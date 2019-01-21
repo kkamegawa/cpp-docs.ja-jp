@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509371"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657592"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map クラス
 
@@ -107,7 +107,7 @@ false>>;
 
 |名前|説明|
 |----------|-----------------|
-|[operator[]](#operator_at)|オーバーロードされます。 指定したキーを持つ要素を検索または挿入します。 このメソッドはコンカレンシー セーフです。|
+|[operator\[\]](#operator_at)|オーバーロードされます。 指定したキーを持つ要素を検索または挿入します。 このメソッドはコンカレンシー セーフです。|
 |[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_unordered_map` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
 ## <a name="remarks"></a>Remarks
@@ -425,7 +425,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 マップに挿入された値の型。
 
-*値*<br/>
+*value*<br/>
 挿入する値。
 
 *_Where*<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 25ba27485990ceaae77e1827f0c74680914e2f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651725"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220388"
 ---
 # <a name="nop"></a>__nop
 
@@ -30,7 +30,7 @@ void __nop();
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`__nop`|x86、x64|
+|`__nop`|x86、ARM、x64、ARM64|
 
 **ヘッダー ファイル** \<intrin.h >
 
@@ -38,7 +38,7 @@ void __nop();
 
 ## <a name="remarks"></a>Remarks
 
-`__nop` 関数は `NOP` マシン語命令と同じです。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+`__nop` 関数は `NOP` マシン語命令と同じです。 X86 と x64 の詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2。命令の参照を設定、"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
 
 ## <a name="see-also"></a>関連項目
 

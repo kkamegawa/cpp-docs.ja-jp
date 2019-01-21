@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481927"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737625"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP からコンカレンシー ランタイムへの移行
 
@@ -34,7 +34,7 @@ OpenMP は、並列化の度合いが事前に決定され、システムで使�
 |例外処理のサポートが必要です。|PPL では、両方の内部と外部並列領域またはループの例外をキャッチすることができます。 OpenMP では、並列領域またはループの内部で例外を処理する必要があります。|
 |取り消し機構が必要です。|PPL には、個々 のタスクと作業の並列のツリーの両方をキャンセルするアプリケーションができます。 OpenMP には、独自のキャンセル メカニズムを実装するためにアプリケーションが必要です。|
 |別の開始元のコンテキストに完了する並列コードを必要とします。|同時実行ランタイムでは、タスクを 1 つのコンテキストでは、開始を待機し、別のコンテキストでは、そのタスクをキャンセルすることができます。 OpenMP ですべての並列処理は、開始元のコンテキストで完了する必要があります。|
-|強化されたデバッグ サポートが必要です。|Visual Studio では、**並列スタック**と**並列タスク**windows マルチ スレッド アプリケーションをより簡単にデバッグできるようにします。<br /><br /> 同時実行ランタイムのデバッグをサポートする詳細については、次を参照してください[タスク ウィンドウを使用して](/visualstudio/debugger/using-the-tasks-window)、[並列スタック ウィンドウを使用して](/visualstudio/debugger/using-the-parallel-stacks-window)、および[チュートリアル: 並列デバッグ。アプリケーション](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)します。|
+|強化されたデバッグ サポートが必要です。|Visual Studio では、**並列スタック**と**並列タスク**windows マルチ スレッド アプリケーションをより簡単にデバッグできるようにします。<br /><br /> 同時実行ランタイムのデバッグをサポートする詳細については、次を参照してください。[タスク ウィンドウを使用して](/visualstudio/debugger/using-the-tasks-window)、[並列スタック ウィンドウを使用して](/visualstudio/debugger/using-the-parallel-stacks-window)、および[チュートリアル。並列アプリケーションのデバッグ](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)します。|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムに移行すべきでない場合
 
@@ -48,17 +48,17 @@ OpenMP は、並列化の度合いが事前に決定され、システムで使�
 
 ## <a name="related-topics"></a>関連トピック
 
-[方法: OpenMP の parallel for ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[方法: 変換、OpenMP 並列 for ループ、同時実行ランタイムを使用するには](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 OpenMP を使用する基本的なループを指定された[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)と[の](../../parallel/openmp/reference/for-openmp.md)ディレクティブでは、同時実行ランタイムを使用するように変換する方法を示します[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズム。
 
-[方法: キャンセル処理を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[方法: 取り消しを使用して、同時実行ランタイムを使用する OpenMP ループを変換します。](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを実行するすべての反復処理を必要としないが、同時実行ランタイムの取り消し機構を使用するように変換する方法を示します。
 
-[方法: 例外処理を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換します。](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)例外の処理を実行するループが、同時実行ランタイムの例外処理メカニズムを使用するように変換する方法を示します。
 
-[方法: 減少変数を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[方法: 減少変数を使用して、同時実行ランタイムを使用する OpenMP ループを変換します。](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを使用する、[削減](../../parallel/openmp/reference/reduction.md)句は、同時実行ランタイムを使用するように変換する方法を示します。
 
 ## <a name="see-also"></a>関連項目

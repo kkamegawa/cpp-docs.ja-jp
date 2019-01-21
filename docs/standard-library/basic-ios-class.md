@@ -260,7 +260,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、コールバック イベントを報告する**消去\_イベント**します。 コピーし、*右*に**\*この**充填文字、リンク付けポインター、および書式設定情報。 例外マスクを変更する前に、コールバック イベントを報告`copyfmt_event`します。 コピーの完了後、**state &**[exceptions](#exceptions) が 0 以外の場合、関数は引数 [rdstate](#rdstate) を使って効果的に [clear](#clear) を呼び出します。 **\*this** を返します。
+メンバー関数は、コールバック イベントを報告する**消去\_イベント**します。 コピーし、*右* に **\*この** 充填文字、リンク付けポインター、および書式設定情報。 例外マスクを変更する前に、コールバック イベントを報告`copyfmt_event`します。 コピーの完了後、**state &**[exceptions](#exceptions) が 0 以外の場合、関数は引数 [rdstate](#rdstate) を使って効果的に [clear](#clear) を呼び出します。 **\*this** を返します。
 
 ### <a name="example"></a>例
 

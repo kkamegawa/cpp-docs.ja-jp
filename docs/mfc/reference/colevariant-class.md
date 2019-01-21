@@ -397,7 +397,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 
 パラメーター *vtSrc* VT_BSTR (UNICODE) または VT_BSTRT (ANSI) にする必要があります。 `SetString` 以降の既定の ANSI に文字列を設定に使用される通常、 [COleVariant::COleVariant](#colevariant)文字列または文字列ポインター パラメーターとしない VARTYPE でコンス トラクターは UNICODE です。
 
-非 UNICODE ビルドの DAO レコード セットは、文字列を ansi を想定しています。 したがって、dao の場合に使用する関数`COleVariant`UNICODE レコード セットを作成していない場合、オブジェクトが使用する必要があります、 **COleVariant::COleVariant (** *lpszSrc* **、***vtSrc* **)** 形式を持つコンス トラクターの*vtSrc* VT_BSTRT (ANSI) に設定または使用`SetString`で*vtSrc* VT に設定ANSI 文字列の作成に _BSTRT します。 たとえば、`CDaoRecordset`関数[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)と[たび](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`パラメーターとしてのオブジェクト。 これらのオブジェクトは、DAO レコード セットが UNICODE でない場合、ANSI にすることがあります。
+非 UNICODE ビルドの DAO レコード セットは、文字列を ansi を想定しています。 したがって、dao の場合に使用する関数`COleVariant`UNICODE レコード セットを作成していない場合、オブジェクトが使用する必要があります、 **COleVariant::COleVariant (** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc* VT_BSTRT (ANSI) に設定または使用`SetString`で*vtSrc* VT に設定ANSI 文字列の作成に _BSTRT します。 たとえば、`CDaoRecordset`関数[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)と[たび](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`パラメーターとしてのオブジェクト。 これらのオブジェクトは、DAO レコード セットが UNICODE でない場合、ANSI にすることがあります。
 
 ## <a name="see-also"></a>関連項目
 

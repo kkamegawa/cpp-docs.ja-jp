@@ -256,9 +256,9 @@ volatile Over&
 |*type-name* **[ ]**|*type-name* __\*__|
 |*type-name* **(** *argument-list* **)**|**(** __\*__ *型名* **) (** *引数リスト* **)**|
 |*type-name*|**const** *type-name*|
-|*type-name*|**揮発性***型名*|
+|*type-name*|**揮発性** *型名*|
 |*type-name* __\*__|**const** *型名* __\*__|
-|*type-name* __\*__|**揮発性***型名* __\*__|
+|*type-name* __\*__|**揮発性** *型名* __\*__|
 
 変換が試行されたシーケンスは次のとおりです。
 

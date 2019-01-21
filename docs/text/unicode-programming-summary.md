@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437939"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627268"
 ---
 # <a name="unicode-programming-summary"></a>Unicode プログラミングの要約
 
@@ -22,11 +22,11 @@ Unicode に対する MFC や C のランタイム機能のサポートを有効�
 
 - エントリ ポイントを指定する。
 
-   **出力**のページ、**リンカー**プロジェクトのフォルダー[プロパティ ページ](../ide/property-pages-visual-cpp.md)ダイアログ ボックスで、セット、**エントリ ポイント**シンボル`wWinMainCRTStartup`.
+   **詳細**のページ、**リンカー**プロジェクトのフォルダー[プロパティ ページ](../ide/property-pages-visual-cpp.md)ダイアログ ボックスで、セット、**エントリ ポイント**にシンボル`wWinMainCRTStartup`.
 
 - 移植性の高いランタイム関数と型を使用する。
 
-   Unicode 文字列を取り扱う際は、必ず適切な C ランタイム関数を使います。 使用することができます、`wcs`ファミリが、機能のことも (国際対応の) 完全ポータブル`_TCHAR`マクロ。 これらのマクロはすべてを先頭`_tcs`;、置き換えると、1 つは、1 つの`str`ファミリの関数。 これらの関数がで詳しく説明されている、[国際化](../c-runtime-library/internationalization.md)のセクション、*ランタイム ライブラリ リファレンス*します。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+   Unicode 文字列を取り扱う際は、必ず適切な C ランタイム関数を使います。 使用することができます、`wcs`ファミリが、機能のことも (国際対応の) 完全ポータブル`_TCHAR`マクロ。 これらのマクロはすべてを先頭`_tcs`;、置き換えると、1 つは、1 つの`str`ファミリの関数。 これらの関数がで詳しく説明されている、[国際化](../c-runtime-library/internationalization.md)のセクション、*ランタイム ライブラリ リファレンス*します。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
 
    使用`_TCHAR`で説明されている関連する移植可能なデータ型と[Unicode のサポート](../text/support-for-unicode.md)します。
 
@@ -87,7 +87,7 @@ Unicode に対する MFC や C のランタイム機能のサポートを有効�
 
 - ランタイム ライブラリには、すべての文字列操作関数の Unicode バージョンが用意されています。 (また、Unicode や MBCS に適した移植性の高いバージョンとして、 これらは、`_tcs`マクロです)。
 
-- Tchar.h には、移植可能なデータ型と`_T`リテラル文字列と文字を変換するためのマクロ。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+- Tchar.h には、移植可能なデータ型と`_T`リテラル文字列と文字を変換するためのマクロ。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
 
 - ランタイム ライブラリのワイド文字バージョンを提供します`main`します。 使用`wmain`Unicode 対応のアプリケーションを作成します。
 

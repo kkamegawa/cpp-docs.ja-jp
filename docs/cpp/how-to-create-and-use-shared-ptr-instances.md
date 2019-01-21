@@ -1,17 +1,17 @@
 ---
-title: '方法: shared_ptr インスタンスを作成して使用する'
+title: '方法: 作成し、shared_ptr インスタンスを使用して、'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176277"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220596"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
+# <a name="how-to-create-and-use-sharedptr-instances"></a>方法: 作成し、shared_ptr インスタンスを使用して、
 
 `shared_ptr` 型は、C++ 標準ライブラリ内のスマート ポインターであり、複数の所有者がメモリ内のオブジェクトの有効期間を管理する必要が生じる可能性があるシナリオを想定して設計されたものです。 `shared_ptr` を初期化した後、そのポインターをコピーすること、関数の引数内の値として渡すこと、および他の `shared_ptr` インスタンスに割り当てることができます。 すべてのインスタンスは同じオブジェクトを指し、1 つの "コントロール ブロック" へのアクセスを共有します。このコントロール ブロックは、新しい `shared_ptr` が追加されるとき、スコープ外になるとき、またはリセットされるときに必ず参照カウントをインクリメントおよびデクリメントします。 参照カウントが 0 に達したときに、コントロール ブロックはメモリ リソースと自らを削除します。
 
@@ -67,4 +67,4 @@ ms.locfileid: "52176277"
 
 ## <a name="see-also"></a>関連項目
 
-[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)
+[スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

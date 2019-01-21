@@ -12,19 +12,18 @@ helpviewer_keywords:
 - _WAIT_CHILD constant
 - _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
-ms.openlocfilehash: 714b4e79f1c229817a12908aad0d726f74023036
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b484f068ce94ab7a2a637723641e1206072cf24b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524392"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220271"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD、_WAIT_GRANDCHILD
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <process.h>
 ```
 
@@ -37,7 +36,7 @@ ms.locfileid: "51524392"
 |`_WAIT_CHILD`|呼び出しプロセスは、指定した新しいプロセスが終了するまで待機します。|
 |`_WAIT_GRANDCHILD`|呼び出しプロセスは、指定した新しいプロセスとその新しいプロセスによって生成されたすべてのプロセスが終了するまで待機します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_cwait](../c-runtime-library/reference/cwait.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

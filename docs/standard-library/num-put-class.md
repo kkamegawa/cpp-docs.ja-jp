@@ -179,9 +179,9 @@ virtual iter_type do_put(
 
 最後に次のようになります。
 
-- 場合**iosbase**します。 **フラグ** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) 0 以外の場合、フラグ**+** 前は、変換仕様に追加されます。
+- 場合**iosbase**します。 **フラグ** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) 0 以外の場合、フラグ **+** 前は、変換仕様に追加されます。
 
-- 場合**iosbase**します。 **フラグ** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase) 0 以外の場合、フラグ**#** 前は、変換仕様に追加されます。
+- 場合**iosbase**します。 **フラグ** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase) 0 以外の場合、フラグ **#** 前は、変換仕様に追加されます。
 
 整数の形式の出力フィールドがさらに続く、[ロケール ファセット](../standard-library/locale-class.md#facet_class)**fac**呼び出しによって返される[use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**します。 [getloc](../standard-library/ios-base-class.md#getloc))。 具体的には、次のように使用します。
 
@@ -221,9 +221,9 @@ virtual iter_type do_put(iter_type next,
 
 場合**iosbase**します。 **フラグ** & **ios_base::fixed**が 0 でない場合、または**iosbase**します。 [有効桁数](../standard-library/ios-base-class.md#precision)が 0 の場合、値を持つ有効桁数よりも大きい**iosbase**します。 **有効桁数**前は、変換仕様に追加されます。 埋め込みの動作は整数出力フィールドの場合と同様です。 埋め込み文字は **fill** です。 最後に次のようになります。
 
-- 場合**iosbase**します。 **フラグ** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) 0 以外の場合、フラグ**+** 前は、変換仕様に追加されます。
+- 場合**iosbase**します。 **フラグ** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) 0 以外の場合、フラグ **+** 前は、変換仕様に追加されます。
 
-- 場合**iosbase**します。 **フラグ** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) 0 以外の場合、フラグ**#** 前は、変換仕様に追加されます。
+- 場合**iosbase**します。 **フラグ** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) 0 以外の場合、フラグ **#** 前は、変換仕様に追加されます。
 
 4 番目のプロテクト仮想メンバー関数:
 

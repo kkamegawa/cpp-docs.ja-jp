@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501323"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626683"
 ---
 # <a name="internationalization-strategies"></a>国際化のアプローチ
 
@@ -30,7 +30,7 @@ ms.locfileid: "50501323"
 
    MBCS 固有の機能を使用するとします。 文字列には、1 バイト文字、2 バイト文字、またはその両方を含めることができます。 C ランタイム ライブラリでは、MBCS 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、MBCS に対応しました。
 
-- 完全な移植性のため、アプリケーションのソース コードが記述された、シンボルの再コンパイルして`_UNICODE`または記号`_MBCS`定義されている、いずれかを使用するバージョンを生成できます。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+- 完全な移植性のため、アプリケーションのソース コードが記述された、シンボルの再コンパイルして`_UNICODE`または記号`_MBCS`定義されている、いずれかを使用するバージョンを生成できます。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
 
    完全に移植可能な C ランタイム関数、マクロ、およびデータ型を使用するとします。 MFC の柔軟性は、これらの方法のいずれかをサポートします。
 

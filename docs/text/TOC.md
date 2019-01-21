@@ -18,6 +18,6 @@
 #### [文字の比較](character-comparison.md)
 #### [バッファー オーバーフロー](buffer-overflow.md)
 ## [ANSI のサポート](support-for-ansi.md)
-## [Tchar.h における汎用テキストのマッピング](generic-text-mappings-in-tchar-h.md)
+## [tchar.h における汎用テキストのマッピング](generic-text-mappings-in-tchar-h.md)
 ### [_MBCS コードでの TCHAR.H データ型の使用](using-tchar-h-data-types-with-mbcs-code.md)
 ## [方法: さまざまな文字列型間で変換する](how-to-convert-between-various-string-types.md)

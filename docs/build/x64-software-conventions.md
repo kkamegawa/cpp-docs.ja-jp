@@ -1,42 +1,242 @@
 ---
 title: x64 ソフトウェア規約
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 8bd2c297aeafcfe46c7d4ba5a71f3234cbba8ec3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eea2059a8c06a8ba4d032b87fb41d7d51bc8eac2
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527260"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627306"
 ---
 # <a name="x64-software-conventions"></a>x64 ソフトウェア規約
 
-このセクションには、Visual C の 64 ビットの拡張機能を x86、x64 の呼び出し規約がについて説明しますアーキテクチャ。
+このセクションには、x64、x86、64 ビット拡張機能の呼び出し規約、C++ がについて説明しますアーキテクチャ。
 
-- [x64 呼び出し規則の概要](../build/overview-of-x64-calling-conventions.md)
+## <a name="overview-of-x64-calling-conventions"></a>X64 呼び出し規則の概要
 
-- [型とストレージ](../build/types-and-storage.md)
+X86 および x64 の 2 つの重要な違いは、64 ビットのアドレス指定機能および一般的な用途のレジスタを 16 個の 64 ビットのフラットなセット。 展開されたレジスタ セットを指定するには、x64 を使用して、 [_ _fastcall](../cpp/fastcall.md)呼び出し規約および RISC ベースの例外処理モデル。 `__fastcall`規則では、最初の 4 つの引数とスタック フレームのレジスタを使用して、追加の引数を渡します。 X64 呼び出し規則、レジスタの使用料などの詳細については、パラメーターをスタックの値、およびスタックのアンワインドを参照してください。 を返す[x64 呼び出し規則](x64-calling-convention.md)します。
 
-- [レジスタの使用](../build/register-usage.md)
-
-- [呼び出し規則](../build/calling-convention.md)
-
-- [スタックの使用](../build/stack-usage.md)
-
-- [プロローグとエピローグ](../build/prolog-and-epilog.md)
-
-- [例外処理](../cpp/exception-handling-in-visual-cpp.md)
-
-- [組み込みおよびインライン アセンブリ](../build/intrinsics-and-inline-assembly.md)
-
-- [イメージ形式](../build/image-format.md)
+## <a name="enable-optimization-for-x64"></a>X64 の最適化を有効にします。
 
 次のコンパイラ オプションでは、x64 用のアプリケーションを最適化するのに役立ちます。
 
 - [/favor (アーキテクチャ固有の最適化)](../build/reference/favor-optimize-for-architecture-specifics.md)
+
+## <a name="types-and-storage"></a>型とストレージ
+
+このセクションでは、列挙型と x64 のデータ型のストレージについて説明します。 アーキテクチャ。
+
+### <a name="scalar-types"></a>スカラー型
+
+任意の配置とデータにアクセスすることはできますが、自然な境界またはパフォーマンスの低下を回避するために、いくつかの複数のデータを整列するがお勧めします。 列挙型が定数の整数であり、32 ビット整数として扱われます。 次の表には、次のアラインメント値を使用して配置に関連している型の定義とデータの推奨される記憶域がについて説明します。
+
+- 8 ビット バイト
+
+- Word の 16 ビット
+
+- 32 ビットのダブルワード
+
+- Quadword - 64 ビット
+
+- Octaword - 128 ビット
+
+|||||
+|-|-|-|-|
+|スカラー型|C データ型|ストレージ サイズ (バイト単位)|推奨される配置|
+|**INT8**|**char**|1|Byte|
+|**UINT8**|**unsigned char**|1|Byte|
+|**INT16**|**short**|2|Word|
+|**UINT16**|**unsigned short**|2|Word|
+|**INT32**|**int**、**長**|4|ダブルワード|
+|**UINT32**|**符号なし int、unsigned long**|4|ダブルワード|
+|**INT64**|**__int64**|8|Quadword|
+|**UINT64**|**unsigned __int64**|8|Quadword|
+|**FP32 (単一の有効桁数)**|**float**|4|ダブルワード|
+|**FP64 (有効桁数を 2 倍)**|**double**|8|Quadword|
+|**ポインター**|__\*__|8|Quadword|
+|**__m64**|**構造体の _ _m64**|8|Quadword|
+|**__m128**|**_ _m128 の構造体**|16|Octaword|
+
+### <a name="aggregates-and-unions"></a>集約と共用体
+
+配列、構造体、共用体などの他の種類では、一貫性のある集約と共用体ストレージとデータ取得を保証するより厳密なのアラインメント要件があります。 配列、構造、および共用体の定義を次に示します。
+
+- 配列
+
+   連続するデータ オブジェクトの順序付きのグループが含まれています。 各オブジェクトが呼び出されると、*要素*します。 配列内のすべての要素と同じサイズとデータ型であります。
+
+- 構造体
+
+   データ オブジェクトの順序付きのグループが含まれています。 、配列の要素とは異なり、構造内のデータ オブジェクトは別のデータの種類とサイズを持つことができます。 構造体の各データ オブジェクトが呼び出されます、*メンバー*します。
+
+- 和集合
+
+   名前付きのメンバーのセットのいずれかを保持するオブジェクト。 名前付きセットのメンバーは、任意の型指定できます。 共用体に割り当てられたストレージは、その共用体、および配置に必要なすべての埋め込みの最大のメンバーに必要なストレージと同じです。
+
+次の表では、厳密に推奨されるスカラー共用体と構造体のメンバーの配置を示します。
+
+||||
+|-|-|-|
+|スカラー型|C データ型|必要な配置|
+|**INT8**|**char**|Byte|
+|**UINT8**|**unsigned char**|Byte|
+|**INT16**|**short**|Word|
+|**UINT16**|**unsigned short**|Word|
+|**INT32**|**int**、**長**|ダブルワード|
+|**UINT32**|**符号なし int、unsigned long**|ダブルワード|
+|**INT64**|**__int64**|Quadword|
+|**UINT64**|**unsigned __int64**|Quadword|
+|**FP32 (単一の有効桁数)**|**float**|ダブルワード|
+|**FP64 (有効桁数を 2 倍)**|**double**|Quadword|
+|**ポインター**|<strong>\*</strong>|Quadword|
+|**__m64**|**構造体の _ _m64**|Quadword|
+|**__m128**|**_ _m128 の構造体**|Octaword|
+
+次の集計の配置ルールが適用されます。
+
+- 配列の配置では、配列の要素の 1 つの配置と同じです。
+
+- 構造体または共用体の先頭の配置は、個々 のメンバーの最大の配置です。 構造体または共用体の各メンバーは、前のメンバーによって、暗黙の型の内部の埋め込みが必要ですが、前の表で定義されている、適切なアラインメントに配置する必要があります。
+
+- 構造体のサイズは、その配置では、最後のメンバーの後にスペースを必要がありますの整数倍である必要があります。 構造体と共用体は、配列でグループ化できる、ので、構造体または共用体の配列の各要素の最初し、最後に、以前に判断する適切な配置。
+
+- 以前のルールを管理する限り、アラインメント要件より大きくなるようにデータを配置することになります。
+
+- 個々 のコンパイラでは、サイズ上の理由から、構造体のパッキングを調整できます。 たとえば[/Zp (構造体メンバーの配置)](../build/reference/zp-struct-member-alignment.md)構造体のパッキングを調整できます。
+
+### <a name="examples-of-structure-alignment"></a>構造体の配置例
+
+次の 4 つ例では、配置済みの構造体または共用体、および対応する数値は、その構造体または共用メモリ内のレイアウトを示しています。 を宣言します。 図内の各列は、メモリのバイトを表し、列の数がそのバイトの移動距離を示します。 各図の 2 行目の名前は、宣言内の変数の名前に対応します。 影付きの列には、指定された配置を実現するために必要なは埋め込みが示されます。
+
+#### <a name="example-1"></a>例 1
+
+```C
+// Total size = 2 bytes, alignment = 2 bytes (word).
+
+_declspec(align(2)) struct {
+    short a;      // +0; size = 2 bytes
+}
+```
+
+![AMD 変換例 1 の構造体レイアウト](../build/media/vcamd_conv_ex_1_block.png "AMD 変換例 1 の構造体レイアウト")
+
+#### <a name="example-2"></a>例 2
+
+```C
+// Total size = 24 bytes, alignment = 8 bytes (quadword).
+
+_declspec(align(8)) struct {
+    int a;       // +0; size = 4 bytes
+    double b;    // +8; size = 8 bytes
+    short c;     // +16; size = 2 bytes
+}
+```
+
+![AMD 変換例 2 の構造体レイアウト](../build/media/vcamd_conv_ex_2_block.png "AMD 変換例 2 の構造体レイアウト")
+
+#### <a name="example-3"></a>例 3
+
+```C
+// Total size = 22 bytes, alignment = 4 bytes (doubleword).
+
+_declspec(align(4)) struct {
+    char a;       // +0; size = 1 byte
+    short b;      // +2; size = 2 bytes
+    char c;       // +4; size = 1 byte
+    int d;        // +8; size = 4 bytes
+}
+```
+
+![AMD 変換例 2 の構造体レイアウト](../build/media/vcamd_conv_ex_3_block.png "AMD 変換例 2 の構造体レイアウト")
+
+#### <a name="example-4"></a>例 4
+
+```C
+// Total size = 8 bytes, alignment = 8 bytes (quadword).
+
+_declspec(align(8)) union {
+    char *p;      // +0; size = 8 bytes
+    short s;      // +0; size = 2 bytes
+    long l;       // +0; size = 4 bytes
+}
+```
+
+![AMD 変換例 4 の共用体 layouit](../build/media/vcamd_conv_ex_4_block.png "AMD 変換例 4 の共用体 layouit")
+
+### <a name="bitfields"></a>ビット フィールド
+
+構造体のビット フィールドは 64 ビットに制限されており、型は int、unsigned int、int64、または unsigned int64 の署名します。 型の境界を越えるビット フィールドでは、次の型の配置をビット フィールドを配置するをスキップします。 たとえば、整数のビット フィールド可能性があります、32 ビットの境界を通過しません。
+
+### <a name="conflicts-with-the-x86-compiler"></a>X86 との競合コンパイラ
+
+4 バイトが自動的に整列していません、スタック、x86 を使用する場合よりも大きいデータ型をコンパイラにアプリケーションをコンパイルします。 のアーキテクチャを x86 コンパイラでは、4 バイトで、たとえば、64 ビットの整数よりも大きな、4 バイトのアラインされたスタックが 8 バイトのアドレスに自動的に配置することはできません。
+
+アラインされていないデータの操作では、2 つの影響を与えます。
+
+- アラインされていない場所へのアクセスに配置された場所にアクセスするよりも長い時間がかかる場合があります。
+
+- インタロックされた操作では、アラインされていない場所を使用できません。
+
+複数の厳密なアラインメントが必要な場合を使用して、`__declspec(align(N))`変数の宣言にします。 動的に、仕様に合わせて、スタックに揃えをコンパイラに対応します。 ただし、実行時にスタックを動的に調整すると、アプリケーションの実行速度が遅くが発生する可能性があります。
+
+## <a name="register-usage"></a>レジスタの使用
+
+浮動小数点の使用可能な x64 のアーキテクチャ (呼ぶ整数レジスタと)、16 個の汎用レジスタと 16 個の XMM/YMM の提供を登録します。 volatile レジスタは、呼び出しで使用された後に内容が破棄されることが、呼び出し元によって想定されているスクラッチ レジスタです。 関数呼び出しで使用された後もレジスタの値を保持するには非 volatile レジスタが必要です。使用された非 volatile レジスタの保存は、呼び出し先が行う必要があります。
+
+### <a name="register-volatility-and-preservation"></a>登録の更新頻度と保持
+
+関数呼び出しで各レジスタがどのように使用されるかを次の表に示します。
+
+||||
+|-|-|-|
+|登録|状態|用途|
+|RAX|Volatile|戻り値レジスタ|
+|RCX|Volatile|1 番目の整数引数|
+|RDX|Volatile|2 番目の整数引数|
+|R8|Volatile|3 番目の整数引数|
+|R9|Volatile|4 番目の整数引数|
+|R10:R11|Volatile|必要に応じて、呼び出し元によって保持される必要があります。syscall/sysret 命令で使用されます。|
+|R12:R15|非 volatile|呼び出し先によって保持される必要があります。|
+|RDI|非 volatile|呼び出し先によって保持される必要があります。|
+|RSI|非 volatile|呼び出し先によって保持される必要があります。|
+|RBX|非 volatile|呼び出し先によって保持される必要があります。|
+|RBP|非 volatile|フレーム ポインターとして使用できます。呼び出し先によって保持される必要があります。|
+|RSP|非 volatile|スタック ポインター|
+|XMM0, YMM0|Volatile|1 番目の FP 引数。`__vectorcall` が使用された場合の 1 番目のベクター型引数。|
+|XMM1, YMM1|Volatile|2 番目の FP 引数。`__vectorcall` が使用された場合の 2 番目のベクター型引数。|
+|XMM2, YMM2|Volatile|3 番目の FP 引数。`__vectorcall` が使用された場合の 3 番目のベクター型引数。|
+|XMM3, YMM3|Volatile|4 番目の FP 引数。`__vectorcall` が使用された場合の 4 番目のベクター型引数。|
+|XMM4, YMM4|Volatile|必要に応じて、呼び出し元によって保持される必要があります。`__vectorcall` が使用された場合の 5 番目のベクター型引数。|
+|XMM5, YMM5|Volatile|必要に応じて、呼び出し元によって保持される必要があります。`__vectorcall` が使用された場合の 6 番目のベクター型引数。|
+|XMM6:XMM15, YMM6:YMM15|非 volatile (XMM)、volatile (YMM の上半分)|呼び出し先によって保持される必要があります。 必要に応じて、呼び出し元によって YMM レジスタが保持される必要があります。|
+
+関数の終了と C ランタイム ライブラリの呼び出しおよび Windows システムの呼び出しを関数のエントリは、CPU の方向フラグをクリアするフラグの登録が必要です。
+
+## <a name="stack-usage"></a>スタックの使用
+
+スタック割り当て、配置、関数の型および x64 のスタック フレームの詳細については、「 [x64 スタックの使用状況](stack-usage.md)します。
+
+## <a name="prolog-and-epilog"></a>プロローグとエピローグ
+
+スタック領域の割り当て、その他の関数を呼び出し、不揮発性レジスタを保存または例外処理を使用するすべての関数のプロローグに関連付けられた各関数のテーブルのエントリとエピローグのアンワインド データのアドレスの制限が説明されている必要があります。関数を各終了します。 必要なプロローグの詳細と x64 のエピローグ コードは、次を参照してください。 [x64 プロローグとエピローグ](prolog-and-epilog.md)します。
+
+## <a name="x64-exception-handling"></a>x64 例外処理
+
+規則と構造化例外処理と C++ 例外処理、x64 での動作を実装するために使用するデータ構造については、次を参照してください。 [x64 例外処理](exception-handling-x64.md)します。
+
+## <a name="intrinsics-and-inline-assembly"></a>組み込みおよびインライン アセンブリ
+
+1 つ、x64 の制約のコンパイラは、インライン アセンブラーのサポートがないようにします。 つまり、関数は、サブルーチン、またはコンパイラによってサポートされる組み込み関数として記述する必要がいずれかの C または C++ で記述することはできません。 特定の関数はパフォーマンスと小文字が区別されないものもあります。 パフォーマンスが重視される関数は、組み込み関数として実装する必要があります。
+
+コンパイラでサポートされている組み込み関数は「[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)します。
+
+## <a name="image-format"></a>イメージの形式
+
+X64 実行可能イメージ形式は、pe 32 + します。 (Dll と Exe) の実行可能イメージは、静的なイメージのデータに対処する 32 ビットの変位相対アドレスを使用できるように、2 ギガバイト単位の最大サイズに制限されます。 このデータにはインポート アドレス テーブル、文字列定数、グローバルな静的データ、およびなどが含まれます。
 
 ## <a name="see-also"></a>関連項目
 

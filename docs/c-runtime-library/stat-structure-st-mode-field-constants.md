@@ -35,19 +35,18 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: edb88c70a58c501ae09342c91b6c5ec667b8151c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 081d96fcf9b0d0d8d5183e3ed6d0fc69c5a29206
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523833"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220232"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 構造体の st_mode フィールド定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <sys/stat.h>
 ```
 
@@ -67,7 +66,7 @@ ms.locfileid: "51523833"
 |`_S_IWRITE`|書き込みアクセス許可、所有者|
 |`_S_IEXEC`|実行/検索アクセス許可、所有者|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_stat、_wstat 関数](../c-runtime-library/reference/stat-functions.md)<br/>
 [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

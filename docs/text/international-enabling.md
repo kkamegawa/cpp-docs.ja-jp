@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514635"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627462"
 ---
 # <a name="international-enabling"></a>国際化対応について
 
@@ -27,7 +27,7 @@ ms.locfileid: "50514635"
 
    - MFC のいずれかの環境で移植性を高める同じ移植可能なランタイム関数を使用します。
 
-   - リテラル文字列と文字いずれの環境では、移植性を高めるを使用して、`_T`マクロ。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+   - リテラル文字列と文字いずれの環境では、移植性を高めるを使用して、`_T`マクロ。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
 
    - Mbcs 文字列を解析するときに注意してください。 Unicode では、これらの予防措置は必要ありません。 詳細については、次を参照してください。 [MBCS のプログラミングについて](../text/mbcs-programming-tips.md)します。
 

@@ -8,19 +8,18 @@ helpviewer_keywords:
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: 9317fdad16121374b31e0862f3326f4150c71579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4c35518130fc233afd055133704bcb0abaccca8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667390"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220726"
 ---
 # <a name="eof-weof"></a>EOF、WEOF
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <stdio.h>
 ```
 
@@ -30,7 +29,7 @@ EOF は、ファイルの終わり (場合によっては、エラー) が検出
 
 WEOF は、ワイド型ストリームの終端を示すために、またはエラー状態を報告するために使用される **wint_t** 型の戻り値です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [putc、putwc](../c-runtime-library/reference/putc-putwc.md)<br/>
 [ungetc、ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)<br/>

@@ -25,19 +25,18 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 672297b2a1d6466f28a7addf74b8d88e2460b15e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517586"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220440"
 ---
 # <a name="file-constants"></a>ファイル定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <fcntl.h>
 ```
 
@@ -57,7 +56,7 @@ ms.locfileid: "51517586"
 | `_O_TRUNC`  | 既存のファイルを開き、長さをゼロに切り詰めます。ファイルに書き込みアクセス許可が必要です。 ファイルの内容は破棄されます。 このフラグを指定すると、`_O_RDONLY` は指定できません。  |
 | `_O_WRONLY`  | 書き込み専用のファイルを開きます。このフラグを指定すると、`_O_RDONLY` と `_O_RDWR` は指定できません。  |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

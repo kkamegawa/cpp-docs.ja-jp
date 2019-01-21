@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>例
 
-演算子**>=**、 **\< =**、 **>**、および**<**、場合、アサートは、`COleDateTime`オブジェクトの設定を null にします。
+演算子 **>=** 、 **\<=**、 **>**、および **<**、場合、アサートは、`COleDateTime`オブジェクトの設定を null にします。
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -897,7 +897,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 有効、無効、および null 状態の値の詳細については、次を参照してください。、[ついて](#m_status)メンバー変数。
 
-**+=** と**-=** 場合演算子はアサート、`COleDateTime`オブジェクトの設定を null にします。 参照してください[COleDateTime 関係演算子](#coledatetime_relational_operators)例についてはします。
+**+=** と **-=** 場合演算子はアサート、`COleDateTime`オブジェクトの設定を null にします。 参照してください[COleDateTime 関係演算子](#coledatetime_relational_operators)例についてはします。
 
 境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 

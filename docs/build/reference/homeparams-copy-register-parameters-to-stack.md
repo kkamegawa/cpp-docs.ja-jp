@@ -1,48 +1,44 @@
 ---
 title: /homeparams (レジスタ パラメーターのスタックへのコピー)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - /homeparams
 helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-ms.openlocfilehash: 952a38d2ab1268ee3dc1fda0899a3ba047281b44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffb5ca602feb7a369bb31d0277834786d66ac12a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518457"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627480"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (レジスタ パラメーターのスタックへのコピー)
 
-関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。
+強制パラメーターは、その場所に関数の開始時にスタックにも書き込まれるレジスタで渡されます。
 
 ## <a name="syntax"></a>構文
 
-```
-/homeparams
-```
+> **/homeparams**
 
 ## <a name="remarks"></a>Remarks
 
-このコンパイラ オプションは、x64 のみコンパイラ (ネイティブ コンパイルおよびクロス コンパイル)。
+このコンパイラ オプションでは、ネイティブおよびクロス コンパイラを x64 を対象とするのみです。
 
-X64 でのパラメーターが渡されると、コンパイルの呼び出し規約によりパラメーターが必要、レジスタに渡されるパラメーターの場合でも。 詳細については、次を参照してください。[パラメーターの引き渡し](../../build/parameter-passing.md)します。 ただし、リリース ビルドでは既定では、登録パラメーターは書き込めません、スタックにパラメーターを既に提供されている領域に。 これにより、プログラムの最適化 (リリース) ビルドをデバッグは困難です。
+X64 呼び出し規則では、レジスタに渡されるパラメーターの場合でも、すべてのパラメーターに割り当てられるスタック領域が必要です。 詳細については、次を参照してください。[パラメーターの引き渡し](../../build/x64-calling-convention.md#parameter-passing)します。 既定では、登録パラメーターは、リリース ビルドに割り当てられたスタック領域にコピーされません。 これにより、プログラム、最適化されたリリース ビルドをデバッグは困難です。
 
-リリース ビルドでは、使用 **/homeparams**させるアプリケーションをデバッグすることができます。 **/homeparams**スタック レジスタ パラメーターを読み込む必要があるために、パフォーマンスがわけです。
+リリース ビルドを使用することができます、 **/homeparams**強制的にコンパイラをコピーするオプションが、アプリケーションをデバッグできるようにする、スタックにパラメーターを登録します。 **/homeparams**余分なサイクルをスタック レジスタ パラメーターの読み込みを必要とするためには、パフォーマンスを示すものでは。
 
-デバッグ ビルドでは、レジスタに渡されるパラメーターを常に、スタックが設定されます。
+デバッグ ビルドでのレジスタに渡されるパラメーターのスタックは常に設定されます。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
-1. **[C/C++]** フォルダーをクリックします。
+1. 開く、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-1. **[コマンド ライン]** プロパティ ページをクリックします。
-
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. コンパイラ オプションを入力して、**追加オプション**ボックス。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

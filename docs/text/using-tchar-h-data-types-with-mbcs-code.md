@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 81e51f136a42c0d0db12744735521ae2b3cdb5f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510709"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626670"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>_MBCS コードでの TCHAR.H データ型の使用
 
@@ -43,7 +43,7 @@ ms.locfileid: "50510709"
     #define _USE_INLINING
     ```
 
-   このメソッドは、汎用テキスト ルーチンを適切な MBCS ルーチンに直接マップ、Tchar.h で提供される、インライン関数サンクをによりします。 Tchar.h から次のコードの抜粋では、これを行う方法の例を示します。
+   このメソッドは、汎用テキスト ルーチンを適切な MBCS ルーチンに直接マップ、tchar.h で提供される、インライン関数サンクをによりします。 Tchar.h から次のコードの抜粋では、これを行う方法の例を示します。
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
@@ -58,7 +58,7 @@ ms.locfileid: "50510709"
     #define _MB_MAP_DIRECT
     ```
 
-   この方法は、既定の動作を使用したくない場合、またはインライン展開を使用できない場合の代替手段であり、高速です。 汎用テキスト ルーチンがマクロによって Tchar.h から次の例のように、そのルーチンの MBCS バージョンに直接マップするとします。
+   この方法は、既定の動作を使用したくない場合、またはインライン展開を使用できない場合の代替手段であり、高速です。 汎用テキスト ルーチンがマクロによって tchar.h から次の例のように、そのルーチンの MBCS バージョンに直接マップするとします。
 
     ```cpp
     #define _tcschr _mbschr
@@ -68,4 +68,4 @@ ms.locfileid: "50510709"
 
 ## <a name="see-also"></a>関連項目
 
-[Tchar.h における汎用テキストのマッピング](../text/generic-text-mappings-in-tchar-h.md)
+[Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)

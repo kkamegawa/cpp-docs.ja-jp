@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480042"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627365"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ ms.locfileid: "50480042"
 |大文字と小文字の変換規約|大文字小文字は変換されません。|
 
 > [!NOTE]
->  将来のコンパイラ バージョンは、パラメーターを格納するために別のレジスタを使用する可能性があります。
+> 将来のコンパイラ バージョンは、パラメーターを格納するために別のレジスタを使用する可能性があります。
 
 使用して、 [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラ オプションでは、各関数を原因としてコンパイルするモジュールで **_ _fastcall** 、競合する属性を使用して、関数が宣言されているか、関数の名前は、しない限り、 `main`.
 
-**_ _Fastcall**キーワードが受け入れられるし、ARM および x64 を対象とするコンパイラでは無視されますアーキテクチャ、x64 チップや規則により、最初の 4 つの引数が可能であれば、レジスタで渡される追加の引数が渡されますスタック。 詳細については、次を参照してください。[概要の x64 呼び出し規則](../build/overview-of-x64-calling-conventions.md)します。 ARM チップでは、最大で 4 個の整数引数と 8 個の浮動小数点引数をレジスタに渡すことができます。追加の引数はスタック上に渡されます。
+**_ _Fastcall**キーワードが受け入れられるし、ARM および x64 を対象とするコンパイラでは無視されますアーキテクチャ、x64 チップや規則により、最初の 4 つの引数が可能であれば、レジスタで渡される追加の引数が渡されますスタック。 詳細については、次を参照してください。 [x64 呼び出し規則](../build/x64-calling-convention.md)します。 ARM チップでは、最大で 4 個の整数引数と 8 個の浮動小数点引数をレジスタに渡すことができます。追加の引数はスタック上に渡されます。
 
 静的でないクラス関数がアウトオブラインで宣言されている場合、アウトオブラインの宣言で呼び出し規則の修飾子を指定する必要はありません。 つまり、クラスの静的でないメンバー メソッドの場合は、宣言時に指定された呼び出し規則が定義の時点で仮定されます。 次のクラス定義があるとします。
 

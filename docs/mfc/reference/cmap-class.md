@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627319"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657579"
 ---
 # <a name="cmap-class"></a>CMap クラス
 
@@ -106,7 +106,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 |名前|説明|
 |----------|-----------------|
-|[CMap::operator](#operator_at)|マップに要素を挿入、演算子の代替の`SetAt`します。|
+|[CMap::operator \[ \]](#operator_at)|マップに要素を挿入、演算子の代替の`SetAt`します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -116,7 +116,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 ほとんどの用途のグローバルなヘルパー関数をこのクラスの呼び出しの一部のメンバー関数をカスタマイズする必要があります、`CMap`クラス。 参照してください[コレクション クラスのヘルパー](../../mfc/reference/collection-class-helpers.md)のマクロとグローバルのセクションでは、 **MFC リファレンス**します。
 
-`CMap` オーバーライド[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)シリアル化とその要素のダンプをサポートするためにします。 アーカイブを使用して、マップが格納されている場合`Serialize`、各マップ要素が順番にシリアル化します。 既定の実装、`SerializeElements`ヘルパー関数はビットごとの書き込み。 派生したポインター コレクション項目のシリアル化に関する情報の`CObject`またはその他のユーザー定義型を参照してください[方法: タイプ セーフなコレクションの作成](../../mfc/how-to-make-a-type-safe-collection.md)です。
+`CMap` オーバーライド[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)シリアル化とその要素のダンプをサポートするためにします。 アーカイブを使用して、マップが格納されている場合`Serialize`、各マップ要素が順番にシリアル化します。 既定の実装、`SerializeElements`ヘルパー関数はビットごとの書き込み。 派生したポインター コレクション項目のシリアル化に関する情報の`CObject`またはその他のユーザー定義型を参照してください[方法。タイプ セーフなコレクションの作成](../../mfc/how-to-make-a-type-safe-collection.md)です。
 
 (キーと値) のマップ内の個々 の要素の診断ダンプが必要な場合は、1 以上にダンプ コンテキストの深さを設定する必要があります。
 

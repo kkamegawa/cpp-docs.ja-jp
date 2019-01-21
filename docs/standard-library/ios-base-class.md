@@ -241,7 +241,7 @@ enum event {
 
 - `copyfmt_event`、への呼び出しの末尾付近で発生するコールバックを識別するために[copyfmt](../standard-library/basic-ios-class.md#copyfmt)直前に、[例外マスク](../standard-library/ios-base-class.md)がコピーされます。
 
-- `erase_event`、への呼び出しの開始時に発生するコールバックを識別するために[copyfmt](../standard-library/basic-ios-class.md#copyfmt)、またはのデストラクターへの呼び出しの先頭に**\*この**します。
+- `erase_event`、への呼び出しの開始時に発生するコールバックを識別するために[copyfmt](../standard-library/basic-ios-class.md#copyfmt)、またはのデストラクターへの呼び出しの先頭に **\*この**します。
 
 - `imbue_event`、への呼び出しの最後に発生するコールバックを識別するために[imbue](#imbue)関数が戻る直前に、します。
 

@@ -169,7 +169,7 @@ OEM 文字セットは、システムによって異なります。
 実際の物理フォントの論理フォント属性が一致するように、GDI を試みる必要がありますに注意を定義するフォントの出力品質を指定します。 参照してください、`lfQuality`内のメンバー、`LOGFONT`値の一覧については、Windows SDK で構造体。
 
 *nPitchAndFamily*<br/>
-ピッチとファミリのフォントを指定します。 参照してください、`lfPitchAndFamily`内のメンバー、`LOGFONT`と詳細については値の一覧については、Windows SDK で構造体。
+ピッチとファミリのフォントを指定します。 構造体`lfPitchAndFamily`内のメンバー`LOGFONT`の詳細については、Windows SDK を参照してください。
 
 *lpszFacename*<br/>
 A`CString`またはフォントのタイプフェイス名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa)関数は現在使用可能なすべてのフォントを列挙するために使用できます。 場合*lpszFacename*が null の場合、GDI がデバイスに依存しないタイプフェイスを使用します。

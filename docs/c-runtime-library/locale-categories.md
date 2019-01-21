@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521356"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220193"
 ---
 # <a name="locale-categories"></a>ロケールのカテゴリ
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ ms.locfileid: "51521356"
 |---------------------|-------------------------------|
 |`LC_ALL`|ロケール固有のすべての動作 (すべてのカテゴリ)|
 |`LC_COLLATE`|`strcoll` 関数と `strxfrm` 関数の動作|
-|`LC_CTYPE`|文字処理関数の動作 (影響を受けない **isdigit**、`isxdigit`、`mbstowcs``mbtowc` を除く)|
+|`LC_CTYPE`|文字処理関数の動作 (影響を受けない `isdigit`、`isxdigit`、`mbstowcs`、`mbtowc` を除く)|
 |`LC_MAX`|`LC_TIME` と同じ|
 |`LC_MIN`|`LC_ALL` と同じ|
 |`LC_MONETARY`|`localeconv` 関数が返す通貨形式情報|
@@ -54,7 +53,7 @@ ms.locfileid: "51521356"
 
 例については、「[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [localeconv](../c-runtime-library/reference/localeconv.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

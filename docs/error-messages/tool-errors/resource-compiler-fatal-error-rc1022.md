@@ -15,7 +15,7 @@ ms.locfileid: "50540909"
 ---
 # <a name="resource-compiler-fatal-error-rc1022"></a>リソース コンパイラの致命的なエラー RC1022
 
-予想される ' #endif'
+' #endif' が必要です。
 
 `#if`、 **#Ifdef**、または **#ifndef**ディレクティブで終わっていない、`#endif`ディレクティブ。
 

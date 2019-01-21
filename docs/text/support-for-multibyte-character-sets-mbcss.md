@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437255"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627346"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>マルチバイト文字セット (MBCS) のサポート
 
@@ -46,7 +46,7 @@ C のランタイム ライブラリおよび MFC は、1 バイト文字、MBCS
 
 ### <a name="mbcsunicode-portability"></a>MBCS と Unicode の移植性
 
-Tchar.h ヘッダー ファイルを使用することにより、同じソースから 1 バイト、MBCS、および Unicode の各アプリケーションをビルドできます。 Tchar.h でプレフィックスが付いたマクロを定義する *_tcs*に割り当てられている`str`、 `_mbs`、または`wcs`関数は、適切な。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 MFC アプリケーションでは、既定で `_MBCS` が定義されています。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+Tchar.h ヘッダー ファイルを使用して構築でき、1 バイト、MBCS、Unicode、同じソースからのアプリケーション。 Tchar.h でプレフィックスが付いたマクロを定義する *_tcs*に割り当てられている`str`、 `_mbs`、または`wcs`関数は、適切な。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 MFC アプリケーションでは、既定で `_UNICODE` が定義されています。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
 
 > [!NOTE]
 >  両方を定義する場合の動作は定義されません`_UNICODE`と`_MBCS`します。

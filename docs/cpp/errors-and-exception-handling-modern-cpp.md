@@ -3,12 +3,12 @@ title: エラーと例外の処理 (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523289"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220570"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>エラーと例外の処理 (Modern C++)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-C++ の例外は、C# や Java などの言語と似ています。 **を再試行してください**ブロック、例外がある場合*スロー*なります*キャッチ*の最初の関連付けられている**キャッチ**のと同じ型のブロック、例外。 つまり、実行が移動することから、**スロー**ステートメントを**キャッチ**ステートメント。 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 前の例では、例外の種類で[invalid_argument](../standard-library/invalid-argument-class.md)、標準ライブラリで定義されて、 [ \<stdexcept >](../standard-library/stdexcept.md)ヘッダー ファイル。 C++ を指定しないは必要ありません、**最後に**ブロックに例外がスローされた場合に、すべてのリソースが解放されるかどうかを確認します。 スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 詳細については、次を参照してください。[方法: 例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。 C++ のスタック アンワインド機構については、次を参照してください。[例外とスタック アンワインド](../cpp/exceptions-and-stack-unwinding-in-cpp.md)します。
+C++ の例外は、C# や Java などの言語と似ています。 **を再試行してください**ブロック、例外がある場合*スロー*なります*キャッチ*の最初の関連付けられている**キャッチ**のと同じ型のブロック、例外。 つまり、実行が移動することから、**スロー**ステートメントを**キャッチ**ステートメント。 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 前の例では、例外の種類で[invalid_argument](../standard-library/invalid-argument-class.md)、標準ライブラリで定義されて、 [ \<stdexcept >](../standard-library/stdexcept.md)ヘッダー ファイル。 C++ を指定しないは必要ありません、**最後に**ブロックに例外がスローされた場合に、すべてのリソースが解放されるかどうかを確認します。 スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 詳細については、「[方法 :例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。 C++ のスタック アンワインド機構については、次を参照してください。[例外とスタック アンワインド](../cpp/exceptions-and-stack-unwinding-in-cpp.md)します。
 
 ## <a name="basic-guidelines"></a>基本的なガイドライン
 
@@ -70,7 +70,7 @@ C++ の例外は、C# や Java などの言語と似ています。 **を再試�
 
 - 例外は、エラーを処理するコードが、1 つ以上の介在する関数呼び出しによりエラーを検出したコードから切り離されている可能性がある場合に使用します。 エラーを処理するコードが、エラーを検出したコードに密に結合されている場合は、パフォーマンスが重要なループで代わりにエラー コードを使用するかどうかを検討します。
 
-- 例外をスローまたは伝達する可能性のある関数ごとに、strong 保証、basic 保証、nothrow (noexcept) 保証の 3 つの例外保証のいずれかを指定します。 詳細については、次を参照してください。[方法: 例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。
+- 例外をスローまたは伝達する可能性のある関数ごとに、strong 保証、basic 保証、nothrow (noexcept) 保証の 3 つの例外保証のいずれかを指定します。 詳細については、「[方法 :例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。
 
 - 値渡しで例外をスローし、参照渡しでそれらの例外をキャッチします。 処理できない例外をキャッチしないでください。
 
@@ -100,7 +100,7 @@ SEH の詳細については、次を参照してください。[構造化例外
 
 ## <a name="see-also"></a>関連項目
 
-[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[方法: 例外と非例外的なコードの間のインターフェイスします。](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

@@ -183,7 +183,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>Remarks
 
-場合*\_メタ*にも等しく**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようとする**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
+場合 *\_メタ* にも等しく**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようとする **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
 
 - 書き込み位置が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 

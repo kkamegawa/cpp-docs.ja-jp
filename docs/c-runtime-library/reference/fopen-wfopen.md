@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333229"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031292"
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -97,7 +97,7 @@ FILE *_wfopen(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>ccs フラグおよび BOM に基づいて使用されるエンコーディング
 
-|ccs フラグ|BOM なし (または新しいファイル)|BOM: UTF-8|BOM: UTF-16|
+|ccs フラグ|BOM なし (または新しいファイル)|BOM:UTF-8|BOM:UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -143,7 +143,7 @@ Unicode モードで書き込むように開かれたファイルには、自動
 
 場合**t**または**b**には、指定しない*モード*、グローバル変数によって既定の変換モードが定義されている[_fmode](../../c-runtime-library/fmode.md)します。 場合**t**または**b**先頭に、引数、関数が失敗して返します**NULL**します。
 
-Unicode およびマルチバイトのストリーム入出力でテキスト モードとバイナリ モードを使用する方法について詳しくは、「 [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 」および「 [をご覧ください。テキスト モードとバイナリ モードの Unicode ストリーム入出力](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」
+テキスト モードとバイナリ モードの Unicode およびマルチバイト ストリーム i/o を使用する方法の詳細については、次を参照してください。[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)と[テキストとバイナリ モードの Unicode Stream I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)します。
 
 次のオプションを追加できる*モード*追加の動作を指定します。
 
@@ -160,25 +160,25 @@ Unicode およびマルチバイトのストリーム入出力でテキスト �
 
 有効な文字は、*モード*で使用される文字列**fopen**と **_fdopen**に対応して*oflag* で使用される引数[_open](open-wopen.md)と[_sopen](sopen-wsopen.md)、次のようにします。
 
-|文字*モード*文字列|等価*oflag*開く (_o)/_sopen の値|
+|文字*モード*文字列|等価*oflag*値\_開く/\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常は **_O_WRONLY** &#124; **_O_CREAT** &#124;* * * * _O_APPEND)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (通常は **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (通常は **_O_WRONLY** &#124; **_O_CREAT** &#124;* * * * _O_TRUNC)|
-|**w +**|**_O_RDWR** (通常は **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (通常は **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
+|**+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (通常は **\_O\_RDWR** &#124;  **\_O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (通常は **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (通常は **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
+|**b**|**\_O\_バイナリ**|
+|**t**|**\_O\_TEXT**|
 |**c**|なし|
 |**n**|なし|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs utf-8 を =**|**_O_UTF8**|
-|**ccs UTF 16LE を =**|**_O_UTF16**|
+|**S**|**\_O\_シーケンシャル**|
+|**R**|**\_O\_ランダム**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_一時**|
+|**ccs = UNICODE**|**\_O\_WTEXT**|
+|**ccs utf-8 を =**|**\_O\_UTF8**|
+|**ccs UTF 16LE を =**|**\_O\_UTF16**|
 
 使用する場合**rb**モードで、コードを移植する必要がある、メモリを使用するオプションとしての Win32 ファイルをマップするかどうかを検討する大きなファイルのほとんどを読み取るするか、またはネットワークのパフォーマンスに心配がない場合も可能性があります。
 

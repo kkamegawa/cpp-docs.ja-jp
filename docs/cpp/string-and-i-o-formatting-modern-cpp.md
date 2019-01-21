@@ -3,12 +3,12 @@ title: 文字列および I/o に書式設定 (Modern C)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326187"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220505"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>文字列および I/O の書式設定 (Modern C++)
 
@@ -42,11 +42,11 @@ int main()
 
 Boost.Format の利点は以下のとおりです。
 
-- 安全性: タイプ セーフであり、エラーには例外をスローします。たとえば、指定項目の過多または過少などです。
+- 安全性:タイプ セーフで、エラーの例外をスロー-項目が多すぎるか少なすぎるの仕様など。
 
-- 拡張可能: ストリーム可能なすべての型を処理できます。
+- 拡張。ストリーム配信できる任意の型に対して機能します。
 
-- 便利: 標準 Posix と類似の書式指定文字列。
+- 便利です。標準 Posix と類似の書式指定文字列。
 
 Boost.Format は C++ でビルドが[iostreams](../standard-library/iostream-programming.md)パフォーマンスが最適化されたは安全で拡張可能である、これらはありません。 パフォーマンスの最適化を必要とする場合は、C を検討してください[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)と[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)は高速で簡単に使用します。 ただし、それらは拡張可能でなく、また脆弱性から安全ではありません。 (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 詳細については、次を参照してください。 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)と[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
 
@@ -64,7 +64,7 @@ Boost.Format は C++ でビルドが[iostreams](../standard-library/iostream-pro
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

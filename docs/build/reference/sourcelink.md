@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480991"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978284"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/SOURCELINK (PDB に含める Sourcelink ファイル)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK (PDB にソース リンクを含めるファイル)
 
-リンカーによって生成される PDB ファイルに含める SourceLink 構成ファイルを指定します。
+リンカーによって生成される PDB ファイルに含めるソース リンクの構成ファイルを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,7 +28,7 @@ JSON 形式の構成ファイルの Url へのローカル ファイル パス�
 
 ## <a name="remarks"></a>Remarks
 
-SourceLink は、ソースのバイナリのデバッグを提供するために依存しない言語とソース管理システムです。 以降では、Visual Studio 2017 バージョン 15.8 ネイティブの C++ バイナリでは、SourceLink はサポートされます。 SourceLink の概要については、次を参照してください。[ソース リンク](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)します。 プロジェクトで SourceLink を使用する方法と、プロジェクトの一部として、SourceLink ファイルを生成する方法については、次を参照してください。[を使用して SourceLink](https://github.com/dotnet/sourcelink#using-sourcelink)します。
+ソース リンクは、ソースのバイナリのデバッグを提供するために依存しない言語とソース管理システムです。 ソース リンクは、ネイティブの C++ バイナリが Visual Studio 2017 バージョン 15.8 以降でサポートされます。 ソース リンクの概要については、次を参照してください。[ソース リンク](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)します。 プロジェクトでソース リンクを使用する方法と、プロジェクトの一部として、SourceLink ファイルを生成する方法については、次を参照してください。[を使用してソース リンク](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)します。
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Visual Studio で/SOURCELINK リンカー オプションを設定するには
 

@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507602"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627515"
 ---
 # <a name="pack"></a>pack
 構造体メンバー、共用体メンバー、およびクラス メンバーのパッキング アラインメントを指定します。
@@ -57,7 +57,7 @@ ms.locfileid: "50507602"
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [構造体の配置例](../build/examples-of-structure-alignment.md)(x64 固有)
+- [構造体の配置例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
 
    > [!WARNING]
    > Visual Studio 2015 以降では、標準の alignas および alignof 演算子を使用できることに注意してください。これらは `__alignof` および `declspec( align )` とは異なり、コンパイラ間で移植できます。 C++ 標準は扱いません梱包、使用する必要がありますので**パック**(または他のコンパイラで対応する拡張機能) をターゲット アーキテクチャのワード サイズより小さいアラインメントを指定します。

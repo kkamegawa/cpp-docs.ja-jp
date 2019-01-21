@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: a0d8fa733a5da14e8ee16acf2623df07c9974893
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523378"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657488"
 ---
 # <a name="arrayview-class"></a>array_view クラス
 
@@ -94,7 +94,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |名前|説明|
 |----------|-----------------|
 |[演算子 ()](#operator_call)|パラメーターによって指定された要素の値を返します。|
-|[operator[]](#operator_at)|パラメーターで指定された要素を返します。|
+|[operator\[\]](#operator_at)|パラメーターで指定された要素を返します。|
 |[operator=](#operator_eq)|指定された `array_view` オブジェクトの内容をこのオブジェクトにコピーします。|
 
 ### <a name="public-constants"></a>パブリック定数
@@ -151,7 +151,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 **ヘッダー:** amp.h
 
-**名前空間:** Concurrency
+**Namespace:** コンカレンシー
 
 ##  <a name="dtor"></a> ~ array_view
 

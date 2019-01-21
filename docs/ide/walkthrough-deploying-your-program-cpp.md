@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496435"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657514"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>チュートリアル: プログラムの配置 (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496435"
 
 1. **ソリューション エクスプローラー**で **[Game Installer]** プロジェクトを選択し、**[ビュー]** > **[プロパティ ウィンドウ]** を選択するか、または **F4** キーを押して **[プロパティ]** ウィンドウを開きます。
 
-1. インストーラーに表示する追加の詳細を指定します。  たとえば、**[製造元]** に "*Contoso*"、**[製品名]** に "*Game Installer*"、**[SupportUrl]** に *http://www.contoso.com* を使用します。
+1. インストーラーに表示する追加の詳細を指定します。  たとえば、**[製造元]** に *Contoso*、**[製品名]** に *Game Installer*、**[SupportUrl]** に *http\://www.contoso.com* を使用します。
 
 1. メニュー バーで **[ビルド]** > **[構成マネージャー]** の順に選択します。 **[プロジェクト]** テーブルの **[ビルド]** 列で、**[Game Installer]** のボックスをオンにします。 **[閉じる]** をクリックします。
 
@@ -72,7 +72,7 @@ ms.locfileid: "50496435"
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:** [チュートリアル: プロジェクトのデバッグ (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**前へ:**[チュートリアル:プロジェクトのデバッグ (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>参照
 

@@ -2,12 +2,12 @@
 title: alignof と alignas (C++)
 ms.date: 11/04/2016
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-ms.openlocfilehash: e5d023d7969764bdd36030a508abdd94068e48b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 825df25494497e13d29212f7f951be8247b6f136
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493653"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411924"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof と alignas (C++)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50493653"
 
 ## <a name="example"></a>例
 
-使用することができます**alignas**クラス、スタックまたは共用体、または個々 のメンバー。 ときに複数**alignas**指定子が検出された場合、コンパイラは、最も厳密なもの、(最大値を含む 1 つ) を選択します。
+使用することができます**alignas**クラス、構造体または共用体、または個々 のメンバーにします。 ときに複数**alignas**指定子が検出された場合、コンパイラは、最も厳密なもの、(最大値を含む 1 つ) を選択します。
 
 ```cpp
 // alignas_alignof.cpp

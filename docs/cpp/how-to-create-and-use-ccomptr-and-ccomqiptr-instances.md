@@ -1,17 +1,17 @@
 ---
-title: '方法: CComPtr および CComQIPtr インスタンスを作成して使用する'
+title: '方法: 作成し、CComPtr および CComQIPtr インスタンスを使用'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518704"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220550"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr および CComQIPtr インスタンスを作成して使用する
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: 作成し、CComPtr および CComQIPtr インスタンスを使用
 
 従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の詳細については、「 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)」を参照してください。
 
@@ -39,4 +39,4 @@ ATL では、よりシンプルな構文を持つ `CComQIPtr`も提供されま�
 
 ## <a name="see-also"></a>関連項目
 
-[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)
+[スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

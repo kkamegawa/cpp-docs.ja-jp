@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 0ff15244f4e93ecd2913fa825e8b5c351c7ff84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501843"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626696"
 ---
 # <a name="general-mbcs-programming-advice"></a>MBCS プログラミングにおける一般的なアドバイス
 
 次のヒントを使用します。
 
-- 柔軟性を高めるには、実行時マクロをなど使用`_tcschr`と`_tcscpy`可能な場合。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+- 柔軟性を高めるには、実行時マクロをなど使用`_tcschr`と`_tcscpy`可能な場合。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
 
 - C ランタイムを使用して、`_getmbcp`関数が現在のコード ページに関する情報を取得します。
 

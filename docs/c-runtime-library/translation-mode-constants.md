@@ -17,19 +17,18 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 25588758e682409bad0a6cb2723304275f00c25e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9ac318c25b317d783e7fd7e287666bf85bb45b26
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519725"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220531"
 ---
 # <a name="translation-mode-constants"></a>変換モード定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <fcntl.h>
 ```
 
@@ -47,7 +46,7 @@ ms.locfileid: "51519725"
 
 詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../c-runtime-library/text-and-binary-mode-file-i-o.md)」および「[File Translation](../c-runtime-library/file-translation-constants.md)」 (ファイル変換) を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_pipe](../c-runtime-library/reference/pipe.md)<br/>

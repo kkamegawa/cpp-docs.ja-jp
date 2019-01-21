@@ -3,12 +3,12 @@ title: Visual Studio で Linux CMake プロジェクトを構成する
 description: Visual Studio で Linux CMake プロジェクトを構成する方法
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585043"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978323"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
@@ -18,7 +18,7 @@ Visual Studio に Linux C++ ワークロードをインストールすると、L
 このトピックは、Visual Studio の CMake サポートに関する基本的な知識が読者にあるものとして作成されています。 詳細については、「[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。 CMake 自体の詳細については、「[Build, Test and Package Your Software With CMake](https://cmake.org/)」 (CMake でソフトウェアをビルド、テスト、パッケージ化する) を参照してください。
 
 > [!NOTE]
-> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake 変数の場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。
+> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake 変数の場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。 Visual Studio 2019 では、ビルド済みバイナリを自動的に配置させることが可能です (「[ビルド済み CMake バイナリをダウンロードする](#download-prebuilt-cmake-binaries)」を参照)。
 
 ## <a name="open-a-folder"></a>フォルダーを開く
 
@@ -110,7 +110,10 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
 
 Linux distro には古いバージョンの CMake が含まれている場合があります。 Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake 変数の場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。
 
-## <a name="see-also"></a>参照
+**Visual Studio 2019**<br/>
+リモート コンピューター上に有効な CMake が見つからなかった場合、情報バーが表示され、CMake のビルド済みバイナリを自動的に配置するオプションが表示されます。 バイナリは `~/.vs/cmake` にインストールされます。 バイナリを配布すると、プロジェクトが自動的に再生成されます。 `CMakeSettings.json` の `cmakeExecutable` フィールドで指定する CMake が無効 (存在しない、またはサポートされていないバージョン) で、かつビルド済みバイナリが存在している場合は、Visual Studio では `cmakeExecutable` が無視され、ビルド済みバイナリが使われます。
+
+## <a name="see-also"></a>「
 
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>
 [Visual C++ 用の CMake ツール](../ide/cmake-tools-for-visual-cpp.md)

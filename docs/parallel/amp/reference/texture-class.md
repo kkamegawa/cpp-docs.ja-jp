@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486590"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657540"
 ---
 # <a name="texture-class"></a>texture クラス
 
@@ -76,7 +76,7 @@ class texture;
 |名前|説明|
 |----------|-----------------|
 |[演算子 ()](#operator_call)|パラメーターによって指定された要素の値を返します。|
-|[operator[]](#operator_at)|指定したインデックス位置にある要素を返します。|
+|[operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
 |[operator=](#operator_eq)|指定したコピー[テクスチャ](texture-class.md)オブジェクトをこのオブジェクト。|
 
 ### <a name="public-constants"></a>パブリック定数
@@ -103,7 +103,7 @@ class texture;
 
 **ヘッダー:** amp_graphics.h
 
-**Namespace:** concurrency::graphics
+**Namespace:** Concurrency::graphics
 
 ##  <a name="dtor"></a> ~ テクスチャ
 
@@ -335,7 +335,7 @@ void set(
 *_Rank*<br/>
 インデックスのランク。
 
-*値*<br/>
+*value*<br/>
 要素の新しい値。
 
 ##  <a name="ctor"></a> テクスチャ

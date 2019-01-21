@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501752"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657566"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector クラス
 
@@ -121,7 +121,7 @@ private details::_Concurrent_vector_base_v4;
 
 |名前|説明|
 |----------|-----------------|
-|[operator[]](#operator_at)|オーバーロードされます。 同時実行ベクターで指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、同時実行セーフ読み取り操作とすることを確認する値として、ベクトルを増加しているときにも`_Index`が、同時実行ベクターのサイズより小さい。|
+|[operator\[\]](#operator_at)|オーバーロードされます。 同時実行ベクターで指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、同時実行セーフ読み取り操作とすることを確認する値として、ベクトルを増加しているときにも`_Index`が、同時実行ベクターのサイズより小さい。|
 |[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
 ## <a name="remarks"></a>Remarks

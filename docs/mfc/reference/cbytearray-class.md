@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-ms.openlocfilehash: 3038f0c67e171ea56438945ded7eccb8e4f98ee5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8cff11f745c3407218a828565232e5b115fc687
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560284"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657319"
 ---
 # <a name="cbytearray-class"></a>CByteArray クラス
 
@@ -101,7 +101,7 @@ class CByteArray : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
 
 ## <a name="remarks"></a>Remarks
 

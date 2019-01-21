@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 67a071ecd457495510b2015f05466e1aa9bfc989
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da493ceb1a0b751e302d296a9840b668e446ff62
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477351"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978336"
 ---
 # <a name="optimization-best-practices"></a>最適化のベスト プラクティス
 
@@ -34,7 +34,7 @@ Visual C がサポート*プロファイル ガイド付き最適化の*(PGO)。
 
 64 ビット環境でリンクを使用する推奨は、 **/OPT:REF、ICF**リンカー オプション、および 32 ビット環境で **/OPT:REF**をお勧めします。 詳細については、次を参照してください。 [/OPT (最適化)](../../build/reference/opt-optimizations.md)します。
 
-また、デバッグ シンボルを生成することを強くお勧めします。これは、最適化されたリリース ビルドの場合も同様です。 デバッグ シンボルを生成しても生成されたコードに影響はなく、必要に応じてアプリケーションを非常に簡単にデバッグできます。
+また、デバッグ シンボルを生成することを強くお勧めします。これは、最適化されたリリース ビルドの場合も同様です。 生成されたコードに影響を与えないし、する必要は多くの場合、アプリケーションをデバッグしやすくなります。
 
 ### <a name="floating-point-switches"></a>浮動小数点のスイッチ
 

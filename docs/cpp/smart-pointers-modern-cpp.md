@@ -3,12 +3,12 @@ title: スマート ポインター (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 5f04a4ab23241d63fc1694d419f85d8b694b7fff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616906"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220661"
 ---
 # <a name="smart-pointers-modern-c"></a>スマート ポインター (Modern C++)
 
@@ -68,23 +68,23 @@ C++ のスマート ポインターの表現方法は、C# などの言語での
 これらのスマート ポインターは、Plain Old C++ Object (POCO) にポインターをカプセル化する最初のオプションとして使用します。
 
 - `unique_ptr`<br/>
-   基になるポインターの所有者は、厳密に 1 人許可されます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 非推奨とされた `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズは 1 つのポインターを高速な挿入および C++ 標準ライブラリ コレクションから取得するための右辺値参照をサポートしています。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: unique_ptr インスタンスを作成して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)します。
+   基になるポインターの所有者は、厳密に 1 人許可されます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 非推奨とされた `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズは 1 つのポインターを高速な挿入および C++ 標準ライブラリ コレクションから取得するための右辺値参照をサポートしています。 ヘッダー ファイルは `<memory>` です。 詳細については、「[方法 :作成し、unique_ptr インスタンスを使用して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)します。
 
 - `shared_ptr`<br/>
-   参照カウント スマート ポインターです。 複数の所有者に 1 個の生のポインターなどを割り当てる場合に使用します。たとえば、コンテナーからポインターのコピーを返し、元のポインターを維持する場合などです。 生のポインターは、`shared_ptr` のすべての所有者がスコープ外になるか、所有権を放棄するまで削除されません。 サイズはポインター 2 個です。1 個はオブジェクト用で、もう 1 個は参照カウントを含む共有コントロール ブロック用です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: shared_ptr インスタンスを作成して](../cpp/how-to-create-and-use-shared-ptr-instances.md)と[shared_ptr クラス](../standard-library/shared-ptr-class.md)します。
+   参照カウント スマート ポインターです。 複数の所有者に 1 個の生のポインターなどを割り当てる場合に使用します。たとえば、コンテナーからポインターのコピーを返し、元のポインターを維持する場合などです。 生のポインターは、`shared_ptr` のすべての所有者がスコープ外になるか、所有権を放棄するまで削除されません。 サイズはポインター 2 個です。1 個はオブジェクト用で、もう 1 個は参照カウントを含む共有コントロール ブロック用です。 ヘッダー ファイルは `<memory>` です。 詳細については、「[方法 :Shared_ptr インスタンスを作成して](../cpp/how-to-create-and-use-shared-ptr-instances.md)と[shared_ptr クラス](../standard-library/shared-ptr-class.md)します。
 
 - `weak_ptr`<br/>
-    `shared_ptr` と同時に使用する特殊ケースのスマート ポインターです。 `weak_ptr` は、1 つ以上の `shared_ptr` インスタンスが所有するオブジェクトへのアクセスを提供しますが、参照カウントには参加しません。 オブジェクトを観察するが、オブジェクトを維持しておく必要はない場合に使用します。 `shared_ptr` インスタンス間の循環参照を解除するいくつかのケースで必要です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: weak_ptr インスタンスを作成して](../cpp/how-to-create-and-use-weak-ptr-instances.md)と[weak_ptr クラス](../standard-library/weak-ptr-class.md)します。
+    `shared_ptr` と同時に使用する特殊ケースのスマート ポインターです。 `weak_ptr` は、1 つ以上の `shared_ptr` インスタンスが所有するオブジェクトへのアクセスを提供しますが、参照カウントには参加しません。 オブジェクトを観察するが、オブジェクトを維持しておく必要はない場合に使用します。 `shared_ptr` インスタンス間の循環参照を解除するいくつかのケースで必要です。 ヘッダー ファイルは `<memory>` です。 詳細については、「[方法 :Weak_ptr インスタンスを作成して](../cpp/how-to-create-and-use-weak-ptr-instances.md)と[weak_ptr クラス](../standard-library/weak-ptr-class.md)します。
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM オブジェクト用のスマート ポインター (従来の Windows プログラミング)
 
 COM オブジェクトを使用する場合、スマート ポインターの適切な型でインターフェイス ポインターをラップします。 Active Template Library (ATL) は、さまざまな目的で複数のスマート ポインターを定義します。 さらに、コンパイラが .tlb ファイルからラッパー クラスを作成するときに使用する `_com_ptr_t` スマート ポインターの型を使用することもできます。 これは、ATL ヘッダー ファイルをインクルードしたくない場合に最も適しています。
 
 [CComPtr クラス](../atl/reference/ccomptr-class.md)<br/>
-ATL を使用できない場合以外は、これを使用してください。 `AddRef` メソッドと `Release` メソッドを使用して、参照カウントを実行します。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
+ATL を使用できない場合以外は、これを使用してください。 `AddRef` メソッドと `Release` メソッドを使用して、参照カウントを実行します。 詳細については、「[方法 :作成し、CComPtr および CComQIPtr インスタンスを使用して、](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
 
 [CComQIPtr クラス](../atl/reference/ccomqiptr-class.md)<br/>
-`CComPtr` に似ていますが、COM オブジェクトで `QueryInterface` を呼び出すための簡単な構文も提供します。 詳細については、次を参照してください。[方法: 作成と使用の CComPtr および CComQIPtr インスタンス](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
+`CComPtr` に似ていますが、COM オブジェクトで `QueryInterface` を呼び出すための簡単な構文も提供します。 詳細については、「[方法 :作成し、CComPtr および CComQIPtr インスタンスを使用して、](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)します。
 
 [CComHeapPtr クラス](../atl/reference/ccomheapptr-class.md)<br/>
 `CoTaskMemFree` を使用してメモリを解放するオブジェクトへのスマート ポインター。
@@ -116,6 +116,6 @@ C を使用して割り当てられているオブジェクトのスマート �
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

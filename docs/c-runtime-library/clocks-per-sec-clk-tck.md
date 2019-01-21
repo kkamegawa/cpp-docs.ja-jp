@@ -8,19 +8,18 @@ helpviewer_keywords:
 - CLOCKS_PER_SEC
 - CLK_TCK constant
 ms.assetid: bc285106-383d-44cb-91bf-276ad7de57bf
-ms.openlocfilehash: 40401028ef16f0d46baec92a37b2ba422d1e56ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a604425809f43be238cbcc7b9148782bb937e00f
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621352"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220362"
 ---
 # <a name="clockspersec-clktck"></a>CLOCKS_PER_SEC、CLK_TCK
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <time.h>
 ```
 
@@ -28,7 +27,7 @@ ms.locfileid: "50621352"
 
 `clock` 関数の戻り値であり、`CLOCKS_PER_SEC` で除算された秒単位の時間を表します。 `CLK_TCK` も同じものですが、古い形式とされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [clock](../c-runtime-library/reference/clock.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

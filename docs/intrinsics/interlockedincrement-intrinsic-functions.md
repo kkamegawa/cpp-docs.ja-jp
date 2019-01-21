@@ -1,6 +1,6 @@
 ---
 title: _InterlockedIncrement の組み込み関数
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: aaa5918862c75c20fd6271109b3e8975709712b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509084"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626934"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
 
@@ -138,4 +138,4 @@ Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)
+[x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

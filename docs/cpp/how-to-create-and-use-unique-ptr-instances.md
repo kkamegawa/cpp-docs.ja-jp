@@ -1,17 +1,17 @@
 ---
-title: '方法: unique_ptr インスタンスを作成して使用する'
+title: '方法: 作成し、unique_ptr インスタンスを使用'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174885"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220583"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>方法: unique_ptr インスタンスを作成して使用する
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>方法: 作成し、unique_ptr インスタンスを使用
 
 A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを共有しません。 これは、別にコピーできません`unique_ptr`値によって、関数に渡す、または、作成するコピーを必要とする任意の C++ 標準ライブラリ アルゴリズムで使用します。 `unique_ptr` ができるのは移動だけです。 この場合、メモリ リソースの所有権は別の `unique_ptr` に移動し、元の `unique_ptr` はそれ以降、所有権を失います。 複数の所有者がオブジェクトを所有するとプログラム ロジックが複雑になるため、所有者を 1 人に制限することをお勧めします。 したがって、プレーンな C++ オブジェクト用にスマート ポインターを確認する場合は、使用`unique_ptr`、および構築する際に、`unique_ptr`を使用して、 [make_unique](../standard-library/memory-functions.md#make_unique)ヘルパー関数。
 
@@ -53,5 +53,5 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを�
 
 ## <a name="see-also"></a>関連項目
 
-[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)<br/>
+[スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

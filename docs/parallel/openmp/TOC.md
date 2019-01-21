@@ -1,13 +1,15 @@
+---
+ms.openlocfilehash: 5f74861f75ed3cd431379f26f9802c0fb29a8bea
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397317"
+---
 # [Visual C++ の OpenMP](openmp-in-visual-cpp.md)
 # [OpenMP C および C++ アプリケーション プログラミング インターフェイス](openmp-c-and-cpp-application-program-interface.md)
 ## [目次](contents.md)
 ## [1.はじめに](1-introduction.md)
-### [1.1 スコープ](1-1-scope.md)
-### [1.2 用語の定義](1-2-definition-of-terms.md)
-### [1.3 実行モデル](1-3-execution-model.md)
-### [1.4 準拠](1-4-compliance.md)
-### [1.5 標準リファレンス](1-5-normative-references.md)
-### [1.6 階層](1-6-organization.md)
 ## [2.ディレクティブ](2-directives.md)
 ### [2.1 ディレクティブの書式](2-1-directive-format.md)
 ### [2.2 条件付きコンパイル](2-2-conditional-compilation.md)
@@ -61,10 +63,6 @@
 #### [3.3.1 omp_get_wtime 関数](3-3-1-omp-get-wtime-function.md)
 #### [3.3.2 omp_get_wtick 関数](3-3-2-omp-get-wtick-function.md)
 ## [4.環境変数](4-environment-variables.md)
-### [4.1 OMP_SCHEDULE](4-1-omp-schedule.md)
-### [4.2 OMP_NUM_THREADS](4-2-omp-num-threads.md)
-### [4.3 OMP_DYNAMIC](4-3-omp-dynamic.md)
-### [4.4 OMP_NESTED](4-4-omp-nested.md)
 ## [A.例](a-examples.md)
 ### [A.1 単純ループの並列実行](a-1-executing-a-simple-loop-in-parallel.md)
 ### [A.2 条件付きコンパイルの指定](a-2-specifying-conditional-compilation.md)
@@ -99,8 +97,6 @@
 ### [A.31 スレッド セーフなロック関数](a-31-thread-safe-lock-functions.md)
 ## [B.ランタイム ライブラリ関数のスタブ](b-stubs-for-run-time-library-functions.md)
 ## [C.OpenMP C と C++ の文法](c-openmp-c-and-cpp-grammar.md)
-### [C.1 表記](c-1-notation.md)
-### [C.2 規則](c-2-rules.md)
 ## [D.schedule 句の使用](d-using-the-schedule-clause.md)
 ## [E.OpenMP C/C++ の実装で定義されている動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F.Version 2.0 の新機能と説明](f-new-features-and-clarifications-in-version-2-0.md)

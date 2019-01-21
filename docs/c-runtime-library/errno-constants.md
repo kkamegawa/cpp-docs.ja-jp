@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645602"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220609"
 ---
 # <a name="errno-constants"></a>errno 定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <errno.h>
 ```
 
@@ -172,6 +171,6 @@ Posix との互換性のために、次の値がサポートされています�
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [グローバル定数](../c-runtime-library/global-constants.md)

@@ -15,7 +15,7 @@ ms.locfileid: "51330594"
 ---
 # <a name="appearance-atl-control-wizard"></a>外観、ATL コントロール ウィザード
 
-コントロールの追加のユーザーの要素のオプションを識別するために、ウィザードのこのページを使用します。 このページとして識別されるコントロールの使用可能な**標準コントロール****コントロール型**上、[オプション、ATL コントロール ウィザード](../../atl/reference/options-atl-control-wizard.md)ページ。
+コントロールの追加のユーザーの要素のオプションを識別するために、ウィザードのこのページを使用します。 このページとして識別されるコントロールの使用可能な**標準コントロール** **コントロール型** 上、[オプション、ATL コントロール ウィザード](../../atl/reference/options-atl-control-wizard.md)ページ。
 
 ## <a name="uielement-list"></a>UIElement の一覧
 

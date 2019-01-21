@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440444"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627333"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ __declspec(align(32)) struct Str1{
 
 - [Align のデータのパッキングでの動作](#vclrfhowalignworkswithdatapacking)
 
-- [構造体の配置例](../build/examples-of-structure-alignment.md)(x64 固有)
+- [構造体の配置例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
 
-##  <a name="vclrfalignexamples"></a> align の例
+## <a name="vclrfalignexamples"></a> align の例
 
 次の例では、`__declspec(align(#))` がデータ構造体のサイズとアラインメントにどのような影響を与えるかを示します。 この例では、次の定義を前提とします。
 
@@ -171,7 +171,7 @@ void fn() {
 
 メモリがヒープ上に割り当てられる場合のアラインメントは、どの割り当て関数が呼び出されるかによって異なります。  たとえば、`malloc` を使用する場合、結果はオペランドのサイズによって決まります。 場合*arg* > = 8、8 バイトでアラインするが、メモリが返されます。 場合*arg* < 8、返されるメモリのアラインメントは、最初の 2 の累乗より小さい*arg*します。 たとえば、malloc(7) を使用すると、アラインメントは 4 バイトになります。
 
-##  <a name="vclrf_declspecaligntypedef"></a> __Declspec(align(#)) と新しい型を定義します。
+## <a name="vclrf_declspecaligntypedef"></a> __Declspec(align(#)) と新しい型を定義します。
 
 型のアラインメントを定義できます。
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 ここで、`aType`と`bType`は同じサイズ (8 バイト) が型の変数`bType`32 バイトでアラインされます。
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> スレッド ローカル ストレージにデータの整列
+## <a name="vclrfthreadlocalstorageallocation"></a> スレッド ローカル ストレージにデータの整列
 
 `__declspec(thread)` 属性を使用して作成され、イメージ内の TLS セクションに配置された静的なスレッド ローカル ストレージ (TLS: Thread-Local Storage) は、通常の静的データとまったく同じようにアラインメントされます。 TLS データを作成するために、オペレーティング システムは、TLS セクションのサイズのメモリを割り当て、TLS セクションのアラインメント属性に従います。
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Align のデータのパッキングでの動作
+## <a name="vclrfhowalignworkswithdatapacking"></a> Align のデータのパッキングでの動作
 
 `/Zp`コンパイラ オプションおよび`pack`プラグマ構造体と共用体のメンバーのデータ パッキングの効果があります。この例ではどのように`/Zp`と`__declspec(align(#))`連携。
 
@@ -244,4 +244,4 @@ struct S {
 
 [__declspec](../cpp/declspec.md)<br/>
 [ARM ABI 規則の概要](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 呼び出し規則の概要](../build/overview-of-x64-calling-conventions.md)
+[x64 ソフトウェア規約](../build/x64-software-conventions.md)

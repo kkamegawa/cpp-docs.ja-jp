@@ -1,17 +1,17 @@
 ---
-title: '方法: 例外的なコードと非例外的なコードをインターフェイスで連結する'
+title: '方法: 例外と非例外的なコードの間のインターフェイスします。'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576684"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220627"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外的なコードと非例外的なコードをインターフェイスで連結する
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外と非例外的なコードの間のインターフェイスします。
 
 ここでは、C++ モジュールで一貫した例外処理を実装する方法と、例外の境界でエラー コードとの間でそれらの例外を変換する方法を説明します。
 
@@ -19,7 +19,7 @@ C++ モジュールは、例外を使用しないコード (非例外コード) 
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>C++ からの非例外関数の呼び出し
 
-C++ から非例外関数を呼び出す場合、すべてのエラーを検出して例外をスローする C ++ 関数でその関数をラップします。 そのようなラッパー関数を設計するときは、まず提供する例外保証の種類 (no-throw、strong、basic) を決定します。 次に、例外がスローされるときにすべてのリソース (たとえばファイル ハンドル) が正しく解放されるように関数を設計します。 通常は、スマート ポインターなどのリソース マネージャー使用してリソースを所有することになります。 設計に関する考慮事項の詳細については、次を参照してください。[方法: 例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。
+C++ から非例外関数を呼び出す場合、すべてのエラーを検出して例外をスローする C ++ 関数でその関数をラップします。 そのようなラッパー関数を設計するときは、まず提供する例外保証の種類 (no-throw、strong、basic) を決定します。 次に、例外がスローされるときにすべてのリソース (たとえばファイル ハンドル) が正しく解放されるように関数を設計します。 通常は、スマート ポインターなどのリソース マネージャー使用してリソースを所有することになります。 設計に関する考慮事項の詳細については、次を参照してください。[方法。例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。
 
 ### <a name="example"></a>例
 
@@ -236,5 +236,5 @@ bool DiffFiles3(const string& file1, const string& file2)
 
 ## <a name="see-also"></a>関連項目
 
-[エラーと例外処理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[方法: 例外安全性に対応した設計をする](../cpp/how-to-design-for-exception-safety.md)<br/>
+[エラーと例外の処理 (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[方法: 例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)<br/>

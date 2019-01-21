@@ -12,19 +12,18 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 0e4a60b5f3dad70f881387d5befca2def9bff7f3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520427"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220284"
 ---
 # <a name="file-permission-constants"></a>ファイルのアクセス許可定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <sys/stat.h>
 ```
 
@@ -48,7 +47,7 @@ ms.locfileid: "51520427"
 |`_S_IWRITE`|読み取り禁止 (ファイルは書き込み専用)|
 |`_S_IREAD` &#124; `_S_IWRITE`|読み取りも書き込みも禁止|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

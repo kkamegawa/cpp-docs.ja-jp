@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 62c9501bb2a21aab241f37805d58c6ec12073ff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629958"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627399"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -44,7 +44,7 @@ unsigned char _InterlockedCompareExchange128(
 [in]64 ビットの整数で、変換先の低い部分と交換される可能性があります。
 
 *ComparandResult*<br/>
-[入力、出力](128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。
+[入力、出力]\(128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -131,4 +131,4 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [_InterlockedCompareExchange の組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
-[x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)
+[x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

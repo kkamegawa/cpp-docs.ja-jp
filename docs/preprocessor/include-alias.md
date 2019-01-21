@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573170"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587877"
 ---
 # <a name="includealias"></a>include_alias
 
-指定します*short_filename*がエイリアスとして使用される*long_filename*します。
+するように指定*alias_filename*で見つかりましたが、`#include`ディレクティブ、コンパイラに置換されます*actual_filename*代わりにします。
 
 ## <a name="syntax"></a>構文
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>プラグマ include_alias (*long_filename*、 *short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>プラグマ include_alias ("*alias_filename*「,」*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>プラグマ include_alias (\<*alias_filename*>、 \< *actual_filename*>)
 
 ## <a name="remarks"></a>Remarks
 
-一部のファイル システムでは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名が許可されます。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 たびに、コンパイラが検出されると、 *long_filename* 、文字列を置き換える*short_filename*、ヘッダー ファイルの検索と*short_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例えば:
+**Include_alias**プラグマ ディレクティブを使用すると、別の名前またはパスのソース ファイルが含まれているファイル名を持つファイルを置き換えてください。 たとえば、一部のファイル システムは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名を許可します。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 たびに、コンパイラが検出されると、 *alias_filename* 、文字列を置き換える*actual_filename*、ヘッダー ファイルの検索と*actual_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -58,7 +58,7 @@ ms.locfileid: "50573170"
 
 > /YcAppleSystemHeaderStop.h
 
-使用することができます、 **include_alias**プラグマを任意のヘッダー ファイル名を別にマップします。 例えば:
+使用することができます、 **include_alias**プラグマを任意のヘッダー ファイル名を別にマップします。 例:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -83,8 +83,8 @@ ms.locfileid: "50573170"
 ファイル名がエラー メッセージ、または定義済みの値として報告されることに注意してください。`__FILE__`置換が実行された後、マクロは、ファイルの名前。 たとえば、次のディレクティブの後に、出力を参照してください。
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 VERYLONGFILENAME のエラーです。H では、次のエラー メッセージが生成されます。
@@ -101,7 +101,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-コンパイラは、THREE.H. ではなく、TWO.H ファイルを探します。
+コンパイラは、three.h ではなく、two.h のファイルを検索します。
 
 ## <a name="see-also"></a>関連項目
 

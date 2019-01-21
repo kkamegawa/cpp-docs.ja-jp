@@ -8,12 +8,12 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: a72e6f1905bad81fc0d79c1f90e88e96fe8b110b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85bfa6cb82b4b1825ae9b9a9a0f3a9f06e579499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487803"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626709"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>64 ビット、x64 の Visual C の構成のターゲット
 
@@ -21,9 +21,9 @@ ms.locfileid: "50487803"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [方法 : Visual C++ プロジェクトを 64 ビット、x64 プラットフォーム用に設定する](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [方法: Visual C プロジェクトを 64 ビット、x64 を構成プラットフォーム](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [方法: 64 ビットの Visual C++ ツールセットをコマンド ラインから有効にする](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [方法: コマンドラインで 64 ビット Visual C ツールセットを有効にします。](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Visual C++ の 64 ビットへの移行に関する一般的な問題](../build/common-visual-cpp-64-bit-migration-issues.md)
 

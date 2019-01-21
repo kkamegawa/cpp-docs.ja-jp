@@ -23,19 +23,18 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: 9419ae53cd04812f45f5feeee73fa0f89c408a0c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b8783a5826376a65cb71444e2d64c61b6938eab8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522299"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220219"
 ---
 # <a name="heap-constants"></a>ヒープ定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <malloc.h>
 ```
 
@@ -52,7 +51,7 @@ ms.locfileid: "51522299"
 |`_HEAPEND`|ヒープの末尾に正常に到達しました (`_heapwalk` ルーチンのみ)。|
 |`_HEAPOK`|ヒープに一貫性があります (`_heapset` ルーチンと `_heapchk` ルーチンのみ)。 これまでのところエラーはありません。**_HEAPINFO** 構造体に、次のエントリに関する情報が含まれています (`_heapwalk` ルーチンのみ)。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

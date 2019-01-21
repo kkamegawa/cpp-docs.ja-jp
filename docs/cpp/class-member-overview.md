@@ -30,7 +30,7 @@ ms.locfileid: "50637919"
 
 - 演算子
 
-- [クラス宣言を入れ子になった](nested-class-declarations.md)とします)。
+- [入れ子にされたクラス宣言](nested-class-declarations.md)
 
 - [共用体](unions.md)
 
@@ -38,7 +38,7 @@ ms.locfileid: "50637919"
 
 - [ビット フィールド](../cpp/cpp-bit-fields.md)します。
 
-- [友人](../cpp/friend-cpp.md)します。
+- [friend](../cpp/friend-cpp.md)します。
 
 - [エイリアスと typedef](../cpp/aliases-and-typedefs-cpp.md)します。
 

@@ -12,5 +12,6 @@
 ## [C/C++ プロパティ (Linux)](prop-pages/c-cpp-linux.md)
 ## [リンカー プロパティ (Linux)](prop-pages/linker-linux.md)
 ## [ビルド イベント プロパティ (Linux)](prop-pages/build-events-linux.md)
-## [カスタム ビルド ステップのプロパティ (Linux)](prop-pages/custom-build-step-linux.md) 
+## [カスタム ビルド ステップのプロパティ (Linux)](prop-pages/custom-build-step-linux.md)
 ## [メイクファイル プロジェクトのプロパティ (Linux)](prop-pages/makefile-linux.md)
+## [リモート アーカイブ プロパティ (Linux)](prop-pages/remote-ar-linux.md)

@@ -23,19 +23,18 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: f51d9a3a28118d922f81a44e31c9abc610645f13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b159d5dbe434f4ce63b7b93f60aca89b51437812
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524996"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220024"
 ---
 # <a name="math-error-constants"></a>数値演算エラー定数
 
 ## <a name="syntax"></a>構文
 
 ```
-
 #include <math.h>
 ```
 
@@ -54,7 +53,7 @@ ms.locfileid: "51524996"
 |`_TLOSS`|有効桁の完全損失が発生しました。|
 |`_UNDERFLOW`|結果が小さすぎて表現できません。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [_matherr](../c-runtime-library/reference/matherr.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

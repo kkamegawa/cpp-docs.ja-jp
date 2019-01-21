@@ -1,6 +1,6 @@
 ---
 title: __alignof 演算子
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 391535d7d80b075149c797cbd00fa34d46ed677d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479496"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627460"
 ---
 # <a name="alignof-operator"></a>__alignof 演算子
 
@@ -37,7 +37,7 @@ C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配�
 
 ## <a name="remarks"></a>Remarks
 
-例えば:
+例:
 
 |正規表現|[値]|
 |----------------|-----------|
@@ -86,11 +86,11 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [/Zp (構造体メンバーの配置)](../build/reference/zp-struct-member-alignment.md)
 
-- [構造体の配置例](../build/examples-of-structure-alignment.md)(x64 固有)
+- [構造体の配置例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
 
 x86 と x64 用のコード内の配置の違いの詳細については、
 
-- [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)
+- [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
 **Microsoft 固有の仕様はここまで**
 

@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 40983509aa9c97cbbd6b778282720c45416ec525
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178097"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978258"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ のヘルプおよびコミュニティ
 
@@ -28,7 +28,7 @@ ms.locfileid: "53178097"
 |Title|説明|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Visual C++ のリファレンスと概念説明が含まれています。 MSDN ライブラリの一部です。|
-|[Windows デベロッパー センター](https://developer.microsoft.com/windows/)|C++ および他の言語を使用して Windows 8 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
+|[Windows デベロッパー センター](https://developer.microsoft.com/windows/)|C++ および他の言語を使用して Windows 10 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
 
 ### <a name="online-and-offline-documentation"></a>オンラインおよびオフラインのドキュメント
 

@@ -543,7 +543,7 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、型の count 個のオブジェクトの配列の記憶域を解放する`Type`から始まる*ptr*、呼び出して`operator delete(ptr)`します。 ポインター *ptr*が返されている前の呼び出しによって[割り当てる](#allocate)等しくを比較するアロケーター オブジェクトに**\*これ**配列を割り当てる同じサイズと型のオブジェクトです。 `deallocate` は例外をスローしません。
+メンバー関数は、型の count 個のオブジェクトの配列の記憶域を解放する`Type`から始まる*ptr*、呼び出して`operator delete(ptr)`します。 ポインター *ptr*が返されている前の呼び出しによって[割り当てる](#allocate)等しくを比較するアロケーター オブジェクトに **\*これ** 配列を割り当てる同じサイズと型のオブジェクトです。 `deallocate` は例外をスローしません。
 
 ### <a name="example"></a>例
 

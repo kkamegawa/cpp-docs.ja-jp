@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617439"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031279"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ int _setmode (
 
 **_Setmode**関数に設定*モード*により与えられたファイルの変換モード*fd*します。 渡す **_O_TEXT**として*モード*設定 (変換) をテキスト モード。 キャリッジ リターンとライン フィード (CR-LF) の組み合わせは、1 つのライン フィード文字の入力に変換されます。 ライン フィード文字は、出力時に CR-LF の組み合わせに変換されます。 渡す **_O_BINARY**バイナリ (無変換) モードを設定、これらの翻訳が抑制されます。
 
-渡すこともできます **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**このドキュメントの後半では、2 番目の例に示すように、Unicode モードを有効にします。 **_setmode**の既定の変換モードを変更するのには通常使用**stdin**と**stdout**が任意のファイルで使用することができます。 適用した場合 **_setmode**をストリームのファイル記述子、呼び出す **_setmode**入力または出力ストリームで操作を実行する前にします。
+渡すこともできます **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**このドキュメントの後半では、2 番目の例に示すように、Unicode モードを有効にします。
+
+> [!CAUTION]
+> Unicode モードがワイド印刷機能のためには (たとえば、 `wprintf`) と幅の狭いの印刷機能はサポートされていません。 Unicode モードのストリームの幅の狭い印刷関数を使用するには、アサートがトリガーされます。
+
+**_setmode**の既定の変換モードを変更するのには通常使用**stdin**と**stdout**が任意のファイルで使用することができます。 適用した場合 **_setmode**をストリームのファイル記述子、呼び出す **_setmode**入力または出力ストリームで操作を実行する前にします。
 
 > [!CAUTION]
 > データを書き込むファイル ストリームでは、明示的にフラッシュ、コードを使用して場合[fflush](fflush.md)を使用する前に **_setmode**モードを変更します。 コードをフラッシュしないと、予期しない動作が発生することがあります。 ストリームにデータを書き込んでいない場合は、コードをフラッシュする必要はありません。

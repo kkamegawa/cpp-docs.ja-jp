@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597565"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334678"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -432,7 +432,7 @@ bool binary_search(
 *last*<br/>
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*値*<br/>
+*value*<br/>
 要素の値が一致する必要がある値、または二項述語で指定された要素の値によって条件を満たす必要がある値。
 
 *comp*<br/>
@@ -3104,7 +3104,7 @@ ForwardIterator lower_bound(
 *last*<br/>
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*値*<br/>
+*value*<br/>
 順序付けられた範囲内で、最初の位置や可能な最初の位置を検索する対象の値。
 
 *comp*<br/>
@@ -5133,7 +5133,7 @@ pair<OutputIterator1, OutputIterator2>
 *dest1*<br/>
 条件は true を返す要素をコピーするために使用する出力反復子を使用してテスト *_Pred*します。
 
-*れた dest2*<br/>
+*dest2*<br/>
 使用条件の場合は false を返す要素をコピーする出力反復子を使用してテスト *_Pred*します。
 
 *_Pred*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standard-library/algorithm-functions.md#shuffle)します。 コード例と詳細については、「 [\<ランダム >](../standard-library/random.md)と Stackoverflow の投稿[理由は std::random_shuffle メソッド非推奨に c++ 14 で?](http://go.microsoft.com/fwlink/p/?linkid=397954)します。
+Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standard-library/algorithm-functions.md#shuffle)します。 コード例と詳細については、「 [\<ランダム >](../standard-library/random.md)と Stack Overflow の投稿[理由は std::random_shuffle メソッド非推奨に c++ 14 で?](http://go.microsoft.com/fwlink/p/?linkid=397954)します。
 
 ## <a name="remove"></a>  remove
 
@@ -7601,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  シャッフル
+## <a name="shuffle"></a>  shuffle
 
 乱数ジェネレーターを使用して、指定された範囲の要素をシャッフル (再配置) します。
 
@@ -7620,7 +7620,7 @@ void shuffle(RandomAccessIterator first,
 *last*<br/>
 シャッフルされる範囲 (境界を含まない) の最後の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
-*汎用*<br/>
+*gen*<br/>
 `shuffle()` 関数が操作で使用する乱数ジェネレーター。 `UniformRandomNumberGenerator` の要件を満たしている必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -8597,7 +8597,7 @@ template<class ForwardIterator, class Type, class Predicate>
 *last*<br/>
 検索する要素範囲内の最後の要素の 1 つ後ろの位置。
 
-*値*<br/>
+*value*<br/>
 返された反復子によってアドレス指定される要素の値が超える必要がある、順序付けられた範囲内の値。
 
 *comp*<br/>

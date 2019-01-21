@@ -1,4 +1,4 @@
-﻿---
+---
 title: C++ 言語リファレンス
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 69b244a1559a4570cc00a72d86426a7929ffc474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469382"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031266"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 
-このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 この体系は、Margaret Ellis と Bjarne Stroustrup による*Annotated C++ Reference Manual* および ANSI/ISO C++ 国際規格 (ISO/IEC FDIS 14882) に基づいてます。 Microsoft 固有の C++ 言語機能の実装も含まれます。
+このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 組織がに基づいて[ *The Annotated C Reference Manual* ](http://www.stroustrup.com/arm.html) Margaret Ellis と Bjarne Stroustrup と、ANSI/ISO C 国際規格 (ISO/IEC FDIS 14882)。 Microsoft 固有の C++ 言語機能の実装も含まれます。
 
 最新の C++ プログラミングの概要については、次を参照してください。[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)に戻ってください。
 

@@ -1,17 +1,17 @@
 ---
-title: '方法: 例外安全性に対応した設計をする'
+title: '方法: 例外安全性のための設計'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327006"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220553"
 ---
-# <a name="how-to-design-for-exception-safety"></a>方法: 例外安全性に対応した設計をする
+# <a name="how-to-design-for-exception-safety"></a>方法: 例外安全性のための設計
 
 例外機構の利点の 1 つは、例外をスローするステートメントから例外を処理する最初の catch ステートメントに、例外に関するデータと共に実行が直接ジャンプすることです。 ハンドラーは呼び出し履歴の何レベル上であってもかまいません。 try ステートメントと throw ステートメントの間で呼び出された関数は、スローされる例外に関して何も知る必要がありません。  ただし、例外が下から上に通知される可能性があるどの時点でも、予期せずにスコープから外れることができるように関数が設計されている必要があり、部分的に作成されたオブジェクト、リークしたメモリ、使用不能な状態のデータ構造体などが部分的に残らないようになっている必要があります。
 
@@ -95,7 +95,7 @@ public:
 
 no-fail (または no-throw) 保証は、関数が提供できる最も強力な保証です。 それは、関数が例外をスローしないか、例外の伝達を許可することを示します。 ただし、(a) この関数が呼び出すすべての関数が no-fail であることがわかっているか、(b) スローされるすべての例外がこの関数に達する前にキャッチされることがわかっているか、(c) この関数に達する可能性があるすべての例外をキャッチし正しく処理する方法がわかっている場合を除いて、確実にこのようなことを保証できません。
 
-strong 保証と basic 保証のどちらも、デストラクターが no-fail であることを前提としています。 標準ライブラリのすべてのコンテナーと型は、デストラクターが例外をスローしないことを保証します。 また、逆の要件もあります。標準ライブラリでは、テンプレート引数として渡される型など、ユーザー定義型のデストラクターが、例外をスローしないことが必要です。
+strong 保証と basic 保証のどちらも、デストラクターが no-fail であることを前提としています。 標準ライブラリのすべてのコンテナーと型は、デストラクターが例外をスローしないことを保証します。 逆の要件です。標準ライブラリは、ユーザー定義型が必要ですに指定されます: たとえば、テンプレート引数として — デストラクターをスローしない必要があります。
 
 ### <a name="strong-guarantee"></a>strong 保証
 
@@ -121,5 +121,5 @@ basic 保証は、3 つのうちで最も弱い保証です。 ただし、stron
 
 ## <a name="see-also"></a>関連項目
 
-[エラーと例外処理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[エラーと例外の処理 (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[方法: 例外と非例外的なコードの間のインターフェイスします。](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

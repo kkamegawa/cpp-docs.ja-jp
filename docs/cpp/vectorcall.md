@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507225"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627452"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Microsoft 固有の仕様**
 
-**_ _Vectorcall**呼び出し規約は、関数の引数には、可能であればレジスタで渡されることを指定します。 **_ _vectorcall**の引数よりも多くレジスタを使用して[_ _fastcall](../cpp/fastcall.md)または既定[x64 呼び出し規則](../build/overview-of-x64-calling-conventions.md)を使用します。 **_ _Vectorcall**呼び出し規約がストリーミング SIMD 拡張命令 2 (SSE2) を含む x86 および x64 プロセッサ上のネイティブ コードでサポートされているだけです。 使用 **_ _vectorcall**レジスタに読み込まれる関数を渡す複数の浮動小数点または SIMD ベクターの引数を高速化し、引数を利用する操作を実行します。 次の一覧の x86 と x64 の実装に共通する機能を示しています。 **_ _vectorcall**します。 相違点については、このトピックで後ほど説明します。
+**_ _Vectorcall**呼び出し規約は、関数の引数には、可能であればレジスタで渡されることを指定します。 **_ _vectorcall**の引数よりも多くレジスタを使用して[_ _fastcall](../cpp/fastcall.md)または既定[x64 呼び出し規則](../build/x64-calling-convention.md)を使用します。 **_ _Vectorcall**呼び出し規約がストリーミング SIMD 拡張命令 2 (SSE2) を含む x86 および x64 プロセッサ上のネイティブ コードでサポートされているだけです。 使用 **_ _vectorcall**レジスタに読み込まれる関数を渡す複数の浮動小数点または SIMD ベクターの引数を高速化し、引数を利用する操作を実行します。 次の一覧の x86 と x64 の実装に共通する機能を示しています。 **_ _vectorcall**します。 相違点については、このトピックで後ほど説明します。
 
 |要素|実装|
 |-------------|--------------------|

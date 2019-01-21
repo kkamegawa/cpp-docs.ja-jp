@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638231"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587890"
 ---
 # <a name="opt-optimizations"></a>/OPT (最適化)
 
@@ -67,7 +67,7 @@ LINK がビルド時に実行する最適化を制御します。
 
 ## <a name="remarks"></a>Remarks
 
-コマンドラインで使用する場合、リンカー既定 **/OPT:REF、ICF、LBR**します。 場合 **/debug**を指定すると、既定値は **/OPT:NOREF、NOICR、NOLBR**します。
+コマンドラインで使用する場合、リンカー既定 **/OPT:REF、ICF、LBR**します。 場合 **/debug**を指定すると、既定値は **/OPT:NOREF、NOICF、NOLBR**します。
 
 **/Opt**最適化は一般にイメージのサイズを小さくと、プログラムの実行速度を向上します。 これらの機能強化は、製品版ビルドの既定で有効になっている理由で大規模なプログラムは、大幅なでができます。
 
