@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500413"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894147"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -109,7 +109,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::DelTool](#deltool)|ツール ヒント コントロールからツールを削除します。|
 |[CToolTipCtrl::GetBubbleSize](#getbubblesize)|ツール ヒントのサイズを取得します。|
 |[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|サイズ、位置、および現在のツール ヒント コントロールを表示するツールヒント ウィンドウのテキストなどの情報を取得します。|
-|[については](#getdelaytime)|初期、ポップアップで、再表示必要時間を取得する期間のツールは、現在設定されているコントロールのヒントします。|
+|[CToolTipCtrl::GetDelayTime](#getdelaytime)|初期、ポップアップで、再表示必要時間を取得する期間のツールは、現在設定されているコントロールのヒントします。|
 |[CToolTipCtrl::GetMargin](#getmargin)|上、左、下、およびツール ヒントのウィンドウに設定されている右の余白を取得します。|
 |[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|ツール ヒント ウィンドウの最大幅を取得します。|
 |[CToolTipCtrl::GetText](#gettext)|ツールは、ツール ヒント コントロールを保持するテキストを取得します。|
@@ -287,7 +287,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 
 構築する、`CToolTipCtrl`で 2 つの手順。 最初に、構築するコンス トラクターを呼び出し、`CToolTipCtrl`オブジェクトを呼び出して`Create`をツール ヒント コントロールを作成し、アタッチ先、`CToolTipCtrl`オブジェクト。
 
-*DwStyle*パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 さらに、ツール ヒント コントロールは、2 つのクラスに固有のスタイル: TTS_ALWAYSTIP と TTS_NOPREFIX します。
+*DwStyle*パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 さらに、ツール ヒント コントロールでは、2 つのクラスに固有のスタイルがあります。TTS_ALWAYSTIP TTS_NOPREFIX.
 
 |スタイル|説明|
 |-----------|-------------|
@@ -376,7 +376,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*返すとき*<br/>
+*lpToolInfo*<br/>
 ツール ヒントへのポインター [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*返すとき*|[out]ポインターを[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)現在ツールヒント ウィンドウに関する情報を受け取る構造体。|
+|*lpToolInfo*|[out]ポインターを[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)現在ツールヒント ウィンドウに関する情報を受け取る構造体。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -415,7 +415,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]
 
-##  <a name="getdelaytime"></a>  については
+##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime
 
 初期のポップアップ ウィンドウを取得し、表示、ツール ヒント コントロールに現在設定されています。
 
@@ -619,7 +619,7 @@ BOOL HitTest(
 *pt*<br/>
 ポインターを`CPoint`をテストする点の座標を格納しているオブジェクト。
 
-*返すとき*<br/>
+*lpToolInfo*<br/>
 ポインター [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)ツールに関する情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>パラメーター
 
 *lpMsg*<br/>
-ポインターを[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)リレーにメッセージを含む構造体。
+ポインターを[MSG](/windows/desktop/api/winuser/ns-winuser-msg)リレーにメッセージを含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -823,7 +823,7 @@ BOOL SetTitle(
 *uIcon*<br/>
 参照してください*アイコン*で[TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) Windows SDK に含まれています。
 
-*キャプションを表示*<br/>
+*lpstrTitle*<br/>
 タイトル文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -844,7 +844,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*返すとき*<br/>
+*lpToolInfo*<br/>
 ポインターを[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)設定情報を指定する構造体。
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect

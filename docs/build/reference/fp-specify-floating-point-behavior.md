@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597539"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894095"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (浮動小数点の動作を指定してください)
 
@@ -24,7 +24,7 @@ ms.locfileid: "51597539"
 
 ## <a name="syntax"></a>構文
 
-> **/fp:**[**正確な** | **strict** | **高速** | **を除く**[**-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>引数
 
@@ -71,13 +71,13 @@ ms.locfileid: "51597539"
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>浮動小数点の動作を制御するプラグマを使用します。
 
-コンパイラが提示する、コマンドラインで指定された浮動小数点の動作をオーバーライドする次の 3 つのプラグマ directivess: [float_control](../../preprocessor/float-control.md)、 [fenv_access](../../preprocessor/fenv-access.md)、および[fp_contract](../../preprocessor/fp-contract.md). これらのプラグマを使用して、関数内ではなく、関数レベルでの浮動小数点の動作を制御することができます。 これらのプラグマに直接対応しないことに注意してください、 **/fp**オプション。 この表の方法、 **/fp**オプションやプラグマが相互にマップします。 詳細については、個々 のオプションとプラグマのマニュアルを参照してください。
+コンパイラが提示する、コマンドラインで指定された浮動小数点の動作をオーバーライドする次の 3 つのプラグマ ディレクティブ: [float_control](../../preprocessor/float-control.md)、 [fenv_access](../../preprocessor/fenv-access.md)、および[fp_contract](../../preprocessor/fp-contract.md). これらのプラグマを使用して、関数内ではなく、関数レベルでの浮動小数点の動作を制御することができます。 これらのプラグマに直接対応しないことに注意してください、 **/fp**オプション。 この表の方法、 **/fp**オプションやプラグマが相互にマップします。 詳細については、個々 のオプションとプラグマのマニュアルを参照してください。
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
 |**/fp:fast**|オフ|オフ|オフ|日付|
-|**/fp: 正確な**|日付|オフ|オフ|日付|
-|**/fp: 以外**|日付|日付|日付|オフ|
+|**/fp:precise**|日付|オフ|オフ|日付|
+|**/fp:strict**|日付|日付|日付|オフ|
 
 ### <a name="the-default-floating-point-environment"></a>既定の浮動小数点環境
 

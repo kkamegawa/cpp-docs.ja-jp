@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570613"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893523"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ ms.locfileid: "50570613"
 (省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/desktop/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *custom*<br/>
-(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
+(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -101,11 +101,11 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)として使用されます。
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)として使用されます。
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)として使用されます。
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)として使用されます。
 
 - `type` = **unspecified**
 

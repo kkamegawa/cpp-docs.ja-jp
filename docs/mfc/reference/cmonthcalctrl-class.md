@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509592"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894199"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl クラス
 
@@ -147,7 +147,7 @@ class CMonthCalCtrl : public CWnd
 |[CMonthCalCtrl::SetCenturyView](#setcenturyview)|2 桁の年のビューを表示する現在の月のカレンダー コントロールを設定します。|
 |[CMonthCalCtrl::SetColor](#setcolor)|月間予定表コントロールの指定した領域の色を設定します。|
 |[CMonthCalCtrl::SetCurrentView](#setcurrentview)|指定されたビューを表示する現在の月のカレンダー コントロールを設定します。|
-|[か](#setcursel)|月間予定表コントロールの現在選択されている日付を設定します。|
+|[CMonthCalCtrl::SetCurSel](#setcursel)|月間予定表コントロールの現在選択されている日付を設定します。|
 |[CMonthCalCtrl::SetDayState](#setdaystate)|月間予定表コントロールでの日付の表示を設定します。|
 |[CMonthCalCtrl::SetDecadeView](#setdecadeview)|10 年のビューに現在の月のカレンダー コントロールを設定します。|
 |[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|予定表の左端の列に表示する曜日を設定します。|
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 参照を[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。 現在の時刻を受け取ります。
 
 *pDateTime*<br/>
-ポインターを[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)現在選択されている日付の情報を受け取る構造体。 このパラメーターは、有効なアドレスである必要があります、NULL にすることはできません。
+ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)現在選択されている日付の情報を受け取る構造体。 このパラメーターは、有効なアドレスである必要があります、NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -579,9 +579,9 @@ int GetMonthRange(
 参照を`COleDateTime`または`CTime`使用できる最大の日付を含むオブジェクト。
 
 *pMinRange*<br/>
-ポインターを[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)範囲の最下位の最後に日付を含む構造体。
+ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*整数*<br/>
+*pMaxRange*<br/>
 ポインター、`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 *dwFlags*<br/>
@@ -594,7 +594,7 @@ int GetMonthRange(
 
 ### <a name="return-value"></a>戻り値
 
-によって示される 2 つの制限により展開されるか月で、範囲を表す整数を*refMinRange*と*refMaxRange*最初と 2 番目のバージョン、または*pMinRange**整数*で 3 番目のバージョン。
+によって示される 2 つの制限により展開されるか月で、範囲を表す整数を *refMinRange* と *refMaxRange* 最初と 2 番目のバージョン、または*pMinRange* *整数* で 3 番目のバージョン。
 
 ### <a name="remarks"></a>Remarks
 
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>パラメーター
 
 *pMinRange*<br/>
-ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)範囲の最下位の最後に日付を含む構造体。
+ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*整数*<br/>
-ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)範囲の最上位の最後に日付を含む構造体。
+*pMaxRange*<br/>
+ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -674,9 +674,9 @@ BOOL GetSelRange(
 参照を`COleDateTime`または`CTime`使用できる最大の日付を含むオブジェクト。
 
 *pMinRange*<br/>
-ポインターを[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)範囲の最下位の最後に日付を含む構造体。
+ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*整数*<br/>
+*pMaxRange*<br/>
 ポインター、`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 参照を[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)または[CTime](../../atl-mfc-shared/reference/ctime-class.md)現在の日付を示すオブジェクト。
 
 *pDateTime*<br/>
-ポインターを[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)日付情報を受け取る構造体。 このパラメーターは、有効なアドレスである必要があります、NULL にすることはできません。
+ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)日付情報を受け取る構造体。 このパラメーターは、有効なアドレスである必要があります、NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwNewView*|[in]毎月、毎年、10 年間、または 2 桁の年のビューを指定する値は次のいずれか。<br /><br /> MCMV_MONTH: 月単位ビュー<br /><br /> MCMV_YEAR: 年のビュー<br /><br /> MCMV_DECADE: 10 年のビュー<br /><br /> MCMV_CENTURY: 2 桁の年のビュー|
+|*dwNewView*|[in]毎月、毎年、10 年間、または 2 桁の年のビューを指定する値は次のいずれか。<br /><br /> MCMV_MONTH:月単位ビュー<br /><br /> MCMV_YEAR:年のビュー<br /><br /> MCMV_DECADE:10 年のビュー<br /><br /> MCMV_CENTURY:2 桁の年のビュー|
 
 ### <a name="return-value"></a>戻り値
 
@@ -963,7 +963,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 このメソッドは、送信、 [MCM_SETCURRENTVIEW](/windows/desktop/Controls/mcm-setcurrentview)メッセージは、Windows SDK で説明します。
 
-##  <a name="setcursel"></a>  か
+##  <a name="setcursel"></a>  CMonthCalCtrl::SetCurSel
 
 月間予定表コントロールの現在選択されている日付を設定します。
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 参照を[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)または[CTime](../../atl-mfc-shared/reference/ctime-class.md)現在選択されている月のカレンダー コントロールを示すオブジェクト。
 
 *pDateTime*<br/>
-ポインターを[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)を現在の選択項目として設定する日付を含む構造体。
+ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)を現在の選択項目として設定する日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1164,9 +1164,9 @@ BOOL SetRange(
 ### <a name="parameters"></a>パラメーター
 
 *pMinRange*<br/>
-ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)範囲の最下位の最後に日付を含む構造体。
+ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*整数*<br/>
+*pMaxRange*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1202,9 +1202,9 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>パラメーター
 
 *pMinRange*<br/>
-ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)範囲の最下位の最後に日付を含む構造体。
+ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*整数*<br/>
+*pMaxRange*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 参照を[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)現在の日付を格納しているオブジェクト。
 
 *pDateTime*<br/>
-2 番目のバージョンへのポインターで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)現在の日付情報を含むオブジェクト。 3 番目のバージョンへのポインターを[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)現在の日付情報を含む構造体。
+2 番目のバージョンへのポインターで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)現在の日付情報を含むオブジェクト。 3 番目のバージョンへのポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)現在の日付情報を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 

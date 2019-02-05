@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613971"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417604"
 ---
 # <a name="remove-wremove"></a>remove、_wremove
 
@@ -59,7 +59,7 @@ int _wremove(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 -1 を返しますそれ以外の場合、設定と**errno**いずれかに**EACCES**読み取り専用ファイルを指定するパスまたはファイルを開いて、または**ENOENT**ことを示すために、ファイル名またはパスが見つからなかったか、パスがディレクトリを指定します。
+ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 -1 を返しますそれ以外の場合、設定と**errno**いずれかに**EACCES**をパスが読み取り専用ファイルを指定することを示すために、ディレクトリを指定しますまたは、開いているファイルまたは**ENOENT** 。ファイル名またはパスが見つからなかったことを示します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 

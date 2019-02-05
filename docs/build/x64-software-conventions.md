@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: eea2059a8c06a8ba4d032b87fb41d7d51bc8eac2
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627306"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702069"
 ---
 # <a name="x64-software-conventions"></a>x64 ソフトウェア規約
 
@@ -52,7 +52,7 @@ X86 および x64 の 2 つの重要な違いは、64 ビットのアドレス�
 |**INT16**|**short**|2|Word|
 |**UINT16**|**unsigned short**|2|Word|
 |**INT32**|**int**、**長**|4|ダブルワード|
-|**UINT32**|**符号なし int、unsigned long**|4|ダブルワード|
+|**UINT32**|**unsigned int, unsigned long**|4|ダブルワード|
 |**INT64**|**__int64**|8|Quadword|
 |**UINT64**|**unsigned __int64**|8|Quadword|
 |**FP32 (単一の有効桁数)**|**float**|4|ダブルワード|
@@ -87,7 +87,7 @@ X86 および x64 の 2 つの重要な違いは、64 ビットのアドレス�
 |**INT16**|**short**|Word|
 |**UINT16**|**unsigned short**|Word|
 |**INT32**|**int**、**長**|ダブルワード|
-|**UINT32**|**符号なし int、unsigned long**|ダブルワード|
+|**UINT32**|**unsigned int, unsigned long**|ダブルワード|
 |**INT64**|**__int64**|Quadword|
 |**UINT64**|**unsigned __int64**|Quadword|
 |**FP32 (単一の有効桁数)**|**float**|ダブルワード|
@@ -141,7 +141,7 @@ _declspec(align(8)) struct {
 #### <a name="example-3"></a>例 3
 
 ```C
-// Total size = 22 bytes, alignment = 4 bytes (doubleword).
+// Total size = 12 bytes, alignment = 4 bytes (doubleword).
 
 _declspec(align(4)) struct {
     char a;       // +0; size = 1 byte

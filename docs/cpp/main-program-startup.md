@@ -1,5 +1,5 @@
 ---
-title: 'main: プログラムの起動'
+title: メイン。プログラムの起動
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603282"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894303"
 ---
-# <a name="main-program-startup"></a>main: プログラムの起動
+# <a name="main-program-startup"></a>メイン。プログラムの起動
 
 という名前の特殊な関数**メイン**はすべての C および C++ プログラムの実行の開始ポイントです。 Unicode プログラミング モデルに準拠するコードを記述する場合は、使用できます`wmain`のワイド文字バージョンである**メイン**します。
 
@@ -37,7 +37,7 @@ int main();
 int main(int argc, char *argv[], char *envp[]);
 ```
 
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様 →
+## <a name="microsoft-specific"></a>Microsoft 固有の仕様
 
 `wmain` の宣言構文は次のとおりです。
 
@@ -51,7 +51,7 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-TCHAR.h で定義されている `_tmain` を使用することもできます。 `_tmain` 解決される**メイン**_UNICODE が定義されていない場合。 定義されている場合、`_tmain` は `wmain` に解決されます。
+使用することも`_tmain`tchar.h で定義されています。 `_tmain` 解決される**メイン**_UNICODE が定義されていない場合。 定義されている場合、`_tmain` は `wmain` に解決されます。
 
 または、**メイン**と`wmain`返すように関数を宣言できます**void** (戻り値はありません)。 宣言する場合**メイン**または`wmain`返すよう**void**を使用して、親プロセスまたはオペレーティング システムに終了コードを返すことはできません、[返す](../cpp/return-statement-in-program-termination-cpp.md)ステートメント。 返される、ときに終了コード**メイン**または`wmain`として宣言されている**void**、使用する必要があります、[終了](../cpp/exit-function.md)関数。
 

@@ -3,12 +3,12 @@ title: '方法: アクティブ化し、WRL を使用した Windows ランタイ
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 4b8ce40e6c28f952596cab48848873be91b73c95
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: ccc64769ca319e8aba141ce95a00eb876cc051f3
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336517"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893965"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>方法: アクティブ化し、WRL を使用した Windows ランタイム コンポーネントを使用します。
 
@@ -36,7 +36,7 @@ Windows ランタイム C++ テンプレート ライブラリを Windows ラン
 
    コードを読みやすくするために、.cpp ファイルでは `using namespace` ディレクティブを使用することをお勧めします。
 
-2. アプリが実行されるスレッドを初期化します。 すべてのアプリケーションでスレッドとスレッド モデルを初期化する必要があります。 この例では、 [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) Windows ランタイムを初期化するためにクラスを指定します[RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx)スレッド モデルとして。 `RoInitializeWrapper` クラスでは、構築時に `Windows::Foundation::Initialize` を呼び出し、破棄時に `Windows::Foundation::Uninitialize` を呼び出します。
+2. アプリが実行されるスレッドを初期化します。 すべてのアプリケーションでスレッドとスレッド モデルを初期化する必要があります。 この例では、 [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) Windows ランタイムを初期化するためにクラスを指定します[RO_INIT_MULTITHREADED](/windows/desktop/api/roapi/ne-roapi-ro_init_type)スレッド モデルとして。 `RoInitializeWrapper` クラスでは、構築時に `Windows::Foundation::Initialize` を呼び出し、破棄時に `Windows::Foundation::Uninitialize` を呼び出します。
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -66,7 +66,7 @@ Windows ランタイム C++ テンプレート ライブラリを Windows ラン
 
    [!code-cpp[wrl-consume-component#9](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx)関数は、URI 文字列の基になる Unicode 形式を取得します。
+   [WindowsGetStringRawBuffer](/windows/desktop/api/winstring/nf-winstring-windowsgetstringrawbuffer)関数は、URI 文字列の基になる Unicode 形式を取得します。
 
 完全な例を次に示します。
 

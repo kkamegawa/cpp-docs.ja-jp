@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597484"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893302"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
@@ -62,7 +62,7 @@ void _endthreadex(
 > [!NOTE]
 > Libcmt.lib にリンクする実行可能ファイルでは、Win32 の [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API を呼び出さないでください。呼び出すと、割り当てられたリソースをランタイム システムで再利用することができなくなります。 **_endthread**と **_endthreadex**割り当てられているスレッド リソースを解放し、呼び出す**ExitThread**します。
 
-**_endthread**スレッド ハンドルを自動的に終了します。 (この動作は、Win32 **ExitThread** API です)。したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。
+**_endthread**スレッド ハンドルを自動的に終了します。 (この動作は、Win32 **ExitThread** API です)。したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API。
 
 などの Win32 **ExitThread** API、 **_endthreadex**スレッド ハンドルを終了できません。 したがって、使用 **_beginthreadex**と **_endthreadex**、Win32 を呼び出してスレッド ハンドルを閉じる必要があります**CloseHandle** API。
 

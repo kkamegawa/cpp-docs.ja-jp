@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570457"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893354"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr クラス
 
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-特定の要素への参照、 [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530)一覧。
+特定の要素への参照、 [addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)一覧。
 
 ### <a name="return-value"></a>戻り値
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>戻り値
 
-1 つまたは複数のリンク リストへのポインター`addrinfo`応答については、ホストを含む構造体。 詳細については、次を参照してください。 [addrinfo 構造](https://msdn.microsoft.com/library/windows/desktop/ms737530)します。
+1 つまたは複数のリンク リストへのポインター`addrinfo`応答については、ホストを含む構造体。 詳細については、次を参照してください。 [addrinfo 構造](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)します。
 
 ## <a name="see-also"></a>関連項目
 

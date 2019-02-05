@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031292"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702909"
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -82,7 +82,7 @@ FILE *_wfopen(
 
 **fopen** Unicode のファイル ストリームをサポートしています。 Unicode ファイルを開くには、渡す、 **ccs**に目的のエンコーディングを指定するフラグ**fopen**、次のようにします。
 
-> **ファイル*fp = fopen ("newfile.txt"、"rt + ccs =**_エンコード_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 値を許可*エンコード*は**UNICODE**、 **utf-8**、および**UTF 16LE**します。
 
@@ -156,7 +156,7 @@ Unicode モードで書き込むように開かれたファイルには、自動
 | **R** | キャッシュがディスクからのランダム アクセスに最適化されるように指定します。ただし、ランダム アクセスに限定されるわけではありません。 |
 | **T** | ファイルを一時ファイルとして指定します。 可能な場合、ファイルはディスクにフラッシュされません。 |
 | **D** | ファイルを一時ファイルとして指定します。 最後のファイル ポインターが閉じられると、ファイルは削除されます。 |
-| **ccs =**_エンコード_ | 使用する設定でエンコードされた文字を指定します (いずれかの**utf-8**、 **UTF 16LE**、または**UNICODE**) このファイル。 何も指定しない場合は、ANSI エンコーディングが使用されます。 |
+| **ccs=**_encoding_ | 使用する設定でエンコードされた文字を指定します (いずれかの**utf-8**、 **UTF 16LE**、または**UNICODE**) このファイル。 何も指定しない場合は、ANSI エンコーディングが使用されます。 |
 
 有効な文字は、*モード*で使用される文字列**fopen**と **_fdopen**に対応して*oflag* で使用される引数[_open](open-wopen.md)と[_sopen](sopen-wsopen.md)、次のようにします。
 
@@ -165,7 +165,7 @@ Unicode モードで書き込むように開かれたファイルには、自動
 |**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (通常は **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
 |**+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (通常は **\_O\_RDWR** &#124;  **\_O\_APPEND** &#124;  **\_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (通常は **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
 |**w +**|**\_O\_RDWR** (通常は **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
 |**b**|**\_O\_バイナリ**|
@@ -176,9 +176,9 @@ Unicode モードで書き込むように開かれたファイルには、自動
 |**R**|**\_O\_ランダム**|
 |**T**|**\_O\_SHORTLIVED**|
 |**D**|**\_O\_一時**|
-|**ccs = UNICODE**|**\_O\_WTEXT**|
-|**ccs utf-8 を =**|**\_O\_UTF8**|
-|**ccs UTF 16LE を =**|**\_O\_UTF16**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 使用する場合**rb**モードで、コードを移植する必要がある、メモリを使用するオプションとしての Win32 ファイルをマップするかどうかを検討する大きなファイルのほとんどを読み取るするか、またはネットワークのパフォーマンスに心配がない場合も可能性があります。
 

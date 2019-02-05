@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178526"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894342"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 
@@ -314,7 +314,7 @@ DWORD GetRange(
 *pMinRange*<br/>
 ポインターを[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトで許可されている最も早い時刻を含む、`CDateTimeCtrl`オブジェクト。
 
-*整数*<br/>
+*pMaxRange*<br/>
 ポインターを`COleDateTime`オブジェクトまたは`CTime`オブジェクトで許可されている最新の時刻を含む、`CDateTimeCtrl`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 最初のバージョンへの参照を[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)システム時刻の情報を受け取るオブジェクト。 2 番目のバージョンへの参照で、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)システム時刻の情報を受け取るオブジェクト。
 
 *pTimeDest*<br/>
-ポインター、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)システム時刻の情報を受け取る構造体。 NULL は指定できません。
+ポインター、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)システム時刻の情報を受け取る構造体。 NULL は指定できません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -552,7 +552,7 @@ BOOL SetRange(
 *pMinRange*<br/>
 ポインターを[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトで許可されている最も早い時刻を含む、`CDateTimeCtrl`オブジェクト。
 
-*整数*<br/>
+*pMaxRange*<br/>
 ポインターを`COleDateTime`オブジェクトまたは`CTime`オブジェクトで許可されている最新の時刻を含む、`CDateTimeCtrl`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 参照を[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトを含む、コントロールを設定します。
 
 *pTimeNew*<br/>
-2 番目のバージョンへのポインターの上で、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)コントロールを設定する時刻を含むオブジェクト。 3 番目のバージョンへのポインターの上で、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)コントロールを設定する時刻を含む構造体。
+2 番目のバージョンへのポインターの上で、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)コントロールを設定する時刻を含むオブジェクト。 3 番目のバージョンへのポインターの上で、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)コントロールを設定する時刻を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 

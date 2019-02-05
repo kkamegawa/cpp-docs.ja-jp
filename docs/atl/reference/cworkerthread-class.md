@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532003"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893458"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread クラス
 
@@ -54,7 +54,7 @@ class CWorkerThread
 |名前|説明|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|ワーカー スレッドのコンス トラクターです。|
-|[CWorkerThread:: ~ CWorkerThread](#dtor)|ワーカー スレッドのデストラクターです。|
+|[CWorkerThread::~CWorkerThread](#dtor)|ワーカー スレッドのデストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -111,7 +111,7 @@ HRESULT AddHandle(
 *pClient*<br/>
 ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナル通知されたときに呼び出されるオブジェクトのインターフェイス。
 
-*について*<br/>
+*dwParam*<br/>
 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナル通知されたとき。
 
 ### <a name="return-value"></a>戻り値
@@ -142,7 +142,7 @@ HRESULT AddTimer(
 *pClient*<br/>
 ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナル通知されたときに呼び出されるオブジェクトのインターフェイス。
 
-*について*<br/>
+*dwParam*<br/>
 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナル通知されたとき。
 
 *phTimer*<br/>
@@ -166,7 +166,7 @@ HRESULT AddTimer(
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread
+##  <a name="dtor"></a>  CWorkerThread::~CWorkerThread
 
 デストラクターです。
 
@@ -248,7 +248,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="remarks"></a>Remarks
 
-ハンドルが削除されたとき[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)に渡された関連付けられているオブジェクトで呼び出される[AddHandle](#addhandle)します。 この呼び出しが失敗した場合、 `CWorkerThread` 、Windows を呼び出す[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)関数のハンドル。
+ハンドルが削除されたとき[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)に渡された関連付けられているオブジェクトで呼び出される[AddHandle](#addhandle)します。 この呼び出しが失敗した場合、 `CWorkerThread` 、Windows を呼び出す[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle)関数のハンドル。
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 
@@ -260,7 +260,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*内部*<br/>
+*dwWait*<br/>
 ワーカー スレッドをシャット ダウンするを待機するミリ秒単位の時間。 ATL_WORKER_THREAD_WAIT の既定値は 10 秒です。 Atlutil.h する前に、必要に応じて、このシンボルは、独自の値を定義できます。
 
 ### <a name="return-value"></a>戻り値
@@ -277,5 +277,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [クラス](../../atl/reference/atl-classes.md)<br/>
-[マルチスレッド: ワーカー スレッドの生成](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[マルチ スレッド。ワーカー スレッドを作成します。](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient インターフェイス](../../atl/reference/iworkerthreadclient-interface.md)

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694180"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893861"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
 *lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)します。
+[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-リソース スクリプトの編集の詳細については、次を参照してください。[方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK の下: SDK Tools。
+リソース スクリプトの編集の詳細については、次を参照してください。[方法。テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK の下。SDK Tools。
 
 [全般] ダイアログ ボックスの詳細についてを参照してください[DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa)と[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK にします。
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
 *lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)します。
+[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
@@ -162,7 +162,7 @@ ATLAPI AtlAxCreateControl(
 
 - などの URL"<http://www.microsoft.com>"
 
-- などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
 
 - などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
 
@@ -214,7 +214,7 @@ ATLAPI AtlAxCreateControlEx(
 
 - などの URL"<http://www.microsoft.com>"
 
-- などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
 
 - などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
 
@@ -273,7 +273,7 @@ ATLAPI AtlAxCreateControlLic(
 
 - などの URL"<http://www.microsoft.com>"
 
-- などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
 
 - などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
 
@@ -327,7 +327,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 - などの URL"<http://www.microsoft.com>"
 
-- などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
 
 - などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
 

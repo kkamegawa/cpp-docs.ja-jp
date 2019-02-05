@@ -1,9 +1,10 @@
 ---
-title: strcpy_s、wcscpy_s、_mbscpy_s
-ms.date: 03/22/2086
+title: strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
+ms.date: 01/22/2019
 apiname:
 - wcscpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - strcpy_s
 apilocation:
 - msvcrt.dll
@@ -22,30 +23,32 @@ apitype: DLLExport
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - _tcscpy_s
 - wcscpy_s
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
 - _mbscpy_s function
+- _mbscpy_s_l function
 - copying strings
 - strings [C++], copying
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616607"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702714"
 ---
-# <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
+# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
 文字列をコピーします。 これらのバージョンの [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されました。
 
 > [!IMPORTANT]
-> **_mbscpy_s** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscpy_s**と **_mbscpy_s_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -64,6 +67,12 @@ errno_t _mbscpy_s(
    unsigned char *dest,
    rsize_t dest_size,
    const unsigned char *src
+);
+errno_t _mbscpy_s_l(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src,
+   _locale_t locale
 );
 ```
 
@@ -84,6 +93,12 @@ errno_t _mbscpy_s(
    unsigned char (&dest)[size],
    const unsigned char *src
 ); // C++ only
+template <size_t size>
+errno_t _mbscpy_s_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -96,6 +111,9 @@ errno_t _mbscpy_s(
 
 *src*<br/>
 null で終わる元の文字列バッファー。
+
+*locale*<br/>
+使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
@@ -113,7 +131,7 @@ null で終わる元の文字列バッファー。
 
 **Strcpy_s**関数のアドレスの内容をコピーする*src*で指定された場所に、終端の null 文字を含む*dest*します。 コピー先の文字列には、コピー元の文字列とその終端の NULL 文字を保持できるサイズが必要です。 動作**strcpy_s**元とコピー先文字列が重なり合う場合は定義されません。
 
-**wcscpy_s**のワイド文字バージョンは、 **strcpy_s**、および **_mbscpy_s**マルチバイト文字バージョンです。 引数**wcscpy_s**はワイド文字列 **_mbscpy_s**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**wcscpy_s**のワイド文字バージョンは、 **strcpy_s**、および **_mbscpy_s**マルチバイト文字バージョンです。 引数**wcscpy_s**はワイド文字列 **_mbscpy_s**と **_mbscpy_s_l**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。 **_mbscpy_s_l**ヲェヒェケェ ・ **_mbscpy_s**を現在のロケールの代わりに渡されたロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 場合*dest*または*src*が null ポインターの場合は、変換先の文字列サイズまたは*dest_size* 」の説明に従って、小さすぎる、無効なパラメーターハンドラーが呼び出されますが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**とき*dest*または*src* null ポインターの場合は、返される**ERANGE**設定と**errno**に**ERANGE**コピー先文字列が小さすぎる場合。
 
@@ -205,8 +223,8 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) <br/>
-[strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strcat、wcscat、_mbscat、_mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcmp、wcscmp、_mbscmp、_mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>

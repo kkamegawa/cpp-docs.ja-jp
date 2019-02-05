@@ -508,7 +508,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 場合*\_メタ* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*)。 この関数は、さまざまな方法で要素を戻すことができます。
+プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 場合 *\_メタ* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*)。 この関数は、さまざまな方法で要素を戻すことができます。
 
 - 戻り位置が使用してに格納されている要素が等しい場合`ch`、入力バッファーのネクスト ポインターをデクリメントできます。
 

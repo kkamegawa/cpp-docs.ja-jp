@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662411"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894498"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind クラス
 
@@ -64,7 +64,7 @@ class CGopherFileFind : public CFileFind
 |[CGopherFileFind::GetLastAccessTime](#getlastaccesstime)|指定したファイルの最終アクセス時刻を取得します。|
 |[CGopherFileFind::GetLastWriteTime](#getlastwritetime)|指定したファイルに最後に書き込んだ時刻を取得します。|
 |[CGopherFileFind::GetLength](#getlength)|(バイト単位)、見つかったファイルの長さを取得します。|
-|[なった](#getlocator)|取得、`CGopherLocator`オブジェクト。|
+|[CGopherFileFind::GetLocator](#getlocator)|取得、`CGopherLocator`オブジェクト。|
 |[CGopherFileFind::GetScreenName](#getscreenname)|Gopher 画面の名前を取得します。|
 |[CGopherFileFind::IsDots](#isdots)|ファイルを反復処理中に現在のディレクトリとその親ディレクトリ マーカーをテストします。|
 
@@ -118,12 +118,12 @@ explicit CGopherFileFind(
 *pConnection*<br/>
 ポインターを[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)オブジェクト。
 
-*独自*<br/>
+*dwContext*<br/>
 操作のコンテキストの識別子。 参照してください**解説**の詳細については*独自*します。
 
 ### <a name="remarks"></a>Remarks
 
-既定値*独自*に MFC によって送信される、`CGopherFileFind`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CGopherFileFind`オブジェクト。 構築する際に、`CGopherFileFind`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+既定値*独自*に MFC によって送信される、`CGopherFileFind`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CGopherFileFind`オブジェクト。 構築する際に、`CGopherFileFind`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>パラメーター
 
 *pTimeStamp*<br/>
-ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルが作成された時刻を含む構造体。
+ポインターを[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)ファイルが作成された時刻を含む構造体。
 
 *refTime*<br/>
 参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。
 
 *pTimeStamp*<br/>
-ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終アクセス時刻を含む構造体。
+ポインターを[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)ファイルの最終アクセス時刻を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>パラメーター
 
 *pTimeStamp*<br/>
-ポインターを[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終書き込み時刻を含む構造体。
+ポインターを[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)ファイルの最終書き込み時刻を含む構造体。
 
 *refTime*<br/>
 参照を[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。
@@ -286,7 +286,7 @@ virtual ULONGLONG GetLength() const;
 
   例をご覧ください[結び付けてその中](../../mfc/reference/cfile-class.md#getlength)(基本クラスの実装)。
 
-##  <a name="getlocator"></a>  なった
+##  <a name="getlocator"></a>  CGopherFileFind::GetLocator
 
 取得するには、このメンバー関数を呼び出す、 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトを[FindFile](#findfile)を使用して、gopher ファイルを検索します。
 

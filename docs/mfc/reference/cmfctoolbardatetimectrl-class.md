@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: 570611c335130039495b13624737b820144cb7f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1252f97a93e67348a00c9809e3f216d4ed63c4d8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545835"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893680"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl クラス
 
@@ -87,7 +87,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|日付と時刻の選択コントロールへのポインターを返します。|
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|ツール バー ボタンに関連付けられているウィンドウ ハンドルを取得します。 (上書き[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd))。|
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|日付と時刻の選択コントロールから選択した時間を取得し、指定した[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。|
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|日付と時刻の選択コントロールから選択した時間を取得し、指定した[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体。|
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|指定したコマンド ID を持つ日時指定コントロールのボタンから選択した時間を返します。|
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|ユーザーがボタンを選択したときに、ボタンの境界線を表示するかどうかを判断します。 (上書き[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder))。|
 |[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|ボタンを処理するかどうかを指定します、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ。 (上書き[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand))。|
@@ -110,7 +110,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ## <a name="remarks"></a>Remarks
 
-日付と時刻の選択コントロールを使用する方法の例は、ToolbarDateTimePicker サンプル プロジェクトを参照してください。 ツールバーにコントロール ボタンを追加する方法については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。
+日付と時刻の選択コントロールを使用する方法の例は、ToolbarDateTimePicker サンプル プロジェクトを参照してください。 ツールバーにコントロール ボタンを追加する方法については、次を参照してください。[チュートリアル。コントロールのツールバーに追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -269,7 +269,7 @@ virtual HWND GetHwnd();
 
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime
 
-関連付けられている日付と時刻の選択コントロールから選択した時間を取得し、指定した[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体
+関連付けられている日付と時刻の選択コントロールから選択した時間を取得し、指定した[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -283,7 +283,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 [out]最初のオーバー ロードで、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)システム時刻の情報を受け取るオブジェクト。 2 番目のオーバー ロードでは、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)システム時刻の情報を受け取るオブジェクト。
 
 *pTimeDest*<br/>
-[out]ポインター、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)システム時刻の情報を受け取る構造体。 NULL は指定できません。
+[out]ポインター、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)システム時刻の情報を受け取る構造体。 NULL は指定できません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -320,7 +320,7 @@ static DWORD GetTimeAll(
 [out]最初のオーバー ロードで、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)システム時刻の情報を受け取るオブジェクト。 2 番目のオーバー ロードでは、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)システム時刻の情報を受け取るオブジェクト。
 
 *pTimeDest*<br/>
-[out]ポインター、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)システム時刻の情報を受け取る構造体。 NULL は指定できません。
+[out]ポインター、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)システム時刻の情報を受け取る構造体。 NULL は指定できません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -441,7 +441,7 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]ボタンを表示するデバイス コンテキスト。
 
-*ため*<br/>
+*nCtlColor*<br/>
 [in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
@@ -564,7 +564,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 [in]最初のバージョンへの参照を[COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)コントロールを設定する時刻を表すオブジェクト。 2 番目のバージョンへのポインターで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)コントロールを設定する時刻を表すオブジェクト。
 
 *pTimeNew*<br/>
-[in]ポインター、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)コントロールを設定する時刻を含む構造体。
+[in]ポインター、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)コントロールを設定する時刻を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -601,7 +601,7 @@ static BOOL SetTimeAll(
 [in]最初のバージョンで、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)コントロールを設定する時刻を表すオブジェクト。 2 番目のバージョンへのポインターで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)コントロールを設定する時刻を表すオブジェクト。
 
 *pTimeNew*<br/>
-[in]ポインター、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)コントロールを設定する時刻を含む構造体。
+[in]ポインター、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)コントロールを設定する時刻を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -616,5 +616,5 @@ static BOOL SetTimeAll(
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
-[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[チュートリアル: ツールバーのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

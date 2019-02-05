@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564460"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893653"
 ---
 # <a name="chttpfile-class"></a>CHttpFile クラス
 
@@ -62,7 +62,7 @@ class CHttpFile : public CInternetFile
 |[CHttpFile::GetVerb](#getverb)|HTTP サーバーへの要求で使用されている動詞を取得します。|
 |[CHttpFile::QueryInfo](#queryinfo)|HTTP サーバーからの応答または要求ヘッダーを返します。|
 |[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|HTTP 要求に関連付けられている状態コードを取得し、指定された`dwStatusCode`パラメーター。|
-|[Chttpfile::sendrequest](#sendrequest)|HTTP サーバーへの要求を送信します。|
+|[CHttpFile::SendRequest](#sendrequest)|HTTP サーバーへの要求を送信します。|
 |[CHttpFile::SendRequestEx](#sendrequestex)|使用して HTTP サーバーに要求を送信、[書き込み](../../mfc/reference/cinternetfile-class.md#write)または[WriteString](../../mfc/reference/cinternetfile-class.md#writestring)メソッドの`CInternetFile`します。|
 
 ## <a name="remarks"></a>Remarks
@@ -172,7 +172,7 @@ CHttpFile(
 *pstrVerb*<br/>
 要求を送信するときに使用されるメソッドを含む文字列へのポインター。 POST、HEAD、または取得します。
 
-*独自*<br/>
+*dwContext*<br/>
 コンテキスト識別子を`CHttpFile`オブジェクト。 参照してください**解説**このパラメーターの詳細についてはします。
 
 *pConnection*<br/>
@@ -182,7 +182,7 @@ CHttpFile(
 
 構築することはありません、`CHttpFile`オブジェクトに直接; 呼び出しではなく[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[しないで](../../mfc/reference/chttpconnection-class.md#openrequest)代わりにします。
 
-既定値`dwContext`に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと`CInternetSession::OpenURL`または`CHttpConnection`を構築する、`CHttpFile`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+既定値`dwContext`に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと`CInternetSession::OpenURL`または`CHttpConnection`を構築する、`CHttpFile`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -203,7 +203,7 @@ BOOL EndRequest(
 *lpBuffIn*<br/>
 初期化されたへのポインター[記述](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)操作に使用される入力バッファーをについて説明します。
 
-*独自*<br/>
+*dwContext*<br/>
 `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -212,7 +212,7 @@ BOOL EndRequest(
 
 ### <a name="remarks"></a>Remarks
 
-既定値*独自*に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)を構築する、`CHttpFile`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+既定値*独自*に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)を構築する、`CHttpFile`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事を参照して[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS 通常、アプリケーションが応答ヘッダーをクエリできますが、アプリケーションは、このフラグを使用して要求ヘッダーを照会もできます。
 
-- これらのヘッダーの値は「最終更新時刻、」などの日付/時刻文字列の HTTP_QUERY_FLAG_SYSTEMTIME このフラグが標準の Win32 とヘッダー値を返します[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)にアプリケーションを必要としない構造体データを解析します。 このフラグを使用する場合は、使用する可能性がある、`SYSTEMTIME`関数のオーバーライドします。
+- これらのヘッダーの値は「最終更新時刻、」などの日付/時刻文字列の HTTP_QUERY_FLAG_SYSTEMTIME このフラグが標準の Win32 とヘッダー値を返します[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)にアプリケーションを必要としない構造体データを解析します。 このフラグを使用する場合は、使用する可能性がある、`SYSTEMTIME`関数のオーバーライドします。
 
 - これらのヘッダーの値を持つは、状態コードなどの番号を HTTP_QUERY_FLAG_NUMBER このフラグは、32 ビットの数値としてデータを返します。
 
@@ -302,10 +302,10 @@ BOOL QueryInfo(
 *lpvBuffer*<br/>
 情報を受け取るバッファーへのポインター。
 
-*書き込ま*<br/>
+*lpdwBufferLength*<br/>
 項目で、これは文字またはバイト数で、データ バッファーの長さを示す値を指します。 参照してください、**解説**セクションは、このパラメーターの詳細情報します。
 
-*時*<br/>
+*lpdwIndex*<br/>
 ヘッダーの 0 から始まるインデックスへのポインター。 NULL にすることができます。 このフラグを使用して、同じ名前の複数のヘッダーの列挙します。 入力で*時*を返す指定したヘッダーのインデックスを示します。 出力では、*時*次のヘッダーのインデックスを示します。 次のインデックスが見つからない場合は、見つからないが返されます。
 
 *str*<br/>
@@ -315,7 +315,7 @@ BOOL QueryInfo(
 インデックス値。 参照してください*時*します。
 
 *pSysTime*<br/>
-Win32 へのポインター [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。
+Win32 へのポインター [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -393,7 +393,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*し*<br/>
+*dwStatusCode*<br/>
 状態コードへの参照。 状態コードは、要求されたイベントの成否を示します。 参照してください**解説**ステータス コードの説明のいくつか。
 
 ### <a name="return-value"></a>戻り値
@@ -424,7 +424,7 @@ HTTP 状態コードは、成功または要求の失敗を示すグループに
 |500|不明なサーバー エラー|
 |503|サーバーの容量に達しました|
 
-##  <a name="sendrequest"></a>  Chttpfile::sendrequest
+##  <a name="sendrequest"></a>  CHttpFile::SendRequest
 
 HTTP サーバーに要求を送信するには、このメンバー関数を呼び出します。
 
@@ -487,7 +487,7 @@ BOOL SendRequestEx(
 *dwFlags*<br/>
 操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) Windows SDK に含まれています。
 
-*独自*<br/>
+*dwContext*<br/>
 `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
 
 *lpBuffIn*<br/>
@@ -506,7 +506,7 @@ BOOL SendRequestEx(
 
 コンテンツがファイルに書き込まれると、呼び出す[EndRequest](#endrequest)操作を終了します。
 
-既定値*独自*に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)を構築する、`CHttpFile`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+既定値*独自*に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)を構築する、`CHttpFile`オブジェクト コンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ### <a name="example"></a>例
 

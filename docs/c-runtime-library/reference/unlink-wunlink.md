@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544198"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417617"
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 
@@ -61,7 +61,7 @@ int _wunlink(
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、これらの各関数は 0 を返します。 関数は-1 を返しますそれ以外の場合、およびセット**errno**に**EACCES**、読み取り専用ファイル、パスを指定しますまたは**ENOENT**、ファイルまたはパスが見つからないまたはパスは、ディレクトリを指定します。
+正常に終了した場合、これらの各関数は 0 を返します。 関数は-1 を返しますそれ以外の場合、およびセット**errno**に**EACCES**、読み取り専用ファイルまたはディレクトリ パスを指定しますまたは**ENOENT**、ファイルまたはパス見つかりません。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 

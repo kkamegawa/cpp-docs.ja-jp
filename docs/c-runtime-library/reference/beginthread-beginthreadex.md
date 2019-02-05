@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626786"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894212"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -121,7 +121,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 呼び出すことができます[_endthread](endthread-endthreadex.md)または **_endthreadex**明示的にスレッドを終了しますただし、 **_endthread**または **_endthreadex**が呼び出されます。スレッド返すパラメーターとして渡されたルーチンから場合自動的に表示します。 呼び出しのスレッドを終了 **_endthread**または **_endthreadex**確実にスレッドに割り当てられているリソースの解放できます。
 
-**_endthread**一方には、スレッド ハンドルを自動的に閉じます **_endthreadex**はありません。 したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API。 この動作は、Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API とは異なります。
+**_endthread**一方には、スレッド ハンドルを自動的に閉じます **_endthreadex**はありません。 したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API。 この動作は、Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API とは異なります。
 
 > [!NOTE]
 > Libcmt.lib にリンクされている実行可能ファイルを呼び出さないでください Win32 **ExitThread** API 実行時のシステムを防ぐため再利用しないようにはリソースを割り当てられます。 **_endthread**と **_endthreadex**割り当てられているスレッド リソースを解放し、呼び出す**ExitThread**します。

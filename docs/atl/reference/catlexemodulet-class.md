@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601410"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893439"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT クラス
 
@@ -52,18 +52,18 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |名前|説明|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|コンストラクターです。|
-|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|デストラクターです。|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[する](#initializecom)|COM を初期化します。|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|COM を初期化します。|
 |[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|コマンドラインを解析し、必要な場合は、登録を実行します。|
 |[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|このメソッドは、メッセージ ループが終了した直後後に呼び出されます。|
 |[CAtlExeModuleT::PreMessageLoop](#premessageloop)|このメソッドは、メッセージ ループを開始する直前に呼び出されます。|
 |[CAtlExeModuleT::RegisterClassObjects](#registerclassobjects)|クラスのオブジェクトを登録します。|
-|[で](#revokeclassobjects)|クラスのオブジェクトを取り消します。|
+|[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|クラスのオブジェクトを取り消します。|
 |[CAtlExeModuleT::Run](#run)|このメソッドは、初期化は、メッセージ ループを実行するには、EXE モジュールのコードが実行してクリーンアップします。|
 |[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|このメソッドは、メッセージ ループを実行します。|
 |[CAtlExeModuleT::UninitializeCom](#uninitializecom)|COM. の初期化を解除します。|
@@ -126,7 +126,7 @@ CAtlExeModuleT() throw();
 
 割り当てられているすべてのリソースを解放します。
 
-##  <a name="initializecom"></a>  する
+##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom
 
 COM を初期化します。
 
@@ -261,7 +261,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 成功、S_FALSE を登録するクラスが存在しなかった場合、またはエラー発生時のエラー HRESULT が S_OK を返します。
 
-##  <a name="revokeclassobjects"></a>  で
+##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects
 
 クラスのオブジェクトを削除します。
 
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>パラメーター
 
 *nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。 既定値は SW_HIDE です。
+ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)セクション。 既定値は SW_HIDE です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>パラメーター
 
 *nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)セクション。
+ウィンドウの表示方法を指定します。 このパラメーターで説明されている値のいずれかを指定できます、 [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)セクション。
 
 ### <a name="return-value"></a>戻り値
 

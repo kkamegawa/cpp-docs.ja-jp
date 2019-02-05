@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677020"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702935"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -64,7 +65,7 @@ wchar_t *_wgetdcwd(
 *ドライブ*<br/>
 ドライブを指定する負でない整数 (0 = 既定のドライブ、1 = A、2 = B など)。
 
-指定されたドライブが使用できない場合、またはドライブの種類 (たとえば、リムーバブル ドライブ、固定ドライブ、CD-ROM ドライブ、RAM ディスク ドライブ、ネットワーク ドライブ) を特定できない場合、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」に説明されているように、正しくないパラメーター ハンドラーが呼び出されます。
+指定したドライブが使用できない場合、またはドライブの種類 (たとえば、リムーバブル、固定、CD-ROM、RAM、ディスクまたはネットワーク ドライブ) 決定できない無効なパラメーター ハンドラーが呼び出されます。 詳細については、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」を参照してください。
 
 *バッファー*<br/>
 パスの格納場所または **NULL**。
@@ -74,13 +75,13 @@ wchar_t *_wgetdcwd(
 *maxlen*<br/>
 文字数で、パスの最大長を指定する 0 以外の場合正の整数: **char**の **_getdcwd**と**wchar_t**の **_wgetdcwd**.
 
-場合*maxlen*ゼロより大きく、記載されている無効なパラメーター ハンドラーが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)が呼び出されます。
+場合*maxlen*以下が 0 の場合、無効なパラメーター ハンドラーが呼び出されます。 詳細については、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 
 指定したドライブ上の現在の作業ディレクトリの完全なパスを表す文字列へのポインターまたは**NULL**エラーを示します。
 
-場合*バッファー*として指定されて**NULL**が不足しているメモリを割り当てることがあると*maxlen*文字、エラーが発生し、 **errno**は設定**ENOMEM**します。 を、終端の null 文字を含むパスの長さを超えた場合*maxlen*、エラーが発生し、 **errno**に設定されている**ERANGE**します。 これらのエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+場合*バッファー*として指定されて**NULL**が不足しているメモリを割り当てることがあると*maxlen*文字、エラーが発生し、 **errno**は設定**ENOMEM**します。 終端の null 文字を含むパスの長さを超えるかどうか*maxlen*、エラーが発生して**errno**に設定されている**ERANGE**します。 これらのエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 

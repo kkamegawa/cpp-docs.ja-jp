@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694531"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894243"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 
@@ -157,7 +157,7 @@ void Attach(HANDLE hToken) throw();
 
 場合、デバッグ ビルドで、アサーション エラーが発生、`CAccessToken`オブジェクトには、アクセス トークンの所有権が既に存在します。
 
-##  <a name="dtor"></a>  CAccessToken:: ~ CAccessToken
+##  <a name="dtor"></a>  CAccessToken::~CAccessToken
 
 デストラクターです。
 
@@ -224,7 +224,7 @@ bool CreateImpersonationToken(
 
 ### <a name="remarks"></a>Remarks
 
-`CreateImpersonationToken` 呼び出し[DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616)新しい権限借用トークンを作成します。
+`CreateImpersonationToken` 呼び出し[DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)新しい権限借用トークンを作成します。
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -288,7 +288,7 @@ bool CreateProcessAsUser(
 *pStartupInfo*<br/>
 ポインターを[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)を新しいプロセスのメイン ウィンドウの表示方法を指定します。
 
-*は、*<br/>
+*dwCreationFlags*<br/>
 優先順位クラスとプロセスの作成を制御する追加のフラグを指定します。 Win32 関数を参照してください。 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)フラグの一覧についてはします。
 
 *bLoadProfile*<br/>
@@ -661,7 +661,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し、 [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) Win32 関数。
+呼び出し、 [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 関数。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -781,7 +781,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*p 入力してください。*<br/>
+*pType*<br/>
 アドレス、 [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type)成功した場合、トークンの種類を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -1093,7 +1093,7 @@ bool PrivilegeCheck(
 
 ### <a name="remarks"></a>Remarks
 
-ときに`PrivilegeCheck`から制御が戻る、`Attributes`のそれぞれに所属[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)対応する特権が有効になっている場合は、構造体を SE_PRIVILEGE_USED_FOR_ACCESS に設定します。 このメソッドは、 [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 関数。
+ときに`PrivilegeCheck`から制御が戻る、`Attributes`のそれぞれに所属[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)対応する特権が有効になっている場合は、構造体を SE_PRIVILEGE_USED_FOR_ACCESS に設定します。 このメソッドは、 [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 関数。
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

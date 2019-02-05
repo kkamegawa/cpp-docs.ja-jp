@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614228"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893939"
 ---
 # <a name="cfiletime-class"></a>CFileTime クラス
 
@@ -59,15 +59,15 @@ class CFileTime :  public FILETIME
 
 |名前|説明|
 |----------|-----------------|
-|[CFileTime::operator-](#operator_-)|この演算子を使用してで減算を実行する`CFileTime`または`CFileTimeSpan`オブジェクト。|
+|[CFileTime::operator -](#operator_-)|この演算子を使用してで減算を実行する`CFileTime`または`CFileTimeSpan`オブジェクト。|
 |[CFileTime::operator! =](#operator_neq)|2 つを比較して`CFileTime`非等値オブジェクトです。|
 |[CFileTime::operator +](#operator_add)|この演算子は、`CFileTimeSpan` オブジェクトで加算を実行するために使用します。|
-|[CFileTime::operator + =](#operator_add_eq)|この演算子は、`CFileTimeSpan` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。|
+|[CFileTime::operator +=](#operator_add_eq)|この演算子は、`CFileTimeSpan` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。|
 |[CFileTime::operator &lt;](#operator_lt)|この演算子は、2 つの `CFileTime` オブジェクトを比較して、小さい方を決定します。|
 |[CFileTime::operator &lt;=](#operator_lt_eq)|この演算子では、2 つの `CFileTime` オブジェクトを比較して、等しいかどうか、または小さい方を決定します。|
 |[CFileTime::operator =](#operator_eq)|代入演算子です。|
-|[CFileTime::operator =](#operator_-_eq)|この演算子を使用してで減算を実行、`CFileTimeSpan`オブジェクトし、結果を現在のオブジェクトに割り当てます。|
-|[CFileTime::operator = =](#operator_eq_eq)|この演算子は、2 つの `CFileTime` オブジェクトが等しいかどうかを比較します。|
+|[CFileTime::operator -=](#operator_-_eq)|この演算子を使用してで減算を実行、`CFileTimeSpan`オブジェクトし、結果を現在のオブジェクトに割り当てます。|
+|[CFileTime::operator ==](#operator_eq_eq)|この演算子は、2 つの `CFileTime` オブジェクトが等しいかどうかを比較します。|
 |[CFileTime::operator &gt;](#operator_gt)|この演算子は、2 つの `CFileTime` オブジェクトを比較して、大きい方を決定します。|
 |[CFileTime::operator &gt;=](#operator_gt_eq)|この演算子は、2 つの `CFileTime` オブジェクトを比較して、等しいかどうか、または大きい方を決定します。|
 
@@ -124,7 +124,7 @@ CFileTime(ULONGLONG nTime) throw();
 ### <a name="parameters"></a>パラメーター
 
 *ft*<br/>
-A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)構造体。
+A [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)構造体。
 
 *nTime*<br/>
 日付と時間を 64 ビット値として表されます。
@@ -225,7 +225,7 @@ static const ULONGLONG Minute = Second* 60;
 
 例をご覧ください[CFileTime::Millisecond](#millisecond)します。
 
-##  <a name="operator_-"></a>  CFileTime::operator-
+##  <a name="operator_-"></a>  CFileTime::operator -
 
 この演算子を使用してで減算を実行する`CFileTime`または`CFileTimeSpan`オブジェクト。
 
@@ -236,7 +236,7 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 *ft*<br/>
@@ -273,14 +273,14 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 返します、`CFileTime`元の時刻と相対時刻の結果を表すオブジェクト。
 
-##  <a name="operator_add_eq"></a>  CFileTime::operator + =
+##  <a name="operator_add_eq"></a>  CFileTime::operator +=
 
 この演算子は、`CFileTimeSpan` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。
 
@@ -290,7 +290,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -352,7 +352,7 @@ A`CFileTime`新しい時刻と日付を含むオブジェクト。
 
 更新された返します`CFileTime`オブジェクト。
 
-##  <a name="operator_-_eq"></a>  CFileTime::operator =
+##  <a name="operator_-_eq"></a>  CFileTime::operator -=
 
 この演算子を使用してで減算を実行、`CFileTimeSpan`オブジェクトし、結果を現在のオブジェクトに割り当てます。
 
@@ -362,14 +362,14 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 A`CFileTimeSpan`減算する相対的な時間を含むオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 更新された返します`CFileTime`オブジェクト。
 
-##  <a name="operator_eq_eq"></a>  CFileTime::operator = =
+##  <a name="operator_eq_eq"></a>  CFileTime::operator ==
 
 この演算子は、2 つの `CFileTime` オブジェクトが等しいかどうかを比較します。
 
@@ -475,7 +475,7 @@ static const ULONGLONG Week = Day* 7;
 
 ## <a name="see-also"></a>関連項目
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTimeSpan クラス](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

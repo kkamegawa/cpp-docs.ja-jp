@@ -93,7 +93,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
    1. また**入力**、追加`runtimeobject.lib`、 `mfuuid.lib`、および`mfplat.lib`を**追加の依存関係**プロパティ。
 
-   1.  **Windows メタデータ**設定**Windows メタデータの生成**に**はい (/WINMD)** します。
+   1. **Windows メタデータ** 設定 **Windows メタデータの生成** に **[はい] (/WINMD)** します。
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL c# アプリからカスタム メディア ファンデーション コンポーネントを使用するには
 

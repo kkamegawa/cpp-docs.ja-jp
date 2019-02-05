@@ -2,12 +2,12 @@
 title: Visual C++ 2003 ～ 2015 の新機能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520183"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894355"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1854,7 +1854,7 @@ Microsoft 固有の **__nullptr** キーワードは **nullptr** と同じ意味
 
 #### <a name="animation-and-d2d-support"></a>アニメーションおよび D2D のサポート
 
-MFC でアニメーションと Direct2D グラフィックスがサポートされるようになりました。 MFC ライブラリには、この機能をサポートするための複数の新しい MFC クラスと関数があります。 また、2 つの新しいチュートリアルで、D2D オブジェクトおよびアニメーション オブジェクトをプロジェクトに追加する方法が説明されています。 このチュートリアルは、「**チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加**」と「**チュートリアル: MFC プロジェクトへのアニメーションの追加**」です。
+MFC でアニメーションと Direct2D グラフィックスがサポートされるようになりました。 MFC ライブラリには、この機能をサポートするための複数の新しい MFC クラスと関数があります。 また、2 つの新しいチュートリアルで、D2D オブジェクトおよびアニメーション オブジェクトをプロジェクトに追加する方法が説明されています。 これらのチュートリアルは、「**チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加**」と「**チュートリアル: MFC プロジェクトへのアニメーションの追加**」です。
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ __sptr、__uptr
 
 - 現在のバージョンのコンパイラでビルドされた Managed Extensions for C++ アプリケーションを以前のバージョンのランタイムで実行する方法についての情報。
 - Managed Extensions for C++ に関してよく寄せられる質問。
-- 既存のネイティブ アプリケーションを Managed Extensions for C++ を使うように移植する方法を示すチュートリアルが追加されました: Walkthrough: Porting an Existing Native C++ Application to Interoperate with .NET Framework Components (チュートリアル: 既存のネイティブ C++ アプリケーションを .NET Framework コンポーネントと相互動作させるための移植)。
+- C++ マネージ拡張を使用する既存のネイティブ アプリケーションを移植する方法を示すチュートリアルが追加されました。チュートリアル: .NET Framework コンポーネントと相互運用する既存のネイティブ C++ アプリケーションを移植します。
 - 値の型のメソッドへのデリゲートを作成できるようになりました。
 - C++ 標準へのコンパイラの準拠が、Visual C++ .NET 2003 で大幅に強化されました。
 - `/arch` コンパイラ オプションが追加されました。
@@ -2233,6 +2233,6 @@ __sptr、__uptr
 
 .SAFESEH ディレクティブと `/safeseh` ml.exe オプションが追加されました。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [Visual C++ 移植とアップグレードのガイド](visual-cpp-porting-and-upgrading-guide.md)

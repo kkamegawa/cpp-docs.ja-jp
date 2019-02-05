@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327448"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893666"
 ---
 # <a name="message-map-macros-mfc"></a>メッセージ マップ マクロ (MFC)
 
@@ -45,7 +45,7 @@ ms.locfileid: "51327448"
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|メッセージ マップがクラスで関数 (クラス宣言で使用する必要があります) にメッセージをマップに使用されることを宣言します。|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|メッセージ マップ (クラスの実装で使用する必要があります) の定義を開始します。|
-|[同じよう](#begin_template_interface_map)|1 つのテンプレート引数を格納しているクラス型のメッセージ マップの定義を開始します。 |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|1 つのテンプレート引数を格納しているクラス型のメッセージ マップの定義を開始します。 |
 |[END_MESSAGE_MAP](#end_message_map)|メッセージ マップ (クラスの実装で使用する必要があります) の定義を終了します。|
 
 ### <a name="message-mapping-macros"></a>メッセージ マップ マクロ
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **ヘッダー:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>同じよう
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 1 つのテンプレート引数を格納しているクラス型のメッセージ マップの定義を開始します。
 
@@ -135,7 +135,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 クラスのメソッドの実装のセクションで、同じようマクロ; メッセージ マップを開始します標準のメッセージ マップの場合とは、各メッセージ ハンドラー メソッドのマクロのエントリを追加します。 BEGIN_MESSAGE_MAP マクロでは、テンプレート メッセージ マップを完了すると、 [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map)マクロ。
 
-メッセージ マップのテンプレート クラスの実装の詳細についてを参照してください[方法: テンプレート クラスのメッセージ マップを作成する](../how-to-create-a-message-map-for-a-template-class.md)します。
+メッセージ マップのテンプレート クラスの実装の詳細についてを参照してください[方法。テンプレート クラスのメッセージ マップを作成する](../how-to-create-a-message-map-for-a-template-class.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -252,7 +252,7 @@ ON_COMMAND_EX(id, memberFxn);
 
 コマンド メッセージ ハンドラーの拡張の形式は高度な用途のために使用できます。 ON_COMMAND_EX マクロは、このようなメッセージ ハンドラーを使用してのスーパー セットを提供します、 [ON_COMMAND](message-map-macros-mfc.md#on_command)機能します。 拡張のコマンド ハンドラー メンバー関数では、コマンド ID を含む UINT、1 つのパラメーターを受け取るし、ブール値を返します。 戻り値が、コマンドが処理されたことを指定する場合は TRUE にする必要があります。それ以外の場合、ルーティングは、その他のコマンド ターゲット オブジェクトを続けます。
 
-詳細については、テクニカル ノートを参照してください。 [TN006: メッセージ マップ] tm006-メッセージ-maps.md)。
+詳細については、テクニカル ノートを参照してください [TN006:。メッセージ マップ] tm006-メッセージ-maps.md)。
 
 ### <a name="requirements"></a>必要条件
 
@@ -261,7 +261,7 @@ ON_COMMAND_EX(id, memberFxn);
 ### <a name="see-also"></a>関連項目
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[テクニカル ノート 6: メッセージ マップ](../tn006-message-maps.md)
+[TN006:メッセージ マップ](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -383,97 +383,97 @@ OLE コマンドの識別子。
 
 `IOleCommandTarget`標準メニュー コマンドは、次のマクロに MFC によって実装されています。
 
-**ON_OLECMD_CLEARSELECTION)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 クリア編集コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 コピーして編集コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 編集 [切り取り] コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 ファイルの新しいコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN)**
+**ON_OLECMD_OPEN( )**
 
 ファイルを開くコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 ファイルのページ設定 コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 貼り付けコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 編集貼り付けコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 ファイルの印刷 コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 ファイルの印刷プレビュー コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 やり直しコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 ファイルの保存のコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 ファイル名を付けてコマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 ファイルのコピーを付けて保存コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 すべての編集コマンドをディスパッチします。 として実装されます。
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 編集を元に戻すコマンドをディスパッチします。 として実装されます。
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>関連項目
 
-[を通じて](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[を通じて](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [ユーザー定義によるハンドラー](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
@@ -615,7 +615,7 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
 
 [CCmdUI クラス](ccmdui-class.md)
 
-## <a name="on_command_range"></a>  割り当てるには
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE
 
 コマンド Id の連続する範囲を 1 つのメッセージ ハンドラー関数にマップするのにには、このマクロを使用します。
 

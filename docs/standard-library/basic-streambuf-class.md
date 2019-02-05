@@ -492,7 +492,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>Remarks
 
-場合*\_メタ*等しく**traits_type::eof**、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*)。 この関数は、さまざまな方法で要素を戻すことができます。
+場合 *\_メタ* 等しく **traits_type::eof**、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*)。 この関数は、さまざまな方法で要素を戻すことができます。
 
 - 戻り位置が使用可能な場合は、戻り位置に要素を格納し、入力バッファーのネクスト ポインターをデクリメントできます。
 

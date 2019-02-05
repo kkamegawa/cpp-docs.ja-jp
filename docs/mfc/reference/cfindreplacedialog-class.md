@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571185"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894407"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog クラス
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Remarks
 
-その他の Windows コモン ダイアログ ボックスとは異なり`CFindReplaceDialog`オブジェクトがモードレスでは、ユーザーが画面上にある他のウィンドウと対話できるようにします。 2 種類がありますの`CFindReplaceDialog`オブジェクト: ダイアログ ボックスおよび検索と置換 ダイアログ ボックスを検索します。 ダイアログ ボックスに、ユーザー入力の検索を検索/置換文字列は、ですが、検索や置換関数のいずれかの実行しません。 アプリケーションにこれらを追加する必要があります。
+その他の Windows コモン ダイアログ ボックスとは異なり`CFindReplaceDialog`オブジェクトがモードレスでは、ユーザーが画面上にある他のウィンドウと対話できるようにします。 2 種類がありますの`CFindReplaceDialog`オブジェクト。ダイアログ ボックスおよび検索と置換 ダイアログ ボックスを検索します。 ダイアログ ボックスに、ユーザー入力の検索を検索/置換文字列は、ですが、検索や置換関数のいずれかの実行しません。 アプリケーションにこれらを追加する必要があります。
 
 構築する、`CFindReplaceDialog`オブジェクト、(引数を持たない) を指定されたコンス トラクターを使用します。 これは、モードレス ダイアログ ボックスであるために、ヒープを使用して、オブジェクトの割り当て、**新しい**演算子、スタックではなく。
 
@@ -89,7 +89,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 使用して、 [m_fr](#m_fr)呼び出す前に ダイアログ ボックスを初期化するために`Create`します。 `m_fr`型の構造は、 [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)します。 この構造体の詳細については、Windows SDK を参照してください。
 
-親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](https://msdn.microsoft.com/library/windows/desktop/ms644947)関数を使用して、 [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)フレームでメッセージ マップ マクロこの登録済みのメッセージを処理するウィンドウです。
+親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)関数を使用して、 [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)フレームでメッセージ マップ マクロこの登録済みのメッセージを処理するウィンドウです。
 
 ダイアログ ボックスを終了したかどうかを指定できます、`IsTerminating`メンバー関数。
 
@@ -175,7 +175,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>Remarks
 
-親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](https://msdn.microsoft.com/library/windows/desktop/ms644947)関数の戻り値は、アプリケーションのインスタンスに固有のメッセージ番号。 フレーム ウィンドウは、コールバック関数を宣言するメッセージ マップ エントリが必要 (`OnFindReplace`次の例で) この登録済みのメッセージを処理します。 次のコード フラグメントは、という名前のフレーム ウィンドウ クラスをこれを行う方法の例を示します`CMyRichEditView`:
+親ウィンドウの検索/置換要求の通知を受けるためには、Windows を使用する必要があります[を通じて](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)関数の戻り値は、アプリケーションのインスタンスに固有のメッセージ番号。 フレーム ウィンドウは、コールバック関数を宣言するメッセージ マップ エントリが必要 (`OnFindReplace`次の例で) この登録済みのメッセージを処理します。 次のコード フラグメントは、という名前のフレーム ウィンドウ クラスをこれを行う方法の例を示します`CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

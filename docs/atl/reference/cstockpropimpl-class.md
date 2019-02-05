@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332427"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894004"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl クラス
 
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>パラメーター
 
 *ppPicture*<br/>
-画像のプロパティへのポインターを受け取る変数。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。
+画像のプロパティへのポインターを受け取る変数。 参照してください[IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp)の詳細。
 
 ### <a name="return-value"></a>戻り値
 
@@ -905,7 +905,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
 
-##  <a name="put_font"></a>  付きます
+##  <a name="put_font"></a>  CStockPropImpl::put_Font
 
 コントロールのフォント プロパティを設定するには、このメソッドを呼び出します。
 
@@ -960,7 +960,7 @@ E_FAIL を返します。
 
 ウィンドウ ハンドルは、読み取り専用値です。
 
-##  <a name="put_mouseicon"></a>  付きます
+##  <a name="put_mouseicon"></a>  CStockPropImpl::put_MouseIcon
 
 (アイコン、ビットマップまたはメタファイル)、マウスがコントロール上に表示される画像の画像のプロパティを設定するには、このメソッドを呼び出します。
 
@@ -994,7 +994,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
 
-##  <a name="put_picture"></a>  付きます
+##  <a name="put_picture"></a>  CStockPropImpl::put_Picture
 
 (アイコン、ビットマップまたはメタファイル) 表示する画像の画像のプロパティを設定するには、このメソッドを呼び出します。
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>パラメーター
 
 *pPicture*<br/>
-画像のプロパティへのポインター。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。
+画像のプロパティへのポインター。 参照してください[IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp)の詳細。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>パラメーター
 
 *pPicture*<br/>
-画像のプロパティへのポインター。 参照してください[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)の詳細。
+画像のプロパティへのポインター。 参照してください[IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp)の詳細。
 
 ### <a name="return-value"></a>戻り値
 

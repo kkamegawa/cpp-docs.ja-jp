@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178123"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893978"
 ---
 # <a name="ctime-class"></a>CTime クラス
 
@@ -57,7 +57,7 @@ class CTime
 |[CTime::Format](#format)|変換を`CTime`オブジェクトを書式設定された文字列に、ローカル タイム ゾーンに基づいて。|
 |[CTime::FormatGmt](#formatgmt)|変換を`CTime`オブジェクトを書式設定された文字列に、UTC に基づいています。|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|格納されている時間の情報に変換、 `CTime` Win32 と互換性のある DBTIMESTAMP 構造体へのオブジェクト。|
-|[CTime::GetAsSystemTime](#getassystemtime)|格納されている時間の情報に変換、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。|
+|[CTime::GetAsSystemTime](#getassystemtime)|格納されている時間の情報に変換、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体。|
 |[CTime::GetCurrentTime](#getcurrenttime)|作成、 `CTime` (静的メンバー関数) の現在の時刻を表すオブジェクト。|
 |[CTime::GetDay](#getday)|によって表される日を返します、`CTime`オブジェクト。|
 |[CTime::GetDayOfWeek](#getdayofweek)|によって表される週の通算日を返す、`CTime`オブジェクト。|
@@ -65,7 +65,7 @@ class CTime
 |[CTime::GetHour](#gethour)|によって表される時間を返します、`CTime`オブジェクト。|
 |[CTime::GetLocalTm](#getlocaltm)|分割、`CTime`オブジェクトをコンポーネントに、ローカル タイム ゾーンに基づいて。|
 |[CTime::GetMinute](#getminute)|によって表される分が返されます、`CTime`オブジェクト。|
-|[渡して](#getmonth)|によって表される月を返します、`CTime`オブジェクト。|
+|[CTime::GetMonth](#getmonth)|によって表される月を返します、`CTime`オブジェクト。|
 |[CTime::GetSecond](#getsecond)|によって表される秒を返します、`CTime`オブジェクト。|
 |[CTime::GetTime](#gettime)|返します、 **_ _time64_t**値、指定された`CTime`オブジェクト。|
 |[CTime::GetYear](#getyear)|によって表される年を返します、`CTime`オブジェクト。|
@@ -76,7 +76,7 @@ class CTime
 |||
 |-|-|
 |[演算子 + -](#operator_add_-)|これらの演算子は加算および減算`CTimeSpan`と`CTime`オブジェクト。|
-|[演算子 + =、=](#operator_add_eq_-_eq)|これらの演算子は加算および減算、`CTimeSpan`オブジェクトとの間この`CTime`オブジェクト。|
+|[operator +=, -=](#operator_add_eq_-_eq)|これらの演算子は加算および減算、`CTimeSpan`オブジェクトとの間この`CTime`オブジェクト。|
 |[演算子 =](#operator_eq)|代入演算子です。|
 |[演算子 = =、< など。](#ctime_comparison_operators)|比較演算子。|
 
@@ -169,10 +169,10 @@ A`__time64_t`時刻の値は UTC 1970 年 1 月 1 日の後の秒数です。 �
 日付と時刻の値を日付/時刻値に変換して、新しいコピーを MS-DOS`CTime`オブジェクト。
 
 *st*<br/>
-A [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体の日付/時刻値に変換して、新しいコピーを`CTime`オブジェクト。
+A [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体の日付/時刻値に変換して、新しいコピーを`CTime`オブジェクト。
 
 *ft*<br/>
-A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)構造体の日付/時刻値に変換して、新しいコピーを`CTime`オブジェクト。
+A [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)構造体の日付/時刻値に変換して、新しいコピーを`CTime`オブジェクト。
 
 *dbts*<br/>
 現在の現地時刻を含む DBTIMESTAMP 構造体への参照。
@@ -209,7 +209,7 @@ A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)構造�
    > [!NOTE]
    > コンス トラクターを使用して、`DBTIMESTAMP`パラメーターは、OLEDB.h が含まれる場合にのみ使用できます。
 
-詳細については、次を参照してください。、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK の構造体。 参照してください、 [MS-DOS の日付と時刻](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 内のエントリ。
+詳細については、次を参照してください。、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)と[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK の構造体。 参照してください、 [MS-DOS の日付と時刻](/windows/desktop/SysInfo/ms-dos-date-and-time)Windows SDK 内のエントリ。
 
 ### <a name="example"></a>例
 
@@ -304,7 +304,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-格納されている時間の情報に変換するには、このメンバー関数を呼び出す、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。
+格納されている時間の情報に変換するには、このメンバー関数を呼び出す、 `CTime` Win32 互換性のあるオブジェクト[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体。
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *timeDest*<br/>
-参照を[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)の変換後の日付/時刻値を保持する構造体、`CTime`オブジェクト。
+参照を[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)の変換後の日付/時刻値を保持する構造体、`CTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -477,7 +477,7 @@ int GetMinute() const throw();
 
 例をご覧ください[GetHour](#gethour)します。
 
-##  <a name="getmonth"></a>  渡して
+##  <a name="getmonth"></a>  CTime::GetMonth
 
 によって表される月を返します、`CTime`オブジェクト。
 
@@ -604,7 +604,7 @@ A`CTime`または`CTimeSpan`操作の結果を表すオブジェクト。
 
 [!code-cpp[NVC_ATLMFC_Utilities#159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTime::operator + =、=
+##  <a name="operator_add_eq_-_eq"></a>  CTime::operator +=, -=
 
 これらの演算子は加算および減算、`CTimeSpan`オブジェクトとの間この`CTime`オブジェクト。
 
@@ -615,7 +615,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CTimeSpan`加算または減算するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

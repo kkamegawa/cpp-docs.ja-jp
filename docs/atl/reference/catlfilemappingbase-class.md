@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614380"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894017"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase クラス
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |名前|説明|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|コンストラクターです。|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|デストラクターです。|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -96,7 +96,7 @@ CAtlFileMappingBase() throw();
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase
+##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
 
 デストラクターです。
 
@@ -193,7 +193,7 @@ HRESULT MapFile(
 ファイルがマップされている場合、ファイルのビューに必要な保護。 参照してください*flProtect*で[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK に含まれています。
 
 *dwViewDesiredAccess*<br/>
-ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
+ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex)Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -201,7 +201,7 @@ HRESULT MapFile(
 
 ### <a name="remarks"></a>Remarks
 
-ファイルのサイズが、ファイル マッピング オブジェクトのサイズを超えないファイル マッピング オブジェクトが作成されたら、場合は、すべてのファイルの内容を共有するために使用可能ななります。 詳細については、次を参照してください。 [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)と[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
+ファイルのサイズが、ファイル マッピング オブジェクトのサイズを超えないファイル マッピング オブジェクトが作成されたら、場合は、すべてのファイルの内容を共有するために使用可能ななります。 詳細については、次を参照してください。 [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)と[mapviewoffileex に](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex)Windows SDK に含まれています。
 
 ### <a name="example"></a>例
 
@@ -239,7 +239,7 @@ HRESULT MapSharedMem(
 ファイルがマップされている場合は、ファイルの表示に必要な保護。 参照してください*flProtect*で`CreateFileMapping`Windows SDK に含まれています。
 
 *dwViewDesiredAccess*<br/>
-ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
+ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex)Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -273,7 +273,7 @@ HRESULT OpenMapping(
 ファイル オフセット マッピングの開始位置。 オフセットの値は、システムのメモリ割り当ての粒度の倍数である必要があります。
 
 *dwViewDesiredAccess*<br/>
-ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](https://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK に含まれています。
+ファイルのビューと、ファイルによってマップされるページの保護へのアクセスの種類を指定します。 参照してください*dwDesiredAccess*で[mapviewoffileex に](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex)Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -314,7 +314,7 @@ HRESULT Unmap() throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[unmapviewoffile に](https://msdn.microsoft.com/library/windows/desktop/aa366882)詳細については、Windows SDK に含まれています。
+参照してください[unmapviewoffile に](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile)詳細については、Windows SDK に含まれています。
 
 ## <a name="see-also"></a>関連項目
 

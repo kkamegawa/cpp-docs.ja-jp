@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468927"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894160"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan クラス
 
@@ -47,15 +47,15 @@ class CFileTimeSpan
 
 |名前|説明|
 |----------|-----------------|
-|[CFileTimeSpan::operator-](#operator_-)|減算を実行する`CFileTimeSpan`オブジェクト。|
+|[CFileTimeSpan::operator -](#operator_-)|減算を実行する`CFileTimeSpan`オブジェクト。|
 |[CFileTimeSpan::operator! =](#operator_neq)|2 つの `CFileTimeSpan` オブジェクトが等しくないかどうかを比較します。|
 |[CFileTimeSpan::operator +](#operator_add)|加算を実行する、`CFileTimeSpan`オブジェクト。|
 |[CFileTimeSpan::operator + =](#operator_add_eq)|加算を実行する、`CFileTimeSpan`オブジェクトし、結果を現在のオブジェクトに割り当てます。|
 |[CFileTimeSpan::operator &lt;](#operator_lt)|2 つ`CFileTimeSpan`小さい方を決定するオブジェクト。|
 |[CFileTimeSpan::operator &lt;=](#operator_lt_eq)|2 つ`CFileTimeSpan`等値または小さい方を決定するオブジェクト。|
 |[CFileTimeSpan::operator =](#operator_eq)|代入演算子です。|
-|[CFileTimeSpan::operator =](#operator_-_eq)|減算を実行、`CFileTimeSpan`オブジェクトし、結果を現在のオブジェクトに割り当てます。|
-|[CFileTimeSpan::operator = =](#operator_eq_eq)|2 つの `CFileTimeSpan` オブジェクトが等しいかどうかを比較します。|
+|[CFileTimeSpan::operator -=](#operator_-_eq)|減算を実行、`CFileTimeSpan`オブジェクトし、結果を現在のオブジェクトに割り当てます。|
+|[CFileTimeSpan::operator ==](#operator_eq_eq)|2 つの `CFileTimeSpan` オブジェクトが等しいかどうかを比較します。|
 |[CFileTimeSpan::operator &gt;](#operator_gt)|2 つ`CFileTimeSpan`うち、大きい方を決定するオブジェクト。|
 |[CFileTimeSpan::operator &gt;=](#operator_gt_eq)|2 つ`CFileTimeSpan`オブジェクトが等しいかどうか大きい方を判断します。|
 
@@ -83,7 +83,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 既存の `CFileTimeSpan` オブジェクト。
 
 *nSpan*<br/>
@@ -105,7 +105,7 @@ LONGLONG GetTimeSpan() const throw();
 
 時間間隔をミリ秒単位で返します。
 
-##  <a name="operator_-"></a>  CFileTimeSpan::operator-
+##  <a name="operator_-"></a>  CFileTimeSpan::operator -
 
 減算を実行する`CFileTimeSpan`オブジェクト。
 
@@ -115,7 +115,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -132,7 +132,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較される `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -149,14 +149,14 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 返します、`CFileTimeSpan`にまたがる 2 つの時間の合計を含むオブジェクトします。
 
-##  <a name="operator_add_eq"></a>  CFileTimeSpan::operator + =
+##  <a name="operator_add_eq"></a>  CFileTimeSpan::operator +=
 
 加算を実行する、`CFileTimeSpan`オブジェクトし、現在のオブジェクトに、その結果を代入します。
 
@@ -166,7 +166,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -183,7 +183,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較される `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -200,7 +200,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較される `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -217,14 +217,14 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 更新された返します`CFileTimeSpan`オブジェクト。
 
-##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator =
+##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator -=
 
 減算を実行する`CFileTimeSpan`オブジェクトし、現在のオブジェクトに、その結果を代入します。
 
@@ -234,14 +234,14 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 更新された返します`CFileTimeSpan`オブジェクト。
 
-##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator = =
+##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator ==
 
 2 つの `CFileTimeSpan` オブジェクトが等しいかどうかを比較します。
 
@@ -251,7 +251,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較される `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -268,7 +268,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較される `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -285,7 +285,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較される `CFileTimeSpan` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -307,7 +307,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTime クラス](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

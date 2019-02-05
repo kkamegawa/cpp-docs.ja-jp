@@ -1,6 +1,6 @@
 ---
 title: isnan、_isnan、_isnanf
-ms.date: 04/05/2018
+ms.date: 01/31/2019
 apiname:
 - _isnan
 - _isnanf
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650867"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703091"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -73,21 +73,21 @@ bool isnan(
 
 C では、 **isnan**マクロと **_isnan**と **_isnanf**関数が 0 以外の値を返す場合、引数*x* NAN は、それ以外の0 を返します。
 
-C++ では、 **isnan**テンプレート関数を返します**true**場合引数*x* NAN; は、それ以外の場合を返す**false**。
+C++ では、 **isnan**テンプレート関数を返します**true**場合、引数*x* ; nan を返しますそれ以外の場合**false**します。
 
 ## <a name="remarks"></a>Remarks
 
-C **isnan**マクロと **_isnan**と **_isnanf**関数は浮動小数点値をテスト*x*、0 以外の値を返す場合*x*ない数 (NAN) 値。 NaN は、浮動小数点演算の結果が IEEE-754 浮動小数点形式の指定した型で表現できない場合に生成されます。 出力で NaN が表現される方法の詳細については、「[printf](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+NaN 値をその他の NaN 値と同じ比較しません、ため、いずれかを検出するためにこれらの関数またはマクロのいずれかを使用する必要があります。 浮動小数点演算の結果を指定した型の IEEE 754 浮動小数点形式で表すことはできません、NaN が発生します。 出力の NaN が表現される方法の詳細については、次を参照してください。 [printf](printf-printf-l-wprintf-wprintf-l.md)します。
 
-C++ としてコンパイルされるときに、 **isnan**マクロが定義されていないと**isnan**テンプレート関数は、代わりに定義されます。 型の値を返します**bool**整数ではなく。
+C++ としてコンパイルされるときに、 **isnan**マクロが定義されていないと**isnan**テンプレート関数は、代わりに定義されます。 型の値を返しますが、マクロと同様に動作**bool**整数ではなく。
 
-**_Isnan**と **_isnanf**関数は、Microsoft 固有の仕様。 **_Isnanf**関数は、x64 用にコンパイルされるときに使用できるのみです。
+**_Isnan**と **_isnanf**関数は、Microsoft に固有です。 **_Isnanf**関数は、x64 用にコンパイルされるときに使用できるのみです。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isnan**、 **_isnanf**|\<math.h>|\<math.h> または \<cmath>|
+|**isnan**, **_isnanf**|\<math.h>|\<math.h> または \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> または \<cfloat>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
@@ -95,5 +95,8 @@ C++ としてコンパイルされるときに、 **isnan**マクロが定義さ
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[_finite、_finitef](finite-finitef.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
+[isfinite _finite、_finitef](finite-finitef.md)<br/>
+[isinf](isinf.md)<br/>
+[isnormal](isnormal.md)<br/>

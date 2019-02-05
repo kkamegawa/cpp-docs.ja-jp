@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 9b70a4caea2b9aa5d86c0e97b97eae784594ec87
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326109"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893341"
 ---
 # <a name="struct-c"></a>struct (C++ )
 
@@ -20,7 +20,7 @@ ms.locfileid: "51326109"
 ## <a name="syntax"></a>構文
 
 ```
-[template-spec] struct[ms-decl-spec] [tag [: base-list ]]
+[template-spec] struct [ms-decl-spec] [tag [: base-list ]]
 {
    member-list
 } [declarators];
@@ -29,26 +29,26 @@ ms.locfileid: "51326109"
 
 #### <a name="parameters"></a>パラメーター
 
-*テンプレートの仕様*<br/>
+*template-spec*<br/>
 テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレートの仕様](templates-cpp.md)します。
 
 *struct*<br/>
 **構造体**キーワード。
 
-*ms 宣言の仕様*<br/>
+*ms-decl-spec*<br/>
 ストレージ クラスの指定 (省略可能)。 詳細についてを参照してください、 [_ _declspec](../cpp/declspec.md)キーワード。
 
 *タグ*<br/>
 構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。
 
-*基本リスト*<br/>
+*base-list*<br/>
 この構造体がメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラスの](../cpp/base-classes.md)詳細についてはします。 各基本クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワード。 メンバー アクセス テーブルを参照してください。[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。
 
-*メンバー リスト*<br/>
+*member-list*<br/>
 構造体のメンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。 ここで唯一の違いは**構造体**の代わりに使用が**クラス**します。
 
-*宣言子*<br/>
-クラスの名前を指定する宣言子リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 クラスのすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**パブリック**します。 データ メンバーがあるために、初期化子リストは構造体で一般的な**パブリック**既定。  参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。
+*declarators*<br/>
+構造体の名前を指定する宣言リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 構造体のすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**パブリック**します。 データ メンバーがあるために、初期化子リストは構造体で一般的な**パブリック**既定。  参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。
 
 ## <a name="remarks"></a>Remarks
 

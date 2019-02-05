@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。'
+title: 'チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) の作成します。'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694050"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893900"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) の作成します。
 
 このチュートリアルでは、Visual Studio での従来の Windows デスクトップ アプリケーションを作成する方法を示します。 作成するサンプル アプリケーションでは、Windows API を使用して、「こんにちは, Windows デスクトップ!」を表示 。ウィンドウです。 このチュートリアルで開発したコードは、他の Windows デスクトップ アプリケーションを作成するためのパターンとして使用できます。
 
@@ -107,7 +107,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    );
    ```
 
-   この関数の戻り値とパラメーターについては、次を参照してください。 [WinMain エントリ ポイント](https://msdn.microsoft.com/library/windows/desktop/ms633559)します。
+   この関数の戻り値とパラメーターについては、次を参照してください。 [WinMain エントリ ポイント](/windows/desktop/api/winbase/nf-winbase-winmain)します。
 
    > [!NOTE]
    > など、すべての余分な単語は`CALLBACK`、または`HINSTANCE`、または`_In_`でしょうか。 Typedef を使用する従来の Windows API と抽象化するには、広範囲にプリプロセッサ マクロの種類とプラットフォーム固有の詳細の一部のコード、呼び出し規則など **_ _declspec**宣言、およびコンパイラのプラグマ。 Visual Studio で IntelliSense を使用することができます[クイック ヒント](/visualstudio/ide/using-intellisense#quick-info)機能をこれらの typedef、マクロ定義内容を参照してください。 関心のある単語の上にマウスを移動または選択し、 **Ctrl**+**K**、 **Ctrl**+**は**用、定義を含む小さなポップアップ ウィンドウ。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 パラメーターと戻り値の型が多くの場合、使用*SAL 注釈*に役立つプログラミング エラーをキャッチします。 詳細については、次を参照してください。 [C と C++ コードの欠陥を削減する SAL 注釈を使って](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)します。
@@ -136,7 +136,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>WinMain 関数に機能を追加するには
 
-1. `WinMain`関数、型の構造体の値を設定する[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。 構造体には、アプリケーションのアイコン、タイトル バー、および重要なは、ウィンドウ プロシージャへの関数ポインターの表示名 ウィンドウの背景色など、ウィンドウに関する情報が含まれています。 一般的な `WNDCLASSEX` 構造体の例を次に示します。
+1. `WinMain`関数、型の構造体の値を設定する[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)します。 構造体には、アプリケーションのアイコン、タイトル バー、および重要なは、ウィンドウ プロシージャへの関数ポインターの表示名 ウィンドウの背景色など、ウィンドウに関する情報が含まれています。 一般的な `WNDCLASSEX` 構造体の例を次に示します。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   上記の構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。
+   上記の構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)します。
 
 1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
 
@@ -237,7 +237,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    return (int) msg.wParam;
    ```
 
-   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)、および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
+   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](/windows/desktop/api/winuser/ns-winuser-msg)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)、および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    この段階では、 `WinMain` 関数のコードは次のようになります。
 

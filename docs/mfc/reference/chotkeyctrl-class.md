@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178136"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894511"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl クラス
 
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 ユーザーがキーの組み合わせを選択した場合、アプリケーションはコントロールから、指定したキーの組み合わせを取得し、WM_SETHOTKEY メッセージを使用して、システムで、ホット キーを設定します。 押されたときに、ホット キー、その後、システムの任意の部分から WM_SETHOTKEY メッセージで指定されたウィンドウは SC_HOTKEY を指定する位置であるメッセージを受信します。 このメッセージには、受信するウィンドウがアクティブにします。 ホット キーは WM_SETHOTKEY 終了と呼ばれるアプリケーションまで有効です。
 
-このメカニズムは WM_HOTKEY メッセージと、Windows に依存する、ホット キーのサポートと異なる[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)と[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)関数。
+このメカニズムは WM_HOTKEY メッセージと、Windows に依存する、ホット キーのサポートと異なる[RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)と[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)関数。
 
 使用しての詳細については`CHotKeyCtrl`を参照してください[コントロール](../../mfc/controls-mfc.md)と[を使用して CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)します。
 

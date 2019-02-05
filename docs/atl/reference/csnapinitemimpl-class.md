@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609411"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893614"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl クラス
 
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)します。
+このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems)します。
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842)します。
+このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command)します。
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-このメソッドは、Win32 関数を実装します。 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)します。
+このメソッドは、Win32 関数を実装します。 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2)します。
 
 ```
 CreatePropertyPages(
@@ -240,7 +240,7 @@ GetResultViewType(
 
 ### <a name="parameters"></a>パラメーター
 
-*取得可能です。*<br/>
+*ppViewType*<br/>
 [out]返されるビューの種類のアドレスへのポインター。
 
 *pViewOptions*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-[RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165)スナップイン データ オブジェクトの構造体。
+[RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem)スナップイン データ オブジェクトの構造体。
 
 ```
 RESULTDATAITEM m_resultDataItem;

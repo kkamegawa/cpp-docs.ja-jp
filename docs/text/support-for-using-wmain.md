@@ -8,16 +8,16 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-ms.openlocfilehash: 4dabb10bc4e0a53b0ad86f72ef7ddc5a5559cc21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4ef970174a56361fdbd2102f363b4849ad4af9f3
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331920"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894186"
 ---
 # <a name="support-for-using-wmain"></a>wmain の使用
 
-Visual C のサポートを定義する、 **wmain**関数と、Unicode アプリケーションにワイド文字引数を渡します。 仮パラメーターを宣言する**wmain**のような形式を使用して`main`します。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例えば:
+Visual C のサポートを定義する、 **wmain**関数と、Unicode アプリケーションにワイド文字引数を渡します。 仮パラメーターを宣言する**wmain**のような形式を使用して`main`します。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例:
 
 ```cpp
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
@@ -34,4 +34,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 
 [Unicode のサポート](../text/support-for-unicode.md)<br/>
 [Unicode プログラミングの要約](../text/unicode-programming-summary.md)<br/>
-[WinMain 関数](https://msdn.microsoft.com/library/windows/desktop/ms633559)
+[WinMain 関数](/windows/desktop/api/winbase/nf-winbase-winmain)

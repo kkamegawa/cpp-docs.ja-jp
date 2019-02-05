@@ -1,22 +1,22 @@
 ---
-title: '方法: スケジューラ インスタンスを管理する'
+title: '方法: スケジューラ インスタンスを管理します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437818"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893991"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>方法: スケジューラ インスタンスを管理する
+# <a name="how-to-manage-a-scheduler-instance"></a>方法: スケジューラ インスタンスを管理します。
 
 スケジューラ インスタンスにより、特定のスケジューリング ポリシーと各種の作業負荷を関連付けることができます。 このトピックには、スケジューラ インスタンスを作成および管理する方法を示す 2 つの基本的な例が含まれています。
 
-例では、既定のスケジューラ ポリシーを使用するスケジューラを作成します。 カスタム ポリシーを使用すると、スケジューラを作成する例を参照してください。[方法: 特定のスケジューラ ポリシーの指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)します。
+例では、既定のスケジューラ ポリシーを使用するスケジューラを作成します。 カスタム ポリシーを使用すると、スケジューラを作成する例を参照してください。[方法。特定のスケジューラ ポリシーを指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)します。
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>アプリケーションのスケジューラ インスタンスを管理するには
 
@@ -38,7 +38,7 @@ ms.locfileid: "50437818"
 
 1. イベントにハンドルを渡す、 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)スケジューラをシャット ダウンするを待機する関数。
 
-1. 呼び出す、 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)イベント オブジェクトへのハンドルを閉じます。
+1. 呼び出す、 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle)イベント オブジェクトへのハンドルを閉じます。
 
 ## <a name="example"></a>例
 

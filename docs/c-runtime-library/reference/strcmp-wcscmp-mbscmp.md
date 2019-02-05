@@ -1,9 +1,10 @@
 ---
-title: strcmp、wcscmp、_mbscmp
-ms.date: 11/04/2016
+title: strcmp、wcscmp、_mbscmp、_mbscmp_l
+ms.date: 01/22/2019
 apiname:
 - wcscmp
 - _mbscmp
+- _mbscmp_l
 - strcmp
 apilocation:
 - msvcrt.dll
@@ -23,6 +24,7 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
+- _mbscmp_l
 - wcscmp
 - strcmp
 - _tcscmp
@@ -34,24 +36,25 @@ helpviewer_keywords:
 - mbscmp function
 - string comparison [C++]
 - _mbscmp function
+- _mbscmp_l function
 - wcscmp function
 - _tcscmp function
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: b7d8614fffc96a600c0d1f92b85503259cfc5cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600526"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703156"
 ---
-# <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
+# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp、wcscmp、_mbscmp、_mbscmp_l
 
 文字列を比較します。
 
 > [!IMPORTANT]
-> **_mbscmp** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscmp**と **_mbscmp_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -68,12 +71,20 @@ int _mbscmp(
    const unsigned char *string1,
    const unsigned char *string2
 );
+int _mbscmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*string1*、 *string2*<br/>
+*string1*, *string2*<br/>
 Null で終わる比較対象の文字列。
+
+*locale*<br/>
+使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
@@ -85,11 +96,11 @@ Null で終わる比較対象の文字列。
 |0|*string1*ヲェヒェケェ ・ *string2*|
 |> 0|*string1*がより大きい*string2*|
 
-パラメーター検証エラー、 **_mbscmp**返します**すると**、定義されている\<string.h > と\<mbstring.h >。
+パラメーター検証エラー、 **_mbscmp**と **_mbscmp_l**返す**すると**、定義されている\<string.h > と\<mbstring.h >。
 
 ## <a name="remarks"></a>Remarks
 
-**Strcmp**関数実行の序数に基づく比較*string1*と*string2*の関係を示す値を返します。 **wcscmp**と **_mbscmp**は、それぞれ、ワイド文字とマルチバイト文字のバージョンの**strcmp**します。 **_mbscmp**現在のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 また場合、 *string1*または*string2* null ポインターの場合は、 **_mbscmp**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合 **_mbscmp**返します**すると**設定と**errno**に**EINVAL**します。 **strcmp**と**wcscmp**パラメーターを検証できません。 それ以外では、これらの関数の動作は同じです。
+**Strcmp**関数実行の序数に基づく比較*string1*と*string2*の関係を示す値を返します。 **wcscmp**と **_mbscmp**は、それぞれ、ワイド文字とマルチバイト文字のバージョンの**strcmp**します。 **_mbscmp**現在のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。 **_mbscmp_l**同じ動作ですが、現在のロケールの代わりに渡されるロケール パラメーターを使用します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 また場合、 *string1*または*string2* null ポインターの場合は、 **_mbscmp**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合 **_mbscmp**と **_mbscmp_l**返す**すると**設定と**errno**に**EINVAL**. **strcmp**と**wcscmp**パラメーターを検証できません。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -103,7 +114,7 @@ Null で終わる比較対象の文字列。
 
 対象の文字セットと辞書式文字順序が異なるロケールで使用することができます**strcoll 系**の代わりに**strcmp**の文字列の辞書式比較します。 また、使用することができます**strxfrm**しを使用して、元の文字列で**strcmp**結果の文字列にします。
 
-**Strcmp**関数は大文字小文字を区別します。 **_stricmp**、 **_wcsicmp**、および **_mbsicmp**最初に変換してに小文字の形式の文字列を比較します。 'Z' の間にある文字が含まれている 2 つの文字列と ASCII の表の 'a' ('['、'\\'、']'、' ^'、'_' と'\`')、大文字と小文字によって異なる方法で、比較します。 たとえば、2 つの文字列"ABCDE"と"ABCD ^"場合は、比較では、小文字、1 つの方法を比較 ("abcde">"abcd ^") と、その他の方法 ("ABCDE"<"ABCD ^")、比較が大文字の場合。
+**Strcmp**関数は大文字小文字を区別します。 **\_stricmp**、  **\_wcsicmp**、および **\_mbsicmp**最初に変換してに小文字の形式の文字列を比較します。 'Z' の間にある文字が含まれている 2 つの文字列と ASCII の表の 'a' ('['、'\\'、']'、' ^'、'_' と'\`')、大文字と小文字によって異なる方法で、比較します。 たとえば、2 つの文字列"ABCDE"と"ABCD ^"場合は、比較では、小文字、1 つの方法を比較 ("abcde">"abcd ^") と、その他の方法 ("ABCDE"<"ABCD ^")、比較が大文字の場合。
 
 ## <a name="requirements"></a>必要条件
 

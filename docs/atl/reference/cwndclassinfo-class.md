@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: 2ffe37059eb6ab81eb9dd67243ba125766b92dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467302"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893744"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo クラス
 
@@ -49,11 +49,11 @@ class CWndClassInfo
 |-|-|
 |[m_atom](#m_atom)|登録されているウィンドウ クラスを一意に識別します。|
 |[m_bSystemCursor](#m_bsystemcursor)|カーソル リソースがシステム カーソルにまたはモジュールのリソースに格納されているカーソルを参照するかどうかを指定します。|
-|[マクロ](#m_lpszcursorid)|カーソル リソースの名前を指定します。|
-|[マクロ](#m_lpszorigname)|既存のウィンドウ クラスの名前が含まれています。|
+|[m_lpszCursorID](#m_lpszcursorid)|カーソル リソースの名前を指定します。|
+|[m_lpszOrigName](#m_lpszorigname)|既存のウィンドウ クラスの名前が含まれています。|
 |[m_szAutoName](#m_szautoname)|ウィンドウ クラスの ATL によって生成された名前を保持します。|
 |[m_wc](#m_wc)|ウィンドウ クラスの情報を保持する`WNDCLASSEX`構造体。|
-|[は](#pwndproc)|既存のウィンドウ クラスのウィンドウ プロシージャを指します。|
+|[pWndProc](#pwndproc)|既存のウィンドウ クラスのウィンドウ プロシージャを指します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -62,12 +62,12 @@ class CWndClassInfo
 |マクロ|説明|
 |-----------|-----------------|
 |[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` 新しいウィンドウ クラスの情報を登録します。|
-|[場合は](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` クラスのパラメーターを含む、新しいウィンドウ クラスの情報を登録します。|
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` クラスのパラメーターを含む、新しいウィンドウ クラスの情報を登録します。|
 |[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` 既存のクラスに基づきますが、別のウィンドウ プロシージャを使用して、ウィンドウ クラスの情報を登録します。 この手法をスーパークラス化と呼びます。|
 
 既定では、 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)が含まれています、`DECLARE_WND_CLASS`ウィンドウを作成するマクロが新しいウィンドウ クラスに基づいています。 DECLARE_WND_CLASS は、既定のスタイル、コントロールの背景色を提供します。 スタイルを指定して、背景色を自分でする場合からクラスを派生`CWindowImpl`され、クラス定義に場合はマクロが含まれます。
 
-既存のウィンドウ クラスに基づくウィンドウを作成する場合からクラスを派生`CWindowImpl`され、クラス定義に DECLARE_WND_SUPERCLASS マクロが含まれます。 例えば:
+既存のウィンドウ クラスに基づくウィンドウを作成する場合からクラスを派生`CWindowImpl`され、クラス定義に DECLARE_WND_SUPERCLASS マクロが含まれます。 例:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
@@ -141,7 +141,7 @@ TCHAR m_szAutoName[13];
 
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc
 
-ウィンドウ クラスの情報の保持、 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)構造体。
+ウィンドウ クラスの情報の保持、 [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)構造体。
 
 ```
 WNDCLASSEX m_wc;

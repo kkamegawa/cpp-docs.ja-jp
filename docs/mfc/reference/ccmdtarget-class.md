@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523820"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894290"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 
@@ -163,7 +163,7 @@ BOOL DoOleVerb(
 動詞の数値識別子です。
 
 *lpMsg*<br/>
-ポインター、 [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) (ダブルクリック) などの動詞を呼び出したイベントを記述する構造体。
+ポインター、 [MSG](/windows/desktop/api/winuser/ns-winuser-msg) (ダブルクリック) などの動詞を呼び出したイベントを記述する構造体。
 
 *hWndParent*<br/>
 オブジェクトを保持しているドキュメント ウィンドウのハンドル。

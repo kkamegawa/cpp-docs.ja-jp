@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694596"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894459"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 
@@ -246,13 +246,13 @@ class CWindow
 |[CWindow::GetWindowContextHelpId](#getwindowcontexthelpid)|ウィンドウのヘルプ コンテキスト識別子を取得します。|
 |[CWindow::GetWindowDC](#getwindowdc)|ウィンドウ全体のデバイス コンテキストを取得します。|
 |[CWindow::GetWindowLong](#getwindowlong)|ウィンドウの余分なメモリの指定したオフセットの 32 ビット値を取得します。|
-|[作成します。](#getwindowlongptr)|ウィンドウの余分なメモリの値を指定したオフセットを含む、指定したウィンドウに関する情報を取得します。|
+|[CWindow::GetWindowLongPtr](#getwindowlongptr)|ウィンドウの余分なメモリの値を指定したオフセットを含む、指定したウィンドウに関する情報を取得します。|
 |[CWindow::GetWindowPlacement](#getwindowplacement)|表示状態と位置を取得します。|
 |[CWindow::GetWindowProcessID](#getwindowprocessid)|ウィンドウを作成したプロセスの識別子を取得します。|
 |[CWindow::GetWindowRect](#getwindowrect)|ウィンドウの境界線の寸法を取得します。|
 |[CWindow::GetWindowRgn](#getwindowrgn)|ウィンドウのウィンドウ領域のコピーを取得します。|
 |[CWindow::GetWindowText](#getwindowtext)|ウィンドウのテキストを取得します。|
-|[Cwindow::getwindowtextlength](#getwindowtextlength)|ウィンドウのテキストの長さを取得します。|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|ウィンドウのテキストの長さを取得します。|
 |[CWindow::GetWindowThreadID](#getwindowthreadid)|指定したウィンドウを作成したスレッドの識別子を取得します。|
 |[CWindow::GetWindowWord](#getwindowword)|ウィンドウの余分なメモリの指定されたオフセット位置の 16 ビット値を取得します。|
 |[CWindow::GotoDlgCtrl](#gotodlgctrl)|ダイアログ ボックスのコントロールにキーボード フォーカスを設定します。|
@@ -313,11 +313,11 @@ class CWindow
 |[CWindow::SetTimer](#settimer)|タイマー イベントを作成します。|
 |[CWindow::SetWindowContextHelpId](#setwindowcontexthelpid)|ウィンドウのヘルプ コンテキスト識別子を設定します。|
 |[CWindow::SetWindowLong](#setwindowlong)|指定したオフセットで余分なウィンドウのメモリに 32 ビット値を設定します。|
-|[作成します。](#setwindowlongptr)|指定したウィンドウの属性を変更しも余分なウィンドウのメモリ内の指定したオフセット値を設定します。|
+|[CWindow::SetWindowLongPtr](#setwindowlongptr)|指定したウィンドウの属性を変更しも余分なウィンドウのメモリ内の指定したオフセット値を設定します。|
 |[CWindow::SetWindowPlacement](#setwindowplacement)|表示状態と位置を設定します。|
 |[CWindow::SetWindowPos](#setwindowpos)|サイズ、位置、および Z オーダーを設定します。|
 |[CWindow::SetWindowRgn](#setwindowrgn)|ウィンドウのウィンドウ領域を設定します。|
-|[Cwindow::setwindowtext](#setwindowtext)|ウィンドウのテキストを変更します。|
+|[CWindow::SetWindowText](#setwindowtext)|ウィンドウのテキストを変更します。|
 |[CWindow::SetWindowWord](#setwindowword)|指定したオフセットで余分なウィンドウのメモリに 16 ビット値を設定します。|
 |[CWindow::ShowCaret](#showcaret)|システム キャレットが表示されます。|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|ウィンドウが所有するポップアップ ウィンドウの表示と非表示を切り替えます。|
@@ -349,7 +349,7 @@ class CWindow
 
 |CWindow メソッド|Win32 関数|
 |--------------------|--------------------|
-|**BOOL ShowWindow (int** `nCmdShow` **)。**|**BOOL ShowWindow (HWND** `hWnd` **、int** `nCmdShow` **)。**|
+|**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
 
 `CWindow::ShowWindow` Win32 関数を呼び出す`ShowWindow`を渡すことによって`CWindow::m_hWnd`最初のパラメーターとして。 すべて`CWindow`Win32 関数を直接ラップするメソッドは成功、`m_hWnd`メンバーであるため、多くの`CWindow`ドキュメントで、Windows sdk を参照します。
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) Windows SDK にします。
+参照してください[ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) Windows SDK にします。
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) Windows SDK にします。
+参照してください[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows SDK にします。
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -1353,7 +1353,7 @@ LONG GetWindowLong(int nIndex) const throw();
 > [!NOTE]
 >  Windows の 32 ビットと 64 ビットの両方のバージョンと互換性があるコードを記述するには使用[作成する](#getwindowlongptr)します。
 
-##  <a name="getwindowlongptr"></a>  作成します。
+##  <a name="getwindowlongptr"></a>  CWindow::GetWindowLongPtr
 
 ウィンドウの余分なメモリの値を指定したオフセットを含む、指定したウィンドウに関する情報を取得します。
 
@@ -1456,11 +1456,11 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) Windows SDK にします。
+参照してください[GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) Windows SDK にします。
 
 このメソッドの 2 番目のバージョンでは、BSTR; で、テキストを格納できます。3 番目のバージョンで結果を格納できます。、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)、ため`CSimpleString`の基本クラスは、`CString`します。
 
-##  <a name="getwindowtextlength"></a>  Cwindow::getwindowtextlength
+##  <a name="getwindowtextlength"></a>  CWindow::GetWindowTextLength
 
 ウィンドウのテキストの長さを取得します。
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロック*<br/>
+*bLock*<br/>
 [in]場合は TRUE (既定値)、ウィンドウがロックされます。 それ以外の場合、これはロック解除されます。
 
 ### <a name="return-value"></a>戻り値
@@ -2115,7 +2115,7 @@ BOOL ResizeClient(
 *nWidth*<br/>
 ピクセル単位で、ウィンドウの新しい幅。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 ピクセル単位で、ウィンドウの新しい高さ。
 
 *bRedraw*<br/>
@@ -2556,7 +2556,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 > [!NOTE]
 >  Windows の 32 ビットと 64 ビットの両方のバージョンと互換性があるコードを記述するには使用[作成する](#setwindowlongptr)します。
 
-##  <a name="setwindowlongptr"></a>  作成します。
+##  <a name="setwindowlongptr"></a>  CWindow::SetWindowLongPtr
 
 指定したウィンドウの属性を変更しも余分なウィンドウのメモリ内の指定したオフセット値を設定します。
 
@@ -2619,7 +2619,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 
 参照してください[SetWindowRgn](/windows/desktop/api/winuser/nf-winuser-setwindowrgn) Windows SDK にします。
 
-##  <a name="setwindowtext"></a>  Cwindow::setwindowtext
+##  <a name="setwindowtext"></a>  CWindow::SetWindowText
 
 ウィンドウのテキストを変更します。
 
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) Windows SDK にします。
+参照してください[SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) Windows SDK にします。
 
 ### <a name="example"></a>例
 

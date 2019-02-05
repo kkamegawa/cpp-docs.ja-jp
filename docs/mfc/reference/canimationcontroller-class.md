@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556664"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894134"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController クラス
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|アニメーション コント ローラーを構築します。|
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|デストラクターです。 アニメーション コント ローラーのオブジェクトが破棄されるときに呼び出されます。|
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|デストラクターです。 アニメーション コント ローラーのオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -140,7 +140,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::CreateKeyframe](#createkeyframe)|オーバーロードされます。 遷移に依存するキーフレームを作成し、指定したグループに追加します。|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|アニメーション マネージャーの状態が変化したときに呼び出すハンドラーを解放または設定します。|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|リリースのタイミング イベントのハンドラーと更新のタイミングのハンドラーを設定または取得します。|
-|[Canimationcontroller::enableprioritycomparisonhandler](#enableprioritycomparisonhandler)|呼び出すかどうか、スケジュールされたストーリー ボードが取り消されました、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|呼び出すかどうか、スケジュールされたストーリー ボードが取り消されました、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。|
 |[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|ストーリー ボードの状態と更新プログラムのイベントのハンドラーを解放または設定します。|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|オーバーロードされます。 そのストーリー ボード アニメーションのグループを検索します。|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|指定したアニメーション変数を含むアニメーション オブジェクトを検索します。|
@@ -400,7 +400,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 ハンドラーは、設定されている場合 (有効) の Windows Animation API 呼び出し、OnAnimationTimerPreUpdate OnAnimationTimerPostUpdate、OnRenderingTooSlow メソッド。 Windows Animation API の更新プログラムのストーリー ボードを可能にするアニメーション タイマーを有効にする必要があります。 それ以外の場合、アニメーションを送信するためにすべてのアニメーション変数の値を更新するマネージャー CAnimationController::UpdateAnimationManager を呼び出す必要があります。
 
-##  <a name="enableprioritycomparisonhandler"></a>  Canimationcontroller::enableprioritycomparisonhandler
+##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
 
 呼び出すかどうか、スケジュールされたストーリー ボードが取り消されました、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。
 
@@ -419,7 +419,7 @@ UI_ANIMATION_PHT_ の組み合わせにフラグを設定または解除する�
 
 ### <a name="remarks"></a>Remarks
 
-Windows アニメーションが dwHandlerType に応じて次の仮想メソッドを呼び出してハンドラーを (有効) に設定されている場合: OnHasPriorityCancel、OnHasPriorityConclude、OnHasPriorityTrim、OnHasPriorityCompress します。 dwHandler は、次のフラグの組み合わせを指定できます: UI_ANIMATION_PHT_NONE - リリース UI_ANIMATION_PHT_CANCEL - すべてのハンドラーは、[キャンセル] を設定比較ハンドラー UI_ANIMATION_PHT_CONCLUDE - 完結比較ハンドラー UI_ANIMATION_PHT_COMPRESS の設定 - 設定Compress 比較ハンドラー UI_ANIMATION_PHT_TRIM - トリム比較ハンドラー UI_ANIMATION_PHT_CANCEL_REMOVE 設定 - キャンセル比較ハンドラー UI_ANIMATION_PHT_CONCLUDE_REMOVE の削除 - 完結比較ハンドラー UI_ANIMATION_PHT_COMPRESS_ の削除します。削除 - 圧縮比較ハンドラー UI_ANIMATION_PHT_TRIM_REMOVE - 削除トリム比較ハンドラーを削除
+ハンドラーは、(有効) 設定 Windows アニメーション呼び出し dwHandlerType に応じて次の仮想メソッドが場合です。OnHasPriorityCancel、OnHasPriorityConclude、OnHasPriorityTrim、OnHasPriorityCompress します。 dwHandler は、次のフラグの組み合わせになります。UI_ANIMATION_PHT_NONE - リリース UI_ANIMATION_PHT_CANCEL - すべてのハンドラーは、[キャンセル] を設定比較ハンドラー UI_ANIMATION_PHT_CONCLUDE - 設定完結比較ハンドラー UI_ANIMATION_PHT_COMPRESS - 圧縮比較ハンドラー UI_ANIMATION_PHT_TRIM の設定 - 設定トリミング比較ハンドラー UI_ANIMATION_PHT_CANCEL_REMOVE - キャンセル比較ハンドラー UI_ANIMATION_PHT_CONCLUDE_REMOVE-remove 完結比較ハンドラー UI_ANIMATION_PHT_COMPRESS_REMOVE - 削除圧縮比較ハンドラー UI_ANIMATION_PHT の削除_TRIM_REMOVE - Trim の比較にハンドラーを削除
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -871,7 +871,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CANCEL を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CANCEL を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)します。
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_COMPRESS を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_COMPRESS を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)します。
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CONCLUDE を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CONCLUDE を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)します。
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_TRIM を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_TRIM を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)します。
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525341"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894108"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 
@@ -63,9 +63,9 @@ class COleDateTime
 
 |名前|説明|
 |----------|-----------------|
-|[近く](#format)|書式設定された文字列表現を生成、`COleDateTime`オブジェクト。|
+|[COleDateTime::Format](#format)|書式設定された文字列表現を生成、`COleDateTime`オブジェクト。|
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、`DBTIMESTAMP`データ構造体。|
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)データ構造体。|
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)データ構造体。|
 |[COleDateTime::GetAsUDATE](#getasudate)|時刻を取得するには、このメソッドを呼び出す、`COleDateTime`として、`UDATE`データ構造体。|
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|作成、 `COleDateTime` (静的メンバー関数) の現在の時刻を表すオブジェクト。|
 |[COleDateTime::GetDay](#getday)|この日付を返します`COleDateTime`オブジェクトは (1 ~ 31) を表します。|
@@ -75,7 +75,7 @@ class COleDateTime
 |[COleDateTime::GetMinute](#getminute)|これで分を返します`COleDateTime`オブジェクトが表す (0 - 59)。|
 |[COleDateTime::GetMonth](#getmonth)|これで、1 か月を返します`COleDateTime`オブジェクトは (1 ~ 12) を表します。|
 |[COleDateTime::GetSecond](#getsecond)|秒を返します。 この`COleDateTime`オブジェクトが表す (0 - 59)。|
-|[「](#getstatus)|この状態 (有効) を取得`COleDateTime`オブジェクト。|
+|[COleDateTime::GetStatus](#getstatus)|この状態 (有効) を取得`COleDateTime`オブジェクト。|
 |[COleDateTime::GetYear](#getyear)|これは年を返します`COleDateTime`オブジェクトが表す。|
 |[COleDateTime::ParseDateTime](#parsedatetime)|文字列から日付/時刻値を読み取っての値を設定`COleDateTime`します。|
 |[COleDateTime::SetDate](#setdate)|この値を設定`COleDateTime`オブジェクト指定した日付のみの値から。|
@@ -88,8 +88,8 @@ class COleDateTime
 |名前|説明|
 |----------|-----------------|
 |[COleDateTime::operator COleDateTime::operator、= =、< など。](#coledatetime_relational_operators)|比較する 2 つ`COleDateTime`値。|
-|[COleDateTime::operator +、- COleDateTime::operator](#operator_add_-)|加算および減算`COleDateTime`値。|
-|[COleDateTime::operator + =、-= COleDateTime::operator](#operator_add_eq_-_eq)|加算および減算、`COleDateTime`値からこの`COleDateTime`オブジェクト。|
+|[COleDateTime::operator +, COleDateTime::operator -](#operator_add_-)|加算および減算`COleDateTime`値。|
+|[COleDateTime::operator +=, COleDateTime::operator -=](#operator_add_eq_-_eq)|加算および減算、`COleDateTime`値からこの`COleDateTime`オブジェクト。|
 |[COleDateTime::operator =](#operator_eq)|コピーを`COleDateTime`値。|
 |[COleDateTime::operator 日付、COleDateTime::operator 日付 *](#operator_date)|変換を`COleDateTime`値に、`DATE`または`DATE*`します。|
 
@@ -119,7 +119,7 @@ class COleDateTime
 > [!CAUTION]
 > 上記の表にことはできますが、1899 年 12 月 30 日の午前 0 時前に日付の値が負の値になる時刻の値はありませんに注意してください。 たとえば、午前 6 時では、日を表す整数が (1899 年 12 月 30 日) の後に正または負の値 (前に、1899 年 12 月 30 日) であっても小数部の値 0.25 で表される常にします。 つまり、単純な浮動ポイントの比較が並べ替えが誤って、 `COleDateTime` 12/29/1899 として 6時 00分 AM を表す**後**1 よりも、同じ日に 7時 00分 AM を表します。
 
-`COleDateTime`クラスは、100、年 1 月 1 日 12 月 31 日から日付から 9999 を処理します。 `COleDateTime`クラスは、構成のグレゴリオ暦カレンダーを使用して、ユリウス暦はサポートされません。 `COleDateTime` 夏時間を無視します。 (を参照してください[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md))。
+`COleDateTime`クラスは、100、年 1 月 1 日 12 月 31 日から日付から 9999 を処理します。 `COleDateTime`クラスは、構成のグレゴリオ暦カレンダーを使用して、ユリウス暦はサポートされません。 `COleDateTime` 夏時間を無視します。 (を参照してください[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md))。
 
 > [!NOTE]
 > 使用することができます、`%y`形式の日付は 1900 年以降だけ 2 桁の年を取得します。 使用する場合、 `%y` 1900 年より前に、の日付、コードの形式でアサート エラーが生成されます。
@@ -128,13 +128,13 @@ class COleDateTime
 
 作成する場合、`COleDateTime`オブジェクトの日付を使用して 100 未満の日付が、許容されるが、後続の呼び出しを`GetYear`、 `GetMonth`、 `GetDay`、 `GetHour`、 `GetMinute`、および`GetSecond`失敗し、-1 を返します。 以前は、2 桁の日付を使用できますが、日付が 100 または大きい MFC 4.2 以降にする必要があります。
 
-問題を回避するには、4 桁の日付を指定します。 例えば:
+問題を回避するには、4 桁の日付を指定します。 例:
 
 [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]
 
 基本的な算術演算、`COleDateTime`コンパニオン クラスを使用して、値[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)します。 `COleDateTimeSpan` 値は、時間間隔を定義します。 これらのクラス間のリレーションシップが間に 1 つのような[CTime](../../atl-mfc-shared/reference/ctime-class.md)と[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)します。
 
-詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -155,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*日付*<br/>
+*date*<br/>
 比較される `COleDateTime` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -264,9 +264,9 @@ A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`C
 
 詳細については、`time_t`データ型を参照してください、[時間](../../c-runtime-library/reference/time-time32-time64.md)で機能、*ランタイム ライブラリ リファレンス*します。
 
-詳細については、次を参照してください。、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 内の構造体。
+詳細については、次を参照してください。、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)と[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK 内の構造体。
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 > [!NOTE]
 > コンス トラクターを使用して、`DBTIMESTAMP`パラメーターは、OLEDB.h が含まれる場合にのみ使用できます。
@@ -275,7 +275,7 @@ A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`C
 
 [!code-cpp[NVC_ATLMFC_Utilities#2](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]
 
-##  <a name="format"></a>  近く
+##  <a name="format"></a>  COleDateTime::Format
 
 日付/時刻値の書式設定された表現を作成します。
 
@@ -372,7 +372,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *sysTime*<br/>
-参照を[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。
+参照を[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -652,7 +652,7 @@ int GetSecond() const throw();
 > [!NOTE]
 >  `COleDateTime`クラスはうるう秒をサポートしていません。
 
-実装の詳細については`COleDateTime`、記事をご覧ください[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+実装の詳細については`COleDateTime`、記事をご覧ください[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 この値をクエリする他のメンバー関数について`COleDateTime`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -674,7 +674,7 @@ int GetSecond() const throw();
 
 例をご覧ください[GetHour](#gethour)します。
 
-##  <a name="getstatus"></a>  「
+##  <a name="getstatus"></a>  COleDateTime::GetStatus
 
 状態 (有効) を取得する指定された`COleDateTime`オブジェクト。
 
@@ -732,9 +732,9 @@ enum DateTimeStatus
 
 - [演算子 +、-](#operator_add_-)
 
-- [演算子 + =、=](#operator_add_eq_-_eq)
+- [operator +=, -=](#operator_add_eq_-_eq)
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ### <a name="example"></a>例
 
@@ -772,7 +772,7 @@ int GetYear() const throw();
 
 - [GetDayOfYear](#getdayofyear)
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ### <a name="example"></a>例
 
@@ -791,7 +791,7 @@ DATE m_dt;
 > [!CAUTION]
 >  値を変更、`DATE`この関数によって返されるポインターによってアクセスされるオブジェクトがこの値を変更`COleDateTime`オブジェクト。 この状態は変更されません`COleDateTime`オブジェクト。
 
-実装の詳細については、`DATE`オブジェクトは、「[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+実装の詳細については、`DATE`オブジェクトは、「[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ##  <a name="m_status"></a>  COleDateTime::m_status
 
@@ -834,21 +834,21 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **operator = (** `timeSrc` **)** 、`time_t`または`__time64_t`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。
 
-- **operator = (** *systimeSrc* **)** 、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。
+- **operator = (** *systimeSrc* **)** 、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。
 
 - **operator = (** `udate` **)** 、`UDATE`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。 A`UDATE`構造体は、「開」の日付を表します。 関数を参照してください。 [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)の詳細。
 
-- **operator = (** `filetimeSrc` **)** 、 [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
+- **operator = (** `filetimeSrc` **)** 、 [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
 
 詳細については、次を参照してください。、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
 
 詳細については、`time_t`データ型を参照してください、[時間](../../c-runtime-library/reference/time-time32-time64.md)で機能、*ランタイム ライブラリ リファレンス*します。
 
-詳細については、次を参照してください。、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)と[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 内の構造体。
+詳細については、次を参照してください。、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)と[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) Windows SDK 内の構造体。
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
-##  <a name="operator_add_-"></a>  COleDateTime::operator +、-
+##  <a name="operator_add_-"></a>  COleDateTime::operator +, -
 
 加算および減算`ColeDateTime`値。
 
@@ -868,17 +868,17 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 オペランドのいずれかが有効ではないと、もう一方が null でない場合、結果の状態`COleDateTime`値が無効です。
 
-**+** と**-** 場合演算子はアサート、`COleDateTime`オブジェクトの設定を null にします。 参照してください[COleDateTime 関係演算子](#coledatetime_relational_operators)例についてはします。
+**+** と **-** 場合演算子はアサート、`COleDateTime`オブジェクトの設定を null にします。 参照してください[COleDateTime 関係演算子](#coledatetime_relational_operators)例についてはします。
 
 有効、無効、および null 状態の値の詳細については、次を参照してください。、[ついて](#m_status)メンバー変数。
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#12](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTime::operator + =、=
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTime::operator +=, -=
 
 加算および減算、`ColeDateTime`値からこの`COleDateTime`オブジェクト。
 
@@ -899,9 +899,9 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 **+=** と **-=** 場合演算子はアサート、`COleDateTime`オブジェクトの設定を null にします。 参照してください[COleDateTime 関係演算子](#coledatetime_relational_operators)例についてはします。
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
-##  <a name="operator_date"></a>  COleDateTime::operator 日付
+##  <a name="operator_date"></a>  COleDateTime::operator DATE
 
 変換を`ColeDateTime`値に、`DATE`します。
 
@@ -911,7 +911,7 @@ operator DATE() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-この演算子を返します、`DATE`値がこれからコピーしたオブジェクト`COleDateTime`オブジェクト。 実装の詳細については、`DATE`オブジェクトは、「[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+この演算子を返します、`DATE`値がこれからコピーしたオブジェクト`COleDateTime`オブジェクト。 実装の詳細については、`DATE`オブジェクトは、「[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 `DATE`場合演算子はアサート、`COleDateTime`オブジェクトの設定を null にします。 参照してください[COleDateTime 関係演算子](#coledatetime_relational_operators)例についてはします。
 
@@ -974,7 +974,7 @@ VAR_DATEVALUEONLY の場合は、時間の値は 0、または午前 0 時にか
 
 文字列を日付/時刻値に変換できませんでしたか、この数値のオーバーフローがあった場合`COleDateTime`オブジェクトが無効です。
 
-境界と実装の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界と実装の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ##  <a name="setdate"></a>  COleDateTime::SetDate
 
@@ -1041,7 +1041,7 @@ int SetDate(
 
 - [GetDayOfYear](#getdayofyear)
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ### <a name="example"></a>例
 
@@ -1125,7 +1125,7 @@ int SetDateTime(
 
 - [GetDayOfYear](#getdayofyear)
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ### <a name="example"></a>例
 
@@ -1218,7 +1218,7 @@ int SetTime(
 
 - [GetDayOfYear](#getdayofyear)
 
-境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+境界の詳細については`COleDateTime`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ### <a name="example"></a>例
 

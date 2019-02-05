@@ -1,10 +1,11 @@
 ---
-title: _mbclen、mblen、_mblen_l
-ms.date: 11/04/2016
+title: _mbclen、mblen、_mblen_l、_mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434387"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702961"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen、mblen、_mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
 長さを取得し、マルチバイト文字の有効性を決定します。
 
@@ -55,6 +58,10 @@ ms.locfileid: "50434387"
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,21 +90,21 @@ int _mblen_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_mbclen**かどうかに従って、1 または 2 を返します、マルチバイト文字*c* 1 または 2 バイト長。 戻り値エラーがない **_mbclen**します。 場合*mbstr*ない**NULL**、 **mblen**マルチバイト文字のバイト単位の長さを返します。 場合*mbstr*は**NULL**またはワイド文字の null 文字を指す**mblen** 0 を返します。 場合、オブジェクトを*mbstr*へのポインターは、その中で有効なマルチバイト文字は*カウント*文字、 **mblen** -1 を返します。
+**_mbclen**かどうかに従って、1 または 2 を返します、マルチバイト文字*c* 1 または 2 バイト長。 戻り値エラーがない **_mbclen**します。 場合*mbstr*いない**NULL**、 **mblen**マルチバイト文字のバイト単位の長さを返します。 場合*mbstr*は**NULL**またはワイド文字の null 文字を指す**mblen** 0 を返します。 ときに、オブジェクトを*mbstr*へのポインターは、その中で有効なマルチバイト文字を形成しない*カウント*文字、 **mblen** -1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbclen**関数は、マルチバイト文字のバイト単位の長さを返します*c*します。 場合*c*への暗黙的な呼び出しによって決定されるマルチバイト文字の先行バイトを指していない **_ismbblead**の結果 **_mbclen**は予測できません。
+**_Mbclen**関数は、マルチバイト文字のバイト単位の長さを返します*c*します。 場合*c*への暗黙的な呼び出しによって決定されるマルチバイト文字の先行バイトを指していません **_ismbblead**の結果 **_mbclen**は予測できません。
 
 **mblen**のバイトの長さを返します*mbstr*場合は、有効なマルチバイト文字し、コード ページに関連付けられているマルチバイト文字の有効性を判断します。 **mblen**検査*カウント*に含まれている以下のバイト*mbstr*、最大**MB_CUR_MAX**バイト。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値を受ける、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale](setlocale-wsetlocale.md)詳細についてはします。 この関数のバージョン、 **_l**サフィックスは、このロケールに依存する動作の現在のロケールを使用します。 **_L**サフィックスが付いたバージョンも、同様に動作が、代わりに渡されたロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**定義されています**|マクロまたはインライン関数にマップされます|**_mbclen**|マクロまたはインライン関数にマップされます|
+|**_tclen**|マクロまたはインライン関数にマップされます|**_mbclen**|マクロまたはインライン関数にマップされます|
 
 ## <a name="requirements"></a>必要条件
 

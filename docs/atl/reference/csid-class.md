@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465365"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894316"
 ---
 # <a name="csid-class"></a>CSid クラス
 
@@ -87,9 +87,9 @@ class CSid
 |[operator ==](#operator_eq_eq)|2 つのセキュリティ記述子オブジェクトの等価性をテストします。|
 |[operator !=](#operator_neq)|非等値の 2 つのセキュリティ記述子オブジェクトをテストします。|
 |[演算子 \<](#operator_lt_)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
-|[演算子 >](#operator_gt_)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
+|[operator >](#operator_gt_)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
 |[演算子 \<=](#operator_lt__eq)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
-|[operator > =](#operator_gt__eq)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
+|[operator >=](#operator_gt__eq)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -232,7 +232,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621)詳細については、Windows SDK に含まれています。
+参照してください[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid)詳細については、Windows SDK に含まれています。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -388,7 +388,7 @@ CSid& operator= (const SID& rhs) throw(...);
 
 更新されたへの参照を返します`CSid`オブジェクト。
 
-##  <a name="operator_eq_eq"></a>  CSid::operator = =
+##  <a name="operator_eq_eq"></a>  CSid::operator ==
 
 2 つのセキュリティ記述子オブジェクトの等価性をテストします。
 

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 1: ウィンドウ クラスの登録'
+title: TN001:ウィンドウ クラスの登録
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693867"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894264"
 ---
-# <a name="tn001-window-class-registration"></a>テクニカル ノート 1: ウィンドウ クラスの登録
+# <a name="tn001-window-class-registration"></a>TN001:ウィンドウ クラスの登録
 
 このノートには、特殊なを登録する MFC ルーチンがについて説明[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es の Microsoft Windows が必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性については説明します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "51693867"
 
 - MFC を呼び出すことによって明示的に[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)または[AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass)します。
 
-- Windows のルーチンを呼び出すことによって明示的に[RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586)します。
+- Windows のルーチンを呼び出すことによって明示的に[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)します。
 
 ## <a name="wndclass-fields"></a>WNDCLASS フィールド
 
@@ -59,7 +59,7 @@ ms.locfileid: "51693867"
 
 `CFrameWnd::LoadFrame` 登録は、`WNDCLASS`最初のパラメーターと、次の標準属性として指定したアイコン ID を使用します。
 
-- クラス スタイル: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
+- クラス スタイル:CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
 - AFX_IDI_STD_FRAME アイコン
 

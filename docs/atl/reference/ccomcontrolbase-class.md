@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694583"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894433"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase クラス
 
@@ -124,9 +124,9 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|確認、 *iVerb*で使用されるパラメーター`IOleObjectImpl::DoVerb`をアクティブ化するコントロールのユーザー インターフェイスを発生し、TRUE を返します。|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|コントロールのプロパティ ページが表示されます。|
 |[CComControlBase::FireViewChange](#fireviewchange)|コントロールを再描画するコンテナーを確認するには、このメソッドを呼び出すか、コントロールのビューが変更された登録されているアドバイズ シンクに通知します。|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|示す、コントロールの設定の現在の外観を取得します。 フラットから 3D 用の 1 の場合は 0。|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|示す、コントロールの設定の現在の外観を取得します。フラットから 3D 用の 1 は 0 です。|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|DISPID_AMBIENT_AUTOCLIP、コンテナーがコントロールの表示領域の自動のクリッピングをサポートしているかどうかを示すフラグを取得します。|
-|[用意されています](#getambientbackcolor)|DISPID_AMBIENT_BACKCOLOR、コンテナーで定義されているすべてのコントロールのアンビエント背景色を取得します。|
+|[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|DISPID_AMBIENT_BACKCOLOR、コンテナーで定義されているすべてのコントロールのアンビエント背景色を取得します。|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|DISPID_AMBIENT_CHARSET、アンビエント文字コンテナーによって定義されているすべてのコントロールのセットを取得します。|
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|DISPID_AMBIENT_CODEPAGE、アンビエント文字コンテナーによって定義されているすべてのコントロールのセットを取得します。|
 |[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|DISPID_AMBIENT_DISPLAYASDEFAULT、したがってボタン コントロールを描画自体太くフレームを使用して、コンテナーには、既定のボタンを使用するには、このサイト内のコントロールがマークされている場合は TRUE であるフラグを取得します。|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|DISPID_AMBIENT_SHOWGRABHANDLES、コンテナーがアクティブなときにハンドルを表示するコントロールを許可するかどうかを示すフラグを取得します。|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|DISPID_AMBIENT_SHOWHATCHING、コンテナーが、UI がアクティブのとき、ハッチ パターンで自体を表示するコントロールを許可するかどうかを示すフラグを取得します。|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|DISPID_AMBIENT_SUPPORTSMNEMONICS、コンテナーがキーボードのニーモニックをサポートしているかどうかを示すフラグを取得します。|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|DISPID_AMBIENT_TEXTALIGN、コンテナーが推奨するテキストの配置を取得します。 標準の配置 (数値、テキスト左) の場合は 0、左揃えの場合は 1、2 を中央揃え、および右揃えの 3。|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|DISPID_AMBIENT_TEXTALIGN、コンテナーが推奨するテキストの配置を取得します。標準の配置 (数値、テキスト左) の場合は 0、左揃えの場合は 1、2 を中央揃え、および右揃えの 3。|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|DISPID_AMBIENT_TOPTOBOTTOM、コンテナーによってコンテンツを表示する方向を取得します。|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|DISPID_AMBIENT_UIDEAD、コンテナーに、コントロール ユーザー インターフェイスの操作に応答するかどうかを示すフラグを取得します。|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|DISPID_AMBIENT_USERMODE、コンテナーが実行モード (TRUE)、またはデザイン モード (FALSE) かどうかを示すフラグを取得します。|
@@ -175,7 +175,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|示すフラグ`IDataObjectImpl::GetData`描画するときに HIMETRIC ユニットと単位を使用する必要があります。|
 |[CComControlBase::m_bInPlaceActive](#m_binplaceactive)|コントロールがアクティブであることを示すフラグです。|
 |[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|コンテナー サポートを示すフラグ、`IOleInPlaceSiteEx`インターフェイスと OCX96 およびちらつきなしのコントロールなどの機能を制御します。|
-|[各](#m_bnegotiatedwnd)|(ちらつきのないとウィンドウなしコントロールなど)、OCX96 コントロールの機能のサポートのコンテナーとコントロールがネゴシエートするかどうかと、コントロールは、ウィンドウまたはウィンドウなしかどうかを示すフラグします。|
+|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|(ちらつきのないとウィンドウなしコントロールなど)、OCX96 コントロールの機能のサポートのコンテナーとコントロールがネゴシエートするかどうかと、コントロールは、ウィンドウまたはウィンドウなしかどうかを示すフラグします。|
 |[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|コンテナー コントロールの表示サイズが変更されたときに、プレゼンテーションを再構成するために、コントロールを示すフラグします。|
 |[CComControlBase::m_bRequiresSave](#m_brequiressave)|最後に保存された後、コントロールが変更を示すフラグします。|
 |[CComControlBase::m_bResizeNatural](#m_bresizenatural)|コントロールでは、自然なエクステント (スケーリングされていない物理サイズ) のサイズを変更することを示すフラグ、コンテナーにコントロールの表示サイズが変更されたとき。|
@@ -189,7 +189,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|コンテナーの座標で表された、コントロールの位置を (ピクセル単位)。|
 |[この](#m_sizeextent)|特定のディスプレイの HIMETRIC 単位 (各単位は 0.01 ミリメートル) 内のコントロールの範囲。|
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|HIMETRIC 単位 (各単位は 0.01 ミリメートル) コントロールの物理サイズ。|
-|[アドバイズ](#m_spadvisesink)|コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。|
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。|
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|A`CComDispatchDriver`オブジェクトを取得し、コンテナーのプロパティを設定することができます、`IDispatch`ポインター。|
 |[CComControlBase::m_spClientSite](#m_spclientsite)|コンテナー内のコントロールのクライアントのサイトへのポインター。|
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|標準的なデータ オブジェクト間のアドバイザリ コネクションをアドバイズ シンクすることを意味を提供します。|
@@ -358,7 +358,7 @@ HRESULT FireViewChange();
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-示す、コントロールの設定の現在の外観を取得します。 フラットから 3D 用の 1 の場合は 0。
+示す、コントロールの設定の現在の外観を取得します。フラットから 3D 用の 1 は 0 です。
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -394,7 +394,7 @@ DISPID_AMBIENT_AUTOCLIP プロパティ。
 
 標準の HRESULT 値の 1 つ。
 
-##  <a name="getambientbackcolor"></a>  用意されています
+##  <a name="getambientbackcolor"></a>  CComControlBase::GetAmbientBackColor
 
 DISPID_AMBIENT_BACKCOLOR、コンテナーで定義されているすべてのコントロールのアンビエント背景色を取得します。
 
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>パラメーター
 
 *ppFont*<br/>
-コンテナーのアンビエント[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)ディスパッチ インターフェイス。
+コンテナーのアンビエント[IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp)ディスパッチ インターフェイス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -704,7 +704,7 @@ DISPID_AMBIENT_SUPPORTSMNEMONICS プロパティ。
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-DISPID_AMBIENT_TEXTALIGN、コンテナーが推奨するテキストの配置を取得します。 標準の配置 (数値、テキスト左) の場合は 0、左揃えの場合は 1、2 を中央揃え、および右揃えの 3。
+DISPID_AMBIENT_TEXTALIGN、コンテナーが推奨するテキストの配置を取得します。標準の配置 (数値、テキスト左) の場合は 0、左揃えの場合は 1、2 を中央揃え、および右揃えの 3。
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -934,7 +934,7 @@ unsigned m_bInPlaceSiteEx:1;
 
 場合`m_bWndLess`false と`m_bInPlaceSiteEx`が true の場合、`m_spInPlaceSite`は、`IOleInPlaceSiteEx`インターフェイス ポインター。 参照してください[は、「](#m_spinplacesite)これら 3 つのデータ メンバーの関係を示すしますテーブル。
 
-##  <a name="m_bnegotiatedwnd"></a>  各
+##  <a name="m_bnegotiatedwnd"></a>  CComControlBase::m_bNegotiatedWnd
 
 (ちらつきのないとウィンドウなしコントロールなど)、OCX96 コントロールの機能のサポートのコンテナーとコントロールがネゴシエートするかどうかと、コントロールは、ウィンドウまたはウィンドウなしかどうかを示すフラグします。
 
@@ -1140,7 +1140,7 @@ SIZE m_sizeNatural;
 
 グローバル関数でピクセルにサイズを変換する[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)します。
 
-##  <a name="m_spadvisesink"></a>  アドバイズ
+##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink
 
 コンテナーのアドバイザリ コネクションを直接ポインター (コンテナーの[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。
 
