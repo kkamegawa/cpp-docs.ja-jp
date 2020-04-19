@@ -1,41 +1,41 @@
 ---
 title: _mm_cvttss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvttss_si64x
 helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 2097ec50eca68cbe5735d30e772644552ab0df3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329021"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217420"
 ---
-# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+# <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft 固有の仕様**
 
-出力拡張 x64 バージョンの 64 ビットの整数に切り捨て単精度浮動小数点数に変換 (`cvttss2si`) 命令。
+切り捨ての単精度浮動小数点数を64ビット整数 (`cvttss2si`) 命令に変換した x64 拡張バージョンを出力します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*値*<br/>
-[in]`__m128`単精度浮動小数点値を含む構造体。
+*value*\
+から単精度浮動小数点値を含む構造体。`__m128`
 
 ## <a name="return-value"></a>戻り値
 
-最初の浮動小数点値の 64 ビット整数への変換の結果。
+最初の浮動小数点値を64ビット整数に変換した結果。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,17 +43,17 @@ __int64 _mm_cvttss_si64x(
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-組み込みの異なる`_mm_cvtss_si64x`不正確な変換は、ゼロに向かって切り捨てられます。 その内のみです。 `__m128`構造体が、XMM レジスタを表す、生成された命令をシステム メモリに、XMM レジスタからデータを移動します。
+組み込みは、不`_mm_cvtss_si64x`正確な変換が0方向に切り捨てられた場合にのみ異なります。 構造体`__m128`は XMM register を表しているため、生成された命令は XMM レジスタからシステムメモリにデータを移動します。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[__m128](../cpp/m128.md)<br/>
+[__m128](../cpp/m128.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

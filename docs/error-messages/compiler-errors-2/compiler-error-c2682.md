@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2682
+title: コンパイラエラー C2682
 ms.date: 11/04/2016
 f1_keywords:
 - C2682
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: 8a9ec2f59f362df284e9bd5cd8df6ae986d59d77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439417"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760284"
 ---
-# <a name="compiler-error-c2682"></a>コンパイラ エラー C2682
+# <a name="compiler-error-c2682"></a>コンパイラエラー C2682
 
-'type1' から 'type2' に変換する casting_operator を使用することはできません。
+casting_operator を使用して ' type1 ' から ' type1 ' に変換することはできません
 
-キャスト演算子と互換性のない型を変換しようとしました。 たとえば、使用することはできません、 [dynamic_cast](../../cpp/dynamic-cast-operator.md)参照へのポインターに変換する演算子。 `dynamic_cast`演算子はキャスト修飾子を使用できることはできません。 型のすべての修飾子が一致する必要があります。
+キャスト演算子が互換性のない型を変換しようとしました。 たとえば、 [dynamic_cast](../../cpp/dynamic-cast-operator.md)演算子を使用してポインターを参照に変換することはできません。 `dynamic_cast` 演算子は、修飾子のキャストには使用できません。 型のすべての修飾子が一致している必要があります。
 
-使用することができます、`const_cast`などの属性を削除するオペレーター `const`、 `volatile`、または`__unaligned`します。
+`const_cast` 演算子を使用すると、`const`、`volatile`、`__unaligned`などの属性を削除できます。
 
 次の例では、C2682 が生成されます。
 
-```
+```cpp
 // C2682.cpp
 class A { virtual void f(); };
 class B: public A {};
@@ -35,7 +35,7 @@ void g(A* pa) {
 
 次の例では、C2682 が生成されます。
 
-```
+```cpp
 // C2682b.cpp
 // compile with: /clr
 ref struct R{};

@@ -1,12 +1,12 @@
 ---
 title: va_arg、va_copy、va_end、va_start
 ms.date: 11/04/2016
-apiname:
+api_name:
 - va_arg
 - va_end
 - va_copy
 - va_start
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - va_arg
 - va_start
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506354"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957359"
 ---
-# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
+# <a name="va_arg-va_copy-va_end-va_start"></a>va_arg、va_copy、va_end、va_start
 
 可変個引数リストにアクセスする。
 
@@ -80,33 +83,33 @@ void va_start(
 引数リストへのポインター。
 
 *dest*<br/>
-初期化される引数のリストへのポインター *src*
+*Src*から初期化される引数のリストへのポインター
 
 *src*<br/>
-コピーする引数の初期化リストへのポインター *dest*します。
+*Dest*にコピーする引数の初期化されたリストへのポインター。
 
 *prev_param*<br/>
 最初の省略可能な引数に先行するパラメーター。
 
 ## <a name="return-value"></a>戻り値
 
-**va_arg**は現在の引数を返します。 **va_copy**、 **va_start**と**va_end**値は返されません。
+**va_arg**は、現在の引数を返します。 **va_copy**、 **va_start** 、および**va_end**は値を返しません。
 
 ## <a name="remarks"></a>Remarks
 
-**Va_arg**、 **va_copy**、 **va_end**、および**va_start**マクロは、移植可能な関数の引数にアクセスするときに、関数は、可変個の引数を受け取ります。 このマクロには 2 種類のバージョンがあります。STDARG.H で定義されているマクロは、ISO C99 標準に準拠します。VARARGS.H で定義されているマクロは非推奨とされましたが、ANSI C89 標準以前に作成されたコードの下位互換性のために残されています。
+**Va_arg**、 **va_copy**、 **va_end**、および**va_start**マクロは、関数が可変個の引数を受け取る場合に、関数の引数に移植可能な方法でアクセスできます。 マクロには、次の2つのバージョンがあります。STDARG.H で定義されているマクロ。H は、ISO C99 標準に準拠しています。VARARGS で定義されているマクロ。H は非推奨とされますが、ANSI C89 標準より前に記述されたコードとの下位互換性のために残されています。
 
 これらのマクロは、関数が固定の個数の必須の引数の後に、省略可能な引数を可変個数受け取るものと想定します。 必須の引数は、関数の通常のパラメーターのように宣言され、パラメーター名でアクセスできます。 省略可能な引数は、STDARG.H (または、ANSI C89 標準以前に書かれたコードの場合は VARARGS.H) のマクロを使用してアクセスします。これらのマクロは、ポインターを引数リストの最初の省略可能な引数へセットし、リストから引数を取得し引数の処理が終了するとポインターをリセットします。
 
 STDARG.H で定義されている C 標準マクロは次のように使用されます。
 
-- **va_start**設定*arg_ptr*関数に渡される引数の一覧で 1 番目の省略可能な引数。 引数*arg_ptr*必要があります、 **va_list**型。 引数*prev_param*引数リストの最初の省略可能な引数の直前にある必須のパラメーターの名前を指定します。 場合*prev_param*マクロの動作は未定義レジスタのストレージ クラスで宣言されます。 **va_start**前に使用する必要があります**va_arg**を初めて使用します。
+- **va_start**は、関数に渡される引数のリストの最初の省略可能な引数に*arg_ptr*を設定します。 引数*arg_ptr*には**va_list**型を指定する必要があります。 引数*prev_param*は、引数リストの最初の省略可能な引数の直前にある必須パラメーターの名前です。 *Prev_param*が register ストレージクラスを使用して宣言されている場合、マクロの動作は定義されていません。 **va_arg**を初めて使用する場合は、 **va_start**を使用する必要があります。
 
-- **va_arg**の値を取得*型*で指定された場所から*arg_ptr*、およびインクリメント*arg_ptr*で一覧には、次の引数をポイントするにはサイズを使用して*型*に次の引数の開始位置を特定します。 **va_arg**できる時間の任意の数をリストから引数を取得する関数で使用します。
+- **va_arg**は、 *arg_ptr*によって指定された場所から*型*の値を取得し、 *arg_ptr*をインクリメントして、次の引数の開始位置を決定するために*型*のサイズを使用して、リスト内の次の引数を指すようにします。 **va_arg**は、関数内で任意の回数だけ使用して、リストから引数を取得できます。
 
-- **va_copy**現在の状態で引数のリストのコピーを作成します。 *Src*パラメーターで既に初期化する必要があります**va_start**; で更新された**va_arg**を呼び出すが使用する必要がありますリセットされていない**va_end**. 次の引数によって取得される**va_arg**から*dest*から取得される次の引数と同じ*src*します。
+- **va_copy**は、現在の状態で引数のリストのコピーを作成します。 *Src*パラメーターは、 **va_start**を使用して既に初期化されている必要があります。**va_arg**の呼び出しで更新されている可能性がありますが、 **va_end**でリセットされていない必要があります。 *Dest*から**va_arg**によって取得される次の引数は、 *src*から取得される次の引数と同じです。
 
-- すべての引数が取得された後**va_end**へのポインターをリセット**NULL**します。 **va_end**使用して初期化される各引数リストで呼び出す必要がある**va_start**または**va_copy**関数が戻る前にします。
+- すべての引数を取得した後、 **va_end**はポインターを**NULL**にリセットします。 関数が返される前に、 **va_start**または**va_copy**で初期化された各引数リストで**va_end**を呼び出す必要があります。
 
 > [!NOTE]
 > VARARGS.H のマクロは非推奨とされており、C89 ANSI 規格以前に作成されたコードとの下位互換性のためだけに残されています。 それ以外の場合は、STDARGS.H のマクロを使用します。
@@ -143,7 +146,7 @@ int main()
 }
 ```
 
-注意**testit**いずれかを指定する 2 番目のパラメーターが必要ですが、 **int**または**char**<strong>\*</strong>。 渡された引数は 0 xffffffff (、**符号なし** **int**ではなく、 **int**) と**NULL** (実際には**int**ではなく、 **char**<strong>\*</strong>)。 ネイティブ コードの場合にプログラムをコンパイルすると、次の出力が生成されます。
+**Testit**は、2番目のパラメーターを**int**または**char**<strong>\*</strong>にする必要があることに注意してください。 渡される引数は、0xffffffff ( **int**ではなく**符号なし** **整数**) および**NULL** (実際には**char**<strong>\*</strong>ではなく**int**) です。 ネイティブ コードの場合にプログラムをコンパイルすると、次の出力が生成されます。
 
 ```Output
 -1
@@ -155,7 +158,7 @@ int main()
 
 **ヘッダー:** \<stdio.h> および \<stdarg.h>
 
-**非推奨のヘッダー:**\<varargs.h&amp;gt;
+**非推奨のヘッダー:** \<varargs.h&gt;
 
 ## <a name="libraries"></a>ライブラリ
 

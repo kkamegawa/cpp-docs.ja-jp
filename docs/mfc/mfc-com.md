@@ -11,42 +11,42 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: a3da9e437dc9ca20aa2a02977b1c8653d68930f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eab688022c311f3d20fc092736ee4c7d37232a43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645160"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508091"
 ---
 # <a name="mfc-com"></a>MFC COM
 
-Active Template Library (ATL) のほとんどは設計されています。 COM をサポートする MFC のサブセットがに設計された COM プログラミングします。 このセクションのトピックには、COM の MFC のサポートがについて説明します
+MFC のサブセットは COM をサポートするように設計されていますが、ほとんどの Active Template Library (ATL) は COM プログラミング向けに設計されています。 このセクションのトピックでは、MFC における COM のサポートについて説明します。
 
-Active テクノロジ (など、ActiveX コントロール、Active ドキュメント コンテインメント、OLE、およびなど) が使用する言語に関係なく、ネットワーク環境で互いと対話するのにソフトウェア コンポーネントを有効にするのにコンポーネント オブジェクト モデル (COM) を使用します。作成されます。 Active テクノロジは、デスクトップまたはインターネット上で実行されるアプリケーションの作成に使用できます。 詳細については、次を参照してください。 [COM の概要](../atl/introduction-to-com.md)または[、コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)します。
+アクティブなテクノロジ (ActiveX コントロール、Active document コンテインメント、OLE など) では、コンポーネントオブジェクトモデル (COM) を使用して、ソフトウェアコンポーネントがネットワーク環境で相互に通信できるようにします。作成. アクティブなテクノロジを使用して、デスクトップまたはインターネット上で実行されるアプリケーションを作成できます。 詳細については、「 [COM の概要](../atl/introduction-to-com.md)」または「[コンポーネントオブジェクトモデル](/windows/win32/com/the-component-object-model)」を参照してください。
 
-アクティブな技術には、次を含む、クライアントとサーバーの両方のテクノロジがあります。
+アクティブなテクノロジには、クライアントとサーバーの両方のテクノロジが含まれます。次に例を示します。
 
-- ActiveX コントロールは、Web サイトなどのコンテナーで使用できる対話型のオブジェクトです。 ActiveX コントロールの詳細についてを参照してください。
+- ActiveX コントロールは、Web サイトなどのコンテナーで使用できる対話型のオブジェクトです。 ActiveX コントロールの詳細については、以下を参照してください。
 
    - [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 
    - [インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)
 
-   - [概要: インターネット](../mfc/mfc-internet-programming-basics.md)
+   - [概要インフォメーション](../mfc/mfc-internet-programming-basics.md)
 
-   - [インターネットで使用する既存の ActiveX コントロールのアップグレードします。](../mfc/upgrading-an-existing-activex-control.md)
+   - [インターネットで使用する既存の ActiveX コントロールをアップグレードする](../mfc/upgrading-an-existing-activex-control.md)
 
    - [ActiveX コントロールのデバッグ](/visualstudio/debugger/how-to-debug-an-activex-control)
 
-- アクティブ スクリプトからブラウザーまたはサーバーの 1 つ以上の ActiveX コントロールの統合の動作を制御します。 アクティブ スクリプトの詳細については、次を参照してください。 [、インターネット上の Active テクノロジ](../mfc/active-technology-on-the-internet.md)します。
+- アクティブスクリプティングは、ブラウザーまたはサーバーからの1つ以上の ActiveX コントロールの統合動作を制御します。 アクティブスクリプティングの詳細については、「[インターネット上のアクティブなテクノロジ](../mfc/active-technology-on-the-internet.md)」を参照してください。
 
-- [Automation](../mfc/automation.md) (以前の OLE オートメーション) 1 つのアプリケーションを別のアプリケーションで実装されているオブジェクトを操作する"オブジェクトを公開したり"操作できるようにすることになります。
+- [オートメーション](../mfc/automation.md)(以前の OLE オートメーション) を使用すると、あるアプリケーションで別のアプリケーションに実装されているオブジェクトを操作したり、オブジェクトを "公開" して操作できるようにしたりすることができます。
 
-   オブジェクトの自動化には、ローカルまたはリモート (上に別のコンピューターをネットワーク経由でアクセスできる) があります。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。
+   自動オブジェクトは、ローカルまたはリモート (ネットワーク経由でアクセス可能な別のコンピューター上) である場合があります。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。
 
-- このセクションの例については、MFC を使用する COM コンポーネントを作成する方法に関する情報も提供します[コネクション ポイント](../mfc/connection-points.md)します。
+- このセクションでは、たとえば、[接続ポイント](../mfc/connection-points.md)で MFC を使用して COM コンポーネントを記述する方法についても説明します。
 
-まだと呼ばれる OLE active テクノロジを今すぐと呼ばれるものと比較の詳細については、トピックを参照してください。 [OLE](../mfc/ole-in-mfc.md)します。
+まだ OLE と呼ばれているものについては、 [「ole」](../mfc/ole-in-mfc.md)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -61,4 +61,3 @@ Active テクノロジ (など、ActiveX コントロール、Active ドキュ�
 ## <a name="see-also"></a>関連項目
 
 [概念](../mfc/mfc-concepts.md)
-

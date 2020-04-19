@@ -1,10 +1,10 @@
 ---
 title: mbtowc、_mbtowc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbtowc
 - _mbtowc_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbtowc
 helpviewer_keywords:
@@ -25,14 +29,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: e5ef6db0f0986b102214229155e1c43c5d029284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506198"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952011"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
 マルチバイト文字を対応するワイド文字に変換します。
 
@@ -68,11 +72,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**mbchar**は**NULL**場合に、オブジェクトを*mbchar*フォームを有効なマルチバイト文字を指す**mbtowc**で長さを返しますマルチバイト文字のバイト数。 場合*mbchar*は**NULL**または参照先オブジェクトがワイド文字の null 文字 (L '\0')、0 を返します。 場合、オブジェクトを*mbchar*へのポインターは、その中で有効なマルチバイト文字は*カウント*文字、-1 を返します。
+**Mbchar**が**NULL**ではなく、 *mbchar*が参照するオブジェクトが有効なマルチバイト文字を指している場合、 **mbtowc**はマルチバイト文字の長さをバイト単位で返します。 *Mbchar*が**null**の場合、または参照先のオブジェクトがワイド文字の null 文字 (L ' \ 0 ') の場合、関数は0を返します。 *Mbchar*が指すオブジェクトが、最初の*カウント*文字の中で有効なマルチバイト文字を形成していない場合は、-1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Mbtowc**関数に変換します*カウント*によって示される数以下のバイト*mbchar*場合は、 *mbchar*ない**NULL**、対応するワイド文字。 **mbtowc**で結果のワイド文字を格納*wchar、* 場合*wchar*ない**NULL**します。 **mbtowc**を検査しない複数の**MB_CUR_MAX**バイト。 **mbtowc**ロケールに依存する動作に現在のロケールを使用 **_mbtowc_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Mbtowc**関数は *、Mbchar が* **NULL**ではない場合に、 *mbchar*が指すバイト数を、対応するワイド文字*に変換し*ます。 **mbtowc**は、 *wchar*が**NULL**でない場合、結果のワイド文字を*wchar*に格納します。 **mbtowc**では、 **MB_CUR_MAX**バイトを超える値は検査されません。 **mbtowc**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbtowc_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -146,7 +150,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

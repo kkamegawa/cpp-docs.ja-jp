@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3856
 ms.assetid: 242d9322-c325-4f20-be58-b2be6da56d60
-ms.openlocfilehash: 1895f7db545813bd2fef209739b5f7ad144dbadc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6079eb0a2b453c3eef159ed8a0d8536a0ad667b0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461036"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754837"
 ---
 # <a name="compiler-error-c3856"></a>コンパイラ エラー C3856
 
-'type': クラスはクラス型ではありません
+' type ': クラスはクラス型ではありません
 
-このエラーの最も一般的な原因より汎用的ながあるか、宣言時よりも、定義の点でテンプレート パラメーターが一覧表示する場合です。
+このエラーの最も一般的な原因は、宣言の時点ではなく、定義の時点でジェネリックまたはテンプレートのパラメーターリストが多い場合です。
 
 次の例では、C3856 が生成されます。
 
-```
+```cpp
 // C3856.cpp
 template <class T>
 struct S {
@@ -36,9 +36,9 @@ template <class T2>  // extra template parameter list in definition
 struct S<T>::S1{};
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3856b.cpp
 // compile with: /c
 template <class T>
@@ -53,9 +53,9 @@ template <class T1>
 struct S<T>::S1{};
 ```
 
-C3856 は、ジェネリックを使用しているときにも発生します。
+C3856 は、ジェネリックを使用する場合にも発生する可能性があります。
 
-```
+```cpp
 // C3856c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,9 +70,9 @@ generic <class V>
 ref struct GS<T>::GS2 {};   // C3856
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3856d.cpp
 // compile with: /clr /c
 generic <class T>

@@ -1,9 +1,9 @@
 ---
 title: _query_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _query_new_handler
 - query_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516000"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949690"
 ---
-# <a name="querynewhandler"></a>_query_new_handler
+# <a name="_query_new_handler"></a>_query_new_handler
 
 現在の新しいハンドラー ルーチンのアドレスを返します。
 
@@ -46,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>戻り値
 
-によって設定された現在の新しいハンドラー ルーチンのアドレスを返します **_set_new_handler**します。
+**_Set_new_handler**によって設定された現在の新しいハンドラールーチンのアドレスを返します。
 
 ## <a name="remarks"></a>Remarks
 
-C++ **_query_new_handler**関数が C++ によって設定の現在の例外処理関数のアドレスを返します[_set_new_handler](set-new-handler.md)関数。 **_set_new_handler**に制御を設定する場合は例外処理関数を指定するために使用、**新しい**演算子がメモリの割り当てに失敗します。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
+C++ **_Query_new_handler**関数は、 C++ [_set_new_handler](set-new-handler.md)関数によって設定された現在の例外処理関数のアドレスを返します。 **_set_new_handler**は、 **new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定するために使用されます。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 

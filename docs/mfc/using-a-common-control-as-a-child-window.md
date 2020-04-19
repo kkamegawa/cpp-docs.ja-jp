@@ -8,12 +8,12 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 690b48cf50e95265aaf5bdd454e2881b8f5fab3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180571"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>子ウィンドウとしてのコモン コントロールの使い方
 
@@ -33,4 +33,3 @@ Windows コモン コントロールのいずれかは、その他のウィン�
 
 [コントロールの作成方法と使い方](../mfc/making-and-using-controls.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

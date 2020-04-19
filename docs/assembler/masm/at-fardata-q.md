@@ -1,26 +1,27 @@
 ---
-title: '@fardata?'
-ms.date: 08/30/2018
+title: '@fardata ですか。'
+ms.date: 12/17/2019
 f1_keywords:
 - '@fardata?'
 helpviewer_keywords:
 - '@fardata? symbol'
 ms.assetid: 5184ac8d-c433-4136-81b2-3e7f6082415d
-ms.openlocfilehash: 50c7d66ca0f4dbd089a11bc2a22ff64e448d58f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb09688ea5848ab04031539d3b3feaa79c5ad40a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492627"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315889"
 ---
-# <a name="fardata"></a>@fardata?
+# <a name="fardata"></a>.fardata を \@しますか?
 
-によって定義されたセグメントの名前、[します。FARDATA でしょうか。](../../assembler/masm/dot-fardata-q.md)ディレクティブ (テキスト マクロ)。
+によって定義されるセグメントの名前[.FARDATA?](dot-fardata-q.md)ディレクティブ (テキストマクロ)。
 
 ## <a name="syntax"></a>構文
 
-> @fardata?
+> **.fardata を \@しますか?**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

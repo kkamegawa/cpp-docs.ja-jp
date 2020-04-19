@@ -11,12 +11,12 @@ helpviewer_keywords:
 - printing [MFC], headers and footers
 - page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
-ms.openlocfilehash: 15c76dabb2512b5906ca631e0da5047fabddf848
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2e57331ccbc7f0afd7b82dc035410af495abd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297230"
 ---
 # <a name="headers-and-footers"></a>ヘッダーとフッター
 
@@ -39,4 +39,3 @@ ms.locfileid: "50564503"
 ## <a name="see-also"></a>関連項目
 
 [印刷](../mfc/printing.md)
-

@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523302"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687776"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-コンテナーのテンプレート クラス map と multimap およびサポート テンプレートを定義します。
+コンテナークラステンプレート map および multimap とそのサポートテンプレートを定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>［要件］
 
-```cpp
-#include <map>
-```
+**ヘッダー:** \<map>
+
+**名前空間:** std
+
+> [!NOTE]
+> @No__t_0map > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -44,7 +47,7 @@ ms.locfileid: "51523302"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[value_compare クラス](../standard-library/value-compare-class-map.md)|要素のキーの値を比較し要素のマップ内の相対順序を決定して、マップの要素を比較できる関数オブジェクトを提供します。|
 |[map クラス](../standard-library/map-class.md)|各要素にデータを自動的に並べる一意キーを持つコレクションからデータを格納および取得するために使用します。|
@@ -52,6 +55,6 @@ ms.locfileid: "51523302"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

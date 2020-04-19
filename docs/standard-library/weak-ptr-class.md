@@ -1,6 +1,6 @@
 ---
 title: weak_ptr クラス
-ms.date: 11/04/2016
+ms.date: 07/29/2019
 f1_keywords:
 - memory/std::weak_ptr
 - memory/std::weak_ptr::element_type
@@ -28,101 +28,70 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2591c4cd124f83085235828d3eb29ab1a90d894a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523264"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684085"
 ---
-# <a name="weakptr-class"></a>weak_ptr クラス
+# <a name="weak_ptr-class"></a>weak_ptr クラス
 
 関連付けの弱いポインターをラップします。
 
 ## <a name="syntax"></a>構文
 
 ```cpp
-template<class _Ty>
-   class weak_ptr {
-public:
-   typedef Ty element_type;
-   weak_ptr();
-   weak_ptr(const weak_ptr&);
-   template <class Other>
-      weak_ptr(const weak_ptr<Other>&);
-   template <class Other>
-      weak_ptr(const shared_ptr<Other>&);
-   weak_ptr& operator=(const weak_ptr&);
-   template <class Other>
-      weak_ptr& operator=(const weak_ptr<Other>&);
-   template <class Other>
-      weak_ptr& operator=(shared_ptr<Other>&);
-   void swap(weak_ptr&);
-   void reset();
-   long use_count() const;
-   bool expired() const;
-   shared_ptr<Ty> lock() const;
-   };
+template<class T> class weak_ptr;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*T* \
 ウィーク ポインターによって制御される型。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、1 つ以上の [shared_ptr クラス](../standard-library/shared-ptr-class.md) オブジェクトによって管理されるリソースを指し示すオブジェクトを表します。 リソースを指し示す `weak_ptr` オブジェクトは、そのリソースの参照カウントに一切影響を与えません。 したがって、リソースを管理する最後の `shared_ptr` オブジェクトが破棄されると、仮にそのリソースを指し示す `weak_ptr` オブジェクトが存在していたとしても、そのリソースは解放されます。 これは、データ構造の循環を防ぐうえで不可欠です。
+クラステンプレートは、1つまたは複数の[shared_ptr](shared-ptr-class.md)オブジェクトによって管理されるリソースを指すオブジェクトを表します。 リソースをポイントする `weak_ptr` オブジェクトは、リソースの参照カウントに影響しません。 リソースを管理する最後の `shared_ptr` オブジェクトが破棄されると、そのリソースを指し示す `weak_ptr` オブジェクトがある場合でも、リソースは解放されます。 この動作は、データ構造の循環を避けるために不可欠です。
 
-`weak_ptr` オブジェクトは、リソースを所有する `shared_ptr` オブジェクトから構築された場合や、リソースを指し示す `weak_ptr` オブジェクトから構築された場合、またはリソースが [operator=](#op_eq) を使って割り当てられた場合に、そのリソースを指し示します。 `weak_ptr` オブジェクトから、そのオブジェクトが指し示すリソースに直接アクセスすることはできません。 そのリソースを使用する必要があるコードは、メンバー関数 [lock](#lock) を呼び出すことによって作成された、そのリソースを所有する `shared_ptr` オブジェクトを介してそのリソースを使用します。 `weak_ptr` オブジェクトは、そのオブジェクトが指し示すリソースが解放されると、そのリソースを所有するすべての `shared_ptr` オブジェクトが破棄されるため、期限切れになります。 有効期限の切れた `weak_ptr` オブジェクトで `lock` を呼び出すと、空の shared_ptr オブジェクトが作成されます。
+`weak_ptr` オブジェクトは、リソースを所有する `shared_ptr` オブジェクトから構築された場合や、リソースを指し示す `weak_ptr` オブジェクトから構築された場合、またはリソースが [operator=](#op_eq) を使って割り当てられた場合に、そのリソースを指し示します。 @No__t_0 オブジェクトは、そのオブジェクトが指しているリソースへの直接アクセスを提供しません。 そのリソースを使用する必要があるコードは、メンバー関数 [lock](#lock) を呼び出すことによって作成された、そのリソースを所有する `shared_ptr` オブジェクトを介してそのリソースを使用します。 リソースを所有するすべての `shared_ptr` オブジェクトが破棄されているため、`weak_ptr` オブジェクトの有効期限が切れています。 有効期限の切れた `weak_ptr` オブジェクトで `lock` を呼び出すと、空の shared_ptr オブジェクトが作成されます。
 
-空の weak_ptr オブジェクトは、リソースを一切参照せず、コントロール ブロックも持ちません。 そのメンバー関数 `lock` は、空の shared_ptr オブジェクトを返します。
+空の weak_ptr オブジェクトは、リソースを指しておらず、コントロールブロックも持ちません。 そのメンバー関数 `lock` は、空の shared_ptr オブジェクトを返します。
 
-循環は、`shared_ptr` オブジェクトによって制御される複数のリソースで、相互に参照し合う `shared_ptr` オブジェクトが保持されているときに発生します。 たとえば、3 つの要素から成るリンク リストがあるとします。先頭のノード `N0` が 2 番目のノード `N1` を所有する `shared_ptr` オブジェクトを保持し、2 番目のノードが 3 番目のノード `N2` を所有する `shared_ptr` オブジェクトを保持し、次に、3 番目のノードが先頭のノード `N0` を所有する `shared_ptr` オブジェクトを保持しているとすると、ループが閉じた状態になり、このリストは循環リンク リストになります。 この状況では、どの参照カウントもゼロにならないので、循環内のノードは解放されません。 この循環を解消するためには、最後のノード `N2` が、`shared_ptr` オブジェクトではなく、`N0` を指し示す `weak_ptr` オブジェクトを保持する必要があります。 `weak_ptr` オブジェクトは `N0` を所有しないので、`N0` の参照カウントに影響しません。先頭ノードに対するプログラムの最後の参照が破棄された時点で、リスト内のノードも破棄されます。
+循環は、`shared_ptr` オブジェクトによって制御される複数のリソースで、相互に参照し合う `shared_ptr` オブジェクトが保持されているときに発生します。 たとえば、3 つの要素から成るリンク リストがあるとします。先頭のノード `N0` が 2 番目のノード `N1` を所有する `shared_ptr` オブジェクトを保持し、2 番目のノードが 3 番目のノード `N2` を所有する `shared_ptr` オブジェクトを保持し、次に、3 番目のノードが先頭のノード `N0` を所有する `shared_ptr` オブジェクトを保持しているとすると、ループが閉じた状態になり、このリストは循環リンク リストになります。 この場合、参照カウントはゼロにならず、サイクル内のノードは解放されません。 この循環を解消するためには、最後のノード `N2` が、`shared_ptr` オブジェクトではなく、`N0` を指し示す `weak_ptr` オブジェクトを保持する必要があります。 @No__t_0 オブジェクトは所有していないため `N0` `N0` の参照カウントには影響しません。また、プログラムのヘッドノードへの最後の参照が破棄されると、リスト内のノードも破棄されます。
 
 ## <a name="members"></a>メンバー
 
-### <a name="constructors"></a>コンストラクター
-
-|コンストラクター|説明|
-|-|-|
-|[weak_ptr](#weak_ptr)|`weak_ptr` を構築します。|
-
-### <a name="methods"></a>メソッド
-
 |||
 |-|-|
+| **コンストラクター** | |
+|[weak_ptr](#weak_ptr)|`weak_ptr` を構築します。|
+| **デストラクター** | |
+|[~ weak_ptr](#tilde-weak_ptr)|`weak_ptr` を構築します。|
+| **Typedefs** | |
 |[element_type](#element_type)|要素の型。|
+| **メンバー関数** | |
 |[expired](#expired)|所有権の有効期限が切れているかどうかをテストします。|
 |[lock](#lock)|リソースの排他的所有権を取得します。|
-|[owner_before](#owner_before)|返します**true**場合は、この`weak_ptr`前に順序付けは (またはより小さい)、指定されたポインター。|
+|[owner_before](#owner_before)|この `weak_ptr` が、指定されたポインターの前 (またはそれより小さい) に順序付けされている場合は**true**を返します。|
 |[reset](#reset)|所有されたリソースを解放します。|
 |[swap](#swap)|2 つの `weak_ptr` オブジェクトを交換します。|
-|[use_count](#use_count)|指定された `shared_ptr` オブジェクトの数をカウントします。|
-
-### <a name="operators"></a>演算子
-
-|演算子|説明|
-|-|-|
+|[use_count](#use_count)|@No__t_0 オブジェクトの数をカウントします。|
+| **演算子** | |
 |[operator=](#op_eq)|所有されたリソースを置換します。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<memory>
-
-**名前空間:** std
-
-## <a name="element_type"></a>  element_type
+## <a name="element_type"></a>element_type
 
 要素の型。
 
 ```cpp
-typedef Ty element_type;
+typedef T element_type; // through C++17
+using element_type = remove_extent_t<T>; // C++20
 ```
 
 ### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター `Ty` のシノニムです。
+この型は、テンプレート パラメーター `T` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -133,7 +102,7 @@ typedef Ty element_type;
 #include <iostream>
 
 int main()
-    {
+{
     std::shared_ptr<int> sp0(new int(5));
     std::weak_ptr<int> wp0(sp0);
     std::weak_ptr<int>::element_type val = *wp0.lock();
@@ -141,24 +110,24 @@ int main()
     std::cout << "*wp0.lock() == " << val << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a>  expired
+## <a name="expired"></a>終了
 
-所有権の有効期限が切れているかどうかをテストします。
+所有権の有効期限が切れているかどうか、つまり、参照先のオブジェクトが削除されたかどうかをテストします。
 
 ```cpp
-bool expired() const;
+bool expired() const noexcept;
 ```
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数を返します**true**場合`*this`有効期限が切れた、それ以外の場合**false**します。
+このメンバー関数は、`*this` の有効期限が切れている場合は**true** 、それ以外の場合は**false**を返します。
 
 ### <a name="example"></a>例
 
@@ -168,14 +137,6 @@ bool expired() const;
 #include <memory>
 #include <iostream>
 
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
-
 int main()
 {
     std::weak_ptr<int> wp;
@@ -205,17 +166,17 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a>制限
 
-リソースの排他的所有権を取得します。
+リソースの所有権を共有する `shared_ptr` を取得します。
 
 ```cpp
-shared_ptr<Ty> lock() const;
+shared_ptr<T> lock() const noexcept;
 ```
 
 ### <a name="remarks"></a>Remarks
 
-場合、このメンバー関数は、空の shared_ptr オブジェクトを返します`*this`切れて; を返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > リソースを所有するオブジェクト`*this`を指します。
+@No__t_1 の有効期限が切れた場合、このメンバー関数は空の[shared_ptr](shared-ptr-class.md)オブジェクトを返します。それ以外の場合は、`*this` が指すリソースを所有する `shared_ptr<T>` オブジェクトを返します。 @No__t_0 のアトミック実行に相当する値を返します。
 
 ### <a name="example"></a>例
 
@@ -225,14 +186,6 @@ shared_ptr<Ty> lock() const;
 #include <memory>
 #include <iostream>
 
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
-
 int main()
 {
     std::weak_ptr<int> wp;
@@ -262,34 +215,31 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a>  operator=
+## <a name="op_eq"></a>operator =
 
 所有されたリソースを置換します。
 
 ```cpp
-weak_ptr& operator=(const weak_ptr& wp);
+weak_ptr& operator=(const weak_ptr& ptr) noexcept;
 
 template <class Other>
-weak_ptr& operator=(const weak_ptr<Other>& wp);
+weak_ptr& operator=(const weak_ptr<Other>& ptr) noexcept;
 
 template <class Other>
-weak_ptr& operator=(const shared_ptr<Other>& sp);
+weak_ptr& operator=(const shared_ptr<Other>& ptr) noexcept;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
-引数の共有ポインターまたはウィーク ポインターによって制御される型。
+*その他の*\
+引数の共有ポインターまたはウィークポインターによって制御される型。
 
-*wp*<br/>
-コピーするウィーク ポインター。
-
-*sp*<br/>
-コピーする共有ポインター。
+*ptr* \
+コピーする弱ポインターまたは共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 
-すべての演算子は、現在 `*this` によって指し示されているリソースを解放し、オペランド シーケンスで指定されたリソースの所有権を `*this` に割り当てます。 演算子が失敗した場合、`*this` は変更されません。
+すべての演算子は、現在 `*this` によってポイントされているリソースを解放し、 *ptr*によって指定されたリソースの所有権を `*this` に割り当てます。 操作が失敗した場合、`*this` は変更されません。 各演算子には、`weak_ptr(ptr).swap(*this)` と同等の効果があります。
 
 ### <a name="example"></a>例
 
@@ -323,38 +273,38 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a>  owner_before
+## <a name="owner_before"></a>owner_before
 
-返します**true**場合は、この`weak_ptr`前に順序付けは (またはより小さい)、指定されたポインター。
+この `weak_ptr` が、指定されたポインターの前 (またはそれより小さい) に順序付けされている場合は**true**を返します。
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+bool owner_before(const shared_ptr<Other>& ptr) const noexcept;
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
-`shared_ptr` または `weak_ptr` への `lvalue` 参照。
+*ptr* \
+@No__t_0 または `weak_ptr` への左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート メンバー関数を返します**true**場合`*this`は`ordered before``ptr`します。
+テンプレートメンバー関数は、 *ptr*の前に `*this` が順序付けされている場合に**true**を返します。
 
-## <a name="reset"></a>  reset
+## <a name="reset"></a>解除
 
-所有されたリソースを解放します。
+所有されているリソースを解放します。
 
 ```cpp
-void reset();
+void reset() noexcept;
 ```
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は `*this` によって指し示されるリソースを解放し、`*this` を空の weak_ptr オブジェクトに変換します。
+このメンバー関数は、`*this` によってポイントされているリソースを解放し、`*this` を空の `weak_ptr` オブジェクトに変換します。
 
 ### <a name="example"></a>例
 
@@ -386,22 +336,29 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a>フォト
 
 2 つの `weak_ptr` オブジェクトを交換します。
 
 ```cpp
-void swap(weak_ptr& wp);
+void swap(weak_ptr& wp) noexcept;
+```
+
+また、特殊化も含まれています。
+
+```cpp
+template<class T>
+void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*wp*<br/>
+*wp* \
 交換するウィーク ポインター。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数が指していたリソースを残します`*this`によってが指し示しその後*wp*、およびリソースが指していた*wp* によってが指し示しその後`*this`. この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
+@No__t_0 の後、もともと `*this` によって参照されていたリソースは、 *wp*によってポイントされ、もともと*wp*によってポイントされていたリソースは `*this` によってポイントされます。 関数は、2つのリソースの参照カウントを変更せず、例外もスローしません。 テンプレートの特殊化の効果は、`a.swap(b)` に相当します。
 
 ### <a name="example"></a>例
 
@@ -410,14 +367,6 @@ void swap(weak_ptr& wp);
 // compile with: /EHsc
 #include <memory>
 #include <iostream>
-
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
 
 int main()
 {
@@ -456,12 +405,12 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a>  use_count
+## <a name="use_count"></a>use_count
 
-指定された `shared_ptr` オブジェクトの数をカウントします。
+共有リソースを所有している `shared_ptr` オブジェクトの数をカウントします。
 
 ```cpp
-long use_count() const;
+long use_count() const noexcept;
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -496,36 +445,41 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a>  weak_ptr
+## <a name="weak_ptr"></a>weak_ptr
 
 `weak_ptr` を構築します。
 
 ```cpp
-weak_ptr();
+constexpr weak_ptr() noexcept;
 
-weak_ptr(const weak_ptr& wp);
+weak_ptr(const weak_ptr& wp) noexcept;
+
+weak_ptr(weak_ptr&& wp) noexcept;
 
 template <class Other>
-weak_ptr(const weak_ptr<Other>& wp);
+weak_ptr(const weak_ptr<Other>& wp) noexcept;
 
 template <class Other>
-weak_ptr(const shared_ptr<Other>& sp);
+weak_ptr(weak_ptr<Other>&& sp) noexcept;
+
+template <class Other>
+weak_ptr(const shared_ptr<Other>& sp) noexcept;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
-引数の共有ポインターまたはウィーク ポインターによって制御される型。
+*その他の*\
+引数の共有ポインターまたはウィーク ポインターによって制御される型。 _他の \*_ が `element_type*` と互換性がない限り、これらのコンストラクターはオーバーロードの解決に関与しません。
 
-*wp*<br/>
+*wp* \
 コピーするウィーク ポインター。
 
-*sp*<br/>
+*sp* \
 コピーする共有ポインター。
 
 ### <a name="remarks"></a>Remarks
 
-コンストラクターはそれぞれ、オペランド シーケンスで指定されたリソースを指し示すオブジェクトを構築します。
+既定のコンストラクターは、空の `weak_ptr` オブジェクトを構築します。 引数ポインターが空の場合、引数を受け取るコンストラクターはそれぞれ、空の `weak_ptr` オブジェクトを構築します。 それ以外の場合は、引数で指定されたリソースを指す `weak_ptr` オブジェクトを構築します。 共有オブジェクトの参照カウントは変更されません。
 
 ### <a name="example"></a>例
 
@@ -560,6 +514,20 @@ wp0.expired() == true
 *wp2.lock() == 5
 ```
 
+## <a name="tilde-weak_ptr"></a>~ weak_ptr
+
+`weak_ptr` を破棄します。
+
+```cpp
+~weak_ptr();
+```
+
+### <a name="remarks"></a>Remarks
+
+デストラクターは、この `weak_ptr` を破棄しますが、格納されているポインターが指すオブジェクトの参照カウントには影響しません。
+
 ## <a name="see-also"></a>関連項目
 
-[shared_ptr クラス](../standard-library/shared-ptr-class.md)<br/>
+[ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)\
+[\<memory>](memory.md)\
+[shared_ptr クラス](shared-ptr-class.md)

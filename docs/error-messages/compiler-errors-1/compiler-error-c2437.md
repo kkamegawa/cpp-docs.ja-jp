@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2437
 ms.assetid: 2d2b3c6c-856a-4b27-ae10-64813b3e5483
-ms.openlocfilehash: 93b642d9bfbb5a8d938e3dfba6e3ad5fe8b3cbb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 745ab4f53223ec60e745068b1857206ed114086a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460672"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744343"
 ---
 # <a name="compiler-error-c2437"></a>コンパイラ エラー C2437
 
-'identifier': 既に初期化されています
+' identifier ': 既に初期化されています
 
-オブジェクトは、1 回だけ初期化できます。
+オブジェクトを初期化できるのは1回だけです。
 
 次の例では、C2437 が生成されます。
 
-```
+```cpp
 // C2437.cpp
 // compile with: /c
 class A {

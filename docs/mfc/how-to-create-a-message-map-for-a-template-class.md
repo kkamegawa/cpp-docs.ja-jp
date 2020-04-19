@@ -1,18 +1,18 @@
 ---
-title: '方法 : テンプレート クラスのメッセージ マップを作成する'
+title: '方法: テンプレート クラスのメッセージ マップを作成します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-ms.openlocfilehash: 437fdf59ae9c9d3428654fc412fd78bf1348a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676e698a899327eee8305731b5d609b5b95ece76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389503"
 ---
-# <a name="how-to-create-a-message-map-for-a-template-class"></a>方法 : テンプレート クラスのメッセージ マップを作成する
+# <a name="how-to-create-a-message-map-for-a-template-class"></a>方法: テンプレート クラスのメッセージ マップを作成します。
 
 MFC でのメッセージ マッピングでは、適切な C++ オブジェクトのインスタンスに Windows メッセージを効率的な方法を提供します。 MFC メッセージ マップのターゲットの例には、アプリケーションのクラス、ドキュメントとビュー クラス、コントロールのクラスおよびなどが含まれます。
 
@@ -62,6 +62,5 @@ END_MESSAGE_MAP()
 
 ## <a name="see-also"></a>関連項目
 
-[同じよう](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
+[BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
-

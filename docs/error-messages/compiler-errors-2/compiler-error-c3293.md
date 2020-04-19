@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3293
 ms.assetid: b772cf98-52e0-4e24-be23-1f5d87d999ac
-ms.openlocfilehash: 84d539722474d5f5dfffe1f6fe121bb7349ba131
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1713632d21ef401fb1177350c81a4a64ed0503ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548210"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760115"
 ---
 # <a name="compiler-error-c3293"></a>コンパイラ エラー C3293
 
 'accessor': クラス'type' の既定のプロパティ (インデクサー) にアクセスするには 'default' を使用してください
 
-インデックス付きプロパティへのアクセスが正しくありません。  参照してください[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)詳細についてはします。
+インデックス付きプロパティへのアクセスが正しくありません。  詳細については、「[方法:/cli でC++プロパティを使用する](../../dotnet/how-to-use-properties-in-cpp-cli.md)」を参照してください。
 
-**Visual Studio 2017 以降**: Visual Studio 2015 以降では、場合によっては、コンパイラは、既定のインデクサーとして既定のプロパティを正しく識別されません。 識別子 "default" を使用してプロパティにアクセスすることで、この問題を回避できました。 C++11 で default がキーワードとして導入された後は、この回避策自体が問題になりました。 そのため、Visual Studio 2017 では、この回避策を必要とするバグが修正され、クラスの既定のプロパティにアクセスするために "default" が使用された場合は、コンパイラがエラーを発生させるようになりました。
+**Visual studio 2017 以降**: visual studio 2015 以前では、コンパイラは既定のインデクサーとして既定のプロパティを誤っ場合がありました。 識別子 "default" を使用してプロパティにアクセスすることで、この問題を回避できました。 C++11 で default がキーワードとして導入された後は、この回避策自体が問題になりました。 そのため、Visual Studio 2017 では、この回避策を必要とするバグが修正され、クラスの既定のプロパティにアクセスするために "default" が使用された場合は、コンパイラがエラーを発生させるようになりました。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、Visual Studio 2015 以前のバージョンでは C3293 が生成されます。
+次の例では、Visual Studio 2015 以前で C3293 が生成されます。
 
-```
+```cpp
 // C3293.cpp
 // compile with: /clr /c
 using namespace System;

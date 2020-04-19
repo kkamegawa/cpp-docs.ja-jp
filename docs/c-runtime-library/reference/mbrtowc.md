@@ -1,9 +1,9 @@
 ---
 title: mbrtowc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrtowc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrtowc
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: bd719e7b336333f6e06a1db9b1e34784575a1602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581832"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952443"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -46,7 +49,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>パラメーター
 
 *wchar*<br/>
-変換されたワイド文字の文字列を受け取るワイド文字のアドレス (型**wchar_t**)。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
+変換されたワイド文字の文字列を受け取るワイド文字のアドレス ( **wchar_t**型)。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
 
 *mbchar*<br/>
 バイト シーケンスのアドレス (マルチバイト文字)。
@@ -54,32 +57,32 @@ size_t mbrtowc(
 *count*<br/>
 チェックするバイト数。
 
-*呼び出すため*<br/>
-変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッド セーフではありませんを常に渡す独自ことをお勧めします。*呼び出すため*引数。
+*mbstate*<br/>
+変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッドセーフではないため、常に独自の*mbstate*引数を渡すことをお勧めします。
 
 ## <a name="return-value"></a>戻り値
 
 次のいずれかの値です。
 
-0、[次へ]*カウント*以下のバイトに格納されている null ワイド文字を表すマルチバイト文字を完成するまたは*wchar*場合は、 *wchar*が null ポインターでないです。
+0次の*数*以下では、 *wchar*が null ポインターではない場合、 *wchar*に格納されている null ワイド文字を表すマルチバイト文字が完成します。
 
-1 に*数*、包括的次*数*または以下のバイトが有効なマルチバイト文字を完成します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 相当するワイド文字が格納されている*wchar*場合は、 *wchar* null ポインターではありません。
+1が*カウント*されます。次の*カウント*を含むか、有効なマルチバイト文字を入力します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 *Wchar*が null ポインターでない場合、それに相当するワイド文字は*wchar*に格納されます。
 
-(size_t)(-1)エンコーディング エラーが発生しました。 次*カウント*または以下のバイトは、完全かつ有効なマルチバイト文字には影響しません。 この場合、 **errno** EILSEQ と変換のシフト状態に設定されている*呼び出すため*が指定されていません。
+(size_t)(-1)エンコードエラーが発生しました。 次の*数*以下のバイトは、完全かつ有効なマルチバイト文字に寄与しません。 この場合、 **errno**は EILSEQ に設定され、 *mbstate*の変換のシフト状態は指定されていません。
 
-(size_t)(-2)次*カウント*バイトは、不完全ながら有効マルチバイト文字とそのすべてに貢献*カウント*バイトが処理されています。 値は格納されません*wchar*が*呼び出すため*関数を再開するように更新します。
+(size_t)(-2)次の*カウント*バイトは不完全である可能性があるマルチバイト文字に寄与し、すべての*カウント*バイトが処理されています。 *Wchar*に値は格納されませんが、 *mbstate*が更新されて関数が再起動されます。
 
 ## <a name="remarks"></a>Remarks
 
-場合*mbchar* null ポインターの場合は、関数が呼び出しに相当します。
+*Mbchar*が null ポインターの場合、関数は呼び出しに相当します。
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-この例では、引数の値で*wchar*と*カウント*は無視されます。
+この場合、引数*wchar*および*count*の値は無視されます。
 
-場合*mbchar* null ポインターでない関数は*カウント*からバイト*mbchar*必要な次の完了に必要なバイト数を決定するにはマルチバイト文字。 対応するマルチバイト文字が格納されている場合は、次の文字が有効な*wchar* null ポインターでない場合。 文字が、対応するワイド null 文字の結果の状態*呼び出すため*は初期の変換状態です。
+*Mbchar*が null ポインターでない場合、関数は、 *mbchar*から*count*バイトを調べて、次のマルチバイト文字を完成させるために必要なバイト数を調べます。 次の文字が有効な場合は、対応するマルチバイト文字が*wchar*に格納されます (null ポインターではない場合)。 文字が対応するワイド null 文字の場合、結果の*mbstate*の状態は初期の変換状態になります。
 
-**Mbrtowc**関数とは異なります[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)によってその再起動します。 変換の状態が格納されている*呼び出すため*同じか、またはその他の再開可能な関数を呼び出すのためです。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、アプリケーションで使用する**後**の代わりに**wcslen**場合、後続の呼び出し**wcsrtombs**の代わりに使用が**wcstombs**.
+**Mbrtowc**関数は、 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)の再起動によって異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**ではなく**wcsrtombs**の後続の呼び出しが使用される場合、アプリケーションでは**wcslen**ではなく**wcsrlen**を使用する必要があります。
 
 ## <a name="example"></a>例
 

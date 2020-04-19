@@ -1,5 +1,5 @@
 ---
-title: '方法: char * 文字列を System::Byte 配列に変換する'
+title: '方法: 変換の char * 文字列を system::byte 配列に'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 26ef83533e7da1d272c31a54165626f513a5508a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ef84e31ee3db703857e3b28ef70dda8d5d01229
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387664"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>方法: char に変換\*system::byte 配列に文字列
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>方法: 文字変換\*system::byte 配列に文字列
 
 `char *` 文字列を <xref:System.Byte> 配列に変換する最も効率的な方法は、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することです。
 

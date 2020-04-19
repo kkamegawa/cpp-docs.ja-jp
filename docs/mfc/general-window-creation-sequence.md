@@ -7,12 +7,12 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: f69d32ea846e93974bc71340777b23750da73ba7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219566"
 ---
 # <a name="general-window-creation-sequence"></a>一般的なウィンドウ作成順序
 
@@ -20,7 +20,7 @@ ms.locfileid: "50446788"
 
 MFC の採用によって提供されるすべてのウィンドウ クラス[2 段階構築](../mfc/one-stage-and-two-stage-construction-of-objects.md)します。 つまり、C++ の呼び出し中に**新しい**演算子、コンス トラクターは、割り当てと C++ オブジェクトを初期化しますが、対応する Windows ウィンドウを作成できません。 後で呼び出すことによって実現されます、[作成](../mfc/reference/cwnd-class.md#create)ウィンドウ オブジェクトのメンバー関数。
 
-`Create`メンバー関数は、Windows のウィンドウを格納してその`HWND`C++ オブジェクトのパブリック データ メンバーに[m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)します。 `Create` 完全な作成パラメーターの柔軟性。 呼び出しの前に`Create`、グローバル関数をウィンドウ クラスを登録する[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)フレームのアイコンとクラスのスタイルを設定するためにします。
+`Create`メンバー関数は、Windows のウィンドウを格納してその`HWND`で、C++オブジェクトのパブリック データ メンバー [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)します。 `Create` 完全な作成パラメーターの柔軟性。 呼び出しの前に`Create`、グローバル関数をウィンドウ クラスを登録する[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)フレームのアイコンとクラスのスタイルを設定するためにします。
 
 フレーム ウィンドウを使用することができます、 [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数の代わりに`Create`します。 `LoadFrame` 少ないパラメーターを使用して Windows のウィンドウになります。 フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースから多くの既定値を取得します。
 
@@ -40,4 +40,3 @@ MFC の採用によって提供されるすべてのウィンドウ クラス[2 
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウの作成](../mfc/creating-windows.md)
-

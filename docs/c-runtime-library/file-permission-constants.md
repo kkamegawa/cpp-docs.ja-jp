@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220284"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742703"
 ---
 # <a name="file-permission-constants"></a>ファイルのアクセス許可定数
 
@@ -27,7 +27,7 @@ ms.locfileid: "54220284"
 #include <sys/stat.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_O_CREAT` (`_open`, `_sopen`) が指定されるとき、これらの定数のいずれかが必須になります。
 
@@ -47,7 +47,7 @@ ms.locfileid: "54220284"
 |`_S_IWRITE`|読み取り禁止 (ファイルは書き込み専用)|
 |`_S_IREAD` &#124; `_S_IWRITE`|読み取りも書き込みも禁止|
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2688
+title: コンパイラエラー C2688
 ms.date: 11/04/2016
 f1_keywords:
 - C2688
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: 5355abc603726eb1bacb7a22fa1095bf2d81c538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588553"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760245"
 ---
-# <a name="compiler-error-c2688"></a>コンパイラ エラー C2688
+# <a name="compiler-error-c2688"></a>コンパイラエラー C2688
 
-'C2::fgrv': covariant の戻りを複数、または仮想継承を varargs 関数はサポートされていません
+' C2:: fgrv ': 複数のまたは仮想継承を伴う共変の戻り値が varargs 関数でサポートされていません
 
-関数には、可変個の引数が含まれている場合、Visual C では共変の戻り値の型はサポートされていません。
+関数に可変個の引数が含まC++れている場合、共変の戻り値の型はビジュアルでサポートされません。
 
-このエラーを解決するには、か、可変個の引数を使用して、または同じすべての仮想関数の戻り値を作成しないように関数を定義します。
+このエラーを解決するには、関数を定義して、変数の引数を使用しないようにするか、またはすべての仮想関数で戻り値を同じにします。
 
 次の例では、C2688 が生成されます。
 
-```
+```cpp
 // C2688.cpp
 struct G1 {};
 struct G2 {};

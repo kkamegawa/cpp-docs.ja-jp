@@ -1,27 +1,27 @@
 ---
 title: __readcr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr3
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: 928be5798c972881015d9af3733b5757afbf64ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b03ff46fabc99839d9c0bbd5c72e1b76d25814c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447919"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221265"
 ---
-# <a name="readcr3"></a>__readcr3
+# <a name="__readcr3"></a>__readcr3
 
 **Microsoft 固有の仕様**
 
-CR3 レジスタを読み取り、その値を返します。
+CR3 register を読み取り、その値を返します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 __readcr3(void);
 ```
 
@@ -35,11 +35,11 @@ CR3 レジスタの値。
 |---------------|------------------|
 |`__readcr3`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
+組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 

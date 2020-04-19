@@ -1,19 +1,19 @@
 ---
-title: 方法:-clr コンパイルでネイティブ型を使用
+title: '方法: -Clr コンパイルでネイティブ型を使用します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387202"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>方法: /clr コンパイルでネイティブ型を使用する
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>方法: /Clr のコンパイルでネイティブ型を使用します。
 
 ネイティブ型を定義することができます、 **/clr**コンパイルとどのように使用されるアセンブリ内からそのネイティブな型が無効です。 ただし、ネイティブ型は参照されているメタデータから使用できるようできません。
 

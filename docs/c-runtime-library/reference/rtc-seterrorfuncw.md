@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFuncW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 03e9f540a215550a698700f28e5722b33b119149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482699"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948962"
 ---
-# <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
+# <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
 実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。
 
@@ -51,17 +54,17 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ## <a name="return-value"></a>戻り値
 
-以前に定義されたエラー関数。または**NULL**以前に定義された関数が存在しない場合。
+以前に定義されたエラー関数。以前に定義された関数がない場合は**NULL**です。
 
 ## <a name="remarks"></a>Remarks
 
-新しいコードでのみ使用して **_RTC_SetErrorFuncW**します。 **_RTC_SetErrorFunc**は旧バージョンとの互換性のためのライブラリにのみ含まれます。
+新しいコードでは、 **_RTC_SetErrorFuncW**のみを使用します。 **_RTC_SetErrorFunc**は、旧バージョンとの互換性のためにライブラリにのみ含まれています。
 
-**_RTC_SetErrorFuncW**コールバックが、リンクされたコンポーネントにのみ適用されますが、グローバルにできません。
+**_RTC_SetErrorFuncW**コールバックは、リンク先のコンポーネントにのみ適用されますが、グローバルには適用されません。
 
-確認しますに渡すアドレス **_RTC_SetErrorFuncW**有効なエラー処理関数のことです。
+**_RTC_SetErrorFuncW**に渡すアドレスが、有効なエラー処理関数のアドレスであることを確認します。
 
-かどうか、エラーが割り当てられた-1 の一種を使用して[_RTC_SetErrorType](rtc-seterrortype.md)、エラー処理関数は呼び出されません。
+[_RTC_SetErrorType](rtc-seterrortype.md)を使用して1の型にエラーが割り当てられている場合、エラー処理関数は呼び出されません。
 
 この関数を呼び出すには、まず、実行時エラー チェックの初期化関数の 1 つを呼び出す必要があります。 詳細については、「 [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)」を参照してください。
 
@@ -79,7 +82,7 @@ typedef int (__cdecl * _RTC_error_fnW)(
 
 それぞれの文字について以下に説明します。
 
-*ErrorType*<br/>
+*errorType*<br/>
 [_RTC_SetErrorType](rtc-seterrortype.md)で指定したエラーの種類。
 
 *ファイル名*<br/>

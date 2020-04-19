@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C3400 C3499 から
-ms.date: 11/17/2017
+title: コンパイラ エラー (C3400 - C3499)
+ms.date: 04/21/2019
 f1_keywords:
 - C3401
 - C3402
@@ -98,14 +98,14 @@ helpviewer_keywords:
 - C3494
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-ms.openlocfilehash: 24915a52bffb6826599e4d64d60a3ece6bee7675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587b28cedb0ab8b11c244be4278c7dc17d1f4247
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857374"
 ---
-# <a name="compiler-errors-c3400-through-c3499"></a>コンパイラ エラー C3400 C3499 から
+# <a name="compiler-errors-c3400-through-c3499"></a>コンパイラ エラー (C3400 - C3499)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -152,9 +152,9 @@ ms.locfileid: "50576723"
 |コンパイラ エラー C3434|'*コンテキスト*': 列挙子の値'*数*'として表すことができない'*型*'、値は'*数*'|
 |コンパイラ エラー C3435|文字セット '*名前*' はサポートされていません|
 |コンパイラ エラー C3436|/source-charset、/execution-charset、または/utf-8 が指定されているときに、#pragma setlocale はサポートされていません|
-|コンパイラ エラー C3437|/source-charset、/execution-charset、または/utf-8 が指定されているときに、#pragma execution_character_set はサポートされていません|
+|コンパイラ エラー C3437|#pragma execution_character_set is not supported when /source-charset, /execution-charset, or /utf-8 has been specified|
 |コンパイラ エラー C3438|'*コンテキスト*':'*値*' マネージまたは WinRT クラスには適用できません|
-|コンパイラ エラー C3439|layout_version (*数*): 無効なバージョン番号|
+|コンパイラ エラー C3439|layout_version(*number*): invalid version number|
 |コンパイラ エラー C3440|'*宣言*': layout_version (*数*) 前の宣言と互換性がありません|
 |コンパイラ エラー C3441|'*宣言*':'*キーワード*' クラスが定義した後に適用することはできません|
 |コンパイラ エラー C3442|共用体の複数のメンバーを初期化しています: '*member1*'と'*member2*'|
@@ -202,7 +202,7 @@ ms.locfileid: "50576723"
 |[コンパイラ エラー C3484](compiler-error-c3484.md)|構文エラー: 戻り値の型の前に ' ->' が必要です。|
 |[コンパイラ エラー C3485](compiler-error-c3485.md)|ラムダ定義に cv 修飾子は使用できません|
 |コンパイラ エラー C3486|互換性のために残されています。|
-|[コンパイル エラー C3487](compiler-error-c3487.md)|'*型*': すべての return 式は、同じ型を推測する必要があります以前はでした'*型*'。|
+|[コンパイラ エラー C3487](compiler-error-c3487.md)|'*型*': すべての return 式は、同じ型を推測する必要があります以前はでした'*型*'。|
 |[コンパイラ エラー C3488](compiler-error-c3488.md)|'&*識別子*' 既定のキャプチャ モードが参照渡しである場合は許可されていません|
 |[コンパイラ エラー C3489](compiler-error-c3489.md)|'&*識別子*' が既定のキャプチャ モードがコピーであるときに必要です|
 |[コンパイラ エラー C3490](compiler-error-c3490.md)|'*識別子*' const オブジェクトを通じてアクセスされているために、変更できません|
@@ -216,3 +216,7 @@ ms.locfileid: "50576723"
 |[コンパイラ エラー C3498](compiler-error-c3498.md)|'*識別子*': マネージまたは WinRT 型を持つ変数をキャプチャすることはできません|
 |[コンパイラ エラー C3499](compiler-error-c3499.md)|void の戻り値の型を持つように指定されているラムダは、値を返すことができません|
 
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

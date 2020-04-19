@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 15b82ddca42f9b70ac16538cea19f8aedd799c05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574448"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514285"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50574448"
 
 ## <a name="remarks"></a>Remarks
 
-**out** C++ 属性には、 [propput](/windows/desktop/Midl/out-idl) MIDL 属性と同じ機能があります。
+**out** C++ 属性には、 [propput](/windows/win32/Midl/out-idl) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 

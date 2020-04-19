@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: 7b2cb4160a0d25aa65d2c5eb345ba1bc08b1c6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428094"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493137"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (マニフェスト検索)
 
@@ -27,25 +27,25 @@ ms.locfileid: "50428094"
 
 ## <a name="remarks"></a>Remarks
 
-**/ALLOWISOLATION:NO**マニフェストがないかのように Dll を読み込むことを示します。 リンカーを設定すると、 `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` 、オプションのヘッダー内のビット`DllCharacteristics`フィールド。
+または、 **[いいえ]** に設定すると、マニフェストがないかのように dll が読み込まれ、 `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION`リンカーによってオプションの`DllCharacteristics`ヘッダーのフィールドにビットが設定されます。
 
-**/ALLOWISOLATION**により、オペレーティング システムはマニフェストの検索と読み込みをします。
+また、オペレーティングシステムはマニフェストの参照と読み込みを実行します。
 
-**/ALLOWISOLATION**既定値です。
+これが既定値です。
 
-実行可能ファイルの分離を無効にする、Windows ローダーは、アプリケーション マニフェストを新しく作成されたプロセスを検索する試行しません。 新しいプロセスがない既定のアクティベーション コンテキスト内で実行可能ファイルまたは名前の実行可能ファイルと同じディレクトリに配置マニフェストがある場合でも<em>実行可能ファイル名</em>**. exe.manifest**します。
+実行可能ファイルの分離が無効になっている場合、Windows ローダーは、新しく作成されたプロセスのアプリケーションマニフェストの検索を試行しません。 新しいプロセスには、実行可能ファイル内にマニフェストがある場合や、実行可能ファイルという名前の実行可能ファイルと同じディレクトリに配置されている場合でも、既定のアクティベーションコンテキストがありません。
 
-詳細については、次を参照してください。 [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference)します。
+詳細については、「[マニフェストファイルリファレンス](/windows/win32/SbsCs/manifest-files-reference)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **マニフェスト ファイル**プロパティ ページ。
+1. [**構成プロパティ** > ] [**リンカー** > **マニフェストファイル**] プロパティページを選択します。
 
-1. 変更、**分離の許可**プロパティ。
+1. "**分離を許可する**" プロパティを変更します。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

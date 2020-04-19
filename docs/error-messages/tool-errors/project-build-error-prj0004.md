@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-ms.openlocfilehash: 94752f16b40f3026967eefc836a95b797f48b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad11e5b81ec31e1ac8a47a0a0ffa31a443f1a107
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359762"
 ---
 # <a name="project-build-error-prj0004"></a>プロジェクト ビルド エラー PRJ0004
 
@@ -23,4 +23,4 @@ ms.locfileid: "50502480"
 
 - 空きディスク領域で、コンピューターが低い可能性があります。
 
-調べることで、ツールの設定を確認することも、[コマンド ライン プロパティ ページ](../../ide/command-line-property-pages.md)します。
+調べることで、ツールの設定を確認することも、[コマンド ライン プロパティ ページ](../../build/reference/command-line-property-pages.md)します。

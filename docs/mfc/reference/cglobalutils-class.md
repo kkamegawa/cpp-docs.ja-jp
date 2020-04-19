@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: bd382a7f0143d1dce75815430741ef58cee0f8c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182017"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils クラス
 
@@ -99,7 +99,7 @@ void AdjustRectToworkArea(
 ### <a name="parameters"></a>パラメーター
 
 [入力、出力]*rect*<br/>
-[in]*pRectDelta*<br/>
+[in] *pRectDelta*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -123,11 +123,11 @@ void CalcExpectedDockedRect(
 
 [in]*ptMouse*<br/>
 
-[out]*rectResult*<br/>
+[out] *rectResult*<br/>
 
-[out]*bDrawTab*<br/>
+[out] *bDrawTab*<br/>
 
-[out]*ppTargetBar*<br/>
+[out] *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -183,9 +183,9 @@ BOOL CheckAlignment(
 
 [in]*pDockManager*<br/>
 
-[in]*bOuterEdge*<br/>
+[in] *bOuterEdge*<br/>
 
-[out]*場合*<br/>
+[out] *dwAlignment*<br/>
 
 [in]*dwEnabledDockBars*<br/>
 
@@ -207,7 +207,7 @@ BOOL CyFromString(
 
 [out]*cy*<br/>
 
-[in]*しました。*<br/>
+[in] *psz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -225,7 +225,7 @@ BOOL DecimalFromString(
 
 [out]*10 進数*<br/>
 
-[in]*しました。*<br/>
+[in] *psz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -261,7 +261,7 @@ void ForceAdjustLayout(
 
 [in]*bForce*<br/>
 
-[in]*bForceInvisible*<br/>
+[in] *bForceInvisible*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -287,7 +287,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*dwAlign*<br/>
+[in] *dwAlign*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -311,11 +311,11 @@ BOOL GetPaneAndAlignFromPoint(
 
 [in]*pt*<br/>
 
-[out]*ppTargetControlBar*<br/>
+[out] *ppTargetControlBar*<br/>
 
-[out]*場合*<br/>
+[out] *dwAlignment*<br/>
 
-[out]*bTabArea*<br/>
+[out] *bTabArea*<br/>
 
 [out]*bCaption*<br/>
 
@@ -348,9 +348,9 @@ void SetNewParent(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lstControlBars*<br/>
+[in] *lstControlBars*<br/>
 
-[in]*pNewParent*<br/>
+[in] *pNewParent*<br/>
 
 [in]*bCheckVisibility*<br/>
 
@@ -366,7 +366,7 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>パラメーター
 
-[out]*str*<br/>
+[out] *str*<br/>
 
 [in]*cy*<br/>
 
@@ -384,13 +384,13 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>パラメーター
 
-[out]*str*<br/>
+[out] *str*<br/>
 
 [in]*10 進数*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

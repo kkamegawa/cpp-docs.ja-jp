@@ -86,16 +86,16 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c154fe621fb88a6dc96a9835fae95c4b86763de
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486308"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866191"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 [CPane Class](../../mfc/reference/cpane-class.md) から派生したペインを一連の行に配置する機能を提供します。
 
@@ -112,51 +112,51 @@ class CDockSite: public CBasePane
 |名前|説明|
 |----------|-----------------|
 |[CDockSite::AddRow](#addrow)||
-|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(上書き[cbasepane::adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout))。|
-|[CDockSite::AdjustLayout](#adjustlayout)|(上書き[cbasepane::adjustlayout](../../mfc/reference/cbasepane-class.md#adjustlayout))。|
-|[CDockSite::AlignDockSite](#aligndocksite)||
-|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(上書き[cbasepane::calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout))。|
-|[CDockSite::CanAcceptPane](#canacceptpane)|(上書き[cbasepane::canacceptpane](../../mfc/reference/cbasepane-class.md#canacceptpane))。|
-|[CDockSite::CreateEx](#createex)|(上書き[cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex))。|
-|[CDockSite::CreateRow](#createrow)||
-|[CDockSite::DockPane](#dockpane)|(上書き[cbasepane::dockpane](../../mfc/reference/cbasepane-class.md#dockpane))。|
-|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(上書き[cbasepane::doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore))。|
+|[CDockSite:: AdjustDockingLayout](#adjustdockinglayout)|( [Cbasepane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout)をオーバーライドします)。|
+|[CDockSite:: AdjustLayout](#adjustlayout)|( [Cbasepane:: AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout)をオーバーライドします)。|
+|[CDockSite:: AlignDockSite](#aligndocksite)||
+|[CDockSite:: CalcFixedLayout](#calcfixedlayout)|( [Cbasepane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)をオーバーライドします)。|
+|[CDockSite:: CanAcceptPane](#canacceptpane)|( [Cbasepane:: CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane)をオーバーライドします)。|
+|[CDockSite:: CreateEx](#createex)|( [Cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)をオーバーライドします)。|
+|[CDockSite:: CreateRow](#createrow)||
+|[CDockSite::D ockPane](#dockpane)|( [Cbasepane::D ockPane](../../mfc/reference/cbasepane-class.md#dockpane)をオーバーライドします)。|
+|[CDockSite::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|( [Cbasepane::D oesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore)をオーバーライドします)。|
 |[CDockSite::FindRowIndex](#findrowindex)||
-|[CDockSite::FixupVirtualRects](#fixupvirtualrects)||
-|[CDockSite::GetDockSiteID](#getdocksiteid)||
-|[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||
-|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|( `CBasePane::IsAccessibilityCompatible`をオーバーライドします)。|
-|[CDockSite::IsDragMode](#isdragmode)||
-|[CDockSite::IsLastRow](#islastrow)||
-|[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||
-|[CDockSite::IsResizable](#isresizable)|(上書き[cbasepane::isresizable](../../mfc/reference/cbasepane-class.md#isresizable))。|
-|[CDockSite::MovePane](#movepane)||
-|[CDockSite::OnInsertRow](#oninsertrow)||
-|[CDockSite::OnRemoveRow](#onremoverow)||
-|[CDockSite::OnResizeRow](#onresizerow)||
-|[CDockSite::OnSetWindowPos](#onsetwindowpos)||
-|[CDockSite::OnShowRow](#onshowrow)||
-|[CDockSite::OnSizeParent](#onsizeparent)||
-|[CDockSite::PaneFromPoint](#panefrompoint)|パラメーターによって指定された点にあるドッキング サイトにドッキングされているペインを返します。|
-|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|ペインを別のペインの左側にドッキングします。|
-|[CDockSite::FindPaneByID](#findpanebyid)|指定された ID によって識別されるペインを返します。|
-|[CDockSite::GetPaneList](#getpanelist)|ドッキング サイトにドッキングされているペインの一覧を返します。|
-|[CDockSite::RectSideFromPoint](#rectsidefrompoint)||
-|[CDockSite::RemovePane](#removepane)||
+|[CDockSite:: FixupVirtualRects](#fixupvirtualrects)||
+|[CDockSite:: GetDockSiteID](#getdocksiteid)||
+|[CDockSite:: GetDockSiteRowsList](#getdocksiterowslist)||
+|[CDockSite:: IsAccessibilityCompatible](#isaccessibilitycompatible)|( `CBasePane::IsAccessibilityCompatible`をオーバーライドします)。|
+|[CDockSite:: IsDragMode](#isdragmode)||
+|[CDockSite:: IsLastRow](#islastrow)||
+|[CDockSite:: IsRectWithinDockSite](#isrectwithindocksite)||
+|[CDockSite:: IsResizable 変更可能](#isresizable)|( [Cbasepane:: isresizable サイズを変更](../../mfc/reference/cbasepane-class.md#isresizable)できます)。|
+|[CDockSite:: MovePane](#movepane)||
+|[CDockSite:: OnInsertRow](#oninsertrow)||
+|[CDockSite:: OnRemoveRow](#onremoverow)||
+|[CDockSite:: OnResizeRow](#onresizerow)||
+|[CDockSite:: OnSetWindowPos](#onsetwindowpos)||
+|[CDockSite:: OnShowRow](#onshowrow)||
+|[CDockSite:: OnSizeParent](#onsizeparent)||
+|[CDockSite::P aneFromPoint](#panefrompoint)|パラメーターによって指定された点にあるドッキング サイトにドッキングされているペインを返します。|
+|[CDockSite::D ockPaneLeftOf](#dockpaneleftof)|ペインを別のペインの左側にドッキングします。|
+|[CDockSite:: FindPaneByID](#findpanebyid)|指定された ID によって識別されるペインを返します。|
+|[CDockSite:: Get List](#getpanelist)|ドッキング サイトにドッキングされているペインの一覧を返します。|
+|[CDockSite:: RectSideFromPoint](#rectsidefrompoint)||
+|[CDockSite:: RemovePane](#removepane)||
 |[CDockSite::RemoveRow](#removerow)||
-|[CDockSite::ReplacePane](#replacepane)||
-|[CDockSite::RepositionPanes](#repositionpanes)||
-|[CDockSite::ResizeDockSite](#resizedocksite)||
-|[CDockSite::ResizeRow](#resizerow)||
-|[CDockSite::ShowPane](#showpane)|ペインを表示します。|
-|[CDockSite::ShowRow](#showrow)||
-|[CDockSite::SwapRows](#swaprows)||
+|[CDockSite:: ReplacePane](#replacepane)||
+|[CDockSite:: RepositionPanes](#repositionpanes)||
+|[CDockSite:: ResizeDockSite](#resizedocksite)||
+|[CDockSite:: ResizeRow](#resizerow)||
+|[CDockSite:: ShowPane](#showpane)|ペインを表示します。|
+|[CDockSite:: ShowRow](#showrow)||
+|[CDockSite:: SwapRows](#swaprows)||
 
 ## <a name="remarks"></a>Remarks
 
-フレームワークは作成`CDockSite`を呼び出すときに自動的にオブジェクト[cframewndex::enabledocking](../../mfc/reference/cframewndex-class.md#enabledocking)します。 ドッキング サイト ウィンドウは、メイン フレーム ウィンドウ上のクライアント領域の端に配置されます。
+`CDockSite` [CFrameWndEx:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)を呼び出すと、フレームワークによってオブジェクトが自動的に作成されます。 ドッキング サイト ウィンドウは、メイン フレーム ウィンドウ上のクライアント領域の端に配置されます。
 
-通常はしなかったために、ドッキング サイトによって提供されるサービスを呼び出す[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)これらのサービスを処理します。
+[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)はこれらのサービスを処理するため、通常、dock サイトによって提供されるサービスを呼び出す必要はありません。
 
 ## <a name="example"></a>例
 
@@ -166,13 +166,15 @@ class CDockSite: public CBasePane
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cbasepane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockSite](../../mfc/reference/cdocksite-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxDockSite.h
+**ヘッダー:** afxDockSite
 
 ##  <a name="addrow"></a>  CDockSite::AddRow
 
@@ -184,9 +186,9 @@ CDockingPanesRow* AddRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pos*<br/>
+から*pos*<br/>
 
-[in]*パラメーター nHeight*<br/>
+から*nHeight*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -219,11 +221,11 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectToAlignBy*<br/>
+から*rectToAlignBy*<br/>
 
-[in]*rectResult*<br/>
+から*rectResult*<br/>
 
-[in]*bMoveImmediately*<br/>
+から*Bmoveimmediately ちに*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -237,15 +239,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bStretch*<br/>
+から*Bstretch*<br/>
 
-[in]*bHorz*<br/>
+から*bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="canacceptpane"></a>  CDockSite::CanAcceptPane
+##  <a name="canacceptpane"></a>CDockSite:: CanAcceptPane
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -253,13 +255,13 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+から*Pbar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="createex"></a>  CDockSite::CreateEx
+##  <a name="createex"></a>CDockSite:: CreateEx
 
 ```
 virtual BOOL CreateEx(
@@ -273,17 +275,17 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*dwStyleEx*<br/>
+から*Dwスタイル ex*<br/>
 
-[in]*dwStyle*<br/>
+から*dwStyle*<br/>
 
-[in]*rect*<br/>
+から*rect*<br/>
 
-[in]*pParentWnd*<br/>
+から*pParentWnd*<br/>
 
-[in]*dwControlBarStyle*<br/>
+から*Dwcontrolbarstyle*<br/>
 
-[in]*pContext*<br/>
+から*pContext*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -300,17 +302,17 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentDockBar*<br/>
+から*pParentDockBar*<br/>
 
-[in]*nOffset*<br/>
+から*Noffset*<br/>
 
-[in]*nRowHeight*<br/>
+から*nRowHeight*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="dockpane"></a>  CDockSite::DockPane
+##  <a name="dockpane"></a>CDockSite::D ockPane
 
 ```
 virtual void DockPane(
@@ -321,15 +323,15 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+から*pWnd*<br/>
 
-[in]*dockMethod*<br/>
+から*dockMethod*<br/>
 
-[in]*lpRect*<br/>
+から*lpRect*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="dockpaneleftof"></a>  CDockSite::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>CDockSite::D ockPaneLeftOf
 
 ペインを別のペインの左側にドッキングします。
 
@@ -342,14 +344,14 @@ virtual BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>パラメーター
 
 *pBarToDock*<br/>
-[入力、出力]左側にドッキングするウィンドウへのポインター *pTargetBar*します。
+[入力、出力]*Ptargetbar*の左側にドッキングするペインへのポインター。
 
 *pTargetBar*<br/>
-[入力、出力][ターゲット] ウィンドウへのポインター。
+[入力、出力]ターゲットペインへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウが正常にドッキングされている場合は TRUE。それ以外の場合、FALSE です。
+ペインが正常にドッキングされている場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
@@ -363,9 +365,9 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID
+##  <a name="findpanebyid"></a>CDockSite:: FindPaneByID
 
-その ID を持つペインを返します
+指定された ID を持つペインを返します。
 
 ```
 CPane* FindPaneByID(UINT nID);
@@ -374,11 +376,11 @@ CPane* FindPaneByID(UINT nID);
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]検索する、ウィンドウのコマンド ID。
+から検索するペインのコマンド ID。
 
 ### <a name="return-value"></a>戻り値
 
-指定したコマンド ID、または、ウィンドウが見つからない場合は NULL で、ウィンドウへのポインター。
+指定したコマンド ID を持つペインへのポインター。ペインが見つからない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
@@ -390,7 +392,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRow*<br/>
+から*Prow*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -426,7 +428,7 @@ const CObList& GetDockSiteRowsList() const;
 
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList
 
-ドッキング サイトにドッキングされているペインの一覧を返します。
+ドッキングサイトにドッキングされているペインの一覧を返します。
 
 ```
 const CObList& GetPaneList() const;
@@ -434,7 +436,7 @@ const CObList& GetPaneList() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在、ドッキング バーにドッキングされているペインの一覧への読み取り専用の参照。
+ドッキングバーに現在ドッキングされているペインのリストへの読み取り専用の参照。
 
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible
 
@@ -446,7 +448,7 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isdragmode"></a>  CDockSite::IsDragMode
+##  <a name="isdragmode"></a>CDockSite:: IsDragMode
 
 ```
 virtual BOOL IsDragMode() const;
@@ -464,7 +466,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRow*<br/>
+から*Prow*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -480,15 +482,15 @@ BOOL IsRectWithinDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+から*rect*<br/>
 
-[in]*ptDelta*<br/>
+から*Ptdelta*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isresizable"></a>  CDockSite::IsResizable
+##  <a name="isresizable"></a>CDockSite:: IsResizable 変更可能
 
 ```
 virtual BOOL IsResizable() const;
@@ -498,7 +500,7 @@ virtual BOOL IsResizable() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="movepane"></a>  CDockSite::MovePane
+##  <a name="movepane"></a>CDockSite:: MovePane
 
 ```
 virtual BOOL MovePane(
@@ -509,11 +511,11 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+から*pWnd*<br/>
 
-[in]*nFlags*<br/>
+から*nFlags*<br/>
 
-[in]*ptOffset*<br/>
+から*ptOffset*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -527,7 +529,7 @@ virtual void OnInsertRow(POSITION pos);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pos*<br/>
+から*pos*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -541,13 +543,13 @@ virtual void OnRemoveRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pos*<br/>
+から*pos*<br/>
 
-[in]*bByShow*<br/>
+から*Bbyshow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onresizerow"></a>  CDockSite::OnResizeRow
+##  <a name="onresizerow"></a>CDockSite:: OnResizeRow
 
 ```
 virtual int OnResizeRow(
@@ -557,15 +559,15 @@ virtual int OnResizeRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRowToResize*<br/>
+から*pRowToResize*<br/>
 
-[in]*nOffset*<br/>
+から*Noffset*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onsizeparent"></a>  CDockSite::OnSizeParent
+##  <a name="onsizeparent"></a>CDockSite:: OnSizeParent
 
 ```
 virtual void OnSizeParent(
@@ -577,17 +579,17 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectAvailable*<br/>
+から*rectAvailable*<br/>
 
-[in]*nSide*<br/>
+から*Nside*<br/>
 
-[in]*bExpand*<br/>
+から*Bexpand*<br/>
 
-[in]*nOffset*<br/>
+から*Noffset*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onsetwindowpos"></a>  CDockSite::OnSetWindowPos
+##  <a name="onsetwindowpos"></a>CDockSite:: OnSetWindowPos
 
 ```
 virtual BOOL OnSetWindowPos(
@@ -598,11 +600,11 @@ virtual BOOL OnSetWindowPos(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndInsertAfter*<br/>
+から*pWndInsertAfter*<br/>
 
-[in]*rectWnd*<br/>
+から*Rectwnd*<br/>
 
-[in]*nFlags*<br/>
+から*nFlags*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -618,13 +620,13 @@ virtual void OnShowRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pos*<br/>
+から*pos*<br/>
 
-[in]*bShow*<br/>
+から*bShow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="panefrompoint"></a>  CDockSite::PaneFromPoint
+##  <a name="panefrompoint"></a>CDockSite::P aneFromPoint
 
 パラメーターによって指定された点にあるドッキング サイトにドッキングされているペインを返します。
 
@@ -634,12 +636,12 @@ virtual CPane* PaneFromPoint(CPoint pt);
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-[in]取得するウィンドウの画面座標にポイントします。
+*未満*<br/>
+から取得するペインのポイント (画面座標)。
 
 ### <a name="return-value"></a>戻り値
 
-指定したポイントに存在するウィンドウがない場合は、指定した点または NULL にあるウィンドウへのポインター。
+指定したポイントにあるペインへのポインター。指定したポイントにペインが存在しない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
@@ -653,9 +655,9 @@ static int __stdcall RectSideFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+から*rect*<br/>
 
-[in]*ポイント*<br/>
+から*ポイント*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -671,9 +673,9 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*我が物*<br/>
+から*pWnd*<br/>
 
-[in]*dockMethod*<br/>
+から*dockMethod*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -685,7 +687,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRow*<br/>
+から*Prow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -699,15 +701,15 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pOldBar*<br/>
+[in] *pOldBar*<br/>
 
-[in]*pNewBar*<br/>
+から*Pnewbar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="repositionpanes"></a>  CDockSite::RepositionPanes
+##  <a name="repositionpanes"></a>CDockSite:: RepositionPanes
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -715,7 +717,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectNewClientArea*<br/>
+から*rectNewClientArea*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -729,9 +731,9 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nNewWidth*<br/>
+[in] *nNewWidth*<br/>
 
-[in]*nNewHeight*<br/>
+から*nNewHeight*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -746,17 +748,17 @@ int ResizeRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRow*<br/>
+から*Prow*<br/>
 
-[in]*nNewSize*<br/>
+から*Nnewsize*<br/>
 
-[in]*bAdjustLayout*<br/>
+から*bAdjustLayout*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="showpane"></a>  CDockSite::ShowPane
+##  <a name="showpane"></a>CDockSite:: ShowPane
 
 ペインを表示します。
 
@@ -771,24 +773,24 @@ virtual BOOL ShowPane(
 ### <a name="parameters"></a>パラメーター
 
 *pBar*<br/>
-[入力、出力]表示/非表示するウィンドウへのポインター。
+[入力、出力]表示または非表示にするペインへのポインター。
 
 *bShow*<br/>
-[in]ウィンドウを表示することを指定する場合は TRUEウィンドウを非表示にすることを指定する場合は FALSE。
+からペインを表示するように指定する場合は TRUE。ペインを非表示にすることを指定する場合は FALSE。
 
 *bDelay*<br/>
-[in]ウィンドウが表示されます。 後に、ウィンドウのレイアウトがまで延期されることを指定する場合は TRUEそれ以外の場合、FALSE です。
+からペインが表示されるまで、ペインのレイアウトを遅延させることを指定する場合は TRUE。それ以外の場合は FALSE。
 
 *bActivate*<br/>
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合は、ウィンドウが表示または非表示に正常にします。 指定したウィンドウがこのドッキング サイトに属していない場合は FALSE です。
+ペインが正常に表示または非表示にされた場合は TRUE。 指定したペインがこのドックサイトに属していない場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-ドッキング ペインを非表示には、このメソッドを呼び出します。 通常、必要はありませんを呼び出す`CDockSite::ShowPane`直接、親フレーム ウィンドウまたは基本ウィンドウによって呼び出されるためです。
+ドッキングされたペインの表示と非表示を切り替えるには、このメソッドを呼び出します。 通常、を直接呼び出す`CDockSite::ShowPane`必要はありません。これは、親フレームウィンドウまたは基本ペインによって呼び出されるためです。
 
 ##  <a name="showrow"></a>  CDockSite::ShowRow
 
@@ -801,11 +803,11 @@ void ShowRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRow*<br/>
+から*Prow*<br/>
 
-[in]*bShow*<br/>
+から*bShow*<br/>
 
-[in]*bAdjustLayout*<br/>
+から*bAdjustLayout*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -819,9 +821,9 @@ void SwapRows(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pFirstRow*<br/>
+から*Pfirstrow*<br/>
 
-[in]*pSecondRow*<br/>
+[in] *pSecondRow*<br/>
 
 ### <a name="remarks"></a>Remarks
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: 219e32cedb02d4ecab73390e33601de32f9b0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4fd95b1f11ed6edac26cb03e41e8b650acfafa3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677969"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139980"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 構造体
 
@@ -22,7 +22,7 @@ ms.locfileid: "50677969"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IUMSUnblockNotification;
 ```
 
@@ -30,46 +30,46 @@ struct IUMSUnblockNotification;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[IUMSUnblockNotification::GetContext](#getcontext)|返します、`IExecutionContext`がブロック解除したスレッド プロキシに関連付けられている実行コンテキストのインターフェイス。 このメソッドが戻るし、基になる実行コンテキストは呼び出しにスケジュールが変更された後、`IThreadProxy::SwitchTo`メソッドでは、このインターフェイスは無効になりました。|
-|[IUMSUnblockNotification::GetNextUnblockNotification](#getnextunblocknotification)|次を返します`IUMSUnblockNotification`メソッドから返されるチェーン内のインターフェイス`IUMSCompletionList::GetUnblockNotifications`します。|
+|[IUMSUnblockNotification:: GetContext](#getcontext)|ブロック解除されたスレッドプロキシに関連付けられている実行コンテキストの `IExecutionContext` インターフェイスを返します。 このメソッドが返され、基になる実行コンテキストが `IThreadProxy::SwitchTo` メソッドの呼び出しによって再スケジュールされると、このインターフェイスは無効になります。|
+|[IUMSUnblockNotification:: GetNextUnblockNotification](#getnextunblocknotification)|メソッド `IUMSCompletionList::GetUnblockNotifications`から返されたチェーン内の次の `IUMSUnblockNotification` インターフェイスを返します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `IUMSUnblockNotification`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrtrm.h
+**ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-##  <a name="getcontext"></a>  Iumsunblocknotification::getcontext メソッド
+## <a name="getcontext"></a>IUMSUnblockNotification:: GetContext メソッド
 
-返します、`IExecutionContext`がブロック解除したスレッド プロキシに関連付けられている実行コンテキストのインターフェイス。 このメソッドが戻るし、基になる実行コンテキストは呼び出しにスケジュールが変更された後、`IThreadProxy::SwitchTo`メソッドでは、このインターフェイスは無効になりました。
+ブロック解除されたスレッドプロキシに関連付けられている実行コンテキストの `IExecutionContext` インターフェイスを返します。 このメソッドが返され、基になる実行コンテキストが `IThreadProxy::SwitchTo` メソッドの呼び出しによって再スケジュールされると、このインターフェイスは無効になります。
 
-```
+```cpp
 virtual IExecutionContext* GetContext() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-`IExecutionContext`をブロック解除スレッド プロキシの実行コンテキストのインターフェイス。
+ブロック解除されたスレッドプロキシへの実行コンテキストの `IExecutionContext` インターフェイス。
 
-##  <a name="getnextunblocknotification"></a>  Iumsunblocknotification::getnextunblocknotification メソッド
+## <a name="getnextunblocknotification"></a>IUMSUnblockNotification:: GetNextUnblockNotification メソッド
 
-次を返します`IUMSUnblockNotification`メソッドから返されるチェーン内のインターフェイス`IUMSCompletionList::GetUnblockNotifications`します。
+メソッド `IUMSCompletionList::GetUnblockNotifications`から返されたチェーン内の次の `IUMSUnblockNotification` インターフェイスを返します。
 
-```
+```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-次`IUMSUnblockNotification`メソッドから返されるチェーン内のインターフェイス`IUMSCompletionList::GetUnblockNotifications`します。
+メソッド `IUMSCompletionList::GetUnblockNotifications`から返されたチェーン内の次の `IUMSUnblockNotification` インターフェイス。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [IUMSScheduler 構造体](iumsscheduler-structure.md)<br/>

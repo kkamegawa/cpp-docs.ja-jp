@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2876
 ms.assetid: 8b674bf1-f9f4-4a8e-8127-e884c1d1708f
-ms.openlocfilehash: e7fcdeaf79728ee99498c69de0205619d16612d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb242c889d924612b5349ea06c19db954261b245
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664725"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736348"
 ---
 # <a name="compiler-error-c2876"></a>コンパイラ エラー C2876
 
-'class::symbol': すべてのオーバー ロードがアクセスできます。
+' class:: symbol ': すべてのオーバーロードにアクセスできるわけではありません
 
-基本クラスの関数のオーバー ロードされたすべてのフォームは、派生クラスにアクセスできる必要があります。
+基底クラスの関数のオーバーロードされたすべての形式は、派生クラスからアクセスできる必要があります。
 
 次の例では、C2876 が生成されます。
 
-```
+```cpp
 // C2876.cpp
 // compile with: /c
 class A {

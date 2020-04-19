@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 8a1cabc058f1aaefe78c67df68106cf1db7ca58e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230387"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults クラス
 

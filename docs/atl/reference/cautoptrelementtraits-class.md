@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-ms.openlocfilehash: 4d13ca8e3de00a49e15e5acbc35c6301b9d7eae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d217441048403b0ff5361f8049b76367174812f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246742"
 ---
 # <a name="cautoptrelementtraits-class"></a>CAutoPtrElementTraits クラス
 

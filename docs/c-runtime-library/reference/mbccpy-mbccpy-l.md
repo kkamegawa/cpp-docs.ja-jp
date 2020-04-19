@@ -1,10 +1,10 @@
 ---
 title: _mbccpy、_mbccpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy
 - _mbccpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy
 - tccpy
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ae2eb75949077d02b98ba3aec75da534e93884
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533745"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952696"
 ---
-# <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
+# <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
 文字列のマルチバイト文字を他の文字列にコピーします。 これらの関数にはセキュリティが強化されたバージョンがあります。「[_mbccpy_s、_mbccpy_s_l](mbccpy-s-mbccpy-s-l.md)」をご覧ください。
 
@@ -75,13 +78,13 @@ void _mbccpy_l(
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbccpy**関数からの 1 つのマルチバイト文字のコピー *src*に*dest*します。
+**_Mbccpy**関数は、 *src*から*dest*に1つのマルチバイト文字をコピーします。
 
-この関数は、パラメーターを検証します。 場合 **_mbccpy**が null ポインターに渡される*dest*または*src*で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**します。
+この関数は、パラメーターを検証します。 **_Mbccpy**に*dest*または*src*の null ポインターが渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定されます。
 
-**_mbccpy**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_l**と同じ **_mbccpy**する点を除いて **_mbccpy_l**の任意のロケールに依存する動作に渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbccpy**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_l**は **_mbccpy**と同じですが、ロケールに依存する動作に対して渡されたロケールが **_mbccpy_l**で使用される点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**セキュリティに関するメモ** null で終わる文字列をご使用ください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。
+**セキュリティに関するメモ** null で終わる文字列をご使用ください。 null で終わる文字列はターゲット バッファーのサイズを超えないようにしてください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409318"
 ---
 # <a name="interface-attributes"></a>インターフェイス属性
 
-次の属性を適用する、[インターフェイス (または _ _interface)](../../cpp/interface.md) C++ のキーワード。
+次の属性を適用する、[インターフェイス (または _ _interface)](../../cpp/interface.md) C++キーワード。
 
 |属性|説明|
 |---------------|-----------------|

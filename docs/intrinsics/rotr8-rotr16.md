@@ -1,6 +1,6 @@
 ---
 title: _rotr8、_rotr16
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _rotr16
 - _rotr8
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 218fb14c118cb9208cdfc29176897543f680b593
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 66598a4e6cdc26fa60a87cd32abaa34319ebe6cc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329723"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218044"
 ---
-# <a name="rotr8-rotr16"></a>_rotr8、_rotr16
+# <a name="_rotr8-_rotr16"></a>_rotr8、_rotr16
 
 **Microsoft 固有の仕様**
 
@@ -23,7 +23,7 @@ ms.locfileid: "51329723"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char _rotr8(
    unsigned char value,
    unsigned char shift
@@ -34,13 +34,13 @@ unsigned short _rotr16(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*値*<br/>
-[in]回転する値。
+*value*\
+から回転する値。
 
-*shift*<br/>
-[in]回転するビット数。
+*転換*\
+から回転するビット数。
 
 ## <a name="return-value"></a>戻り値
 
@@ -50,18 +50,18 @@ unsigned short _rotr16(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_rotr8`|x86、ARM、x64|
-|`_rotr16`|x86、ARM、x64|
+|`_rotr8`|x86、ARM、x64、ARM64|
+|`_rotr16`|x86、ARM、x64、ARM64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-右シフト演算とは異なり、右回転を実行すると、下端からあふれた下位ビットは最上位ビット位置に移動します。
+右シフト演算とは異なり、右の回転を実行すると、下位にある下位ビットが上位ビット位置に移動されます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // rotr.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -103,5 +103,5 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
 
 ## <a name="see-also"></a>関連項目
 
-[_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)<br/>
+[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

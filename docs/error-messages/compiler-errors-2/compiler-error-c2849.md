@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2849
 ms.assetid: e28f6b3e-e0e7-4f92-b006-ebaa81d368e6
-ms.openlocfilehash: 4812c836d099e9cbb3849e48046edfdeda24ffc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a67c81fd58312921ef01209d7bc2f96eecaed4b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594702"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738883"
 ---
 # <a name="compiler-error-c2849"></a>コンパイラ エラー C2849
 
-'デコンス トラクター': インターフェイスはデストラクターを持つことはできません
+' デストラクター ': インターフェイスにデストラクターを含めることはできません
 
-Visual C[インターフェイス](../../cpp/interface.md)デストラクターを含めることはできません。
+ビジュアルC++ [インターフェイス](../../cpp/interface.md)にデストラクターを含めることはできません。
 
 次の例では、C2849 が生成されます。
 
-```
+```cpp
 // C2849.cpp
 // compile with: /c
 __interface C {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3634
 ms.assetid: fd09f10c-f863-483b-9756-71c16b760b02
-ms.openlocfilehash: 2acd76fee5e7ca309991e639044a45ea83ed112b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2abf5191035e450dca72777cdc2b2675ac9b90de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527544"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742588"
 ---
 # <a name="compiler-error-c3634"></a>コンパイラ エラー C3634
 
-'function': マネージまたは WinRTclass の抽象メソッドを定義することはできません
+' function ': マネージクラスまたは WinRTclass の抽象メソッドを定義することはできません。
 
 マネージド クラスまたは WinRT クラスで抽象メソッドを宣言することはできますが、定義することはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では警告 C3634 が生成されます。
 
-```
+```cpp
 // C3634.cpp
 // compile with: /clr
 ref class C {

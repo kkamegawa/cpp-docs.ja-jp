@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: 8fb5f7e2133f1055cde05b2dc1358896c9ea0c20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa36fc0ac0eed5ea760224f9e0a3af1c97e18895
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324091"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException クラス
 
@@ -122,4 +122,3 @@ NULL ターミネータを含めた、バッファーが保持できる文字の
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CException クラス](../../mfc/reference/cexception-class.md)<br/>
 [例外処理](../../mfc/exception-handling-in-mfc.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: b7bb0ffe169fd9b4167e6af4b772df23acf02212
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395990"
 ---
 # <a name="connecting-to-a-data-source"></a>データ ソースへの接続
 

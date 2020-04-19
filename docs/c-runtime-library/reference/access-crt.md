@@ -1,9 +1,9 @@
 ---
 title: access (CRT)
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - access
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - access
 helpviewer_keywords:
 - access function
 ms.assetid: 65197793-bd0a-41c3-9c29-18de2d95d9a6
-ms.openlocfilehash: a12acb91852d97596c956834c2b2dc0a2412194e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f218b8de79ea174d935097c6ecbe4cf303db7a2
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471384"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300119"
 ---
 # <a name="access-crt"></a>access (CRT)
 
-この POSIX 関数は非推奨とされます。 代わりに ISO C++ 準拠の [_access](access-waccess.md) またはセキュリティが強化された [_access_s](access-s-waccess-s.md) を使用してください。
+Microsoft 実装の POSIX 関数名 `access` は、 [_access](access-waccess.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに、 [_access](access-waccess.md)またはセキュリティが強化された[_access_s](access-s-waccess-s.md)関数を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

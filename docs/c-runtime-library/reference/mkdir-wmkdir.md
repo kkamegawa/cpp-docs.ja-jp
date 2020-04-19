@@ -1,10 +1,10 @@
 ---
 title: _mkdir、_wmkdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmkdir
 - _mkdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkdir
 - tmkdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496618"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951716"
 ---
-# <a name="mkdir-wmkdir"></a>_mkdir、_wmkdir
+# <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
 新しいディレクトリを作成します。
 
@@ -63,9 +66,9 @@ int _wmkdir(
 
 ## <a name="return-value"></a>戻り値
 
-新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラー、関数の戻り値-1 とセット**errno**次のようにします。
+新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーが発生した場合、この関数は-1 を返し、 **errno**を次のように設定します。
 
-**EEXIST**ディレクトリは作成されませんでした*dirname*既存のファイル、ディレクトリ、またはデバイスの名前を指定します。
+**Eexist** *Dirname*が既存のファイル、ディレクトリ、またはデバイスの名前であるため、ディレクトリは作成されませんでした。
 
 **ENOENT**パスが見つかりませんでした。
 
@@ -73,9 +76,9 @@ int _wmkdir(
 
 ## <a name="remarks"></a>Remarks
 
-**_Mkdir**関数は、指定した新しいディレクトリを作成します。 *dirname します。* **_mkdir**の最後のコンポーネントのみの呼び出しごとの 1 つだけの新しいディレクトリを作成できます*dirname*新しいディレクトリの名前を付けます。 **_mkdir**パスの区切り記号では変換されません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
+**Mkdir**関数は、指定された dirname を持つ新しいディレクトリを作成し*ます。* **mkdir**は呼び出しごとに1つの新しいディレクトリを作成できます。そのため、 *dirname*の最後のコンポーネントのみが新しいディレクトリに名前を指定できます。 mkdir はパス区切り記号を変換しません **(_l)** Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
 
-**_wmkdir**のワイド文字バージョンです **_mkdir**、 *dirname*引数 **_wmkdir**はワイド文字列です。 **_wmkdir**と **_mkdir**動作は同じです。
+**_wmkdir**のワイド文字バージョン**です。** **_wmkdir**への*dirname*引数は、ワイド文字列です。 それ以外では、 **_wmkdir**と**mkdir**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

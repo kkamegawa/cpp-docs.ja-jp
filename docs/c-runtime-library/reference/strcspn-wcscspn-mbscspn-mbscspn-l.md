@@ -1,12 +1,12 @@
 ---
 title: strcspn、wcscspn、_mbscspn、_mbscspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcspn
 - _mbscspn
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446450"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940765"
 ---
-# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
+# <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
 
 文字列の中で、文字セットに含まれる文字が最初に見つかった位置のインデックスを返します。
 
 > [!IMPORTANT]
-> **_mbschr**と **_mbschr_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbschr**と **_mbschr_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -88,17 +91,17 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の最初の文字のインデックスを返す*str*内にある*strCharSet*します。 内の文字のない場合*str*に*strCharSet*、戻り値の長さは、その後*str*します。
+これらの関数は、 *Strcharset*内の*str*の最初の文字のインデックスを返します。 *Str*内の文字が*strcharset*に含まれていない場合、戻り値は*str*の長さになります。
 
 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>Remarks
 
-**wcscspn**と **_mbscspn**のワイド文字とマルチバイト文字バージョン**strcspn**します。 引数**wcscspn**はワイド文字列 **_mbscspn**はマルチバイト文字の文字列。
+**wcscspn**と **_mbscspn**は、ワイド文字バージョンとマルチバイト文字バージョンの**strcspn**です。 **Wcscspn**の引数はワイド文字列です。これらの **_mbscspn**はマルチバイト文字列です。
 
-**_mbscspn**パラメーターを検証します。 いずれか*str*または*strCharSet* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値 0 とセットが許可された場合**errno**に**EINVAL**します。 **strcspn**と**wcscspn**パラメーターを検証できません。 それ以外では、これらの関数の動作は同じです。
+**_mbscspn**は、そのパラメーターを検証します。 *Str*または*strcharset*のいずれかが null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は0を返し、 **errno**を**EINVAL**に設定します。 **strcspn**と**wcscspn**では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

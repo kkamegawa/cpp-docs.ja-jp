@@ -1,26 +1,27 @@
 ---
 title: RECORD (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - RECORD
 helpviewer_keywords:
 - RECORD directive
 ms.assetid: c83db394-0fe3-468f-813f-13302cdc862d
-ms.openlocfilehash: 6464445975a84968dab79cfafc9c948337c9e5ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9cbf2c487ab3dd3026b57f7b058a0dd852bed41
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486464"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318515"
 ---
-# <a name="record-masm"></a>RECORD (MASM)
+# <a name="record"></a>RECORD
 
-指定したフィールドで構成されるレコードの種類を宣言します。 *fieldname* 、フィールドの名前*幅*ビット単位の数を指定および*式*その初期値を提供します。
+指定されたフィールドで構成されるレコード型を宣言します。 フィールド*名はフィールドに名前を*付け、 *width*はビット数を示し、 *expression*は初期値を指定します。
 
 ## <a name="syntax"></a>構文
 
-> *recordname*レコード*fieldname*:*幅*[=*式*] [、 *fieldname*:*幅*[=*式*]].
+> *recordname* **レコード** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

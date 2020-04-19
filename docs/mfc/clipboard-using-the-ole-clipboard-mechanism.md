@@ -1,5 +1,5 @@
 ---
-title: 'クリップボード : OLE クリップボード機構の使用方法'
+title: クリップボード:OLE クリップボード機構の使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,42 +8,41 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 3dadd2ae6774c684fe751e02fb3a80570accd30a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661449"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508909"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>クリップボード : OLE クリップボード機構の使用方法
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>クリップボード:OLE クリップボード機構の使用
 
-OLE は、クリップボードを使用してデータを転送するための標準形式といくつかの特定の OLE 形式を使用します。
+OLE では、クリップボードを使用してデータを転送するために、標準形式といくつかの OLE 固有の形式が使用されます。
 
-切り取りまたはアプリケーションからデータをコピーするときに、データが貼り付け操作で使用されるクリップボードに格納されます。 このデータは、さまざまな形式では。 クリップボードからデータを貼り付けるときに、アプリケーションはこれらの形式を使用するを選択できます。 具体的に特定の形式で貼り付けを使用していない場合は、ほとんどの情報を提供する形式を選択する、アプリケーションを作成する必要があります。 読み取りをする可能性があります、続行する前に、[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)トピック。 これらには、データが、作業を転送する方法と、アプリケーションでそれらを実装する方法の基本について説明します。
+アプリケーションからデータを切り取ったりコピーしたりすると、データはクリップボードに保存され、後で貼り付け操作で使用できるようになります。 このデータは、さまざまな形式になっています。 ユーザーがクリップボードからデータを貼り付けることを選択した場合、アプリケーションでは、使用する形式を選択できます。 アプリケーションは、ユーザーが特に特定の形式を指定しない限り、[特殊な貼り付け] を使用して、最も多くの情報を提供する形式を選択するように記述する必要があります。 続行する前に、「[データオブジェクトとデータソース (OLE)](../mfc/data-objects-and-data-sources-ole.md) 」のトピックを読むことをお勧めします。 これらの例では、データ転送のしくみと、それらをアプリケーションに実装する方法の基本について説明します。
 
-Windows では、さまざまなクリップボードを使用してデータを転送するために使用できる標準の形式を定義します。 これらは、メタファイル、テキスト、ビットマップ、およびその他のユーザーが含まれます。 OLE では、さまざまな OLE に固有の書式を定義します。 これらの標準形式で指定したよりも詳細を必要とするアプリケーションでは、独自のカスタム クリップボード形式を登録することをお勧めを勧めします。 Win32 API 関数を使用して[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)これを行う。
+Windows では、クリップボードを介してデータを転送するために使用できる標準形式がいくつか定義されています。 これには、メタファイル、テキスト、ビットマップなどが含まれます。 OLE では、多くの OLE 固有の書式も定義されています。 これらの標準形式よりも詳細な情報が必要なアプリケーションの場合は、独自のカスタムクリップボード形式を登録することをお勧めします。 これを行うには、Win32 API 関数[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)を使用します。
 
-たとえば、Microsoft Excel スプレッドシート用のカスタム形式を登録します。 この形式はより多くの情報よりも、たとえば、ビットマップします。 このデータをスプレッドシート形式をサポートするアプリケーションに貼り付けると、すべての数式と、スプレッドシートから値が保持される、通常の必要に応じて更新できます。 Microsoft Excel は、OLE アイテムとして貼り付けができるようにもデータとの形式でクリップボードに配置します。 すべての OLE ドキュメント コンテナーには、埋め込みアイテムとしてこの情報を貼り付けることができます。 この埋め込みアイテムは、Microsoft Excel を使用して変更できます。 クリップボードには、単純なスプレッドシートの選択範囲のイメージのビットマップも含まれています。 これはまた、OLE ドキュメント コンテナーやペイントなどのビットマップ エディターに貼り付けることができます。 ビットマップの場合はありません、スプレッドシート データを操作する方法です。
+たとえば、Microsoft Excel では、スプレッドシートのカスタム書式が登録します。 この形式には、ビットマップなど、より多くの情報が含まれています。 スプレッドシート形式をサポートするアプリケーションにこのデータが貼り付けられると、スプレッドシートのすべての数式と値が保持され、必要に応じて更新できます。 Microsoft Excel では、OLE アイテムとして貼り付けることができるように、データを形式でクリップボードに配置することもできます。 OLE ドキュメントコンテナーでは、この情報を埋め込みアイテムとして貼り付けることができます。 この埋め込み項目は、Microsoft Excel を使用して変更できます。 クリップボードには、スプレッドシート上で選択された範囲のイメージの単純なビットマップも含まれています。 これは、OLE ドキュメントコンテナーまたはペイントなどのビットマップエディターに貼り付けることもできます。 ただし、ビットマップの場合は、データをスプレッドシートとして操作する方法はありません。
 
-を、クリップボードから情報の最大量を取得するには、アプリケーションが、クリップボードからデータを貼り付ける前にこれらのカスタム形式の確認する必要があります。
+クリップボードから最大量の情報を取得するには、クリップボードからデータを貼り付ける前に、アプリケーションでこれらのカスタム形式を確認する必要があります。
 
-たとえば、[切り取り] コマンドを有効にする可能性がありますハンドラーを記述する、次のような。
+たとえば、Cut コマンドを有効にするには、次のようなハンドラーを記述します。
 
 [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [コピーと貼り付けデータ](../mfc/clipboard-copying-and-pasting-data.md)
+- [データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)
 
-- [その他のデータ形式の追加](../mfc/clipboard-adding-other-formats.md)
+- [その他の形式の追加](../mfc/clipboard-adding-other-formats.md)
 
-- [Windows クリップボードの使用方法](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Windows クリップボードの使用](../mfc/clipboard-using-the-windows-clipboard.md)
 
 - [OLE](../mfc/ole-background.md)
 
-- [OLE データ オブジェクトとデータ ソースと統一されたデータの転送します。](../mfc/data-objects-and-data-sources-ole.md)
+- [OLE データオブジェクトとデータソース、および uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)
 
 ## <a name="see-also"></a>関連項目
 
 [クリップボード](../mfc/clipboard.md)
-

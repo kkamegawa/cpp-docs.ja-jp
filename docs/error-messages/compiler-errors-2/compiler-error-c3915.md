@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 511da8ebe896cb2d0e2869f36bdb474cae5ba521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507758"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756280"
 ---
 # <a name="compiler-error-c3915"></a>コンパイラ エラー C3915
 
-'type' には、既定のインデックス付きプロパティ (クラス インデクサー) がありません。
+' type ' には、既定のインデックス付きプロパティ (クラスインデクサー) がありません
 
-型には、既定、インデックス付きプロパティがありません。
+型には、既定のインデックス付きプロパティがありません。
 
-詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3915 が生成されます。
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -46,13 +46,13 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-定義されている同じコンパイル単位で既定のインデクサーを使用しようとした場合にも C3915<xref:System.Reflection.DefaultMemberAttribute>します。
+また、C3915 <xref:System.Reflection.DefaultMemberAttribute>で定義されているのと同じコンパイル単位で既定のインデクサーを使用しようとした場合にも発生する可能性があります。
 
 次の例では、C3915 が生成されます。
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

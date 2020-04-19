@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2562
 ms.assetid: 2c41e511-9952-4b98-9976-6b1523613e1b
-ms.openlocfilehash: c665c4ed82fefaf0ee724defb8c205f86fc06dd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78536fdc0c2a6a6e9c4842fdea6423037496b30b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435310"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755552"
 ---
 # <a name="compiler-error-c2562"></a>コンパイラ エラー C2562
 
-'identifier': 'void' 関数の値を返す
+' identifier ': ' void ' 関数は値を返します
 
-関数として`void`が値を返します。
+関数は `void` として宣言されていますが、値を返します。
 
-このエラーは、間違った関数プロトタイプで発生することができます。
+このエラーは、関数プロトタイプが正しくないことが原因で発生する可能性があります。
 
-このエラーは、関数の宣言で戻り値の型を指定する場合に解決される可能性があります。
+関数宣言で戻り値の型を指定すると、このエラーが解決される場合があります。
 
 次の例では、C2562 が生成されます。
 
-```
+```cpp
 // C2562.cpp
 // compile with: /c
 void testfunc() {

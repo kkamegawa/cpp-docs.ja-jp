@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519320"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243819"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 オブジェクト間の不等性をテストします。
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 不等性をテストする一方のオブジェクト。
 
-*right*<br/>
+*そうです*\
 不等性をテストする一方のオブジェクト。
 
-*Ty1*<br/>
+*Ty1*\
 左辺の共有ポインターによって制御される型。
 
-*Ty2*<br/>
+*Ty2*\
 右辺の共有ポインターによって制御される型。
 
 ### <a name="return-value"></a>戻り値
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 オブジェクト同士が等しいかどうかをテストします。
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 等しいかどうかをテストするオブジェクト。
 
-*right*<br/>
+*そうです*\
 等しいかどうかをテストするオブジェクト。
 
-*Ty1*<br/>
+*Ty1*\
 左辺の共有ポインターによって制御される型。
 
-*Ty2*<br/>
+*Ty2*\
 右辺の共有ポインターによって制御される型。
 
 ### <a name="return-value"></a>戻り値
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 1 つ目のオブジェクトが 2 つ目のオブジェクト以上であるかをテストします。
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較するオブジェクトの 1 つ。
 
-*right*<br/>
+*そうです*\
 比較するオブジェクトの 1 つ。
 
-*Ty1*<br/>
+*Ty1*\
 左辺の共有ポインターによって制御される型。
 
-*Ty2*<br/>
+*Ty2*\
 右辺の共有ポインターによって制御される型。
 
 ### <a name="remarks"></a>Remarks
 
 テンプレートの演算子を返す`left.get() >= right.get()`します。
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 1 番目のオブジェクトが 2 番目のオブジェクトより小さいかどうかをテストします。
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較するオブジェクトの 1 つ。
 
-*right*<br/>
+*そうです*\
 比較するオブジェクトの 1 つ。
 
-*Ty1*<br/>
+*Ty1*\
 左辺のポインターによって制御される型。
 
-*Ty2*<br/>
+*Ty2*\
 右辺のポインターによって制御される型。
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 1 番目のオブジェクトが 2 番目のオブジェクト以下であるかどうかをテストします。
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較するオブジェクトの 1 つ。
 
-*right*<br/>
+*そうです*\
 比較するオブジェクトの 1 つ。
 
-*Ty1*<br/>
+*Ty1*\
 左辺の共有ポインターによって制御される型。
 
-*Ty2*<br/>
+*Ty2*\
 右辺の共有ポインターによって制御される型。
 
 ### <a name="remarks"></a>Remarks
 
 テンプレートの演算子を返します `left.get() <= right.get()`
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 1 番目のオブジェクトが 2 番目のオブジェクトより大きいかどうかをテストします。
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較するオブジェクトの 1 つ。
 
-*right*<br/>
+*そうです*\
 比較するオブジェクトの 1 つ。
 
-*Ty1*<br/>
+*Ty1*\
 左辺の共有ポインターによって制御される型。
 
-*Ty2*<br/>
+*Ty2*\
 右辺の共有ポインターによって制御される型。
 
-## <a name="op_lt_lt"></a>  演算子&lt;&lt;
+## <a name="op_lt_lt"></a> 演算子&lt;&lt;
 
 共有ポインターをストリームに書き込みます。
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 ストリーム要素の型。
 
-*Tr*<br/>
+*tr*\
 ストリーム要素の特性の型。
 
-*Ty*<br/>
+*Ty*\
 共有ポインターによって制御される型。
 
-*out*<br/>
+*out*\
 出力ストリーム。
 
-*sp*<br/>
+*sp*\
 共有ポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<memory>](../standard-library/memory.md)<br/>

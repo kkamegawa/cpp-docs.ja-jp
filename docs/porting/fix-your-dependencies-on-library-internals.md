@@ -1,24 +1,24 @@
 ---
-title: ライブラリ内部の依存関係を修正する
+title: ライブラリ内部の依存C++関係を修正する
 ms.date: 05/24/2017
 helpviewer_keywords:
-- library internals in an upgraded Visual C++ project
-- _Hash_seq in an upgraded Visual C++ project
+- library internals in an upgraded Visual Studio C++ project
+- _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: 7f1db0019894474b0770d293b293a663b1ee5a0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662697"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627013"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>ライブラリ内部の依存関係を修正する
+# <a name="fix-your-dependencies-on-c-library-internals"></a>ライブラリ内部の依存C++関係を修正する
 
 Microsoft では、標準ライブラリ、ほとんどの C ランタイム ライブラリ、および多くのバージョンの Visual Studio の他の Microsoft ライブラリ用のソース コードを公開しています。 その目的は、ユーザーがライブラリの動作を理解できるようにすることと、コードをデバッグすることです。 ライブラリのソース コードを公開する 1 つの副次作用は、いくつかの内部値、データ構造、および関数が、ライブラリ インターフェイスの一部でない場合でも公開されることです。 通常、これらには、2 つのアンダースコア、または後ろに大文字が続くアンダースコアで始まる名前があり、この名前は C++ 標準で実装用に予約されます。 これらの値、構造、および関数は実装の詳細であり、ライブラリの経時的な変化に伴い、変更される可能性があるため、これらに依存しないことを強くお勧めします。 依存すると、コードが移植できなくなり、コードを新しいバージョンのライブラリに移行しようとしたときに問題が発生する危険性があります。
 
 ほとんどの場合、各リリースの Visual Studio の新機能または重大な変更に関するドキュメントでは、ライブラリ内部の変更は示されません。 結局は、これらの実装の詳細による影響を受けないことになっています。 ただし、ライブラリ内で表示できる一部のコードを使用したいという非常に強い衝動にかられる場合があります。 このトピックでは、依存していた可能性のある CRT または標準ライブラリ内部の依存関係について説明します。また、コードを更新し、これらの依存関係を削除して、コードの移植性を高めたり、新しいバージョンのライブラリに移行できるようにしたりする方法についても説明します。
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 いくつかの文字列型で `std::hash` を実装するために使用される、内部ハッシュ関数 `std::_Hash_seq(const unsigned char *, size_t)` は、最近のバージョンの標準ライブラリでは表示されていました。 この関数は、文字シーケンスで [FNV-1a ハッシュ]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)を実装していました。
 
@@ -76,6 +76,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>関連項目
 
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[以前のバージョンのビジュアルからのプロジェクトのアップグレードC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Universal CRT へのコードのアップグレード](upgrade-your-code-to-the-universal-crt.md)

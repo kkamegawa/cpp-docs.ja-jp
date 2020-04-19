@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: 443a381c33458e61ba49eb10724d31614831f422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c4355f43df33f37838cfc9be4453e42271ae9f3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411763"
 ---
 # <a name="using-cobject"></a>CObject の使い方
 
@@ -31,7 +31,7 @@ ms.locfileid: "50564828"
 
 - [オブジェクトを動的に作成します。](../mfc/dynamic-object-creation.md)
 
-- [診断のために、オブジェクトのデータをダンプします。](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)
+- [診断のために、オブジェクトのデータをダンプします。](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))
 
 - オブジェクトの内部状態の検証 (を参照してください[MFC ASSERT_VALID と cobject::assertvalid](reference/diagnostic-services.md#assert_valid))
 
@@ -46,4 +46,3 @@ ms.locfileid: "50564828"
 [CRuntimeClass 構造体](../mfc/reference/cruntimeclass-structure.md)<br/>
 [ファイル](../mfc/files-in-mfc.md)<br/>
 [シリアル化](../mfc/serialization-in-mfc.md)
-

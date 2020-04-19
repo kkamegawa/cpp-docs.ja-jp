@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ Interop を使用して ANSI 文字列をマーシャリングする'
+title: '方法: C++ Interop を使用して ANSI 文字列をマーシャ リング'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: 272e64a5dd8faf103daf3ab7fa17449bf3dbb7ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570502"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345750"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>方法: C++ Interop を使用して ANSI 文字列をマーシャリングする
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>方法: C++ Interop を使用して ANSI 文字列をマーシャ リング
 
 このトピックでは、ANSI 文字列をする方法を示しますが、C++ 相互運用の場合、.NET Framework を使用して渡す<xref:System.String>ANSI への変換は、追加の手順は、Unicode 形式で文字列を表します。 その他の文字列型との相互運用を次のトピックを参照してください。
 

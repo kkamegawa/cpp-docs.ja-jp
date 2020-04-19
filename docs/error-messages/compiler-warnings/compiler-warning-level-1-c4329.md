@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4329
 ms.assetid: 4316f51a-2c56-4b3f-831e-65d24b83b65c
-ms.openlocfilehash: 31ea3aec2c7dd8e02a23a5c3cf6e5ac406636516
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0eb99d9ab6ac58f32013a8b50330f6139548f499
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622587"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966071"
 ---
 # <a name="compiler-warning-level-1-c4329"></a>コンパイラの警告 (レベル 1) C4329
 
-__declspec(align()) は列挙型で無視されます。
+__declspec (align ()) は列挙型では無視されます
 
-使用、 [align](../../cpp/align-cpp.md)のキーワード、 [_ _declspec](../../cpp/declspec.md)の修飾子は許可されていません、`enum`します。 次の例では、C4329 が生成されます。
+[__Declspec](../../cpp/declspec.md)修飾子の[align](../../cpp/align-cpp.md)キーワードの使用は、`enum`では許可されていません。 次の例では、C4329 が生成されます。
 
-```
+```cpp
 // C4329.cpp
 // compile with: /W1 /LD
 enum __declspec(align(256)) TestEnum {   // C4329

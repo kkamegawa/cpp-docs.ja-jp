@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694258"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509533"
 ---
 # <a name="add-a-property"></a>プロパティを追加する
 
@@ -30,7 +30,7 @@ ms.locfileid: "51694258"
    > [!NOTE]
    > プロジェクトに属性が設定されていない限り、ライブラリ ノード内で入れ子にされるディスパッチ インターフェイスに、プロパティを追加することもできます。
 
-1. ショートカット メニューから、**[追加]**、**[プロパティの追加]** の順に選択します。
+1. ショートカット メニューから、 **[追加]** 、 **[プロパティの追加]** の順に選択します。
 
 1. [プロパティ追加ウィザード](#names-add-property-wizard)で、情報を指定してプロパティを作成します。
 
@@ -65,7 +65,7 @@ ms.locfileid: "51694258"
   |インターフェイスの型|説明|
   |--------------------|-----------------|
   |ATL デュアル インターフェイス、カスタム インターフェイス、およびローカル カスタム インターフェイス|プロパティ名を指定します。|
-  |MFC ディスパッチ インターフェイス、MFC ActiveX コントロールのディスパッチ インターフェイス|プロパティ名を指定するか、リストからストック プロパティを選択します。 リストからプロパティを選択すると、**[プロパティの型]** ボックスに適切な値が表示されます。 この型は、**[実装型]** での選択に応じて変更できます。|
+  |MFC ディスパッチ インターフェイス、MFC ActiveX コントロールのディスパッチ インターフェイス|プロパティ名を指定するか、リストからストック プロパティを選択します。 リストからプロパティを選択すると、 **[プロパティの型]** ボックスに適切な値が表示されます。 この型は、 **[実装型]** での選択に応じて変更できます。|
 
 - **戻り値の型**
 
@@ -93,9 +93,9 @@ ms.locfileid: "51694258"
 
   |実装型|説明|
   |-------------------------|-----------------|
-  |**ストック**|**プロパティ名**で選択したプロパティのストック実装を指定します。 これが既定値です。 詳細については、「[ストック プロパティ](#stock-properties)」を参照してください。<br /><br /> **[ストック]** を指定すると、**[プロパティの型]**、**[パラメーターの型]**、および **[パラメーター名]** が淡色表示になります。|
+  |**ストック**|**プロパティ名**で選択したプロパティのストック実装を指定します。 これが既定値です。 詳細については、「[ストック プロパティ](#stock-properties)」を参照してください。<br /><br /> **[ストック]** を指定すると、 **[プロパティの型]** 、 **[パラメーターの型]** 、および **[パラメーター名]** が淡色表示になります。|
   |**メンバー変数**|メンバー変数として追加されるプロパティを指定します。 カスタム プロパティやほとんどのストック プロパティをメンバー変数として追加することができます。 `Caption` プロパティ、`hWnd` プロパティ、`Text` プロパティの**メンバー変数**を指定することはできません。<br /><br /> **[変数名]** と **[通知関数]** の下に既定の名前を提供します。 この名前は編集できます。|
-  |**Get/Set メソッド**|既定で `Get`*PropertyName* 関数および `Set`*PropertyName* 関数として追加されるプロパティを指定します。 これらの名前は、**[Get 関数]** および **[Set 関数]** の下に表示されます。<br /><br /> Get 関数の値を渡す既定の**プロパティの型**は変更できます。 `Get` 関数および `Set` 関数のパラメーターを指定することができます。|
+  |**Get/Set メソッド**|既定で `Get`*PropertyName* 関数および `Set`*PropertyName* 関数として追加されるプロパティを指定します。 これらの名前は、 **[Get 関数]** および **[Set 関数]** の下に表示されます。<br /><br /> Get 関数の値を渡す既定の**プロパティの型**は変更できます。 `Get` 関数および `Set` 関数のパラメーターを指定することができます。|
 
 - **Get 関数**
 
@@ -129,7 +129,7 @@ ms.locfileid: "51694258"
 
 - **パラメーター リスト**
 
-  プロパティに追加する属性のリストを表示します。 リスト内の各項目は、パラメーター名、パラメーターの型、および属性で構成されます。 リストを更新するには、**[追加]** と **[削除]** を使用します。
+  プロパティに追加する属性のリストを表示します。 リスト内の各項目は、パラメーター名、パラメーターの型、および属性で構成されます。 リストを更新するには、 **[追加]** と **[削除]** を使用します。
 
 - **[追加]**
 
@@ -149,15 +149,15 @@ ms.locfileid: "51694258"
 
 - `id`
 
-  プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](/windows/desktop/Midl/id) に関するページを参照してください。
+  プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](/windows/win32/Midl/id) に関するページを参照してください。
 
 - `helpcontext`
 
-  コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](/windows/desktop/Midl/helpcontext) に関するページを参照してください。
+  コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](/windows/win32/Midl/helpcontext) に関するページを参照してください。
 
 - `helpstring`
 
-  適用先となる要素を記述するために使用される文字列を指定します。 既定では、`property`&nbsp;*Property&nbsp;name* に設定されます。 *MIDL リファレンス*の [helpstring](/windows/desktop/Midl/helpstring) に関するページを参照してください。
+  適用先となる要素を記述するために使用される文字列を指定します。 既定では、`property`&nbsp;*Property&nbsp;name* に設定されます。 *MIDL リファレンス*の [helpstring](/windows/win32/Midl/helpstring) に関するページを参照してください。
 
 ### <a name="other-options"></a>その他のオプション
 
@@ -165,17 +165,17 @@ ms.locfileid: "51694258"
 
 |オプション|説明|
 |------------|-----------------|
-|`bindable`|プロパティがデータ バインディングをサポートすることを示します。 *MIDL リファレンス*の [bindable](/windows/desktop/Midl/bindable) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
-|`defaultbind`|これがオブジェクトを最もよく表す 1 つのバインド可能なプロパティであることを示します。 *MIDL リファレンス*の [defaultbind](/windows/desktop/Midl/defaultbind) に関するページを参照してください。|
-|`displaybind`|このプロパティをユーザーにバインド可能として表示する必要があることを示します。 *MIDL リファレンス*の [displaybind](/windows/desktop/Midl/displaybind) に関するページを参照してください。|
-|`immediatebind`|データ バインディング オブジェクトのこのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。 *MIDL リファレンス*の [immediatebind](/windows/desktop/Midl/immediatebind) に関するページを参照してください。|
-|`defaultcollelem`|プロパティが既定コレクションの要素に対するアクセサー関数であることを示します。 *MIDL リファレンス*の [defaultcollelem](/windows/desktop/Midl/defaultcollelem) に関するページを参照してください。|
-|`nonbrowsable`|プロパティ ブラウザーに表示してはならない interface または dispinterface メンバーにタグを付けます。 *MIDL リファレンス*の [nonbrowsable](/windows/desktop/Midl/nonbrowsable) に関するページを参照してください。|
-|`requestedit`|`OnRequestEdit` 通知がプロパティでサポートされることを示します。 "*MIDL リファレンス*" の [requestedit](/windows/desktop/Midl/requestedit) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
-|`source`|プロパティのメンバーがイベントのソースであることを示します。 *MIDL リファレンス* の [source](/windows/desktop/Midl/source) に関するページを参照してください。|
-|`hidden`|プロパティは存在しますが、ユーザー指向ブラウザーでは表示されないことを示します。 *MIDL リファレンス*の [hidden](/windows/desktop/Midl/hidden) に関するページを参照してください。|
-|`restricted`|プロパティを任意に呼び出せないことを指定します。 *MIDL リファレンス* の [restricted](/windows/desktop/Midl/restricted) に関するページを参照してください。|
-|`local`|プロパティがリモートでないことを MIDL コンパイラに対して指定します。 *MIDL リファレンス* の [local](/windows/desktop/Midl/local) に関するページを参照してください。|
+|`bindable`|プロパティがデータ バインディングをサポートすることを示します。 *MIDL リファレンス*の [bindable](/windows/win32/Midl/bindable) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
+|`defaultbind`|これがオブジェクトを最もよく表す 1 つのバインド可能なプロパティであることを示します。 *MIDL リファレンス*の [defaultbind](/windows/win32/Midl/defaultbind) に関するページを参照してください。|
+|`displaybind`|このプロパティをユーザーにバインド可能として表示する必要があることを示します。 *MIDL リファレンス*の [displaybind](/windows/win32/Midl/displaybind) に関するページを参照してください。|
+|`immediatebind`|データ バインディング オブジェクトのこのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。 *MIDL リファレンス*の [immediatebind](/windows/win32/Midl/immediatebind) に関するページを参照してください。|
+|`defaultcollelem`|プロパティが既定コレクションの要素に対するアクセサー関数であることを示します。 *MIDL リファレンス*の [defaultcollelem](/windows/win32/Midl/defaultcollelem) に関するページを参照してください。|
+|`nonbrowsable`|プロパティ ブラウザーに表示してはならない interface または dispinterface メンバーにタグを付けます。 *MIDL リファレンス*の [nonbrowsable](/windows/win32/Midl/nonbrowsable) に関するページを参照してください。|
+|`requestedit`|`OnRequestEdit` 通知がプロパティでサポートされることを示します。 "*MIDL リファレンス*" の [requestedit](/windows/win32/Midl/requestedit) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
+|`source`|プロパティのメンバーがイベントのソースであることを示します。 *MIDL リファレンス* の [source](/windows/win32/Midl/source) に関するページを参照してください。|
+|`hidden`|プロパティは存在しますが、ユーザー指向ブラウザーでは表示されないことを示します。 *MIDL リファレンス*の [hidden](/windows/win32/Midl/hidden) に関するページを参照してください。|
+|`restricted`|プロパティを任意に呼び出せないことを指定します。 *MIDL リファレンス* の [restricted](/windows/win32/Midl/restricted) に関するページを参照してください。|
+|`local`|プロパティがリモートでないことを MIDL コンパイラに対して指定します。 *MIDL リファレンス* の [local](/windows/win32/Midl/local) に関するページを参照してください。|
 
 ## <a name="stock-properties"></a>ストック プロパティ
 
@@ -191,5 +191,5 @@ ms.locfileid: "51694258"
 |`Font`|コントロールのアンビエント フォントを返すか設定します。 コントロールにフォントがない場合、Null になります。|
 |`ForeColor`|コントロールのアンビエント `ForeColor` プロパティを返すか設定します。|
 |`hWnd`|コントロールの `hWnd` プロパティを返すか設定します。 `hWnd` には、**メンバー変数**実装型がありません。|
-|`ReadyState`|コントロールの `ReadyState` プロパティを返すか設定します。 コントロールの状態には、「初期化されていません」、「初期化されています」、「読み込んでいます」、「インタラクティブ」、「完了」があります。 詳細については、*インターネット SDK* の [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) に関するページを参照してください。|
+|`ReadyState`|コントロールの `ReadyState` プロパティを返すか設定します。 コントロールの状態には、「初期化されていません」、「初期化されています」、「読み込んでいます」、「インタラクティブ」、「完了」があります。 詳細については、*インターネット SDK* の [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) に関するページを参照してください。|
 |`Text`|コントロールに格納されているテキストを返すか設定します。 `Text` には、**メンバー変数**実装型がありません。|

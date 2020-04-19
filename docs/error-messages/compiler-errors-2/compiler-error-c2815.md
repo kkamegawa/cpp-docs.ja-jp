@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2815
 ms.assetid: d0256fd6-0721-4c99-b03c-52d96e77a613
-ms.openlocfilehash: ab6708e7ae0a56bd71adebad4fb42d6ea9abe116
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 579fc94f3b16056b5f26dd0b9ea16b5fc36fda22
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750716"
 ---
 # <a name="compiler-error-c2815"></a>コンパイラ エラー C2815
 
-'operator delete': 最初の仮パラメーターがある必要があります ' void *'、'param' の使用
+' operator delete ': 最初の仮パラメーターは ' void * ' でなければなりませんが、' param ' が使用されました
 
-ユーザー定義[delete 演算子](../../standard-library/new-operators.md#op_delete)関数は、型の最初の仮パラメーターを受け取る必要があります`void *`します。
+ユーザー定義の[operator delete](../../standard-library/new-operators.md#op_delete)関数は、`void *`型の最初の仮パラメーターを受け取る必要があります。
 
 次の例では、C2815 が生成されます。
 
-```
+```cpp
 // C2815.cpp
 // compile with: /c
 class CMyClass {

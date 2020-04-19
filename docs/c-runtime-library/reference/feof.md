@@ -1,9 +1,9 @@
 ---
 title: feof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - feof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feof
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580700"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941142"
 ---
 # <a name="feof"></a>feof
 
@@ -43,20 +46,20 @@ int feof(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**Feof**関数は、ファイルの終端を越えて読み取りを実行しようとしましたが、読み取り操作の場合に 0 以外の値を返します。 それ以外の場合は 0 を返します。 ストリーム ポインターがある場合**NULL**、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**feof** 0 を返します。
+**Feof**関数は、読み取り操作がファイルの末尾を越えて読み取ろうとした場合、0以外の値を返します。それ以外の場合は0を返します。 ストリームポインターが**NULL**の場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、 **feof**は0を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Feof**ルーチン (関数とマクロの両方を実装) を決定するかどうかの末尾*ストリーム*が渡されました。 ファイルの末尾が渡されると、読み取り操作がファイルの終わりインジケーターを返すまで、またはストリームが閉じられるまで[巻き戻し](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または**clearerr**に対してと呼びます。
+**Feof**ルーチン (関数とマクロの両方として実装されます) は、*ストリーム*の末尾が渡されたかどうかを判断します。 ファイルの終わりが渡されると、読み取り操作は、ストリームが閉じられるか、または[rewind](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または**clearerr**が呼び出されるまで、ファイルの終端のインジケーターを返します。
 
-など、ファイルには 10 バイトが含まれていて、ファイルから 10 バイトを読み取る**feof**は、ファイル ポインターは、ファイルの最後が、末尾を超えていないので 0 を返します。 だけを読み取る後 11 バイト**feof** 0 以外の値を返します。
+たとえば、ファイルに10バイトが含まれていて、ファイルから10バイトを読み取った場合、 **feof**は0を返します。これは、ファイルポインターがファイルの末尾にある場合でも、末尾を越えて読み取ろうとしていないためです。 11番目のバイトを読み取った後にのみ、 **feof**は0以外の値を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -106,14 +109,14 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfeoftxt"></a>入力: crt_feof.txt
+## <a name="input-crt_feoftxt"></a>入力: crt_feof.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Number of bytes read = 19

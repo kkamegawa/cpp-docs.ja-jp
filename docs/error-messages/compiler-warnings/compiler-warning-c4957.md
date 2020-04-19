@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 9afdd213baadd907afacde0ff7f14f3c78bc60a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388668"
 ---
 # <a name="compiler-warning-c4957"></a>コンパイラの警告 C4957
 
@@ -21,7 +21,7 @@ ms.locfileid: "50528259"
 
 キャストにより、検証不可能なイメージが生成されます。
 
-安全なキャストもあります (ユーザー定義の変換をトリガーする `static_cast` 、 `const_cast`など)。 [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) は、検証可能なコードを生成することが保証されています。
+安全なキャストもあります (ユーザー定義の変換をトリガーする `static_cast` 、 `const_cast`など)。 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) は、検証可能なコードを生成することが保証されています。
 
 詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 

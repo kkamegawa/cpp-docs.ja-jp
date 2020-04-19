@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: 56470040365f1b1aa0e311f43937d7ec33f7f148
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b7c432a649b566b455109f6de1f7bcc0734ff9b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579947"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453797"
 ---
 # <a name="logicerror-class"></a>logic_error クラス
 
@@ -68,5 +68,5 @@ Type: class std::logic_error
 
 ## <a name="see-also"></a>関連項目
 
-[exception クラス](../standard-library/exception-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[exception クラス](../standard-library/exception-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

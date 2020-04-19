@@ -1,6 +1,6 @@
 ---
 title: CFtpConnection クラス
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504248"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177283"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection クラス
 
-インターネット サーバーに FTP 接続を管理でき、そのサーバー上のディレクトリおよびファイルを直接操作できます。
+インターネットサーバーへの FTP 接続を管理し、そのサーバー上のディレクトリとファイルを直接操作できるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -53,35 +53,35 @@ class CFtpConnection : public CInternetConnection
 
 |名前|説明|
 |----------|-----------------|
-|[CFtpConnection::CFtpConnection](#cftpconnection)|`CFtpConnection` オブジェクトを構築します。|
+|[CFtpConnection:: CFtpConnection](#cftpconnection)|`CFtpConnection` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CFtpConnection::Command](#command)|FTP サーバーに直接コマンドを送信します。|
-|[CFtpConnection::CreateDirectory](#createdirectory)|サーバー上のディレクトリを作成します。|
+|[CFtpConnection:: Command](#command)|FTP サーバーに直接コマンドを送信します。|
+|[CFtpConnection::CreateDirectory](#createdirectory)|サーバーにディレクトリを作成します。|
 |[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|この接続の現在のディレクトリを取得します。|
-|[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|この接続を URL として、現在のディレクトリを取得します。|
-|[CFtpConnection::GetFile](#getfile)|接続先のサーバーからファイルを取得します。|
-|[CFtpConnection::OpenFile](#openfile)|接続されているサーバー上のファイルを開きます。|
-|[CFtpConnection::PutFile](#putfile)|サーバー上のファイルを配置します。|
+|[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|この接続の現在のディレクトリを URL として取得します。|
+|[CFtpConnection::GetFile](#getfile)|接続されているサーバーからファイルを取得します。|
+|[CFtpConnection::OpenFile](#openfile)|接続されたサーバー上のファイルを開きます。|
+|[CFtpConnection::PutFile](#putfile)|サーバーにファイルを配置します。|
 |[CFtpConnection::Remove](#remove)|サーバーからファイルを削除します。|
-|[CFtpConnection::RemoveDirectory](#removedirectory)|サーバーから、指定されたディレクトリを削除します。|
-|[CFtpConnection::Rename](#rename)|サーバー上のファイルの名前を変更します。|
-|[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|現在の FTP ディレクトリを設定します。|
+|[CFtpConnection::RemoveDirectory](#removedirectory)|指定されたディレクトリをサーバーから削除します。|
+|[CFtpConnection:: Rename](#rename)|サーバー上のファイルの名前を変更します。|
+|[CFtpConnection:: SetCurrentDirectory](#setcurrentdirectory)|現在の FTP ディレクトリを設定します。|
 
 ## <a name="remarks"></a>Remarks
 
-FTP では、MFC WinInet クラスによって認識される 3 つのインターネット サービスの 1 つです。
+FTP は、MFC WinInet クラスによって認識される3つのインターネットサービスの1つです。
 
-Ftp サーバーとの通信のインスタンスを作成する必要がありますまず[CInternetSession](../../mfc/reference/cinternetsession-class.md)、し、作成、`CFtpConnection`オブジェクト。 作成することはありません、`CFtpConnection`オブジェクトに直接; 呼び出しではなく、 [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)、作成し、`CFtpConnection`オブジェクトし、ポインターを返します。
+FTP インターネットサーバーと通信するには、まず[CInternetSession](../../mfc/reference/cinternetsession-class.md)のインスタンスを作成し、次にオブジェクトを`CFtpConnection`作成する必要があります。 オブジェクトを`CFtpConnection`直接作成することはありません。代わりに、 [CInternetSession:: getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection) `CFtpConnection`を呼び出します。これにより、オブジェクトが作成され、ポインターが返されます。
 
-方法の詳細については、`CFtpConnection`クラスでは、その他の MFC インターネット機能は、記事をご覧ください。[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)します。 サービス、HTTP、および、gopher は、クラスを参照してください。 サポートされている他の 2 つの通信の詳細については[CHttpConnection](../../mfc/reference/chttpconnection-class.md)と[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)します。
+が他の MFC インターネット`CFtpConnection`クラスと連携する方法の詳細については、「 [WinInet を使用したインターネットプログラミング](../../mfc/win32-internet-extensions-wininet.md)」を参照してください。 サポートされている他の2つのサービス (HTTP および gopher) との通信の詳細については、「 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) and [CGopherConnection](../../mfc/reference/cgopherconnection-class.md)クラス」を参照してください。
 
 ## <a name="example"></a>例
 
-  例を参照してください、 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)クラスの概要。
+  [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)クラスの概要の例を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -95,9 +95,9 @@ Ftp サーバーとの通信のインスタンスを作成する必要があり�
 
 **ヘッダー:** afxinet.h
 
-##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection
+##  <a name="cftpconnection"></a>CFtpConnection:: CFtpConnection
 
-このメンバー関数が構築すると呼ばれる、`CFtpConnection`オブジェクト。
+このメンバー関数は、オブジェクトを`CFtpConnection`構築するために呼び出されます。
 
 ```
 CFtpConnection(
@@ -119,41 +119,41 @@ CFtpConnection(
 ### <a name="parameters"></a>パラメーター
 
 *pSession*<br/>
-関連するへのポインター [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。
+関連する[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトへのポインター。
 
 *hConnected*<br/>
-現在のインターネット セッションの Windows ハンドル。
+現在のインターネットセッションの Windows ハンドル。
 
 *pstrServer*<br/>
-FTP サーバーの名前を含む文字列へのポインター。
+FTP サーバー名を含む文字列へのポインターです。
 
-*独自*<br/>
-操作のコンテキストの識別子。 *独自*によって返される操作の状態情報を識別する[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)します。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はコンテキスト ID に関連付けられる
+*dwContext*<br/>
+操作のコンテキスト識別子。 *dwContext*は、 [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)によって返される操作の状態情報を識別します。 既定値は1に設定されています。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとそれが実行する作業は、そのコンテキスト ID に関連付けられます。
 
 *pstrUserName*<br/>
-ログインするユーザーの名前を指定する null で終わる文字列へのポインター。 NULL の場合、既定値は匿名です。
+ログインするユーザーの名前を指定する null で終わる文字列へのポインター。 NULL の場合、既定値は anonymous です。
 
 *pstrPassword*<br/>
-ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*匿名の既定のパスワードはユーザーの電子メール名が NULL の場合。 場合*pstrPassword*が NULL (または空の文字列) が、 *pstrUserName*が NULL でない空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:
+ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 *PstrPassword*と*pstrUserName*の両方が NULL の場合、既定の匿名パスワードはユーザーの電子メール名になります。 *PstrPassword*が null (または空の文字列) であるにもかかわらず*pstrUserName*が null でない場合は、空白のパスワードが使用されます。 次の表では、 *pstrUserName*と*pstrPassword*の4つの設定の動作について説明します。
 
-|*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|
+|*pstrUserName*|*pstrPassword*|FTP サーバーに送信されたユーザー名|FTP サーバーに送信されるパスワード|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL または""|NULL または""|「匿名」|ユーザーの電子メール名|
-|NULL 以外の文字列|NULL または""|*pstrUserName*|" "|
-|NULL 以外の文字列が NULL|ERROR|ERROR||
+|NULL または ""|NULL または ""|非同期|ユーザーの電子メール名|
+|NULL 以外の文字列|NULL または ""|*pstrUserName*|" "|
+|Null 以外の文字列|ERROR|ERROR||
 |NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
 
-*ポート*<br/>
+*nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 *bPassive*<br/>
-この FTP セッションをパッシブまたはアクティブ モードを指定します。 かどうかは TRUE に設定すると、設定、Win32 API *dwFlag* INTERNET_FLAG_PASSIVE にします。
+この FTP セッションのパッシブモードまたはアクティブモードを指定します。 TRUE に設定すると、Win32 API *Dwflag*が INTERNET_FLAG_PASSIVE に設定されます。
 
 ### <a name="remarks"></a>Remarks
 
-作成することはありません、`CFtpConnection`オブジェクトに直接します。 代わりに、 [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)を作成し、`CFptConnection`オブジェクト。
+オブジェクトを`CFtpConnection`直接作成することはありません。 代わりに、 `CFptConnection`オブジェクトを作成する[CInternetSession:: getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)を呼び出します。
 
-##  <a name="command"></a>  CFtpConnection::Command
+##  <a name="command"></a>CFtpConnection:: Command
 
 FTP サーバーに直接コマンドを送信します。
 
@@ -171,16 +171,18 @@ CInternetFile* Command(
 送信されるコマンドが含まれている文字列へのポインター。
 
 *eResponse*<br/>
-FTP サーバーからの応答が予期されているかどうかを判断します。 次のいずれかの値になります。
+FTP サーバーからの応答が必要かどうかを指定します。 次のいずれかの値になります。
 
-- `CmdRespNone` 応答は発生しません。
+- `CmdRespNone`応答は必要ありません。
+- `CmdRespRead`応答が必要です。
+- `CmdRespWrite`使用しません。
 
-- `CmdRespRead` 応答が必要です。
+CmdResponseType は、 *afxinet.h*で定義されている CFtpConnection のメンバーです。
 
 *dwFlags*<br/>
-この関数を制御するフラグが含まれている値。 完全な一覧についてを参照してください。 [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)します。
+この関数を制御するフラグが含まれている値。 完全な一覧については、「 [Ftpcommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)」を参照してください。
 
-*独自*<br/>
+*dwContext*<br/>
 コールバックでアプリケーションのコンテキストを識別するために使用されるアプリケーション定義の値が含まれている値へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -189,13 +191,13 @@ FTP サーバーからの応答が予期されているかどうかを判断し�
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数の機能をエミュレートする、 [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)関数は、Windows SDK で説明されているとします。
+このメンバー関数は、Windows SDK で説明されているように、 [Ftpcommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)関数の機能をエミュレートします。
 
-エラーが発生する場合、MFC は型の例外をスロー [CInternetException](../../mfc/reference/cinternetexception-class.md)します。
+エラーが発生した場合、MFC は[CInternetException](../../mfc/reference/cinternetexception-class.md)型の例外をスローします。
 
 ##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory
 
-接続されたサーバーのディレクトリを作成するには、このメンバー関数を呼び出します。
+接続されたサーバーにディレクトリを作成するには、このメンバー関数を呼び出します。
 
 ```
 BOOL CreateDirectory(LPCTSTR pstrDirName);
@@ -204,17 +206,17 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ### <a name="parameters"></a>パラメーター
 
 *pstrDirName*<br/>
-作成するディレクトリの名前を含む文字列へのポインター。
+作成するディレクトリの名前を格納している文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Windows 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Windows の関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-使用`GetCurrentDirectory`をサーバーにこの接続の現在の作業ディレクトリを決定します。 リモート システムがルート ディレクトリにするに接続を前提としてはいません。
+サーバー `GetCurrentDirectory`へのこの接続に使用する現在の作業ディレクトリを確認するには、を使用します。 リモートシステムがルートディレクトリに接続していることを想定しないでください。
 
-`pstrDirName`いずれかのパラメーターには、部分的にまたは現在のディレクトリに対して相対的な完全修飾ファイル名。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `CreateDirectory` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+パラメーター `pstrDirName`には、現在のディレクトリに対して相対的な部分的または完全修飾ファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `CreateDirectory`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
 ##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory
 
@@ -241,22 +243,22 @@ BOOL GetCurrentDirectory(
 
 |||
 |-|-|
-|エントリを|によって参照されるバッファーのサイズ*pstrDirName*します。|
-|返された場合|格納されている文字数*pstrDirName*します。 メンバー関数が失敗したし、し、ERROR_INSUFFICIENT_BUFFER が返されます*lpdwLen*アプリケーションは、文字列を受信するために割り当てる必要がありますバイト数が含まれています。|
+|入力時|*PstrDirName*によって参照されるバッファーのサイズ。|
+|戻るとき|*PstrDirName*に格納されている文字数。 メンバー関数が失敗し、ERROR_INSUFFICIENT_BUFFER が返された場合、 *lpdwLen*には、アプリケーションが文字列を受信するために割り当てる必要があるバイト数が含まれます。|
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-URL として代わりに、ディレクトリ名を取得する[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)します。
+代わりに、URL としてディレクトリ名を取得するには、 [Getcurrentdirectoryasurl](#getcurrentdirectoryasurl)を呼び出します。
 
-パラメーター *pstrDirName*または*strDirName*現在のディレクトリに対して相対的か部分的に修飾ファイル名または完全修飾します。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `GetCurrentDirectory` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+パラメーター *pstrDirName*または*strdirname*は、現在のディレクトリに対して相対的なファイル名または完全修飾名のいずれかにすることができます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `GetCurrentDirectory`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
 ##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection::GetCurrentDirectoryAsURL
 
-URL として現在のディレクトリの名前を取得するには、このメンバー関数を呼び出します。
+現在のディレクトリの名前を URL として取得するには、このメンバー関数を呼び出します。
 
 ```
 BOOL GetCurrentDirectoryAsURL(CString& strDirName) const;
@@ -279,22 +281,22 @@ BOOL GetCurrentDirectoryAsURL(
 
 |||
 |-|-|
-|エントリを|によって参照されるバッファーのサイズ*pstrDirName*します。|
-|返された場合|格納されている文字数*pstrDirName*します。 メンバー関数が失敗したし、し、ERROR_INSUFFICIENT_BUFFER が返されます*lpdwLen*アプリケーションは、文字列を受信するために割り当てる必要がありますバイト数が含まれています。|
+|入力時|*PstrDirName*によって参照されるバッファーのサイズ。|
+|戻るとき|*PstrDirName*に格納されている文字数。 メンバー関数が失敗し、ERROR_INSUFFICIENT_BUFFER が返された場合、 *lpdwLen*には、アプリケーションが文字列を受信するために割り当てる必要があるバイト数が含まれます。|
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-`GetCurrentDirectoryAsURL` 同じように動作[GetCurrentDirectory](#getcurrentdirectory)
+`GetCurrentDirectoryAsURL`[Getcurrentdirectory](#getcurrentdirectory)と同じように動作します。
 
-パラメーター *strDirName*現在のディレクトリに対して相対的か部分的に修飾ファイル名または完全修飾します。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `GetCurrentDirectoryAsURL` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+*Strdirname*パラメーターは、現在のディレクトリまたは完全修飾名を基準とした、部分的に修飾されたファイル名のいずれかになります。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `GetCurrentDirectoryAsURL`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
 ##  <a name="getfile"></a>  CFtpConnection::GetFile
 
-FTP サーバーからファイルを取得し、ローカル コンピューターに保存するには、このメンバー関数を呼び出します。
+FTP サーバーからファイルを取得し、ローカルコンピューターに保存するには、このメンバー関数を呼び出します。
 
 ```
 BOOL GetFile(
@@ -309,56 +311,56 @@ BOOL GetFile(
 ### <a name="parameters"></a>パラメーター
 
 *pstrRemoteFile*<br/>
-FTP サーバーから取得するファイルの名前を含む null で終わる文字列へのポインター。
+FTP サーバーから取得するファイルの名前を格納している、null で終わる文字列へのポインター。
 
 *pstrLocalFile*<br/>
-ローカル システムで作成するファイルの名前を含む null で終わる文字列へのポインター。
+ローカルシステム上に作成するファイルの名前を格納している、null で終わる文字列へのポインター。
 
 *bFailIfExists*<br/>
-かどうか、ファイル名は既存のファイルで既に使用可能性がありますを示します。 場合は、ローカル ファイル名が既に存在して、このパラメーターが true の場合、`GetFile`は失敗します。 それ以外の場合、`GetFile`既存のファイルのコピーが消去されます。
+ファイル名が既存のファイルで既に使用されている可能性があるかどうかを示します。 ローカルファイル名が既に存在し、このパラメーターが TRUE の`GetFile`場合、は失敗します。 それ以外`GetFile`の場合は、によってファイルの既存のコピーが削除されます。
 
 *dwAttributes*<br/>
-ファイルの属性を示します。 次の FILE_ATTRIBUTE_ * フラグの任意の組み合わせを指定できます。
+ファイルの属性を示します。 これは、次の FILE_ATTRIBUTE_ * フラグの任意の組み合わせにすることができます。
 
-- FILE_ATTRIBUTE_ARCHIVE ファイルは、アーカイブ ファイルです。 アプリケーションでは、この属性を使用して、ファイルをバックアップまたは削除のマークします。
+- FILE_ATTRIBUTE_ARCHIVE ファイルはアーカイブファイルです。 アプリケーションでは、この属性を使用して、バックアップまたは削除するファイルをマークします。
 
-- FILE_ATTRIBUTE_COMPRESSED ファイルまたはディレクトリは圧縮されます。 ファイルの場合は、圧縮は、すべてのファイルにデータが圧縮されているを意味します。 ディレクトリの場合は、圧縮は、新しく作成されたファイルとサブディレクトリの既定値です。
+- FILE_ATTRIBUTE_COMPRESSED ファイルまたはディレクトリが圧縮されていることを示します。 ファイルの場合、圧縮とは、ファイル内のすべてのデータが圧縮されることを意味します。 ディレクトリの場合、新しく作成されたファイルおよびサブディレクトリの既定値は compression です。
 
 - FILE_ATTRIBUTE_DIRECTORY ファイルはディレクトリです。
 
-- FILE_ATTRIBUTE_NORMAL ファイルには、他の属性セットがありません。 この属性は、単独で使用される場合にのみ有効です。 その他のすべてのファイル属性は、FILE_ATTRIBUTE_NORMAL をオーバーライドします。
+- FILE_ATTRIBUTE_NORMAL ファイルに他の属性が設定されていません。 この属性は、単独で使用した場合にのみ有効です。 その他のすべてのファイル属性は FILE_ATTRIBUTE_NORMAL をオーバーライドします。
 
-- FILE_ATTRIBUTE_HIDDEN ファイルは表示されません。 通常のディレクトリ一覧に含めることは。
+- FILE_ATTRIBUTE_HIDDEN ファイルが非表示になっています。 通常のディレクトリの一覧に含めることはできません。
 
-- FILE_ATTRIBUTE_READONLY ファイルは読み取り専用です。 アプリケーションできますファイルの読み取りことはできませんへの書き込みまたは削除します。
+- FILE_ATTRIBUTE_READONLY ファイルは読み取り専用です。 アプリケーションはファイルを読み取ることができますが、書き込むことや削除することはできません。
 
-- FILE_ATTRIBUTE_SYSTEM ファイルの一部であるまたはオペレーティング システムによって排他的に使用されます。
+- FILE_ATTRIBUTE_SYSTEM ファイルがの一部であるか、オペレーティングシステムによって排他的に使用されています。
 
-- FILE_ATTRIBUTE_TEMPORARY ファイルは、一時的なストレージの使用されています。 アプリケーションは、どうしても必要な場合にのみ、ファイルを書き込む必要があります。 ファイルのデータのほとんどは、ファイルがすぐに削除されるため、メディアに書き込まれずに、メモリに残ります。
+- FILE_ATTRIBUTE_TEMPORARY ファイルが一時ストレージに使用されています。 アプリケーションは、絶対に必要な場合にのみファイルに書き込む必要があります。 ファイルはすぐに削除されるため、ファイルのデータのほとんどは、メディアにフラッシュされることなくメモリに残ります。
 
 *dwFlags*<br/>
-転送が発生する条件を指定します。 このパラメーターには、いずれかを指定できます、 *dwFlags*で説明されている値[FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) Windows SDK に含まれています。
+転送を実行する条件を指定します。 このパラメーターには、Windows SDK の[Ftpgetfile](/windows/win32/api/wininet/nf-wininet-ftpgetfilew)に記述されている任意の*dwFlags*値を指定できます。
 
-*独自*<br/>
-ファイルを取得するためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。
+*dwContext*<br/>
+ファイル取得のコンテキスト識別子。 *DwContext*の詳細については、「**解説**」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-`GetFile` FTP サーバーからファイルの読み取りをローカルに格納することに関連するオーバーヘッドのすべてを処理する高レベルのルーチンです。 ファイルのデータのみを取得するか閉じるファイル転送では、制御を必要とするアプリケーションを使用する必要があります`OpenFile`と[細かい](../../mfc/reference/cinternetfile-class.md#read)代わりにします。
+`GetFile`は、FTP サーバーからのファイルの読み取りおよびローカルでのファイルの保存に関連するすべてのオーバーヘッドを処理する、高レベルのルーチンです。 ファイルデータのみを取得するか、ファイル転送を制御する必要があるアプリケーションでは`OpenFile` 、と[CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read)を使用する必要があります。
 
-場合*dwFlags* FILE_TRANSFER_TYPE_ASCII、ファイル データの翻訳も変換コントロール、および Windows の対応する文字の書式設定します。 既定の転送は、バイナリ モードの場合は、サーバーに格納されている同じ形式でにダウンロードは、ファイルの場所です。
+*DwFlags*が FILE_TRANSFER_TYPE_ASCII の場合、ファイルデータの変換によって、制御文字と書式設定文字も Windows の同等のものに変換されます。 既定の転送はバイナリモードであり、ファイルはサーバーに格納されているのと同じ形式でダウンロードされます。
 
-両方*pstrRemoteFile*と*pstrLocalFile*現在のディレクトリに対して相対的か部分的に修飾ファイル名または完全修飾します。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `GetFile` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+*PstrRemoteFile*と*pstrLocalFile*はどちらも、現在のディレクトリまたは完全修飾ファイルの相対ファイル名のいずれかになります。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `GetFile`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
-上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+*DwContext*の既定値をオーバーライドして、コンテキスト識別子を任意の値に設定します。 コンテキスト識別子は、その[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトによって作成`CFtpConnection`されるオブジェクトのこの特定の操作に関連付けられます。 値は[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)に返され、識別された操作の状態が示されます。 インターネットの最初[の手順に関する記事を参照してください。WinInet](../../mfc/wininet-basics.md)の詳細については、「」を参照してください。
 
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
-読み取りまたは書き込み用に FTP サーバー上にあるファイルを開くには、このメンバー関数を呼び出します。
+読み取りまたは書き込みのために FTP サーバー上にあるファイルを開くには、このメンバー関数を呼び出します。
 
 ```
 CInternetFile* OpenFile(
@@ -371,44 +373,44 @@ CInternetFile* OpenFile(
 ### <a name="parameters"></a>パラメーター
 
 *pstrFileName*<br/>
-開かれるファイルの名前を含む文字列へのポインター。
+開くファイルの名前を格納している文字列へのポインター。
 
 *dwAccess*<br/>
-ファイルへのアクセス方法を決定します。 GENERIC_READ と GENERIC_WRITE の両方ではなくいずれかを指定できます。
+ファイルへのアクセス方法を決定します。 GENERIC_READ または GENERIC_WRITE のいずれかを指定できますが、両方を指定することはできません。
 
 *dwFlags*<br/>
 後続の転送が発生する条件を指定します。 次の FTP_TRANSFER_ * 定数のいずれかを指定できます。
 
-- FTP_TRANSFER_TYPE_ASCII ファイルは、FTP ASCII (タイプ A) 転送メソッドを使用して転送します。 変換コントロールと書式設定情報を対応するローカル。
+- FTP ASCII (Type A) 転送方法を使用してファイル転送を FTP_TRANSFER_TYPE_ASCII します。 コントロールと書式設定の情報を、それと等価なローカルのに変換します。
 
-- FTP_TRANSFER_TYPE_BINARY ファイルは、(タイプ I) FTP's イメージ転送メソッドを使用してデータを転送します。 変更せずに、これとまったく同じデータを転送するファイルが存在します。 これは、既定の転送方法です。
+- FTP_TRANSFER_TYPE_BINARY ファイルは、FTP のイメージ (タイプ I) 転送方法を使用してデータを転送します。 ファイルは、データが存在する場合とまったく同じように転送されますが、変更はありません。 これは、既定の転送方法です。
 
-*独自*<br/>
-ファイルを開くためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。
+*dwContext*<br/>
+ファイルを開くためのコンテキスト識別子。 *DwContext*の詳細については、「**解説**」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを[CInternetFile](../../mfc/reference/cinternetfile-class.md)オブジェクト。
+[CInternetFile](../../mfc/reference/cinternetfile-class.md)オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-`OpenFile` 次の状況で使用する必要があります。
+`OpenFile`は、次の状況で使用する必要があります。
 
-- アプリケーションでは、ローカル ファイルにデータがないことが、送信して、FTP サーバー上のファイルとして作成する必要があるデータがあります。 1 回`OpenFile`、アプリケーションはファイルを開き[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)サーバーに FTP のファイル データを送信します。
+- アプリケーションには、FTP サーバー上のファイルとして送信して作成する必要があるデータが含まれていますが、そのデータはローカルファイルにはありません。 ファイル`OpenFile`を開くと、アプリケーションは[CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write)を使用して FTP ファイルデータをサーバーに送信します。
 
-- アプリケーションは、サーバーからファイルを取得しをディスクに書き込む代わりに、アプリケーションによって制御され、メモリに配置する必要があります。 アプリケーションを使用して[細かい](../../mfc/reference/cinternetfile-class.md#read)を使用した後`OpenFile`ファイルを開きます。
+- アプリケーションは、サーバーからファイルを取得し、それをディスクに書き込むのではなく、アプリケーションで制御されたメモリに配置する必要があります。 アプリケーションでは、を使用して`OpenFile`ファイルを開くと、 [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read)が使用されます。
 
-- アプリケーションをきめ細かなファイル転送の制御レベルが必要です。 進行状況を表示するアプリケーションなど、コントロールは、ファイルのダウンロード中にファイル転送の状態の進行状況を示します。
+- アプリケーションでは、ファイル転送を細かく制御する必要があります。 たとえば、アプリケーションでは、ファイルのダウンロード中にファイル転送ステータスの進行状況を示す進行状況コントロールを表示することができます。
 
-呼び出した後`OpenFile`呼び出しまで`CInternetConnection::Close`、アプリケーションを呼び出すことができますのみ[細かい](../../mfc/reference/cinternetfile-class.md#read)、 [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)、 `CInternetConnection::Close`、または[CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile)します。 同じ FTP セッションの他の FTP 関数への呼び出しは失敗し、FTP_ETRANSFER_IN_PROGRESS にエラー コードを設定します。
+`OpenFile` の呼び出しから `CInternetConnection::Close` の呼び出しまでの間にアプリケーションで呼び出すことができるのは、[CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read)、[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)、`CInternetConnection::Close`、または [CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile) のみです。 同じ FTP セッションに対する他の FTP 関数の呼び出しは失敗し、エラーコードは FTP_ETRANSFER_IN_PROGRESS に設定されます。
 
-*PstrFileName*パラメーターは、いずれか、部分的に修飾ファイル名、現在のディレクトリに相対パスまたは完全修飾を指定できます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `OpenFile` 適切な文字にディレクトリ名の区切り記号を使用する前に変換します。
+*PstrFileName*パラメーターには、現在のディレクトリを基準とした、または完全に修飾された部分的なファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `OpenFile`ディレクトリ名の区切り記号を使用する前に、適切な文字に変換します。
 
-上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+*DwContext*の既定値をオーバーライドして、コンテキスト識別子を任意の値に設定します。 コンテキスト識別子は、その[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトによって作成`CFtpConnection`されるオブジェクトのこの特定の操作に関連付けられます。 値は[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)に返され、識別された操作の状態が示されます。 インターネットの最初[の手順に関する記事を参照してください。WinInet](../../mfc/wininet-basics.md)の詳細については、「」を参照してください。
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
-FTP サーバー上のファイルを保存するには、このメンバー関数を呼び出します。
+FTP サーバーにファイルを格納するには、このメンバー関数を呼び出します。
 
 ```
 BOOL PutFile(
@@ -421,30 +423,30 @@ BOOL PutFile(
 ### <a name="parameters"></a>パラメーター
 
 *pstrLocalFile*<br/>
-ローカル システムから送信するファイルの名前を含む文字列へのポインター。
+ローカルシステムから送信するファイルの名前を格納している文字列へのポインター。
 
 *pstrRemoteFile*<br/>
-FTP サーバー上に作成するファイルの名前を含む文字列へのポインター。
+FTP サーバー上に作成するファイルの名前を含む文字列へのポインターです。
 
 *dwFlags*<br/>
-ファイルの転送が発生する条件を指定します。 説明されている FTP_TRANSFER_ * 定数のいずれか[OpenFile](#openfile)します。
+ファイルの転送が発生する条件を指定します。 は、「 [OpenFile](#openfile)」で説明されている FTP_TRANSFER_ * 定数のいずれかになります。
 
-*独自*<br/>
-ファイルを配置するためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。
+*dwContext*<br/>
+ファイルを配置するためのコンテキスト識別子。 *DwContext*の詳細については、「**解説**」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-`PutFile` すべての FTP サーバー上のファイルを格納することに関連付けられている操作を処理する高度なルーチン。 のみ、データを送信するか、ファイルの転送の詳細にコントロールを必要とするアプリケーションを使用する必要があります[OpenFile](#openfile)と[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)します。
+`PutFile`は、FTP サーバーへのファイルの保存に関連するすべての操作を処理する、高レベルのルーチンです。 データを送信するか、ファイル転送をより細かく制御する必要があるアプリケーションは、 [OpenFile](#openfile)と[CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write)を使用する必要があります。
 
-`dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+`dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子は、その[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトによって作成`CFtpConnection`されるオブジェクトのこの特定の操作に関連付けられます。 値は[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)に返され、識別された操作の状態が示されます。 インターネットの最初[の手順に関する記事を参照してください。WinInet](../../mfc/wininet-basics.md)の詳細については、「」を参照してください。
 
 ##  <a name="remove"></a>  CFtpConnection::Remove
 
-接続先のサーバーから、指定したファイルを削除するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、接続されているサーバーから指定されたファイルを削除します。
 
 ```
 BOOL Remove(LPCTSTR pstrFileName);
@@ -453,19 +455,19 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="parameters"></a>パラメーター
 
 *pstrFileName*<br/>
-削除するファイル名を含む文字列へのポインター。
+削除するファイル名を格納している文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-*PstrFileName*パラメーターは、いずれか、部分的に修飾ファイル名、現在のディレクトリに相対パスまたは完全修飾を指定できます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `Remove`関数が使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+*PstrFileName*パラメーターには、現在のディレクトリを基準とした、または完全に修飾された部分的なファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 関数`Remove`は、使用される前に、ディレクトリ名の区切り記号を適切な文字に変換します。
 
 ##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory
 
-接続先のサーバーから、指定されたディレクトリを削除するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、接続されているサーバーから指定したディレクトリを削除します。
 
 ```
 BOOL RemoveDirectory(LPCTSTR pstrDirName);
@@ -478,17 +480,17 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-使用[GetCurrentDirectory](#getcurrentdirectory)をサーバーの現在の作業ディレクトリを決定します。 リモート システムがルート ディレクトリにするに接続を前提としてはいません。
+[Getcurrentdirectory](#getcurrentdirectory)を使用して、サーバーの現在の作業ディレクトリを特定します。 リモートシステムがルートディレクトリに接続していることを想定しないでください。
 
-*PstrDirName*パラメーターに現在のディレクトリに対して相対的なファイルが部分的または完全修飾することができます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `RemoveDirectory` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+*PstrDirName*パラメーターには、現在のディレクトリを基準とした、部分的または完全に修飾されたファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `RemoveDirectory`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
 ##  <a name="rename"></a>  CFtpConnection::Rename
 
-接続されているサーバー上の指定のファイルの名前を変更するには、このメンバー関数を呼び出します。
+接続されたサーバー上の指定したファイルの名前を変更するには、このメンバー関数を呼び出します。
 
 ```
 BOOL Rename(
@@ -499,22 +501,22 @@ BOOL Rename(
 ### <a name="parameters"></a>パラメーター
 
 *pstrExisting*<br/>
-名前を変更するファイルの現在の名前を含む文字列へのポインター。
+名前を変更するファイルの現在の名前を格納している文字列へのポインター。
 
 *pstrNew*<br/>
-ファイルの新しい名前を含む文字列へのポインター。
+ファイルの新しい名前を格納している文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-*PstrExisting*と*pstrNew*パラメーターは、いずれか、部分的に修飾ファイル名、現在のディレクトリに相対パスまたは完全修飾を指定できます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `Rename` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+*PstrExisting*パラメーターと*pstrNew*パラメーターには、現在のディレクトリを基準とした、または完全修飾されたファイル名のいずれかを指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `Rename`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
 ##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory
 
-FTP サーバー上の別のディレクトリに変更するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、FTP サーバー上の別のディレクトリに変更します。
 
 ```
 BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
@@ -523,17 +525,17 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 ### <a name="parameters"></a>パラメーター
 
 *pstrDirName*<br/>
-ディレクトリの名前を含む文字列へのポインター。
+ディレクトリの名前を格納している文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
-*PstrDirName*パラメーターに現在のディレクトリに対して相対的なファイルが部分的または完全修飾することができます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `SetCurrentDirectory` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
+*PstrDirName*パラメーターには、現在のディレクトリを基準とした、部分的または完全に修飾されたファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `SetCurrentDirectory`ディレクトリ名の区切り記号を使用する前に適切な文字に変換します。
 
-使用[GetCurrentDirectory](#getcurrentdirectory)を FTP サーバーの現在の作業ディレクトリを決定します。 リモート システムがルート ディレクトリにするに接続を前提としてはいません。
+[Getcurrentdirectory](#getcurrentdirectory)を使用して、FTP サーバーの現在の作業ディレクトリを特定します。 リモートシステムがルートディレクトリに接続していることを想定しないでください。
 
 ## <a name="see-also"></a>関連項目
 

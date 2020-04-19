@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 2cb6fe8588f4b81ae5c67533c4b9124ae8c9b252
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618154"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460114"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex クラス
 
@@ -56,7 +56,7 @@ class recursive_timed_mutex;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<mutex >
+**ヘッダー:** \<ミューテックス >
 
 **名前空間:** std
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を取得できた場合、`mutex`または呼び出し元のスレッドが既に所有している場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有`mutex`権を正常に取得した場合は true。呼び出し元`mutex`のスレッドがを既に所有している場合は**true** 。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し元のスレッドが既に所有している場合、 `mutex`、関数をすぐに返します**true**、および以前のロックが有効になります。
+呼び出し元のスレッドが既に`mutex`を所有している場合、関数はすぐに**true**を返し、前のロックは有効のままになります。
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -119,16 +119,16 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*<br/>
+*Rel_time*\
 メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、`mutex`または呼び出し元のスレッドが既に所有している場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有`mutex`権を正常に取得した場合は true。呼び出し元`mutex`のスレッドがを既に所有している場合は**true** 。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し元のスレッドが既に所有している場合、 `mutex`、メソッドはすぐに返します**true**、および以前のロックが有効になります。
+呼び出し元のスレッドが既に`mutex`を所有している場合、メソッドは直ちに**true**を返し、以前のロックは有効のままになります。
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -143,16 +143,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*<br/>
+*Abs_time*\
 メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、`mutex`または呼び出し元のスレッドが既に所有している場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有`mutex`権を正常に取得した場合は true。呼び出し元`mutex`のスレッドがを既に所有している場合は**true** 。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し元のスレッドが既に所有している場合、 `mutex`、メソッドはすぐに返します**true**、および以前のロックが有効になります。
+呼び出し元のスレッドが既に`mutex`を所有している場合、メソッドは直ちに**true**を返し、以前のロックは有効のままになります。
 
 ## <a name="unlock"></a>  unlock
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
-ms.openlocfilehash: 93104c978ead80598a540da1469065643cb27442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be5639802f6f4a11a29326efd71d9634797c9f5c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306328"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>配列、リスト、マップのテンプレート クラス
 
@@ -44,4 +44,3 @@ ms.locfileid: "50466054"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

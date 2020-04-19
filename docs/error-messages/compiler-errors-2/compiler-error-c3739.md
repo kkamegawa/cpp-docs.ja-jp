@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 34f035c089b183670e87a23eb62f995b2af23c9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567493"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752705"
 ---
 # <a name="compiler-error-c3739"></a>コンパイラ エラー C3739
 
-'class': event_receiver の 'layout_dependent' パラメーターが true の場合にのみ、構文がサポート
+' class ': 構文は、event_receiver の ' layout_dependent ' パラメーターが true の場合にのみサポートされます
 
-イベントの全体のインターフェイスをフックするしようとしましたが、`layout_dependent`で[event_receiver](../../windows/event-receiver.md)属性が true ではありません。 一度に 1 つのイベントをフックする必要があります。
+イベントのインターフェイス全体をフックしようとしましたが、`layout_dependent` [event_receiver](../../windows/event-receiver.md)属性が true ではありません。一度に1つのイベントをフックする必要があります。
 
 次の例では、C3739 が生成されます。
 
-```
+```cpp
 // C3739.cpp
 struct A
 {

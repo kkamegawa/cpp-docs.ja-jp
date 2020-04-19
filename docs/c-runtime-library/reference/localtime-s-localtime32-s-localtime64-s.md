@@ -1,11 +1,11 @@
 ---
 title: localtime_s、_localtime32_s、_localtime64_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 07/09/2019
+api_name:
 - _localtime64_s
 - _localtime32_s
 - localtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _localtime32_s
 - localtime32_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c00a5d23441612d0e70bfafd571bcb25250edb09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492782"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953338"
 ---
-# <a name="localtimes-localtime32s-localtime64s"></a>localtime_s、_localtime32_s、_localtime64_s
+# <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s、_localtime32_s、_localtime64_s
 
-変換を**time_t**時刻の値を**tm**構造体、およびローカル タイム ゾーンに合わせて修正します。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md) です。
+**Time_t** time 値を**tm**構造体に変換し、ローカルタイムゾーンを修正します。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -74,48 +77,48 @@ errno_t _localtime64_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*tmDest*|*sourceTime*|戻り値|値*tmDest*|無効なパラメーター ハンドラーを呼び出す|
+|*tmDest*|*sourceTime*|戻り値|*Tmdest*の値|無効なパラメーター ハンドラーを呼び出す|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULL**|任意|**EINVAL**|変更されない|はい|
-|いない**NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|はい|
-|いない**NULL** (有効なメモリを指す)|0 より小さいかより大きい **_MAX__TIME64_T**|**EINVAL**|すべてのフィールドが -1 に設定される|いいえ|
+|**NULL**|任意|**EINVAL**|変更されない|[はい]|
+|Not **NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|[はい]|
+|Not **NULL** (有効なメモリを指す)|0より小さいか、または **_MAX__TIME64_T**を超えています。|**EINVAL**|すべてのフィールドが -1 に設定される|いいえ|
 
-最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Localtime32_s**関数として格納されている時刻の変換、 [time_t](../../c-runtime-library/standard-types.md)値し、その結果の種類の構造に格納[tm](../../c-runtime-library/standard-types.md)します。 **長い**値*sourceTime*午前 0 時以降の経過秒数を表します (00: 00:00)、UTC 1970 年 1 月 1 日です。 通常、この値はから取得、[時間](time-time32-time64.md)関数。
+**Localtime_s**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時間を変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **Time_t** Value *sourcetime*は、午前0時 (00:00:00)、1970年1月1日からの経過秒数を表します。 通常、この値は[time](time-time32-time64.md)関数から取得されます。
 
-**_localtime32_s** 、ユーザーが最初にグローバル環境変数を設定する場合、ローカル タイム ゾーンに合わせて修正**TZ**します。 ときに**TZ**設定は、その他の 3 つの環境変数 (**_timezone**、 **_daylight**、および **_tzname**) も自動的に設定します。 場合、 **TZ**変数が設定されていない**localtime32_s**コントロール パネルの 日付/時刻で指定されているタイム ゾーン情報を使用します。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能との ANSI 標準定義の一部ではない**localtime**します。
+**localtime_s**は、ユーザーが最初にグローバル環境変数**TZ**を設定した場合、ローカルタイムゾーンを修正します。 **TZ**が設定されている場合、他の3つの環境変数 ((**timezone**、 **_tzname** **、および**) も自動的に設定されます。 **TZ**変数が設定されていない場合、 **Localtime_s**は、コントロールパネルの [日付/時刻] アプリケーションで指定されたタイムゾーン情報を使用しようとします。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能であり、 **localtime**の ANSI 標準定義の一部ではありません。
 
 > [!NOTE]
 > 対象の環境は、夏時間が有効かどうかを判断しようとします。
 
-**_localtime64_s**、使用、 **_ _time64_t**構造体、ことができますを 23時 59分: 59、1 月 18 日、3001、世界協定時刻 (UTC) を表す日付 **_localtime32_s**2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。
+**__time64_t**構造体を使用する **_localtime64_s**では、23:59:59 年1月18日から3001年1月18日までの日付を表すことができます。一方、 **_Localtime32_s**は23:59:59 年1月18日までの日付を表します。2038、UTC。
 
-**localtime_s**に評価されるインライン関数は、 **_localtime64_s**、および**time_t**と等価 **_ _time64_t**します。 強制的にコンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**します。 これにより**localtime_s**を評価する **_localtime32_s**します。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**localtime_s**は、 **_localtime64_s**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **localtime_s**が **_localtime32_s**に評価されます。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-構造体型のフィールド[tm](../../c-runtime-library/standard-types.md)はそれぞれ、次の値を格納、 **int**します。
+Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは、次の値を格納します。各値は**int**です。
 
 |フィールド|説明|
 |-|-|
-|**tm_sec**|秒 (0 - 59)。|
-|**未満**|分 (0 - 59)。|
-|**tm_hour**|午前 0 時からの経過時間 (0 - 23)。|
-|**tm_mday**|(1 ~ 31) の月の日。|
-|**tm_mon**|月 (0 - 11年 1 月 = 0 です)。|
+|**tm_sec**|秒後 (0-59)。|
+|**tm_min**|分後 (0-59)。|
+|**tm_hour**|深夜からの時間 (0-23)。|
+|**tm_mday**|月の通算日 (1-31)。|
+|**tm_mon**|月 (0-11;1月 = 0)。|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
-|**tm_wday**|週の曜日 (0 ~ 6 です。日曜日 = 0)。|
-|**tm_yday**|年の通算日 (0 - 365;1 月 1 日 = 0)。|
+|**tm_wday**|曜日 (0-6;日曜日 = 0)。|
+|**tm_yday**|年の通算日 (0-365;1月1日 = 0)。|
 |**tm_isdst**|夏時間が有効な場合は正の値、夏時間が無効な場合は 0、夏時間かどうか状態が不明な場合は負の値。|
 
-場合、 **TZ**環境変数が設定されている、C ランタイム ライブラリで規則を前提を米国に適切な夏時間 (DST) の計算の実装します。
+**TZ**環境変数が設定されている場合、C ランタイムライブラリは、夏時間 (DST) の計算を実装するために、米国に適した規則を前提としています。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime > または\<time.h >|
+|**localtime_s**、 **_localtime32_s**、 **_localtime64_s**|\<time.h>|\<ctime > また\<は time .h >|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

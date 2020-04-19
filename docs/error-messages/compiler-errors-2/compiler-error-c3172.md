@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C3172
+title: コンパイラエラー C3172
 ms.date: 11/04/2016
 f1_keywords:
 - C3172
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: 5c9c1561b63c740b9f7f5d85b2bf3e04de2542c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1da2676d660d23e3fb71b56263779b1f1edacbf9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514947"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761739"
 ---
-# <a name="compiler-error-c3172"></a>コンパイラ エラー C3172
+# <a name="compiler-error-c3172"></a>コンパイラエラー C3172
 
-'モジュール名': プロジェクトで異なる idl_module の属性を指定することはできません
+' module_name ': プロジェクトで異なる idl_module 属性を指定することはできません
 
-[idl_module](../../windows/idl-module.md)属性と同じ名前が異なる`dllname`または`version`パラメーターが 2 つのコンパイル時にファイルに見つかりませんでした。 1 つだけの一意な`idl_module`コンパイルごとに属性を指定できます。
+同じ名前で `dllname` または `version` パラメーターが異なる[idl_module](../../windows/idl-module.md)属性が、コンパイルの2つのファイルに見つかりました。 コンパイルごとに指定できる一意の `idl_module` 属性は1つだけです。
 
-同じ`idl_module`属性を 1 つ以上のソース コード ファイルで指定できます。
+同一の `idl_module` 属性は、複数のソースコードファイルで指定できます。
 
-たとえば場合、次`idl_module`属性が見つかりました。
+たとえば、次の `idl_module` 属性が見つかったとします。
 
-```
+```cpp
 // C3172.cpp
 [module(name="MyMod")];
 [ idl_module(name="x", dllname="file.dll", version="1.1") ];
@@ -32,11 +32,11 @@ int main() {}
 
 この場合、次のようになります。
 
-```
+```cpp
 // C3172b.cpp
 // compile with: C3172.cpp
 // C3172 expected
 [ idl_module(name="x", dllname="file.dll", version="1.0") ];
 ```
 
-コンパイラが生成 C3172 (別のバージョンの値に注意してください)。
+コンパイラは C3172 を生成します (異なるバージョンの値に注意してください)。

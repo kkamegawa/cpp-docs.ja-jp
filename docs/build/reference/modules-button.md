@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-ms.openlocfilehash: 7e013e6ee42086f1b52d49c34e01bf18f27e0da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efe6859ead257201fea8577675a7b8e55b5f700e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321203"
 ---
 # <a name="modules-button"></a>[モジュール] ボタン
 
@@ -17,4 +17,4 @@ ms.locfileid: "50663841"
 
 ## <a name="see-also"></a>関連項目
 
-[[値] エディット コントロール](../../build/reference/value-edit-control.md)
+[[値] エディット コントロール](value-edit-control.md)

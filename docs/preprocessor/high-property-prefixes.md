@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: high_property_prefixes import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 130d19f275612e153955ae49f299fe2f36d098bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579817"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219009"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>high_property_prefixes import 属性
 
-**C++ 固有の仕様**
+**C++のみ**
 
 3 つのプロパティ メソッドの代替プレフィックスを指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import***タイプライブラリ***high_property_prefixes (** "*getprefix*" **,** "*putprefix*" **,** "*putrefprefix*" **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*GetPrefix*<br/>
-使用するプレフィックス、`propget`メソッド。
+*GetPrefix*\
+`propget`メソッドに使用されるプレフィックス。
 
-*PutPrefix*<br/>
-使用するプレフィックス、`propput`メソッド。
+*PutPrefix*\
+`propput`メソッドに使用されるプレフィックス。
 
-*PutRefPrefix*<br/>
-使用するプレフィックス、`propputref`メソッド。
+*PutRefPrefix*\
+`propputref`メソッドに使用されるプレフィックス。
 
 ## <a name="remarks"></a>Remarks
 
-既定では、高度なエラー処理`propget`、 `propput`、および`propputref`メソッドは、というプレフィックスを持つメンバー関数によって公開`Get`、 `Put`、および`PutRef`、それぞれします。
+既定では、高レベルのエラー処理`propget`、 `propput`、および`propputref`メソッドは、それぞれプレフィックス`Get`、 `Put`、および`PutRef`を持つという名前のメンバー関数によって公開されます。
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

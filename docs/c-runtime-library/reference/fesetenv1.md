@@ -1,9 +1,9 @@
 ---
 title: fesetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 155b9f635f6e8c3dc5acb61126f41c49cd32601f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436150"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941110"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -43,8 +46,8 @@ int fesetenv(
 
 ### <a name="parameters"></a>パラメーター
 
-*penv*<br/>
-ポインターを**fenv_t**への呼び出しで設定された浮動小数点環境を格納しているオブジェクト[fegetenv](fegetenv1.md)または[feholdexcept](feholdexcept2.md)します。 使用して、既定のスタートアップ浮動小数点環境を指定することも、 **FE_DFL_ENV**マクロ。
+*ペン v*<br/>
+[Fegetenv](fegetenv1.md)または[feholdexcept](feholdexcept2.md)の呼び出しによって設定された浮動小数点環境を含む**fenv_t**オブジェクトへのポインター。 **FE_DFL_ENV**マクロを使用して、既定のスタートアップ浮動小数点環境を指定することもできます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -52,9 +55,9 @@ int fesetenv(
 
 ## <a name="remarks"></a>Remarks
 
-**Fesetenv**関数に格納されている値から現在の浮動小数点環境の設定、 **fenv_t**指すオブジェクト*penv*します。 浮動小数点環境とは、浮動小数点計算に影響する一連の状態フラグと制御モードです。 浮動小数点例外の丸めモードと状態フラグが含まれます。  場合*penv*は**FE_DFL_ENV**が有効なを指していないまたは**fenv_t**オブジェクト、その後の動作が定義されていません。
+**Fesetenv**関数は、 **fenv_t**が指すオブジェクトに格納されている値から現在の浮動小数点環境を設定*します。* 浮動小数点環境とは、浮動小数点計算に影響する一連の状態フラグと制御モードです。 浮動小数点例外の丸めモードと状態フラグが含まれます。  **FE_DFL_ENV**が*ない場合、または有効*な**fenv_t**オブジェクトを指していない場合、後続の動作は未定義になります。
 
-この関数の呼び出しが例外をされている状態フラグを設定、 *penv*オブジェクトがそれらの例外は発生しません。
+この関数を呼び出すと、*このオブジェクトに*ある例外状態フラグが設定されますが、これらの例外は発生しません。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 

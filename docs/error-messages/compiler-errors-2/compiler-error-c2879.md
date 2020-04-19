@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2879
 ms.assetid: ac92b645-2394-49de-8632-43d44e0553ed
-ms.openlocfilehash: 9ac8f5e5edb1a6ed7314c5b5d125fcc9bfbe67de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c7238faf94a2493894534ae5684634b65bb4342
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677956"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736296"
 ---
 # <a name="compiler-error-c2879"></a>コンパイラ エラー C2879
 
-'symbol': 既存の名前空間は、名前を指定できます、代替名前空間のエイリアス定義によってのみ
+' symbol ': 名前空間エイリアスの定義により、既存の名前空間に代替名を指定することはできません
 
-作成することはできません、[名前空間エイリアス](../../cpp/namespaces-cpp.md#namespace_aliases)名前空間以外のシンボルにします。
+名前空間以外のシンボルに対して[名前空間エイリアス](../../cpp/namespaces-cpp.md#namespace_aliases)を作成することはできません。
 
 次の例では、C2879 が生成されます。
 
-```
+```cpp
 // C2879.cpp
 int main() {
    int i;

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524112"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456259"
 ---
 # <a name="isfundamental-class"></a>is_fundamental クラス
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*です。 つまり、基本型、 **void**、整数型、浮動小数点型、または`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
+型*Ty*が基本型、つまり、 **void**、整数型、浮動小数点型`cv-qualified` 、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -77,5 +77,5 @@ is_fundamental<void> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound クラス](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound クラス](../standard-library/is-compound-class.md)

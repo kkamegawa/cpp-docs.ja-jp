@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2588
 ms.assetid: 19a0cabd-ca13-44a5-9be3-ee676abf9bc4
-ms.openlocfilehash: 15f9ba62751d9b3cb17ab56659310292dab41adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1f73e2585606e7e86213607a96ef713345419c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596782"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755409"
 ---
 # <a name="compiler-error-c2588"></a>コンパイラ エラー C2588
 
-':: ~ identifier': 無効なグローバル デストラクター
+':: ~ identifier ': 無効なグローバルデストラクターです。
 
-デストラクターは、クラス、構造体または共用体以外のものに対して定義されます。 これは認められていません。
+デストラクターは、クラス、構造体、または共用体以外のものに対して定義されています。 これは許可されていません。
 
-このエラーは、不足しているクラス、構造、またはスコープ解決演算子の左側にある共用体の名前によって発生することができます (`::`) 演算子。
+このエラーは、スコープ解決 (`::`) 演算子の左側にクラス、構造体、または共用体の名前がないことが原因で発生する可能性があります。
 
 次の例では、C2588 が生成されます。
 
-```
+```cpp
 // C2588.cpp
 ~F();   // C2588
 ```

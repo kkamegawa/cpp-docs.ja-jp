@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447232"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749504"
 ---
 # <a name="compiler-error-c3893"></a>コンパイラ エラー C3893
 
-'var': initonly データ メンバーの左辺値の使用は、クラス 'type_name' のインスタンス コンス トラクターでのみ使用できます。
+' var ': initonly データメンバーの左辺値の使用は、クラス ' type_name ' のインスタンスコンストラクターでのみ許可されています
 
-静的[initonly](../../dotnet/initonly-cpp-cli.md)データ メンバーは、静的コンス トラクターで取得された、アドレスを持つことができますのみです。
+静的な[initonly](../../dotnet/initonly-cpp-cli.md)データメンバーは、静的コンストラクターで取得できるのはアドレスだけです。
 
-インスタンス (静的ではない) initonly データ メンバーは、取得されたインスタンス (静的ではない) コンス トラクターで、アドレスだけを設定できます。
+インスタンス (静的ではない) initonly データメンバーには、インスタンス (非静的) コンストラクターで取得できるアドレスのみを含めることができます。
 
 次の例では、C3893 が生成されます。
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

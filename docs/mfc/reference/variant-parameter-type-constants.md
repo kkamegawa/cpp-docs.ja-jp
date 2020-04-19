@@ -35,12 +35,12 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-ms.openlocfilehash: 9627452d674aa48a84094665d9499e3a38a3bdf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b15a303f69ce13cf3ba3b6c1c0739acdb8a33c7c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309481"
 ---
 # <a name="variant-parameter-type-constants"></a>Variant パラメーター型の定数
 

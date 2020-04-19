@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 9cd27fb40522a07ce4591b654ee8a6dda53b4f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 815cc4a81addc673349a3133b24ed73cfe0207e2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456408"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857672"
 ---
 # <a name="anonymous-class-types"></a>匿名クラス型
 
-クラスを匿名にすることができます: 宣言することがなくこれは、*識別子*します。 クラス名を置き換えるときに便利ですが、 **typedef**次のように、名前。
+クラスは匿名にすることができます。つまり、*識別子*なしで宣言できます。 これは、次に示すように、クラス名を**typedef**名に置き換える場合に便利です。
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
->  前の例で示した匿名クラスの使用は、既存の C コードとの互換性を維持するために役立ちます。 一部の C コードでの使用で**typedef**匿名構造体と組み合わせては普及しています。
+>  前の例で示した匿名クラスの使用は、既存の C コードとの互換性を維持するために役立ちます。 一部の C コードでは、匿名構造体と共に**typedef**を使用することは一般的です。
 
 匿名クラスは、次のように、クラス メンバーへの参照が別のクラスに含まれていないかのように見せる場合にも役立ちます。
 
@@ -43,13 +43,13 @@ struct PTValue
 PTValue ptv;
 ```
 
-上記のコードで`iValue`オブジェクトのメンバー選択演算子を使用してアクセスできます (**.**) 次のようにします。
+上のコードでは、次のように、オブジェクトメンバー選択演算子 ( **.** ) を使用して `iValue` にアクセスできます。
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-匿名クラスには、特定の制限が適用されます  (無名共用体の詳細については、次を参照してください[共用体](../cpp/unions.md)。)。匿名クラスの制限は次のとおりです。
+匿名クラスには、特定の制限が適用されます (匿名共用体の詳細については、「[共用体](../cpp/unions.md)」を参照してください)。匿名クラス:
 
 - コンストラクターやデストラクターを持つことはできません。
 
@@ -59,7 +59,7 @@ int i = ptv.iValue;
 
 ## <a name="anonymous-structs"></a>匿名構造体
 
-### <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**Microsoft 固有の仕様**
 
 Microsoft の C 拡張機能を使用すれば、名前を指定せずに、別の構造体内に構造体変数を宣言できます。 このような入れ子の構造体を "匿名構造体" といいます。 C++ では匿名構造体を使用できません。
 

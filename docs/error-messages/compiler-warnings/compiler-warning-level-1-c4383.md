@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 61bc3951a7d57a5a4eefb69b5a0c4399df99160a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548799"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966168"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>コンパイラの警告 (レベル 1) C4383
 
-'instance_dereference_operator': ユーザー定義の 'operator' 演算子が存在するときに、ハンドルの逆参照の意味を変更できますオペランドに対して明示的に指定する静的関数として、演算子を書き込み
+' instance_dereference_operator ': ユーザー定義の ' operator ' 演算子が存在する場合、ハンドルの逆参照の意味が変更される可能性があります。演算子を静的関数として記述し、オペランドについて明示的にします。
 
-マネージ型に逆参照演算子のインスタンスのユーザー定義の上書きを追加すると、ハンドルのオブジェクトを返す型の逆参照演算子の機能を無効可能性があります。 検討逆参照演算子の静的なユーザー定義を記述します。
+マネージ型の逆参照演算子のユーザー定義インスタンスオーバーライドを追加すると、その型の逆参照演算子がハンドルのオブジェクトを返す機能をオーバーライドする可能性があります。 静的なユーザー定義の逆参照演算子を記述することを検討してください。
 
-詳細については、次を参照してください。[オブジェクト演算子 (^) へのハンドル](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md)と[参照演算子の追跡](../../windows/tracking-reference-operator-cpp-component-extensions.md)します。
+詳細については、「[オブジェクト演算子 (^) へのハンドル](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)」および「[参照操作の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)」を参照してください。
 
-また、インスタンス演算子では、参照されているメタデータを使用して他の言語コンパイラを使用できません。 詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)します。
+また、参照されたメタデータを使用して、他の言語コンパイラでインスタンス演算子を使用することはできません。 詳細については、「[ユーザー定義のC++演算子 (/cli)](../../dotnet/user-defined-operators-cpp-cli.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4383 が生成されます。
 
-```
+```cpp
 // C4383.cpp
 // compile with: /clr /W1
 

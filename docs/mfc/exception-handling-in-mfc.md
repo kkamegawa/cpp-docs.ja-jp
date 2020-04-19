@@ -1,6 +1,6 @@
 ---
 title: 例外処理 (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - assertions [MFC], When to use exceptions
@@ -33,81 +33,80 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7d1be30edec598135eed2a74fca87f1e5444f55d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694557"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246731"
 ---
 # <a name="exception-handling-in-mfc"></a>例外処理 (MFC)
 
-この記事では、MFC で使用できる例外処理メカニズムについて説明します。 2 つのメカニズムを使用できます。
+この記事では、MFC で使用できる例外処理機構について説明します。 次の2つのメカニズムを使用できます。
 
-- MFC バージョン 3.0 で使用でき、後で、C++ 例外
+- C++例外 (MFC バージョン3.0 以降で使用可能)
 
-- MFC のバージョン 1.0 で使用でき、後で、MFC 例外マクロ
+- Mfc バージョン1.0 以降で使用できる MFC 例外マクロ
 
-MFC を使用して新しいアプリケーションを記述している場合は、C++ のメカニズムを使用する必要があります。 既存のアプリケーションが広範囲にわたってそのメカニズムを使用する場合は、マクロに基づくメカニズムを使用できます。
+MFC を使用して新しいアプリケーションを作成する場合は、 C++メカニズムを使用する必要があります。 既存のアプリケーションで既にこのメカニズムが広く使用されている場合は、マクロベースのメカニズムを使用できます。
 
-MFC 例外処理マクロではなく、C++ 例外を使用する既存のコードを簡単に変換できます。 これを行うためのガイドライン、コードの変換の利点については、記事[例外: MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)します。
+MFC 例外マクロの代わりに、例外C++を使用するように既存のコードを簡単に変換できます。 コードを変換する場合の利点と、そのためのガイドラインについては、「[例外: MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)」を参照してください。
 
-MFC 例外処理マクロを使用してアプリケーションを既に開発した場合は、新しいコードで C++ 例外を使用している、既存のコードでこれらのマクロを使用を続行できます。 この記事[例外: Version 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)これを行うためのガイドラインを提供します。
+MFC 例外マクロを使用して既にアプリケーションを開発している場合は、新しいコードで例外を使用しC++ながら、既存のコードでこれらのマクロを使用し続けることができます。 「[例外: バージョン3.0 での例外マクロの変更」で](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)は、そのためのガイドラインが提供されています。
 
 > [!NOTE]
->  コードの C++ 例外処理を有効にするコードの生成 ページで、プロジェクトの [C/C++] フォルダーを有効にする C++ の例外を選択します。[プロパティ ページ](../ide/property-pages-visual-cpp.md)ダイアログ ボックスで、または使用して、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション。
+>  コード内C++で例外処理を有効にするにC++は、プロジェクトの [[プロパティページ](../build/reference/property-pages-visual-cpp.md)] ダイアログボックスC++の C/フォルダーの [コード生成] ページで [例外を有効にする] を選択するか、 [/ehsc](../build/reference/eh-exception-handling-model.md)コンパイラオプションを使用します。
 
 ここでは、次のトピックについて説明します。
 
 - [例外を使用する場合](#_core_when_to_use_exceptions)
 
-- [MFC 例外処理のサポート](#_core_mfc_exception_support)
+- [MFC 例外サポート](#_core_mfc_exception_support)
 
-- [例外についての詳細情報](#_core_further_reading_about_exceptions)
+- [例外に関する参考資料](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a> 例外を使用する場合
+##  <a name="_core_when_to_use_exceptions"></a>例外を使用する場合
 
-結果の 3 つのカテゴリは、プログラムの実行中に、関数が呼び出されたときに発生する可能性が。 通常の実行、エラーの実行、または異常な実行します。 各カテゴリを以下に示します。
+プログラムの実行中に関数が呼び出されると、通常の実行、エラーの発生、または異常な実行の3つのカテゴリの結果が発生する可能性があります。 各カテゴリについて以下に説明します。
 
 - 通常の実行
 
-   関数は、正常に実行され、返すことがあります。 一部の関数は、関数の結果を示す呼び出し元に結果コードを返します。 結果コードは、関数は厳密に定義され、関数の考えられる結果の範囲を表します。 結果コードでは、成功または失敗を示すことができますか、期待の通常の範囲内にあるエラーの特定の種類を示すこともできます。 たとえば、ファイルのステータス関数は、ファイルが存在しないことを示すコードを返すことができます。 結果コードは、多くの予期される結果のいずれかを表すために、「エラー コード」という用語が使用されないことに注意してください。
+   関数は正常に実行され、を返します。 一部の関数は、結果コードを呼び出し元に返します。これは、関数の結果を示します。 有効な結果コードは関数に対して厳密に定義され、関数の結果の範囲を表します。 結果コードは、成功または失敗を示すことも、通常の期待範囲内にある特定の種類の障害を示すこともできます。 たとえば、ファイル状態関数は、ファイルが存在しないことを示すコードを返すことができます。 結果コードは多くの予期される結果の1つを表すため、"エラーコード" という用語は使用されないことに注意してください。
 
-- エラー実行
+- 間違った実行
 
-   呼び出し元は、いくつかの間違いは、関数に引数を渡すことで、または不適切なコンテキストで関数を呼び出します。 このような状況と、エラーが発生して、プログラムの開発中にアサーションでは検出する必要があります。 (アサーションの詳細については、次を参照してください[c/c++ アサーション](/visualstudio/debugger/c-cpp-assertions)。)。
+   呼び出し元が関数に引数を渡すとき、または不適切なコンテキストで関数を呼び出すと、何らかの誤りが発生します。 このような状況ではエラーが発生し、プログラムの開発中にアサーションによって検出される必要があります。 (アサーションの詳細については、「 [C/C++アサーション](/visualstudio/debugger/c-cpp-assertions)」を参照してください)。
 
 - 異常な実行
 
-   異常な実行には、低いメモリまたは I/O エラーなどのプログラムのコントロールの外部の条件は、関数の結果への影響の状況が含まれています。 異常な状況は、例外のスローとキャッチによって処理する必要があります。
+   通常とは異なる実行には、メモリ不足や i/o エラーなど、プログラムの制御外の条件が関数の結果に影響を与える状況が含まれます。 異常な状況は、例外をキャッチしてスローすることによって処理する必要があります。
 
-例外処理は、異常な実行に特に適しています。
+例外の使用は、特に異常な実行に適しています。
 
-##  <a name="_core_mfc_exception_support"></a> MFC 例外処理のサポート
+##  <a name="_core_mfc_exception_support"></a>MFC 例外サポート
 
-使用するか、C++ 例外を直接使用するか、または MFC 例外処理マクロを使用して、 [CException クラス](../mfc/reference/cexception-class.md)または`CException`-フレームワークによって、またはアプリケーションによってスローされる可能性がオブジェクトを派生します。
+C++例外を直接使用するか、MFC 例外マクロを使用するかにかかわらず、 [CException クラス](../mfc/reference/cexception-class.md)を使用するか、フレームワークまたはアプリケーションによってスローされる可能性のある `CException`派生オブジェクトを使用します。
 
-次の表では、MFC によって提供される定義済みの例外を示します。
+次の表は、MFC によって提供される定義済みの例外を示しています。
 
-|例外クラス|説明|
+|例外クラス|意味|
 |---------------------|-------------|
 |[CMemoryException クラス](../mfc/reference/cmemoryexception-class.md)|メモリ不足|
 |[CFileException クラス](../mfc/reference/cfileexception-class.md)|ファイルの例外|
 |[CArchiveException クラス](../mfc/reference/carchiveexception-class.md)|アーカイブ/シリアル化の例外|
-|[CNotSupportedException クラス](../mfc/reference/cnotsupportedexception-class.md)|サポートされていないサービスの要求への応答|
-|[CResourceException クラス](../mfc/reference/cresourceexception-class.md)|Windows リソース割り当て例外|
+|[CNotSupportedException クラス](../mfc/reference/cnotsupportedexception-class.md)|サポートされていないサービスに対する要求への応答|
+|[CResourceException クラス](../mfc/reference/cresourceexception-class.md)|Windows リソース割り当ての例外|
 |[CDaoException クラス](../mfc/reference/cdaoexception-class.md)|データベースの例外 (DAO クラス)|
 |[CDBException クラス](../mfc/reference/cdbexception-class.md)|データベースの例外 (ODBC クラス)|
 |[COleException クラス](../mfc/reference/coleexception-class.md)|OLE 例外|
-|[COleDispatchException クラス](../mfc/reference/coledispatchexception-class.md)|ディスパッチ (オートメーション) 例外|
-|[CUserException クラス](../mfc/reference/cuserexception-class.md)|例外メッセージ ボックスでは、ユーザーに警告をスロー ジェネリック[CException クラス](../mfc/reference/cexception-class.md)|
+|[COleDispatchException クラス](../mfc/reference/coledispatchexception-class.md)|ディスパッチ (オートメーション) の例外|
+|[CUserException クラス](../mfc/reference/cuserexception-class.md)|メッセージボックスを使用してユーザーに警告し、汎用[CException クラス](../mfc/reference/cexception-class.md)をスローする例外|
 
-> [!NOTE]
->  MFC では、C++ 例外と MFC 例外処理マクロの両方をサポートします。 MFC によって直接サポートされない Windows NT 構造化例外ハンドラー (SEH) で説明したよう[構造化例外処理](/windows/desktop/debug/structured-exception-handling)します。
+MFC はバージョン 3.0 以降、C++ 例外を使用していますが、フォームの C++ 例外に似た古い例外処理マクロを引き続きサポートします。 これらのマクロは新しいプログラミングで推奨されませんが、下位互換性のために引き続きサポートされます。 既にマクロを使用しているプログラムでは、自由に C++ の例外も使用できます。 プリプロセス中、マクロは、Visual C++ C++バージョン2.0 の言語の MSVC 実装で定義されている例外処理キーワードに評価されます。 C++ 例外処理の使用を開始するときは、既存の例外処理マクロをそのまま維持できます。 マクロとC++例外処理の組み合わせ、および新しい機構を使用するように古いコードを変換する方法については、「[例外C++ : mfc マクロと例外](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)および例外の使用[: mfc 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)」を参照してください。 以前の MFC 例外マクロを使用している場合、これは C++ の例外のキーワードに評価されます。 「[例外: バージョン3.0 での例外マクロの変更点」を](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)参照してください。 MFC では、「[構造化例外処理](/windows/win32/debug/structured-exception-handling)」で説明されているように、Windows NT 構造化例外ハンドラー (SEH) を直接サポートしていません。
 
-##  <a name="_core_further_reading_about_exceptions"></a> 例外に関する詳細情報
+##  <a name="_core_further_reading_about_exceptions"></a>例外に関する参考資料
 
-次の記事では、例外処理の MFC ライブラリの使用について説明します。
+次の記事では、MFC ライブラリを使用して例外を処理する方法について説明します。
 
 - [例外処理: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
@@ -121,7 +120,7 @@ MFC 例外処理マクロを使用してアプリケーションを既に開発�
 
 - [例外処理: OLE の例外](../mfc/exceptions-ole-exceptions.md)
 
-次の記事では、C++ 例外のキーワードを持つ MFC 例外マクロを比較し、コードを改変する方法について説明します。
+次の記事では、MFC 例外マクロとC++例外キーワードを比較し、コードをどのように調整できるかを説明します。
 
 - [例外処理: MFC 3.0 での変更点](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
@@ -129,8 +128,7 @@ MFC 例外処理マクロを使用してアプリケーションを既に開発�
 
 - [例外処理: MFC マクロと C++ 例外機構の使用](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C++ 例外処理](../cpp/cpp-exception-handling.md)<br/>
-[方法: 独自のカスタム例外クラスを作成します。](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[例外C++とエラー処理に関する最新のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[操作方法: 独自のカスタム例外クラスを作成する](https://go.microsoft.com/fwlink/p/?linkid=128045)

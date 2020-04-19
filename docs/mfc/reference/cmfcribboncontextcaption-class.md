@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-ms.openlocfilehash: 3e6d8dcd643a58b3df60488b50da08288a34bab9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237326"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption クラス
 

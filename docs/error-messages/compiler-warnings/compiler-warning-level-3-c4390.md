@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4390
 ms.assetid: c95c2f1b-9bce-4b1f-a80c-565d4cde0b1e
-ms.openlocfilehash: 4ca00f892adc8fe3ac1bffb59a27ea1744249dea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8402c6a2d0fcbb4704b833ac7ae2b070c7af3a48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479522"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051592"
 ---
 # <a name="compiler-warning-level-3-c4390"></a>コンパイラの警告 (レベル 3) C4390
 
-';'。 空の被制御文が見つかりました。目的ですか。
+'; ': 空の制御されたステートメントが見つかりました。これは目的ですか。
 
-手順が含まれていない制御ステートメントの後にセミコロンが見つかりました。
+命令を含まない制御ステートメントの後にセミコロンが見つかりました。
 
-マクロにより C4390 を取得する場合は使用、[警告](../../preprocessor/warning.md)プラグマ マクロを含むモジュールで C4390 を無効にします。
+マクロが原因で C4390 を取得した場合は、[警告](../../preprocessor/warning.md)プラグマを使用して、マクロを含むモジュールの C4390 を無効にする必要があります。
 
 次の例では、C4390 が生成されます。
 
-```
+```cpp
 // C4390.cpp
 // compile with: /W3
 int main() {

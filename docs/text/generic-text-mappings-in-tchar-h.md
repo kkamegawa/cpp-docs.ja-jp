@@ -1,8 +1,6 @@
 ---
 title: Tchar.h における汎用テキスト マッピング
 ms.date: 11/04/2016
-f1_keywords:
-- tchar.h
 helpviewer_keywords:
 - mapping generic-text
 - generic-text mappings [C++]
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410708"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキスト マッピング
 
@@ -47,11 +45,11 @@ Tchar.h を使用すると、1 バイト、マルチバイト文字のセット 
 
 ### <a name="generic-text-data-type-mappings"></a>汎用テキストのデータ型のマップ
 
-|汎用テキスト<br /> データ型名|_UNICODE &<br /> _MBCS が未定義の場合|_MBCS<br /> 定義済み|_UNICODE<br /> 定義済み|
+|汎用テキスト<br /> データ型名|_UNICODE (&AMP; A)<br /> _MBCS が未定義の場合|_MBCS<br /> 定義済み|_UNICODE<br /> 定義済み|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**符号付き文字**|**符号付き文字**|**wchar_t**|
+|`_TSCHAR`|**signed char**|**signed char**|**wchar_t**|
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
 |`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (次の文字または文字列を対応する Unicode に変換)|

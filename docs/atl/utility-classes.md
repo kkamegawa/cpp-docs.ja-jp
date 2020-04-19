@@ -2,17 +2,15 @@
 title: ユーティリティ クラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.classes.utility
 helpviewer_keywords:
 - utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-ms.openlocfilehash: 0ea5350dbb169383e752e5c202e4276fa6224704
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de899d6c70bde4f9f9ec7241d3c923f77ff8248
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274842"
 ---
 # <a name="utility-classes"></a>ユーティリティ クラス
 
@@ -35,4 +33,3 @@ ms.locfileid: "50484592"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)
-

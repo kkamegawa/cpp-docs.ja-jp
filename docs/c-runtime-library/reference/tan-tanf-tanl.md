@@ -1,11 +1,11 @@
 ---
 title: tan、tanf、tanl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564024"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946899"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -63,16 +66,16 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Tan**のタンジェントを返します関数*x*します。 場合*x*が 263 以上で、または少ないよりまたは-263 等しくは、結果の有効桁数の損失が発生します。
+**Tan**関数は、 *x*のタンジェントを返します。 *X*が263以上、または-263 以下の場合は、結果の有意性が失われます。
 
-|入力|SEH 例外|**Matherr**例外|
+|入力|SEH 例外|**Matherr**例外的|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|none|_DOMAIN|
 |± INF|**無効です**|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tan**を受け取って返す**float**または**長い****二重**値。 C プログラムで**tan**は**二重**します。
+でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**tan**のオーバーロードを呼び出すことができます。 C プログラムでは、 **tan**は常にを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 

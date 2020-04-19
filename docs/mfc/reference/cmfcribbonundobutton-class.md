@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: 78d6b3423f19fe0cf3caf3aa0184fbe779a6c029
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410092"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton クラス
 
@@ -56,7 +56,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ## <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCRibbonUndoButton`クラス、およびアクションの一覧に新しいアクションを追加します。 このコード スニペットの一部、[リボン ガジェット サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCRibbonUndoButton`クラス、およびアクションの一覧に新しいアクションを追加します。 このコード スニペットの一部、[リボン ガジェット サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 

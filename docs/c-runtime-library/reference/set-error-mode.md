@@ -1,9 +1,9 @@
 ---
 title: _set_error_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_error_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_error_mode
 - _set_error_mode
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502311"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948562"
 ---
-# <a name="seterrormode"></a>_set_error_mode
+# <a name="_set_error_mode"></a>_set_error_mode
 
-変更 **_error_mode**を既定以外の場所が C ランタイムでのプログラムを終了する可能性がありますエラーのエラー メッセージの書き込み先を決定します。
+**__Error_mode**を変更して、C ランタイムがプログラムを終了する可能性のあるエラーのエラーメッセージを書き込む既定以外の場所を決定します。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -56,20 +59,20 @@ int _set_error_mode(
 
 ## <a name="remarks"></a>Remarks
 
-値を設定して、エラー出力シンクを制御 **_error_mode**します。 たとえば、出力を標準エラー出力またはを使用して、**メッセージ ボックス**API。
+**__Error_mode**の値を設定することによって、エラー出力シンクを制御します。 たとえば、出力を標準エラーに転送したり、 **MessageBox** API を使用したりすることができます。
 
-*Mode_val*パラメーターは、次の値のいずれかに設定することができます。
+*Mode_val*パラメーターは、次のいずれかの値に設定できます。
 
 |パラメーター|説明|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|エラー シンクはによって決まります **__app_type**します。|
-|**_OUT_TO_STDERR**|エラー シンクは、標準エラーです。|
-|**_OUT_TO_MSGBOX**|エラー シンクは、メッセージ ボックスです。|
-|**_REPORT_ERRMODE**|現在のレポート **_error_mode**値。|
+|**_OUT_TO_DEFAULT**|エラーシンクは **__app_type**によって決定されます。|
+|**標準 (_E)**|エラー シンクは、標準エラーです。|
+|**メッセージボックス (_D)**|エラー シンクは、メッセージ ボックスです。|
+|**_REPORT_ERRMODE**|現在の **__error_mode**値を報告します。|
 
-リストされている以外の値が渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合 **_set_error_mode**設定**errno**に**EINVAL** -1 を返します。
+リストされている以外の値が渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **_set_error_mode**は**errno**を**EINVAL**に設定し、-1 を返します。
 
-と共に使用した場合、[アサート](assert-macro-assert-wassert.md)、 **_set_error_mode**  ダイアログ ボックスで失敗したステートメントを表示しを選択することができます、**無視**ボタンをクリックすることができます続行すると、プログラムを実行します。
+[Assert](assert-macro-assert-wassert.md)と共に使用すると、 **_set_error_mode**は失敗したステートメントをダイアログボックスに表示し、プログラムの実行を続行できるように、 **[無視]** ボタンを選択するオプションを提供します。
 
 ## <a name="requirements"></a>必要条件
 

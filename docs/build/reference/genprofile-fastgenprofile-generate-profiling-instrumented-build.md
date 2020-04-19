@@ -10,12 +10,12 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: e703c94d4a8b7cf7c70e68071959b775987f1710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf6327b175344f1e2914792eb47a4838e544ea24
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292212"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE、/FASTGENPROFILE (プロファイル インストルメント ビルドの生成)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50496448"
 **MEMMAX**=*値*、 **MEMMIN**=*値*<br/>
 使用**MEMMAX**と**MEMMIN**をメモリ内のトレーニング データの最大値と最小の予約サイズを指定します。 値は、予約するメモリ量 (バイト単位) です。 既定では、これらの値は内部ヒューリスティックによって決定されます。
 
-**パス**&AMP;#124; **NOPATH です**  <br/>
+**PATH**  &#124; **NOPATH** <br/>
 使用**パス**関数への各一意のパスの PGO カウンターの個別セットを指定します。 使用**場合は、NOPATH**関数の各カウンターの 1 つだけのセットを指定します。 指定すると **/GENPROFILE**、既定値は**パス**します。 指定すると **/FASTGENPROFILE**、既定値は**場合は、NOPATH**します。
 
 **TRACKEH**  &#124; **NOTRACKEH** <br/>
@@ -52,13 +52,13 @@ ms.locfileid: "50496448"
 
 **/GENPROFILE**と **/FASTGENPROFILE**オプション付き最適化のプロファイル (PGO) のアプリケーション トレーニングをサポートするために必要なプロファイル インストルメンテーション ファイルを生成するリンカーに指示します。 これらのオプションは、Visual Studio 2015 の新機能です。 非推奨とされるこれらのオプションを優先 **/LTCG:PGINSTRUMENT**、 **/PGD**と **/POGOSAFEMODE**オプションと**PogoSafeMode**、 **VCPROFILE_ALLOC_SCALE**と**VCPROFILE_PATH**環境変数。 アプリケーションのトレーニングによって生成されたプロファイル情報が、ビルド中に入力として使用され、対象のプログラム全体の最適化が実行されます。 アプリのトレーニング中とビルド中にパフォーマンスのためのさまざまなプロファイル機能を制御する追加のオプションを設定することができます。 既定のオプションを指定して **/GENPROFILE**特に大規模で複雑なマルチ スレッド アプリケーション用の最も正確な結果を提供します。 **/FASTGENPROFILE**オプションは、メモリ フット プリントの削減と精度と引き換えに、トレーニング中にパフォーマンスを向上させるさまざまな既定値を使用します。
 
-使用してビルドした後に、インストルメント化されたアプリを実行するときに、プロファイル情報がキャプチャ **/GENPROFILE**の **/FASTGENPROFILE**します。 指定すると、この情報がキャプチャされた、 [/USEPROFILE](useprofile.md)リンカー オプション、プロファイリングを実行する手順し、最適化されたビルド手順をガイドするために使用します。 アプリをトレーニングする方法の詳細と、収集したデータの詳細については、次を参照してください。[ガイド付き最適化のプロファイル](profile-guided-optimizations.md)します。
+使用してビルドした後に、インストルメント化されたアプリを実行するときに、プロファイル情報がキャプチャ **/GENPROFILE**の **/FASTGENPROFILE**します。 指定すると、この情報がキャプチャされた、 [/USEPROFILE](useprofile.md)リンカー オプション、プロファイリングを実行する手順し、最適化されたビルド手順をガイドするために使用します。 アプリをトレーニングする方法の詳細と、収集したデータの詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。
 
 指定する必要がありますも **/LTCG**を指定すると **/GENPROFILE**または **/FASTGENPROFILE**します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -70,6 +70,6 @@ ms.locfileid: "50496448"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)<br/>
-[/LTCG (リンク時のコード生成)](../../build/reference/ltcg-link-time-code-generation.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)<br/>
+[/LTCG (リンク時のコード生成)](ltcg-link-time-code-generation.md)<br/>

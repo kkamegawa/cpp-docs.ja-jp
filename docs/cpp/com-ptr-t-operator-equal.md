@@ -5,16 +5,14 @@ f1_keywords:
 - _com_ptr_t.operator=
 - _com_ptr_t::operator=
 helpviewer_keywords:
-- operator = [C++], pointers
-- = operator [C++], with specific Visual C++ objects
-- operator= [C++], pointers
+- _com_ptr_t [C++]
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
-ms.openlocfilehash: 7ce2d83df4068cf7a71452887dbe8fb7e51a9702
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: MT
+ms.openlocfilehash: 95f1ff784a173731c847abc91c293c74d8d7afbe
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331491"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222468"
 ---
 # <a name="comptrtoperator-"></a>_com_ptr_t::operator =
 

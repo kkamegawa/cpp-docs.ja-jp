@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 5dc58b71c8b2032342b6604112673086dc94649b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ca0f4a367abf939ed4307611517a883d8b82e0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429823"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152665"
 ---
 # <a name="c-abstract-declarators"></a>C 抽象宣言子
 
@@ -45,6 +45,6 @@ int (*const []) ( unsigned int, ... )
 > [!NOTE]
 >  1 組の空のかっこで構成される抽象宣言子 **( )** は、あいまいであるため、使用できません。 暗黙的な識別子がかっこ内にある (この場合は修飾されていない型になる) のか、かっこの前にある (この場合は関数型になる) のか、判断することはできません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

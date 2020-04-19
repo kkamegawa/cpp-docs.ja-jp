@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCWindowsManagerDialog [MFC], CMFCWindowsManagerDialog
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
-ms.openlocfilehash: 67fbd1ed066b47cdedf1b5ea2952b042c69bd978
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5089decc7a118cd867aa14df51f5d7e269221108
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373662"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog クラス
 
@@ -41,7 +41,7 @@ class CMFCWindowsManagerDialog : public CDialog
 
 ## <a name="example"></a>例
 
-次の例は、構築する方法を示します、`CMFCWindowsManagerDialog`オブジェクトを呼び出すことによって`CMDIFrameWndEx::ShowWindowsDialog`します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、構築する方法を示します、`CMFCWindowsManagerDialog`オブジェクトを呼び出すことによって`CMDIFrameWndEx::ShowWindowsDialog`します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]
 

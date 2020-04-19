@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: c22d04f7a799ea720fb7d69ffc1aa21ddf9db55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468433"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514121"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,11 +25,11 @@ ms.locfileid: "50468433"
 
 ## <a name="remarks"></a>Remarks
 
-**Ref** C++ 属性と同じ機能を持つ、 [ref](/windows/desktop/Midl/ref) MIDL 属性。
+**Ref** C++属性には[ref](/windows/win32/Midl/ref) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法を示しています、 **ref**属性。
+次のコードは、 **ref**属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,7 +49,7 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**対象**|**typedef**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**typedef**、interface パラメーター、interface メソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

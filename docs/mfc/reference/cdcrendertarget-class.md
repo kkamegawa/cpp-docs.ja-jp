@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168174"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget クラス
 
@@ -59,7 +59,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 |名前|説明|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|返します ID2D1DCRenderTarget インターフェイス|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|返します ID2D1DCRenderTarget インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -171,7 +171,7 @@ ID2D1DCRenderTarget オブジェクトへのポインター。
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*
 
 返します ID2D1DCRenderTarget インターフェイス
 

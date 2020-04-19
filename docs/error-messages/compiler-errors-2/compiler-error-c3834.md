@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3834
 ms.assetid: 059e0dc4-300b-4e74-b6c2-41a57831fe2a
-ms.openlocfilehash: 9f2bb96beaac8ede75863084c8ebf8345c940f53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dac75ca5bea868823eba8e344fb4ec043fae1ad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564165"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741535"
 ---
 # <a name="compiler-error-c3834"></a>コンパイラ エラー C3834
 
-不正の明示的な; ピンされたポインターへキャストピンされたローカル変数を使用して、代わりに
+ピンポインターへの明示的なキャストが無効です。代わりにピン留めされたローカル変数を使用する
 
-固定ポインターに明示的なキャストは許可されません。
+ピン留めされたポインターへの明示的なキャストは許可されていません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3834 が生成されます。
 
-```
+```cpp
 // C3834.cpp
 // compile with: /clr
 int main() {

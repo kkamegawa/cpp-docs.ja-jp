@@ -1,5 +1,5 @@
 ---
-title: 'コンテナー : クライアント アイテムの状態'
+title: コンテナー:クライアント アイテムの状態
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client-item states
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 866aa6f2265abe671ce0028e3be5f1c8ee1762a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152853"
 ---
-# <a name="containers-client-item-states"></a>コンテナー : クライアント アイテムの状態
+# <a name="containers-client-item-states"></a>コンテナー:クライアント アイテムの状態
 
 この記事では、クライアントの項目がその有効期間内を通過するさまざまな状態について説明します。
 
@@ -42,6 +42,6 @@ ms.locfileid: "50575345"
 
 [コンテナー](../mfc/containers.md)<br/>
 [アクティベーション](../mfc/activation-cpp.md)<br/>
-[コンテナー: クライアント アイテムへの通知](../mfc/containers-client-item-notifications.md)<br/>
+[コンテナー:クライアント アイテム通知](../mfc/containers-client-item-notifications.md)<br/>
 [トラッカー](../mfc/trackers.md)<br/>
 [CRectTracker クラス](../mfc/reference/crecttracker-class.md)

@@ -1,12 +1,12 @@
 ---
 title: strtoumax、_strtoumax_l、wcstoumax、_wcstoumax_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstoumax_l
 - _strtoumax_l
 - wcstoumax
 - strtoumax
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstoumax
 - _tcstoumax
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-ms.openlocfilehash: c9c8ca79ed68b23586d9fef979bc8d47b72ca846
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4ed09ad51e538f3964fea87fa55e410c79d3a5d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957687"
 ---
-# <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax、_strtoumax_l、wcstoumax、_wcstoumax_l
+# <a name="strtoumax-_strtoumax_l-wcstoumax-_wcstoumax_l"></a>strtoumax、_strtoumax_l、wcstoumax、_wcstoumax_l
 
 サポートされる最大の符号なし整数型の整数値に文字列を変換します。
 
@@ -87,19 +90,19 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtoumax**存在する場合は、変換後の値を返しますまたは**UINTMAX_MAX**オーバーフローが発生します。 **strtoumax**変換を実行できない場合は 0 を返します。 **wcstoumax**と同様に値を返します**strtoumax**します。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローやアンダー フローが発生した場合。
+**strtoumax**は、変換された値 (存在する場合)、またはオーバーフロー時の**UINTMAX_MAX**を返します。 変換を実行できない場合、 **strtoumax**は0を返します。 **wcstoumax**は、値と同様を**strtoumax**に返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生した場合、 **errno**は**ERANGE**に設定されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-入力文字列の各関数に変換します*strSource*を**uintmax_t**整数値。
+これらの各関数は、入力文字列*Strsource*を**uintmax_t**整数値に変換します。
 
-**strtoumax**文字列の読み取りを停止する*strSource*数値の一部として認識できない最初の文字。 終端の null 文字がありますまたは最初の数値文字に以上である可能性がある*基本*します。 **LC_NUMERIC**ロケールのカテゴリの設定には、小数点文字の認識*strSource*します。 詳細については、「[setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **strtoumax**と**wcstoumax** ; 現在のロケールを使用します **_strtoumax_l**と **_wcstoumax_l**で渡されるロケールを代わりに使用する点は同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**strtoumax**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 これは、終端の null 文字である場合もあれば、*基数*以上の最初の数字の場合もあります。 ロケールの**LC_NUMERIC** category 設定によって、 *strsource*の小数点文字が認識されます。 詳細については、「[setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **strtoumax**と**wcstoumax**は現在のロケールを使用します。 **_strtoumax_l**と **_wcstoumax_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*ない**NULL**、場所を指しているスキャンを停止させた文字へのポインターが格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*によってポイントされている位置に格納されて*endptr*します。
+*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
 
-ワイド文字バージョン**strtoumax**は**wcstoumax**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**Strtoumax**のワイド文字バージョンは**wcstoumax**;*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -108,11 +111,11 @@ NULL で終わる変換対象の文字列。
 |**_tcstoumax**|**strtoumax**|**strtoumax**|**wcstoumax**|
 |**_tcstoumax_l**|**strtoumax_l**|**_strtoumax_l**|**_wcstoumax_l**|
 
-**strtoumax**が必要ですが*strSource*次の形式の文字列を指すようにします。
+**strtoumax**は、 *strsource*が次の形式の文字列を指すことを想定しています。
 
-> [*空白*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }] [*桁*&#124; *文字*]  
+> [*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。 *数字*は 1 つ以上の 10 進数字。 *文字*1 つまたは複数の文字を 'a' から 'z' (または 'A' ~ 'Z')。 この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*が 2 ~ 36 の間の数値の基数として使用されます。 場合*基本*は 0 が指す文字列の先頭の文字です。 *strSource*を使用して、ベースを決定します。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*は 0 です。 および、スキャンされた最初の文字は '0'、8 進数の整数が想定されますと、'8' または '9' の文字は、スキャンは停止します。 **strtoumax**により、プラス記号 (**+**) またはマイナス記号 (**-**) プレフィックスは主要なマイナス記号の場合、戻り値がの 2 つの補数であることを示します、変換後の文字列の絶対値。
+*空白*は、空白文字とタブ文字で構成される場合があります。これは無視されます。 *数字*は1桁以上の10進数です。 *文字*は、' a ' ~ ' z ' (または ' a ' ~ ' z ') の1つ以上の文字です。 この形式に一致しない文字を見つけるとスキャンを停止します。 *Base*が 2 ~ 36 の場合は、数値の基数として使用されます。 *Base*が0の場合、 *strsource*によって指定された文字列の最初の文字が、ベースを決定するために使用されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば、 *base*が0で、スキャンされた最初の文字が ' 0 ' の場合、8進数の整数と見なされ、' 8 ' または ' 9 ' の文字がスキャンを停止します。 **strtoumax**では、正符号 **+** () または負 **-** 符号 () のプレフィックスを使用できます。先頭の負符号は、戻り値が、変換された文字列の絶対値の2つの補数であることを示します。
 
 ## <a name="requirements"></a>必要条件
 

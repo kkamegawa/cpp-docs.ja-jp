@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3342
 ms.assetid: 5c6d784f-bebe-4f7e-8615-44ca6f78bfba
-ms.openlocfilehash: fe95b1ac194e7eef4db04d6ba970505b99021285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511271db9651e4274f7e0838917c5aac639eae2c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438404"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753459"
 ---
 # <a name="compiler-error-c3342"></a>コンパイラ エラー C3342
 
@@ -21,13 +21,13 @@ ms.locfileid: "50438404"
 
 属性が複数回定義されています。
 
-詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3342 が生成されます。
 
-```
+```cpp
 // C3342.cpp
 // compile with: /clr /c
 using namespace System;

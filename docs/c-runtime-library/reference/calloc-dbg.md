@@ -1,9 +1,9 @@
 ---
 title: _calloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _calloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454393"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939319"
 ---
-# <a name="callocdbg"></a>_calloc_dbg
+# <a name="_calloc_dbg"></a>_calloc_dbg
 
 デバッグ ヘッダーと上書きバッファー用の追加の領域を持つ多数のメモリ ブロックをヒープに割り当てます (デバッグ バージョンのみ)。
 
@@ -47,42 +50,42 @@ void *_calloc_dbg(
 
 ### <a name="parameters"></a>パラメーター
 
-*数*<br/>
+*number*<br/>
 要求するメモリ ブロックの数。
 
 *size*<br/>
 要求する各メモリ ブロックのサイズ (バイト)。
 
 *blockType*<br/>
-要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
 
 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
+割り当て操作を要求したソースファイルの名前へのポインターまたは**NULL**。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の番号を行または**NULL**します。
+割り当て操作が要求されたソースファイル内の行番号または**NULL**。
 
-*Filename*と*linenumber*ときにパラメーターが使用可能なだけ **_calloc_dbg**が明示的に呼び出された、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されています。
+*Filename*パラメーターと*linenumber*パラメーターは、 **_calloc_dbg**が明示的に呼び出された場合、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されている場合にのみ使用できます。
 
 ## <a name="return-value"></a>戻り値
 
-正常に完了する、この関数、最後に割り当てられたメモリ ブロックのユーザー部分へのポインターを返します、新しいハンドラー関数を呼び出し、または返します**NULL**します。 戻る動作の詳細については、「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[calloc](calloc.md) 関数を参照してください。
+正常に完了した場合、この関数は最後に割り当てられたメモリブロックのユーザー部分へのポインターを返すか、新しいハンドラー関数を呼び出すか、 **NULL**を返します。 戻る動作の詳細については、「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[calloc](calloc.md) 関数を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_calloc_dbg**のデバッグ バージョンです、 [calloc](calloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_calloc_dbg**への呼び出しに減少**calloc**します。 両方**calloc**と **_calloc_dbg**割り当てる*数*ベースのヒープ内のメモリ ブロックしますが、 **_calloc_dbg**いくつかのデバッグを提供しています機能:
+**_calloc_dbg**は、 [calloc](calloc.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_calloc_dbg**の各呼び出しは**calloc**の呼び出しに限定されます。 **Calloc**と **_calloc_dbg**は、どちらもベースヒープ内のメモリブロックを割り当てますが、 **_calloc_dbg**に*はいくつか*のデバッグ機能が用意されています。
 
 - リークをテストするための、ブロックのユーザー部分の両側のバッファー。
 
 - 特定の割り当ての種類を追跡するためのブロック型パラメーター。
 
-- *ファイル名*/*linenumber*割り当て要求の起点を特定する情報。
+- *ファイル名*/*linenumber*は、割り当て要求の発生元を特定するための情報です。
 
-**_calloc_dbg**各メモリ ブロックを要求したよりも少し多い領域を割り当てます*サイズ*します。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
+**_calloc_dbg**は、要求された*サイズ*よりも若干多くの領域を使用して、各メモリブロックを割り当てます。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
 
-**_calloc_dbg**設定**errno**に**ENOMEM**メモリ割り当てが失敗した場合。**EINVAL** (以前に説明したオーバーヘッドを含む) に必要なメモリの量を超えたかどうかに返される **_HEAP_MAXREQ**します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+**_calloc_dbg**は、メモリ割り当てが失敗した場合に**errno**を**ENOMEM**に設定します。必要なメモリの量 (前に説明したオーバーヘッドを含む) が **_HEAP_MAXREQ**を超えると、 **EINVAL**が返されます。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」を参照してください。
 

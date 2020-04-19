@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2088
+title: コンパイラエラー C2088
 ms.date: 11/04/2016
 f1_keywords:
 - C2088
 helpviewer_keywords:
 - C2088
 ms.assetid: b93f7094-185b-423d-8bb9-507cd757dbf5
-ms.openlocfilehash: 6d53f2896fc3b964a4d2652b3bfd0dcebb4a7226
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f798774a7735a6aceb0bf75b3c6da9ccb1e4a72
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550777"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301978"
 ---
-# <a name="compiler-error-c2088"></a>コンパイラ エラー C2088
+# <a name="compiler-error-c2088"></a>コンパイラエラー C2088
 
-'operator': 'クラス キー' に対して正しくありません
+' operator ': ' class-key ' に対して無効です。
 
-演算子は、構造体または共用体が定義されていません。 このエラーは C コードのみです。
+演算子が構造体または共用体に対して定義されていません。 このエラーは、C コードに対してのみ有効です。
 
-次の例では、C2088 に 3 回が生成されます。
+次の例では、C2088 が3回生成されます。
 
-```
+```c
 // C2088.c
 struct S {
    int m_i;

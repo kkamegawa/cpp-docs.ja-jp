@@ -1,9 +1,9 @@
 ---
 title: imaxabs
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxabs
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666249"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954691"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -47,10 +50,10 @@ intmax_t imaxabs(
 
 ## <a name="return-value"></a>戻り値
 
-**Imaxabs**関数は引数の絶対値を返します。 エラーの戻り値はありません。
+**Imaxabs**関数は、引数の絶対値を返します。 エラーの戻り値はありません。
 
 > [!NOTE]
-> を使用して表すことができる負の整数の範囲**intmax_t**範囲よりも大きい、表すことができる正の整数の引数を指定することは**imaxabs**変換することはできません。 引数の絶対値を戻り値で表すことができない場合は入力の動作**imaxabs**が定義されていません。
+> **Intmax_t**を使用して表すことができる負の整数の範囲は、表すことができる正の整数の範囲より大きいため、変換できない**imaxabs**に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **imaxabs**の動作は未定義になります。
 
 ## <a name="requirements"></a>必要条件
 

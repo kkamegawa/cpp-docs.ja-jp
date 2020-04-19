@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
-ms.openlocfilehash: 27db194cb308d711a259127b628c60b4d10b94ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa276ea839f11574609b183d78b46e08581a1b51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458163"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743654"
 ---
 # <a name="compiler-error-c2477"></a>コンパイラ エラー C2477
 
-'member': 静的データ メンバーは派生クラスを使って初期化できません
+' member ': 静的データメンバーを派生クラスで初期化することはできません
 
-テンプレート クラスの静的データ メンバーが正しく初期化されていません。 これは、ISO C 標準に準拠するために Visual Studio .NET 2003 では、前に、Visual C コンパイラのバージョンと互換性に影響する変更です。
+テンプレートクラスの静的データメンバーが正しく初期化されませんでした。 これは、ISO C++ C++標準に準拠するために、Visual Studio .net 2003 より前のバージョンの Microsoft compiler では互換性に影響する変更点です。
 
 次の例では、C2477 が生成されます。
 
-```
+```cpp
 // C2477.cpp
 // compile with: /Za /c
 template <class T>

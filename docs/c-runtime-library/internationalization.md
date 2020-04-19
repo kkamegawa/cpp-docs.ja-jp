@@ -9,12 +9,12 @@ helpviewer_keywords:
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 32ac86804ac4701dfeca20fb03071198f0291f81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0066fe2b17425695cefc648acc7479172067e885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460490"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737986"
 ---
 # <a name="internationalization"></a>国際化
 
@@ -22,6 +22,6 @@ Microsoft ランタイム ライブラリには、さまざまなバージョン
 
 また、ISO646 演算子の代替も含まれます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2055
+title: コンパイラエラー C2055
 ms.date: 11/04/2016
 f1_keywords:
 - C2055
 helpviewer_keywords:
 - C2055
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
-ms.openlocfilehash: 3c198168b4445e619148e5611621fa3ddba95d6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb6e4d5891c5aefc9d66e7d70a5cd7685ccd393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597276"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302043"
 ---
-# <a name="compiler-error-c2055"></a>コンパイラ エラー C2055
+# <a name="compiler-error-c2055"></a>コンパイラエラー C2055
 
-型リストではなく、仮パラメーター リストが必要です。
+型リストではなく、仮パラメーターリストが必要です
 
-関数定義には、仮パラメーター リストではなく、パラメーターの型リストが含まれています。 ANSI C には、void または省略記号でない限り、名前を指定する正式なパラメーターが必要です。 (`...`)。
+関数定義に、仮パラメーターリストではなくパラメーター型リストが含まれています。 ANSI C では、パラメーターが void または省略記号 (`...`) でない限り、正式なパラメーターに名前を付ける必要があります。
 
 次の例では、C2055 が生成されます。
 
-```
+```c
 // C2055.c
 // compile with: /c
 void func(int, char) {}  // C2055

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4097
 ms.assetid: 2525be51-fac2-43b2-b57c-3bbf1a2268f7
-ms.openlocfilehash: d27e1d33db7a531d541bffdac015176de72077d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a96f7d7d70919410cb7291ed2784a41d244ff2b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472151"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627107"
 ---
 # <a name="compiler-warning-level-1-c4097"></a>コンパイラの警告 (レベル 1) C4097
 
@@ -21,7 +21,7 @@ ms.locfileid: "50472151"
 
 次の例では C4097 が生成されます。
 
-```
+```cpp
 // C4097.cpp
 // compile with: /W1
 #pragma runtime_checks("",test)   // C4097

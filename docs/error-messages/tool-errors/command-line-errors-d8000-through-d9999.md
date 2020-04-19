@@ -1,56 +1,43 @@
 ---
-title: コマンド ライン エラー D8000 から D9999
-ms.date: 11/17/2017
+title: コマンド ラインのエラーと警告
+ms.date: 04/17/2019
 ms.assetid: d02ec7df-26a5-4198-ac92-87b29ec9d5c8
-ms.openlocfilehash: f808db4ab42098b6b9cdba466f5e07128581b0a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5cd53a23c4f043715fa7e2372fb5c256337da20
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563021"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857345"
 ---
-# <a name="command-line-errors-d8000-through-d9999"></a>コマンド ライン エラー D8000 から D9999
+# <a name="command-line-errors-and-warnings"></a>コマンド ラインのエラーと警告
 
-このセクションの記事では、ビルド ツールによって生成されたコマンド ライン エラーへの参照を提供します。
+このセクションの記事では、コマンド ライン エラーおよびビルド ツールによって生成される警告への参照を提供します。 これらのメッセージがあるフォーム`Dxxxx`ここで、 *xxxx*は 4 桁の番号です。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="error-and-warning-messages"></a>エラーと警告メッセージ
+## <a name="command-line-error-messages"></a>コマンド ライン エラー メッセージ
 
-[コマンド ライン エラー D8016](../../error-messages/tool-errors/command-line-error-d8016.md)
-
-[コマンド ライン エラー D8021](../../error-messages/tool-errors/command-line-error-d8021.md)
-
-[コマンド ライン エラー D8022](../../error-messages/tool-errors/command-line-error-d8022.md)
-
-[コマンド ライン エラー D8027](../../error-messages/tool-errors/command-line-error-d8027.md)
-
-[コマンド ライン エラー D8036](../../error-messages/tool-errors/command-line-error-d8036.md)
-
-[コマンド ライン エラー D8037](../../error-messages/tool-errors/command-line-error-d8037.md)
-
+[コマンド ライン エラー D8016](../../error-messages/tool-errors/command-line-error-d8016.md) \
+[コマンド ライン エラー D8021](../../error-messages/tool-errors/command-line-error-d8021.md) \
+[コマンド ライン エラー D8022](../../error-messages/tool-errors/command-line-error-d8022.md) \
+[コマンド ライン エラー D8027](../../error-messages/tool-errors/command-line-error-d8027.md) \
+[コマンド ライン エラー D8036](../../error-messages/tool-errors/command-line-error-d8036.md) \
+[コマンド ライン エラー D8037](../../error-messages/tool-errors/command-line-error-d8037.md) \
 [コマンド ライン エラー D8045](../../error-messages/tool-errors/command-line-error-d8045.md)
 
-[コマンド ラインの警告 D9024](../../error-messages/tool-errors/command-line-warning-d9024.md)
+## <a name="command-line-warning-messages"></a>コマンドラインの警告メッセージ
 
-[コマンド ラインの警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md)
-
-[コマンド ラインの警告 D9026](../../error-messages/tool-errors/command-line-warning-d9026.md)
-
-[コマンド ラインの警告 D9027](../../error-messages/tool-errors/command-line-warning-d9027.md)
-
-[コマンド ラインの警告 D9028](../../error-messages/tool-errors/command-line-warning-d9028.md)
-
-[コマンド ラインの警告 D9035](../../error-messages/tool-errors/command-line-warning-d9035.md)
-
-[コマンド ラインの警告 D9036](../../error-messages/tool-errors/command-line-warning-d9036.md)
-
-[コマンド ラインの警告 D9040](../../error-messages/tool-errors/command-line-warning-d9040.md)
-
-[コマンド ラインの警告 D9041](../../error-messages/tool-errors/command-line-warning-d9041.md)
-
+[コマンドラインの警告 D9024](../../error-messages/tool-errors/command-line-warning-d9024.md) \
+[コマンドラインの警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md) \
+[コマンドラインの警告 D9026](../../error-messages/tool-errors/command-line-warning-d9026.md) \
+[コマンドラインの警告 D9027](../../error-messages/tool-errors/command-line-warning-d9027.md) \
+[コマンドラインの警告 D9028](../../error-messages/tool-errors/command-line-warning-d9028.md) \
+[コマンドラインの警告 D9035](../../error-messages/tool-errors/command-line-warning-d9035.md) \
+[コマンドラインの警告 D9036](../../error-messages/tool-errors/command-line-warning-d9036.md) \
+[コマンドラインの警告 D9040](../../error-messages/tool-errors/command-line-warning-d9040.md) \
+[コマンドラインの警告 D9041](../../error-messages/tool-errors/command-line-warning-d9041.md) \
 [コマンド ラインの警告 D9043](../../error-messages/tool-errors/command-line-warning-d9043.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ ビルド エラー](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)

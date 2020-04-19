@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4285
 ms.assetid: fa14de1f-fc19-4eec-8bea-81003636e12f
-ms.openlocfilehash: 96e1077ce3c9e60823a11aa41719738265ee703b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326b73dcf4665c442926e68995bace60300b6ebf
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535981"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052100"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>コンパイラの警告 (レベル 2) C4285
 
-戻り値の型の 'identifier::operator ->' は再帰挿入辞表記を使用して適用されている場合
+挿入辞表記を使用して適用された場合、' identifier:: operator-> ' の戻り値の型は再帰的です
 
-指定した**演算子**関数の型を返すことは定義されているかが定義されている型への参照。
+指定された**operator-> ()** 関数は、定義されている型、またはそれが定義されている型への参照を返すことができません。
 
 次の例では、C4285 が生成されます。
 
-```
+```cpp
 // C4285.cpp
 // compile with: /W2
 class C

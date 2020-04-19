@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592167"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448898"
 ---
 # <a name="gslice-class"></a>gslice クラス
 
@@ -25,13 +25,13 @@ valarray の多次元のサブセットを定義するのに使用する、値�
 
 ## <a name="remarks"></a>Remarks
 
-このクラスには、[gslice_array](../standard-library/gslice-array-class.md) 型のオブジェクトの特性を示すパラメーターが格納されます。 クラス gslice のオブジェクトがクラス [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** のオブジェクトの引数として現れる場合、valarray のサブセットは間接的に構築されます。 親の valarray から選択したサブセットを指定する格納値には、以下が含まれています。
+このクラスには、[gslice_array](../standard-library/gslice-array-class.md) 型のオブジェクトの特性を示すパラメーターが格納されます。 クラス gslice のオブジェクトがクラス [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** のオブジェクトの引数として現れる場合、valarray のサブセットは間接的に構築されます。 親の valarray から選択したサブセットを指定する格納値には、以下が含まれています。
 
 - 開始インデックス。
 
-- クラスの長さベクター`valarray<size_t>`します。
+- クラス`valarray<size_t>`の長さベクター。
 
-- クラスのストライド ベクター`valarray<size_t>`します。
+- クラス`valarray<size_t>`のストライドベクター。
 
 これら 2 つのベクターは同じ長さにする必要があります。
 
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>パラメーター
 
-*_StartIndex*<br/>
+*StartIndex (_l)* \
 サブセットの最初の要素の valarray インデックス。
 
-*_LenArray*<br/>
+*_LenArray*\
 各スライスに要素の数を指定する配列。
 
-*_IncArray*<br/>
+*この配列 (_l)* \
 各スライスにストライドを指定する配列。
 
 ### <a name="return-value"></a>戻り値
 
-既定のコンストラクターは、開始インデックスに対してゼロを格納し、長さおよびストライド ベクターに対して長さゼロのベクターを格納します。 2 番目のコンス トラクター ストア *_StartIndex* 、開始インデックスの *_LenArray*の長さの配列と *_IncArray*ストライド配列に対して。
+既定のコンストラクターは、開始インデックスに対してゼロを格納し、長さおよびストライド ベクターに対して長さゼロのベクターを格納します。 2番目のコンストラクターは、開始インデックスの場合は*StartIndex* 、長さ配列の場合は *_LenArray* 、stride*配列の場合*は値を格納します。
 
 ### <a name="remarks"></a>Remarks
 
-**gslice** は、すべて指定された要素で始まる valarray の複数のスライスで構成される valarray のサブセットを定義します。 `gslice` と [slice::slice](../standard-library/slice-class.md#slice) の唯一の違いは、複数のスライスを定義する配列を使用する機能です。 最初のスライスが最初の要素のインデックスを使用して *_StartIndex*、要素の最初の要素で指定された数だけ *_LenArray*との最初の要素で指定されたストライド *_IncArray*. 次の一連の直交スライスのセットには、最初のスライスで指定された最初の要素が含まれます。 2 番目の要素の *_LenArray*要素の数を指定します。 Stride の 2 番目の要素である *_IncArray*します。 スライスの 3 番目のディメンションは開始要素として、2 次元配列の要素を取得し、同様に続行します。
+**gslice** は、すべて指定された要素で始まる valarray の複数のスライスで構成される valarray のサブセットを定義します。 `gslice` と [slice::slice](../standard-library/slice-class.md#slice) の唯一の違いは、複数のスライスを定義する配列を使用する機能です。 最初のスライスには、*最初の要素*が含まれてい*ます。これ*には、 *_LenArray*の最初の要素によって指定された数の要素と、1番目の要素の最初の要素によって指定された stride があります。 次の一連の直交スライスのセットには、最初のスライスで指定された最初の要素が含まれます。 *_LenArray*の2番目の要素は、要素の数を指定します。 Stride は、要素*配列*の2番目の要素によって指定されます。 スライスの 3 番目のディメンションは開始要素として、2 次元配列の要素を取得し、同様に続行します。
 
 ### <a name="example"></a>例
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

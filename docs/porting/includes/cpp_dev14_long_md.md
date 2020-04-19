@@ -1,1 +1,0 @@
-Visual Studio 2015 の Visual C++

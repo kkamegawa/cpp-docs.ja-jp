@@ -1,9 +1,9 @@
 ---
 title: terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438638"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946196"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-呼び出し[中止](abort.md)を使用してを指定した関数または**set_terminate**します。
+**Set_terminate**を使用して、 [abort](abort.md)または指定した関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +44,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Remarks
 
-**終了**関数は、C++ 例外処理で使用されは、次の場合に呼び出されます。
+**Terminate**関数は例外処理でC++使用され、次の場合に呼び出されます。
 
 - スローされた C++ 例外と一致する catch ハンドラーが見つからない。
 
@@ -49,7 +52,7 @@ void terminate( void );
 
 - 例外をスローした後でスタックが破損した。
 
-**終了**呼び出し[中止](abort.md)既定。 この既定の設定を変更するには、独自の終了関数を作成し、呼び出すことによって**set_terminate**引数として関数の名前に置き換えます。 **終了**への引数として渡された最後関数を呼び出す**set_terminate**します。 詳細については、「[Unhandled C++ Exceptions](../../cpp/unhandled-cpp-exceptions.md)」(ハンドルされない C++ 例外) を参照してください。
+**terminate**呼び出しは、既定で[中止](abort.md)されます。 独自の終了関数を記述し、関数の名前を引数として使用して**set_terminate**を呼び出すことで、この既定値を変更できます。 **terminate** **set_terminate**の引数として指定された最後の関数を呼び出します。 詳細については、「[Unhandled C++ Exceptions](../../cpp/unhandled-cpp-exceptions.md)」(ハンドルされない C++ 例外) を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

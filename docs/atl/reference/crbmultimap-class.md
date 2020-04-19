@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278138"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap クラス
 
@@ -114,7 +114,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 デストラクターです。
 
@@ -234,7 +234,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 *key*<br/>
 追加するキー値、`CRBMultiMap`オブジェクト。
 
-*値*<br/>
+*value*<br/>
 追加する値、`CRBMultiMap`オブジェクトに関連付けられている*キー*します。
 
 ### <a name="return-value"></a>戻り値

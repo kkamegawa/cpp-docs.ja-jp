@@ -1,11 +1,11 @@
----
+﻿---
 title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - tgamma
 - tgammaf
 - tgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tgamma
 - tgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518946"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946208"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -72,27 +75,27 @@ long double tgammal(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合のガンマを返します*x*します。
+成功した場合は、 *x*のガンマを返します。
 
-場合に、範囲エラーが発生する可能性がありますの大きさ*x*が大きすぎるか小さすぎるため、データ型。 場合に、ドメイン エラーまたは範囲エラーが発生する*x* < = 0。
+*X*の大きさがデータ型に対して大きすぎるか小さすぎる場合、範囲エラーが発生することがあります。 *X* < = 0 の場合は、ドメインエラーまたは範囲エラーが発生する可能性があります。
 
-|懸案事項|Return|
+|問題|Return|
 |-----------|------------|
-|x = ±0|±INFINITY|
+|x = ±0|±無限大|
 |x = 負の整数|NaN|
-|x-= INFINITY|NaN|
+|x =-無限大|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |ドメイン エラー|NaN|
-|極エラー|±HUGE_VAL、±HUGE_VALF、または ±HUGE_VALL|
-|オーバーフロー範囲エラー|±HUGE_VAL、±HUGE_VALF、または ±HUGE_VALL|
+|極エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
+|オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**長い** **二重**型。 C プログラムで**tgamma**は、**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**long** **double**型。 C プログラムでは、 **tgamma**は常に**double**を取得し、double を返します。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
 

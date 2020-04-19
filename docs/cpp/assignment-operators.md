@@ -1,6 +1,6 @@
 ---
 title: 代入演算子
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184388"
 ---
 # <a name="assignment-operators"></a>代入演算子
 
 ## <a name="syntax"></a>構文
 
-*式**代入演算子**式*
+*expression* *assignment-operator* *expression*
 
 *代入演算子*: のいずれか<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
@@ -57,7 +57,7 @@ ms.locfileid: "51328475"
 
 次の表の代入演算子は、= 演算子を除いて、すべてが複合代入演算子です。
 
-### <a name="assignment-operators"></a>代入演算子
+### <a name="assignment-operators-table"></a>代入演算子の表
 
 |演算子|説明|
 |--------------|-------------|
@@ -73,7 +73,7 @@ ms.locfileid: "51328475"
 |**^=**|1 番目と 2 番目のオペランドのビットごとの排他的 OR を取得します。結果を 1 番目のオペランドで指定されたオブジェクトに格納します。|
 |**\|=**|1 番目と 2 番目のオペランドのビットごとの包括的 OR を取得します。結果を 1 番目のオペランドで指定されたオブジェクトに格納します。|
 
-**演算子のキーワード**
+### <a name="operator-keywords"></a>演算子のキーワード
 
 複合代入演算子の 3 つには、相当するテキスト表記があります。 それらは次のとおりです。
 
@@ -111,13 +111,13 @@ int main() {
 
 ## <a name="simple-assignment"></a>単純代入
 
-単純な代入演算子 (**=**) により、最初のオペランドで指定されたオブジェクトに格納される 2 番目のオペランドの値。 両方のオブジェクトが数値型である場合、値を保存する前に、右側のオペランドが左側の型に変換されます。
+単純な代入演算子 ( **=** ) により、最初のオペランドで指定されたオブジェクトに格納される 2 番目のオペランドの値。 両方のオブジェクトが数値型である場合、値を保存する前に、右側のオペランドが左側の型に変換されます。
 
-オブジェクトの**const**と**揮発性**型を割り当てるだけである型の左辺値に**揮発性**またはのどちらでもない**const**も**揮発性**します。
+オブジェクトの**const**と**volatile**型を割り当てるだけである型の左辺値に**volatile**またはのどちらでもない**const**も**volatile**します。
 
-クラス型 (構造体、共用体、およびクラスの型) のオブジェクトへの割り当てという名前の関数によって実行されます`operator=`します。 この演算子関数の既定の動作は、ビットごとのコピーです。ただしこの動作は、オーバーロードした演算子により変更できます  参照してください[演算子のオーバー ロード](../cpp/operator-overloading.md)詳細についてはします。 さらに、クラス型を持つことができます*コピー割り当て*と*移動の代入*演算子。 詳細については、次を参照してください。[コピー コンス トラクターとコピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)と[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)します。
+クラス型 (構造体、共用体、およびクラスの型) のオブジェクトへの割り当てという名前の関数によって実行されます`operator=`します。 この演算子関数の既定の動作は、ビットごとのコピーです。ただしこの動作は、オーバーロードした演算子により変更できます 参照してください[演算子のオーバー ロード](../cpp/operator-overloading.md)詳細についてはします。 さらに、クラス型を持つことができます*コピー割り当て*と*移動の代入*演算子。 詳細については、次を参照してください。[コピー コンス トラクターとコピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)と[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)します。
 
-特定の基底クラスからの任意の明確な派生クラスのオブジェクトは、その基底クラスのオブジェクトに代入できます。 派生クラスから基底クラスへの暗黙の変換は存在しますが、基底クラスから派生クラスへの暗黙の変換は存在しないため、逆は当てはまりません。 例えば:
+特定の基底クラスからの任意の明確な派生クラスのオブジェクトは、その基底クラスのオブジェクトに代入できます。 派生クラスから基底クラスへの暗黙の変換は存在しますが、基底クラスから派生クラスへの暗黙の変換は存在しないため、逆は当てはまりません。 例:
 
 ```cpp
 // expre_SimpleAssignment.cpp
@@ -180,7 +180,7 @@ B = A;
 
 ## <a name="compound-assignment"></a>複合代入。
 
-複合代入演算子での表に示した[代入演算子](#assignment-operators)、フォームで指定された*e1* *op*= *e2*ここで、 *e1*のない変更可能な左辺値は、 **const**型と*e2*は、次のいずれか。
+複合代入演算子に示すように、[代入演算子の表](#assignment-operators-table)、フォームで指定された*e1* *op*= *e2*ここで、 *e1*のない変更可能な左辺値は、 **const**型と*e2*は、次のいずれか。
 
 - 数値型
 

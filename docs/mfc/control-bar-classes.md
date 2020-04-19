@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
-ms.openlocfilehash: 3584b24f9cc83c79ce382f02eaee4670490e608a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3426d84eab888a6fe78b663945776fff2fe708dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301956"
 ---
 # <a name="control-bar-classes"></a>コントロール バー クラス
 
@@ -60,4 +60,3 @@ Windows ツール バー コモン コントロールの機能が用意されて
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

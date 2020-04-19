@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2881
 ms.assetid: b49c63c2-b064-4d4b-a75e-ddd2af947522
-ms.openlocfilehash: 82a4fbe94bc7250244d57f549e52037d6a54c784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c171fd529943bb07a6c512e4ac97f64f13f959d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610523"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736283"
 ---
 # <a name="compiler-error-c2881"></a>コンパイラ エラー C2881
 
-'namespace1': 'namespace2' のエイリアスとして既に使用されます
+' 名前空間 ': ' 名前空間内 ' の別名として既に使用されています
 
-同じ名前は、2 つの名前空間のエイリアスとして使用できません。
+2つの名前空間の別名と同じ名前を使用することはできません。
 
 次の例では、C2881 が生成されます。
 
-```
+```cpp
 // C2881.cpp
 // compile with: /c
 namespace A {

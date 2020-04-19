@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ Interop を使用して Unicode 文字列をマーシャリングする'
+title: '方法: C++ Interop を使用して Unicode 文字列をマーシャ リング'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f08ea9d6eb879aa3b07ac0ff983637236368a11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400553"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>方法: C++ Interop を使用して Unicode 文字列をマーシャリングする
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>方法: C++ Interop を使用して Unicode 文字列をマーシャ リング
 
 このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "50507784"
 
 ## <a name="example"></a>例
 
-Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
+Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
 
 ```
 // MarshalUnicode1.cpp

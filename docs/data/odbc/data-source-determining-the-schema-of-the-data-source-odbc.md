@@ -1,19 +1,19 @@
 ---
-title: 'データ ソース : データ ソースのスキーマの判定 (ODBC)'
+title: データ ソース:データ ソース (ODBC) のスキーマを決定します。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], schema
 - schemas [C++], data sources
 - data sources [C++], determining schema
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
-ms.openlocfilehash: ed6500c5718cf90b39600b12659a3090fe9532ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c419a3ac2d870e6a85675492ee6c9b726427a0e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395977"
 ---
-# <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>データ ソース : データ ソースのスキーマの判定 (ODBC)
+# <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>データ ソース:データ ソース (ODBC) のスキーマを決定します。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -22,4 +22,4 @@ ms.locfileid: "50580763"
 ## <a name="see-also"></a>関連項目
 
 [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+[データ ソース: 接続の管理 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

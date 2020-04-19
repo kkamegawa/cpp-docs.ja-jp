@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
-ms.openlocfilehash: b8b6a7bfd5b44e0ddd1e8dfba1a054d9645a4693
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1630def4fb2b22c948b3a33b081227d91351bf35
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438754"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756826"
 ---
 # <a name="compiler-error-c3095"></a>コンパイラ エラー C3095
 
@@ -19,13 +19,13 @@ ms.locfileid: "50438754"
 
 複数回出現する属性がターゲットに適用されないように、いくつかの属性が宣言されます。
 
-詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3095 が生成されます。
 
-```
+```cpp
 // C3095.cpp
 // compile with: /clr /c
 using namespace System;

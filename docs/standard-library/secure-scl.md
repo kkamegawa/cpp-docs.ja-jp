@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
-ms.openlocfilehash: dcfaee2906136dffbe79a49f089a079104112e78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1af084363fc0d6d1723a9af7b633779f92ed2b38
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559160"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450539"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) に置き換えられています。このマクロは、[チェックを行う反復子](../standard-library/checked-iterators.md)を有効にするかどうかを定義します。 既定では、チェックを行う反復子はデバッグ ビルドで有効になっており、製品版ビルドで無効になっています。
 
 > [!IMPORTANT]
-> _SECURE_SCL マクロの直接的な使用は非推奨とされます。 代わりに、コントロールを使用して _ITERATOR_DEBUG_LEVEL は反復子の設定を確認します。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
+> _SECURE_SCL マクロの直接使用は非推奨とされます。 代わりに、チェックを行う反復子の設定を制御するには、[レベル] を使用します。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-チェックを行う反復子が有効になっている場合、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 Checked 反復子を有効にするには、1 または 2 に _ITERATOR_DEBUG_LEVEL を設定します。 これは、1 の _SECURE_SCL 設定に相当または有効になっています。
+チェックを行う反復子が有効になっている場合、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 チェックを行う反復子を有効にするには、[レベル] を1または2に設定します。 これは、_SECURE_SCL 設定1または enabled に相当します。
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-Checked 反復子を無効にするには、_ITERATOR_DEBUG_LEVEL を 0 に設定します。 これは 0、_SECURE_SCL 設定に相当または無効になっています。
+チェックを行う反復子を無効にするには、[レベル] を0に設定します。 これは、0または disabled の _SECURE_SCL 設定に相当します。
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0
@@ -38,7 +38,7 @@ Checked 反復子を無効にするには、_ITERATOR_DEBUG_LEVEL を 0 に設�
 
 ## <a name="see-also"></a>関連項目
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
-[Checked Iterators](../standard-library/checked-iterators.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)\
+[チェックを行う反復子](../standard-library/checked-iterators.md)\
+[反復子のデバッグのサポート](../standard-library/debug-iterator-support.md)\
+[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)

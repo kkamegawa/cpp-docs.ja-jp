@@ -1,6 +1,6 @@
 ---
-title: function (C/C++)
-ms.date: 11/04/2016
+title: function プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: 1c8c250e3ea28d56aec837f5c3353c3bb6515442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611459"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220142"
 ---
-# <a name="function-cc"></a>function (C/C++)
-このプラグマの引数リストで指定された関数を呼び出します。
+# <a name="function-pragma"></a>function プラグマ
+
+プラグマの引数リストで指定された関数をインライン展開するのではなく、その関数の呼び出しを生成するようコンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **#pragma 関数 (** *function1* [ **,** *function2* ...] **)**
 
 ## <a name="remarks"></a>Remarks
 
-使用する場合、`intrinsic`プラグマ (または/Oi) 使用することができます (組み込み関数は、関数呼び出しとしてではなく、インライン コードとして生成されます) の組み込み関数を生成するコンパイラを指示する、**関数**プラグマを明示的に適用します。関数呼び出し。 コンパイラが function プラグマを検出した後、組み込み関数を含む最初の関数定義に達した時点でそのプラグマが有効になります。 ソース ファイルの末尾に、またはの外観に影響が引き続き、`intrinsic`プラグマと同じ組み込み関数を指定します。 **関数**プラグマは関数の外側でのみ使用できます: グローバル レベル。
+組み込み関数は、通常、関数呼び出しとしてではなく、インラインコードとして生成されます。 組み込みの[プラグマ](intrinsic.md)または[/Oi](../build/reference/oi-generate-intrinsic-functions.md)コンパイラオプションを使用して、組み込み関数を生成するようにコンパイラに指示した場合は、**関数**プラグマを使用して明示的に関数呼び出しを強制することができます。 **関数**プラグマが検出されると、指定された組み込み関数を含む最初の関数定義で有効になります。 効果は、ソースファイルの末尾、または同じ組み込み関数を指定する`intrinsic`プラグマの外観に続きます。 **関数**プラグマは、関数の外部でグローバルレベルでのみ使用できます。
 
-組み込み形式を持つ関数の一覧は、次を参照してください。 [#pragma intrinsic](../preprocessor/intrinsic.md)します。
+組み込みフォームを持つ関数の一覧については、「[組み込みプラグマ](intrinsic.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -84,4 +83,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

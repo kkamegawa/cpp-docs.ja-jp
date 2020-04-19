@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2947
 ms.assetid: 6c056f62-ec90-4883-8a67-aeeb6ec13546
-ms.openlocfilehash: 3738c257192134eedb8554b0d875023862441416
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7056c13edca534701ffe82f0169897ea804f40d7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566760"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755357"
 ---
 # <a name="compiler-error-c2947"></a>コンパイラ エラー C2947
 
-指定してください ' >' をコンストラクトを終了するには、'構文' が見つかりません
+コンストラクターを終了するために ' > ' が必要ですが、' 構文 ' が見つかりました
 
-ジェネリックまたはテンプレートの引数リストが正しく終了がない可能性があります。
+ジェネリックまたはテンプレートの引数リストが正しく終了していない可能性があります。
 
-構文エラー C2947 を生成こともできます。
+C2947 は、構文エラーによって生成されることもあります。
 
 次の例では、C2947 が生成されます。
 
-```
+```cpp
 // C2947.cpp
 // compile with: /c
 template <typename T>=   // C2947

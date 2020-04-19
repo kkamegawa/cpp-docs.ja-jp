@@ -2,14 +2,14 @@
 title: /APPCONTAINER (UWP/Microsoft Store アプリ)
 ms.date: 11/04/2016
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-ms.openlocfilehash: 306ffc7cda7cc6045b5decd6824fdc3848233824
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ab8cf1ce034580953fdf1403264e8ef3d3ff09
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295119"
 ---
-# <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (Microsoft Store アプリ)
+# <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (Microsoft Store App)
 
 リンカーがアプリ コンテナーで実行される必要がある実行可能イメージを生成するかどうかを指定します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "50541324"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -41,5 +41,5 @@ ms.locfileid: "50541324"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

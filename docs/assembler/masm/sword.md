@@ -1,27 +1,28 @@
 ---
 title: SWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SWORD
 helpviewer_keywords:
 - SWORD directive
 ms.assetid: 99228a2a-4ed1-4343-a317-e59302620a55
-ms.openlocfilehash: 6209cab0de471a673d97daaeb9de42f9a1f6e2df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc34061a14b41220252bbb75537d2ccefa601afe
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522383"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318398"
 ---
 # <a name="sword"></a>SWORD
 
-割り当て、必要に応じて、各記憶域の符号付きの word (2 バイト) を初期化します`initializer`します。 型指定子としても使用できる型が有効な任意の場所。
+各*初期化子*について、署名された単語 (2 バイト) を割り当てて、必要に応じて初期化します。 型が有効である任意の場所で、型指定子として使用することもできます。
 
 ## <a name="syntax"></a>構文
 
-> 名前の剣初期化子 [] の初期化子].
+> *名前***ソード***初期化子*⟦ __、__ *初期化子*...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[WORD](../../assembler/masm/word.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[WORD](word.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

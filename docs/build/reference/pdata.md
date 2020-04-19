@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /PDATA dumpbin option
 - -PDATA dumpbin option
 ms.assetid: 5d41d629-6576-4733-b103-0d61e6b77b50
-ms.openlocfilehash: ce9fae2065101be6e418a10365c4ba4cd158ec94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd763abf7b2a08e6aa54ba37cb451f1ec0f6cef7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320059"
 ---
 # <a name="pdata"></a>/PDATA
 
@@ -27,8 +27,8 @@ RISC プロセッサだけです。
 
 このオプションは、例外テーブル (.pdata) イメージまたはオブジェクトをダンプします。
 
-のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+[DUMPBIN オプション](dumpbin-options.md)

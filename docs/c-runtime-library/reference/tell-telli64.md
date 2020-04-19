@@ -1,10 +1,10 @@
 ---
 title: _tell、_telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660149"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946256"
 ---
-# <a name="tell-telli64"></a>_tell、_telli64
+# <a name="_tell-_telli64"></a>_tell、_telli64
 
 ファイル ポインターの位置を取得します。
 
@@ -61,19 +64,19 @@ __int64 _telli64(
 
 ファイル ポインターの現在の位置。 シーク非対応のデバイスでは、戻り値は未定義です。
 
--1 L の戻り値は、エラーを示します。 場合*処理*は、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EBADF** -1 L を返します。
+戻り値-1L はエラーを示します。 *Handle*が無効なファイル記述子の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EBADF**に設定し、-1l を返します。
 
 戻り値の詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Tell**関数に関連付けられたファイル ポインター (存在する場合) の現在位置を取得、*処理*引数。 位置は、ファイルの先頭からのバイト数で表されます。 **_Telli64**関数では、この値は 64 ビット整数として表されます。
+この**関数は、** *handle*引数に関連付けられているファイルポインターの現在位置 (存在する場合) を取得します。 位置は、ファイルの先頭からのバイト数で表されます。 **_Telli64**関数の場合、この値は64ビットの整数として表されます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_tell**、 **_telli64**|\<io.h>|
+|**_telli64** 、|\<io.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -110,14 +113,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>入力: crt_tell.txt
+### <a name="input-crt_telltxt"></a>入力: crt_tell.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Current file position is: 20

@@ -7,12 +7,12 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653389"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454288"
 ---
 # <a name="durationvalues-structure"></a>duration_values 構造体
 
@@ -32,7 +32,7 @@ struct duration_values;
 |名前|説明|
 |----------|-----------------|
 |[max](#max)|静的。 `Rep` 型の値の上限を指定します。|
-|[分](#min)|静的。 `Rep` 型の値の下限を指定します。|
+|[min](#min)|静的。 `Rep` 型の値の下限を指定します。|
 |[zero](#zero)|静的。 `Rep(0)` を返します。|
 
 ## <a name="requirements"></a>必要条件
@@ -87,5 +87,5 @@ static constexpr Rep zero();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

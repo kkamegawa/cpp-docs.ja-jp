@@ -1,6 +1,6 @@
----
+﻿---
 title: '例外処理のタイミング: 概要'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477429"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246330"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外処理のタイミング: 概要
 
-終了ハンドラーの実行方法に関係なく **_ _try**ステートメント ブロックが終了します。 原因としてからのジャンプ、 **_ _try**ブロック、`longjmp`ステートメント ブロック、および例外処理によるスタックのアンワインドから制御を転送します。
+**__Try**ステートメントブロックの終了方法に関係なく、終了ハンドラーが実行されます。 **__Try**ブロックからのジャンプ、ブロックの外部で制御を転送する `longjmp` ステートメント、例外処理によるスタックのアンワインドなどが発生します。
 
 > [!NOTE]
->  Visual C++ は、`setjmp` ステートメントと `longjmp` ステートメントの 2 つの形式をサポートします。 高速なバージョンは終了処理をバイパスしますが、より効率的です。 このバージョンを使用するファイルをインクルード\<setjmp.h >。 もう一方のバージョンは、前の段落で説明したような終了処理をサポートします。 このバージョンを使用するファイルをインクルード\<setjmpex.h >。 高速バージョンでパフォーマンスがどの程度向上するかは、ハードウェア構成によって異なります。
+>  Microsoft C++コンパイラでは、2つの形式の `setjmp` と `longjmp` ステートメントがサポートされています。 高速なバージョンは終了処理をバイパスしますが、より効率的です。 このバージョンを使用するには、ファイル \<setjmp. h > を含めます。 もう一方のバージョンは、前の段落で説明したような終了処理をサポートします。 このバージョンを使用するには、ファイル \<setjmpex.h > を含めます。 高速バージョンでパフォーマンスがどの程度向上するかは、ハードウェア構成によって異なります。
 
 オペレーティング システムは、例外ハンドラー本体を含む他のあらゆるコードを実行する前に、適切な順序ですべての終了ハンドラーを実行します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "50477429"
 
 1. 制御がこのフィルターを通過する (フィルターが 0 を返す) と、制御が通過できないフィルターが見つかるまで処理が続行されます。
 
-1. このフィルターは、-1 を返す場合、例外が発生したし、終了を行わずに実行が続行されます。
+1. このフィルターが-1 を返した場合、例外が発生した場所で実行が続行され、終了は行われません。
 
 1. フィルターが 1 を返すと、次のイベントが発生します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "50477429"
 
    - この例外ハンドラーの末尾の後ろのコード行に制御が進みます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

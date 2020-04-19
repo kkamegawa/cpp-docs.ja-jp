@@ -1,4 +1,4 @@
----
+﻿---
 title: _variant_t 抽出
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,13 +49,13 @@ helpviewer_keywords:
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
 ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403335"
 ---
-# <a name="variantt-extractors"></a>_variant_t 抽出
+# <a name="_variant_t-extractors"></a>_variant_t 抽出
 
 **Microsoft 固有の仕様**
 
@@ -89,13 +89,13 @@ operator unsigned __int64() const;
 
 カプセル化されたから生データを抽出`VARIANT`します。 場合、`VARIANT`されませんが、適切な型に既に`VariantChangeType`変換を実行するために使用し、障害発生時にエラーが生成されます。
 
-- **operator short ()** 抽出、**短い**整数値。
+- **operator short ()** 抽出、**short**整数値。
 
-- **operator long ()** 抽出、**長い**整数値。
+- **operator long ()** 抽出、**long**整数値。
 
 - **operator float ()** 抽出、 **float**数値を指定します。
 
-- **operator double ()** 抽出、**二重**整数値。
+- **operator double ()** 抽出、**double**整数値。
 
 - **operator CY ()** 抽出、`CY`オブジェクト。
 

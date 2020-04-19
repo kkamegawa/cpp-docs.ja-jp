@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2600 から C2699
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2600 - C2699)
+ms.date: 04/21/2019
 f1_keywords:
 - C2604
 - C2606
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2686
 - C2697
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
-ms.openlocfilehash: af173a04f9ae1e8a3ec4c9b3c869a4e51867cf1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac5f5724490574aecf0e5b542f6fdd42b0ae5bb
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518652"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857057"
 ---
-# <a name="compiler-errors-c2600-through-c2699"></a>コンパイラ エラー C2600 から C2699
+# <a name="compiler-errors-c2600-through-c2699"></a>コンパイラ エラー (C2600 - C2699)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -72,8 +72,8 @@ ms.locfileid: "50518652"
 |[コンパイラ エラー C2600](compiler-error-c2600.md)|'*関数*': (する必要があります最初に宣言されなければクラスの) コンパイラによって生成された特殊なメンバー関数を定義することはできません|
 |[コンパイラ エラー C2601](compiler-error-c2601.md)|'*関数*': ローカル関数の定義が正しくありません|
 |[コンパイラ エラー C2602](compiler-error-c2602.md)|'*クラス*::*識別子*'が、基本クラスのメンバーではない'*クラス*'|
-|[コンパイラ エラー C2603](compiler-error-c2603.md)|'*関数*': 関数内のコンス トラクター/デストラクターにブロック スコープスタティック オブジェクトが多すぎます|
-|コンパイラ エラー C2604|'*識別子*': 1 つ以上のインターフェイス メソッドを実装することはできません|
+|[コンパイラ エラー C2603](compiler-error-c2603.md)|'*関数*'。関数内のコンス トラクター/デストラクターにブロック スコープスタティック オブジェクトが多すぎます|
+|コンパイラ エラー C2604|'*識別子*'。1 つ以上のインターフェイス メソッドを実装することはできません。|
 |[コンパイラ エラー C2605](compiler-error-c2605.md)|'*識別子*': このメソッドがマネージまたは WinRT クラスで予約されています|
 |コンパイラ エラー C2606|'*class1*': 再実装できません'*メンバー*'ランタイムの基本から継承されているとは、'*class2*'。|
 |コンパイラ エラー C2607|静的なアサーションに失敗しました|
@@ -133,7 +133,7 @@ ms.locfileid: "50518652"
 |[コンパイラ エラー C2661](compiler-error-c2661.md)|'*関数*': オーバー ロードされた関数はありません*数*引数。|
 |[コンパイラ エラー C2662](compiler-error-c2662.md)|'*関数*': から 'this' ポインターを変換できません'*type1*'to'*type2*'|
 |[コンパイラ エラー C2663](compiler-error-c2663.md)|'*関数*':*数*オーバー ロードである、'this' ポインターの法的な変換はありません|
-|[コンパイラ エラー C2664](compiler-error-c2664.md)|'*関数*': 引数を変換できません*数*から'*type1*'to'*type2*'|
+|[コンパイラ エラー c2664 を生成](compiler-error-c2664.md)|'*関数*': 引数を変換できません*数*から'*type1*'to'*type2*'|
 |[コンパイラ エラー C2665](compiler-error-c2665.md)|'*関数*': のいずれも、*数*オーバー ロードは、すべての引数の型を変換でした|
 |[コンパイラ エラー C2666](compiler-error-c2666.md)|'*関数*':*数*オーバー ロードがある同様の変換|
 |[コンパイラ エラー C2667](compiler-error-c2667.md)|'*関数*': のいずれも*数*オーバー ロードがある最適な変換|
@@ -168,3 +168,8 @@ ms.locfileid: "50518652"
 |[コンパイラ エラー C2696](compiler-error-c2696.md)|マネージまたは WinRT 型の一時オブジェクトを作成することはできません '*型*'|
 |コンパイラ エラー C2697|互換性のために残されています。|
 |[コンパイラ エラー C2698](compiler-error-c2698.md)|使用して、宣言には、'*declaration1*'と共存できません既存を使用して、宣言には、'*declaration2*'。|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

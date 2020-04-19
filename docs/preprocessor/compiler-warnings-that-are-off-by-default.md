@@ -1,173 +1,180 @@
 ---
 title: 既定で無効になっているコンパイラ警告
-ms.date: 05/30/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651374"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712671"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
-コンパイラには、ほとんどの開発者は、それらを表示したくありませんので、既定でオフになっている警告が含まれます。 場合によっては、古いコードは、一般的なイディオムにあるまたは言語から、Microsoft 拡張機能の利用、スタイル上の選択肢を表現します。 それ以外の場合でプログラマは予期されない、または未定義の動作につながる可能性がありますが、誤った仮定で動作を行う多くの場合、領域を示します。 これらの警告の一部は、ライブラリのヘッダーで非常にノイズの多い可能性があります。 C ランタイム ライブラリと C++ 標準ライブラリは、警告レベルでのみ警告を発するありません[/W4](../build/reference/compiler-option-warning-level.md)します。
+# <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラ警告
 
-## <a name="enable-warnings-that-are-off-by-default"></a>既定で無効になっている警告を有効にします。
+コンパイラは、既定では無効になっている警告をサポートしています。これは、ほとんどの開発者がそれを見つけることができないためです。 場合によっては、スタイルが選択されたこと、または古いコードの共通表現について警告することがあります。 その他の警告は、言語に対する Microsoft 拡張機能の使用に関するものです。 一部の警告は、プログラマが誤った想定を行う可能性がある領域を示しています。これは、予期しない動作や未定義の動作につながる可能性があります。 これらの警告がすべて有効になっている場合は、ライブラリヘッダーに何度も表示されることがあります。 C ランタイムライブラリとC++標準ライブラリは、警告レベルの[/W4](../build/reference/compiler-option-warning-level.md)でのみ警告を出力することを目的としています。
 
-無効になっている通常既定では、次のオプションのいずれかを使用して警告を有効にできます。
+## <a name="enable-warnings-that-are-off-by-default"></a>既定でオフになっている警告を有効にする
 
-- **#pragma 警告 (既定:** *warning_number* **)**
+次のいずれかのオプションを使用して、通常は既定でオフになっている警告を有効にすることができます。
 
-   指定の警告 (*warning_number*) が既定のレベルで有効になっています。 警告に関するドキュメントには、既定のレベルの警告が記載されています。
+- **#pragma warning (既定値:** *warning_number* **)**
+
+   指定された警告 (*warning_number*) は、既定のレベルで有効になっています。 警告に関するドキュメントには、既定のレベルの警告が記載されています。
 
 - **#pragma warning(** *warning_level* **:** *warning_number* **)**
 
-   指定の警告 (*warning_number*) は、指定されたレベルで有効になっている (*warning_level*)。
+   指定された警告 (*warning_number*) は、指定されたレベル (*warning_level*) で有効になっています。
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` は既定では無効のすべての警告を有効にします。 使用して個々 の警告をオフにすることができます、このオプションを使用する場合、 [/wd](../build/reference/compiler-option-warning-level.md)オプション。
+   `/Wall` は既定では無効のすべての警告を有効にします。 このオプションを使用する場合は、 [/wd](../build/reference/compiler-option-warning-level.md)オプションを使用して個々の警告をオフにすることができます。
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   これにより、警告*nnnn*レベル*L*します。
+   このオプションを選択すると、レベル*L*で警告*nnnn*が有効になります。
 
-## <a name="warnings-that-are-off-by-default"></a>既定で無効になっている警告
+## <a name="warnings-that-are-off-by-default"></a>既定でオフになっている警告
 
-次の警告は、Visual Studio 2015 以降で既定でオフには。
+Visual Studio 2015 以降のバージョンでは、次の警告が既定で無効になっています。
 
 |||
 |-|-|
-|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (レベル 4)|列挙子 '*識別子*列挙型のスイッチ' で'*列挙*' case ラベルによって明示的に処理されません。|
-|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (レベル 4)|列挙子 '*識別子*列挙型のスイッチ' で'*列挙*' はハンドルされません|
-|C4191 (レベル 3)|'*演算子*': 安全でない変換から'*type_of_expression*'to'*type_required*'|
-|[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (レベル 4)|'*識別子*': から変換'*type1*'to'*type2*'、データ損失の可能性|
-|[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (レベル 4)|'*演算子*': から変換'*type1*'to'*type2*'、データ損失の可能性|
-|[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (レベル 4)|'*関数*': 関数プロトタイプがありません: '()' を '(void)' に変換します。|
-|[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md) (レベル 4)|'*関数*': メンバー関数はどの基底クラス仮想メンバー関数をオーバーライドしません|
-|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) (レベル 1)|'*virtual_function*': ベースからの仮想メンバー関数用のオーバーライドはありません'*クラス*'; 関数が非表示|
-|[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) (レベル 3)|'*クラス*': クラスは仮想関数を含んでいますが、デストラクターが仮想ではありません。|
-|[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md) (レベル 4)|'*関数*': ベースからの仮想メンバー関数用のオーバーライドはありません'*型*'; 関数が非表示|
-|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) (レベル 3)|'*演算子*': 符号なし/負の定数が一致しません|
-|[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md) (レベル 4)|標準の拡張機能を使用します '*var*': for ループで宣言したループ コントロール変数が for ループ スコープの外側で使用。|
-|[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md) (レベル 4)|'*演算子*': 式は常に false|
-|[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md) (レベル 4)|'*型*': 未定義の型の使用が CLR meta-data で検出されましたこの型を使用して、ランタイム例外が生じる|
-|[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md) (レベル 1)|動作変更: '*関数*' 呼び出されると、メンバー演算子が以前のバージョンで呼び出されましたが、|
-|[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md) (レベル 1)|動作変更: '*member1*'の代わりに呼び出す'*member2*'|
+|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md)(レベル 4)|列挙型 '*enumeration*' のスイッチ内の列挙子 '*identifier*' は、case ラベルによって明示的に処理されていません|
+|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md)(レベル 4)|列挙型 '*enumeration*' のスイッチ内の列挙子 '*identifier*' は処理されません|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md)(レベル 1) | ' HRESULT ' は ' bool ' に変換されています。これは必要なものですか? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md)(レベル 3)|'*operator*': '*type_of_expression*' から '*type_required*' への安全でない変換です。|
+|[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)(レベル 4)|'*identifier*': ' type1 *' から '* *type1*' への変換です。データが失われる可能性があります。|
+|[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)(レベル 4)|'*operator*': ' type1 *' から '* *type1*' への変換です。データが失われる可能性があります。|
+|[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)(レベル 4)|'*function*': 関数プロトタイプが指定されていません: ' () ' を ' (void) ' に変換しています|
+|[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)(レベル 4)|'*function*': メンバー関数は、基底クラスの仮想メンバー関数をオーバーライドしません|
+|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)(レベル 1)|'*virtual_function*': 基底*クラス ' class*' からの仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です|
+|[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)(レベル 3)|'*class*': クラスは仮想関数を含んでいますが、デストラクターは仮想ではありません|
+|[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)(レベル 4)|'*function*': ベース '*type*' から仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です|
+|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)(レベル 3)|'*operator*': 符号なしまたは負の定数が一致しません。|
+|[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)(レベル 4)|非標準の拡張が使用されています: '*var*': for ループで宣言されたループコントロール変数が for ループスコープの外側で使用されています|
+|[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)(レベル 4)|'*operator*': 式は常に false です|
+|[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)(レベル 4)|'*type*': CLR メタデータで検出された未定義の型が使用されています。この型を使用すると、ランタイム例外が発生する可能性があります|
+|[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)(レベル 1)|動作変更: '*function*' が呼び出されましたが、メンバー演算子が前のバージョンで呼び出されました|
+|[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)(レベル 1)|動作変更: '*member2*' の代わりに '*member1*' が呼び出されました|
 |[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|'this' : ベース メンバー初期化リストで使用されました。|
-|[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) (レベル 4)|'*アクション*': から変換'*type_1*'to'*type_2*'、signed/unsigned が一致しません|
+|[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)(レベル 4)|'*action*': '*type_1*' から '*type_2*' への変換、符号付き/符号なしの不一致|
 |C4370 (レベル 3)|パッキングの改善のために、前バージョンのコンパイラからクラスのレイアウトが変更されました。|
-|[C4371](../error-messages/compiler-warnings/c4371.md) (レベル 3)|'*classname*': クラスのレイアウトは、メンバーのパッキングの改善のため、コンパイラの以前のバージョンから変更された可能性があります'*メンバー*'|
+|[C4371](../error-messages/compiler-warnings/c4371.md)(レベル 3)|'*classname*': メンバー '*member*' のパッキングが適切であるため、クラスのレイアウトが以前のバージョンのコンパイラから変更された可能性があります|
 |C4388 (レベル 4)|signed と unsigned の数値を比較しようとしました。|
-|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (レベル 2)|'*関数*': 関数のシグネチャには、型が含まれています'*型*';。C++ のオブジェクトは純粋なコードの間で渡すため安全でないと混合またはネイティブ|
-|C4426 (レベル 1)|#pragma optimize() が原因で最適化フラグがヘッダーを含めた後に変更があります<sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (レベル 4)|'*class1*':/vd2 下のオブジェクトのレイアウトは仮想ベースにより変更されます'*class2*'|
-|[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (レベル 4)|仮想基本から dynamic_cast '*class1*'to'*class2*' 一部のコンテキストで失敗する可能性があります|
+|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)(レベル 2)|'*function*': 関数シグネチャに型 '*type*' が含まれています。C++オブジェクトは、純粋なコードと混合またはネイティブの間で渡すことは安全ではありません|
+|C4426 (レベル 1)|ヘッダーを含めた後に最適化フラグが変更されました。 #pragma optimize () <sup>14.1</sup>が原因である可能性があります|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)(レベル 4)|'*class1*':/Vd2 の下のオブジェクトレイアウトは仮想ベース '*class2*' によって変更されます|
+|[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)(レベル 4)|仮想ベース '*class1*' から '*class2*' への dynamic_cast は、一部のコンテキストでは失敗する可能性があります|
 |C4444 (レベル 3)|トップ レベルの '__unaligned' がこのコンテキストで実装されていません。|
-|[C4464](../error-messages/compiler-warnings/c4464.md) (レベル 4)|相対インクルード パスを含む '… '|
-|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (レベル 4)|スコープを持たない列挙型の事前宣言は、基になる型 (int が想定されます) をいる必要があります<sup>Perm</sup>|
-|C4472 (レベル 1)|'*識別子*' はネイティブ列挙型: マネージ列挙型を宣言するアクセス指定子 (秘密/公開) の追加|
-|[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (レベル 4)|'*関数*': 参照されていないインライン関数は削除されました|
-|[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (レベル 4)|'type name': 型名では、メタ データの上限を超えています '*制限*' 文字。|
-|[C4545](../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md) (レベル 1)|コンマ前の式は、引数リストのない関数として評価します。|
-|[C4546](../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md) (レベル 1)|コンマの前の関数呼び出しに引数一覧がありません。|
-|[C4547](../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md) (レベル 1)|'*演算子*': コンマも何も起こりません前の演算子の副作用が予想される演算子。|
-|[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md) (レベル 1)|コンマ前の式は無効です。有効な式を指定してください。|
-|[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (レベル 1)|'*operator1*': コンマの前に、の演算子は無効です。 つもりでした'*operator2*' でしょうか。|
-|[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (レベル 1)|式の影響はありません; 式の副作用が必要です。|
-|[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (レベル 3)|効果を含む '_assume' '*効果*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (レベル 4)|情報: catch (...) セマンティクスが Visual C 7.1; から変更構造化例外 (SEH) はキャッチされません。|
-|C4574 (レベル 4)|'*識別子*'は' 0': 候補を使用して、' #if*識別子*' でしょうか。|
-|C4577 (レベル 1)|' noexcept' の処理モードが指定されていない例外の併用例外で終了処理は保証されません。 /EHsc を指定します。|
-|C4582 (レベル 4)|'*型*': コンス トラクターが暗黙的に呼び出されません|
-|C4583 (レベル 4)|'*型*': デストラクターは暗黙的に呼び出されません|
-|C4587 (レベル 1)|'*anonymous_structure*': 動作変更: コンス トラクターが不要になった暗黙的に呼び出されます|
-|C4588 (レベル 1)|'*anonymous_structure*': 動作変更: デストラクターは呼び出されなく|
-|C4596 (レベル 4)|'*識別子*': メンバー宣言での無効な修飾名<sup>14.3</sup> <sup>Perm</sup>|
-|C4598 (レベル 1 およびレベル 3)|' #include"*ヘッダー*"' ヘッダー番号*数*、プリコンパイル済みヘッダーと一致しませんその位置にある現在のコンパイル<sup>14.3。</sup>|
-|C4599 (レベル 3)|'*オプション**パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません<sup>14.3</sup>|
-|C4605 (レベル 1)|'/D*マクロ*' 現在のコマンドラインで指定しますが、プリコンパイル済みヘッダーを構築したときに指定されませんでした|
-|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (レベル 3)|'*union_member*'は既に初期化されて、初期化子リストで、もう 1 つの共用体メンバーにより'*union_member*' <sup>Perm</sup>|
-|[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (レベル 3)|#pragma warning: 警告番号がありません '*数*'|
-|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (レベル 4)|'derived class': 基底クラスの既定コンストラクターにアクセスできないため、既定のコンストラクターは生成できませんでした。|
-|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (レベル 4)|'derived class': 基底クラスのコピー コンストラクターにアクセスできないため、コピー コンストラクターは生成できませんでした。|
-|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (レベル 4)|'derived class': 基底クラスの代入演算子にアクセスできないため、代入演算子は生成できませんでした。|
-|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (レベル 1)|digraphs は -Ze でサポートされていません。 文字のシーケンス '*digraph*'の代替トークンとして解釈されない'*char*'|
-|[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (レベル 3)|'*インスタンス*': ローカル スタティック オブジェクトの構築がスレッド セーフではありません|
-|C4647 (レベル 3)|動作変更: _ _is_pod (*型*) 別の値が、以前のバージョン|
-|C4654 (レベル 4)|プリコンパイル済みヘッダーの前に配置されたコードは、行が無視されます。 コードをプリコンパイル済みヘッダーに追加します。 <sup>14.1</sup>|
-|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (レベル 4)|'*シンボル*'は '0' に置き換える、プリプロセッサ マクロとして定義されていない'*ディレクティブ*'|
-|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (レベル 4)|'*シンボル*': 方向性のあるパラメーター属性がいません指定すると、[in]|
-|[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (レベル 3)|'*ユーザー定義型*': 動作の変更可能な UDT の戻り値の呼び出し規則|
-|[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (レベル 1)|'*関数*': 公開されたメンバーのシグネチャはアセンブリ プライベート ネイティブ型を含む'*native_type*'|
-|[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (レベル 4)|'*関数*': 関数のインライン化できません|
-|[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (レベル 3)|メモリに 32 ビットの浮動結果を格納します。パフォーマンスが低下する可能性があります|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|揮発性アクセス '*式*' は/volatile:\<iso&#124;ms > 設定; _iso_volatile_load/store 組み込み関数を使用を検討してください|
-|C4749 (レベル 4)|条件付きでサポートされています: 非標準レイアウト型に適用される offsetof '*型*'|
-|C4767 (レベル 4)|セクション名 '*シンボル*' が 8 文字より長いと、リンカーによって切り詰められます|
-|C4768 (レベル 3)|リンケージ指定の前に _ _declspec 属性は無視されます。|
-|C4774 (レベル 4)|'*文字列*': 書式指定文字列の引数で想定される*数*リテラル文字列はありません|
-|C4777 (レベル 4)|'*関数*': 書式文字列'*文字列*'型の引数が必要です'*type1*'、可変個引数が、*数*型が '*type2*'|
-|C4786 (レベル 3)|'*シンボル*': オブジェクト名は切り詰められました'*数*' 文字にデバッグ情報で|
-|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (レベル 4)|'*バイト*"構築後に追加されたバイトのパディング"*member_name*'|
-|C4826 (レベル 2)|変換 '*type1*'to'*type2*' は符号拡張します。 これにより、予期しない実行時の動作が発生する可能性があります。|
-|C4837 (レベル 4)|検出されたトライグラフ: '??*文字*'置き換え'*文字*'|
-|C4841 (レベル 4)|非標準の拡張機能が使用: 複合メンバー指定子が offsetof で使用されます。|
-|C4842 (レベル 4)|'offsetof' の複数の継承を使用して、型に適用の結果は、コンパイラ リリース間において一貫性は保証されません。|
-|[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (レベル 4)|'_ファイル_(*line_number*)' コンパイラは、中かっこで囲んだ初期化リスト内で左から右の評価順序を強制しない可能性があります|
-|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (レベル 1)|'LPSTR' にキャストされた幅の広いリテラル文字列|
-|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (レベル 1)|'LPWSTR' にキャストされたリテラル文字列|
-|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (レベル 1)|'*宣言子*': GUID はクラス、インターフェイス、または名前空間に関連付けできます。|
-|[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (レベル 1)|コピー初期化が正しくありません。複数のユーザー定義の変換が暗黙的に適用されています。|
-|[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (レベル 4)|number ビット ポインター用にタイプ ライブラリがビルドされていることを想定します。|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (レベル 1)|reinterpret_cast が関連クラス間で使用されました: '*class1*'と'*class2*'|
-|C4962|'*関数*': プロファイル ガイド付き最適化の最適化によってプロファイル データに矛盾が生じたために無効です|
-|[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (レベル 4)|'*シンボル*': 例外の指定が以前の宣言と一致しません|
+|[C4464](../error-messages/compiler-warnings/c4464.md)(レベル 4)|相対インクルードパスに '.. ' が含まれています|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)(レベル 4)|対象範囲外の列挙の事前宣言には、基になる型 (int と仮定) の<sup>Perm</sup>が必要です|
+|C4472 (レベル 1)|'*identifier*' はネイティブ列挙型です。マネージ列挙型を宣言するには、アクセス指定子 (private/public) を追加してください|
+|[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md)(レベル 4)|'*function*': 参照されていないインライン関数は削除されました|
+|[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)(レベル 4)|' type name ': 型名がメタデータの上限である '*limit*' 文字を超えています|
+|[C4545](../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md)(レベル 1)|コンマ前の式は、引数リストのない関数として評価します。|
+|[C4546](../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md)(レベル 1)|コンマの前の関数呼び出しに引数一覧がありません。|
+|[C4547](../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md)(レベル 1)|'*operator*': コンマの前の演算子は無効です。副作用のある演算子が必要です|
+|[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md)(レベル 1)|コンマ前の式は無効です。有効な式を指定してください。|
+|[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md)(レベル 1)|'*operator1*': コンマの前の演算子は無効です。'*operator2*' を意図しましたか?|
+|[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)(レベル 1)|式の影響はありません; 式の副作用が必要です。|
+|[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)(レベル 3)|' __assume ' には '*effect*' 効果が含まれています|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)(レベル 4)|情報: キャッチ (...) のセマンティクスが Visual C++ 7.1 以降に変更されました。構造化例外 (SEH) はキャッチされなくなりました。|
+|C4574 (レベル 4)|'*identifier*' は ' 0 ' に定義されています: ' #if *identifier*' を使用しますか?|
+|C4577 (レベル 1)|例外処理モードが指定されていない ' noexcept ' が使用されています。例外での終了は保証されていません。 /EHsc を指定する|
+|C4582 (レベル 4)|'*type*': コンストラクターは暗黙的に呼び出されません。|
+|C4583 (レベル 4)|'*type*': デストラクターは暗黙的に呼び出されません|
+|C4587 (レベル 1)|'*anonymous_structure*': 動作変更: コンストラクターは暗黙的に呼び出されなくなりました|
+|C4588 (レベル 1)|'*anonymous_structure*': 動作変更: デストラクターは暗黙的に呼び出されなくなりました|
+|[C4596](../error-messages/compiler-warnings/c4596.md)(レベル 4)|'*identifier*': メンバー宣言<sup>14.3</sup> <sup>Perm</sup>内の修飾名が無効です|
+|C4598 (レベル1およびレベル 3)|' #include "*header*" ': プリコンパイル済みヘッダーのヘッダー番号*ヘッダー番号*が、その位置<sup>14.3</sup>の現在のコンパイルと一致しません|
+|C4599 (レベル 3)|'*オプション* *パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません<sup>14.3</sup>|
+|C4605 (レベル 1)|現在のコマンドラインで '/d*macro*' が指定されましたが、プリコンパイル済みヘッダーがビルドされたときに指定されませんでした|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)(レベル 3)|'*union_member*' は、初期化子リスト '*union_member* <sup>' の</sup>別の共用体メンバーによって既に初期化されています。|
+|[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md)(レベル 3)|#pragma 警告: 警告番号 '*number*' がありません|
+|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md)(レベル 4)|'derived class': 基底クラスの既定コンストラクターにアクセスできないため、既定のコンストラクターは生成できませんでした。|
+|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md)(レベル 4)|'derived class': 基底クラスのコピー コンストラクターにアクセスできないため、コピー コンストラクターは生成できませんでした。|
+|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md)(レベル 4)|'derived class': 基底クラスの代入演算子にアクセスできないため、代入演算子は生成できませんでした。|
+|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md)(レベル 1)|digraphs は -Ze でサポートされていません。 文字シーケンス '*digraph*' は '*char*' の代替トークンとして解釈されません|
+|[(C4640)](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)(レベル 3)|'*instance*': ローカルの静的オブジェクトの構築はスレッドセーフではありません|
+| C4643 (レベル 4) | 名前空間 std の '*identifier*' を事前宣言することはC++ 、標準では許可されていません。 <sup>15.8</sup> |
+|C4647 (レベル 3)|動作の変更: __ ispod (*型*) は以前のバージョンでは異なる値を持っています。|
+|C4654 (レベル 4)|プリコンパイル済みヘッダー行の前に配置されたコードは無視されます。 プリコンパイル済みヘッダーにコードを追加します。 <sup>14.1</sup>|
+|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md)(レベル 4)|'*symbol*' はプリプロセッサマクロとして定義されていません。 '*ディレクティブ*' の ' 0 ' に置き換えてください。|
+|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md)(レベル 4)|'*symbol*': 方向性のあるパラメーター属性が指定されていません。 [in] を既定にします|
+|[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)(レベル 3)|'*ユーザー定義型*': 動作が変更される可能性があります。 UDT の戻り値の呼び出し規約が変更されています。|
+|[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)(レベル 1)|'*function*': プライベートでないメンバーのシグネチャには、アセンブリプライベートネイティブ型 '*native_type*' が含まれています|
+|[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md)(レベル 4)|'*function*': 関数がインライン化されていません。|
+|[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)(レベル 3)|メモリに 32 ビットの浮動結果を格納します。パフォーマンスが低下する可能性があります|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|'*expression*' の volatile アクセスは、/volatile: \< iso&#124;ms > 設定; の対象となります。__iso_volatile_load/store 組み込み関数の使用を検討する|
+|C4749 (レベル 4)|条件付きでサポート: offsetof が非標準レイアウト型 '*type*' に適用されました|
+|C4767 (レベル 4)|セクション名 '*symbol*' が8文字を超えているため、リンカーによって切り捨てられます|
+|C4768 (レベル 3)|リンケージ指定の前の __declspec 属性は無視されます|
+|C4774 (レベル 4)|'*string*': 引数*番号*に必要な書式文字列が文字列リテラルではありません|
+|C4777 (レベル 4)|'*function*': 書式文字列 '*string*' には型 ' type1 ' の引数が必要ですが、可変個引数引数の*数値*には*型 '* *type1*' が含まれています|
+|C4786 (レベル 3)|'*symbol*': オブジェクト名がデバッグ情報の '*number*' 文字に切り詰められました|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)(レベル 4) | '*Type*' から bool への暗黙的な変換です。 考えられる情報損失<sup>16.0</sup> |
+|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md)(レベル 4)|コンストラクト '*member_name*' の後に '*bytes*' バイトのパディングが追加されました|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md)(レベル 1) | '*member*': ローカルクラスのメンバー関数に本体がありません。 |
+|C4826 (レベル 2)|' Type1 *' から '* *type1*' への変換は、符号拡張されています。 これにより、予期しないランタイム動作が発生する可能性があります。|
+|C4837 (レベル 4)|検出されたトライグラフ: '??*文字*' は '*character*' に置き換えられました|
+|C4841 (レベル 4)|非標準の拡張機能が使用されています: 複合メンバー指定子が offsetof で使用されています|
+|C4842 (レベル 4)|複数の継承を使用して型に適用された ' offsetof ' の結果は、コンパイラリリース間で一貫性が保証されていません|
+|[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md)(レベル 4)|'_file_(*line_number*) ' コンパイラは、かっこ付き初期化リストに左から右への評価順序を強制することはできません|
+|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md)(レベル 1)|'LPSTR' にキャストされた幅の広いリテラル文字列|
+|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md)(レベル 1)|'LPWSTR' にキャストされたリテラル文字列|
+|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md)(レベル 1)|'*宣言子*': GUID は、クラス、インターフェイス、または名前空間にのみ関連付けることができます|
+|[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md)(レベル 1)|コピー初期化が正しくありません。複数のユーザー定義の変換が暗黙的に適用されています。|
+|[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md)(レベル 4)|number ビット ポインター用にタイプ ライブラリがビルドされていることを想定します。|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md)(レベル 1)|reinterpret_cast が関連クラスの間で使用されています: '*class1*' と '*class2*'|
+|C4962|'*function*': 最適化によってプロファイルデータに矛盾が生じたため、ガイド付き最適化のプロファイルを無効にします|
+|[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md)(レベル 4)|'*symbol*': 例外指定が前の宣言と一致しません|
 |C4987 (レベル 4)|非標準の拡張機能が使用されています: 'throw (...)' です。|
-|C4988 (レベル 4)|'*シンボル*': 変数には、外側のクラス/関数スコープが宣言されています|
-|C5022|'*型*': 指定された複数の移動コンス トラクター|
-|C5023|'*型*': 指定された複数の移動代入演算子|
-|C5024 (レベル 4)|'*型*': 移動コンス トラクターが暗黙的に削除済みとして定義|
-|C5025 (レベル 4)|'*型*': 移動代入演算子が暗黙的に削除済みとして定義|
-|C5026 (レベル 1 およびレベル 4)|'*型*': 移動コンス トラクターが暗黙的に削除済みとして定義|
-|C5027 (レベル 1 およびレベル 4)|'*型*': 移動代入演算子が暗黙的に削除済みとして定義|
-|C5029 (レベル 4)|標準の拡張機能を使用します C++ のアラインメント属性は、変数、データ メンバーおよびタグの種類のみに適用。|
-|C5031 (レベル 4)|#pragma warning (pop): 別のファイルにプッシュされた警告の状態をポップアップ表示可能性が高い不一致<sup>14.1</sup>|
-|C5032 (レベル 4)|#pragma warning (push) ない対応の #pragma warning (pop) が検出された<sup>14.1</sup>|
-|C5034|組み込みの使用 '*組み込み*' 関数をにより*関数*ゲスト コードとしてコンパイルする<sup>15.3</sup>|
-|C5035|機能を使用して、'*機能*' 関数をにより*関数*ゲスト コードとしてコンパイルする<sup>15.3</sup>|
-|C5036 (レベル 1)|/hybrid:x86arm64 でコンパイルするときに、varargs 関数ポインター変換 '*type1*'to'*type2*' <sup>15.3</sup>|
-|[C5038](../error-messages/compiler-warnings/c5038.md) (レベル 4)|データ メンバー '*member1*'後にデータ メンバー初期化が'*member2*' <sup>15.3</sup>|
-|C5039 (レベル 4)|'*関数*':-ehc の extern C 関数に渡されたポインターまたは参照関数をスローする可能性があることにします。 未定義の動作は、この関数が例外をスローした場合に発生する可能性があります。 <sup>15.5</sup>|
-|C5042 (レベル 3)|'*関数*': 関数宣言のブロック スコープでは、標準 C++ で指定された 'inline' をすることはできません 'inline' 指定子を削除<sup>15.5。</sup>|
-|[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入は<sup>15.7</sup>|
+|C4988 (レベル 4)|'*symbol*': 変数がクラス/関数スコープの外部で宣言されています。|
+|C5022|'*type*': 複数の移動コンストラクターが指定されました|
+|C5023|'*type*': 複数の移動代入演算子が指定されています。|
+|C5024 (レベル 4)|'*type*': 移動コンストラクターが暗黙的に削除済みとして定義されました|
+|C5025 (レベル 4)|'*type*': 移動代入演算子は暗黙的に削除済みとして定義されました|
+|C5026 (レベル1およびレベル 4)|'*type*': 移動コンストラクターが暗黙的に削除済みとして定義されました|
+|C5027 (レベル1およびレベル 4)|'*type*': 移動代入演算子は暗黙的に削除済みとして定義されました|
+|C5029 (レベル 4)|非標準のC++拡張機能が使用されています: 変数、データメンバー、タグの種類にのみ適用されるアラインメント属性|
+|C5031 (レベル 4)|#pragma 警告 (pop): 不一致の可能性があります。ポップアップの警告状態が別のファイル<sup>14.1</sup>にプッシュされました|
+|C5032 (レベル 4)|検出された #pragma 警告 (プッシュ) に対応する #pragma 警告 (pop) <sup>14.1</sup>がありません|
+|C5034|組み込みの '*組み込み*' を使用すると、関数の*名前*がゲストコード<sup>15.3</sup>としてコンパイルされます。|
+|C5035|機能 '*feature*' を使用すると *、* 関数の名前がゲストコード<sup>15.3</sup>としてコンパイルされます|
+|C5036 (レベル 1)|/hybrid: x86arm64 ' type1 *' から '* *type1*' <sup>15.3</sup>を使用してコンパイルするときの varargs 関数ポインター変換|
+|[C5038](../error-messages/compiler-warnings/c5038.md)(レベル 4)|データメンバー '*member1*' はデータメンバー '*member2*' <sup>15.3</sup>の後に初期化されます|
+|C5039 (レベル 4)|'*function*':-ehc で extern c 関数に渡される可能性のあるスロー関数へのポインターまたは参照です。 この関数が例外をスローした場合、未定義の動作が発生する可能性があります。 <sup>15.5</sup>|
+|C5042 (レベル 3)|'*function*': ブロックスコープの関数宣言を標準C++で ' inline ' に指定することはできません。' inline ' 指定子<sup>15.5</sup>の削除|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリ負荷の Spectre 軽減策を挿入します。 <sup>15.7</sup>|
 
-<sup>14.1</sup>この警告は Visual Studio 2015 Update 1 以降を使用します。<br/>
-<sup>14.3</sup>この警告は Visual Studio 2015 Update 3 以降を使用します。<br/>
-<sup>15.3</sup>この警告は Visual Studio 2017 バージョン 15.3 以降を使用します。<br/>
-<sup>15.5</sup>この警告は Visual Studio 2017 バージョン 15.5 以降使用できます。<br/>
-<sup>15.7</sup>この警告は Visual Studio 2017 バージョン 15.7 以降使用できます。<br/>
-<sup>Perm</sup>しない限り、この警告はオフ、 [/permissive -](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。<br/>
+<sup>14.1</sup> Visual Studio 2015 Update 1 以降では、この警告を利用できます。\
+<sup>14.3</sup> Visual Studio 2015 Update 3 以降では、この警告を利用できます。\
+<sup>15.3</sup> Visual Studio 2017 バージョン15.3 以降では、この警告は使用できます。\
+<sup>15.5</sup> Visual Studio 2017 バージョン15.5 以降では、この警告は使用できます。\
+<sup>15.7</sup> Visual Studio 2017 バージョン15.7 以降では、この警告は使用できます。\
+<sup>15.8</sup> Visual Studio 2017 バージョン15.8 以降では、この警告は使用できます。\
+<sup>16.0</sup>この警告は、Visual STUDIO 2019 RTM 以降で使用できます。\
+<sup>Perm</sup>この警告は、 [/permissive-](../build/reference/permissive-standards-conformance.md)コンパイラオプションが設定されていない場合にオフになります。
 
-## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンで既定でオフの警告
+## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンでは、既定で警告がオフになっています
 
-これらの警告は、既定のバージョンの Visual Studio 2015 より前にコンパイラで無効でした。
-
-|||
-|-|-|
-|[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md) (レベル 2)|'*変換*': から切り捨て'*type1*'to'*type2*'|
-|[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md) (レベル 1)|'*変数*': ポインター切り捨てから'*型*'to'*型*'|
-|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) (レベル 1)|'*操作*': から変換'*type1*'to'*type2*' より大きいサイズの|
-|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) (レベル 1)|'*演算子*': ゼロ拡張'*type1*'to'*type2*' より大きいサイズの|
-
-この警告は、既定のバージョンの Visual Studio 2012 より前に、のコンパイラではオフになっていました。
+これらの警告は、Visual Studio 2015 より前のバージョンのコンパイラでは既定でオフになっていました。
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (レベル 4)|型指定子がありません - int と仮定しました。 メモ: C は、現在 int を既定値としてサポートしていません|
+|[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)(レベル 2)|'*conversion*': ' type1 *' から '* *type1*' への切り捨て|
+|[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)(レベル 1)|'*variable*': ポインターが '*type*' から '*type*' に切り捨てられる|
+|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)(レベル 1)|'*operation*': ' type1 ' からより大きいサイズ*の '* *type1*' への変換です。|
+|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)(レベル 1)|'*operator*': ' type1 ' をより大きいサイズ*の '* *type1*' に拡張することはできません。|
+
+この警告は、Visual Studio 2012 より前のバージョンのコンパイラでは既定で無効になっていました。
+
+|||
+|-|-|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)(レベル 4)|型指定子がありません - int と仮定しました。 メモ:C は既定の-int をサポートしなくなりました|
 
 ## <a name="see-also"></a>関連項目
 

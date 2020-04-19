@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 8a4a2011124056af7064c8241450e1f3613776a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580870"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756748"
 ---
 # <a name="compiler-error-c3073"></a>コンパイラ エラー C3073
 
-'type': ref クラスには、ユーザー定義のコピー コンス トラクターがありません。
+' type ': ref クラスにユーザー定義のコピーコンストラクターがありません。
 
-[/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のコンパイル時に、コンパイラでは、参照型のコピー コンス トラクターは生成されません。 いずれかで **/clr**のコンパイル時にコピーする型のインスタンスが予想される場合、参照型の独自のコピー コンス トラクターを定義する必要があります。
+[/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)コンパイルでは、コンパイラは参照型のコピーコンストラクターを生成しません。 任意の **/clr**コンパイルで、型のインスタンスがコピーされることが予想される場合は、参照型に対して独自のコピーコンストラクターを定義する必要があります。
 
-詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+詳細については、「 [ C++参照型のスタックセマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3073 が生成されます。
 
-```
+```cpp
 // C3073.cpp
 // compile with: /clr
 ref class R {

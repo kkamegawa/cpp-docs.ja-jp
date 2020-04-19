@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-ms.openlocfilehash: 18190f4d35d69f167be075130c8332baf7b459ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a7b84b40dd74f42944e61cfd219638907502c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223386"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 複合コントロールの基本
 
@@ -32,4 +32,3 @@ ATL プロジェクト ウィザードと**クラスの追加** ダイアログ 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [複合コントロールに関するグローバル関数](../atl/reference/composite-control-global-functions.md)<br/>
 [複合コントロールに関するマクロ](../atl/reference/composite-control-macros.md)
-

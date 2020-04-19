@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322015"
 ---
 # <a name="internal-classes"></a>内部クラス
 
@@ -325,7 +325,7 @@ ms.locfileid: "50435491"
 |`CCommandManager Class`|`CCommandManager`クラスは、コマンドとイメージとの関連付けを管理します。|
 |`CDialogImpl Class (MFC)`|などのダイアログ ボックスを使用したクラスに実装の詳細を提供します。`CDialogEx`します。|
 |`CDocumentAdapter Class`|検索と整理ハンドラーに必要な IDocument インターフェイスを実装します。|
-|`CFrameImpl Class`|`CFrameImpl`クラスは、次のフレーム ウィンドウ クラスにツールバーのカスタマイズを処理します[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)、および[COleIPFrameWndEx クラス](../../mfc/reference/coleipframewndex-class.md)。|
+|`CFrameImpl Class`|`CFrameImpl`クラスは、次のフレーム ウィンドウ クラスのツールバーのカスタマイズを処理します。[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)、および[COleIPFrameWndEx クラス](../../mfc/reference/coleipframewndex-class.md)します。|
 |`CFullScreenImpl Class`|実装は SDI と MDI アプリケーションに共通の機能の全画面表示に対応します。|
 |`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`クラスは MDI タブと MDI タブ付きグループの実装を簡素化するヘルパー クラスです。|
 |`CMemDC Class`|メモリ デバイス コンテキストのヘルパー クラスです。 メモリ デバイス コンテキストでは、オフスクリーン描画をサポートします。|
@@ -412,4 +412,3 @@ ms.locfileid: "50435491"
 ## <a name="see-also"></a>関連項目
 
 [MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)
-

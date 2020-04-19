@@ -1,38 +1,36 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: tlbid import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: 31b71f7c195a7e2ee649b40197551e4ff5efda2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584513"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216540"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>tlbid import 属性
 
-**C++ 固有の仕様**
+**C++のみ**
 
 プライマリ タイプ ライブラリ以外のライブラリの読み込みを許可します。
 
 ## <a name="syntax"></a>構文
 
-```
-tlbid(number)
-```
+> **#import***タイプライブラリ-dll***tlbid (** *数値* **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*数*<br/>
-`filename` のタイプ ライブラリの番号。
+*少数*\
+*タイプライブラリ dll*内のタイプライブラリの番号。
 
 ## <a name="remarks"></a>Remarks
 
-複数のタイプ ライブラリを使用してプライマリ タイプ ライブラリ以外のライブラリを読み込むことが可能に 1 つの DLL に組み込まれているかどうかは**tlbid**します。
+複数のタイプライブラリが1つの DLL に組み込まれている場合、 **tlbid**を使用してプライマリタイプライブラリ以外のライブラリを読み込むことができます。
 
 例えば:
 
@@ -46,9 +44,9 @@ tlbid(number)
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

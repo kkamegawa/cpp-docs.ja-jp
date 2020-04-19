@@ -1,10 +1,10 @@
 ---
 title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642365"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625915"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
 現在の時刻をバッファーにコピーします。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) の説明にあるとおり、セキュリティが強化されたバージョンの [_strtime、_wstrtime](strtime-wstrtime.md) です。
 
@@ -72,32 +75,34 @@ errno_t _wstrtime_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0。
+正常終了した場合は 0 を返します。
 
 エラー状況が発生した場合は、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは ERRNO.H で定義されます。この関数によって生成される正確なエラーについては、下記の表をご覧ください。 エラー コードの詳細については、「[errno 定数](../../c-runtime-library/errno-constants.md)」をご覧ください。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|Return|内容*バッファー*|
+|*バッファー*|*numberOfElements*|Return|*バッファー*の内容|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(任意)|**EINVAL**|変更されない|
-|いない**NULL** (有効なバッファーを指す)|0|**EINVAL**|変更されない|
-|いない**NULL** (有効なバッファーを指す)|0 < サイズ < 9|**EINVAL**|空の文字列|
-|いない**NULL** (有効なバッファーを指す)|サイズ > 9|0|コメントで指定されている書式設定の、現在の時刻|
+|Not **NULL** (有効なバッファーを指す)|0|**EINVAL**|変更されない|
+|Not **NULL** (有効なバッファーを指す)|0 < サイズ < 9|**EINVAL**|空の文字列|
+|Not **NULL** (有効なバッファーを指す)|サイズ > 9|0|コメントで指定されている書式設定の、現在の時刻|
 
 ## <a name="security-issues"></a>セキュリティ上の問題
 
-無効なを渡す以外**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターが 9 よりも大きい。
+無効な**NULL**以外の値をバッファーに渡すと、 *numberofelements*パラメーターが9よりも大きい場合、アクセス違反が発生します。
 
-値を渡す*numberOfElements*バッファー オーバーランが発生、バッファーの実際のサイズより大きい。
+*Numberofelements*の値をバッファーの実際のサイズより大きい値に渡すと、バッファーオーバーランが発生します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数のセキュリティを強化バージョンの提供[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)します。 **_Strtime_s**関数が指すバッファーに現在の現地時刻をコピー*で*します。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間表記で時間を表す 2 桁の数字は、 **mm** 、時間、分を表す2桁の数字は、**ss**秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
+これらの関数は、より安全なバージョンの[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)を提供します。 **_Strtime_s**関数は、 *timestr*が指すバッファーに現在の現地時刻をコピーします。 時刻は**hh: mm: ss**として書式設定されます。ここで、 **hh**は24時間表記の時間を表す2桁の数字、 **mm**は2桁の数字を表し、 **ss**は秒を表す2桁の数字です。 たとえば、文字列**18:23:44**は、午後6時24分と44秒を表します。 バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
 
-**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrtime**は、 **_strtime**のワイド文字バージョンです。 **_wstrtime**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 
@@ -105,14 +110,14 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime_s**|**_strtime_s**|**_strtime_s**|**_wstrtime_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

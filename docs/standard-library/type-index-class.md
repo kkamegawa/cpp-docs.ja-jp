@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
-ms.openlocfilehash: 8807a041ab1c6ef47a9c3c12dac2688f121f6cfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b30c9719957b9ffc5f3ce17692eb90c1b266ae0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650492"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447049"
 ---
 # <a name="typeindex-class"></a>type_index クラス
 
@@ -39,5 +39,5 @@ class type_index { public: type_index(const type_info& tinfo); const char *name(
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム型情報](../cpp/run-time-type-information.md)<br/>
-[\<typeindex>](../standard-library/typeindex.md)<br/>
+[ランタイム型情報](../cpp/run-time-type-information.md)\
+[\<typeindex>](../standard-library/typeindex.md)

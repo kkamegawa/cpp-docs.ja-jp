@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: d9d1cebe08a6a163d76271ab001ec91b7cee82a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567129"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966117"
 ---
 # <a name="compiler-warning-level-1-c4391"></a>コンパイラの警告 (レベル 1) C4391
 
-'signature': 組み込み関数に対して正しくない戻り値の型は、'type' が必要です
+' signature ': 組み込み関数の戻り値の型が正しくありません。 ' type ' が必要です
 
-コンパイラ組み込み関数の宣言には、正しくない戻り値の型が必要があります。 結果のイメージは正しく動作しない可能性があります。
+コンパイラ組み込みの関数宣言の戻り値の型が正しくありません。 結果のイメージが正常に実行されない可能性があります。
 
-この警告を解決するか、宣言を修正してまたは宣言を削除して単に #include 適切なヘッダー ファイル。
+この警告を修正するには、宣言を修正するか、宣言を削除して、適切なヘッダーファイルを #include します。
 
 次の例では、C4391 が生成されます。
 
-```
+```cpp
 // C4391.cpp
 // compile with: /W1
 // processor: x86

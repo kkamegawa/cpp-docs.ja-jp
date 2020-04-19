@@ -1,27 +1,27 @@
 ---
 title: コンパイラの警告 (レベル 4) C4295
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 f1_keywords:
 - C4295
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: ed31ea19f9c36a9c6fab7452a4bfc3843a151059
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472190"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924847"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>コンパイラの警告 (レベル 4) C4295
 
-> '*配列*': 配列が小さすぎる、終端の null 文字を含める
+> '*array*': 配列が小さすぎるため、終端の null 文字を含めることができません
 
-配列が初期化されましたが、配列の最後の文字が null ではありません。文字列として配列にアクセスすると、予期しない結果が生じる場合があります。
+配列は初期化されましたが、配列の最後の文字が null ではありません。配列に文字列としてアクセスすると、予期しない結果が生じる可能性があります。
 
 ## <a name="example"></a>例
 
-次の例では、C4295 が生成されます。 この問題を解決する可能性がありますを宣言する、配列のサイズを保持するより大きなから、初期化子の文字列または終端の null は、配列初期化子リストを使用しての配列である、インテントをオフにする可能性があります`char`null で終わる文字列ではありません。
+次の例では、C4295 が生成されます。 この問題を解決するには、配列のサイズを大きく宣言し、初期化子文字列から終端の null を保持するか、配列初期化子リストを使用して、これが null で終わる`char`文字列ではなくの配列であることを明確にすることができます。
 
 ```C
 // C4295.c

@@ -1,11 +1,11 @@
 ---
 title: fmod、fmodf、fmodl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957078"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -72,13 +75,13 @@ long double fmodl(
 
 ## <a name="return-value"></a>戻り値
 
-**fmod**の浮動小数点の剰余を返します*x* / *y*します。 場合の値*y* 0.0、 **fmod**簡易な NaN を返します。 による簡易な NaN の表現については、 **printf**ファミリを参照してください[printf](printf-printf-l-wprintf-wprintf-l.md)します。
+**fmod**は、 *x* / *y*の浮動小数点の剰余を返します。 *Y*の値が0.0 の場合、 **fmod**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**Fmod**関数は浮動小数点の剰余を計算*f*の*x* / *y*ように*x* = *は* \* *y* + *f*ここで、*は*整数*f*と同じ符号*x*との絶対値*f*がの絶対値より小さい*y*します。
+**Fmod**関数は x*y* *の* / 浮動小数点の剰余*f*を計算*します (* *x* = *i* \* *y* + *f*)。は整数で、 *f*は*x*と同じ符号を持ち、 *f*の絶対値は*y*の絶対値より小さい値です。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**fmod**を受け取って返す**float**と**長い****二重**値。 C プログラムで**fmod**常に 2 つ受け取る**二重**引数を返す、**二重**。
+C++ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**fmod**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fmod**は常に2つの**double**引数を受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 

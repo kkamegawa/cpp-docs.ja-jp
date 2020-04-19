@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3701
 ms.assetid: a7faaa87-d2f5-4d6a-9a2f-5cab2d24a648
-ms.openlocfilehash: 2efbf3c48b7c366d262facac9cebb4f72d9f1513
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6852d130b0f10282b8c22b0053760eca120252c7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580600"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758022"
 ---
 # <a name="compiler-error-c3701"></a>コンパイラ エラー C3701
 
-'function': イベント ソースにイベントがありません
+' function ': event_source にイベントがありません
 
-使用しようとする[event_source](../../windows/event-source.md)をイベント メソッドを持たないクラスにします。 このエラーを修正するには、クラスに 1 つまたは複数のイベントを追加します。
+イベントメソッドのないクラスで[event_source](../../windows/event-source.md)を使用しようとしました。 このエラーを解決するには、クラスに1つ以上のイベントを追加します。
 
 次の例では、C3701 が生成されます。
 
-```
+```cpp
 // C3701.cpp
 [ event_source(native) ]
 class CEventSrc {

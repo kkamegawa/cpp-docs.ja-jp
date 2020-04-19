@@ -1,9 +1,9 @@
 ---
 title: _putw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putw
 - putw
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949741"
 ---
-# <a name="putw"></a>_putw
+# <a name="_putw"></a>_putw
 
 ストリームに整数を書き込みます。
 
@@ -50,18 +53,18 @@ int _putw(
 *binint*<br/>
 出力されるバイナリ整数。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた値を返します。 戻り値**EOF**エラーを示している可能性があります。 **EOF**は有効な整数値、使用でも**ferror**にエラーを確認します。 場合*ストリーム*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EOF**します。
+書き込まれた値を返します。 **EOF**の戻り値は、エラーを示している可能性があります。 **EOF**も正当な整数値であるため、 **ferror**を使用してエラーを確認します。 *Stream*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、 **EOF**を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Putw**関数は、型のバイナリ値を書き込みます**int**の現在位置に*ストリーム。* **_putw**ストリーム内の項目の配置には影響しませんも、その特殊な配置を想定しています。 **_putw**は主に以前のライブラリとの互換性。 移植性の問題が発生する可能性 **_putw**ためのサイズ、 **int**と内のバイトの順序付け、 **int**システム間で異なります。
+**_Putw**関数は、 **int**型のバイナリ値をストリームの現在位置に書き込み*ます。* **_putw**は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw**は、主に以前のライブラリとの互換性を維持するためのものです。 **_Putw**で移植性の問題が発生する可能性があります。これは **、int のサイズと** **int**内のバイトの順序がシステム間で異なるためです。
 
 ## <a name="requirements"></a>必要条件
 
@@ -107,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Wrote ten words

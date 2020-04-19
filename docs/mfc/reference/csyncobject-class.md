@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: d72d167be874d0776ce8da02784c2e0c267c9175
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324871"
 ---
 # <a name="csyncobject-class"></a>CSyncObject クラス
 
@@ -44,7 +44,7 @@ class CSyncObject : public CObject
 |名前|説明|
 |----------|-----------------|
 |[CSyncObject::Lock](#lock)|同期オブジェクトにアクセスします。|
-|[したら](#unlock)|同期オブジェクトにアクセスします。|
+|[CSyncObject::Unlock](#unlock)|同期オブジェクトにアクセスします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -62,7 +62,7 @@ class CSyncObject : public CObject
 
 Microsoft Foundation Class ライブラリは、いくつかのクラスから派生した`CSyncObject`します。 これらは[CEvent](../../mfc/reference/cevent-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、 [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)、および[CSemaphore](../../mfc/reference/csemaphore-class.md)します。
 
-同期オブジェクトを使用する方法については、この記事を参照してください。[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+同期オブジェクトを使用する方法については、この記事を参照してください。[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -133,7 +133,7 @@ operator HANDLE() const;
 
 ハンドルを使用して、Windows Api を直接呼び出すことができます。
 
-##  <a name="unlock"></a>  したら
+##  <a name="unlock"></a>  CSyncObject::Unlock
 
 宣言`Unlock`パラメーターなしでは、純粋仮想関数とから派生したすべてのクラスでオーバーライドする必要があります`CSyncObject`します。
 
@@ -163,4 +163,3 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

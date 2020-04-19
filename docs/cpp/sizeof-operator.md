@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
 ms.openlocfilehash: 9edd6420193fbc1ff6013c545b294851ce105848
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267220"
 ---
 # <a name="sizeof-operator"></a>sizeof 演算子
 
@@ -37,7 +37,7 @@ sizeof  ( type-name )
 
 - 任意の式を指定します。 式を使用すると**sizeof**またはかっこがない場合に指定することができます。 式は評価されません。
 
-ときに、 **sizeof**演算子は型のオブジェクトに適用**char**1 になります。 ときに、 **sizeof**演算子が配列に適用される場合、配列識別子によって表されるポインターのサイズではなく、その配列内のバイトの合計数になります。 配列識別子によって表されるポインターのサイズを取得することをパラメーターとして渡す関数を使用する**sizeof**します。 例えば:
+ときに、 **sizeof**演算子は型のオブジェクトに適用**char**1 になります。 ときに、 **sizeof**演算子が配列に適用される場合、配列識別子によって表されるポインターのサイズではなく、その配列内のバイトの合計数になります。 配列識別子によって表されるポインターのサイズを取得することをパラメーターとして渡す関数を使用する**sizeof**します。 例:
 
 ## <a name="example"></a>例
 
@@ -71,13 +71,13 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-ときに、 **sizeof**演算子に適用されます、**クラス**、**構造体**、または**共用体**型、結果は、そのオブジェクト内のバイトの数単語の境界にメンバーをアラインする追加の埋め込みと入力します。 結果は、個々のメンバーのストレージ要件を追加することで計算されたサイズには必ずしも対応しません。 [/Zp](../build/reference/zp-struct-member-alignment.md)コンパイラ オプションおよび[パック](../preprocessor/pack.md)プラグマは、メンバーのアラインメント境界に影響します。
+ときに、 **sizeof**演算子に適用されます、**class**、**struct**、または**union**型、結果は、そのオブジェクト内のバイトの数単語の境界にメンバーをアラインする追加の埋め込みと入力します。 結果は、個々のメンバーのストレージ要件を追加することで計算されたサイズには必ずしも対応しません。 [/Zp](../build/reference/zp-struct-member-alignment.md)コンパイラ オプションおよび[パック](../preprocessor/pack.md)プラグマは、メンバーのアラインメント境界に影響します。
 
 **Sizeof**演算子は空のクラスの場合でも、0 を生成することはありません。
 
 **Sizeof**演算子は、次のオペランドでは使用できません。
 
-- 関数  (ただし、 **sizeof**関数へのポインターに適用できます)。
+- 関数 (ただし、 **sizeof**関数へのポインターに適用できます)。
 
 - ビット フィールド。
 

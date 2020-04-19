@@ -1,41 +1,44 @@
 ---
 title: OLE DB アーキテクチャのデザインの問題
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 3e0175c6b554c319a662ffd726023caf7176d9fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461972"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525318"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB アーキテクチャのデザインの問題
 
-OLE DB アプリケーションを開始する前に、次の問題を考慮してください。
+> [!NOTE]
+> ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
-## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>OLE DB アプリケーションを記述するプログラミング実装を使用するか。
+OLE DB アプリケーションを起動する前に、次の問題を検討してください。
 
-Microsoft には、このタスクを実行するいくつかのライブラリが用意されています。 OLE DB テンプレート ライブラリを、OLE DB 属性、および OLE DB SDK では、生の OLE DB インターフェイス。 または、ウィザード、プログラムを記述するのに役立ちます。 これらの実装については、後述[OLE DB テンプレート、属性、およびその他の実装](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)します。
+## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>どのプログラミング実装を使用して OLE DB アプリケーションを作成するか
 
-## <a name="do-you-need-to-write-your-own-provider"></a>独自のプロバイダーを記述する必要がありますか。
+Microsoft では、このタスクを実行するためのライブラリとして、OLE DB テンプレート ライブラリ、OLE DB 属性、および未加工の OLE DB インターフェイスを OLE DB SDK 内に用意しています。 また、プログラム作成に役立つウィザードも用意しています。 これらの実装については、「[OLE DB テンプレート、属性、およびその他の実装](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)」をご覧ください。
 
-ほとんどの開発者は、独自のプロバイダーを作成する必要はありません。 Microsoft では、いくつかのプロバイダーを提供します。 データ接続を作成するたびに (たとえば、使用してプロジェクトにコンシューマーを追加すると、 **ATL OLE DB コンシューマー ウィザード**)、**データ リンク プロパティ** ダイアログ ボックスには、使用可能なすべてのプロバイダーが一覧表示されますシステムに登録します。 独自のデータ ストアとデータ アクセス アプリケーションの適切なプロバイダーのいずれかの場合を行う最も簡単な方法は次のいずれかを使用します。 ただし場合は、データ ストアは、これらのカテゴリのいずれかに一致しない、独自のプロバイダーを作成する必要あります。 プロバイダーを作成する方法の詳細については、次を参照してください。 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)します。
+## <a name="do-you-need-to-write-your-own-provider"></a>独自のプロバイダーを作成する必要があるか
 
-## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>コンシューマーに必要なレベルのサポート
+ほとんどの場合、開発者は、独自のプロバイダーを作成する必要はありません。 Microsoft が複数のプロバイダーを提供しています。 データ接続を作成するたびに (たとえば、**ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーをプロジェクトに追加するときに)、システムに登録された使用可能なすべてのプロバイダーの一覧が **[データ リンク プロパティ]** ダイアログ ボックスに表示されます。 これらのプロバイダーのいずれかが、ご使用のデータ ストアおよびデータ アクセス アプリケーションに対応している場合は、そのプロバイダーを使用するのが最も簡単です。 ただし、ご使用のデータ ストアがこれらのカテゴリのいずれにも該当しない場合は、独自のプロバイダーを作成する必要があります。 プロバイダーの作成については、[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)をご覧ください。
 
-一部のコンシューマーは、ベーシック; であることができます。他のユーザーは、複雑になることができます。 OLE DB オブジェクトの機能は、プロパティによって指定されます。 使用すると、 **ATL OLE DB コンシューマー ウィザード**コンシューマーを作成する、または**データベース プロバイダー ウィザード**の標準セットを提供する適切なオブジェクトのプロパティを設定するプロバイダーを作成するには機能。 ただし、これらの処理に必要なすべてのウィザードで生成されたコンシューマーまたはプロバイダーのクラスをサポートしていない場合、必要がありますでこれらのクラス インターフェイスを指すため、 [OLE DB テンプレート ライブラリ](../../data/oledb/ole-db-templates.md)します。 これらのインターフェイスは、使いやすくために余分な実装を提供する、生の OLE DB インターフェイスをラップします。
+## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>どのレベルのサポートがコンシューマーに必要であるか
 
-など、行セット内のデータを更新するウィザードを使用して、コンシューマーの作成時に指定されていない場合は、する機能、ファクトの後に設定して指定できます、`DBPROP_IRowsetChange`と`DBPROP_UPDATABILITY`コマンド オブジェクトのプロパティ。 次に、行セットが作成されたときに、`IRowsetChange`インターフェイス。
+基本的なコンシューマーもあれば、複雑なコンシューマーもあります。 OLE DB オブジェクトの機能は、プロパティで指定されます。 **ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーを作成する場合、または**データベース プロバイダー ウィザード**を使用してプロバイダーを作成する場合は、適切なオブジェクト プロパティが自動的に設定され、一連の標準の機能が利用可能になります。 ただし、ウィザードで生成されたコンシューマー クラスまたはプロバイダー クラスで、必要なすべての処理がサポートされない場合は、[OLE DB テンプレート ライブラリ](../../data/oledb/ole-db-templates.md)で、それらのクラスのインターフェイスを参照する必要があります。 これらのインターフェイスにより、未加工の OLE DB インターフェイスがラップされ、それらをより使いやすくするための追加実装が提供されます。
 
-## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>別のデータ アクセス テクノロジ (ADO、ODBC、または DAO) を使用して以前のコードを使用していますか。
+たとえば、行セットのデータを更新したいと考えているが、ウィザードでコンシューマーを作成するときにそれを指定することを忘れた場合は、後でコマンド オブジェクト上で `DBPROP_IRowsetChange` および `DBPROP_UPDATABILITY` プロパティを設定して、その機能を指定できます。 これにより、行セットは、作成された時点で `IRowsetChange` インターフェイスを持つようになります。
 
-(コンポーネントの OLE DB と ADO のコンポーネントを使用して、OLE DB の ODBC コードを移行する) などのテクノロジの組み合わせについて、すべての状況を説明することは、Visual C ドキュメントの範囲外です。 ただし、さまざまなシナリオをカバーする多くの記事では、次の Microsoft web サイトで使用できます。
+## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>別のデータ アクセス テクノロジ (ADO、ODBC、または DAO) を使用している古いコードがあるか
+
+さまざまなテクノロジを組み合わせることができますが (たとえば、ADO コンポーネントと OLE DB コンポーネントを併用したり、ODBC コードを OLE DB に移行したりできます)、Visual C++ ドキュメントの範囲では、すべての状況を説明することはできません。 しかしながら、さまざまなシナリオを含む多くの記事が次の Microsoft Web サイトで公開されています。
 
 - [Microsoft ヘルプおよびサポート](https://support.microsoft.com/)
 
-- [Microsoft データ アクセス技術記事の概要](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Microsoft Data Access Technical Articles Overview (Microsoft データ アクセス技術に関する記事の概要)](https://msdn.microsoft.com/library/ms810811.aspx)
 
 ## <a name="see-also"></a>関連項目
 

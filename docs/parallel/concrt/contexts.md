@@ -1,77 +1,76 @@
 ---
-title: コンテキスト
+title: Contexts
 ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eaf21a3d65ae891a48657de9d3e7aff78ce12b9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529172"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142191"
 ---
-# <a name="contexts"></a>コンテキスト
+# <a name="contexts"></a>Contexts
 
-このドキュメントでは、同時実行ランタイムのコンテキストの役割について説明します。 スケジューラに関連付けられているスレッドと呼ばれる、*実行コンテキスト*、または単*コンテキスト*します。 [Concurrency::wait](reference/concurrency-namespace-functions.md#wait)関数と、同時実行::[コンテキスト クラス](../../parallel/concrt/reference/context-class.md)コンテキストの動作を制御できます。 使用して、`wait`関数を指定した時間、現在のコンテキストを中断します。 使用して、`Context`クラス経由で、現在のコンテキストをオーバーサブスク ライブするときにコンテキスト ブロック、ブロックを解除し生成、または詳細に制御する必要があります。
+このドキュメントでは、同時実行ランタイム内のコンテキストの役割について説明します。 スケジューラにアタッチされるスレッドは、*実行コンテキスト*または*コンテキスト*だけと呼ばれます。 [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait)関数と concurrency::[Context クラス](../../parallel/concrt/reference/context-class.md)を使用すると、コンテキストの動作を制御できます。 現在のコンテキストを指定した時間だけ中断するには、`wait` 関数を使用します。 コンテキストのブロック、ブロック解除、および生成のタイミングをより細かく制御する必要がある場合、または現在のコンテキストをオーバーサブスクライブする場合は、`Context` クラスを使用します。
 
 > [!TIP]
->  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+> コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 タスクスケジューラはアプリケーションのパフォーマンスを微調整するのに役立ちます。そのため、同時実行ランタイムを初めて使用する場合は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)から始めることをお勧めします。
 
 ## <a name="the-wait-function"></a>Wait 関数
 
-[Concurrency::wait](reference/concurrency-namespace-functions.md#wait)関数が指定したミリ秒数の現在のコンテキストの実行を協調的になります。 ランタイムでは、yield 時間を使用して、その他のタスクを実行します。 指定した時間が経過すると、ランタイム スケジュールの実行コンテキストを変更します。 そのため、`wait`関数は、現在のコンテキストに指定された値よりも長い中断可能性があります、`milliseconds`パラメーター。
+[Concurrency:: wait](reference/concurrency-namespace-functions.md#wait)関数は、指定されたミリ秒数の間、現在のコンテキストの実行を協調的に生成します。 ランタイムは、yield time を使用して他のタスクを実行します。 指定された時間が経過すると、ランタイムはコンテキストの実行をスケジュールします。 したがって、`wait` 関数は、`milliseconds` パラメーターに指定された値よりも長い現在のコンテキストを中断する可能性があります。
 
-0 (ゼロ) を渡す、`milliseconds`パラメーターとその他のすべてのアクティブなコンテキストで作業を実行する機会が与えられますまで、現在のコンテキストを中断するランタイム。 その他のすべてのアクティブなタスクにタスクを譲渡できます。
+`milliseconds` パラメーターに 0 (ゼロ) を渡すと、他のすべてのアクティブなコンテキストに作業を実行する機会が与えられるまで、ランタイムは現在のコンテキストを中断します。 これにより、タスクを他のすべてのアクティブなタスクに対して行うことができます。
 
 ### <a name="example"></a>例
 
-使用する例については、 `wait` 、現在のコンテキストを生成する関数を確認を実行するには、その他のコンテキストを許可してしまう[方法: スケジュール グループを使用して注文の実行に影響する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
+`wait` 関数を使用して現在のコンテキストを生成し、他のコンテキストを実行できるようにする例については、「[方法: スケジュールグループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)」を参照してください。
 
-## <a name="the-context-class"></a>Context クラス
+## <a name="the-context-class"></a>コンテキストクラス
 
-同時実行性::[コンテキスト クラス](../../parallel/concrt/reference/context-class.md)実行コンテキストのプログラミングの抽象化して 2 つの重要な機能を提供しています: 協調的ブロック、ブロック解除、および現在のコンテキストを生成する機能と機能現在のコンテキストをオーバーサブスク ライブされます。
+Concurrency::[context クラス](../../parallel/concrt/reference/context-class.md)は、実行コンテキストのプログラミングの抽象化を提供し、2つの重要な機能を提供します。現在のコンテキストを協調的にブロック、ブロック解除、および生成する機能と、現在のコンテキストをオーバーサブスクライブする機能です。
 
 ### <a name="cooperative-blocking"></a>協調ブロッキング
 
-`Context` クラスを使用すると、現在の実行コンテキストをブロックまたは生成できます。 リソースが利用できないため、現在のコンテキストを続行できない場合、ブロックまたは生成する機能は便利です。
+`Context` クラスを使用すると、現在の実行コンテキストをブロックまたは生成できます。 ブロックまたは生成は、リソースが使用できないために現在のコンテキストを続行できない場合に便利です。
 
-[Concurrency::Context::Block](reference/context-class.md#block)メソッドは、現在のコンテキストをブロックします。 ブロックされているコンテキストでは、ランタイムは、その他のタスクを実行できるように、処理リソースが生成されます。 [Concurrency::Context::Unblock](reference/context-class.md#unblock)メソッド ブロックされているコンテキストのブロックを解除します。 `Context::Unblock`と呼ばれるものとは異なるコンテキストからメソッドを呼び出す必要があります`Context::Block`します。 ランタイムによってスロー [concurrency::context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md)コンテキスト自体のブロックを解除しようとするとします。
+[Concurrency:: Context:: Block](reference/context-class.md#block)メソッドは、現在のコンテキストをブロックします。 ブロックされているコンテキストは、ランタイムが他のタスクを実行できるように処理リソースを生成します。 [Concurrency:: Context:: ブロック解除](reference/context-class.md#unblock)メソッドは、ブロックされたコンテキストのブロックを解除します。 `Context::Unblock` メソッドは、`Context::Block`を呼び出したコンテキストとは異なるコンテキストから呼び出す必要があります。 コンテキストが自身のブロックを解除しようとすると、ランタイムは[concurrency:: context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md)をスローします。
 
-呼び出す通常の協調をブロックし、コンテキストのブロックを解除、 [concurrency::Context::CurrentContext](reference/context-class.md#currentcontext)へのポインターを取得する、`Context`と結果を保存、現在のスレッドに関連付けられているオブジェクト。 呼び出して、`Context::Block`メソッドは、現在のコンテキストをブロックします。 後で、呼び出す`Context::Unblock`ブロックされているコンテキストのブロックを解除する別のコンテキストから。
+コンテキストを協調的にブロックおよびブロック解除するには、通常、 [concurrency:: context:: CurrentContext](reference/context-class.md#currentcontext)を呼び出して、現在のスレッドに関連付けられている `Context` オブジェクトへのポインターを取得し、結果を保存します。 次に、`Context::Block` メソッドを呼び出して、現在のコンテキストをブロックします。 後で、別のコンテキストから `Context::Unblock` を呼び出して、ブロックされたコンテキストのブロックを解除します。
 
-呼び出しの各ペアに一致する必要があります`Context::Block`と`Context::Unblock`します。 ランタイムによってスロー [concurrency::context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md)ときに、`Context::Block`または`Context::Unblock`メソッドが他のメソッドに一致する呼び出しがない連続して呼び出されます。 ただし、呼び出す必要はない`Context::Block`を呼び出す前に`Context::Unblock`します。 たとえば、1 つのコンテキストでは`Context::Unblock`別のコンテキストの呼び出しの前に`Context::Block`同じコンテキストではそのコンテキストがブロックされていません。
+呼び出しの各ペアを `Context::Block` と `Context::Unblock`に一致させる必要があります。 `Context::Block` または `Context::Unblock` メソッドが、別のメソッドに対して一致する呼び出しを行わずに連続して呼び出された場合、ランタイムは[concurrency:: context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md)をスローします。 ただし、`Context::Unblock`を呼び出す前に `Context::Block` を呼び出す必要はありません。 たとえば、あるコンテキストが同じコンテキストに対して別のコンテキストで `Context::Block` を呼び出す前に、`Context::Unblock` を呼び出すと、そのコンテキストはブロックされたままになります。
 
-[:Yield](reference/context-class.md#yield)メソッドは実行をランタイムの他のタスクを実行してコンテキストの実行のスケジュールを変更できるようにします。 呼び出すと、`Context::Block`メソッド、ランタイムが、コンテキストを再スケジュールします。
+[Concurrency:: Context:: Yield](reference/context-class.md#yield)メソッドを実行すると、ランタイムは他のタスクを実行し、コンテキストの実行を再スケジュールできるようになります。 `Context::Block` メソッドを呼び出すと、ランタイムはコンテキストを再スケジュールしません。
 
 #### <a name="example"></a>例
 
-使用する例については、 `Context::Block`、 `Context::Unblock`、および`Context::Yield`協調セマフォ クラスを実装するメソッドを参照してください[方法: コンテキスト クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)します。
+`Context::Block`、`Context::Unblock`、および `Context::Yield` メソッドを使用して協調セマフォクラスを実装する例については、「[方法: コンテキストクラスを使用して協調セマフォを実装](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)する」を参照してください。
 
 ##### <a name="oversubscription"></a>オーバーサブスクリプション
 
-既定のスケジューラは、使用可能なハードウェア スレッドが同じ数のスレッドを作成します。 使用することができます*オーバー サブスクリプション*の特定のハードウェア スレッドの追加のスレッドを作成します。
+既定のスケジューラは、使用可能なハードウェアスレッドと同じ数のスレッドを作成します。 *オーバーサブスクリプション*を使用して、特定のハードウェアスレッドに対して追加のスレッドを作成できます。
 
-負荷の高い操作では、オーバー サブスクリプション通常はスケーラビリティの追加のオーバーヘッドが発生します。 ただし、長い待機時間があるタスクでは、たとえば、ディスクやネットワーク接続からデータを読み取るオーバー サブスクリプション効率を向上できます全体的な一部のアプリケーションの。
-
-> [!NOTE]
->  同時実行ランタイムによって作成されたスレッドからのみオーバー サブスクリプションを有効にします。 (メイン スレッドを含む)、ランタイムによって作成されていないスレッドから呼び出された場合は、オーバー サブスクリプションを指定しても効果はありません。
-
-現在のコンテキストでオーバー サブスクリプションを有効にする、 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)メソッドを`_BeginOversubscription`パラメーターに設定**true**します。 同時実行ランタイムによって作成されたスレッドでオーバー サブスクリプションを有効にすると、1 つ追加のスレッドを作成するランタイムが行われます。 オーバー サブスクリプションの終了日を必要とするすべてのタスクの後に呼び出す`Context::Oversubscribe`で、`_BeginOversubscription`パラメーターに設定**false**します。
-
-複数回から現在のコンテキストでは、オーバー サブスクリプションを有効にすることができますが、有効にしたのと同じ回数で無効にする必要があります。 オーバー サブスクリプションも入れ子になんだことができます。つまり、オーバー サブスクリプションを使用して別のタスクによって作成されるタスクは、そのコンテキストをオーバーサブスク ライブできますも。 ただし、入れ子になったタスクとその親の両方が同じコンテキストに最も外側の呼び出しだけに属している場合`Context::Oversubscribe`追加のスレッドを作成します。
+計算を集中的に行う操作では、オーバーサブスクリプションは通常、追加のオーバーヘッドが発生するため、拡張されません。 ただし、ディスクやネットワーク接続からのデータの読み取りなど、待機時間の長いタスクの場合、オーバーサブスクリプションによって一部のアプリケーションの全体的な効率が向上します。
 
 > [!NOTE]
->  ランタイムによってスロー [concurrency::invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md)が有効にする前に、オーバー サブスクリプションが無効になっている場合。
+> 同時実行ランタイムによって作成されたスレッドからのみオーバーサブスクリプションを有効にします。 オーバーサブスクリプションは、ランタイムによって作成されていないスレッド (メインスレッドを含む) から呼び出された場合には効果がありません。
+
+現在のコンテキストでオーバーサブスクリプションを有効にするには、`_BeginOversubscription` パラメーターを**true**に設定して[Concurrency:: Context:: oversubscribe](reference/context-class.md#oversubscribe)メソッドを呼び出します。 同時実行ランタイムによって作成されたスレッドでオーバーサブスクリプションを有効にすると、ランタイムによって1つの追加スレッドが作成されます。 オーバーサブスクリプションを必要とするすべてのタスクが完了したら、`_BeginOversubscription` パラメーターを**false**に設定して `Context::Oversubscribe` を呼び出します。
+
+現在のコンテキストからオーバーサブスクリプションを複数回有効にすることができますが、有効にした回数と同じ回数だけ無効にする必要があります。 オーバーサブスクリプションも入れ子にすることができます。つまり、オーバーサブスクリプションを使用する別のタスクによって作成されたタスクは、そのコンテキストをオーバーサブスクライブすることもできます。 ただし、入れ子になったタスクとその親の両方が同じコンテキストに属している場合は、`Context::Oversubscribe` の最も外側の呼び出しのみが、追加のスレッドを作成します。
+
+> [!NOTE]
+> オーバーサブスクリプションが有効になる前に無効になっている場合、ランタイムは[concurrency:: invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md)をスローします。
 
 ###### <a name="example"></a>例
 
-オーバー サブスクリプションを使用して、ネットワーク接続からデータを読み取ることによって発生した待機時間を短縮する例を参照してください[方法: 待機時間のオフセットを使用してオーバー サブスクリプション](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)します。
+オーバーサブスクリプションを使用して、ネットワーク接続からのデータの読み取りによって発生する待機時間をオフセットする例については、「[方法: オーバーサブスクリプションを使用して待機時間をオフセット](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)する」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [方法: スケジュール グループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [方法: Context クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [方法: オーバーサブスクリプションを使用して待機時間を短縮する](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

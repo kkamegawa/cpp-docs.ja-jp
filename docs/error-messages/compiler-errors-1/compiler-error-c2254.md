@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
-ms.openlocfilehash: da89741811bbb9055f3f6793d115a357d80ab79a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38220575a48720a9df0e232ef74c8743e7e056c7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629152"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758841"
 ---
 # <a name="compiler-error-c2254"></a>コンパイラ エラー C2254
 
-'function': 純粋指定子または抽象オーバーライド指定子のフレンド関数では使用できません
+' function ': フレンド関数では、純粋指定子または抽象オーバーライド指定子は使用できません
 
-A`friend`関数が純粋に指定された`virtual`します。
+`friend` 関数は、純粋 `virtual`として指定されます。
 
 次の例では、C2254 が生成されます。
 
-```
+```cpp
 // C2254.cpp
 // compile with: /c
 class A {

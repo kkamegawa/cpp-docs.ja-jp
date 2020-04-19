@@ -160,17 +160,17 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f61c5aea825d85043ad273c640c4aabd38ebbb5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517677"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505130"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
 Windows のポップアップ メニュー機能を実装し、ティアオフ メニューやツールヒントなどの機能を追加することでそれを拡張します。
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -184,101 +184,101 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|`CMFCPopupMenu` オブジェクトを構築します。|
+|[CMFCPopupMenu:: CMFCPopupMenu](#cmfcpopupmenu)|`CMFCPopupMenu` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||
-|[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|ユーザー定義のツールの空のエントリを表示するポップアップ メニューが有効になっているかどうかを設定します。|
+|[CMFCPopupMenu:: Always Showemptyツールエントリ](#alwaysshowemptytoolsentry)|ユーザー定義ツールの空のエントリを表示するためにポップアップメニューを有効にするかどうかを設定します。|
 |[CMFCPopupMenu::AreAllCommandsShown](#areallcommandsshown)||
-|[CMFCPopupMenu::CheckArea](#checkarea)|ポップアップ メニューの基準とした点の位置を決定します。|
-|[CMFCPopupMenu::CloseMenu](#closemenu)||
-|[CMFCPopupMenu::Create](#create)|ポップアップ メニューを作成しにアタッチします、`CMFCPopupMenu`オブジェクト。|
-|[CMFCPopupMenu::DefaultMouseClickOnClose](#defaultmouseclickonclose)||
-|[CMFCPopupMenu::EnableMenuLogo](#enablemenulogo)|ポップアップ メニューのロゴを初期化します。|
+|[CMFCPopupMenu:: CheckArea](#checkarea)|ポップアップメニューを基準とするポイントの位置を決定します。|
+|[CMFCPopupMenu:: CloseMenu](#closemenu)||
+|[CMFCPopupMenu:: Create](#create)|ポップアップメニューを作成し、 `CMFCPopupMenu`オブジェクトにアタッチします。|
+|[CMFCPopupMenu::D efaultMouseClickOnClose](#defaultmouseclickonclose)||
+|[CMFCPopupMenu::EnableMenuLogo](#enablemenulogo)|ポップアップメニューのロゴを初期化します。|
 |[CMFCPopupMenu::EnableMenuSound](#enablemenusound)|メニューのサウンドを有効にします。|
 |[CMFCPopupMenu::EnableResize](#enableresize)||
-|[CMFCPopupMenu::EnableScrolling](#enablescrolling)||
+|[CMFCPopupMenu:: EnableScrolling](#enablescrolling)||
 |[CMFCPopupMenu::EnableVertResize](#enablevertresize)||
-|[CMFCPopupMenu::FindSubItemByCommand](#findsubitembycommand)||
-|[CMFCPopupMenu::GetActiveMenu](#getactivemenu)|現在アクティブなメニューを返します。|
-|[CMFCPopupMenu::GetAnimationSpeed](#getanimationspeed)|ポップアップ メニューのアニメーションの速度を返します。|
-|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|ポップアップ メニューのアニメーションの現在の型を返します。|
-|[CMFCPopupMenu::GetDropDirection](#getdropdirection)||
-|[CMFCPopupMenu::GetForceMenuFocus](#getforcemenufocus)|メニュー バー、ポップアップ メニューが表示される場合に、フォーカスを返すかどうかを示します。|
-|[CMFCPopupMenu::GetForceShadow](#getforceshadow)||
-|[CMFCPopupMenu::GetHMenu](#gethmenu)|関連付けられたメニュー リソース ハンドルを返します。|
-|[CMFCPopupMenu::GetMenuBar](#getmenubar)|返します、 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)ポップアップ メニュー内に埋め込まれます。|
-|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|指定したインデックス位置にあるメニュー項目にポインターを返します。|
-|[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|ポップアップ メニュー項目の数を返します。|
-|[CMFCPopupMenu::GetMessageWnd](#getmessagewnd)|ポップアップ メニューのメッセージのルーティング先のウィンドウにポインターを返します。|
-|[CMFCPopupMenu::GetParentArea](#getparentarea)||
-|[CMFCPopupMenu::GetParentButton](#getparentbutton)|親ツールバー ボタンへのポインターを返します。|
-|[CMFCPopupMenu::GetParentPopupMenu](#getparentpopupmenu)|親のポップアップ メニューへのポインターを返します。|
+|[CMFCPopupMenu:: FindSubItemByCommand](#findsubitembycommand)||
+|[CMFCPopupMenu:: GetActiveMenu](#getactivemenu)|現在アクティブなメニューを返します。|
+|[CMFCPopupMenu:: Getアニメーション速度](#getanimationspeed)|ポップアップメニューのアニメーション速度を返します。|
+|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|ポップアップメニューアニメーションの現在の型を返します。|
+|[CMFCPopupMenu:: GetDropDirection](#getdropdirection)||
+|[CMFCPopupMenu:: GetForceMenuFocus](#getforcemenufocus)|ポップアップメニューが表示されたときに、フォーカスがメニューバーに返されるかどうかを示します。|
+|[CMFCPopupMenu:: GetForceShadow](#getforceshadow)||
+|[CMFCPopupMenu:: GetHMenu](#gethmenu)|添付メニューリソースへのハンドルを返します。|
+|[CMFCPopupMenu:: GetMenuBar](#getmenubar)|ポップアップメニュー内に埋め込まれている[Cmfcpopupmenubar](../../mfc/reference/cmfcpopupmenubar-class.md)を返します。|
+|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|指定したインデックス位置にあるメニュー項目へのポインターを返します。|
+|[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|ポップアップメニュー内の項目数を返します。|
+|[CMFCPopupMenu:: GetMessageWnd](#getmessagewnd)|フレームワークがポップアップメニューメッセージをルーティングするウィンドウへのポインターを返します。|
+|[CMFCPopupMenu:: GetParentArea](#getparentarea)||
+|[CMFCPopupMenu:: GetParentButton](#getparentbutton)|親ツールバーボタンへのポインターを返します。|
+|[CMFCPopupMenu::GetParentPopupMenu](#getparentpopupmenu)|親ポップアップメニューへのポインターを返します。|
 |[CMFCPopupMenu::GetParentRibbonElement](#getparentribbonelement)||
-|[CMFCPopupMenu::GetParentToolBar](#getparenttoolbar)|親ツールバーへのポインターを返します。|
-|[CMFCPopupMenu::GetQuickCustomizeType](#getquickcustomizetype)||
-|[CMFCPopupMenu::GetSelItem](#getselitem)|現在選択されているメニュー コマンドへのポインターを返します。|
-|[CMFCPopupMenu::HasBeenResized](#hasbeenresized)||
-|[CMFCPopupMenu::HideRarelyUsedCommands](#hiderarelyusedcommands)|ポップアップ メニューがあまり使用されないコマンドを非表示にできるかどうかを示します。|
-|[CMFCPopupMenu::InCommand](#incommand)||
-|[CMFCPopupMenu::InsertItem](#insertitem)|指定した位置に、ポップアップ メニューには、新しい項目を挿入します。|
-|[CMFCPopupMenu::InsertSeparator](#insertseparator)|指定した位置に、ポップアップ メニューには、区切り記号を挿入します。|
+|[CMFCPopupMenu:: GetParentToolBar](#getparenttoolbar)|親ツールバーへのポインターを返します。|
+|[CMFCPopupMenu:: Getquickカスタマイズ Etype](#getquickcustomizetype)||
+|[CMFCPopupMenu:: GetSelItem](#getselitem)|現在選択されているメニューコマンドへのポインターを返します。|
+|[CMFCPopupMenu:: Hasのサイズ変更](#hasbeenresized)||
+|[CMFCPopupMenu:: Hiderarelyused コマンド](#hiderarelyusedcommands)|ポップアップメニューで使用頻度の低いコマンドを非表示にできるかどうかを示します。|
+|[CMFCPopupMenu:: InCommand](#incommand)||
+|[CMFCPopupMenu:: InsertItem](#insertitem)|新しい項目をポップアップメニューの指定した位置に挿入します。|
+|[CMFCPopupMenu:: InsertSeparator](#insertseparator)|ポップアップメニューの指定した位置に区切り記号を挿入します。|
 |[CMFCPopupMenu::IsAlwaysClose](#isalwaysclose)||
 |[CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry](#isalwaysshowemptytoolsentry)||
-|[CMFCPopupMenu::IsCustomizePane](#iscustomizepane)|ポップアップ メニューとして機能しているかどうかを示す、 **QuickCustomizePane**します。|
-|[CMFCPopupMenu::IsEscClose](#isescclose)||
-|[CMFCPopupMenu::IsIdle](#isidle)|ポップアップ メニューが現在アイドル状態かどうかを示します。|
-|[CMFCPopupMenu::IsMenuSound](#ismenusound)||
-|[CMFCPopupMenu::IsQuickCustomize](#isquickcustomize)|決定かどうか、関連付けられている[CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)QuickCustomize モードでは、します。|
-|[CMFCPopupMenu::IsResizeble](#isresizeble)||
-|[CMFCPopupMenu::IsRightAlign](#isrightalign)|メニューが右揃えまたは左揃えするかどうかを示します。|
-|[CMFCPopupMenu::IsScrollable](#isscrollable)||
-|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|フレームワークの親フレームは、ユーザーは、ポップアップ メニューからコマンドを選択したときに通知するかどうかを示します。|
-|[CMFCPopupMenu::IsShown](#isshown)|ポップアップ メニューが現在表示されているかどうかを示します。|
-|[CMFCPopupMenu::MoveTo](#moveto)||
+|[CMFCPopupMenu:: IsCustomizePane](#iscustomizepane)|ポップアップメニューが**Quickcustomizepane**として機能しているかどうかを示します。|
+|[CMFCPopupMenu:: IsEscClose](#isescclose)||
+|[CMFCPopupMenu:: IsIdle](#isidle)|ポップアップメニューが現在アイドル状態かどうかを示します。|
+|[CMFCPopupMenu:: IsMenuSound](#ismenusound)||
+|[CMFCPopupMenu:: IsQuickCustomize](#isquickcustomize)|関連付けられている[Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)が quickcustomize モードであるかどうかを判断します。|
+|[CMFCPopupMenu:: IsResizeble](#isresizeble)||
+|[CMFCPopupMenu:: Isright Align](#isrightalign)|メニューを右揃えまたは左揃えにするかどうかを示します。|
+|[CMFCPopupMenu:: IsScrollable 可能](#isscrollable)||
+|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|ユーザーがポップアップメニューからコマンドを選択したときに、フレームワークが親フレームに通知するかどうかを示します。|
+|[CMFCPopupMenu:: IsShown](#isshown)|ポップアップメニューが現在表示されているかどうかを示します。|
+|[CMFCPopupMenu:: MoveTo](#moveto)||
 |[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`をオーバーライドします)。|
-|[CMFCPopupMenu::PostCommand](#postcommand)||
+|[CMFCPopupMenu::P ostCommand](#postcommand)||
 |[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|( `CFrameWnd::PreTranslateMessage`をオーバーライドします)。|
-|[CMFCPopupMenu::RecalcLayout](#recalclayout)|オンまたはオフに標準のコントロール バーが切り替えられたときに、またはフレーム ウィンドウのサイズが変更されたときに、フレームワークによって呼び出されます。 (上書き[表示](../../mfc/reference/cframewnd-class.md#recalclayout))。|
-|[CMFCPopupMenu::RemoveAllItems](#removeallitems)|ポップアップ メニューからすべての項目をクリアします。|
-|[CMFCPopupMenu::RemoveItem](#removeitem)|ポップアップ メニューから、指定した項目を削除します。|
-|[CMFCPopupMenu::SaveState](#savestate)||
-|[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)|ポップアップ メニューのアニメーションの速度を設定します。|
-|[CMFCPopupMenu::SetAnimationType](#setanimationtype)|ポップアップ メニューのアニメーションの種類を設定します。|
-|[CMFCPopupMenu::SetAutoDestroy](#setautodestroy)||
-|[CMFCPopupMenu::SetDefaultItem](#setdefaultitem)|ポップアップ メニューの既定のコマンドを設定します。|
-|[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)|メニュー バー、ポップアップ メニューが表示される場合に返される入力フォーカスを強制します。|
-|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|ポップアップ メニューがメイン フレームの外に置くと、メニューの影を描画するためにフレームワークを強制します。|
-|[CMFCPopupMenu::SetMaxWidth](#setmaxwidth)|ポップアップ メニューの最大幅を設定します。|
-|[CMFCPopupMenu::SetMessageWnd](#setmessagewnd)||
+|[CMFCPopupMenu::RecalcLayout](#recalclayout)|標準コントロールバーのオン/オフを切り替えるか、またはフレームウィンドウのサイズが変更されたときに、フレームワークによって呼び出されます。 ( [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)をオーバーライドします)。|
+|[CMFCPopupMenu::RemoveAllItems](#removeallitems)|ポップアップメニューからすべての項目を削除します。|
+|[CMFCPopupMenu::RemoveItem](#removeitem)|指定した項目をポップアップメニューから削除します。|
+|[CMFCPopupMenu:: SaveState](#savestate)||
+|[CMFCPopupMenu:: Setアニメーション速度](#setanimationspeed)|ポップアップメニューのアニメーション速度を設定します。|
+|[CMFCPopupMenu::SetAnimationType](#setanimationtype)|ポップアップメニューのアニメーションの種類を設定します。|
+|[CMFCPopupMenu:: SetAutoDestroy](#setautodestroy)||
+|[CMFCPopupMenu:: SetDefaultItem](#setdefaultitem)|ポップアップメニューの既定のコマンドを設定します。|
+|[CMFCPopupMenu:: SetForceMenuFocus](#setforcemenufocus)|ポップアップメニューが表示されたときに、入力フォーカスをメニューバーに強制的に戻します。|
+|[CMFCPopupMenu:: SetForceShadow](#setforceshadow)|ポップアップメニューがメインフレームの外側に表示されたときに、フレームワークがメニューの影を描画するようにします。|
+|[CMFCPopupMenu:: SetMaxWidth](#setmaxwidth)|ポップアップメニューの最大の幅を設定します。|
+|[CMFCPopupMenu:: SetMessageWnd](#setmessagewnd)||
 |[CMFCPopupMenu::SetParentRibbonElement](#setparentribbonelement)||
-|[CMFCPopupMenu::SetQuickCustomizeType](#setquickcustomizetype)||
-|[CMFCPopupMenu::SetQuickMode](#setquickmode)||
-|[CMFCPopupMenu::SetRightAlign](#setrightalign)|ポップアップ メニューのメニューの配置を設定します。|
-|[CMFCPopupMenu::SetSendMenuSelectMsg](#setsendmenuselectmsg)|ポップアップ メニューの親フレームは、ユーザーがコマンドを選択したときに通知するかどうかを制御するフラグを設定します。|
-|[CMFCPopupMenu::ShowAllCommands](#showallcommands)|すべてのコマンドを表示するポップアップ メニューを強制します。|
-|[CMFCPopupMenu::TriggerResize](#triggerresize)||
-|[CMFCPopupMenu::UpdateAllShadows](#updateallshadows)|すべての開かれたポップアップ メニューの影を更新します。|
-|[CMFCPopupMenu::UpdateShadow](#updateshadow)|ポップアップ メニューの影を更新します。|
+|[CMFCPopupMenu:: Setquickカスタマイズ Etype](#setquickcustomizetype)||
+|[CMFCPopupMenu:: SetQuickMode](#setquickmode)||
+|[CMFCPopupMenu:: Setright Align](#setrightalign)|ポップアップメニューのメニューの配置を設定します。|
+|[CMFCPopupMenu::SetSendMenuSelectMsg](#setsendmenuselectmsg)|ユーザーがコマンドを選択したときにポップアップメニューで親フレームを通知するかどうかを制御するフラグを設定します。|
+|[CMFCPopupMenu:: ShowAllCommands](#showallcommands)|ポップアップメニューですべてのコマンドを強制的に表示します。|
+|[CMFCPopupMenu:: TriggerResize](#triggerresize)||
+|[CMFCPopupMenu:: UpdateAllShadows](#updateallshadows)|開いているすべてのポップアップメニューの影を更新します。|
+|[CMFCPopupMenu:: UpdateShadow](#updateshadow)|ポップアップメニューの影を更新します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||
+|[CMFCPopupMenu:: CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||
-|[CMFCPopupMenu::OnChooseItem](#onchooseitem)||
+|[CMFCPopupMenu:: On Item](#onchooseitem)||
 
 ### <a name="remarks"></a>Remarks
 
-通常、MFC はポップアップ メニューを自動的に作成します。 作成する場合、`CMFCPopupMenu`オブジェクトを手動で、1 つは、ヒープの割り当てを呼び出して[CMFCPopupMenu::Create](#create)します。
+通常、MFC はポップアップメニューを自動的に作成します。 オブジェクトを`CMFCPopupMenu`手動で作成する場合は、ヒープに1つを割り当ててから、 [CMFCPopupMenu:: create](#create)を呼び出します。
 
 ## <a name="example"></a>例
 
-次の例では、ポップアップ メニュー オブジェクトを構成する方法を示します。 例をロゴと、ポップアップ メニューのサウンド設定、アニメーションの速度と種類の設定、ポップアップ メニューがメイン フレーム以外の場所が表示されたら、メニューの影を描画、最大の幅を設定し、ポップアップ メニューの右側のメニューの配置を設定する方法を示します。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+ポップアップメニューオブジェクトを構成する方法を次の例に示します。 この例では、ポップアップメニューのロゴとサウンドを設定する方法、アニメーションの速度と種類を設定する方法、メインフレームの外側にポップアップメニューを表示したときにメニューの影を描画する方法、最大の幅を設定する方法、およびポップアップメニューの右のメニューの配置を設定する方法を示します。 このコードスニペットは、[カスタムページサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -298,7 +298,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxpopupmenu.h
+**ヘッダー:** afxpopupmenu
 
 ##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu
 
@@ -310,8 +310,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pTopFrame*<br/>
-[in]*pPopupMenu*<br/>
+から*Ptopframe*<br/>
+から*pPopupMenu*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -319,7 +319,7 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ##  <a name="alwaysshowemptytoolsentry"></a>  CMFCPopupMenu::AlwaysShowEmptyToolsEntry
 
-ユーザー定義のツールの空のエントリを表示するポップアップ メニューが有効になっているかどうかを設定します。
+ユーザー定義ツールの空のエントリを表示するためにポップアップメニューを有効にするかどうかを設定します。
 
 ```
 static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
@@ -328,7 +328,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bShow*<br/>
-[in]ポップアップ メニューが空のエントリを表示できる場合は TRUE。FALSE それ以外の場合。
+からポップアップメニューに空のエントリを表示できる場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
 
@@ -340,9 +340,9 @@ BOOL AreAllCommandsShown() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="checkarea"></a>  CMFCPopupMenu::CheckArea
+##  <a name="checkarea"></a>CMFCPopupMenu:: CheckArea
 
-ポップアップ メニューの基準とした点の位置を決定します。
+ポップアップメニューを基準とするポイントの位置を決定します。
 
 ```
 MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
@@ -351,29 +351,29 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="parameters"></a>パラメーター
 
 *ptScreen*<br/>
-[in]画面座標にポイントします。
+から画面座標で表される点。
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューの基準としたが、ポイントを示す MENUAREA_TYPE パラメーター。
+ポイントがポップアップメニューに対して相対的な位置を示す MENUAREA_TYPE パラメーター。
 
 ### <a name="remarks"></a>Remarks
 
-MENUAREA_TYPE パラメーターは、次の値のいずれかを持つことができます。
+MENUAREA_TYPE パラメーターには、次のいずれかの値を指定できます。
 
-- 外部 - *ptScreen*がポップアップ メニューの範囲外です。
+- 外部- *Ptscreen*はポップアップメニューの外側にあります。
 
-- ロゴ - *ptScreen*ロゴの領域には。
+- LOGO- *Ptscreen*はロゴ領域上にあります。
 
-- TEAROFF_CAPTION - *ptScreen*ティアオフ キャプション上します。
+- TEAROFF_CAPTION- *Ptscreen*はティアオフキャプション上にあります。
 
-- SHADOW_BOTTOM - *ptScreen*がポップアップ メニューの下部にあるシャドウを超えています。
+- SHADOW_BOTTOM- *Ptscreen*は、ポップアップメニューの下詰め (影) 上にあります。
 
-- SHADOW_RIGHT - *ptScreen*上、ポップアップ メニューの適切なシャドウします。
+- SHADOW_RIGHT- *Ptscreen*は、ポップアップメニューの右上にあります。
 
-- メニュー - *ptScreen*コマンド上します。
+- MENU- *Ptscreen*はコマンドの上にあります。
 
-##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu
+##  <a name="closemenu"></a>CMFCPopupMenu:: CloseMenu
 
 ```
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
@@ -381,13 +381,13 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bSetFocusToBar*<br/>
+から*bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="cmfcpopupmenu"></a>  CMFCPopupMenu::CMFCPopupMenu
+##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu:: CMFCPopupMenu
 
-構築、 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクト。
+[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトを構築します。
 
 ```
 CMFCPopupMenu(
@@ -398,18 +398,18 @@ CMFCPopupMenu(
 ### <a name="parameters"></a>パラメーター
 
 *pCustPage*<br/>
-[in]カスタマイズ ページへのポインター。
+からカスタマイズページへのポインター。
 
 *lpszTitle*<br/>
-[in]メニューのキャプションを含む文字列。
+からメニューのキャプションを格納している文字列。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドがリソースを割り当てて、`CMFCPopupMenu`します。 ポップアップ メニュー項目を作成するには[CMFCPopupMenu::Create](#create)します。
+このメソッドは、 `CMFCPopupMenu`のリソースを割り当てます。 ポップアップメニュー項目を作成するには、 [CMFCPopupMenu:: create](#create)を呼び出します。
 
-##  <a name="create"></a>  CMFCPopupMenu::Create
+##  <a name="create"></a>CMFCPopupMenu:: Create
 
-ポップアップ メニューを作成しにアタッチします、 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクト。
+ポップアップメニューを作成し、 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -424,38 +424,38 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pWndParent*<br/>
-[in]親ウィンドウ、`CMFCPopupMenu`します。
+からの親ウィンドウ`CMFCPopupMenu`。
 
 *x*<br/>
-[in]ポップアップ メニューの位置の水平画面座標
+からポップアップメニューの位置の水平画面座標
 
 *y*<br/>
-[in]ポップアップ メニューの位置の垂直画面座標。
+からポップメニューの位置を表示する垂直方向の画面座標。
 
 *hMenu*<br/>
-[in]メニュー リソースへのハンドル。
+からメニューリソースを処理するハンドル。
 
-*ブロックされています。*<br/>
-[in]メニューは、カスタマイズ可能なかどうかを示すブール値パラメーター。 FALSE は、ポップアップ メニューがカスタマイズ可能なことを示します。
+*化*<br/>
+からメニューがカスタマイズ可能かどうかを示すブール型パラメーターです。 FALSE は、ポップアップメニューがカスタマイズ可能であることを示します。
 
 *bOwnMessage*<br/>
-[in]メニューのメッセージのルーティング方法を示すブール値パラメーター。 詳細については、「解説」を参照してください。
+からフレームワークがメニューメッセージをどのようにルーティングするかを示すブール型パラメーター。 詳細については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-場合*bOwnMessage* true の場合、フレームワークのルートに任意のメニューのメッセージは、 *pWndParent*します。 *pWndParent*場合は、NULL を指定する必要がありますできません*bOwnMessage*は TRUE です。 場合*bOwnMessage* FALSE、フレームワークのルートは、親のポップアップ メニューにメニュー メッセージです。
+*BOwnMessage*が TRUE の場合、フレームワークはすべてのメニューメッセージを*pWndParent*にルーティングします。 *bOwnMessage*が TRUE の場合、 *pWndParent*を NULL にすることはできません。 *BOwnMessage*が FALSE の場合、フレームワークはメニューメッセージを親ポップアップメニューにルーティングします。
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`Create`のメソッド、`CMFCPopuMenu`クラス。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+クラスのメソッド`Create`を使用する方法を次の例に示します。 `CMFCPopuMenu` このコードスニペットは、[カスタムページサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 
-##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar
+##  <a name="createtearoffbar"></a>CMFCPopupMenu:: CreateTearOffBar
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -466,15 +466,15 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndMain*<br/>
-[in]*uiID*<br/>
-[in]*lpszName*<br/>
+から*pWndMain*<br/>
+から*uiID*<br/>
+から*Lpszname*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose
+##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::D efaultMouseClickOnClose
 
 ```
 virtual BOOL DefaultMouseClickOnClose() const;
@@ -486,7 +486,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 ##  <a name="enablemenulogo"></a>  CMFCPopupMenu::EnableMenuLogo
 
-ポップアップ メニューのロゴを初期化します。
+ポップアップメニューのロゴを初期化します。
 
 ```
 void EnableMenuLogo(
@@ -497,16 +497,16 @@ void EnableMenuLogo(
 ### <a name="parameters"></a>パラメーター
 
 *iLogoSize*<br/>
-[in](ピクセル単位)、ロゴのサイズ。
+からロゴのサイズ (ピクセル単位)。
 
 *nLogoLocation*<br/>
-[in]ロゴの位置を示す列挙型。
+からロゴの位置を示す列挙データ型。
 
 ### <a name="remarks"></a>Remarks
 
-ロゴを表示するには、メソッドを実装[CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo)メイン フレーム ウィンドウにします。
+ロゴを表示するには、メインフレームウィンドウで[CFrameWndEx:: OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo)メソッドを実装します。
 
-使用可能な値を*nLogoLocation*は MENU_LOGO_LEFT、MENU_LOGO_RIGHT、MENU_LOGO_TOP、および MENU_LOGO_BOTTOM します。
+*NLogoLocation*に指定できる値は、MENU_LOGO_LEFT、MENU_LOGO_RIGHT、MENU_LOGO_TOP、および MENU_LOGO_BOTTOM です。
 
 ##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound
 
@@ -519,11 +519,11 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bEnable*<br/>
-[in]有効にするサウンド、FALSE それ以外の場合は TRUE です。
+からサウンドを有効にする場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-サウンドを有効にした場合、フレームワーク、 [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound)メソッド ユーザーは、ポップアップ メニューを開くか、メニュー コマンドを選択したときにします。 既定では、この機能が有効にします。
+サウンドを有効にすると、ユーザーがポップアップメニューを開いたとき、またはメニューコマンドを選択したときに、フレームワークによって[PlaySound](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound)メソッドが呼び出されます。 既定では、この機能は有効になっています。
 
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize
 
@@ -533,7 +533,7 @@ void EnableResize(CSize sizeMinResize);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*sizeMinResize*<br/>
+から*sizeMinResize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -545,7 +545,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*BOOL*<br/>
+から*BOOL*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -557,11 +557,11 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nMinResize*<br/>
+から*Nminresize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand
+##  <a name="findsubitembycommand"></a>CMFCPopupMenu:: FindSubItemByCommand
 
 ```
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
@@ -569,7 +569,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmd*<br/>
+から*uiCmd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -585,15 +585,15 @@ static CMFCPopupMenu* GetActiveMenu();
 
 ### <a name="return-value"></a>戻り値
 
-アクティブなポップアップ メニューのまたは現在アクティブなポップアップ メニューがない場合は NULL へのポインター。
+アクティブなポップアップメニューへのポインター。現在アクティブなポップアップメニューがない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-各アプリケーションは、最大で 1 つアクティブなポップアップ メニューを持つことができます。
+各アプリケーションには、アクティブなポップアップメニューを1つしか含めることができません。
 
-##  <a name="getanimationspeed"></a>  CMFCPopupMenu::GetAnimationSpeed
+##  <a name="getanimationspeed"></a>CMFCPopupMenu:: Getアニメーション速度
 
-ポップアップ メニューのアニメーションの速度を返します。
+ポップアップメニューのアニメーション速度を返します。
 
 ```
 static UINT GetAnimationSpeed();
@@ -601,15 +601,15 @@ static UINT GetAnimationSpeed();
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューのアニメーションが終了するまでをミリ秒単位の時間を示す整数。
+ポップアップメニューのアニメーションが完了するまでにかかった時間 (ミリ秒単位) を示す整数。
 
 ### <a name="remarks"></a>Remarks
 
-アニメーションの速度は、グローバルな値です。 使用[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)ポップアップ メニューのアニメーションの速度を変更します。
+アニメーションの速度はグローバルな値です。 ポップアップメニューのアニメーション速度を変更するには、 [CMFCPopupMenu:: Setanimation speed](#setanimationspeed)を使用します。
 
 ##  <a name="getanimationtype"></a>  CMFCPopupMenu::GetAnimationType
 
-ポップアップ アニメーションの現在の型を返します。
+ポップアップアニメーションの現在の型を返します。
 
 ```
 static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
@@ -618,24 +618,24 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ### <a name="parameters"></a>パラメーター
 
 *bNoSystem*<br/>
-[in]このメソッドがグローバルな値をチェックするかどうかを示すブール値パラメーター。 このメソッドのこのインスタンスのアニメーションのスタイルを取得する場合は FALSE、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)します。
+からこのメソッドがグローバル値をチェックするかどうかを示すブール型パラメーター。 このメソッドが[CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)のこのインスタンスのアニメーションスタイルを返すようにする場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-アニメーションの種類を記述する列挙値。
+アニメーションの種類を説明する列挙値。
 
 ### <a name="remarks"></a>Remarks
 
-ポップアップ メニューのアニメーションのスタイルでは、アプリケーションのグローバルです。 使用[CMFCPopupMenu::SetAnimationType](#setanimationtype)アニメーションのスタイルを設定します。
+ポップアップメニューのアニメーションのスタイルは、アプリケーションに対してグローバルです。 [CMFCPopupMenu:: Setanimation type](#setanimationtype)を使用して、アニメーションのスタイルを設定します。
 
-次の表では、可能なアニメーションの種類を示します。
+次の表に、使用可能なアニメーションの種類を示します。
 
 |||
 |-|-|
-|NO_ANIMATION|ポップアップ メニューでは、アニメーション化されていないと、すぐに表示されます。  |
-|展開します。|フレームワークには、左上隅から右下隅にポップアップ メニューが表示されます。  |
-|スライド|ポップアップ メニューは、上から下へ移動します。  |
-|フェード|ポップアップ メニューでは、まず透明のように表示され、徐々 に塗りつぶされます。  |
+|NO_ANIMATION|ポップアップメニューはアニメーション化されず、すぐに表示されます。  |
+|折り畳み|フレームワークによって、左上隅のポップアップメニューが右下隅に表示されます。  |
+|挿入|ポップアップメニューは、上から下に移動します。  |
+|非|ポップアップメニューは、まず透過的に見え、徐々に solidifies に見えます。  |
 
 ##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
 
@@ -649,7 +649,7 @@ DROP_DIRECTION GetDropDirection() const;
 
 ##  <a name="getforcemenufocus"></a>  CMFCPopupMenu::GetForceMenuFocus
 
-メニュー バー、ポップアップ メニューが表示される場合に、フォーカスを返すかどうかを示します。
+ポップアップメニューが表示されたときに、フォーカスがメニューバーに返されるかどうかを示します。
 
 ```
 static BOOL GetForceMenuFocus();
@@ -657,11 +657,11 @@ static BOOL GetForceMenuFocus();
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューが表示されます。 ときに、メニュー バーに入力フォーカスが返される場合は TRUE。ポップアップ メニューがフォーカスを保持する場合は FALSE です。
+ポップアップメニューが表示されたときに、入力フォーカスがメニューバーに返される場合は TRUE。ポップアップメニューがフォーカスを保持する場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-既定では、アプリケーションは、メニュー バーにフォーカスを返しません。 この設定を変更するには使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)します。
+既定では、アプリケーションはメニューバーにフォーカスを返しません。 この設定を変更するには、 [CMFCPopupMenu:: SetForceMenuFocus](#setforcemenufocus)を使用します。
 
 ##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow
 
@@ -675,7 +675,7 @@ static BOOL __stdcall GetForceShadow();
 
 ##  <a name="gethmenu"></a>  CMFCPopupMenu::GetHMenu
 
-関連付けられたメニュー リソース ハンドルを返します。
+添付メニューリソースへのハンドルを返します。
 
 ```
 HMENU GetHMenu();
@@ -683,7 +683,7 @@ HMENU GetHMenu();
 
 ##  <a name="getmenubar"></a>  CMFCPopupMenu::GetMenuBar
 
-返します、 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)ポップアップ メニュー内に埋め込まれます。
+ポップアップメニュー内に埋め込まれている[Cmfcpopupmenubar](../../mfc/reference/cmfcpopupmenubar-class.md)を返します。
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -691,15 +691,15 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 ### <a name="return-value"></a>戻り値
 
-埋め込まれたへのポインター`CMFCPopupMenuBar`します。
+埋め込ま`CMFCPopupMenuBar`れたへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-ポップアップ メニューが埋め込まれた`CMFCPopupMenuBar`オブジェクト。 さまざまな埋め込みクラスを使用している場合は、派生クラスでは、このメソッドをオーバーライドする必要があります。
+ポップアップメニューには、オブジェクトが埋め`CMFCPopupMenuBar`込まれています。 別の埋め込みクラスを使用している場合は、派生クラスでこのメソッドをオーバーライドする必要があります。
 
 ##  <a name="getmenuitem"></a>  CMFCPopupMenu::GetMenuItem
 
-指定したインデックス位置にあるメニュー項目にポインターを返します。
+指定したインデックス位置にあるメニュー項目へのポインターを返します。
 
 ```
 CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
@@ -708,19 +708,19 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *iIndex*<br/>
-[in]メニュー項目の 0 から始まるインデックス。
+からメニュー項目の0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-メニュー項目へのポインター。 インデックスが有効でない場合は NULL です。
+メニュー項目へのポインター。 インデックスが無効な場合は NULL になります。
 
 ### <a name="remarks"></a>Remarks
 
-メニュー項目がによって表される、 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)します。 このメソッドを呼び出すときに適切なポインターを返します`CMFCToolBarMenuButton`します。
+メニュー項目は、 [Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)によって表されます。 このメソッドを呼び出すと、適切な`CMFCToolBarMenuButton`へのポインターが返されます。
 
 ##  <a name="getmenuitemcount"></a>  CMFCPopupMenu::GetMenuItemCount
 
-ポップアップ メニュー項目の数を返します。
+ポップアップメニュー内の項目数を返します。
 
 ```
 int GetMenuItemCount() const;
@@ -730,9 +730,9 @@ int GetMenuItemCount() const;
 
 メニュー内の項目の数。
 
-##  <a name="getmessagewnd"></a>  CMFCPopupMenu::GetMessageWnd
+##  <a name="getmessagewnd"></a>CMFCPopupMenu:: GetMessageWnd
 
-ポップアップ メニューのメッセージのルーティング先のウィンドウにポインターを返します。
+フレームワークがポップアップメニューメッセージをルーティングするウィンドウへのポインターを返します。
 
 ```
 CWnd* GetMessageWnd() const;
@@ -740,11 +740,11 @@ CWnd* GetMessageWnd() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューのメッセージを受信するウィンドウへのポインターウィンドウがない場合は NULL です。
+ポップアップメニューメッセージを受け取るウィンドウへのポインター。ウィンドウがない場合は NULL です。
 
 ### <a name="remarks"></a>Remarks
 
-メソッドを使用すると[CMFCPopupMenu::Create](#create) ] メニューの [メッセージを受信するどのようなウィンドウを指定する、ポップアップ メニューを作成します。
+[CMFCPopupMenu:: create](#create)メソッドを使用してポップアップメニューを作成する場合は、メニューメッセージを受信するウィンドウを指定します。
 
 ##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea
 
@@ -754,7 +754,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectParentBtn*<br/>
+[in] *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -762,7 +762,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ##  <a name="getparentbutton"></a>  CMFCPopupMenu::GetParentButton
 
-親ツールバー ボタンへのポインターを返します。
+親ツールバーボタンへのポインターを返します。
 
 ```
 CMFCToolBarMenuButton* GetParentButton() const;
@@ -770,17 +770,17 @@ CMFCToolBarMenuButton* GetParentButton() const;
 
 ### <a name="return-value"></a>戻り値
 
-親ツールバー ボタンへのポインター。 ポップアップ メニューがツール バー ボタンの親を持たない場合は NULL です。
+親ツールバーボタンへのポインター。 ポップアップメニューに親のツールバーボタンがない場合は NULL です。
 
 ### <a name="remarks"></a>Remarks
 
-A`CMFCPopupMenu`メニュー上のボタンで関連付けることができます。 このシナリオでは、ユーザーが親のツール バー ボタンを選択すると、ポップアップ メニューが表示されます。
+は`CMFCPopupMenu` 、メニューのボタンに関連付けることができます。 このシナリオでは、ユーザーが親のツールバーボタンを選択したときにポップアップメニューが表示されます。
 
-ポップアップ メニューにショートカット メニューがある場合はありませんツール バー ボタンの親。
+ポップアップメニューがショートカットメニューの場合は、親ツールバーボタンが表示されません。
 
 ##  <a name="getparentpopupmenu"></a>  CMFCPopupMenu::GetParentPopupMenu
 
-親のポップアップ メニューへのポインターを返します。
+親ポップアップメニューへのポインターを返します。
 
 ```
 CMFCPopupMenu* GetParentPopupMenu() const;
@@ -788,11 +788,11 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>戻り値
 
-親へのポインター`CMFCPopupMenu`オブジェクト。親のポップアップ メニューがない場合は NULL です。
+親`CMFCPopupMenu`オブジェクトへのポインターです。親ポップアップメニューがない場合は NULL です。
 
 ### <a name="remarks"></a>Remarks
 
-ポップアップ メニューが親を持つ`CMFCPopupMenu`サブメニューであるかどうかにのみオブジェクトします。
+ポップアップメニューは、サブメニューの場合`CMFCPopupMenu`にのみ、親オブジェクトを持ちます。
 
 ##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement
 
@@ -814,13 +814,13 @@ CMFCToolBar* GetParentToolBar() const;
 
 ### <a name="return-value"></a>戻り値
 
-親ツールバーへのポインター。 親ツールバー、ポップアップ メニューがない場合は NULL です。
+親ツールバーへのポインター。 ポップアップメニューに親ツールバーがない場合は NULL です。
 
 ### <a name="remarks"></a>Remarks
 
-場合、`CMFCPopupMenu`がショートカット メニュー、ツールバーの親を持たない。
+`CMFCPopupMenu`がショートカットメニューの場合、親ツールバーはありません。
 
-##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType
+##  <a name="getquickcustomizetype"></a>CMFCPopupMenu:: Getquickカスタマイズ Etype
 
 ```
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
@@ -830,9 +830,9 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getselitem"></a>  CMFCPopupMenu::GetSelItem
+##  <a name="getselitem"></a>CMFCPopupMenu:: GetSelItem
 
-現在選択されているメニュー コマンドへのポインターを返します。
+現在選択されているメニューコマンドへのポインターを返します。
 
 ```
 CMFCToolBarMenuButton* GetSelItem();
@@ -840,13 +840,13 @@ CMFCToolBarMenuButton* GetSelItem();
 
 ### <a name="return-value"></a>戻り値
 
-現在選択されているメニューへのポインター項目が選択されていない場合は NULL です。
+現在選択されているメニューコマンドへのポインター。項目が選択されていない場合は NULL です。
 
 ### <a name="remarks"></a>Remarks
 
-ポップアップ メニューにメニュー コマンドがによって表される、 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)から派生したクラスまたは`CMFCToolBarMenuButton`します。
+ポップアップメニューのメニューコマンドは、 [Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)、またはから`CMFCToolBarMenuButton`派生したクラスによって表されます。
 
-##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized
+##  <a name="hasbeenresized"></a>CMFCPopupMenu:: Hasのサイズ変更
 
 ```
 BOOL HasBeenResized() const;
@@ -856,9 +856,9 @@ BOOL HasBeenResized() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="hiderarelyusedcommands"></a>  CMFCPopupMenu::HideRarelyUsedCommands
+##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu:: Hiderarelyused コマンド
 
-ポップアップ メニューがあまり使用されないコマンドを非表示にできるかどうかを示します。
+ポップアップメニューで使用頻度の低いコマンドを非表示にできるかどうかを示します。
 
 ```
 BOOL HideRarelyUsedCommands() const;
@@ -866,13 +866,13 @@ BOOL HideRarelyUsedCommands() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合は、ポップアップ メニューには、あまり使用されないコマンドが非表示にできます。それ以外の場合は FALSE です。
+ポップアップメニューで使用頻度の低いコマンドを非表示にできる場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、その構成が有効になっていない場合、ほとんどのコマンドを使用ポップアップ メニューを非表示にできるかどうかのみを指定します。 親ボタンがあり、親ウィンドウがから派生した場合、ポップアップ メニューがめったに使用するコマンドを非表示できます、 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)します。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)この機能を有効にして[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)をこの機能が現在有効になっているかどうかを判断します。 親ウィンドウには、これら両方のメソッドを呼び出す必要があります。
+このメソッドは、ポップアップメニューで使用頻度の低いコマンドを非表示にできるかどうかを指定します。構成が有効になっている場合には無効です。 ポップアップメニューに親ボタンがあり、親ウィンドウが[Cmfcmenubar クラス](../../mfc/reference/cmfcmenubar-class.md)から派生している場合、使用頻度の低いコマンドを非表示にすることができます。 この機能を有効にするには[Cmfcmenubar:: SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)を使用し、この機能が現在有効になっているかどうかを判断するには[Cmfcmenubar:: IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)を使用します。 親ウィンドウに対して、これらのメソッドの両方を呼び出す必要があります。
 
-##  <a name="incommand"></a>  CMFCPopupMenu::InCommand
+##  <a name="incommand"></a>CMFCPopupMenu:: InCommand
 
 ```
 virtual BOOL InCommand();
@@ -884,7 +884,7 @@ virtual BOOL InCommand();
 
 ##  <a name="insertitem"></a>  CMFCPopupMenu::InsertItem
 
-指定した位置に、ポップアップ メニューには、新しい項目を挿入します。
+新しい項目をポップアップメニューの指定した位置に挿入します。
 
 ```
 int InsertItem(
@@ -894,23 +894,23 @@ int InsertItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*ボタン*<br/>
-[in]追加するメニュー項目への参照。
+*;*<br/>
+から追加するメニュー項目への参照。
 
 *iInsertAt*<br/>
-[in]新しい項目の 0 から始まるインデックス。 場合*iInsertAt* -1 の場合は、項目のメニューの末尾に追加されます。
+から新しい項目の0から始まるインデックス。 *IInsertAt*が-1 の場合、項目はメニューの最後に追加されます。
 
 ### <a name="return-value"></a>戻り値
 
-項目が挿入された位置の 0 から始まるインデックス。 メソッドが失敗した場合は-1。
+項目が挿入された位置の0から始まるインデックス。 メソッドが失敗した場合は-1。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、無効な値を指定する場合は失敗*iInsertAt*、ポップアップ メニュー上の現在の項目の数よりも大きい整数など。
+*IInsertAt*に無効な値を指定すると、このメソッドは失敗します (現在ポップアップメニューに表示されている項目の数よりも大きい整数など)。
 
 ##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator
 
-指定した位置に、ポップアップ メニューには、区切り記号を挿入します。
+ポップアップメニューの指定した位置に区切り記号を挿入します。
 
 ```
 int InsertSeparator(int iInsertAt = -1);
@@ -919,17 +919,17 @@ int InsertSeparator(int iInsertAt = -1);
 ### <a name="parameters"></a>パラメーター
 
 *iInsertAt*<br/>
-[in]このメソッドで、区切り記号を挿入する位置の 0 から始まるインデックス。
+からこのメソッドが区切り記号を挿入する位置の、0から始まるインデックス番号。
 
 ### <a name="return-value"></a>戻り値
 
-区切り記号が挿入された位置の 0 から始まるインデックス。 このメソッドが失敗した場合は-1。
+区切り記号が挿入された位置の0から始まるインデックス。 このメソッドが失敗した場合は-1。
 
 ### <a name="remarks"></a>Remarks
 
-値の-1 *iInsertAt*このメソッドは、ポップアップ メニューの末尾に区切り記号を追加することを意味します。
+*IInsertAt*の値-1 は、このメソッドがポップアップメニューの末尾に区切り記号を追加することを意味します。
 
-このメソッドは失敗*iInsertAt*は無効な値です。
+*IInsertAt*が無効な値の場合、このメソッドは失敗します。
 
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose
 
@@ -951,9 +951,9 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="iscustomizepane"></a>  CMFCPopupMenu::IsCustomizePane
+##  <a name="iscustomizepane"></a>CMFCPopupMenu:: IsCustomizePane
 
-ポップアップ メニューとして機能しているかどうかを示す、 **QuickCustomizePane**します。
+ポップアップメニューが**Quickcustomizepane**として機能しているかどうかを示します。
 
 ```
 BOOL IsCustomizePane();
@@ -961,15 +961,15 @@ BOOL IsCustomizePane();
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ ウィンドウがある場合は TRUE、 **QuckCustomizePane**場合は FALSE。
+ポップアップが**QuckCustomizePane**の場合は TRUE を返します。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-使用して、 **QuickCustomizePane**を直接ポップアップ メニューをカスタマイズするユーザーを有効にします。 **QuickCustomizePane**は、`CMFCPopupMenu`ユーザーがファイルを直接編集ツールバーのボタンをクリックしたときに表示されます。
+ユーザーがポップアップメニューを直接カスタマイズできるようにするには、 **Quickcustomizepane ウィンドウ**を使用します。 **Quickcustomizepane**は`CMFCPopupMenu` 、ユーザーがツールバーボタンをクリックして直接編集したときに表示されるです。
 
-アプリケーションが中にこのメソッドを呼び出す必要があります[CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)します。
+アプリケーションでは、 [CMDIFrameWndEx:: OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)中にこのメソッドを呼び出す必要があります。
 
-##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose
+##  <a name="isescclose"></a>CMFCPopupMenu:: IsEscClose
 
 ```
 BOOL IsEscClose();
@@ -981,7 +981,7 @@ BOOL IsEscClose();
 
 ##  <a name="isidle"></a>  CMFCPopupMenu::IsIdle
 
-ポップアップ メニューが現在アイドル状態かどうかを示します。
+ポップアップメニューが現在アイドル状態かどうかを示します。
 
 ```
 virtual BOOL IsIdle() const;
@@ -989,13 +989,13 @@ virtual BOOL IsIdle() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューがアイドル モードでは、TRUE を返します。それ以外の場合は FALSE です。
+ポップアップメニューがアイドルモードの場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-既定では、ポップアップ メニューがアイドル モード表示アニメーションが完了し、ユーザーは、ポップアップ メニューをスクロールしていない場合。
+既定では、表示アニメーションが完了し、ユーザーがポップアップメニューをスクロールしていない場合、ポップアップメニューはアイドルモードになります。
 
-##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound
+##  <a name="ismenusound"></a>CMFCPopupMenu:: IsMenuSound
 
 ```
 static UINT __stdcall IsMenuSound();
@@ -1005,9 +1005,9 @@ static UINT __stdcall IsMenuSound();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isquickcustomize"></a>  CMFCPopupMenu::IsQuickCustomize
+##  <a name="isquickcustomize"></a>CMFCPopupMenu:: IsQuickCustomize
 
-決定かどうか、関連付けられている[CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)QuickCustomize モードでは、します。
+関連付けられている[Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)が quickcustomize モードであるかどうかを判断します。
 
 ```
 BOOL IsQuickCustomize();
@@ -1015,13 +1015,13 @@ BOOL IsQuickCustomize();
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられたメニュー ボタンが QuickCustomize モードでは、TRUE を返します。それ以外の場合は FALSE です。 ポップアップ メニューが関連付けられていない場合、このメソッドは FALSE を返すこともが、`CMFCToolBarMenuButton`します。
+関連付けられたメニューボタンが QuickCustomize モードである場合は TRUE。それ以外の場合は FALSE。 このメソッドは、ポップアップメニューがに関連付けら`CMFCToolBarMenuButton`れていない場合にも FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-QuickCustomize では、モード、ユーザーは、ツールバーのボタンを直接カスタマイズするボタンを選択します。
+QuickCustomize モードでは、ユーザーはツールバーのボタンを選択して、ボタンを直接カスタマイズします。
 
-##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble
+##  <a name="isresizeble"></a>CMFCPopupMenu:: IsResizeble
 
 ```
 BOOL IsResizeble() const;
@@ -1033,7 +1033,7 @@ BOOL IsResizeble() const;
 
 ##  <a name="isrightalign"></a>  CMFCPopupMenu::IsRightAlign
 
-メニューが右揃えまたは左揃えするかどうかを示します。
+メニューを右揃えまたは左揃えにするかどうかを示します。
 
 ```
 BOOL IsRightAlign() const;
@@ -1041,15 +1041,15 @@ BOOL IsRightAlign() const;
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、メニューは右揃えになります。FALSE の場合は、メニューの左側に配置します。
+メニューが右上にある場合は TRUE。メニューが左揃えの場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-使用することができます[CMFCPopupMenu::SetRightAlign](#setrightalign)メニューの配置を設定します。 既定では、ポップアップ メニューは、左揃えを使用します。
+[CMFCPopupMenu:: Setright align](#setrightalign)を使用して、メニューの配置を設定できます。 既定では、ポップアップメニューでは左揃えが使用されます。
 
-メニューの配置では、グローバル設定ではありませんし、ポップアップ メニュー間で異なることができます。
+メニューの配置はグローバル設定ではなく、ポップアップメニューによって異なる場合があります。
 
-##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable
+##  <a name="isscrollable"></a>CMFCPopupMenu:: IsScrollable 可能
 
 ```
 BOOL IsScrollable() const;
@@ -1061,7 +1061,7 @@ BOOL IsScrollable() const;
 
 ##  <a name="issendmenuselectmsg"></a>  CMFCPopupMenu::IsSendMenuSelectMsg
 
-フレームワークの親フレームは、ユーザーは、ポップアップ メニューからコマンドを選択したときに通知するかどうかを示します。
+ユーザーがポップアップメニューからコマンドを選択したときに、フレームワークが親フレームに通知するかどうかを示します。
 
 ```
 static BOOL IsSendMenuSelectMsg();
@@ -1069,15 +1069,15 @@ static BOOL IsSendMenuSelectMsg();
 
 ### <a name="return-value"></a>戻り値
 
-フレームワークに通知が親フレームは、TRUE を返します。それ以外の場合は FALSE です。
+フレームワークが親フレームに通知する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、メニュー コマンドを選択したために使用するときにオン メッセージが送信することによって、親フレームを通知します。
+フレームワークは、使用したがメニューコマンドを選択したときに WM_MENUSELECT メッセージを送信して、親フレームに通知します。
 
-##  <a name="isshown"></a>  CMFCPopupMenu::IsShown
+##  <a name="isshown"></a>CMFCPopupMenu:: IsShown
 
-ポップアップ メニューが現在表示されているかどうかを示します。
+ポップアップメニューが現在表示されているかどうかを示します。
 
 ```
 BOOL IsShown() const;
@@ -1085,7 +1085,7 @@ BOOL IsShown() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューを表示する場合は TRUE。それ以外の場合は FALSE です。
+ポップアップメニューが表示される場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo
 
@@ -1095,7 +1095,7 @@ void MoveTo(const CPoint& pt);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pt*<br/>
+から*pt*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1107,11 +1107,11 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nHot*<br/>
+から*Nhot*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem
+##  <a name="onchooseitem"></a>CMFCPopupMenu:: On Item
 
 ```
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1119,7 +1119,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uidCmdID*<br/>
+から*Uidcmdid*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1135,16 +1135,16 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nID*<br/>
-[in]*nCode*<br/>
-[in]*pExtra*<br/>
-[in]*pHandlerInfo*<br/>
+から*nID*<br/>
+から*nCode*<br/>
+から*Pextra*<br/>
+から*pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand
+##  <a name="postcommand"></a>CMFCPopupMenu::P ostCommand
 
 ```
 BOOL PostCommand(UINT uiCommandID);
@@ -1152,7 +1152,7 @@ BOOL PostCommand(UINT uiCommandID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCommandID*<br/>
+から*uiCommandID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1166,7 +1166,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMsg*<br/>
+から*pMsg*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1180,13 +1180,13 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bNotify*<br/>
+から*Bnotify*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="removeallitems"></a>  CMFCPopupMenu::RemoveAllItems
 
-ポップアップ メニューからすべての項目をクリアします。
+ポップアップメニューからすべての項目を削除します。
 
 ```
 void RemoveAllItems();
@@ -1194,7 +1194,7 @@ void RemoveAllItems();
 
 ##  <a name="removeitem"></a>  CMFCPopupMenu::RemoveItem
 
-ポップアップ メニューから、指定した項目を削除します。
+指定した項目をポップアップメニューから削除します。
 
 ```
 BOOL RemoveItem(int iIndex);
@@ -1203,17 +1203,17 @@ BOOL RemoveItem(int iIndex);
 ### <a name="parameters"></a>パラメーター
 
 *iIndex*<br/>
-[in]削除する項目の 0 から始まるインデックス。
+から削除する項目の0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。
+メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、項目の削除の影響を受けるすべての区切り記号を自動的に配置します。 フレームワークが区切り記号を再配置する方法の詳細については、次を参照してください。 [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)します。
+このメソッドは、項目の削除によって影響を受けるすべての区切り記号を自動的に配置します。 フレームワークによる区切り記号の再配置方法の詳細については、「 [Cmfctoolbar:: RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)」を参照してください。
 
-##  <a name="savestate"></a>  CMFCPopupMenu::SaveState
+##  <a name="savestate"></a>CMFCPopupMenu:: SaveState
 
 ```
 virtual void SaveState();
@@ -1221,9 +1221,9 @@ virtual void SaveState();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setanimationspeed"></a>  CMFCPopupMenu::SetAnimationSpeed
+##  <a name="setanimationspeed"></a>CMFCPopupMenu:: Setアニメーション速度
 
-ポップアップ メニューのアニメーションの速度を設定します。
+ポップアップメニューのアニメーション速度を設定します。
 
 ```
 static void SetAnimationSpeed(UINT nElapse);
@@ -1232,17 +1232,17 @@ static void SetAnimationSpeed(UINT nElapse);
 ### <a name="parameters"></a>パラメーター
 
 *nElapse*<br/>
-[in]新しいアニメーションの速度 (ミリ秒単位)。
+から新しいアニメーション速度 (ミリ秒単位)。
 
 ### <a name="remarks"></a>Remarks
 
-アニメーションの速度はグローバル値であり、アプリケーション内のすべてのポップアップ メニューに影響します。 この値は、[完了] をポップアップ メニューのアニメーションがかかる時間を指定します。
+アニメーションの速度はグローバルな値であり、アプリケーションのすべてのポップアップメニューに影響します。 この値は、ポップアップメニューのアニメーションを完了するために必要な時間を指定します。
 
-既定では、このパラメーターは、30 ミリ秒に設定されます。 有効な値の範囲*nElapse*は 0 ~ 200 です。
+既定では、このパラメーターは30ミリ秒に設定されています。 *Nelapse*の有効な値の範囲は 0 ~ 200 です。
 
 ##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType
 
-このポップアップ メニューのアニメーションの種類を設定します。
+このポップアップメニューのアニメーションの種類を設定します。
 
 ```
 static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
@@ -1251,13 +1251,13 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="parameters"></a>パラメーター
 
 *type*<br/>
-[in]アニメーションの種類を指定する列挙型。
+からアニメーションの種類を指定する列挙データ型。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[CMFCPopupMenu::GetAnimationType](#getanimationtype)の有効な値の一覧については*型*します。
+*型*の有効な値の一覧については、「 [CMFCPopupMenu:: getアニメーション型](#getanimationtype)」を参照してください。
 
-##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy
+##  <a name="setautodestroy"></a>CMFCPopupMenu:: SetAutoDestroy
 
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -1265,13 +1265,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bAutoDestroy*<br/>
+から*Bautodestroy*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setdefaultitem"></a>  CMFCPopupMenu::SetDefaultItem
 
-ポップアップ メニューの既定のコマンドを設定します。
+ポップアップメニューの既定のコマンドを設定します。
 
 ```
 void SetDefaultItem(UINT uiCmd);
@@ -1280,15 +1280,15 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="parameters"></a>パラメーター
 
 *uiCmd*<br/>
-[in]新しい既定のコマンドのメニュー コマンド ID。
+から新しい既定のコマンドのメニューコマンド ID。
 
 ### <a name="remarks"></a>Remarks
 
-ポップアップ メニューの既定のコマンドは、ポップアップ メニューが表示されたら、選択されているコマンドです。
+ポップアップメニューの既定のコマンドは、ポップアップメニューが表示されたときに選択されるコマンドです。
 
 ##  <a name="setforcemenufocus"></a>  CMFCPopupMenu::SetForceMenuFocus
 
-メニュー バー、ポップアップ メニューが表示される場合に返される入力フォーカスを強制します。
+ポップアップメニューが表示されたときに、入力フォーカスをメニューバーに強制的に戻します。
 
 ```
 static void SetForceMenuFocus(BOOL bValue);
@@ -1297,15 +1297,15 @@ static void SetForceMenuFocus(BOOL bValue);
 ### <a name="parameters"></a>パラメーター
 
 *bValue*<br/>
-[in]メニュー バー、ポップアップ メニューが表示される場合に入力フォーカスを強制するためにフレームワークが必要な場合は TRUE。 ポップアップ メニューにフォーカスを保持する場合は FALSE です。
+からフレームワークがポップアップメニューが表示されたときに、入力フォーカスをメニューバーに強制的に適用する場合は TRUE。 ポップアップメニューでフォーカスを保持する場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、アプリケーション内のすべてのポップアップ メニューのグローバル フラグを設定します。 既定では、この機能は有効になっていません。
+このメソッドは、アプリケーションのすべてのポップアップメニューに対してグローバルなフラグを設定します。 既定では、この機能は有効になっていません。
 
 ##  <a name="setforceshadow"></a>  CMFCPopupMenu::SetForceShadow
 
-ポップアップ メニューがメイン フレームの外に置くと、メニューの影を描画するためにフレームワークを強制します。
+ポップアップメニューがメインフレームの外側に表示されたときに、フレームワークがメニューの影を描画するようにします。
 
 ```
 static void SetForceShadow(BOOL bValue);
@@ -1314,15 +1314,15 @@ static void SetForceShadow(BOOL bValue);
 ### <a name="parameters"></a>パラメーター
 
 *bValue*<br/>
-[in]それ以外の場合 FALSE メニューの影を描画するためにフレームワークが必要な場合は TRUE。
+からフレームワークでメニューの影を描画する場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出すときに、アプリケーションのグローバル フラグを設定します。 このフラグは、アプリケーションのすべてのポップアップ メニューに影響します。
+このメソッドを呼び出すと、アプリケーションでグローバルフラグが設定されます。 このフラグは、アプリケーションのすべてのポップアップメニューに影響します。
 
-##  <a name="setmaxwidth"></a>  CMFCPopupMenu::SetMaxWidth
+##  <a name="setmaxwidth"></a>CMFCPopupMenu:: SetMaxWidth
 
-ポップアップ メニューの最大幅を設定します。
+ポップアップメニューの最大の幅を設定します。
 
 ```
 void SetMaxWidth(int iMaxWidth);
@@ -1331,13 +1331,13 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="parameters"></a>パラメーター
 
 *iMaxWidth*<br/>
-[in]ピクセル単位で、ポップアップ メニューの最大幅。
+からポップアップメニューの最大幅 (ピクセル単位)。
 
 ### <a name="remarks"></a>Remarks
 
-メニュー コマンドに関連付けられたテキストは、最大の幅に収まらないは切り捨てられに適合しない一部の 3 つのドットが置き換えられます。
+メニューコマンドに関連付けられているテキストが最大幅に合わない場合は、切り捨てられ、幅に合わない部分が3つのドットに置き換えられます。
 
-##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd
+##  <a name="setmessagewnd"></a>CMFCPopupMenu:: SetMessageWnd
 
 ```
 void SetMessageWnd(CWnd* pMsgWnd);
@@ -1345,7 +1345,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMsgWnd*<br/>
+から*pMsgWnd*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1357,11 +1357,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pElem*<br/>
+から*Pelem*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType
+##  <a name="setquickcustomizetype"></a>CMFCPopupMenu:: Setquickカスタマイズ Etype
 
 ```
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1369,7 +1369,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*型*<br/>
+から*型*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1381,9 +1381,9 @@ void SetQuickMode();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setrightalign"></a>  CMFCPopupMenu::SetRightAlign
+##  <a name="setrightalign"></a>CMFCPopupMenu:: Setright Align
 
-ポップアップ メニューのメニューの配置を設定します。
+ポップアップメニューのメニューの配置を設定します。
 
 ```
 void SetRightAlign(BOOL bRightAlign = TRUE);
@@ -1392,15 +1392,15 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bRightAlign*<br/>
-[in]メニューの配置を示すブール値。 右揃えは TRUE、FALSE が左揃えを示します。
+からメニューの配置を示すブール値。 TRUE は右揃え、FALSE は左揃えを示します。
 
 ### <a name="remarks"></a>Remarks
 
-既定では、すべてのポップアップ メニューは、左揃えです。
+既定では、すべてのポップアップメニューは左揃えになっています。
 
 ##  <a name="setsendmenuselectmsg"></a>  CMFCPopupMenu::SetSendMenuSelectMsg
 
-ポップアップ メニューの親フレームは、ユーザーがコマンドを選択したときに通知するかどうかを制御するフラグを設定します。
+ユーザーがコマンドを選択したときにポップアップメニューで親フレームを通知するかどうかを制御するフラグを設定します。
 
 ```
 static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
@@ -1409,15 +1409,15 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bSet*<br/>
-[in]TRUE の場合は、ポップアップ メニューを通知の親フレームには、FALSE それ以外の場合。
+からポップアップメニューが親フレームを通知する場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-これは、グローバル アプリケーション内のすべてのポップアップ メニューのオプションです。 有効になっている場合、親フレームにコマンドを選択すると、ポップアップ メニューにオン メッセージが送信されます。
+これは、アプリケーションのすべてのポップアップメニューのグローバルオプションです。 この設定が有効になっている場合、ユーザーがコマンドを選択したときにポップアップメニューから親フレームに WM_MENUSELECT メッセージが送信されます。
 
-##  <a name="showallcommands"></a>  CMFCPopupMenu::ShowAllCommands
+##  <a name="showallcommands"></a>CMFCPopupMenu:: ShowAllCommands
 
-すべてのコマンドを表示するポップアップ メニューを強制します。
+ポップアップメニューですべてのコマンドを強制的に表示します。
 
 ```
 void ShowAllCommands();
@@ -1425,7 +1425,7 @@ void ShowAllCommands();
 
 ### <a name="remarks"></a>Remarks
 
-これはグローバル設定ではありませんし、現在のポップアップ メニューのみに影響します。
+これはグローバル設定ではなく、現在のポップアップメニューのみに影響します。
 
 ##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize
 
@@ -1435,9 +1435,9 @@ void TriggerResize();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="updateallshadows"></a>  CMFCPopupMenu::UpdateAllShadows
+##  <a name="updateallshadows"></a>CMFCPopupMenu:: UpdateAllShadows
 
-すべての開かれたポップアップ メニューの影を更新します。
+開いているすべてのポップアップメニューの影を更新します。
 
 ```
 static void UpdateAllShadows(LPRECT lprectScreen = NULL);
@@ -1446,15 +1446,15 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lprectScreen*<br/>
-[in]画面座標で更新するには、リージョンを示す四角形。
+から更新する領域を画面座標で指定する四角形。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、アニメーション化されたコントロールまたは動的コンテンツが含まれるその他の windows ポップアップ メニューが表示される場合に便利です。
+このメソッドは、アニメーション化されたコントロールや、動的なコンテンツを持つその他のウィンドウにポップアップメニューを表示する場合に便利です。
 
-##  <a name="updateshadow"></a>  CMFCPopupMenu::UpdateShadow
+##  <a name="updateshadow"></a>CMFCPopupMenu:: UpdateShadow
 
-ポップアップ メニューの影を更新します。
+ポップアップメニューの影を更新します。
 
 ```
 void UpdateShadow(LPRECT lprectScreen = NULL);
@@ -1463,11 +1463,11 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lprectScreen*<br/>
-[in]四角形を画面座標で更新する領域の境界を指定します。
+から更新する領域の境界を指定する画面座標の四角形。
 
 ### <a name="remarks"></a>Remarks
 
-影を含むポップアップ メニューにアニメーション化されたイメージが重なっている場合は、このメソッドを呼び出します。
+シャドウを持つポップアップメニューがアニメーション化されたイメージと重なっている場合に、このメソッドを呼び出します。
 
 ## <a name="see-also"></a>関連項目
 

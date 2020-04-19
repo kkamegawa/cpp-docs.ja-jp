@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-ms.openlocfilehash: 27ac930e567521b12dfc35e2f8c4c389c35ae47d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ac029a119a77fa87c6cd004fece9c4e6b382026
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607637"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460062"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 標準ライブラリ内のスレッド セーフ
 
@@ -36,4 +36,4 @@ ms.locfileid: "50607637"
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)

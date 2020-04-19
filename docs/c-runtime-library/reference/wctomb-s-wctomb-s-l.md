@@ -1,10 +1,10 @@
 ---
 title: wctomb_s、_wctomb_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wctomb_s_l
 - wctomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctomb_s
 - _wctomb_s_l
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329724ca0196e07397d4f0337a2bf0aa2db05c84
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957892"
 ---
-# <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
+# <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s、_wctomb_s_l
 
 ワイド文字を対応するマルチバイト文字に変換します。 「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [wctomb、_wctomb_l](wctomb-wctomb-l.md) です。
 
@@ -60,14 +63,14 @@ errno_t _wctomb_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*pRetValue*<br/>
+*この値*<br/>
 バイト数、または結果を示すコード。
 
 *mbchar*<br/>
 マルチバイト文字のアドレス。
 
 *sizeInBytes*<br/>
-バッファーのサイズ*mbchar*します。
+バッファー *mbchar*のサイズ。
 
 *wchar*<br/>
 ワイド文字。
@@ -81,21 +84,21 @@ errno_t _wctomb_s_l(
 
 エラー条件
 
-|*mbchar*|*sizeInBytes*|戻り値|*pRetValue*|
+|*mbchar*|*sizeInBytes*|戻り値|*この値*|
 |--------------|-------------------|------------------|-----------------|
 |**NULL**|>0|**EINVAL**|変更されない|
 |任意|>**INT_MAX**|**EINVAL**|変更されない|
 |任意|小さすぎる|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**wctomb**返します**EINVAL**設定と**errno**に**EINVAL**します。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **wctomb**は**einval**を返し、 **errno**を**einval**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Wctomb_s**関数に変換しますその*wchar*を対応するマルチバイト文字の引数で結果を格納および*mbchar*します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
+**Wctomb_s**関数は、 *wchar*引数を対応するマルチバイト文字に変換し、その結果を*mbchar*に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
 
-場合**wctomb_s**ワイド文字に変換をマルチバイト文字の場合は、バイト数が置かれる (よりも大きくなることはありません**MB_CUR_MAX**)によって示される整数に、ワイド文字*pRetValue*します。 場合*wchar*ワイド文字の null 文字 (L '\0') は、 **wctomb_s**塗りつぶします*pRetValue* 1。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb_s**に 0 を入れ*pRetValue*します。 現在のロケールで変換が不可能な場合**wctomb_s**に-1 を入れ*pRetValue*します。
+Wctomb_s がワイド文字をマルチバイト文字に変換する場合、ワイド文字のバイト数 ( **MB_CUR_MAX**を超えることはありません) が、" " の*値*によって示される整数になります。 *Wchar*がワイド文字の null 文字 (L ' \ 0 ') の場合、 **wctomb_s**は、その*値*を1で塗りつぶします。 ターゲットポインター *mbchar*が**NULL**の場合、 **wctomb_s**は、"" の*値*に0を入れます。 現在のロケールで変換できない場合、wctomb_s は、" " の*値*に-1 を設定します。
 
-**wctomb_s**ロケールに依存する情報の現在のロケールを使用 **_wctomb_s_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wctomb_s**は、ロケールに依存する情報に現在のロケールを使用します。 **_wctomb_s_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -108,7 +111,7 @@ errno_t _wctomb_s_l(
 
 ## <a name="example"></a>例
 
-このプログラムの動作を示しています、 **wctomb**関数。
+このプログラムは、 **wctomb**関数の動作を示しています。
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,4 +145,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

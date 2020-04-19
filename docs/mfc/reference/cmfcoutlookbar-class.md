@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374143"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar クラス
 
@@ -61,7 +61,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCOutlookBar::CMFCOutlookBar`|既定のコンストラクター|
+|`CMFCOutlookBar::CMFCOutlookBar`|既定のコンストラクターです。|
 |`CMFCOutlookBar::~CMFCOutlookBar`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Remarks
 
-Outlook バーの例は、次を参照してください。、 [OutlookDemo サンプル: MFC OutlookDemo アプリケーション](../../visual-cpp-samples.md)します。
+Outlook バーの例は、次を参照してください。、 [OutlookDemo サンプル。MFC OutlookDemo アプリケーション](../../overview/visual-cpp-samples.md)します。
 
 ## <a name="implementing-the-outlook-bar"></a>Outlook バーを実装します。
 
@@ -294,7 +294,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`Create`のメソッド、`CMFCOutlookBar`クラス。 このコード スニペットの一部、 [Outlook マルチ ビュー サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`Create`のメソッド、`CMFCOutlookBar`クラス。 このコード スニペットの一部、 [Outlook マルチ ビュー サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
@@ -458,7 +458,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]アクティブになっているタブ ページの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]アクティブ設定しようとしているタブ ページの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値

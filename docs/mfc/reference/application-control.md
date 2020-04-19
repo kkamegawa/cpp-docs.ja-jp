@@ -1,17 +1,15 @@
 ---
 title: アプリケーションの制御
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 55a5dcad21502e7aff7427dbdad41d25298356e7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: cb4ad19dfad06b793f226324d8e28c37c084ad67
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518919"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612298"
 ---
 # <a name="application-control"></a>アプリケーションの制御
 
@@ -27,7 +25,7 @@ OLE には、アプリケーションとそれらのオブジェクトを十分�
 |[AfxOleSetUserCtrl](#afxolesetuserctrl)|設定またはユーザー コントロール フラグをクリアします。|
 |[AfxOleLockApp](#afxolelockapp)|アプリケーションのアクティブなオブジェクトの数のフレームワークのグローバルなカウントをインクリメントします。|
 |[AfxOleLockControl](#afxolelockcontrol)| 指定したコントロールのクラス ファクトリをロックします。 |
-|[Afxoleunlockapp を呼び出します](#afxoleunlockapp)|デクリメントするアプリケーションのアクティブなオブジェクトの数のフレームワークの数。|
+|[AfxOleUnlockApp](#afxoleunlockapp)|デクリメントするアプリケーションのアクティブなオブジェクトの数のフレームワークの数。|
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| 指定したコントロールのクラス ファクトリのロックを解除します。 |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE システム レジストリでサーバーを登録します。|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|ユーザー インターフェイスを実装、 *typename*オブジェクト コマンド。|
@@ -149,7 +147,7 @@ void AFXAPI AfxOleLockApp();
 
 **ヘッダー**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>  Afxoleunlockapp を呼び出します
+##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp
 
 デクリメント、アプリケーションのアクティブなオブジェクトのフレームワークの数。
 
@@ -211,11 +209,6 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxOleUnlockControl](#afxoleunlockcontrol)
 
 ##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
@@ -327,15 +320,11 @@ void AFXAPI AfxOleSetEditMenu(
 
 クライアントのアプリケーション リソースのスクリプトでは、次のステートメントをいる必要があります (します。RC) のファイル:
 
-**#include \<afxolecl.rc >**
+**#include \<afxolecl.rc>**
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxole.h
-
-## <a name="see-also"></a>関連項目
-
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
@@ -376,8 +365,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **ヘッダー:** afxwin.h
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxOleLockControl](#afxolelockcontrol)
-

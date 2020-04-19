@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: eee8cf874230874b519bbd2cb3ebb34c7d4c5c80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7034a99bfefe8f4c11cdf8f99dc4b0c31fac10a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219796"
 ---
 # <a name="document-classes"></a>ドキュメント クラス
 
@@ -52,4 +52,3 @@ ms.locfileid: "50484631"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

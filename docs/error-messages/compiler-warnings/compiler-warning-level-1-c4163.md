@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4163
 ms.assetid: b08413fd-03fc-4f41-9167-a98976ac12f2
-ms.openlocfilehash: 737cf7ad00bfefd429792eed3f730844789e0c02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 640ce66233fb8820ec434e70060a5ab3cf56c3c0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597166"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627437"
 ---
 # <a name="compiler-warning-level-1-c4163"></a>コンパイラの警告 (レベル 1) C4163
 
@@ -21,7 +21,7 @@ ms.locfileid: "50597166"
 
 次の例では C4163 が生成されます。
 
-```
+```cpp
 // C4163.cpp
 // compile with: /W1 /LD
 #include <math.h>

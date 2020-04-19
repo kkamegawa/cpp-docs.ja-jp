@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: d99750efcfc400cc85a865ebd30a8c2a3da1d07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359398"
 ---
 # <a name="project-build-error-prj0019"></a>プロジェクト ビルド エラー PRJ0019
 
@@ -21,6 +21,6 @@ ms.locfileid: "50620794"
 
 ツールは、エラー コードがエラー メッセージが返されるときに、PRJ0019 も表示されます。 これは、たとえば、MIDL の出力を NUL にリダイレクトする場合に発生します。
 
-参照してください[カスタム ビルド ステップのトラブルシューティングとビルド イベント](../../ide/troubleshooting-build-customizations.md)詳細についてはします。
+参照してください[カスタム ビルド ステップのトラブルシューティングとビルド イベント](../../build/troubleshooting-build-customizations.md)詳細についてはします。
 
 このエラーは、ユーザー グループのメンバーとして実行して、管理アクセス権が必要なときにも発生します。 詳細については、次を参照してください。[ユーザー グループのメンバーとして実行されている](../../security/running-as-a-member-of-the-users-group.md)します。

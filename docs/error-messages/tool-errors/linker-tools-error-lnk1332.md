@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-ms.openlocfilehash: 9fbc871b6fdf046c5bbc5053da9bde39580ed279
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161070"
 ---
 # <a name="linker-tools-error-lnk1332"></a>リンカ ツール エラー LNK1332
 

@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy、_mbsnbcpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy
 - _ftcsncpy
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 1f22e8066b5b32feef642b01ad82955935a450e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654091"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952250"
 ---
-# <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy、_mbsnbcpy_l
+# <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy、_mbsnbcpy_l
 
-コピー **n**を宛先文字列に文字列のバイト。 これらの関数のセキュリティを強化したバージョンについては、「[_mbsnbcpy_s、_mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)」を参照してください。
+文字列の**n**バイトをコピー先の文字列にコピーします。 これらの関数のセキュリティを強化したバージョンについては、「[_mbsnbcpy_s、_mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -92,18 +95,18 @@ unsigned char * _mbsnbcpy_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbcpy**コピー先文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
+**_mbsnbcpy**は、対象の文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbsnbcpy**関数コピー*数*からバイト*strSource*に*追加される文字*。 場合*数*のサイズを超える*追加される文字*元とコピー先の文字列が重なり合うの動作または **_mbsnbcpy**が定義されていません。
+**_Mbsnbcpy**関数は、 *Strsource*から*strsource*に*count*バイトをコピーします。 *Count*が*strdest*のサイズを超える場合、またはコピー元とコピー先の文字列が重なり合う場合、 **_mbsnbcpy**の動作は未定義になります。
 
-場合*strSource*または*追加される文字*null ポインターの場合は、」の説明に従って、この関数は無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**NULL**設定と**errno**に**EINVAL**します。
+*Strsource*または*strsource*が null ポインターの場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
-出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 これらの関数バージョンが同じでないそのものを除く、 **_l**サフィックスを使用して、現在のロケールとが付いているバージョン、 **_l**サフィックスが代わりにロケール パラメーターを使用しての渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているバージョンが渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランを使用すると任意の攻撃者のコードを実行できるため、認められていない特権の昇格が発生し、システムを危険にさらすことがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランを使用すると任意の攻撃者のコードを実行できるため、認められていない特権の昇格が発生し、システムを危険にさらすことがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティを強化された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

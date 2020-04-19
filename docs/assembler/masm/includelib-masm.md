@@ -1,30 +1,31 @@
 ---
 title: INCLUDELIB (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - INCLUDELIB
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: 12b629029c6ef250c288021232c23f82dcdd00a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eff5b546aa10341434f2e34f03b9096d4c7f468a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452209"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317203"
 ---
-# <a name="includelib-masm"></a>INCLUDELIB (MASM)
+# <a name="includelib"></a>INCLUDELIB
 
-リンク先となる現在のモジュールをリンカーに通知*libraryname*します。
+現在のモジュールが*libraryname*とリンクされる必要があることをリンカーに通知します。
 
 ## <a name="syntax"></a>構文
 
-> INCLUDELIB libraryname
+> **インクルード***名 (libraryname* )
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-*Libraryname*セミコロンが大きい、円記号が含まれている場合、山かっこで囲む必要があります-記号、小さいよりも、シンボル、単一引用符または二重引用符よりも。
+*Libraryname*には、円記号、セミコロン、大なり記号、小なり記号、単一引用符、二重引用符が含まれている場合、山かっこで囲む必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -6,26 +6,25 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 3f6e8978c01d6689118a3a004c48e75a40151490
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2373351330982623ffa602fd81bec61d0bc257b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594741"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492135"
 ---
 # <a name="interfaces-atl"></a>インターフェイス (ATL)
 
-インターフェイスは、オブジェクトが外部にその機能を公開する方法です。 COM では、インターフェイスは、(C++ vtable) など、オブジェクトによって実装される関数へのポインターのテーブルです。 テーブルは、インターフェイスを表し、ポイントする関数は、そのインターフェイスのメソッド。 オブジェクトは、インターフェイスを多くを公開できます。
+インターフェイスは、オブジェクトが外部との間で機能を公開する方法です。 COM では、インターフェイスは、オブジェクトによって実装さC++れる関数へのポインター (vtable など) のテーブルです。 この表は、インターフェイスを表しています。このテーブルが指す関数は、そのインターフェイスのメソッドです。 オブジェクトは、選択された数のインターフェイスを公開できます。
 
-各インターフェイスは、基本的な COM インターフェイスに基づいて[IUnknown](../atl/iunknown.md)します。 メソッド`IUnknown`オブジェクトによって公開されている他のインターフェイスに移動できます。
+各インターフェイスは、基本的な COM インターフェイス[IUnknown](../atl/iunknown.md)に基づいています。 の`IUnknown`メソッドを使用すると、オブジェクトによって公開されている他のインターフェイスに移動できます。
 
-また、各インターフェイスには、一意のインターフェイス ID (IID) が与えられます。 この一意性は、インターフェイスのバージョン管理のサポートが容易にします。 インターフェイスの新しいバージョンには、新しい IID を持つ、新しいインターフェイスだけです。
+また、各インターフェイスには一意のインターフェイス ID (IID) が割り当てられます。 この一意性により、インターフェイスのバージョン管理を簡単にサポートできるようになります。 新しいバージョンのインターフェイスは、新しい IID を使用した新しいインターフェイスにすぎません。
 
 > [!NOTE]
->  定義済みは、標準の COM と OLE インターフェイスの Iid。
+>  標準の COM および OLE インターフェイスの Iid がは事前に定義されています。
 
 ## <a name="see-also"></a>関連項目
 
 [COM の概要](../atl/introduction-to-com.md)<br/>
-[COM オブジェクトとインターフェイス](/windows/desktop/com/com-objects-and-interfaces)
-
+[COM オブジェクトとインターフェイス](/windows/win32/com/com-objects-and-interfaces)

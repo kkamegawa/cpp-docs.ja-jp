@@ -1,15 +1,15 @@
 ---
 title: ラムダ式の構文
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577473"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222387"
 ---
 # <a name="lambda-expression-syntax"></a>ラムダ式の構文
 
@@ -21,7 +21,7 @@ ms.locfileid: "50577473"
 
 ラムダは、関数ポインターと関数オブジェクトの両方の利点を持ち、それらの欠点を回避できます。 ラムダは、関数オブジェクトのように柔軟性があり状態を保持できますが、関数オブジェクトとは異なり、その簡潔な構文には明示的なクラス定義は必要ありません。 ラムダを使用すると、同等の関数オブジェクトのコードよりも使いやすくエラーが発生しにくいコードを作成できます。
 
-次の例では、ラムダの使用と関数オブジェクトの使用を比較しています。 最初の例では、ラムダを使用して `vector` オブジェクト内の各要素が偶数か奇数であるかをコンソールに出力します。 2 番目の例では、関数オブジェクトを使用して同じことを行っています。
+次の例では、ラムダの使用と関数オブジェクトの使用を比較しています。 最初の例では、ラムダを使用して `vector` オブジェクト内の各要素が偶数か奇数であるかをコンソールに出力します。 2 番目の例では、関数オブジェクトを使用して同じタスクを行っています。
 
 ## <a name="example-1-using-a-lambda"></a>例 1: ラムダの使用
 
@@ -39,7 +39,7 @@ using namespace std;
 
 int main()
 {
-   // Create a vector object that contains 10 elements.
+   // Create a vector object that contains 9 elements.
    vector<int> v;
    for (int i = 1; i < 10; ++i) {
       v.push_back(i);
@@ -64,8 +64,6 @@ int main()
 }
 ```
 
-### <a name="output"></a>出力
-
 ```Output
 1 is odd
 2 is even
@@ -83,9 +81,9 @@ There are 4 even numbers in the vector.
 
 3 番目の引数の例で、 **for_each**関数は、ラムダ。 `[&evenCount]` の部分は、式の capture 句を指定します。`(int n)` はパラメーター リストを指定します。残りの部分は、式の本体を指定します。
 
-## <a name="example-2-using-a-function-object"></a>例 2: 関数オブジェクトの使用
+## <a name="example-2-using-a-function-object"></a>例 2:関数オブジェクトを使用します。
 
-ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例と共に、ラムダではなく、関数オブジェクトを使用して、 **for_each**例 1 と同じ結果を生成する関数。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 操作を実行する`FunctorClass`、関数呼び出し演算子を実装する**operator()** します。 Visual C++ コンパイラは、サイズとパフォーマンスにおいて例 1. のラムダ コードと同等のコードを生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。
+ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例と共に、ラムダではなく、関数オブジェクトを使用して、 **for_each**例 1 と同じ結果を生成する関数。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 操作を実行する`FunctorClass`、関数呼び出し演算子を実装する**operator()** します。 MicrosoftC++コンパイラ サイズと例 1 でのラムダ コードのパフォーマンスに匹敵するコードを生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。
 
 詳細については、 **operator()** を参照してください[関数を呼び出す](../cpp/function-call-cpp.md)します。 詳細については、 **for_each**関数を参照してください[for_each](../standard-library/algorithm-functions.md#for_each)します。
 
@@ -129,7 +127,7 @@ private:
 
 int main()
 {
-    // Create a vector object that contains 10 elements.
+    // Create a vector object that contains 9 elements.
     vector<int> v;
     for (int i = 1; i < 10; ++i) {
         v.push_back(i);
@@ -145,8 +143,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-## <a name="output"></a>出力
 
 ```Output
 1 is odd

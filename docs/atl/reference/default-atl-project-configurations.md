@@ -4,12 +4,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
-ms.openlocfilehash: cf8cb07200db59068e5eb28f7fedf47a6cd1ab01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24f518f3ca5fefbfed1d89da9209bc2c27d890e2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276576"
 ---
 # <a name="default-atl-project-configurations"></a>ATL プロジェクトの既定の構成
 
@@ -17,7 +17,7 @@ ATL プロジェクト ウィザードでは、既定で 2 つのプロジェク
 
 |構成|文字セット|ATL の使用|
 |-------------------|-------------------|----------------|
-|Release|MBCS|[DLL]|
+|解放|MBCS|[DLL]|
 |デバッグ|MBCS|[DLL]|
 
 **文字セット**、 **ATL の使用**すべてに変更することができ、**プロジェクト設定**] ダイアログ ボックス [、**全般**タブ。Configuration Manager を使用して、独自の構成を追加することもできます。 詳細については、次を参照してください。[ビルド構成](/visualstudio/ide/understanding-build-configurations)します。
@@ -25,7 +25,6 @@ ATL プロジェクト ウィザードでは、既定で 2 つのプロジェク
 ## <a name="see-also"></a>関連項目
 
 [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)<br/>
+[コンパイラとビルドのプロパティの設定](../../build/working-with-project-properties.md)<br/>
 [構成マネージャー ダイアログ ボックス](/visualstudio/ide/understanding-build-configurations)<br/>
 [コードのコンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)
-

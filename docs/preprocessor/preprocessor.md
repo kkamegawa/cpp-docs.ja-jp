@@ -1,22 +1,23 @@
 ---
 title: プリプロセッサ
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 883504810f1b659e28764a75ebc7cfda325920a5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530965"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222241"
 ---
 # <a name="preprocessor"></a>プリプロセッサ
-プリプロセッサは、変換の第 1 段階としてソース ファイルのテキストを操作するテキスト プロセッサです。 プリプロセッサは、ソース テキストを解析しませんが、マクロの呼び出しを特定する目的でトークンに分割します。 コンパイラは通常、最初のパスでプリプロセッサを呼び出しますが、コンパイルすることなくテキストを処理するために個別にプリプロセッサを呼び出すことができます。
+
+プリプロセッサは、変換の第 1 段階としてソース ファイルのテキストを操作するテキスト プロセッサです。 プリプロセッサはソーステキストを解析しませんが、マクロ呼び出しを見つけるためにトークンに分割されます。 コンパイラは通常、最初のパスでプリプロセッサを呼び出しますが、コンパイルすることなくテキストを処理するために個別にプリプロセッサを呼び出すことができます。
 
 プリプロセッサのリファレンス資料として、次のセクションを参照してください。
 
-- [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)
+- [プリプロセッサディレクティブ](../preprocessor/preprocessor-directives.md)
 
 - [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)
 
@@ -26,17 +27,17 @@ ms.locfileid: "50530965"
 
 **Microsoft 固有の仕様**
 
-使用して前処理した後、ソース コードの一覧を取得することができます、 [/E](../build/reference/e-preprocess-to-stdout.md)または[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)コンパイラ オプション。 両オプション共に、プリプロセッサを呼び出し、生成されるテキストを標準出力デバイス (ほとんどの場合、コンソール) に出力します。 2 つのオプション間の違いは、/E では `#line` ディレクティブが含まれ、/EP ではこうしたディレクティブが削除されることです。
+前処理の後、 [/e](../build/reference/e-preprocess-to-stdout.md)または[/ep](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)コンパイラオプションを使用して、ソースコードの一覧を取得できます。 どちらのオプションも、プリプロセッサを起動し、生成されたテキストを標準出力デバイス (ほとんどの場合、コンソール) に送信します。 2つのオプションの違いは、 `/E`に`#line`ディレクティブ`/EP`が含まれ、これらのディレクティブが除去されることです。
 
 **Microsoft 固有の仕様はここまで**
 
-##  <a name="_predir_special_terminology"></a> 特別な用語
+##  <a name="_predir_special_terminology"></a>特別な用語
 
-プリプロセッサのドキュメントでは、"引数" という用語は、関数に渡されるエンティティを意味します。 場合によっては、関数呼び出しで指定される引数式、および関数定義で指定される引数宣言をそれぞれ表す "実" または "仮" を修飾として先頭に付けることがあります。
+プリプロセッサのドキュメントでは、"引数" という用語は、関数に渡されるエンティティを意味します。 場合によっては、関数呼び出しで指定された引数式と関数定義で指定された引数宣言をそれぞれ記述する "actual" または "仮の" によって変更されることがあります。
 
-"変数" という用語は、簡単な C 型のデータ オブジェクトを意味します。 "オブジェクト" は、C++ オブジェクトおよび変数の両方を意味する包括的な用語です。
+"変数" という用語は、簡単な C 型のデータ オブジェクトを意味します。 "オブジェクト" という用語は、 C++オブジェクトと変数の両方を指します。これは包括的な用語です。
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[変換フェーズ](../preprocessor/phases-of-translation.md)
+[C/C++プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)\
+[翻訳のフェーズ](../preprocessor/phases-of-translation.md)

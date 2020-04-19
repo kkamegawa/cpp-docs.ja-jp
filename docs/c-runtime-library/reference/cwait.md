@@ -1,9 +1,9 @@
 ---
 title: _cwait
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwait
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwait
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4be342ef528959bae22917bc59eef5a953aa4ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489623"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937743"
 ---
-# <a name="cwait"></a>_cwait
+# <a name="_cwait"></a>_cwait
 
 ほかのプロセスが終了するまで待機します。
 
@@ -48,35 +51,35 @@ intptr_t _cwait(
 
 ### <a name="parameters"></a>パラメーター
 
-*返し、termstat*<br/>
-指定されたプロセスの結果コードを格納するバッファーへのポインターまたは**NULL**します。
+*termstat*<br/>
+指定されたプロセスの結果コードが格納されるバッファーへのポインター、または**NULL**。
 
 *procHandle*<br/>
-待機するプロセスを識別するハンドル (前に終了する必要のあるプロセスは、 **_cwait**返すことができます)。
+待機するプロセス (つまり、 **_cwait**がを返す前に終了する必要があるプロセス) へのハンドル。
 
 *action*<br/>
-Windows オペレーティング システムのアプリケーションでは NULL。 無視されますその他のアプリケーション: を実行するアクション コード*procHandle*します。
+空白Windows オペレーティングシステムアプリケーションでは無視されます。他のアプリケーションの場合: *procHandle*で実行するアクションコード。
 
 ## <a name="return-value"></a>戻り値
 
-指定されたプロセスのハンドルを返し、設定の指定されたプロセスが正常に完了したら、*返し、termstat*を指定されたプロセスによって返される結果コード。 それ以外の場合、-1 を返し、設定**errno**次のようにします。
+指定されたプロセスが正常に完了すると、は指定されたプロセスのハンドルを返し、 *termstat*を指定されたプロセスによって返される結果コードに設定します。 それ以外の場合、は-1 を返し、 **errno**を次のように設定します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|**ECHILD**|指定されたプロセスが存在しない*procHandle*が無効かを呼び出し、 [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)または[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) API が失敗しました。|
+|**ECHILD**|指定されたプロセスが存在しないか、 *procHandle*が無効であるか、 [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)または[WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API の呼び出しが失敗しました。|
 |**EINVAL**|*アクション*が無効です。|
 
 これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Cwait**関数によって提供される、指定されたプロセスのプロセス ID の終了を待機*procHandle*します。 値*procHandle*に渡される **_cwait**への呼び出しによって返される値である必要があります、 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数、指定されたプロセスを作成します。 プロセス ID が前に終了した場合は **_cwait**が呼び出され、 **_cwait**が直ちに返されます。 **_cwait**他の任意の既知のプロセスを待機する任意のプロセスで使用できる有効なハンドル (*procHandle*) が存在します。
+**_Cwait**関数は、 *procHandle*によって提供される、指定されたプロセスのプロセス ID が終了するまで待機します。 **_Cwait**に渡される*procHandle*の値は、指定されたプロセスを作成した[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数の呼び出しによって返される値である必要があります。 **_Cwait**が呼び出される前にプロセス ID が終了した場合、 **_cwait**は直ちに返されます。 **_cwait**は、任意のプロセスが、有効なハンドル (*procHandle*) が存在する他の既知のプロセスを待機するために使用できます。
 
-*返し、termstat*指定されたプロセスのリターン コードを格納するバッファーを指します。 値*返し、termstat* 、Windows を呼び出すことによって、指定されたプロセスが正常に終了しているかどうかを示す[ExitProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) API。 **ExitProcess** 、指定されたプロセスを呼び出す場合、内部的に呼び出されます**終了**または **_exit**から返します**メイン**、やの末尾に達した**メイン**. 経由で返される値の詳細については*返し、termstat*を参照してください[GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)します。 場合 **_cwait**を呼び出すとき、 **NULL**値*返し、termstat*、指定されたプロセスのリターン コードは格納されません。
+*termstat*は、指定されたプロセスのリターンコードが格納されるバッファーを指します。 *Termstat*の値は、指定されたプロセスが Windows [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API を呼び出すことによって正常に終了したかどうかを示します。 **ExitProcess**は、指定されたプロセスが**exit**または **_exit**を呼び出し、 **main**から戻るか、 **main**の最後に到達した場合に、内部的に呼び出されます。 *Termstat*で返される値の詳細については、「 [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)」を参照してください。 **_Cwait**が、 *Termstat*に**NULL**値を使用して呼び出された場合、指定されたプロセスのリターンコードは格納されません。
 
-*アクション*親子関係がこれらの環境で実装されていないため、Windows オペレーティング システムによってパラメーターは無視されます。
+Windows オペレーティングシステムでは、このような環境に親子関係が実装されていないため、*アクション*パラメーターは無視されます。
 
-しない限り、 *procHandle*が-1 または-2 (現在のプロセスまたはスレッドへのハンドル) のハンドルは閉じられます。 したがって、この状況では、返されたハンドルは使用しないでください。
+*ProcHandle*が-1 または-2 (現在のプロセスまたはスレッドへのハンドル) でない限り、ハンドルは閉じられます。 したがって、この状況では、返されたハンドルは使用しないでください。
 
 ## <a name="requirements"></a>必要条件
 

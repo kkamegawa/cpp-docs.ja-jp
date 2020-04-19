@@ -1,6 +1,6 @@
 ---
 title: __readgsbyte、__readgsdword、__readgsqword、__readgsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readgsbyte
 - __readgsdword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: fee7101ab72b9a0aecffb8ab8365dda1ec52d170
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220414"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222356"
 ---
-# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
+# <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
 **Microsoft 固有の仕様**
 
-GS セグメントの先頭の相対オフセットで指定された場所からは、メモリを読み取ります。
+GS セグメントの先頭を基準としたオフセットによって指定された場所からメモリを読み取ります。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char __readgsbyte(
    unsigned long Offset
 );
@@ -42,33 +42,33 @@ unsigned __int64 __readgsqword(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*オフセット*<br/>
-[in]先頭からのオフセット`GS`から読み取る。
+*影*\
+からの`GS`先頭から読み取るオフセット。
 
 ## <a name="return-value"></a>戻り値
 
-メモリの内容をバイト、ワード、ダブルワード、quadword (として呼び出される関数の名前で示されます) の場所に`GS:[Offset]`します。
+位置`GS:[Offset]`にある byte、word、double word、または quadword のメモリの内容 (呼び出される関数の名前で示されます)。
 
 ## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`__readgsbyte`|X64|
-|`__readgsdword`|X64|
-|`__readgsqword`|X64|
-|`__readgsword`|X64|
+|`__readgsbyte`|x64|
+|`__readgsdword`|x64|
+|`__readgsqword`|x64|
+|`__readgsword`|x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-これらのルーチンは、組み込みとしてのみ利用できます。
+これらのルーチンは、組み込み関数としてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[_ _writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[__ writ/sbyte、 \_/writ、 \_sqword、/writ/sqword \_](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

@@ -1,26 +1,27 @@
 ---
 title: '@data'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@data'
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 456a1f1e53fbcba47d1ef33a1fa89b0d4fdc6a37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74539105f85ba3080f42fc958ec7edd305748c23
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607416"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316253"
 ---
-# <a name="data"></a>@data
+# <a name="data"></a>データの \@
 
-既定のデータ グループの名前。 除くすべてのモデルと評価されるタ**フラット**します。 評価される**フラット**下、**フラット**メモリ モデル (テキスト マクロ)。
+既定のデータグループの名前。 **フラット**を除くすべてのモデルに対して、dgroup に評価されます。 **フラット**メモリモデル (テキストマクロ) では、**フラット**として評価されます。
 
 ## <a name="syntax"></a>構文
 
-> @data
+> **データの \@**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

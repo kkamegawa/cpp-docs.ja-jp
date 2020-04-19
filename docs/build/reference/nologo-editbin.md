@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /NOLOGO editbin option
 - NOLOGO editbin option
 ms.assetid: 909a1909-0c99-4bce-8013-bf161d645f19
-ms.openlocfilehash: 58d2139c2646564b54a378cab0ca258c5fde4891
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 994b896172725873d69120262f045764b278f17d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320397"
 ---
 # <a name="nologo-editbin"></a>/NOLOGO (EDITBIN)
 
@@ -27,4 +27,4 @@ ms.locfileid: "50596496"
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

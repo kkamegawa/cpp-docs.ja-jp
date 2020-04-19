@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_null_pointer
 ms.assetid: f3b3601b-f162-4803-a6e9-dabf5c3876cc
-ms.openlocfilehash: 10979e790cb1f3e1ae3eace4f88a0328cb9a7f01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b306753146a51bde842b55e4f36d3c1afa82591d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480393"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455845"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer クラス
 
@@ -26,12 +26,12 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*T*は`std::nullptr_t`、それ以外の場合は false を保持します。
+型が`std::nullptr_t` *T*の場合、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -41,4 +41,4 @@ struct is_null_pointer;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

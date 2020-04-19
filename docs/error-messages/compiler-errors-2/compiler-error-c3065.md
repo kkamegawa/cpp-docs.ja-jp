@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3065
 ms.assetid: e7a0bc69-1c68-459e-a7c4-93c65609ff7c
-ms.openlocfilehash: e12f6e318d51ecaccc7c29e1e01d1aedcaac937e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 026a6d5191f5bf7969dd2c8217b624d44b8ca345
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526559"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761430"
 ---
 # <a name="compiler-error-c3065"></a>コンパイラ エラー C3065
 
@@ -21,7 +21,7 @@ ms.locfileid: "50526559"
 
 次の例では C3065 が生成されます。
 
-```
+```cpp
 // C3065.cpp
 // compile with: /c
 __declspec(property(get=get_i)) int i;   // C3065

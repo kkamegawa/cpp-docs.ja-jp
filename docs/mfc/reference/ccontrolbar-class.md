@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345826"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -107,7 +107,7 @@ class CControlBar : public CWnd
 
 - [コントロール バー](../../mfc/control-bars.md)
 
-- [テクニカル ノート 31: コントロール バー](../../mfc/tn031-control-bars.md)します。
+- [テクニカル ノート 31:コントロール バー](../../mfc/tn031-control-bars.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -135,7 +135,7 @@ virtual CSize CalcDynamicLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*されて*<br/>
+*nLength*<br/>
 コントロール バー、水平方向または垂直方向に応じてのいずれかの要求されたディメンション*寸法*します。
 
 *nMode*<br/>
@@ -320,7 +320,7 @@ void EnableDocking(DWORD dwDockStyle);
 
 指定した辺は、移行先フレーム ウィンドウのドッキングの辺のいずれかに一致する必要がありますか、そのフレーム ウィンドウにコントロール バーをドッキングすることはできません。
 
-##  <a name="getbarstyle"></a>  したとき
+##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle
 
 判断するためには、この関数を呼び出す**cbrs _** (コントロール バーのスタイル) の設定は、コントロール バーに現在設定されています。
 
@@ -543,7 +543,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)<br/>

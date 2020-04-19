@@ -1,28 +1,29 @@
 ---
 title: SQWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SQWORD
 helpviewer_keywords:
 - SQWORD directive
 ms.assetid: 329245f1-af34-4540-a912-73e9045c47fa
-ms.openlocfilehash: 8457e14ce4d53df6dffbcea4ee1a83e19a23cc49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22d3761a0c60d13eb8249348df0f81d17dde6705
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554987"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318437"
 ---
 # <a name="sqword"></a>SQWORD
 
-割り当て、必要に応じて各 8 の符号付きバイトのストレージを初期化します`initializer`します。 また、型指定子として使用できる型が有効な任意の場所。
+*初期化子*ごとに8個の符号付きバイトのストレージを割り当て、必要に応じて初期化します。 型が有効である任意の場所で、型指定子として使用することもできます。
 
 ## <a name="syntax"></a>構文
 
-> SQWORD 初期化子の名前 [] の初期化子].
+> **sqword** *初期化子*__の名前を⟦、__ *initializer* ...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[QWORD](../../assembler/masm/qword.md)<br/>
-[DQ](../../assembler/masm/dq.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[QWORD](qword.md)\
+[DQ](dq.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428678"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447288"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混在 (ネイティブおよびマネージ) アセンブリ
 
@@ -27,14 +27,14 @@ ms.locfileid: "50428678"
 
 Visual C を使用してマネージの混在のアセンブリの生成をサポートするのみ、 **/clr**コンパイラ オプション。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。 純粋なまたは検証可能なマネージ アセンブリが必要な場合は、c# を使用して作成することをお勧めします。
 
-以前のバージョンの Visual C コンパイラ ツールセットには、次の 3 つの種類のマネージ アセンブリの生成がサポートされています。 混合、純粋、および検証します。 後者の 2 つは、後ほど[純粋で検証可能なコード (C +/cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
+以前のバージョンの MicrosoftC++コンパイラ ツールセットには、次の 3 つの種類のマネージ アセンブリの生成がサポートされています。 混合、純粋、および検証可能な。 後者の 2 つは、後ほど[純粋で検証可能なコード (C +/cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[方法:/clr:pure に移行](../dotnet/how-to-migrate-to-clr.md)<br/>
+[方法: /Clr:pure に移行します。](../dotnet/how-to-migrate-to-clr.md)<br/>
 アプリケーションへの .NET 機能の導入またはアプリケーション内の .NET 機能の更新を行うための推奨処理手順について説明します。
 
-[方法: MFC および ATL コードを使用して、/clr のコンパイル](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[方法: MFC および ATL コードを使用して、/clr をコンパイルします。](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 共通言語ランタイムをターゲットに既存の MFC および ATL プログラムをコンパイルする方法について説明します。
 
 [混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)<br/>

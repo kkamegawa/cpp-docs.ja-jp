@@ -1,12 +1,12 @@
 ---
 title: _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sprintf_p
 - _swprintf_p_l
 - _swprintf_p
 - _sprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sprintf_p
 - _swprintf_p_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579597"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958026"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
+# <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
 パラメーターが書式文字列で使用される順序を指定できる文字列に、書式付きデータを書き込みます。
 
@@ -96,7 +99,7 @@ int _swprintf_p_l(
 書式指定文字列。
 
 *argument_list*<br/>
-書式指定文字列に省略可能な引数。
+書式指定文字列への省略可能な引数。
 
 *locale*<br/>
 使用するロケール。
@@ -105,15 +108,15 @@ int _swprintf_p_l(
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は-1 または書き込まれた文字数。
+書き込まれた文字数。エラーが発生した場合は-1。
 
 ## <a name="remarks"></a>Remarks
 
-**_Sprintf_p**関数は、書式化して、一連の文字と値を格納*バッファー*します。 各引数、 *argument_list* (ある場合) は変換されに対応する書式指定に応じて*形式*します。 *形式*引数は、[書式指定構文の printf および wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 間の差 **_sprintf_p**と**sprintf_s**される **_sprintf_p**引数の順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+**_Sprintf_p**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 *Argument_list*内の各引数 (存在する場合) は、*形式*の対応する形式指定に従って変換および出力されます。 *Format*引数は、 [printf 関数と wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)を使用します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 **_Sprintf_p**と**sprintf_s**の違いは、 **_sprintf_p**は位置指定パラメーターをサポートしている点です。これにより、書式設定文字列で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-**_swprintf_p**のワイド文字バージョンは、 **_sprintf_p**; へのポインター引数 **_swprintf_p**はワイド文字列です。 エンコーディング エラーの検出 **_swprintf_p**内で異なる場合があります **_sprintf_p**します。 **_swprintf_p**と**fwprintf_p**動作は同じことを除いて **_swprintf_p**型の出力先ではなく文字列に出力を書き込む**ファイル**と **_swprintf_p**が必要です、*カウント*書き込まれる文字の最大数を指定するパラメーター。 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_swprintf_p**は、 **_sprintf_p**のワイド文字バージョンです。 **_swprintf_p**へのポインター引数はワイド文字列です。 **_Swprintf_p**でのエンコードエラーの検出は、 **_sprintf_p**の場合とは異なる場合があります。 **_swprintf_p**と**fwprintf_p**は同じように動作しますが、 **_swprintf_p**は、型**ファイル**の出力先ではなく文字列に出力を書き込む点と、 **_swprintf_p**は*count*パラメーターを指定して書き込む最大文字数。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-**_sprintf_p**に格納されるバイト数を返します*バッファー*、終端の null 文字を含みません。 **_swprintf_p**で格納されるワイド文字の数を返します*バッファー*、終端の null ワイド文字を含みません。 場合*バッファー*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
+**_sprintf_p**は、*バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **_swprintf_p**は、*バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。 *バッファー*または*形式*が null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

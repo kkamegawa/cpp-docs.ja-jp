@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-ms.openlocfilehash: 11b1e0e2166bba2dc366520161729a8d84e865d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cc4b87ded26807066c81e5da6935548d1a5ad26
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384960"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException クラス
 
@@ -31,11 +31,11 @@ public ref class InvalidArgumentException : COMException,    IException,    IPri
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 

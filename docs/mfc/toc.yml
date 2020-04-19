@@ -1,0 +1,2917 @@
+- name: MFC デスクトップ アプリケーション
+  href: mfc-desktop-applications.md
+- name: MFC の概念
+  expanded: false
+  items:
+    - name: MFC の概念
+      href: mfc-concepts.md
+    - name: MFC の一般的なトピック
+      expanded: false
+      items:
+        - name: MFC の一般的なトピック
+          href: general-mfc-topics.md
+        - name: MFC ソース ファイルの利用
+          href: using-the-mfc-source-files.md
+        - name: MFC ライブラリのバージョン
+          expanded: false
+          items:
+            - name: MFC ライブラリのバージョン
+              href: mfc-library-versions.md
+            - name: MFC MBCS DLL アドオン
+              href: mfc-mbcs-dll-add-on.md
+        - name: クラスを使用した Windows アプリケーションの作成
+          expanded: false
+          items:
+            - name: クラスを使用した Windows アプリケーションの作成
+              href: using-the-classes-to-write-applications-for-windows.md
+            - name: フレームワーク (MFC)
+              href: framework-mfc.md
+            - name: SDI と MDI
+              href: sdi-and-mdi.md
+            - name: ドキュメント、ビュー、フレームワーク
+              href: documents-views-and-the-framework.md
+            - name: ウィザードおよびリソース エディター
+              href: wizards-and-the-resource-editors.md
+        - name: フレームワークを使ったアプリケーションの作成
+          expanded: false
+          items:
+            - name: フレームワークを使ったアプリケーションの作成
+              href: building-on-the-framework.md
+            - name: MFC アプリケーションの作成手順
+              href: sequence-of-operations-for-building-mfc-applications.md
+            - name: OLE アプリケーションの作成手順
+              href: sequence-of-operations-for-creating-ole-applications.md
+            - name: ActiveX コントロールの作成手順
+              href: sequence-of-operations-for-creating-activex-controls.md
+            - name: データベース アプリケーションの作成手順
+              href: sequence-of-operations-for-creating-database-applications.md
+            - name: フレームワークと記述したコードとの関係
+              href: how-the-framework-calls-your-code.md
+        - name: 'CWinApp:Application クラス'
+          expanded: false
+          items:
+            - name: 'CWinApp:Application クラス'
+              href: cwinapp-the-application-class.md
+            - name: CWinApp および MFC アプリケーション ウィザード
+              href: cwinapp-and-the-mfc-application-wizard.md
+            - name: オーバーライド可能な CWinApp のメンバー関数
+              href: overridable-cwinapp-member-functions.md
+            - name: InitInstance メンバー関数
+              href: initinstance-member-function.md
+            - name: Run メンバー関数
+              href: run-member-function.md
+            - name: ExitInstance メンバー関数
+              href: exitinstance-member-function.md
+            - name: OnIdle メンバー関数
+              href: onidle-member-function.md
+            - name: CWinApp のその他のサービス
+              href: special-cwinapp-services.md
+        - name: ドキュメント テンプレートとドキュメント/ビューの作成手順
+          expanded: false
+          items:
+            - name: ドキュメント テンプレートとドキュメント/ビューの作成手順
+              href: document-templates-and-the-document-view-creation-process.md
+            - name: ドキュメント テンプレートの作成
+              href: document-template-creation.md
+            - name: ドキュメント/ビューの作成
+              href: document-view-creation.md
+            - name: 各種 MFC オブジェクト間の関係
+              href: relationships-among-mfc-objects.md
+            - name: 新しいドキュメント、ウィンドウ、ビューの作成
+              href: creating-new-documents-windows-and-views.md
+        - name: MFC モジュールの状態データの管理
+          expanded: false
+          items:
+            - name: MFC モジュールの状態データの管理
+              href: managing-the-state-data-of-mfc-modules.md
+            - name: DLL のエクスポート関数のエントリ ポイント
+              href: exported-dll-function-entry-points.md
+            - name: COM インターフェイスのエントリ ポイント
+              href: com-interface-entry-points.md
+            - name: ウィンドウ プロシージャのエントリ ポイント
+              href: window-procedure-entry-points.md
+        - name: アイドリング ループ処理
+          href: idle-loop-processing.md
+        - name: MFC モジュール状態でのアクティベーション コンテキストのサポート
+          href: support-for-activation-contexts-in-the-mfc-module-state.md
+        - name: MFC コモン コントロール ライブラリの分離
+          href: isolation-of-the-mfc-common-controls-library.md
+        - name: Windows Vista コモン コントロールの作成要件
+          expanded: false
+          items:
+            - name: Windows Vista コモン コントロールの作成要件
+              href: build-requirements-for-windows-vista-common-controls.md
+            - name: 非推奨の ANSI API
+              href: deprecated-ansi-apis.md
+        - name: '方法: 再起動マネージャーのサポートの追加'
+          href: how-to-add-restart-manager-support.md
+        - name: 動的レイアウト
+          href: dynamic-layout.md
+    - name: CObject の使い方
+      expanded: false
+      items:
+        - name: CObject の使い方
+          href: using-cobject.md
+        - name: CObject からのクラスの派生
+          expanded: false
+          items:
+            - name: CObject からのクラスの派生
+              href: deriving-a-class-from-cobject.md
+            - name: 機能レベルの指定
+              href: specifying-levels-of-functionality.md
+        - name: ランタイム クラス情報へのアクセス方法
+          href: accessing-run-time-class-information.md
+        - name: オブジェクトの動的生成
+          href: dynamic-object-creation.md
+        - name: 'CObject クラス:よく寄せられる質問'
+          expanded: false
+          items:
+            - name: 'CObject クラス:よく寄せられる質問'
+              href: cobject-class-frequently-asked-questions.md
+            - name: CObject から新しくクラスを派生する必要性
+              href: do-i-have-to-derive-new-classes-from-cobject-q.md
+            - name: CObject からクラスを派生するときのオーバーヘッド
+              href: what-does-it-cost-me-to-derive-a-class-from-cobject-q.md
+    - name: コレクション
+      expanded: false
+      items:
+        - name: コレクション
+          href: collections.md
+        - name: コレクション クラスの選択に関する推奨事項
+          href: recommendations-for-choosing-a-collection-class.md
+        - name: テンプレート ベースのクラス
+          href: template-based-classes.md
+        - name: '方法: タイプ セーフなコレクションの作成'
+          href: how-to-make-a-type-safe-collection.md
+        - name: コレクションの全メンバーへのアクセス
+          expanded: false
+          items:
+            - name: コレクションの全メンバーへのアクセス
+              href: accessing-all-members-of-a-collection.md
+            - name: CObject コレクションの全オブジェクトの削除
+              href: deleting-all-objects-in-a-cobject-collection.md
+        - name: スタック コレクションとキュー コレクションの作成
+          href: creating-stack-and-queue-collections.md
+    - name: 例外処理 (MFC)
+      expanded: false
+      items:
+        - name: 例外処理 (MFC)
+          href: exception-handling-in-mfc.md
+        - name: '例外:Version 3.0 での例外マクロの変更点'
+          href: exceptions-changes-to-exception-macros-in-version-3-0.md
+        - name: '例外:例外のキャッチと削除'
+          href: exceptions-catching-and-deleting-exceptions.md
+        - name: '例外:MFC 例外マクロからの変換'
+          href: exceptions-converting-from-mfc-exception-macros.md
+        - name: '例外:MFC マクロと C++ の例外の使用'
+          href: exceptions-using-mfc-macros-and-cpp-exceptions.md
+        - name: '例外:例外の内容の調査'
+          href: exceptions-examining-exception-contents.md
+        - name: '例外:例外でのオブジェクトの解放'
+          href: exceptions-freeing-objects-in-exceptions.md
+        - name: '例外:独自関数からの例外のスロー'
+          href: exceptions-throwing-exceptions-from-your-own-functions.md
+        - name: '例外:コンストラクターでの例外'
+          href: exceptions-exceptions-in-constructors.md
+        - name: '例外:データベースの例外'
+          href: exceptions-database-exceptions.md
+        - name: '例外:OLE 例外'
+          href: exceptions-ole-exceptions.md
+    - name: MFC のファイル
+      expanded: false
+      items:
+        - name: MFC のファイル
+          href: files-in-mfc.md
+        - name: ファイルを開く
+          href: opening-files.md
+        - name: ファイルの読み書き
+          href: reading-and-writing-files.md
+        - name: ファイルを閉じる
+          href: closing-files.md
+        - name: ファイルの状態へのアクセス
+          href: accessing-file-status.md
+    - name: インターフェイス要素
+      href: interface-elements.md
+    - name: MAPI
+      expanded: false
+      items:
+        - name: MAPI
+          href: mapi.md
+        - name: MFC での MAPI サポート
+          href: mapi-support-in-mfc.md
+        - name: MAPI のサンプル
+          href: mapi-samples.md
+    - name: メモリ管理
+      expanded: false
+      items:
+        - name: メモリ管理
+          href: memory-management.md
+        - name: 'メモリ管理:フレームの割り当て'
+          href: memory-management-frame-allocation.md
+        - name: 'メモリ管理:ヒープの割り当て'
+          expanded: false
+          items:
+            - name: 'メモリ管理:ヒープの割り当て'
+              href: memory-management-heap-allocation.md
+            - name: 'メモリ管理:使用例'
+              href: memory-management-examples.md
+            - name: 'メモリ管理:サイズ変更可能なメモリ ブロック'
+              href: memory-management-resizable-memory-blocks.md
+    - name: メッセージの処理とマップ
+      expanded: false
+      items:
+        - name: メッセージの処理とマップ
+          href: message-handling-and-mapping.md
+        - name: フレームワークのメッセージとコマンド
+          expanded: false
+          items:
+            - name: フレームワークのメッセージとコマンド
+              href: messages-and-commands-in-the-framework.md
+            - name: '[メッセージ]'
+              href: messages.md
+            - name: メッセージ ハンドラー
+              href: message-handlers.md
+            - name: メッセージの種類
+              href: message-categories.md
+            - name: メッセージ マップ
+              href: mapping-messages.md
+            - name: ユーザー インターフェイス オブジェクトとコマンド ID
+              expanded: false
+              items:
+                - name: ユーザー インターフェイス オブジェクトとコマンド ID
+                  href: user-interface-objects-and-command-ids.md
+                - name: コマンド ID
+                  href: command-ids.md
+                - name: 標準コマンド
+                  href: standard-commands.md
+            - name: コマンド ターゲット
+              href: command-targets.md
+        - name: フレームワークがハンドラーを呼び出す方法
+          expanded: false
+          items:
+            - name: フレームワークがハンドラーを呼び出す方法
+              href: how-the-framework-calls-a-handler.md
+            - name: メッセージの送信と受信
+              href: message-sending-and-receiving.md
+            - name: コマンド以外のメッセージのハンドラーへの到達方法
+              href: how-noncommand-messages-reach-their-handlers.md
+            - name: コマンド ルーティング
+              href: command-routing.md
+            - name: コマンド ルーティングの図
+              href: command-routing-illustration.md
+            - name: OnCmdMsg ハンドラー
+              href: oncmdmsg-handler.md
+            - name: 標準のコマンド ルーティングのオーバーライド
+              href: overriding-the-standard-command-routing.md
+        - name: フレームワークのメッセージ マップの検索方法
+          expanded: false
+          items:
+            - name: フレームワークのメッセージ マップの検索方法
+              href: how-the-framework-searches-message-maps.md
+            - name: メッセージ マップの所在
+              href: where-to-find-message-maps.md
+            - name: メッセージ マップの派生
+              href: derived-message-maps.md
+        - name: メッセージ ハンドラー関数の宣言
+          expanded: false
+          items:
+            - name: メッセージ ハンドラー関数の宣言
+              href: declaring-message-handler-functions.md
+            - name: 標準 Windows メッセージのハンドラー
+              href: handlers-for-standard-windows-messages.md
+            - name: コマンドとコントロール通知のハンドラー
+              href: handlers-for-commands-and-control-notifications.md
+            - name: メッセージ マップの範囲のハンドラー
+              href: handlers-for-message-map-ranges.md
+            - name: 反映されたメッセージの処理方法
+              href: handling-reflected-messages.md
+        - name: '方法: ステータス バーへのコマンド情報の表示'
+          href: how-to-display-command-information-in-the-status-bar.md
+        - name: '方法: テンプレート クラスのメッセージ マップの作成'
+          href: how-to-create-a-message-map-for-a-template-class.md
+    - name: MFC COM
+      expanded: false
+      items:
+        - name: MFC COM
+          href: mfc-com.md
+        - name: Active ドキュメント コンテインメント
+          expanded: false
+          items:
+            - name: Active ドキュメント コンテインメント
+              href: active-document-containment.md
+            - name: 'Active ドキュメント コンテインメントの例:Office バインダー'
+              href: example-of-active-document-containment-office-binder.md
+            - name: Active ドキュメント コンテナー アプリケーションの作成
+              href: creating-an-active-document-container-application.md
+            - name: Active ドキュメント コンテナー
+              expanded: false
+              items:
+                - name: Active ドキュメント コンテナー
+                  href: active-document-containers.md
+                - name: '[ヘルプ] メニューのマージ'
+                  href: help-menu-merging.md
+                - name: プログラムによる印刷
+                  href: programmatic-printing.md
+                - name: メッセージ処理とコマンド ターゲット
+                  href: message-handling-and-command-targets.md
+            - name: Active ドキュメント サーバー
+              href: active-document-servers.md
+            - name: Active ドキュメント
+              href: active-documents.md
+        - name: オートメーション
+          expanded: false
+          items:
+            - name: オートメーション
+              href: automation.md
+            - name: オートメーション クライアント
+              expanded: false
+              items:
+                - name: オートメーション クライアント
+                  href: automation-clients.md
+                - name: 'オートメーション クライアント:タイプ ライブラリの使用'
+                  href: automation-clients-using-type-libraries.md
+            - name: オートメーション サーバー
+              expanded: false
+              items:
+                - name: オートメーション サーバー
+                  href: automation-servers.md
+                - name: 'オートメーション サーバー:オブジェクトの有効期間に関する問題'
+                  href: automation-servers-object-lifetime-issues.md
+        - name: 接続ポイント
+          href: connection-points.md
+    - name: MFC インターネット プログラミングの基礎
+      expanded: false
+      items:
+        - name: MFC インターネット プログラミングの基礎
+          href: mfc-internet-programming-basics.md
+        - name: インターネット関連の MFC クラス
+          href: internet-related-mfc-classes.md
+        - name: 項目別のインターネット情報
+          href: internet-information-by-topic.md
+        - name: タスク別のインターネット情報
+          href: internet-information-by-task.md
+        - name: インターネット上の Active テクノロジ
+          href: active-technology-on-the-internet.md
+        - name: WinInet の基礎
+          href: wininet-basics.md
+        - name: HTML の基礎
+          href: html-basics.md
+    - name: MFC インターネット プログラミングのタスク
+      expanded: false
+      items:
+        - name: MFC インターネット プログラミングのタスク
+          href: mfc-internet-programming-tasks.md
+        - name: アプリケーションの設計上の選択肢
+          href: application-design-choices.md
+        - name: MFC アプリケーションの記述
+          href: writing-mfc-applications.md
+        - name: インターネット上の ActiveX コントロール
+          href: activex-controls-on-the-internet.md
+        - name: 既存の ActiveX コントロールのアップグレード
+          href: upgrading-an-existing-activex-control.md
+        - name: インターネット上の非同期モニカー
+          href: asynchronous-monikers-on-the-internet.md
+        - name: インターネット アプリケーションのテスト
+          href: testing-internet-applications.md
+        - name: インターネット セキュリティ (C++)
+          href: internet-security-cpp.md
+    - name: MFC の OLE
+      expanded: false
+      items:
+        - name: MFC の OLE
+          href: ole-in-mfc.md
+        - name: OLE の背景知識
+          expanded: false
+          items:
+            - name: OLE の背景知識
+              href: ole-background.md
+            - name: 'OLE の背景知識:リンクと埋め込み'
+              href: ole-background-linking-and-embedding.md
+            - name: 'OLE の背景知識:コンテナーとサーバー'
+              href: ole-background-containers-and-servers.md
+            - name: 'OLE の背景知識:実装戦略'
+              href: ole-background-implementation-strategies.md
+            - name: 'OLE の背景知識:MFC の実装'
+              href: ole-background-mfc-implementation.md
+        - name: アクティベーション (C++)
+          expanded: false
+          items:
+            - name: アクティベーション (C++)
+              href: activation-cpp.md
+            - name: 'アクティベーション:動詞'
+              href: activation-verbs.md
+        - name: コンテナー
+          expanded: false
+          items:
+            - name: コンテナー
+              href: containers.md
+            - name: 'コンテナー:コンテナーの実装'
+              href: containers-implementing-a-container.md
+            - name: 'コンテナー:クライアントの項目'
+              href: containers-client-items.md
+            - name: 'コンテナー:クライアントの項目の通知'
+              href: containers-client-item-notifications.md
+            - name: 'コンテナー:クライアントの項目の状態'
+              href: containers-client-item-states.md
+            - name: 'コンテナー:複合ファイル'
+              href: containers-compound-files.md
+            - name: 'コンテナー:ユーザー インターフェイスの問題'
+              href: containers-user-interface-issues.md
+            - name: 'コンテナー:高度な機能'
+              href: containers-advanced-features.md
+        - name: データ オブジェクトとデータ ソース (OLE)
+          expanded: false
+          items:
+            - name: データ オブジェクトとデータ ソース (OLE)
+              href: data-objects-and-data-sources-ole.md
+            - name: 'データ オブジェクトとデータ ソース:作成と破棄'
+              href: data-objects-and-data-sources-creation-and-destruction.md
+            - name: 'データ オブジェクトとデータ ソース:操作'
+              href: data-objects-and-data-sources-manipulation.md
+        - name: OLE のドラッグ アンド ドロップ
+          href: drag-and-drop-ole.md
+        - name: メニューとリソース (OLE)
+          expanded: false
+          items:
+            - name: メニューとリソース (OLE)
+              href: menus-and-resources-ole.md
+            - name: 'メニューとリソース:コンテナーの変更点'
+              href: menus-and-resources-container-additions.md
+            - name: 'メニューとリソース:サーバーの変更点'
+              href: menus-and-resources-server-additions.md
+            - name: 'メニューとリソース:メニューの結合'
+              href: menus-and-resources-menu-merging.md
+        - name: 登録
+          href: registration.md
+        - name: サーバー
+          expanded: false
+          items:
+            - name: サーバー
+              href: servers.md
+            - name: 'サーバー:サーバーの実装'
+              href: servers-implementing-a-server.md
+            - name: 'サーバー:サーバー ドキュメントの実装'
+              href: servers-implementing-server-documents.md
+            - name: 'サーバー:埋め込み先フレーム ウィンドウの実装'
+              href: servers-implementing-in-place-frame-windows.md
+            - name: 'サーバー:サーバー項目'
+              href: servers-server-items.md
+            - name: 'サーバー:ユーザー インターフェイスの問題'
+              href: servers-user-interface-issues.md
+        - name: トラッカー
+          expanded: false
+          items:
+            - name: トラッカー
+              href: trackers.md
+            - name: 'トラッカー:OLE アプリケーションでのトラッカーの実装'
+              expanded: false
+              items:
+                - name: 'トラッカー:OLE アプリケーションでのトラッカーの実装'
+                  href: trackers-implementing-trackers-in-your-ole-application.md
+                - name: '方法: コードでのトラッカーの実装'
+                  href: how-to-implement-tracking-in-your-code.md
+                - name: ラバー バンド処理とトラッカー
+                  href: rubber-banding-and-trackers.md
+    - name: MFC におけるシリアル化
+      expanded: false
+      items:
+        - name: MFC におけるシリアル化
+          href: serialization-in-mfc.md
+        - name: 'シリアル化:シリアル化可能なクラスの作成'
+          href: serialization-making-a-serializable-class.md
+        - name: 'シリアル化:オブジェクトのシリアル化'
+          expanded: false
+          items:
+            - name: 'シリアル化:オブジェクトのシリアル化'
+              href: serialization-serializing-an-object.md
+            - name: CArchive オブジェクトとは
+              href: what-is-a-carchive-object.md
+            - name: CArchive オブジェクトを作成する 2 つの方法
+              href: two-ways-to-create-a-carchive-object.md
+            - name: CArchive 演算子 << および >> の使用
+              href: using-the-carchive-output-and-input-operators.md
+            - name: アーカイブを使用した CObject の格納と読み込み
+              href: storing-and-loading-cobjects-via-an-archive.md
+        - name: 'シリアル化:シリアル化とデータベースの入出力'
+          expanded: false
+          items:
+            - name: 'シリアル化:シリアル化とデータベースの入出力'
+              href: serialization-serialization-vs-database-input-output.md
+            - name: 入出力処理の推奨事項
+              href: recommendations-for-handling-input-output.md
+            - name: 'MFC データベース アプリケーションの [ファイル] メニュー'
+              href: file-menu-in-an-mfc-database-application.md
+    - name: ユーザー インターフェイス要素 (MFC)
+      expanded: false
+      items:
+        - name: ユーザー インターフェイス要素 (MFC)
+          href: user-interface-elements-mfc.md
+        - name: ActiveX コントロール
+          expanded: false
+          items:
+            - name: ActiveX コントロール
+              href: activex-controls.md
+            - name: MFC ActiveX コントロール
+              expanded: false
+              items:
+                - name: MFC ActiveX コントロール
+                  href: mfc-activex-controls.md
+                - name: 'MFC ActiveX コントロール:最適化'
+                  expanded: false
+                  items:
+                    - name: 'MFC ActiveX コントロール:最適化'
+                      href: mfc-activex-controls-optimization.md
+                    - name: 永続化と初期化の最適化
+                      href: optimizing-persistence-and-initialization.md
+                    - name: ウィンドウなしのアクティベーション
+                      href: providing-windowless-activation.md
+                    - name: '[表示時にアクティブ] オプションのオフ'
+                      href: turning-off-the-activate-when-visible-option.md
+                    - name: コントロールがアクティブでないときのマウスとの対話
+                      href: providing-mouse-interaction-while-inactive.md
+                    - name: ちらつきなしのアクティベーションの提供
+                      href: providing-flicker-free-activation.md
+                    - name: クリッピングを行わないデバイス コンテキストの使用
+                      href: using-an-unclipped-device-context.md
+                    - name: コントロールの描画の最適化
+                      href: optimizing-control-drawing.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールの描画'
+                  href: mfc-activex-controls-painting-an-activex-control.md
+                - name: 'MFC ActiveX コントロール:イベント'
+                  href: mfc-activex-controls-events.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールへのストック イベントの追加'
+                  href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
+                - name: 'MFC ActiveX コントロール:カスタム イベントの追加'
+                  href: mfc-activex-controls-adding-custom-events.md
+                - name: 'MFC ActiveX コントロール:メソッド'
+                  href: mfc-activex-controls-methods.md
+                - name: 'MFC ActiveX コントロール:ストック メソッドの追加'
+                  href: mfc-activex-controls-adding-stock-methods.md
+                - name: 'MFC ActiveX コントロール:カスタム メソッドの追加'
+                  href: mfc-activex-controls-adding-custom-methods.md
+                - name: 'MFC ActiveX コントロール:メソッドからのエラー コードを返す'
+                  href: mfc-activex-controls-returning-error-codes-from-a-method.md
+                - name: 'MFC ActiveX コントロール:プロパティ'
+                  href: mfc-activex-controls-properties.md
+                - name: 'MFC ActiveX コントロール:ストック プロパティの追加'
+                  href: mfc-activex-controls-adding-stock-properties.md
+                - name: 'MFC ActiveX コントロール:カスタム プロパティの追加'
+                  href: mfc-activex-controls-adding-custom-properties.md
+                - name: 'MFC ActiveX コントロール:高度なプロパティの実装'
+                  href: mfc-activex-controls-advanced-property-implementation.md
+                - name: 'MFC ActiveX コントロール:アンビエント プロパティへのアクセス'
+                  href: mfc-activex-controls-accessing-ambient-properties.md
+                - name: 'MFC ActiveX コントロール:プロパティ ページ'
+                  href: mfc-activex-controls-property-pages.md
+                - name: 'MFC ActiveX コントロール:別のカスタム プロパティ ページの追加'
+                  href: mfc-activex-controls-adding-another-custom-property-page.md
+                - name: 'MFC ActiveX コントロール:ストック プロパティ ページの使用'
+                  href: mfc-activex-controls-using-stock-property-pages.md
+                - name: 'MFC ActiveX コントロール:オートメーション サーバーの作成'
+                  href: mfc-activex-controls-creating-an-automation-server.md
+                - name: 'MFC ActiveX コントロール:フォントの使用'
+                  href: mfc-activex-controls-using-fonts.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールにおけるピクチャの使用'
+                  href: mfc-activex-controls-using-pictures-in-an-activex-control.md
+                - name: 'MFC ActiveX コントロール:高度なトピック'
+                  href: mfc-activex-controls-advanced-topics.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールの配布'
+                  href: mfc-activex-controls-distributing-activex-controls.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールのライセンス'
+                  href: mfc-activex-controls-licensing-an-activex-control.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールのローカライズ'
+                  href: mfc-activex-controls-localizing-an-activex-control.md
+                - name: 'MFC ActiveX コントロール:シリアル化'
+                  href: mfc-activex-controls-serializing.md
+                - name: 'MFC ActiveX コントロール:Windows コントロールのサブクラス化'
+                  expanded: false
+                  items:
+                    - name: 'MFC ActiveX コントロール:Windows コントロールのサブクラス化'
+                      href: mfc-activex-controls-subclassing-a-windows-control.md
+                    - name: 返送されたウィンドウ メッセージの ID
+                      href: reflected-window-message-ids.md
+                - name: 'MFC ActiveX コントロール:ActiveX コントロールにおけるデータ バインディングの使用'
+                  href: mfc-activex-controls-using-data-binding-in-an-activex-control.md
+            - name: ActiveX コントロールのコンテナー
+              expanded: false
+              items:
+                - name: ActiveX コントロールのコンテナー
+                  href: activex-control-containers.md
+                - name: ActiveX コントロールのコンテナー
+                  href: containers-for-activex-controls.md
+                - name: 'ActiveX コントロールのコンテナー:ActiveX コントロール サポートの手動による有効化'
+                  href: activex-control-containers-manually-enabling-activex-control-containment.md
+                - name: 'ActiveX コントロールのコンテナー:コントロール コンテナー アプリケーションへのコントロールの追加'
+                  href: inserting-a-control-into-a-control-container-application.md
+                - name: 'ActiveX コントロールのコンテナー:ActiveX コントロールとメンバー変数の関連付け'
+                  href: activex-control-containers-connecting-an-activex-control-to-a-member-variable.md
+                - name: 'ActiveX コントロールのコンテナー:ActiveX コントロールで発生したイベントの処理'
+                  href: activex-control-containers-handling-events-from-an-activex-control.md
+                - name: 'ActiveX コントロールのコンテナー:コントロール プロパティの表示と変更'
+                  href: activex-control-containers-viewing-and-modifying-control-properties.md
+                - name: 'ActiveX コントロールのコンテナー:ActiveX コントロール コンテナーでの ActiveX コントロールのプログラミング'
+                  href: programming-activex-controls-in-a-activex-control-container.md
+                - name: 'ActiveX コントロールのコンテナー:ダイアログではないコンテナーでのコントロールの使用'
+                  href: activex-control-containers-using-controls-in-a-non-dialog-container.md
+            - name: テスト コンテナーでのプロパティとイベントのテスト
+              href: testing-properties-and-events-with-test-container.md
+        - name: クリップボードのトピック
+          expanded: false
+          items:
+            - name: クリップボードのトピック
+              href: clipboard.md
+            - name: 'クリップボード:クリップボード機構を使用するタイミング'
+              href: clipboard-when-to-use-each-clipboard-mechanism.md
+            - name: 'クリップボード:Windows クリップボードの使用'
+              href: clipboard-using-the-windows-clipboard.md
+            - name: 'クリップボード:OLE クリップボード機構の使用'
+              expanded: false
+              items:
+                - name: 'クリップボード:OLE クリップボード機構の使用'
+                  href: clipboard-using-the-ole-clipboard-mechanism.md
+                - name: 'クリップボード:データのコピーと貼り付け'
+                  href: clipboard-copying-and-pasting-data.md
+                - name: 'クリップボード:その他の形式の追加'
+                  href: clipboard-adding-other-formats.md
+        - name: コントロール (MFC)
+          expanded: false
+          items:
+            - name: コントロール (MFC)
+              href: controls-mfc.md
+            - name: コモン コントロールのサンプル一覧
+              href: common-control-sample-list.md
+            - name: コントロールの作成方法と使い方
+              expanded: false
+              items:
+                - name: コントロールの作成方法と使い方
+                  href: making-and-using-controls.md
+                - name: ダイアログ ボックスでのコモン コントロールの使用
+                  href: using-common-controls-in-a-dialog-box.md
+                - name: ダイアログ エディターを使用したコントロールの追加
+                  href: using-the-dialog-editor-to-add-controls.md
+                - name: 手動でコントロールを追加する方法
+                  href: adding-controls-by-hand.md
+                - name: 標準コントロールからのコントロールの派生
+                  href: deriving-controls-from-a-standard-control.md
+                - name: 子ウィンドウとしてのコモン コントロールの使用
+                  href: using-a-common-control-as-a-child-window.md
+                - name: コモン コントロールからの通知の受信
+                  href: receiving-notification-from-common-controls.md
+            - name: CAnimateCtrl の使い方
+              expanded: false
+              items:
+                - name: CAnimateCtrl の使い方
+                  href: using-canimatectrl.md
+                - name: アニメーション コントロールの使用
+                  href: using-an-animation-control.md
+                - name: アニメーション コントロールによる通知の送信
+                  href: notifications-sent-by-animation-controls.md
+            - name: CDateTimeCtrl の使い方
+              expanded: false
+              items:
+                - name: CDateTimeCtrl の使い方
+                  href: using-cdatetimectrl.md
+                - name: 日時指定コントロールの作成
+                  href: creating-the-date-and-time-picker-control.md
+                - name: 日時指定コントロールの例
+                  href: date-and-time-picker-control-examples.md
+                - name: 埋め込み月間予定表コントロールへのアクセス
+                  href: accessing-the-embedded-month-calendar-control.md
+                - name: 日時指定コントロールでのカスタム書式指定文字列の使用
+                  href: using-custom-format-strings-in-a-date-and-time-picker-control.md
+                - name: 日時指定コントロールでのコールバック フィールドの使用
+                  href: using-callback-fields-in-a-date-and-time-picker-control.md
+                - name: 日時指定コントロールの通知メッセージの処理
+                  href: processing-notification-messages-in-date-and-time-picker-controls.md
+            - name: CComboBoxEx の使い方
+              expanded: false
+              items:
+                - name: CComboBoxEx の使い方
+                  href: using-ccomboboxex.md
+                - name: 拡張コンボ ボックス コントロールの作成
+                  href: creating-an-extended-combo-box-control.md
+                - name: 拡張コンボ ボックス コントロールでのイメージ リストの使用
+                  href: using-image-lists-in-an-extended-combo-box-control.md
+                - name: 各項目のイメージの設定
+                  href: setting-the-images-for-an-individual-item.md
+                - name: 拡張コンボ ボックス コントロールでの通知メッセージの処理
+                  href: processing-notification-messages-in-extended-combo-box-controls.md
+            - name: CHeaderCtrl の使い方
+              expanded: false
+              items:
+                - name: CHeaderCtrl の使い方
+                  href: using-cheaderctrl.md
+                - name: ヘッダー コントロールおよびリスト コントロール
+                  href: header-control-and-list-control.md
+                - name: ヘッダー コントロールの例
+                  href: header-control-examples.md
+                - name: ヘッダー コントロールのヘッダー項目
+                  href: header-items-in-a-header-control.md
+                - name: ヘッダー項目の外観のカスタマイズ
+                  href: customizing-the-header-item-s-appearance.md
+                - name: ヘッダー項目に対するドラッグ アンド ドロップのサポート
+                  href: providing-drag-and-drop-support-for-header-items.md
+                - name: ヘッダー コントロールでのイメージ リストの使用
+                  href: using-image-lists-with-header-controls.md
+                - name: オーナー描画ヘッダー コントロールの作成
+                  href: making-owner-drawn-header-controls.md
+                - name: ヘッダー コントロールの操作
+                  href: working-with-a-header-control.md
+                - name: ヘッダー コントロールの作成
+                  href: creating-the-header-control.md
+                - name: ヘッダー コントロールへの項目の追加
+                  href: adding-items-to-the-header-control.md
+                - name: ヘッダー コントロールの項目の並べ替え
+                  href: ordering-items-in-the-header-control.md
+                - name: ヘッダー コントロール通知の処理
+                  href: processing-header-control-notifications.md
+            - name: CHotKeyCtrl の使い方
+              expanded: false
+              items:
+                - name: CHotKeyCtrl の使い方
+                  href: using-chotkeyctrl.md
+                - name: ホット キー コントロールの使用
+                  href: using-a-hot-key-control.md
+                - name: ホット キーの設定
+                  href: setting-a-hot-key.md
+                - name: グローバル ホット キー
+                  href: global-hot-keys.md
+                - name: スレッド固有のホット キー
+                  href: thread-specific-hot-keys.md
+            - name: CImageList の使い方
+              expanded: false
+              items:
+                - name: CImageList の使い方
+                  href: using-cimagelist.md
+                - name: イメージ リストの種類
+                  href: types-of-image-lists.md
+                - name: イメージ リストの使用
+                  href: using-an-image-list.md
+                - name: イメージ リストの操作
+                  href: manipulating-image-lists.md
+                - name: イメージ リストのイメージの描画
+                  href: drawing-images-from-an-image-list.md
+                - name: イメージ リストのイメージのオーバーレイ
+                  href: image-overlays-in-image-lists.md
+                - name: イメージ リストのイメージのドラッグ
+                  href: dragging-images-from-an-image-list.md
+                - name: イメージ リストのイメージ情報
+                  href: image-information-in-image-lists.md
+            - name: CListCtrl の使い方
+              expanded: false
+              items:
+                - name: CListCtrl の使い方
+                  href: using-clistctrl.md
+                - name: リスト コントロールとリスト ビュー
+                  href: list-control-and-list-view.md
+                - name: リスト項目とイメージ リスト
+                  href: list-items-and-image-lists.md
+                - name: コールバック項目とコールバック マスク
+                  href: callback-items-and-the-callback-mask.md
+                - name: リスト コントロールの作成
+                  href: creating-the-list-control.md
+                - name: イメージ リストの作成
+                  href: creating-the-image-lists.md
+                - name: コントロールへの列の追加 (レポート ビュー)
+                  href: adding-columns-to-the-control-report-view.md
+                - name: コントロールへの項目の追加
+                  href: adding-items-to-the-control.md
+                - name: リスト コントロールのスクロール、整列、並べ替え、検索
+                  href: scrolling-arranging-sorting-and-finding-in-list-controls.md
+                - name: リスト コントロールの作業領域の実装
+                  href: implementing-working-areas-in-list-controls.md
+                - name: リスト コントロールでの通知メッセージの処理
+                  href: processing-notification-messages-in-list-controls.md
+                - name: リスト コントロール スタイルの変更
+                  href: changing-list-control-styles.md
+                - name: 仮想リスト コントロール
+                  href: virtual-list-controls.md
+                - name: リスト コントロールの破棄
+                  href: destroying-the-list-control.md
+            - name: CMonthCalCtrl の使い方
+              expanded: false
+              items:
+                - name: CMonthCalCtrl の使い方
+                  href: using-cmonthcalctrl.md
+                - name: 月間予定表コントロールの作成
+                  href: creating-the-month-calendar-control.md
+                - name: 月間予定表コントロールの例
+                  href: month-calendar-control-examples.md
+                - name: 月間予定表コントロールでの通知メッセージの処理
+                  href: processing-notification-messages-in-month-calendar-controls.md
+                - name: 月間予定表コントロールの日付状態の設定
+                  href: setting-the-day-state-of-a-month-calendar-control.md
+            - name: CProgressCtrl の使い方
+              expanded: false
+              items:
+                - name: CProgressCtrl の使い方
+                  href: using-cprogressctrl.md
+                - name: プログレス コントロールのスタイル
+                  href: styles-for-the-progress-control.md
+                - name: プログレス コントロールの設定
+                  href: settings-for-the-progress-control.md
+                - name: プログレス コントロールの操作
+                  href: manipulating-the-progress-control.md
+            - name: CReBarCtrl の使い方
+              expanded: false
+              items:
+                - name: CReBarCtrl の使い方
+                  href: using-crebarctrl.md
+                - name: CReBar とCReBarCtrl の比較
+                  href: crebar-vs-crebarctrl.md
+                - name: Rebar コントロールの作成
+                  href: creating-a-rebar-control.md
+                - name: Rebar コントロールとバンド
+                  href: rebar-controls-and-bands.md
+                - name: Rebar コントロールでのイメージ リストの使用
+                  href: using-an-image-list-with-a-rebar-control.md
+                - name: Rebar コントロールでのダイアログ バーの使用
+                  href: using-a-dialog-bar-with-a-rebar-control.md
+                - name: Rebar コントロールでの通知メッセージの処理
+                  href: processing-notification-messages-in-a-rebar-control.md
+            - name: CRichEditCtrl の使い方
+              expanded: false
+              items:
+                - name: CRichEditCtrl の使い方
+                  href: using-cricheditctrl.md
+                - name: リッチ エディット コントロールの概要
+                  href: overview-of-the-rich-edit-control.md
+                - name: リッチ エディット コントロールに関連するクラス
+                  href: classes-related-to-rich-edit-controls.md
+                - name: リッチ エディット コントロールの例
+                  href: rich-edit-control-examples.md
+                - name: リッチ エディット コントロールでの文字書式の設定
+                  href: character-formatting-in-rich-edit-controls.md
+                - name: リッチ エディット コントロールでの段落書式の設定
+                  href: paragraph-formatting-in-rich-edit-controls.md
+                - name: リッチ エディット コントロールでの現在の選択
+                  href: current-selection-in-a-rich-edit-control.md
+                - name: リッチ エディット コントロールでのワード区切り
+                  href: word-breaks-in-rich-edit-controls.md
+                - name: リッチ エディット コントロールでのクリップボード操作
+                  href: clipboard-operations-in-rich-edit-controls.md
+                - name: リッチ エディット コントロールでのストリーム操作
+                  href: stream-operations-in-rich-edit-controls.md
+                - name: リッチ エディット コントロールでの印刷
+                  href: printing-in-rich-edit-controls.md
+                - name: 自動的にサイズ調整されるリッチ エディット コントロール
+                  href: bottomless-rich-edit-controls.md
+                - name: リッチ エディット コントロールからの通知
+                  href: notifications-from-a-rich-edit-control.md
+            - name: CSliderCtrl の使い方
+              expanded: false
+              items:
+                - name: CSliderCtrl の使い方
+                  href: using-csliderctrl.md
+                - name: スライダー コントロールの使用
+                  href: using-slider-controls.md
+                - name: スライダー コントロールのスタイル
+                  href: slider-control-styles.md
+                - name: スライダー コントロールのメンバー関数
+                  href: slider-control-member-functions.md
+                - name: スライダーの通知メッセージ
+                  href: slider-notification-messages.md
+            - name: CSpinButtonCtrl の使い方
+              expanded: false
+              items:
+                - name: CSpinButtonCtrl の使い方
+                  href: using-cspinbuttonctrl.md
+                - name: スピン ボタンのスタイル
+                  href: spin-button-styles.md
+                - name: スピン ボタンのメンバー関数
+                  href: spin-button-member-functions.md
+            - name: CStatusBarCtrl の使い方
+              expanded: false
+              items:
+                - name: CStatusBarCtrl の使い方
+                  href: using-cstatusbarctrl.md
+                - name: ステータス バーの作成方法
+                  href: methods-of-creating-a-status-bar.md
+                - name: CStatusBarCtrl の設定値
+                  href: settings-for-the-cstatusbarctrl.md
+                - name: CStatusBarCtrl を使用して CStatusBarCtrl オブジェクトを作成する方法
+                  href: using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md
+                - name: CStatusBarCtrl オブジェクトのモードの設定
+                  href: setting-the-mode-of-a-cstatusbarctrl-object.md
+                - name: CStatusBarCtrl オブジェクトの区画の初期化
+                  href: initializing-the-parts-of-a-cstatusbarctrl-object.md
+                - name: CStatusBarCtrl オブジェクトでのツール ヒントの使用
+                  href: using-tooltips-in-a-cstatusbarctrl-object.md
+            - name: CTabCtrl の使い方
+              expanded: false
+              items:
+                - name: CTabCtrl の使い方
+                  href: using-ctabctrl.md
+                - name: タブ コントロールとプロパティ シート
+                  href: tab-controls-and-property-sheets.md
+                - name: タブおよびタブ コントロールの属性
+                  href: tabs-and-tab-control-attributes.md
+                - name: オーナー描画タブの作成
+                  href: making-owner-drawn-tabs.md
+                - name: タブ コントロールの使用
+                  href: working-with-a-tab-control.md
+                - name: タブ コントロールの作成
+                  href: creating-the-tab-control.md
+                - name: タブ コントロールへのタブの追加
+                  href: adding-tabs-to-a-tab-control.md
+                - name: タブ コントロールの通知メッセージの処理
+                  href: processing-tab-control-notification-messages.md
+            - name: CToolBarCtrl の使い方
+              expanded: false
+              items:
+                - name: CToolBarCtrl の使い方
+                  href: using-ctoolbarctrl.md
+                - name: ツール バーの作成方法
+                  href: methods-of-creating-a-toolbar.md
+                - name: ツール バー コントロールの設定値
+                  href: settings-for-the-toolbar-control.md
+                - name: CToolBarCtrl オブジェクトの作成
+                  href: creating-a-ctoolbarctrl-object.md
+                - name: ツール バー コントロールでのイメージ リストの使用
+                  href: using-image-lists-in-a-toolbar-control.md
+                - name: ツール バー コントロールでのドロップダウン ボタンの使用
+                  href: using-drop-down-buttons-in-a-toolbar-control.md
+                - name: ツール バー コントロールの外観のカスタマイズ
+                  href: customizing-the-appearance-of-a-toolbar-control.md
+                - name: ツール ヒントの通知の処理
+                  href: handling-tool-tip-notifications.md
+                - name: カスタマイズ通知の処理
+                  href: handling-customization-notifications.md
+            - name: CToolTipCtrl の使い方
+              expanded: false
+              items:
+                - name: CToolTipCtrl の使い方
+                  href: using-ctooltipctrl.md
+                - name: ツール ヒントの作成方法
+                  href: methods-of-creating-tool-tips.md
+                - name: ツール ヒント コントロールの設定値
+                  href: settings-for-the-tool-tip-control.md
+                - name: CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法
+                  href: using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md
+                - name: ツール ヒント コントロールの操作
+                  href: manipulating-the-tool-tip-control.md
+            - name: CTreeCtrl の使い方
+              expanded: false
+              items:
+                - name: CTreeCtrl の使い方
+                  href: using-ctreectrl.md
+                - name: CTreeCtrl とCTreeView の比較
+                  href: ctreectrl-vs-ctreeview.md
+                - name: ツリー コントロールの使用
+                  href: using-tree-controls.md
+                - name: ツリー コントロールとの情報のやり取り
+                  href: communicating-with-a-tree-control.md
+                - name: ツリー コントロールのスタイル
+                  href: tree-control-styles.md
+                - name: ツリー コントロールの親項目と子項目
+                  href: tree-control-parent-and-child-items.md
+                - name: ツリー コントロールの項目位置
+                  href: tree-control-item-position.md
+                - name: ツリー コントロールの項目のラベル
+                  href: tree-control-item-labels.md
+                - name: ツリー コントロールのラベルの編集
+                  href: tree-control-label-editing.md
+                - name: ツリー コントロール項目の状態の概要
+                  href: tree-control-item-states-overview.md
+                - name: ツリー コントロールのイメージ リスト
+                  href: tree-control-image-lists.md
+                - name: ツリー コントロールの項目の選択
+                  href: tree-control-item-selection.md
+                - name: ツリー コントロールのドラッグ アンド ドロップ操作
+                  href: tree-control-drag-and-drop-operations.md
+                - name: ツリー コントロールの項目の情報
+                  href: tree-control-item-information.md
+                - name: ツリー コントロールの通知メッセージ
+                  href: tree-control-notification-messages.md
+        - name: コントロール バー
+          href: control-bars.md
+        - name: ダイアログ バー
+          href: dialog-bars.md
+        - name: ダイアログ ボックス
+          expanded: false
+          items:
+            - name: ダイアログ ボックス
+              href: dialog-boxes.md
+            - name: '例:メニュー コマンドによるダイアログ ボックスの表示'
+              href: example-displaying-a-dialog-box-via-a-menu-command.md
+            - name: ダイアログ ボックスのサンプル一覧
+              href: dialog-sample-list.md
+            - name: フレームワークのダイアログ ボックス コンポーネント
+              href: dialog-box-components-in-the-framework.md
+            - name: モーダルとモードレスのダイアログ ボックス
+              href: modal-and-modeless-dialog-boxes.md
+            - name: プロパティ シートとプロパティ ページ (MFC)
+              href: property-sheets-and-property-pages-mfc.md
+            - name: ダイアログ リソースの作成
+              href: creating-the-dialog-resource.md
+            - name: コード ウィザードによるダイアログ クラスの作成
+              expanded: false
+              items:
+                - name: コード ウィザードによるダイアログ クラスの作成
+                  href: creating-a-dialog-class-with-code-wizards.md
+                - name: ダイアログ クラスの作成
+                  href: creating-your-dialog-class.md
+            - name: ダイアログ ボックスの有効期間
+              expanded: false
+              items:
+                - name: MFC でのダイアログ ボックスの操作
+                  href: life-cycle-of-a-dialog-box.md
+                - name: ダイアログ ボックスの作成と表示
+                  href: creating-and-displaying-dialog-boxes.md
+                - name: モーダル ダイアログ ボックスの作成
+                  href: creating-modal-dialog-boxes.md
+                - name: モードレス ダイアログ ボックスの作成
+                  href: creating-modeless-dialog-boxes.md
+                - name: メモリ内のダイアログ テンプレートの使用
+                  href: using-a-dialog-template-in-memory.md
+                - name: ダイアログ ボックスの背景色の設定
+                  href: setting-the-dialog-boxs-background-color.md
+                - name: ダイアログ ボックスの初期化
+                  href: initializing-the-dialog-box.md
+                - name: ダイアログ ボックスでの Windows メッセージの処理
+                  href: handling-windows-messages-in-your-dialog-box.md
+                - name: ダイアログ オブジェクトからのデータの取得
+                  href: retrieving-data-from-the-dialog-object.md
+                - name: ダイアログ ボックスのクローズ
+                  href: closing-the-dialog-box.md
+                - name: ダイアログ ボックスの破棄
+                  href: destroying-the-dialog-box.md
+            - name: ダイアログ データ エクスチェンジとダイアログ データ検証
+              expanded: false
+              items:
+                - name: ダイアログ データ エクスチェンジとダイアログ データ検証
+                  href: dialog-data-exchange-and-validation.md
+                - name: ダイアログ データ エクスチェンジ
+                  href: dialog-data-exchange.md
+                - name: ダイアログ データ検証
+                  href: dialog-data-validation.md
+            - name: ダイアログ ボックスのコントロールへのタイプ セーフ アクセス
+              expanded: false
+              items:
+                - name: ダイアログ ボックスのコントロールへのタイプ セーフ アクセス
+                  href: type-safe-access-to-controls-in-a-dialog-box.md
+                - name: コード ウィザードを使用しない、コントロールへのタイプ セーフ アクセス
+                  href: type-safe-access-to-controls-without-code-wizards.md
+                - name: コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス
+                  href: type-safe-access-to-controls-with-code-wizards.md
+            - name: クラスへの Windows メッセージの対応付け
+              href: mapping-windows-messages-to-your-class.md
+            - name: 通常オーバーライドされるメンバー関数
+              href: commonly-overridden-member-functions.md
+            - name: 通常追加されるメンバー関数
+              href: commonly-added-member-functions.md
+            - name: コモン ダイアログ クラス
+              href: common-dialog-classes.md
+            - name: OLE のダイアログ ボックス
+              href: dialog-boxes-in-ole.md
+            - name: 'チュートリアル: アプリケーションへの CTaskDialog の追加'
+              href: walkthrough-adding-a-ctaskdialog-to-an-application.md
+        - name: ドキュメント/ビュー アーキテクチャ
+          expanded: false
+          items:
+            - name: ドキュメント/ビュー アーキテクチャ
+              href: document-view-architecture.md
+            - name: ドキュメント/ビューのサンプル リスト
+              href: document-view-sample-list.md
+            - name: ドキュメント/ビュー アーキテクチャの全体像
+              href: a-portrait-of-the-document-view-architecture.md
+            - name: ドキュメント/ビュー アーキテクチャの利点
+              href: advantages-of-the-document-view-architecture.md
+            - name: MFC のアプリケーション ウィザードで作成されるドキュメント クラスとビュー クラス
+              href: document-and-view-classes-created-by-the-mfc-application-wizard.md
+            - name: ドキュメント/ビュー アーキテクチャの代替手段
+              href: alternatives-to-the-document-view-architecture.md
+            - name: ドキュメントの使用
+              expanded: false
+              items:
+                - name: ドキュメントの使用
+                  href: using-documents.md
+                - name: CDocument からのドキュメント クラスの派生
+                  href: deriving-a-document-class-from-cdocument.md
+                - name: ドキュメント データ変数を使ったデータ管理
+                  href: managing-data-with-document-data-variables.md
+                - name: データのファイルへのシリアル化
+                  href: serializing-data-to-and-from-files.md
+                - name: シリアル化機構のバイパス
+                  href: bypassing-the-serialization-mechanism.md
+                - name: ドキュメントでのコマンドの処理
+                  href: handling-commands-in-the-document.md
+            - name: ビューの使用
+              expanded: false
+              items:
+                - name: ビューの使用
+                  href: using-views.md
+                - name: MFC で使用できる派生ビュー クラス
+                  href: derived-view-classes-available-in-mfc.md
+                - name: ビューの描画
+                  href: drawing-in-a-view.md
+                - name: ビューを使用したユーザー入力の解釈
+                  href: interpreting-user-input-through-a-view.md
+                - name: 印刷でのビューの役割
+                  href: role-of-the-view-in-printing.md
+                - name: ビューのスクロールと拡大/縮小
+                  href: scrolling-and-scaling-views.md
+            - name: 複数のドキュメント タイプ、ビュー、フレーム ウィンドウ
+              href: multiple-document-types-views-and-frame-windows.md
+            - name: ドキュメントとビューの初期化と後処理
+              expanded: false
+              items:
+                - name: ドキュメントとビューの初期化と後処理
+                  href: initializing-and-cleaning-up-documents-and-views.md
+                - name: ドキュメントとビューの初期化
+                  href: initializing-documents-and-views.md
+                - name: ドキュメントとビューの後処理
+                  href: cleaning-up-documents-and-views.md
+            - name: 1 つのドキュメントへの複数のビューの追加
+              href: adding-multiple-views-to-a-single-document.md
+        - name: フォーム ビュー (MFC)
+          expanded: false
+          items:
+            - name: フォーム ビュー (MFC)
+              href: form-views-mfc.md
+            - name: プロジェクトへのフォームの挿入
+              href: inserting-a-form-into-a-project.md
+        - name: 'HTML ヘルプ:プログラムの状況依存のヘルプ'
+          href: html-help-context-sensitive-help-for-your-programs.md
+        - name: MDI タブ付きグループ
+          href: mdi-tabbed-groups.md
+        - name: メニュー (MFC)
+          expanded: false
+          items:
+            - name: メニュー (MFC)
+              href: menus-mfc.md
+            - name: メニューのサンプル一覧
+              href: menu-sample-list.md
+            - name: プログラム実行時のメニューの操作
+              href: manipulating-menus-during-program-execution.md
+            - name: '方法: ユーザー インターフェイス オブジェクトの更新'
+              expanded: false
+              items:
+                - name: '方法: ユーザー インターフェイス オブジェクトの更新'
+                  href: how-to-update-user-interface-objects.md
+                - name: 更新ハンドラーが呼び出されるタイミング
+                  href: when-update-handlers-are-called.md
+                - name: ON_UPDATE_COMMAND_UI マクロ
+                  href: on-update-command-ui-macro.md
+                - name: CCmdUI クラス
+                  href: the-ccmdui-class.md
+        - name: OLE (MFC)
+          href: ole-mfc.md
+        - name: 印刷および印刷プレビュー
+          expanded: false
+          items:
+            - name: 印刷および印刷プレビュー
+              href: printing-and-print-preview.md
+            - name: 印刷
+              expanded: false
+              items:
+                - name: 印刷
+                  href: printing.md
+                - name: 既定の印刷プロセス
+                  href: how-default-printing-is-done.md
+                - name: マルチページ ドキュメント
+                  href: multipage-documents.md
+                - name: ヘッダーとフッター
+                  href: headers-and-footers.md
+                - name: GDI リソースの割り当て
+                  href: allocating-gdi-resources.md
+            - name: 印刷プレビューのアーキテクチャ
+              href: print-preview-architecture.md
+        - name: プロパティ シート (MFC)
+          expanded: false
+          items:
+            - name: プロパティ シート (MFC)
+              href: property-sheets-mfc.md
+            - name: MFC のプロパティ シートとプロパティ ページ
+              href: property-sheets-and-property-pages-in-mfc.md
+            - name: アプリケーションでのプロパティ シートの使用
+              href: using-property-sheets-in-your-application.md
+            - name: プロパティ シートへのコントロールの追加
+              href: adding-controls-to-a-property-sheet.md
+            - name: データの交換
+              href: exchanging-data.md
+            - name: モードレス プロパティ シートの作成
+              href: creating-a-modeless-property-sheet.md
+            - name: '[適用] ボタンの処理'
+              href: handling-the-apply-button.md
+            - name: ウィザードとしてのプロパティ シート
+              href: property-sheets-as-wizards.md
+        - name: リボン デザイナー (MFC)
+          expanded: false
+          items:
+            - name: リボン デザイナー (MFC)
+              href: ribbon-designer-mfc.md
+            - name: '方法: 既存の MFC リボンのリボン リソースへの変換'
+              href: how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md
+            - name: '方法: アプリケーション ボタンのカスタマイズ'
+              href: how-to-customize-the-application-button.md
+            - name: '方法: クイック アクセス ツール バーのカスタマイズ'
+              href: how-to-customize-the-quick-access-toolbar.md
+            - name: '方法: リボン コントロールとイベント ハンドラーの追加'
+              href: how-to-add-ribbon-controls-and-event-handlers.md
+            - name: '方法: MFC アプリケーションからのリボン リソースの読み込み'
+              href: how-to-load-a-ribbon-resource-from-an-mfc-application.md
+            - name: 'チュートリアル: MFC を使用したリボン アプリケーションの作成'
+              href: walkthrough-creating-a-ribbon-application-by-using-mfc.md
+            - name: 'チュートリアル: MFC Scribble アプリケーションの更新 (パート 1)'
+              href: walkthrough-updating-the-mfc-scribble-application-part-1.md
+            - name: 'チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)'
+              href: walkthrough-updating-the-mfc-scribble-application-part-2.md
+        - name: ステータス バー
+          expanded: false
+          items:
+            - name: ステータス バー
+              href: status-bars.md
+            - name: MFC でのステータス バーの実装
+              expanded: false
+              items:
+                - name: MFC でのステータス バーの実装
+                  href: status-bar-implementation-in-mfc.md
+                - name: ステータス バー ウィンドウのテキストの更新
+                  href: updating-the-text-of-a-status-bar-pane.md
+        - name: ツール ヒント
+          expanded: false
+          items:
+            - name: ツール ヒント
+              href: tool-tips.md
+            - name: CFrameWnd から派生していないウィンドウのツール ヒント
+              expanded: false
+              items:
+                - name: CFrameWnd から派生していないウィンドウのツール ヒント
+                  href: tool-tips-in-windows-not-derived-from-cframewnd.md
+                - name: ツール ヒントを有効にする方法
+                  href: enabling-tool-tips.md
+                - name: ツール ヒント用 TTN_NEEDTEXT 通知の処理
+                  href: handling-ttn-needtext-notification-for-tool-tips.md
+                - name: TOOLTIPTEXT の構造
+                  href: tooltiptext-structure.md
+        - name: ツールバー
+          expanded: false
+          items:
+            - name: ツールバー
+              href: toolbars.md
+            - name: ツール バーのサンプル一覧
+              href: toolbar-sample-list.md
+            - name: MFC ツール バーの実装
+              expanded: false
+              items:
+                - name: MFC ツール バーの実装
+                  href: mfc-toolbar-implementation.md
+                - name: ツール バーに関する基本事項
+                  href: toolbar-fundamentals.md
+                - name: ツール バーのドッキングとフローティング
+                  href: docking-and-floating-toolbars.md
+                - name: ツール バーのツール ヒント
+                  href: toolbar-tool-tips.md
+                - name: ToolBar コントロールの操作
+                  href: working-with-the-toolbar-control.md
+                - name: 古い形式のツール バーの使用
+                  href: using-your-old-toolbars.md
+        - name: ビジュアル マネージャー
+          href: visualization-manager.md
+        - name: Windows
+          expanded: false
+          items:
+            - name: Windows
+              href: windows.md
+            - name: ウィンドウ オブジェクト
+              expanded: false
+              items:
+                - name: ウィンドウ オブジェクト
+                  href: window-objects.md
+                - name: C++ ウィンドウ オブジェクトと HWND の関係
+                  href: relationship-between-a-cpp-window-object-and-an-hwnd.md
+                - name: ウィンドウ クラスの派生
+                  href: derived-window-classes.md
+                - name: ウィンドウの作成
+                  expanded: false
+                  items:
+                    - name: ウィンドウの作成
+                      href: creating-windows.md
+                    - name: ウィンドウ クラスの登録
+                      href: registering-window-classes.md
+                    - name: ウィンドウの一般的な作成順序
+                      href: general-window-creation-sequence.md
+                - name: ウィンドウ オブジェクトの破棄
+                  expanded: false
+                  items:
+                    - name: ウィンドウ オブジェクトの破棄
+                      href: destroying-window-objects.md
+                    - name: ウィンドウの破棄順序
+                      href: window-destruction-sequence.md
+                    - name: ウィンドウ メモリの割り当てと解放
+                      href: allocating-and-deallocating-window-memory.md
+                - name: CWnd と HWND の分離
+                  href: detaching-a-cwnd-from-its-hwnd.md
+                - name: ウィンドウ オブジェクトの操作
+                  href: working-with-window-objects.md
+                - name: デバイス コンテキスト
+                  href: device-contexts.md
+                - name: グラフィック オブジェクト
+                  expanded: false
+                  items:
+                    - name: グラフィック オブジェクト
+                      href: graphic-objects.md
+                    - name: 1 段階でのオブジェクトの構築と 2 段階でのオブジェクトの構築
+                      href: one-stage-and-two-stage-construction-of-objects.md
+                    - name: グラフィック オブジェクトのデバイス コンテキストへの選択
+                      href: selecting-a-graphic-object-into-a-device-context.md
+            - name: フレーム ウィンドウ
+              expanded: false
+              items:
+                - name: フレーム ウィンドウ
+                  href: frame-windows.md
+                - name: フレーム ウィンドウ クラス
+                  expanded: false
+                  items:
+                    - name: フレーム ウィンドウ クラス
+                      href: frame-window-classes.md
+                    - name: アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス
+                      href: frame-window-classes-created-by-the-application-wizard.md
+                - name: フレーム ウィンドウ スタイル (C++)
+                  expanded: false
+                  items:
+                    - name: フレーム ウィンドウ スタイル (C++)
+                      href: frame-window-styles-cpp.md
+                    - name: MFC で作成したウィンドウのスタイル変更
+                      href: changing-the-styles-of-a-window-created-by-mfc.md
+                - name: フレーム ウィンドウの機能
+                  href: what-frame-windows-do.md
+                - name: フレーム ウィンドウの使用
+                  expanded: false
+                  items:
+                    - name: フレーム ウィンドウの使用
+                      href: using-frame-windows.md
+                    - name: ドキュメント フレーム ウィンドウの作成
+                      href: creating-document-frame-windows.md
+                    - name: CWnd オブジェクトの初期化のタイミング
+                      href: when-to-initialize-cwnd-objects.md
+                    - name: フレーム ウィンドウの破棄
+                      href: destroying-frame-windows.md
+                    - name: MDI 子ウィンドウの管理
+                      href: managing-mdi-child-windows.md
+                    - name: 現在のビューの管理
+                      href: managing-the-current-view.md
+                    - name: メニュー、コントロール バー、およびアクセラレータの管理
+                      href: managing-menus-control-bars-and-accelerators.md
+                    - name: ファイルのフレーム ウィンドウへのドラッグ アンド ドロップ
+                      href: dragging-and-dropping-files-in-a-frame-window.md
+                    - name: ダイナミック データ エクスチェンジ (DDE) への応答
+                      href: responding-to-dynamic-data-exchange-dde.md
+                    - name: ほかのウィンドウの動作の調整
+                      href: orchestrating-other-window-actions.md
+    - name: Windows ソケット
+      expanded: false
+      items:
+        - name: Windows ソケット
+          href: windows-sockets.md
+        - name: MFC における Windows ソケット
+          expanded: false
+          items:
+            - name: MFC における Windows ソケット
+              href: windows-sockets-in-mfc.md
+            - name: 'Windows ソケット:背景'
+              href: windows-sockets-background.md
+            - name: 'Windows ソケット:ストリーム ソケット'
+              href: windows-sockets-stream-sockets.md
+            - name: 'Windows ソケット:データグラム ソケット'
+              href: windows-sockets-datagram-sockets.md
+            - name: 'Windows ソケット:アーカイブ付きソケットの使用'
+              href: windows-sockets-using-sockets-with-archives.md
+            - name: 'Windows ソケット:動作シーケンス'
+              href: windows-sockets-sequence-of-operations.md
+            - name: 'Windows ソケット:アーカイブを使用するソケットの例'
+              href: windows-sockets-example-of-sockets-using-archives.md
+            - name: 'Windows ソケット:アーカイブ付きソケットの動作'
+              href: windows-sockets-how-sockets-with-archives-work.md
+            - name: 'Windows ソケット:CAsyncSocket クラスの使用'
+              href: windows-sockets-using-class-casyncsocket.md
+            - name: 'Windows ソケット:ソケット クラスからの派生'
+              href: windows-sockets-deriving-from-socket-classes.md
+            - name: 'Windows ソケット:ソケット通知'
+              href: windows-sockets-socket-notifications.md
+            - name: 'Windows ソケット:ブロッキング'
+              href: windows-sockets-blocking.md
+            - name: 'Windows ソケット:バイトの順序付け'
+              href: windows-sockets-byte-ordering.md
+            - name: 'Windows ソケット:文字列の変換'
+              href: windows-sockets-converting-strings.md
+            - name: 'Windows ソケット:ポートとソケット アドレス'
+              href: windows-sockets-ports-and-socket-addresses.md
+    - name: Win32 インターネット拡張機能 (WinInet)
+      expanded: false
+      items:
+        - name: Win32 インターネット拡張機能 (WinInet)
+          href: win32-internet-extensions-wininet.md
+        - name: WinInet を使ってインターネット クライアント アプリケーションを簡単に作成する方法
+          href: how-wininet-makes-it-easier-to-create-internet-client-applications.md
+        - name: MFC を使ってインターネット クライアント アプリケーションを簡単に作成する方法
+          href: how-mfc-makes-it-easier-to-create-internet-client-applications.md
+        - name: インターネット クライアント アプリケーションの作成用の MFC クラス
+          href: mfc-classes-for-creating-internet-client-applications.md
+        - name: インターネット クライアント クラスの必要条件
+          href: prerequisites-for-internet-client-classes.md
+        - name: MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法
+          href: writing-an-internet-client-application-using-mfc-wininet-classes.md
+        - name: 典型的なインターネット クライアント アプリケーションでの手順
+          href: steps-in-a-typical-internet-client-application.md
+        - name: 典型的な FTP クライアント アプリケーションでの手順
+          href: steps-in-a-typical-ftp-client-application.md
+        - name: 典型的な FTP クライアント アプリケーションでのファイルの削除手順
+          href: steps-in-a-typical-ftp-client-application-to-delete-a-file.md
+        - name: 典型的な Gopher クライアント アプリケーションでの手順
+          href: steps-in-a-typical-gopher-client-application.md
+        - name: 典型的な HTTP クライアント アプリケーションでの手順
+          href: steps-in-a-typical-http-client-application.md
+- name: 階層図
+  expanded: false
+  items:
+    - name: 階層図
+      href: hierarchy-chart.md
+    - name: 階層図カテゴリ
+      href: hierarchy-chart-categories.md
+- name: MFC のカスタマイズ
+  expanded: false
+  items:
+    - name: MFC のカスタマイズ
+      href: customization-for-mfc.md
+    - name: キーボードとマウスのカスタマイズ
+      href: keyboard-and-mouse-customization.md
+    - name: ユーザー定義のツール
+      href: user-defined-tools.md
+    - name: カスタマイズによるセキュリティへの影響
+      href: security-implications-of-customization.md
+- name: MFC テクニカル ノート
+  expanded: false
+  items:
+    - name: MFC テクニカル ノート
+      href: mfc-technical-notes.md
+    - name: カテゴリ別テクニカル ノート
+      href: technical-notes-by-category.md
+    - name: 番号順テクニカル ノート
+      href: technical-notes-by-number.md
+    - name: 'テクニカル ノート 1:ウィンドウ クラスの登録'
+      href: tn001-window-class-registration.md
+    - name: 'テクニカル ノート 2:永続オブジェクトのデータ形式'
+      href: tn002-persistent-object-data-format.md
+    - name: 'テクニカル ノート 3:Windows ハンドルとオブジェクト間のマップ'
+      href: tn003-mapping-of-windows-handles-to-objects.md
+    - name: 'テクニカル ノート 6:メッセージ マップ'
+      href: tn006-message-maps.md
+    - name: 'テクニカル ノート 11:DLL の構成要素としての MFC'
+      href: tn011-using-mfc-as-part-of-a-dll.md
+    - name: 'テクニカル ノート 14:カスタム コントロール'
+      href: tn014-custom-controls.md
+    - name: 'テクニカル ノート 16:MFC における C++ の多重継承'
+      href: tn016-using-cpp-multiple-inheritance-with-mfc.md
+    - name: 'テクニカル ノート 17:ウィンドウ オブジェクトの破棄'
+      href: tn017-destroying-window-objects.md
+    - name: 'テクニカル ノート 20:ID 名および番号に関する規約'
+      href: tn020-id-naming-and-numbering-conventions.md
+    - name: 'テクニカル ノート 21:コマンドとメッセージのルーティング'
+      href: tn021-command-and-message-routing.md
+    - name: 'テクニカル ノート 22:標準コマンドの実装'
+      href: tn022-standard-commands-implementation.md
+    - name: 'テクニカル ノート 23:MFC の標準リソース'
+      href: tn023-standard-mfc-resources.md
+    - name: 'テクニカル ノート 24:MFC で定義されているメッセージおよびリソース'
+      href: tn024-mfc-defined-messages-and-resources.md
+    - name: 'テクニカル ノート 25:ドキュメント、ビュー、フレームの作成'
+      href: tn025-document-view-and-frame-creation.md
+    - name: 'テクニカル ノート 26:DDX ルーチンおよび DDV ルーチン'
+      href: tn026-ddx-and-ddv-routines.md
+    - name: 'テクニカル ノート 28:状況依存のヘルプのサポート'
+      href: tn028-context-sensitive-help-support.md
+    - name: 'テクニカル ノート 29:分割ウィンドウ'
+      href: tn029-splitter-windows.md
+    - name: 'テクニカル ノート 30:印刷と印刷プレビューのカスタマイズ'
+      href: tn030-customizing-printing-and-print-preview.md
+    - name: 'テクニカル ノート 31:コントロール バー'
+      href: tn031-control-bars.md
+    - name: 'テクニカル ノート 32:MFC 例外処理機構'
+      href: tn032-mfc-exception-mechanism.md
+    - name: 'テクニカル ノート 33:MFC の DLL バージョン'
+      href: tn033-dll-version-of-mfc.md
+    - name: 'テクニカル ノート 35:Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用'
+      href: tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md
+    - name: 'テクニカル ノート 36:AppWizard と ClassWizard を使って CFormView を利用する方法'
+      href: tn036-using-cformview-with-appwizard-and-classwizard.md
+    - name: 'テクニカル ノート 37:MFC 2.1 のマルチスレッド アプリケーション'
+      href: tn037-multithreaded-mfc-2-1-applications.md
+    - name: 'テクニカル ノート 38:MFC-OLE IUnknown の実装'
+      href: tn038-mfc-ole-iunknown-implementation.md
+    - name: 'テクニカル ノート 39:MFC-OLE オートメーションの実装'
+      href: tn039-mfc-ole-automation-implementation.md
+    - name: 'テクニカル ノート 40:MFC-OLE 埋め込み先サイズ変更とズーム'
+      href: tn040-mfc-ole-in-place-resizing-and-zooming.md
+    - name: 'テクニカル ノート 41:MFC-OLE1 から MFC-OLE 2 への移植'
+      href: tn041-mfc-ole1-migration-to-mfc-ole-2.md
+    - name: 'テクニカル ノート 42:ODBC ドライバーの開発に関する推奨事項'
+      href: tn042-odbc-driver-developer-recommendations.md
+    - name: 'テクニカル ノート 43:RFX ルーチン'
+      href: tn043-rfx-routines.md
+    - name: 'テクニカル ノート 44:MFC の DBCS サポート'
+      href: tn044-mfc-support-for-dbcs.md
+    - name: 'テクニカル ノート 45:MFC データベースの Long Varchar/Varbinary 型のサポート'
+      href: tn045-mfc-database-support-for-long-varchar-varbinary.md
+    - name: 'テクニカル ノート 46:MFC クラスのコメント規約'
+      href: tn046-commenting-conventions-for-the-mfc-classes.md
+    - name: 'テクニカル ノート 47:データベース トランザクション条件の緩和'
+      href: tn047-relaxing-database-transaction-requirements.md
+    - name: 'テクニカル ノート 48:MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムの作成'
+      href: tn048-writing-odbc-setup-and-administration-programs.md
+    - name: 'テクニカル ノート 49:MFC-OLE の MBCS から Unicode への変換層 (MFCANS32)'
+      href: tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md
+    - name: 'テクニカル ノート 50:MFC-OLE コモン ダイアログ (MFCUIx32)'
+      href: tn050-mfc-ole-common-dialogs-mfcuix32.md
+    - name: 'テクニカル ノート 51:今後の CTL3D の使用'
+      href: tn051-using-ctl3d-now-and-in-the-future.md
+    - name: 'テクニカル ノート 53:DAO データベース クラス用カスタム DFX ルーチン'
+      href: tn053-custom-dfx-routines-for-dao-database-classes.md
+    - name: 'テクニカル ノート 54:MFC DAO クラス使用中の DAO の直接呼び出し'
+      href: tn054-calling-dao-directly-while-using-mfc-dao-classes.md
+    - name: 'テクニカル ノート 55:MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行'
+      href: tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md
+    - name: 'テクニカル ノート 56:ローカライズされた MFC コンポーネントのインストール'
+      href: tn056-installation-of-localized-mfc-components.md
+    - name: 'テクニカル ノート 57:MFC コンポーネントのローカライズ'
+      href: tn057-localization-of-mfc-components.md
+    - name: 'テクニカル ノート 58:MFC のモジュール状態の実装'
+      href: tn058-mfc-module-state-implementation.md
+    - name: 'テクニカル ノート 59:MFC の MBCS-Unicode 変換マクロの使用'
+      href: tn059-using-mfc-mbcs-unicode-conversion-macros.md
+    - name: 'テクニカル ノート 60:新しい Windows コモン コントロール'
+      href: tn060-the-new-windows-common-controls.md
+    - name: 'テクニカル ノート 61:ON_NOTIFY メッセージと WM_NOTIFY メッセージ'
+      href: tn061-on-notify-and-wm-notify-messages.md
+    - name: 'テクニカル ノート 62:Windows コントロールへのメッセージ リフレクション'
+      href: tn062-message-reflection-for-windows-controls.md
+    - name: 'テクニカル ノート 63:インターネット MFC 拡張 DLL のデバッグ'
+      href: tn063-debugging-internet-extension-dlls.md
+    - name: 'テクニカル ノート 64:ActiveX コントロールにおけるアパートメント モデルのスレッド処理'
+      href: tn064-apartment-model-threading-in-activex-controls.md
+    - name: 'テクニカル ノート 65:OLE オートメーション サーバー用デュアル インターフェイス サポート'
+      href: tn065-dual-interface-support-for-ole-automation-servers.md
+    - name: 'テクニカル ノート 66:MFC 3.x から 4.0 への移植によくある問題点'
+      href: tn066-common-mfc-3-x-to-4-0-porting-issues.md
+    - name: 'テクニカル ノート 68:Microsoft Access 7 ODBC ドライバーでのトランザクションの実行'
+      href: tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md
+    - name: 'テクニカル ノート 70:MFC のウィンドウ クラス名'
+      href: tn070-mfc-window-class-names.md
+    - name: 'テクニカル ノート 71:MFC IOleCommandTarget の実装'
+      href: tn071-mfc-iolecommandtarget-implementation.md
+- name: クラス ライブラリの概要
+  expanded: false
+  items:
+    - name: クラス ライブラリの概要
+      href: class-library-overview.md
+    - name: クラスの設計の一般的な考え方
+      expanded: false
+      items:
+        - name: クラスの設計の一般的な考え方
+          href: general-class-design-philosophy.md
+        - name: アプリケーション フレームワーク
+          href: application-framework.md
+        - name: C 言語 API との関係
+          href: relationship-to-the-c-language-api.md
+    - name: 'ルート クラス:CObject'
+      href: root-class-cobject.md
+    - name: MFC アプリケーション アーキテクチャ クラス
+      expanded: false
+      items:
+        - name: MFC アプリケーション アーキテクチャ クラス
+          href: mfc-application-architecture-classes.md
+        - name: アプリケーションおよびスレッド サポート クラス
+          href: application-and-thread-support-classes.md
+        - name: コマンド ルーティング クラス
+          href: command-routing-classes.md
+        - name: ドキュメント クラス
+          href: document-classes.md
+        - name: ビュー クラス (アーキテクチャ)
+          href: view-classes-architecture.md
+        - name: フレーム ウィンドウ クラス (アーキテクチャ)
+          href: frame-window-classes-architecture.md
+        - name: ドキュメント テンプレート クラス
+          href: document-template-classes.md
+    - name: ウィンドウ、ダイアログ、コントロール クラス
+      expanded: false
+      items:
+        - name: ウィンドウ、ダイアログ、コントロール クラス
+          href: window-dialog-and-control-classes.md
+        - name: フレーム ウィンドウ クラス (Windows)
+          href: frame-window-classes-windows.md
+        - name: ビュー クラス (Windows)
+          href: view-classes-windows.md
+        - name: ダイアログ ボックス クラス
+          href: dialog-box-classes.md
+        - name: コントロール クラス
+          href: control-classes.md
+        - name: コントロール バー クラス
+          href: control-bar-classes.md
+    - name: 描画および印刷クラス
+      expanded: false
+      items:
+        - name: 描画および印刷クラス
+          href: drawing-and-printing-classes.md
+        - name: 出力 (デバイス コンテキスト) クラス
+          href: output-device-context-classes.md
+        - name: 描画ツール クラス
+          href: drawing-tool-classes.md
+    - name: 単純データ型クラス
+      href: simple-data-type-classes.md
+    - name: 配列、リスト、マップ クラス
+      expanded: false
+      items:
+        - name: 配列、リスト、マップ クラス
+          href: array-list-and-map-classes.md
+        - name: 配列、リスト、マップのテンプレート クラス
+          href: template-classes-for-arrays-lists-and-maps.md
+        - name: 使用可能な配列クラス
+          href: ready-to-use-array-classes.md
+        - name: 使用可能なリスト クラス
+          href: ready-to-use-list-classes.md
+        - name: 使用可能なマップ クラス
+          href: ready-to-use-map-classes.md
+    - name: ファイルおよびデータベース クラス
+      expanded: false
+      items:
+        - name: ファイルおよびデータベース クラス
+          href: file-and-database-classes.md
+        - name: ファイル I/O クラス
+          href: file-i-o-classes.md
+        - name: OLE DB クラス
+          href: ole-db-classes.md
+        - name: DAO クラス
+          href: dao-classes.md
+        - name: ODBC クラス
+          href: odbc-classes.md
+    - name: インターネットおよびネットワーク クラス
+      expanded: false
+      items:
+        - name: インターネットおよびネットワーク クラス
+          href: internet-and-networking-classes.md
+        - name: Windows Sockets クラス
+          href: windows-sockets-classes.md
+        - name: Win32 インターネット クラス
+          href: win32-internet-classes.md
+    - name: OLE クラス
+      expanded: false
+      items:
+        - name: OLE クラス
+          href: ole-classes.md
+        - name: OLE コンテナー クラス
+          href: ole-container-classes.md
+        - name: OLE サーバー クラス
+          href: ole-server-classes.md
+        - name: OLE ドラッグ アンド ドロップおよびデータ転送クラス
+          href: ole-drag-and-drop-and-data-transfer-classes.md
+        - name: OLE コモン ダイアログ クラス
+          href: ole-common-dialog-classes.md
+        - name: OLE オートメーション クラス
+          href: ole-automation-classes.md
+        - name: OLE コントロール クラス
+          href: ole-control-classes.md
+        - name: Active ドキュメント クラス
+          href: active-document-classes.md
+        - name: OLE 関連クラス
+          href: ole-related-classes.md
+    - name: デバッグおよび例外クラス
+      expanded: false
+      items:
+        - name: デバッグおよび例外クラス
+          href: debugging-and-exception-classes.md
+        - name: デバッグ サポート クラス
+          href: debugging-support-classes.md
+        - name: 例外クラス
+          href: exception-classes.md
+- name: チュートリアル (MFC)
+  expanded: false
+  items:
+    - name: チュートリアル (MFC)
+      href: walkthroughs-mfc.md
+    - name: 'チュートリアル: 新しい MFC シェル コントロールの使用'
+      href: walkthrough-using-the-new-mfc-shell-controls.md
+    - name: 'チュートリアル: ツール バーへのコントロールの追加'
+      href: walkthrough-putting-controls-on-toolbars.md
+    - name: 'チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加'
+      href: walkthrough-adding-a-d2d-object-to-an-mfc-project.md
+    - name: 'チュートリアル: MFC プロジェクトへのアニメーションの追加'
+      href: walkthrough-adding-animation-to-an-mfc-project.md
+- name: MFC API リファレンス
+  items:
+    - name: MFC のクラス
+      expanded: false
+      items:
+        - name: MFC クラス
+          href: reference/mfc-classes.md
+        - name: CAccelerateDecelerateTransition クラス
+          href: reference/cacceleratedeceleratetransition-class.md
+        - name: CAnimateCtrl クラス
+          href: reference/canimatectrl-class.md
+        - name: CAnimationBaseObject クラス
+          href: reference/canimationbaseobject-class.md
+        - name: CAnimationColor クラス
+          href: reference/canimationcolor-class.md
+        - name: CAnimationController クラス
+          href: reference/canimationcontroller-class.md
+        - name: CAnimationGroup クラス
+          href: reference/canimationgroup-class.md
+        - name: CAnimationManagerEventHandler クラス
+          href: reference/canimationmanagereventhandler-class.md
+        - name: CAnimationPoint クラス
+          href: reference/canimationpoint-class.md
+        - name: CAnimationRect クラス
+          href: reference/canimationrect-class.md
+        - name: CAnimationSize クラス
+          href: reference/canimationsize-class.md
+        - name: CAnimationStoryboardEventHandler クラス
+          href: reference/canimationstoryboardeventhandler-class.md
+        - name: CAnimationTimerEventHandler クラス
+          href: reference/canimationtimereventhandler-class.md
+        - name: CAnimationValue クラス
+          href: reference/canimationvalue-class.md
+        - name: CAnimationVariable クラス
+          href: reference/canimationvariable-class.md
+        - name: CAnimationVariableChangeHandler クラス
+          href: reference/canimationvariablechangehandler-class.md
+        - name: CAnimationVariableIntegerChangeHandler クラス
+          href: reference/canimationvariableintegerchangehandler-class.md
+        - name: CArchive クラス
+          href: reference/carchive-class.md
+        - name: CArchiveException クラス
+          href: reference/carchiveexception-class.md
+        - name: CArray クラス
+          href: reference/carray-class.md
+        - name: CAsyncMonikerFile クラス
+          href: reference/casyncmonikerfile-class.md
+        - name: CAsyncSocket クラス
+          href: reference/casyncsocket-class.md
+        - name: CAutoHideDockSite クラス
+          href: reference/cautohidedocksite-class.md
+        - name: CBaseKeyFrame クラス
+          href: reference/cbasekeyframe-class.md
+        - name: CBasePane クラス
+          href: reference/cbasepane-class.md
+        - name: CBaseTabbedPane クラス
+          href: reference/cbasetabbedpane-class.md
+        - name: CBaseTransition クラス
+          href: reference/cbasetransition-class.md
+        - name: CBitmap クラス
+          href: reference/cbitmap-class.md
+        - name: CBitmapButton クラス
+          href: reference/cbitmapbutton-class.md
+        - name: CBitmapRenderTarget クラス
+          href: reference/cbitmaprendertarget-class.md
+        - name: CBrush クラス
+          href: reference/cbrush-class.md
+        - name: CButton クラス
+          href: reference/cbutton-class.md
+        - name: CByteArray クラス
+          href: reference/cbytearray-class.md
+        - name: CCachedDataPathProperty クラス
+          href: reference/ccacheddatapathproperty-class.md
+        - name: CCheckListBox クラス
+          href: reference/cchecklistbox-class.md
+        - name: CClientDC クラス
+          href: reference/cclientdc-class.md
+        - name: CCmdTarget クラス
+          href: reference/ccmdtarget-class.md
+        - name: CCmdUI クラス
+          href: reference/ccmdui-class.md
+        - name: CColorDialog クラス
+          href: reference/ccolordialog-class.md
+        - name: CComboBox クラス
+          href: reference/ccombobox-class.md
+        - name: CComboBoxEx クラス
+          href: reference/ccomboboxex-class.md
+        - name: CCommandLineInfo クラス
+          href: reference/ccommandlineinfo-class.md
+        - name: CCommonDialog クラス
+          href: reference/ccommondialog-class.md
+        - name: CConnectionPoint クラス
+          href: reference/cconnectionpoint-class.md
+        - name: CConstantTransition クラス
+          href: reference/cconstanttransition-class.md
+        - name: CContextMenuManager クラス
+          href: reference/ccontextmenumanager-class.md
+        - name: CControlBar クラス
+          href: reference/ccontrolbar-class.md
+        - name: CCreateContext 構造体
+          href: reference/ccreatecontext-structure.md
+        - name: CCriticalSection クラス
+          href: reference/ccriticalsection-class.md
+        - name: CCtrlView クラス
+          href: reference/cctrlview-class.md
+        - name: CCubicTransition クラス
+          href: reference/ccubictransition-class.md
+        - name: CCustomInterpolator クラス
+          href: reference/ccustominterpolator-class.md
+        - name: CCustomTransition クラス
+          href: reference/ccustomtransition-class.md
+        - name: CD2DBitmap クラス
+          href: reference/cd2dbitmap-class.md
+        - name: CD2DBitmapBrush クラス
+          href: reference/cd2dbitmapbrush-class.md
+        - name: CD2DBrush クラス
+          href: reference/cd2dbrush-class.md
+        - name: CD2DBrushProperties クラス
+          href: reference/cd2dbrushproperties-class.md
+        - name: CD2DEllipse クラス
+          href: reference/cd2dellipse-class.md
+        - name: CD2DGeometry クラス
+          href: reference/cd2dgeometry-class.md
+        - name: CD2DGeometrySink クラス
+          href: reference/cd2dgeometrysink-class.md
+        - name: CD2DGradientBrush クラス
+          href: reference/cd2dgradientbrush-class.md
+        - name: CD2DLayer クラス
+          href: reference/cd2dlayer-class.md
+        - name: CD2DLinearGradientBrush クラス
+          href: reference/cd2dlineargradientbrush-class.md
+        - name: CD2DMesh クラス
+          href: reference/cd2dmesh-class.md
+        - name: CD2DPathGeometry クラス
+          href: reference/cd2dpathgeometry-class.md
+        - name: CD2DPointF クラス
+          href: reference/cd2dpointf-class.md
+        - name: CD2DPointU クラス
+          href: reference/cd2dpointu-class.md
+        - name: CD2DRadialGradientBrush クラス
+          href: reference/cd2dradialgradientbrush-class.md
+        - name: CD2DRectF クラス
+          href: reference/cd2drectf-class.md
+        - name: CD2DRectU クラス
+          href: reference/cd2drectu-class.md
+        - name: CD2DResource クラス
+          href: reference/cd2dresource-class.md
+        - name: CD2DRoundedRect クラス
+          href: reference/cd2droundedrect-class.md
+        - name: CD2DSizeF クラス
+          href: reference/cd2dsizef-class.md
+        - name: CD2DSizeU クラス
+          href: reference/cd2dsizeu-class.md
+        - name: CD2DSolidColorBrush クラス
+          href: reference/cd2dsolidcolorbrush-class.md
+        - name: CD2DTextFormat クラス
+          href: reference/cd2dtextformat-class.md
+        - name: CD2DTextLayout クラス
+          href: reference/cd2dtextlayout-class.md
+        - name: CDaoDatabase クラス
+          href: reference/cdaodatabase-class.md
+        - name: CDaoException クラス
+          href: reference/cdaoexception-class.md
+        - name: CDaoFieldExchange クラス
+          href: reference/cdaofieldexchange-class.md
+        - name: CDaoQueryDef クラス
+          href: reference/cdaoquerydef-class.md
+        - name: CDaoRecordset クラス
+          href: reference/cdaorecordset-class.md
+        - name: CDaoRecordView クラス
+          href: reference/cdaorecordview-class.md
+        - name: CDaoTableDef クラス
+          href: reference/cdaotabledef-class.md
+        - name: CDaoWorkspace クラス
+          href: reference/cdaoworkspace-class.md
+        - name: CDatabase クラス
+          href: reference/cdatabase-class.md
+        - name: CDataExchange クラス
+          href: reference/cdataexchange-class.md
+        - name: CDataPathProperty クラス
+          href: reference/cdatapathproperty-class.md
+        - name: CDataRecoveryHandler クラス
+          href: reference/cdatarecoveryhandler-class.md
+        - name: CDateTimeCtrl クラス
+          href: reference/cdatetimectrl-class.md
+        - name: CDBException クラス
+          href: reference/cdbexception-class.md
+        - name: CDBVariant クラス
+          href: reference/cdbvariant-class.md
+        - name: CDC クラス
+          href: reference/cdc-class.md
+        - name: CDCRenderTarget クラス
+          href: reference/cdcrendertarget-class.md
+        - name: CDHtmlDialog クラス
+          expanded: false
+          items:
+            - name: CDHtmlDialog クラス
+              href: reference/cdhtmldialog-class.md
+            - name: DDX_DHtml ヘルパー マクロ
+              href: reference/ddx-dhtml-helper-macros.md
+        - name: CDialog クラス
+          href: reference/cdialog-class.md
+        - name: CDialogBar クラス
+          href: reference/cdialogbar-class.md
+        - name: CDialogEx クラス
+          href: reference/cdialogex-class.md
+        - name: CDiscreteTransition クラス
+          href: reference/cdiscretetransition-class.md
+        - name: CDocItem クラス
+          href: reference/cdocitem-class.md
+        - name: CDockablePane クラス
+          href: reference/cdockablepane-class.md
+        - name: CDockablePaneAdapter クラス
+          href: reference/cdockablepaneadapter-class.md
+        - name: CDockingManager クラス
+          href: reference/cdockingmanager-class.md
+        - name: CDockingPanesRow クラス
+          href: reference/cdockingpanesrow-class.md
+        - name: CDockSite クラス
+          href: reference/cdocksite-class.md
+        - name: CDockState クラス
+          href: reference/cdockstate-class.md
+        - name: CDocObjectServer クラス
+          href: reference/cdocobjectserver-class.md
+        - name: CDocObjectServerItem クラス
+          href: reference/cdocobjectserveritem-class.md
+        - name: CDocTemplate クラス
+          href: reference/cdoctemplate-class.md
+        - name: CDocument クラス
+          href: reference/cdocument-class.md
+        - name: CDragListBox クラス
+          href: reference/cdraglistbox-class.md
+        - name: CDrawingManager クラス
+          href: reference/cdrawingmanager-class.md
+        - name: CDumpContext クラス
+          href: reference/cdumpcontext-class.md
+        - name: CDWordArray クラス
+          href: reference/cdwordarray-class.md
+        - name: CEdit クラス
+          href: reference/cedit-class.md
+        - name: CEditView クラス
+          href: reference/ceditview-class.md
+        - name: CEvent クラス
+          href: reference/cevent-class.md
+        - name: CException クラス
+          href: reference/cexception-class.md
+        - name: CFieldExchange クラス
+          href: reference/cfieldexchange-class.md
+        - name: CFile クラス
+          href: reference/cfile-class.md
+        - name: CFileDialog クラス
+          href: reference/cfiledialog-class.md
+        - name: CFileException クラス
+          href: reference/cfileexception-class.md
+        - name: CFileFind クラス
+          href: reference/cfilefind-class.md
+        - name: CFindReplaceDialog クラス
+          href: reference/cfindreplacedialog-class.md
+        - name: CFolderPickerDialog クラス
+          href: reference/cfolderpickerdialog-class.md
+        - name: CFont クラス
+          href: reference/cfont-class.md
+        - name: CFontDialog クラス
+          href: reference/cfontdialog-class.md
+        - name: CFontHolder クラス
+          href: reference/cfontholder-class.md
+        - name: CFormView クラス
+          href: reference/cformview-class.md
+        - name: CFrameWnd クラス
+          href: reference/cframewnd-class.md
+        - name: CFrameWndEx クラス
+          href: reference/cframewndex-class.md
+        - name: CFtpConnection クラス
+          href: reference/cftpconnection-class.md
+        - name: CFtpFileFind クラス
+          href: reference/cftpfilefind-class.md
+        - name: CGdiObject クラス
+          href: reference/cgdiobject-class.md
+        - name: CGlobalUtils クラス
+          href: reference/cglobalutils-class.md
+        - name: CGopherConnection クラス
+          href: reference/cgopherconnection-class.md
+        - name: CGopherFile クラス
+          href: reference/cgopherfile-class.md
+        - name: CGopherFileFind クラス
+          href: reference/cgopherfilefind-class.md
+        - name: CGopherLocator クラス
+          href: reference/cgopherlocator-class.md
+        - name: CHeaderCtrl クラス
+          href: reference/cheaderctrl-class.md
+        - name: CHotKeyCtrl クラス
+          href: reference/chotkeyctrl-class.md
+        - name: CHtmlEditCtrl クラス
+          href: reference/chtmleditctrl-class.md
+        - name: CHtmlEditCtrlBase クラス
+          href: reference/chtmleditctrlbase-class.md
+        - name: CHtmlEditDoc クラス
+          href: reference/chtmleditdoc-class.md
+        - name: CHtmlEditView クラス
+          href: reference/chtmleditview-class.md
+        - name: CHtmlView クラス
+          href: reference/chtmlview-class.md
+        - name: CHttpConnection クラス
+          href: reference/chttpconnection-class.md
+        - name: CHttpFile クラス
+          href: reference/chttpfile-class.md
+        - name: CHwndRenderTarget クラス
+          href: reference/chwndrendertarget-class.md
+        - name: CImageList クラス
+          href: reference/cimagelist-class.md
+        - name: CInstantaneousTransition クラス
+          href: reference/cinstantaneoustransition-class.md
+        - name: CInternetConnection クラス
+          href: reference/cinternetconnection-class.md
+        - name: CInternetException クラス
+          href: reference/cinternetexception-class.md
+        - name: CInternetFile クラス
+          href: reference/cinternetfile-class.md
+        - name: CInternetSession クラス
+          href: reference/cinternetsession-class.md
+        - name: CInterpolatorBase クラス
+          href: reference/cinterpolatorbase-class.md
+        - name: CInvalidArgException クラス
+          href: reference/cinvalidargexception-class.md
+        - name: CIPAddressCtrl クラス
+          href: reference/cipaddressctrl-class.md
+        - name: CJumpList クラス
+          href: reference/cjumplist-class.md
+        - name: CKeyboardManager クラス
+          href: reference/ckeyboardmanager-class.md
+        - name: CKeyFrame クラス
+          href: reference/ckeyframe-class.md
+        - name: CLinearTransition クラス
+          href: reference/clineartransition-class.md
+        - name: CLinearTransitionFromSpeed クラス
+          href: reference/clineartransitionfromspeed-class.md
+        - name: CLinkCtrl クラス
+          href: reference/clinkctrl-class.md
+        - name: CList クラス
+          href: reference/clist-class.md
+        - name: CListBox クラス
+          href: reference/clistbox-class.md
+        - name: CListCtrl クラス
+          href: reference/clistctrl-class.md
+        - name: CListView クラス
+          href: reference/clistview-class.md
+        - name: CLongBinary クラス
+          href: reference/clongbinary-class.md
+        - name: CMap クラス
+          href: reference/cmap-class.md
+        - name: CMapPtrToPtr クラス
+          href: reference/cmapptrtoptr-class.md
+        - name: CMapPtrToWord クラス
+          href: reference/cmapptrtoword-class.md
+        - name: CMapStringToOb クラス
+          href: reference/cmapstringtoob-class.md
+        - name: CMapStringToPtr クラス
+          href: reference/cmapstringtoptr-class.md
+        - name: CMapStringToString クラス
+          href: reference/cmapstringtostring-class.md
+        - name: CMapWordToOb クラス
+          href: reference/cmapwordtoob-class.md
+        - name: CMapWordToPtr クラス
+          href: reference/cmapwordtoptr-class.md
+        - name: CMDIChildWnd クラス
+          href: reference/cmdichildwnd-class.md
+        - name: CMDIChildWndEx クラス
+          href: reference/cmdichildwndex-class.md
+        - name: CMDIFrameWnd クラス
+          href: reference/cmdiframewnd-class.md
+        - name: CMDIFrameWndEx クラス
+          href: reference/cmdiframewndex-class.md
+        - name: CMDITabInfo クラス
+          href: reference/cmditabinfo-class.md
+        - name: CMemFile クラス
+          href: reference/cmemfile-class.md
+        - name: CMemoryException クラス
+          href: reference/cmemoryexception-class.md
+        - name: CMemoryState 構造体
+          href: reference/cmemorystate-structure.md
+        - name: CMenu クラス
+          href: reference/cmenu-class.md
+        - name: CMenuTearOffManager クラス
+          href: reference/cmenutearoffmanager-class.md
+        - name: CMetaFileDC クラス
+          href: reference/cmetafiledc-class.md
+        - name: CMFCAcceleratorKey クラス
+          href: reference/cmfcacceleratorkey-class.md
+        - name: CMFCAcceleratorKeyAssignCtrl クラス
+          href: reference/cmfcacceleratorkeyassignctrl-class.md
+        - name: CMFCAutoHideBar クラス
+          href: reference/cmfcautohidebar-class.md
+        - name: CMFCAutoHideButton クラス
+          href: reference/cmfcautohidebutton-class.md
+        - name: CMFCBaseTabCtrl クラス
+          href: reference/cmfcbasetabctrl-class.md
+        - name: CMFCBaseToolBar クラス
+          href: reference/cmfcbasetoolbar-class.md
+        - name: CMFCBaseVisualManager クラス
+          href: reference/cmfcbasevisualmanager-class.md
+        - name: CMFCButton クラス
+          href: reference/cmfcbutton-class.md
+        - name: CMFCCaptionBar クラス
+          href: reference/cmfccaptionbar-class.md
+        - name: CMFCCaptionButton クラス
+          href: reference/cmfccaptionbutton-class.md
+        - name: CMFCCmdUsageCount クラス
+          href: reference/cmfccmdusagecount-class.md
+        - name: CMFCColorBar クラス
+          href: reference/cmfccolorbar-class.md
+        - name: CMFCColorButton クラス
+          href: reference/cmfccolorbutton-class.md
+        - name: CMFCColorDialog クラス
+          href: reference/cmfccolordialog-class.md
+        - name: CMFCColorMenuButton クラス
+          href: reference/cmfccolormenubutton-class.md
+        - name: CMFCColorPickerCtrl クラス
+          href: reference/cmfccolorpickerctrl-class.md
+        - name: CMFCColorPopupMenu クラス
+          href: reference/cmfccolorpopupmenu-class.md
+        - name: CMFCCustomColorsPropertyPage クラス
+          href: reference/cmfccustomcolorspropertypage-class.md
+        - name: CMFCDesktopAlertDialog クラス
+          href: reference/cmfcdesktopalertdialog-class.md
+        - name: CMFCDesktopAlertWnd クラス
+          href: reference/cmfcdesktopalertwnd-class.md
+        - name: CMFCDesktopAlertWndButton クラス
+          href: reference/cmfcdesktopalertwndbutton-class.md
+        - name: CMFCDesktopAlertWndInfo クラス
+          href: reference/cmfcdesktopalertwndinfo-class.md
+        - name: CMFCDisableMenuAnimation クラス
+          href: reference/cmfcdisablemenuanimation-class.md
+        - name: CMFCDragFrameImpl クラス
+          href: reference/cmfcdragframeimpl-class.md
+        - name: CMFCDropDownFrame クラス
+          href: reference/cmfcdropdownframe-class.md
+        - name: CMFCDropDownToolBar クラス
+          href: reference/cmfcdropdowntoolbar-class.md
+        - name: CMFCDropDownToolbarButton クラス
+          href: reference/cmfcdropdowntoolbarbutton-class.md
+        - name: CMFCDynamicLayout クラス
+          href: reference/cmfcdynamiclayout-class.md
+        - name: CMFCEditBrowseCtrl クラス
+          href: reference/cmfceditbrowsectrl-class.md
+        - name: CMFCFilterChunkValueImpl クラス
+          href: reference/cmfcfilterchunkvalueimpl-class.md
+        - name: CMFCFontComboBox クラス
+          href: reference/cmfcfontcombobox-class.md
+        - name: CMFCFontInfo クラス
+          href: reference/cmfcfontinfo-class.md
+        - name: CMFCHeaderCtrl クラス
+          href: reference/cmfcheaderctrl-class.md
+        - name: CMFCImageEditorDialog クラス
+          href: reference/cmfcimageeditordialog-class.md
+        - name: CMFCImageEditorPaletteBar クラス
+          href: reference/cmfcimageeditorpalettebar-class.md
+        - name: CMFCImagePaintArea クラス
+          href: reference/cmfcimagepaintarea-class.md
+        - name: CMFCKeyMapDialog クラス
+          href: reference/cmfckeymapdialog-class.md
+        - name: CMFCLinkCtrl クラス
+          href: reference/cmfclinkctrl-class.md
+        - name: CMFCListCtrl クラス
+          href: reference/cmfclistctrl-class.md
+        - name: CMFCMaskedEdit クラス
+          href: reference/cmfcmaskededit-class.md
+        - name: CMFCMenuBar クラス
+          href: reference/cmfcmenubar-class.md
+        - name: CMFCMenuButton クラス
+          href: reference/cmfcmenubutton-class.md
+        - name: CMFCOutlookBar クラス
+          href: reference/cmfcoutlookbar-class.md
+        - name: CMFCOutlookBarPane クラス
+          href: reference/cmfcoutlookbarpane-class.md
+        - name: CMFCOutlookBarTabCtrl クラス
+          href: reference/cmfcoutlookbartabctrl-class.md
+        - name: CMFCPopupMenu クラス
+          href: reference/cmfcpopupmenu-class.md
+        - name: CMFCPopupMenuBar クラス
+          href: reference/cmfcpopupmenubar-class.md
+        - name: CMFCPreviewCtrlImpl クラス
+          href: reference/cmfcpreviewctrlimpl-class.md
+        - name: CMFCPrintPreviewToolBar クラス
+          href: reference/cmfcprintpreviewtoolbar-class.md
+        - name: CMFCPropertyGridColorProperty クラス
+          href: reference/cmfcpropertygridcolorproperty-class.md
+        - name: CMFCPropertyGridCtrl クラス
+          href: reference/cmfcpropertygridctrl-class.md
+        - name: CMFCPropertyGridFileProperty クラス
+          href: reference/cmfcpropertygridfileproperty-class.md
+        - name: CMFCPropertyGridFontProperty クラス
+          href: reference/cmfcpropertygridfontproperty-class.md
+        - name: CMFCPropertyGridProperty クラス
+          href: reference/cmfcpropertygridproperty-class.md
+        - name: CMFCPropertyGridToolTipCtrl クラス
+          href: reference/cmfcpropertygridtooltipctrl-class.md
+        - name: CMFCPropertyPage クラス
+          href: reference/cmfcpropertypage-class.md
+        - name: CMFCPropertySheet クラス
+          href: reference/cmfcpropertysheet-class.md
+        - name: CMFCReBar クラス
+          href: reference/cmfcrebar-class.md
+        - name: CMFCRibbonApplicationButton クラス
+          href: reference/cmfcribbonapplicationbutton-class.md
+        - name: CMFCRibbonBar クラス
+          href: reference/cmfcribbonbar-class.md
+        - name: CMFCRibbonBaseElement クラス
+          href: reference/cmfcribbonbaseelement-class.md
+        - name: CMFCRibbonButton クラス
+          href: reference/cmfcribbonbutton-class.md
+        - name: CMFCRibbonButtonsGroup クラス
+          href: reference/cmfcribbonbuttonsgroup-class.md
+        - name: CMFCRibbonCategory クラス
+          href: reference/cmfcribboncategory-class.md
+        - name: CMFCRibbonCheckBox クラス
+          href: reference/cmfcribboncheckbox-class.md
+        - name: CMFCRibbonColorButton クラス
+          href: reference/cmfcribboncolorbutton-class.md
+        - name: CMFCRibbonComboBox クラス
+          href: reference/cmfcribboncombobox-class.md
+        - name: CMFCRibbonContextCaption クラス
+          href: reference/cmfcribboncontextcaption-class.md
+        - name: CMFCRibbonCustomizeDialog クラス
+          href: reference/cmfcribboncustomizedialog-class.md
+        - name: CMFCRibbonCustomizePropertyPage クラス
+          href: reference/cmfcribboncustomizepropertypage-class.md
+        - name: CMFCRibbonEdit クラス
+          href: reference/cmfcribbonedit-class.md
+        - name: CMFCRibbonFontComboBox クラス
+          href: reference/cmfcribbonfontcombobox-class.md
+        - name: CMFCRibbonGallery クラス
+          href: reference/cmfcribbongallery-class.md
+        - name: CMFCRibbonGalleryMenuButton クラス
+          href: reference/cmfcribbongallerymenubutton-class.md
+        - name: CMFCRibbonLabel クラス
+          href: reference/cmfcribbonlabel-class.md
+        - name: CMFCRibbonLinkCtrl クラス
+          href: reference/cmfcribbonlinkctrl-class.md
+        - name: CMFCRibbonMainPanel クラス
+          href: reference/cmfcribbonmainpanel-class.md
+        - name: CMFCRibbonMiniToolBar クラス
+          href: reference/cmfcribbonminitoolbar-class.md
+        - name: CMFCRibbonPanel クラス
+          href: reference/cmfcribbonpanel-class.md
+        - name: CMFCRibbonProgressBar クラス
+          href: reference/cmfcribbonprogressbar-class.md
+        - name: CMFCRibbonQuickAccessToolBarDefaultState クラス
+          href: reference/cmfcribbonquickaccesstoolbardefaultstate-class.md
+        - name: CMFCRibbonSeparator クラス
+          href: reference/cmfcribbonseparator-class.md
+        - name: CMFCRibbonSlider クラス
+          href: reference/cmfcribbonslider-class.md
+        - name: CMFCRibbonStatusBar クラス
+          href: reference/cmfcribbonstatusbar-class.md
+        - name: CMFCRibbonStatusBarPane クラス
+          href: reference/cmfcribbonstatusbarpane-class.md
+        - name: CMFCRibbonUndoButton クラス
+          href: reference/cmfcribbonundobutton-class.md
+        - name: CMFCShellListCtrl クラス
+          href: reference/cmfcshelllistctrl-class.md
+        - name: CMFCShellTreeCtrl クラス
+          href: reference/cmfcshelltreectrl-class.md
+        - name: CMFCSpinButtonCtrl クラス
+          href: reference/cmfcspinbuttonctrl-class.md
+        - name: CMFCStandardColorsPropertyPage クラス
+          href: reference/cmfcstandardcolorspropertypage-class.md
+        - name: CMFCStatusBar クラス
+          href: reference/cmfcstatusbar-class.md
+        - name: CMFCTabCtrl クラス
+          href: reference/cmfctabctrl-class.md
+        - name: CMFCTabDropTarget クラス
+          href: reference/cmfctabdroptarget-class.md
+        - name: CMFCTabToolTipInfo 構造体
+          href: reference/cmfctabtooltipinfo-structure.md
+        - name: CMFCTasksPane クラス
+          href: reference/cmfctaskspane-class.md
+        - name: CMFCTasksPaneTask クラス
+          href: reference/cmfctaskspanetask-class.md
+        - name: CMFCTasksPaneTaskGroup クラス
+          href: reference/cmfctaskspanetaskgroup-class.md
+        - name: CMFCToolBar クラス
+          href: reference/cmfctoolbar-class.md
+        - name: CMFCToolBarButton クラス
+          href: reference/cmfctoolbarbutton-class.md
+        - name: CMFCToolBarComboBoxButton クラス
+          href: reference/cmfctoolbarcomboboxbutton-class.md
+        - name: CMFCToolBarComboBoxEdit クラス
+          href: reference/cmfctoolbarcomboboxedit-class.md
+        - name: CMFCToolBarDateTimeCtrl クラス
+          href: reference/cmfctoolbardatetimectrl-class.md
+        - name: CMFCToolBarEditBoxButton クラス
+          href: reference/cmfctoolbareditboxbutton-class.md
+        - name: CMFCToolBarFontComboBox クラス
+          href: reference/cmfctoolbarfontcombobox-class.md
+        - name: CMFCToolBarFontSizeComboBox クラス
+          href: reference/cmfctoolbarfontsizecombobox-class.md
+        - name: CMFCToolBarImages クラス
+          href: reference/cmfctoolbarimages-class.md
+        - name: CMFCToolBarMenuButton クラス
+          href: reference/cmfctoolbarmenubutton-class.md
+        - name: CMFCToolBarInfo クラス
+          href: reference/cmfctoolbarinfo-class.md
+        - name: CMFCToolBarsCustomizeDialog クラス
+          href: reference/cmfctoolbarscustomizedialog-class.md
+        - name: CMFCToolTipCtrl クラス
+          href: reference/cmfctooltipctrl-class.md
+        - name: CMFCToolTipInfo クラス
+          href: reference/cmfctooltipinfo-class.md
+        - name: CMFCVisualManager クラス
+          href: reference/cmfcvisualmanager-class.md
+        - name: CMFCVisualManagerOffice2003 クラス
+          href: reference/cmfcvisualmanageroffice2003-class.md
+        - name: CMFCVisualManagerOffice2007 クラス
+          href: reference/cmfcvisualmanageroffice2007-class.md
+        - name: CMFCVisualManagerOfficeXP クラス
+          href: reference/cmfcvisualmanagerofficexp-class.md
+        - name: CMFCVisualManagerVS2005 クラス
+          href: reference/cmfcvisualmanagervs2005-class.md
+        - name: CMFCVisualManagerWindows クラス
+          href: reference/cmfcvisualmanagerwindows-class.md
+        - name: CMFCVisualManagerWindows7 クラス
+          href: reference/cmfcvisualmanagerwindows7-class.md
+        - name: CMFCWindowsManagerDialog クラス
+          href: reference/cmfcwindowsmanagerdialog-class.md
+        - name: CMiniFrameWnd クラス
+          href: reference/cminiframewnd-class.md
+        - name: CMonikerFile クラス
+          href: reference/cmonikerfile-class.md
+        - name: CMonthCalCtrl クラス
+          href: reference/cmonthcalctrl-class.md
+        - name: CMouseManager クラス
+          href: reference/cmousemanager-class.md
+        - name: CMultiDocTemplate クラス
+          href: reference/cmultidoctemplate-class.md
+        - name: CMultiLock クラス
+          href: reference/cmultilock-class.md
+        - name: CMultiPageDHtmlDialog クラス
+          href: reference/cmultipagedhtmldialog-class.md
+        - name: CMultiPaneFrameWnd クラス
+          href: reference/cmultipaneframewnd-class.md
+        - name: CMutex クラス
+          href: reference/cmutex-class.md
+        - name: CNetAddressCtrl クラス
+          href: reference/cnetaddressctrl-class.md
+        - name: CNotSupportedException クラス
+          href: reference/cnotsupportedexception-class.md
+        - name: CObArray クラス
+          href: reference/cobarray-class.md
+        - name: CObject クラス
+          href: reference/cobject-class.md
+        - name: CObList クラス
+          href: reference/coblist-class.md
+        - name: COccManager クラス
+          href: reference/coccmanager-class.md
+        - name: COleBusyDialog クラス
+          href: reference/colebusydialog-class.md
+        - name: COleChangeIconDialog クラス
+          href: reference/colechangeicondialog-class.md
+        - name: COleChangeSourceDialog クラス
+          href: reference/colechangesourcedialog-class.md
+        - name: COleClientItem クラス
+          href: reference/coleclientitem-class.md
+        - name: COleCmdUI クラス
+          href: reference/colecmdui-class.md
+        - name: COleControl クラス
+          href: reference/colecontrol-class.md
+        - name: COleControlContainer クラス
+          href: reference/colecontrolcontainer-class.md
+        - name: COleControlModule クラス
+          href: reference/colecontrolmodule-class.md
+        - name: COleControlSite クラス
+          href: reference/colecontrolsite-class.md
+        - name: COleConvertDialog クラス
+          href: reference/coleconvertdialog-class.md
+        - name: COleCurrency クラス
+          href: reference/colecurrency-class.md
+        - name: COleDataObject クラス
+          href: reference/coledataobject-class.md
+        - name: COleDataSource クラス
+          href: reference/coledatasource-class.md
+        - name: COleDBRecordView クラス
+          href: reference/coledbrecordview-class.md
+        - name: COleDialog クラス
+          href: reference/coledialog-class.md
+        - name: COleDispatchDriver クラス
+          href: reference/coledispatchdriver-class.md
+        - name: COleDispatchException クラス
+          href: reference/coledispatchexception-class.md
+        - name: COleDocObjectItem クラス
+          href: reference/coledocobjectitem-class.md
+        - name: COleDocument クラス
+          href: reference/coledocument-class.md
+        - name: COleDropSource クラス
+          href: reference/coledropsource-class.md
+        - name: COleDropTarget クラス
+          href: reference/coledroptarget-class.md
+        - name: COleException クラス
+          href: reference/coleexception-class.md
+        - name: COleInsertDialog クラス
+          href: reference/coleinsertdialog-class.md
+        - name: COleIPFrameWnd クラス
+          href: reference/coleipframewnd-class.md
+        - name: COleIPFrameWndEx クラス
+          href: reference/coleipframewndex-class.md
+        - name: COleLinkingDoc クラス
+          href: reference/colelinkingdoc-class.md
+        - name: COleLinksDialog クラス
+          href: reference/colelinksdialog-class.md
+        - name: COleMessageFilter クラス
+          href: reference/colemessagefilter-class.md
+        - name: COleObjectFactory クラス
+          href: reference/coleobjectfactory-class.md
+        - name: COlePasteSpecialDialog クラス
+          href: reference/colepastespecialdialog-class.md
+        - name: COlePropertiesDialog クラス
+          href: reference/colepropertiesdialog-class.md
+        - name: COlePropertyPage クラス
+          href: reference/colepropertypage-class.md
+        - name: COleResizeBar クラス
+          href: reference/coleresizebar-class.md
+        - name: COleSafeArray クラス
+          href: reference/colesafearray-class.md
+        - name: COleServerDoc クラス
+          href: reference/coleserverdoc-class.md
+        - name: COleServerItem クラス
+          href: reference/coleserveritem-class.md
+        - name: COleStreamFile クラス
+          href: reference/colestreamfile-class.md
+        - name: COleTemplateServer クラス
+          href: reference/coletemplateserver-class.md
+        - name: COleUpdateDialog クラス
+          href: reference/coleupdatedialog-class.md
+        - name: COleVariant クラス
+          href: reference/colevariant-class.md
+        - name: CPagerCtrl クラス
+          href: reference/cpagerctrl-class.md
+        - name: CPageSetupDialog クラス
+          href: reference/cpagesetupdialog-class.md
+        - name: CPaintDC クラス
+          href: reference/cpaintdc-class.md
+        - name: CPalette クラス
+          href: reference/cpalette-class.md
+        - name: CPane クラス
+          href: reference/cpane-class.md
+        - name: CPaneContainer クラス
+          href: reference/cpanecontainer-class.md
+        - name: CPaneContainerManager クラス
+          href: reference/cpanecontainermanager-class.md
+        - name: CPaneDialog クラス
+          href: reference/cpanedialog-class.md
+        - name: CPaneDivider クラス
+          href: reference/cpanedivider-class.md
+        - name: CPaneFrameWnd クラス
+          href: reference/cpaneframewnd-class.md
+        - name: CParabolicTransitionFromAcceleration クラス
+          href: reference/cparabolictransitionfromacceleration-class.md
+        - name: CPen クラス
+          href: reference/cpen-class.md
+        - name: CPictureHolder クラス
+          href: reference/cpictureholder-class.md
+        - name: CPrintDialog クラス
+          href: reference/cprintdialog-class.md
+        - name: CPrintDialogEx クラス
+          href: reference/cprintdialogex-class.md
+        - name: CPrintInfo 構造体
+          href: reference/cprintinfo-structure.md
+        - name: CProgressCtrl クラス
+          href: reference/cprogressctrl-class.md
+        - name: CPropertyPage クラス
+          href: reference/cpropertypage-class.md
+        - name: CPropertySheet クラス
+          href: reference/cpropertysheet-class.md
+        - name: CPropExchange クラス
+          href: reference/cpropexchange-class.md
+        - name: CPtrArray クラス
+          href: reference/cptrarray-class.md
+        - name: CPtrList クラス
+          href: reference/cptrlist-class.md
+        - name: CReBar クラス
+          href: reference/crebar-class.md
+        - name: CReBarCtrl クラス
+          href: reference/crebarctrl-class.md
+        - name: CRecentDockSiteInfo クラス
+          href: reference/crecentdocksiteinfo-class.md
+        - name: CRecentFileList クラス
+          href: reference/crecentfilelist-class.md
+        - name: CRecordset クラス
+          href: reference/crecordset-class.md
+        - name: CRecordView クラス
+          href: reference/crecordview-class.md
+        - name: CRectTracker クラス
+          href: reference/crecttracker-class.md
+        - name: CRenderTarget クラス
+          href: reference/crendertarget-class.md
+        - name: CResourceException クラス
+          href: reference/cresourceexception-class.md
+        - name: CReversalTransition クラス
+          href: reference/creversaltransition-class.md
+        - name: CRgn クラス
+          href: reference/crgn-class.md
+        - name: CRichEditCntrItem クラス
+          href: reference/cricheditcntritem-class.md
+        - name: CRichEditCtrl クラス
+          href: reference/cricheditctrl-class.md
+        - name: CRichEditDoc クラス
+          href: reference/cricheditdoc-class.md
+        - name: CRichEditView クラス
+          href: reference/cricheditview-class.md
+        - name: CRuntimeClass 構造体
+          href: reference/cruntimeclass-structure.md
+        - name: CScrollBar クラス
+          href: reference/cscrollbar-class.md
+        - name: CScrollView クラス
+          href: reference/cscrollview-class.md
+        - name: CSemaphore クラス
+          href: reference/csemaphore-class.md
+        - name: CSettingsStore クラス
+          href: reference/csettingsstore-class.md
+        - name: CSettingsStoreSP クラス
+          href: reference/csettingsstoresp-class.md
+        - name: CSharedFile クラス
+          href: reference/csharedfile-class.md
+        - name: CShellManager クラス
+          href: reference/cshellmanager-class.md
+        - name: CSimpleException クラス
+          href: reference/csimpleexception-class.md
+        - name: CSingleDocTemplate クラス
+          href: reference/csingledoctemplate-class.md
+        - name: CSingleLock クラス
+          href: reference/csinglelock-class.md
+        - name: CSinusoidalTransitionFromRange クラス
+          href: reference/csinusoidaltransitionfromrange-class.md
+        - name: CSinusoidalTransitionFromVelocity クラス
+          href: reference/csinusoidaltransitionfromvelocity-class.md
+        - name: CSliderCtrl クラス
+          href: reference/csliderctrl-class.md
+        - name: CSmartDockingInfo クラス
+          href: reference/csmartdockinginfo-class.md
+        - name: CSmoothStopTransition クラス
+          href: reference/csmoothstoptransition-class.md
+        - name: CSocket クラス
+          href: reference/csocket-class.md
+        - name: CSocketFile クラス
+          href: reference/csocketfile-class.md
+        - name: CSpinButtonCtrl クラス
+          href: reference/cspinbuttonctrl-class.md
+        - name: CSplitButton クラス
+          href: reference/csplitbutton-class.md
+        - name: CSplitterWnd クラス
+          href: reference/csplitterwnd-class.md
+        - name: CSplitterWndEx クラス
+          href: reference/csplitterwndex-class.md
+        - name: CStatic クラス
+          href: reference/cstatic-class.md
+        - name: CStatusBar クラス
+          href: reference/cstatusbar-class.md
+        - name: CStatusBarCtrl クラス
+          href: reference/cstatusbarctrl-class.md
+        - name: CStdioFile クラス
+          href: reference/cstdiofile-class.md
+        - name: CStringArray クラス
+          href: reference/cstringarray-class.md
+        - name: CStringList クラス
+          href: reference/cstringlist-class.md
+        - name: CSyncObject クラス
+          href: reference/csyncobject-class.md
+        - name: CTabCtrl クラス
+          href: reference/ctabctrl-class.md
+        - name: CTabbedPane クラス
+          href: reference/ctabbedpane-class.md
+        - name: CTabView クラス
+          href: reference/ctabview-class.md
+        - name: CTaskDialog クラス
+          href: reference/ctaskdialog-class.md
+        - name: CToolBar クラス
+          href: reference/ctoolbar-class.md
+        - name: CToolBarCtrl クラス
+          href: reference/ctoolbarctrl-class.md
+        - name: CToolTipCtrl クラス
+          href: reference/ctooltipctrl-class.md
+        - name: CTooltipManager クラス
+          href: reference/ctooltipmanager-class.md
+        - name: CTreeCtrl クラス
+          href: reference/ctreectrl-class.md
+        - name: CTreeView クラス
+          href: reference/ctreeview-class.md
+        - name: CTypedPtrArray クラス
+          href: reference/ctypedptrarray-class.md
+        - name: CTypedPtrList クラス
+          href: reference/ctypedptrlist-class.md
+        - name: CTypedPtrMap クラス
+          href: reference/ctypedptrmap-class.md
+        - name: CUIntArray クラス
+          href: reference/cuintarray-class.md
+        - name: CUserException クラス
+          href: reference/cuserexception-class.md
+        - name: CUserTool クラス
+          href: reference/cusertool-class.md
+        - name: CUserToolsManager クラス
+          href: reference/cusertoolsmanager-class.md
+        - name: CView クラス
+          href: reference/cview-class.md
+        - name: CVSListBox クラス
+          href: reference/cvslistbox-class.md
+        - name: CWaitCursor クラス
+          href: reference/cwaitcursor-class.md
+        - name: CWinApp クラス
+          href: reference/cwinapp-class.md
+        - name: CWinAppEx クラス
+          href: reference/cwinappex-class.md
+        - name: CWindowDC クラス
+          href: reference/cwindowdc-class.md
+        - name: CWinFormsControl クラス
+          href: reference/cwinformscontrol-class.md
+        - name: CWinFormsDialog クラス
+          href: reference/cwinformsdialog-class.md
+        - name: CWinFormsView クラス
+          href: reference/cwinformsview-class.md
+        - name: CWinThread クラス
+          href: reference/cwinthread-class.md
+        - name: CWnd クラス
+          href: reference/cwnd-class.md
+        - name: CWordArray クラス
+          href: reference/cwordarray-class.md
+        - name: ICommandSource インターフェイス
+          href: reference/icommandsource-interface.md
+        - name: ICommandTarget インターフェイス
+          href: reference/icommandtarget-interface.md
+        - name: ICommandUI インターフェイス
+          href: reference/icommandui-interface.md
+        - name: IView インターフェイス
+          href: reference/iview-interface.md
+    - name: 内部クラス
+      href: reference/internal-classes.md
+    - name: MFC マクロとグローバル
+      expanded: false
+      items:
+        - name: MFC マクロとグローバル
+          href: reference/mfc-macros-and-globals.md
+        - name: データ型 (MFC)
+          href: reference/data-types-mfc.md
+        - name: MFC クラス オブジェクトの型キャスト
+          href: reference/type-casting-of-mfc-class-objects.md
+        - name: ランタイム オブジェクト モデル サービス
+          href: reference/run-time-object-model-services.md
+        - name: 診断サービス
+          href: reference/diagnostic-services.md
+        - name: モジュールと DLL
+          href: reference/extension-dll-macros.md
+        - name: 例外処理
+          href: reference/exception-processing.md
+        - name: CString の書式指定とメッセージ ボックスの表示
+          href: reference/cstring-formatting-and-message-box-display.md
+        - name: アプリケーションの情報と管理
+          href: reference/application-information-and-management.md
+        - name: 標準コマンド ID とウィンドウ ID
+          href: reference/standard-command-and-window-ids.md
+        - name: コレクション クラスのヘルパー
+          href: reference/collection-class-helpers.md
+        - name: 淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
+          href: reference/gray-and-dithered-bitmap-functions.md
+        - name: レコード フィールド エクスチェンジ (RFX) 関数
+          href: reference/record-field-exchange-functions.md
+        - name: CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
+          href: reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md
+        - name: OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
+          href: reference/dialog-data-exchange-functions-for-ole-controls.md
+        - name: データベース マクロとデータベース グローバル
+          href: reference/database-macros-and-globals.md
+        - name: DAO データベース エンジンの初期化と終了
+          href: reference/dao-database-engine-initialization-and-termination.md
+        - name: OLE の初期化
+          href: reference/ole-initialization.md
+        - name: アプリケーションの制御
+          href: reference/application-control.md
+        - name: ディスパッチ マップ
+          href: reference/dispatch-maps.md
+        - name: Variant パラメーター型の定数
+          href: reference/variant-parameter-type-constants.md
+        - name: タイプ ライブラリ アクセス
+          href: reference/type-library-access.md
+        - name: プロパティ ページ (MFC)
+          href: reference/property-pages-mfc.md
+        - name: イベント マップ
+          href: reference/event-maps.md
+        - name: イベント シンク マップ
+          href: reference/event-sink-maps.md
+        - name: コネクション マップ
+          href: reference/connection-maps.md
+        - name: OLE コントロールの登録
+          href: reference/registering-ole-controls.md
+        - name: クラス ファクトリとライセンス
+          href: reference/class-factories-and-licensing.md
+        - name: OLE コントロールの永続化
+          href: reference/persistence-of-ole-controls.md
+        - name: インターネット URL 解析用グローバル
+          href: reference/internet-url-parsing-globals.md
+        - name: DHTML イベント マップ
+          href: reference/dhtml-event-maps.md
+        - name: DHTML 編集コマンド マップ
+          href: reference/dhtml-editing-command-maps.md
+        - name: 標準的なダイアログ データ エクスチェンジ ルーチン
+          href: reference/standard-dialog-data-exchange-routines.md
+        - name: 標準的なダイアログ データ検証ルーチン
+          href: reference/standard-dialog-data-validation-routines.md
+        - name: AFX メッセージ
+          href: reference/afx-messages.md
+        - name: ツール バー コントロールのスタイル
+          href: reference/toolbar-control-styles.md
+        - name: 'CMFCImagePaintArea::IMAGE_EDIT_MODE 列挙体'
+          href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
+        - name: UICheckState 列挙体
+          href: reference/uicheckstate-enumeration.md
+    - name: 構造体、スタイル、コールバック関数とメッセージ マップ
+      expanded: false
+      items:
+        - name: 構造体、スタイル、コールバック関数とメッセージ マップ
+          href: reference/structures-styles-callbacks-and-message-maps.md
+        - name: MFC が使用する構造体
+          expanded: false
+          items:
+            - name: MFC が使用する構造体
+              href: reference/structures-used-by-mfc.md
+            - name: AFX_EXTENSION_MODULE 構造体
+              href: reference/afx-extension-module-structure.md
+            - name: AFX_GLOBAL_DATA 構造体
+              href: reference/afx-global-data-structure.md
+            - name: CDaoDatabaseInfo 構造体
+              href: reference/cdaodatabaseinfo-structure.md
+            - name: CDaoErrorInfo 構造体
+              href: reference/cdaoerrorinfo-structure.md
+            - name: CDaoFieldInfo 構造体
+              href: reference/cdaofieldinfo-structure.md
+            - name: CDaoIndexInfo 構造体
+              href: reference/cdaoindexinfo-structure.md
+            - name: CDaoIndexFieldInfo 構造体
+              href: reference/cdaoindexfieldinfo-structure.md
+            - name: CDaoParameterInfo 構造体
+              href: reference/cdaoparameterinfo-structure.md
+            - name: CDaoQueryDefInfo 構造体
+              href: reference/cdaoquerydefinfo-structure.md
+            - name: CDaoRelationInfo 構造体
+              href: reference/cdaorelationinfo-structure.md
+            - name: CDaoRelationFieldInfo 構造体
+              href: reference/cdaorelationfieldinfo-structure.md
+            - name: CDaoTableDefInfo 構造体
+              href: reference/cdaotabledefinfo-structure.md
+            - name: CDaoWorkspaceInfo 構造体
+              href: reference/cdaoworkspaceinfo-structure.md
+            - name: CODBCFieldInfo 構造体
+              href: reference/codbcfieldinfo-structure.md
+            - name: DHtmlUrlEventMapEntry 構造体
+              href: reference/dhtmlurleventmapentry-structure.md
+            - name: HSE_VERSION_INFO 構造体
+              href: reference/hse-version-info-structure.md
+        - name: MFC で使用するスタイル
+          href: reference/styles-used-by-mfc.md
+        - name: MFC で使われているコールバック関数
+          href: reference/callback-functions-used-by-mfc.md
+        - name: メッセージ マップ (MFC)
+          expanded: false
+          items:
+            - name: メッセージ マップ (MFC)
+              href: reference/message-maps-mfc.md
+            - name: メッセージ マップ マクロ (MFC)
+              href: reference/message-map-macros-mfc.md
+            - name: デリゲートとインターフェイス マップ マクロ
+              href: reference/delegate-and-interface-maps.md
+            - name: '方法: メッセージ マップ クロス リファレンスの使用'
+              href: reference/how-to-use-the-message-map-cross-reference.md
+            - name: 子ウィンドウの通知メッセージ ハンドラー
+              href: reference/child-window-notification-message-handlers.md
+            - name: 汎用コントロール ハンドラー
+              href: reference/generic-control-handler.md
+            - name: ユーザー ボタン ハンドラー
+              href: reference/user-button-handlers.md
+            - name: コンボ ボックス ハンドラー
+              href: reference/combo-box-handlers.md
+            - name: 編集コントロール ハンドラー
+              href: reference/edit-control-handlers.md
+            - name: リスト ボックス ハンドラー
+              href: reference/list-box-handlers.md
+            - name: WM_ で始まるメッセージのハンドラー
+              href: reference/handlers-for-wm-messages.md
+            - name: 'WM_ メッセージ ハンドラー:A から C'
+              href: reference/wm-message-handlers-a-c.md
+            - name: 'WM_ メッセージ ハンドラー:D から E'
+              href: reference/wm-message-handlers-d-e.md
+            - name: 'WM_ メッセージ ハンドラー:F から K'
+              href: reference/wm-message-handlers-f-k.md
+            - name: 'WM_ メッセージ ハンドラー:L から M'
+              href: reference/wm-message-handlers-l-m.md
+            - name: 'WM_ メッセージ ハンドラー:N から O'
+              href: reference/wm-message-handlers-n-o.md
+            - name: 'WM_ メッセージ:P から R'
+              href: reference/wm-messages-p-r.md
+            - name: 'WM_ メッセージ:S'
+              href: reference/wm-messages-s.md
+            - name: 'WM_ メッセージ:T から Z'
+              href: reference/wm-messages-t-z.md
+            - name: ユーザー定義のハンドラー
+              href: reference/user-defined-handlers.md
+- name: MFC ウィザードとダイアログ ボックス
+  expanded: false
+  items:
+    - name: MFC ウィザードとダイアログ ボックス
+      href: reference/mfc-wizards-and-dialog-boxes.md
+    - name: MFC DLL プロジェクトの作成
+      expanded: false
+      items:
+        - name: MFC DLL プロジェクトの作成
+          href: reference/creating-an-mfc-dll-project.md
+        - name: MFC DLL ウィザード
+          expanded: false
+          items:
+            - name: MFC DLL ウィザード
+              href: reference/mfc-dll-wizard.md
+            - name: '[アプリケーションの設定] (MFC DLL ウィザード)'
+              href: reference/application-settings-mfc-dll-wizard.md
+        - name: MFC DLL ウィザードによって生成されるクラスと関数
+          href: reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md
+    - name: MFC アプリケーションの作成
+      expanded: false
+      items:
+        - name: MFC アプリケーションの作成
+          href: reference/creating-an-mfc-application.md
+        - name: MFC アプリケーション ウィザード
+          expanded: false
+          items:
+            - name: MFC アプリケーション ウィザード
+              href: reference/mfc-application-wizard.md
+            - name: '[アプリケーションの種類] (MFC アプリケーション ウィザード)'
+              href: reference/application-type-mfc-application-wizard.md
+            - name: '[複合ドキュメント サポート] (MFC アプリケーション ウィザード)'
+              href: reference/compound-document-support-mfc-application-wizard.md
+            - name: '[データベース サポート] (MFC アプリケーション ウィザード)'
+              href: reference/database-support-mfc-application-wizard.md
+            - name: '[ユーザー インターフェイスの機能] (MFC アプリケーション ウィザード)'
+              href: reference/user-interface-features-mfc-application-wizard.md
+            - name: '[高度な機能] (MFC アプリケーション ウィザード)'
+              href: reference/advanced-features-mfc-application-wizard.md
+            - name: '[生成されたクラス] (MFC アプリケーション ウィザード)'
+              href: reference/generated-classes-mfc-application-wizard.md
+        - name: フォーム ベースの MFC アプリケーションの作成
+          href: reference/creating-a-forms-based-mfc-application.md
+        - name: ファイル エクスプローラー形式の MFC アプリケーションの作成
+          href: reference/creating-a-file-explorer-style-mfc-application.md
+        - name: Web ブラウザー形式の MFC アプリケーションの作成
+          href: reference/creating-a-web-browser-style-mfc-application.md
+    - name: MFC ActiveX コントロール コンテナーの作成
+      href: reference/creating-an-mfc-activex-control-container.md
+    - name: MFC ActiveX コントロールの作成
+      expanded: false
+      items:
+        - name: MFC ActiveX コントロールの作成
+          href: reference/creating-an-mfc-activex-control.md
+        - name: MFC ActiveX コントロール ウィザード
+          expanded: false
+          items:
+            - name: MFC ActiveX コントロール ウィザード
+              href: reference/mfc-activex-control-wizard.md
+            - name: '[アプリケーションの設定] (MFC ActiveX コントロール ウィザード)'
+              href: reference/application-settings-mfc-activex-control-wizard.md
+            - name: '[コントロール名] (MFC ActiveX コントロール ウィザード)'
+              href: reference/control-names-mfc-activex-control-wizard.md
+            - name: '[コントロールの設定] (MFC ActiveX コントロール ウィザード)'
+              href: reference/control-settings-mfc-activex-control-wizard.md
+    - name: MFC クラスの追加
+      expanded: false
+      items:
+        - name: MFC クラスの追加
+          href: reference/adding-an-mfc-class.md
+        - name: MFC クラス追加ウィザード
+          expanded: false
+          items:
+            - name: MFC クラス追加ウィザード
+              href: reference/mfc-add-class-wizard.md
+    - name: タイプ ライブラリからの MFC クラスの追加
+      expanded: false
+      items:
+        - name: タイプ ライブラリからの MFC クラスの追加
+          href: reference/adding-an-mfc-class-from-a-type-library.md
+        - name: Typelib クラス追加ウィザード
+          href: reference/add-class-from-typelib-wizard.md
+    - name: MFC メッセージ ハンドラーの追加
+      expanded: false
+      items:
+        - name: MFC メッセージ ハンドラーの追加
+          href: reference/adding-an-mfc-message-handler.md
+        - name: 関数へのメッセージの割り当て
+          expanded: false
+          items:
+            - name: 関数へのメッセージの割り当て
+              href: reference/mapping-messages-to-functions.md
+            - name: ユーザー インターフェイス オブジェクトに関連付けられたメッセージの種類
+              href: reference/message-types-associated-with-user-interface-objects.md
+            - name: メッセージ ハンドラーの編集
+              href: reference/editing-a-message-handler.md
+            - name: リフレクション メッセージ用のメッセージ ハンドラーの定義
+              href: reference/defining-a-message-handler-for-a-reflected-message.md
+            - name: 新しいコントロール クラスに基づいた変数の宣言
+              href: reference/declaring-a-variable-based-on-your-new-control-class.md
+    - name: MFC ODBC コンシューマーの追加
+      expanded: false
+      items:
+        - name: MFC ODBC コンシューマーの追加
+          href: reference/adding-an-mfc-odbc-consumer.md
+        - name: MFC ODBC コンシューマー ウィザード
+          href: reference/mfc-odbc-consumer-wizard.md
+    - name: MFC プロジェクトへの ATL サポートの追加
+      expanded: false
+      items:
+        - name: MFC プロジェクトへの ATL サポートの追加
+          href: reference/adding-atl-support-to-your-mfc-project.md
+        - name: ATL ウィザードで追加した ATL サポートの詳細
+          href: reference/details-of-atl-support-added-by-the-atl-wizard.md
+    - name: MFC クラス ウィザード
+      href: reference/mfc-class-wizard.md

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
-ms.openlocfilehash: 3979fce67f1ecb7f78bd02d4f1c4d2cca287ceca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 069f369627f42314cc14688a9e0c0a55808db507
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628216"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752029"
 ---
 # <a name="compiler-error-c2108"></a>コンパイラ エラー C2108
 
@@ -19,13 +19,13 @@ ms.locfileid: "50628216"
 
 配列の添字が整数式ではありません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C2108 が正しくない使用する場合に発生、`this`型の既定のインデクサーにアクセスする値型のポインター。 詳細については、次を参照してください。[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)します。
+C2108 は、型の既定のインデクサーにアクセスするために値型の `this` ポインターを誤って使用した場合に発生する可能性があります。 詳細については、「 [this ポインターのセマンティクス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)」を参照してください。
 
 次の例では、C2108 が生成されます。
 
-```
+```cpp
 // C2108.cpp
 // compile with: /clr
 using namespace System;

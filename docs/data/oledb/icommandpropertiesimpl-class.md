@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408954"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl クラス
 
-実装を提供、 [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85))インターフェイス。
+実装を提供、 [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 これは、コマンドでは必須です。 によって定義された静的関数によって提供される、実装、 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)マクロ。
 
-## <a name="getproperties"></a> Icommandpropertiesimpl::getproperties
+## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
 
 コマンドのプロパティのマップを使用してすべての要求されたプロパティ セットが返されます。
 
@@ -75,13 +75,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandproperties::getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandproperties::getproperties](/previous-versions/windows/desktop/ms723119(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
 「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
 
-## <a name="setproperties"></a> Icommandpropertiesimpl::setproperties
+## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
 
 コマンド オブジェクトのプロパティを設定します。
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandproperties::setproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandproperties::setproperties](/previous-versions/windows/desktop/ms711497(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

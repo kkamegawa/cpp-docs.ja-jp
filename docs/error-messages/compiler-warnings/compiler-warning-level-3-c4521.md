@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-ms.openlocfilehash: 887526810f7e65280adcde422ef871a67ccdde1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79e0866262b2db18424355de0702288d0f24592d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591812"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992069"
 ---
 # <a name="compiler-warning-level-3-c4521"></a>コンパイラの警告 (レベル 3) C4521
 
-'class': 指定された複数のコピー コンス トラクター
+' class ': 複数のコピーコンストラクターが指定されました
 
-クラスには、1 つの型の複数のコピー コンス トラクターがあります。 この警告は参照用です。コンス トラクターは、プログラムで呼び出し可能です。
+クラスには、1つの型の複数のコピーコンストラクターがあります。 この警告は情報提供を目的としています。コンストラクターは、プログラムで呼び出すことができます。
 
-使用して、[警告](../../preprocessor/warning.md)この警告を抑制するプラグマ。
+この警告を非表示にするには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4521 が生成されます。
 
-```
+```cpp
 // C4521.cpp
 // compile with: /EHsc /W3
 #include <iostream>

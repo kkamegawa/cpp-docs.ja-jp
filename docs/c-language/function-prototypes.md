@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: b424f07fb139e3ece48da7bfb5cff94f7b84334c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596808"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857087"
 ---
 # <a name="function-prototypes"></a>関数プロトタイプ
 
@@ -24,7 +24,7 @@ ms.locfileid: "50596808"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> は Microsoft 仕様です \*/
+/\**属性-seq*<sub>opt</sub>は Microsoft 固有の \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ ms.locfileid: "50596808"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 関数宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新しい形式の宣言子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* 古い形式の宣言子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* 新しい形式の宣言子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 古い形式の宣言子 \*/
 
 プロトタイプは、右かっこのすぐ後のセミコロンで終了するため本体がないという点を除き、関数定義と同じ形式です。 いずれの場合も、戻り値の型は、関数定義で指定された戻り値の型と一致する必要があります。
 
 関数プロトタイプには次の重要な用途があります。
 
-- これらは **int** 以外の型を返す関数の戻り値の型を設定します。**int** の値を返す関数の場合、プロトタイプは必須ではありませんが、プロトタイプの使用をお勧めします。
+- これらは、 **int**以外の型を返す関数の戻り値の型を設定します。**Int**値を返す関数にはプロトタイプは必要ありませんが、プロトタイプをお勧めします。
 
 - 完全なプロトタイプがない場合は標準変換が行われますが、型または引数の数とパラメーターの数は照合されません。
 
@@ -70,7 +70,7 @@ int add( int a, int );
 
 プロトタイプには、引数として渡されたそれぞれの式の型と識別子を含めることができます。 ただし、このような識別子のスコープは、宣言の末尾までに限定されます。 プロトタイプは、引数の数が可変である、または渡す引数がないという事実も反映できます。 このようなリストがないと、不一致が検出されず、コンパイラはこれらに関する診断メッセージを生成できません。 型チェックの詳細については、「[引数](../c-language/arguments.md)」を参照してください。
 
-Microsoft C コンパイラのプロトタイプ スコープは、**/Za** コンパイラ オプションを指定してコンパイルした場合に ANSI に準拠します。 つまり、プロトタイプ内で **struct** または **union** タグを宣言する場合、タグはグローバル スコープではなく、そのスコープで入力されます。 たとえば、ANSI 準拠のために **/Za** を指定してコンパイルする場合、この関数を呼び出すと常に型の不一致エラーが発生します。
+Microsoft C コンパイラのプロトタイプ スコープは、 **/Za** コンパイラ オプションを指定してコンパイルした場合に ANSI に準拠します。 つまり、プロトタイプ内で **struct** または **union** タグを宣言する場合、タグはグローバル スコープではなく、そのスコープで入力されます。 たとえば、ANSI 準拠のために **/Za** を指定してコンパイルする場合、この関数を呼び出すと常に型の不一致エラーが発生します。
 
 ```C
 void func1( struct S * );

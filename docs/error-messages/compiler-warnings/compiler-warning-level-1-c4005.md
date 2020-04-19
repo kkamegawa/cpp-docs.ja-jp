@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-ms.openlocfilehash: 76aab2160bd5f7918771dcf63b7297a869da751e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71b23ec719198d15a99b4fcfd50db8b151e03226
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651296"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627356"
 ---
 # <a name="compiler-warning-level-1-c4005"></a>コンパイラの警告 (レベル 1) C4005
 
-'identifier': 再定義はマクロ
+' identifier ': マクロの再定義
 
-マクロの識別子が 2 回定義されます。 コンパイラは、2 つ目のマクロ定義を使用します。
+マクロ識別子は2回定義されます。 コンパイラは、2番目のマクロ定義を使用します。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. コマンドラインで、コードでは、マクロを定義する、`#define`ディレクティブ。
+1. `#define` ディレクティブを使用して、コマンドラインとコードにマクロを定義します。
 
-1. マクロはインクルード ファイルからインポートします。
+1. インクルードファイルからインポートされたマクロ。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
 
-1. 定義を 1 つを削除します。
+1. 定義の1つを削除します。
 
-1. 使用して、 [#undef](../../preprocessor/hash-undef-directive-c-cpp.md)ディレクティブを 2 番目の定義。
+1. 2番目の定義の前に[#undef](../../preprocessor/hash-undef-directive-c-cpp.md)ディレクティブを使用します。
 
 次の例では、C4005 が生成されます。
 
-```
+```cpp
 // C4005.cpp
 // compile with: /W1 /EHsc
 #include <iostream>

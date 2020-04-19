@@ -1,28 +1,29 @@
 ---
 title: .ELSE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ELSE
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: 0ecc23a3b9a8c7140c7bcd2daedf1cd73afbc430
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08d3d3d6dbf423d25081cfd9c866bba717c50d29
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596925"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313835"
 ---
-# <a name="else"></a>.ELSE
+# <a name="else-32-bit-masm"></a>.ELSE (32 ビット MASM)
 
 ## <a name="syntax"></a>構文
 
-> .ELSE
+> **.ELSE**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[します。IF](../../assembler/masm/dot-if.md)します。
+(32 ビット MASM のみ。)「」を参照してください[。の場合](dot-if.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

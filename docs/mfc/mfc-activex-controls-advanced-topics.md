@@ -12,50 +12,50 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645589"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305387"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
 
 この記事では、ActiveX コントロールの開発に関連する高度なトピックについて説明します。 次の設定があります。
 
-- [ActiveX コントロールにおけるデータベース クラスの使用](#_core_using_database_classes_in_activex_controls)
+- [ActiveX コントロールでのデータベースクラスの使用](#_core_using_database_classes_in_activex_controls)
 
-- [パラメーター化されたプロパティを実装します。](#_core_implementing_a_parameterized_property)
+- [パラメーター化されたプロパティの実装](#_core_implementing_a_parameterized_property)
 
-- [ActiveX コントロールでのエラーを処理](#_core_handling_errors_in_your_activex_control)
+- [ActiveX コントロールでのエラーの処理](#_core_handling_errors_in_your_activex_control)
 
-- [コントロール内の特殊なキーの処理](#_core_handling_special_keys_in_your_control)
+- [コントロールでの特殊なキーの処理](#_core_handling_special_keys_in_your_control)
 
-- [実行時に表示されないダイアログ コントロールへのアクセス](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
+- [実行時に非表示になるダイアログコントロールへのアクセス](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
 
-##  <a name="_core_using_database_classes_in_activex_controls"></a> ActiveX コントロールにおけるデータベース クラスの使用
+##  <a name="_core_using_database_classes_in_activex_controls"></a>ActiveX コントロールでのデータベースクラスの使用
 
-ActiveX コントロールのクラスは、クラス ライブラリの一部であるために、同じ手順と MFC データベース クラスを使用する ActiveX コントロールの開発に標準の MFC アプリケーションでデータベース クラスの使用に関する規則を適用できます。
+ActiveX コントロールクラスはクラスライブラリの一部であるため、標準の MFC アプリケーションでデータベースクラスを使用する場合と同じ手順と規則を適用して、MFC データベースクラスを使用する ActiveX コントロールを開発できます。
 
-MFC データベース クラスの一般的な概要については、次を参照してください。 [MFC データベース クラス (DAO と ODBC)](../data/mfc-database-classes-odbc-and-dao.md)します。 この記事では MFC ODBC クラスと MFC DAO クラスしの詳細については、いずれかを紹介します。
+MFC データベースクラスの一般的な概要については、「 [Mfc データベースクラス (DAO および ODBC)](../data/mfc-database-classes-odbc-and-dao.md)」を参照してください。 この記事では、MFC ODBC クラスと MFC DAO クラスの両方について説明します。詳細については、こちらを参照してください。
 
 > [!NOTE]
->  Visual C 環境とウィザードは、(DAO クラスが含まれていますし、それらを使用することもできます) が DAO をサポートしています。 使用することをお勧めします。 [OLE DB テンプレート](../data/oledb/ole-db-programming.md)または[ODBC と MFC](../data/odbc/odbc-and-mfc.md)の新しいプロジェクト。 DAO は、既存のアプリケーションを維持するためにのみ使用する必要があります。
+> DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 ビジュアルC++環境とウィザードでは、dao はサポートされていません (dao クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-programming.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
 
-##  <a name="_core_implementing_a_parameterized_property"></a> パラメーター化されたプロパティを実装します。
+##  <a name="_core_implementing_a_parameterized_property"></a>パラメーター化されたプロパティの実装
 
-パラメーター化されたプロパティ (プロパティの配列とも呼ばれます) は、コントロールの 1 つのプロパティと値の同種のコレクションを公開するためのメソッドです。 たとえば、パラメーター化されたプロパティを使用すると、配列またはディクショナリをプロパティとして公開します。 Visual basic で配列表記を使用してこのようなプロパティにアクセスします。
+パラメーター化されたプロパティ (プロパティ配列とも呼ばれます) は、同種の値のコレクションをコントロールの単一のプロパティとして公開するためのメソッドです。 たとえば、パラメーター化されたプロパティを使用して、配列またはディクショナリをプロパティとして公開できます。 Visual Basic では、このようなプロパティには配列表記を使用してアクセスします。
 
 [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]
 
-パラメーター化されたプロパティを実装するのにには、プロパティの追加ウィザードを使用します。 プロパティの追加ウィザードでは、上記の表記を使用してプロパティにアクセスするユーザーが制御できる取得/設定関数または標準の方法でのペアを追加することで、プロパティを実装します。
+パラメーター化されたプロパティを実装するには、プロパティの追加ウィザードを使用します。 プロパティの追加ウィザードでは、Get/Set 関数のペアを追加することによってプロパティを実装します。これにより、コントロールユーザーは、上記の表記法または標準の方法を使用してプロパティにアクセスできるようになります。
 
-同様に、メソッドとプロパティ、パラメーター化されたプロパティも使用できるパラメーターの数に制限があります。 パラメーター化されたプロパティは、の場合は、制限は、15 個のパラメーター (1 つのパラメーター プロパティの値を格納するために予約されています) とは。
+パラメーター化されたプロパティには、メソッドやプロパティと同様に、許可されるパラメーターの数も制限されます。 パラメーター化されたプロパティの場合、制限は15個のパラメーターです (プロパティ値を格納するために1つのパラメーターが予約されています)。
 
-次の手順では、整数の 2 次元の配列としてアクセスできる配列と呼ばれる、パラメーター化されたプロパティを追加します。
+次の手順では、配列と呼ばれるパラメーター化されたプロパティを追加します。このプロパティには、整数の2次元配列としてアクセスできます。
 
 #### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>プロパティの追加ウィザードを使用してパラメーター化されたプロパティを追加するには
 
@@ -65,77 +65,77 @@ MFC データベース クラスの一般的な概要については、次を参
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
+1. ショートカットメニューの **[追加]** をクリックし、 **[プロパティの追加]** をクリックします。
 
-1. **プロパティ名**ボックスに「`Array`します。
+1. **[プロパティ名]** ボックスに「`Array`」と入力します。
 
-1. **プロパティ型**ボックスで、**短い**します。
+1. **[プロパティの種類]** ボックスで、 **[short]** を選択します。
 
-1. **実装**型、 をクリックして**Get/set メソッド**します。
+1. **[実装]** の種類 で、 **[Get/Set メソッド]** をクリックします。
 
-1. **Get 関数**と**設定関数**ボックス、Get と Set 関数の一意の名前を入力するか、既定の名前をそのまま使用します。
+1. **Get 関数**と**set 関数**の各ボックスに、Get 関数と set 関数に一意の名前を入力するか、既定の名前をそのまま使用します。
 
-9. という名前のパラメーターを追加*行*(型*短い*) を使用して、**パラメーター名**と**パラメーターの型**コントロール。
+9. パラメーター**名**と**パラメーターの型**コントロールを使用して、*行*(型*short*) と呼ばれるパラメーターを追加します。
 
-10. 呼ばれる 2 番目のパラメーターを追加*列*(型*短い*)。
+10. *列*( *short*型) という2番目のパラメーターを追加します。
 
 11. **[完了]** をクリックします。
 
-### <a name="changes-made-by-the-add-property-wizard"></a>によって行われた変更、プロパティの追加ウィザード
+### <a name="changes-made-by-the-add-property-wizard"></a>プロパティの追加ウィザードによって行われた変更
 
-プロパティの追加ウィザードが、コントロール クラスのヘッダーに変更をによってカスタム プロパティを追加すると (します。H) と実装 (します。CPP) ファイル。
+カスタムプロパティを追加すると、プロパティの追加ウィザードによってコントロールクラスヘッダー () が変更されます。H) と実装 (.CPP) ファイル。
 
-次の行は、コントロール クラスに追加されます。H ファイル:
+次の行がコントロールクラスに追加されます。H ファイル:
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-このコードと呼ばれる 2 つの関数を宣言して`GetArray`と`SetArray`プロパティにアクセスするときに、特定の行と列を要求するユーザーを許可します。
+このコードは、プロパティにアクセスするときにユーザーが特定の行と列を要求できるようにする `GetArray` と `SetArray` と呼ばれる2つの関数を宣言します。
 
-コントロールのコントロール クラスの実装にあるディスパッチ マップにさらに、プロパティの追加ウィザードが次の行を追加します (します。CPP) ファイル:
+さらに、プロパティの追加ウィザードでは、コントロールクラスの実装 () にあるコントロールのディスパッチマップに次の行を追加します。CPP) ファイル:
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-実装では最後に、`GetArray`と`SetArray`関数の末尾に追加します。CPP ファイルです。 ほとんどの場合は、プロパティの値を返す Get 関数を変更します。 Set 関数には、通常、プロパティの変更の前後どちらでも、実行されるコードが含まれます。
+最後に、`GetArray` および `SetArray` 関数の実装がの末尾に追加されます。CPP ファイル。 ほとんどの場合、プロパティの値を返すように Get 関数を変更します。 Set 関数には、通常、プロパティが変更される前または後に実行する必要があるコードが含まれます。
 
-このプロパティを使用するには、コントロール クラスの型の 2 次元配列のメンバー変数を宣言できます**短い**、パラメーター化されたプロパティの値を格納します。 パラメーターで示されている適切な行と列に格納された値を返す Get 関数を変更し、行と列パラメーターによって参照される値を更新するセット関数を変更可能性があります。
+このプロパティを使用するには、パラメーター化されたプロパティの値を格納するために、control クラスで**short**型の2次元配列メンバー変数を宣言します。 次に、パラメーターで示されているように、適切な行と列に格納されている値を返すように Get 関数を変更し、行と列のパラメーターによって参照される値を更新するように Set 関数を変更します。
 
-##  <a name="_core_handling_errors_in_your_activex_control"></a> ActiveX コントロールでのエラーを処理
+##  <a name="_core_handling_errors_in_your_activex_control"></a>ActiveX コントロールでのエラーの処理
 
-コントロール内のエラーが発生した場合は、コントロール コンテナーに、エラーを報告する必要があります。 エラーが発生した状況に応じて、エラー報告の 2 つの方法はあります。 プロパティの取得エラーが発生した場合、または関数を OLE オートメーション メソッドの実装内でコントロールを呼び出す必要がありますまたは[COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror)エラーが発生したコントロールのユーザーにどの信号。 その他の任意の時点で、エラーが発生した場合、コントロールを呼び出す必要があります[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)、株価のエラー イベントが発生します。
+コントロールでエラー状態が発生した場合は、コントロールコンテナーにエラーを報告することが必要になる場合があります。 エラーを報告するには、エラーが発生した状況に応じて2つの方法があります。 プロパティの Get または Set 関数内、または OLE オートメーションメソッドの実装内でエラーが発生した場合、コントロールは、エラーが発生したことをコントロールユーザーに通知する、 [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror)を呼び出す必要があります。 他のタイミングでエラーが発生した場合、コントロールは、ストックエラーイベントを発生させる、 [COleControl:: 焼討 error](../mfc/reference/colecontrol-class.md#fireerror)を呼び出す必要があります。
 
-コントロールで発生したエラーの種類を示すエラー コードを渡す必要があります`ThrowError`または`FireError`します。 エラー コードは、32 ビットの値を持つ OLE ステータス コードです。 可能であれば、エラー コードをとして使用で定義されたコードの標準セットから選択します。H ヘッダー ファイルです。 次の表では、これらのコードを示します。
+発生したエラーの種類を示すには、コントロールは `ThrowError` または `FireError`にエラーコードを渡す必要があります。 エラーコードは、32ビットの値を持つ OLE ステータスコードです。 可能であれば、OLECTL で定義されている標準のコードセットからエラーコードを選択します。H ヘッダーファイル。 次の表は、これらのコードをまとめたものです。
 
-### <a name="activex-control-error-codes"></a>ActiveX コントロール エラー コード
+### <a name="activex-control-error-codes"></a>ActiveX コントロールのエラーコード
 
-|Error|説明|
+|エラー|説明|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|無効な関数呼び出し|
 |CTL_E_OVERFLOW|オーバーフロー|
-|CTL_E_OUTOFMEMORY|メモリ不足|
-|CTL_E_DIVISIONBYZERO|0 による除算|
-|CTL_E_OUTOFSTRINGSPACE|文字列スペース|
-|CTL_E_OUTOFSTACKSPACE|スタック領域不足|
+|CTL_E_OUTOFMEMORY|メモリ不足です|
+|CTL_E_DIVISIONBYZERO|0による除算|
+|CTL_E_OUTOFSTRINGSPACE|文字列スペースが不足しています。|
+|CTL_E_OUTOFSTACKSPACE|スタック領域が不足しています。|
 |CTL_E_BADFILENAMEORNUMBER|ファイル名または番号が正しくありません。|
-|CTL_E_FILENOTFOUND|ファイルが見つかりませんでした。|
+|CTL_E_FILENOTFOUND|ファイルが見つからない|
 |CTL_E_BADFILEMODE|ファイル モードが正しくありません。|
 |CTL_E_FILEALREADYOPEN|ファイルは既に開かれています。|
 |CTL_E_DEVICEIOERROR|デバイス I/O エラーです。|
 |CTL_E_FILEALREADYEXISTS|ファイルは既に存在します|
 |CTL_E_BADRECORDLENGTH|レコード長が正しくありません。|
-|CTL_E_DISKFULL|ディスクがいっぱいです。|
+|CTL_E_DISKFULL|ディスクがいっぱいです|
 |CTL_E_BADRECORDNUMBER|レコード番号が正しくありません|
-|CTL_E_BADFILENAME|不適切なファイル名|
+|CTL_E_BADFILENAME|ファイル名が正しくありません|
 |CTL_E_TOOMANYFILES|ファイルが多すぎます。|
 |CTL_E_DEVICEUNAVAILABLE|デバイスが準備されていません|
 |CTL_E_PERMISSIONDENIED|アクセス許可は拒否されました|
 |CTL_E_DISKNOTREADY|ディスクが準備されていません|
-|CTL_E_PATHFILEACCESSERROR|パス/ファイル アクセス エラー|
+|CTL_E_PATHFILEACCESSERROR|パス/ファイルアクセスエラー|
 |CTL_E_PATHNOTFOUND|パスが見つかりません。|
 |CTL_E_INVALIDPATTERNSTRING|正しくないパターン文字列|
-|CTL_E_INVALIDUSEOFNULL|無効な NULL の使用|
-|CTL_E_INVALIDFILEFORMAT|無効なファイルの形式|
+|CTL_E_INVALIDUSEOFNULL|NULL の使用は無効です|
+|CTL_E_INVALIDFILEFORMAT|ファイル形式が無効です|
 |CTL_E_INVALIDPROPERTYVALUE|無効なプロパティ値|
-|CTL_E_INVALIDPROPERTYARRAYINDEX|無効なプロパティの配列インデックス|
+|CTL_E_INVALIDPROPERTYARRAYINDEX|無効なプロパティ配列インデックス|
 |CTL_E_SETNOTSUPPORTEDATRUNTIME|Set は実行時にはサポートされません|
 |CTL_E_SETNOTSUPPORTED|Set はサポートされません。読み取り専用のプロパティです。|
 |CTL_E_NEEDPROPERTYARRAYINDEX|プロパティ配列のインデックスが必要です。|
@@ -143,44 +143,43 @@ MFC データベース クラスの一般的な概要については、次を参
 |CTL_E_GETNOTSUPPORTEDATRUNTIME|Get は実行時にはサポートされません|
 |CTL_E_GETNOTSUPPORTED|Get はサポートされません。書き込み専用のプロパティです|
 |CTL_E_PROPERTYNOTFOUND|プロパティが見つかりません。|
-|CTL_E_INVALIDCLIPBOARDFORMAT|無効なクリップボード形式|
+|CTL_E_INVALIDCLIPBOARDFORMAT|クリップボードの形式が無効です|
 |CTL_E_INVALIDPICTURE|無効な画像|
 |CTL_E_PRINTERERROR|プリンター エラーです|
-|CTL_E_CANTSAVEFILETOTEMP|ファイルを TEMP に保存することはできません。|
+|CTL_E_CANTSAVEFILETOTEMP|ファイルを TEMP に保存できません|
 |CTL_E_SEARCHTEXTNOTFOUND|検索文字列が見つかりませんでした|
 |CTL_E_REPLACEMENTSTOOLONG|置換後の文字列が長すぎます|
 
-必要に応じて、標準のコードのいずれかによってカバーされていない状態のカスタム エラー コードを定義するのに CUSTOM_CTL_SCODE マクロを使用します。 このマクロのパラメーターは、1000 までの整数をすることは 32767 です。 例えば:
+必要に応じて、CUSTOM_CTL_SCODE マクロを使用して、標準コードのいずれにも含まれない条件のカスタムエラーコードを定義します。 このマクロのパラメーターは、1000 ~ 32767 の範囲の整数である必要があります。 例 :
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
-既存の VBX コントロールを置換する ActiveX コントロールを作成する場合は、VBX コントロールはエラー コードと互換性があることを確認します。 を使用して同じ数値の値では、ActiveX コントロール エラー コードを定義します。
+既存の VBX コントロールを置き換える ActiveX コントロールを作成する場合は、エラーコードに互換性があることを確認するために、VBX コントロールが使用するのと同じ数値を使用して ActiveX コントロールのエラーコードを定義します。
 
-##  <a name="_core_handling_special_keys_in_your_control"></a> コントロール内の特殊なキーの処理
+##  <a name="_core_handling_special_keys_in_your_control"></a>コントロールでの特殊なキーの処理
 
-場合によっては; 特別な方法で特定のキーストロークの組み合わせを処理するために必要な可能性があります。などを挿入複数行テキストで ENTER キーが押されたときに、新しい行のボックス コントロールまたは編集の間を移動コントロールと、方向キーが押されました。
+場合によっては、特定のキーストロークの組み合わせを特別な方法で処理することが必要になることがあります。たとえば、複数行テキストボックスコントロールで ENTER キーを押すか、方向キー ID が押されたときに編集コントロールのグループ間を移動すると、新しい行を挿入します。
 
-ActiveX コントロールの基底クラスがある場合`COleControl`、オーバーライドすることができます[cwnd::pretranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)コンテナーがそれらを処理する前にメッセージを処理します。 この手法を使用して場合、常に返します**TRUE**のオーバーライドで、メッセージを処理する場合`PreTranslateMessage`します。
+ActiveX コントロールの基本クラスが `COleControl`場合は、 [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドして、コンテナーがメッセージを処理する前にメッセージを処理することができます。 この手法を使用する場合、`PreTranslateMessage`のオーバーライドでメッセージを処理する場合は、常に**TRUE**を返します。
 
-次のコード例では、方向キーに関連するすべてのメッセージの処理方法を示します。
+次のコード例は、方向キーに関連するメッセージを処理する方法を示しています。
 
 [!code-cpp[NVC_MFC_AxUI#38](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_5.cpp)]
 
-ActiveX コントロールのキーボード インターフェイスの処理に関する詳細については、ActiveX SDK のドキュメントを参照してください。
+ActiveX コントロールのキーボードインターフェイスを処理する方法の詳細については、ActiveX SDK のドキュメントを参照してください。
 
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 実行時に表示されないダイアログ コントロールへのアクセス
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>実行時に非表示になるダイアログコントロールへのアクセス
 
-ユーザー インターフェイスがない実行時に表示されないダイアログ コントロールを作成することができます。 ActiveX コントロールの実行時にダイアログ ボックスを使用して、非表示を追加する場合[:getdlgitem](../mfc/reference/cwnd-class.md#getdlgitem)コントロールにアクセスするコントロールは正しく動作しません。 代わりに、コントロールを表すオブジェクトを取得するのに、次の手法のいずれかを使用する必要があります。
+ユーザーインターフェイスを持たず、実行時に非表示になるダイアログコントロールを作成できます。 実行時に非表示の ActiveX コントロールをダイアログボックスに追加し、 [CWnd:: GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem)を使用してコントロールにアクセスした場合、コントロールは正しく機能しません。 代わりに、次のいずれかの方法を使用して、コントロールを表すオブジェクトを取得する必要があります。
 
-- 追加のメンバー変数ウィザードを使用して選択**コントロール変数**し、コントロールの id。 メンバー変数の名前を入力し、として、コントロールのラッパー クラスを選択、**コントロール型**します。
+- メンバー変数の追加ウィザードを使用して、 **[制御変数]** を選択し、コントロールの ID を選択します。 メンバー変数名を入力し、コントロールの**種類**としてコントロールのラッパークラスを選択します。
 
-     - または -
+     または
 
-- ダイアログの項目として、ローカル変数とサブクラスを宣言します。 次のようなコードを挿入 (`CMyCtrl`ラッパー クラスには、IDC_MYCTRL1 はコントロールの ID)。
+- ローカル変数とサブクラスをダイアログ項目として宣言します。 次のようなコードを挿入します (`CMyCtrl` は、コントロールの ID で IDC_MYCTRL1 ラッパークラスです)。
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

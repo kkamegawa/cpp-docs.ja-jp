@@ -1,9 +1,9 @@
 ---
 title: _CrtCheckMemory
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtCheckMemory
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-ms.openlocfilehash: cb39a76c140934dabdd1269c02aba6018691f917
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e458825a81b7032310458ccda52d9299e126a35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537151"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938862"
 ---
-# <a name="crtcheckmemory"></a>_CrtCheckMemory
+# <a name="_crtcheckmemory"></a>_CrtCheckMemory
 
 デバッグ ヒープで割り当てられたメモリ ブロックの整合性を確認します (デバッグ バージョンのみ)。
 
@@ -42,13 +45,13 @@ int _CrtCheckMemory( void );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_CrtCheckMemory**関数が FALSE を返す TRUE。 それ以外を返します。
+成功した場合、 **_CrtCheckMemory**は TRUE を返します。それ以外の場合、関数は FALSE を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_CrtCheckMemory**関数は、基になるベース ヒープを確認して、各メモリ ブロックを調べることによって、デバッグ ヒープ マネージャーによって割り当てられたメモリを検証します。 基になるベース ヒープ、デバッグ ヘッダー情報、または上書きバッファーでは、エラーまたはメモリの不整合が発生した場合 **_CrtCheckMemory**エラー状態を示す情報を含むデバッグ レポートが生成されます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtCheckMemory**プリプロセス時に削除されます。
+**_CrtCheckMemory**関数は、基になるベースヒープを確認し、各メモリブロックを調べることによって、デバッグヒープマネージャーによって割り当てられたメモリを検証します。 基になるベースヒープ、デバッグヘッダー情報、または上書きバッファーでエラーやメモリの不整合が発生した場合、 **_CrtCheckMemory**はエラー状態を説明する情報を含むデバッグレポートを生成します。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtCheckMemory**の呼び出しはプリプロセス中に削除されます。
 
-動作 **_CrtCheckMemory**のビット フィールドを設定して制御することができます、 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグを使用して、 [_CrtSetDbgFlag](crtsetdbgflag.md)関数。 すると、 **_CRTDBG_CHECK_ALWAYS_DF**ビット フィールドを ON **_CrtCheckMemory**メモリ割り当て操作が要求されるたびに呼び出されます。 この方法は実行速度を低下させますが、エラーをすばやく見つけるために役立ちます。 すると、 **_CRTDBG_ALLOC_MEM_DF**ビット フィールドを OFF と **_CrtCheckMemory**をヒープを確認し、すぐに完了しない**TRUE**します。
+**_CrtCheckMemory**の動作を制御するには、 [_CrtSetDbgFlag](crtsetdbgflag.md)関数を使用して[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグのビットフィールドを設定します。 **_CRTDBG_CHECK_ALWAYS_DF**ビットフィールドをオンにすると、メモリ割り当て操作が要求されるたびに **_CrtCheckMemory**が呼び出されます。 この方法は実行速度を低下させますが、エラーをすばやく見つけるために役立ちます。 **_CRTDBG_ALLOC_MEM_DF**ビットフィールドをオフにすると、 **_CrtCheckMemory**はヒープを検証せず、すぐに**TRUE**を返します。
 
 この関数は **TRUE** または **FALSE** を返すため、[_ASSERT](assert-asserte-assert-expr-macros.md) 系マクロに渡すことによって、デバッグ用の単純なエラー処理機構を作成できます。 次の例は、ヒープの破損が検出された場合に、アサーション エラーを発生させます。
 
@@ -56,7 +59,7 @@ int _CrtCheckMemory( void );
 _ASSERTE( _CrtCheckMemory( ) );
 ```
 
-詳細について **_CrtCheckMemory**他のデバッグ関数と共に使用することができますを参照してください[Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)します。 メモリ管理とデバッグ ヒープの概要については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+**_CrtCheckMemory**を他のデバッグ関数と共に使用する方法の詳細については、「[ヒープ状態レポート機能](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 メモリ管理とデバッグ ヒープの概要については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -72,7 +75,7 @@ _ASSERTE( _CrtCheckMemory( ) );
 
 ## <a name="example"></a>例
 
-使用する方法の例については **_CrtCheckMemory**を参照してください[crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)します。
+**_CrtCheckMemory**の使用例については、 [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

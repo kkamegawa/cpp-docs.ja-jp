@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: b9b45142d0fb1d53ccecad31ace7ad1a6dd4ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524710"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341693"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo クラス
 
@@ -51,7 +51,7 @@ class CMDITabInfo
 
 |名前|説明|
 |----------|-----------------|
-|`CMDITabInfo::CMDITabInfo`|既定のコンストラクター|
+|`CMDITabInfo::CMDITabInfo`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

@@ -1,9 +1,9 @@
 ---
 title: _getmaxstdio
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getmaxstdio
 - getmaxstdio
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-ms.openlocfilehash: ea8e516b4c0806230376ea52e399c9fa1f9a858a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf3f55262e54ec4d5205d08dfcb499f2802ded23
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618340"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955035"
 ---
-# <a name="getmaxstdio"></a>_getmaxstdio
+# <a name="_getmaxstdio"></a>_getmaxstdio
 
 ストリーム入出力のレベルで許可されている、同時に開かれたファイルの数を返します。
 
@@ -44,11 +47,11 @@ int _getmaxstdio( void );
 
 ## <a name="return-value"></a>戻り値
 
-現在許可されている同時に開いているファイルの数を表す数値を返します、 **stdio**レベル。
+**Stdio**レベルで現在許可されている、同時に開かれているファイルの数を表す数値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-使用[_setmaxstdio](setmaxstdio.md)で許可されている同時に開いているファイルの数を構成する、 **stdio**レベル。
+[_Setmaxstdio](setmaxstdio.md)を使用して、 **stdio**レベルで許可される同時に開いているファイルの数を構成します。
 
 ## <a name="requirements"></a>必要条件
 

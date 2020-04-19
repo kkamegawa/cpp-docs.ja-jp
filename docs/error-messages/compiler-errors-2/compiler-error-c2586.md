@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2586
 ms.assetid: dae703c7-5c38-4db6-8411-4d1b22713eb5
-ms.openlocfilehash: a6af49bba84eded7d530f6ecc37fac8f6acf16e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be98f475bdcfb4dfdd7f7f37d78f4977d71c52b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755422"
 ---
 # <a name="compiler-error-c2586"></a>コンパイラ エラー C2586
 
-不適切な変換がユーザー定義の構文: 無効な間接指定
+不適切なユーザー定義の変換構文です: 間接指定が無効です。
 
-変換演算子の間接参照を指定することはできません。
+変換演算子の間接参照は許可されていません。
 
 次の例では、C2586 が生成されます。
 
-```
+```cpp
 // c2586.cpp
 // compile with: /c
 struct C {

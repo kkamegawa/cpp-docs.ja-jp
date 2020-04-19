@@ -1,21 +1,21 @@
 ---
 title: unary_negate クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::unary_negate
+- functional/std::unary_negate
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326018"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684428"
 ---
-# <a name="unarynegate-class"></a>unary_negate クラス
+# <a name="unary_negate-class"></a>unary_negate クラス
 
-指定した単項関数の戻り値を否定するメンバー関数を提供するテンプレート クラス。
+指定された単項関数の戻り値を否定するメンバー関数を提供するクラステンプレート。 [Not_fn](functional-functions.md#not_fn)を優先する c++ 17 では非推奨となりました。
 
 ## <a name="syntax"></a>構文
 
@@ -24,7 +24,6 @@ template <class Predicate>
 class unary_negate
     : public unaryFunction<typename Predicate::argument_type, bool>
 {
-public:
     explicit unary_negate(const Predicate& Func);
     bool operator()(const typename Predicate::argument_type& left) const;
 };
@@ -32,10 +31,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*<br/>
+*Func* \
 否定する単項関数。
 
-*left*<br/>
+*左*\
 否定する単項関数のオペランド。
 
 ## <a name="return-value"></a>戻り値
@@ -44,7 +43,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、単項関数オブジェクトのコピーを格納する *\_Func*します。 そのメンバー関数`operator()`返すよう`!_Func(left)`します。
+クラステンプレートは、単項関数オブジェクトのコピーを *\_Func*に格納します。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
 
 `unary_negate` のコンストラクターが直接使用されることはほとんどありません。 **unary_negator** アダプター述語を宣言して使用する場合、ヘルパー関数 [not1](../standard-library/functional-functions.md#not1) を利用した方が簡単です。
 
@@ -93,20 +92,10 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 30 35 )
 The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
-*/
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

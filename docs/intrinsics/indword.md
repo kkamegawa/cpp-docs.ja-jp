@@ -1,6 +1,6 @@
 ---
 title: __indword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: f4b37247093da14c8d5e8fed69b01265d3fed2ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599811"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222119"
 ---
-# <a name="indword"></a>__indword
+# <a name="__indword"></a>__indword
 
 **Microsoft 固有の仕様**
 
-使用して、指定されたポートからのデータの 1 つのダブル ワードを読み取り、`in`命令。
+`in`命令を使用して、指定したポートから1つのデータを読み取ります。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned long __indword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]読み取るポート。
+*ポート*\
+から読み取り元のポート。
 
 ## <a name="return-value"></a>戻り値
 
-単語は、ポートから読み取ります。
+ポートから読み取られた単語。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,7 +44,7 @@ unsigned long __indword(
 |---------------|------------------|
 |`__indword`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

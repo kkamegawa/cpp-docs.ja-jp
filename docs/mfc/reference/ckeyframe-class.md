@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: b6ebe5ba78a259014f62bdf04f30e856a57f1aba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392610"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame クラス
 

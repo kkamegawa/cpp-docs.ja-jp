@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 59a4b48e412cee6b2a90608747aa6fb3e1b79ca7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293863"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (既定のライブラリの指定)
 
@@ -34,11 +34,11 @@ ms.locfileid: "51326387"
 
 **/DEFAULTLIB**オプションでは、1 つ追加*ライブラリ*リンクが参照を解決するときに検索するライブラリの一覧にします。 指定されているライブラリ **/DEFAULTLIB**後コマンドラインで、既定のライブラリが .obj ファイル内の前に明示的に指定したライブラリが検索されます。
 
-引数を指定せずに使用すると、 [/NODEFAULTLIB (すべて既定のライブラリの無視)](../../build/reference/nodefaultlib-ignore-libraries.md)オプションをすべてオーバーライドされます **/DEFAULTLIB**:*ライブラリ*オプション。 **/NODEFAULTLIB**:*ライブラリ*上書きオプション **/DEFAULTLIB**:*ライブラリ*ときに、同じ*ライブラリ*両方で名前を指定します。
+引数を指定せずに使用すると、 [/NODEFAULTLIB (すべて既定のライブラリの無視)](nodefaultlib-ignore-libraries.md)オプションをすべてオーバーライドされます **/DEFAULTLIB**:*ライブラリ*オプション。 **/NODEFAULTLIB**:*ライブラリ*上書きオプション **/DEFAULTLIB**:*ライブラリ*ときに、同じ*ライブラリ*両方で名前を指定します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -50,5 +50,5 @@ ms.locfileid: "51326387"
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
-- [リンカー オプション](../../build/reference/linker-options.md)
+- [MSVC リンカーのリファレンス](linking.md)
+- [MSVC リンカー オプション](linker-options.md)

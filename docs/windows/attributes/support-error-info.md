@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: 8aed647677b8c8d26fdca522c10ec9ecee9f87c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c05b6735c5c29e44f3cc190a150a5efe02025519
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407290"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 

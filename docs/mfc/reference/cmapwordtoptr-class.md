@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-ms.openlocfilehash: 33cea9e7c88b8018af544e129e88349f5b83e78c
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: ff869eff90584f2fc259261a35b577f80bab71c6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164060"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr クラス
 
@@ -115,4 +115,3 @@ Word とポインターのマップは、シリアル化されません。
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

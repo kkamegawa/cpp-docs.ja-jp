@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 22f9df6248b0ee1af2ef999bbf0dba2e716c9189
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291809"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (スレッド ローカル ストレージを使用したファイバー保護のサポート)
 
@@ -33,11 +33,11 @@ ms.locfileid: "50557912"
 
 宣言されたデータ`__declspec(thread)`スレッド ローカル ストレージ (TLS) の配列を使用して参照されます。 TLS の配列は、各スレッドに対して、システムが保持しているアドレスの配列です。 この配列内の各アドレスは、スレッド ローカル ストレージのデータの場所を示します。
 
-ファイバーは、軽量オブジェクトをスタックとレジスタのコンテキストで構成され、さまざまなスレッドでスケジュールできます。 ファイバーは、任意のスレッドで実行できます。 ファイバーはスワップ アウトが後に別のスレッドで再起動ため、TLS の配列のアドレスする必要がありますいないキャッシュまたは最適化される共通部分式として関数呼び出しの間で (を参照してください、 [/Og (グローバルの最適化)](../../build/reference/og-global-optimizations.md)オプション詳細情報)。 **/GT**このような最適化を防止します。
+ファイバーは、軽量オブジェクトをスタックとレジスタのコンテキストで構成され、さまざまなスレッドでスケジュールできます。 ファイバーは、任意のスレッドで実行できます。 ファイバーはスワップ アウトが後に別のスレッドで再起動ため、TLS の配列のアドレスする必要がありますいないキャッシュまたは最適化される共通部分式として関数呼び出しの間で (を参照してください、 [/Og (グローバルの最適化)](og-global-optimizations.md)オプション詳細情報)。 **/GT**このような最適化を防止します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -51,5 +51,5 @@ ms.locfileid: "50557912"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

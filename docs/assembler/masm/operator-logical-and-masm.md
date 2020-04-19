@@ -1,27 +1,28 @@
 ---
-title: 代入演算子 (MASM)
-ms.date: 08/30/2018
+title: Substitution 演算子 (MASM)
+ms.date: 12/17/2019
 f1_keywords:
 - operator &&
 helpviewer_keywords:
 - operator &&
 - '&& operator'
 ms.assetid: cab40336-02b2-48a1-a429-3782fc8e941d
-ms.openlocfilehash: 90fda73cd17e7e8f46283abb55c785bcc1098478
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 414b2eb1c1950d35a16f9d2975fb46052a5a3d2b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427847"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311131"
 ---
-# <a name="substitution-operator-masm"></a>代入演算子 (MASM)
+# <a name="substitution-operator-masm"></a>Substitution 演算子 (MASM)
 
-置換*パラメーター*とその対応する引数の値。
+*パラメーター*を対応する引数値に置き換えます。
 
 ## <a name="syntax"></a>構文
 
-> &*パラメーター*&
+> __&__ *パラメーター* __&__
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,10 +1,10 @@
 ---
 title: vscanf、vwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf
 - vwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945448"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf、vwscanf
 
@@ -57,24 +60,24 @@ int vwscanf(
 
 正常に変換され、代入されたフィールドの数を返します。この数には、読み取られても代入されなかったフィールドは含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。
 
-場合*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
+*Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Vscanf**関数は、標準入力ストリームからデータを読み取る**stdin**で指定されている場所にデータを書き込みます、 *arglist*引数リスト。 リスト内の各引数は型指定子に対応する型の変数へのポインターである必要があります*形式*します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Vscanf**関数は、標準入力ストリーム**stdin**からデータを読み取り、 *arglist*引数リストによって指定された場所にデータを書き込みます。 リストの各引数は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 使用すると**vscanf**の幅を常に文字列を読み取り、指定、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**);それ以外の場合、正しくない形式の入力には、バッファー オーバーランを可能性があります。 代わりに、[vscanf_s、vwscanf_s](vscanf-s-vwscanf-s.md) または [fgets](fgets-fgetws.md) を使用できます。
+> **Vscanf**を使用して文字列を読み取る場合は、常に **% s**形式の幅を指定します (たとえば、 **"% s"** ではなく **"% 32s"** )。それ以外の場合、入力が正しくないとバッファーオーバーランが発生する可能性があります。 代わりに、[vscanf_s、vwscanf_s](vscanf-s-vwscanf-s.md) または [fgets](fgets-fgetws.md) を使用できます。
 
-**vwscanf**のワイド文字バージョンです**vscanf**、*形式*引数**vwscanf**はワイド文字列です。 **vwscanf**と**vscanf**ストリームが ANSI モードで開かれている場合の動作は同じです。 **vscanf** UNICODE ストリームからの入力をサポートしていません。
+**vwscanf**は、ワイド文字バージョンの**vscanf**です。**vwscanf**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **vwscanf**と**vscanf**は同じように動作します。 **vscanf**は、UNICODE ストリームからの入力をサポートしていません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vtscanf**|**vscanf**|**vscanf**|**vwscanf**|
+|**vtscanf (_s)**|**vscanf**|**vscanf**|**vwscanf**|
 
 詳細については、「[Format Specification Fields: scanf and wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」(scanf 関数と wscanf 関数の書式指定フィールド) をご覧ください。
 
@@ -85,7 +88,7 @@ int vwscanf(
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

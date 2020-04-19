@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
 ms.openlocfilehash: 51561c6f7cf5ba49c86f818d925db548438b2981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386175"
 ---
-# <a name="bstrtdetach"></a>_bstr_t::Detach
+# <a name="_bstr_tdetach"></a>_bstr_t::Detach
 
 **Microsoft 固有の仕様**
 
@@ -31,7 +31,7 @@ BSTR Detach( ) throw;
 
 ## <a name="example"></a>例
 
-参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、**デタッチ**します。
+参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、**Detach**します。
 
 **Microsoft 固有の仕様はここまで**
 

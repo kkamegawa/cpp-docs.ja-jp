@@ -6,12 +6,12 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_AUTO
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-ms.openlocfilehash: f750b9b21a2d44a160380acb11f10864a07782e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197381"
 ---
 # <a name="object-map-macros"></a>オブジェクト マップに関するマクロ
 
@@ -21,7 +21,7 @@ ms.locfileid: "50594416"
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|入力すると、オブジェクトのマップには、クラス オブジェクトのテキストの説明を指定することができます。|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|オブジェクト マップに ATL オブジェクトを入力、レジストリを更新し、オブジェクトのインスタンスを作成します。|
-|[役立つ](#object_entry_non_createable_ex_auto)|オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。|
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -65,10 +65,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 ### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
-[in]という名前の C++ クラスで実装されている COM クラスの CLSID*クラス*します。
+[in]によって実装される COM クラスの CLSID、C++という名前のクラス*クラス*します。
 
 *class*<br/>
-[in]によって表される COM クラスを実装する C++ クラスの名前*clsid*します。
+[in]名前、C++によって表される COM クラスを実装するクラス*clsid*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -86,7 +86,7 @@ OBJECT_ENTRY_AUTO クリエーター クラスとクラス ファクトリ ク�
 |コンポーネント カテゴリの登録|[カテゴリに関するマクロ](../../atl/reference/category-macros.md)|
 |クラス レベルの初期化とクリーンアップ|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
-##  <a name="object_entry_non_createable_ex_auto"></a>  役立つ
+##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 
 オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。
 
@@ -97,10 +97,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
-[in]という名前の C++ クラスで実装されている COM クラスの CLSID*クラス*します。
+[in]によって実装される COM クラスの CLSID、C++という名前のクラス*クラス*します。
 
 *class*<br/>
-[in]によって表される COM クラスを実装する C++ クラスの名前*clsid*します。
+[in]名前、C++によって表される COM クラスを実装するクラス*clsid*します。
 
 ### <a name="remarks"></a>Remarks
 

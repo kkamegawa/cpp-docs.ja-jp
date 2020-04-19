@@ -2,12 +2,12 @@
 title: 『C 言語リファレンス』の構成
 ms.date: 11/04/2016
 ms.assetid: 7e42daa4-9c9e-4c2d-bbc4-e45405803c20
-ms.openlocfilehash: 8b663f06a7971e5cdac43856f652f6f2509a62f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 864cef5fe7a6fc2a737d5cc0e850e3db760bddc6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573577"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148180"
 ---
 # <a name="organization-of-the-c-language-reference"></a>『C 言語リファレンス』の構成
 
@@ -27,6 +27,6 @@ ms.locfileid: "50573577"
 
 - [実装で定義された動作](../c-language/implementation-defined-behavior.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 言語リファレンス](../c-language/c-language-reference.md)

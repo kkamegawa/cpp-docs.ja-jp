@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-ms.openlocfilehash: 511dfba92629cfbf71c805a9ea50b8e27f775c54
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4383fd96c359661d225433dbe9e7dd8b7f939f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520827"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458900"
 ---
 # <a name="isunion-class"></a>is_union クラス
 
@@ -27,12 +27,12 @@ struct is_union;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*が共用体型または`cv-qualified`形式の共用体型、それ以外の場合は false を保持します。
+型*Ty*が共用体型または`cv-qualified`共用体型の形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -80,5 +80,5 @@ is_union<ints> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class クラス](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_class クラス](../standard-library/is-class-class.md)

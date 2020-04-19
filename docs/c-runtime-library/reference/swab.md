@@ -1,10 +1,10 @@
 ---
 title: _swab
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swab
 - stdlib/_swab
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _swab
 - stdlib/_swab
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603035"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946288"
 ---
-# <a name="swab"></a>_swab
+# <a name="_swab"></a>_swab
 
 バイトを交換します。
 
@@ -60,13 +63,13 @@ void _swab(
 
 ## <a name="return-value"></a>戻り値
 
-**Swab**関数が値を返しません。 関数のセット**errno**に**EINVAL**場合、 *src*または*dest*ポインターが null または*n*が小さい0 の場合と無効なパラメーター ハンドラーが呼び出されます、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+**Swab**関数は値を返しません。 関数は、 *src*ポインターまたは*dest*ポインターが null であるか、 *n*が0未満の場合に**errno**を**EINVAL**に設定し、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。
 
 戻り値の詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-場合*n*が偶数、 **_swab**関数コピー *n*からバイト*src*、隣接する (バイト単位) の各ペアを交換およびで結果を格納*dest*します。 場合*n*が奇数 **_swab**コピーして、最初のスワップ*n*-1 バイトまでの*src*と最後のバイトはコピーされません。 **_Swab**関数は、通常、異なるバイト順を使用するマシンに転送するためのバイナリ データの準備に使用します。
+*N*が偶数の場合、 **_swab**関数は*src*から*n*バイトをコピーし、隣接するバイトの各ペアをスワップして、結果を*dest*に格納します。 *N*が奇数の場合、 **_swab**は*src*の最初の*n*-1 バイトをコピーしてスワップします。最後のバイトはコピーされません。 **_Swab**関数は、通常、別のバイト順を使用するマシンに転送するためのバイナリデータを準備するために使用されます。
 
 ## <a name="requirements"></a>必要条件
 

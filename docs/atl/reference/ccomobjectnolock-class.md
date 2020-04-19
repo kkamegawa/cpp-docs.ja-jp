@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 85a5a71e330b8171a8e0e239d9afab43a6df1512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467365"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497036"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock クラス
 
-このクラスは実装`IUnknown`の集約オブジェクトは、モジュールのロック数をコンス トラクターでインクリメントされません。
+このクラスは`IUnknown` 、非集計オブジェクトに対してを実装しますが、コンストラクターのモジュールロック数をインクリメントしません。
 
 ## <a name="syntax"></a>構文
 
@@ -31,8 +31,8 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*<br/>
-派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のインターフェイスからも、します。
+*常用*<br/>
+[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -48,14 +48,14 @@ class CComObjectNoLock : public Base
 |名前|説明|
 |----------|-----------------|
 |[CComObjectNoLock::AddRef](#addref)|オブジェクトの参照カウントをインクリメントします。|
-|[CComObjectNoLock::QueryInterface](#queryinterface)|要求されたインターフェイス ポインターを返します。|
+|[CComObjectNoLock::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを返します。|
 |[CComObjectNoLock::Release](#release)|オブジェクトの参照カウントをデクリメントします。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComObjectNoLock` 似ています[CComObject](../../atl/reference/ccomobject-class.md)実装で[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非集約オブジェクトです。 ただし、`CComObjectNoLock`増分値はモジュールのロックは、コンス トラクター内で数。
+`CComObjectNoLock`は、非集計オブジェクトに対して[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装するという点で、 [CComObject](../../atl/reference/ccomobject-class.md)に似ています。ただし、 `CComObjectNoLock`では、コンストラクターのモジュールロックカウントはインクリメントされません。
 
-ATL を使用して`CComObjectNoLock`のクラス ファクトリを内部的にします。 一般に、このクラスを直接使用するはありません。
+ATL で`CComObjectNoLock`は、クラスファクトリに対して内部的にを使用します。 一般に、このクラスは直接使用しません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,7 +65,7 @@ ATL を使用して`CComObjectNoLock`のクラス ファクトリを内部的に
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef
 
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-テストや診断に使用する値。
+診断またはテストに役立つ可能性のある値。
 
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
 
-コンストラクターです。 異なり[CComObject](../../atl/reference/ccomobject-class.md)モジュールのロック カウントを増分されません。
+コンストラクターです。 [CComObject](../../atl/reference/ccomobject-class.md)とは異なり、はモジュールのロックカウントをインクリメントしません。
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -90,9 +90,9 @@ CComObjectNoLock(void* = NULL);
 ### <a name="parameters"></a>パラメーター
 
 <em>void\*</em><br/>
-[in]この名前のないパラメーターは使用されません。 他の対称性が存在する`CComXXXObjectXXX`コンス トラクター。
+からこの無名パラメーターは使用されません。 これは、他の`CComXXXObjectXXX`コンストラクターとの対称のために存在します。
 
-##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock
 
 デストラクターです。
 
@@ -102,7 +102,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="remarks"></a>Remarks
 
-割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)します。
+割り当てられたすべてのリソースを解放し、 [FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出します。
 
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
 
@@ -115,10 +115,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>パラメーター
 
 *iid*<br/>
-[in]要求されているインターフェイスの識別子。
+から要求されているインターフェイスの識別子。
 
 *ppvObject*<br/>
-[out]によって識別されるインターフェイス ポインターへのポインター *iid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。
+入出力*Iid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject*は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -134,7 +134,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-デバッグ ビルドで`Release`テストや診断に使用する値を返します。 非デバッグ ビルドで`Release`常に 0 を返します。
+デバッグビルドでは`Release` 、診断またはテストに役立つ値が返されます。 非デバッグビルドでは、 `Release`は常に0を返します。
 
 ## <a name="see-also"></a>関連項目
 

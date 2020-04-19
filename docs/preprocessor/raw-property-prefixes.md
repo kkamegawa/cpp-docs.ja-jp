@@ -1,48 +1,46 @@
 ---
-title: raw_property_prefixes
-ms.date: 10/18/2018
+title: raw_property_prefixes import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - raw_property_prefixes
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 1e44b5265e486f0e5b5896bed41b62ebbdaa4fd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4d91470781e7c5f673fd228c24904322d1db8b3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647137"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216040"
 ---
-# <a name="rawpropertyprefixes"></a>raw_property_prefixes
+# <a name="raw_property_prefixes-import-attribute"></a>raw_property_prefixes import 属性
 
-**C++ 固有の仕様**
+**C++のみ**
 
 3 つのプロパティ メソッドの代替プレフィックスを指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import***タイプライブラリ***raw_property_prefixes (** "*getprefix*" **,** "*putprefix*" **,** "*putrefprefix*" **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*GetPrefix*<br/>
-使用するプレフィックス、`propget`メソッド。
+*GetPrefix*\
+`propget`メソッドに使用するプレフィックス。
 
-*PutPrefix*<br/>
-使用するプレフィックス、`propput`メソッド。
+*PutPrefix*\
+`propput`メソッドに使用するプレフィックス。
 
-*PutRefPrefix*<br/>
-使用するプレフィックス、`propputref`メソッド。
+*PutRefPrefix*\
+`propputref`メソッドに使用するプレフィックス。
 
 ## <a name="remarks"></a>Remarks
 
-既定では、低レベルで`propget`、 `propput`、および`propputref`メソッドは、というプレフィックスを持つメンバー関数によって公開**get _**、 **put _**、および**putref _** それぞれします。 これらのプレフィックスは、MIDL によって生成されるヘッダー ファイルで使用される名前と互換性があります。
+既定では、低レベル`propget`の`propput`、、 `propputref`およびの各メソッドは、それぞれ`put_`、、および`get_` `putref_`のプレフィックスを使用して名前が付けられたメンバー関数によって公開されます。 これらのプレフィックスは、MIDL によって生成されるヘッダー ファイルで使用される名前と互換性があります。
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

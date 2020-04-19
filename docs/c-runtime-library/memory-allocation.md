@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-ms.openlocfilehash: e77548e9f85057f8e8a1c92e4a0aa904a58e14a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc9865b149c2289f99f6ee13f31179ae58a15e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618778"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742792"
 ---
 # <a name="memory-allocation"></a>メモリ割り当て
 
@@ -52,6 +52,6 @@ ms.locfileid: "50618778"
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|**new** 演算子が (メモリの割り当てに) 失敗したときにエラー処理機構を有効にし、C++ 標準ライブラリのコンパイルを有効にします|
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|**malloc** の新しいハンドラー モードを設定します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

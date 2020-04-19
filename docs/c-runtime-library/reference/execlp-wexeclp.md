@@ -1,10 +1,10 @@
 ---
 title: _execlp、_wexeclp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexeclp
 - _execlp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclp
 - wexeclp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ae1805dd00428aee0acca4bcb3ee221bce1d271
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937182"
 ---
-# <a name="execlp-wexeclp"></a>_execlp、_wexeclp
+# <a name="_execlp-_wexeclp"></a>_execlp、_wexeclp
 
 新しい子プロセスを読み込んで実行します。
 
@@ -63,12 +66,12 @@ intptr_t _wexeclp(
 *cmdname*<br/>
 実行するファイルのパス。
 
-*arg0*、.*argn*<br/>
+*arg0*、...*argn*<br/>
 パラメーターへのポインターのリスト。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -84,9 +87,9 @@ intptr_t _wexeclp(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数の各読み込んで個別のパラメーターとして各コマンドライン引数を渡すを使用して、新しいプロセスを実行し、**パス**環境変数を実行するファイルを検索します。
+これらの各関数は新しいプロセスを読み込んで実行し、各コマンドライン引数を個別のパラメーターとして渡し、 **PATH**環境変数を使用して実行するファイルを検索します。
 
-**_Execlp**関数は、パラメーターを検証します。 場合*cmdname*または*arg0*が null ポインターまたは空の文字列」の説明に従って、これらの関数は無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
+これら**の関数は**、パラメーターを検証します。 *Cmdname*または*arg0*が null ポインターまたは空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは開始されません。
 
 ## <a name="requirements"></a>必要条件
 

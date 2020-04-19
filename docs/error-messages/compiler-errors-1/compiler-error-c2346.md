@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-ms.openlocfilehash: a6d75ca671e22203cb40ca18de21606834eeefa8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f2bac38166a8972193a7aaa7e84913b941c799
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527362"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518323"
 ---
 # <a name="compiler-error-c2346"></a>コンパイラ エラー C2346
 
-'function' は、ネイティブとしてコンパイルできません: 理由
+' function ' はネイティブとしてコンパイルできません: 理由
 
-コンパイラは、MSIL に関数をコンパイルできませんでした。
+コンパイラは、関数を MSIL にコンパイルできませんでした。
 
-詳細については、次を参照してください。[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+詳細については、「[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)、および[/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. MSIL にコンパイルできない関数でコードを削除します。
+1. MSIL にコンパイルできない関数のコードを削除します。
 
-1. 使用して、モジュールがコンパイルされませんか **/clr**、またはアンマネージドのプラグマでアンマネージ関数をマークします。
+1. **/Clr**でモジュールをコンパイルしないか、アンマネージプラグマを使用して関数をアンマネージとしてマークしてください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2346 が生成されます。
 
-```
+```cpp
 // C2346.cpp
 // processor: x86
 // compile with: /clr
@@ -45,7 +45,7 @@ struct S
    virtual __clrcall ~S() { }
 };
 
-void main()
+int main()
 {
    S s;
 }

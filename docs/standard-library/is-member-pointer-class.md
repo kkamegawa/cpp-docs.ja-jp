@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_pointer class
 - is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
-ms.openlocfilehash: a02d8a156a861367f34ac0cda4744c3de9e43efe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f07e32c8ab1ea82a0c3616e96baca920a95e3042
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521324"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456132"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer クラス
 
@@ -27,12 +27,12 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*がメンバー関数へのポインターまたはメンバーのオブジェクトへのポインターまたは`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
+型*Ty*がメンバー関数へのポインターまたはメンバーオブジェクトへのポインターである場合、または`cv-qualified`そのいずれかの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -85,7 +85,7 @@ is_member_pointer<int (functional::*)()> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_function_pointer クラス](../standard-library/is-member-function-pointer-class.md)<br/>
-[is_member_object_pointer クラス](../standard-library/is-member-object-pointer-class.md)<br/>
-[is_pointer クラス](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_function_pointer クラス](../standard-library/is-member-function-pointer-class.md)\
+[is_member_object_pointer クラス](../standard-library/is-member-object-pointer-class.md)\
+[is_pointer クラス](../standard-library/is-pointer-class.md)

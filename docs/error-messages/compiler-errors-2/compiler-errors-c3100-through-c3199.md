@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C3100 から C3199
-ms.date: 11/17/2017
+title: コンパイラ エラー (C3100 - C3199)
+ms.date: 04/21/2019
 f1_keywords:
 - C3102
 - C3105
@@ -66,14 +66,14 @@ helpviewer_keywords:
 - C3191
 - C3193
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-ms.openlocfilehash: 72228be503cee9b080ae667f36b042af88161894
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efa3207a9fdfb81a52bf319a1cbc2da84084b6cd
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856820"
 ---
-# <a name="compiler-errors-c3100-through-c3199"></a>コンパイラ エラー C3100 から C3199
+# <a name="compiler-errors-c3100-through-c3199"></a>コンパイラ エラー (C3100 - C3199)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -109,11 +109,11 @@ ms.locfileid: "50481875"
 |コンパイラ エラー C3123|WinRT ジェネリック インターフェイスの制約を含めることはできません。|
 |コンパイラ エラー C3124|'signed char' は有効な WinRT データ型ではありません。 代わりに、'unsigned char'、'wchar_t' または 'signed short' を使用します。|
 |コンパイラ エラー C3125|'*型*': 型直接的または間接的に派生できません 'platform::exception' から|
-|[コンパイラ エラー C3126](compiler-error-c3126.md)|共用体を定義できません '*共用体*マネージまたは WinRT 型' 内部'*型*'。|
+|[コンパイラ エラー C3126](compiler-error-c3126.md)|共用体を定義できません '*union*マネージまたは WinRT 型' 内部'*型*'。|
 |コンパイラ エラー C3127|'*型*':'*特徴*' 特徴は WinRT ref クラスでのみ使用できます|
 |コンパイラ エラー C3128|'*型*'によって導入された vtable がありません'*型*'|
 |コンパイラ エラー C3129|'*型*': _ _default_vptr_for_base は、ローカルに定義されたポリモーフィックな型およびベースでのみ使用できます|
-|[コンパイラ エラー C3130](compiler-error-c3130.md)|内部コンパイル エラー: が PDB に挿入されたコード ブロックを書き込みに失敗しました|
+|[コンパイラ エラー C3130](compiler-error-c3130.md)|内部コンパイラ エラー: pdb ファイルに挿入されたコード ブロックを書き込めませんでした|
 |[コンパイラ エラー C3131](compiler-error-c3131.md)|プロジェクトが、'module' 属性 'name' プロパティがあります。|
 |[コンパイラ エラー C3132](compiler-error-c3132.md)|'*パラメーター*': パラメーター配列は、'1 次元マネージまたは WinRT 配列' 型の仮引数にのみ適用できます|
 |[コンパイラ エラー C3133](compiler-error-c3133.md)|C++ varargs に属性を適用することはできません。|
@@ -183,3 +183,8 @@ ms.locfileid: "50481875"
 |[コンパイラ エラー C3197](compiler-error-c3197.md)|'*キーワード*': 定義でのみ使用できます|
 |[コンパイラ エラー C3198](compiler-error-c3198.md)|無効な浮動小数点プラグマの使用: fenv_access プラグマは precise モードでのみ動作します。|
 |[コンパイラ エラー C3199](compiler-error-c3199.md)|無効な浮動小数点プラグマの使用: 例外は precise でないモードでサポートされていません|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

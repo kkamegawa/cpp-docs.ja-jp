@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: c45ce5e2e72c6a987a0053cb4b1bbb151c149faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b679a89bb768ad7a50d0bbaa7b814c7a72f9f4c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496541"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740430"
 ---
 # <a name="compiler-error-c3352"></a>コンパイラ エラー C3352
 
-'function': 指定された関数がデリゲート型 'type' と一致しません
+' function ': 指定された関数は、デリゲート型 ' type ' と一致しません
 
-パラメーターのリストが`function`とデリゲートが一致していません。
+`function` のパラメーターリストとデリゲートが一致しません。
 
-詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../../windows/delegate-cpp-component-extensions.md)します。
+詳細については、「 [delegate (C++コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3352 が生成されます。
 
-```
+```cpp
 // C3352.cpp
 // compile with: /clr
 delegate int D( int, int );

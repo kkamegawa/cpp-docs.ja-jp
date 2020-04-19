@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2268
 ms.assetid: 0ed055c9-3c6f-4df2-a5b6-85cf0e01a249
-ms.openlocfilehash: cfdb22be92e0d80cddbaca74b12b7af60b2e302d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11e0c2c81e9bcd2249321e83a506aeaa832c2ee8
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545731"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301796"
 ---
 # <a name="compiler-error-c2268"></a>コンパイラ エラー C2268
 
@@ -21,7 +21,7 @@ ms.locfileid: "50545731"
 
 次の例では C2268 が生成されます。
 
-```
+```c
 // C2268.c
 // compile with: /c
 // processor: x86
@@ -41,7 +41,7 @@ void* mainCRTStartup(void* p) {
 
 この場合、次のようになります。
 
-```
+```c
 // C2268b.c
 // compile with: C2268.c /EHsc /GL /Ob0 /O2 /Fa /GS- /link /nodefaultlib
 // processor: x86

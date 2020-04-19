@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-ms.openlocfilehash: da80a10cbf7246ad0aeaecffe20992d2050abb3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7e6bde7ce07edf7a75f38c37f3e4cbb3c6c3486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752458"
 ---
 # <a name="compiler-error-c3745"></a>コンパイラ エラー C3745
 
-'function': イベントだけができます 'raised' します。
+' function ': イベントのみを ' 発生 ' にすることができます
 
-定義された関数のみ、 [_ _event](../../cpp/event.md)キーワードに渡すことができます、 [_ _raise](../../cpp/raise.md)キーワード。
+[__Raise](../../cpp/raise.md)キーワードに渡すことができるのは、 [__event](../../cpp/event.md)キーワードで定義された関数だけです。
 
 次の例では、C3745 が生成されます。
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();

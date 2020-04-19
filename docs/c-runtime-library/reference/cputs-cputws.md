@@ -1,10 +1,10 @@
 ---
 title: _cputs、_cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601176"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942631"
 ---
-# <a name="cputs-cputws"></a>_cputs、_cputws
+# <a name="_cputs-_cputws"></a>_cputs、_cputws
 
 コンソールに文字列を書き込みます。
 
@@ -62,13 +65,13 @@ int _cputws(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_cputs** 0 を返します。 関数が失敗した場合は 0 以外の値を返します。
+成功した場合は、0が返さ**れます。** 関数が失敗した場合は 0 以外の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Cputs**を指している null で終わる文字列を書き込みます*str*直接にコンソール。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
+**Cpu の ts**関数は、 *str*が指す null で終わる文字列をコンソールに直接書き込みます。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
 
-この関数は、そのパラメーターを検証します。 場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** -1 が返されます。
+この関数は、そのパラメーターを検証します。 *Str*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、-1 が返されます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

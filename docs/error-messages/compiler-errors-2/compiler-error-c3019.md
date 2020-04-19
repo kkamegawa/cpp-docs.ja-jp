@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
-ms.openlocfilehash: bba90917614cbc8facb182659c288f9823d8ab45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b2dbf55b18c50020140eae25a71b18ceb10b10
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432554"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742133"
 ---
 # <a name="compiler-error-c3019"></a>コンパイラ エラー C3019
 
-openmp 'for' ステートメントの増分値が正しくない形式
+OpenMP ' for ' ステートメントのインクリメントには、正しくない形式が含まれています
 
-OpenMP のインクリメント部分`for`ループ インデックス変数、演算子の右側にある左右の両方を使用する必要があります。
+OpenMP `for` ループのインクリメント部分では、演算子の左辺と右辺の両方でインデックス変数を使用する必要があります。
 
 次の例では、C3019 が生成されます。
 
-```
+```cpp
 // C3019.cpp
 // compile with: /openmp
 int main()

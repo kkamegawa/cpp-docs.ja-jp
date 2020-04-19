@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459775"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142180"
 ---
-# <a name="float4-class"></a>float_4 クラス
+# <a name="float_4-class"></a>float_4 クラス
 
 4 個の浮動小数点数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class float_4;
 ```
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[float_4 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[float_4 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -309,23 +309,23 @@ class float_4;
 |float_4::get_wxyz||
 |float_4::get_wxz||
 |float_4::get_wxzy||
-|float_4::get_wy||
-|float_4::get_wyx||
+|float_4:: get_wy||
+|float_4:: get_wyx||
 |float_4::get_wyxz||
 |float_4::get_wyz||
 |float_4::get_wyzx||
 |float_4::get_wz||
-|float_4::get_wzx||
+|float_4:: get_wzx||
 |float_4::get_wzxy||
-|float_4::get_wzy||
-|float_4::get_wzyx||
+|float_4:: get_wzy||
+|float_4:: get_wzyx||
 |float_4::get_x||
 |float_4::get_xw||
-|float_4::get_xwy||
+|float_4:: get_xwy||
 |float_4::get_xwyz||
 |float_4::get_xwz||
-|float_4::get_xwzy||
-|float_4::get_xy||
+|float_4:: get_xwzy||
+|float_4:: get_xy||
 |float_4::get_xyw||
 |float_4::get_xywz||
 |float_4::get_xyz||
@@ -352,21 +352,21 @@ class float_4;
 |float_4::get_yzx||
 |float_4::get_yzxw||
 |float_4::get_z||
-|float_4::get_zw||
-|float_4::get_zwx||
-|float_4::get_zwxy||
-|float_4::get_zwy||
+|float_4:: get_zw||
+|float_4:: get_zwx||
+|float_4:: get_zwxy||
+|float_4:: get_zwy||
 |float_4::get_zwyx||
 |float_4::get_zx||
 |float_4::get_zxw||
 |float_4::get_zxwy||
 |float_4::get_zxy||
 |float_4::get_zxyw||
-|float_4::get_zy||
+|float_4:: get_zy||
 |float_4::get_zyw||
 |float_4::get_zywx||
-|float_4::get_zyx||
-|float_4::get_zyxw||
+|float_4:: get_zyx||
+|float_4:: get_zyxw||
 |float_4::ref_a||
 |float_4::ref_b||
 |float_4::ref_g||
@@ -375,47 +375,47 @@ class float_4;
 |float_4::ref_x||
 |float_4::ref_y||
 |float_4::ref_z||
-|float_4::set_w||
+|float_4:: set_w||
 |float_4::set_wx||
 |float_4::set_wxy||
 |float_4::set_wxyz||
 |float_4::set_wxz||
 |float_4::set_wxzy||
-|float_4::set_wy||
-|float_4::set_wyx||
+|float_4:: set_wy||
+|float_4:: set_wyx||
 |float_4::set_wyxz||
 |float_4::set_wyz||
 |float_4::set_wyzx||
 |float_4::set_wz||
-|float_4::set_wzx||
-|float_4::set_wzxy||
-|float_4::set_wzy||
-|float_4::set_wzyx||
+|float_4:: set_wzx||
+|float_4:: set_wzxy||
+|float_4:: set_wzy||
+|float_4:: set_wzyx||
 |float_4::set_x||
-|float_4::set_xw||
-|float_4::set_xwy||
+|float_4:: set_xw||
+|float_4:: set_xwy||
 |float_4::set_xwyz||
-|float_4::set_xwz||
-|float_4::set_xwzy||
-|float_4::set_xy||
+|float_4:: set_xwz||
+|float_4:: set_xwzy||
+|float_4:: set_xy||
 |float_4::set_xyw||
-|float_4::set_xywz||
+|float_4:: set_xywz||
 |float_4::set_xyz||
-|float_4::set_xyzw||
+|float_4:: set_xyzw||
 |float_4::set_xz||
 |float_4::set_xzw||
 |float_4::set_xzwy||
 |float_4::set_xzy||
 |float_4::set_xzyw||
-|float_4::set_y||
-|float_4::set_yw||
-|float_4::set_ywx||
+|float_4:: set_y||
+|float_4:: set_yw||
+|float_4:: set_ywx||
 |float_4::set_ywxz||
 |float_4::set_ywz||
 |float_4::set_ywzx||
 |float_4::set_yx||
 |float_4::set_yxw||
-|float_4::set_yxwz||
+|float_4:: set_yxwz||
 |float_4::set_yxz||
 |float_4::set_yxzw||
 |float_4::set_yz||
@@ -423,26 +423,26 @@ class float_4;
 |float_4::set_yzwx||
 |float_4::set_yzx||
 |float_4::set_yzxw||
-|float_4::set_z||
-|float_4::set_zw||
-|float_4::set_zwx||
-|float_4::set_zwxy||
-|float_4::set_zwy||
+|float_4:: set_z||
+|float_4:: set_zw||
+|float_4:: set_zwx||
+|float_4:: set_zwxy||
+|float_4:: set_zwy||
 |float_4::set_zwyx||
 |float_4::set_zx||
 |float_4::set_zxw||
-|float_4::set_zxwy||
+|float_4:: set_zxwy||
 |float_4::set_zxy||
 |float_4::set_zxyw||
-|float_4::set_zy||
-|float_4::set_zyw||
+|float_4:: set_zy||
+|float_4:: set_zyw||
 |float_4::set_zywx||
-|float_4::set_zyx||
-|float_4::set_zyxw||
+|float_4:: set_zyx||
+|float_4:: set_zyxw||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
@@ -455,13 +455,13 @@ class float_4;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#float_4__size)||
+|[サイズ定数](#float_4__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |float_4::a||
 |float_4::ab||
@@ -482,19 +482,19 @@ class float_4;
 |float_4::b||
 |float_4::ba||
 |float_4::bag||
-|float_4::bagr||
+|float_4:: bagr||
 |float_4::bar||
 |float_4::barg||
 |float_4::bg||
-|float_4::bga||
-|float_4::bgar||
+|float_4:: bga||
+|float_4:: bgar||
 |float_4::bgr||
 |float_4::bgra||
 |float_4::br||
 |float_4::bra||
 |float_4::brag||
-|float_4::brg||
-|float_4::brga||
+|float_4:: brg||
+|float_4:: brga||
 |float_4::g||
 |float_4::ga||
 |float_4::gab||
@@ -521,7 +521,7 @@ class float_4;
 |float_4::rba||
 |float_4::rbag||
 |float_4::rbg||
-|float_4::rbga||
+|float_4:: rbga||
 |float_4::rg||
 |float_4::rga||
 |float_4::rgab||
@@ -539,10 +539,10 @@ class float_4;
 |float_4::wyz||
 |float_4::wyzx||
 |float_4::wz||
-|float_4::wzx||
-|float_4::wzxy||
-|float_4::wzy||
-|float_4::wzyx||
+|float_4:: wzx||
+|float_4:: wzxy||
+|float_4:: wzy||
+|float_4:: wzyx||
 |float_4::x||
 |float_4::xw||
 |float_4::xwy||
@@ -565,27 +565,27 @@ class float_4;
 |float_4::ywxz||
 |float_4::ywz||
 |float_4::ywzx||
-|float_4::yx||
-|float_4::yxw||
-|float_4::yxwz||
+|float_4:: yx||
+|float_4:: yxw||
+|float_4:: yxwz||
 |float_4::yxz||
 |float_4::yxzw||
 |float_4::yz||
-|float_4::yzw||
-|float_4::yzwx||
-|float_4::yzx||
-|float_4::yzxw||
+|float_4:: yzw||
+|float_4:: yzwx||
+|float_4:: yzx||
+|float_4:: yzxw||
 |float_4::z||
 |float_4::zw||
 |float_4::zwx||
 |float_4::zwxy||
 |float_4::zwy||
 |float_4::zwyx||
-|float_4::zx||
+|float_4:: zx||
 |float_4::zxw||
-|float_4::zxwy||
-|float_4::zxy||
-|float_4::zxyw||
+|float_4:: zxwy||
+|float_4:: zxy||
+|float_4:: zxyw||
 |float_4::zy||
 |float_4::zyw||
 |float_4::zywx||
@@ -596,17 +596,17 @@ class float_4;
 
 `float_4`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline float_4(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
 *_V3*<br/>
-3 要素を初期化する値。
+要素3を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-##  <a name="float_4__size"></a> サイズ
+## <a name="float_4__size"></a>幅
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

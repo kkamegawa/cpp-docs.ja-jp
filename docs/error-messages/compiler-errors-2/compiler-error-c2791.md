@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2791
+title: コンパイラエラー C2791
 ms.date: 11/04/2016
 f1_keywords:
 - C2791
 helpviewer_keywords:
 - C2791
 ms.assetid: 938ad1fb-75d9-4ce2-ad92-83d6249005b5
-ms.openlocfilehash: 66a111ea6fe2ca5acfbc473d19da62d9de67372a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d589094f117135474d1a8788867d2d571bbb5f5d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666610"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739546"
 ---
-# <a name="compiler-error-c2791"></a>コンパイラ エラー C2791
+# <a name="compiler-error-c2791"></a>コンパイラエラー C2791
 
-'super' の不正な使用: 'class' には、すべての基底クラスはありません。
+' super ' が不適切に使用されています: ' class ' に基底クラスがありません。
 
-キーワード[super](../../cpp/super.md)すべての基底クラスがないクラスのメンバー関数のコンテキスト内で使用されました。
+キーワード[super](../../cpp/super.md)は、基底クラスを持たないクラスのメンバー関数のコンテキスト内で使用されました。
 
 次の例では、C2791 が生成されます。
 
-```
+```cpp
 // C2791.cpp
 struct D {
    void mf() {

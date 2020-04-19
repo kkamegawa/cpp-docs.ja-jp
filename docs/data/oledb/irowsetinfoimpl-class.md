@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390725"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl クラス
 
-実装を提供、 [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイス。
+実装を提供、 [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 行セットの必須インターフェイス。 このクラスを使用して行セット プロパティを実装する、[プロパティ セットのマップ](../../data/oledb/begin-propset-map.md)コマンド クラスで定義されています。 行セット クラスでは、コマンド クラスのプロパティを使用する設定が表示されますが、コマンドまたはセッション オブジェクトが作成されたとき、実行時のプロパティの独自のコピーでは、行セットが指定されました。
 
-## <a name="getproperties"></a> Irowsetinfoimpl::getproperties
+## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
 プロパティの現在の設定を返します、`DBPROPSET_ROWSET`グループ。
 
@@ -87,9 +87,9 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetinfo::getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetinfo::getproperties](/previous-versions/windows/desktop/ms719611(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="getreferencedrowset"></a> Irowsetinfoimpl::getreferencedrowset
+## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
 ブックマークを適用する行セットにインターフェイス ポインターを返します。
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *IOrdinal*パラメーターはブックマーク列である必要があります。
+参照してください[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *IOrdinal*パラメーターはブックマーク列である必要があります。
 
 ## <a name="getspecification"></a> Irowsetinfoimpl::getspecification
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 

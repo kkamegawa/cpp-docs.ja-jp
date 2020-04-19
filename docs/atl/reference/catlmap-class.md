@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260611"
 ---
 # <a name="catlmap-class"></a>CAtlMap クラス
 
@@ -101,7 +101,7 @@ class CAtlMap
 |名前|説明|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|コンストラクターです。|
-|[CAtlMap:: ~ CAtlMap](#dtor)|デストラクターです。|
+|[CAtlMap::~CAtlMap](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -114,13 +114,13 @@ class CAtlMap
 |[CAtlMap::GetCount](#getcount)|マップ内の要素の数を取得するには、このメソッドを呼び出します。|
 |[CAtlMap::GetHashTableSize](#gethashtablesize)|マップのハッシュ テーブルでビンの数を決定するには、このメソッドを呼び出します。|
 |[CAtlMap::GetKeyAt](#getkeyat)|指定された位置に格納されているキーを取得するには、このメソッドを呼び出して、`CAtlMap`オブジェクト。|
-|[で](#getnext)|次の要素に格納されているペアへのポインターを取得するには、このメソッドを呼び出す、`CAtlMap`オブジェクト。|
+|[CAtlMap::GetNext](#getnext)|次の要素に格納されているペアへのポインターを取得するには、このメソッドを呼び出す、`CAtlMap`オブジェクト。|
 |[CAtlMap::GetNextAssoc](#getnextassoc)|反復処理するためには、次の要素を取得します。|
 |[CAtlMap::GetNextKey](#getnextkey)|次のキーを取得するには、このメソッドを呼び出す、`CAtlMap`オブジェクト。|
 |[CAtlMap::GetNextValue](#getnextvalue)|[次へ] の値を取得するには、このメソッドを呼び出す、`CAtlMap`オブジェクト。|
 |[CAtlMap::GetStartPosition](#getstartposition)|マップの反復処理を開始するには、このメソッドを呼び出します。|
 |[CAtlMap::GetValueAt](#getvalueat)|指定された位置に格納されている値を取得するには、このメソッドを呼び出して、`CAtlMap`オブジェクト。|
-|[格納します。](#inithashtable)|ハッシュ テーブルを初期化するためには、このメソッドを呼び出します。|
+|[CAtlMap::InitHashTable](#inithashtable)|ハッシュ テーブルを初期化するためには、このメソッドを呼び出します。|
 |[CAtlMap::IsEmpty](#isempty)|空のマップ オブジェクトをテストするには、このメソッドを呼び出します。|
 |[CAtlMap::Lookup](#lookup)|キーまたは値を検索するには、このメソッドを呼び出して、`CAtlMap`オブジェクト。|
 |[CAtlMap::Rehash](#rehash)|Rehash にこのメソッドを呼び出して、`CAtlMap`オブジェクト。|
@@ -221,7 +221,7 @@ CAtlMap(
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 デストラクターです。
 
@@ -294,7 +294,7 @@ CPair* GetAt(POSITION& pos) throw();
 *key*<br/>
 マップのキーの種類を指定するテンプレート パラメーター。
 
-*値*<br/>
+*value*<br/>
 マップの値の型を指定するテンプレート パラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -354,7 +354,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 例をご覧ください[CAtlMap::CAtlMap](#catlmap)します。
 
-##  <a name="getnext"></a>  で
+##  <a name="getnext"></a>  CAtlMap::GetNext
 
 次の要素に格納されているペアへのポインターを取得するには、このメソッドを呼び出す、`CAtlMap`オブジェクト。
 
@@ -391,7 +391,7 @@ void GetNextAssoc(
 *key*<br/>
 マップのキーの種類を指定するテンプレート パラメーター。
 
-*値*<br/>
+*value*<br/>
 マップの値の型を指定するテンプレート パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -486,7 +486,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 指定された位置に格納されている値への参照を返します、`CAtlMap`オブジェクト。
 
-##  <a name="inithashtable"></a>  格納します。
+##  <a name="inithashtable"></a>  CAtlMap::InitHashTable
 
 ハッシュ テーブルを初期化するためには、このメソッドを呼び出します。
 
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 検索する要素を識別するキーを指定します。
 
-*値*<br/>
+*value*<br/>
 検索する値を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 追加するキー値、`CAtlMap`オブジェクト。
 
-*値*<br/>
+*value*<br/>
 追加する値、`CAtlMap`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -731,7 +731,7 @@ void SetValueAt(
 *pos*<br/>
 以前の呼び出しによって返される位置カウンター [CAtlMap::GetNextAssoc](#getnextassoc)または[CAtlMap::GetStartPosition](#getstartposition)します。
 
-*値*<br/>
+*value*<br/>
 追加する値、`CAtlMap`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -782,6 +782,6 @@ V  m_value;
 
 ## <a name="see-also"></a>関連項目
 
-[マーキーのサンプル](../../visual-cpp-samples.md)<br/>
+[マーキーのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [UpdatePV サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

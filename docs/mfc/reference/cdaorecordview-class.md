@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207195"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView クラス
 
@@ -39,7 +39,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 |名前|説明|
 |----------|-----------------|
-|[指定して](#cdaorecordview)|`CDaoRecordView` オブジェクトを構築します。|
+|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|`CDaoRecordView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -89,7 +89,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 **ヘッダー:** afxdao.h
 
-##  <a name="cdaorecordview"></a>  指定して
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView
 
 派生した型のオブジェクトを作成するときに`CDaoRecordView`、いずれかの形式のビュー オブジェクトを初期化し、ビューの基になるダイアログ リソースの識別にコンス トラクターを呼び出します。
 
@@ -173,7 +173,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 
 構築またはレコード セット オブジェクトを取得してにポインターを返すには、このメンバー関数をオーバーライドする必要があります。 ClassWizard で、レコード ビュー クラスを宣言する場合、ウィザードの既定のオーバーライドを書き込みます。 ClassWizard の既定の実装では、1 つが存在する場合は、レコード ビューに格納されているレコード セットのポインターを返します。 Classwizard で指定した型のレコード セット オブジェクトを作成しますがそうでない場合、`Open`メンバー関数、テーブルを開くか、クエリを実行して、オブジェクトへのポインターを返します。
 
-詳細と例については、この記事を参照してください。[レコード ビュー: レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
+詳細と例については、この記事を参照してください。[レコード ビュー。レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

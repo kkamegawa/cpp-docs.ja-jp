@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391232"
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer クラス
 
@@ -66,7 +66,7 @@ class CD2DLayer : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|返します ID2D1Layer インターフェイス|
+|[CD2DLayer::operator ID2D1Layer*](#operator_id2d1layer_star)|返します ID2D1Layer インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -206,7 +206,7 @@ ID2D1Layer オブジェクトへのポインターを格納します。
 ID2D1Layer* m_pLayer;
 ```
 
-##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer *
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer*
 
 返します ID2D1Layer インターフェイス
 

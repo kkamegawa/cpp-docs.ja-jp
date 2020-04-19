@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6566c27999f218b7a214e32dde96bd1cf96fbb12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653064"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990129"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>コンパイラの警告 (レベル 4) C4682
 
 'parameter': 方向性のあるパラメーター属性が指定されていません。[in] を既定とします
 
-属性付きインターフェイスのパラメーターのメソッドに、方向属性 [in](../../windows/in-cpp.md) または [out](../../windows/out-cpp.md)が指定されていません。パラメーターの既定値は in です。
+属性付きインターフェイスのパラメーターのメソッドに、方向属性の1つ ( [in](../../windows/in-cpp.md)または[out](../../windows/out-cpp.md)) がありません。パラメーターの既定値は in です。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
 次の例では C4682 警告が生成されます。
 
-```
+```cpp
 // C4682.cpp
 // compile with: /W4
 #pragma warning(default : 4682)

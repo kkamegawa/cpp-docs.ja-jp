@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: b3c5104038e6d715977a211af5a535cc9a5d916f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338247"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager クラス
 
@@ -117,7 +117,7 @@ BOOL AddView(
 
 ### <a name="example"></a>例
 
-次の例へのポインターを取得する方法を示します、`CMouseManager`オブジェクトを使用して、`CWinAppEx::GetMouseManager`メソッドと`AddView`メソッドで、`CMouseManager`クラス。 このコード スニペットの一部、[状態コレクション サンプル](../../visual-cpp-samples.md)します。
+次の例へのポインターを取得する方法を示します、`CMouseManager`オブジェクトを使用して、`CWinAppEx::GetMouseManager`メソッドと`AddView`メソッドで、`CMouseManager`クラス。 このコード スニペットの一部、[状態コレクション サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 
@@ -273,4 +273,3 @@ void SetCommandForDblClk(
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)<br/>
 [キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)
-

@@ -1,6 +1,6 @@
 ---
-title: conform
-ms.date: 11/04/2016
+title: conform プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
@@ -9,41 +9,42 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 816ff85bb19f549c6ea072073bd89fcd503545f2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432904"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220501"
 ---
-# <a name="conform"></a>conform
-**C++ 固有の仕様**
+# <a name="conform-pragma"></a>conform プラグマ
 
-実行時の動作を指定します、 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)コンパイラ オプション。
+**C++のみ**
+
+[/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)コンパイラオプションの実行時の動作を指定します。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma 準拠 (** *名前***[、表示]** [**、** {**で** | **オフ**}][**、** {**プッシュ** | **pop** }] [**、** *識別子*] **)**
+> **#pragma 準拠**している (*名前* **[, show]** [ **,** { **on** | **off** }] [[ **,** { **push** | **pop** }] [ **,** *identifier* [ **,** { **on** **オフ}** ]  | ] ] **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*name*<br/>
-変更されるコンパイラ オプションの名前を指定します。 唯一の有効な*名前*は`forScope`します。
+*指定*\
+変更されるコンパイラ オプションの名前を指定します。 有効な*名前*は`forScope`だけです。
 
-**表示します。**<br/>
-(省略可能)現在の設定と、*名前*(true または false)、コンパイル時に警告メッセージとして表示されます。 たとえば、`#pragma conform(forScope, show)` のようにします。
+**示**\
+Optional*名前*の現在の設定 (true または false) を、コンパイル中に警告メッセージで表示します。 たとえば、`#pragma conform(forScope, show)` のようにします。
 
-**で**、**オフ**<br/>
-(省略可能)設定*名前*に**で**により、 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)コンパイラ オプション。 既定値は**オフ**します。
+**on**、 **off**\
+Optional*名前*を**on**に設定すると、 [/zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)コンパイラオプションが有効になります。 既定値は**off**です。
 
-**push**<br/>
-(省略可能)現在の値をプッシュ*名前*内部コンパイラ スタックにします。 指定する場合*識別子*を指定できます、**で**または**オフ**値*名前*をスタックにプッシュします。 たとえば、`#pragma conform(forScope, push, myname, on)` のようにします。
+**押し付け**\
+Optional*名前*の現在の値を内部コンパイラスタックにプッシュします。 *識別子*を指定すると、スタックにプッシュされる*名前*の**on**または**off**の値を指定できます。 たとえば、`#pragma conform(forScope, push, myname, on)` のようにします。
 
-**pop**<br/>
-(省略可能)値を設定*名前*を内部コンパイラ スタックと、pop、スタックの上部にある値。 識別子を指定した場合**pop**、レコードが見つかるまで戻るスタックがポップされます*識別子*、これもポップされます; の現在の値*名前*でスタック上の次のレコードの新しい値になります*名前*します。 指定した場合**pop**で、*識別子*スタックで、レコード内でない、 **pop**は無視されます。
+**ショート**\
+Optional*Name*の値を内部コンパイラスタックの一番上の値に設定し、スタックをポップします。 識別子を**pop**と共に指定すると、*識別子*を持つレコードが見つかるまでスタックがポップされます。これもポップされます。スタック上の次のレコードの [*名前*] の現在の値が、[*名前*] の新しい値になります。 スタック上のレコードに含まれていない*識別子*を使用して**pop**を指定すると、 **pop**は無視されます。
 
-*identifier*<br/>
-(省略可能)含めることができます、**プッシュ**または**pop**コマンド。 場合*識別子*を使用する、**で**または**オフ**指定子も使用できます。
+*識別子*\
+Optional**プッシュ**または**pop**コマンドに含めることができます。 *識別子*を使用する場合は、 **on**または**off**指定子も使用できます。
 
 ## <a name="example"></a>例
 
@@ -65,4 +66,4 @@ int main() {}
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

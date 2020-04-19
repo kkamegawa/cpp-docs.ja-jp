@@ -6,20 +6,20 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d2b7b3c88b51003a96526ef14d9940a8c26c3b3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501001"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142487"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>方法: call クラスおよび transformer クラスに処理関数を提供する
 
-このトピックでは、作業関数を提供するいくつかの方法を示しています、 [concurrency::call](../../parallel/concrt/reference/call-class.md)と[concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)クラス。
+このトピックでは、 [concurrency:: call](../../parallel/concrt/reference/call-class.md)クラスおよび[concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)クラスに処理関数を提供するいくつかの方法について説明します。
 
 最初の例では、ラムダ式を `call` オブジェクトに渡す方法を示します。 2 番目の例では、関数オブジェクトを `call` オブジェクトに渡す方法を示します。 3 番目の例では、クラス メソッドを `call` オブジェクトにバインドする方法を示します。
 
-このトピックの説明では、すべての例で `call` クラスを使用します。 使用する例については、`transformer`クラスを参照してください[方法: データ パイプラインでトランスフォーマーを使用する](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)します。
+このトピックの説明では、すべての例で `call` クラスを使用します。 `transformer` クラスを使用する例については、「[方法: データパイプラインでトランスフォーマーを使用](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)する」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -41,23 +41,23 @@ ms.locfileid: "50501001"
 
 ## <a name="example"></a>例
 
-使用する次の例には、前に似ています、 [std::bind1st](../../standard-library/functional-functions.md#bind1st)と[:mem_fun](../../standard-library/functional-functions.md#mem_fun)をバインドする関数を`call`クラス メソッドにオブジェクト。
+次の例は前の例と似ていますが、 [std:: bind1st](../../standard-library/functional-functions.md#bind1st)関数と[std:: mem_fun](../../standard-library/functional-functions.md#mem_fun)関数を使用して `call` オブジェクトをクラスメソッドにバインドする点が異なります。
 
 この方法は、関数呼び出し演算子 `call` ではなく、特定のクラス メソッドに `transformer` オブジェクトまたは `operator()` オブジェクトをバインドする必要がある場合に使用します。
 
 [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]
 
-結果を割り当てることができます、`bind1st`関数を[std::function](../../standard-library/function-class.md)オブジェクトまたはを使用して、`auto`キーワードは、次の例に示すようにします。
+次の例に示すように、`bind1st` 関数の結果を[std:: function](../../standard-library/function-class.md)オブジェクトに割り当てるか、`auto` キーワードを使用することもできます。
 
 [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`call.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`call.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc call.cpp**
+> **cl.exe/EHsc 呼び出し .cpp**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

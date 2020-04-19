@@ -1,5 +1,5 @@
 ---
-title: 'OLE 概要 : コンテナーとサーバー'
+title: OLE の背景知識:コンテナーとサーバー
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE full-server applications [MFC]
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 3c696f1e99a73cbce6f1ff749de937297b28d88b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616926"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346109"
 ---
-# <a name="ole-background-containers-and-servers"></a>OLE 概要 : コンテナーとサーバー
+# <a name="ole-background-containers-and-servers"></a>OLE の背景知識:コンテナーとサーバー
 
-コンテナー アプリケーションは、独自のドキュメントに埋め込まれたまたはリンクされた項目を取り入れることのできるアプリケーションです。 コンテナーのアプリケーションによって管理されているドキュメントを保存して、アプリケーション自体によって作成されたデータと同様に OLE ドキュメント コンポーネントを表示できる必要があります。 コンテナー アプリケーションは、ユーザーが新しい項目を挿入または既存の項目を編集するには、必要な場合に、サーバー アプリケーションをアクティブ化を許可することもあります。 コンテナー アプリケーションのユーザー インターフェイスの要件は、記事に記載されて[コンテナー: ユーザー インターフェイスの問題](../mfc/containers-user-interface-issues.md)します。
+コンテナー アプリケーションは、独自のドキュメントに埋め込まれたまたはリンクされた項目を取り入れることのできるアプリケーションです。 コンテナーのアプリケーションによって管理されているドキュメントを保存して、アプリケーション自体によって作成されたデータと同様に OLE ドキュメント コンポーネントを表示できる必要があります。 コンテナー アプリケーションは、ユーザーが新しい項目を挿入または既存の項目を編集するには、必要な場合に、サーバー アプリケーションをアクティブ化を許可することもあります。 コンテナー アプリケーションのユーザー インターフェイスの要件は、記事に記載されて[コンテナー。ユーザー インターフェイスの問題](../mfc/containers-user-interface-issues.md)します。
 
 サーバー アプリケーションまたはコンポーネントのアプリケーションは、コンテナー アプリケーションで使用する OLE ドキュメント コンポーネントを作成できるアプリケーションです。 通常、サーバー アプリケーションは、ドラッグ アンド ドロップするか、コンテナー アプリケーションが埋め込みまたはリンクされた項目としてデータを挿入するためのデータをクリップボードにコピーをサポートします。 アプリケーションは、コンテナーとサーバーの両方にあります。
 
@@ -36,9 +36,8 @@ ms.locfileid: "50616926"
 ## <a name="see-also"></a>関連項目
 
 [OLE の背景知識](../mfc/ole-background.md)<br/>
-[OLE の背景知識: MFC における実装](../mfc/ole-background-mfc-implementation.md)<br/>
+[OLE の背景知識: MFC の実装](../mfc/ole-background-mfc-implementation.md)<br/>
 [コンテナー](../mfc/containers.md)<br/>
 [サーバー](../mfc/servers.md)<br/>
 [コンテナー: クライアント アイテム](../mfc/containers-client-items.md)<br/>
 [サーバー: サーバー アイテム](../mfc/servers-server-items.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: 778ed2d80aa926c7282073a99898a6aa355a3379
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330532"
 ---
 # <a name="super"></a>__super
 
@@ -33,7 +33,7 @@ __super::member_function();
 
 **_ _super**を使用してでは使用できません宣言します。 参照してください[宣言を使用して](../cpp/using-declaration.md)詳細についてはします。
 
-導入に伴い[属性](../windows/cpp-attributes-reference.md)コードを挿入する、コードには、名前がわからないに呼び出すメソッドを含む 1 つまたは複数の基底クラスが含まれます。
+導入に伴い[属性](../windows/attributes/attributes-alphabetical-reference.md)コードを挿入する、コードには、名前がわからないに呼び出すメソッドを含む 1 つまたは複数の基底クラスが含まれます。
 
 ## <a name="example"></a>例
 

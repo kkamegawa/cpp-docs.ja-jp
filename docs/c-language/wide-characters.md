@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - wide characters
 ms.assetid: 165c4a12-8ab9-45fb-9964-c55e9956194c
-ms.openlocfilehash: 619adfd398f3955708df3267613de40e71e15fa6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 868acf0abd26a1f4b5533bb997fb9ea09a27954b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452066"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151963"
 ---
 # <a name="wide-characters"></a>Wide Characters (ワイド文字)
 
@@ -19,6 +19,6 @@ ms.locfileid: "50452066"
 
 マルチバイト文字定数は、上記のように読み取られ、これが `mbtowc` ランタイム関数を使用してワイド文字定数に変換されます。 結果が有効なワイド文字定数でない場合は、エラーが発行されます。 いずれの場合も、`mbtowc` 関数でチェックするバイト数は `MB_CUR_MAX` の値に制限されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [文字](../c-language/characters.md)

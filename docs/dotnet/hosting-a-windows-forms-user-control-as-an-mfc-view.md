@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: c041ae941858184245879ced972c19e6e998b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222872"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
 
@@ -34,4 +34,4 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 ## <a name="see-also"></a>関連項目
 
 [MFC での Windows フォーム ユーザー コントロールの使用](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[方法: 複合コントロールを作成する](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[方法: 複合コントロールを作成](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: 42d2dd6978fda7a88459c015b86ad8c02fdfd06d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330194"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices 名前空間
 
@@ -47,7 +47,7 @@ namespace Platform {
 
 **メタデータ:** platform.winmd
 
-**名前空間:** Platform::InteropServices
+**名前空間:** Platform::interopservices
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Value
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-ms.openlocfilehash: 4cca648b3b81dbf0d9f8d3e5f87625464f1d8385
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24e70ad646e2673869b135e8cc7657910b9b499c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383296"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox インターフェイス
 
@@ -70,4 +70,4 @@ property T Value {T get();}
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

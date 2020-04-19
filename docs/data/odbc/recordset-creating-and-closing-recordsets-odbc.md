@@ -1,6 +1,6 @@
 ---
-title: 'レコードセット: レコードセットの生成と破棄 (ODBC)'
-ms.date: 11/04/2016
+title: レコードセット:レコードセットの作成と破棄 (ODBC)
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
 - recordsets, creating
@@ -9,58 +9,61 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581507"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707992"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコードセット: レコードセットの生成と破棄 (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコードセット:レコードセットの作成と破棄 (ODBC)
+
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-レコード セットを使用するレコード セット オブジェクトの構築を呼び出してその`Open`メンバー関数は、レコード セットのクエリを実行し、レコードを選択します。 レコード セットが完了したらと閉じるオブジェクトを破棄します。
+レコードセットを使用するには、レコードセット オブジェクトを構築してから、そのメンバー関数 `Open` を呼び出して、レコードセットのクエリを実行し、レコードを選択します。 レコードセットを使用し終えたら、オブジェクトを閉じて破棄します。
 
 このトピックでは、次の内容について説明します。
 
-- [レコード セット オブジェクトを作成するタイミングと方法](#_core_creating_recordsets_at_run_time)します。
+- [レコードセット オブジェクトを作成するタイミングと方法](#_core_creating_recordsets_at_run_time)。
 
-- [タイミングと方法は、パラメーター化、フィルター処理、並べ替え、またはロックによって、レコード セットの動作を修飾することができます](#_core_setting_recordset_options)します。
+- [レコードセットの動作を、パラメーター化、フィルター処理、並べ替え、またはロックすることで、絞り込むタイミングと方法](#_core_setting_recordset_options)。
 
-- [レコード セット オブジェクトを終了するタイミングと方法](#_core_closing_a_recordset)します。
+- [レコードセット オブジェクトを閉じるタイミングと方法](#_core_closing_a_recordset)。
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> 実行時にレコード セットの作成
+##  <a name="_core_creating_recordsets_at_run_time"></a> 実行時にレコードセットを作成する
 
-レコード セット オブジェクトを作成するには、プログラムで、前に、アプリケーション固有のレコード セット クラスを通常記述します。 この手順の詳細については、次を参照してください。 [MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)します。
+プログラムでレコードセット オブジェクトを作成するには、通常、事前にアプリケーション固有のレコードセット クラスを記述します。 この準備手順の詳細については、「[Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」 (MFC ODBC コンシューマーの追加) を参照してください。
 
-データ ソースからレコードを選択する必要がある場合は、ダイナセットまたはスナップショットのオブジェクトを開きます。 作成するオブジェクトの型が行う必要がある依存データ、アプリケーションで、どのような ODBC ドライバーをサポートするいるとします。 詳細については、次を参照してください。[ダイナセット](../../data/odbc/dynaset.md)と[スナップショット](../../data/odbc/snapshot.md)します。
+データ ソースからレコードを選択する必要がある場合は、ダイナセットまたはスナップショット オブジェクトを開きます。 作成するオブジェクトの種類は、アプリケーションでデータを使って行う必要があることと、ご利用の ODBC ドライバーでサポートされていることによって異なります。 詳細については、「[ダイナセット](../../data/odbc/dynaset.md)」と「[スナップショット](../../data/odbc/snapshot.md)」を参照してください。
 
-#### <a name="to-open-a-recordset"></a>レコード セットを開く
+#### <a name="to-open-a-recordset"></a>レコードセットを開くには
 
-1. オブジェクトを構築、 `CRecordset`-クラスを派生します。
+1. `CRecordset` 派生クラスのオブジェクトを構築します。
 
-   ヒープまたは関数のスタック フレーム オブジェクトを構築することができます。
+   オブジェクトは、ヒープまたは関数のスタック フレーム オブジェクト上に構築できます。
 
-1. 必要に応じて既定のレコード セットの動作を変更します。 使用可能なオプションで、次を参照してください。[レコード セットのオプションの設定](#_core_setting_recordset_options)します。
+1. 必要に応じてレコードセットの既定の動作を変更します。 使用可能なオプションについては、「[レコードセットのオプションを設定する](#_core_setting_recordset_options)」を参照してください。
 
-1. オブジェクトの[オープン](../../mfc/reference/crecordset-class.md#open)メンバー関数。
+1. オブジェクトのメンバー関数 [Open](../../mfc/reference/crecordset-class.md#open) を呼び出します。
 
-コンス トラクターへのポインターを渡す、`CDatabase`オブジェクトまたはされによって返される接続文字列に基づくフレームワークを構築する一時的なデータベース オブジェクトを使用して NULL を渡す、 [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect)メンバー関数。 `CDatabase`オブジェクトは、データ ソースに既に接続可能性があります。
+コンストラクターで、ポインターを `CDatabase` オブジェクトに渡すか、NULL を渡して、フレームワークによって構築され、メンバー関数 [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) によって返される接続文字列に基づいて開かれる一時的なデータベース オブジェクトを使用します。 `CDatabase` オブジェクトは、データ ソースに既に接続されている場合があります。
 
-呼び出し`Open`SQL を使用して、データ ソースからレコードを選択します。 (ある場合) を選択した最初のレコードは、現在のレコードです。 このレコードのフィールドの値は、レコード セット オブジェクトのフィールド データ メンバーに格納されます。 すべてのレコードが選択されて場合、両方の`IsBOF`と`IsEOF`メンバー関数は 0 を返します。
+`Open` への呼び出しでは、SQL を使用してデータ ソースからレコードが選択されます。 選択された最初のレコード (ある場合) が現在のレコードです。 このレコードのフィールドの値は、レコードセット オブジェクトのフィールド データ メンバーに格納されます。 いずれかのレコードが選択されていた場合は、`IsBOF` と `IsEOF` の両方のメンバー関数が 0 を返します。
 
-[オープン](../../mfc/reference/crecordset-class.md#open)呼び出しができます。
+[Open](../../mfc/reference/crecordset-class.md#open) 呼び出しでは、次のことができます。
 
-- レコード セットがダイナセットまたはスナップショットであるかどうかを指定します。 レコード セットは、既定では、スナップショットとして開きます。 または、前方スクロール、順方向専用のレコードを指定することができます。
+- レコードセットがダイナセットかスナップショットかを指定します。 レコードセットは、既定でスナップショットとして開かれます。 または、一度に 1 レコードずつの前方スクロールのみを許可する順方向専用のレコードセットを指定することもできます。
 
-   既定では、レコード セットに格納されている既定の種類を使用して、`CRecordset`データ メンバー`m_nDefaultType`します。 ウィザードを初期化するコードを記述する`m_nDefaultType`ウィザードで選択したレコード セットの種類にします。 この既定を受け入れるのではなく、別のレコード セットの種類を置き換えることができます。
+   既定では、レコードセットでは `CRecordset` データ メンバー `m_nDefaultType` に格納されている既定の種類が使用されます。 ウィザードによって `m_nDefaultType` を初期化するコードが、ウィザードで選択したレコードセットの種類に書き込まれます。 この既定を受け入れるのではなく、別のレコードセットの種類に置き換えることもできます。
 
-- 既定の SQL を置換する文字列を指定**選択**レコード セットを作成するステートメント。
+- レコードセットによって構築される既定の SQL **SELECT** ステートメントを置換する文字列を指定します。
 
-- レコード セットが読み取り専用、または追加専用であるかどうかを指定します。 既定では、レコード セットを許可するが、されるを制限するには新しいレコードのみを追加するまたはすべての更新プログラムを無効にすることができます。
+- レコードセットを読み取り専用、または追加専用にするかどうかを指定します。 レコードセットでは既定ですべての更新が許可されていますが、それを新しいレコードの追加のみに制限したり、すべての更新プログラムを許可しないようにすることもできます。
 
-次の例は、クラスの読み取り専用スナップショットのオブジェクトを開く方法を示しています。`CStudentSet`を、アプリケーション固有のクラス。
+次の例では、クラス `CStudentSet` (アプリケーション固有のクラス) の読み取り専用スナップショット オブジェクトを開く方法を示しています。
 
 ```cpp
 // Construct the snapshot object
@@ -71,41 +74,41 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-呼び出した後`Open`オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、クエリを再実行またはデータ ソースで発生した変更を含めるレコード セットを更新する可能性があります。 詳細については、次を参照してください。[レコード セット: レコード セット (ODBC) のクエリを再実行](../../data/odbc/recordset-requerying-a-recordset-odbc.md)します。
+`Open` を呼び出した後、オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、データ ソースで発生した変更を含めるために、クエリを再実行またはレコードセットを更新することをお勧めします。 詳細については、「[Recordset: Requerying a Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)」 (レコードセット: クエリの再実行 (ODBC)) を参照してください。
 
 > [!TIP]
->  開発時に使用する接続文字列では、最終的なユーザーが必要な接続文字列は指定できません可能性があります。 この点で、アプリケーションを汎用化する方法については、次を参照してください。[データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)します。
+>  開発時に使用する接続文字列は、最終的にユーザーが必要とする接続文字列とは異なる場合があります。 これに関するアプリケーションの汎用化については、「[Data Source:Managing Connections (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)」 (データ ソース:接続の管理 (ODBC)) を参照してください。
 
-##  <a name="_core_setting_recordset_options"></a> レコード セットのオプションの設定
+##  <a name="_core_setting_recordset_options"></a> レコードセットのオプションを設定する
 
-レコード セット オブジェクトの構築後を呼び出す前に、`Open`レコードを選択するをレコード セットの動作を制御するいくつかのオプションを設定することがあります。 すべてのレコード セットの次の操作を実行できます。
+レコードセット オブジェクトを構築してから、`Open` を呼び出してレコードを選択する前に、レコードセットの動作を制御するためのオプションをいくつか設定することができます。 すべてのレコードセットに対して、次の操作を実行できます。
 
-- 指定、[フィルター](../../data/odbc/recordset-filtering-records-odbc.md)レコードの選択を制限します。
+- [フィルター](../../data/odbc/recordset-filtering-records-odbc.md)を指定して、レコードの選択を制限する。
 
-- 指定、[並べ替え](../../data/odbc/recordset-sorting-records-odbc.md)レコードの順序。
+- レコードの[並べ替え](../../data/odbc/recordset-sorting-records-odbc.md)順序を指定する。
 
-- 指定[パラメーター](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)情報を取得または実行時に計算を使用してレコードを選択できるようにします。
+- 実行時に取得または計算した情報を使用してレコードを選択できるように、[パラメーター](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を指定する。
 
-条件を満たす場合、次のオプションを設定することもできます。
+条件が整っている場合は、次のオプションを設定することもできます。
 
-- レコード セットは更新可能であり、ロック オプションをサポートする場合は、指定、[ロック](../../data/odbc/recordset-locking-records-odbc.md)メソッドの更新に使用します。
+- レコードセットが更新可能でロック オプションがサポートされている場合は、更新に使用する[ロック](../../data/odbc/recordset-locking-records-odbc.md)方法を指定します。
 
 > [!NOTE]
->  レコードの選択に影響を与える、呼び出す前に、これらのオプションを設定する必要があります、`Open`メンバー関数。
+>  レコードの選択に影響を及ぼすには、メンバー関数 `Open` を呼び出す前にこれらのオプションを設定する必要があります。
 
-##  <a name="_core_closing_a_recordset"></a> レコード セットを閉じる
+##  <a name="_core_closing_a_recordset"></a> レコードセットを閉じる
 
-レコード セットが完了したら、ときに、破棄し、そのメモリの割り当てを解除する必要があります。
+レコードセットを使用し終えたら、それを破棄してそのメモリの割り当てを解除する必要があります。
 
-#### <a name="to-close-a-recordset"></a>レコード セットを閉じる
+#### <a name="to-close-a-recordset"></a>レコードセットを閉じるには
 
-1. 呼び出すその[閉じる](../../mfc/reference/crecordset-class.md#close)メンバー関数。
+1. そのメンバー関数 [Close](../../mfc/reference/crecordset-class.md#close) を呼び出します。
 
-1. レコード セット オブジェクトを破棄します。
+1. レコードセット オブジェクトを破棄します。
 
-   関数のスタック フレームで宣言したとき、オブジェクトがスコープから外れたときに、オブジェクトに自動的に破棄されます。 それ以外の場合、使用、**削除**演算子。
+   関数のスタック フレームで宣言した場合は、オブジェクトがスコープから外れたときに、オブジェクトが自動的に破棄されます。 それ以外の場合は、**delete** 演算子を使用します。
 
-`Close` レコード セットの解放`HSTMT`を処理します。 C++ のオブジェクトは破棄されません。
+`Close` によってレコードセットの `HSTMT` ハンドルが解放されます。 C++ オブジェクトは破棄されません。
 
 ## <a name="see-also"></a>関連項目
 

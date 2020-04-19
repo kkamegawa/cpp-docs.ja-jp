@@ -5,12 +5,12 @@ helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-ms.openlocfilehash: ffd07377d54fcfff93ab4ab3771515a90ccf2785
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad6f529762e77e1cf1c00f41eea0add5d196fbb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307264"
 ---
 # <a name="spin-button-member-functions"></a>スピン ボタンのメンバー関数
 
@@ -30,4 +30,3 @@ ms.locfileid: "50542598"
 
 [CSpinButtonCtrl の使い方](../mfc/using-cspinbuttonctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

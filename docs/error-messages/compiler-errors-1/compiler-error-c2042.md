@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2042
 ms.assetid: e111788f-41ce-405a-9824-a4c1c26059e6
-ms.openlocfilehash: 3302b3a529ad8af054bb29bced66bc939abcc060
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bc66f5b3a7bd669ef06cac3b53631ff7948e8ad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643868"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740391"
 ---
 # <a name="compiler-error-c2042"></a>コンパイラ エラー C2042
 
@@ -21,14 +21,14 @@ ms.locfileid: "50643868"
 
 次の例では C2042 エラーが生成されます。
 
-```
+```cpp
 // C2042.cpp
 unsigned signed int i;   // C2042
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2042b.cpp
 // compile with: /c
 unsigned int i;

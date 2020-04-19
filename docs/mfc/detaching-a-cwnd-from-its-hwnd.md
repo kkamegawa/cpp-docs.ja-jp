@@ -10,12 +10,12 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-ms.openlocfilehash: fe4d9efa6adcec51d5944755e4a8abb1cc0784e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259af94958f88643e9c3ce725b25c4e92cc38226
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394573"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>CWnd と HWND の分離
 
@@ -32,4 +32,3 @@ ms.locfileid: "50653974"
 ## <a name="see-also"></a>関連項目
 
 [Window オブジェクト](../mfc/window-objects.md)
-

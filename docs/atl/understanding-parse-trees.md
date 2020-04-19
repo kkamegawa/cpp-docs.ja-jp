@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: 11625ebda2e84d4a738a2d54e849e3406a5c4f70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1aea573e78e6f6a9a86bc4e3987ee448815f329
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196169"
 ---
 # <a name="understanding-parse-trees"></a>パース ツリーについて
 
@@ -60,4 +60,3 @@ HKEY_CLASSES_ROOT
 ## <a name="see-also"></a>関連項目
 
 [レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)
-

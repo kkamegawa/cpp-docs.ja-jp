@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2863
 ms.assetid: 32561d67-a795-486b-b3b6-4b90a1acb176
-ms.openlocfilehash: c0ee0e2932ef0ce739e14fd29ddde31f7d665f43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127db2f3e7d334b684502587f9b330959063234e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530846"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755071"
 ---
 # <a name="compiler-error-c2863"></a>コンパイラ エラー C2863
 
-'interface': インターフェイスはフレンドを持つことはできません
+' interface ': インターフェイスはフレンドを持つことができません
 
-インターフェイスでフレンドを宣言することはできません。
+インターフェイスでのフレンドの宣言は許可されていません。
 
 次の例では、C2863 が生成されます。
 
-```
+```cpp
 // C2863.cpp
 // compile with: /c
 #include <unknwn.h>

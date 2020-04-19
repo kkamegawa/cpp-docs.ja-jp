@@ -1,5 +1,5 @@
 ---
-title: イベント処理 (ATL) の原則
+title: イベント処理の原則 (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
@@ -8,41 +8,40 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: e460685d17a568d9e3b49af40dd1e3f1dbda7c28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 066c8db60afed31ceba1c9ef6f4a10d5f842e608
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610991"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492142"
 ---
 # <a name="event-handling-principles"></a>イベント処理の原則
 
-3 つの手順はすべてのイベント処理に共通します。 必要があります。
+すべてのイベント処理に共通する手順は3つあります。 次の操作を行う必要があります。
 
-- オブジェクトには、イベント インターフェイスを実装します。
+- オブジェクトにイベントインターフェイスを実装します。
 
-- オブジェクトがイベントを受信することは、イベント ソースにお勧めします。
+- オブジェクトがイベントを受け取る必要があることをイベントソースに通知します。
 
-- オブジェクトが不要になったイベントを受信する必要がある場合は、イベント ソースをアドバイズです。
+- オブジェクトがイベントを受け取る必要がなくなったときに、イベントソースのアドバイズを解除します。
 
-イベント インターフェイスを実装することをする方法は、その型によって異なります。 イベント インターフェイス vtable、デュアルまたはディスパッチ インターフェイスを使用できます。 インターフェイスを定義するイベント ソースのデザイナーにはそのインターフェイスを実装するためです。
+イベントインターフェイスを実装する方法は、その型によって異なります。 イベントインターフェイスは、vtable、デュアル、またはディスパッチインターフェイスにすることができます。 インターフェイスを定義するには、イベントソースのデザイナーが必要です。このインターフェイスを実装する必要があります。
 
 > [!NOTE]
->  イベント インターフェイスを二重にすることはできませんが、技術的な理由はありませんは、さまざまなデュアルの使用を回避するために適切な設計上の理由があります。 ただし、これは、イベントのデザイナー/実装者によって行われた決定*ソース*します。 イベントの観点から作業しているため`sink`、デュアル イベント インターフェイスを実装するが、任意の選択肢がないことの可能性を考慮する必要があります。 デュアル インターフェイスの詳細については、次を参照してください。[デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)します。
+>  イベントインターフェイスをデュアルにすることはできないという技術的な理由はありませんが、duals の使用を避けるための優れた設計上の理由がいくつかあります。 ただし、これは、イベント*ソース*のデザイナー/実装者によって決定されたものです。 イベント`sink`の観点から作業しているので、2つのイベントインターフェイスを実装するのではなく、何も選択できない可能性があります。 デュアルインターフェイスの詳細については、「[デュアルインターフェイスと ATL](../atl/dual-interfaces-and-atl.md)」を参照してください。
 
-イベント ソースを通知するのに分けることが 3 つの手順。
+イベントソースの通知は、次の3つの手順に分けることができます。
 
-- クエリのソース オブジェクトは[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)します。
+- [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)のソースオブジェクトに対してクエリを実行します。
 
-- 呼び出す[IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)興味イベント インターフェイスの IID を渡します。 かどうか、正常に返されます、 [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)コネクション ポイント オブジェクトのインターフェイス。
+- [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)を呼び出して、関心のあるイベントインターフェイスの IID を渡します。 成功した場合は、コネクションポイントオブジェクトの[IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)インターフェイスが返されます。
 
-- 呼び出す[iconnectionpoint::advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise)を渡す、`IUnknown`イベント シンクの。 かどうか、正常に返されます、`DWORD`接続を表すクッキー。
+- イベントシンクのを`IUnknown`渡す[IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise)を呼び出します。 成功した場合、接続を`DWORD`表すクッキーが返されます。
 
-イベントの受信にご関心を正常に登録した後は、ソース オブジェクトによって発生したイベントに従ってオブジェクトのイベント インターフェイスでメソッドが呼び出されます。 イベントを受信するが不要になったときに経由で接続ポイントに cookie を渡すことができます[:unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)します。 これにより、ソースとシンク間の接続が中断されます。
+イベントの受信に対する関心が正常に登録されると、オブジェクトのイベントインターフェイスのメソッドが、ソースオブジェクトによって発生したイベントに従って呼び出されます。 イベントを受け取る必要がなくなった場合は、 [IConnectionPoint:: アドバイズ](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)を介して接続ポイントにクッキーを渡すことができます。 これにより、ソースとシンク間の接続が切断されます。
 
-参照しないように注意するイベントを処理するときのサイクルです。
+イベントを処理するときは、参照サイクルを避けるように注意してください。
 
 ## <a name="see-also"></a>関連項目
 
 [イベント処理](../atl/event-handling-and-atl.md)
-

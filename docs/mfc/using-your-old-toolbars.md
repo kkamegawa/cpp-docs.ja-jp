@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [MFC], backward compatibility
 - COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
-ms.openlocfilehash: 4c02f7d547c0799e79309e2635b9ab5903a16cd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcfa11b2d7d7cd7426d0c75df71a4b0eb2d96ed6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411384"
 ---
 # <a name="using-your-old-toolbars"></a>古い形式のツール バーの使用方法
 
@@ -35,4 +35,3 @@ DOCKTOOL サンプルでは、旧形式のツールバー、新しいスタイ�
 ## <a name="see-also"></a>関連項目
 
 [MFC ツール バーの実装](../mfc/mfc-toolbar-implementation.md)
-

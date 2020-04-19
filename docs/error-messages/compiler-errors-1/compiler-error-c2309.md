@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2309
 ms.assetid: 6303d5b5-72cf-42b8-92ce-b1eb48e80d48
-ms.openlocfilehash: 9d114565b6b119711aaa773d76658cc27838f4a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2567562b5d8a75a40afcb4a94ad453ee65709a00
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484644"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759036"
 ---
 # <a name="compiler-error-c2309"></a>コンパイラ エラー C2309
 
-catch ハンドラーには、かっこで囲まれた例外宣言が必要です。
+catch ハンドラーには、かっこで囲まれた例外宣言が必要です
 
 Catch ハンドラーには、かっこで囲まれた型がありません。
 
 次の例では、C2309 が生成されます。
 
-```
+```cpp
 // C2309.cpp
 // compile with: /EHsc
 #include <eh.h>

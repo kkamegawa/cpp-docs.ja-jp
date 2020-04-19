@@ -10,11 +10,11 @@ helpviewer_keywords:
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
 ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166907"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>インライン アセンブラーのラベルにジャンプ
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-**終了**名前を指定しますこのコードは、C ライブラリ関数へのジャンプを発生する可能性があります、**終了**関数の代わりに目的の場所にします。
+**exit**名前を指定しますこのコードは、C ライブラリ関数へのジャンプを発生する可能性があります、**exit**関数の代わりに目的の場所にします。
 
 MASM のプログラム、ドル記号のように (`$`) は、現在の場所のカウンターとして機能します。 現在構成されている命令のラベルになります。 `__asm`ブロック、その主な用途は、時間の長い条件付きのジャンプを作成します。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3038
 ms.assetid: 140ada3e-5636-43ef-a4ee-22a9f66a771f
-ms.openlocfilehash: 0baceeec9911181d9b21c53edf55b73686801316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26fee4f5d636ac56ae01499f6b600d38f56bbe46
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642743"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754967"
 ---
 # <a name="compiler-error-c3038"></a>コンパイラ エラー C3038
 
@@ -21,7 +21,7 @@ parallel ディレクティブの [reduction](../../parallel/openmp/reference/re
 
 次の例では C3038 が生成されます。
 
-```
+```cpp
 // C3038.cpp
 // compile with: /openmp /c
 int g_i, g_i2;

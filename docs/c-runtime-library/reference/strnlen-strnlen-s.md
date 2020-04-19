@@ -1,7 +1,7 @@
 ---
 title: strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsnlen
 - strnlen_s
 - _mbstrnlen
@@ -10,7 +10,7 @@ apiname:
 - strnlen
 - wcsnlen_s
 - _mbsnlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -23,7 +23,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsnlen
 - strnlen_s
@@ -57,19 +61,19 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6613c79bd9637b857dbf825eca2b37c71c154bec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602567"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946996"
 ---
-# <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
+# <a name="strnlen-strnlen_s-wcsnlen-wcsnlen_s-_mbsnlen-_mbsnlen_l-_mbstrnlen-_mbstrnlen_l"></a>strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
 
 現在のロケールまたは渡されたロケールを使用して、文字列の長さを取得します。 これらは、[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md) のセキュリティを強化したバージョンです。
 
 > [!IMPORTANT]
-> **_mbsnlen**、 **_mbsnlen_l**、 **_mbstrnlen**、および **_mbstrnlen_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnlen**、 **_mbsnlen_l**、 **_mbstrnlen**、および **_mbstrnlen_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -123,22 +127,22 @@ NULL で終わる文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、文字列内の文字数を返します (終端の null 文字は含まれません)。 最初の null 終端文字がない場合*numberOfElements*バイトの文字列 (またはワイド文字**wcsnlen**)、し*numberOfElements*に返されますエラー条件します。null で終わる文字列の長さが厳密があるより小さい*numberOfElements*します。
+これらの関数は、文字列内の文字数を返します (終端の null 文字は含まれません)。 文字列の最初の*numberofelements*バイト (または**wcsnlen**のワイド文字) 内に null 終端文字がない場合は、エラー状態を示す*numberofelements*が返されます。null で終わる文字列には、 *Numberofelements*より厳密に小さい長さがあります。
 
 **_mbstrnlen**と **_mbstrnlen_l**文字列に無効なマルチバイト文字が含まれている場合は、-1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
 > [!NOTE]
-> **strnlen**に代わるものでない**strlen**;**strnlen**既知のサイズのバッファーに入力方向の信頼されていないデータのサイズを計算するためだけに使用するためのものでは、ネットワーク パケットなどです。 **strnlen**長さを計算しますが、については説明しません、バッファーの末尾、文字列の終端がない場合。 その他の状況では、使用**strlen**します。 (同じ**wcsnlen**、 **_mbsnlen**、および **_mbstrnlen**)。
+> **strnlen**は**strlen**に代わるものではありません。**strnlen**は、既知のサイズのバッファー (ネットワークパケットなど) の受信した信頼できないデータのサイズを計算するためにのみ使用することを目的としています。 **strnlen**は長さを計算しますが、文字列が終了していない場合は、バッファーの末尾を越えていません。 その他の状況では、 **strlen**を使用します。 ( **Wcsnlen**、 **_mbsnlen**、および **_mbstrnlen**にも同じことが当てはまります)。
 
-これらの各関数の文字数を返します*str*、終端の null 文字が含まれていません。 ただし、 **strnlen**と**strnlen_s** 1 バイト文字の文字列として文字列を解釈し、そのため、戻り値は常に (バイト単位) の数と同じ場合でも、文字列には、マルチバイトが含まれています。文字。 **wcsnlen**と**wcsnlen_s**のワイド文字バージョン**strnlen**と**strnlen_s**引数それぞれ; **wcsnlen**と**wcsnlen_s**文字数はワイド文字単位では、ワイド文字列です。 それ以外の場合、 **wcsnlen**と**strnlen**の動作は同様に、同じ**strnlen_s**と**wcsnlen_s**します。
+これらの関数は、 *str*の文字数を返します。終端の null 文字は含まれません。 ただし、 **strnlen**と**strnlen_s**は文字列を1バイト文字列として解釈するため、文字列にマルチバイト文字が含まれている場合でも、戻り値は常にバイト数と等しくなります。 **wcsnlen**と**wcsnlen_s**はそれぞれ**strnlen**と**strnlen_s**のワイド文字バージョンです。**wcsnlen**と**wcsnlen_s**の引数はワイド文字列で、文字数はワイド文字単位です。 それ以外の場合、 **wcsnlen**と**strnlen**は、 **strnlen_s**と**wcsnlen_s**と同じように動作します。
 
-**strnlen**、 **wcsnlen**、および **_mbsnlen**パラメーターを検証できません。 場合*str*は**NULL**、アクセス違反が発生します。
+**strnlen**、 **wcsnlen**、および **_mbsnlen**では、パラメーターは検証されません。 *Str*が**NULL**の場合、アクセス違反が発生します。
 
-**strnlen_s**と**wcsnlen_s**パラメーターを検証します。 場合*str*は**NULL**関数は、0 を返します。
+**strnlen_s**と**wcsnlen_s**は、そのパラメーターを検証します。 *Str*が**NULL**の場合、関数は0を返します。
 
-**_mbstrnlen**もそのパラメーターを検証します。 場合*str*は**NULL**、または*numberOfElements*がより大きい**INT_MAX**、 **_mbstrnlen**説明されているように、無効なパラメーター例外を生成します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbstrnlen**設定**errno**に**EINVAL** -1 を返します。
+**_mbstrnlen**もそのパラメーターを検証します。 *Str*が**NULL**の場合、または*numberofelements*が**INT_MAX**より大きい場合、 **_mbstrnlen**は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **_mbstrnlen**は**errno**を**EINVAL**に設定し、-1 を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -148,9 +152,9 @@ NULL で終わる文字列。
 |**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
-**_mbsnlen**と **_mbstrnlen**マルチバイト文字列のマルチバイト文字数を返します。 **_mbsnlen**マルチバイト コード ページに従ってマルチバイト文字シーケンスを認識です。 現在使用中、または渡されたロケールに従ってマルチバイト文字の有効性テストは実行されません。 **_mbstrnlen**マルチバイト文字の有効性をテストし、マルチバイト文字シーケンスを認識します。 場合に渡される文字列 **_mbstrnlen**無効なマルチバイト文字が含まれています**errno**に設定されている**EILSEQ**します。
+**_mbsnlen**と **_mbstrnlen**は、マルチバイト文字列のマルチバイト文字数を返します。 **_mbsnlen**は、現在使用されているマルチバイトコードページに従って、または渡されたロケールに従って、マルチバイト文字のシーケンスを認識します。マルチバイト文字の有効性はテストされません。 **_mbstrnlen**は、マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 **_Mbstrnlen**に渡された文字列に無効なマルチバイト文字が含まれている場合、 **errno**は**EILSEQ**に設定されます。
 
-出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないことを除いて、これらの関数バージョンが同じである、 **_l**サフィックスは、このロケールに依存する動作し、付いているバージョンの現在のロケールを使用して、 **_l**サフィックス渡されるロケール パラメーターを代わりに使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンでは、このロケールに依存する動作に現在のロケールを使用し、 **_l**サフィックスが付いているバージョンは渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

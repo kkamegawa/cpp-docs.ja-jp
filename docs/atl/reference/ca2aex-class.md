@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 77bb49ab87c20b6df317282d8f5e6e228deb3a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247639"
 ---
 # <a name="ca2aex-class"></a>CA2AEX クラス
 
@@ -99,7 +99,7 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 変換するテキスト文字列。
 
 *nCodePage*<br/>

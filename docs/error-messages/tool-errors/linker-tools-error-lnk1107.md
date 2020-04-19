@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1107
 ms.assetid: a37a893d-5efa-4eba-8f40-6c5518b4b9d0
-ms.openlocfilehash: 68048d9f824283d002a4ea8b64d88f37bbeefc48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c75966d9c6c22f1bd2123fb30282bb2bed467130
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646564"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991032"
 ---
 # <a name="linker-tools-error-lnk1107"></a>リンカ ツール エラー LNK1107
 
-無効または壊れたファイル: の場所で読み取ることができません
+ファイルが無効であるか壊れています: 場所で読み取ることができません
 
-このツールは、ファイルを読み取れませんでした。 ファイルを再作成します。
+ツールでファイルを読み取ることができませんでした。 ファイルを再作成します。
 
-モジュールに渡すしようとした場合にも LNK1107 (.dll または .netmodule の拡張機能で作成された[/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)または[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) リンカー;、.obj ファイルを代わりに渡します。
+LNK1107 は、 [/clr: noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)または[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)で作成されたモジュール (.dll または .netmodule 拡張子) をリンカーに渡そうとした場合にも発生する可能性があります。代わりに .obj ファイルを渡してください。
 
-次の例: コンパイルする場合
+次のサンプルをコンパイルすると、次のようになります。
 
-```
+```cpp
 // LNK1107.cpp
 // compile with: /clr /LD
 public ref class MyClass {
@@ -32,4 +32,4 @@ public:
 };
 ```
 
-指定**リンク LNK1107.dll**コマンドラインで LNK1107 が表示されます。  エラーを解決するには、次のように指定します。**リンク LNK1107.obj**代わりにします。
+次に、コマンドラインで**LINK LNK1107**を指定すると、LNK1107 が表示されます。  このエラーを解決するには、代わりに**LINK LNK1107**を指定します。

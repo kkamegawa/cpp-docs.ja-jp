@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 84756eb177fcec1981f3f2ed018d57eb27df9823
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403868"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar クラス
 
@@ -35,7 +35,7 @@ class CMFCBaseToolBar : public CPane
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCBaseToolBar::CMFCBaseToolBar`|既定のコンストラクター|
+|`CMFCBaseToolBar::CMFCBaseToolBar`|既定のコンストラクターです。|
 |`CMFCBaseToolBar::~CMFCBaseToolBar`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド

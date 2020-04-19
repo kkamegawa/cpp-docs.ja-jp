@@ -1,9 +1,9 @@
 ---
 title: _configthreadlocale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _configthreadlocale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: aac0d36654a81e5d616ffff28e5a254fe06628a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326044"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939019"
 ---
-# <a name="configthreadlocale"></a>_configthreadlocale
+# <a name="_configthreadlocale"></a>_configthreadlocale
 
 スレッドごとのロケール オプションを設定します。
 
@@ -50,23 +53,23 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ## <a name="return-value"></a>戻り値
 
-前のスレッドごとのロケールの状態 (**_DISABLE_PER_THREAD_LOCALE**または **_ENABLE_PER_THREAD_LOCALE**)、または-1 を返します。
+前のスレッドごとのロケールの状態 **(&** i)、または失敗した**場合は-** 1 のいずれかになります。
 
 ## <a name="remarks"></a>Remarks
 
-**_Configurethreadlocale**スレッド固有のロケールの使用を制御する関数を使用します。 次のいずれかを使用して、 *per_thread_locale_type*オプションを指定またはスレッドごとのロケールの状態を確認します。
+**_Configurethreadlocale**関数は、スレッド固有のロケールの使用を制御するために使用されます。 次のいずれかの*per_thread_locale_type*オプションを使用して、スレッドごとのロケールの状態を指定または確認します。
 
 | オプション | 説明 |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | 現在のスレッドでスレッド固有のロケールを使用させます。 後続の呼び出し**setlocale**このスレッドでスレッドのロケールだけに影響します。 |
-| **_DISABLE_PER_THREAD_LOCALE** | 現在のスレッドでグローバルなロケールを使用させます。 後続の呼び出し**setlocale**このスレッドでグローバル ロケールを使用して他のスレッドに影響します。 |
+| **ロケール (_S)** | 現在のスレッドでスレッド固有のロケールを使用させます。 このスレッドで**setlocale**を呼び出すと、スレッド独自のロケールだけに影響します。 |
+| **ローカルロケール (_S)** | 現在のスレッドでグローバルなロケールを使用させます。 このスレッドで**setlocale**を呼び出すと、グローバルロケールを使用する他のスレッドに影響します。 |
 | **0** | この特定のスレッドの現在の設定を取得します。 |
 
-これらの関数の動作に影響を与える**setlocale**、 **_tsetlocale**、 **_wsetlocale**、および **_setmbcp**します。 スレッドごとのロケールが無効になっている、その後の呼び出しの場合**setlocale**または **_wsetlocale**グローバル ロケールを使用するすべてのスレッドのロケールを変更します。 スレッドごとのロケールを有効にすると、 **setlocale**または **_wsetlocale**現在のスレッドのロケールにのみ影響します。
+これらの関数は、 **setlocale**、 **_tsetlocale**、 **_wsetlocale**、および **_setmbcp**の動作に影響します。 スレッドごとのロケールが無効になっている場合、 **setlocale**または **_wsetlocale**への後続の呼び出しでは、グローバルロケールを使用するすべてのスレッドのロケールが変更されます。 スレッドごとのロケールが有効になっている場合、 **setlocale**または **_wsetlocale**は現在のスレッドのロケールにのみ影響します。
 
-使用する場合 **_configurethreadlocale**呼び出すことが推奨スレッドごとのロケールを有効にする**setlocale**または **_wsetlocale**そのスレッドで優先ロケールを設定するにはその後すぐにします。
+**_Configurethreadlocale**を使用してスレッドごとのロケールを有効にする場合は、その後すぐに**setlocale**または **_wsetlocale**を呼び出して、そのスレッドで優先ロケールを設定することをお勧めします。
 
-場合*per_thread_locale_type*が、値の 1 つの表に示す、この関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL** -1 を返します。
+*Per_thread_locale_type*がテーブルに示されている値のいずれでもない場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 ## <a name="requirements"></a>必要条件
 

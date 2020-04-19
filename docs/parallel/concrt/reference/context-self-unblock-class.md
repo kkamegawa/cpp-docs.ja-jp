@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 5cb7fc951a4c62f4d299ce7d394e9f8268d7ed74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622171"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143111"
 ---
-# <a name="contextselfunblock-class"></a>context_self_unblock クラス
+# <a name="context_self_unblock-class"></a>context_self_unblock クラス
 
 このクラスは、同じコンテキストから `Unblock` オブジェクトの `Context` メソッドが呼び出された場合にスローされる例外を表します。 これは、特定のコンテキストがそれ自体のブロックを解除しようとしたことを示します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class context_self_unblock : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[context_self_unblock](#ctor)|オーバーロードされます。 `context_self_unblock` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class context_self_unblock : public std::exception;
 
 `context_self_unblock`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a>context_self_unblock
 
 `context_self_unblock` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();
@@ -57,9 +57,9 @@ context_self_unblock() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

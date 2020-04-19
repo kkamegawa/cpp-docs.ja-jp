@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: 123ccf583fe5e07d9f2610ec621b48d8a8c39be8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622029"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150559"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport に関する規則と制限
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622029"
 
 - **dllimport** 属性または `dllexport` 属性を指定しないで関数を宣言した場合、その関数は DLL インターフェイスの一部とは見なされません。 したがって、関数の定義は、該当のモジュール内か、同じプログラムの別のモジュール内に存在している必要があります。 関数を DLL インターフェイスに含める場合は、その関数の定義を他のモジュールで `dllexport` として宣言する必要があります。 それ以外の場合、リンカー エラーがクライアントのビルド時に生成されます。
 
-- プログラムの 1 つのモジュールに、同じ関数の **dllimport** 宣言と `dllexport` 宣言が含まれる場合は、`dllexport` 属性が **dllimport** 属性よりも優先されます。 ただし、コンパイラの警告が生成されます。 例:
+- プログラムの 1 つのモジュールに、同じ関数の **dllimport** 宣言と `dllexport` 宣言が含まれる場合は、`dllexport` 属性が **dllimport** 属性よりも優先されます。 ただし、コンパイラの警告が生成されます。 次に例を示します。
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -69,7 +69,7 @@ ms.locfileid: "50622029"
 
     ```
 
-- `dllexport` 属性が含まれたオブジェクト宣言のあるプログラムでは、そのオブジェクトを定義している必要があるため、グローバルまたはローカルの静的関数ポインターを、`dllexport` 関数のアドレスで初期化できます。 同様に、`dllexport` データ オブジェクトのアドレスで、グローバルまたはローカルの静的データ ポインターを初期化できます。 例:
+- `dllexport` 属性が含まれたオブジェクト宣言のあるプログラムでは、そのオブジェクトを定義している必要があるため、グローバルまたはローカルの静的関数ポインターを、`dllexport` 関数のアドレスで初期化できます。 同様に、`dllexport` データ オブジェクトのアドレスで、グローバルまたはローカルの静的データ ポインターを初期化できます。 次に例を示します。
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -96,6 +96,6 @@ ms.locfileid: "50622029"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [DLL インポートおよびエクスポート関数](../c-language/dll-import-and-export-functions.md)

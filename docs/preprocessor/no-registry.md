@@ -1,44 +1,42 @@
 ---
-title: no_registry
-ms.date: 10/18/2018
+title: no_registry import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - no_registry
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-ms.openlocfilehash: bd101f5ca1776518ff4c5092da99134110bbb0b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c81cc2f570cb9ac4e977dac6d55cb69e491d3b2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503026"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220724"
 ---
-# <a name="noregistry"></a>no_registry
+# <a name="no_registry-import-attribute"></a>no_registry import 属性
 
-**no_registry**レジストリにインポートされたタイプ ライブラリを検索しないようにコンパイラに指示`#import`します。
+**no_registry**は、でインポートされた`#import`タイプライブラリのレジストリを検索しないようコンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
-```
-#import filename no_registry
-```
+> **#import***タイプライブラリ***no_registry**
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*タイプライブラリ*\
 タイプ ライブラリ。
 
 ## <a name="remarks"></a>Remarks
 
-参照されるタイプ ライブラリがインクルード ディレクトリで見つからない場合、タイプ ライブラリがレジストリである場合でも、コンパイルは失敗します。  **no_registry**で暗黙的にインポートされた他のタイプ ライブラリに伝達`auto_search`します。
+参照されるタイプライブラリがインクルードディレクトリに見つからない場合は、タイプライブラリがレジストリに存在する場合でも、コンパイルは失敗します。  **no_registry**は、によって暗黙的に`auto_search`インポートされる他のタイプライブラリに伝達されます。
 
-ファイル名で指定され、`#import` に直接渡されるタイプ ライブラリの場合、コンパイラはレジストリを検索しません。
+コンパイラは、ファイル名で指定され、に`#import`直接渡されるタイプライブラリのレジストリを検索しません。
 
-ときに`auto_search`が指定されている追加`#import`に s が生成されます、 **no_registry**の初期設定`#import`(場合初期`#import`ディレクティブが**no_registry**、 `auto_search`-生成された`#import`も**no_registry**)。
+を`auto_search`指定した場合は`#import` 、初期`#import`の**no_registry**設定を使用して、追加のディレクティブが生成されます。 最初`#import`のディレクティブが`auto_search` **no_registry**の場合、生成`#import`されたは**no_registry**にもなります。
 
-**no_registry**クロス コンパイラをレジストリ内のファイルの古いバージョンの検索のリスクを負うことがなく、参照されるタイプ ライブラリをインポートする場合に便利です。 **no_registry**もタイプ ライブラリが登録されていない場合に便利です。
+クロス参照型ライブラリをインポートする場合は、 **no_registry**を使用すると便利です。 これにより、コンパイラはレジストリで古いバージョンのファイルを検索できません。 **no_registry**は、タイプライブラリが登録されていない場合にも役立ちます。
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

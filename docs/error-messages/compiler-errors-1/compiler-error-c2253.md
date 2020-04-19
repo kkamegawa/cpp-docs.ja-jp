@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2253
 ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
-ms.openlocfilehash: 847c37c6ae5edf14205d3d46ca624a572c8d6b6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89acfd8a03dc0ee2dc25e14e0b3a63ab25151cc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658173"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758854"
 ---
 # <a name="compiler-error-c2253"></a>コンパイラ エラー C2253
 
-'function': 純粋指定子または抽象オーバーライド指定子の仮想関数でのみ使用できます
+' function ': 純粋指定子または抽象オーバーライド指定子は、仮想関数でのみ使用できます
 
-非仮想関数が純粋に指定された`virtual`します。
+非仮想関数は、純粋 `virtual`として指定されます。
 
 次の例では、C2253 が生成されます。
 
-```
+```cpp
 // C2253.cpp
 // compile with: /c
 class A {
@@ -33,7 +33,7 @@ public:
 
 次の例では、C2253 が生成されます。
 
-```
+```cpp
 // C2253_2.cpp
 // compile with: /clr /c
 ref struct A {

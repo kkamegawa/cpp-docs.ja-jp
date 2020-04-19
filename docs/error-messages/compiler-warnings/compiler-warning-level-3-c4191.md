@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657770"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051875"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>コンパイラの警告 (レベル 3) C4191
 
@@ -27,7 +27,7 @@ ms.locfileid: "50657770"
 
 - 引数リストの長さが異なる場合 ( `__cdecl`では、短い方の引数リストが varargs であっても、長い方のリストから短い方へキャストされる場合のみ)。
 
-- データへのポインター (以外の**void**<strong>\*</strong>) 関数へのポインターに対してエイリアス。
+- 関数へのポインターに対してエイリアス化されたデータへのポインター ( **void** <strong>\*</strong>以外)。
 
 - その他の型の違いによって、 `reinterpret_cast`でエラーまたは警告が発生する場合。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50657770"
 
 次の例では C4191 が生成されます。
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

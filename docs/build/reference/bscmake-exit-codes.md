@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exit codes
 - BSCMAKE, exit codes
 ms.assetid: 1a5ca9d8-a217-43c8-9780-2a41d458b8c0
-ms.openlocfilehash: 3be28721be20c7067737a421afa57c97275a040d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7c7c34f5944198b1594b2f580d5cc73e3c20706
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294903"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE 終了コード
 
@@ -24,4 +24,4 @@ BSCMAKE では、オペレーティング システムまたは呼び出し元�
 
 ## <a name="see-also"></a>関連項目
 
-[BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)
+[BSCMAKE リファレンス](bscmake-reference.md)

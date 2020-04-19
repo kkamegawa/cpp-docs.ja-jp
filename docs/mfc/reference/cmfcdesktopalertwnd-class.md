@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403673"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[Cmfcdesktopalertwnd::create](#create)|作成して、デスクトップの通知ウィンドウを初期化します。|
+|[CMFCDesktopAlertWnd::Create](#create)|作成して、デスクトップの通知ウィンドウを初期化します。|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|アニメーションの速度を返します。|
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|アニメーションの種類を返します。|
 |[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|自動終了時間帯を返します。|
@@ -120,7 +120,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法を示しています、`CMFCDesktopAlertWnd`を構成するクラス、`CMFCDesktopAlertWnd`オブジェクト。 この例では、アニメーションの種類の設定、ポップアップ ウィンドウの透明度を設定、通知ウィンドウが小さいキャプションを表示することを指定、および通知ウィンドウを自動的に終了する前に経過した時間を設定する方法を示します。 例では、作成し、デスクトップの通知ウィンドウを初期化する方法も示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメソッドを使用する方法を示しています、`CMFCDesktopAlertWnd`を構成するクラス、`CMFCDesktopAlertWnd`オブジェクト。 この例では、アニメーションの種類の設定、ポップアップ ウィンドウの透明度を設定、通知ウィンドウが小さいキャプションを表示することを指定、および通知ウィンドウを自動的に終了する前に経過した時間を設定する方法を示します。 例では、作成し、デスクトップの通知ウィンドウを初期化する方法も示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 
@@ -138,7 +138,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 **ヘッダー:** afxDesktopAlertWnd.h
 
-##  <a name="create"></a>  Cmfcdesktopalertwnd::create
+##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
 
 作成して、デスクトップの通知ウィンドウを初期化します。
 
@@ -352,9 +352,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*wParam*<br/>
+[in] *wParam*<br/>
 
-[in]*lParam*<br/>
+[in] *lParam*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -489,7 +489,7 @@ virtual CSize GetDialogSize();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

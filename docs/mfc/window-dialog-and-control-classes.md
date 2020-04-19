@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-ms.openlocfilehash: aef31f7831ef7480793abdf75eecaf11f6a6b7a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fc7d800cee7e3bf64f64028b2499935eb42a044
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167622"
 ---
 # <a name="window-dialog-and-control-classes"></a>ウィンドウ、ダイアログ、コントロール クラス
 
@@ -23,4 +23,3 @@ ms.locfileid: "50467254"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

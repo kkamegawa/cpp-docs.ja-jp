@@ -12,12 +12,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: f991eff82e5b6919f7960513ae9bc502cad77069
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641091"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151144"
 ---
 # <a name="initializing-scalar-types"></a>スカラー型の初期化
 
@@ -104,6 +104,6 @@ int function( void )
 
 グローバル変数 `GLOBAL` は外部レベルで宣言されるため、グローバル有効期間があります。 ローカル変数 `LOCAL` には **auto** ストレージ クラスがあり、このローカル変数を宣言する関数の実行中のみアドレスが存在します。 したがって、**static** ポインター変数 `lp` を `LOCAL` のアドレスで初期化することはできません。 `GLOBAL` のアドレスは常に同じであるため、**static** ポインター変数 `gp` をこのアドレスに初期化できます。 同様に、`*rp` がローカル変数であり、定数でない初期化子を指定できるため、`rp` は初期化できます。 ブロックが入力されるたびに `LOCAL` に新しいアドレスが割り当てられ、それが `rp` に割り当てられます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [初期化](../c-language/initialization.md)

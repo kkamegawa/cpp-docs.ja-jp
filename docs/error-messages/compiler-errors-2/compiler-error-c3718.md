@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479050"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753199"
 ---
 # <a name="compiler-error-c3718"></a>コンパイラ エラー C3718
 
-受信側のクラスのメンバー関数のコンテキストで 'event' を呼び出すことができますのみ
+受信側クラスのメンバー関数のコンテキストでのみ ' event ' を呼び出すことができます
 
-`event`受信側のクラスからのみ呼び出すことができます。
+`event` は、受信側のクラスからのみ呼び出すことができます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3718 が生成されます。
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

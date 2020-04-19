@@ -1,19 +1,19 @@
 ---
-title: '方法: System::String を標準文字列に変換する'
+title: '方法: System::string を標準文字列に変換します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: fafd23cb9dec25c742e040fad0793c38bd092322
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379117"
 ---
-# <a name="how-to-convert-systemstring-to-standard-string"></a>方法: System::String を標準文字列に変換する
+# <a name="how-to-convert-systemstring-to-standard-string"></a>方法: System::string を標準文字列に変換します。
 
 Vcclr.h の <xref:System.String> を使用せずに、`std::string` を `std::wstring` または `PtrToStringChars` に変換できます。
 

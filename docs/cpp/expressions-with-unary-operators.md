@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183872"
 ---
 # <a name="expressions-with-unary-operators"></a>単項演算子を含む式
 
@@ -51,21 +51,21 @@ ms.locfileid: "50559069"
 
 - *postfix-expression*
 
-- `++` *単項式*
+- `++` *unary-expression*
 
-- `--` *単項式*
+- `--` *unary-expression*
 
-- *単項演算子**キャスト式*
+- *unary-operator* *cast-expression*
 
-- **sizeof** *単項式*
+- **sizeof** *unary-expression*
 
-- `sizeof(` *型名* `)`
+- `sizeof(` *type-name* `)`
 
-- `decltype(` *式* `)`
+- `decltype(` *expression* `)`
 
-- *割り当て式*
+- *allocation-expression*
 
-- *割り当て解除式*
+- *deallocation-expression*
 
 すべて*後置式*と見なされます、*単項式*、し、どの 1 次式と見なされるため、*後置式*、どの 1 次式は、見なされます、*単項式*もします。 詳細については、次を参照してください。[後置式](../cpp/postfix-expressions.md)と[一次式](../cpp/primary-expressions.md)します。
 
@@ -75,7 +75,7 @@ A*単項演算子*の 1 つ以上の次の記号で構成されます。 `* & + 
 
 *式*式にできます。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。
 
-*割り当て式*を指す、**新しい**演算子。 *解放式*を指す、**削除**演算子。 詳細については、このトピックで前述したリンクを参照してください。
+*割り当て式*を指す、**new**演算子。 *解放式*を指す、**delete**演算子。 詳細については、このトピックで前述したリンクを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

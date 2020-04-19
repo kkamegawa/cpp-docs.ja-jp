@@ -1,7 +1,7 @@
 ---
 title: _ismbb 系ルーチン
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbb
 - ismbb
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481407"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944528"
 ---
-# <a name="ismbb-routines"></a>_ismbb 系ルーチン
+# <a name="_ismbb-routines"></a>_ismbb 系ルーチン
 
 現在のロケールまたは指定された LC_CTYPE 変換状態カテゴリを使用して、特定の条件に対して整数値 `c` をテストします。
 
@@ -37,7 +40,7 @@ ms.locfileid: "50481407"
 |[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct、_ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
 |[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_ismbb` ファミリのすべてのルーチンは、特定の条件に対して整数値 `c` をテストします。 テスト結果は、有効なマルチバイト コード ページによって異なります。 既定では、マルチバイト コード ページは、プログラムの開始時にオペレーティング システムから取得した ANSI コード ページに設定されます。 [_getmbcp](../c-runtime-library/reference/getmbcp.md) を使って使用中のマルチバイト コード ページを照会し、または [_setmbcp](../c-runtime-library/reference/setmbcp.md) を使って変更できます。
 
@@ -76,7 +79,7 @@ ms.locfileid: "50481407"
 
 `_ismbb` ルーチンは、関数とマクロの両方として実装されます。 実装の選び方については、「[関数またはマクロの選択に関する推奨事項](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [バイト分類](../c-runtime-library/byte-classification.md)<br/>
 [is、isw 系ルーチン](../c-runtime-library/is-isw-routines.md)<br/>

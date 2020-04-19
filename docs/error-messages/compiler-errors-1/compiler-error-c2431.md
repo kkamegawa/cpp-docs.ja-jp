@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2431
 ms.assetid: 88a5b648-c89f-47d1-a20e-63231ab4f0f7
-ms.openlocfilehash: 6298748b341d58c5d931566f714530a4858e46ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 135f73490cf23313d4ac4e2a5f568f2b6100422b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608105"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744525"
 ---
 # <a name="compiler-error-c2431"></a>コンパイラ エラー C2431
 
-'identifier' に無効なインデックス レジスタ
+' identifier ' に無効なインデックスレジスタがあります
 
-ESP レジスタがスケールまたはインデックスとベース レジスタの両方として使用します。 X86 プロセッサで許可するかしないのエンコーディングの兄弟です。
+ESP レジスタは、インデックスと基本レジスタの両方としてスケーリングまたは使用されます。 X86 プロセッサの SIB エンコードでは、どちらも許可されません。
 
 次の例では、C2431 が生成されます。
 
-```
+```cpp
 // C2431.cpp
 // processor: x86
 int main() {

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252534"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan クラス
 
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 比較対象のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -178,7 +178,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pFormat*、 *pszFormat*<br/>
+*pFormat*, *pszFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`CTimeSpan`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 値との書式設定コードの意味`Format`を以下に示します。
 
 - **%D**この日の合計 `CTimeSpan`
@@ -334,7 +334,7 @@ LONGLONG GetTotalSeconds() const throw();
 
 例をご覧ください[従来](#gettotalhours)します。
 
-##  <a name="operator_add_-"></a>  CTimeSpan::operator +、-
+##  <a name="operator_add_-"></a>  CTimeSpan::operator +, -
 
 追加し、減算`CTimeSpan`オブジェクト。
 
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 追加する値、`CTimeSpan`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -360,7 +360,7 @@ A`CTimeSpan`操作の結果を表すオブジェクト。
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator + =、=
+##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=, -=
 
 追加し、減算、`CTimeSpan`オブジェクトとの間この`CTimeSpan`します。
 
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*<br/>
+*span*<br/>
 追加する値、`CTimeSpan`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -416,4 +416,3 @@ CArchive& Serialize64(CArchive& ar);
 [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

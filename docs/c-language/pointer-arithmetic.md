@@ -5,12 +5,12 @@ helpviewer_keywords:
 - pointer arithmetic
 - arithmetic pointer
 ms.assetid: eb924a29-59d3-48a5-9d62-9424790730eb
-ms.openlocfilehash: 7ed238bdeedf95bb79543a28ed8dd602020fa55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1b3e31561bedece6a6180fbeb13473153a46ab6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615476"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152678"
 ---
 # <a name="pointer-arithmetic"></a>ポインターの算術演算
 
@@ -20,6 +20,6 @@ ms.locfileid: "50615476"
 
 同様に、2 つのポインター値を減算する場合、変換では、オペランドで指定されたアドレス間には空白のない同じの型の値だけが指定されているものと見なされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 加法演算子](../c-language/c-additive-operators.md)

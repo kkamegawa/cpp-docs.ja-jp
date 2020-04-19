@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/stdx
 ms.assetid: 0e25b138-1dfa-4073-a0b6-14bed81c774c
-ms.openlocfilehash: 1eacf30c7259245ef36ece41ce621197d3c76127
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caa4b50b731c37e58c652e6cd63a8edae29dd940
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449249"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142654"
 ---
 # <a name="stdx-namespace"></a>stdx 名前空間
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 namespace stdx;
 ```
 
@@ -23,15 +23,14 @@ namespace stdx;
 
 ### <a name="functions"></a>関数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[declval 関数](declval-function.md)||
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** ppltasks.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[参照](reference-concurrency-runtime.md)
-
+[リファレンス](reference-concurrency-runtime.md)

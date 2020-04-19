@@ -2,12 +2,12 @@
 title: 浮動小数点の移行に関する問題
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332349"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626979"
 ---
 # <a name="floating-point-migration-issues"></a>浮動小数点の移行に関する問題
 
@@ -31,6 +31,6 @@ Visual Studio のさまざまな浮動小数点モードでコード生成が修
 
 ## <a name="see-also"></a>関連項目
 
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[以前のバージョンのビジュアルからのプロジェクトのアップグレードC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 40978bff010fbb1640398c3248c595b3ae04289f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303797"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>C++/CLI (Visual C++) による .NET プログラミング
 
-**Visual Studio 2015**: 既定では、Visual Studio 2015 で作成された CLR プロジェクトが .NET Framework 4.5.2 を対象します。 新しいプロジェクトを作成するときに .NET Framework 4.6 を対象とするには、 **[新しいプロジェクト]** ダイアログの上部中央にあるドロップダウン リストでターゲット フレームワークを変更します。 既存のプロジェクトのターゲット フレームワークを変更するには、プロジェクトを閉じて、プロジェクト ファイル (.vcxproj) を編集し、ターゲット フレームワークのバージョンの値を 4.6 に変更します。 次にプロジェクトを開いたときに、設定が有効になります。
+**Visual Studio 2015**: 既定で、Visual Studio 2015 で作成された CLR プロジェクトは .NET Framework 4.5.2 を対象とします。 新しいプロジェクトを作成するときに .NET Framework 4.6 を対象とするには、 **[新しいプロジェクト]** ダイアログの上部中央にあるドロップダウン リストでターゲット フレームワークを変更します。 既存のプロジェクトのターゲット フレームワークを変更するには、プロジェクトを閉じて、プロジェクト ファイル (.vcxproj) を編集し、ターゲット フレームワークのバージョンの値を 4.6 に変更します。 次にプロジェクトを開いたときに、設定が有効になります。
 
-**Visual Studio 2017**: Visual Studio 2017 で、既定のフレームワークが 4.6.1 と Framework バージョン セレクターはの下部に、**新しいプロジェクト ダイアログ**します。 C +/cli CLI 自体が既定でインストールされていません。 コンポーネントをインストールする Visual Studio インストーラーを開くし、選択 c++/cli Visual C の下の CLI コンポーネント。
+**Visual Studio 2017**: Visual Studio 2017 では、既定のフレームワークが 4.6.1 と Framework バージョン セレクターはの下部に、**新しいプロジェクト ダイアログ**します。 C +/cli CLI 自体が既定でインストールされていません。 コンポーネントをインストールする Visual Studio インストーラーを開くし、選択 c++/cli Visual C の下の CLI コンポーネント。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388463"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton クラス
 
@@ -57,7 +57,7 @@ class CBitmapButton : public CButton
 
 さまざまなアプリケーションでは、ビットマップ イメージのさまざまな組み合わせを要求します。
 
-|上へ|[下へ移動]|Focused|無効|アプリケーション|
+|上へ|[下へ移動]|フォーカスされている|無効|アプリケーション|
 |--------|----------|-------------|--------------|-----------------|
 |×||||ビットマップ|
 |×|×|||WS_TABSTOP スタイル ボタンをクリックします。|
@@ -88,7 +88,7 @@ class CBitmapButton : public CButton
 
 1. アプリケーションのダイアログ クラスで (から派生した`CDialog`)、追加、`CBitmapButton`メンバー オブジェクトです。
 
-1. `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンを呼び出し、`CBitmapButton`オブジェクトの[AutoLoad](#autoload)関数は、ボタンのコントロール ID をパラメーターとして使用して、`CDialog`オブジェクト**この**ポインター。
+1. `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンを呼び出し、`CBitmapButton`オブジェクトの[AutoLoad](#autoload)関数は、ボタンのコントロール ID をパラメーターとして使用して、`CDialog`オブジェクト**this**ポインター。
 
 BN_CLICKED などの Windows 通知メッセージを処理する場合、その親にビットマップ ボタン コントロールから送信 (から派生したクラスは、通常`CDialog`)、追加、 `CDialog`-派生オブジェクトをメッセージ マップ エントリとメッセージ ハンドラー メンバー各メッセージの関数。 によって送信された通知を`CBitmapButton`オブジェクトは、によって送信されたものと同じ、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクト。
 
@@ -224,7 +224,6 @@ void SizeToContent();
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CButton クラス](../../mfc/reference/cbutton-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

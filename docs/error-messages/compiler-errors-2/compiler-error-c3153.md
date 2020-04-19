@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3153
 ms.assetid: d775d97e-2480-484f-81f1-88406b10f947
-ms.openlocfilehash: 62b9e7499c52153183f14eae47c488da6a59b458
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54fa7de8eb3df8d4b3695544c5285cc202275492
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610419"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745917"
 ---
 # <a name="compiler-error-c3153"></a>コンパイラ エラー C3153
 
-'interface': インターフェイスのインスタンスを作成することはできません
+' interface ': インターフェイスのインスタンスを作成することはできません。
 
-インターフェイスをインスタンス化することはできません。 インターフェイスのメンバーを使用するには、インターフェイスからクラスを派生、インターフェイス メンバーを実装およびメンバーを使用します。
+インターフェイスをインスタンス化することはできません。 インターフェイスのメンバーを使用するには、インターフェイスからクラスを派生させ、インターフェイスメンバーを実装してから、メンバーを使用します。
 
 次の例では、C3153 が生成されます。
 
-```
+```cpp
 // C3153.cpp
 // compile with: /clr
 interface class A {

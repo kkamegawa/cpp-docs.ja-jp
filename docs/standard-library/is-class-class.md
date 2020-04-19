@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522078"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456649"
 ---
 # <a name="isclass-class"></a>is_class クラス
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*として型が定義されて、**クラス**または**構造体**、または`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
+型*Ty*が**クラス**、 `cv-qualified` **構造体**、またはそのいずれかの形式として定義されている型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -71,6 +71,6 @@ is_class<int> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound クラス](../standard-library/is-compound-class.md)<br/>
-[is_union クラス](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound クラス](../standard-library/is-compound-class.md)\
+[is_union クラス](../standard-library/is-union-class.md)

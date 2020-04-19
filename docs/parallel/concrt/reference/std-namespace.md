@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/std
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
-ms.openlocfilehash: 5bfec287aac1dbfc8b068b61414f0bfcf8edc28d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06cb2ca2ec9a8745a1999f9bf630fe2fa4e6e1f3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566479"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142670"
 ---
 # <a name="std-namespace"></a>std 名前空間
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 namespace std;
 ```
 
@@ -23,15 +23,14 @@ namespace std;
 
 ### <a name="functions"></a>関数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[make_exception_ptr 関数](make-exception-ptr-function.md)||
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** ppltasks.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[参照](reference-concurrency-runtime.md)
-
+[リファレンス](reference-concurrency-runtime.md)

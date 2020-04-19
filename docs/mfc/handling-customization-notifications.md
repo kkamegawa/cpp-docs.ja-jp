@@ -47,12 +47,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: f73e6ef070177f39bdf2e0736660f8eb963727ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240688"
 ---
 # <a name="handling-customization-notifications"></a>カスタマイズ通知の処理
 
@@ -218,4 +218,3 @@ typedef struct {
 
 [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

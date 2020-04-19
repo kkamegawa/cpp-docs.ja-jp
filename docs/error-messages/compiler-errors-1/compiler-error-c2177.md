@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2177
 ms.assetid: 2a39a880-cddb-4d3e-a572-645a14c4c478
-ms.openlocfilehash: 9beb8454804401f8b39f9976fe62faf6e2659537
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b48118c854fa2ec77e93c5b7becd334bfe29849
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641133"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737245"
 ---
 # <a name="compiler-error-c2177"></a>コンパイラ エラー C2177
 
@@ -21,7 +21,7 @@ ms.locfileid: "50641133"
 
 次の例では C2177 が生成されます。
 
-```
+```cpp
 // C2177.cpp
 int main() {
    int a=18446744073709551616;   // C2177

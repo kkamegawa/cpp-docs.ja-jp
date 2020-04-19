@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314690"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>レギュラー MFC Dll でのデータベース、OLE、およびソケット MFC 拡張 Dll の使用
 
 MFC 拡張 DLL と有線接続しない場合は、MFC 拡張 DLL からレギュラー MFC DLL を使用する場合、 **CDynLinkLibrary**オブジェクトのチェーン レギュラー MFC DLL の一連の関連する問題の 1 つ以上を実行する場合があります。 MFC データベース、OLE、およびソケットのデバッグ バージョンをサポートするため、Dll が MFC 拡張 Dll として実装されている、明示的に使用、独自の MFC 拡張 Dll のいずれかのしないいなくても、機能をこれらの MFC を使用する場合と同様の問題が発生する可能性があります。 いくつかの現象は次のとおりです。
 
-- クラスの型のオブジェクトを逆シリアル化しようとして定義されている場合、MFC 拡張 DLL、メッセージ"警告: アーカイブから CYourClass を読み込むことができません。 クラス定義されていません。" シリアル化が失敗のトレースのデバッグ ウィンドウとオブジェクトに表示されます。
+- クラスの型のオブジェクトを逆シリアル化しようとして定義されている場合、MFC 拡張 DLL、メッセージ"警告。アーカイブから CYourClass を読み込むことができません。 クラス定義されていません。" シリアル化が失敗のトレースのデバッグ ウィンドウとオブジェクトに表示されます。
 
 - 無効なクラスを示す例外がスローする可能性があります。
 
@@ -132,17 +132,17 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [MFC 拡張 DLL を初期化します。](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [MFC 拡張 DLL を初期化します。](run-time-library-behavior.md#initializing-extension-dlls)
 
-- [レギュラー MFC Dll を初期化します。](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [レギュラー MFC Dll を初期化します。](run-time-library-behavior.md#initializing-regular-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [MFC 拡張 DLL](../build/extension-dlls.md)
+- [MFC 拡張 DLL](extension-dlls.md)
 
-- [MFC と静的にリンクされるレギュラー MFC DLL](../build/regular-dlls-statically-linked-to-mfc.md)
+- [MFC と静的にリンクされるレギュラー MFC DLL](regular-dlls-statically-linked-to-mfc.md)
 
-- [MFC と動的にリンクされるレギュラー MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [MFC と動的にリンクされるレギュラー MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [DLL の一部としての MFC の使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
@@ -150,4 +150,4 @@ BOOL CYourRegularDLL::InitInstance()
 
 ## <a name="see-also"></a>関連項目
 
-[MFC 拡張 DLL](../build/extension-dlls.md)
+[MFC 拡張 DLL](extension-dlls.md)

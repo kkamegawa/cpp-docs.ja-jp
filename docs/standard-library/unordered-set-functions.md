@@ -5,25 +5,20 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522611"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257768"
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 関数
+# <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; 関数
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a>swap (unordered_set)
 
 2 つのコンテナーのコンテンツを交換します。
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -32,25 +27,25 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*<br/>
+*キー*\
 キーの型。
 
-*ハッシュ*<br/>
+*ハッシュ*\
 ハッシュ関数のオブジェクト型。
 
-*Pred*<br/>
+*Pred*\
 等価比較関数のオブジェクト型。
 
-*Alloc*<br/>
+*Alloc*\
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 スワップする最初のコンテナー。
 
-*right*<br/>
+*右*\
 スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、`left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)` を実行します。
 
@@ -102,18 +97,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>swap (unordered_multiset)
 
 2 つのコンテナーのコンテンツを交換します。
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,25 +115,25 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*<br/>
+*キー*\
 キーの型。
 
-*ハッシュ*<br/>
+*ハッシュ*\
 ハッシュ関数のオブジェクト型。
 
-*Pred*<br/>
+*Pred*\
 等価比較関数のオブジェクト型。
 
-*Alloc*<br/>
+*Alloc*\
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 スワップする最初のコンテナー。
 
-*right*<br/>
+*右*\
 スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、`left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)` を実行します。
 
@@ -194,12 +187,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>関連項目
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

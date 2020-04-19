@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], arrays
 - classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
-ms.openlocfilehash: 6c2b43dc2eee3c2df27c5879d74c8ca11e68b820
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 309567f897bf5ca941852b433cdee0e8e0d44b3c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392636"
 ---
 # <a name="ready-to-use-array-classes"></a>使用可能な配列クラス
 
@@ -43,4 +43,3 @@ ms.locfileid: "50677748"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

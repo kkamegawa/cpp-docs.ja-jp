@@ -1,5 +1,5 @@
 ---
-title: 'SQL: SQL の直接呼び出し (ODBC)'
+title: SQL:SQL の直接呼び出し (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, direct calls from ODBC
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: 17b3279a4803a61595af64ab18629d6cf69f0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd528e7abb713e4b3eb2bd5388a29958a1bb006c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329973"
 ---
-# <a name="sql-making-direct-sql-calls-odbc"></a>SQL: SQL の直接呼び出し (ODBC)
+# <a name="sql-making-direct-sql-calls-odbc"></a>SQL:SQL の直接呼び出し (ODBC)
 
 このトピックでは、次の内容について説明します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "50549852"
 
 ##  <a name="_core_when_to_call_sql_directly"></a> SQL を直接呼び出すときに
 
-新しいテーブルを作成する (削除) のテーブルを削除、既存のテーブルを変更、インデックスを作成および変更するその他の SQL 機能を実行、[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)スキーマ、データベースを使用してデータ ソースに直接 SQL ステートメントを発行する必要があります定義言語 (DDL)。 (デザイン時)、テーブルのレコード セットを作成するウィザードを使用する場合は、レコード セットを表すテーブルの列を選択できます。 列またはデータ ソースの別のユーザー テーブルに追加後、プログラムがコンパイルされた後にこれはできません。 データベース クラスは DDL を直接サポートされませんが、実行時に動的に、レコード セットに新しい列をバインドするコードを記述することもできます。 このバインディングを実行する方法については、次を参照してください。[レコード セット: 動的にバインドのデータ列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。
+新しいテーブルを作成する (削除) のテーブルを削除、既存のテーブルを変更、インデックスを作成および変更するその他の SQL 機能を実行、[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)スキーマ、データベースを使用してデータ ソースに直接 SQL ステートメントを発行する必要があります定義言語 (DDL)。 (デザイン時)、テーブルのレコード セットを作成するウィザードを使用する場合は、レコード セットを表すテーブルの列を選択できます。 列またはデータ ソースの別のユーザー テーブルに追加後、プログラムがコンパイルされた後にこれはできません。 データベース クラスは DDL を直接サポートされませんが、実行時に動的に、レコード セットに新しい列をバインドするコードを記述することもできます。 このバインディングを実行する方法については、次を参照してください。[レコード セット。動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。
 
 DBMS 自体を使用すると、スキーマ、または DDL の機能を実行できる他のツールを変更します。 レコードは返されません定義済みクエリ (ストアド プロシージャ) の呼び出しなどの SQL ステートメントを送信するための ODBC 関数呼び出しを使用することもできます。
 

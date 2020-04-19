@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164119"
 ---
 # <a name="cdocument-class"></a>CDocument クラス
 
@@ -154,7 +154,7 @@ class CDocument : public CCmdTarget
 |[CDocument::CanCloseFrame](#cancloseframe)|オーバーライド可能な; 高度なこのドキュメントを表示するフレーム ウィンドウを閉じる前に呼び出されます。|
 |[CDocument::ClearChunkList](#clearchunklist)|チャンクの一覧をクリアします。|
 |[CDocument::ClearPathName](#clearpathname)|ドキュメント オブジェクトのパスをクリアします。|
-|[のに](#deletecontents)|ドキュメントのクリーンアップを実行すると呼ばれます。|
+|[CDocument::DeleteContents](#deletecontents)|ドキュメントのクリーンアップを実行すると呼ばれます。|
 |[CDocument::FindChunk](#findchunk)|指定した GUID のチャンクを検索します。|
 |[CDocument::GetAdapter](#getadapter)|実装するオブジェクトへのポインターを返します`IDocument`インターフェイス。|
 |[CDocument::GetDocTemplate](#getdoctemplate)|ドキュメントの種類を説明するドキュメント テンプレートへのポインターを返します。|
@@ -170,7 +170,7 @@ class CDocument : public CCmdTarget
 |[CDocument::LoadDocumentFromStream](#loaddocumentfromstream)|ストリームからドキュメントのデータを読み込むと呼ばれます。|
 |[CDocument::OnBeforeRichPreviewFontChanged](#onbeforerichpreviewfontchanged)|リッチ プレビューのフォントが変更される前に呼び出されます。|
 |[CDocument::OnChangedViewList](#onchangedviewlist)|ビューが追加またはドキュメントから削除された後に呼び出されます。|
-|[は](#onclosedocument)|文書を閉じると呼ばれます。|
+|[CDocument::OnCloseDocument](#onclosedocument)|文書を閉じると呼ばれます。|
 |[CDocument::OnCreatePreviewFrame](#oncreatepreviewframe)|リッチ プレビュー用プレビュー フレームを作成する必要があるときに、フレームワークによって呼び出されます。|
 |[CDocument::OnDocumentEvent](#ondocumentevent)|ドキュメントのイベントに応答フレームワークによって呼び出されます。|
 |[CDocument::OnDrawThumbnail](#ondrawthumbnail)|サムネイルのコンテンツを描画するために派生クラスでこのメソッドをオーバーライドします。|
@@ -183,7 +183,7 @@ class CDocument : public CCmdTarget
 |[CDocument::OnRichPreviewFontChanged](#onrichpreviewfontchanged)|リッチ プレビューのフォントが変更されたときに呼び出されます。|
 |[CDocument::OnRichPreviewSiteChanged](#onrichpreviewsitechanged)|リッチ プレビュー サイトが変更されたときに呼び出されます。|
 |[CDocument::OnRichPreviewTextColorChanged](#onrichpreviewtextcolorchanged)|リッチ プレビュー テキストの色が変更されたときに呼び出されます。|
-|[単一](#onsavedocument)|ドキュメントをディスクに保存すると呼ばれます。|
+|[CDocument::OnSaveDocument](#onsavedocument)|ドキュメントをディスクに保存すると呼ばれます。|
 |[CDocument::OnUnloadHandler](#onunloadhandler)|プレビュー ハンドラーがアンロードされるときに、フレームワークによって呼び出されます。|
 |[CDocument::PreCloseFrame](#precloseframe)|フレーム ウィンドウを閉じる前に呼び出されます。|
 |[CDocument::ReadNextChunkValue](#readnextchunkvalue)|次のチャンク値を読み取ります。|
@@ -344,7 +344,7 @@ virtual void ClearPathName();
 
 パスをオフにすると、`CDocument`オブジェクトにより、アプリケーションは、ドキュメントが次に保存するときにユーザーに確認します。 これにより、**保存**コマンドと同様に動作を**名前を付けて保存**コマンド。
 
-##  <a name="deletecontents"></a>  のに
+##  <a name="deletecontents"></a>  CDocument::DeleteContents
 
 破棄せずに、ドキュメントのデータを削除するためにフレームワークによって呼び出される、`CDocument`オブジェクト自体です。
 
@@ -427,7 +427,7 @@ virtual CFile* GetFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 目的のファイルのパスを表す文字列。 相対パスまたは絶対パスがあります。
 
 *pError*<br/>
@@ -687,7 +687,7 @@ virtual void OnChangedViewList();
 
 かどうか、最後のビューが削除されると、そうである場合は、ドキュメントを削除します。 この関数の既定の実装を確認します。 フレームワークを追加またはビューを削除する場合は、特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、ビューを関連付けることがない場合でも、開いたままにドキュメントを作成する場合は、この関数をオーバーライドします。
 
-##  <a name="onclosedocument"></a>  は
+##  <a name="onclosedocument"></a>  CDocument::OnCloseDocument
 
 ドキュメントが閉じられたとき、通常、ファイルを閉じるコマンドの一部として、フレームワークによって呼び出されます。
 
@@ -841,7 +841,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*lpszPathName*<br/>
 開かれているドキュメントのパスを指します。
 
 ### <a name="return-value"></a>戻り値
@@ -944,7 +944,7 @@ virtual void OnRichPreviewTextColorChanged();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onsavedocument"></a>  単一
+##  <a name="onsavedocument"></a>  CDocument::OnSaveDocument
 
 ファイルの保存またはファイル名を付けてコマンドの一部として、フレームワークによって呼び出されます。
 
@@ -954,7 +954,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*lpszPathName*<br/>
 ファイルの保存先の完全修飾パスを指します。
 
 ### <a name="return-value"></a>戻り値
@@ -985,7 +985,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)判定コマンドに関連付けられているオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -1113,7 +1113,7 @@ virtual void ReportSaveLoadException(
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*lpszPathName*<br/>
 ポイントされていたドキュメントの名前を保存または読み込み。
 
 *e*<br/>
@@ -1129,7 +1129,7 @@ virtual void ReportSaveLoadException(
 
 既定の実装では、例外オブジェクトを検査し、具体的には、原因を説明するエラー メッセージを探します。 特定のメッセージが見つからない場合、または場合*e*が null の場合、一般的なメッセージで指定された、 *nIDPDefault*パラメーターを使用します。 関数は、エラー メッセージを含むメッセージ ボックスを表示します。 追加のカスタマイズされたエラー メッセージを提供したい場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。
 
-##  <a name="savemodified"></a>  に対して、順番
+##  <a name="savemodified"></a>  CDocument::SaveModified
 
 変更されたドキュメントが終了する前に、フレームワークによって呼び出されます。
 
@@ -1193,7 +1193,7 @@ virtual void SetPathName(
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*lpszPathName*<br/>
 ドキュメントのパスとして使用する文字列を指します。
 
 *baddtomru です。*<br/>
@@ -1254,9 +1254,9 @@ void UpdateAllViews(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプルは](../../visual-cpp-samples.md)<br/>
-[MFC サンプル SNAPVW](../../visual-cpp-samples.md)<br/>
-[MFC サンプル NPP](../../visual-cpp-samples.md)<br/>
+[MFC のサンプルは](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル NPP](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>

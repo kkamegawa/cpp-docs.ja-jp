@@ -1,23 +1,23 @@
 ---
-title: 'チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)'
-ms.date: 09/20/2018
+title: 'チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新'
+ms.date: 04/25/2019
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d4655c0a4a8847642b75575e324a291e39bbf42a
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558169"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新
 
 [第 1 部](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)クラシックに、Office Fluent リボンを追加する方法を説明しました。 このチュートリアルの Scribble アプリケーション。 この部分は、リボン パネルとユーザーがメニューとコマンドの代わりに使用できるコントロールを追加する方法を示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-[Visual C++ のサンプル](../visual-cpp-samples.md)
+[Visual C++ のサンプル](../overview/visual-cpp-samples.md)
 
 ##  <a name="top"></a> セクション
 

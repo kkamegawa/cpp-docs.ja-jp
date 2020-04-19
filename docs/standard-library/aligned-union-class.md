@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: 1a26675879c50440a4955989aca178dbe5049fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606870"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690109"
 ---
-# <a name="alignedunion-class"></a>aligned_union クラス
+# <a name="aligned_union-class"></a>aligned_union クラス
 
 共用体型を格納するのに十分な大きさと適切に配置された POD 型と必要なサイズを提供します。
 
@@ -29,15 +29,15 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*len*<br/>
+*Len* \
 共用体内の最大の型に関するアラインメント値を指定します。
 
-*型*<br/>
+*型*\
 基になる共用体内の個別の型。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスを使用して、初期化されていない記憶域に共用体を格納するために必要なサイズと配置を取得します。 メンバー typedef `type` pod 型で表示されている任意の型のストレージに適した*型*; 最小サイズは*Len*します。 静的メンバー`alignment_value`型の`std::size_t`で表示されているすべての種類のために必要な最も厳格な配置を含む*型*します。
+クラステンプレートを使用して、初期化されていないストレージに共用体を格納するために必要なアラインメントとサイズを取得します。 メンバー typedef は、*型*に示されている任意の型のストレージに適した POD 型に名前を `type` ます。最小サイズは*Len*です。 型 `std::size_t` の静的メンバー `alignment_value` には、「*型*」に示されているすべての型で必要とされる最も厳格な配置が含まれています。
 
 ## <a name="example"></a>例
 
@@ -77,7 +77,7 @@ int main()
 value of u->i is 1065353216
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 
@@ -85,5 +85,5 @@ value of u->i is 1065353216
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of クラス](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[alignment_of クラス](../standard-library/alignment-of-class.md)

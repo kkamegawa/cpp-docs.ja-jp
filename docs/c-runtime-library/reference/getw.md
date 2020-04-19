@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487608"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954876"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 ストリームから整数を取得します。
 
@@ -44,16 +47,16 @@ int _getw(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**_getw**読み取られた整数値を返します。 戻り値**EOF**エラーまたはファイルの末尾のいずれかを示します。 ただし、ため、 **EOF**値も有効な整数値を使用して**feof**または**ferror**ファイルの終端またはエラー条件を確認します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EOF**します。
+**_getw**は、読み取られた整数値を返します。 **EOF**の戻り値は、エラーまたはファイルの末尾を示します。 ただし、 **EOF**値も正しい整数値であるため、 **feof**または**ferror**を使用して、ファイルの終わりまたはエラーの状態を確認します。 *Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**EOF**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Getw**関数は次のような種類のバイナリ値を読み取ります**int**に関連付けられているファイルから*ストリーム*ポイントに関連付けられたファイル ポインター (存在する場合) をインクリメントして次の未読文字。 **_getw**ストリーム内の項目の特殊な配置を想定しません。 移植の問題が発生する **_getw**ためのサイズ、 **int**型と内のバイトの順序付け、 **int**システム間で型が異なります。
+**_Getw**関数は、*ストリーム*に関連付けられているファイルから**int**型の次のバイナリ値を読み取り、関連付けられているファイルポインター (存在する場合) を、次の未読文字を指すようにインクリメントします。 **_getw**は、ストリーム内の項目の特別な配置を想定していません。 **_Getw**では、 **int**型のサイズと**int**型内のバイトの順序がシステム間で異なるため、移植に関する問題が発生する可能性があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -98,14 +101,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>入力: crt_getw.txt
+### <a name="input-crt_getwtxt"></a>入力: crt_getw.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 First data word in file: 0x656e694c

@@ -1,70 +1,85 @@
 ---
 title: '&lt;numeric&gt; 関数'
-ms.date: 11/04/2016
+description: C++標準ライブラリの &lt;numeric&gt;ヘッダーによって提供される関数テンプレートについて説明します。
+ms.date: 10/30/2019
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
+- numeric/std::exclusive_scan
+- numeric/std::gcd
+- numeric/std::inclusive_scan
 - numeric/std::inner_product
 - numeric/std::iota
+- numeric/std::lcm
 - numeric/std::partial_sum
+- numeric/std::reduce
+- numeric/std::transform_exclusive_scan
+- numeric/std::transform_inclusive_scan
+- numeric/std::transform_reduce
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
 - std::adjacent_difference [C++]
+- std::exclusive_scan [C++]
+- std::gcd [C++]
+- std::inclusive_scan [C++]
 - std::inner_product [C++]
 - std::iota [C++]
+- std::lcm [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+- std::reduce [C++]
+- std::transform_exclusive_scan [C++]
+- std::transform_inclusive_scan [C++]
+- std::transform_reduce [C++]
+ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475102"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627447"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 関数
 
-||||
-|-|-|-|
-|[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|
-|[iota](#iota)|[partial_sum](#partial_sum)|
+## <a name="accumulate"></a>加算
 
-## <a name="accumulate"></a>  accumulate
-
-連続する部分和を計算することで、いくつかの初期値を含め、指定された範囲のすべての要素の合計を計算します。または、指定された二項演算を使用して取得した、合計以外の連続する部分的な結果を計算します。
+連続する部分和を計算することによって、初期値を含め、指定した範囲のすべての要素の合計を計算します。 またはは、指定された二項演算の連続する部分的な結果の結果を計算します。
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
-指定された二項演算に従って、合計または結合される範囲内の先頭の要素を示す入力反復子。
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
 
-*last*<br/>
-指定された二項演算に従って、合計または結合される範囲内の最後の要素、つまり反復処理され累積に実際に含まれる最後の要素の 1 つ次の位置を示す入力反復子。
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
 
-*val*<br/>
-指定された二項演算に従って、各要素がさらに追加または結合される初期値。
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
 
-*binary_op*<br/>
-指定された範囲と、以前の適用の結果の各要素に適用される二項演算。
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
 
 ### <a name="return-value"></a>戻り値
 
-合計*val*の最初のテンプレート関数にして、または 2 つ目のテンプレート関数の指定、sum 操作ではなく、二項演算を適用した結果の指定した範囲内のすべての要素 ( *PartialResult、 \*Iter*) ここで、 *PartialResult*操作の前のアプリケーションの結果と`Iter`が範囲内の要素を指す反復子です。
+最初のテンプレート関数の指定した範囲内にある*init*とすべての要素の合計。2番目のテンプレート関数の場合は、sum 演算ではなく二項演算*binary_op*を適用した結果が (* partialresult, in_ になります。 *iter*)。 *partialresult*は、操作の以前のアプリケーションの結果であり、 *in_iter*は範囲内の次の要素を指す反復子です。
 
 ### <a name="remarks"></a>Remarks
 
-初期値は保証があることを明確に定義された結果の範囲が空で、後者*val*が返されます。 二項演算は結合的または可換的である必要はありません。 結果は初期値に初期化*val*し*結果* =  `binary_op` (*結果*、 <strong>\*</strong>`Iter`) 内で、繰り返しが計算されます、`Iter`が範囲内の連続する要素を指す反復子です。 範囲が有効であることが必要で、複雑さは範囲のサイズに応じて線形的です。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
+初期値によって、範囲が空の場合に適切に定義された結果が得られます。この場合、 *init*が返されます。 二項演算は、結合または可換である必要はありません。 結果は初期値の*init*に初期化され、*結果* = *binary_op*(*result*, *in_iter*) が範囲を通じて反復的に計算されます。ここで、 *in_iter*はそれぞれを指す反復子です。範囲内の連続する要素。 範囲は有効である必要があり、複雑さは範囲のサイズに比例します。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
 
 ### <a name="example"></a>例
 
@@ -165,9 +180,9 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a>  adjacent_difference
+## <a name="adjacent_difference"></a>adjacent_difference
 
-入力範囲内の各要素とその先行要素との連続する差分を計算し、結果をターゲット範囲に出力するか、または差分演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。
+入力範囲内の各要素とその先行要素との連続する差を計算します。 結果をターゲット範囲に出力します。 またはは、差分演算が指定された別の二項演算に置き換えられる、一般化されたプロシージャの結果を計算します。
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -182,35 +197,54 @@ OutputIterator adjacent_difference(
     InputIterator last,
     OutputIterator result,
     BinaryOperation binary_op);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*exec*\
+実行ポリシー。
+
+*最初*の \
 含まれる要素がそれぞれの先行要素と差分処理されるか、または値のペアが別の指定された二項演算で処理される入力範囲の先頭の要素を示す入力反復子。
 
-*last*<br/>
+*最後*の \
 含まれる要素がそれぞれの先行要素と差分処理されるか、または値のペアが別の指定された二項演算で処理される入力範囲の最後の要素を示す入力反復子。
 
-*結果*<br/>
+*結果*\
 一連の差分または指定された演算の結果が格納されるターゲット範囲の先頭の要素を示す出力反復子。
 
-*binary_op*<br/>
-差分プロシージャの減算演算を置き換える一般的な演算で適用される二項演算。
+*binary_op*\
+一般化された操作で適用する二項演算で、差分プロシージャの減算演算を置き換えます。
 
 ### <a name="return-value"></a>戻り値
 
-ターゲット範囲の終了位置を示す出力反復子: `result` + ( `last` - `first`)。
+ターゲット範囲の末尾を示す出力反復子: `result` + (`last` - `first`)。
 
 ### <a name="remarks"></a>Remarks
 
-出力反復子 _*結果*入力反復子と同じ反復子にできる *、* ように`adjacent_difference`インプレース s を計算することがあります。
+出力反復子の*結果*は、*最初*に入力反復子と同じ反復子になることができるため、`adjacent_difference` 値が適切に計算される可能性があります。
 
-値のシーケンスの *、* 1、 *、* 2、 *、* 3 の最初のテンプレート関数は、入力の範囲が連続する格納`partial_difference`s *、* 1、 *、* 2 - *、* 1、a3 - *、* ターゲット範囲内の 2。
+入力範囲内の*1、* *a 2、* *a*3 の値のシーケンスの場合 *、1つ*目のテンプレート関数は、連続した `adjacent_difference`*値を 1*、2- *a*1、a3- *a*2 をターゲット範囲に格納します。
 
-値のシーケンスの *、* 1、 *、* 2、 *、* 3、2 つ目のテンプレート関数は、入力の範囲内の連続する格納`partial_difference`s *、* 1、 *、* 2 `binary_op` *、* 1、 *、* 3 `binary_op` *、* ターゲット範囲内の 2。
+入力範囲に*1、a 2、* *a*3*の値のシーケンスがある場合*、2番目のテンプレート関数は、連続した *`adjacent_difference` 値 (* 1、2 *binary_op* *a* *1、* *a*3 *binary_op* *a*2) をに格納します。ターゲット範囲。
 
-適用される演算の順序は完全に指定されるため、二項演算 `binary_op` は結合的または可換的である必要はありません。
+二項演算*binary_op*は、適用される操作の順序が指定されているため、結合または可換である必要はありません。
 
 ### <a name="example"></a>例
 
@@ -273,7 +307,164 @@ int main( )
 }
 ```
 
-## <a name="inner_product"></a>  inner_product
+## <a name="exclusive_scan"></a>exclusive_scan
+
+初期値を指定して、`std::plus<>()` または指定した二項演算子を範囲に対して使用して、排他的プレフィックスの合計演算を実行します。 指定したコピー先で始まる範囲に結果を書き込みます。 *排他的プレフィックス*合計は、n*番目*の入力要素が*n*番目の合計に含まれていないことを意味します。 実行ポリシー引数を含むオーバーロードは、指定したポリシーに従って実行されます。
+
+```cpp
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*exec*\
+実行ポリシー。
+
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*結果*\
+一連の合計または指定した演算の結果が格納されるターゲット範囲の最初の要素を示す出力反復子。
+
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
+
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
+
+### <a name="return-value"></a>戻り値
+
+ターゲット範囲の末尾を示す出力反復子: *result* + (*last* - *first*)。
+
+## <a name="gcd"></a>gcd
+
+M と n の整数の最大公約数を計算します。
+
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> gcd(M m, N n);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*m*、 *n*\
+整数型の値。
+
+### <a name="return-value"></a>戻り値
+
+*M*と*n*の絶対値の最大公約数を返します。 *m*と*n*の両方が0の場合は0を返します。 *M*または*n*の絶対値が `common_type_t<M,N>`型の値として表現できない場合、結果は未定義になります。
+
+## <a name="inclusive_scan"></a>inclusive_scan
+
+初期値を指定して、範囲に対して `std::plus<>()` または指定した二項演算子のいずれかを使用して、包括プレフィックスの合計操作を計算します。 指定したコピー先で始まる範囲に結果を書き込みます。 *包括プレフィックス*合計は *、n 番目の*入力要素が*n*番目の合計に含まれることを意味します。 実行ポリシー引数を含むオーバーロードは、指定したポリシーに従って実行されます。
+
+```cpp
+template<class InputIterator, class OutputIterator>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*exec*\
+実行ポリシー。
+
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*結果*\
+一連の合計または指定した演算の結果が格納されるターゲット範囲の最初の要素を示す出力反復子。
+
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
+
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
+
+### <a name="return-value"></a>戻り値
+
+ターゲット範囲の末尾を示す出力反復子: *result* + (*last* - *first*)。
+
+## <a name="inner_product"></a>inner_product
 
 2 つの範囲の要素ごとの積の合計を計算し、それを指定された初期値に加算するか、または和や積の二項演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。
 
@@ -283,55 +474,55 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1* \
 2 番目の範囲との内積または一般化された内積を計算する必要がある、1 番目の範囲内の先頭の要素を示す入力反復子。
 
-*last1*<br/>
+*last1* \
 2 番目の範囲との内積または一般化された内積を計算する必要がある、1 番目の範囲内の最後の要素を示す入力反復子。
 
-*first2*<br/>
+*first2* \
 1 番目の範囲との内積または一般化された内積を計算する必要がある、2 番目の範囲内の先頭の要素を示す入力反復子。
 
-*val*<br/>
+*初期化*\
 範囲間の内積または一般化された内積を追加する必要がある初期値。
 
-*binary_op1*<br/>
+*binary_op1*\
 内積の一般化における要素ごとの内積に適用される内積の合計演算を置き換える二項演算。
 
-*binary_op2*<br/>
+*binary_op2*\
 内積の一般化における内積の要素ごとの乗算演算を置き換える二項演算。
 
 ### <a name="return-value"></a>戻り値
 
 1 番目のメンバー関数は、要素ごとの積の合計を返し、それを指定された初期値に追加します。 したがって、*a*i と *b*i の値の範囲の場合、次を返します。
 
-`val` + ( *、* 1 \* *b*1) + ( *、* 2 \* *b*2) +… + ( *、* n \* *b*n)
+*init* + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
 
-反復的*val*で`val`+ ( *、* は\* *b*しました)。
+*init*を*init* + (*a*i \* *b*i) に繰り返し置換する。
 
 2 番目のメンバー関数は次を返します。
 
-`val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )
+*init* *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ...*binary_op1* (*a*n *binary_op2* *b*n)
 
-反復的*val*で`val` *binary_op1* ( *、* は*binary_op2* *b*i)。
+*init*を*init* *binary_op1* (*a*i *binary_op2* *b*i) に繰り返し置換する。
 
 ### <a name="remarks"></a>Remarks
 
-初期値があることを明確に定義された結果の範囲が空の場合、その場合により、 *val*が返されます。 二項演算は結合的または可換的である必要はありません。 範囲が有効であることが必要で、複雑さは範囲のサイズに応じて線形的です。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
+初期値は、範囲が空の場合に、適切に定義された結果があることを保証します。 その場合は、 *init*が返されます。 二項演算は、結合または可換的である必要はありません。 範囲は有効である必要があり、複雑さは範囲のサイズに比例します。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
 
 ### <a name="example"></a>例
 
@@ -423,9 +614,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a>  iota
+## <a name="iota"></a>イオータ
 
-最初の要素で始まると、一連の値のインクリメントでの入力開始の値を格納します (` value++`) 間隔内の要素の各`[ first,  last)`します。
+最初の要素から開始値を格納し、その値の連続する値 (`value++`) を `[first,  last)`間隔の各要素に入力します。
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -434,16 +625,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*最初*の \
 入力する必要がある、範囲内の先頭の要素を示す入力反復子。
 
-*last*<br/>
+*最後*の \
 入力する必要がある、範囲内の最後の要素を示す入力反復子。
 
-*値*<br/>
-先頭の要素に格納し、以降の要素に関して連続してインクリメントするための開始値。
-
-### <a name="remarks"></a>Remarks
+*value*\
+最初の要素に格納し、後の要素に対して連続してインクリメントする開始値。
 
 ### <a name="example"></a>例
 
@@ -487,9 +676,16 @@ int main(void)
 }
 ```
 
-## <a name="partial_sum"></a>  partial_sum
+## <a name="lcm"></a>lcm
 
-入力範囲の先頭の要素から *i* 番目の要素までの一連の合計を計算し、各合計の結果をターゲット範囲の *i* 番目の要素に格納するか、または合計演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> lcm(M m, N n);
+```
+
+## <a name="partial_sum"></a>partial_sum
+
+最初の要素から*n*番目の要素までの入力範囲に含まれる一連の合計を計算し、その各合計の結果をターゲット範囲の*n*番目の要素に格納します。 またはは、sum 操作が別の指定された二項演算に置き換えられた一般化されたプロシージャの結果を計算します。
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -508,31 +704,31 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*最初*の \
 指定された二項演算に従って、部分的に合計または結合される範囲内の先頭の要素を示す入力反復子。
 
-*last*<br/>
+*最後*の \
 指定された二項演算に従って、部分的に合計または結合される範囲内の最後の要素、つまり反復処理され累積に実際に含まれる最後の要素の 1 つ次の位置を示す入力反復子。
 
-*結果*<br/>
-一連の部分和または指定された演算の結果が格納されるターゲット範囲の先頭の要素を示す出力反復子。
+*結果*\
+一連の部分合計を格納するターゲット範囲の最初の要素、または指定された二項演算の連続する結果を示す出力反復子。
 
-*binary_op*<br/>
-部分和プロシージャの合計演算を置き換える一般的な演算で適用される二項演算。
+*binary_op*\
+部分和プロシージャの合計演算を置き換える、一般化された操作で適用する二項演算。
 
 ### <a name="return-value"></a>戻り値
 
-ターゲット範囲の終了位置を示す出力反復子: `result` + (`last` - `first`)、
+ターゲット範囲の末尾を示す出力反復子: *result* + (*last* - *first*)。
 
 ### <a name="remarks"></a>Remarks
 
-出力反復子*結果*入力反復子と同じ反復子にできる*最初*、インプレース部分和を計算することがあります。
+出力反復子の*結果*は、*最初*に入力反復子と同じ反復子にすることができます。そのため、部分的な合計が計算される可能性があります。
 
-入力範囲に *a*1、*a*2、*a*3 の値のシーケンスがある場合、最初のテンプレート関数は連続する部分和をターゲット範囲に格納します。ここで、*i* 番目の要素は (  ( ( *a*1 + *a*2) + *a*3) *a*i) によって得られます。
+値のシーケンスの 1 *、2*、 *.* ..1つ目のテンプレート関数は、入力範囲内*の x を*ターゲット範囲に格納します。 *N*番目の要素は、によって指定され*ます (1*+ *a*2 + *a*3 +... + *a*n)。
 
-値のシーケンスの *、* 1、 *、* 2、 *、* 3、入力の範囲で 2 つ目のテンプレート関数は、格納、i 番目の要素が、ターゲット範囲内の連続する部分和によって指定された ((( *、* 1 `binary_op` *、* 2) `binary_op` *、* 3) *、* は)。
+入力範囲内の1、a 2、 *3 の*値のシーケンスの場合 *、2番*目のテンプレート関数は、一連の*結果をターゲット*範囲に格納します。 *N*番目の要素は (...((*a*1 *binary_op* *a*2) *binary_op* *a*3)*binary_op* ...)*binary_op* *a*n)。
 
-二項演算*binary_op*結合的または可換かする必要はありませんが、操作の順序を適用するためには完全に指定します。
+二項演算*binary_op*は、適用される操作の順序が指定されているため、結合または可換である必要はありません。
 
 ### <a name="example"></a>例
 
@@ -594,6 +790,278 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="reduce"></a>落とし
 
-[\<numeric>](../standard-library/numeric.md)<br/>
+任意の変えるの順序で合計を計算することによって、指定された範囲のすべての要素を減らします (初期値を含む場合もあります)。 または、指定された二項演算の結果を計算することで、を減らします。 実行ポリシー引数を含むオーバーロードは、指定したポリシーに従って実行されます。
+
+```cpp
+template<class InputIterator>
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator>
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*exec*\
+実行ポリシー。
+
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*結果*\
+一連の合計または指定した演算の結果が格納されるターゲット範囲の最初の要素を示す出力反復子。
+
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
+
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
+
+### <a name="return-value"></a>戻り値
+
+*Binary_op*または `std::plus<>()` を、 *init*に適用し、指定された範囲のすべての要素を (* partialresult, *in_iter*) に適用した結果。 *partialresult*は、操作の以前のアプリケーションの結果であり、 *in_iter*は、範囲内の要素を指す反復子です。 *Init*を指定しないオーバーロードでは、使用される*init*値は `typename iterator_traits<InputIterator>::value_type{}`に相当します。
+
+### <a name="remarks"></a>Remarks
+
+`reduce` の動作は、 *binary_op*が連想と可換でない限り、非決定的です。 Binary_op によって要素が変更された場合、動作は未定義になります。または、 *first*, *last*] の \[間隔で反復子を無効にします。
+
+## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
+
+指定した単項演算子を使用して範囲の要素を変換します。次に、初期値を指定して、`std::plus<>()` または指定した二項演算子を範囲に対して使用して、排他的プレフィックスの合計演算を実行します。 指定したコピー先で始まる範囲に結果を書き込みます。 *排他的プレフィックス*合計は、n*番目*の入力要素が*n*番目の合計に含まれていないことを意味します。 実行ポリシー引数を含むオーバーロードは、指定したポリシーに従って実行されます。 合計は任意の順序で実行できます。
+
+```cpp
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*exec*\
+実行ポリシー。
+
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*結果*\
+一連の合計または指定した演算の結果が格納されるターゲット範囲の最初の要素を示す出力反復子。
+
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
+
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
+
+*unary_op*\
+指定された範囲内の各要素に適用する単項演算。
+
+## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
+
+指定した単項演算子を使用して範囲の要素を変換した後、初期値を使用して、`std::plus<>()` または指定した二項演算子を範囲に対して使用して、包括プレフィックスの合計操作を計算します。 指定したコピー先で始まる範囲に結果を書き込みます。 *包括プレフィックス*合計は *、n 番目の*入力要素が*n*番目の合計に含まれることを意味します。 実行ポリシー引数を含むオーバーロードは、指定したポリシーに従って実行されます。 合計は任意の順序で実行できます。
+
+```cpp
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*exec*\
+実行ポリシー。
+
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*結果*\
+一連の合計または指定した演算の結果が格納されるターゲット範囲の最初の要素を示す出力反復子。
+
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
+
+*unary_op*\
+指定された範囲内の各要素に適用する単項演算。
+
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
+
+## <a name="transform_reduce"></a>transform_reduce
+
+要素の範囲を変換し、変換された要素を任意の順序で縮小するファンクタを適用します。 実質的には、`transform` の後に `reduce`が続きます。
+
+```cpp
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*exec*\
+実行ポリシー。
+
+*最初*の \
+*Binary_op*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*first1* \
+*Binary_op1*を使用して合計または結合する範囲内の最初の要素を示す入力反復子。
+
+*最後*の \
+*Binary_op*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*last1* \
+*Binary_op1*を使用して合計または結合する範囲内の最後の要素を示す入力反復子。これは、反復累積に実際に含まれる最後の要素の1つ後ろの位置です。
+
+*結果*\
+一連の合計または指定した演算の結果が格納されるターゲット範囲の最初の要素を示す出力反復子。
+
+*初期化*\
+*Binary_op*を使用して各要素が追加または結合される初期値。
+
+*binary_op*\
+指定された範囲内の各要素に適用する二項演算と、以前のアプリケーションの結果。
+
+*unary_op*\
+指定された範囲内の各要素に適用する単項演算。
+
+### <a name="return-value"></a>戻り値
+
+変換後の結果が減少します。

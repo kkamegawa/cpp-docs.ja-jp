@@ -1,9 +1,9 @@
 ---
 title: __uncaught_exception
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __uncaught_exception
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __uncaught_exception
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0130776ec2511aefd42d1700f950d97738e9fb14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579635"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945950"
 ---
-# <a name="uncaughtexception"></a>__uncaught_exception
+# <a name="__uncaught_exception"></a>__uncaught_exception
 
-1 つまたは複数の例外がスローされたが、対応するによってまだ処理されていないかどうかを示します**キャッチ**のブロックを[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)ステートメント。
+1つ以上の例外がスローされた[が、try-catch ステートメントの](../../cpp/try-throw-and-catch-statements-cpp.md)対応する**catch**ブロックによってまだ処理されていないかどうかを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +43,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>戻り値
 
-**true**から例外がスローされます、**お試しください**一致するまでブロック**キャッチ**ブロックが初期化された以外の場合、 **false**します。
+**try** で例外がスローされてから、一致する **catch** ブロックが初期化されるまでは **true** です。 それ以外の場合は **false** です。
 
 ## <a name="remarks"></a>Remarks
 

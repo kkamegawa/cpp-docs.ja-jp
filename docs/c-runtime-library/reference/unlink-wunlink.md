@@ -1,10 +1,10 @@
 ---
 title: _unlink、_wunlink
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlink
 - _wunlink
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tunlink
 - _unlink
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
-ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
+ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417617"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957392"
 ---
-# <a name="unlink-wunlink"></a>_unlink、_wunlink
+# <a name="_unlink-_wunlink"></a>_unlink、_wunlink
 
 ファイルを削除します。
 
@@ -61,19 +64,19 @@ int _wunlink(
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、これらの各関数は 0 を返します。 関数は-1 を返しますそれ以外の場合、およびセット**errno**に**EACCES**、読み取り専用ファイルまたはディレクトリ パスを指定しますまたは**ENOENT**、ファイルまたはパス見つかりません。
+正常に終了した場合、これらの各関数は 0 を返します。 それ以外の場合、この関数は-1 を返し、 **errno**を**EACCES**に設定します。これは、パスが読み取り専用のファイルまたはディレクトリを指定しているか、ファイルまたはパスが見つからないことを示す**ENOENT**に設定されていることを意味します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Unlink**関数で指定されたファイルを削除*filename*します。 **_wunlink**のワイド文字バージョンです **_unlink**、 *filename*への引数 **_wunlink**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**Unlink**関数は、 *filename*によって指定されたファイルを削除します。 **_wunlink**のワイド文字バージョン**です。** **_wunlink**の*filename*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
+|**tunlink (_c)**|**_unlink**|**_unlink**|**_wunlink**|
 
 ## <a name="requirements"></a>必要条件
 
@@ -102,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtunlinktxt"></a>入力: crt_unlink.txt
+### <a name="input-crt_unlinktxt"></a>入力: crt_unlink.txt
 
 ```Input
 This file will be deleted.

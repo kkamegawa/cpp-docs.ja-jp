@@ -6,29 +6,28 @@ helpviewer_keywords:
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-ms.openlocfilehash: 389c273f7c8727ecbb4ed5455987126e21e26a63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbeabf69f174fcf172808ff71f07ed05f1dc9675
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467952"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511038"
 ---
 # <a name="tree-control-item-states-overview"></a>ツリー コントロール項目の状態の概要
 
-ツリー コントロール内の各アイテム ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) は現在の状態があります。 たとえば、項目選択できます、無効になっている、展開、およびなど。 ほとんどの場合、ツリー コントロール項目の選択などのユーザー操作を反映するように、項目の状態が自動的に設定します。 ただし、設定することも、項目の状態を使用して、 [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate)メンバー関数を使用して、項目の現在の状態の取得、 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)メンバー関数。 項目の状態の完全な一覧を参照してください。[ツリー ビュー コントロール定数](/windows/desktop/Controls/tree-view-control-item-states)Windows SDK に含まれています。
+ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) の各項目には現在の状態があります。 たとえば、項目の選択、無効化、展開などを行うことができます。 ほとんどの場合、ツリーコントロールは項目の状態を自動的に設定して、項目の選択などのユーザー操作を反映します。 ただし、 [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate)メンバー関数を使用して項目の状態を設定し、 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)メンバー関数を使用して項目の現在の状態を取得することもできます。 項目の状態の完全な一覧については、「Windows SDK の[ツリービューコントロール定数](/windows/win32/Controls/tree-view-control-item-states)」を参照してください。
 
-アイテムの現在の状態がで指定された、*状態*パラメーター。 ツリー コントロール項目の選択や、項目にフォーカスを設定など、ユーザーの操作を反映するように、項目の状態を変更する可能性があります。 さらに、アプリケーションでは、無効にするか、またはアイテムを非表示にオーバーレイ画像または状態のイメージを指定したり、項目の状態を変更します。
+項目の現在の状態は、 *nState*パラメーターによって指定されます。 項目を選択したり、項目にフォーカスを設定するなど、ユーザーの操作を反映するために、ツリーコントロールが項目の状態を変更することがあります。 さらに、アプリケーションは、項目の状態を変更して、項目を無効または非表示にしたり、オーバーレイイメージまたは状態イメージを指定したりすることがあります。
 
-指定またはアイテムの状態を変更すると、*取得*どの状態ビットを設定すると、パラメーターを指定し、*状態*パラメーターには、これらのビットの新しい値が含まれています。 たとえば、次の例が、親アイテムの現在の状態を変更 (で指定された*hParentItem*) で、`CTreeCtrl`オブジェクト (`m_treeCtrl`) に`TVIS_EXPANDPARTIAL`:
+項目の状態を指定または変更する場合、 *nStateMask*パラメーターは設定する状態ビットを指定し、 *nState*パラメーターにはそれらのビットの新しい値を格納します。 たとえば、次の例では、 `CTreeCtrl`オブジェクト (`m_treeCtrl`) の親アイテム ( *hParentItem*によって指定) の現在の状態`TVIS_EXPANDPARTIAL`をに変更します。
 
 [!code-cpp[NVC_MFCControlLadenDialog#71](../mfc/codesnippet/cpp/tree-control-item-states-overview_1.cpp)]
 
-状態を変更する別の例は、アイテムのオーバーレイのイメージを設定することです。 これを実現する*取得*含める必要があります、`TVIS_OVERLAYMASK`値、および *%n 状態*1 ベース イメージのインデックス、オーバーレイ シフトを使用して 8 ビットを左に含める必要があります、 [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)マクロです。 インデックスには、0 をオーバーレイ画像を指定しない場合があります。 オーバーレイ画像する必要がありますに加えオーバーレイのイメージのツリー コントロールの一覧に以前の呼び出しによって、 [CImageList::SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)関数。 関数を追加するには、イメージの 1 から始まるインデックスを指定しますこれからマクロを使用するインデックスです。 ツリー コントロールでは、最大 4 つのオーバーレイ画像を持つことができます。
+状態を変更するもう1つの例は、項目のオーバーレイイメージを設定することです。 これを実現する*取得*含める必要があります、`TVIS_OVERLAYMASK`値、および *%n 状態*1 ベース イメージのインデックス、オーバーレイ シフトを使用して 8 ビットを左に含める必要があります、 [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask)マクロです。 オーバーレイイメージを指定しない場合、インデックスは0になることがあります。 前の[CImageList:: SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)関数の呼び出しによって、オーバーレイイメージがツリーコントロールのオーバーレイイメージの一覧に追加されている必要があります。 関数は、追加するイメージの1から始まるインデックスを指定します。これは、INDEXTOOVERLAYMASK マクロで使用されるインデックスです。 ツリーコントロールは、最大4つのオーバーレイイメージを持つことができます。
 
-項目の状態のイメージを設定する*取得*含める必要があります、`TVIS_STATEIMAGEMASK`値、および*状態*1 から始まるインデックスのシフト状態のイメージを使用して、12 ビットを左に含める必要があります、 [INDEXTOSTATEIMAGEMASK](/windows/desktop/api/commctrl/nf-commctrl-indextostateimagemask)マクロ。 インデックスは、状態の画像を含まないように指定する 0 にできます。 イメージのオーバーレイと状態の詳細については、次を参照してください。[ツリー コントロールのイメージ リスト](../mfc/tree-control-image-lists.md)します。
+項目の状態のイメージを設定するには、nStateMask `TVIS_STATEIMAGEMASK`に値を含める必要があります。 *nState*には、 [INDEXTOSTATEIMAGEMASK](/windows/win32/api/commctrl/nf-commctrl-indextostateimagemask)マクロを使用して、左側の12ビットに移動した状態イメージの1から始まるインデックスを含める必要があります。 状態イメージを指定しない場合、インデックスは0になることがあります。 オーバーレイと状態のイメージの詳細については、「[ツリーコントロールのイメージリスト](../mfc/tree-control-image-lists.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

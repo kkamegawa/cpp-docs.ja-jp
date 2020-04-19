@@ -6,16 +6,16 @@ helpviewer_keywords:
 - strings [C++], initializing
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
-ms.openlocfilehash: 85fa3258b69aacd094501b1bb1599190eb0487df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579722"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147933"
 ---
 # <a name="initializing-strings"></a>文字列の初期化
 
-文字列リテラル (またはワイド文字列リテラル) で、文字 (またはワイド文字) の配列を初期化できます。 例:
+文字列リテラル (またはワイド文字列リテラル) で、文字 (またはワイド文字) の配列を初期化できます。 次に例を示します。
 
 ```
 char code[ ] = "abc";
@@ -52,6 +52,6 @@ Microsoft C では、文字列リテラルは最長 2048 バイトです。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [初期化](../c-language/initialization.md)

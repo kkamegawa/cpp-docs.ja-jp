@@ -1,10 +1,10 @@
 ---
-title: isfinite _finite、_finitef
+title: isfinite、_finite、_finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -31,14 +35,14 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: 1be5aa204a7db3054a49c2e05a8fd77b12ae8a3d
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702753"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957178"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite _finite、_finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite、_finite、_finitef
 
 浮動小数点値が有限かどうかを決定します。
 
@@ -70,11 +74,11 @@ int _finitef(
 
 ## <a name="return-value"></a>戻り値
 
-`isfinite`マクロと`_finite`と`_finitef`場合、関数が 0 以外の値を返す*x*があるかの有限値。 0 の場合は、引数が無限または NaN が返されます。 C++ のインライン テンプレート関数`isfinite`、同様に動作が返されます**true**または**false**します。
+X が normal または`_finitef` subnormal の有限値の場合、 `_finite` `isfinite`マクロと関数および関数は0以外の値を返します。 引数が無限または NaN の場合は、0を返します。 インラインC++テンプレート関数`isfinite`は同じように動作しますが、 **true**または**false**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-`isfinite` C、C++ としてコンパイルする場合は、インライン テンプレートの関数としてコンパイルすると、マクロです。 `_finite`と`_finitef`関数は、Microsoft に固有です。 `_finitef` 関数は、x86、ARM、または ARM64 プラットフォーム用にコンパイルするときにのみ使用できます。
+`isfinite`は、C としてコンパイルされた場合はマクロであり、 C++としてコンパイルされた場合はインラインテンプレート関数です。 関数`_finite` と`_finitef`関数は、Microsoft 固有の関数です。 `_finitef` 関数は、x86、ARM、または ARM64 プラットフォーム用にコンパイルするときにのみ使用できます。
 
 ## <a name="requirements"></a>必要条件
 

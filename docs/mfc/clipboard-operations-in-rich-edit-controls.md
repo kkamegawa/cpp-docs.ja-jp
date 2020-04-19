@@ -10,27 +10,26 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 345c0b3e79bc531101481dc7be9624539a06d832
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e232010b443ace245844f1c28649477cccc8e9e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508962"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>リッチ エディット コントロールでのクリップボード操作
 
-アプリケーションを使用して、クリップボードの内容をリッチ エディット コントロールに貼り付けることができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 最適使用可能なクリップボード形式または特定のクリップボード形式のいずれかを使用します。 また、リッチ エディット コントロールがクリップボードの形式を貼り付けできるかどうかを確認することができます。
+アプリケーションでは、クリップボードの内容をリッチエディットコントロール ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) に貼り付けることができます。これは、最適なクリップボード形式または特定のクリップボード形式を使用します。 また、リッチエディットコントロールがクリップボード形式を貼り付けることができるかどうかを判断することもできます。
 
-コピーしたり、現在の選択の内容の切り取りを使用して、[コピー](../mfc/reference/cricheditctrl-class.md#copy)または[切り取り](../mfc/reference/cricheditctrl-class.md#cut)メンバー関数。 同様に、貼り付けることができます、クリップボードの内容にリッチ エディット コントロールを使用して、[貼り付けます](../mfc/reference/cricheditctrl-class.md#paste)メンバー関数。 おそらく最もわかりやすい形式であることを認識する最初の使用可能な形式のコントロールに貼り付けます。
+[Copy](../mfc/reference/cricheditctrl-class.md#copy)または[cut](../mfc/reference/cricheditctrl-class.md#cut)メンバー関数を使用して、現在の選択内容をコピーまたは切り取りできます。 同様に、 [paste](../mfc/reference/cricheditctrl-class.md#paste)メンバー関数を使用すると、クリップボードの内容をリッチエディットコントロールに貼り付けることができます。 コントロールは、認識されている最初の使用可能な形式を貼り付けます。これは、おそらく最もわかりやすい形式です。
 
-特定のクリップボード形式を貼り付け、使用することができます、 [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial)メンバー関数。 この関数は、ユーザーがクリップボード形式を選択できる貼り付けコマンドを使用してアプリケーションに適しています。 使用することができます、 [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste)メンバー関数は、特定の形式がコントロールによって認識されるかどうかを判断します。
+特定のクリップボード形式を貼り付けるには、 [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial)メンバー関数を使用します。 この関数は、ユーザーがクリップボード形式を選択できるようにするための、貼り付けの特別なコマンドを使用するアプリケーションに便利です。 [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste)メンバー関数を使用すると、指定した書式がコントロールによって認識されているかどうかを判断できます。
 
-使用することも`CanPaste`リッチ エディット コントロールで使用できる任意のクリップボード形式が認識されるかどうかを判断します。 この関数では、`OnInitMenuPopup`ハンドラー。 アプリケーションで有効にする場合があります、灰色のコントロールが任意の使用可能な形式に貼り付けることができるかどうかによって [貼り付け] コマンド。
+また、を使用`CanPaste`して、リッチエディットコントロールによって使用可能なクリップボード形式が認識されるかどうかを判断することもできます。 この関数は、 `OnInitMenuPopup`ハンドラーで役に立ちます。 アプリケーションでは、使用可能な任意の形式をコントロールが貼り付けることができるかどうかに応じて、貼り付けコマンドを有効または灰色にすることができます。
 
-リッチ エディット コントロールの登録 2 クリップボード形式: リッチ テキスト形式と RichEdit テキストおよびオブジェクトと呼ばれる形式。 アプリケーションを使用してこれらの形式を登録することができます、[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)関数は、指定する、 **CF_RTF**と**CF_RETEXTOBJ**値。
+リッチエディットコントロールは、リッチテキスト形式と、RichEdit テキストおよびオブジェクトという形式の2つのクリップボード形式を登録します。 アプリケーションでは、 **CF_RTF**と**CF_RETEXTOBJ**の値を指定して、 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数を使用してこれらの形式を登録できます。
 
 ## <a name="see-also"></a>関連項目
 
 [CRichEditCtrl の使い方](../mfc/using-cricheditctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

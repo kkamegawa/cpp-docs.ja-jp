@@ -1,9 +1,9 @@
 ---
 title: _pclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _pclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _pclose
 - pclose
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507719"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951083"
 ---
-# <a name="pclose"></a>_pclose
+# <a name="_pclose"></a>_pclose
 
 新しいコマンド プロセッサを待機し、関連するパイプのストリームを閉じます。
 
@@ -48,18 +51,18 @@ FILE *stream
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
-以前の呼び出しから値を返す **_popen**します。
+*一連*<br/>
+前の **_popen**の呼び出しからの戻り値。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は、終了するコマンド プロセッサ、または-1 の終了ステータスを返します。 戻り値の形式はの場合と同じ **_cwait**下位と上位バイトが交換を除き、します。 ストリームが場合**NULL**、 **_pclose**設定**errno**に**EINVAL** -1 を返します。
+終了コマンドプロセッサの終了ステータスを返します。エラーが発生した場合は-1 を返します。 戻り値の形式は **_cwait**の場合と同じですが、下位バイトと上位バイトが交換される点が異なります。 Stream が**NULL**の場合、 **_pclose**は**errno**を**EINVAL**に設定し、-1 を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Pclose**関数は、関連付けられているによって開始されたコマンド プロセッサ (Cmd.exe) のプロセス ID **_popen**呼び出しを実行し、 [_cwait](cwait.md)で新しいコマンドを呼び出すプロセッサ、し、関連するパイプのストリームを閉じます。
+**_Pclose**関数は、関連付けられた **_popen**呼び出しによって開始されたコマンドプロセッサ (CMD.EXE) のプロセス ID を検索し、新しいコマンドプロセッサで[_cwait](cwait.md)呼び出しを実行して、関連付けられているパイプのストリームを閉じます。
 
 ## <a name="requirements"></a>必要条件
 

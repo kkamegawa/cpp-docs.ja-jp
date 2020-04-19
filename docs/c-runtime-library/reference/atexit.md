@@ -1,9 +1,9 @@
 ---
 title: atexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atexit
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b91e6dad81f006b0b94ac17a940e840386f6d2b1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556645"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939658"
 ---
 # <a name="atexit"></a>atexit
 
@@ -47,15 +50,15 @@ int atexit(
 
 ## <a name="return-value"></a>戻り値
 
-**atexit**成功した場合、0、エラーが発生した場合は 0 以外の値を返します。
+**atexit**は成功した場合は0、エラーが発生した場合は0以外の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Atexit**関数には、関数のアドレスが渡されます*func*プログラムが正常に終了したときに呼び出されます。 連続して呼び出す**atexit** 、後入れ先出し (LIFO) の順序で実行される関数のレジスタが作成されます。 渡される関数は、 **atexit**パラメーターを受け取ることはできません。 **atexit**と **_onexit**関数のレジスタを保持するために、ヒープを使用します。 したがって、登録可能な関数の数は、ヒープ メモリの量によってのみ制限されます。
+**Atexit**関数には、プログラムが正常に終了したときに呼び出される関数*func*のアドレスが渡されます。 **Atexit**を連続して呼び出すと、後入れ先出し (LIFO) の順序で実行される関数のレジスタが作成されます。 **Atexit**に渡される関数は、パラメーターを受け取ることができません。 **atexit**と **_onexit**は、ヒープを使用して関数のレジスタを保持します。 したがって、登録可能な関数の数は、ヒープ メモリの量によってのみ制限されます。
 
-内のコード、 **atexit**関数は可能性がありますが既に読み込まれていない場合にある DLL への依存関係を含めることはできません、 **atexit**関数が呼び出されます。
+**Atexit**関数のコードには、 **atexit**関数が呼び出されたときに既にアンロードされている可能性のある DLL に対する依存関係を含めることはできません。
 
-ANSI 準拠のアプリケーションを生成するには、ANSI 標準を使用して**atexit**関数 (も同様ではなく **_onexit**関数)。
+ANSI 準拠のアプリケーションを生成するには、(類似の **_onexit**関数ではなく) ansi 標準の**atexit**関数を使用します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -65,7 +68,7 @@ ANSI 準拠のアプリケーションを生成するには、ANSI 標準を使�
 
 ## <a name="example"></a>例
 
-このプログラムのプッシュ 4 つの関数のときに実行される関数のスタックに**atexit**が呼び出されます。 プログラムの終了時に、後入れ先出し法でこれらのプログラムが実行されます。
+このプログラムは、 **atexit**が呼び出されたときに実行される関数のスタックに4つの関数をプッシュします。 プログラムの終了時に、後入れ先出し法でこれらのプログラムが実行されます。
 
 ```C
 // crt_atexit.c

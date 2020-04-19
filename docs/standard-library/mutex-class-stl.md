@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522565"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457064"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex クラス (C++ 標準ライブラリ)
 
@@ -53,7 +53,7 @@ class mutex;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<mutex >
+**ヘッダー:** \<ミューテックス >
 
 **名前空間:** std
 
@@ -111,7 +111,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -131,5 +131,5 @@ void unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

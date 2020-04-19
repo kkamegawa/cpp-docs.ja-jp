@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
-ms.openlocfilehash: 9fd6920956d6a48ec7e1f15bf54ea8d75bad4aa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50585904f125dcb572043b568978d65eb1c61e80
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585485"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758087"
 ---
 # <a name="compiler-error-c3673"></a>コンパイラ エラー C3673
 
-'type': クラスには、コピー コンス トラクターがありません。
+' type ': クラスにコピーコンストラクターがありません。
 
-CLR 参照型のオブジェクトをコピーするには、ユーザー定義のコンス トラクターが必要です。 詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+CLR ref 型のオブジェクトをコピーするには、ユーザー定義のコンストラクターが必要です。 詳細については、「 [ C++参照型のスタックセマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3673 が生成されます。
 
-```
+```cpp
 // C3673.cpp
 // compile with: /clr
 public ref struct R {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3673 が生成されます。
 
-```
+```cpp
 // C3673_b.cpp
 // compile with: /clr /c
 // C3673 expected

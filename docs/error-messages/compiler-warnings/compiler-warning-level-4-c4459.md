@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585069"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447756"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>コンパイラの警告 (レベル 4) C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "50585069"
 
 宣言*識別子*ローカル スコープで、同じ名前の宣言を非表示に*識別子*グローバル スコープでします。 この警告を参照するかを把握できます。*識別子*このスコープでの解決をローカルに宣言されたバージョンにグローバル バージョンではなく、可能性のあるユーザーの意図ができない可能性があります。 一般に、優れたエンジニア リング手法としてグローバル変数の使用を最小限に抑えることをお勧めします。 グローバル名前空間の汚染を最小化するには、グローバル変数の名前付きの名前空間の使用をお勧めします。
 
-この警告は、Visual Studio 2015、Visual c コンパイラ バージョン 18.00 で新しく追加されました。 または、コードを移行する際に、後で、コンパイラのバージョンからの警告を抑制するのには、使用、 [/Wv:18](../../build/reference/compiler-option-warning-level.md)コンパイラ オプション。
+この警告は、Microsoft Visual Studio 2015 で新しく追加されたC++18.00 コンパイラのバージョン。 または、コードを移行する際に、後で、コンパイラのバージョンからの警告を抑制するのには、使用、 [/Wv:18](../../build/reference/compiler-option-warning-level.md)コンパイラ オプション。
 
 ## <a name="example"></a>例
 

@@ -14,20 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 04fdfb767645cb2db31a453a2378881a8b3e3a04
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657592"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143165"
 ---
-# <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map クラス
+# <a name="concurrent_unordered_map-class"></a>concurrent_unordered_map クラス
 
-`concurrent_unordered_map` クラスは、`std::pair<const K, _Element_type>` 型要素の可変長シーケンスを制御する同時実行セーフなコンテナーです。 このシーケンスは、同時実行セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。
+ph x="1" /&gt; クラスは、`concurrent_unordered_map` 型要素の可変長シーケンスを制御するコンカレンシー セーフなコンテナーです。 このシーケンスは、コンカレンシー セーフな追加、要素アクセス、反復子アクセス、反復子走査の各操作を実行できるように表されます。 ここでは、同時実行セーフとは、ポインターまたは反復子が常に有効であることを意味します。 これは、要素の初期化、または特定のトラバーサルの順序の保証ではありません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <typename K,
     typename _Element_type,
     typename _Hasher = std::hash<K>,
@@ -46,7 +46,7 @@ key_equality>,
 false>>;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *K*<br/>
 キーの型。
@@ -61,13 +61,13 @@ false>>;
 等価比較関数のオブジェクト型。 この引数は省略可能であり、既定値は `std::equal_to<K>` です。
 
 *_Allocator_type*<br/>
-同時実行順序なしのマップのメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能、既定値は`std::allocator<std::pair<K`、`_Element_type>>`します。
+同時実行順序なしのマップのメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `std::allocator<std::pair<K`、`_Element_type>>`です。
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`allocator_type`|ストレージを管理するためのアロケーターの型です。|
 |`const_iterator`|被制御シーケンスの定数反復子の型です。|
@@ -88,31 +88,31 @@ false>>;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[concurrent_unordered_map](#ctor)|オーバーロードされます。 同時実行順序なしのマップを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[at](#at)|オーバーロードされます。 `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。|
 |[hash_function](#hash_function)|格納されているハッシュ関数オブジェクトを取得します。|
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_map` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを取得します。|
-|[swap](#swap)|2 つの `concurrent_unordered_map` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
+|[スワップ](#swap)|2 つの `concurrent_unordered_map` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
 |[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[operator\[\]](#operator_at)|オーバーロードされます。 指定したキーを持つ要素を検索または挿入します。 このメソッドはコンカレンシー セーフです。|
 |[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_unordered_map` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-詳細については、`concurrent_unordered_map`クラスを参照してください[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。
+`concurrent_unordered_map` クラスの詳細については、「[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -122,17 +122,17 @@ false>>;
 
 `concurrent_unordered_map`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concurrent_unordered_map.h
+**ヘッダー:** concurrent_unordered_map
 
 **名前空間:** concurrency
 
-##  <a name="at"></a> で
+## <a name="at"></a>(
 
 `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 mapped_type& at(const key_type& KVal);
 
 const mapped_type& at(const key_type& KVal) const;
@@ -147,15 +147,15 @@ const mapped_type& at(const key_type& KVal) const;
 
 見つかった要素のデータ値への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 引数のキー値が見つからない場合、この関数は、`out_of_range` クラスのオブジェクトをスローします。
 
-##  <a name="begin"></a> 開始
+## <a name="begin"></a>初め
 
 同時実行コンテナーの最初の要素を指す反復子を返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 iterator begin();
 
 const_iterator begin() const;
@@ -163,45 +163,45 @@ const_iterator begin() const;
 
 ### <a name="return-value"></a>戻り値
 
-同時実行コンテナーの最初の要素の反復子。
+同時実行コンテナー内の最初の要素を指す反復子。
 
-##  <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
 同時実行コンテナーの最初の要素を指す定数反復子を返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 const_iterator cbegin() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-同時実行コンテナーの最初の要素に定数反復子。
+同時実行コンテナー内の最初の要素を指す定数反復子。
 
-##  <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
-同時実行コンテナーの最後の要素の次の位置を指す定数反復子を返します。 このメソッドはコンカレンシー セーフです。
+同時実行コンテナー内の最後の要素の次の位置を指す定数反復子を返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 const_iterator cend() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-位置を同時実行コンテナーの最後の要素を指す定数反復子。
+同時実行コンテナー内の最後の要素の次の位置を指す定数反復子。
 
-##  <a name="clear"></a> オフ
+## <a name="clear"></a>クリア
 
 同時実行コンテナー内のすべての要素を消去します。 この関数は、同時実行セーフではありません。
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_map
+## <a name="ctor"></a>concurrent_unordered_map
 
 同時実行順序なしのマップを構築します。
 
-```
+```cpp
 explicit concurrent_unordered_map(
     size_type _Number_of_buckets = 8,
     const hasher& _Hasher = hasher(),
@@ -236,45 +236,45 @@ concurrent_unordered_map(
 入力反復子の型。
 
 *_Number_of_buckets*<br/>
-この順序付けられていないマップ バケットの初期数。
+この順序なしマップのバケットの初期数。
 
 *_Hasher*<br/>
 この順序なしのマップのハッシュ関数。
 
 *key_equality*<br/>
-この順序付けられていないマップの等値比較関数。
+この順序なしのマップの等値比較関数。
 
 *_Allocator*<br/>
-この順序付けられていないマップのアロケーター。
+この順序なしのマップのアロケーター。
 
-*開始 (_b)*<br/>
+*_Begin*<br/>
 コピーする要素範囲内の最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 コピーする要素範囲を超える最初の要素の位置。
 
 *_Umap*<br/>
 要素のコピー元または移動元の `concurrent_unordered_map` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-すべてのコンス トラクターは、アロケーター オブジェクトを格納`_Allocator`と順序付けられていないマップを初期化します。
+すべてのコンストラクターは、アロケーターオブジェクト `_Allocator` を格納し、順序なしのマップを初期化します。
 
-最初のコンス トラクター空の初期マップを指定しますを明示的に指定します、バケット数ハッシュ関数、等しいかどうかの関数とアロケーターの型を使用します。
+最初のコンストラクターは、空の初期マップを指定し、使用するバケット、ハッシュ関数、等値関数、およびアロケーターの種類の数を明示的に指定します。
 
-2 番目のコンス トラクターでは、順序なしのマップのアロケーターを指定します。
+2番目のコンストラクターは、順序付けられていないマップのアロケーターを指定します。
 
-3 番目のコンス トラクターは、反復子の範囲で指定された値を指定する [ `_Begin`、 `_End`)。
+3番目のコンストラクターは、反復子の範囲 [`_Begin`、`_End`) によって指定された値を指定します。
 
-4 番目と 5 番目のコンス トラクターは、同時実行の順序なしのマップのコピーを指定します。`_Umap`します。
+4番目と5番目のコンストラクターは、同時に順序付けられていないマップ `_Umap`のコピーを指定します。
 
-最後のコンス トラクターは、同時実行の順序なしのマップの移動を指定`_Umap`します。
+最後のコンストラクターは、同時に順序付けられていないマップ `_Umap`の移動を指定します。
 
-##  <a name="count"></a> カウント
+## <a name="count"></a>数
 
 指定したキーに一致する要素の数をカウントします。 この関数は、同時実行セーフです。
 
-```
+```cpp
 size_type count(const key_type& KVal) const;
 ```
 
@@ -285,29 +285,29 @@ size_type count(const key_type& KVal) const;
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーにキーが表示される回数の合計を回数します。
+キーがコンテナー内に出現する回数。
 
-##  <a name="empty"></a> 空
+## <a name="empty"></a>指定
 
 要素が存在しないかどうかをテストします。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 bool empty() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-**true**同時実行コンテナーが空の場合**false**それ以外の場合。
+同時実行コンテナーが空の場合は**true** 、それ以外の場合は**false** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-同時実行の挿入がある場合、同時実行コンテナーが空かどうかを戻り値は読み取り専用でも前に、この関数の呼び出し直後後変更可能性があります。
+同時挿入が存在する場合、戻り値が読み込まれる前に、同時実行コンテナーが空であるかどうかは、この関数を呼び出した直後に変更される可能性があります。
 
-##  <a name="end"></a> 終わり
+## <a name="end"></a>終わり
 
-同時実行コンテナーの最後の要素の次の位置を指す反復子を返します。 このメソッドはコンカレンシー セーフです。
+同時実行コンテナー内の最後の要素の次の位置を指す反復子を返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 iterator end();
 
 const_iterator end() const;
@@ -315,13 +315,13 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>戻り値
 
-同時実行コンテナーの最後の要素を指す反復子。
+同時実行コンテナー内の最後の要素の次の位置を指す反復子。
 
-##  <a name="equal_range"></a> equal_range
+## <a name="equal_range"></a>equal_range
 
-指定したキーに一致する範囲を検索します。 この関数は、同時実行セーフです。
+指定されたキーに一致する範囲を検索します。 この関数は、同時実行セーフです。
 
-```
+```cpp
 std::pair<iterator,
     iterator> equal_range(
     const key_type& KVal);
@@ -338,17 +338,17 @@ std::pair<const_iterator,
 
 ### <a name="return-value"></a>戻り値
 
-A[ペア](../../../standard-library/pair-structure.md)最初の要素は、反復子を先頭に、2 番目の要素が、範囲の末尾に反復子です。
+最初の要素が先頭の反復子であり、2番目の要素が範囲の末尾を指す反復子である[ペア](../../../standard-library/pair-structure.md)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-同時実行の挿入を begin 反復子の後と終わりの反復子の前に挿入される追加のキーが発生することができます。
+同時に挿入を行うと、開始反復子の後、および終了反復子の前に追加のキーが挿入される可能性があります。
 
-##  <a name="find"></a> 検索
+## <a name="find"></a>探す
 
 指定したキーに一致する要素を検索します。 この関数は、同時実行セーフです。
 
-```
+```cpp
 iterator find(const key_type& KVal);
 
 const_iterator find(const key_type& KVal) const;
@@ -361,13 +361,13 @@ const_iterator find(const key_type& KVal) const;
 
 ### <a name="return-value"></a>戻り値
 
-指定したキーに一致する最初の要素の位置を指す反復子または反復子`end()`そのような要素が存在しない場合。
+指定されたキーと一致した最初の要素の位置を指す反復子。このような要素が存在しない場合は、反復子 `end()`。
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 この同時実行コンテナーの格納されたアロケーター オブジェクトを返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -375,11 +375,11 @@ allocator_type get_allocator() const;
 
 この同時実行コンテナーの格納されたアロケーター オブジェクト。
 
-##  <a name="hash_function"></a> hash_function
+## <a name="hash_function"></a>hash_function
 
 格納されているハッシュ関数オブジェクトを取得します。
 
-```
+```cpp
 hasher hash_function() const;
 ```
 
@@ -387,11 +387,11 @@ hasher hash_function() const;
 
 格納されているハッシュ関数オブジェクト。
 
-##  <a name="insert"></a> 挿入します。
+## <a name="insert"></a>insert
 
 要素を `concurrent_unordered_map` オブジェクトに追加します。
 
-```
+```cpp
 std::pair<iterator,
     bool> insert(
     const value_type& value);
@@ -420,10 +420,10 @@ typename std::enable_if<!std::is_same<const_iterator,
 ### <a name="parameters"></a>パラメーター
 
 *_Iterator*<br/>
-反復子の型を挿入するために使用します。
+挿入に使用される反復子の型。
 
 *V*<br/>
-マップに挿入された値の型。
+Map に挿入される値の型。
 
 *value*<br/>
 挿入する値。
@@ -435,27 +435,27 @@ typename std::enable_if<!std::is_same<const_iterator,
 挿入する範囲の先頭。
 
 *last*<br/>
-挿入する範囲の終了。
+挿入する範囲の末尾。
 
 ### <a name="return-value"></a>戻り値
 
 反復子とブール値を含むペア。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-最初のメンバー関数は、要素 X がのと同じ順序付けキーを持つが、シーケンス内に存在するかどうかを決定します。`value`します。 場合は、このような要素 X を作成して初期化で`value`します。 関数は、反復子を決定し、 `where` X を指定します。挿入が発生したかどうか、関数を返します`std::pair(where, true)`します。 返しますそれ以外の場合、`std::pair(where, false)`します。
+1つ目のメンバー関数は、キーの順序が `value`の要素 X と等価であるかどうかを判断します。 そうでない場合は、このような要素 X を作成し、`value`で初期化します。 次に、関数は、X を指定する反復子 `where` を決定します。挿入が行われた場合、関数は `std::pair(where, true)`を返します。 それ以外の場合は `std::pair(where, false)`を返します。
 
-2 番目のメンバー関数は、挿入を返します ( `value`) を使用して、`_Where`として挿入ポイントを検索する被制御シーケンス内の開始場所。
+2番目のメンバー関数は、挿入ポイントを検索するための被制御シーケンス内の開始位置として `_Where` を使用して、insert (`value`) を返します。
 
-3 番目のメンバー関数は、範囲からの要素の値のシーケンスを挿入 [ `first`、 `last`)。
+3番目のメンバー関数は、範囲 [`first`、`last`) から要素値のシーケンスを挿入します。
 
-最後の 2 つのメンバー関数の動作は同じことを除いて、最初の 2 つ`value`挿入された値を構築するために使用します。
+最後の2つのメンバー関数は、最初の2つのメンバー関数と同じように動作しますが、挿入された値を構築するために `value` が使用される点が異なります。
 
-##  <a name="key_eq"></a> key_eq
+## <a name="key_eq"></a>key_eq
 
 格納された等価比較関数のオブジェクトを取得します。
 
-```
+```cpp
 key_equal key_eq() const;
 ```
 
@@ -463,23 +463,23 @@ key_equal key_eq() const;
 
 格納された等価比較関数のオブジェクト。
 
-##  <a name="load_factor"></a> load_factor
+## <a name="load_factor"></a>load_factor
 
-計算し、コンテナーの現在のテーブル占有率を返します。 占有率は、バケットの数で割った値コンテナー内の要素の数です。
+コンテナーの現在の占有率を計算して返します。 占有率は、コンテナー内の要素の数をバケット数で割った値です。
 
-```
+```cpp
 float load_factor() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-コンテナーのテーブル占有率。
+コンテナーの占有率。
 
-##  <a name="max_load_factor"></a> max_load_factor
+## <a name="max_load_factor"></a>max_load_factor
 
-取得またはコンテナーの最大テーブル占有率を設定します。 最大テーブル占有率は要素の最大数、コンテナーの内部テーブルを拡張する前に、バケットにすることができます。
+コンテナーの最大占有率を取得または設定します。 最大の占有率は、コンテナーが内部テーブルを拡張する前に、どのバケットにも含まれる要素の最大数です。
 
-```
+```cpp
 float max_load_factor() const;
 
 void max_load_factor(float _Newmax);
@@ -491,13 +491,13 @@ void max_load_factor(float _Newmax);
 
 ### <a name="return-value"></a>戻り値
 
-1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2 番目のメンバー関数は、値は返されませんがスローされます、 [out_of_range](../../../standard-library/out-of-range-class.md)指定したテーブル占有率が有効でない場合は例外.
+1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は値を返しませんが、指定されたテーブル占有率が無効である場合は[out_of_range](../../../standard-library/out-of-range-class.md)例外をスローします。
 
-##  <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
-アロケーターによって決定される、同時実行コンテナーの最大サイズを返します。 このメソッドはコンカレンシー セーフです。
+アロケーターによって決定される同時実行コンテナーの最大サイズを返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 size_type max_size() const;
 ```
 
@@ -505,15 +505,15 @@ size_type max_size() const;
 
 この同時実行コンテナーに挿入できる要素の最大数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この上限値実際にどのようなコンテナー実際に保持できるよりも高い場合があります。
+この上限値は、実際にコンテナーが保持できるものよりも大きくなる場合があります。
 
-##  <a name="operator_at"></a> operator[]
+## <a name="operator_at"></a>演算子 []
 
 指定したキーを持つ要素を検索または挿入します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 mapped_type& operator[](const key_type& kval);
 
 mapped_type& operator[](key_type&& kval);
@@ -522,27 +522,27 @@ mapped_type& operator[](key_type&& kval);
 ### <a name="parameters"></a>パラメーター
 
 *KVal*<br/>
-キーの値
+のキー値
 
 検索または挿入します。
 
 ### <a name="return-value"></a>戻り値
 
-見つからないか、または挿入された要素のデータ値への参照。
+検出または挿入された要素のデータ値への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 引数のキー値が見つからない場合は、データ型の既定値と一緒に挿入されます。
 
-`operator[]` マップに要素を挿入に使用することがあります`m`を使用して`m[key] = DataValue;`ここで、`DataValue`の値である、`mapped_type`のキーの値を持つ要素の`key`します。
+`operator[]` は `m[key] = DataValue;`を使用してマップの `m` に要素を挿入するために使用できます。 `DataValue` は、キー値が `mapped_type` の要素の `key`の値です。
 
-`operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更される、または新しい要素が作成されるかどうかは指示されません。 メンバー関数は、`find`と[挿入](#insert)指定したキーを持つ要素が既に、挿入前に存在するかどうかを判断するために使用できます。
+`operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更される、または新しい要素が作成されるかどうかは指示されません。 メンバー関数 `find` と[挿入](#insert)を使用して、指定したキーを持つ要素が挿入前に既に存在するかどうかを判断できます。
 
-##  <a name="operator_eq"></a> 演算子 =
+## <a name="operator_eq"></a>operator =
 
 別の `concurrent_unordered_map` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。
 
-```
+```cpp
 concurrent_unordered_map& operator= (const concurrent_unordered_map& _Umap);
 
 concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
@@ -557,15 +557,15 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 
 この `concurrent_unordered_map` オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-同時実行ベクターの場合は、既存の要素を消去した後`operator=`の内容を移動またはコピー`_Umap`同時実行ベクターにします。
+同時実行ベクターで既存の要素を消去した後、`operator=` `_Umap` の内容を同時実行ベクターにコピーまたは移動します。
 
-##  <a name="rehash"></a> 流用しています
+## <a name="rehash"></a>rehash
 
 ハッシュ テーブルをリビルドします。
 
-```
+```cpp
 void rehash(size_type _Buckets);
 ```
 
@@ -574,17 +574,17 @@ void rehash(size_type _Buckets);
 *_Buckets*<br/>
 必要なバケット数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー関数は、バケット数を `_Buckets` 以上に変更し、必要に応じて、ハッシュ テーブルをリビルドします。 バケット数は 2 の累乗である必要があります。 場合いない 2 の累乗で、2 の累乗に切り上げられますされます。
+メンバー関数は、バケット数を `_Buckets` 以上に変更し、必要に応じて、ハッシュ テーブルをリビルドします。 バケットの数は2の累乗でなければなりません。 2の累乗でない場合は、次に大きい2の累乗に切り上げられます。
 
-スローされます、 [out_of_range](../../../standard-library/out-of-range-class.md)例外のバケットの数が有効でない場合 (0 またはバケットの最大数より大きい)。
+バケットの数が無効である場合 (0 またはバケットの最大数を超える)、 [out_of_range](../../../standard-library/out-of-range-class.md)例外がスローされます。
 
-##  <a name="size"></a> サイズ
+## <a name="size"></a>幅
 
-この同時実行コンテナーの要素の数を返します。 このメソッドはコンカレンシー セーフです。
+この同時実行コンテナー内の要素の数を返します。 このメソッドはコンカレンシー セーフです。
 
-```
+```cpp
 size_type size() const;
 ```
 
@@ -592,28 +592,28 @@ size_type size() const;
 
 コンテナー内の項目の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-同時実行の挿入がある場合は、同時実行コンテナー内の要素の数は、戻り値は読み取り専用でも前に、この関数の呼び出し直後後変更できます。
+同時挿入が存在する場合、戻り値が読み込まれる前に、同時実行コンテナー内の要素の数が、この関数を呼び出した直後に変更される可能性があります。
 
-##  <a name="swap"></a> スワップ
+## <a name="swap"></a>フォト
 
 2 つの `concurrent_unordered_map` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。
 
-```
+```cpp
 void swap(concurrent_unordered_map& _Umap);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *_Umap*<br/>
-`concurrent_unordered_map`交換するオブジェクト。
+交換する `concurrent_unordered_map` オブジェクト。
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
-特定のバケットのこのコンテナーの最初の要素に反復子を返します。
+特定のバケットのこのコンテナー内の最初の要素を指す反復子を返します。
 
-```
+```cpp
 local_iterator unsafe_begin(size_type _Bucket);
 
 const_local_iterator unsafe_begin(size_type _Bucket) const;
@@ -621,98 +621,98 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
-バケットのインデックス。
+*_Bucket*<br/>
+バケットインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 バケットの先頭を指す反復子。
 
-##  <a name="unsafe_bucket"></a> unsafe_bucket
+## <a name="unsafe_bucket"></a>unsafe_bucket
 
-このコンテナー内に特定のキーがマップされるバケットのインデックスを返します。
+このコンテナー内の特定のキーがマップされるバケットインデックスを返します。
 
-```
+```cpp
 size_type unsafe_bucket(const key_type& KVal) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *KVal*<br/>
-検索対象の要素のキー。
+検索対象の要素キー。
 
 ### <a name="return-value"></a>戻り値
 
-このコンテナー内のキーのバケットのインデックス。
+このコンテナー内のキーのバケットインデックス。
 
-##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
 このコンテナー内の現在のバケット数を返します。
 
-```
+```cpp
 size_type unsafe_bucket_count() const;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-このコンテナー内のバケットの現在数。
+このコンテナー内の現在のバケット数。
 
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
-このコンテナーの特定のバケット内の項目の数を返します。
+このコンテナーの特定のバケットに含まれる項目の数を返します。
 
-```
+```cpp
 size_type unsafe_bucket_size(size_type _Bucket);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
-検索するバケット。
+*_Bucket*<br/>
+検索対象のバケット。
 
 ### <a name="return-value"></a>戻り値
 
-このコンテナー内のバケットの現在数。
+このコンテナー内の現在のバケット数。
 
-##  <a name="unsafe_cbegin"></a> unsafe_cbegin
+## <a name="unsafe_cbegin"></a>unsafe_cbegin
 
-特定のバケットのこのコンテナーの最初の要素に反復子を返します。
+特定のバケットのこのコンテナー内の最初の要素を指す反復子を返します。
 
-```
+```cpp
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
-バケットのインデックス。
+*_Bucket*<br/>
+バケットインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 バケットの先頭を指す反復子。
 
-##  <a name="unsafe_cend"></a> unsafe_cend
+## <a name="unsafe_cend"></a>unsafe_cend
 
-位置を特定のバケット内の最後の要素を指す反復子を返します。
+特定のバケット内の最後の要素の次の位置を指す反復子を返します。
 
-```
+```cpp
 const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
-バケットのインデックス。
+*_Bucket*<br/>
+バケットインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 バケットの先頭を指す反復子。
 
-##  <a name="unsafe_end"></a> unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
-特定のバケットのこのコンテナーの最後の要素に反復子を返します。
+特定のバケットのこのコンテナー内の最後の要素を指す反復子を返します。
 
-```
+```cpp
 local_iterator unsafe_end(size_type _Bucket);
 
 const_local_iterator unsafe_end(size_type _Bucket) const;
@@ -720,18 +720,18 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
-バケットのインデックス。
+*_Bucket*<br/>
+バケットインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 バケットの末尾を指す反復子。
 
-##  <a name="unsafe_erase"></a> unsafe_erase
+## <a name="unsafe_erase"></a>unsafe_erase
 
 `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
 
-```
+```cpp
 iterator unsafe_erase(
     const_iterator _Where);
 
@@ -748,11 +748,11 @@ size_type unsafe_erase(
 *_Where*<br/>
 消去する反復子の位置。
 
-*開始 (_b)*<br/>
-消去する要素の範囲の最初の要素の位置。
+*_Begin*<br/>
+消去する要素範囲内の最初の要素の位置。
 
-*(_E)*<br/>
-消去する要素の範囲を超える先頭の要素の位置。
+*_End*<br/>
+消去する要素の範囲を超える最初の要素の位置。
 
 *KVal*<br/>
 消去するキー値。
@@ -761,17 +761,17 @@ size_type unsafe_erase(
 
 最初の 2 つのメンバー関数は、削除された要素の後の最初の残存要素を指定する反復子を返します。このような要素が存在しない場合は、`concurrent_unordered_map::end`() が返されます。 3 つ目のメンバー関数は削除する要素の数を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-最初のメンバー関数が指す被制御シーケンスの要素を削除する`_Where`します。 2 番目のメンバー関数は、範囲内の要素を削除する [ `_Begin`、 `_End`)。
+1つ目のメンバー関数は、`_Where`が指す被制御シーケンスの要素を削除します。 2番目のメンバー関数は、[`_Begin`, `_End`) の範囲内の要素を削除します。
 
-3 番目のメンバー関数は、区切られた範囲内の要素を削除する`concurrent_unordered_map::equal_range`(KVal)。
+3番目のメンバー関数は、`concurrent_unordered_map::equal_range`(KVal) で区切られた範囲内の要素を削除します。
 
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
 このコンテナー内のバケットの最大数を返します。
 
-```
+```cpp
 size_type unsafe_max_bucket_count() const;
 ```
 
@@ -779,8 +779,7 @@ size_type unsafe_max_bucket_count() const;
 
 このコンテナー内のバケットの最大数。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)
-

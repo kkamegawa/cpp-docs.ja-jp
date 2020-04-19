@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 84657677fc672fc227d40423ffb217b1b550761b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487660"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454991"
 ---
 # <a name="underflowerror-class"></a>underflow_error クラス
 
@@ -67,5 +67,5 @@ Type: class std::underflow_error
 
 ## <a name="see-also"></a>関連項目
 
-[runtime_error クラス](../standard-library/runtime-error-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[runtime_error クラス](../standard-library/runtime-error-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

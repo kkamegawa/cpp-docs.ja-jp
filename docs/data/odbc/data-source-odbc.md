@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring ODBC data sources
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
-ms.openlocfilehash: df61ca28a1a5c7fb1f2096f2cc22654794f5dbdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b435c65bab565e109d37e1dd24e051993cbb30c8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397914"
 ---
 # <a name="data-source-odbc"></a>データ ソース (ODBC)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50469798"
 
 データ ソースの詳細については、次のトピックを参照してください。
 
-- [データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+- [データ ソース: 接続の管理 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
 
 - [データ ソース: データ ソースのスキーマの判定 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ANSI [MFC]
 - MFC [C++], ANSI support
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
-ms.openlocfilehash: b0a7f38decca349be86f29760ee7a96b2623feb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18c869cf9e7aeca909ac7ad52cb9a0efdb915a0f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537411"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504196"
 ---
 # <a name="support-for-ansi"></a>ANSI のサポート
 
@@ -21,4 +21,4 @@ ms.locfileid: "50537411"
 
 [Unicode のサポート](../text/support-for-unicode.md)<br/>
 [非推奨の ANSI API](../mfc/deprecated-ansi-apis.md)<br/>
-[シェルと共通のコントロールのバージョン](https://msdn.microsoft.com/library/windows/desktop/bb776779)
+[シェルと共通のコントロールのバージョン](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))

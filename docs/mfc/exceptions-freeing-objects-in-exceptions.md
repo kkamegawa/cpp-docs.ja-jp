@@ -1,5 +1,5 @@
----
-title: '例外処理 : 例外処理でのオブジェクトの解放'
+﻿---
+title: 例外:例外オブジェクトの解放
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406068"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>例外処理 : 例外処理でのオブジェクトの解放
+# <a name="exceptions-freeing-objects-in-exceptions"></a>例外:例外オブジェクトの解放
 
 この記事では、必要性と例外が発生したときに、オブジェクトを解放する方法について説明します。 ここでは、次の内容について説明します。
 
@@ -30,9 +30,9 @@ ms.locfileid: "50442472"
 
 これを行う 2 つの主な方法があります。
 
-- 使用してローカル例外処理、**お試しください**と**キャッチ**キーワードは、1 つのステートメントを使用してすべてのオブジェクトを破棄します。
+- **try** と **catch** キーワードを使用してローカル例外を処理し、1 つのステートメントを使用してすべてのオブジェクトを破棄します。
 
-- 内の任意のオブジェクトを破棄、**キャッチ**さらに処理するため、ブロックの外側の例外をスローする前にブロックします。
+- さらに処理するため、ブロックの外側の例外をスローする前に、**catch** ブロック内の任意のオブジェクトを破棄します。
 
 これら 2 つの方法は、問題のある例を次の解決策として次に示します。
 
@@ -42,11 +42,11 @@ ms.locfileid: "50442472"
 
 ##  <a name="_core_handling_the_exception_locally"></a> ローカルでの例外を処理します。
 
-**Try ~ catch**パラダイムのメモリ リークを回避して、例外が発生したときに、オブジェクトが破棄されることを確保防御的なプログラミング方法を提供します。 たとえば、この記事の前半で示した例は次のように書き換えることができます。
+**try/catch** パラダイムのメモリ リークを回避して、例外が発生したときに、オブジェクトが確実に破棄されるように防御的なプログラミング方法を提供します。 たとえば、この記事の前半で示した例は次のように書き換えることができます。
 
 [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
 
-この新しい例は、例外をキャッチし、それをローカルで処理するための例外ハンドラーを設定します。 関数が正常終了したし、オブジェクトを破棄します。 この例の重要な側面はで、例外をキャッチするコンテキストが確立されていること、 **try ~ catch**ブロック。 ローカル例外フレーム、せず、関数がわからなくなります例外がスローされ、通常どおりに終了して、オブジェクトを破棄することはありません。
+この新しい例は、例外をキャッチし、それをローカルで処理するための例外ハンドラーを設定します。 関数が正常終了し、オブジェクトを破棄します。 この例の重要な側面は、例外をキャッチするコンテキストが **try/catch** ブロック確立されていることです。 ローカル例外フレームがなければ、関数は例外がスローされたことがわからなくなり、通常どおりに終了してオブジェクトを破棄することはありません。
 
 ##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> オブジェクトの破棄後に例外のスロー
 
@@ -60,11 +60,10 @@ ms.locfileid: "50442472"
 
 例外処理機構フレーム オブジェクトを自動的に割り当て解除します。フレーム オブジェクトのデストラクターが呼び出されます。
 
-例外をスローする関数を呼び出す場合は使用できます**try ~ catch**ブロックを必ず、例外をキャッチして、作成した任意のオブジェクトを破棄する可能性があります。 具体的には、MFC 関数の多くが例外をスローすることもあります。
+例外をスローする関数を呼び出す場合 **try/catch**ブロックを使用して、例外をキャッチして、作成した任意のオブジェクトを破棄する可能性があります。 具体的には、MFC 関数の多くが例外をスローすることもあります。
 
-詳細については、次を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、[例外: キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

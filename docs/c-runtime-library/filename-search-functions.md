@@ -1,7 +1,7 @@
 ---
 title: ファイル名検索関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - file names [C++], searching for
 - _find function
@@ -17,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: f5f0629b97c3f3731e3916af36c9c8e40176462a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621651"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300311"
 ---
 # <a name="filename-search-functions"></a>ファイル名検索関数
 
@@ -95,17 +98,17 @@ FAT システムなど、ファイルの作成と最終アクセス時刻をサ�
 
 |構造体|時刻型|ファイル サイズの型|
 |---------------|---------------|--------------------|
-|`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
-|`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
-|`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
+|`_finddata_t`、`_wfinddata_t`|`__time64_t`|`_fsize_t`|
+|`_finddata32_t`、`_wfinddata32_t`|`__time32_t`|`_fsize_t`|
+|`__finddata64_t`、`__wfinddata64_t`|`__time64_t`|`__int64`|
+|`_finddata32i64_t`、`_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`_finddata64i32_t`、`_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
 `_fsize_t` は `unsigned long` (32 ビット) の `typedef` です。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension
@@ -153,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [システム コール](../c-runtime-library/system-calls.md)

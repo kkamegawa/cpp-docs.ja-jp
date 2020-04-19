@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs_s
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459060"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518310"
 ---
-# <a name="wcsrtombss"></a>wcsrtombs_s
+# <a name="wcsrtombs_s"></a>wcsrtombs_s
 
-ワイド文字の文字列をマルチバイト文字の文字列表現に変換します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおりセキュリティが強化されたバージョンの [wcsrtombs](wcsrtombs.md) です。
+ワイド文字の文字列をマルチバイト文字の文字列形式に変換します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおりセキュリティが強化されたバージョンの [wcsrtombs](wcsrtombs.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -58,67 +61,67 @@ errno_t wcsrtombs_s(
 ### <a name="parameters"></a>パラメーター
 
 *pReturnValue*<br/>
-変換された文字数。
+Null 終端文字を含む、変換された文字列のサイズ (バイト単位)。
 
 *mbstr*<br/>
 結果として変換されたマルチバイト文字の文字列のバッファーのアドレス。
 
 *sizeInBytes*<br/>
-バイト単位のサイズ、 *mbstr*バッファー。
+*Mbstr*バッファーのサイズ (バイト単位)。
 
 *wcstr*<br/>
 変換するワイド文字の文字列を指します。
 
 *count*<br/>
-格納されるバイトの最大数、 *mbstr*バッファー、または[_TRUNCATE](../../c-runtime-library/truncate.md)します。
+*Mbstr*バッファーに格納される最大バイト数、または[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
-*呼び出すため*<br/>
-ポインター、 **mbstate_t**変換状態オブジェクト。
+*mbstate*<br/>
+**Mbstate_t**変換状態オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-|エラー条件|戻り値および**errno**|
+|エラー条件|戻り値と**errno**|
 |---------------------|------------------------------|
-|*mbstr*は**NULL**と*sizeInBytes* > 0|**EINVAL**|
-|*wcstr*は**NULL**|**EINVAL**|
-|コピー先のバッファーが小さすぎて変換後の文字列を含む (しない限り、*カウント*は **_TRUNCATE**; 以下の「解説」を参照してください)|**ERANGE**|
+|*mbstr*が**NULL**で、 *sizeinbytes* > 0|**EINVAL**|
+|*wcstr*が**NULL**です|**EINVAL**|
+|コピー先のバッファーが小さすぎて、変換後の文字列を含めることができません ( *count*が **_TRUNCATE**場合を除きます。次の「解説」を参照してください)。|**ERANGE**|
 
-これらのいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラー コードを返します設定と**errno**表に記載されています。
+これらのいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラーコードを返し、表に示されているように**errno**を設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Wcsrtombs_s**関数が指すワイド文字の文字列に変換します*wcstr*が指すバッファーに格納されるマルチバイト文字に*mbstr*を使用して、含まれる変換状態*呼び出すため*します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
+**Wcsrtombs_s**関数は、 *mbstate*に含まれる変換状態を使用して、 *wcstr*が指すワイド文字の文字列を*mbstr*が指すバッファーに格納されているマルチバイト文字に変換します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
 
 - ワイド文字の null が検出されました。
 
 - 変換できないワイド文字が検出されました。
 
-- 格納されるバイト数、 *mbstr* equals をバッファー*カウント*します。
+- *Mbstr* buffer に格納されているバイト数は*count*と等しくなります。
 
 変換後の文字列は、常に null で終わります (エラーの場合も同様)。
 
-場合*カウント*特殊な値は、 [_TRUNCATE](../../c-runtime-library/truncate.md)、し**wcsrtombs_s**コピー先のバッファーは null の空きを残して収まる限りの文字列の多くに変換されますターミネータ。
+*Count*が[_TRUNCATE](../../c-runtime-library/truncate.md)特別な値の場合、 **wcsrtombs_s**は、null 終端文字用の空きを残したまま、コピー先のバッファーに収まる限りの文字列を変換します。
 
-場合**wcsrtombs_s** 、元の文字列を正常に変換に null の終端文字を含む変換された文字列のバイト単位のサイズが置かれる *&#42;pReturnValue* (提供されている*pReturnValue*ない**NULL**)。 これが発生した場合でも、 *mbstr*引数が**NULL**し、必要なバッファー サイズを決定する方法を提供します。 その場合*mbstr*は**NULL**、*数*は無視されます。
+**Wcsrtombs_s**がソース文字列を正常に変換した場合は、null 終端文字を含む、変換された文字列のサイズを、  *&#42;preturnvalue*値 (指定された*preturnvalue* **値が null**ではない) に格納します。 これは、 *mbstr*引数が**NULL**の場合にも発生し、必要なバッファーサイズを決定する手段を提供します。 *Mbstr*が**NULL**の場合、 *count*は無視されることに注意してください。
 
-場合**wcsrtombs_s**マルチバイト文字に変換できないワイド文字が検出されたに-1 を入れ *\*pReturnValue*、空の文字列をコピー先のバッファーを設定、設定**errno**に**EILSEQ**、し、返します**EILSEQ**します。
+**Wcsrtombs_s**がマルチバイト文字に変換できないワイド文字が検出された場合は、 *\*preturnvalue*に-1 を挿入し、コピー先バッファーを空の文字列に設定して、 **errno**を**EILSEQ**に設定し、 **EILSEQ**を返します。
 
-によって、シーケンスを指している場合*wcstr*と*mbstr*の動作が重なる**wcsrtombs_s**が定義されていません。 **wcsrtombs_s**は現在のロケールの LC_TYPE カテゴリを受けます。
+*Wcstr*と*mbstr*が指すシーケンスが重なっている場合、 **wcsrtombs_s**の動作は未定義です。 **wcsrtombs_s**は、現在のロケールの LC_TYPE カテゴリの影響を受けます。
 
 > [!IMPORTANT]
-> いることを確認*wcstr*と*mbstr*重複しないと*数*に変換するワイド文字の数を正確に反映します。
+> *Wcstr*と*mbstr*が重複しないようにし、その*カウント*に変換するワイド文字の数が正しく反映されていることを確認します。
 
-**Wcsrtombs_s**関数とは異なります[wcstombs_s、_wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)によってその再起動します。 変換の状態が格納されている*呼び出すため*同じか、またはその他の再開可能な関数を呼び出すのためです。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、アプリケーションは使用**後**なく**wcslen**後続の呼び出しの場合は、 **wcsrtombs_s**の代わりに使用された**wcstombs_s**.
+**Wcsrtombs_s**関数は、再起動によって[_wcstombs_s_l wcstombs_s と](wcstombs-s-wcstombs-s-l.md)異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、 **wcstombs_s**ではなく**wcsrtombs_s**の後続の呼び出しが使用された場合、アプリケーションは**wcslen**ではなく**wcsrlen**を使用します。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="exceptions"></a>例外
 
-**Wcsrtombs_s**関数は、現在のスレッドで関数が呼び出すない限り、マルチ スレッド セーフ**setlocale**この関数の実行中に、*呼び出すため*が null です。
+**Wcsrtombs_s**関数は、この関数の実行中に現在のスレッドの関数が**setlocale**を呼び出し、 *mbstate*が null の場合は、マルチスレッドセーフです。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // crt_wcsrtombs_s.cpp
@@ -135,7 +138,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 #define MB_BUFFER_SIZE 100
 
-void main()
+int main()
 {
     const wchar_t   wcString[] =
                     {L"Every good boy does fine."};
@@ -165,7 +168,7 @@ void main()
 The string was successfully converted.
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

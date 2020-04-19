@@ -6,12 +6,12 @@ helpviewer_keywords:
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-ms.openlocfilehash: 7bb5bda4a7b85ea8bb852649b20f10f0c4693188
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b358b4e92c7d9f214291b047a080f71b48183519
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411514"
 ---
 # <a name="using-slider-controls"></a>スライダー コントロールの使い方
 
@@ -29,4 +29,3 @@ ms.locfileid: "50533565"
 
 [CSliderCtrl の使い方](../mfc/using-csliderctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

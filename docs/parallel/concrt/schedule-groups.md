@@ -4,37 +4,36 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1765c10f4cf8fe499aed1a140d2bba1ecaaf2300
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453522"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142309"
 ---
 # <a name="schedule-groups"></a>スケジュール グループ
 
-このドキュメントでは、同時実行ランタイムのスケジュール グループの役割について説明します。 A*スケジュール グループ*で、またはグループ、関連するタスク化します。 すべてのスケジューラでは、1 つまたは複数のスケジュール グループがあります。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。 逆に、アプリケーションがある特定の品質要件、たとえば、一連のタスクに割り当てられている処理リソースの量を制限する場合に場合は、スケジューラ インスタンスを使用します。 スケジューラ インスタンスの詳細については、次を参照してください。[スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)します。
+このドキュメントでは、同時実行ランタイムのスケジュールグループの役割について説明します。 *スケジュールグループ*は、関連するタスクをまとめてアフィニティ化する、またはグループ化します。 すべてのスケジューラには、1つまたは複数のスケジュールグループがあります。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。 逆に、タスクのセットに割り当てられる処理リソースの量を制限する必要がある場合など、アプリケーションに特定の品質要件がある場合は、scheduler インスタンスを使用します。 Scheduler インスタンスの詳細については、「 [Scheduler instances](../../parallel/concrt/scheduler-instances.md)」を参照してください。
 
 > [!TIP]
->  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+> コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 タスクスケジューラはアプリケーションのパフォーマンスを微調整するのに役立ちます。そのため、同時実行ランタイムを初めて使用する場合は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)から始めることをお勧めします。
 
-すべて`Scheduler`オブジェクトがすべてのスケジューリング ノードの既定のスケジュール グループ。 A*スケジューリング ノード*基になるシステム トポロジにマップされます。 方の値が大きい、プロセッサ パッケージごとに 1 つのスケジュール ノードまたは Non-uniform Memory アーキテクチャ (NUMA) ノードに、ランタイムが作成されます。 スケジュール グループ、タスクを明示的に関連付けないはない場合、スケジューラはタスクを追加するグループを選択します。
+すべての `Scheduler` オブジェクトには、すべてのスケジュールノードに既定のスケジュールグループがあります。 *スケジュールノード*は、基になるシステムトポロジにマップされます。 ランタイムは、プロセッサパッケージまたは Non-uniform Memory Architecture (NUMA) ノードごとに1つのスケジュールノードを作成します。 タスクをスケジュールグループに明示的に関連付けない場合は、タスクを追加するグループがスケジューラによって選択されます。
 
-`SchedulingProtocol`スケジューラ ポリシー、スケジューラが各スケジュール グループ内のタスクが実行される順序に影響を与えます。 ときに`SchedulingProtocol`に設定されている`EnhanceScheduleGroupLocality`(既定では、)、タスク スケジューラは、現在のタスクが完了するか、協調的に生成するときに使用するスケジュール グループから次のタスクを選択します。 [次へ] の使用可能なグループを移動する前に、タスク スケジューラは作業の現在のスケジュール グループを検索します。 これに対し、`SchedulingProtocol`に設定されている`EnhanceForwardProgress`スケジューラは、各タスクが終了または生成後に次のスケジュール グループに移動します。 これらのポリシーと比較する例を参照してください[方法: スケジュール グループを使用して注文の実行に影響する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
+`SchedulingProtocol` scheduler ポリシーは、スケジューラが各スケジュールグループ内のタスクを実行する順序に影響します。 `SchedulingProtocol` が `EnhanceScheduleGroupLocality` (既定) に設定されている場合、現在のタスクが終了または協調的になったときに、タスクスケジューラによってスケジュールグループから次のタスクが選択されます。 タスクスケジューラは、現在のスケジュールグループの作業を検索してから、次に使用可能なグループに移動します。 逆に、`SchedulingProtocol` が `EnhanceForwardProgress`に設定されている場合、スケジューラは、各タスクが終了または生成された後、次のスケジュールグループに移動します。 これらのポリシーを比較する例については、「[方法: スケジュールグループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)」を参照してください。
 
-ランタイムを使用して、 [concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)スケジュール グループを表すクラス。 作成する、`ScheduleGroup`オブジェクトを呼び出し、 [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)または[concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)メソッド。 ランタイムでは、参照カウントのメカニズムを使用して、有効期間を制御`ScheduleGroup`オブジェクトの場合と同様`Scheduler`オブジェクト。 作成するときに、`ScheduleGroup`オブジェクト、ランタイムはカウンターを 1 つの参照を設定します。 [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference)メソッドを 1 つの参照カウンターをインクリメントします。 [Concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release)メソッドをデクリメントを 1 つの参照カウンター。
+ランタイムは、 [concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)クラスを使用して、スケジュールグループを表します。 `ScheduleGroup` オブジェクトを作成するには、 [concurrency:: CurrentScheduler:: CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)メソッドまたは[Concurrency:: Scheduler:: CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)メソッドを呼び出します。 ランタイムは、参照カウント機構を使用して、`Scheduler` オブジェクトと同様に `ScheduleGroup` オブジェクトの有効期間を制御します。 `ScheduleGroup` オブジェクトを作成すると、ランタイムによって参照カウンターが1に設定されます。 [Concurrency:: ScheduleGroup:: reference](reference/schedulegroup-class.md#reference)メソッドは、参照カウンターを1だけインクリメントします。 [Concurrency:: ScheduleGroup:: Release](reference/schedulegroup-class.md#release)メソッドは、参照カウンターを1だけデクリメントします。
 
-多くの同時実行ランタイム型では、スケジュール グループと共にオブジェクトを関連付けることができます。 たとえば、 [concurrency::agent](../../parallel/concrt/reference/agent-class.md)などのクラスとメッセージ ブロック クラス[concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)、 [concurrency::join](../../parallel/concrt/reference/join-class.md)、および同時実行::[タイマー](reference/timer-class.md)、取得するコンス トラクターのオーバー ロードされたバージョンの提供、`ScheduleGroup`オブジェクト。 ランタイムを使用して、`Scheduler`これに関連付けられているオブジェクト`ScheduleGroup`タスクをスケジュールするオブジェクト。
+同時実行ランタイムの多くの型を使用して、オブジェクトをスケジュールグループと関連付けることができます。 たとえば、concurrency [:: agent](../../parallel/concrt/reference/agent-class.md)クラスとメッセージブロッククラス ( [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)、 [concurrency:: join](../../parallel/concrt/reference/join-class.md)、concurrency::[timer](reference/timer-class.md)など) は、`ScheduleGroup` オブジェクトを受け取るコンストラクターのオーバーロードされたバージョンを提供します。 ランタイムは、この `ScheduleGroup` オブジェクトに関連付けられている `Scheduler` オブジェクトを使用して、タスクをスケジュールします。
 
-使用することも、 [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask)軽量タスクをスケジュールする方法。 軽量タスクの詳細については、次を参照してください。[軽量タスク](../../parallel/concrt/lightweight-tasks.md)します。
+また、 [concurrency:: ScheduleGroup:: schedulegroup](reference/schedulegroup-class.md#scheduletask)メソッドを使用して、軽量タスクをスケジュールすることもできます。 軽量タスクの詳細については、「[軽量タスク](../../parallel/concrt/lightweight-tasks.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-使用がタスクの実行順序を制御するグループをスケジュール例では、次を参照してください。[方法: スケジュール グループを使用して注文の実行に影響する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
+スケジュールグループを使用してタスクの実行順序を制御する例については、「[方法: スケジュールグループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)<br/>
 [方法: スケジュール グループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-

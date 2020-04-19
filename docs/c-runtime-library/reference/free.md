@@ -1,9 +1,9 @@
 ---
 title: free
 ms.date: 11/04/2016
-apiname:
+api_name:
 - free
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - free
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: f56212874f05ea5d4ab7bd826a7a4c145551dfc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621235"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956726"
 ---
 # <a name="free"></a>free
 
@@ -48,15 +51,15 @@ void free(
 
 ## <a name="remarks"></a>Remarks
 
-**無料**関数メモリ ブロックの割り当てを解除 (*_expand*) への呼び出しによって割り当てられていた**calloc**、 **malloc**、または**realloc**します。 解放されるバイトの数、ブロックが割り当てられたときに要求されたバイト数と同じです (の場合は再割り当てまたは**realloc**)。 場合 *_expand*は**NULL**、ポインターは無視されますと**無料**が直ちに返されます。 無効なポインターを解放しようとしています (によって割り当てられていないメモリ ブロックへのポインター **calloc**、 **malloc**、または**realloc**) 以降の割り当て要求に影響を与える可能性がありますエラーが発生します。
+**Free**関数は、以前に**calloc**、 **malloc**、または**realloc**への呼び出しによって割り当てられたメモリブロック (*memblock*) を解放します。 解放されたバイト数は、ブロックが割り当てられた (または再**割り当ての場合**は再割り当てされた) ときに要求されたバイト数と同じです。 *Memblock*が**NULL**の場合、ポインターは無視され、すぐに**解放**されます。 無効なポインター ( **calloc**、 **malloc**、または**realloc**によって割り当てられていないメモリブロックへのポインター) を解放しようとすると、後続の割り当て要求に影響し、エラーが発生する可能性があります。
 
-場合は、メモリの解放でエラーが発生した**errno**が障害の性質に関するオペレーティング システムからの情報を設定します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+メモリの解放中にエラーが発生した場合、エラーの性質上、オペレーティングシステムからの情報が**errno**に設定されます。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 メモリ ブロックを解放すると、[_heapmin](heapmin.md) が、未使用の領域を結合して、それらをオペレーティング システムに戻すことで、ヒープ上の空きメモリの量を最小限に抑えます。 オペレーティング システムにリリースされない解放されたメモリは、空きプールに復元され、再度割り当てに使用できます。
 
-アプリケーションが、C ランタイム ライブラリのデバッグ バージョンにリンクされている場合**無料**に解決される[_free_dbg](free-dbg.md)します。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **free**は[_free_dbg](free-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**無料**がマークされている`__declspec(noalias)`、グローバル変数を変更することがなく、関数が保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
+**free**はと`__declspec(noalias)`マークされています。これは、関数がグローバル変数を変更しないことが保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
 
 [_malloca](malloca.md) を使用して割り当てられたメモリを解放するには、[_freea](freea.md) を使用します。
 

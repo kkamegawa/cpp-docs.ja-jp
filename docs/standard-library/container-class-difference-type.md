@@ -4,31 +4,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: aa742c0df9a8647bb08dcc0c7f5391afcdc94b96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f685c899593d5483e2c8cd619466eb226e4dc36
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620858"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258199"
 ---
-# <a name="container-classdifferencetype"></a>コンテナー クラス::difference_type
+# <a name="container-classdifference_type"></a>コンテナー クラス::difference_type
 
 > [!NOTE]
-> このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
 
 被制御シーケンス内にある任意の 2 つの要素のアドレスの違いを表現できるオブジェクトを記述します。
 
 ## <a name="syntax"></a>構文
 
-```
-
+```cpp
 typedef T1 difference_type;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-説明されている、ここで指定されていない型のシノニムとして`T1`(通常`Alloc::difference_type`)。
+ここでは、指定されていない型 `T1` (通常 `Alloc::difference_type`) のシノニムとして記述されています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)<br/>
+[サンプル コンテナー クラス](../standard-library/sample-container-class.md)

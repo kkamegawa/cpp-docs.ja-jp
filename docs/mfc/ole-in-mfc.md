@@ -10,73 +10,72 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 992715c545f90176ab750890c4be3e05dfe950d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2668d35c24e9d95440a96c5b3eda1fab7bbf3891
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520485"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507998"
 ---
 # <a name="ole-in-mfc"></a>MFC の OLE
 
-これらの記事では、MFC を使用して OLE プログラミングの基礎について説明します。 MFC には、OLE を使用するプログラムを作成する最も簡単な方法が用意されています。
+これらの記事では、MFC を使用した OLE プログラミングの基礎について説明します。 MFC には、OLE を使用するプログラムを記述する最も簡単な方法が用意されています。
 
-- OLE ビジュアル編集 (インプレース アクティブ化) を使用します。
+- OLE ビジュアル編集を使用する場合 (インプレースアクティブ化)。
 
-- OLE コンテナーまたはサーバーで作業します。
+- OLE コンテナーまたはサーバーとして機能します。
 
-- ドラッグ アンド ドロップ機能を実装します。
+- ドラッグアンドドロップ機能を実装します。
 
-- 日付と時刻のデータを使用します。
+- 日付と時刻のデータを使用する場合。
 
-- MFC の状態データを管理するには、DLL 関数のエントリ ポイント、OLE と COM インターフェイス エントリ ポイント、およびウィンドウ プロシージャ エントリ ポイントを含むモジュールがエクスポートされます。
+- エクスポートされた DLL 関数のエントリポイント、OLE/COM インターフェイスのエントリポイント、ウィンドウプロシージャのエントリポイントなど、MFC モジュールの状態データを管理する。
 
-使用することも[Automation](../mfc/automation.md)します。
+[オートメーション](../mfc/automation.md)を使用することもできます。
 
 > [!NOTE]
->  用語を OLE 表します、リンクと埋め込みに関連付けられているなどテクノロジ OLE コンテナー、OLE サーバー、OLE アイテム、インプレース アクティブ化 (ビジュアル編集)、トラッカー、ドラッグ アンド ドロップ、およびメニューのマージします。 用語など、ActiveX コントロール、コンポーネント オブジェクト モデル (COM) と COM ベースのオブジェクトをアクティブが適用されます。 OLE オートメーションは、Automation と呼ばれるようになりました。
+>  Ole という用語は、OLE コンテナー、OLE サーバー、OLE アイテム、埋め込み先ライセンス認証 (またはビジュアル編集)、トラッカー、ドラッグアンドドロップ、メニューのマージなど、リンクと埋め込みに関連するテクノロジを意味します。 アクティブという用語は、ActiveX コントロールなどのコンポーネントオブジェクトモデル (COM) と COM ベースのオブジェクトに適用されます。 OLE オートメーションがオートメーションと呼ばれるようになりました。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [OLE の背景知識](../mfc/ole-background.md)<br/>
-OLE について説明し、そのしくみについて説明します。
+OLE について説明し、そのしくみについての概念を説明します。
 
 [アクティベーション](../mfc/activation-cpp.md)<br/>
-OLE 項目の編集におけるライセンス認証の役割について説明します。
+OLE 項目の編集時のアクティブ化の役割について説明します。
 
 [コンテナー](../mfc/containers.md)<br/>
-OLE のコンテナーの使用へのリンクを提供します。
+OLE でコンテナーを使用するためのリンクを示します。
 
-[データ オブジェクトとデータ ソース](../mfc/data-objects-and-data-sources-ole.md)<br/>
-使用方法に関するトピックへのリンク、`COleDataObject`と`COleDataSource`クラス。
+[データオブジェクトとデータソース](../mfc/data-objects-and-data-sources-ole.md)<br/>
+クラス`COleDataObject` および`COleDataSource`クラスの使用について説明したトピックへのリンクを示します。
 
 [ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)<br/>
-コピーと貼り付け ole の使用について説明します。
+OLE でのコピーと貼り付けの使用方法について説明します。
 
 [OLE のメニューとリソース](../mfc/menus-and-resources-ole.md)<br/>
-MFC OLE ドキュメント アプリケーションでメニューとリソースの使用について説明します。
+MFC OLE ドキュメントアプリケーションでのメニューとリソースの使用について説明します。
 
 [登録](../mfc/registration.md)<br/>
 サーバーのインストールと初期化について説明します。
 
 [サーバー](../mfc/servers.md)<br/>
-コンテナー アプリケーションで使用するため、OLE 項目 (またはコンポーネント) を作成する方法について説明します。
+コンテナーアプリケーションで使用する OLE 項目 (またはコンポーネント) を作成する方法について説明します。
 
 [トラッカー](../mfc/trackers.md)<br/>
-に関する情報を提供、 `CRectTracker` OLE クライアント アイテムと対話するユーザーを有効にするためのグラフィカル インターフェイスを提供するクラス。
+ユーザーが OLE クライアント`CRectTracker`アイテムと対話できるようにするためのグラフィカルインターフェイスを提供するクラスについて説明します。
 
 ## <a name="related-sections"></a>関連項目
 
 [接続ポイント](../mfc/connection-points.md)<br/>
-(以前は OLE コネクション ポイントと呼ばれます) の接続ポイントを実装する方法を説明します。 MFC クラスを使用して`CCmdTarget`と`CConnectionPoint`します。
+MFC クラス`CCmdTarget`および`CConnectionPoint`を使用して、接続ポイント (旧称 OLE connection points) を実装する方法について説明します。
 
-[コンテナー/サーバーの COM コンポーネント](../mfc/containers-advanced-features.md)<br/>
-既存のコンテナー アプリケーションに省略可能な高度な機能を組み込むために必要な手順について説明します。
+[コンテナー/サーバー COM コンポーネント](../mfc/containers-advanced-features.md)<br/>
+既存のコンテナーアプリケーションにオプションの高度な機能を組み込むために必要な手順について説明します。
 
-[コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)<br/>
-OLE MFC なしの使用について説明します。
+[コンポーネント オブジェクト モデル](/windows/win32/com/the-component-object-model)<br/>
+MFC を使用しない OLE の使用について説明します。
 
 ## <a name="see-also"></a>関連項目
 
 [概念](../mfc/mfc-concepts.md)
-

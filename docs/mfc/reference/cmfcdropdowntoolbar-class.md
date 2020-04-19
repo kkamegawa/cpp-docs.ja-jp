@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238074"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 
@@ -72,11 +72,11 @@ A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの
 
 3. ダミー ボタンに置き換える、`CMFCDropDownToolBarButton`オブジェクトを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。
 
-ツール バー ボタンの詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。 ドロップダウン ツール バーの例は、サンプル プロジェクト VisualStudioDemo を参照してください。
+ツール バー ボタンの詳細については、次を参照してください。[チュートリアル。コントロールのツールバーに追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。 ドロップダウン ツール バーの例は、サンプル プロジェクト VisualStudioDemo を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、使用する方法、`Create`メソッドで、`CMFCDropDownToolBar`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`Create`メソッドで、`CMFCDropDownToolBar`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in]通常のメニュー画像を参照するビットマップのリソース ID。
 
-*ブロックされています。*<br/>
+*bLocked*<br/>
 [in]ツールバーをロックする場合は TRUEそれ以外の場合は FALSE です。
 
 *uiDisabledResID*<br/>
@@ -174,17 +174,17 @@ virtual BOOL LoadToolBar(
 
 [in]*uiResID*<br/>
 
-[in]*uiColdResID*<br/>
+[in] *uiColdResID*<br/>
 
 [in]*uiMenuResID*<br/>
 
 [in]*BOOL*<br/>
 
-[in]*uiDisabledResID*<br/>
+[in] *uiDisabledResID*<br/>
 
-[in]*uiMenuDisabledResID*<br/>
+[in] *uiMenuDisabledResID*<br/>
 
-[in]*uiHotResID*<br/>
+[in] *uiHotResID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -261,4 +261,3 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

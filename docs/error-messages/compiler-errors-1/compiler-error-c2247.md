@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: ab1f83e2075128441cbffd2d939e3b99b45be4c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596432"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758906"
 ---
 # <a name="compiler-error-c2247"></a>コンパイラ エラー C2247
 
-' identifier' の 'class' では、'specifier' を使用して、'class' から継承するためにアクセスできません。
+' class ' は ' class ' から継承するために ' 指定子 ' を使用するため、' identifier ' にアクセスできません
 
-`identifier` プライベートまたはプロテクトのアクセスで宣言されたクラスから継承されます。
+`identifier` は、private または protected アクセスで宣言されたクラスから継承されます。
 
 次の例では、C2247 が生成されます。
 
-```
+```cpp
 // C2247.cpp
 class A {
 public:
@@ -32,11 +32,11 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible
 ```
 
-このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成することもできます。 保護されたメンバーのアクセスを制御します。 プロテクト メンバー (n) は、(A) (n) がメンバーである、クラスから継承するクラス (B) のメンバー関数でのみアクセスできます。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。プロテクトメンバーによるアクセス制御。 プロテクトメンバー (n) は、(n) がメンバーであるクラス (A) から継承するクラス (B) のメンバー関数を介してのみアクセスできます。
 
-コードは、Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C の両方で有効で、メンバーの型のフレンドを宣言します。 パブリック継承も使用されます。
+Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio で有効なコードの場合は、メンバーを型のフレンドとして宣言します。 パブリック継承を使用することもできます。
 
-```
+```cpp
 // C2247b.cpp
 // compile with: /c
 // C2247 expected
@@ -57,11 +57,11 @@ void A::f() {
 }
 ```
 
-C2247 は、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成することもできます。 プライベート基本クラスはアクセスできないようになりました。 プライベート基底クラス型であるクラス (A) は (B) は (C) の基本クラスとして B を使用する型にアクセスできません。
+C2247 は、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成することもできます。プライベート基本クラスにアクセスできなくなりました。 型 (B) のプライベート基本クラスであるクラス (A) は、B を基底クラスとして使用する型 (C) にアクセスできないようにする必要があります。
 
-コードは、Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C の両方で有効で、スコープ演算子を使用します。
+Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio で有効なコードについては、scope 演算子を使用します。
 
-```
+```cpp
 // C2247c.cpp
 // compile with: /c
 struct A {};

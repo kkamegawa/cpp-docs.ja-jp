@@ -9,21 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 1f0ff93c22263ca4b35377b5d9af089816e8895a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537112"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687884"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedefs
 
-||||
-|-|-|-|
-|[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|
-|[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|
-
-## <a name="ios"></a>  ios
+## <a name="ios"></a>ios
 
 従来の iostream ライブラリの ios クラスをサポートします。
 
@@ -33,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_ios](../standard-library/basic-ios-class.md)型の要素に対して特殊化されて、 **char**で既定の特性。
+この型はクラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムで、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
 
-## <a name="streamoff"></a>  streamoff
+## <a name="streamoff"></a>streamoff
 
 内部操作をサポートします。
 
@@ -49,9 +44,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Remarks
 
-型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 32 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。 値`streamoff(-1)`通常誤ったオフセットを示します。
+型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 32 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。 @No__t_0 値は、通常、間違ったオフセットを示します。
 
-## <a name="streampos"></a>  streampos
+## <a name="streampos"></a>streampos
 
 バッファー ポインターまたはファイル ポインターの現在の位置を保持します。
 
@@ -132,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_ios](../standard-library/basic-ios-class.md)型の要素に対して特殊化されて、 **wchar_t**で既定の特性。
+この型はクラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムで、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
 
-## <a name="wstreampos"></a>  wstreampos
+## <a name="wstreampos"></a>wstreampos
 
 バッファー ポインターまたはファイル ポインターの現在の位置を保持します。
 
@@ -167,7 +162,3 @@ int main( )
 ```Output
 7
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<ios>](../standard-library/ios.md)<br/>

@@ -1,28 +1,28 @@
 ---
 title: ML の致命的なエラー A1010
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: eb4d77b856e93a8d64ee6c51bec63ceae59b22e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3141f8819a33281c70e34bd7772d4475886e557
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449128"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312587"
 ---
 # <a name="ml-fatal-error-a1010"></a>ML の致命的なエラー A1010
 
-**比類のないブロックの入れ子。**
+**一致しないブロックの入れ子:**
 
-ブロックの先頭に、対応する end がないか、ブロックの終了を開始に対応するありませんでした。 次のいずれかが含まれます。
+最初のブロックの終わりに一致するものがないか、またはブロックの末尾に一致する先頭がありませんでした。 次のいずれかが関係している可能性があります。
 
-- などの高度なディレクティブ[します。IF](../../assembler/masm/dot-if.md)、[します。繰り返し](../../assembler/masm/dot-repeat.md)、または[します。中に](../../assembler/masm/dot-while.md)します。
+- などの高レベルのディレクティブ[。の場合は](dot-if.md) [。](dot-repeat.md)またはを繰り返し[ます。しばらくお待ち](dot-while.md)ください。
 
-- などの条件付きのアセンブリ ディレクティブ[場合](../../assembler/masm/if-masm.md)、[繰り返します](../../assembler/masm/repeat.md)、または**中**します。
+- [IF](if-masm.md)、 [REPEAT](repeat.md)、 **WHILE**などの条件付きアセンブリディレクティブ。
 
 - 構造体または共用体の定義。
 
@@ -30,10 +30,10 @@ ms.locfileid: "50449128"
 
 - セグメントの定義。
 
-- A [POPCONTEXT](../../assembler/masm/popcontext.md)ディレクティブ。
+- [Popcontext](popcontext.md)ディレクティブ。
 
-- 条件付きアセンブリなど、ディレクティブ、 [ELSE](../../assembler/masm/else-masm.md)、 [ELSEIF](../../assembler/masm/elseif-masm.md)、または**ENDIF** 、一致することがなく[場合](../../assembler/masm/if-masm.md)。
+- [If](if-masm.md)と一致することのない、 [ELSE](else-masm.md)、 [ELSEIF](elseif-masm.md)、または**ENDIF**などの条件付きアセンブリディレクティブ。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

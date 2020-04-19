@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 937b4e993919f5b6e28e3c389476854be36fa1cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668287"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738012"
 ---
 # <a name="compiler-error-c3499"></a>コンパイラ エラー C3499
 
@@ -27,11 +27,11 @@ void の戻り値の型を持つように指定されているラムダは、値
 
 - ラムダ式の本体を構成するステートメントを結合して、単一のステートメントにする
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、ラムダ式の本体に複数のステートメントが含まれており、値を返すものの、ラムダ式で戻り値の型が指定されていないため、C3499 が生成されます。
 
-```
+```cpp
 // C3499a.cpp
 
 int main()
@@ -40,11 +40,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3499 について考えられる 2 つの解決策を示します。 最初の解決策では、ラムダ式の戻り値の型を指定します。 2 番目の解決策では、ラムダ式の本体を構成するステートメントを結合して、単一のステートメントにします。
 
-```
+```cpp
 // C3499b.cpp
 
 int main()
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

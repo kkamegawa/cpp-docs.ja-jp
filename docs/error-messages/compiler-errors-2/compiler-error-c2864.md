@@ -1,27 +1,31 @@
 ---
 title: コンパイラ エラー C2864
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - C2864
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 9bfc18137df1a54530011a8ec3f7ea50b1d6c86a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468394"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998668"
 ---
 # <a name="compiler-error-c2864"></a>コンパイラ エラー C2864
 
-'variable' : in-class initializer を持つ静的データ メンバーには、非揮発性 const integral 型が必要です
+> '*メンバー名*': クラス内初期化子を持つ静的データメンバーは、非 volatile const 整数型である必要があります
 
-`static`、非 `volatile`、または非整数型として定義された `const` データ メンバーを初期化するには、member-definition ステートメントを使用します。 これらを宣言で初期化することはできません。
+## <a name="remarks"></a>コメント
 
-この例では、C2864 が生成されます。
+`volatile`、非`const`、または整数型として定義されている `static` データメンバーを初期化するには、メンバー定義ステートメントを使用します。 宣言で初期化することはできません。
 
-```
+## <a name="example"></a>例
+
+このサンプルでは、C2864 が生成されます。
+
+```cpp
 // C2864.cpp
 // compile with: /c
 class B  {
@@ -30,14 +34,14 @@ private:
    static int b = 3;   // C2864
    volatile static int c = 3;   // C2864
    volatile static const int d = 3;   // C2864
-   const static long long e = 3;   // OK
+   static const long long e = 3;   // OK
    static const double f = 3.33;   // C2864
 };
 ```
 
 このサンプルは、C2864 を修正する方法を示しています。
 
-```
+```cpp
 // C2864b.cpp
 // compile with: /c
 class C  {

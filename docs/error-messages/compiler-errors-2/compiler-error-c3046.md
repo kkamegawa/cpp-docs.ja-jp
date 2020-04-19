@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3046
 ms.assetid: 2e53d835-faa1-4ec0-9807-41f3dc552635
-ms.openlocfilehash: 56fffc0e9aab19f8ad8510ad886ec255a327249d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4af29ff6a5267dc80c52e8a3ea9d92cad8d8f7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761339"
 ---
 # <a name="compiler-error-c3046"></a>コンパイラ エラー C3046
 
@@ -21,7 +21,7 @@ OpenMP '#pragma omp sections' の領域で構造化ブロックがありませ�
 
 次の例では C3046 が生成されます。
 
-```
+```cpp
 // C3046.cpp
 // compile with: /openmp /c
 #include "omp.h"

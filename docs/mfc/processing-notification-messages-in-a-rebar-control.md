@@ -7,41 +7,40 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 4c35a1efb1c93aecf17e8f57b9e96c033aa4334a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507956"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Rebar コントロールでの通知メッセージの処理
 
-Rebar コントロールの親クラスで作成、`OnChildNotify`ハンドラー関数の rebar コントロールの switch ステートメントを (`CReBarCtrl`) 通知のメッセージを処理します。 ユーザーが rebar コントロール、変更、削除、rebar バンドのレイアウトと、rebar コントロールからのバンド上でオブジェクトをドラッグすると、親ウィンドウに通知が送信されます。
+Rebar コントロールの親クラスで、処理する rebar コントロール`OnChildNotify` (`CReBarCtrl`) 通知メッセージの switch ステートメントを含むハンドラー関数を作成します。 ユーザーが rebar コントロール上でオブジェクトをドラッグしたり、rebar バンドのレイアウトを変更したり、rebar コントロールからバンドを削除したりすると、通知が親ウィンドウに送信されます。
 
-Rebar コントロールによっては、次の通知メッセージを送信できます。
+Rebar コントロールオブジェクトは、次の通知メッセージを送信できます。
 
-- RBN_AUTOSIZE が (したスタイルで作成された) rebar コントロールから送信されたときに、rebar 自動的にサイズが変更されます。
+- Rebar が自動的にサイズを変更したときに rebar コントロール (RBS_AUTOSIZE スタイルで作成) によって送信された RBN_AUTOSIZE。
 
-- RBN_BEGINDRAG は、ユーザーがバンドのドラッグを開始するときに、rebar コントロールから送信されます。
+- RBN_BEGINDRAG は、ユーザーがバンドのドラッグを開始したときに rebar コントロールによって送信されます。
 
-- RBN_CHILDSIZE rebar コントロール バンドの子ウィンドウのサイズによって送信されます。
+- RBN_CHILDSIZE バンドの子ウィンドウのサイズが変更されたときに rebar コントロールによって送信されます。
 
-- RBN_DELETEDBAND rebar コントロール バンドが削除された後で送信されます。
+- RBN_DELETEDBAND は、バンドが削除された後に rebar コントロールによって送信されます。
 
-- RBN_DELETINGBAND rebar コントロール バンドが削除されるときに送信されます。
+- バンドが削除されようとしているときに rebar コントロールによって送信された RBN_DELETINGBAND。
 
-- RBN_ENDDRAG は、ユーザーがバンドのドラッグを停止したとき、rebar コントロールから送信されます。
+- RBN_ENDDRAG は、ユーザーがバンドのドラッグを停止したときに rebar コントロールによって送信されます。
 
-- RBN_GETOBJECT が rebar コントロール (ときスタイルで作成された) によって送信される、コントロールのバンド上にオブジェクトをドラッグするとします。
+- オブジェクトがコントロールのバンド上にドラッグされたときに、rebar コントロール (RBS_REGISTERDROP スタイルで作成) によって送信された RBN_GETOBJECT。
 
-- RBN_HEIGHTCHANGE rebar コントロールの高さが変更されたときに送信されます。
+- RBN_HEIGHTCHANGE は、その高さが変更されたときに rebar コントロールによって送信されます。
 
-- RBN_LAYOUTCHANGED は、ユーザー コントロールのバンドのレイアウトが変更されたとき、rebar コントロールから送信されます。
+- RBN_LAYOUTCHANGED は、ユーザーがコントロールのバンドのレイアウトを変更したときに rebar コントロールによって送信されます。
 
-これらの通知の詳細については、次を参照してください。 [Rebar コントロールの参照](/windows/desktop/controls/rebar-control-reference)Windows SDK に含まれています。
+これらの通知の詳細については、Windows SDK の「 [Rebar コントロールリファレンス](/windows/win32/controls/rebar-control-reference)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

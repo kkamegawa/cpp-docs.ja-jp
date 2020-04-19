@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3272
 ms.assetid: 7cdf254d-f207-4116-a1bf-7386f3b82a6f
-ms.openlocfilehash: 3e4348dcce0cfd04234b515877d788e5330f8e4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14eefa303a8148b79ca7bc0d1777688ffce176f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598576"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753849"
 ---
 # <a name="compiler-error-c3272"></a>コンパイラ エラー C3272
 
 'symbol': シンボルは、StructLayout(LayoutKind::Explicit) で定義された型パラメーターのメンバーであるため、このシンボルには FieldOffset が必要です
 
-ときに`StructLayout(LayoutKind::Explicit)`でフィールドをマークする必要がありますが実際には、`FieldOffset`します。
+`StructLayout(LayoutKind::Explicit)` が有効な場合は、フィールドを `FieldOffset`でマークする必要があります。
 
 次の例では C3272 が生成されます。
 
-```
+```cpp
 // C3272_2.cpp
 // compile with: /clr /c
 using namespace System;

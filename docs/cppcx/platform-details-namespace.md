@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-ms.openlocfilehash: 5374fb48427ea836c81fdd6731dee19c15dbc618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387644"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details 名前空間
 

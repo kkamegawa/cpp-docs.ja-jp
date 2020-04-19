@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
 ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338923"
 ---
 # <a name="compiler-error-c2441"></a>コンパイラ エラー C2441
 
-> '*変数*': __declspec(process) と共に宣言されたシンボルは/clr では定数である必要があります: ピュア モード
+> '*variable*' : a symbol declared with __declspec(process) must be const in /clr:pure mode
 
 ## <a name="remarks"></a>Remarks
 

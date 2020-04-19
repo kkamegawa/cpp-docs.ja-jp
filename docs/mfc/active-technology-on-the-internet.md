@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: 04444ca1318eaf52f05c05a251baf120c16eec29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9f09715f53247cc8a3abf0fbc63517e76d810c3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394924"
 ---
 # <a name="active-technology-on-the-internet"></a>インターネット上の Active テクノロジ
 
@@ -24,7 +24,7 @@ ActiveX コントロール (以前の OLE コントロール) は、Web ペー�
 
 ## <a name="internet-data-download-services"></a>インターネットのデータのダウンロード サービス
 
-一般的なプロトコルを使用してインターネット経由でデータをダウンロードできます: HTTP、FTP、および gopher します。 MFC WinInet クラスを簡単に抽象化して、TCP/IP および WinSock プロトコルで HTTP、FTP、および gopher プロトコルを使用してデータを転送します。 MFC の非同期モニカー クラスでは、ラージ オブジェクトを非同期的に表示するためにブロックすることがなくファイルをダウンロードする方法を提供します。 詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。
+データは、一般的なプロトコルを使用してインターネット経由でダウンロードできます。HTTP、FTP、および gopher します。 MFC WinInet クラスを簡単に抽象化して、TCP/IP および WinSock プロトコルで HTTP、FTP、および gopher プロトコルを使用してデータを転送します。 MFC の非同期モニカー クラスでは、ラージ オブジェクトを非同期的に表示するためにブロックすることがなくファイルをダウンロードする方法を提供します。 詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。
 
 ## <a name="active-scripts"></a>アクティブ スクリプト
 
@@ -39,4 +39,3 @@ VBScript および他のスクリプト言語は、コントロールを接続�
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)<br/>
 [インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)<br/>
 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
-

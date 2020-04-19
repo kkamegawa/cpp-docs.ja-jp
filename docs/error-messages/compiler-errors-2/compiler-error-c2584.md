@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: b61ad65555b5d5232468206f6170223c5f160a34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556690"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748633"
 ---
 # <a name="compiler-error-c2584"></a>コンパイラ エラー C2584
 
-'Class': 'Base2' がベースにアクセスできる直接既に 'Base1' のベース
+' Class ': direct base ' Base2 ' にアクセスできません。' Base1 ' のベースが既にあります
 
-`Class` 既にから直接派生`Base1`します。 `Base2` 派生`Base1`します。 `Class` 派生できません`Base2`(直接) から継承しないことになりますので`Base1`ここでも、これは無効ため`Base1`直接基底クラスでは既にします。
+`Class` は `Base1`から直接派生しています。 `Base2` も `Base1`から派生します。 `Base1` は既に直接基底クラスであるため、`Class` を `Base2` から派生させることはできません。これは `Base1` から間接的に継承することを意味します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2584 が生成されます。
 
-```
+```cpp
 // C2584.cpp
 // compile with: /c
 struct A1 {

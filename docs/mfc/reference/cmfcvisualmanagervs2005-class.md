@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 0b89757380aa50af5092979c3824d3e15f29ca2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338117"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 クラス
 
@@ -86,7 +86,7 @@ CMFCVisualManagerVS2005 クラスを使用して、Microsoft Visual Studio 2005 
 
 ## <a name="example"></a>例
 
-次の例では、VS 2005 ビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、VS 2005 ビジュアル マネージャーを使用する方法を示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
@@ -136,7 +136,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pPropList*<br/>
+[in] *pPropList*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -164,10 +164,10 @@ virtual void GetTabFrameColors(
 [in]*clrBlack*<br/>
 [in]*clrHighlight*<br/>
 [in]*clrFace*<br/>
-[in]*clrDarkShadow*<br/>
+[in] *clrDarkShadow*<br/>
 [in]*clrLight*<br/>
-[in]*pbrFace*<br/>
-[in]*pbrBlack*<br/>
+[in] *pbrFace*<br/>
+[in] *pbrBlack*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -195,7 +195,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 [in]*pDC*<br/>
 [in]*rectBounds*<br/>
-[in]*rectBorderSize*<br/>
+[in] *rectBorderSize*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -218,10 +218,10 @@ virtual void OnDrawCaptionButton(
 [in]*pDC*<br/>
 [in]*pButton*<br/>
 [in]*描画*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 [in]*bMaximized*<br/>
 [in]*bDisabled*<br/>
-[in]*nImageID*<br/>
+[in] *nImageID*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -241,7 +241,7 @@ virtual COLORREF OnDrawPaneCaption(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*描画*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*rectButtons*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -263,7 +263,7 @@ virtual void OnDrawSeparator(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*rect*<br/>
-[in]*bIsHoriz*<br/>
+[in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -281,9 +281,9 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectTab*<br/>
+[in] *rectTab*<br/>
 [in]*iTab*<br/>
-[in]*bIsActive*<br/>
+[in] *bIsActive*<br/>
 [in]*pTabWnd*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -369,7 +369,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*pFrameWnd*<br/>
 [in]*描画*<br/>
 

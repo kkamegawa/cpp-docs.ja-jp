@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: aa22c9b218b88a8834e8ba474c2aa2c203ea89dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8b2a045ce94562dcba0019bc03aaa90c4d384a9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517118"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140900"
 ---
-# <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling クラス
+# <a name="invalid_multiple_scheduling-class"></a>invalid_multiple_scheduling クラス
 
 このクラスは、`task_handle` オブジェクトまたは `run` オブジェクトの `task_group` メソッドを使用して `structured_task_group` オブジェクトが複数回スケジュールされた場合、間に `wait` メソッドまたは `run_and_wait` メソッドを呼び出さなかったときにスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class invalid_multiple_scheduling : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[invalid_multiple_scheduling](#ctor)|オーバーロードされます。 `invalid_multiple_scheduling` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class invalid_multiple_scheduling : public std::exception;
 
 `invalid_multiple_scheduling`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> invalid_multiple_scheduling
+## <a name="ctor"></a>invalid_multiple_scheduling
 
 `invalid_multiple_scheduling` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP invalid_multiple_scheduling(_In_z_ const char* _Message) throw();
 
 invalid_multiple_scheduling() throw();
@@ -57,15 +57,15 @@ invalid_multiple_scheduling() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [task_handle クラス](task-handle-class.md)<br/>
 [task_group クラス](task-group-class.md)<br/>
 [run](task-group-class.md)<br/>
-[wait](task-group-class.md)<br/>
+[待機](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group クラス](structured-task-group-class.md)

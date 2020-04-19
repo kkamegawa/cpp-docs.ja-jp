@@ -1,11 +1,11 @@
 ---
 title: ccos、ccosf、ccosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ccos
 - ccosf
 - ccosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ccos
 - ccosf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d6acddf979b7488be722bd850fe9e16816d1030
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943182"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos、ccosf、ccosl
 
@@ -68,15 +71,15 @@ _Lcomplex ccosl(
 
 ## <a name="return-value"></a>戻り値
 
-コサイン*z*、(ラジアン単位)。
+*Z*のコサイン (ラジアン)。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ccos**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ccos**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**ccos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ccos**は常にを受け取り、**戻り値を**返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ccos**、 **ccosf**、 **ccosl**|\<complex.h>|\<ccomplex>|
 

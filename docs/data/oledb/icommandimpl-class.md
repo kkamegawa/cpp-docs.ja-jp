@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408967"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 
-実装を提供、 [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85))インターフェイス。
+実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -107,7 +107,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 コマンド オブジェクトの必須インターフェイス。
 
-## <a name="cancel"></a> Icommandimpl::cancel
+## <a name="cancel"></a> ICommandImpl::Cancel
 
 現在のコマンドの実行をキャンセルします。
 
@@ -119,9 +119,9 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[icommand::cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="cancelexecution"></a> Icommandimpl::cancelexecution
+## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
 現在のコマンドの実行をキャンセルします。
 
@@ -131,7 +131,7 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> Icommandimpl::createrowset
+## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
 によって呼び出される[Execute](../../data/oledb/icommandimpl-execute.md)を 1 つの行セットを作成します。
 
@@ -161,7 +161,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pParams*<br/>
 [入力/出力]対応する*pParams*で`ICommand::Execute`します。
 
-*入力/出力*<br/>
+*pcRowsAffected*<br/>
 対応する*入力/出力*で`ICommand::Execute`します。
 
 *ppRowset*<br/>
@@ -178,9 +178,9 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供するには、別の呼び出しを配置`CreateRowset`内から`Execute`します。
 
-参照してください[icommand::execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス。*
+参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス。*
 
-## <a name="execute"></a> Icommandimpl::execute
+## <a name="execute"></a> ICommandImpl::Execute
 
 コマンドを実行します。
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommand::execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -204,7 +204,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 `Execute` 呼び出し[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)します。 1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供する既定の実装をオーバーライドします。
 
-## <a name="getdbsession"></a> Icommandimpl::getdbsession
+## <a name="getdbsession"></a> ICommandImpl::GetDBSession
 
 コマンドを作成したセッションにインターフェイス ポインターを返します。
 
@@ -217,13 +217,13 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
 セッションからプロパティを取得するために便利です。
 
-## <a name="icommandimpl"></a> Icommandimpl::icommandimpl
+## <a name="icommandimpl"></a> ICommandImpl::ICommandImpl
 
 コンストラクターです。
 
@@ -233,7 +233,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> Icommandimpl::m_bcancel
+## <a name="bcancel"></a> ICommandImpl::m_bCancel
 
 コマンドが取り消されたかどうかを示します。
 
@@ -261,7 +261,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 既定値は**true** (キャンセルできます)。
 
-## <a name="bisexecuting"></a> Icommandimpl::m_bisexecuting
+## <a name="bisexecuting"></a> ICommandImpl::m_bIsExecuting
 
 コマンドが現在実行されているかどうかを示します。
 

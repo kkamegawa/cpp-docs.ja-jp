@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
-ms.openlocfilehash: deeabdb08f4b0fb3cd722d5d33a4d2cfffb15d61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f9e9393d0b4ee4075b24c20f0755a5317e94eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601572"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761073"
 ---
 # <a name="compiler-error-c2913"></a>コンパイラ エラー C2913
 
-明示的な特殊化です。'declaration' はクラス テンプレートの特殊化ではありません。
+明示的特殊化。' 宣言 ' はクラステンプレートの特殊化ではありません
 
-非テンプレート クラスを専門とすることはできません。
+非テンプレートクラスを特殊化することはできません。
 
 次の例では、C2913 が生成されます。
 
-```
+```cpp
 // C2913.cpp
 // compile with: /c
 class X{};

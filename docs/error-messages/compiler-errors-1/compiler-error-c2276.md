@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2276
 ms.assetid: 62005ad9-6cb9-4b1f-965d-b875adaf695e
-ms.openlocfilehash: 2128be2be4f0b5be37bbfc5098a35bb39afe5906
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69bbabbf38f7ee02d08f4b5e9dc4bed167919291
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633663"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760063"
 ---
 # <a name="compiler-error-c2276"></a>コンパイラ エラー C2276
 
-'operator': メンバーにバインドされた関数の式に無効な操作
+' operator ': バインドされたメンバー関数式に対する無効な操作です。
 
-メンバーへのポインターを作成する構文の問題が見つかりました。
+コンパイラにより、メンバーへのポインターを作成する構文に問題が見つかりました。
 
 次の例では、C2276 が生成されます。
 
-```
+```cpp
 // C2276.cpp
 class A {
 public:

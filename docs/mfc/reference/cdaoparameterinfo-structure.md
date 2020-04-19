@@ -1,22 +1,22 @@
 ---
 title: CDaoParameterInfo 構造体
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoParameterInfo
 helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 29248f04833662750d99b112fe2386c6ff4d97fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f96cba8ea43db7e24e834b1de4ffb593b2c6e0d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545913"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303489"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 構造体
 
-`CDaoParameterInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているパラメーターのオブジェクトに関する情報が含まれています。
+`CDaoParameterInfo` 構造体には、データアクセスオブジェクト (DAO) 用に定義されたパラメーターオブジェクトに関する情報が含まれています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,32 +32,32 @@ struct CDaoParameterInfo
 #### <a name="parameters"></a>パラメーター
 
 *m_strName*<br/>
-パラメーター オブジェクトの一意名します。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。
+パラメーターオブジェクトに一意の名前を指定します。 詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 *m_nType*<br/>
-パラメーター オブジェクトのデータ型を示す値。 使用可能な値の一覧を参照してください、 *m_nType*のメンバー、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体。 詳細については、「型のプロパティ」DAO ヘルプのトピックを参照してください。
+パラメーターオブジェクトのデータ型を示す値です。 使用可能な値の一覧については、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体の*m_nType*メンバーを参照してください。 詳細については、DAO ヘルプの「Type プロパティ」を参照してください。
 
 *m_varValue*<br/>
-格納され、パラメーターの値を[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト。
+[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクトに格納されているパラメーターの値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-プライマリとセカンダリの上への参照情報がによって返される方法を示すため、 [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)クラスのメンバー関数`CDaoQueryDef`します。
+上のプライマリとセカンダリへの参照は、`CDaoQueryDef`クラスの[Getparameterinfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)メンバー関数によって情報がどのように返されるかを示します。
 
-MFC は、DAO クラスでオブジェクトのパラメーターをカプセル化しません。 クエリ定義オブジェクトの基になる MFC`CDaoQueryDef`オブジェクトは、パラメーターをパラメーター コレクションに格納します。 パラメーター オブジェクトにアクセスする、 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)オブジェクトをクエリ定義オブジェクトの`GetParameterInfo`メンバー関数は、特定のパラメーター名またはパラメーターのコレクションへのインデックス。 使用することができます、 [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount)メンバー関数と組み合わせて`GetParameterInfo`パラメーター コレクションをループ処理します。
+MFC では、DAO パラメーターオブジェクトはクラスにカプセル化されません。 MFC `CDaoQueryDef` オブジェクトの基になる DAO querydef オブジェクトは、パラメーターコレクションにパラメーターを格納します。 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)オブジェクト内のパラメーターオブジェクトにアクセスするには、特定のパラメーター名またはインデックスをパラメーターコレクションに対して、querydef オブジェクトの `GetParameterInfo` メンバー関数を呼び出します。 [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount)メンバー関数を `GetParameterInfo` と組み合わせて使用して、Parameters コレクションをループ処理することができます。
 
-によって取得される情報、 [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)にメンバー関数が格納されている、`CDaoParameterInfo`構造体。 呼び出す`GetParameterInfo`クエリ定義オブジェクトをパラメーター コレクションを持つパラメーター オブジェクトを格納します。
+[CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)メンバー関数によって取得された情報は `CDaoParameterInfo` 構造体に格納されます。 パラメーターオブジェクトが格納されているパラメーターコレクションを持つ、の querydef オブジェクトの `GetParameterInfo` を呼び出します。
 
 > [!NOTE]
->  取得または設定パラメーターの値のみを使用する場合、 [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue)と[パラメータ](../../mfc/reference/cdaorecordset-class.md#setparamvalue)クラスのメンバー関数`CDaoRecordset`します。
+>  パラメーターの値のみを取得または設定する場合は、`CDaoRecordset`クラスの[GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue)および[SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue)メンバー関数を使用します。
 
-`CDaoParameterInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoParameterInfo`オブジェクト。
+`CDaoParameterInfo` は、デバッグビルドで `Dump` メンバー関数も定義します。 `Dump` を使用すると、`CDaoParameterInfo` オブジェクトの内容をダンプできます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoQueryDef クラス](../../mfc/reference/cdaoquerydef-class.md)

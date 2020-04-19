@@ -6,12 +6,12 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: 0b43c7c148076e96dd0d3f444ffa8b6bad7c8b29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566154"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459793"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 列挙型
 
@@ -41,4 +41,4 @@ enum codecvt_mode {
 
 ## <a name="see-also"></a>関連項目
 
-[\<codecvt>](../standard-library/codecvt.md)<br/>
+[\<codecvt>](../standard-library/codecvt.md)

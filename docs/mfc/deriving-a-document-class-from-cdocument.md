@@ -8,12 +8,12 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 042ba7adc8d36e57a714e03ec67c1c0f22b4da78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5998d5707eb741be0e8ac270f6ac5ce77a9ff8d8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153269"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>CDocument からのドキュメント クラスの派生
 
@@ -32,4 +32,3 @@ ms.locfileid: "50496123"
 ## <a name="see-also"></a>関連項目
 
 [ドキュメントの使い方](../mfc/using-documents.md)
-

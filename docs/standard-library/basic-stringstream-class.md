@@ -12,14 +12,14 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], rdbuf
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
-ms.openlocfilehash: 7e39d5dabf27ffbe15e519c006592935076a45c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546529"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688416"
 ---
-# <a name="basicstringstream-class"></a>basic_stringstream クラス
+# <a name="basic_stringstream-class"></a>basic_stringstream クラス
 
 クラス [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> のストリーム バッファーを使用して、要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。
 
@@ -32,18 +32,18 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*Elem*<br/>
+*Elem* \
 文字列の基本要素の型。
 
-*Tr*<br/>
+*Tr* \
 文字列の基本要素に特化した文字の特徴。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、要素の挿入と抽出を制御するオブジェクトとクラスのストリーム バッファーを使用してエンコードされたオブジェクトについて説明します[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**、 **。Tr**、 `Alloc`>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`、要素は、クラスのアロケーターによって割り当てられていると`Alloc`します。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
+クラステンプレートは、要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを記述します。これは、`Elem` 型の要素を持つ[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**、 **Tr**、`Alloc` > のストリームバッファーを使用し、文字の特徴は `Tr` クラスによって決定され、その要素は `Alloc` クラスのアロケーターによって割り当てられます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -64,7 +64,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 |[rdbuf](#rdbuf)|型 `pointer` の格納されたストリーム バッファーのアドレスを [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> に返します。|
 |[str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<sstream>
 
@@ -90,17 +90,17 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>パラメーター
 
-*モード (_m)*<br/>
+*_Mode* \
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*str*<br/>
+*str* \
 `basic_string` 型のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンス トラクターを呼び出して基底クラスを初期化する[basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) ここで、`sb`クラスの格納されているオブジェクトは、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**、 **Tr**、 `Alloc`>。 初期化も`sb`basic_stringbuf 呼び出し元によって < **Elem**、 **Tr**、 `Alloc`> ( `_Mode`)。
+最初のコンストラクターは、 [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) を呼び出すことによって基底クラスを初期化します。ここで `sb` は、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**、 **Tr**、`Alloc` > クラスの格納されているオブジェクトです。 また、basic_stringbuf < **Elem**、 **Tr**、`Alloc` > (`_Mode`) を呼び出すことによって `sb` を初期化します。
 
-2 番目のコンストラクターが basic_iostream( **sb**) を呼び出して基底クラスを初期化します。 またを初期化します`sb`basic_stringbuf 呼び出し元によって < **Elem**、 **Tr**、 `Alloc`> (_ *Str*、 `_Mode`)。
+2 番目のコンストラクターが basic_iostream( **sb**) を呼び出して基底クラスを初期化します。 また、basic_stringbuf < **Elem**、 **Tr**、`Alloc` > (_ *Str*、`_Mode`) を呼び出すことによって `sb` を初期化します。
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -112,7 +112,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>戻り値
 
-型の格納されたストリーム バッファーのアドレス`pointer`basic_stringbuf < **Elem**、 **Tr**、 `Alloc`>。
+@No__t_0 型の格納されたストリームバッファーのアドレス < **Elem**、 **Tr**、`Alloc` > です。
 
 ### <a name="example"></a>例
 
@@ -131,7 +131,7 @@ void str(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newstr*<br/>
+*Newstr* \
 新しい文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -144,10 +144,10 @@ void str(
 
 ### <a name="example"></a>例
 
-参照してください[basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)を使用する例については`str`します。
+@No__t_1 を使用する例については、「 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

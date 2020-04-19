@@ -1,5 +1,5 @@
 ---
-title: 'Windows ソケット : 予備知識'
+title: Windows ソケット:背景
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record-oriented data [MFC]
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-ms.openlocfilehash: 93342f734d1e475cbae1b7e3025c59e6e6f73284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217879"
 ---
-# <a name="windows-sockets-background"></a>Windows ソケット : 予備知識
+# <a name="windows-sockets-background"></a>Windows ソケット:背景
 
 この記事では、Windows ソケットの特性と目的について説明します。 以下の内容についても説明します。
 
@@ -44,7 +44,7 @@ Windows ソケット仕様は、Microsoft Windows 向けのバイナリ互換性
 
 Microsoft Foundation Class ライブラリ (MFC) は、Windows ソケット API を使用するプログラムをサポートするために、2 つのクラスを提供しています。 1 つは `CSocket` です。このクラスは、高レベルの抽象化を提供してネットワーク通信プログラミングを簡略化します。
 
-Windows ソケット仕様では、Windows ソケットは Microsoft Windows でのネットワーク コンピューティング向けのオープン インターフェイスであり、現在のバージョンは 1.1 です。Windows ソケットは、TCP/IP コミュニティに属する個人と会社の大規模なグループによってオープン ネットワーキング標準として開発されたものであり、自由に利用できます。 現在、ソケット プログラミング モデルは、インターネット プロトコル スイートを使用して 1 つの "通信ドメイン" をサポートします。 仕様は、Windows SDK で使用できます。
+Windows ソケット仕様では、Windows ソケット:ネットワーク コンピューティング Microsoft Windows、version 1.1 に今すぐに開くインターフェイスは、個人や企業は、TCP/IP コミュニティでの大規模なグループによってオープン ネットワー キング標準として開発されましたし、は自由に使用します。 現在、ソケット プログラミング モデルは、インターネット プロトコル スイートを使用して 1 つの "通信ドメイン" をサポートします。 仕様は、Windows SDK で使用できます。
 
 > [!TIP]
 >  ソケットはインターネット プロトコル スイートを使用するため、"情報ハイウェイ" でのインターネット通信をサポートするアプリケーションにとって最適な手段です。
@@ -70,7 +70,7 @@ Windows ソケット仕様では、Windows ソケットは Microsoft Windows で
 > [!NOTE]
 >  XNS などの一部のネットワーク プロトコルでは、ストリームをバイトのストリームではなく、レコードのストリームにできます。 ただし、もっと一般的な TCP/IP プロトコルでは、ストリームはバイト ストリームです。 Windows ソケットは、基になるプロトコルに依存しない抽象化レベルを提供します。
 
-これらの型についてを参照してください、どのような状況で使用するソケットの種類および[Windows ソケット: Stream ソケット](../mfc/windows-sockets-stream-sockets.md)と[Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)します。
+これらの種類についてを参照してください、どのような状況で使用するソケットの種類および[Windows ソケット。ソケットを Stream](../mfc/windows-sockets-stream-sockets.md)と[Windows ソケット。データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)します。
 
 ##  <a name="_core_the_socket_data_type"></a> ソケットのデータ型
 
@@ -89,7 +89,7 @@ Windows ソケット仕様では、Windows ソケットは Microsoft Windows で
 - リモート プロシージャ コール (RPC)。受信側アプリケーションにメッセージを関数呼び出しとして解釈させます。
 
 > [!TIP]
->  MFC ソケットの理想的な使用状況は、通信の両端を自分で作成し、両端で MFC を使用する場合です。 非 MFC アプリケーションとの通信時に大文字と小文字を管理する方法など、このトピックの詳細については、次を参照してください。 [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)します。
+>  MFC ソケットの理想的な使用状況は、通信の両端を自分で作成し、両端で MFC を使用する場合です。 非 MFC アプリケーションとの通信時に大文字と小文字を管理する方法など、このトピックの詳細については、次を参照してください。 [Windows ソケット。バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)します。
 
 詳細については、Windows ソケット仕様を参照してください: **ntohs**、 **ntohl**、 **htons**、 **htonl**します。 次のトピックも参照してください。
 
@@ -102,4 +102,3 @@ Windows ソケット仕様では、Windows ソケットは Microsoft Windows で
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
-

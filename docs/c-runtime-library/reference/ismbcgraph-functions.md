@@ -1,7 +1,7 @@
 ---
 title: _ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcpunct_l
 - _ismbcblank
 - _ismbcprint
@@ -12,7 +12,7 @@ apiname:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcspace
 - _ismbcgraph
@@ -56,14 +59,14 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626214"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953904"
 ---
-# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
+# <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 
 文字がグラフィカル文字、表示文字、区切り記号、または空白文字であるかどうかを判定します。
 
@@ -120,21 +123,21 @@ int _ismbcspace_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c* < = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**)、結果は、戻り値に対応する **_ismbb 系**ルーチン。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* < = 255 で、対応する **_ismbb**ルーチンが存在する場合 (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応している場合)、結果は対応する **_ismbb**ルーチンの戻り値になります。
 
-ものがあることを除き、これらの関数バージョンが同じで、 **_l**サフィックスは、ロケールに依存する動作、現在のロケールの代わりに渡されるロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のバージョンは同じですが、 **_l**サフィックスが付いているものは、現在のロケールではなく、ロケールに依存する動作で渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
+|ルーチン|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|グラフィック|場合にのみ、0 以外の値を返します*c*空白 () を除く ASCII またはカタカナの印刷可能な文字の 1 バイト表現です。|
-|**_ismbcprint**|印刷可能|場合にのみ、0 以外の値を返します*c*空白 () を含む ASCII またはカタカナの印刷可能な文字の 1 バイト表現です。|
-|**_ismbcpunct**|区切り記号|場合にのみ、0 以外の値を返します*c* ASCII またはカタカナの区切り記号文字の 1 バイト表現です。|
-|**_ismbcblank**|空白または水平タブ|場合にのみ、0 以外の値を返します*c*が空白文字または水平タブ文字: *c*= 0x20 または*c*0x09 を = です。|
-|**_ismbcspace**|空白|場合にのみ、0 以外の値を返します*c*空白文字: *c*= 0x20 または 0x09 < =*c*< = 0x0D します。|
+|**_ismbcgraph**|グラフィック|*C*が空白 () を除く ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcprint**|印刷可能|*C*が空白 () を含む ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcpunct**|区切り記号|*C*が ASCII またはカタカナの区切り文字の1バイト表現である場合に限り、0以外の値を返します。|
+|**_ismbcblank**|空白または水平タブ|*C*がスペースまたは水平タブ文字の場合 (c = 0x20 または*c*= 0x09 の場合のみ)、0以外の値を*返します。*|
+|**_ismbcspace**|空白|*C*が空白文字の場合にのみ、0以外の値を返します。 *c*= 0x20 または 0x09 < =*c*< = 0x0D。|
 
 ## <a name="requirements"></a>必要条件
 

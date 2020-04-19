@@ -1,5 +1,5 @@
 ---
-title: 'レコード フィールド エクスチェンジ: RFX の動作のしくみ'
+title: レコード フィールド エクス チェンジ:RFX のしくみ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record editing [C++], using RFX
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395704"
 ---
-# <a name="record-field-exchange-how-rfx-works"></a>レコード フィールド エクスチェンジ: RFX の動作のしくみ
+# <a name="record-field-exchange-how-rfx-works"></a>レコード フィールド エクス チェンジ:RFX のしくみ
 
 このトピックでは、RFX プロセスについて説明します。 これは、高度なトピック。
 
@@ -26,7 +26,7 @@ ms.locfileid: "50534707"
 - [RFX プロセス](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  このトピックの対象から派生したクラス`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクス チェンジ (Bulk RFX) が実装されます。 バルク rfx 関数は、rfx 関数に似ています。 相違点を理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの対象から派生したクラス`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクス チェンジ (Bulk RFX) が実装されます。 バルク rfx 関数は、rfx 関数に似ています。 相違点を理解するのを参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 ##  <a name="_core_rfx_and_the_recordset"></a> RFX とレコード セット
 
@@ -34,15 +34,15 @@ ms.locfileid: "50534707"
 
 フレームワークでは特定の段階でエディット バッファーをバックアップに必要な場合、その内容を復元できるようにします。 Rfx 関数は、新しいレコードを追加する前に、既存のレコードを編集する前に、エディット バッファーをバックアップします。 場合によっては、たとえば、エディット バッファーが復元後に、`Update`呼び出し次`AddNew`します。 破棄した場合、新しく変更した編集バッファーなどを呼び出す前に別のレコードに移動、編集のバッファーは復元されません`Update`します。
 
-データ ソースとレコード セットのフィールド データ メンバーの間でデータを交換するだけでなくは、rfx 関数は、バインド パラメーターを管理します。 順序で、パラメーター データ メンバーがバインドされているレコード セットが開かれたときに、"?"SQL ステートメント内のプレース ホルダーを`CRecordset::Open`を構築します。 詳細については、次を参照してください。[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
+データ ソースとレコード セットのフィールド データ メンバーの間でデータを交換するだけでなくは、rfx 関数は、バインド パラメーターを管理します。 順序で、パラメーター データ メンバーがバインドされているレコード セットが開かれたときに、"?"SQL ステートメント内のプレース ホルダーを`CRecordset::Open`を構築します。 詳細については、次を参照してください。[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
 
 レコード セット クラスのオーバーライド`DoFieldExchange`双方向のデータの移動、すべての作業です。 ダイアログ データ エクス チェンジ (DDX) などは、RFX には、クラスのデータ メンバーに関する情報が必要があります。 ウィザードのレコード セットに固有の実装を記述することで、必要な情報を提供する`DoFieldExchange`フィールドのデータに基づいて、ウィザードで指定したメンバーの名前とデータ型。
 
 ##  <a name="_core_the_record_field_exchange_process"></a> レコード フィールド交換プロセス
 
-このセクションは、レコード セット オブジェクトが開かれると、RFX イベントのシーケンスをについて説明し、追加すると、更新、およびレコードを削除します。 テーブル[レコード セットを開くときの RFX 操作のシーケンス](#_core_sequence_of_rfx_operations_during_recordset_open)とテーブル[スクロール時の RFX 操作のシーケンス](#_core_sequence_of_rfx_operations_during_scrolling)このトピックでは、RFX プロセスとしての処理を示して、`Move`コマンド、レコード セットと更新します。 これらのプロセス中に[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)が呼び出され、多くのさまざまな操作を実行します。 `m_nOperation`のデータ メンバー、 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)オブジェクトが必要な操作を決定します。 役に立つことを読み取る[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)このマテリアルを読む前にします。
+このセクションは、レコード セット オブジェクトが開かれると、RFX イベントのシーケンスをについて説明し、追加すると、更新、およびレコードを削除します。 テーブル[レコード セットを開くときの RFX 操作のシーケンス](#_core_sequence_of_rfx_operations_during_recordset_open)とテーブル[スクロール時の RFX 操作のシーケンス](#_core_sequence_of_rfx_operations_during_scrolling)このトピックでは、RFX プロセスとしての処理を示して、`Move`コマンド、レコード セットと更新します。 これらのプロセス中に[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)が呼び出され、多くのさまざまな操作を実行します。 `m_nOperation`のデータ メンバー、 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)オブジェクトが必要な操作を決定します。 役に立つことを読み取る[レコード セット。レコード選択による (ODBC) の記録](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[レコード セット。どのレコードの更新 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)このマテリアルを読む前にします。
 
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> 列とパラメーターの RFX: 最初のバインド
+###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX:列とパラメーターの最初のバインド
 
 次の RFX アクティビティが発生したレコード セット オブジェクトを呼び出すと、表示順序[オープン](../../mfc/reference/crecordset-class.md#open)メンバー関数。
 
@@ -68,7 +68,7 @@ ms.locfileid: "50534707"
 
 レコード セットでは、ODBC の準備の実行を使用して、同じ SQL ステートメントを使用して高速なクエリを再実行できるようにします。 準備実行の詳細については、ODBC SDK を参照してください。*プログラマーズ リファレンス*、MSDN ライブラリ。
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: スクロール
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX:スクロール
 
 1 つのレコードから別にスクロールするときに、フレームワーク`DoFieldExchange`以前新しいレコードの値を持つフィールド データ メンバーに格納されている値を置き換えます。
 
@@ -82,7 +82,7 @@ ms.locfileid: "50534707"
 |||2.ODBC は、移動を行い、データを設定します。|
 ||3.C++ 用のデータを修正します。||
 
-###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: 新しいレコードを追加して、既存のレコードの編集
+###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX:新しいレコードを追加して、既存のレコードの編集
 
 新しいレコードを追加する場合、レコード セットは、新しいレコードの内容をビルドするをエディット バッファーとして動作します。 レコードを追加する場合と同様のレコードの編集は、レコード セットのフィールド データ メンバーの値の変更が伴います。 RFX の観点から、シーケンスのとおりです。
 
@@ -90,7 +90,7 @@ ms.locfileid: "50534707"
 
 1. `AddNew` または`Edit`RFX が変更されたフィールド データ メンバーを検出できるように編集バッファー内のフィールドを準備します。
 
-   新しいレコードに使用すると、新しいものを比較する前の値があるないため`AddNew`PSEUDO_ 値に各フィールド データ メンバーの値を設定します。 後で、呼び出すときに`Update`、RFX PSEUDO_ 値を持つ各データ メンバーの値を比較します。 違いがある場合、データ メンバーが設定されています。 (PSEUDO_ はレコードの列に Null 値を true と同じも、これらのいずれかが C++ の NULL と同じです)。
+   新しいレコードに使用すると、新しいものを比較する前の値があるないため`AddNew`PSEUDO_ 値に各フィールド データ メンバーの値を設定します。 後で、呼び出すときに`Update`、RFX PSEUDO_ 値を持つ各データ メンバーの値を比較します。 違いがある場合、データ メンバーが設定されています。 (PSEUDO_ はレコードの列に Null 値を true と同じがこれらのいずれかと同じC++NULL です)。
 
    異なり、`Update`に対して呼び出す`AddNew`、`Update`に対して呼び出す`Edit`PSEUDO_ を使用するのではなく、以前に格納された値で更新された値を比較します。 その違いは`AddNew`比較の以前に格納された値がありません。
 
@@ -116,7 +116,7 @@ ms.locfileid: "50534707"
 |||8.SQL を送信します。|
 ||9.`AddNew`、そのバックアップの内容をエディット バッファーを復元します。 `Edit`バックアップを削除します。||
 
-### <a name="rfx-deleting-existing-records"></a>RFX: 既存のレコードを削除します。
+### <a name="rfx-deleting-existing-records"></a>RFX:既存のレコードを削除します。
 
 レコードを削除するときに RFX モジュールによって、レコードが削除されたことをオフに移動する必要がありますを知らせるリマインダーとして、すべてのフィールドが NULL に設定します。 その他の RFX シーケンス情報が不要です。
 

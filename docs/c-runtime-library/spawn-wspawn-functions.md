@@ -1,7 +1,7 @@
 ---
 title: _spawn 系関数と _wspawn 系関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawn
 - _tspawnlp
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693715"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301705"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
+# <a name="_spawn-_wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
 
 各 `_spawn` 関数は、新しいプロセスを作成して実行します。
 
@@ -65,7 +68,7 @@ ms.locfileid: "51693715"
 
 関数名の最後の文字は、関数の種類を示します。
 
-|文字|バリアント|
+|Letter|バリアント|
 |-|-|
 | `e`  | 環境設定へのポインター配列 `envp` が新しいプロセスに渡されます。  |
 | `l`  | コマンド ライン引数が `_spawn` 関数に個別に渡されます。 このサフィックスは、通常は、新しいプロセスに渡すパラメーターの個数が事前にわかっている場合に使用します。  |
@@ -117,7 +120,7 @@ ms.locfileid: "51693715"
 >  文字列に空白が含まれる場合、予期しない動作になることがあります。たとえば、`_spawn` を `"hi there"` という文字列に渡すと、新しいプロセスは `"hi"` と `"there"` という 2 つの引数を使用する結果になります。 新しいプロセスでは "hi there" というファイルを開こうとするため、プロセスは失敗します。 この問題を回避するには、`"\"hi there\""` のように文字列を引用符で囲みます。
 
 > [!IMPORTANT]
->  ユーザー入力のコンテンツを明示的にチェックしないまま `_spawn` に渡さないでください。 `_spawn` によって [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
+>  ユーザー入力のコンテンツを明示的にチェックしないまま `_spawn` に渡さないでください。 `_spawn` によって [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
 
 `_spawnl`、`_spawnle`、`_spawnlp`、`_spawnlpe` では引数へのポインターが個別の引数として渡され、`_spawnv`、`_spawnve`、`_spawnvp`、`_spawnvpe` ではポインターの配列として渡されます。 少なくとも 1 つの引数 (`arg0` または `argv`[0]) を生成されたプロセスに渡す必要があります。 規則上、この引数は、コマンド ラインの場合に入力するはずのプログラムの名前です。 ただし、別の値を使用しても、エラーは発生しません。
 
@@ -127,7 +130,7 @@ ms.locfileid: "51693715"
 
 ## <a name="environment-of-the-spawned-process"></a>生成されたプロセスの環境
 
-`_spawn` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_spawnl`、`_spawnlp`、`_spawnv`、`_spawnvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `envp` 引数を使用して環境設定のリストを渡すことで、`_spawnle`、`_spawnlpe`、`_spawnve`、`_spawnvpe` の各呼び出しを使用して、新しいプロセスの環境を変更できます。 引数 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 `value` は二重引用符で囲みません。`envp` 配列の最後の要素は **NULL** にする必要があります。 `envp` 自身が **NULL** である場合、生成されたプロセスは親プロセスの環境設定を継承します。
+`_spawn` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_spawnl`、`_spawnlp`、`_spawnv`、`_spawnvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `envp` 引数を使用して環境設定のリストを渡すことで、`_spawnle`、`_spawnlpe`、`_spawnve`、`_spawnvpe` の各呼び出しを使用して、新しいプロセスの環境を変更できます。 引数 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 (`value` は二重引用符で囲まれていないことに注意してください)。`envp` 配列の最後の要素は**NULL**にする必要があります。 `envp` 自身が **NULL** である場合、生成されたプロセスは親プロセスの環境設定を継承します。
 
 `_spawn` 関数は、開いているファイルに関するすべての情報 (変換モードを含む) を新しいプロセスに渡すことができます。 この情報は環境内の `C_FILE_INFO` エントリを通してリアル モードで渡されます。 通常、スタートアップ コードはこのエントリを処理してから、環境から削除します。 ただし、`_spawn` 関数によって C 以外のプロセスが生成される場合、このエントリは環境内に残されます。 環境を印刷すると、環境情報がバイナリ形式でリアル モードで渡されているため、このエントリの定義文字列にグラフィック文字が示されます。 これ以外の影響が通常の操作に及ぶことはありません。 保護モードでは、環境情報はテキスト形式で渡されるため、グラフィック文字は含まれません。
 
@@ -139,13 +142,13 @@ ms.locfileid: "51693715"
 
 `_spawn` を DLL または GUI アプリケーションから呼び出して、出力をパイプにリダイレクトするには、次の 2 つのオプションがあります。
 
-- Win32 API を使用してパイプを作成し、[AllocConsole](/windows/console/allocconsole) を呼び出し、ハンドル値をスタートアップ構造体に設定し、[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) を呼び出します。
+- Win32 API を使用してパイプを作成し、[AllocConsole](/windows/console/allocconsole) を呼び出し、ハンドル値をスタートアップ構造体に設定し、[CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) を呼び出します。
 
 - [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) を呼び出してパイプを作成し、**cmd.exe /c** (または **command.exe /c**) を使用してアプリを呼び出します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,
@@ -226,7 +229,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロセス制御と環境制御](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

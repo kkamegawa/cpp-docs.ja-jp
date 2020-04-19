@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2638
+title: コンパイラエラー C2638
 ms.date: 11/04/2016
 f1_keywords:
 - C2638
 helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
-ms.openlocfilehash: 0c4c1e73c97f51bb0e52a618829ffb0bed417a45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6053e9bcf49159e8ceefe9264d30319493c4cf1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582778"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748347"
 ---
-# <a name="compiler-error-c2638"></a>コンパイラ エラー C2638
+# <a name="compiler-error-c2638"></a>コンパイラエラー C2638
 
-'identifier': メンバーへのポインターで _based 修飾子
+' identifier ': __based 修飾子は、メンバーへのポインターでは無効です
 
-`__based`メンバーへのポインターの修飾子を使用することはできません。
+`__based` 修飾子は、メンバーへのポインターには使用できません。
 
 次の例では、C2638 が生成されます。
 
-```
+```cpp
 // C2638.cpp
 void *a;
 

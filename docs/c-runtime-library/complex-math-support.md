@@ -1,18 +1,18 @@
 ---
 title: C の複雑な数値演算のサポート
-ms.date: 03/30/2018
+ms.date: 05/14/2019
 f1_keywords:
 - c.complex
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452612"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66186093"
 ---
 # <a name="c-complex-math-support"></a>C の複雑な数値演算のサポート
 
@@ -28,15 +28,15 @@ complex.h ヘッダーの Microsoft 実装では、次の型が C99 標準ネイ
 
 |標準の型|Microsoft の型|
 |-|-|
-|**float complex** または **float _Complex**|**_FComplex**|
-|**double complex** または **double _Complex**|**_DComplex**|
-|**long double complex** または **long double _Complex**|**_LComplex**|
+|**float complex** または **float _Complex**|**_Fcomplex**|
+|**double complex** または **double _Complex**|**_Dcomplex**|
+|**long double complex** または **long double _Complex**|**_Lcomplex**|
 
 math.h ヘッダーは個別の型 **struct _complex** を定義します。これは [_cabs](../c-runtime-library/reference/cabs.md) 関数で使用されます。 **struct _complex** 型は同等の複雑な数値演算関数 [cabs、cabsf、cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md) では使用されません。
 
 ## <a name="complex-constants-and-macros"></a>複雑な定数とマクロ
 
-**I** は `{ 0.0f, 1.0f }` で初期化された **float** 複合型の **_FComplex** として定義されます。
+**I** は `{ 0.0f, 1.0f }` で初期化された **float** 複合型の **_Fcomplex** として定義されます。
 
 ## <a name="trigonometric-functions"></a>三角関数
 

@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : シリアル化'
+title: MFC ActiveX コントロール:シリアル化します。
 ms.date: 09/12/2018
 f1_keywords:
 - _wVerMinor
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324741"
 ---
-# <a name="mfc-activex-controls-serializing"></a>MFC ActiveX コントロール : シリアル化
+# <a name="mfc-activex-controls-serializing"></a>MFC ActiveX コントロール:シリアル化します。
 
 この記事では、ActiveX コントロールをシリアル化する方法について説明します。 シリアル化は、ディスク ファイルなどの永続的なストレージ メディアに対するから読み取りまたは書き込みのプロセスです。 Microsoft Foundation Class (MFC) ライブラリでは、クラスでシリアル化の組み込みサポート`CObject`します。 `COleControl` プロパティの交換機構を使用して ActiveX コントロールには、このサポートを拡張します。
 
@@ -54,20 +54,20 @@ ActiveX コントロールのシリアル化をオーバーライドすること
 
 |プロパティの exchange 関数|目的|
 |---------------------------------|-------------|
-|**PX_Blob)**|型のバイナリ ラージ オブジェクト (BLOB) データのプロパティをシリアル化します。|
-|**PX_Bool)**|ブール型のプロパティをシリアル化します。|
-|**PX_Color)**|カラーの型のプロパティをシリアル化します。|
-|**PX_Currency)**|型をシリアル化**CY** (通貨) プロパティ。|
-|**PX_Double)**|型をシリアル化**二重**プロパティ。|
-|**PX_Font)**|フォントの type プロパティをシリアル化します。|
-|**PX_Float)**|型をシリアル化**float**プロパティ。|
-|**PX_IUnknown)**|型のプロパティをシリアル化`LPUNKNOWN`します。|
-|**PX_Long)**|型をシリアル化**長い**プロパティ。|
-|**PX_Picture)**|Picture プロパティの型をシリアル化します。|
-|**PX_Short)**|型をシリアル化**短い**プロパティ。|
-|**PXstring)**|型をシリアル化`CString`プロパティ。|
-|**PX_ULong)**|型をシリアル化**ULONG**プロパティ。|
-|**PX_UShort)**|型をシリアル化**USHORT**プロパティ。|
+|**PX_Blob( )**|型のバイナリ ラージ オブジェクト (BLOB) データのプロパティをシリアル化します。|
+|**PX_Bool( )**|ブール型のプロパティをシリアル化します。|
+|**PX_Color( )**|カラーの型のプロパティをシリアル化します。|
+|**PX_Currency( )**|型をシリアル化**CY** (通貨) プロパティ。|
+|**PX_Double( )**|型をシリアル化**double**プロパティ。|
+|**PX_Font( )**|フォントの type プロパティをシリアル化します。|
+|**PX_Float( )**|型をシリアル化**float**プロパティ。|
+|**PX_IUnknown( )**|型のプロパティをシリアル化`LPUNKNOWN`します。|
+|**PX_Long( )**|型をシリアル化**long**プロパティ。|
+|**PX_Picture( )**|Picture プロパティの型をシリアル化します。|
+|**PX_Short( )**|型をシリアル化**short**プロパティ。|
+|**PXstring( )**|型をシリアル化`CString`プロパティ。|
+|**PX_ULong( )**|型をシリアル化**ULONG**プロパティ。|
+|**PX_UShort( )**|型をシリアル化**USHORT**プロパティ。|
 
 これらのプロパティ exchange 関数の詳細については、次を参照してください。[永続化の OLE コントロール](../mfc/reference/persistence-of-ole-controls.md)で、 *MFC リファレンス*します。
 
@@ -96,4 +96,3 @@ ActiveX コントロールのシリアル化をオーバーライドすること
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

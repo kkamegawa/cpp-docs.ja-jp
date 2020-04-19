@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3243
 ms.assetid: 35d8ad1a-377d-47df-be9d-c55eea23340f
-ms.openlocfilehash: 1fd0cdf44cb820882cdcda3728b664321f730d5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 280d7cf8ee79887cd188efb71eecfc8dbca08f3e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754564"
 ---
 # <a name="compiler-error-c3243"></a>コンパイラ エラー C3243
 
@@ -21,7 +21,7 @@ ms.locfileid: "50460038"
 
 次の例では C3243 が生成されます。
 
-```
+```cpp
 // C3243.cpp
 #pragma warning(disable:4199)
 __interface IX14A {

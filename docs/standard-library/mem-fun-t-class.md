@@ -1,21 +1,21 @@
 ---
 title: mem_fun_t クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun_t
+- functional/std::mem_fun_t
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 32c66eb20215bc68efd0f0bb43c30f951da1bae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c6606fe4d2df3b6068c3bb8194dc380344f7d97
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456369"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689378"
 ---
-# <a name="memfunt-class"></a>mem_fun_t クラス
+# <a name="mem_fun_t-class"></a>mem_fun_t クラス
 
-使用するアダプター クラスを`non_const`ポインター引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。
+ポインター引数を使用して初期化するときに、引数を取らない `non_const` メンバー関数を単項関数オブジェクトとして呼び出すことができるようにするアダプタークラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -25,17 +25,16 @@ class mem_fun_t : public unary_function<Type *, Result> {
     explicit mem_fun_t(Result (Type::* _Pm)());
 
     Result operator()(Type* _Pleft) const;
-
 };
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pm*<br/>
+*Pm \ (_r)*
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*_Pleft*<br/>
-オブジェクトを *_Pm*でメンバー関数が呼び出されます。
+*_Pleft* \
+*Pm*メンバー関数が呼び出されるオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
@@ -43,20 +42,8 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は ( `_Pleft`->* `_Pm`)( ) を返すように定義されています。
+クラステンプレートには、プライベートメンバーオブジェクト内の `Type` クラスのメンバー関数へのポインターである必要がある、 *Pm*のコピーが格納されます。 このメソッドは、(`_Pleft` ->*  `_Pm`) () を返すように、メンバー関数 `operator()` を定義します。
 
 ## <a name="example"></a>例
 
 `mem_fun_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[\<functional>](../standard-library/functional.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

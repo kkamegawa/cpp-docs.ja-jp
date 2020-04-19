@@ -5,12 +5,12 @@ helpviewer_keywords:
 - register variables
 - register storage class
 ms.assetid: 7577bf48-88ec-4191-873c-ef4217a4034e
-ms.openlocfilehash: 339a96e33e186ddcc0615f89ff68a7f87b0bfdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fac6db2254a909d0ec558a7e76f7ccf32aa7ac3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668651"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147348"
 ---
 # <a name="register-storage-class-specifier"></a>register ストレージ クラス指定子
 
@@ -20,6 +20,6 @@ Microsoft C/C++ コンパイラは、レジスタ変数に対するユーザー�
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [内部レベル宣言のストレージ クラス指定子](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-ms.openlocfilehash: 56a735f9e79ca4f5423201139adc740878afb279
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfe6fa220e19deebd86e7c8b7bd25dab60165f73
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392922"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>埋め込み月間予定表コントロールへのアクセス
 
@@ -41,4 +41,3 @@ ms.locfileid: "50652537"
 
 [CDateTimeCtrl の使い方](../mfc/using-cdatetimectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

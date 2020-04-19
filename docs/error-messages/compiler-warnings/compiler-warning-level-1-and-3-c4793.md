@@ -16,11 +16,11 @@ helpviewer_keywords:
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280543"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>コンパイラの警告 (レベル 1 および 3) C4793
 

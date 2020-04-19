@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3736
 ms.assetid: 579b773c-41e7-40ea-8382-2e3ce2667f4c
-ms.openlocfilehash: e31d68a13ebd9c5267fd285d43ebc66ae8b53182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c4626164fe8fe3fb932fba3ae8e87c774f5aeec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584198"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752848"
 ---
 # <a name="compiler-error-c3736"></a>コンパイラ エラー C3736
 
-'event': メソッドであるか、またマネージド イベントの場合、データ メンバー
+' event ': メソッドであるか、マネージイベントの場合はデータメンバーである必要があります。
 
-ネイティブ モードと COM イベントには、メソッドがある場合があります。 .NET イベントでは、データ メンバーはこともできます。
+ネイティブイベントと COM イベントは、メソッドである必要があります。 .NET イベントはデータメンバーでもかまいません。
 
 次の例では、C3736 が生成されます。
 
-```
+```cpp
 // C3736.cpp
 struct A {
    __event int e();

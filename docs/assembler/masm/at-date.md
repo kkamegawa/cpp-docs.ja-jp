@@ -1,26 +1,27 @@
 ---
 title: '@Date'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Date'
 helpviewer_keywords:
 - '@Date symbol'
 ms.assetid: e5af496b-c5c8-4724-a54a-6880fcd67ee3
-ms.openlocfilehash: 3fe1b50243609a11b996ddb1569920967399f98a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 985b73b32d0990f060a14e18c9d0efdce4eae7dd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455680"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315980"
 ---
-# <a name="date"></a>@Date
+# <a name="date"></a>\@日付
 
-システムの日付、形式月/日/年 (テキスト マクロ)。
+Mm/dd/yy (テキストマクロ) の形式のシステム日付。
 
 ## <a name="syntax"></a>構文
 
-> @Date
+> **\@日付**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

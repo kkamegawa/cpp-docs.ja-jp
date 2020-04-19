@@ -10,15 +10,15 @@ helpviewer_keywords:
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
 ms.openlocfilehash: 3b26628fd18749bd19819fe787888fd3264a79d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330981"
 ---
 # <a name="special-member-functions"></a>特殊なメンバー関数
 
-*特殊なメンバー関数*がのクラス (または構造体) のメンバー関数が、場合によっては、コンパイラを自動的に生成できます。 これらの関数は、[既定のコンス トラクター](constructors-cpp.md#default_constructors)、[デストラクター](destructors-cpp.md)、[コピー コンス トラクターとコピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)、および[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)します。 クラスは、1 つ以上の特殊なメンバー関数を定義していない場合、コンパイラ可能性があります暗黙的に宣言し、使用される関数を定義します。 コンパイラによって生成された実装が呼び出されます、*既定*特殊なメンバー関数。 不要な場合、コンパイラは関数を生成しません。
+*特殊なメンバー関数*がのクラス (または構造体) のメンバー関数が、場合によっては、コンパイラを自動的に生成できます。 これらの関数は、[既定のコンス トラクター](constructors-cpp.md#default_constructors)、[デストラクター](destructors-cpp.md)、[コピー コンス トラクターとコピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)、および[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)します。 クラスは、1 つ以上の特殊なメンバー関数を定義していない場合、コンパイラ可能性があります暗黙的に宣言し、使用される関数を定義します。 コンパイラによって生成された実装が呼び出されます、*default*特殊なメンバー関数。 不要な場合、コンパイラは関数を生成しません。
 
 使用して既定の特殊なメンバー関数を明示的に宣言することができます、 **= 既定**キーワード。 これは、コンパイラで必要な場合のみ、同じ方法で、関数がすべての宣言されていない場合、関数を定義します。
 

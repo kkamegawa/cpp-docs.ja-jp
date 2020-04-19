@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-ms.openlocfilehash: 0539992ac3f9394972b1de36dde0e85ed592413a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ddfd0a5ff506e17efeb63624b7cb8c6a8b1eda4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383790"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>フレームワークのメッセージとコマンド
 
@@ -39,4 +39,3 @@ Microsoft Windows 用に記述されたアプリケーションは、「メッ�
 ## <a name="see-also"></a>関連項目
 
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
-

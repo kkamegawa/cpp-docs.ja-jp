@@ -6,16 +6,16 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615645"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376334"
 ---
 # <a name="binary-output-files"></a>バイナリ出力ファイル
 
-ストリームは本来、テキスト向けとして設計されており、既定の出力モードはテキストです。 テキスト モードでは、改行文字 (16 進数 10) は、キャリッジ リターンとラインフィード (16 ビットのみ) に展開されます。 この拡大は次のような問題を起こす可能性があります。
+ストリームは本来、テキスト向けとして設計されており、既定の出力モードはテキストです。 テキストモードでは、ラインフィード (改行) 文字が復帰と改行のペアに拡張されます。 この拡大は次のような問題を起こす可能性があります。
 
 ```cpp
 // binary_output_files.cpp
@@ -30,7 +30,7 @@ int main( )
 }
 ```
 
-このプログラムでは、{ 99, 0, 10, 0 } というバイト シーケンスの出力を想定していたところ、{ 99, 0, 13, 10, 0 } が出力されます。バイナリ入力を要求するプログラムで問題が起こります。 文字が変換なしで書き込まれる、本来のバイナリ出力が必要であれば、[ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) コンストラクター オープンモード引数を利用し、バイナリ出力を指定できます。
+このプログラムでは、{ 99, 0, 10, 0 } というバイト シーケンスの出力を想定していたところ、{ 99, 0, 13, 10, 0 } が出力されます。バイナリ入力を要求するプログラムで問題が起こります。 実際のバイナリ出力が必要な場合は、文字が変換されないように記述されている場合は`openmode` 、 [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream)コンストラクター引数を使用してバイナリ出力を指定できます。
 
 ```cpp
 // binary_output_files2.cpp
@@ -50,4 +50,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[出力ストリーム](../standard-library/output-streams.md)<br/>
+[出力ストリーム](../standard-library/output-streams.md)

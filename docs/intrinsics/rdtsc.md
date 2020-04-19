@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 5f058eaf6587b74f5a75044416d23ac6b64fb415
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582066"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217148"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
 **Microsoft 固有の仕様**
 
-生成、`rdtsc`命令で、プロセッサのタイムスタンプを返します。 プロセッサのタイムスタンプは、最後のリセット以降のクロック サイクル数を記録します。
+プロセッサのタイムスタンプを返す命令を生成します。`rdtsc` プロセッサのタイムスタンプには、前回のリセットからのクロックサイクル数が記録されます。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
 ## <a name="return-value"></a>戻り値
 
-ティック カウントを表す 64 ビット符号なし整数。
+ティック数を表す64ビット符号なし整数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -37,17 +37,17 @@ unsigned __int64 __rdtsc();
 |---------------|------------------|
 |`__rdtsc`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-このルーチンは組み込みとしてのみ使用できます。
+このルーチンは、組み込みとしてのみ使用できます。
 
-この世代のハードウェアで TSC 値の解釈は、x64 の以前のバージョンとは異なります。 詳細についてはハードウェアのマニュアルを参照してください。
+新しい世代のハードウェアでの TSC 値の解釈は、以前のバージョンの x64 の場合と異なります。 詳細については、ハードウェアのマニュアルを参照してください。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>

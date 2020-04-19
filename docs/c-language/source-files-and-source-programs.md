@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: c9a7c17c5cf52cb263d61fe79baa331c5b4d57a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637147"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152535"
 ---
 # <a name="source-files-and-source-programs"></a>ソース ファイルとソース プログラム
 
@@ -39,6 +39,6 @@ C の "ソース プログラム" は、ディレクティブ、プラグマ、�
 
 ソース ファイルは、実行可能なステートメントを含む必要はありません。 たとえば、変数の定義を 1 つのソース ファイルに置き、これらの変数を使用する他のソース ファイルでこれらの変数への参照を宣言すると便利な場合があります。 この手法により、必要なときに簡単に定義を見つけて更新できるようになります。 同じ理由から、定数およびマクロは、ソース ファイルで必要に応じて参照できる "インクルード ファイル" または "ヘッダー ファイル" という名前の別個のファイルにまとめることがよくあります。 [マクロ](../preprocessor/macros-c-cpp.md)および[インクルード ファイル](../preprocessor/hash-include-directive-c-cpp.md)については、『*プリプロセッサ リファレンス*』の説明を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プログラムの構造](../c-language/program-structure.md)

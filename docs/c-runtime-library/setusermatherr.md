@@ -1,9 +1,9 @@
 ---
 title: __setusermatherr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __setusermatherr
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr90.dll
 - msvcrt.dll
@@ -12,20 +12,23 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __setusermatherr
 helpviewer_keywords:
 - __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
-ms.openlocfilehash: 116abd203cc289c63535a8e41a005a6fd248b08b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc20be40614aaeda72040496a61a6ea9df99383
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640467"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957743"
 ---
-# <a name="setusermatherr"></a>__setusermatherr
+# <a name="__setusermatherr"></a>__setusermatherr
 
 数値演算エラーを処理するために、[_matherr](../c-runtime-library/reference/matherr.md) ルーチンではなく、ユーザーが指定したルーチンを指定します。
 
@@ -44,7 +47,7 @@ void __setusermatherr(
 
 *pf* パラメーターの型は `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` として宣言されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ## <a name="requirements"></a>必要条件
 

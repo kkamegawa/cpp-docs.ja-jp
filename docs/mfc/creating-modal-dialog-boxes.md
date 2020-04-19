@@ -6,18 +6,17 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], modal
 ms.assetid: 26c7a68c-79f6-4862-a5a8-6024984644d2
-ms.openlocfilehash: eb9aab7e8579fbbbfdf5d0f2dca9b6e6abea0066
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed0fe3b7ef8aeddea01f573bfe8e1c01a6b5b443
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657342"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685680"
 ---
 # <a name="creating-modal-dialog-boxes"></a>モーダル ダイアログ ボックスの作成
 
-モーダル ダイアログ ボックスを作成するで宣言されている 2 つのパブリック コンス トラクターのいずれかを呼び出す[CDialog](../mfc/reference/cdialog-class.md)します。 次に、呼び出すダイアログ オブジェクトの[DoModal](../mfc/reference/cdialog-class.md#domodal) ダイアログ ボックスを表示し、ユーザーが [ok] を選択するまで対話操作を管理またはキャンセルするメンバー関数。 この管理によって`DoModal`はモーダル ダイアログ ボックスは、します。 モーダル ダイアログ ボックス、`DoModal`ダイアログ リソースを読み込みます。
+モーダルダイアログボックスを作成するには、 [CDialog](../mfc/reference/cdialog-class.md)で宣言されている2つのパブリックコンストラクターのいずれかを呼び出します。 次に、呼び出すダイアログ オブジェクトの[DoModal](../mfc/reference/cdialog-class.md#domodal) ダイアログ ボックスを表示し、ユーザーが [ok] を選択するまで対話操作を管理またはキャンセルするメンバー関数。 この管理の `DoModal` は、ダイアログボックスがモーダルになることを意味します。 モーダルダイアログボックスの場合、`DoModal` はダイアログリソースを読み込みます。
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

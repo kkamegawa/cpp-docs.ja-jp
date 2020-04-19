@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
-ms.openlocfilehash: 2c680d86a0ea69d67f9e53a481f2f096f4cc7878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f89208314c1d2e8ddb5100da72aa600a411b4608
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756800"
 ---
 # <a name="compiler-error-c2548"></a>コンパイラ エラー C2548
 
-'class::member': パラメーターのパラメーターの既定のパラメーターがありません
+' class:: member ': パラメーターパラメーターの既定のパラメーターがありません
 
-既定のパラメーター リストには、パラメーターがありません。 パラメーター リストの任意の場所の既定のパラメーターを指定する場合は、後続のすべてのパラメーターの既定のパラメーターを定義する必要があります。
+既定のパラメーターリストにパラメーターがありません。 パラメーターリスト内の任意の場所に既定のパラメーターを指定する場合は、後続のすべてのパラメーターに対して既定のパラメーターを定義する必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2548 が生成されます。
 
-```
+```cpp
 // C2548.cpp
 // compile with: /c
 void func( int = 1, int, int = 3);  // C2548

@@ -1,39 +1,32 @@
 ---
 title: MFC クラスの追加
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.classes.adding.mfc
 helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: f9bed3814c4489cf3850ccab97efb23caeb51730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 266940092e68a76f2ac485a81ac6ac90b02ee0ac
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640805"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907647"
 ---
 # <a name="adding-an-mfc-class"></a>MFC クラスの追加
 
-プロジェクトに Microsoft Foundation Class (MFC) ライブラリのクラスから派生したクラスを追加するには、使用、**クラスの追加**で使用できるコマンド[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)します。 新しいクラスの名前を指定、基本クラスを選択し、それが関連付けられている (該当する場合) ダイアログ ボックスの ID を選択します。 コード ウィザードでは、ヘッダー ファイルと実装ファイルを作成し、プロジェクトに追加します。
+Microsoft Foundation Class (MFC) ライブラリクラスから派生したクラスをプロジェクトに追加するには、[クラスウィザード](mfc-class-wizard.md)の **[クラスの追加]** ボタンを使用します。 新しいクラスの名前を指定し、基本クラスを選択して、関連付けられているダイアログボックスの ID (存在する場合) を選択します。 ヘッダーファイルと実装ファイルが作成され、プロジェクトに追加されます。
 
 > [!NOTE]
->  場合、MFC クラスを ATL COM アプリケーションに追加することができますを最初に[MFC サポートで、アプリケーションを作成する](../../atl/reference/mfc-support-in-atl-projects.md)します。 MFC をサポートする Win32 プロジェクトに MFC クラスを追加することもできます。
+>  Mfc を[サポートするアプリケーション](../../atl/reference/mfc-support-in-atl-projects.md)を最初に作成した場合は、mfc クラスを ATL COM アプリケーションに追加できます。 Mfc をサポートする Win32 プロジェクトに MFC クラスを追加することもできます。
 
 ### <a name="to-add-an-mfc-class-to-your-project"></a>MFC クラスをプロジェクトに追加するには
 
-1. クラス ビューでは、プロジェクト名を右クリックします。 クリックして**追加**順にクリックします**クラスの追加**を開く、[クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックス。
-
-1. テンプレート ペインで選択**MFC クラス**キーを押すと、**追加**ボタンをクリックします。
-
-1. 新しいクラスの設定を定義、 [MFC クラス ウィザード](../../mfc/reference/mfc-add-class-wizard.md) ダイアログ ボックス。
-
-1. クリックして**完了**ウィザードを終了し、クラス ビューで、新しいクラスを表示します。 ウィザードによって作成されたファイルを表示することもできます。**ソリューション エクスプ ローラー**します。
+クラスビューで、プロジェクト名を右クリックします。 **[クラスウィザード]** をクリックし、 **[クラスの追加]** をクリックして [ [MFC クラスの追加](mfc-add-class-wizard.md)] ダイアログボックスを開きます。 **クラスウィザード**を使用して、メッセージハンドラーまたは新しいメソッドを追加します。
 
 ## <a name="see-also"></a>関連項目
 
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
 [クラスの概要](../../mfc/class-library-overview.md)
-

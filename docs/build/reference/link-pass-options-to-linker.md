@@ -1,6 +1,6 @@
 ---
 title: /link (リンカーにオプションを渡す)
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - /link
 helpviewer_keywords:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: dfa39988782a0c5bd121b6e18402d3f6b67a13e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574929"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155774"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (リンカーにオプションを渡す)
 
@@ -24,28 +24,32 @@ ms.locfileid: "50574929"
 
 ## <a name="syntax"></a>構文
 
-```
-/link linkeroptions
-```
+> **/link** *linker-options*
 
 ## <a name="arguments"></a>引数
 
-*linkeroptions*<br/>
+*リンカー オプション*<br/>
 リンカー オプションまたはリンカーに渡されるオプション。
 
 ## <a name="remarks"></a>Remarks
 
-**/Link**オプションとリンカー オプションは、ファイル名と CL オプションの後に表示する必要があります。 スペースは間で必要な **/link**と`linkeroptions`します。 詳細については、次を参照してください。[リンカー オプションの設定](../../build/reference/setting-linker-options.md)します。
+**/Link**オプションとリンカー オプションは、ファイル名と CL オプションの後に表示する必要があります。 スペースは間で必要な **/link**およびリンカー オプション。 詳細については、次を参照してください。 [MSVC リンカー参照](linking.md)します。
+
+## <a name="example"></a>例
+
+このサンプルのコマンドラインのコンパイル*hello.cpp*既存のオブジェクト ファイルにリンクと*there.obj*します。追加渡しますし **/VERSION**リンカー コマンド。
+
+`cl /W4 /EHsc hello.cpp there.obj /link /VERSION:3.14`
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+IDE は、通常のコンパイルし、コードをリンクする個別のコマンドを送信します。 プロジェクトのプロパティ ページで、リンカー オプションを設定できます。
 
-1. をクリックして、**リンカー**フォルダー。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. リンカー プロパティ ページをクリックします。
+1. 選択、**構成プロパティ** > **リンカー**フォルダー。
 
-1. 1 つまたは複数のプロパティを変更します。
+1. 1 つまたは複数のプロパティを変更します。 **OK** を選択して変更を保存してください。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -53,5 +57,5 @@ ms.locfileid: "50574929"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

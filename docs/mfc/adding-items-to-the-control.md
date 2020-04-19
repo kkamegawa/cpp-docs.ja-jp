@@ -4,27 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-ms.openlocfilehash: 90a722405b7954b3d6e0e9f13b3f51a5e902a4af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c03be6f04746ec2e3146916d72cad637a204187
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602581"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509334"
 ---
 # <a name="adding-items-to-the-control"></a>コントロールへの項目の追加
 
-リスト コントロールに項目を追加する ([CListCtrl](../mfc/reference/clistctrl-class.md))、いくつかのバージョンの 1 つを呼び出して、 [InsertItem](../mfc/reference/clistctrl-class.md#insertitem)によってどのような情報がある場合、メンバー関数。 1 つのバージョンは、 [LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)を準備する構造。 `LV_ITEM`構造体には、多数のメンバーが含まれていますが、リスト コントロール項目の属性をより細かく制御します。
+リストコントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) に項目を追加するには、使用している情報に応じて、いくつかのバージョンの[InsertItem](../mfc/reference/clistctrl-class.md#insertitem)メンバー関数のいずれかを呼び出します。 1つのバージョンでは、準備する[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)構造体が使用されます。 構造体`LVITEM`には多数のメンバーが含まれているため、リストコントロール項目の属性をより詳細に制御できます。
 
-([レポート] ビュー) に関して 2 つの重要なメンバーの`LV_ITEM`構造体は、`iItem`と`iSubItem`メンバー。 `iItem`メンバーは、構造体が参照する項目の 0 から始まるインデックス、および`iSubItem`構造体には、項目に関する情報が含まれている場合、メンバーは、サブ項目、または 0 の 1 から始まるインデックス。 これら 2 つのメンバーで、アイテム、型、およびサブ項目のリスト コントロールがレポート ビューに表示される情報の値ごとに決定します。 詳細については、次を参照してください。 [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem)します。
+`LVITEM`構造体の2つの重要なメンバー (レポートビューに関して) `iItem`は`iSubItem` 、メンバーとメンバーです。 メンバーは、構造体が参照`iSubItem`している項目の0から始まるインデックスであり、メンバーはサブ項目の1から始まるインデックスです。また、構造体に項目に関する情報が含まれている場合は0になります。 `iItem` この2つのメンバーを使用して、項目ごとに、リストコントロールがレポートビューであるときに表示されるサブ項目情報の型と値を決定します。 詳細については、「 [CListCtrl:: SetItem](../mfc/reference/clistctrl-class.md#setitem)」を参照してください。
 
-追加のメンバーは、項目のテキスト、アイコン、状態、および項目のデータを指定します。 「データの項目」リスト ビュー アイテムに関連付けられているアプリケーション定義の値です。 詳細については、`LV_ITEM`構造体は、「 [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)します。
+追加のメンバーは、項目のテキスト、アイコン、状態、および項目データを指定します。 "Item data" は、リストビューアイテムに関連付けられたアプリケーション定義の値です。 構造体の`LVITEM`詳細については、「 [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem)」を参照してください。
 
-他のバージョンの`InsertItem`1 つまたは複数個別の値を受け取る、内のメンバーに対応する、`LV_ITEM`構造をサポートするメンバーのみを初期化することができます。 一般に、リスト コントロール リストの項目のためのストレージを管理するがする格納できる情報の一部、アプリケーションで代わりに、「コールバック項目」を使用します。 詳細については、次を参照してください。[コールバック項目とコールバック マスク](../mfc/callback-items-and-the-callback-mask.md)このトピックの「と[コールバック項目とコールバック マスク](/windows/desktop/Controls/using-list-view-controls)Windows SDK にします。
+他のバージョン`InsertItem`の`LVITEM`では、構造体のメンバーに対応する1つ以上の個別の値を受け取ります。これにより、サポートするメンバーだけを初期化できます。 一般に、リストコントロールはリスト項目のストレージを管理しますが、"コールバック項目" を使用して、情報の一部をアプリケーションに格納することができます。 詳細については、このトピックの「[コールバック項目と](../mfc/callback-items-and-the-callback-mask.md)コールバックマスク」、および「Windows SDK のコールバック[項目と](/windows/win32/Controls/using-list-view-controls)コールバックマスク」を参照してください。
 
-詳細については、次を参照してください。[リスト ビュー項目の追加とサブ項目](/windows/desktop/Controls/using-list-view-controls)します。
+詳細については、「[リストビューの項目と](/windows/win32/Controls/using-list-view-controls)サブ項目の追加」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

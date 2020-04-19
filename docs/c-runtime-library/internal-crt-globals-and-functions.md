@@ -1,7 +1,7 @@
 ---
 title: 内部 CRT グローバルおよび関数
-ms.date: 11/04/2016
-apiname:
+ms.date: 01/22/2019
+api_name:
 - __acrt_iob_func
 - __AdjustPointer
 - _assert
@@ -44,6 +44,7 @@ apiname:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -208,6 +209,7 @@ apiname:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -275,7 +277,7 @@ apiname:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-apilocation:
+api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
@@ -291,7 +293,11 @@ apilocation:
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -335,6 +341,7 @@ f1_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -499,6 +506,7 @@ f1_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -609,6 +617,7 @@ helpviewer_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -773,6 +782,7 @@ helpviewer_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -841,12 +851,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 252065039597b6176b42008b31b7082740bcc265
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485615"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940241"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT グローバルおよび関数
 
@@ -926,6 +936,7 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |__crtCreateEventExW|
 |__crtCreateSemaphoreExW|
 |__crtCreateSymbolicLinkW|
+|_crt_debugger_hook|
 |__crtEnumSystemLocalesEx|
 |__crtFlsAlloc|
 |__crtFlsFree|
@@ -1104,6 +1115,7 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |_pwctype|
 |__pwctype_func|
 |__pxcptinfoptrs|
+|_query_app_type|
 |_realloc_base|
 |[_register_onexit_function](../c-runtime-library/execute-onexit-table-initialize-onexit-table-register-onexit-function.md)|
 |_register_thread_local_exe_atexit_callback|
@@ -1179,6 +1191,6 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

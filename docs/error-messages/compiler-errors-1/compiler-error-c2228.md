@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2228
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
-ms.openlocfilehash: 20e295d09e39a12ed8163ec980fa304cd4167218
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56eed6aeff5a955253a440d5931d66118f4604e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628398"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759283"
 ---
 # <a name="compiler-error-c2228"></a>コンパイラ エラー C2228
 
 '.identifier' の左側はクラス、構造体、共用体でなければなりません
 
-ピリオド (.) の左側のオペランドがクラス、構造体または共用体。
+ピリオド (.) の左側のオペランドが、クラス、構造体、または共用体ではありません。
 
 次の例では C2228 が生成されます。
 
-```
+```cpp
 // C2228.cpp
 int i;
 struct S {

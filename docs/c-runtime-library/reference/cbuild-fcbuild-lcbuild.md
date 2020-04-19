@@ -1,11 +1,11 @@
 ---
 title: _Cbuild、_FCbuild、_LCbuild
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cbuild
 - _FCbuild
 - _LCbuild
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cbuild
 - _FCbuild
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511801"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943225"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild、_FCbuild、_LCbuild
+# <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild、_FCbuild、_LCbuild
 
-実数部と虚数部から複素数を構築します。
+実数部および虚数部から複素数を構築します。
 
 ## <a name="syntax"></a>構文
 
@@ -58,19 +61,19 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ## <a name="return-value"></a>戻り値
 
-A **_Dcomplex**、 **_Fcomplex**、または **_Lcomplex**複素数を表す構造体 (*実際*、*虚数部* \*は) 指定した浮動小数点型の値。
+指定された浮動小数点型の値に対する複素数 (*実数*、*虚数* \* i) を**表す、** **_Fcomplex**、または **_Lcomplex**構造体。
 
 ## <a name="remarks"></a>Remarks
 
-**_Cbuild**、 **_FCbuild**、および **_LCbuild**関数の複雑な種類の作成を簡略化します。 使用して、 [creal、crealf、creall](creal-crealf-creall.md)と[cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)表される複素数の実数部と虚数部の部分を取得する関数。
+**_Cbuild**、 **(fcbuild**)、および**lcbuild**関数は、複合型の作成を簡略化します。 表示される複素数の実数部と虚数部を取得するには、 [creal、crealf、creal](creal-crealf-creall.md) 、および[cimag、cimagf、cimagf](cimag-cimagf-cimagl.md)関数を使用します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**_Cbuild**、 **_FCbuild**、 **_LCbuild**|\<complex.h>|\<ccomplex>|
+|**_Cbuild**、( **fcbuild**)、 **lcbuild**|\<complex.h>|\<ccomplex>|
 
-これらの関数は、Microsoft 固有です。 種類 **_Dcomplex**、 **_Fcomplex**、および **_Lcomplex**は実装されていない C99 のネイティブ型に対応する Microsoft 固有**double _Complex**、 **float _Complex**、および**long double _Complex**、それぞれします。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数は、Microsoft 固有の関数です。 型 **(_t**、 **_Fcomplex**、および **_Lcomplex** ) は、実装されていない C99 ネイティブ型に対して、それぞれ**Complex**、 **float**、および**long double complex**の各型に相当します。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

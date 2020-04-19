@@ -1,6 +1,6 @@
 ---
 title: CDataRecoveryHandler クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253583"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler クラス
 
@@ -146,7 +146,7 @@ class CDataRecoveryHandler : public CObject
 
 使用する前に、`CDataRecoveryHandler`オブジェクトを呼び出す必要があります[CDataRecoveryHandler::Initialize](#initialize)します。
 
-`CDataRecoveryHandler`クラスは、再起動マネージャーを密接に関連して`CDataRecoveryHandler`グローバル パラメーターに依存する`m_dwRestartManagerSupportFlags`します。 このパラメーターは、再起動マネージャーがどのようなアクセス許可と、アプリケーションと対話する方法を決定します。 再起動マネージャーを既存のアプリケーションに組み込むに割り当てる必要があります`m_dwRestartManagerSupportFlags`メイン アプリケーションのコンス トラクターで適切な値。 再起動マネージャーを使用する方法の詳細については、次を参照してください。[方法: 再起動マネージャーのサポートを追加](../../mfc/how-to-add-restart-manager-support.md)します。
+`CDataRecoveryHandler`クラスは、再起動マネージャーを密接に関連して`CDataRecoveryHandler`グローバル パラメーターに依存する`m_dwRestartManagerSupportFlags`します。 このパラメーターは、再起動マネージャーがどのようなアクセス許可と、アプリケーションと対話する方法を決定します。 再起動マネージャーを既存のアプリケーションに組み込むに割り当てる必要があります`m_dwRestartManagerSupportFlags`メイン アプリケーションのコンス トラクターで適切な値。 再起動マネージャーを使用する方法の詳細については、次を参照してください。[方法。再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -168,7 +168,7 @@ TRUE の場合、`CDataRecoveryHandler`保存されているすべてのドキ�
 
 このメソッドは、ドキュメントを保存する必要がありますがない場合に TRUE を返します。 取得する場合、すべてのドキュメントを保存せず TRUE を返します、`CWinApp`または`CDocManager`のアプリケーションにエラーが生成されます。
 
-このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります`m_dwRestartManagerSupportFlags`します。 参照してください[m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)詳細についてはします。
+このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります`m_dwRestartManagerSupportFlags`します。 詳細については、「[方法 :再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)」をご覧ください。
 
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo
 
@@ -690,4 +690,3 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [方法: 再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)
-

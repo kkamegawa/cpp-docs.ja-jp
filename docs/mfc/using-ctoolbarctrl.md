@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 4a325f750b65b39670168df5a85687b53fcc5a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411670"
 ---
 # <a name="using-ctoolbarctrl"></a>CToolBarCtrl の使い方
 
@@ -35,4 +35,3 @@ ms.locfileid: "50581429"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

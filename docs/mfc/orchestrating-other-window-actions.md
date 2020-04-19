@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: ab034f8c22f99c166f41bb47107bda83eef439b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b767ac8899217761cfcca8e24da841a694ead1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378162"
 ---
 # <a name="orchestrating-other-window-actions"></a>ほかのウィンドウの動作の調整
 
@@ -23,4 +23,3 @@ ms.locfileid: "50657289"
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
-

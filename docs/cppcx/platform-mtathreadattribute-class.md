@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 07a20457df1bb9124b965cfae27d30e9f31d7531
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152671"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute クラス
 
@@ -52,7 +52,7 @@ MTAThreadAttribute 属性が継承[platform::object Class](../cppcx/platform-obj
 
 **メタデータ:** platform.winmd
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 ## <a name="ctor"></a> MTAThreadAttribute コンス トラクター
 

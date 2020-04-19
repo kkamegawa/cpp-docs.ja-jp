@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3048
 ms.assetid: 48e07091-94d9-471d-befe-7e2507631edd
-ms.openlocfilehash: 451ae87f26357f47df4efdaa4393450f660a9000
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bec5921ea3d44c60d5d385da811beb6674c1a8d5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502437"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761313"
 ---
 # <a name="compiler-error-c3048"></a>コンパイラ エラー C3048
 
@@ -21,7 +21,7 @@ atomic ディレクティブが正しく指定されていません。
 
 次の例では C3048 が生成されます。
 
-```
+```cpp
 // C3048.cpp
 // compile with: /openmp vcomps.lib
 #include "omp.h"

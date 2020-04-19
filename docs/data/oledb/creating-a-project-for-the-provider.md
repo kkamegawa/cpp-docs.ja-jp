@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: f63b09d47dd8f3ebe8750275bb005be89ca8fde8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362008"
 ---
 # <a name="creating-a-project-for-the-provider"></a>プロバイダーのプロジェクトの作成
 

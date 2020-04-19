@@ -1,14 +1,14 @@
 ---
 title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset_s_l
 - _strnset_s
 - _mbsnset_s
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnset_s_l
 - wcsnset_s
@@ -54,19 +58,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: bb82e96c23e1554fb2ec5e2a36089823eaf55595
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459996"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626131"
 ---
-# <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
+# <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 文字列の文字を所定の書式に初期化します。 これらの [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) のバージョンは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbsnset_s**と **_mbsnset_s_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnset_s**と **_mbsnset_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -118,7 +122,7 @@ errno_t _mbsnset_s_l(
 変更対象の文字列。
 
 *numberOfElements*<br/>
-サイズ、 *str*バッファー。
+*Str*バッファーのサイズ。
 
 *c*<br/>
 文字設定。
@@ -133,17 +137,17 @@ errno_t _mbsnset_s_l(
 
 正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。
 
-これらの関数は、引数を検証します。 場合*str*が null で終わる有効な文字列でない、またはサイズ引数が 0 未満、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、これらの関数の戻り値はエラー コードとセットを許可された場合**errno**にそのエラー コード。 既定のエラー コードは**EINVAL**より特定の値が適用されない場合。
+これらの関数は、引数を検証します。 *Str*が null で終わる有効な文字列でない場合、またはサイズ引数が0以下の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数はエラーコードを返し、 **errno**をそのエラーコードに設定します。 より具体的な値が適用されない場合、既定のエラーコードは**EINVAL**です。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数セット、多くても最初*カウント*の文字*str*に*c*します。 場合*カウント*のサイズより大きい*str*、サイズの*str*の代わりに使用が*カウント*。 エラーが発生*カウント*がより大きい*numberOfElements*両方のパラメーターがのサイズを超えると*str*します。
+これらの関数は、str の最大文字*数*である*str*を*c*に設定します。 *Count*が*str*のサイズより大きい場合は、 *count*の代わりに*str*のサイズが使用されます。 *Count*が*numberofelements*よりも大きく、両方のパラメーターが*str*のサイズより大きい場合、エラーが発生します。
 
-**_wcsnset_s**と **_mbsnset_s**のワイド文字とマルチバイト文字バージョン **_strnset_s**します。 文字列引数 **_wcsnset_s**ワイド文字は、文字列以外の **_mbsnset_s**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsnset_s**と **_mbsnset_s**は、 **_strnset_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset_s**の文字列引数はワイド文字列です。 **_mbsnset_s**は amultibyte 文字列です。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -152,7 +156,7 @@ errno_t _mbsnset_s_l(
 |**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
 |**_tcsnset_s_l**|**_strnset_s_l**|**_mbsnbset_s_l**|**_wcsnset_s_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -162,7 +166,7 @@ errno_t _mbsnset_s_l(
 |**_wcsnset_s_l**|\<tchar.h>|
 |**_mbsnset_s**、 **_mbsnset_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

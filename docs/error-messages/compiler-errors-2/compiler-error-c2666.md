@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2666
+title: コンパイラエラー C2666
 ms.date: 11/04/2016
 f1_keywords:
 - C2666
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755994"
 ---
-# <a name="compiler-error-c2666"></a>コンパイラ エラー C2666
+# <a name="compiler-error-c2666"></a>コンパイラエラー C2666
 
-'identifier': オーバー ロードの番号がある同様の変換
+' identifier ': 数値のオーバーロードに似た変換があります
 
-オーバー ロードされた関数または演算子があいまいです。   仮パラメーター リストは、あいまいさを解決するのには、コンパイラのすぎるような可能性があります。  このエラーを解決するには、実際のパラメーターの 1 つ以上を明示的にキャストします。
+オーバーロードされた関数または演算子があいまいです。   あいまいさを解決するために、仮パラメーターリストがコンパイラに似ている場合があります。  このエラーを解決するには、1つまたは複数の実際のパラメーターを明示的にキャストします。
 
 次の例では、C2666 が生成されます。
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成することもできます。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果としても生成されます。
 
-- 二項演算子とポインター型へのユーザー定義の変換
+- 二項演算子とポインター型へのユーザー定義変換
 
-- 限定変換が恒等変換と同じです。
+- 修飾変換は id 変換と同じではありません
 
-二項演算子の\<、>、 \<=、および > =、渡されるパラメーターは、今すぐに暗黙的に変換、オペランドの型パラメーターの型には、オペランドの型に変換するユーザー定義変換演算子が定義されている場合。 あいまいさが残る可能性があります。
+二項演算子 \<、>、\<=、および > = の場合、渡されたパラメーターは、オペランドの型に変換するユーザー定義の変換演算子をパラメーターの型が定義する場合に、オペランドの型に暗黙的に変換されるようになりました。 あいまいさが生じる可能性があります。
 
-コードは、Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C の両方で有効で、関数の構文を使用して明示的にクラスの演算子を呼び出します。
+Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio で有効なコードについては、関数構文を使用してクラス演算子を明示的に呼び出します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -102,11 +102,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次のサンプルの生成 C2666
+次の例では、C2666 が生成されます。
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

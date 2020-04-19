@@ -1,26 +1,27 @@
 ---
 title: PUSHCONTEXT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PUSHCONTEXT
 helpviewer_keywords:
 - PUSHCONTEXT directive
 ms.assetid: 18e528ee-df6c-4ce6-8823-b35b40f757fd
-ms.openlocfilehash: b657b6519fd9e4cbd367eaefc984fd959618c57d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 991cdd41e8bd180b210e949839eec091438a83e7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590295"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318606"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-現在の一部またはすべてを保存します。 `context`: セグメント レジスタを引き受けると、基数値、および cref を一覧表示のフラグ、またはプロセッサ/コプロセッサの値。 `context`できる**と**、 `RADIX`、**を一覧表示する**、 **CPU**、または**すべて**します。
+現在の*コンテキスト*の一部またはすべてを保存します。セグメントレジスタでは、基数値、リスティングおよび cref フラグ、またはプロセッサ/コプロセッサ値が想定されます。 *コンテキスト*は、(32 ビット masm のみ)、**基数**、**リスティング**、 **CPU** (32 ビット Masm のみ)、または**すべて**を**想定**できます。
 
 ## <a name="syntax"></a>構文
 
-> PUSHCONTEXT コンテキスト
+> **Pushcontext** *コンテキスト*
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

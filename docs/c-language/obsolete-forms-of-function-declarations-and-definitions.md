@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: 4822ee75c9a1112aff7c7b54dffb745325f56001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed6ee67194aa208f77a8d43dcc17ac43b0d74278
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444240"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148011"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>関数の宣言と定義の廃止された形式
 
@@ -28,7 +28,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 
 整数、または `int` と同じサイズのポインターを返す関数に、宣言は不要ですが、宣言することをお勧めします。
 
-ANSI C 標準に準拠するために、省略記号を使った旧形式の関数宣言では、/Za オプションでのコンパイル時にエラーが、/Ze オプションでのコンパイル時にはレベル 4 の警告が発生するようになりました。 例:
+ANSI C 標準に準拠するために、省略記号を使った旧形式の関数宣言では、/Za オプションでのコンパイル時にエラーが、/Ze オプションでのコンパイル時にはレベル 4 の警告が発生するようになりました。 次に例を示します。
 
 ```
 void funct1( a, ... )  /* Generates a warning under /Ze or */
@@ -49,6 +49,6 @@ void funct1( int a, ... )
 
 次のセクション「[C 関数定義](../c-language/c-function-definitions.md)」では、旧形式の構文を含む関数定義の構文を示します。 旧形式の構文のパラメーター リストの非終端要素は、*identifier-list* です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数の概要](../c-language/overview-of-functions.md)

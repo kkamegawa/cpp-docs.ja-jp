@@ -6,46 +6,56 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543313"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706896"
 ---
 # <a name="implementing-property-pages"></a>プロパティ ページの実装
 
-プロパティ ページは、COM オブジェクトを実装する、`IPropertyPage`または`IPropertyPage2`インターフェイス。 ATL によって、プロパティ ページを実装するためのサポートの提供、 [ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)で、[クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md)します。
+::: moniker range="vs-2019"
 
-ATL を使用してプロパティ ページを作成します。
+ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降では使用できません。
 
-- 作成または ATL のダイナミック リンク ライブラリ (DLL) のサーバー プロジェクトを開きます。
+::: moniker-end
 
-- 開く、[クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md)選択**ATL プロパティ ページ**します。
+::: moniker range="<=vs-2017"
 
-- プロパティ ページがアパートメント スレッドがあるため、ユーザー インターフェイス) を確認します。
+プロパティ ページは、`IPropertyPage` または `IPropertyPage2` インターフェイスを実装する COM オブジェクトです。 ATL では、[[クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)の [ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)経由のプロパティ ページの実装をサポートしています。
 
-- タイトル、説明 (ドキュメント文字列)、およびページに関連するヘルプ ファイルを設定します。
+ATL を使用してプロパティ ページを作成するには:
 
-- 生成されたダイアログ リソース プロパティ ページのユーザー インターフェイスとして機能するには、コントロールを追加します。
+- ATL ダイナミック リンク ライブラリ (DLL) サーバー プロジェクトを作成するか開きます。
 
-- 検証を実行、ページのサイトを更新、または、ページに関連付けられたオブジェクトを更新するページのユーザー インターフェイスの変更に応答します。 具体的には、呼び出す[IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty)ユーザーがプロパティ ページに変更を行ったとします。
+- [[クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)を開き、 **[ATL プロパティ ページ]** を開きます。
 
-- 必要に応じてオーバーライドして、`IPropertyPageImpl`メソッドを次のガイドラインを使用します。
+- プロパティ ページがアパートメント スレッドであることを確認します (ユーザー インターフェイスがあるため)。
 
-   |IPropertyPageImpl メソッド|オーバーライドする場合に.|メモ|
+- タイトル、説明 (ドキュメント文字列)、およびページに関連付けるヘルプ ファイルを設定します。
+
+- 生成されたダイアログ リソースに、プロパティ ページのユーザー インターフェイスとして機能するコントロールを追加します。
+
+- ページのユーザー インターフェイスの変更に応じて、検証の実行、ページ サイトの更新、またはページに関連付けられたオブジェクトの更新を実行します。 特に、ユーザーがプロパティ ページを変更した場合は、[IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) を呼び出します。
+
+- 必要に応じて、次のガイドラインを使用して `IPropertyPageImpl` メソッドをオーバーライドします。
+
+   |IPropertyPageImpl メソッド|オーバーライドの目的...|メモ|
    |------------------------------|----------------------------------|-----------|
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|ページおよびサポートするインターフェイスに渡されたオブジェクトの数に基本的なサニティ チェックを実行します。|基本クラスの実装を呼び出す前に、独自のコードを実行します。 設定されているオブジェクトが、期待どおりに準拠していない場合は、呼び出しをできるだけ早く失敗する必要があります。|
-   |[アクティブ化します。](../atl/reference/ipropertypageimpl-class.md#activate)|ページのユーザー インターフェイス (たとえば、オブジェクトから現在のプロパティ値を持つダイアログ コントロールを設定、コントロールを動的に作成またはその他の初期化を実行します) を初期化します。|基底クラスがあるそれらを更新する前に、ダイアログ ウィンドウおよびすべてのコントロールを作成することになるように、コードの前に、基本クラスの実装を呼び出します。|
-   |[適用します。](../atl/reference/ipropertypageimpl-class.md#apply)|プロパティの設定を検証し、オブジェクトを更新します。|これは何もトレースとは別の呼び出しから基本クラスの実装を呼び出す必要はありません。|
-   |[非アクティブ化します。](../atl/reference/ipropertypageimpl-class.md#deactivate)|ウィンドウの関連項目をクリーンアップします。|基本クラスの実装では、プロパティ ページを表す ダイアログ ボックスを破棄します。 ダイアログ ボックスが破棄される前に、クリーンアップする必要がある場合は、基本クラスを呼び出す前に、コードを追加する必要があります。|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|ページに渡される複数のオブジェクトとそれらがサポートするインターフェイスの基本的なサニティ チェックを実行します。|基底クラスの実装を呼び出す前に、自分のコードを実行します。 設定されるオブジェクトが期待に沿っていない場合は、できるだけ早く呼び出しを失敗させる必要があります。|
+   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|ページのユーザー インターフェイスを初期化します (例: ダイアログのコントロールにオブジェクトの現在のプロパティ値を設定する、コントロールを動的に作成する、その他の初期化を実行する)。|自分のコードで更新を試行する前に基底クラスの実装を呼び出して、基底クラスでダイアログ ウィンドウとすべてのコントロールが作成できるようにします。|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|プロパティの設定を検証し、オブジェクトを更新します。|呼び出しのトレース以外のことは行われないため、基底クラスの実装を呼び出す必要はありません。|
+   |[Deactivate](../atl/reference/ipropertypageimpl-class.md#deactivate)|ウィンドウに関連する項目をクリーンアップします。|基底クラスの実装では、プロパティ ページを表すダイアログ ボックスが破棄されます。 ダイアログ ボックスが破棄される前にクリーンアップする必要がある場合は、基底クラスを呼び出す前に、自分のコードを追加する必要があります。|
 
-例プロパティ ページの実装を参照してください。[例: プロパティ ページを実装する](../atl/example-implementing-a-property-page.md)します。
+プロパティ ページの実装の例については、「[例:プロパティ ページの実装](../atl/example-implementing-a-property-page.md)」を参照してください。
 
 > [!NOTE]
-> プロパティ ページに ActiveX コントロールをホストする場合は、ウィザードで生成されたクラスの派生を変更する必要があります。 置換**CDialogImpl\<CYourClass >** で**CAxDialogImpl\<CYourClass >** 基底クラスの一覧にします。
+> プロパティ ページに ActiveX コントロールをホストする場合は、ウィザードで生成されたクラスの派生を変更する必要があります。 基底クラスの一覧の **CDialogImpl\<CYourClass>** を **CAxDialogImpl\<CYourClass>** に置き換えます。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 
 [プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
-[例](../visual-cpp-samples.md)
+[ATLPages の例](../overview/visual-cpp-samples.md)

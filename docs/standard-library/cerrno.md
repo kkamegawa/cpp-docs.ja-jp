@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cerrno header
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
-ms.openlocfilehash: 16a3858f25afd6a5d26f611f5398361bf82ee13a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1186a1e3c58c34de53f7a9835eaf9fd188593301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517659"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455506"
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
 
-標準 C ライブラリ ヘッダー \<errno.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+C 標準ライブラリヘッダー \<errno をインクルードし、関連`std`する名前を名前空間に追加し > ます。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,12 +23,96 @@ ms.locfileid: "51517659"
 #include <cerrno>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="macros"></a>[マクロ]
 
-このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+```cpp
+#define errno
+#define E2BIG
+#define EACCES
+#define EADDRINUSE
+#define EADDRNOTAVAIL
+#define EAFNOSUPPORT
+#define EAGAIN
+#define EALREADY
+#define EBADF
+#define EBADMSG
+#define EBUSY
+#define ECANCELED
+#define ECHILD
+#define ECONNABORTED
+#define ECONNREFUSED
+#define ECONNRESET
+#define EDEADLK
+#define EDESTADDRREQ
+#define EDOM
+#define EEXIST
+#define EFAULT
+#define EFBIG
+#define EHOSTUNREACH
+#define EIDRM
+#define EILSEQ
+#define EINPROGRESS
+#define EINTR
+#define EINVAL
+#define EIO
+#define EISCONN
+#define EISDIR
+#define ELOOP
+#define EMFILE
+#define EMLINK
+#define EMSGSIZE
+#define ENAMETOOLONG
+#define ENETDOWN
+#define ENETRESET
+#define ENETUNREACH
+#define ENFILE
+#define ENOBUFS
+#define ENODATA
+#define ENODEV
+#define ENOENT
+#define ENOEXEC
+#define ENOLCK
+#define ENOLINK
+#define ENOMEM
+#define ENOMSG
+#define ENOPROTOOPT
+#define ENOSPC
+#define ENOSR
+#define ENOSTR
+#define ENOSYS
+#define ENOTCONN
+#define ENOTDIR
+#define ENOTEMPTY
+#define ENOTRECOVERABLE
+#define ENOTSOCK
+#define ENOTSUP
+#define ENOTTY
+#define ENXIO
+#define EOPNOTSUPP
+#define EOVERFLOW
+#define EOWNERDEAD
+#define EPERM
+#define EPIPE
+#define EPROTO
+#define EPROTONOSUPPORT
+#define EPROTOTYPE
+#define ERANGE
+#define EROFS
+#define ESPIPE
+#define ESRCH
+#define ETIME
+#define ETIMEDOUT
+#define ETXTBSY
+#define EWOULDBLOCK
+#define EXDEV
+```
+
+### <a name="remarks"></a>Remarks
+
+ここでのマクロは、POSIX 標準で定義されています。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

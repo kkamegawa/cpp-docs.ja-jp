@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-ms.openlocfilehash: 749e242db37944f0c4dcbfb785028b01a0604f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79181702c95f8c666b06bdb26319ccb06e55db0a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161719"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException クラス
 
@@ -33,11 +33,11 @@ public ref class ChangedStateException : COMException,    IException,    IPrinta
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 

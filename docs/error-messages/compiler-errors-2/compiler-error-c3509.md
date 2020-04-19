@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
-ms.openlocfilehash: e5e3c48581b5225bf1cf6777c9891c458034e11f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d91bbdf67b49e5722491f562b5eced2c5af10837
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496646"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753745"
 ---
 # <a name="compiler-error-c3509"></a>コンパイラ エラー C3509
 
-'type': 無効な Automation 戻り値の型。'void'、'HRESULT' または 'SCODE' する必要があります、パラメーターがマークされている 'retval'、戻り値の型の場合
+' type ': オートメーションの戻り値の型が無効です。パラメーターが ' retval ' とマークされている場合、戻り値の型は ' void '、' HRESULT ' または ' SCODE ' である必要があります
 
 COM インターフェイスのメソッドは、void または HRESULT を返す必要があります。
 
 次の例では、C3509 が生成されます。
 
-```
+```cpp
 // C3509.cpp
 #define _ATL_DEBUG_QI
 

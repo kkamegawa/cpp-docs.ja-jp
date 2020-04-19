@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 739bf08139c56992af883b5cefa5c235bf08f551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164047"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox クラス
 
@@ -218,7 +218,7 @@ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)リスト ボックス
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル TSTCON](../../visual-cpp-samples.md)<br/>
+[MFC サンプル TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox クラス](../../mfc/reference/clistbox-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CListBox クラス](../../mfc/reference/clistbox-class.md)

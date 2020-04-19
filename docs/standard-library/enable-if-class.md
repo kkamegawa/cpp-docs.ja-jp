@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591881"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454211"
 ---
 # <a name="enableif-class"></a>enable_if クラス
 
-SFINAE オーバーロード解決用のタイプのインスタンスを条件によって作成する 入れ子の typedef`enable_if<Condition,Type>::type`が存在する — のシノニムであり`Type`— 場合にのみ`Condition`は**true**します。
+SFINAE オーバーロード解決用のタイプのインスタンスを条件によって作成する 入れ子になっ`enable_if<Condition,Type>::type`た typedef は、 `Condition`が**true**の`Type`場合にのみ、のシノニムになります。
 
 ## <a name="syntax"></a>構文
 
@@ -27,17 +27,17 @@ struct enable_if;
 
 ### <a name="parameters"></a>パラメーター
 
-*B*<br/>
+*B*\
 結果の型の存在を定義する値。
 
-*T*<br/>
-場合をインスタンス化する型*B*は true。
+*\T*\
+*B*が true の場合にインスタンスを生成する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合*B*が true の場合`enable_if<B, T>`のシノニムである入れ子になった typedef「型」という名前を持つ*T*します。
+*B*が true の場合`enable_if<B, T>` 、には、 *T*のシノニムである "type" という名前の入れ子になった typedef があります。
 
-場合*B*が false の場合`enable_if<B, T>`"type"という名前の入れ子にされた typedef はありません。
+*B*が false の場合`enable_if<B, T>` 、は "type" という名前の入れ子になった typedef を持ちません。
 
 このエイリアス テンプレートが提供されています。
 
@@ -46,11 +46,11 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-C++ では、テンプレート パラメーターの置き換えの失敗は、それ自体はエラーではありません。これは *SFINAE* (substitution failure is not an error: 置き換えの失敗はエラーではない) と呼ばれます。 一般的に、`enable_if` はオーバーロード解決から候補を外す (つまりオーバーロード セットを除外する) ために使用します。一方を優先させて他方の定義が拒否されることもあります。 これは、SFINAE の動作に適合します。 SFINAE の詳細については、Wikipedia の「[Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798)」を参照してください。
+C++ では、テンプレート パラメーターの置き換えの失敗は、それ自体はエラーではありません。これは *SFINAE* (substitution failure is not an error: 置き換えの失敗はエラーではない) と呼ばれます。 一般的に、`enable_if` はオーバーロード解決から候補を外す (つまりオーバーロード セットを除外する) ために使用します。一方を優先させて他方の定義が拒否されることもあります。 これは、SFINAE の動作に適合します。 SFINAE の詳細については、Wikipedia の「[Substitution failure is not an error](https://go.microsoft.com/fwlink/p/?linkid=394798)」を参照してください。
 
 次に、4 つのシナリオの例を示します。
 
-- シナリオ 1: 関数の戻り値の型をラッピングする
+- シナリオ 1:関数の戻り値の型をラップしています。
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- シナリオ 2: 既定の引数を持つ関数パラメーターを追加する
+- 例 2:既定の引数を持つ関数パラメーターを追加すると、次のようになります。
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- シナリオ 3: 既定の引数を持つテンプレート パラメーターを追加する
+- 例 3:既定の引数を持つテンプレートパラメーターを追加すると、次のようになります。
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- シナリオ 4: 関数がテンプレート化されていない引数を持っている場合、その型をラッピングできる
+- シナリオ 4:関数に非テンプレート引数がある場合は、その型をラップできます。
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 シナリオ 1 は、コンストラクターおよび変換演算子では機能しません。それらは戻り値の型を持たないためです。
 
-シナリオ 2 では、パラメーターは名前がないままです。 `::type Dummy = BAR` とすることもできますが、名前`Dummy` は重要ではなく、名前を付けることは "未参照のパラメーター" 警告をトリガーする可能性があります。 関数パラメーターの型 `FOO`、および既定の引数`BAR` を選択する必要があります。  たとえば**int**と`0`、コードのユーザーでした誤って関数に追加する整数を渡しますは無視されますが、します。 使用すること勧め代わりに、 `void **` 、`0`または**nullptr**ほとんどないからですに変換できるため、 `void **`:
+シナリオ 2 では、パラメーターは名前がないままです。 `::type Dummy = BAR` とすることもできますが、名前`Dummy` は重要ではなく、名前を付けることは "未参照のパラメーター" 警告をトリガーする可能性があります。 関数パラメーターの型 `FOO`、および既定の引数`BAR` を選択する必要があります。  **Int**と`0`を指定することもできますが、コードのユーザーは、無視される余分な整数を誤って関数に渡すことができます。 代わりに、との`void **`いずれか`0`または**nullptr**を使用することをお勧めし`void **`ます。これは、ほとんど何も変換できないためです。
 
 ```cpp
 template <your_stuff>
@@ -127,7 +127,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-この例では、`make_pair("foo", "bar")` は `pair<const char *, const char *>` を返します。 オーバーロード解決では、どの `func()` が必要かを決定する必要があります。 `pair<A, B>` は、`pair<X, Y>` から暗黙に変換されるコンストラクターを持っています。  これは新しいものではなく、C++98 にありました。 ただし C++98/03 では、暗黙に変換されるコンストラクターのシグネチャは、`pair<int, int>(const pair<const char *, const char *>&)` の場合でも必ず存在します。  オーバー ロードの解決は関係ありませんので、そのコンス トラクターをインスタンス化が試行がひどいこと`const char *`に暗黙的に変換されていない**int**; のみ、署名を調べるには、定義は、関数の前にインスタンス化します。  そのため、この例のコードは曖昧です。シグネチャは、`pair<const char *, const char *>` を `pair<int, int>` と `pair<string, string>` の両方に変換するために存在するからです。
+この例では、`make_pair("foo", "bar")` は `pair<const char *, const char *>` を返します。 オーバーロード解決では、どの `func()` が必要かを決定する必要があります。 `pair<A, B>` は、`pair<X, Y>` から暗黙に変換されるコンストラクターを持っています。  これは新しいものではなく、C++98 にありました。 ただし C++98/03 では、暗黙に変換されるコンストラクターのシグネチャは、`pair<int, int>(const pair<const char *, const char *>&)` の場合でも必ず存在します。  オーバーロードの解決では、コンストラクター `const char *`をインスタンス化しようとしても、暗黙的に**int**に変換することはできません。これは、関数定義がインスタンス化される前に、シグネチャを確認するだけです。  そのため、この例のコードは曖昧です。シグネチャは、`pair<const char *, const char *>` を `pair<int, int>` と `pair<string, string>` の両方に変換するために存在するからです。
 
 C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`pair<A, B>(const pair<X, Y>&)` が、以下の場合**のみ**、つまり `const X&` が `A` に暗黙に変換され、`const Y&` が `B` に暗黙に変換される場合のみ存在するようにしています。  これにより、オーバーロード解決は、`pair<const char *, const char *>` が `pair<int, int>` に変換されないこと、および `pair<string, string>` となるオーバーロードが実行可能であることを決定できます。
 
@@ -139,4 +139,4 @@ C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`p
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: 標準文字列を System::String に変換する'
+title: '方法: System::string を標準文字列に変換します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - string conversion [C++], C++ Standard Library string
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-ms.openlocfilehash: 5c09ac5e86066e4382c511dce45e4ec6e5301d54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1fca0e8cb614c111af80324793cf8027be333a0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387514"
 ---
-# <a name="how-to-convert-standard-string-to-systemstring"></a>方法: 標準文字列を System::String に変換する
+# <a name="how-to-convert-standard-string-to-systemstring"></a>方法: System::string を標準文字列に変換します。
 
 このトピックで示すは C++ 標準ライブラリの文字列を変換する方法 ([\<文字列 >](../standard-library/string.md)) に、<xref:System.String>します。
 

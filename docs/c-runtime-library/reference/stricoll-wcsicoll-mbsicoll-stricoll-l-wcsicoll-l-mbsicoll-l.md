@@ -1,14 +1,14 @@
 ---
 title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsicoll_l
 - _stricoll_l
 - _mbsicoll
 - _wcsicoll_l
 - _wcsicoll
 - _stricoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stricoll
 - _stricoll
@@ -51,19 +54,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 952d3b25f9c3741313e791c49f88a7d2e79ac60b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579670"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940700"
 ---
-# <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
+# <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
 ロケール固有の情報を使用して文字列を比較します。
 
 > [!IMPORTANT]
-> **_mbsicoll**と **_mbsicoll_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsicoll**と **_mbsicoll_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -107,24 +110,24 @@ Null で終わる比較対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の関係を示す値を返します*string1*に*string2*、次のようにします。
+これらの各関数は、次のように、 *string1*と*string2*の関係を示す値を返します。
 
 |戻り値|string1 と string2 との関係|
 |------------------|----------------------------------------|
-|< 0|*string1*未満*string2*|
-|0|*string1*と同じ*string2*|
-|> 0|*string1*より大きい*string2*|
-|**すると**|エラーが発生しました。|
+|< 0|*string1*が*string2*未満|
+|0|*string1*と*string2*の同一|
+|> 0|*string1*が*string2*より大きい|
+|**_NLSCMPERROR**|エラーが発生しました。|
 
-これらの関数を返します。**すると**します。 使用する**すると**、いずれかを含める\<string.h > または\<mbstring.h >。 **_wcsicoll**場合に失敗できる*string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生したときに **_wcsicoll**設定**errno**に**EINVAL**します。 呼び出しでエラーをチェックする **_wcsicoll**設定**errno**を 0 にし、確認**errno**呼び出した後 **_wcsicoll**します。
+これらの各関数は、 **_NLSCMPERROR**を返します。 **_NLSCMPERROR**を使用するには\<、mbstring.h > または\<> のいずれかを指定します。 *string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **_wcsicoll**は失敗する可能性があります。 エラーが発生すると、 **_wcsicoll**は**errno**を**EINVAL**に設定することがあります。 **_Wcsicoll**の呼び出しでエラーが発生していないかどうかを確認するには、 **errno**を0に設定し、 **_wcsicoll**を呼び出した後に**errno**を確認します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数は、大文字と小文字を実行します。 *string1*と*string2*現在使用されているコード ページに従ってします。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
+これらの各関数は、現在使用中のコードページに従って、 *string1*と*string2*の大文字と小文字を区別しない比較を実行します。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
 
-**_stricmp**とは異なります **_stricoll**点で、 **_stricmp**比較が受ける**LC_CTYPE**であるのに対し、 **_stricoll**比較に基づいて、 **LC_CTYPE**と**LC_COLLATE**ロケールのカテゴリに分類します。 詳細については、 **LC_COLLATE**カテゴリを参照してください[setlocale](setlocale-wsetlocale.md)と[ロケールのカテゴリ](../../c-runtime-library/locale-categories.md)します。 この関数のバージョン、 **_l**サフィックスを使用しているバージョンは、現在のロケール、 **_l**代わりに渡されたロケールを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_stricmp**は、 **_stricmp**の比較が**lc_ctype**によって影響を**受けるという**点で **_stricoll**とは異なります。一方、 **_stricoll**の比較**は、** 国. **LC_COLLATE**カテゴリの詳細については、「 [Setlocale](setlocale-wsetlocale.md) and [Locale Categories](../../c-runtime-library/locale-categories.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、現在のロケールを使用します。 **_l**サフィックスが付いているバージョンは、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2*は**NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md). これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**します。
+これらのすべての関数では、パラメーターの検証が行われます。 *String1*または*string2*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

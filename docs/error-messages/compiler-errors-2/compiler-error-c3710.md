@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 04b79b3c924892eb2a970f880d3f2048f4cb2b10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607676"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753420"
 ---
 # <a name="compiler-error-c3710"></a>コンパイラ エラー C3710
 
-'function': _ _hook のイベント ハンドラーを指定するための構文が正しくありません/\__unhook
+' function ': __hook/\_でイベントハンドラーを指定するための構文が正しくありません _unhook
 
-イベント ハンドラーを指定すると[_ _hook](../../cpp/hook.md)または[_ _unhook](../../cpp/unhook.md)ハンドラーは有効なメソッドである必要があります。
+[__Hook](../../cpp/hook.md)または[__unhook](../../cpp/unhook.md)でイベントハンドラーを指定する場合、ハンドラーは有効なメソッドである必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次のサンプルの生成 C3710
+次の例では、C3710 が生成されます。
 
-```
+```cpp
 // C3710.cpp
 // compile with: /link /opt:noref
 #include <atlbase.h>

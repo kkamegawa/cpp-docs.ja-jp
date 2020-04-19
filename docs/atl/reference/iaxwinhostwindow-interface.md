@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 1e389dc253f24eed2fee7e1d552be931a23f5e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276108"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow インターフェイス
 
@@ -79,7 +79,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 標準の HRESULT 値。
 
-##  <a name="createcontrol"></a>  については
+##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
 
 コントロールを作成し、初期化して、識別されるウィンドウでホスト*hWnd*します。
 
@@ -113,7 +113,7 @@ STDMETHOD(CreateControl)(
 
 ライセンスされた ActiveX コントロールを作成するを参照してください。 [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)します。
 
-##  <a name="createcontrolex"></a>  詳細
+##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
 
 ActiveX コントロールを作成、初期化、および指定したウィンドウでホスト[については](#createcontrol)します。
 
@@ -222,4 +222,3 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 [IAxWinAmbientDispatch インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

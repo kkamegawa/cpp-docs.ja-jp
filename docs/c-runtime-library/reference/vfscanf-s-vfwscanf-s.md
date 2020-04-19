@@ -1,10 +1,10 @@
 ---
 title: vfscanf_s、vfwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfscanf_s
 - vfwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 7f2f39ef124220ddee0b42242a9991d63fe5969a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521251"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957374"
 ---
-# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s、vfwscanf_s
+# <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s、vfwscanf_s
 
 ストリームから書式化されたデータを読み出します。 これらのバージョンの vfscanf、vfwscanf は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンです。
 
@@ -49,7 +52,7 @@ int vfwscanf_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
@@ -60,18 +63,18 @@ int vfwscanf_s(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または戻り値は、ファイル ストリームの末尾に達した場合は、最初の変換の前に、 **EOF**の**vfscanf_s**と**vfwscanf_s**します。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **vfscanf_s**および**vfwscanf_s**の戻り値は**EOF**になります。
 
-これらの関数では、パラメーターの検証が行われます。 場合*ストリーム*は無効なファイル ポインターの場合、または*形式*null ポインターの場合は、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
+これらの関数では、パラメーターの検証が行われます。 *Stream*が無効なファイルポインターの場合、または*format*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Vfscanf_s**関数は、の現在位置からデータを読み取る*ストリーム*で指定されている場所に、 *arglist*引数リスト (ある場合)。 リスト内の各引数は型指定子に対応する型の変数へのポインターである必要があります*形式*します。 *形式*コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*引数**scanf_s**; を参照してください[書式指定フィールド。scanf 関数と wscanf 関数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)の説明については*形式*します。 **vfwscanf_s**のワイド文字バージョンは、 **vfscanf_s**; 引数 format **vfwscanf_s**はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **vfscanf_s** UNICODE ストリームからの入力を現在サポートされていません。
+**Vfscanf_s**関数は、*ストリーム*の現在位置から、 *arglist*引数リストによって指定された場所 (存在する場合) にデータを読み取ります。 リストの各引数は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf_s**の*format*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。 **vfwscanf_s**は、 **vfscanf_s**のワイド文字バージョンです。**vfwscanf_s**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **vfscanf_s**は、現在 UNICODE ストリームからの入力をサポートしていません。
 
-安全な関数の主な違い (がある、 **_s**サフィックス) 他のバージョンがより安全な関数が各文字のサイズを必要として**c**、 **C**、 **s**、 **S**、および **[** 直後、変数を引数として渡される型のフィールド。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
+より安全な関数 ( **_s**サフィックスがある) とその他のバージョンの主な違いは、セキュリティが強化された関数では、各**c**、 **c**、 **s**、 **s**、および **[** type] フィールドのサイズを文字単位で指定する必要があることです。変数の直後に引数として渡されます。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
 > [!NOTE]
-> 型のサイズのパラメーターが**符号なし**ではなく、 **size_t**します。
+> Size パラメーターは、 **size_t**ではなく**unsigned**型です。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

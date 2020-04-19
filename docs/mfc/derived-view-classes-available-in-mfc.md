@@ -7,12 +7,12 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152905"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC で使用できる派生ビュー クラス
 
@@ -24,7 +24,7 @@ ms.locfileid: "50594498"
 |-----------|-----------------|
 |[CView](../mfc/reference/cview-class.md)|すべてのビューの基本クラスです。|
 |[CCtrlView](../mfc/reference/cctrlview-class.md)|基本クラスの`CTreeView`、 `CListView`、 `CEditView`、および`CRichEditView`します。 これらのクラスを使用して、指定された Windows のコモン コントロールとドキュメント/ビュー アーキテクチャを使用できます。|
-|[CEditView](../mfc/reference/ceditview-class.md)|Windows に基づく単純なビューでは、ボックス コントロールを編集します。 入力とテキストの編集は、単純なテキスト エディター アプリケーションの基礎として使用できます。 「 `CRichEditView`」も参照してください。|
+|[CEditView](../mfc/reference/ceditview-class.md)|Windows に基づく単純なビューでは、ボックス コントロールを編集します。 入力とテキストの編集は、単純なテキスト エディター アプリケーションの基礎として使用できます。 参照 `CRichEditView`.|
 |[CRichEditView](../mfc/reference/cricheditview-class.md)|ビューを含む、 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)オブジェクト。 このクラスに似ています`CEditView`とは異なり、 `CEditView`、`CRichEditView`書式設定されたテキストのハンドル。|
 |[CListView](../mfc/reference/clistview-class.md)|ビューを含む、 [CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクト。|
 |[Ctreeview の比較](../mfc/reference/ctreeview-class.md)|ビューを含む、 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) Visual C でソリューション エクスプ ローラー ウィンドウのようにビューのオブジェクト。|
@@ -38,9 +38,8 @@ ms.locfileid: "50594498"
 > [!NOTE]
 >  MFC バージョン 4.0 の時点で`CEditView`から派生`CCtrlView`します。
 
-これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、次を参照してください。[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)します。 データベース クラスの詳細については、次を参照してください。[概要: データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
+これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、次を参照してください。[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)します。 データベース クラスの詳細については、次を参照してください。[概要。データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [ビューの使い方](../mfc/using-views.md)
-

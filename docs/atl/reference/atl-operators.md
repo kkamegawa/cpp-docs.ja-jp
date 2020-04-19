@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260910"
 ---
 # <a name="atl-operators"></a>ATL 演算子
 
@@ -20,9 +20,9 @@ ms.locfileid: "50476259"
 |[operator ==](#operator_eq_eq)|2 つ`CSid`オブジェクトまたは`SID`構造体が等しいかどうか。|
 |[operator !=](#operator_neq)|2 つ`CSid`オブジェクトまたは`SID`構造体が等しくないです。|
 |[演算子 <](#operator_lt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより小さい`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|
-|[演算子 >](#operator_gt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|
+|[operator >](#operator_gt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|
 |[operator <=](#operator_lt__eq)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体は、以下に、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|
-|[operator > =](#operator_gt__eq)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造がより大きいか等しい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|
+|[operator >=](#operator_gt__eq)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造がより大きいか等しい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -140,7 +140,7 @@ True の場合のアドレス、 *lhs*が未満のアドレス、 *rhs*FALSE、�
 
 この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造体、および C++ 標準ライブラリ コレクション クラスとの互換性を提供する実装されます。
 
-##  <a name="operator_gt__eq"></a>  operator > =
+##  <a name="operator_gt__eq"></a>  operator >=
 
 かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造がより大きいか等しい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。
 
@@ -163,4 +163,3 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Remarks
 
 この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造体、および C++ 標準ライブラリ コレクション クラスとの互換性を提供する実装されます。
-

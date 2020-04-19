@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-ms.openlocfilehash: 92d639468e7465415b3553558090ca2d6811de9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3e4cec75ce23beb2a617d672170f86c608ca0a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411839"
 ---
 # <a name="using-cimagelist"></a>CImageList の使い方
 
@@ -39,4 +39,3 @@ ms.locfileid: "50502675"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

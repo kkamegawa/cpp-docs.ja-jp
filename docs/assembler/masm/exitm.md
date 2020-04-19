@@ -1,30 +1,31 @@
 ---
 title: EXITM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - EXITM
 helpviewer_keywords:
 - EXITM directive
 ms.assetid: a3484d33-04a9-4791-8d53-3fc3bc7b417c
-ms.openlocfilehash: 8d9b1e118e8afd8e2f001d5b2afca5c3d449fa4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89611bf9599a59ed09e217cc45cf16b48fe17a89
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555169"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313406"
 ---
 # <a name="exitm"></a>EXITM
 
-現在の繰り返しまたはマクロ ブロックの拡張を終了し、次のステートメント ブロックの外側のアセンブリを開始します。
+現在の繰り返しまたはマクロブロックの展開を終了し、ブロックの外側にある次のステートメントのアセンブリを開始します。
 
 ## <a name="syntax"></a>構文
 
-> EXITM [テキスト アイテム]
+> **Exitm** ⟦*textitem*⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-関数では、マクロ、*テキスト アイテム*返される値。
+マクロ関数では、 *textitem*は返される値です。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

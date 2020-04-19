@@ -1,6 +1,6 @@
 ---
 title: IRegistrar インターフェイス
-ms.date: 2/1/2017
+ms.date: 02/01/2017
 f1_keywords:
 - IRegistrar
 - ATLIFASE/ATL::IRegistrar
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-ms.openlocfilehash: 3494920164ed3a62713298d2cafdbdc27dbb2b97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927763"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar インターフェイス
 
-このインターフェイスは atliface.h で定義され、内部的に関数によって使用される CAtlModule メンバーなど[ため](catlmodule-class.md#updateregistryfromresourced)します。
+このインターフェイスは atliface で定義され、 [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)などの CAtlModule メンバー関数によって内部的に使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +34,7 @@ typedef interface IRegistrar IRegistrar;
 
 ## <a name="remarks"></a>Remarks
 
-トピックを参照して[置き換え可能パラメーターの使用 (レジストラーのプリプロセッサ)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)の詳細。
+詳細については、「[置換可能なパラメーター (レジストラーのプリプロセッサ) の使用](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -43,19 +43,19 @@ typedef interface IRegistrar IRegistrar;
 |名前|説明|
 |----------|-----------------|
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|リソースを登録します。 |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| リソースを登録解除します。|
-|[IRegistrar::FileRegister](#fileregister)|ファイルを登録します。|
-|[IRegistrar::FileUnregister](#fileunregister)|ファイルを登録解除します。|
-|[IRegistrar::StringRegister](#stringregister)|文字列を登録します。|
-|[IRegistrar::StringUnregister](#stringunregister)|文字列の登録を解除します。|
-|[IRegistrar::ResourceRegister](#resourceregister)|リソースを登録します。|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|リソースを登録解除します。|
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| リソースの登録を解除します。|
+|[IRegistrar:: FileRegister](#fileregister)|ファイルを登録します。|
+|[IRegistrar:: FileUnregister 解除](#fileunregister)|ファイルの登録を解除します。|
+|[IRegistrar:: StringRegister](#stringregister)|文字列を登録します。|
+|[IRegistrar:: StringUnregister 解除](#stringunregister)|文字列の登録を解除します|
+|[IRegistrar:: ResourceRegister](#resourceregister)|リソースを登録します。|
+|[IRegistrar::ResourceUnregister](#resourceunregister)|リソースの登録を解除します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlifase.h
+**ヘッダー:** atlifase
 
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+##  <a name="resourceregistersz"></a>IRegistrar:: ResourceRegisterSz
 
 リソースを登録します。
 
@@ -66,9 +66,9 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+##  <a name="resourceunregistersz"></a>IRegistrar:: ResourceUnregisterSz
 
-リソースを登録解除します。
+リソースの登録を解除します。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
@@ -88,7 +88,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
 
 ##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
 
-ファイルを登録解除します。
+ファイルの登録を解除します。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister(
@@ -106,7 +106,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
 
-指定した文字列データを登録解除します。
+指定された文字列データの登録を解除します。
 
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister(
@@ -126,7 +126,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
 
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
 
-リソースを登録解除します。
+リソースの登録を解除します。
 
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
@@ -139,5 +139,5 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 
 [置き換え可能パラメーターの使用 (レジストラー プリプロセッサ)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[モジュール クラス](../../atl/atl-module-classes.md)<br/>
+[モジュールクラス](../../atl/atl-module-classes.md)<br/>
 [レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)

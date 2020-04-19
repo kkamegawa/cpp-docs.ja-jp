@@ -1,10 +1,10 @@
 ---
 title: _lseek、_lseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lseeki64
 - _lseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lseeki64
 - _lseek
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326096"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952985"
 ---
-# <a name="lseek-lseeki64"></a>_lseek、_lseeki64
+# <a name="_lseek-_lseeki64"></a>_lseek、_lseeki64
 
 指定した場所にファイル ポインターを移動します。
 
@@ -68,21 +71,21 @@ __int64 _lseeki64(
 
 ## <a name="return-value"></a>戻り値
 
-**_lseek**ファイルの先頭からの新しい位置のバイト単位のオフセットを返します。 **_lseeki64** 64 ビット整数のオフセットを返します。 関数は、エラーを示す-1 L を返します。 不適切なファイル記述子、*origin* の値が無効、*オフセット*によって指定された位置がファイルの開始より前であるなど、無効なパラメーターが渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EBADF** -1 L を返します。 (ターミナルやポインターなどの) シーク非対応のデバイスでは、戻り値は未定義です。
+**_lseek**は、ファイルの先頭からの新しい位置のオフセットをバイト単位で返します。 **_lseeki64**は、64ビット整数のオフセットを返します。 この関数は、エラーを示す-1L を返します。 不適切なファイル記述子、*origin* の値が無効、*オフセット*によって指定された位置がファイルの開始より前であるなど、無効なパラメーターが渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EBADF**に設定し、-1l を返します。 (ターミナルやポインターなどの) シーク非対応のデバイスでは、戻り値は未定義です。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Lseek**関数に関連付けられたファイル ポインターを移動する*fd*である新しい場所に*オフセット*からバイト*原点*します。 ファイルの次の操作は、新しい場所で行われます。 *origin* 引数は、Stdio.h で定義されている、次の定数のいずれかである必要があります。
+**_Lseek**関数は、 *fd*に関連付けられたファイルポインターを、*原点*から*オフセット*バイトである新しい場所に移動します。 ファイルの次の操作は、新しい場所で行われます。 *origin* 引数は、Stdio.h で定義されている、次の定数のいずれかである必要があります。
 
-|*配信元*値||
+|*配信元*の値||
 |-|-|
 | **SEEK_SET** | ファイルの先頭。 |
 | **SEEK_CUR** | ファイル ポインターの現在の位置。 |
-| **オフセット** | EOF (ファイル終端)。 |
+| **SEEK_END** | EOF (ファイル終端)。 |
 
-使用することができます **_lseek**ファイルまたはファイルの末尾を越える任意の場所にポインターを移動します。
+**_Lseek**を使用すると、ファイルの任意の場所またはファイルの末尾を越える位置にポインターを移動できます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlseekcinput"></a>入力: crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>入力: crt_lseek.c_input
 
 ```Input
 Line one.
@@ -159,7 +162,7 @@ Line four.
 Line five.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Position for beginning of file seek = 0

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing classes [MFC]
 - graphics [MFC], graphical output classes
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
-ms.openlocfilehash: 8580991e71c1ddbd50ba7cdac566b31db3d38675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70645d5bb4ab3d1a168e164b2bd721f2d2479742
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408226"
 ---
 # <a name="drawing-and-printing-classes"></a>描画および印刷クラス
 
@@ -23,4 +23,3 @@ ms.locfileid: "50528386"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

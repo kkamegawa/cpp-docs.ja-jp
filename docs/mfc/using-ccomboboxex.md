@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: 18350a5f4ac8056676eeb275f9fc95478b3a8e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e119b41bbca42a1cbc0dbb5e721947c5bd7f1bc8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394469"
 ---
 # <a name="using-ccomboboxex"></a>CComboBoxEx の使い方
 
@@ -35,4 +35,3 @@ ms.locfileid: "50596639"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

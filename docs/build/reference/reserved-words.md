@@ -17,16 +17,16 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319422"
 ---
 # <a name="reserved-words"></a>予約語
 
-次の単語は、リンカーによって予約されています。 これらの名前を引数として使用できる[モジュール定義ステートメント](../../build/reference/module-definition-dot-def-files.md)名前が二重引用符で囲まれている場合にのみ ("")。
+次の単語は、リンカーによって予約されています。 これらの名前を引数として使用できる[モジュール定義ステートメント](module-definition-dot-def-files.md)名前が二重引用符で囲まれている場合にのみ ("")。
 
 ||||
 |-|-|-|
@@ -38,14 +38,14 @@ ms.locfileid: "50502467"
 |**説明**|**移動可能な**<sup>1</sup>|**READWRITE**|
 |**DEV386**|**MOVEABLE**<sup>1</sup>|**リアルモード**<sup>1</sup>|
 |**破棄できます。**|**複数**|**常駐**|
-|**動的**|**NAME**|**RESIDENTNAME**<sup>1</sup>|
-|**実行専用**|**NEWFILES**<sup>2</sup>|**セクション**|
+|**DYNAMIC**|**NAME**|**RESIDENTNAME**<sup>1</sup>|
+|**EXECUTE-ONLY**|**NEWFILES**<sup>2</sup>|**セクション**|
 |**EXECUTEONLY**|**NODATA**<sup>1</sup>|**セグメント**|
 |**読み取り**|**NOIOPL**<sup>1</sup>|**共有**|
 |**EXETYPE**|**NONAME**|**1 つ**|
 |**エクスポート**|**準拠していない**<sup>1</sup>|**スタックサイズ**|
 |**固定**<sup>1</sup>|**NONDISCARDABLE**|**スタブ**|
-|**関数**<sup>2</sup>|**[なし]**|**バージョン**|
+|**関数**<sup>2</sup>|**NONE**|**バージョン**|
 |**ヒープサイズ**|**非共有**|**WINDOWAPI**|
 |**インポート**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
 |**非純粋**<sup>1</sup>|**オブジェクト**|**WINDOWS**|
@@ -57,5 +57,5 @@ ms.locfileid: "50502467"
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
-- [リンカー オプション](../../build/reference/linker-options.md)
+- [MSVC リンカーのリファレンス](linking.md)
+- [MSVC リンカー オプション](linker-options.md)

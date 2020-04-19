@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: 58fb08ee48f3cc51a96304b9c1708dbfbf195adb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247172"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping クラス
 
@@ -39,7 +39,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|暗黙的な変換は、`CAtlFileMapping`オブジェクトを`T*`します。|
+|[CAtlFileMapping::operator T*](#operator_t_star)|暗黙的な変換は、`CAtlFileMapping`オブジェクトを`T*`します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -55,7 +55,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 **ヘッダー:** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *
+##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T*
 
 暗黙的な変換は、`CAtlFileMapping`オブジェクトを`T*`します。
 

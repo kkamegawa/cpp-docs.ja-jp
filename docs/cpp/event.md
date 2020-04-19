@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154426"
 ---
-# <a name="event"></a>__event
+# <a name="__event"></a>__event
 
 イベントを宣言します。
 
@@ -62,7 +62,7 @@ __event HRESULT OnClick(int* b, char* s);
 
 COM イベントはインターフェイスです。 イベント ソース インターフェイスのメソッドのパラメーターがある*で*パラメーター (ただし、これは厳格に強制されていません)、ため、*アウト*パラメーターはマルチキャストした場合に便利です。 使用する場合に、レベル 1 の警告が発行される、*アウト*パラメーター。
 
-戻り値の型は、通常、HRESULT または**void**、任意の整数型を指定できますが、含む**列挙型**します。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラはイベント ソース インターフェイスとしてのマークで自動的に注意してください、[ソース](../windows/source-cpp.md)生成された IDL にします。
+戻り値の型は、通常、HRESULT または**void**、任意の整数型を指定できますが、含む**enum**します。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラはイベント ソース インターフェイスとしてのマークで自動的に注意してください、[ソース](../windows/attributes/source-cpp.md)生成された IDL にします。
 
 [_ _Interface](../cpp/interface.md)キーワードの後に必要なは常に **_ _event** COM イベント ソース。
 
@@ -75,7 +75,7 @@ __event __interface IEvent1;
 
 ## <a name="managed-events"></a>マネージド イベント
 
-新しい構文でイベントのコーディングについては、次を参照してください。[イベント](../windows/event-cpp-component-extensions.md)します。
+新しい構文でイベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
 
 マネージド イベントは、データ メンバーまたはメソッドです。 イベントと共に使用すると、デリゲートの戻り値の型が準拠する必要があります、[共通言語仕様](/dotnet/standard/language-independence-and-language-independent-components)します。 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。 デリゲートの詳細については、次を参照してください。[デリゲートとイベント](../dotnet/delegates-and-events.md)します。 マネージド イベントがメンバー関数である場合、その型はデリゲートへのポインターでなければなりません。
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 マネージド イベントを暗黙的に宣言するときは、イベント ハンドラーが追加または削除されたときに呼び出される追加および削除アクセサーを指定できます。 クラスの外部からイベントを呼び出す (発生させる) メソッドを定義することもできます。
 
-## <a name="example-native-events"></a>例: ネイティブ イベント
+## <a name="example-native-events"></a>例:ネイティブ イベント
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>例: COM イベント
+## <a name="example-com-events"></a>例:COM イベント
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [イベント処理](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

@@ -1,46 +1,47 @@
 ---
 title: .FPO
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FPO
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec08be4941f81abed55420884b34dc817caf3f13
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570506"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317735"
 ---
-# <a name="fpo"></a>.FPO
+# <a name="fpo-32-bit-masm"></a>.FPO (32 ビット MASM)
 
-します。FPO ディレクティブは、.debug$ セグメントまたはセクションをデバッグ レコードの生成を制御します。
+**。FPO**ディレクティブは、デバッグレコードの出力を. debug $ F セグメントまたはセクションに制御します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> FPO (*cdwLocals*、 *cdwParams*、 *cbProlog*、 *cbRegs*、 *fUseBP*、 *cbFrame*)
+> **.FPO** (*cdwlocals*、 *cdwlocals*、 *cbprolog*、 *cbRegs*、 *fusebp*、 *cbprolog*)
 
 ### <a name="parameters"></a>パラメーター
 
-*cdwLocals*<br/>
-ローカル変数を符号なし 32 ビット値の数。
+*Cdwlocals*\
+ローカル変数の数 (符号なし32ビット値)。
 
-*cdwParams*<br/>
-DWORD を符号なし 16 ビット値でパラメーターのサイズ。
+*Cdwparams*\
+DWORD のパラメーターのサイズ (符号なし16ビット値)。
 
-*cbProlog*<br/>
-符号なし 8 ビット値を関数プロローグ コードのバイト数。
+*Cbprolog*\
+関数プロローグコード内のバイト数。符号なし8ビット値。
 
-*cbRegs*<br/>
-保存されたレジスタの数。
+*cbRegs*\
+Number レジスタが保存されました。
 
-*fUseBP*<br/>
-EBP レジスタが割り当てられているかどうかを示します。 0 または 1。
+*Fusebp*\
+EBP レジスタが割り当てられているかどうかを示します。 0または1のいずれかです。
 
-*cbFrame*<br/>
-フレームの種類を示します。  参照してください[FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data)詳細についてはします。
+*Cbframe*\
+フレームの種類を示します。  詳細については、「 [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

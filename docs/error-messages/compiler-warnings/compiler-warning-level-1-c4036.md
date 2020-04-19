@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4036
 ms.assetid: f0b15359-4d62-48ec-8cb1-a7b36587a47f
-ms.openlocfilehash: 632e88bb64568c97e937e83e177598054a954f22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 858cf089d3f681438a221115c8758c38a5cf8d9a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609574"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626267"
 ---
 # <a name="compiler-warning-level-1-c4036"></a>コンパイラの警告 (レベル 1) C4036
 
@@ -25,7 +25,7 @@ ms.locfileid: "50609574"
 
 次の例では C4036 が生成されます。
 
-```
+```c
 // C4036.c
 // compile with: /Zg /W1
 // D9035 expected

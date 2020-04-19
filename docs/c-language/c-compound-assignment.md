@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
-ms.openlocfilehash: 102f53378430074a59636eb18488a7ab51289731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a9391e2a62a59c5e7fd7937c1f3d12509b76ad
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445137"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148765"
 ---
 # <a name="c-compound-assignment"></a>C 複合代入
 
@@ -35,6 +35,6 @@ n &= MASK;
 
 この例では、ビットごとの包括的 AND 演算は `n` と `MASK` で実行され、結果は `n` に割り当てられます。 マニフェスト定数 `MASK` は [#define](../preprocessor/hash-define-directive-c-cpp.md) プリプロセッサ ディレクティブで定義されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C の代入演算子](../c-language/c-assignment-operators.md)

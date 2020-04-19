@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545588"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954553"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 ファイル記述子が文字デバイスに関連付けられているかどうかを判定します。
 
@@ -48,13 +51,13 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>戻り値
 
-**_isatty**記述子がキャラクター デバイスに関連付けられている場合は 0 以外の値を返します。 それ以外の場合、 **_isatty** 0 を返します。
+**_isatty**は、記述子が文字デバイスに関連付けられている場合、0以外の値を返します。 それ以外の場合、 **_isatty**は0を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Isatty**関数は決定かどうか*fd*キャラクター デバイス (端末、コンソール、プリンター、またはシリアル ポート) に関連付けられています。
+**_Isatty**関数は、 *fd*がキャラクターデバイス (端末、コンソール、プリンター、またはシリアルポート) に関連付けられているかどうかを判断します。
 
-この関数は、検証、 *fd*パラメーター。 場合*fd* 、不適切なファイル ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値 0 とセットが許可された場合**errno**に**EBADF**します。
+この関数は、 *fd*パラメーターを検証します。 *Fd*が無効なファイルポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は0を返し、 **errno**を**EBADF**に設定します。
 
 ## <a name="requirements"></a>必要条件
 

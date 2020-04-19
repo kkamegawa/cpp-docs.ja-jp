@@ -1,6 +1,6 @@
 ---
 title: CD2DGradientBrush クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
 - AFXRENDERTARGET/CD2DGradientBrush
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: bc26dd495fb9bd91aaf5eac192011faad80bc668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173380"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush クラス
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |名前|説明|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|CD2DGradientBrush オブジェクトを構築します。|
-|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|デストラクターです。 D2D グラデーション ブラシ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DGradientBrush:: ~ CD2DGradientBrush](#_dtorcd2dgradientbrush)|デストラクターです。 D2D グラデーション ブラシ オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -110,7 +110,7 @@ GradientStops 配列内のグラデーションの分岐点の数を指定する
 *colorInterpolationGamma*<br/>
 グラデーションの分岐点間の補間を実行する色で領域。
 
-*オン*<br/>
+*extendMode*<br/>
 [0, 1] の正規化された範囲外のグラデーションの動作です。
 
 *pBrushProperties*<br/>

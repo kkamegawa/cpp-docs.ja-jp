@@ -3,12 +3,12 @@ title: /USEPROFILE (LTCG を使用して PGO のデータ)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317134"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (スレッド セーフ モードで実行 PGO)
 
@@ -16,7 +16,7 @@ ms.locfileid: "50550632"
 
 ## <a name="syntax"></a>構文
 
-> **/USEPROFILE**[**:**{**アグレッシブな**|**PGD =**_filename_}]
+> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
 
 ### <a name="arguments"></a>引数
 
@@ -38,7 +38,7 @@ ms.locfileid: "50550632"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
 
@@ -56,5 +56,5 @@ ms.locfileid: "50550632"
 
 [/GENPROFILE と/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[ガイド付き最適化のプロファイル](../../build/reference/profile-guided-optimizations.md)<br/>
-[ガイド付き最適化のプロファイルの環境変数](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)<br/>
+[ガイド付き最適化のプロファイルの環境変数](../environment-variables-for-profile-guided-optimizations.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする'
+title: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクします。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: 1bc601a4dbd7a51695b6964ab4d0ee47531c1b2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387267"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクします。
 
 Windows フォーム コントロールまたは MFC のマクロのマップ形式の他のフォームから発生した管理対象のイベントからのコールバックを受信するネイティブの C++ クラスを有効にすることができます。 ビューとダイアログ ボックスでイベントをシンクは、コントロールに対して同じタスクの実行に似ています。
 
@@ -25,7 +25,7 @@ Windows フォーム コントロールまたは MFC のマクロのマップ形
 
 - 使用してデリゲート マップ作成[BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)、 [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)、および[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)します。
 
-このサンプルで行った作業を続行する[方法: Windows フォームで DDX/DDV データ バインディングを行う](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)します。
+このサンプルで行った作業を続行する[方法。Windows フォームで DDX/DDV データ バインディング](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)します。
 
 次に、MFC コントロールは関連付けます (`m_MyControl`) と呼ばれる管理対象のイベント ハンドラー デリゲートを使用して`OnClick`、管理対象の<xref:System.Windows.Forms.Control.Click>イベント。
 

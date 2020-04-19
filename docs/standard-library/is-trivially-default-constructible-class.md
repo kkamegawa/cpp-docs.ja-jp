@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563671"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459654"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible クラス
 
@@ -26,22 +26,22 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*が自明なコンス トラクター、それ以外の場合は false を保持するクラスです。
+型*Ty*が自明なコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラスの既定のコンス トラクター *Ty*は簡単では場合。
+クラス*Ty*の既定のコンストラクターは、次のような場合に自明です。
 
-- 暗黙的に宣言された既定のコンス トラクターである
+- 暗黙的に宣言された既定のコンストラクターである
 
-- クラスは、 *Ty*仮想関数がありません
+- クラス*Ty*に仮想関数がありません。
 
-- クラスは、 *Ty*仮想基底クラスがありません
+- クラス*Ty*に仮想基底がありません
 
-- すべての直接の基底クラスの*Ty*自明なコンス トラクターがあります。
+- *クラスの*すべての直接基底に自明なコンストラクターがある
 
 - クラス型のすべての非静的データ メンバーのクラスに自明なコンストラクターがある
 
@@ -55,4 +55,4 @@ struct is_trivially_default_constructible;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

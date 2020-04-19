@@ -1,33 +1,33 @@
 ---
 title: ML の致命的でないエラー A2050
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2050
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-ms.openlocfilehash: 59d08b9c2743a3b45633527bcc54b3e1c4d6a58c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 311aedd0cc739fd862efb0a18cc444b3fb75b165
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439716"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316981"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>ML の致命的でないエラー A2050
 
-**リアルタイムまたは 10 進数を許可されていません**
+**実数または BCD の数値は使用できません**
 
-(実際) の浮動小数点数またはバイナリのコード化された 10 進数 (BCD) の定数が他にも使用されたデータの初期化子として。
+データ初期化子としてではなく、浮動小数点 (実数) またはバイナリのコード化された decimal (BCD) 定数が使用されました。
 
 次のいずれかが発生しました。
 
-- 実数値または BCD は、式で使用されました。
+- 式で実数または BCD が使用されました。
 
-- 以外のディレクティブを初期化するために使用された実数[DWORD](../../assembler/masm/dword.md)、 [QWORD](../../assembler/masm/qword.md)、または[TBYTE](../../assembler/masm/tbyte.md)します。
+- [DWORD](dword.md)、 [QWORD](qword.md)、または[t](tbyte.md)以外のディレクティブを初期化するために実数が使用されました。
 
-- BCD は以外のディレクティブを初期化するために使用された`TBYTE`します。
+- BCD は、`TBYTE`以外のディレクティブを初期化するために使用されました。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

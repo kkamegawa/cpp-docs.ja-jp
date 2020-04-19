@@ -1,6 +1,6 @@
 ---
 title: インポートとエクスポート
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: c7328f0e5f5d408ec93f31fa4cbea987594264ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492763"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220641"
 ---
 # <a name="importing-and-exporting"></a>インポートとエクスポート
 
@@ -27,11 +27,9 @@ ms.locfileid: "50492763"
 
 モジュール定義ファイル (.def) は、テキスト ファイルです。DLL のさまざまな属性を記述する 1 つ以上のモジュール文が含まれています。 使用しない場合 **_declspec**または**方式**DLL の関数をエクスポートする DLL に .def ファイルが必要です。
 
-.Def ファイルを使用する[アプリケーションにインポート](../build/importing-using-def-files.md)または[DLL からエクスポート](../build/exporting-from-a-dll-using-def-files.md)します。
+.Def ファイルを使用する[アプリケーションにインポート](importing-using-def-files.md)または[DLL からエクスポート](exporting-from-a-dll-using-def-files.md)します。
 
 ## <a name="using-declspec"></a>_ _Declspec を使用します。
-
-C++ での visual **_declspec**と**方式**を置き換える、 **_ _export**キーワードの 16 ビット バージョンの Visual C で以前に使用します。
 
 使用する必要はありません **_declspec**そうですが、正しくコンパイルするコードのより優れたコードを生成するコンパイラを使用します。 コンパイラはかどうか、関数が存在する DLL にか、DLL の境界を越える関数呼び出し内に存在するが通常の間接参照のレベルをスキップするコードを生成するために、コンパイラにより決定できるためより優れたコードを生成できません。 ただし、使用する必要があります **_declspec** DLL で使用される変数をインポートします。
 
@@ -41,10 +39,10 @@ C++ での visual **_declspec**と**方式**を置き換える、 **_ _export**�
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [アプリケーションへのインポート](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [アプリケーションへのインポート](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL からのエクスポートします。](../build/exporting-from-a-dll.md)
+- [DLL からのエクスポートします。](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

@@ -1,7 +1,7 @@
 ---
 title: _countof マクロ
 ms.date: 03/22/2018
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _countof
 - countof
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536137"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942686"
 ---
-# <a name="countof-macro"></a>_countof マクロ
+# <a name="_countof-macro"></a>_countof マクロ
 
-静的に割り当てられた配列の要素の数を計算します。
+静的に割り当てられた配列内の要素の数を計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,13 +47,13 @@ ms.locfileid: "50536137"
 
 ## <a name="return-value"></a>戻り値
 
-表される、配列内の要素の数、 **size_t**します。
+**Size_t**として表される、配列内の要素の数。
 
 ## <a name="remarks"></a>Remarks
 
-**_countof**関数のようなプリプロセッサ マクロとして実装されます。 C++ のバージョンには、静的に宣言された配列の代わりに、ポインターが渡された場合は、コンパイル時に検出するために余分なテンプレート メカニズムがあります。
+**の countof**は、関数に似たプリプロセッサマクロとして実装されています (_c)。 このC++バージョンには、静的に宣言された配列ではなくポインターが渡された場合に、コンパイル時に検出する追加のテンプレート機構があります。
 
-いることを確認*配列*は実際には配列、ポインターではなくです。 C では、 **_countof**場合に、誤った結果を生成*配列*のポインターです。 C++ では、 **_countof**場合のコンパイルに失敗した*配列*のポインターです。  関数にパラメーターとして渡される配列*ポインターに減衰*、つまり、関数内で使用することはできません **_countof**配列の範囲を確認します。
+*配列*が実際にはポインターではなく配列であることを確認します。 C では、*配列*がポインターである場合、**は、が誤った結果**を生成します。 でC++は、*配列*がポインターである場合、**の countは**コンパイルに失敗します。  *ポインターに decays*する関数にパラメーターとして渡された配列。つまり、関数内では、を使用して配列の範囲を**決定すること**はできません。
 
 ## <a name="requirements"></a>必要条件
 

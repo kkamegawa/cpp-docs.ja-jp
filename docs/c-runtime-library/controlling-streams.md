@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-ms.openlocfilehash: ac584e36154d0035ce3408b1302513dd7e960bf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525922"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743314"
 ---
 # <a name="controlling-streams"></a>ストリームの制御
 
@@ -37,6 +37,6 @@ ms.locfileid: "50525922"
 
 `FILE` オブジェクト、またはそのオブジェクトと使用するために指定したファイル バッファーに格納されている値は変更しないでください。 `FILE` オブジェクトをコピーすること、およびそのコピーのアドレスをライブラリ関数への引数 `stream` として移植して使用することはできません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ファイルとストリーム](../c-runtime-library/files-and-streams.md)

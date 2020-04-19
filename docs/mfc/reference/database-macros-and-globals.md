@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323191"
 ---
 # <a name="database-macros-and-globals"></a>データベース マクロとデータベース グローバル関数
 
@@ -58,10 +58,6 @@ void AFXAPI AfxDbInitModule( );
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<afxdll_.h >
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 

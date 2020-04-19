@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: ddd6c6a36c05d92d2f53bc4937826581942470dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491768"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497281"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection クラス
 
-このクラスは、取得およびクリティカル セクション オブジェクトの所有権を解放するためのメソッドを提供します。
+このクラスには、クリティカルセクションオブジェクトの所有権を取得および解放するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -42,30 +42,30 @@ class CComCriticalSection
 
 |名前|説明|
 |----------|-----------------|
-|[CComCriticalSection::Init](#init)|作成し、クリティカル セクション オブジェクトを初期化します。|
-|[CComCriticalSection::Lock](#lock)|クリティカル セクション オブジェクトの所有権を取得します。|
-|[CComCriticalSection::Term](#term)|クリティカル セクション オブジェクトによって使用されるシステム リソースを解放します。|
-|[CComCriticalSection::Unlock](#unlock)|クリティカル セクション オブジェクトの所有権を解放します。|
+|[CComCriticalSection:: Init](#init)|クリティカルセクションオブジェクトを作成し、初期化します。|
+|[CComCriticalSection::Lock](#lock)|クリティカルセクションオブジェクトの所有権を取得します。|
+|[CComCriticalSection:: Term](#term)|クリティカルセクションオブジェクトによって使用されているシステムリソースを解放します。|
+|[CComCriticalSection:: Unlock](#unlock)|クリティカルセクションオブジェクトの所有権を解放します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComCriticalSection::m_sec](#m_sec)|CRITICAL_SECTION オブジェクト。|
+|[CComCriticalSection::m_sec](#m_sec)|CRITICAL_SECTION オブジェクトです。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComCriticalSection` クラスに似ていますが[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), 点が明示的に初期化し、クリティカル セクションを解放する必要があります。
+`CComCriticalSection`はクラス[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)に似ていますが、クリティカルセクションを明示的に初期化して解放する必要がある点が異なります。
 
-通常、使用して`CComCriticalSection`を通じて、 **typedef**名前[CriticalSection](ccommultithreadmodel-class.md#criticalsection)します。 この名前の参照`CComCriticalSection`とき[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されています。
+通常、 **typedef**名`CComCriticalSection` [CriticalSection](ccommultithreadmodel-class.md#criticalsection)を使用します。 この名前は`CComCriticalSection` 、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されている場合に参照されます。
 
-参照してください[CComCritSecLock クラス](../../atl/reference/ccomcritseclock-class.md)呼び出すよりもこのクラスを使用するより安全な方法を`Lock`と`Unlock`直接します。
+とを`Lock` 直接呼び出すよりも、このクラスを安全に使用する方法については、「[CComCritSecLock クラス](../../atl/reference/ccomcritseclock-class.md)」を参照してください。`Unlock`
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcore.h
+**ヘッダー:** atlcore .h
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
 
 コンストラクターです。
 
@@ -75,11 +75,11 @@ CComCriticalSection() throw();
 
 ### <a name="remarks"></a>Remarks
 
-セット、 [m_sec](#m_sec)データ メンバーを NULL にします。
+[M_sec](#m_sec)データメンバーを NULL に設定します。
 
 ##  <a name="init"></a>  CComCriticalSection::Init
 
-Win32 関数を呼び出す[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)に含まれるクリティカル セクション オブジェクトを初期化しますが、 [m_sec](#m_sec)データ メンバー。
+Win32 関数[InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection)を呼び出します。この関数は、 [m_sec](#m_sec)データメンバーに格納されている重要なセクションオブジェクトを初期化します。
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、E_OUTOFMEMORY または E_FAIL エラー発生時に、S_OK を返します。
+成功した場合は S_OK、失敗した場合は E_OUTOFMEMORY または E_FAIL を返します。
 
 ##  <a name="lock"></a>  CComCriticalSection::Lock
 
-Win32 関数を呼び出す[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)、どの待機スレッドがクリティカル セクション オブジェクトに含まれているの所有権を取得できるまで、 [m_sec](#m_sec)データ メンバー。
+Win32 関数[EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)を呼び出します。この関数は、スレッドが[m_sec](#m_sec)データメンバーに格納されているクリティカルセクションオブジェクトの所有権を取得するまで待機します。
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、E_OUTOFMEMORY または E_FAIL エラー発生時に、S_OK を返します。
+成功した場合は S_OK、失敗した場合は E_OUTOFMEMORY または E_FAIL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-呼び出して、クリティカル セクション オブジェクトを初期化まず必要があります、 [Init](#init)メソッド。 保護されたコードの実行が完了すると、スレッドで呼び出す必要があります[Unlock](#unlock)クリティカル セクションの所有権を解放します。
+クリティカルセクションオブジェクトは、 [Init](#init)メソッドを呼び出すことによって最初に初期化する必要があります。 保護されたコードの実行が完了したら、スレッドは[ロック解除](#unlock)を呼び出して、クリティカルセクションの所有権を解放する必要があります。
 
 ##  <a name="m_sec"></a>  CComCriticalSection::m_sec
 
-すべてで使用されるクリティカル セクション オブジェクトを含む`CComCriticalSection`メソッド。
+すべて`CComCriticalSection`のメソッドで使用されるクリティカルセクションオブジェクトを格納します。
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+##  <a name="term"></a>CComCriticalSection:: Term
 
-Win32 関数を呼び出す[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)に含まれているクリティカル セクション オブジェクトによって使用されるすべてのリソースを解放する、 [m_sec](#m_sec)データ メンバー。
+Win32 関数[DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection)を呼び出します。この関数は、 [m_sec](#m_sec)データメンバーに格納されているクリティカルセクションオブジェクトによって使用されているすべてのリソースを解放します。
 
 ```
 HRESULT Term() throw();
@@ -127,11 +127,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-1 回`Term`が呼び出されると、重要なセクションは、同期は使用できなくします。
+`Term`が呼び出されると、クリティカルセクションを同期に使用できなくなります。
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+##  <a name="unlock"></a>CComCriticalSection:: Unlock
 
-Win32 関数を呼び出す[により](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)に含まれるクリティカル セクション オブジェクトの所有権を解放する、 [m_sec](#m_sec)データ メンバー。
+Win32 関数[LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)を呼び出します。この関数は、 [m_sec](#m_sec)データメンバーに格納されている重要なセクションオブジェクトの所有権を解放します。
 
 ```
 HRESULT Unlock() throw();
@@ -143,7 +143,7 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-所有権を取得するスレッドを呼び出す必要があります、[ロック](#lock)メソッド。 呼び出しごとに`Lock`に対応する呼び出しを必要と`Unlock`クリティカル セクションの所有権を解放します。
+最初に所有権を取得するには、スレッドが[ロック](#lock)メソッドを呼び出す必要があります。 へ`Lock`の各呼び出しでは、クリティカル`Unlock`セクションの所有権を解放するために、対応する呼び出しが必要です。
 
 ## <a name="see-also"></a>関連項目
 

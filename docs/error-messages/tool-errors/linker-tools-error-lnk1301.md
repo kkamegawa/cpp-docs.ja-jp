@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: b112c4498913c18d82ce8fbc4f6c6d211b906263
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431240"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990940"
 ---
 # <a name="linker-tools-error-lnk1301"></a>リンカ ツール エラー LNK1301
 
-LTCG clr モジュールが見つかると、/LTCG:parameter と互換性がありません。
+LTCG clr モジュールが見つかりました。/LTCG: parameter と互換性がありません
 
-/Clr:pure および/GL でコンパイルされたモジュールは、/LTCG の (PGO) パラメーターをプロファイル ガイド付き最適化のいずれかと共にリンカーに渡されました。
+/Clr および/GL を使用してコンパイルされたモジュールが、/LTCG. のプロファイルガイド付き最適化 (PGO) パラメーターの1つと共にリンカーに渡されました。
 
-/Clr:pure モジュールでは、プロファイル ガイド付き最適化はサポートされていません。
+ガイド付き最適化のプロファイルは、/clr モジュールではサポートされていません。
 
-詳細については次を参照してください:
+詳細については、次のトピックを参照してください。
 
 - [/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -29,17 +29,17 @@ LTCG clr モジュールが見つかると、/LTCG:parameter と互換性があ�
 
 - [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [ガイド付き最適化のプロファイル](../../build/reference/profile-guided-optimizations.md)
+- [ガイド付き最適化のプロファイル](../../build/profile-guided-optimizations.md)
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. /Clr でコンパイルしないでまたは/LTCG の PGO パラメーターの 1 つとリンクしません。
+1. /Clr を使用してコンパイルしないでください。または、いずれかの PGO パラメーターを/LTCG. にリンクしないでください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、LNK1301 が生成されます。
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

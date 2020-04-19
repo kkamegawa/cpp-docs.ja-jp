@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 04f7c6475d88f843ef381563f80559529e6b59e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477182"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451353"
 ---
 # <a name="removeconst-class"></a>remove_const クラス
 
@@ -32,12 +32,12 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-インスタンス`remove_const<T>`、修飾型であるを保持`T1`とき*T*の形式は`const T1`それ以外の場合、 *T*します。
+*T*の形式`remove_const<T>` `T1` が`const T1`である場合、のインスタンスは変更された型を保持します。それ以外の場合は*t*です。
 
 ## <a name="example"></a>例
 
@@ -69,6 +69,6 @@ remove_const_t<const int> == int
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_const クラス](../standard-library/add-const-class.md)<br/>
-[remove_cv クラス](../standard-library/remove-cv-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_const クラス](../standard-library/add-const-class.md)\
+[remove_cv クラス](../standard-library/remove-cv-class.md)

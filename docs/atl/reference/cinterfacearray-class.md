@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: 64271cbdb634284a5abcdd17b2c14d23a496b3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e8714bf40e99a1014d7cd6de82cddb13cbbb9cf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258872"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray クラス
 

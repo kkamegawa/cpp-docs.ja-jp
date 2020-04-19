@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-ms.openlocfilehash: 9f45d888e10ad1f86d0ba395155c7fd5c6c1bf0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d73155e36909efb1a7261f9fe45c2431525437a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633455"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742908"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS および MBCS データ型
 
@@ -32,7 +32,7 @@ SBCS の文字列処理関数の中には、(符号付きの) **char**<strong>\*
 
 1. TCHAR.H のタイプ セーフな静的リンク ライブラリ関数を使用します。 この場合は、コマンド ラインで定数 **_NO_INLINING** を定義します。 これは、一番時間がかかりますが、一番タイプ セーフな方法です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

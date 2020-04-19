@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
-ms.openlocfilehash: 2d96a0e4f5f0b34c76f41058316c7f158f1a939d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f44c94cbb3c945406835816d8fc6ed7c39480eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624096"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742627"
 ---
 # <a name="compiler-error-c3633"></a>コンパイラ エラー C3633
 
-管理対象の 'type' のメンバーとして 'member' を定義することはできません。
+' member ' をマネージド ' type ' のメンバーとして定義することはできません
 
-CLR 参照クラスのデータ メンバーは、pod 型以外の C++ 型のすることはできません。  CLR 型でポッドのネイティブな型をインスタンス化することができますのみ。  たとえば、POD 型では、コピー コンス トラクターまたは代入演算子を含めることはできません。
+CLR 参照クラスのデータメンバーを非 POD C++型にすることはできません。  CLR 型では、POD ネイティブ型のみをインスタンス化できます。  たとえば、ポッド型にコピーコンストラクターまたは代入演算子を含めることはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3633 が生成されます。
 
-```
+```cpp
 // C3633.cpp
 // compile with: /clr /c
 #pragma warning( disable : 4368 )

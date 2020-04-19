@@ -1,73 +1,81 @@
 ---
 title: DUMPBIN オプション
-ms.date: 11/04/2016
+description: Microsoft DUMPBIN ユーティリティのコマンドラインオプションのリファレンスガイドです。
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 5c57c49a39ae135f88f1f1eca25e59a68c7ad1aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434308"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257729"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN オプション
 
-オプションは、ダッシュ (-) またはフォワード スラッシュ (/) の後に、オプションの名前のいずれかである、オプション指定子で構成されます。 オプション名の省略形は使用できません。 引数を取るオプションの場合は、: (コロン) の後ろに引数を指定します。 1 つのオプションの指定には、スペースやタブは挿入できません。 複数のオプションを指定する場合は、各オプションを 1 つ以上のスペースまたはタブで区切ります。 オプション名、およびその引数として指定するキーワードやファイル名では、大文字と小文字は区別されません。 大半のオプションはバイナリ ファイルにも適用できますが、特定の種類のファイルにしか指定できないオプションもあります。 特に指定されていない限り、DUMPBIN は標準出力に情報を出力します。 使用して、 [/out](../../build/reference/out-dumpbin.md)ファイルに出力を送信するオプション。
+オプションは、ダッシュ (`-`) またはスラッシュ (`/`) のいずれかのオプション*指定子*で構成され、その後にオプションの名前が続きます。 オプション名を省略することはできません。 一部のオプションは、コロン (`:`) の後に指定された引数を受け取ります。 1 つのオプションの指定には、スペースやタブは挿入できません。 複数のオプションを指定する場合は、各オプションを 1 つ以上のスペースまたはタブで区切ります。 オプション名とそのキーワードまたはファイル名の引数では、大文字と小文字が区別されません。 ほとんどのオプションはすべてのバイナリファイルに適用されますが、特定の種類のファイルにのみ適用されます。 特に指定されていない限り、DUMPBIN は標準出力に情報を出力します。 [/Out](out-dumpbin.md)オプションを使用して、出力をファイルに送信します。
+
+## <a name="options-list"></a>オプションの一覧
 
 DUMPBIN には、次のオプションがあります。
 
-- [/ALL](../../build/reference/all.md)
+- [/ALL](all.md)
 
-- [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)
+- [/ARCHIVEMEMBERS](archivemembers.md)
 
-- [/CLRHEADER](../../build/reference/clrheader.md)
+- [/CLRHEADER](clrheader.md)
 
-- [/DEPENDENTS](../../build/reference/dependents.md)
+- [/DEPENDENTS](dependents.md)
 
-- [/DIRECTIVES](../../build/reference/directives.md)
+- [/DIRECTIVES](directives.md)
 
-- [/DISASM](../../build/reference/disasm.md)
+- [/Disasm\[: {BYTES\|NOBYTES}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE |PROMPT |QUEUE |送信}](errorreport-dumpbin-exe.md) (非推奨)
 
-- [/EXPORTS](../../build/reference/dash-exports.md)
+- [/EXPORTS](dash-exports.md)
 
-- [/FPO](../../build/reference/fpo.md)
+- [/FPO](fpo.md)
 
-- [/HEADERS](../../build/reference/headers.md)
+- [/HEADERS](headers.md)
 
-- [/インポート](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS\[: ファイル名\]](imports-dumpbin.md)
 
-- [/LINENUMBERS](../../build/reference/linenumbers.md)
+- [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](../../build/reference/linkermember.md)
+- [/LINKERMEMBER\[: {1 | 2}\]](linkermember.md)
 
-- [/LOADCONFIG](../../build/reference/loadconfig.md)
+- [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](../../build/reference/out-dumpbin.md)
+- [/NOPDB](nopdb.md)
 
-- [/PDATA](../../build/reference/pdata.md)
+- [/OUT: ファイル名](out-dumpbin.md)
 
-- [/PDBPATH](../../build/reference/pdbpath.md)
+- [/PDATA](pdata.md)
 
-- [/RANGE](../../build/reference/range.md)
+- [/PDBPATH\[: VERBOSE\]](pdbpath.md)
 
-- [/RAWDATA](../../build/reference/rawdata.md)
+- [/Rangee: vaMin\[、vaMax\]](range.md)
 
-- [/RELOCATIONS](../../build/reference/relocations.md)
+- [/RAWDATA\[: {NONE\|1\|2\|4\|8}\[、#\]\]](rawdata.md)
 
-- [/SECTION](../../build/reference/section-dumpbin.md)
+- [/RELOCATIONS](relocations.md)
 
-- [/SUMMARY](../../build/reference/summary.md)
+- [/SECTION: 名前](section-dumpbin.md)
 
-- [/SYMBOLS](../../build/reference/symbols.md)
+- [/SUMMARY](summary.md)
 
-- [/TLS](../../build/reference/tls.md)
+- [/SYMBOLS](symbols.md)
 
-## <a name="see-also"></a>関連項目
+- [/TLS](tls.md)
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)
+コマンドラインで DUMPBIN でサポートされているオプションを一覧表示するには、/? を使用し**ます。** オプション。
+
+## <a name="see-also"></a>参照
+
+[その他の MSVC ビルドツール](c-cpp-build-tools.md)\
+[DUMPBIN コマンドライン](dumpbin-command-line.md)\
+[DUMPBIN リファレンス](dumpbin-reference.md)

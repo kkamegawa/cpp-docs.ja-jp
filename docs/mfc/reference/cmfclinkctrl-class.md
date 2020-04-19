@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: bc43dcaf077bc97e3ff589a12bee6a8eac6aeed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608586"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346207"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl クラス
 
@@ -53,7 +53,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ## <a name="example"></a>例
 
-次の例のサイズを設定する方法を示します、`CMFCLinkCtrl`オブジェクト、および url と、ツールヒントを設定する方法、`CMFCLinkCtrl`オブジェクト。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例のサイズを設定する方法を示します、`CMFCLinkCtrl`オブジェクト、および url と、ツールヒントを設定する方法、`CMFCLinkCtrl`オブジェクト。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]

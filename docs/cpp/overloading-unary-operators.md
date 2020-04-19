@@ -12,11 +12,11 @@ helpviewer_keywords:
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377232"
 ---
 # <a name="overloading-unary-operators"></a>単項演算子のオーバーロード
 
@@ -46,13 +46,13 @@ ms.locfileid: "50497221"
 
 次の規則は他のすべての単項演算子に適用されます。 単項演算子関数を非静的メンバーとして宣言するには、次の形式で宣言する必要があります。
 
-> *ret 型***演算子** *op* **)**
+> *ret-type* **operator** *op* **()**
 
 場所*ret 型*は戻り値の型と*op*が演算子の 1 つは、上記の表に表示されています。
 
 単項演算子関数をグローバル関数として宣言するには、次の形式で宣言する必要があります。
 
-> *ret 型***演算子** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 場所*ret 型*と*op*メンバー演算子関数について説明したとおり、 *arg*は操作対象のクラス型の引数です。
 

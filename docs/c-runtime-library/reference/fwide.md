@@ -1,9 +1,9 @@
 ---
 title: fwide
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwide
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwide
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e986ba5ab28072f4933e555eea32a5893c8df56
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557848"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956219"
 ---
 # <a name="fwide"></a>fwide
 
@@ -42,15 +45,15 @@ int fwide(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
-ポインター**ファイル**構造 (無視されます)。
+*一連*<br/>
+**ファイル**構造へのポインター (無視)。
 
 *モード*<br/>
-ストリームの新しい幅: ワイド文字の場合は正、バイトの場合は負、変更しない場合は 0 にします  (この値は無視されます)。
+ストリームの新しい幅: ワイド文字の場合は正、バイトの場合は負、変更しない場合は 0 にします (この値は無視されます)。
 
 ## <a name="return-value"></a>戻り値
 
-この関数が返す現在だけ*モード*します。
+現在、この関数は、*モード*を返すだけです。
 
 ## <a name="remarks"></a>Remarks
 

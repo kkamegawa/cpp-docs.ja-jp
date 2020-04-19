@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: 0ebb56023694b1713bfe88379d07fc621da4d43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee80fb2c917281163156ef148403088cef8e8545
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622652"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760167"
 ---
 # <a name="compiler-error-c3289"></a>コンパイラ エラー C3289
 
 'property': trivial プロパティはインデックスできません
 
-プロパティが正しく宣言されませんでした。 インデックス付きプロパティに対してアクセサーを定義する必要があります。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。
+プロパティが正しく宣言されませんでした。 インデックス付きプロパティに対してアクセサーを定義する必要があります。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3289 が生成されます。
 
-```
+```cpp
 // C3289.cpp
 // compile with: /clr
 public ref struct C {

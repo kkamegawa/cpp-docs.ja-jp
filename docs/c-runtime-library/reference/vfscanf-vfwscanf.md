@@ -1,10 +1,10 @@
 ---
 title: vfscanf、vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521506"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945520"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -49,7 +52,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
@@ -60,15 +63,15 @@ int vfwscanf(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または戻り値は、ファイル ストリームの末尾に達した場合は、最初の変換の前に、 **EOF**の**vfscanf**と**vfwscanf**します。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **vfscanf**と**vfwscanf**の戻り値は**EOF**になります。
 
-これらの関数では、パラメーターの検証が行われます。 場合*ストリーム*または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
+これらの関数では、パラメーターの検証が行われます。 *Stream*または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Vfscanf**関数は、の現在位置からデータを読み取る*ストリーム*で指定されている場所に、 *arglist*引数リスト。 リスト内の各引数は型指定子に対応する型の変数へのポインターである必要があります*形式*します。 *形式*コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*引数**scanf**; を参照してください[scanf](scanf-scanf-l-wscanf-wscanf-l.md)の説明*形式*します。
+**Vfscanf**関数は、*ストリーム*の現在位置から、 *arglist*引数リストによって指定された位置にデータを読み取ります。 リストの各引数は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf**の*format*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 」を参照してください。
 
-**vfwscanf**のワイド文字バージョンは、 **vfscanf**; 引数 format **vfwscanf**はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **vfscanf** UNICODE ストリームからの入力をサポートしていません。
+**vfwscanf**は、ワイド文字バージョンの**vfscanf**です。**vfwscanf**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **vfscanf**は、UNICODE ストリームからの入力をサポートしていません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

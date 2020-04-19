@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 7e515a33bfa827bba5329182cd3b79764495d728
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531119"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142386"
 ---
-# <a name="missingwait-class"></a>missing_wait クラス
+# <a name="missing_wait-class"></a>missing_wait クラス
 
 このクラスは、`task_group` オブジェクトまたは `structured_task_group` オブジェクトのデストラクターの実行時に、そのオブジェクトにスケジュールされたタスクがまだ存在する場合にスローされる例外を表します。 例外の結果としてのスタック アンワインドによりデストラクターが実行される場合、この例外はスローされません。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
@@ -29,13 +29,13 @@ class missing_wait : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[missing_wait](#ctor)|オーバーロードされます。 `missing_wait` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-例外のフロー、存在しない必要がありますいずれかを呼び出す、`wait`または`run_and_wait`のメソッド、`task_group`または`structured_task_group`消滅させるためには、そのオブジェクトを許可する前にオブジェクト。 ランタイムが呼び出しを忘れた場合を示す値としては、この例外をスロー、`wait`または`run_and_wait`メソッド。
+例外フローが存在しない場合は、オブジェクトの破棄を許可する前に、`task_group` または `structured_task_group` オブジェクトの `wait` または `run_and_wait` メソッドを呼び出す必要があります。 ランタイムは、`wait` または `run_and_wait` メソッドの呼び出しを忘れたことを示すために、この例外をスローします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -43,17 +43,17 @@ class missing_wait : public std::exception;
 
 `missing_wait`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> missing_wait
+## <a name="ctor"></a>missing_wait
 
 `missing_wait` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -61,13 +61,13 @@ missing_wait() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [task_group クラス](task-group-class.md)<br/>
-[wait](task-group-class.md)<br/>
+[待機](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group クラス](structured-task-group-class.md)

@@ -1,25 +1,25 @@
 ---
-title: References to Pointers (ポインターへの参照)
-ms.date: 08/20/2018
+title: ポインターへの参照
+ms.date: 06/13/2019
 helpviewer_keywords:
 - references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
-ms.openlocfilehash: 060bbaef74c934de4d8529b3ceafc61d1b70dc70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4719bc5ca0980da3a4f8ad3c2348fc870e916e90
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512724"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141695"
 ---
-# <a name="references-to-pointers"></a>References to Pointers (ポインターへの参照)
+# <a name="references-to-pointers"></a>ポインターへの参照
 
-ポインターへの参照は、オブジェクトへの参照とほぼ同じ方法で宣言できます。 ポインターへの参照を宣言すると、通常のポインターのように使用される変更可能な値が生成されます。
+ポインターへの参照は、オブジェクトへの参照とほぼ同じ方法で宣言できます。 ポインターへの参照は、通常のポインターのように使用される変更可能な値です。
 
 ## <a name="example"></a>例
 
-次のコード例で、ポインターへのポインターとポインターへの参照の使用方法の相違点について説明します。
+このコード サンプルでは、ポインターへのポインターとポインターへの参照を使用して違いを示します。
 
-関数 `Add1` および `Add2` は、機能的に同等です (ただし、呼び出し方法が異なります)。 違いは、`Add1` が二重の間接参照を使用しているのに対し、`Add2` はポインターへの参照を便利に利用している点です。
+関数`Add1`と`Add2`は同様に、ないと呼んでいますが、機能的に同等です。 される点が異なります`Add1`二重の間接参照を使用して、`Add2`ポインターへの参照の利便性を使用します。
 
 ```cpp
 // references_to_pointers.cpp
@@ -52,11 +52,11 @@ void PrintTree( BTree* btRoot );
 int main( int argc, char *argv[] ) {
    // Usage message
    if( argc < 2 ) {
-      cerr << "Usage: Refptr [1 | 2]" << "\n";
+      cerr << "Usage: " << argv[0] << " [1 | 2]" << "\n";
       cerr << "\nwhere:\n";
       cerr << "1 uses double indirection\n";
       cerr << "2 uses a reference to a pointer.\n";
-      cerr << "\nInput is from stdin.\n";
+      cerr << "\nInput is from stdin. Use ^Z to terminate input.\n";
       return 1;
    }
 
@@ -99,15 +99,15 @@ int main( int argc, char *argv[] ) {
 // PrintTree: Display the binary tree in order.
 void PrintTree( BTree* MybtRoot ) {
    // Traverse the left branch of the tree recursively.
-   if ( btRoot->Left )
-      PrintTree( btRoot->Left );
+   if ( MybtRoot->Left )
+      PrintTree( MybtRoot->Left );
 
    // Print the current node.
-   cout << btRoot->szText << "\n";
+   cout << MybtRoot->szText << "\n";
 
    // Traverse the right branch of the tree recursively.
-   if ( btRoot->Right )
-      PrintTree( btRoot->Right );
+   if ( MybtRoot->Right )
+      PrintTree( MybtRoot->Right );
 }
 
 // Add1: Add a node to the binary tree.
@@ -150,13 +150,13 @@ int Add2( BTree*& Root, char *szToAdd ) {
 ```
 
 ```Output
-Usage: Refptr [1 | 2]
+Usage: references_to_pointers.exe [1 | 2]
 
 where:
 1 uses double indirection
 2 uses a reference to a pointer.
 
-Input is from stdin.
+Input is from stdin. Use ^Z to terminate input.
 ```
 
 ## <a name="see-also"></a>関連項目

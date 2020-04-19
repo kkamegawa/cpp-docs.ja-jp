@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2800 C2899 から
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2800 - C2899)
+ms.date: 04/21/2019
 f1_keywords:
 - C2816
 - C2820
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a0367d1d465d4460202f4d6d29468e59f6a74657
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332076"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856724"
 ---
-# <a name="compiler-errors-c2800-through-c2899"></a>コンパイラ エラー C2800 C2899 から
+# <a name="compiler-errors-c2800-through-c2899"></a>コンパイラ エラー (C2800 - C2899)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -110,12 +110,12 @@ ms.locfileid: "51332076"
 |コンパイラ エラー C2848|'*クラス*': マネージまたは WinRT 型が共用体のメンバーにすることはできません|
 |[コンパイラ エラー C2849](compiler-error-c2849.md)|'*インターフェイス*': インターフェイスはデストラクターを持つことはできません|
 |[コンパイラ エラー C2850](compiler-error-c2850.md)|'*構築*': ファイルのスコープで許可されている専用できない可能性があります、入れ子になった構成体|
-|コンパイラ エラー C2851|'*enum*': パブリック WinRT 列挙型のみとして使用できる 'int' または 'unsigned int' 基本データ型|
+|コンパイラ エラー C2851|'*enum*'。パブリック WinRT 列挙型のみとして使用できる 'int' または 'unsigned int' 基本データ型|
 |コンパイラ エラー C2852|'*識別子*': クラス内で専用のデータ メンバーを初期化することができます|
 |コンパイラ エラー C2853|'*識別子*': 非静的データ メンバーは 'auto' を含む型を含めることはできません|
 |[コンパイラ エラー C2854](compiler-error-c2854.md)|#pragma hdrstop に構文エラー|
 |[コンパイラ エラー C2855](compiler-error-c2855.md)|コマンド ライン オプション '*オプション*' プリコンパイル済みヘッダー|
-|[コンパイラ エラー C2856](compiler-error-c2856.md)|#pragma hdrstop は #if ブロックの内部ですることはできません。|
+|[コンパイラ エラー C2856](compiler-error-c2856.md)|#pragma hdrstop cannot be inside an #if block|
 |[コンパイラ エラー C2857](compiler-error-c2857.md)|'#include' は/Yc で指定されたステートメント*filename*コマンド ライン オプションは、ソース ファイルにありませんでした|
 |[コンパイラ エラー C2858](compiler-error-c2858.md)|コマンド ライン オプション '/Yc (/Fd*filename*)' を使用するプリコンパイル済みヘッダーは、'/Fd*filename*'|
 |[コンパイラ エラー C2859](compiler-error-c2859.md)|*ファイル名*でない、 *filetype*このプリコンパイル済みヘッダーが作成されたときに使用されたファイルはプリコンパイル済みヘッダーを再作成します。|
@@ -159,3 +159,8 @@ ms.locfileid: "51332076"
 |[コンパイラ エラー C2897](compiler-error-c2897.md)|デストラクターとファイナライザーは、関数テンプレートをすることはできません。|
 |[コンパイラ エラー C2898](compiler-error-c2898.md)|'*宣言*': メンバー関数テンプレートを仮想にすることはできません|
 |コンパイラ エラー C2899|互換性のために残されています。|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

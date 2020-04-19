@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1202
 ms.assetid: c859adb8-17a7-4fa1-a1f3-5820b7bf3849
-ms.openlocfilehash: c9aeccd0a7bf29edd5ecab91ee1de6c76fa2512e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08694e8df4e72d730f19e08db7370f7bd866266e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585238"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747216"
 ---
 # <a name="fatal-error-c1202"></a>致命的なエラー C1202
 
@@ -19,11 +19,11 @@ ms.locfileid: "50585238"
 
 テンプレート定義が再帰的であるか、複雑さの制限を超えました。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C1202 が生成されます。
 
-```
+```cpp
 // C1202.cpp
 // processor: x86 IPF
 template<int n>
@@ -36,11 +36,11 @@ public:
 Factorial<7> facSeven;
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 考えられる解決策。
 
-```
+```cpp
 // C1202b.cpp
 // compile with: /c
 template<int n>

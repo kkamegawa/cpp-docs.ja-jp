@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-ms.openlocfilehash: 00ac67fec3aafa5a259b5222bd6bb8654210fa61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11663a9b8672e2f91feb59e275181dbe645484e9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436363"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051303"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>コンパイラの警告 (レベル 1) C4742
 
-'var' が 'file1' および 'file2' 内で異なるアラインメント: 番号と番号
+' file1 ' と ' file2 ' では、' var ' の配置が異なります。数値と数値
 
-参照または 2 つのファイルで定義された外部変数は、それらのファイルで異なるアラインメントをいます。 この警告は、コンパイラが検索するときに生成されます`__alignof`に変数の*file1*とは異なります`__alignof`に変数の*file2*します。 別のファイルで変数を宣言するときに、互換性のない型を使用して、または一致しないを使用してこれを発生することができます`#pragma pack`複数のファイル。
+2つのファイルで参照または定義された外部変数は、それらのファイル内で異なるアラインメントを持ちます。 この警告は、コンパイラが*file1*の変数の `__alignof` が*file2*の変数の `__alignof` と異なることを検出した場合に生成されます。 異なるファイルで変数を宣言するとき、または異なるファイルで一致しない `#pragma pack` を使用することによって、互換性のない型を使用することが原因である可能性があります。
 
-この警告を解決するには、同じ種類の定義を使用するか異なる名前の変数を使用します。
+この警告を解決するには、同じ型定義を使用するか、変数に別の名前を使用します。
 
-詳細については、次を参照してください。[パック](../../preprocessor/pack.md)と[_ _alignof 演算子](../../cpp/alignof-operator.md)します。
+詳細については、「 [pack](../../preprocessor/pack.md) And [__alignof Operator](../../cpp/alignof-operator.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 これは、型を定義する最初のファイルです。
 
-```
+```c
 // C4742a.c
 // compile with: /c
 struct X {
@@ -39,7 +39,7 @@ struct X {
 
 次の例では、C4742 が生成されます。
 
-```
+```c
 // C4742b.c
 // compile with: C4742a.c /W1 /GL
 // C4742 expected

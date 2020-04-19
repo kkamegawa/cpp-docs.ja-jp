@@ -1,6 +1,6 @@
 ---
 title: ビュー クラス (Windows)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.view
 helpviewer_keywords:
@@ -8,82 +8,81 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: 5fc08ec23e0a2b2ba105aa3a633ee862dc452450
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462300"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302963"
 ---
 # <a name="view-classes-windows"></a>ビュー クラス (Windows)
 
-`CView` その派生クラスは、フレーム ウィンドウのクライアント領域を表す子ウィンドウ。 ビューは、データを表示し、ドキュメントの入力をそのまま使用します。
+`CView` とその派生クラスは、フレームウィンドウのクライアント領域を表す子ウィンドウです。 ビューには、データが表示され、ドキュメントの入力が受け入れられます。
 
-ビュー クラスは、ドキュメント クラスとドキュメント テンプレート オブジェクトを使用して、フレーム ウィンドウ クラスに関連付けられます。
+ビュークラスは、ドキュメントクラスと、ドキュメントテンプレートオブジェクトを使用するフレームウィンドウクラスに関連付けられています。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-ドキュメントのデータのアプリケーション固有のビューの基本クラスです。 ビューは、データを表示し、ユーザー入力を編集したり、データの選択をそのまま使用します。 ビュー クラスまたはクラスから派生`CView`します。
+ドキュメントのデータのアプリケーション固有のビューの基本クラス。 ビューデータを表示し、ユーザーの入力を受け入れてデータを編集または選択します。 `CView`からビュークラスまたはクラスを派生させます。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-スクロール機能を持つビューの基本クラスです。 ビューからクラスを派生`CScrollView`自動スクロールします。
+スクロール機能を持つビューの基本クラスです。 自動スクロール用に `CScrollView` からビュークラスを派生させます。
 
-## <a name="form-and-record-views"></a>フォーム ビューとレコード ビュー
+## <a name="form-and-record-views"></a>フォームビューとレコードビュー
 
-フォーム ビューは、スクロール可能なビューでも。 ダイアログ ボックスのテンプレートが基づきます。
+フォームビューはスクロールビューでもあります。 これらは、ダイアログボックステンプレートに基づいています。
 
-レコード ビューは、フォーム ビューから派生します。 ダイアログ ボックス テンプレートだけでなくもデータベースへの接続があります。
+レコードビューはフォームビューから派生します。 ダイアログボックステンプレートに加えて、データベースへの接続もあります。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-レイアウトを持つが、ダイアログ ボックスのテンプレートで定義されているスクロール可能なビュー。 クラスを派生`CFormView` ダイアログ ボックスのテンプレートに基づくユーザー インターフェイスを実装します。
+ダイアログボックステンプレートでレイアウトが定義されているスクロールビュー。 ダイアログボックステンプレートに基づいてユーザーインターフェイスを実装するには、`CFormView` からクラスを派生させます。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-フォーム ビューのデータ アクセス オブジェクト (DAO) のレコード セット オブジェクトに直接接続します。 などのすべてのフォーム ビュー、 `CDaoRecordView`  ダイアログ ボックスのテンプレートに基づきます。
+データアクセスオブジェクト (DAO) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、`CDaoRecordView` はダイアログボックステンプレートに基づいています。 DAO は Access データベースで使用され、Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-フォーム ビューの Open Database Connectivity (ODBC) レコード セット オブジェクトに直接接続されています。 などのすべてのフォーム ビュー、 `CRecordView`  ダイアログ ボックスのテンプレートに基づきます。
+Open Database Connectivity (ODBC) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、`CRecordView` はダイアログボックステンプレートに基づいています。
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
-HTML の WebBrowser 編集プラットフォームの機能を提供するフォーム ビュー。
+WebBrowser HTML 編集プラットフォームの機能を提供するフォームビュー。
 
-## <a name="control-views"></a>コントロールの表示
+## <a name="control-views"></a>コントロールビュー
 
-コントロールのビューでは、そのビューとしてコントロールが表示されます。
+コントロールビューでは、コントロールがビューとして表示されます。
 
 [CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
-Windows のコントロールに関連付けられているすべてのビューの基本クラスです。 コントロールに基づくビューを以下に示します。
+Windows コントロールに関連付けられているすべてのビューの基本クラス。 以下では、コントロールに基づくビューについて説明します。
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
-標準の Windows を含むビューの編集コントロール (を参照してください[CEdit](../mfc/reference/cedit-class.md))。 コントロールのサポートのテキストの編集、検索、置換、およびスクロール機能を編集します。
+Windows 標準編集コントロールを含むビュー (「 [CEdit](../mfc/reference/cedit-class.md)」を参照)。 エディットコントロールは、テキストの編集、検索、置換、およびスクロール機能をサポートします。
 
 [CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
-豊富な Windows を含むビューの編集コントロール (を参照してください[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 エディット コントロールの機能だけでなく豊富なコントロールのサポートのフォント、色、段落の書式設定、および OLE 埋め込みオブジェクトを編集します。
+Windows リッチエディットコントロールを含むビュー (「 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)」を参照)。 リッチエディットコントロールでは、エディットコントロールの機能に加えて、フォント、色、段落書式、および埋め込み OLE オブジェクトがサポートされています。
 
 [CListView](../mfc/reference/clistview-class.md)<br/>
-Windows のリスト コントロールを含むビュー (を参照してください[CListCtrl](../mfc/reference/clistctrl-class.md))。 リスト コントロールには、アイコンとラベルをファイル エクスプ ローラーの右側のウィンドウと同様の方法で構成される各項目のコレクションが表示されます。
+Windows リストコントロールを含むビュー ( [CListCtrl](../mfc/reference/clistctrl-class.md)を参照)。 リストコントロールは、ファイルエクスプローラーの右ペインと同様の方法で、項目のコレクションを表示します。各項目はアイコンとラベルで構成されます。
 
-[Ctreeview の比較](../mfc/reference/ctreeview-class.md)<br/>
-Windows のツリー コントロールを含むビュー (を参照してください[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 ツリー コントロールでは、ファイル エクスプ ローラーの左側のウィンドウと同様の方法で配置されたラベルとアイコンの階層リストを表示します。
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
+Windows ツリーコントロールを含むビュー (「 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)」を参照)。 ツリーコントロールには、ファイルエクスプローラーの左ペインと同様の方法で配置されたアイコンとラベルの階層リストが表示されます。
 
-## <a name="related-classes"></a>関連するクラス
+## <a name="related-classes"></a>関連クラス
 
-`CSplitterWnd` 1 つのフレーム ウィンドウ内で複数のビューであることができます。 `CPrintDialog` `CPrintInfo`ビューの印刷と印刷プレビュー機能をサポートします。 `CRichEditDoc` `CRichEditCntrItem`を併用`CRichEditView`OLE コンテナーの機能を実装します。
+`CSplitterWnd` を使用すると、1つのフレームウィンドウ内に複数のビューを含めることができます。 `CPrintDialog` と `CPrintInfo` では、ビューの印刷と印刷のプレビュー機能がサポートされています。 `CRichEditDoc` と `CRichEditCntrItem` は、OLE コンテナー機能を実装するために `CRichEditView` と共に使用されます。
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
-このウィンドウは、ユーザーは、複数のペインに分割できますです。 これらのウィンドウは、サイズ、ユーザーまたは固定サイズを変更できます。
+ユーザーが複数のペインに分割できるウィンドウ。 これらのペインは、ユーザーまたは固定サイズによってサイズ変更できます。
 
 [CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
-ファイルの印刷には、標準のダイアログ ボックスを提供します。
+には、ファイルを印刷するための標準のダイアログボックスが用意されています。
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-印刷または印刷プレビュー ジョブに関する情報を含む構造体。 使用される`CView`アーキテクチャ印刷します。
+印刷または印刷プレビュージョブに関する情報を格納している構造体。 `CView`の印刷アーキテクチャで使用されます。
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-含まれる OLE クライアント アイテムの一覧を保持する`CRichEditView`します。
+`CRichEditView`にある OLE クライアントアイテムの一覧を保持します。
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Ole 項目に格納されているクライアント側のアクセスを提供する`CRichEditView`します。
+`CRichEditView`に格納されている OLE 項目へのクライアント側アクセスを提供します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)
-

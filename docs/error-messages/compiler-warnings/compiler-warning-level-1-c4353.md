@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4353
 ms.assetid: 6e79f186-ed82-4c95-9923-0ad5bb9c4db1
-ms.openlocfilehash: 305c1156ae8dc664edba17287786db50bfabbd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f04bc78e1ff6183208f888d9072bfe90b3aca083
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483704"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966544"
 ---
 # <a name="compiler-warning-level-1-c4353"></a>コンパイラの警告 (レベル 1) C4353
 
-標準の拡張機能を使用します。 関数式として定数 0。 組み込みの '_ _noop' 関数を使用してください。
+非標準の拡張機能が使用されています: 定数0が関数式です。 代わりに ' __noop ' 関数を使用してください
 
-関数の式として定数ゼロ (0) を使用することはできません。 詳細については、次を参照してください。 [_ _noop](../../intrinsics/noop.md)します。
+定数ゼロ (0) を関数式として使用することはできません。 詳細については、「 [__noop](../../intrinsics/noop.md)」を参照してください。
 
 次の例では、C4353 が生成されます。
 
-```
+```cpp
 // C4353.cpp
 // compile with: /W1
 void MyPrintf(void){};

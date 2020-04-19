@@ -1,7 +1,0 @@
-# [OpenMP ディレクティブ](openmp-directives.md)
-# [OpenMP 句](openmp-clauses.md)
-# [OpenMP ライブラリ リファレンス](openmp-library-reference.md)
-## [OpenMP ライブラリ](openmp-libraries.md)
-## [OpenMP データ型](openmp-data-types.md)
-## [OpenMP 環境変数](openmp-environment-variables.md)
-## [OpenMP 関数](openmp-functions.md)

@@ -1,40 +1,39 @@
 ---
-title: ヘッダー項目をカスタマイズする&#39;外観
+title: ヘッダー項目&#39;の外観のカスタマイズ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 8610a3fcc489e69d95f0b0d2e78987664130555e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511022"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508720"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>ヘッダー項目をカスタマイズする&#39;外観
+# <a name="customizing-the-header-item39s-appearance"></a>ヘッダー項目&#39;の外観のカスタマイズ
 
-設定して、 *dwStyle*パラメーター ヘッダー コントロールを最初に作成したとき ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)) の外観を定義する、およびヘッダーの動作は、項目またはヘッダーのコントロール自体。
+最初にヘッダーコントロール ([CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create)) を作成するときに*dwStyle*パラメーターを設定することにより、ヘッダー項目またはヘッダーコントロール自体の外観と動作を定義できます。
 
-サンプリングのスタイルを設定して、その目的を次に示します。
+設定できるスタイルのサンプルとその用途は次のとおりです。
 
-- プッシュ ボタンのようにヘッダー項目を使用、 **HDS_BUTTONS**スタイル。
+- ヘッダー項目がプッシュボタンのように見えるようにするには、 **HDS_BUTTONS**スタイルを使用します。
 
-   Microsoft Outlook で行われるように、特定の列でデータを並べ替えなどのヘッダー アイテムでは、マウス クリックに応答アクションを実行する場合は、このスタイルを使用します。
+   Microsoft Outlook で行ったように、特定の列によるデータの並べ替えなど、ヘッダー項目に対するマウスクリックに応じてアクションを実行する場合は、このスタイルを使用します。
 
-- ヘッダー項目を「ホット トラッキング」表示上にマウス カーソルが成功したとき、使用、**するとき**スタイル。
+- マウスカーソルが上に置かれたときに、ヘッダー項目に "ホットトラッキング" の外観を与えるには、 **HDS_HOTTRACK**スタイルを使用します。
 
-   ポインターは、それ以外の場合、フラットでアイテムがホット トラッキングが 3D のアウトラインを表示バー。
+   ホットトラッキングは、他のフラットバー内の項目の上にポインターが渡されると、3D アウトラインを表示します。
 
-- ヘッダー コントロールを非表示にすることを示すを使用して、 **HDS_HIDDEN**スタイル。
+- ヘッダーコントロールを非表示にする必要があることを示すには、 **HDS_HIDDEN**スタイルを使用します。
 
-   **HDS_HIDDEN**スタイルでは、ヘッダー コントロールがデータ コンテナーとビジュアル コントロールではなくとして使用するものであることを示します。 このスタイルはコントロールが自動的に非表示されませんが、代わりの動作に影響`CHeaderCtrl::Layout`します。 返される値、 *cy*のメンバー、`WINDOWPOS`される構造は 0 をコントロールは、ユーザーに表示できないする必要があります。
+   **HDS_HIDDEN**スタイルは、ヘッダーコントロールがビジュアルコントロールではなくデータコンテナーとして使用されることを示します。 このスタイルでは、コントロールが自動的に非表示になることはあり`CHeaderCtrl::Layout`ませんが、の動作に影響します。 `WINDOWPOS`構造体の*cy*メンバーで返される値は0になり、コントロールがユーザーに表示されないことを示します。
 
-これらのプロパティの詳細については、次を参照してください。[項目](/windows/desktop/Controls/header-controls)Windows SDK に含まれています。 ヘッダー コントロールに項目を追加する方法の詳細については、次を参照してください。[ヘッダー コントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)します。
+これらのプロパティの詳細については、「Windows SDK 内の[項目](/windows/win32/Controls/header-controls)」を参照してください。 ヘッダーコントロールへの項目の追加の詳細については、「[ヘッダーコントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

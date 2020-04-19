@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754876"
 ---
 # <a name="compiler-error-c3852"></a>コンパイラ エラー C3852
 
-'member' は型 'type' を持つ: 集約の初期化では、このメンバーは初期化できませんでした
+' member ' は型 ' type ' を持っています: 集計初期化はこのメンバーを初期化できませんでした
 
-集約の初期化の一部として、既定の初期化を集約の初期化で、既定の初期化を受け取ることができないデータ メンバーに割り当てるが試行されました。
+集計の初期化で既定の初期化を受け取ることができないデータメンバーに、集計初期化の一部として既定の初期化を割り当てようとしました。
 
-次の例では、C3852 を生成します。
+次のサンプルでは、C3852 が生成されます。
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

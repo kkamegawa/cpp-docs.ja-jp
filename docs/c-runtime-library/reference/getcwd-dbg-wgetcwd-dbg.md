@@ -1,10 +1,10 @@
 ---
 title: _getcwd_dbg、_wgetcwd_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd_dbg
 - _getcwd_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd_dbg
 - _wgetcwd_dbg
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 9616c5f7e29b4f003d3943ba058d1f1a1d5adb5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3eb318b9b2faa8716abdd26eafa926c8072b5614
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955279"
 ---
-# <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg、_wgetcwd_dbg
+# <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg、_wgetcwd_dbg
 
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md) 関数のデバッグ バージョン (デバッグ中のみ使用可能)。
 
@@ -67,28 +70,28 @@ wchar_t *_wgetcwd_dbg(
 パスの格納場所。
 
 *maxlen*<br/>
-パスの最大長: **char**の **_getcwd_dbg**と**wchar_t**の **_wgetcwd_dbg**します。
+文字数でのパスの最大長: **_getcwd_dbg**の場合は**char** 、 **_wgetcwd_dbg**の場合は**wchar_t**です。
 
 *blockType*<br/>
-要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
+割り当て操作を要求したソースファイルの名前へのポインターまたは**NULL**。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の番号を行または**NULL**します。
+割り当て操作が要求されたソースファイル内の行番号または**NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-ポインターを返します*バッファー*します。 A **NULL**戻り、エラー値と**errno**設定されて**ENOMEM**、割り当てるメモリが不足していることを示す*maxlen*バイト数 (ときに、 **NULL**として引数が指定されて*バッファー*)、または**ERANGE**、パスがより長いことを示す*maxlen*文字。
+*バッファー*へのポインターを返します。 **Null**の戻り値はエラーを示し、 **errno**は**ENOMEM**に設定されます。これは、 *maxlen*バイトを割り当てるためのメモリが不足していることを示します ( **NULL**引数が*バッファー*として指定されている場合)。または**ERANGE**。パスが*maxlen*文字を超えていることを示します。
 
 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Getcwd_dbg**と **_wgetcwd_dbg**関数と同じ **_getcwd**と **_wgetcwd**する点を除いて、 **_デバッグ**が定義されている場合、これらの関数でのデバッグ バージョンを使用**malloc**と **_malloc_dbg**場合は、メモリを割り当てる**NULL**として渡される、最初のパラメーター。 詳細については、「[_malloc_dbg](malloc-dbg.md)」をご覧ください。
+**_Getcwd_dbg**関数と **_wgetcwd_dbg**関数は **_getcwd**および **_wgetcwd**と同じですが、 **_debug**が定義されている場合、これらの関数は**malloc**と **_malloc_dbg**のデバッグバージョンを使用する点が異なります。**NULL**が最初のパラメーターとして渡された場合は、メモリを割り当てます。 詳細については、「[_malloc_dbg](malloc-dbg.md)」をご覧ください。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、定義、 **_CRTDBG_MAP_ALLOC**フラグ。 ときに **_CRTDBG_MAP_ALLOC**が定義されている、呼び出し **_getcwd**と **_wgetcwd**にマップし直され **_getcwd_dbg**と **_wgetcwd_dbg**をそれぞれで、 *blockType*設定 **_NORMAL_BLOCK**します。 したがって、としてヒープ ブロックをマークする場合、これらの関数を明示的に呼び出す必要はない **_CLIENT_BLOCK**します。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、 **_CRTDBG_MAP_ALLOC**フラグを定義できます。 **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_getcwd**と **_wgetcwd**の呼び出しはそれぞれ **_getcwd_dbg**と **_wgetcwd_dbg**に再マップされ、 *blocktype*は **_NORMAL_BLOCK**に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK**としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 
 ## <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

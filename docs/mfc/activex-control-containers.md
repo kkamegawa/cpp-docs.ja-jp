@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 3356c5d94eaf4cef0b44c509144d0de4a5d42abf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394859"
 ---
 # <a name="activex-control-containers"></a>ActiveX コントロール コンテナー
 
@@ -39,7 +39,7 @@ ActiveX コントロール コンテナーと対話を使用してコントロ�
 
 - [ActiveX コントロール コンテナー: ActiveX コントロールとメンバー変数の関連付け](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [ActiveX コントロール コンテナー: ActiveX からイベントの処理の制御します。](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [ActiveX コントロール コンテナー: ActiveX コントロールからイベントの処理](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
 - [ActiveX コントロール コンテナー: コントロール プロパティの表示と変更](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
@@ -54,4 +54,3 @@ Visual C と MFC ActiveX コントロールのクラスを使用して ActiveX �
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

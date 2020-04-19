@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CView class [MFC], role in printing
 - printing views [MFC]
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
-ms.openlocfilehash: 7aaf50a63c0d5dcf52f5ee388162f37d66505b0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 835ea44ef82e59543bab835cd4bf5029dde0b453
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308876"
 ---
 # <a name="role-of-the-view-in-printing"></a>印刷でのビューの役割
 
@@ -31,4 +31,3 @@ ms.locfileid: "50635449"
 ## <a name="see-also"></a>関連項目
 
 [ビューの使い方](../mfc/using-views.md)
-

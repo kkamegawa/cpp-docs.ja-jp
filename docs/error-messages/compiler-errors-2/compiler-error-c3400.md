@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3400
 ms.assetid: d44169a8-73b6-4766-b406-b3a6c93f2a4d
-ms.openlocfilehash: 70d23e22780b6efc8220675655d8ed095ca50bab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb4b9d03e10155383f2c58cca07253ae69c2c69a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557379"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737505"
 ---
 # <a name="compiler-error-c3400"></a>コンパイラ エラー C3400
 
@@ -19,13 +19,13 @@ ms.locfileid: "50557379"
 
 コンパイラが循環制約を検出しました。
 
-詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
+詳細については、「[Constraints on Generic Type Parameters (C++/CLI) (ジェネリック型パラメーターの (C++/CLI))](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3400 が生成されます。
 
-```
+```cpp
 // C3400.cpp
 // compile with: /clr /c
 generic<class T, class U>

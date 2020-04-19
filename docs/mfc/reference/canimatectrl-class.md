@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 18adead999f26768ae669d3a829b557bf9632a29
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178261"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177446"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl クラス
 
@@ -47,46 +47,46 @@ class CAnimateCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|`CAnimateCtrl` オブジェクトを構築します。|
+|[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)|`CAnimateCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CAnimateCtrl::Close](#close)|AVI クリップを閉じます。|
-|[CAnimateCtrl::Create](#create)|アニメーション コントロールを作成し、それにアタッチ、`CAnimateCtrl`オブジェクト。|
-|[CAnimateCtrl::CreateEx](#createex)|指定した Windows の拡張スタイルを使用してアニメーション コントロールを作成しにアタッチします、`CAnimateCtrl`オブジェクト。|
-|[CAnimateCtrl::IsPlaying](#isplaying)|Audio-video Interleaved (AVI)、クリップを再生するかどうかを示します。|
-|[CAnimateCtrl::Open](#open)|ファイルまたはリソースから、AVI クリップを開き、最初のフレームを表示します。|
-|[CAnimateCtrl::Play](#play)|サウンドなし AVI クリップを再生します。|
-|[CAnimateCtrl::Seek](#seek)|AVI クリップの選択した 1 つのフレームが表示されます。|
-|[CAnimateCtrl::Stop](#stop)|AVI クリップの再生を停止します。|
+|[CAnimateCtrl:: Close](#close)|AVI クリップを閉じます。|
+|[CAnimateCtrl::Create](#create)|アニメーションコントロールを作成し、 `CAnimateCtrl`オブジェクトにアタッチします。|
+|[CAnimateCtrl::CreateEx](#createex)|指定した Windows 拡張スタイルを使用してアニメーションコントロールを作成し`CAnimateCtrl` 、それをオブジェクトにアタッチします。|
+|[CAnimateCtrl:: IsPlaying](#isplaying)|オーディオビデオインターリーブ (AVI) クリップが再生中かどうかを示します。|
+|[CAnimateCtrl::Open](#open)|ファイルまたはリソースから AVI クリップを開き、最初のフレームを表示します。|
+|[CAnimateCtrl::P のレイアウト](#play)|サウンドを使用せずに AVI クリップを再生します。|
+|[CAnimateCtrl:: Seek](#seek)|AVI クリップの選択された1フレームを表示します。|
+|[CAnimateCtrl:: Stop](#stop)|AVI クリップの再生を停止します。|
 
 ## <a name="remarks"></a>Remarks
 
-このコントロール (つまり、`CAnimateCtrl`クラス) は以降、Windows 95、Windows 98、および Windows NT version 3.51 で実行するプログラムにのみ使用できます。
+このコントロール (および`CAnimateCtrl`クラス) は、windows 95、windows 98、および windows NT バージョン3.51 以降で実行されているプログラムに対してのみ使用できます。
 
-アニメーション コントロールは、AVI (オーディオ Video Interleaved) 形式でクリップを表示する四角形のウィンドウ: 標準の Windows ビデオ/オーディオ形式。 AVI クリップは、一連の映画のように、ビットマップ フレームです。
+アニメーションコントロールとは、AVI (Audio Video Interleaved) 形式 (標準の Windows ビデオ/オーディオ形式) でクリップを表示する四角形のウィンドウです。 AVI クリップは、ムービーのような一連のビットマップフレームです。
 
-アニメーション コントロールは、単純な AVI クリップのみを再生できます。 具体的には、アニメーション コントロールで再生するクリップは、次の要件を満たす必要があります。
+アニメーションコントロールは、単純な AVI クリップだけを再生できます。 具体的には、アニメーションコントロールによって再生されるクリップは、次の要件を満たしている必要があります。
 
-- ビデオ ストリームを 1 つだけ必要があるし、少なくとも 1 つのフレームが必要になります。
+- 1つのビデオストリームだけが必要であり、少なくとも1つのフレームが必要です。
 
-- 最大で 2 つのストリームにできますファイル (通常、その他のストリーム存在する場合は、オーディオ ストリーム アニメーション コントロール オーディオ情報を無視しますが)。
+- ファイルには最大で2つのストリームが存在する場合があります (通常、他のストリームはオーディオストリームですが、アニメーションコントロールはオーディオ情報を無視します)。
 
-- クリップは現在必要がありますか、圧縮されていない、または RLE8 圧縮で圧縮されます。
+- クリップは、圧縮されていないか、RLE8 圧縮を使用して圧縮されている必要があります。
 
-- ビデオ ストリームでは、パレットの変更は許可されません。
+- ビデオストリームでは、パレットの変更は許可されていません。
 
-AVI クリップを追加するには、AVI リソースとしてアプリケーションに、または別の AVI ファイルとしてアプリケーションを伴うことができます。
+Avi のクリップは、avi リソースとしてアプリケーションに追加することも、アプリケーションに別の AVI ファイルとして添付することもできます。
 
-スレッドの継続実行 AVI クリップが表示されますが、ために、アニメーション コントロールの 1 つの一般的な用途は、時間のかかる操作中にシステムの使用状況を示すは。 たとえば、ファイル エクスプ ローラーの検索 ダイアログ ボックスでは、システム ファイルを検索として移動虫眼鏡が表示されます。
+AVI クリップが表示されている間、スレッドは実行を続けているため、アニメーションコントロールの一般的な用途の1つは、時間のかかる操作中にシステムの動作を示すことです。 たとえば、ファイルエクスプローラーの [検索] ダイアログボックスには、システムがファイルを検索するときに、移動中の虫眼鏡が表示されます。
 
-作成する場合、`CAnimateCtrl`ボックスまたはダイアログ エディターを使用して、ダイアログ リソースから自動的に破棄されます ダイアログ ボックスを閉じると、ダイアログ ボックスでオブジェクトします。
+ダイアログボックス内で`CAnimateCtrl` 、またはダイアログエディターを使用してダイアログリソースからオブジェクトを作成した場合、ユーザーがダイアログボックスを閉じたときに自動的に破棄されます。
 
-作成する場合、`CAnimateCtrl`オブジェクト、ウィンドウ内にそれを破棄する必要があります。 作成する場合、`CAnimateCtrl`スタック上のオブジェクトは自動的に破棄します。 作成する場合、`CAnimateCtrl`を使用して、ヒープ上のオブジェクト、**新しい**関数を呼び出す必要があります**削除**を破棄するオブジェクト。 新しいクラスを派生させる場合`CAnimateCtrl`とそのクラスのメモリを割り当てることをオーバーライド、`CAnimateCtrl`デストラクターの割り当てを破棄します。
+ウィンドウ内に`CAnimateCtrl`オブジェクトを作成する場合は、そのオブジェクトを破棄する必要がある場合があります。 スタックに`CAnimateCtrl`オブジェクトを作成すると、そのオブジェクトは自動的に破棄されます。 新しい関数を使用`CAnimateCtrl`してヒープにオブジェクトを作成する場合は、オブジェクトに対して**delete**を呼び出して破棄する必要があります。 から`CAnimateCtrl`新しいクラスを派生させ、そのクラスにメモリを割り当てる場合は、 `CAnimateCtrl`デストラクターをオーバーライドして割り当てを破棄します。
 
-使用しての詳細については`CAnimateCtrl`を参照してください[コントロール](../../mfc/controls-mfc.md)と[を使用して CAnimateCtrl](../../mfc/using-canimatectrl.md)します。
+の使用方法`CAnimateCtrl`の詳細については、「 [Controls](../../mfc/controls-mfc.md) and [using CAnimateCtrl](../../mfc/using-canimatectrl.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -102,7 +102,7 @@ AVI クリップを追加するには、AVI リソースとしてアプリケー
 
 **ヘッダー:** afxcmn.h
 
-##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl
+##  <a name="canimatectrl"></a>CAnimateCtrl:: CAnimateCtrl
 
 `CAnimateCtrl` オブジェクトを構築します。
 
@@ -112,15 +112,15 @@ CAnimateCtrl();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出す必要があります、[作成](#create)メンバー関数を作成するオブジェクトの他の操作を実行する前にします。
+作成したオブジェクトに対して他の操作を実行する前に、 [create](#create) member 関数を呼び出す必要があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]
 
-##  <a name="close"></a>  CAnimateCtrl::Close
+##  <a name="close"></a>CAnimateCtrl:: Close
 
-アニメーション コントロール (存在する場合) で既に開かれている AVI クリップを閉じてメモリから削除されます。
+アニメーションコントロールで以前に開いていた AVI クリップ (存在する場合) を閉じ、メモリから削除します。
 
 ```
 BOOL Close();
@@ -132,11 +132,11 @@ BOOL Close();
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。
+  [CAnimateCtrl:: CAnimateCtrl](#canimatectrl)の例を参照してください。
 
 ##  <a name="create"></a>  CAnimateCtrl::Create
 
-アニメーション コントロールを作成し、それにアタッチ、`CAnimateCtrl`オブジェクト。
+アニメーションコントロールを作成し、 `CAnimateCtrl`オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -149,16 +149,16 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *dwStyle*<br/>
-アニメーション コントロールのスタイルを指定します。 以下の「解説」セクションとアニメーション コントロールのスタイルで説明されているスタイルが説明されている windows 任意組み合わせを適用[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。
+アニメーションコントロールのスタイルを指定します。 後述の「解説」で説明されている windows スタイルと、Windows SDK の「[アニメーションコントロールスタイル](/windows/win32/Controls/animation-control-styles)」で説明されているアニメーションコントロールスタイルの任意の組み合わせを適用します。
 
 *rect*<br/>
-アニメーション コントロールの位置とサイズを指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体。
+アニメーションコントロールの位置とサイズを指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のいずれかになります。
 
 *pParentWnd*<br/>
-アニメーション コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。
+アニメーションコントロールの親ウィンドウ (通常は`CDialog`) を指定します。 NULL にすることはできません。
 
 *nID*<br/>
-アニメーション コントロールの ID を指定します
+アニメーションコントロールの ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -166,27 +166,27 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>Remarks
 
-構築する、`CAnimateCtrl`で 2 つの手順。 最初に、コンス トラクターを呼び出してを呼び出して`Create`、アニメーション コントロールを作成しにアタッチする`CAnimateCtrl`オブジェクト。
+を作成する`CAnimateCtrl`には、2つの手順を実行します。 まず、コンストラクターを呼び出し、次にを`Create`呼び出します。これにより、アニメーションコントロールが作成`CAnimateCtrl`され、オブジェクトにアタッチされます。
 
-次の適用[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)アニメーション コントロールにします。
+次の[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)をアニメーションコントロールに適用します。
 
-- WS_CHILD 常に
+- 常に WS_CHILD
 
 - WS_VISIBLE 通常
 
-- WS_DISABLED ことはほとんどありません。
+- WS_DISABLED はまれ
 
-アニメーション コントロールで拡張ウィンドウ スタイルを使用する場合は、呼び出す[CreateEx](#createex)の代わりに`Create`します。
+アニメーションコントロールで拡張 windows スタイルを使用する場合は、ではなく`Create` [CreateEx](#createex) を呼び出します。
 
-上記のウィンドウ スタイル、だけでなくアニメーション コントロールに 1 つまたは複数のアニメーション コントロールのスタイルを適用します。 詳細については、Windows SDK を参照してください[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)します。
+上に示したウィンドウスタイルに加えて、1つまたは複数のアニメーションコントロールスタイルをアニメーションコントロールに適用することもできます。 [アニメーションコントロールスタイル](/windows/win32/Controls/animation-control-styles)の詳細については、Windows SDK を参照してください。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。
+  [CAnimateCtrl:: CAnimateCtrl](#canimatectrl)の例を参照してください。
 
-##  <a name="createex"></a>  CAnimateCtrl::CreateEx
+##  <a name="createex"></a>CAnimateCtrl:: CreateEx
 
-コントロール (子ウィンドウ) を作成しに関連付けます、`CAnimateCtrl`オブジェクト。
+コントロール (子ウィンドウ) を作成し、 `CAnimateCtrl`オブジェクトに関連付けます。
 
 ```
 virtual BOOL CreateEx(
@@ -200,19 +200,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
 
 *dwStyle*<br/>
-アニメーション コントロールのスタイルを指定します。 ウィンドウの任意の組み合わせを適用し、で説明されているアニメーション コントロールのスタイル[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。
+アニメーションコントロールのスタイルを指定します。 Windows SDK の「[アニメーションコントロールのスタイル](/windows/win32/Controls/animation-control-styles)」で説明されている、ウィンドウとアニメーションのコントロールスタイルを任意に組み合わせて適用します。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
 
 *nID*<br/>
-コントロールの子ウィンドウ ID
+コントロールの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -220,11 +220,11 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>Remarks
 
-使用`CreateEx`の代わりに[作成](#create)、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。
+Windows `CreateEx`拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
 ##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying
 
-Audio-video Interleaved (AVI)、クリップを再生するかどうかを示します。
+オーディオビデオインターリーブ (AVI) クリップが再生中かどうかを示します。
 
 ```
 BOOL IsPlaying() const;
@@ -232,15 +232,15 @@ BOOL IsPlaying() const;
 
 ### <a name="return-value"></a>戻り値
 
-AVI クリップが再生中以外の場合は TRUE。それ以外の場合、FALSE です。
+AVI クリップが再生中の場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying)メッセージは、Windows SDK で説明します。
+このメソッドは、Windows SDK で説明されている[ACM_ISPLAYING](/windows/win32/Controls/acm-isplaying)メッセージを送信します。
 
 ##  <a name="open"></a>  CAnimateCtrl::Open
 
-AVI クリップを開くし、最初のフレームを表示するには、この関数を呼び出します。
+AVI クリップを開き、その最初のフレームを表示するには、この関数を呼び出します。
 
 ```
 BOOL Open(LPCTSTR lpszFileName);
@@ -249,11 +249,11 @@ BOOL Open(UINT nID);
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
-A`CString`オブジェクトまたは AVI ファイルの名前または AVI リソースの名前を含む null で終わる文字列へのポインター。 このパラメーターが NULL の場合、システムは、存在する場合、アニメーション コントロールの既に開かれている AVI クリップを閉じます。
+*lpszFileName*<br/>
+Avi ファイルの名前または avi リソースの名前のいずれかを含む、null で終わる文字列へのオブジェクトまたはポインター。`CString` このパラメーターが NULL の場合、アニメーションコントロール (存在する場合) に対して以前に開かれていた AVI クリップがシステムによって閉じられます。
 
 *nID*<br/>
-AVI リソース識別子です。 このパラメーターが NULL の場合、システムは、存在する場合、アニメーション コントロールの既に開かれている AVI クリップを閉じます。
+AVI リソース識別子。 このパラメーターが NULL の場合、アニメーションコントロール (存在する場合) に対して以前に開かれていた AVI クリップがシステムによって閉じられます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -261,23 +261,23 @@ AVI リソース識別子です。 このパラメーターが NULL の場合、
 
 ### <a name="remarks"></a>Remarks
 
-AVI リソースは、アニメーション コントロールを作成したモジュールから読み込まれます。
+AVI リソースは、アニメーションコントロールを作成したモジュールから読み込まれます。
 
-`Open` AVI クリップ; でサウンドをサポートしていませんサイレント AVI クリップのみを開くことができます。
+`Open`は、AVI クリップのサウンドをサポートしていません。サイレント AVI クリップのみを開くことができます。
 
-アニメーション コントロールが、`ACS_AUTOPLAY`スタイル、アニメーション コントロールは自動的に開始が作成され後すぐにクリップを再生します。 スレッドの継続の実行中に、バック グラウンドでクリップを再生を続けます。 クリップが完了すると、再生が自動的に繰り返されます。
+アニメーションコントロールに`ACS_AUTOPLAY`スタイルが設定されている場合、アニメーションコントロールは、開いた直後にクリップの再生を自動的に開始します。 スレッドが実行を継続している間、バックグラウンドでクリップが再生され続けます。 クリップの再生が完了すると、自動的に繰り返されます。
 
-アニメーション コントロールが、`ACS_CENTER`スタイル、AVI クリップがコントロールの中央、およびコントロールのサイズは変更されません。 アニメーション コントロールがない場合、`ACS_CENTER`スタイル、AVI クリップ内のイメージのサイズに AVI クリップが開かれたときに、コントロールがサイズ変更されます。 コントロールの左上隅の位置は変更されません、コントロールのサイズのみ。
+アニメーションコントロールの`ACS_CENTER`スタイルがの場合、AVI クリップはコントロールの中央に配置され、コントロールのサイズは変更されません。 アニメーションコントロールに`ACS_CENTER`スタイルが設定されていない場合、avi クリップが avi クリップ内のイメージのサイズに開かれると、コントロールのサイズが変更されます。 コントロールの左上隅の位置は変更されず、コントロールのサイズのみになります。
 
-アニメーション コントロールが、 `ACS_TRANSPARENT` 、透明な背景を使用して最初のフレームが描画されるのではなくスタイルで背景色が指定された、アニメーション クリップします。
+アニメーションコントロールに`ACS_TRANSPARENT`スタイルが設定されている場合、最初のフレームは、アニメーションクリップで指定された背景色ではなく、透明な背景を使用して描画されます。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。
+  [CAnimateCtrl:: CAnimateCtrl](#canimatectrl)の例を参照してください。
 
 ##  <a name="play"></a>  CAnimateCtrl::Play
 
-アニメーション コントロールで AVI クリップを再生するには、この関数を呼び出します。
+アニメーションコントロールで AVI クリップを再生するには、この関数を呼び出します。
 
 ```
 BOOL Play(
@@ -288,14 +288,14 @@ BOOL Play(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFrom*<br/>
-再生を開始するフレームの 0 から始まるインデックス。 値は、65,536 未満である必要があります。 値 0 AVI クリップの最初のフレームを始めることを意味します。
+*n*<br/>
+再生を開始するフレームの0から始まるインデックス。 値は65536未満である必要があります。 値0は、AVI クリップの最初のフレームから開始することを意味します。
 
-*フォーム状態*<br/>
-0 から始まるインデックス、フレームの再生を終了します。 値は、65,536 未満である必要があります。 値 - 1 は、AVI クリップの最後のフレームの終了を意味します。
+*n*<br/>
+再生が終了するフレームの0から始まるインデックス。 値は65536未満である必要があります。 値-1 は、AVI クリップの最後のフレームで終わることを意味します。
 
 *nRep*<br/>
-AVI クリップを再生する時間数。 値 - 1 は、ファイルの再生を無期限にするかを意味します。
+AVI クリップを再生する回数。 値-1 は、ファイルを無期限に再生することを意味します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -303,15 +303,15 @@ AVI クリップを再生する時間数。 値 - 1 は、ファイルの再生�
 
 ### <a name="remarks"></a>Remarks
 
-アニメーション コントロールが、スレッドの継続の実行中には、バック グラウンドでクリップを再生します。 アニメーション コントロールが`ACS_TRANSPARENT`スタイル、AVI クリップに再生するアニメーション クリップに指定された背景色ではなく、透明な背景を使用します。
+アニメーションコントロールは、スレッドの実行を継続しながら、バックグラウンドでクリップを再生します。 アニメーションコントロールにスタイルが`ACS_TRANSPARENT`設定されている場合は、アニメーションクリップで指定された背景色ではなく、透明な背景を使用して AVI クリップが再生されます。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。
+  [CAnimateCtrl:: CAnimateCtrl](#canimatectrl)の例を参照してください。
 
 ##  <a name="seek"></a>  CAnimateCtrl::Seek
 
-静的に AVI クリップの 1 つのフレームを表示するには、この関数を呼び出します。
+この関数を呼び出して、AVI クリップの1つのフレームを静的に表示します。
 
 ```
 BOOL Seek(UINT nTo);
@@ -319,8 +319,8 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>パラメーター
 
-*フォーム状態*<br/>
-表示するフレームの 0 から始まるインデックス。 値は、65,536 未満である必要があります。 値が 0 の手段が AVI クリップの最初のフレームを表示します。 値が-1 の手段が AVI クリップの最後のフレームを表示します。
+*n*<br/>
+表示するフレームの0から始まるインデックス。 値は65536未満である必要があります。 値が0の場合は、AVI クリップの最初のフレームが表示されます。 値が-1 の場合は、AVI クリップの最後のフレームが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -328,15 +328,15 @@ BOOL Seek(UINT nTo);
 
 ### <a name="remarks"></a>Remarks
 
-アニメーション コントロールが`ACS_TRANSPARENT`、透明な背景を使用して、AVI クリップが描画されるのではなくスタイルで背景色が指定された、アニメーション クリップします。
+アニメーションコントロールにスタイルが`ACS_TRANSPARENT`設定されている場合は、アニメーションクリップで指定された背景色ではなく、透明な背景を使用して AVI クリップが描画されます。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。
+[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)の例を参照してください。
 
-##  <a name="stop"></a>  CAnimateCtrl::Stop
+##  <a name="stop"></a>CAnimateCtrl:: Stop
 
-アニメーション コントロールで AVI クリップの再生を停止するには、この関数を呼び出します。
+アニメーションコントロールで AVI クリップの再生を停止するには、この関数を呼び出します。
 
 ```
 BOOL Stop();
@@ -348,7 +348,7 @@ BOOL Stop();
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CAnimateCtrl::CAnimateCtrl](#canimatectrl)します。
+  [CAnimateCtrl:: CAnimateCtrl](#canimatectrl)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -356,4 +356,3 @@ BOOL Stop();
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

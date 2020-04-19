@@ -1,33 +1,37 @@
 ---
 title: コンパイラの警告 (レベル 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: b8f62b7556d458f285597b4ae92a4f6e15ee60c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657988"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810610"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>コンパイラの警告 (レベル 1) C4436
 
-仮想ベース 'class1' から 'class2' コンス トラクターまたはデストラクターでへの dynamic_cast は/vd2 を部分的に構築されたオブジェクト コンパイルに失敗したり、#pragma vtordisp(2) と ' class2' を有効な定義
+コンストラクターまたはデストラクター内の仮想ベース ' class1 ' から ' class2 ' への dynamic_cast は、/vd2 を使用して部分的に構築されたオブジェクトで失敗するか、#pragma vtordisp (2) が有効な ' class2 ' を定義しています。
 
-コンパイラが検出されましたが、`dynamic_cast`次の特性を持つ操作。
+コンパイラで、次の特性を持つ `dynamic_cast` 操作が検出されました。
 
-- キャストは、基本クラスのポインターから派生クラスのポインターです。
+- キャストは、基底クラスポインターから派生クラスポインターへのキャストです。
 
-- 派生クラスは、事実上、基本クラスを継承します。
+- 派生クラスは、実質的に基底クラスを継承します。
 
-- 派生クラスがない、`vtordisp`仮想ベースのフィールド。
+- 派生クラスには、仮想ベースの `vtordisp` フィールドがありません。
 
-- コンス トラクターまたは派生クラスのデストラクターで、キャストが見つかったか、さらにいくつかのクラスは、派生クラスから継承します。
+- キャストは、派生クラスのコンストラクターまたはデストラクター、または派生クラスからさらに継承するクラスにあります。
 
-警告を示します、`dynamic_cast`部分的に構築されたオブジェクトで動作している場合が、正しく実行されない可能性があります。  さらに派生オブジェクトの下位のオブジェクトで動作している派生コンス トラクターとデストラクターが発生します。  警告でという名前の派生クラスはさらにしない場合、派生した、警告は無視できます。
+警告は、部分的に構築されたオブジェクトで動作している場合に、`dynamic_cast` が正しく実行されない可能性があることを示します。  これは、派生コンストラクターまたはデストラクターが、さらに派生したオブジェクトのサブオブジェクト上で動作している場合に発生します。  警告で指定された派生クラスがそれ以上派生していない場合は、警告を無視できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例は、C4436 を生成し、不足しているから発生するコード生成の問題を示します`vtordisp`フィールド。
+次の例では、C4436 を生成し、不足している `vtordisp` フィールドから発生するコード生成の問題を示します。
 
 ```cpp
 // C4436.cpp
@@ -69,7 +73,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

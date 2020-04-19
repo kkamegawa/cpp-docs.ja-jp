@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630621"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457754"
 ---
 # <a name="filestatus-class"></a>file_status クラス
 
@@ -33,7 +33,7 @@ class file_status;
 
 |コンストラクター|説明|
 |-|-|
-|[file_status](#file_status)|用のラッパーを構築します[file_type](../standard-library/filesystem-enumerations.md#file_type)とファイル[perms](../standard-library/filesystem-enumerations.md#perms)します。|
+|[file_status](#file_status)|[File_type](../standard-library/filesystem-enumerations.md#file_type)とファイル[perms](../standard-library/filesystem-enumerations.md#perms)のラッパーを構築します。|
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -50,13 +50,13 @@ class file_status;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<filesystem >
+**ヘッダー:** \<ファイルシステム >
 
-**Namespace:** std::experimental::filesystem、std::experimental::filesystem
+**名前空間:** std:: 実験的:: filesystem、std:: 実験的:: filesystem
 
-## <a name="file_status"></a> file_status::file_status
+## <a name="file_status"></a>file_status::file_status
 
-用のラッパーを構築します[file_type](../standard-library/filesystem-enumerations.md#file_type)とファイル[perms](../standard-library/filesystem-enumerations.md#perms)します。
+[File_type](../standard-library/filesystem-enumerations.md#file_type)とファイル[perms](../standard-library/filesystem-enumerations.md#perms)のラッパーを構築します。
 
 ```cpp
 explicit file_status(
@@ -72,16 +72,16 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>パラメーター
 
-*ftype*<br/>
-指定された`file_type`、既定値は`file_type::none`します。
+*ftype*\
+指定`file_type`した場合`file_type::none`、既定値はになります。
 
-*マスク*<br/>
-指定したファイル`perms`、既定値は`perms::unknown`します。
+*隠す*\
+指定さ`perms`れたファイル`perms::unknown`、既定値はです。
 
-*file_status*<br/>
+*file_status*\
 格納されているオブジェクト。
 
-## <a name="op_as"></a> file_status::operator =
+## <a name="op_as"></a>file_status:: operator =
 
 この既定のメンバー代入演算子は想定どおりに動作します。
 
@@ -92,10 +92,10 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>パラメーター
 
-*file_status*<br/>
-[File_status](../standard-library/file-status-class.md)にコピーされる、`file_status`します。
+*file_status*\
+に`file_status`コピーされる[file_status](../standard-library/file-status-class.md) 。
 
-## <a name="type"></a> 型
+## <a name="type"></a>各種
 
 `file_type` を取得または設定します。
 
@@ -106,14 +106,14 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>パラメーター
 
-*ftype*<br/>
+*ftype*\
 `file_type` と指定します。
 
-## <a name="permissions"></a> アクセス許可
+## <a name="permissions"></a>許可
 
 ファイルのアクセス許可を取得または設定します。
 
-Setter を使用してファイルを`readonly`または削除、`readonly`属性。
+Setter を使用してファイル`readonly`を作成するか、 `readonly`属性を削除します。
 
 ```cpp
 perms permissions() const noexcept
@@ -122,11 +122,11 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク*<br/>
+*隠す*\
 `perms` と指定します。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[path クラス](../standard-library/path-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[path クラス](../standard-library/path-class.md)\
+[\<filesystem>](../standard-library/filesystem.md)

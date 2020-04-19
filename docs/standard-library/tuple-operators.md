@@ -9,21 +9,16 @@ f1_keywords:
 - tuple/std::operator<=
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677036"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241657"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 `tuple` オブジェクトどうしが等しくないかどうかを比較します。
 
@@ -36,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ### <a name="remarks"></a>Remarks
@@ -88,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 `tuple` オブジェクトの大小関係 (未満) を比較します。
 
@@ -101,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ### <a name="remarks"></a>Remarks
@@ -153,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 `tuple` オブジェクトの大小関係 (以下) を比較します。
 
@@ -166,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ### <a name="remarks"></a>Remarks
@@ -218,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 `tuple` オブジェクトどうしが等しいかどうかを比較します。
 
@@ -231,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ### <a name="remarks"></a>Remarks
@@ -283,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 `tuple` オブジェクトの大小関係 (より大きい) を比較します。
 
@@ -296,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ### <a name="remarks"></a>Remarks
@@ -348,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 `tuple` オブジェクトの大小関係 (以上) を比較します。
 
@@ -361,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ### <a name="remarks"></a>Remarks
@@ -412,7 +407,3 @@ int main() {
 true
 false
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<tuple>](../standard-library/tuple.md)<br/>

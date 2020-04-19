@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: 363ff2a4cee48b1660de87714d73c93e795017cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297243"
 ---
 # <a name="destroying-window-objects"></a>ウィンドウ オブジェクトの破棄
 
@@ -33,4 +33,3 @@ ms.locfileid: "50488809"
 ## <a name="see-also"></a>関連項目
 
 [Window オブジェクト](../mfc/window-objects.md)
-

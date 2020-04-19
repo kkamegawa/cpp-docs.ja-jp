@@ -8,31 +8,30 @@ helpviewer_keywords:
 - columns [MFC], adding to CListCtrl
 - CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
-ms.openlocfilehash: e40a923c755f8b32ca3a6ed1884eb7f7a1d6abfb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9321a582f223269ee998dccd01721f47d90eb7fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529338"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509338"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>コントロールへの列の追加 (レポート ビュー)
 
 > [!NOTE]
->  次の手順は、いずれかには、 [CListView](../mfc/reference/clistview-class.md)または[CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクト。
+>  次の手順は、 [CListView](../mfc/reference/clistview-class.md)オブジェクトまたは[CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクトのいずれかに適用されます。
 
-リスト コントロールがレポートの表示とリスト コントロールの各項目のさまざまなサブ項目を整理するためのメソッドを提供する列が表示されます。 この組織は、リスト コントロール内の列と、リスト コントロール項目のサブ項目間の一対一の対応で実装されます。 サブ項目の詳細については、次を参照してください。[コントロールへの項目の追加](../mfc/adding-items-to-the-control.md)します。 レポート ビューで、リスト コントロールの例は、Windows 95 および Windows 98 のエクスプ ローラーの詳細ビューによって提供されます。 最初の列には、フォルダー、ファイルのアイコン、およびラベルが表示されます。 ファイルのサイズ、ファイルの種類、最終変更日、日付およびなど、他の列が一覧表示します。
+リストコントロールがレポートビューの場合、列が表示され、各リストコントロール項目のさまざまなサブ項目を整理することができます。 この組織は、リストコントロール内の列とリストコントロール項目の関連するサブ項目の間に1対1の対応が実装されています。 サブ項目の詳細については、「[コントロールへの項目の追加](../mfc/adding-items-to-the-control.md)」を参照してください。 レポートビューのリストコントロールの例は、Windows 95 および Windows 98 Explorer の詳細ビューによって提供されます。 最初の列には、フォルダー、ファイルアイコン、およびラベルが一覧表示されます。 他の列の一覧ファイルのサイズ、ファイルの種類、最終更新日など。
 
-コントロールがある場合にのみ列が表示されている場合でも、いつでもリスト コントロールに列を追加できる、`LVS_REPORT`スタイル ビットがオンにします。
+いつでも列をリストコントロールに追加できますが、列は、コントロール`LVS_REPORT`のスタイルビットがオンになっている場合にのみ表示されます。
 
-各列に関連付けられているヘッダー項目 (を参照してください[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オブジェクト、列にラベルを列のサイズを変更することができます。
+各列には、関連付けられたヘッダー項目 (「 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)」を参照) があります。このオブジェクトは、列にラベルを付け、ユーザーが列のサイズを変更できるようにします
 
-リスト コントロールでは、レポート ビューをサポートする場合は、リスト コントロールの項目で可能な各サブ項目の列を追加する必要があります。 準備して列を追加、 [LV_COLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)構造とを呼び出すし[InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn)します。 (ヘッダー項目とも呼ばれます) 必要な列を追加した後、それらを並べ替えることができますメンバー関数および埋め込みのヘッダー コントロールに属しているスタイルを使用します。 詳細については、次を参照してください。[ヘッダー コントロール項目の並べ替え](../mfc/ordering-items-in-the-header-control.md)します。
+リストコントロールでレポートビューがサポートされている場合は、リストコントロール項目で、使用可能な各サブ項目の列を追加する必要があります。 列を追加するには、 [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)構造体を準備してから、 [insertcolumn](../mfc/reference/clistctrl-class.md#insertcolumn)を呼び出します。 必要な列 (ヘッダー項目と呼ばれることもあります) を追加した後は、埋め込みヘッダーコントロールに属しているメンバー関数とスタイルを使用して、列を並べ替えることができます。 詳細については、「[ヘッダーコントロールの項目の順序付け](../mfc/ordering-items-in-the-header-control.md)」を参照してください。
 
 > [!NOTE]
->  リスト コントロールが作成された場合、 **LVS_NOCOLUMNHEADER**列を挿入しようとすると、スタイルは無視されます。
+>  **LVS_NOCOLUMNHEADER**スタイルを使用してリストコントロールを作成した場合、列を挿入しようとしても無視されます。
 
 ## <a name="see-also"></a>関連項目
 
 [CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: 680ca7a162d8fbedc793ff097663d942843887d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a3084d4655e173234d3bb6e8d411b28e8968377
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198054"
 ---
 # <a name="implementing-a-dialog-box"></a>ダイアログ ボックスを実装します。
 
@@ -49,4 +49,3 @@ ATL プロジェクト ダイアログ ボックスに追加する 2 つの方�
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ クラス](../atl/atl-window-classes.md)
-

@@ -1,6 +1,6 @@
 ---
 title: CDataConnection クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209296"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection クラス
 
@@ -119,7 +119,7 @@ class CDataConnection
 > [!NOTE]
 >  複数のセッションを処理する必要があるデータベース アプリケーションを作成する場合は、使用する必要があります。 [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)します。
 
-## <a name="#cdataconnection"></a> Cdataconnection::cdataconnection
+## <a name="cdataconnection"></a> CDataConnection::CDataConnection
 
 インスタンスを作成し、初期化、`CDataConnection`オブジェクト。
 
@@ -141,7 +141,7 @@ CDataConnection(const CDataConnection &ds);
 
 2 番目のオーバーライドを作成する新しい`CDataConnection`設定を指定するデータ接続オブジェクトと等しいオブジェクト。
 
-## <a name="#copy"></a> Cdataconnection::copy
+## <a name="copy"></a> CDataConnection::Copy
 
 既存のデータ接続のコピーを作成します。
 
@@ -156,7 +156,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *ds*<br/>
 [in]コピーする既存のデータ接続への参照。
 
-## <a name="#open"></a> Cdataconnection::open
+## <a name="open"></a> CDataConnection::Open
 
 初期化文字列を使用してデータ ソースへの接続を開きます。
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 標準の HRESULT です。
 
-## <a name="#opennewsession"></a> Cdataconnection::opennewsession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 現在の接続オブジェクトのデータ ソースを使用して新しいセッションを開きます。
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*セッション*<br/>
+*session*<br/>
 [入力/出力]新しいセッション オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
@@ -198,7 +198,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 標準の HRESULT です。
 
-## <a name="op_bool"></a> Cdataconnection::operator BOOL
+## <a name="op_bool"></a> CDataConnection::operator BOOL
 
 現在のセッションが開いているかどうかを判断します。
 
@@ -226,7 +226,7 @@ operator bool() throw();
 
 返します、 **bool** (C++ データ型) の値。 **true**現在のセッションが開いていることを意味します**false**現在のセッションが閉じられたことを意味します。
 
-## <a name="op_cdata_amp"></a> Cdataconnection::operator CDataSource&amp;
+## <a name="op_cdata_amp"></a> CDataConnection::operator CDataSource&amp;
 
 格納されている参照を返します`CDataSource`オブジェクト。
 
@@ -248,7 +248,7 @@ operator const CDataSource&() throw();
 
 [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)]
 
-## <a name="op_cdata_star"></a> Cdataconnection::operator CDataSource *
+## <a name="op_cdata_star"></a> CDataConnection::operator CDataSource*
 
 格納されているポインターを返します`CDataSource`オブジェクト。
 

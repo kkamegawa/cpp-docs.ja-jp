@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758490"
 ---
 # <a name="compiler-error-c3918"></a>コンパイラ エラー C3918
 
-使用するにはデータ メンバー ' member' には
+使用するには、' member ' がデータメンバーである必要があります
 
-C3918 は、イベントに関連するいくつかの理由で発生します。
+C3918 は、イベントに関連するいくつかの理由で発生する可能性があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C3918 は、クラスのメンバーは、現在のコンテキストで必要な場合に発生します。 次の例では、C3918 が生成されます。
+C3918 は、現在のコンテキストでクラスメンバーが必要であるために発生する可能性があります。 次の例では、C3918 が生成されます。
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -41,13 +41,13 @@ public:
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C3918 は、null (イベント名が提供されなくへの直接アクセスにバッキング ストアのデリゲートをイベントの) 単純なイベントを確認しようとする場合にも発生します。
+また、C3918 は、単純なイベントを null に対してチェックしようとした場合にも発生します (イベント名は、イベントのバッキングストアデリゲートへの直接アクセスを提供しなくなります)。
 
 次の例では、C3918 が生成されます。
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -66,11 +66,11 @@ ref struct EventSource : public IEFace {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C3918 が正しくないイベントにサブスクライブする場合にも発生します。 次の例では、C3918 が生成されます。
+C3918 は、誤ってイベントをサブスクライブしている場合にも発生する可能性があります。 次の例では、C3918 が生成されます。
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

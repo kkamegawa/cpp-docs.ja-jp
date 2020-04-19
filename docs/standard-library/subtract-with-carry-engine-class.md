@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501401"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685820"
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine クラス
+# <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine クラス
 
 キャリー付き減算 (ラグ付きフィボナッチ法) アルゴリズムでランダム シーケンスを生成します。
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*<br/>
-結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Uinttype* \
+結果を表す符号なし整数型。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-*W*<br/>
+*W* \
 **ワード サイズ**。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*S* \
 **短いラグ**。 整数値の数。 **前提条件**: `0 < S < R`
 
-*R*<br/>
+*R*\
 **長いラグ**。 生成される数列の中の繰り返しを決定します。
 
 ## <a name="members"></a>メンバー
@@ -60,9 +60,9 @@ class subtract_with_carry_engine;
 
 ## <a name="remarks"></a>Remarks
 
-`substract_with_carry_engine` テンプレート クラスは、[linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) を改良したものです。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
+@No__t_0 クラステンプレートは、 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)よりも向上しています。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
 
-このエンジンは、漸化式 (*周期*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。ここで、`x(i - S) - x(i - R) - cy(i - 1) < 0` の場合 `cy(i)` は値 `1` を、そうでない場合は `0` を持ち、`M` は値 `2`<sup>W</sup> を持ちます。エンジンの状態は、キャリー インジケーター + *R*値。 これらの値は、最後で構成されている*R*場合に返される値`operator()`少なくともが呼び出された*R*タイムアウトと、それ以外の場合、`N`返された値と最後`R - N`seed の値。
+このエンジンは、繰り返しの関係 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。この場合、`cy(i)` の値は `x(i - S) - x(i - R) - cy(i - 1) < 0` の場合は `1`、それ以外の場合は `0`、`M` の値は<sup>W</sup>`2` になります。エンジンの状態は、キャリーインジケーターと*R*の値を加算したものです。 これらの値は、`operator()` が*r*回以上呼び出された場合に返される最後の*r*値で構成されます。それ以外の場合は、返された `N` 値、およびシードの最後の `R - N` 値で構成されます。
 
 テンプレート引数 `UIntType` には、最大 `M - 1` の値を保持するのに十分な大きさが必要です。
 
@@ -76,7 +76,7 @@ class subtract_with_carry_engine;
 
 キャリー付き減算エンジンのアルゴリズムの詳細については、Wikipedia の記事「[Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator)」(Lagged Fibonacci 法) を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -84,4 +84,4 @@ class subtract_with_carry_engine;
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

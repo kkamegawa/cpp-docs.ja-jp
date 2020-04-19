@@ -1,17 +1,17 @@
 ---
-title: '方法: デリゲートを定義および使用する (C++/CLI)'
+title: '方法: 定義してデリゲートを使用 (C +/cli CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 3254f01a2d6399626ad78bb742a2cfd861d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387371"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>方法: デリゲートを定義および使用する (C++/CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>方法: 定義してデリゲートを使用 (C +/cli CLI)
 
 この記事では、定義および c++ のデリゲートを使用する方法を示しています。/cli CLI。
 
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)
+[delegate (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)

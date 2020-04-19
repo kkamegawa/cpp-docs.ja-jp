@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384376"
 ---
 # <a name="windows-operations-ccli"></a>Windows の操作 (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry> クラスは、<xref:Microsoft.Win32.RegistryKey> の静的インスタンスの単なるコンテナーです。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
 
-<xref:Microsoft.Win32.Registry> クラスのオブジェクトは、静的オブジェクトであるだけでなく、読み取り専用です。 さらに、レジストリ オブジェクトのコンテンツにアクセスするために作成される <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスも読み取り専用です。 この動作をオーバーライドする方法の例は、次を参照してください。[方法: Windows レジストリにデータを書き込む (C +/cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)します。
+<xref:Microsoft.Win32.Registry> クラスのオブジェクトは、静的オブジェクトであるだけでなく、読み取り専用です。 さらに、レジストリ オブジェクトのコンテンツにアクセスするために作成される <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスも読み取り専用です。 この動作をオーバーライドする方法の例は、次を参照してください。[方法。Windows レジストリにデータを書き込む (C +/cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)します。
 
 <xref:Microsoft.Win32.Registry> クラスには、さらに <xref:Microsoft.Win32.Registry.DynData> と <xref:Microsoft.Win32.Registry.PerformanceData> の 2 つのオブジェクトがあります。 この 2 つのオブジェクトは両方とも <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスです。 <xref:Microsoft.Win32.Registry.DynData>オブジェクトには、し、Windows 98 および Windows me でのみサポートされている動的レジストリ情報が含まれています。 <xref:Microsoft.Win32.Registry.PerformanceData> オブジェクトを使用すると、Windows パフォーマンス モニター システムを使用するアプリケーションのパフォーマンス カウンター情報にアクセスできます。 <xref:Microsoft.Win32.Registry.PerformanceData>ノードが表す情報をレジストリに実際に格納されていないと、そのため、Regedit.exe を使用すると表示されることはできません。
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Remarks
 
-レジストリにアクセスする .NET Framework を使用することができます、<xref:Microsoft.Win32.Registry>と[RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx)では、どちらも、クラスが定義されている、<xref:Microsoft.Win32>名前空間。 **レジストリ**クラスは、の静的インスタンスのコンテナー、<xref:Microsoft.Win32.RegistryKey>クラス。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
+レジストリにアクセスする .NET Framework を使用することができます、<xref:Microsoft.Win32.Registry>と<xref:Microsoft.Win32.RegistryKey>では、どちらも、クラスが定義されている、<xref:Microsoft.Win32>名前空間。 **レジストリ**クラスは、の静的インスタンスのコンテナー、<xref:Microsoft.Win32.RegistryKey>クラス。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
 
 ## <a name="related-sections"></a>関連項目
 

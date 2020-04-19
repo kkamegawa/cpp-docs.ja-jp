@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-ms.openlocfilehash: 3287ac31744506720f1c5c1080a6225311f0e3a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47feeb056d02b81bb88ccf3c5fd49bc983583ee7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239306"
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC アプリケーション アーキテクチャ クラス
 
@@ -41,4 +41,3 @@ MFC アプリケーションでのドキュメント/ビュー アーキテク�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

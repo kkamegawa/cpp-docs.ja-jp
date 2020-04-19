@@ -1,10 +1,11 @@
 ---
 title: /X (標準インクルード パスの無視)
-ms.date: 11/04/2016
+ms.date: 07/18/2019
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 23942803ae0a25aaddd7f5844b303528c2c7ccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16f903b98d69472fe1a33b084fe6393ecf9ec001
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663763"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341043"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (標準インクルード パスの無視)
 
-コンパイラが、PATH および INCLUDE 環境変数で指定されたディレクトリのインクルード ファイルを検索するを防ぎます。
+パスで指定されたディレクトリ内のインクルードファイルをコンパイラが検索できないようにし、環境変数を含めます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,17 +33,17 @@ ms.locfileid: "50663763"
 
 ## <a name="remarks"></a>Remarks
 
-このオプションを使用することができます、 [/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) オプション。
+このオプションは、 [/i (追加のインクルードディレクトリ)](i-additional-include-directories.md) ( **/i**`directory`) オプションと共に使用できます。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
-1. をクリックして、**プリプロセッサ**プロパティ ページ。
+1. **[プリプロセッサ]** プロパティページをクリックします。
 
-1. 変更、**標準インクルード パスの無視**プロパティ。
+1. "**標準インクルードパスを無視**する" プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -50,7 +51,7 @@ ms.locfileid: "50663763"
 
 ## <a name="example"></a>例
 
-次のコマンドで`/X`PATH および INCLUDE 環境変数で指定された位置を無視するようにコンパイラに指示し、`/I`で検索するディレクトリを指定しますファイルを含めます。
+次のコマンドでは`/X` 、は、パスで指定された場所を無視し、環境変数`/I`を含めるようにコンパイラに指示します。また、インクルードファイルを検索するディレクトリを指定します。
 
 ```
 CL /X /I \ALT\INCLUDE MAIN.C
@@ -58,5 +59,5 @@ CL /X /I \ALT\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

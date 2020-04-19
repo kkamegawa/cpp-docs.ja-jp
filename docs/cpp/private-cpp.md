@@ -7,11 +7,11 @@ helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
 ms.openlocfilehash: 19ea551f625cac02e639753a976eddb7a5fa164b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622275"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345824"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -25,9 +25,9 @@ private base-class
 
 ## <a name="remarks"></a>Remarks
 
-前に、クラス メンバーの一覧と、**プライベート**キーワードは、それらのメンバーが、クラスのメンバー関数とフレンドからのみアクセスできることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。
+前に、クラス メンバーの一覧と、**private**キーワードは、それらのメンバーが、クラスのメンバー関数とフレンドからのみアクセスできることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。
 
-基底クラスの名前、**プライベート**キーワードは、基底クラスのパブリックおよびプロテクト メンバーが派生クラスのプライベート メンバーを指定します。
+基底クラスの名前、**private**キーワードは、基底クラスのパブリックおよびプロテクト メンバーが派生クラスのプライベート メンバーを指定します。
 
 クラスのメンバーの既定のアクセスはプライベートです。 構造体または共用体のメンバーの既定のアクセスはパブリックです。
 
@@ -37,7 +37,7 @@ private base-class
 
 ## <a name="clr-specific"></a>/clr 固有
 
-CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**保護**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。
+CLR 型では、C++ アクセス指定子のキーワード (**public**、**private**、および**protected**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。
 
 > [!NOTE]
 >  ファイルがコンパイルされた[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。

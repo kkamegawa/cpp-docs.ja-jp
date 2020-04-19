@@ -1,45 +1,45 @@
 ---
 title: _mm_cvtsi64x_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtsi64x_ss
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 4b8d0e1a19441cd671143843ae4ac6e89bfeae50
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328943"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217461"
 ---
-# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+# <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Microsoft 固有の仕様**
 
-拡張 x64 を生成します。 スカラー単精度浮動小数点値に変換する 64 ビット整数のバージョン (`cvtsi2ss`) 命令。
+スカラー単精度浮動小数点値 (`cvtsi2ss`) 命令に変換64ビット整数の x64 拡張バージョンを生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 __m128 _mm_cvtsi64x_ss(
    __m128 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
-[in]`__m128` 4 つの単精度浮動小数点値を含む構造体。
+*ある*\
+から4つの単精度浮動小数点値を含む構造体。`__m128`
 
-*b*<br/>
-[in]浮動小数点値に変換する 64 ビット整数。
+*b*\
+から浮動小数点値に変換する64ビット整数。
 
 ## <a name="return-value"></a>戻り値
 
-`__m128`最初の浮動小数点値が変換の結果は、構造体。 その他の 3 つの値から変更されていないコピー`a`します。
+最初の浮動小数点値が変換の結果である構造体。`__m128` その他の3つの値は *、* から変更されずにコピーされます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -47,17 +47,17 @@ __m128 _mm_cvtsi64x_ss(
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-`__m128`構造体が、XMM レジスタを表し、値は、そのため、この組み込み`b`からシステム メモリ、XMM に移動するのには、登録します。
+構造`__m128`体は XMM register を表します。したがって、組み込みでは、システムメモリの値*b*を XMM レジスタに移動できます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // _mm_cvtsi64x_ss.cpp
 // processor: x64
 
@@ -91,5 +91,5 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[__m128](../cpp/m128.md)<br/>
+[__m128](../cpp/m128.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

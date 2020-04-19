@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 264b93d11b82eb00ac85e92413ca1a7071e06879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582248"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126462"
 ---
-# <a name="invalidcomputedomain-class"></a>invalid_compute_domain クラス
+# <a name="invalid_compute_domain-class"></a>invalid_compute_domain クラス
 
-ランタイムがで指定された計算ドメインを使用してカーネルを起動できない場合にスローされる例外、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼び出しサイト。
+この例外は、ランタイムが[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼び出しサイトで指定された計算ドメインを使用してカーネルを起動できない場合にスローされます。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class invalid_compute_domain : public runtime_exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[invalid_compute_domain コンス トラクター](#ctor)|`invalid_compute_domain` クラスの新しいインスタンスを初期化します。|
+|[invalid_compute_domain コンストラクター](#ctor)|`invalid_compute_domain` クラスの新しいインスタンスを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,19 +41,19 @@ class invalid_compute_domain : public runtime_exception;
 
 `invalid_compute_domain`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amprt.h
+**ヘッダー:** amprt. h
 
 **名前空間:** Concurrency
 
-## <a name="ctor"></a> invalid_compute_domain
+## <a name="ctor"></a>invalid_compute_domain
 
 クラスの新しいインスタンスを初期化します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -62,13 +62,13 @@ invalid_compute_domain() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明。
 
 ### <a name="return-value"></a>戻り値
 
 `invalid_compute_domain` クラスのインスタンス。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

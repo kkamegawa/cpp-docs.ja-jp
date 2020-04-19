@@ -1,6 +1,6 @@
 ---
 title: /GX (例外処理の有効化)
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 f1_keywords:
 - /gx
 helpviewer_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 3e820791b651a029f048423daacf50ddc8b74a1d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 171ff0d0dfb1dec41bae5f6be63c941802c402a4
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620624"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245088"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (例外処理の有効化)
 
-非推奨。 使用して宣言された関数であるという前提を使用して同期例外処理できるように`extern "C"`例外はスローされません。
+非推奨。 `extern "C"` を使用して宣言された関数が例外をスローしないことを想定して、同期例外処理を有効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -28,28 +28,26 @@ ms.locfileid: "50620624"
 /GX
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**/GX**は非推奨とされます。 相当するものを使用して、 [/EHsc](../../build/reference/eh-exception-handling-model.md)オプションを使用します。 非推奨のコンパイラ オプションの一覧は、次を参照してください。、**非推奨とされた削除済みのコンパイラ オプション**セクション[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
+**/Gx**は非推奨とされます。 代わりに、 [/ehsc](eh-exception-handling-model.md)オプションを使用してください。 非推奨のコンパイラオプションの一覧については、「[カテゴリ別のコンパイラオプション](compiler-options-listed-by-category.md)」の「**非推奨のコンパイラオプション**」セクションを参照してください。
 
-既定では、 **/EHsc**と等価の **/GX**、Visual Studio 開発環境を使用してコンパイルする場合は適用されます。 コマンド ライン ツールを使用すると例外処理を指定しません。 これは、相当の**では/GX-** します。
+既定では、 **/ehsc**は **/gx**に相当しますが、Visual Studio 開発環境を使用してコンパイルすると有効になります。 コマンドラインツールを使用する場合、例外処理は指定されません。 これは、 **/GX-** に相当します。
 
-詳細については、次を参照してください。 [C++ 例外処理](../../cpp/cpp-exception-handling.md)します。
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. ナビゲーションウィンドウで、 **[構成プロパティ]** 、 **[CC++/]** 、 **[コマンドライン]** の順に選択します。
 
-1. ナビゲーション ウィンドウで、**構成プロパティ**、 **C/C++**、**コマンドライン**します。
-
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション] ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[/EH (例外処理モデル)](eh-exception-handling-model.md)

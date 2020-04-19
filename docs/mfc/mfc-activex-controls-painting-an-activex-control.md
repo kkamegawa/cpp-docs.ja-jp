@@ -1,18 +1,18 @@
 ---
-title: 'MFC ActiveX コントロール : ActiveX コントロールの描画'
+title: MFC ActiveX コントロール:ActiveX コントロールの描画
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186880"
 ---
-# <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールの描画
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールの描画
 
 この記事では、ActiveX コントロールの描画プロセスとプロセスを最適化する描画コードを変更する方法について説明します。 (を参照してください[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)ないコントロールを個別に描画を最適化する方法の手法が以前に選択した GDI オブジェクトを復元します。 すべてのコントロールが描画されたコンテナーが自動的に復元元のオブジェクトです。)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50549527"
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX コントロールの描画プロセス
 
-ActiveX コントロールは、最初に表示されるまたは再描画される場合、1 つの重要な違いと、MFC を使用して開発された他のアプリケーションのような描画プロセスに従います: ActiveX コントロールがアクティブまたは非アクティブな状態であることができます。
+ActiveX コントロールは、最初に表示されるまたは再描画されると、これらの重要な違いと、MFC を使用して開発された他のアプリケーションのような描画プロセスに従います。ActiveX コントロールは、アクティブまたは非アクティブな状態にできます。
 
 アクティブなコントロールは、子ウィンドウによって ActiveX コントロール コンテナーで表されます。 など、他のウィンドウを担当 WM_PAINT メッセージが受信したときに自身を描画します。 コントロールの基底クラス、 [COleControl](../mfc/reference/colecontrol-class.md)でメッセージを処理、`OnPaint`関数。 この既定の実装、`OnDraw`コントロールの関数。
 
@@ -88,9 +88,9 @@ ActiveX コントロールの描画の既定の実装では、コントロール
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|
 |`StretchBlt`|`TextOut`||
 
-加え`CDC`メンバー関数は、メタファイル DC で互換性のあるその他のいくつかの関数があります。 以下の[CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette)、 [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)、および 3 つのメンバー関数の`CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect)、 [構築](../mfc/reference/cbrush-class.md#createdibpatternbrush)、および[とき](../mfc/reference/cbrush-class.md#createpatternbrush)します。
+加え`CDC`メンバー関数は、メタファイル DC で互換性のあるその他のいくつかの関数があります。 以下の[CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette)、 [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)、および 3 つのメンバー関数の`CBrush`:[CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect)、[構築](../mfc/reference/cbrush-class.md#createdibpatternbrush)、および[とき](../mfc/reference/cbrush-class.md#createpatternbrush)します。
 
-関数は、メタファイルには記録されません[とき](../mfc/reference/cdc-class.md#drawfocusrect)、 [DrawIcon](../mfc/reference/cdc-class.md#drawicon)、 [DrawText](../mfc/reference/cdc-class.md#drawtext)、 [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)、 [。FillRect](../mfc/reference/cdc-class.md#fillrect)、 [FrameRect](../mfc/reference/cdc-class.md#framerect)、[とき](../mfc/reference/cdc-class.md#graystring)、 [InvertRect](../mfc/reference/cdc-class.md#invertrect)、 [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)、および[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)します。 メタファイル DC が実際には、デバイスに関連付けられていないためには、メタファイル DC で SetDIBits、GetDIBits、および CreateDIBitmap を使用できません。 コピー先として、メタファイル DC で SetDIBitsToDevice と StretchDIBits を使用できます。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)、[ビットマップ](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)、および[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)はメタファイル DC で意味がありません。
+メタファイルには記録されません関数は次のとおりです。[消去](../mfc/reference/cdc-class.md#drawfocusrect)、 [DrawIcon](../mfc/reference/cdc-class.md#drawicon)、 [DrawText](../mfc/reference/cdc-class.md#drawtext)、 [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)、 [FillRect](../mfc/reference/cdc-class.md#fillrect)、 [FrameRect](../mfc/reference/cdc-class.md#framerect)、[とき](../mfc/reference/cdc-class.md#graystring)、 [InvertRect](../mfc/reference/cdc-class.md#invertrect)、 [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)、および[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)します。 メタファイル DC が実際には、デバイスに関連付けられていないためには、メタファイル DC で SetDIBits、GetDIBits、および CreateDIBitmap を使用できません。 コピー先として、メタファイル DC で SetDIBitsToDevice と StretchDIBits を使用できます。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)、[ビットマップ](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)、および[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)はメタファイル DC で意味がありません。
 
 メタファイルの DC を使用する際に別のポイントは、座標系をピクセル単位で計測いない可能性があります。 このため、四角形に収まるように、描画のコードを調整する必要がすべて成功する`OnDraw`で、 *rcBounds*パラメーター。 これにより、コントロール外の描画、ため*rcBounds*コントロールのウィンドウのサイズを表します。
 
@@ -111,4 +111,3 @@ ActiveX コントロールの描画の既定の実装では、コントロール
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

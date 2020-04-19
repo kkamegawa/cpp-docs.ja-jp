@@ -67,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: b59d4de6751dd2a7f90c5de766b5f95cb7e7b330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209391"
 ---
 # <a name="cbookmark-class"></a>CBookmark クラス
 
@@ -112,7 +112,7 @@ class CBookmark< 0 > : public CBookmarkBase
 
 |||
 |-|-|
-|[演算子 =](#operator)|1 つ割り当てます`CBookmark`を別のクラス。|
+|[operator=](#operator)|1 つ割り当てます`CBookmark`を別のクラス。|
 
 ## <a name="remarks"></a>Remarks
 

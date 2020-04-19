@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4087
 ms.assetid: 546e4d57-5c8e-422c-8ef1-92657336dad5
-ms.openlocfilehash: 84d24d95053b962c1776dc18576e4ed236b63469
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe2b4fadfb87726e81178a3530299dbb8620aec9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643717"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626843"
 ---
 # <a name="compiler-warning-level-1-c4087"></a>コンパイラの警告 (レベル 1) C4087
 
@@ -23,7 +23,7 @@ ms.locfileid: "50643717"
 
 ## <a name="example"></a>例
 
-```
+```c
 // C4087.c
 // compile with: /W1
 int f1( void ) {

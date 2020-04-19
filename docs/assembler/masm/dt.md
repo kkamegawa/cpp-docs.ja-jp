@@ -1,26 +1,27 @@
 ---
 title: DT
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - dt
 helpviewer_keywords:
 - DT directive
 ms.assetid: 96c5c4e9-7053-49f0-946a-8088e178e79a
-ms.openlocfilehash: f41d5b2ff5fab35dae3d5b2125c5cd3a1b106058
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7350d942e365c2ce240be7fcbc53a073a0a33c5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466992"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318203"
 ---
 # <a name="dt"></a>DT
 
-割り当て、必要に応じて各 10 バイトのストレージを初期化します`initializer`します。 型指定子としても使用できる型が有効な任意の場所。 `DT` シノニムです[TBYTE](../../assembler/masm/tbyte.md)します。
+*初期化子*ごとに10バイトのストレージを割り当て、必要に応じて初期化します。 型が有効である任意の場所で、型指定子として使用することもできます。 **DT**は、 [t](tbyte.md)のシノニムです。
 
 ## <a name="syntax"></a>構文
 
-> [name]DT 初期化子 [] の初期化子].
+> ⟦*name*⟧ **DT** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

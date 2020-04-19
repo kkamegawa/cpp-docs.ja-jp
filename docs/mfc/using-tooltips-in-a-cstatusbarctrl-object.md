@@ -8,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: a5ebefe3d5daab9917cdb1db7eface09c78b456a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9a1fec7eb951fa76c542e09df751b4c58ddb16
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411436"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトでのツール ヒントの使い方
 
@@ -30,4 +30,3 @@ ms.locfileid: "50438793"
 
 [CStatusBarCtrl の使い方](../mfc/using-cstatusbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

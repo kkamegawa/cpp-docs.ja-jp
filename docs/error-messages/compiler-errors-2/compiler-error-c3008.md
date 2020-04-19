@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3008
 ms.assetid: 04d93201-28e5-4be0-945c-aad616376f4b
-ms.openlocfilehash: 4f3b0e8ec935a4425977ea89993677704681a9e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af62620fcc25abbe69062256938656781437252
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437896"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298871"
 ---
 # <a name="compiler-error-c3008"></a>コンパイラ エラー C3008
 
@@ -21,7 +21,7 @@ ms.locfileid: "50437896"
 
 次の例では C3008 が生成されます。
 
-```
+```c
 // C3008.c
 // compile with: /openmp
 int main()

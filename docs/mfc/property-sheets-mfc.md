@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-ms.openlocfilehash: efcaaec38309cd6d675ebaa418f3bb0f0683547b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 974d6cc0004985544f1786139a9a89c61f00382f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297079"
 ---
 # <a name="property-sheets-mfc"></a>プロパティ シート (MFC)
 
@@ -38,7 +38,7 @@ ms.locfileid: "50514986"
 
 - [CPropertyPage をクラスします。](../mfc/reference/cpropertypage-class.md)
 
-- [サンプル](../visual-cpp-samples.md)
+- [サンプル](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>関連項目
 

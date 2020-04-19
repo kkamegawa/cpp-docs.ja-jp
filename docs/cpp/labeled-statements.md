@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368748"
 ---
 # <a name="labeled-statements"></a>ラベル付きステートメント
 
@@ -81,7 +81,7 @@ int main() {
 
 **Case ステートメント**
 
-後に表示されるラベル、**ケース**キーワードは外にも指定できません、**切り替える**ステートメント。 (この制限にも適用されます、**既定**キーワードです)。次のコード フラグメントの正しい使用方法を示しています。**ケース**ラベル。
+後に表示されるラベル、**case**キーワードは外にも指定できません、**switch**ステートメント。 (この制限にも適用されます、**default**キーワードです)。次のコード フラグメントの正しい使用方法を示しています。**case**ラベル。
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>Case ステートメント内のラベル
 
-後に表示されるラベル、**ケース**キーワードは外にも指定できません、**切り替える**ステートメント。 (この制限にも適用されます、**既定**キーワードです)。次のコード フラグメントの正しい使用方法を示しています。**ケース**ラベル。
+後に表示されるラベル、**case**キーワードは外にも指定できません、**switch**ステートメント。 (この制限にも適用されます、**default**キーワードです)。次のコード フラグメントの正しい使用方法を示しています。**case**ラベル。
 
 ```cpp
 // Sample Microsoft Windows message processing loop.

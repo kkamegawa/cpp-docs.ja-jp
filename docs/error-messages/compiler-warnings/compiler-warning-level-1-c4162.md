@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578266"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624851"
 ---
 # <a name="compiler-warning-level-1-c4162"></a>コンパイラの警告 (レベル 1) C4162
 
-'identifier': 見つかった C リンケージを持つ関数
+' identifier ': C リンケージを伴う関数が見つかりませんでした
 
-C リンケージを持つ関数は宣言されていますが、見つかりません。
+C リンケージを持つ関数が宣言されていますが、見つかりません。
 
-この警告を解決するには、.c ファイルでコンパイル (C コンパイラを呼び出します)。  C++ コンパイラを呼び出す必要がある場合、は、関数宣言の前に、extern"C"を配置します。
+この警告を解決するには、.c ファイル (C コンパイラを呼びます) でコンパイルします。  C++コンパイラを呼び出す必要がある場合は、関数宣言の前に Extern "C" を配置します。
 
-次のサンプルの生成 C4162
+次の例では、C4162 が生成されます。
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -38,7 +38,7 @@ int main() {
 
 考えられる解決方法:
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

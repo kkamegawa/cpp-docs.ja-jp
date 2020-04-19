@@ -1,9 +1,9 @@
 ---
 title: _get_heap_handle
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_heap_handle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_heap_handle
 - get_heap_handle
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5f53569db6cf99eb8f91e9a8668280b135097ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480029"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955862"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
 C ランタイム システムで使用されるヒープのハンドルを返します。
 
@@ -48,7 +51,7 @@ C ランタイム システムで使用される Win32 ヒープのハンドル�
 
 ## <a name="remarks"></a>Remarks
 
-[HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) を呼び出し、CRT ヒープの Low Fragmentation Heap を有効にする場合は、この関数を使用します。
+[HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) を呼び出し、CRT ヒープの Low Fragmentation Heap を有効にする場合は、この関数を使用します。
 
 ## <a name="requirements"></a>必要条件
 

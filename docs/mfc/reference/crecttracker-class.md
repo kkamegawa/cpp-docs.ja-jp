@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372276"
 ---
 # <a name="crecttracker-class"></a>CRectTracker クラス
 
@@ -134,7 +134,7 @@ virtual void AdjustRect(
 
 特殊な機能によって直接サポートされていない`CRectTracker`などグリッドにスナップまたは保持の縦横比は、この関数をオーバーライドすることで実装できます。
 
-##  <a name="crecttracker"></a>  利用
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker
 
 作成し、初期化、`CRectTracker`オブジェクト。
 
@@ -253,7 +253,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出しから戻ると*<br/>
+*lpTrueRect*<br/>
 ポインター、`RECT`デバイスを含む構造体の各座標、`CRectTracker`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -407,7 +407,7 @@ WM_SETCURSOR メッセージから、前のヒット テストの結果。
 
 WM_SETCURSOR メッセージを処理するウィンドウの関数内からこの関数を呼び出す (通常`OnSetCursor`)。
 
-##  <a name="track"></a>  反転
+##  <a name="track"></a>  CRectTracker::Track
 
 四角形のサイズを変更するユーザー インターフェイスを表示するには、この関数を呼び出します。
 
@@ -481,8 +481,8 @@ TRUE の場合、x 軸または y 軸に沿った四角形を反転します。�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプルの追跡ツール](../../visual-cpp-samples.md)<br/>
-[MFC サンプル DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC のサンプルの追跡ツール](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar クラス](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)

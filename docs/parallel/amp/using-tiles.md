@@ -2,24 +2,24 @@
 title: タイルの使用
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176095"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126267"
 ---
 # <a name="using-tiles"></a>タイルの使用
 
-タイルを使用して、アプリのアクセラレーションを最大化することができます。 タイルは、スレッドを等しい四角形のサブセットに分割または*タイル*します。 適切なタイルのサイズとタイル アルゴリズムを使用している場合、C++ AMP コードによるアクセラレーションがさらに向上します。 タイルの基本コンポーネントは次のとおりです。
+タイルを使用して、アプリのアクセラレーションを最大化することができます。 タイルは、スレッドを等しい四角形のサブセットまたは*タイル*に分割します。 適切なタイルのサイズとタイル アルゴリズムを使用している場合、C++ AMP コードによるアクセラレーションがさらに向上します。 タイルの基本コンポーネントは次のとおりです。
 
 - `tile_static` 変数。 タイルの主な利点は、`tile_static` へのアクセスによるパフォーマンスの向上です。 `tile_static` メモリのデータへのアクセスは、グローバル空間内のデータ (`array` または `array_view` オブジェクト) へのアクセスよりも大幅に高速になる場合があります。 各タイルについて `tile_static` 変数のインスタンスが作成され、タイル内のすべてのスレッドがこの変数にアクセスできます。 一般的なタイル アルゴリズムでは、データをグローバル メモリから `tile_static` メモリに 1 回コピーし、`tile_static` メモリから何度もアクセスします。
 
-- [tile_barrier::wait メソッド](reference/tile-barrier-class.md#wait)します。 `tile_barrier::wait` の呼び出しは、同じタイル内のすべてのスレッドが `tile_barrier::wait` の呼び出しに到達するまで、現在のスレッドの実行を中断します。 スレッドが実行される順序を保証することはできません。ただ、すべてのスレッドが `tile_barrier::wait` の呼び出しに到達するまで、タイル内のどのスレッドもこの呼び出しを越えて実行されないだけです。 これは、`tile_barrier::wait` メソッドを使用することによって、スレッド単位ではなく、タイル単位でタスクを実行できることを意味します。 一般的なタイル アルゴリズムでは、`tile_static` メモリ全体を初期化するコードがあり、その後に `tile_barrer::wait` の呼び出しが続きます。 `tile_barrier::wait` の後に続くコードには、すべての `tile_static` 値へのアクセスを必要とする計算が含まれます。
+- [tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait)。 `tile_barrier::wait` の呼び出しは、同じタイル内のすべてのスレッドが `tile_barrier::wait` の呼び出しに到達するまで、現在のスレッドの実行を中断します。 スレッドが実行される順序を保証することはできません。ただ、すべてのスレッドが `tile_barrier::wait` の呼び出しに到達するまで、タイル内のどのスレッドもこの呼び出しを越えて実行されないだけです。 これは、`tile_barrier::wait` メソッドを使用することによって、スレッド単位ではなく、タイル単位でタスクを実行できることを意味します。 一般的なタイル アルゴリズムでは、`tile_static` メモリ全体を初期化するコードがあり、その後に `tile_barrier::wait` の呼び出しが続きます。 `tile_barrier::wait` の後に続くコードには、すべての `tile_static` 値へのアクセスを必要とする計算が含まれます。
 
 - ローカルおよびグローバル インデックス作成。 `array_view` オブジェクトや `array` オブジェクト全体を基準とするスレッドのインデックス、およびタイルを基準とするインデックスにアクセスできます。 ローカル インデックスを使うと、コードが読みやすくなり、デバッグも容易になります。 通常、`tile_static` 変数にアクセスするにはローカル インデックスを使用し、`array` 変数や `array_view` 変数にアクセスするにはグローバル インデックスを使用します。
 
-- [tiled_extent クラス](../../parallel/amp/reference/tiled-extent-class.md)と[tiled_index クラス](../../parallel/amp/reference/tiled-index-class.md)します。 `tiled_extent` の呼び出しで `extent` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。 `tiled_index` の呼び出しで `index` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。
+- [Tiled_extent クラス](../../parallel/amp/reference/tiled-extent-class.md)と[tiled_index クラス](../../parallel/amp/reference/tiled-index-class.md)。 `tiled_extent` の呼び出しで `extent` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。 `tiled_index` の呼び出しで `index` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。
 
 タイルを活用するには、アルゴリズムによって、計算ドメインをタイルに分割し、すばやくアクセスできるようにタイルのデータを `tile_static` 変数にコピーする必要があります。
 
@@ -27,7 +27,7 @@ ms.locfileid: "52176095"
 
 次の図は、2 × 3 のタイルに配置された 8 × 9 のデータ行列を示しています。
 
-![8&#45;によって&#45;2 分割 9 マトリックス&#45;によって&#45;3 つのタイル](../../parallel/amp/media/usingtilesmatrix.png "8&#45;によって&#45;9 マトリックスが 2 に分かれています&#45;によって&#45;3 つのタイル")
+![8&#45;x&#45;9 のマトリックスを 2&#45;&#45;つのタイルに分割](../../parallel/amp/media/usingtilesmatrix.png "8&#45;x&#45;9 のマトリックスを 2&#45;&#45;つのタイルに分割")
 
 次の例では、このタイル化された行列のグローバル、タイル、およびローカル インデックスを表示します。 `array_view` オブジェクトは、`Description` 型の要素を使用して作成されます。 `Description` は、行列の要素のグローバル、タイル、およびローカル インデックスを保持します。 `parallel_for_each` の呼び出しのコードは、各要素のグローバル、タイル、およびローカル インデックスの値を設定します。 出力は `Description` 構造体の値を表示します。
 
@@ -134,7 +134,7 @@ void TilingDescription() {
     }
 }
 
-void main() {
+int main() {
     TilingDescription();
     char wait;
     std::cin >> wait;
@@ -151,9 +151,9 @@ void main() {
 
 4. 各スレッドが実行されるときに、インデックス `t_idx` は、スレッドが含まれているタイル (`tiled_index::tile` プロパティ) およびタイル内のスレッドの位置 (`tiled_index::local` プロパティ) に関する情報を返します。
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>タイルの同期: tile_static と tile_barrier::wait
+## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>タイルの同期: tile_static と tile_barrier::wait
 
-前の例は、タイルのレイアウトとインデックスについて説明していますが、それ自体は有用ではありません。  タイルは、タイルがアルゴリズムに不可欠であり、`tile_static` 変数を十分に活用する場合に有用になります。 タイル内のすべてのスレッドは `tile_static` 変数にアクセスできるため、`tile_static` 変数へのアクセスを同期するために `tile_barrier::wait` の呼び出しが使用されます。 タイル内のすべてのスレッドが `tile_static` 変数にアクセスできますが、タイル内のスレッドの実行順序は保証されません。 次の例では、`tile_static` 変数と、`tile_barrier::wait` メソッドを使用して、各タイルの平均値を計算する方法を示します。 この例を理解するための鍵を次に示します。
+前の例は、タイルのレイアウトとインデックスについて説明していますが、それ自体は有用ではありません。  タイルは、タイルがアルゴリズムに不可欠であり、`tile_static` 変数を十分に活用する場合に有用になります。 タイル内のすべてのスレッドは `tile_static` 変数にアクセスできるため、`tile_barrier::wait` 変数へのアクセスを同期するために `tile_static` の呼び出しが使用されます。 タイル内のすべてのスレッドが `tile_static` 変数にアクセスできますが、タイル内のスレッドの実行順序は保証されません。 次の例では、`tile_static` 変数と、`tile_barrier::wait` メソッドを使用して、各タイルの平均値を計算する方法を示します。 この例を理解するための鍵を次に示します。
 
 1. rawData は 8 × 8 の行列に格納されます。
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -289,19 +289,19 @@ t_idx.barrier.wait();
 
 - `tile_static`
 
-A*メモリ フェンス*により、アクセスがスレッド タイルの他のスレッドを使用可能なメモリ、そのメモリへのアクセスは、プログラムの順序に従って実行されます。 これを実現するために、コンパイラとプロセッサは、フェンスを越えて読み取りと書き込みの順序を変更しません。 C++ AMP では、メモリ フェンスは、次のいずれかのメソッドを呼び出すことによって作成されます。
+*メモリフェンス*によって、スレッドタイルの他のスレッドがメモリアクセスを使用できるようになり、メモリアクセスはプログラムの順序に従って実行されます。 これを実現するために、コンパイラとプロセッサは、フェンスを越えて読み取りと書き込みの順序を変更しません。 C++ AMP では、メモリ フェンスは、次のいずれかのメソッドを呼び出すことによって作成されます。
 
-- [tile_barrier::wait メソッド](reference/tile-barrier-class.md#wait): グローバルの両方の周囲にフェンスを作成し、`tile_static`メモリ。
+- [tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait): グローバルメモリと `tile_static` メモリの両方にフェンスを作成します。
 
-- [tile_barrier::wait_with_all_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_all_memory_fence): グローバルの両方の周囲にフェンスを作成し、`tile_static`メモリ。
+- [tile_barrier:: Wait_with_all_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_all_memory_fence): グローバルメモリと `tile_static` メモリの両方にフェンスを作成します。
 
-- [tile_barrier::wait_with_global_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_global_memory_fence): グローバル メモリのみフェンスを作成します。
+- [tile_barrier:: Wait_with_global_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_global_memory_fence): グローバルメモリの周りにフェンスを作成します。
 
-- [tile_barrier::wait_with_tile_static_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): 周囲にのみフェンスを作成します`tile_static`メモリ。
+- [tile_barrier:: Wait_with_tile_static_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): `tile_static` メモリの周りにのみフェンスを作成します。
 
 必要な特定のフェンスを呼び出すことによって、アプリのパフォーマンスが向上する場合があります。 バリアの種類は、コンパイラやハードウェアによるステートメントの並べ替えに影響します。 たとえば、グローバル メモリ フェンスを使用する場合、フェンスはグローバル メモリ アクセスにのみ適用されます。このため、コンパイラやハードウェアは、フェンスの両側で `tile_static` 変数の読み取りや書き込みを並べ替える可能性があります。
 
-次の例では、バリアは `tile_static` 変数である `tileValues` への書き込みを同期します。 この例では、`tile_barrier::wait_with_tile_static_memory_fence` の代わりに `tile_barrier::wait` を呼び出しています。
+次の例では、バリアは `tileValues` 変数である `tile_static` への書き込みを同期します。 この例では、`tile_barrier::wait_with_tile_static_memory_fence` の代わりに `tile_barrier::wait` を呼び出しています。
 
 ```cpp
 // Using a tile_static memory fence.
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static キーワード](../../cpp/tile-static-keyword.md)

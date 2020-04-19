@@ -2,18 +2,16 @@
 title: UI サポート クラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.ui
 helpviewer_keywords:
 - user interfaces, support classes
 - user interfaces, ATL classes
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
-ms.openlocfilehash: 7306ddbbc3cf70850e0c7c66e48abf402017e5db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4aa508a028eb0a90233b7baa34db9ee78bbe2b83
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274210"
 ---
 # <a name="ui-support-classes"></a>UI サポート クラス
 
@@ -36,4 +34,3 @@ ms.locfileid: "50644224"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)
-

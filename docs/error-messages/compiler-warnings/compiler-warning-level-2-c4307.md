@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4307
 ms.assetid: 7cca11e9-be61-49e4-8b15-88b84f0cbf07
-ms.openlocfilehash: e9ad30f60260893130beed921aab811c894868cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5566bca22c328328a49e82268b96e8ec0fedc95
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528155"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052067"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>コンパイラの警告 (レベル 2) C4307
 
-'operator': 定数整数のオーバーフロー
+' operator ': 整数定数がオーバーフローしています。
 
-演算子は、それに割り当てられた領域をオーバーフローする整数の定数に評価される式で使用されます。 定数のより大きい型を使用する必要があります。 A **int を署名**よりも小さい値を保持、`unsigned int`ため、 **int を署名**1 ビットを使用して、記号を表します。
+演算子は、割り当てられた領域を整数定数でオーバーフローする式で使用されます。 定数には、より大きな型を使用することが必要になる場合があります。 符号**付き整数は**、符号を表すために1ビット**を使用する**ため、`unsigned int` よりも小さい値を保持します。
 
 次の例では、C4307 が生成されます。
 
-```
+```cpp
 // C4307.cpp
 // compile with: /W2
 int i = 2000000000 + 2000000000;   // C4307

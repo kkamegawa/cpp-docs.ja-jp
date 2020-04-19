@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 42eedf5d67de71860ecfe5f224914b80f3674a43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493757"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490887"
 ---
 # <a name="displaybind"></a>displaybind
 
-バインド可能なユーザーに表示されるプロパティを示します。
+バインド可能としてユーザーに表示される必要があるプロパティを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50493757"
 
 ## <a name="remarks"></a>Remarks
 
-**Displaybind** C++ 属性と同じ機能を持つ、 [displaybind](/windows/desktop/Midl/displaybind) MIDL 属性。
+**Displaybind** C++属性には[displaybind](/windows/win32/Midl/displaybind) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)を使用する方法の例については**displaybind**します。
+**Displaybind**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

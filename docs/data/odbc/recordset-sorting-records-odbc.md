@@ -1,19 +1,19 @@
 ---
-title: 'レコードセット: レコードの並べ替え (ODBC)'
+title: レコード セット:レコードの並べ替え (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sorting data, recordset data
 - ODBC recordsets, sorting
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-ms.openlocfilehash: 708ba8e851fa81ef2adb4360fe582880acd23c31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368631"
 ---
-# <a name="recordset-sorting-records-odbc"></a>レコードセット: レコードの並べ替え (ODBC)
+# <a name="recordset-sorting-records-odbc"></a>レコード セット:レコードの並べ替え (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -62,5 +62,5 @@ rsStudent.Open( );
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: パラメーターを利用したレコードセット (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[レコードセット: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [レコードセット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

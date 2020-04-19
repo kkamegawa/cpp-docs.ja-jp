@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-ms.openlocfilehash: bf6ad9c8ea1b1a66f5a8abbf61f78c942ffda2fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52d676f68718cdd4d16cf93bf0d7e3fd6b03822
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349855"
 ---
 # <a name="using-chotkeyctrl"></a>CHotKeyCtrl の使い方
 
@@ -34,4 +34,3 @@ ms.locfileid: "50483773"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

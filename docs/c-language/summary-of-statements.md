@@ -2,12 +2,12 @@
 title: ステートメントの概要
 ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: ac5452e4b7e3faeff364d9f03ec7b87b3b82bd36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 1a230ca7d998316d2ec96e76b54ac60575acd2ee
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491971"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856996"
 ---
 # <a name="summary-of-statements"></a>ステートメントの概要
 
@@ -18,8 +18,8 @@ ms.locfileid: "50491971"
 &nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Microsoft 固有の仕様 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-ステートメント* /\* Microsoft 固有の \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally ステートメント* /\* Microsoft 固有の \*/
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**<br/>
@@ -28,7 +28,7 @@ ms.locfileid: "50491971"
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
@@ -56,11 +56,11 @@ ms.locfileid: "50491971"
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-*try-except-statement*:   /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
+*try-except-ステートメント*:/\* Microsoft 固有の \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
 
-*try-finally-statement*:   /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
+*try-finally ステートメント*:/\* Microsoft 固有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
 
 ## <a name="see-also"></a>参照
 

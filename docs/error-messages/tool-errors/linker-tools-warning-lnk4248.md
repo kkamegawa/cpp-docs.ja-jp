@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461231"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988102"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>リンカー ツールの警告 LNK4248
 
-'type' の未解決の typeref トークン (トークン)イメージは動作しない可能性があります。
+' type ' の未解決の typeref トークン (トークン) です。イメージは実行されない可能性があります
 
-型の MSIL のメタデータで定義がありません。
+型には、MSIL メタデータの定義がありません。
 
-LNK4248 は、MSIL モジュールの型の事前宣言のみがある場合に発生することができます (でコンパイルされた **/clr**) MSIL モジュールの定義を持つネイティブ モジュールとリンクしている場合や、MSIL モジュールの型が参照されている場所型。
+LNK4248 は、msil モジュール ( **/clr**でコンパイルされた) 内の型に対して、型が msil モジュールで参照され、その型の定義を持つネイティブモジュールに msil モジュールがリンクされている場合に発生する可能性があります。
 
-このような状況では、リンカーは、MSIL のメタデータでネイティブ型の定義を提供し、これが正しい動作が提供します。
+この場合、リンカーは MSIL メタデータにネイティブ型定義を提供します。これにより、正しい動作が提供される可能性があります。
 
-ただし、事前宣言が CLR 型の場合、リンカーのネイティブな型定義できません。
+ただし、前方型宣言が CLR 型である場合、リンカーのネイティブ型定義が正しくない可能性があります。
 
 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. MSIL モジュールの種類の定義を提供します。
+1. MSIL モジュールで型定義を指定します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、LNK4248 が生成されます。 解決するのには、構造体 A を定義します。
+次の例では、LNK4248 が生成されます。 解決する構造体を定義します。
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -47,11 +47,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例には、型の前方の定義があります。
+次の例には、型の事前定義が含まれています。
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -64,11 +64,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、LNK4248 が生成されます。
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

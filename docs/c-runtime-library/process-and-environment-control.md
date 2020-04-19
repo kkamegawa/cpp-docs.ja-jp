@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329411"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742111"
 ---
 # <a name="process-and-environment-control"></a>プロセス制御と環境制御
 
@@ -77,15 +77,15 @@ Windows オペレーティング システムでは、起動されたプロセ�
 
 |関数|PATH 変数を使用してファイルを検索する|引数渡し規約|環境設定|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
-|**_execl**、**_spawnl**|×|リスト|呼び出し元プロセスから継承|
-|**_execle**、**_spawnle**|×|リスト|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
-|**_execlp**、**_spawnlp**|[はい]|リスト|呼び出し元プロセスから継承|
-|**_execvpe**、**_spawnvpe**|[はい]|配列|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
-|**_execlpe**、**_spawnlpe**|[はい]|リスト|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
-|**_execv**、**_spawnv**|×|配列|呼び出し元プロセスから継承|
-|**_execve**、**_spawnve**|×|配列|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
-|**_execvp**、**_spawnvp**|[はい]|配列|呼び出し元プロセスから継承|
+|**_execl**、**_spawnl**|いいえ|リスト|呼び出し元プロセスから継承|
+|**_execle**、**_spawnle**|いいえ|リスト|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
+|**_execlp**、**_spawnlp**|はい|リスト|呼び出し元プロセスから継承|
+|**_execvpe**、**_spawnvpe**|はい|配列|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
+|**_execlpe**、**_spawnlpe**|はい|リスト|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
+|**_execv**、**_spawnv**|いいえ|配列|呼び出し元プロセスから継承|
+|**_execve**、**_spawnve**|いいえ|配列|最後の引数として渡された新しいプロセスの環境のテーブルへのポインター|
+|**_execvp**、**_spawnvp**|はい|配列|呼び出し元プロセスから継承|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

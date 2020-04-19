@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C3136
+title: コンパイラエラー C3136
 ms.date: 10/03/2018
 f1_keywords:
 - C3136
 helpviewer_keywords:
 - C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-ms.openlocfilehash: e32ffca067c3b25120301527e7a708d53001d541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75862f3b80d617b607a7b3e735cb3e16e9a40bb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501092"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757385"
 ---
-# <a name="compiler-error-c3136"></a>コンパイラ エラー C3136
+# <a name="compiler-error-c3136"></a>コンパイラエラー C3136
 
-'interface': COM インターフェイスは、別の COM インターフェイスからのみ継承できます、'interface' は COM インターフェイスはありません。
+' interface ': COM インターフェイスは他の COM インターフェイスからのみ継承できます。 ' interface ' は COM インターフェイスではありません。
 
-適用されているインターフェイス、[インターフェイス属性](../../windows/attributes/interface-attributes.md)COM インターフェイスではないインターフェイスから継承します。 COM インターフェイスが最終的に継承`IUnknown`します。 インターフェイス属性に続く任意のインターフェイスは、COM インターフェイスです。
+インターフェイス[属性](../../windows/attributes/interface-attributes.md)を適用したインターフェイスは、COM インターフェイスではないインターフェイスから継承されます。 COM インターフェイスは、最終的には `IUnknown`から継承します。 インターフェイス属性が前に置かれているインターフェイスは、COM インターフェイスです。
 
 次の例では、C3136 が生成されます。
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

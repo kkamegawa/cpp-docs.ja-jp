@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176364"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345945"
 ---
 # <a name="multiple-base-classes"></a>複数の基本クラス
 
@@ -48,7 +48,7 @@ class CollectionOfBook : public Book, public Collection {
 
 仮想基底クラスとして指定された基底クラスは、データ メンバーを複製しなくても、間接基底クラスとして複数回使用できます。 データ メンバーの 1 つのコピーが、仮想基底クラスとして使用するすべての基底クラスで共有されます。
 
-仮想基底クラスを宣言するときに、**仮想**キーワードは派生クラスの基底のリストに表示されます。
+仮想基底クラスを宣言するときに、**virtual**キーワードは派生クラスの基底のリストに表示されます。
 
 昼食の行列をシミュレートした、次の図のクラス階層構造を考えます。
 
@@ -71,7 +71,7 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 ```
 
-**仮想**キーワードにより、サブオブジェクトの 1 つだけコピー`Queue`が含まれています (次の図を参照してください)。
+**virtual**キーワードにより、サブオブジェクトの 1 つだけコピー`Queue`が含まれています (次の図を参照してください)。
 
 ![昼食をシミュレートした&#45;行オブジェクト、仮想基底クラス](../cpp/media/vc38xp3.gif "昼食をシミュレートした&#45;行オブジェクト、仮想基底クラス") <br/>
 仮想基底クラスを持つ、シミュレートされた lunch-line オブジェクト
@@ -188,7 +188,7 @@ public:
 
 - `D` 型のオブジェクトの宣言。
 
-- Address-of 演算子を適用する効果 (**&**) そのオブジェクトにします。 アドレス演算子は、常にオブジェクトのベース アドレスを指定することに注意してください。
+- Address-of 演算子を適用する効果 ( **&** ) そのオブジェクトにします。 アドレス演算子は、常にオブジェクトのベース アドレスを指定することに注意してください。
 
 - アドレス演算子を使用して取得したポインターを、基底クラス型 `A` に明示的に変換する効果。 オブジェクトのアドレスを `A*` 型に強制変換しても、2 つのサブオブジェクトが存在する場合、`A` 型のどのサブオブジェクトを選択するのかについて十分な情報が必ずコンパイラに提供されるわけではありません。
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205937"
 ---
 # <a name="cfileexception-class"></a>CFileException クラス
 
@@ -63,7 +63,7 @@ class CFileException : public CException
 
 |名前|説明|
 |----------|-----------------|
-|[については、「](#m_cause)|例外の原因に対応する移植可能なコードが含まれています。|
+|[CFileException::m_cause](#m_cause)|例外の原因に対応する移植可能なコードが含まれています。|
 |[CFileException::m_lOsError](#m_loserror)|関連するオペレーティング システム エラー番号が含まれています。|
 |[CFileException::m_strFileName](#m_strfilename)|この例外は、ファイルの名前が含まれています。|
 
@@ -175,7 +175,7 @@ virtual BOOL GetErrorMessage(
 
 [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]
 
-##  <a name="m_cause"></a>  については、「
+##  <a name="m_cause"></a>  CFileException::m_cause
 
 `CFileException` 列挙型によって定義された値が含まれます。
 
@@ -187,35 +187,35 @@ int m_cause;
 
 このデータ メンバーが型のパブリック変数**int**します。列挙子とその意味は次のとおりです。
 
-- `CFileException::none` 0: エラーが発生します。
+- `CFileException::none` 0:エラーはありません。
 
-- `CFileException::genericException` 1: 未指定のエラーが発生しました。
+- `CFileException::genericException` 1:未指定のエラーが発生しました。
 
-- `CFileException::fileNotFound` 2: ファイルが見つかりませんでした。
+- `CFileException::fileNotFound` 2:ファイルが見つかりませんでした。
 
-- `CFileException::badPath` 3: パスのすべてまたは一部が無効です。
+- `CFileException::badPath` 3:パスのすべてまたは一部が無効です。
 
-- `CFileException::tooManyOpenFiles` 4: 開いているファイルの許可されている数を超えました。
+- `CFileException::tooManyOpenFiles` 4:開いているファイルの許容数を超えました。
 
-- `CFileException::accessDenied` 5: ファイルにアクセスできませんでした。
+- `CFileException::accessDenied` 5:ファイルにアクセスできませんでした。
 
-- `CFileException::invalidFile` 6: 無効なファイル ハンドルを使用しようとしましたがあります。
+- `CFileException::invalidFile` 6:無効なファイル ハンドルを使用しようとしましたがあります。
 
-- `CFileException::removeCurrentDir` 7: 現在の作業ディレクトリを削除することはできません。
+- `CFileException::removeCurrentDir` 7:現在の作業ディレクトリを削除できません。
 
-- `CFileException::directoryFull` 8: 複数のディレクトリ エントリはありません。
+- `CFileException::directoryFull` 8:ディレクトリ エントリがあります。
 
-- `CFileException::badSeek` 9: ファイル ポインターを設定しようとしてエラーが発生しました。
+- `CFileException::badSeek` 9:ファイル ポインターを設定しようとしてエラーが発生しました。
 
-- `CFileException::hardIO` 10: ハードウェア エラーが発生しました。
+- `CFileException::hardIO` 10:ハードウェア エラーが発生しました。
 
-- `CFileException::sharingViolation` 11: 共有します。EXE が読み込まれていない、または共有の領域がロックされました。
+- `CFileException::sharingViolation` 11:共有。EXE が読み込まれていない、または共有の領域がロックされました。
 
-- `CFileException::lockViolation` 12: 既にロックされている領域をロックしようとしましたがあります。
+- `CFileException::lockViolation` 12:既にロックされている領域をロックしようとしましたがあります。
 
-- `CFileException::diskFull` 14: ディスクがいっぱいです。
+- `CFileException::diskFull` 14:ディスクがいっぱいです。
 
-- `CFileException::endOfFile` 15: ファイルの末尾に達しました。
+- `CFileException::endOfFile` 15:ファイルの末尾に達しました。
 
     > [!NOTE]
     >  これらの `CFileException` 原因列挙子は、`CArchiveException` 原因列挙子とは異なります。
@@ -281,7 +281,7 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 *nErrno*<br/>
 整数エラー コードは実行時のインクルード ファイル ERRNO で定義されています。H.
 
-*場合*<br/>
+*lpszFileName*<br/>
 ファイルの名前を含む文字列へのポインターの原因となった例外、使用可能な場合。
 
 ### <a name="example"></a>例
@@ -301,7 +301,7 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 *lOsError*<br/>
 オペレーティング システム固有のエラー コード。
 
-*場合*<br/>
+*lpszFileName*<br/>
 ファイルの名前を含む文字列へのポインターの原因となった例外、使用可能な場合。
 
 ### <a name="example"></a>例
@@ -313,4 +313,3 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 [CException クラス](../../mfc/reference/cexception-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [例外処理](../../mfc/reference/exception-processing.md)
-

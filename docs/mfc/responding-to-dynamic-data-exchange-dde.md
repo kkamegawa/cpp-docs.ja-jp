@@ -11,12 +11,12 @@ helpviewer_keywords:
 - responding to dynamic data exchange (DDE)
 - frame windows [MFC], shell registration
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
-ms.openlocfilehash: b18e4e48e79afa549fbc3be08b4bf6947449f972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6ca50b95e35ea4d7a6c29c6dd6919e02c9bdc7a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308915"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>ダイナミック データ エクスチェンジ (DDE) への応答
 
@@ -25,4 +25,3 @@ ms.locfileid: "50470656"
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
-

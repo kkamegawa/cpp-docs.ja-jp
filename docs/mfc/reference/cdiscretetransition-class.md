@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: 6092e805516d242daf6149615a8ef72df334dfd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7087dfa13972737f0a1244d2cc9a7088b23dc184
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506863"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition クラス
 
@@ -39,25 +39,25 @@ class CDiscreteTransition : public CBaseTransition;
 
 |名前|説明|
 |----------|-----------------|
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|不連続遷移オブジェクトを構築し、そのパラメーターを初期化します。|
+|[CDiscreteTransition:: CDiscreteTransition](#cdiscretetransition)|離散遷移オブジェクトを構築し、そのパラメーターを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CDiscreteTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|
+|[CDiscreteTransition:: Create](#create)|遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。 ( [Cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create)をオーバーライドします)。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|移行の最後にアニメーション変数の値。|
-|[CDiscreteTransition::m_delay](#m_delay)|最終的な値に瞬間的なスイッチを遅延する時間数。|
-|[CDiscreteTransition::m_hold](#m_hold)|によって、最終値に変数を保持するための時間。|
+|[CDiscreteTransition:: m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時のアニメーション変数の値。|
+|[CDiscreteTransition:: m_delay](#m_delay)|瞬間的なスイッチが最終的な値になるのを待機する時間。|
+|[CDiscreteTransition:: m_hold](#m_hold)|変数が最終的な値に保持される時間の長さ。|
 
 ## <a name="remarks"></a>Remarks
 
-不連続の遷移中にアニメーション変数のまま初期値を指定した遅延時間指定の最終値とその値のままに瞬時にスイッチの特定のホールド時間のです。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。
+個別の遷移では、アニメーション変数は指定された遅延時間の初期値のままになり、その後すぐに指定された最終値に切り替えられ、一定の期間、その値のままになります。 すべての遷移は自動的にクリアされるため、operator new を使用して割り当てることをお勧めします。 カプセル化された IuiAnimateGroup 遷移 COM オブジェクトは、次に NULL になるまで、CAnimationController:: によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても効果はありません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -71,9 +71,9 @@ class CDiscreteTransition : public CBaseTransition;
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition
+##  <a name="cdiscretetransition"></a>CDiscreteTransition:: CDiscreteTransition
 
-不連続遷移オブジェクトを構築し、そのパラメーターを初期化します。
+離散遷移オブジェクトを構築し、そのパラメーターを初期化します。
 
 ```
 CDiscreteTransition(
@@ -84,18 +84,18 @@ CDiscreteTransition(
 
 ### <a name="parameters"></a>パラメーター
 
-*遅延*<br/>
-最終的な値に瞬間的なスイッチを遅延する時間数。
+*よる*<br/>
+瞬間的なスイッチが最終的な値になるのを待機する時間。
 
 *dblFinalValue*<br/>
-移行の最後にアニメーション変数の値。
+遷移の終了時のアニメーション変数の値。
 
-*保留中*<br/>
-によって、最終値に変数を保持するための時間。
+*まま*<br/>
+変数が最終的な値に保持される時間の長さ。
 
 ##  <a name="create"></a>  CDiscreteTransition::Create
 
-カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。
+遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。
 
 ```
 virtual BOOL Create(
@@ -104,31 +104,31 @@ virtual BOOL Create(
 ```
 
 *pLibrary*<br/>
-ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。
+標準遷移のライブラリを定義する、 [Iuiの遷移 Tionlibrary インターフェイス](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。
+移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue
 
-移行の最後にアニメーション変数の値。
+遷移の終了時のアニメーション変数の値。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_delay"></a>  CDiscreteTransition::m_delay
+##  <a name="m_delay"></a>CDiscreteTransition:: m_delay
 
-最終的な値に瞬間的なスイッチを遅延する時間数。
+瞬間的なスイッチが最終的な値になるのを待機する時間。
 
 ```
 UI_ANIMATION_SECONDS m_delay;
 ```
 
-##  <a name="m_hold"></a>  CDiscreteTransition::m_hold
+##  <a name="m_hold"></a>CDiscreteTransition:: m_hold
 
-によって、最終値に変数を保持するための時間。
+変数が最終的な値に保持される時間の長さ。
 
 ```
 UI_ANIMATION_SECONDS m_hold;

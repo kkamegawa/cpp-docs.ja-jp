@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: 4ad690d78c1544adbe365a35ba3b5921c883631e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc13f83f79f8c8103184b4322a77866a78d149be
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498771"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964925"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>コンパイラの警告 (レベル 1) C4397
 
-DefaultCharSetAttribute は無視されます。
+DefaultCharSetAttribute は無視されます
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Visual C コンパイラによって無視されます。 DLL の文字セットを指定するには、DllImport の CharSet オプションを使用します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> は、Microsoft C++コンパイラでは無視されます。 DLL の文字セットを指定するには、DllImport の CharSet オプションを使用します。 詳細については、「 [Interop (暗黙のC++ PInvoke) の使用](../../dotnet/using-cpp-interop-implicit-pinvoke.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4397 が生成されます。
 
-```
+```cpp
 // C4397.cpp
 // compile with: /W1 /c /clr
 using namespace System;

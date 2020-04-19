@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: 06d4c19208bd242169e1cd07a71e8a568f46f7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9c1774fe7cd4a6883aa79f384cc64521a57ed17
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466093"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448007"
 ---
 # <a name="compiler-error-c2383"></a>コンパイラ エラー C2383
 
@@ -19,7 +19,7 @@ ms.locfileid: "50466093"
 
 C++ コンパイラ、既定の引数を関数へのポインターにはできません。
 
-このコードは、Visual Studio 2005 より前に、のバージョンの Visual C コンパイラによって受け入れられましたが、エラーになります。 Visual C のすべてのバージョンで動作するコードでは、関数へのポインター引数に既定値は割り当てないでください。
+このコードは、Microsoft によって承認されましたC++、Visual Studio 2005 より前に、のバージョンのコンパイラがエラーになります。 Visual C のすべてのバージョンで動作するコードでは、関数へのポインター引数に既定値は割り当てないでください。
 
 ## <a name="example"></a>例
 

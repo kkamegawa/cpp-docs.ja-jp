@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308499"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>データベース アプリケーションの作成手順
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624902"
 |必要に応じて、追加のレコード ビューとレコード セット クラスを作成します。|クラス ビューを使用すると、デザイン、ビューのエディターのクラスおよびダイアログ ボックスを作成できます。|クラス ビューでは、新しいクラスの追加のファイルを作成します。|
 |必要に応じて、コードでは、レコード セット オブジェクトを作成します。 各レコード セットを使用して、レコードを操作する.|派生したクラスに基づいて、レコード セット[CRecordset](../mfc/reference/crecordset-class.md)ウィザードを使用します。|ODBC では、レコード フィールド エクス (チェンジ RFX) を使用して、データベースとレコード セットのフィールド データ メンバーの間のデータを交換します。 レコード ビューを使用している場合、ダイアログ データ エクス (チェンジ DDX) は、レコード セットとレコード ビュー上のコントロール間でデータを交換します。|
 |... または作成する明示的な[CDatabase](../mfc/reference/cdatabase-class.md)をオープンする各データベース用のコード。|データベース オブジェクトをに基づいて、レコード セット オブジェクト。|データベース オブジェクトは、データ ソースへのインターフェイスを提供します。|
-|レコード セットにデータ列を動的にバインドします。|ODBC では、バインドを管理するレコード セットの派生クラスにコードを追加します。 記事をご覧ください[レコード セット: データ列を動的にバインド (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。||
+|レコード セットにデータ列を動的にバインドします。|ODBC では、バインドを管理するレコード セットの派生クラスにコードを追加します。 記事をご覧ください[レコード セット。動的に結びつける方法 (ODBC) のデータ列](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。||
 
 ## <a name="see-also"></a>関連項目
 

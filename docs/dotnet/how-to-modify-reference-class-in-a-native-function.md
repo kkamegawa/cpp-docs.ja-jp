@@ -1,19 +1,19 @@
 ---
-title: '方法: ネイティブ関数の参照クラスを変更する'
+title: '方法: ネイティブ関数の参照クラスを変更します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: 20ebf23cf97eb6232698e8c5f59f2f0531beb55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404391"
 ---
-# <a name="how-to-modify-reference-class-in-a-native-function"></a>方法: ネイティブ関数の参照クラスを変更する
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>方法: ネイティブ関数の参照クラスを変更します。
 
 CLR 配列を持つ参照クラスをネイティブ関数に渡すし、PInvoke サービスを使用してクラスを変更できます。
 

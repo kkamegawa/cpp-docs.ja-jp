@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3373
 ms.assetid: 6e7586c3-1a15-4773-ad20-f90090a400dc
-ms.openlocfilehash: 2f279d602d5023c2981f49ff088fec49a1c14c76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbf6b19e6ae5e5278d7536ba8ec1cfc28483f753
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571900"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758581"
 ---
 # <a name="compiler-error-c3373"></a>コンパイラ エラー C3373
 
@@ -21,7 +21,7 @@ ms.locfileid: "50571900"
 
 次の例では C3373 が生成されます。
 
-```
+```cpp
 // C3373.cpp
 #include <windows.h>
 

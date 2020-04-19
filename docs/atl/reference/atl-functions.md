@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [ATL]
 - ATL, global functions
 ms.assetid: 69db0cb2-de1d-445b-b692-020d6e8c2173
-ms.openlocfilehash: 5cf56d21be605094c3ae812bd7aa39b573d2b733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f0c6ccaa049290d3e183ae682c19ab7e497c2b8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261555"
 ---
 # <a name="atl-functions"></a>ATL 関数
 

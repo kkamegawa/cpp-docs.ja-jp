@@ -1,5 +1,5 @@
----
-title: 例外の仕様 (スロー、noexcept) (C++)
+﻿---
+title: 例外の指定 (throw、noexcept)C++()
 ms.date: 01/18/2018
 helpviewer_keywords:
 - exceptions [C++], exception specifications
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 9280f3d96088d988a9d5cfe0f3d56444b865167e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517339"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245879"
 ---
-# <a name="exception-specifications-throw-noexcept-c"></a>例外の仕様 (スロー、noexcept) (C++)
+# <a name="exception-specifications-throw-noexcept-c"></a>例外の指定 (throw、noexcept)C++()
 
-例外の仕様は、関数で伝えることができる例外の種類についてのプログラマの意図を示す C++ 言語機能です。 関数は可能性がありますかを使用して、例外によって終了可能性がありますを指定できます、*例外仕様*します。 コンパイラは、関数の呼び出しを最適化するためにこの情報を使用することができ、予期しない例外の場合、プログラムを終了する関数をエスケープします。
+例外指定は、 C++関数によって伝達される例外の種類についてプログラマが意図したものを示す言語機能です。 例外*指定*を使用して、例外によって関数が終了するか、または終了しないかを指定できます。 コンパイラは、この情報を使用して関数の呼び出しを最適化し、予期しない例外によって関数がエスケープされた場合にプログラムを終了することができます。
 
-C++ 17 の前に、例外の指定の 2 種類がありました。 *Noexcept 仕様*c++ 11 で新しく追加されました。 これは、関数をエスケープできる潜在的な例外のセットが空かどうかを指定します。 *動的例外指定*、または`throw(optional_type_list)`仕様が c++ 11 で非推奨し、以外の c++ 17 では削除`throw()`のエイリアスである`noexcept(true)`します。 この例外の指定は、関数からスローできる例外に関する概要情報を提供するよう設計されましたが、実際に問題がある検出されました。 ある程度役に立つことが 1 つの動的例外指定が、無条件`throw()`仕様。 たとえば、関数宣言します。
+C++ 17 より前では、2種類の例外指定がありました。 *Noexcept 仕様*は c++ 11 で新しく追加されました。 関数をエスケープできる可能性のある例外のセットが空であるかどうかを指定します。 *動的例外指定*(`throw(optional_type_list)` 仕様) は c++ 11 で非推奨とされ、c++ 17 では削除されました。ただし、`noexcept(true)`のエイリアスである `throw()`は除きます。 この例外指定は、関数からスローされる可能性がある例外に関する概要情報を提供するように設計されていますが、実際には、問題があることがわかりました。 ある程度役に立つことが実証された1つの動的例外指定は、無条件の `throw()` 仕様でした。 たとえば、関数宣言は次のようになります。
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-このコードでは、コンパイル時に関数が例外をスローしません。 ただし、 **/std:c + + 14**モードにする可能性が未定義の動作が、関数は例外をスローする場合。 使用して勧めそのため、 [noexcept](../cpp/noexcept-cpp.md)上ではなく演算子。
+このコードでは、コンパイル時に関数が例外をスローしません。 ただし、 **/std: c++ 14**モードでは、関数が例外をスローした場合に、未定義の動作が発生する可能性があります。 したがって、上記のいずれでもなく、 [noexcept](../cpp/noexcept-cpp.md)演算子を使用することをお勧めします。
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-次の表は、例外の仕様の Microsoft Visual C の実装をまとめたものです。
+次の表に、Microsoft C++による例外指定の実装の概要を示します。
 
-|例外の指定|説明|
+|例外の指定|意味|
 |-----------------------------|-------------|
-|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 [/Std:c + + 14](../build/reference/std-specify-language-standard-version.md)モード (既定)、`noexcept`と`noexcept(true)`は同等です。 宣言されている関数から例外をスローするときに`noexcept`または`noexcept(true)`、 [std::terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。 として宣言されている関数から例外をスローするときに`throw()`で **/std:c + + + 14**モードでは、結果は未定義の動作です。 特定の関数は呼び出されません。 これは、コンパイラを呼び出すを必要とする、標準の c++ 14 からの逸脱[std::unexpected](../standard-library/exception-functions.md#unexpected)します。  <br/> **Visual Studio 2017 バージョン 15.5 以降**: で **/std:c + + 17**モード、 `noexcept`、 `noexcept(true)`、および`throw()`はすべて同等です。 **/Std:c + + 17**モード、`throw()`の別名です`noexcept(true)`します。 **/Std:c + + + 17**モードで、これらの仕様のいずれかで宣言された関数から例外がスローされたときに[std::terminate](../standard-library/exception-functions.md#terminate)が呼び出される標準の c++ 17 で必要とします。|
-|`noexcept(false)`<br/>`throw(...)`<br/>なしの仕様|関数は、任意の型の例外をスローできます。|
-|`throw(type)`| (**C++ 14 以降**)、関数型の例外をスローする`type`します。 コンパイラは、構文を受け入れますが、として解釈`noexcept(false)`します。 **/Std:c + + 17**モード、コンパイラは警告 C5040 を発行します。|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 [/Std: c++ 14](../build/reference/std-specify-language-standard-version.md)モード (既定) では、`noexcept` と `noexcept(true)` は同等です。 `noexcept` または `noexcept(true)`として宣言された関数から例外がスローされると、 [std:: terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。 **/Std: c++ 14**モードで `throw()` として宣言された関数から例外がスローされると、結果は未定義の動作になります。 特定の関数は呼び出されません。 これは C++ 14 標準の相違点であり、コンパイラが[std::](../standard-library/exception-functions.md#unexpected)を呼び出す必要がありました。  <br/> **Visual Studio 2017 バージョン15.5 以降**: **/std: c++ 17**モードでは、`noexcept`、`noexcept(true)`、および `throw()` はすべて同等です。 **/Std: c++ 17**モードでは、`throw()` は `noexcept(true)`のエイリアスです。 **/Std: c++ 17**モードでは、これらのいずれかの仕様で宣言された関数から例外がスローされると、c++ 17 標準によって必要に応じて[std:: terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。|
+|`noexcept(false)`<br/>`throw(...)`<br/>指定なし|関数は、任意の型の例外をスローできます。|
+|`throw(type)`| (**C++ 14 以前**)関数は `type`型の例外をスローできます。 コンパイラは構文を受け入れますが、`noexcept(false)`として解釈します。 **/Std: c++ 17**モードでは、コンパイラは警告 C5040 を発行します。|
 
-例外処理をアプリケーションで使用する場合があります関数関数の外側のスコープを終了する前に、スローされた例外のハンドルがマークされている呼び出し履歴で`noexcept`、 `noexcept(true)`、または`throw()`します。 例外をスローする 1 つと、例外を処理する 1 つとして指定の間で任意の関数が呼び出された場合`noexcept`、 `noexcept(true)` (または`throw()`で **/std:c + + 17**モード)、プログラムが終了したときに、noexcept 関数には、例外が伝達されます。
+アプリケーションで例外処理を使用する場合、`noexcept`、`noexcept(true)`、または `throw()`とマークされた関数の外側のスコープを終了する前に、スローされた例外を処理する関数が呼び出し履歴に存在する必要があります。 例外をスローする関数と例外を処理する関数の間に呼び出された関数が `noexcept`、`noexcept(true)` (または **/std: c++ 17**モードで `throw()`) として指定されている場合、noexcept 関数が例外を伝達するとプログラムは終了します。
 
 関数の例外動作は、次の要因によって異なります。
 
-- [言語標準のコンパイル モード](../build/reference/std-specify-language-standard-version.md)設定されます。
+- [標準コンパイルモード](../build/reference/std-specify-language-standard-version.md)が設定されている言語。
 - C または C++ で関数をコンパイルするかどうか。
 
-- これは、 [/EH](../build/reference/eh-exception-handling-model.md)コンパイラ オプションを使用します。
+- 使用する[/EH](../build/reference/eh-exception-handling-model.md)コンパイラオプション。
 
 - 例外の指定を明示的に使用するかどうか。
 
-明示的な例外の指定は C 関数では使用できません。 C 関数が下の例外をスローしていないと見なされます **/EHsc**、構造化例外をスローする可能性が、 **/EHs**、 **/EHa**、または **/EHac**します。
+明示的な例外の指定は C 関数では使用できません。 C 関数は、 **/ehsc**で例外をスローしないことを前提としており、 **/ehs**、 **/eha**、または **/EHac**の下で構造化例外をスローすることがあります。
 
-次の表は、C++ 関数はさまざまなコンパイラ例外の処理オプションの下でスローすることは可能性がある可能性があるかどうかをまとめたものです。
+次の表は、関数C++がさまざまなコンパイラ例外処理オプションでスローする可能性があるかどうかをまとめたものです。
 
 |関数|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|例外を指定していない C++ 関数|はい|[はい]|[はい]|はい|
-|C++ 関数`noexcept`、 `noexcept(true)`、または`throw()`例外の指定|いいえ|×|[はい]|はい|
-|C++ 関数`noexcept(false)`、 `throw(...)`、または`throw(type)`例外の指定|はい|[はい]|[はい]|はい|
+|例外を指定していない C++ 関数|はい|はい|はい|はい|
+|C++`noexcept`、`noexcept(true)`、または `throw()` の例外指定を含む関数|いいえ|いいえ|はい|はい|
+|C++`noexcept(false)`、`throw(...)`、または `throw(type)` の例外指定を含む関数|はい|はい|はい|はい|
 
 ## <a name="example"></a>例
 
@@ -127,7 +127,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [try、throw、catch ステートメント (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
-[C++ 例外処理](../cpp/cpp-exception-handling.md)
+[例外C++とエラー処理に関する最新のベストプラクティス](errors-and-exception-handling-modern-cpp.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: c84485fdd06bc9264241cb37aa3c6b2fb29d9322
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620754"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742821"
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 準拠
 
@@ -28,6 +28,6 @@ Microsoft 固有の関数とグローバル変数の名前は、1 つのアン�
 
 Microsoft 固有のマクロとマニフェスト定数の名前は、2 つのアンダー スコア、または先頭の 1 つのアンダースコアとその直後の大文字で始まります。 これらの識別子のスコープは絶対です。 たとえば、この理由から Microsoft 固有の識別子 **_UPPER** を使用することはできません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [互換性](../c-runtime-library/compatibility.md)

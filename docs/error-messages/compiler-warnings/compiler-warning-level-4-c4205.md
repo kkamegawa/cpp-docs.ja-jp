@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4205
 ms.assetid: 39b5108c-7230-41b4-b2fe-2293eb6aae28
-ms.openlocfilehash: 1b165d2bdb2fb50df89fdd77c734c054a40b6e95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e46642494e55769a0676f0e33af0ca40c31939ad
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622483"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541800"
 ---
 # <a name="compiler-warning-level-4-c4205"></a>コンパイラの警告 (レベル 4) C4205
 
-標準の拡張機能を使用: 関数のスコープ内で静的関数の宣言
+非標準の拡張機能が使用されています: 関数スコープの静的関数宣言
 
-Microsoft 拡張機能 (/Ze) で**静的**関数は、別の関数内で宣言することができます。 関数には、グローバル スコープが与えられます。
+Microsoft 拡張機能 (/Ze) では、**静的**関数を別の関数内で宣言できます。 関数にはグローバルスコープが指定されています。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // C4205.c
 // compile with: /W4
 void func1()
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-このような初期化が有効で ANSI 互換でない ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+このような初期化は、ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) では無効です。

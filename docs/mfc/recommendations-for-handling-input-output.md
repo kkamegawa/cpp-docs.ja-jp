@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 1144337df9657d63c53a13e03cf31eb487ce4068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218565"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>入出力処理の推奨事項
 
@@ -25,9 +25,9 @@ ms.locfileid: "50585459"
 
      **アプリケーションでファイルを開く上のメモリにファイル全体を読み取るし、ファイル全体で書き戻しをディスクにファイルの保存**
 
-   - [はい] : これは、既定で MFC のドキュメントです。 使用`CDocument`シリアル化します。
+   - うん：これは、既定の MFC ドキュメント ケースです。 使用`CDocument`シリアル化します。
 
-   - いいえ: これは、通常のファイルの更新トランザクション ベースの場合。 トランザクションごとのファイルを更新し、不要`CDocument`シリアル化します。
+   - 違います：これは、通常のファイルの更新トランザクション ベースの場合です。 トランザクションごとのファイルを更新し、不要`CDocument`シリアル化します。
 
 - いいえ、プライマリ データは、ディスク ファイルに存在しません。
 

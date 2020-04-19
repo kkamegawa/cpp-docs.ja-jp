@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
-ms.openlocfilehash: f61281da23e46236e7fce496a4d89086e5d6c0ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b006592723df1222d05e39b3bc9e5729efc8aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546371"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755032"
 ---
 # <a name="compiler-error-c2870"></a>コンパイラ エラー C2870
 
-'name': 名前空間の定義がファイル スコープで、または別の名前空間定義内ですぐに表示する必要があります
+' name ': 名前空間定義は、ファイルスコープで、または別の名前空間定義のすぐ下に記述する必要があります
 
-名前空間を定義した`name`が正しくないです。 (すべてのブロックとクラス) の外部のファイル スコープで名前空間を定義する必要がありますまたは別の名前空間内ですぐにします。
+名前空間 `name` 正しく定義されていません。 名前空間は、ファイルスコープ (すべてのブロックおよびクラスの外側) または別の名前空間内で定義する必要があります。
 
 次の例では、C2870 が生成されます。
 
-```
+```cpp
 // C2870.cpp
 // compile with: /c
 int main() {

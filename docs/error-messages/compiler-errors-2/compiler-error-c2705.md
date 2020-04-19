@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2705
+title: コンパイラエラー C2705
 ms.date: 11/04/2016
 f1_keywords:
 - C2705
 helpviewer_keywords:
 - C2705
 ms.assetid: 29249ea3-4ea7-4105-944b-bdb83e8d6852
-ms.openlocfilehash: 872471158d3f8c301a271dd68b2ef36839e2b9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cd46db8e4cb237bebd9568409ecadf0ff84cdf8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616272"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758308"
 ---
-# <a name="compiler-error-c2705"></a>コンパイラ エラー C2705
+# <a name="compiler-error-c2705"></a>コンパイラエラー C2705
 
-'label': '例外ハンドラー ブロック' スコープへのジャンプが正しくありません
+' label ': ' exception handler block ' スコープへのジャンプが正しくありません。
 
-実行が内のラベルにジャンプ、 `try` / `catch`、 `__try` / `__except`、 `__try` / `__finally`ブロックします。 詳細については、「[例外処理](../../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
+実行は、`try`/`catch`、`__try`/`__except`、`__try`/`__finally` ブロック内のラベルにジャンプします。 詳細については、「[例外処理](../../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
 
 次の例では、C2705 が生成されます。
 
-```
+```cpp
 // C2705.cpp
 int main() {
 goto trouble;

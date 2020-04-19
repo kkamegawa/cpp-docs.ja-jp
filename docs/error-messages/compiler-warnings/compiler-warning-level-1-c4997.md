@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4997
 ms.assetid: d39678fd-0c1a-4104-8a45-9e3f20de0407
-ms.openlocfilehash: 298653e7ebed272db1baa11514ac5bff27944b3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f531374a0aaa06372b811d25e1ce45bee10656f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564178"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052215"
 ---
 # <a name="compiler-warning-level-1-c4997"></a>コンパイラの警告 (レベル 1) C4997
 
@@ -21,7 +21,7 @@ ms.locfileid: "50564178"
 
 次の例では C4997 が生成されます。
 
-```
+```cpp
 // C4997.cpp
 // compile with: /WX
 // to resolve this C4997, uncomment all code

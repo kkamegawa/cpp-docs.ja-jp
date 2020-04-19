@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fcdff67c57e932e414a2b61b28cd0498ab997c60
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173593"
 ---
 # <a name="derived-message-maps"></a>メッセージ マップの派生
 
@@ -38,4 +38,3 @@ ms.locfileid: "52175602"
 ## <a name="see-also"></a>関連項目
 
 [フレームワークのメッセージ マップ検索方法](../mfc/how-the-framework-searches-message-maps.md)
-

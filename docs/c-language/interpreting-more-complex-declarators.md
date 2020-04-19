@@ -5,12 +5,12 @@ helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: a6049f060a81f75f6c85686a6526b590de688eaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581546"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148245"
 ---
 # <a name="interpreting-more-complex-declarators"></a>より複雑な宣言子の解釈
 
@@ -126,6 +126,6 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
 
 この例は、かっこの配置によって宣言の意味がどのように変わるかを示しています。 この例では、`var` は、ポインターの要素を 5 つ含む配列です。それらのポインターはそれぞれ、要素として共有体へのポインターを 5 つ含む配列を指します。 `typedef` を使用して複雑な宣言を回避する方法の例については、「[typedef 宣言](../c-language/typedef-declarations.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言と型](../c-language/declarations-and-types.md)

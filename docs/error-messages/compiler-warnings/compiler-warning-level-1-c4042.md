@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 99f4f45aad82aa9898dad4cffb60b8e3311ddc9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db7f0425c3752c20ca8c5d4b6c95845ff64475c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576810"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627033"
 ---
 # <a name="compiler-warning-level-1-c4042"></a>コンパイラの警告 (レベル 1) C4042
 
-'identifier': 無効なストレージ クラスがあります。
+' identifier ': 無効なストレージクラスがあります
 
-指定されたストレージ クラスは、このコンテキストでこの識別子では使用できません。 コンパイラは、代わりに既定のストレージ クラスを使用します。
+このコンテキストでは、指定されたストレージクラスをこの識別子と共に使用することはできません。 コンパイラは、代わりに既定のストレージクラスを使用します。
 
-- `extern`、場合*識別子*関数です。
+- *識別子*が関数の場合は `extern`。
 
-- **自動**場合は、*識別子*仮パラメーターまたはローカル変数です。
+- **auto**(*識別子*が仮パラメーターまたはローカル変数の場合)。
 
-- ストレージ クラスのない場合、*識別子*はグローバル変数です。
+- ストレージクラスがありません。*識別子*がグローバル変数です。
 
-この警告を発生以外のストレージ クラスを指定する**登録**パラメーターの宣言でします。
+この警告は、パラメーター宣言で**register**以外のストレージクラスを指定することによって発生することがあります。
 
-次のサンプルの生成 C4042
+次の例では、C4042 が生成されます。
 
-```
+```cpp
 // C4042.cpp
 // compile with: /W1 /LD
 int func2( __declspec( thread ) int tls_i )    // C4042

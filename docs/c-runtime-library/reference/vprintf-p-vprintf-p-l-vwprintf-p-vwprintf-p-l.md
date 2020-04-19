@@ -1,12 +1,12 @@
 ---
 title: _vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vwprintf_p
 - _vprintf_p
 - _vprintf_p_l
 - _vwprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vwprintf_p_l
 - vprintf_p
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-ms.openlocfilehash: 266df8c033fc9d1c8459aff9f2b95771947d88d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa8b6c4909e45d6d4278dc14e3a2947285fe3ed
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635085"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945714"
 ---
-# <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l
+# <a name="_vprintf_p-_vprintf_p_l-_vwprintf_p-_vwprintf_p_l"></a>_vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l
 
 引数リストへのポインターを使用して、書式付き出力を書き込みます。その際、引数を使用する順序を指定できます。
 
@@ -83,7 +86,7 @@ int _vwprintf_p_l(
 *format*<br/>
 書式の指定。
 
-*定義されています*<br/>
+*argptr*<br/>
 引数リストへのポインター。
 
 *locale*<br/>
@@ -93,20 +96,20 @@ int _vwprintf_p_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vprintf_p**と **_vwprintf_p**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。
+**_vprintf_p**と **_vwprintf_p**は、書き込まれた文字数を返します。終端の null 文字は含まれません。出力エラーが発生した場合は、負の値が返されます。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数、引数リストへのポインターを受け取る書式設定して、特定のデータを書き込みます**stdout**します。 これらの関数は異なる**vprintf_s**と**vwprintf_s**のみをサポートする、引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して**stdout**に書き込みます。 これらの関数は、引数を使用する順序を指定する機能をサポートしている点でのみ、 **vprintf_s**および**vwprintf_s**と異なります。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-**_vwprintf_p**のワイド文字バージョンは、 **_vprintf_p**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **_vprintf_p** UNICODE ストリームへの出力をサポートされていません。
+**_vwprintf_p**は、 **_vprintf_p**のワイド文字バージョンです。ストリームが ANSI モードで開かれている場合、2つの関数の動作は同じになります。 **_vprintf_p**は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-場合*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+*Format*が null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -124,7 +127,7 @@ int _vwprintf_p_l(
 
 \* UNIX V との互換性用。
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

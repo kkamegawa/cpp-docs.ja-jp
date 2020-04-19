@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368657"
 ---
 # <a name="logical-and-operator-ampamp"></a>論理 AND 演算子: &amp;&amp;
 
@@ -41,7 +41,7 @@ char *pch = 0;
 
 `pch` が null (0) であれば、式の右側は評価されません。 したがって、null ポインターを使用した代入が発生することはありません。
 
-## <a name="operator-keyword-for-"></a>&& の演算子キーワード
+## <a name="operator-keyword-for-"></a>演算子キーワード (& a) (& a)
 
 **と**演算子と等価のテキストは、  **&&** します。 アクセスする 2 つの方法がある、**と**プログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。
 

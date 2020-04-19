@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 4b7fff1bef091a9d47e6ea4dc0e53e86ce39ad7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627436"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452368"
 ---
 # <a name="valuecompare-class"></a>value_compare クラス
 
@@ -39,7 +39,7 @@ protected:
 
 ## <a name="remarks"></a>Remarks
 
-間で value_compare によって提供される比較条件`value_types`hash_map に含まれる要素全体の補助型クラスの構築によって各要素のキーの間の比較から出されます。 メンバー関数の演算子は、オブジェクトを使用して`comp`型の`key_compare`2 つの要素の並べ替えキー構成要素を比較する value_compare によって提供される関数オブジェクトに格納します。
+Hash_map に含まれる要素全体の`value_types`間で value_compare によって提供される比較条件は、補助型クラスの構築によって各要素のキーを比較することによって発生します。 メンバー関数の演算子は、value_compare `comp`によっ`key_compare`て提供される関数オブジェクトに格納されている型のオブジェクトを使用して、2つの要素の並べ替えキーコンポーネントを比較します。
 
 hash_set と hash_multiset (キーの値が要素の値を同一である単純なコンテナー) の場合、value_compare は `key_compare` と等価です。hash_map と hash_multimap の場合、型 `pair` の要素の値が要素のキーの値と同一ではないため、その 2 つは等価ではありません。
 
@@ -55,6 +55,6 @@ value_compare の宣言方法や使用方法の例については、[hash_map::v
 
 ## <a name="see-also"></a>関連項目
 
-[binary_function 構造体](../standard-library/binary-function-struct.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function 構造体](../standard-library/binary-function-struct.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -1,30 +1,31 @@
 ---
 title: .EXIT
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .EXIT
 helpviewer_keywords:
 - .EXIT directive
 ms.assetid: 5f77c281-3d65-4174-83ea-34dcc7085ecf
-ms.openlocfilehash: 29af321582842a932f0788514f9ce12aa4c0ce53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a96ffa95ef10b15053c8e62c4adb17ba9c4d0e85
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427925"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318320"
 ---
-# <a name="exit"></a>.EXIT
+# <a name="exit-32-bit-masm"></a>.EXIT (32 ビット MASM)
 
-終了コードを生成します。
+終了コードを生成します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .終了 [expression]
+> **.** ⟦*式*⟧を終了します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-省略可能な返します*式*シェルにします。
+シェルにオプションの*式*を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

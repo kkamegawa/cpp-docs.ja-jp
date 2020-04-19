@@ -1,9 +1,9 @@
 ---
 title: _memccpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memccpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memccpy
 helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537398"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951966"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 バッファーから文字をコピーします。
 
@@ -60,13 +63,13 @@ void *_memccpy(
 
 ## <a name="return-value"></a>戻り値
 
-場合、文字*c*がコピーされる **_memccpy**で char へのポインターを返します*dest*文字の後にします。 場合*c*はコピーされず、返します**NULL**します。
+文字*c*がコピーされた場合、 **_memccpy**は、その文字の直後にある*dest*の char へのポインターを返します。 *C*がコピーされない場合は、 **NULL**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Memccpy**関数の 0 個以上の文字をコピーする*src*に*dest*、ときに停止する、文字*c*がコピーされている場合、または*カウント*文字がコピーされた、早い方です。
+**_Memccpy**関数は、 *src*の0個以上の文字を*dest*にコピーし、文字*c*がコピーされたとき、または*カウント*文字がコピーされたときに、どちらか早い方を停止します。
 
-**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -105,7 +108,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Function: _memccpy 60 characters or to character 's'

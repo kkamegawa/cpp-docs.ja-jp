@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - buttons [MFC], tool tips
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
-ms.openlocfilehash: 43e4d9bad06ded35f377839b177c30f4dd634dc2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec7795a524420d62b2307f26954bbf205d19dea9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167973"
 ---
 # <a name="tool-tips"></a>ツール ヒント
 

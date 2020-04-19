@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2498
 ms.assetid: 0839f12c-aaa4-4a02-bb33-7f072715dd14
-ms.openlocfilehash: 1087dbb2297058f752e0a15776e4a7185e32a5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6f6469a221c914e0eef9e190c79a2b2706e651
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462271"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756995"
 ---
 # <a name="compiler-error-c2498"></a>コンパイラ エラー C2498
 
-'function': 'novtable' は、クラス宣言または定義にのみ適用できます
+' function ': ' novtable ' は、クラス宣言または定義にのみ適用できます
 
-使用してこのエラーは発生する`__declspec(novtable)`関数を使用します。
+このエラーは、関数で `__declspec(novtable)` を使用することによって発生することがあります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2498 が生成されます。
 
-```
+```cpp
 // C2498.cpp
 // compile with: /c
 void __declspec(novtable) f() {}   // C2498

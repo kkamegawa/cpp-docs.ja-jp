@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: e08a8538c93681c59779f681812a9ba8f7e316a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636258"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051737"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>コンパイラの警告 (レベル 3) C4243
 
-'conversion type' 変換 'type1' から 'type2' に存在するにアクセスできません。
+' type1 ' から ' type1 ' への ' 変換型 ' 変換が存在しますが、アクセスできません
 
-派生クラスへのポインターは、基底クラスへのポインターに変換されますが、派生クラスは、プライベートまたはプロテクトのアクセス権を持つ基本クラスを継承します。
+派生クラスへのポインターは基底クラスへのポインターに変換されますが、派生クラスは、プライベートまたは保護されたアクセスで基底クラスを継承します。
 
 次の例では、C4243 が生成されます。
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected

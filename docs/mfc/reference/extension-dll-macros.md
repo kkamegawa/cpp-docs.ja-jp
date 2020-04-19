@@ -1,15 +1,15 @@
 ---
 title: マクロと Dll を管理するための関数
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322203"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>マクロと Dll を管理するための関数
 
@@ -20,10 +20,10 @@ ms.locfileid: "51329593"
 |[AfxOleInitModule](#afxoleinitmodule)|MFC と動的にリンクされるレギュラー MFC DLL から OLE サポートを提供します。|
 |[AfxNetInitModule](#afxnetinitmodule)|MFC と動的にリンクされるレギュラー MFC DLL からの MFC ソケットをサポートを提供します。|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|各モジュールの状態フラグの現在の状態を取得します。|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|初期化の前に、またはクリーンアップ後に前のモジュールの状態を復元するモジュールの状態を設定します。|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|DLL を初期化します。|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|モジュールの状態をクリーンアップした後は、前のモジュール状態を復元するや初期化の前に設定します。|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|DLL を初期化します。|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|MFC の WinSxS 動作に影響するモジュールの状態フラグを設定します。|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|で MFC をクリーンアップ MFC 拡張 DLL の各プロセスは、DLL からデタッチされるとき。|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|各プロセスは、DLL からデタッチされるときに、MFC 拡張 DLL をクリーンアップする MFC を使用できます。|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,15 +79,11 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 モジュールの状態と MFC の詳細についてを参照してください「の管理モジュールの状態データの MFC モジュール」[新しいドキュメントの作成、Windows、およびビュー](../creating-new-documents-windows-and-views.md)と[テクニカル ノート 58](../tn058-mfc-module-state-implementation.md)します。
 
 > [!NOTE]
->  MFC では、アセンブリのアクティベーション コンテキストを作成するときに使用して[AfxWinInit](#afxwininit)コンテキストを作成して`AFX_MANAGE_STATE`をアクティブ化して、非アクティブ化します。 また、 `AFX_MANAGE_STATE` MFC コードがユーザーの DLL によって選択されている適切なライセンス認証のコンテキストで実行するには静的の MFC ライブラリと MFC の Dll に対してを有効にします。 詳細については、次を参照してください。[の MFC モジュール状態でアクティブ化コンテキストのサポート](../support-for-activation-contexts-in-the-mfc-module-state.md)します。
+>  MFC では、アセンブリのアクティベーション コンテキストを作成するときに使用して[AfxWinInit](application-information-and-management.md#afxwininit)コンテキストを作成して`AFX_MANAGE_STATE`をアクティブ化して、非アクティブ化します。 また、 `AFX_MANAGE_STATE` MFC コードがユーザーの DLL によって選択されている適切なライセンス認証のコンテキストで実行するには静的の MFC ライブラリと MFC の Dll に対してを有効にします。 詳細については、次を参照してください。[の MFC モジュール状態でアクティブ化コンテキストのサポート](../support-for-activation-contexts-in-the-mfc-module-state.md)します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxstat_.h
-
-### <a name="see-also"></a>関連項目
-
-[AfxGetStaticModuleState](#afxgetstaticmodulestate)
 
 ## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
@@ -109,11 +105,6 @@ OLE コントロールを構築してを使用している場合`COleControlModu
 
 **ヘッダー**: \<afxdll_.h >
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
-
 ## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 
 MFC ソケットは、MFC と動的にリンクされるレギュラー MFC DLL からサポートは、この関数の呼び出しを追加でレギュラー MFC DLL の`CWinApp::InitInstance`MFC ソケットの DLL を初期化します。
@@ -131,11 +122,6 @@ MFC ソケットの DLL が MFC 拡張 DLL です。MFC 拡張 DLL にワイヤ�
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<afxdll_.h >
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
 ## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
@@ -163,16 +149,9 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 
 **ヘッダー:** afxcomctl32.h
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[MFC モジュールの状態データの管理](../managing-the-state-data-of-mfc-modules.md)<br/>
-[AfxSetAmbientActCtx](#setambientactctx)
-
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-初期化の前にモジュールの状態を設定またはクリーンアップ後に、前のモジュール状態の復元は、この関数を呼び出します。
+初期化の前にモジュールの状態を設定またはクリーンアップした後は、前のモジュール状態を復元する、この関数を呼び出します。
 
 ### <a name="syntax"></a>構文
 
@@ -202,7 +181,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **ヘッダー:** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 MFC 拡張 DLL のこの関数を呼び出す`DllMain`DLL を初期化します。
 
@@ -226,7 +205,7 @@ MFC 拡張 DLL が正常に初期化される場合は TRUE。それ以外の場
 
 ### <a name="remarks"></a>Remarks
 
-例えば:
+例:
 
 ```cpp
 static AFX_EXTENSION_MODULE NVC_MFC_DLLDLL = { NULL, NULL };
@@ -249,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` DLL の HMODULE のコピーを作成し、DLL のランタイム クラスをキャプチャ (`CRuntimeClass`構造) とそのオブジェクトのファクトリ (`COleObjectFactory`オブジェクト) 使用するときに後で、`CDynLinkLibrary`オブジェクトが作成されます。
 MFC 拡張 Dll の 2 つの作業を実行しなければ、`DllMain`関数。
 
-- 呼び出す[AfxInitExtensionModule](#_mfc_afxinitextensionmodule)戻り値を確認します。
+- 呼び出す[AfxInitExtensionModule](#afxinitextensionmodule)戻り値を確認します。
 
 - 作成、`CDynLinkLibrary`オブジェクトの DLL をエクスポートするかどうかは[CRuntimeClass 構造](cruntimeclass-structure.md)オブジェクトか、独自のカスタム リソース。
 
@@ -258,11 +237,6 @@ MFC 拡張 Dll の 2 つの作業を実行しなければ、`DllMain`関数。
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdll_.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxTermExtensionModule](#afxtermextensionmodule)
 
 ## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 
@@ -299,16 +273,9 @@ BOOL CMFCListViewApp::InitInstance()
 
 **ヘッダー:** afxcomctl32.h
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxGetAmbientActCtx](#afxgetambientactctx)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[MFC モジュールの状態データの管理](../managing-the-state-data-of-mfc-modules.md)
-
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
-拡張を許可する MFC クリーンアップするには、MFC DLL の各プロセスは、DLL からデタッチされるときに、この関数を呼び出す (動作は、プロセスの終了時に、またはの結果として、DLL がアンロードされるときに、`AfxFreeLibrary`呼び出します)。
+各プロセスは、DLL からデタッチされるときに、MFC 拡張 DLL をクリーンアップする MFC を許可するには、この関数を呼び出す (動作は、プロセスの終了時に、またはの結果として、DLL がアンロードされるときに、`AfxFreeLibrary`呼び出します)。
 
 ### <a name="syntax"></a>構文
 
@@ -322,11 +289,11 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 参照、 [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) MFC 拡張 DLL のモジュールの状態を格納する構造体。
 
 *ボール*<br/>
-場合は TRUE、クリーンアップ MFC 拡張 DLL のすべてのモジュール。 それ以外の場合、クリーンアップ、現在の DLL モジュールのみです。
+TRUE の場合は、すべての MFC 拡張 DLL のモジュールをクリーンアップします。 それ以外の場合、現在の DLL のモジュールのみをクリーンアップします。
 
 ### <a name="remarks"></a>Remarks
 
-`AfxTermExtensionModule` モジュールに接続されている任意のローカル ストレージを削除し、メッセージ マップのキャッシュからエントリを削除します。 例えば:
+`AfxTermExtensionModule` モジュールに接続されている任意のローカル ストレージを削除し、メッセージ マップのキャッシュからエントリを削除します。 例:
 
 ```cpp
 static AFX_EXTENSION_MODULE NVC_MFC_DLLDLL = { NULL, NULL };
@@ -366,7 +333,8 @@ MFC 拡張 Dll を呼び出す必要があります[AfxInitExtensionModule](#afx
 
 **ヘッダー:** afxdll_.h
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxInitExtensionModule](#afxinitextensionmodule)
+[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
+[MFC モジュールの状態データの管理](../managing-the-state-data-of-mfc-modules.md)<br/>

@@ -1,19 +1,19 @@
 ---
-title: '方法: MSIL からスローされるネイティブ コードの例外をキャッチする'
+title: '方法: MSIL からスローされるネイティブ コードで例外をキャッチします。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379045"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>方法: MSIL からスローされるネイティブ コードの例外をキャッチする
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>方法: MSIL からスローされるネイティブ コードで例外をキャッチします。
 
 ネイティブ コードでは、MSIL からネイティブの C++ 例外をキャッチできます。  CLR の例外をキャッチする`__try`と`__except`します。
 
@@ -79,4 +79,4 @@ caught an exception
 
 ## <a name="see-also"></a>関連項目
 
-[例外処理](../windows/exception-handling-cpp-component-extensions.md)
+[例外処理](../extensions/exception-handling-cpp-component-extensions.md)

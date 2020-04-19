@@ -7,22 +7,22 @@ helpviewer_keywords:
 - noinline __declspec keyword
 - __declspec keyword [C++], noinline
 ms.assetid: f259d55b-dec7-4bde-8cf9-14521e4fdc42
-ms.openlocfilehash: 3a8dce21aa707a1a52c647c9efee5ab806511ca8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e424846c46dd50852b62008c4f1f38827da849c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454562"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857412"
 ---
 # <a name="noinline"></a>noinline
 
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**Microsoft 固有の仕様**
 
-**__declspec(noinline)** 特定のメンバー関数 (クラス内の関数) をインラインにしないようにコンパイラに指示します。
+**__declspec (noinline)** は、特定のメンバー関数 (クラス内の関数) をインライン化しないようにコンパイラに指示します。
 
 コードのパフォーマンスにとって大きな意味がなく、重要でなければ、関数をインラインにしない方がよい場合があります。 つまり、関数が小さく、頻繁に呼び出されないと考えられる場合 (エラー条件を処理する関数など)。
 
-注意する関数がマークされている場合**noinline**、呼び出し元の関数が小さくなり、自体の対象となるコンパイラのインライン化します。
+関数が**noinline**としてマークされている場合は、呼び出し元の関数が小さくなり、それ自体がコンパイラのインライン展開の候補になることに注意してください。
 
 ```cpp
 class X {
@@ -34,9 +34,8 @@ class X {
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [inline、__inline、\__forceinline](inline-functions-cpp.md)
-

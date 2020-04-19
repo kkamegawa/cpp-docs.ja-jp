@@ -1,6 +1,6 @@
 ---
 title: デバッグとエラー報告のマクロ
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,30 +11,30 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522301"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062037"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
 
-これらのマクロは、便利なデバッグとトレース機能を提供します。
+これらのマクロは、便利なデバッグ機能とトレース機能を提供します。
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|リークを任意のインターフェイスを出力ウィンドウに書き込みますが検出されたときに`_Module.Term`が呼び出されます。|
-|[_ATL_DEBUG_QI](#_atl_debug_qi)|すべての呼び出しを書き込みます`QueryInterface`出力ウィンドウにします。|
-|[ATLASSERT](#atlassert)|同じ機能を実行、 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)マクロは、C ランタイム ライブラリが見つかりません。|
-|[ATLENSURE](#atlensure)|パラメーターの検証を実行します。 呼び出す`AtlThrow`必要な場合|
-|[ATLTRACENOTIMPL](#atltracenotimpl)|指定した関数が実装されていないこと、ダンプ デバイスにメッセージを送信します。|
-|[ATLTRACE](#alttrace)|指定されたフラグとレベルに応じて、デバッガー ウィンドウなど、出力デバイスに警告を報告します。 旧バージョンとの互換性のために含まれています。|
-|[ATLTRACE2](#atltrace2)|指定されたフラグとレベルに応じて、デバッガー ウィンドウなど、出力デバイスに警告を報告します。|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|が呼び出されたとき`_Module.Term`に検出されたインターフェイスリークを出力ウィンドウに書き込みます。|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|のすべての呼び出し`QueryInterface`を出力ウィンドウに書き込みます。|
+|[ATLASSERT](#atlassert)|は、C ランタイムライブラリにある[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)マクロと同じ機能を実行します。|
+|[ATLENSURE 保証](#atlensure)|パラメーターの検証を実行します。 必要`AtlThrow`に応じて呼び出す|
+|[ATLTRACENOTIMPL](#atltracenotimpl)|指定された関数が実装されていないことをダンプデバイスにメッセージを送信します。|
+|[ATLTRACE](#atltrace)|は、指定されたフラグとレベルに従って、デバッガーウィンドウなどの出力デバイスに警告を報告します。 旧バージョンとの互換性のために用意されています。|
+|[ATLTRACE2](#atltrace2)|は、指定されたフラグとレベルに従って、デバッガーウィンドウなどの出力デバイスに警告を報告します。|
 
-##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
+##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
-すべてをトレースする ATL ヘッダー ファイルをインクルードする前にこのマクロを定義して`AddRef`と`Release`出力ウィンドウに、コンポーネントのインターフェイスを呼び出します。
+すべて`AddRef`をトレースし、コンポーネントのインターフェイスでの呼び出しを出力`Release`ウィンドウに追加する ATL ヘッダーファイルを含める前に、このマクロを定義します。
 
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -42,30 +42,30 @@ ms.locfileid: "50522301"
 
 ### <a name="remarks"></a>Remarks
 
-次に示すように、トレース出力が表示されます。
+トレース出力は次のように表示されます。
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-各トレースの最初の部分は必ず`ATL: QIThunk`します。 次に、特にを識別する値は、*インターフェイス サンク*使用されています。 インターフェイス サンクは、参照カウントを維持し、ここで使用されるトレース機能を提供するために使用するオブジェクトです。 呼び出すたびに新しいインターフェイス サンクが作成された`QueryInterface`の要求を除き、`IUnknown`インターフェイス (この場合、同じサンクが返されますたびに COM の規則に準拠する)。
+各トレースの最初の部分は常に`ATL: QIThunk`です。 次に、使用される特定の*インターフェイスサンク*を識別する値を指定します。 インターフェイスサンクは、参照カウントを維持し、ここで使用されるトレース機能を提供するために使用されるオブジェクトです。 `IUnknown`インターフェイスの要求を`QueryInterface`除き、のすべての呼び出しに対して新しいインターフェイスサンクが作成されます (この場合、COM の id 規則に準拠するために毎回同じサンクが返されます)。
 
-次に表示されます`AddRef`または`Release`呼び出されたメソッドを示します。 次に、そのインターフェイスの参照カウントが変更されたオブジェクトを識別する値が表示されます。 トレースされる値は、**この**オブジェクトのポインター。
+次に、呼び出さ`AddRef`れ`Release`たメソッドを確認します。 その後、インターフェイス参照カウントが変更されたオブジェクトを識別する値が表示されます。 トレースされる値は、オブジェクトの**this**ポインターです。
 
-トレースは、参照カウントが後にそのサンクの参照カウント`AddRef`または`Release`が呼び出されました。 この参照カウントでは、オブジェクトの参照カウントが一致しないことに注意してください。 各サンクは、COM の参照カウントの規則に完全に準拠するための独自の参照カウントを保持します。
+トレースされた参照カウントは、または`AddRef` `Release`が呼び出された後の、そのサンクの参照カウントです。 この参照カウントは、オブジェクトの参照カウントと一致しない場合があることに注意してください。 各サンクは、COM の参照カウント規則に完全に準拠できるように、独自の参照カウントを保持します。
 
-トレース情報の最後の部分は、オブジェクトとに影響されるインターフェイスの名前、`AddRef`または`Release`呼び出します。
+トレースされる情報の最後の部分は、オブジェクトの名前と、 `AddRef`または`Release`の呼び出しによって影響を受けるインターフェイスです。
 
-サーバーのシャット ダウン時に検出されたリーク インターフェイスと`_Module.Term`が呼び出されますがこのようなログに記録します。
+サーバーがシャットダウンして`_Module.Term`呼び出されたときに検出されたインターフェイスリークは、次のようにログに記録されます。
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
-インターフェイス サンクの有効期間全体を通じて、参照がカウントを調べることは、情報はここで指定した以前のトレース ステートメントで提供される情報に直接マップされます。 さらに、そのインターフェイス サンクの最大の参照カウントを示す値を取得します。
+ここに示されている情報は、前のトレースステートメントで提供された情報に直接マップされるため、インターフェイスサンクの全体の有効期間全体にわたって参照カウントを調べることができます。 さらに、そのインターフェイスサンクの最大参照カウントを示す値を取得します。
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES は、製品版ビルドで使用できます。
+> _ATL_DEBUG_INTERFACES は、リテールビルドで使用できます。
 
-##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
+##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
-すべての呼び出しを書き込みます`QueryInterface`出力ウィンドウにします。
+のすべての呼び出し`QueryInterface`を出力ウィンドウに書き込みます。
 
 ```
 #define _ATL_DEBUG_QI
@@ -73,13 +73,13 @@ ms.locfileid: "50522301"
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し`QueryInterface`失敗、出力ウィンドウに表示されます。
+の呼び出しが失敗`QueryInterface`した場合、[出力] ウィンドウには次のように表示されます。
 
 *インターフェイス名* - `failed`
 
-##  <a name="atlassert"></a>  ATLASSERT
+##  <a name="atlassert"></a>ATLASSERT
 
-ATLASSERT マクロと同じ機能を実行する、 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)マクロは、C ランタイム ライブラリが見つかりません。
+ATLASSERT マクロは、C ランタイムライブラリの[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)マクロと同じ機能を実行します。
 
 ```
 ATLASSERT(booleanExpression);
@@ -87,20 +87,20 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*<br/>
-0 以外の値または 0 に評価される式 (ポインターを含む)。
+*booleanExpression*<br/>
+0以外または0に評価される式 (ポインターを含む)。
 
 ### <a name="remarks"></a>Remarks
 
-ATLASSERT を評価するデバッグ ビルドで*ブール式*し、結果が false の場合、デバッグ レポートを生成します。
+デバッグビルドでは、ATLASSERT は*booleanExpression*を評価し、結果が false の場合にデバッグレポートを生成します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldef.h
+**ヘッダー:** atldef. h
 
-##  <a name="atlensure"></a>  ATLENSURE
+##  <a name="atlensure"></a>ATLENSURE 保証
 
-このマクロは、関数に渡されるパラメーターの検証に使用されます。
+このマクロは、関数に渡されるパラメーターを検証するために使用されます。
 
 ```
 ATLENSURE(booleanExpression);
@@ -109,23 +109,23 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*<br/>
+*booleanExpression*<br/>
 テストするブール式を指定します。
 
 *hr*<br/>
-返されるエラー コードを指定します。
+返されるエラーコードを指定します。
 
 ### <a name="remarks"></a>Remarks
 
-これらのマクロは、検出し、正しくないパラメーターの使用法のユーザーに通知するためのメカニズムを提供します。
+これらのマクロは、不適切なパラメーターの使用を検出してユーザーに通知するメカニズムを提供します。
 
-ATLASSERT と条件に呼び出しが失敗したかどうか、マクロが呼び出す`AtlThrow`します。
+マクロは ATLASSERT を呼び出し、条件が呼び出し`AtlThrow`に失敗した場合はを呼び出します。
 
-ATLENSURE の場合、`AtlThrow`は E_FAIL で呼び出されます。
+Atlensure 場合、 `AtlThrow`は E_FAIL を使用して呼び出されます。
 
-ATLENSURE_THROW の場合、`AtlThrow`は指定した HRESULT で呼び出されます。
+ATLENSURE_THROW の場合は、 `AtlThrow`指定した HRESULT を使用してが呼び出されます。
 
-ATLENSURE と ATLASSERT の違いは、ATLENSURE がリリース ビルドとデバッグ ビルドのようにに例外をスローします。
+ATLENSURE と ATLASSERT の違いは、ATLENSURE はリリースビルドだけでなくデバッグビルドでも例外をスローすることです。
 
 ### <a name="example"></a>例
 
@@ -135,9 +135,9 @@ ATLENSURE と ATLASSERT の違いは、ATLENSURE がリリース ビルドとデ
 
 **ヘッダー:** afx.h
 
-##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
+##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL
 
-ATL のデバッグ ビルドでは、文字列を送信します。" *funcname*は実装されていません"に、ダンプ デバイスと E_NOTIMPL を返します。
+ATL のデバッグビルドでは、によって文字列 " *funcname*は実装されていません" がダンプデバイスに送信され、E_NOTIMPL が返されます。
 
 ```
 ATLTRACENOTIMPL(funcname);
@@ -146,11 +146,11 @@ ATLTRACENOTIMPL(funcname);
 ### <a name="parameters"></a>パラメーター
 
 *funcname*<br/>
-[in]実装されていない関数の名前を含む文字列。
+から実装されていない関数の名前を含む文字列。
 
 ### <a name="remarks"></a>Remarks
 
-リリース ビルドで単に E_NOTIMPL を返します。
+リリースビルドでは、は E_NOTIMPL を返します。
 
 ### <a name="example"></a>例
 
@@ -158,11 +158,11 @@ ATLTRACENOTIMPL(funcname);
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atltrace.h
+**ヘッダー:** atltrace .h
 
-##  <a name="atltrace"></a>  ATLTRACE
+##  <a name="atltrace"></a>ATLTRACE
 
-指定されたフラグとレベルに応じて、デバッガー ウィンドウなど、出力デバイスに警告を報告します。 旧バージョンとの互換性のために含まれています。
+は、指定されたフラグとレベルに従って、デバッガーウィンドウなどの出力デバイスに警告を報告します。 旧バージョンとの互換性のために用意されています。
 
 ```
 ATLTRACE(exp);
@@ -176,24 +176,24 @@ ATLTRACE(
 ### <a name="parameters"></a>パラメーター
 
 *exp*<br/>
-[in]文字列と、Visual C に送信する変数の出力ウィンドウまたはこれらのメッセージをトラップするアプリケーション。
+から出力ウィンドウまたはこれらのメッセージをトラップする任意のアプリケーションに送信する文字列と変数。
 
 *category*<br/>
-[in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。
+から報告するイベントまたはメソッドの種類。 カテゴリの一覧については、「解説」を参照してください。
 
-*レベル*<br/>
-[in]レポートへのトレースのレベル。 詳細については、「解説」を参照してください。
+*平準*<br/>
+からレポートするトレースのレベル。 詳細については、「解説」を参照してください。
 
 *lpszFormat*<br/>
-[in]ダンプ デバイスに送信する書式設定された文字列。
+からダンプデバイスに送信する、書式設定された文字列。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ATLTRACE2](#atltrace2) ATLTRACE の説明についてはします。 ATLTRACE ATLTRACE2 動作と同じ場合、ATLTRACE は旧バージョンとの互換性のために含まれています。
+ATLTRACE の詳細については、「 [ATLTRACE2](#atltrace2) 」を参照してください。 ATLTRACE と ATLTRACE2 の動作は同じですが、旧バージョンとの互換性のために ATLTRACE が含まれています。
 
-##  <a name="atltrace2"></a>  ATLTRACE2
+##  <a name="atltrace2"></a>ATLTRACE2
 
-指定されたフラグとレベルに応じて、デバッガー ウィンドウなど、出力デバイスに警告を報告します。
+は、指定されたフラグとレベルに従って、デバッガーウィンドウなどの出力デバイスに警告を報告します。
 
 ```
 ATLTRACE2(exp);
@@ -201,83 +201,83 @@ ATLTRACE2(exp);
 ATLTRACE2(
     DWORD category,
     UINT level,
-    LPCSTRlpszFormat,  ...);
+    LPCSTR lpszFormat,  ...);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *exp*<br/>
-[in]Visual C の出力ウィンドウ、またはこれらのメッセージをトラップする任意のアプリケーションに送信する文字列。
+から出力ウィンドウまたはこれらのメッセージをトラップするアプリケーションに送信する文字列。
 
 *category*<br/>
-[in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。
+から報告するイベントまたはメソッドの種類。 カテゴリの一覧については、「解説」を参照してください。
 
-*レベル*<br/>
-[in]レポートへのトレースのレベル。 詳細については、「解説」を参照してください。
+*平準*<br/>
+からレポートするトレースのレベル。 詳細については、「解説」を参照してください。
 
 *lpszFormat*<br/>
-[in]`printf`-を使用して文字列を作成すると、ダンプ デバイスに送信する書式指定文字列のスタイルを設定します。
+からダンプ`printf`デバイスに送信する文字列を作成するために使用するスタイルの書式指定文字列。
 
 ### <a name="remarks"></a>Remarks
 
-ATLTRACE2 の短い形式は、デバッガーの出力ウィンドウに文字列を書き込みます。 ATLTRACE2 の 2 番目の形式も、デバッガーの出力ウィンドウに出力を書き込みますが、ATL/MFC トレース ツールの設定に従います (を参照してください[ATLTraceTool サンプル](../../visual-cpp-samples.md))。 たとえば、設定した場合*レベル*4 および ATL/MFC トレース ツールをレベル 0 の場合は、メッセージをしないに表示されます。 *レベル*0、1、2、3、または 4 にすることができます。 0 の場合、既定では、最も重大な問題だけを報告します。
+短い形式の ATLTRACE2 は、デバッガーの出力ウィンドウに文字列を書き込みます。 2番目の形式の ATLTRACE2 は、デバッガーの出力ウィンドウにも出力を書き込みますが、ATL/MFC トレースツールの設定の対象となります (「 [Atltracetool Sample](../../overview/visual-cpp-samples.md)」を参照してください)。 たとえば、 *level*を4に設定し、ATL/MFC トレースツールをレベル0に設定した場合、メッセージは表示されません。 *level*には、0、1、2、3、または4を指定できます。 既定値は0で、最も重大な問題だけが報告されます。
 
-*カテゴリ*パラメーターに設定するトレース フラグが一覧表示されます。 これらのフラグは、レポート方法の種類に対応します。 次の表は、使用できる有効なトレース フラグを一覧表示、*カテゴリ*パラメーター。
+*Category*パラメーターは、設定するトレースフラグを一覧表示します。 これらのフラグは、レポートを作成するメソッドの種類に対応しています。 次の表は、 *category*パラメーターに使用できる有効なトレースフラグを示しています。
 
-### <a name="atl-trace-flags"></a>ATL トレース フラグ
+### <a name="atl-trace-flags"></a>ATL トレースフラグ
 
 |ATL カテゴリ|説明|
 |------------------|-----------------|
-|`atlTraceGeneral`|ATL のすべてのアプリケーションについてレポートします。 これが既定値です。|
-|`atlTraceCOM`|COM メソッドについてレポートします。|
-|`atlTraceQI`|QueryInterface 呼び出しについてレポートします。|
-|`atlTraceRegistrar`|オブジェクトの登録についてレポートします。|
-|`atlTraceRefcount`|参照カウントの変化についてレポートします。|
-|`atlTraceWindowing`|Windows の方法でのレポートたとえば、無効なメッセージ マップ ID を報告します。|
-|`atlTraceControls`|コントロール上のレポートたとえば、コントロールまたはそのウィンドウが破棄されるときを報告します。|
-|`atlTraceHosting`|メッセージをホストしているレポートたとえば、コンテナー内のクライアントがアクティブになるを報告します。|
-|`atlTraceDBClient`|OLE DB コンシューマー テンプレート; 上のレポートたとえば、GetData が失敗した呼び出し、出力は、HRESULT を含めることができます。|
-|`atlTraceDBProvider`|OLE DB プロバイダー テンプレート; 上のレポートたとえば、列の作成が失敗したかどうかを報告します。|
-|`atlTraceSnapin`|MMC スナップイン アプリケーションについてレポートします。|
+|`atlTraceGeneral`|すべての ATL アプリケーションに関するレポートを作成します。 これが既定値です。|
+|`atlTraceCOM`|COM メソッドに関するレポートを作成します。|
+|`atlTraceQI`|QueryInterface 呼び出しを報告します。|
+|`atlTraceRegistrar`|オブジェクトの登録に関するレポートを作成します。|
+|`atlTraceRefcount`|参照カウントが変更されたことを報告します。|
+|`atlTraceWindowing`|Windows のメソッドに関するレポートたとえば、は無効なメッセージマップ ID を報告します。|
+|`atlTraceControls`|コントロールに関するレポートたとえば、コントロールまたはウィンドウが破棄されたことを報告します。|
+|`atlTraceHosting`|メッセージをホストしているレポートたとえば、コンテナー内のクライアントがアクティブ化されたことを報告します。|
+|`atlTraceDBClient`|OLE DB コンシューマーテンプレートに関するレポートたとえば、GetData の呼び出しが失敗した場合、出力には HRESULT を含めることができます。|
+|`atlTraceDBProvider`|OLE DB プロバイダーテンプレートに関するレポートたとえば、は、列の作成に失敗したかどうかを報告します。|
+|`atlTraceSnapin`|MMC スナップインアプリケーションのレポート。|
 |`atlTraceNotImpl`|指定された関数が実装されていないことを報告します。|
-|`atlTraceAllocation`|デバッグ ツール atldbgmem.h メモリによって出力されるメッセージを報告します。|
+|`atlTraceAllocation`|Atldbgmem のメモリデバッグツールによって出力されたメッセージを報告します。|
 
-### <a name="mfc-trace-flags"></a>MFC のトレース フラグ
+### <a name="mfc-trace-flags"></a>MFC トレースフラグ
 
-|MFC のカテゴリ|説明|
+|MFC カテゴリ|説明|
 |------------------|-----------------|
-|`traceAppMsg`|一般的な目的は、MFC メッセージ。 常にお勧めします。|
-|`traceDumpContext`|メッセージ[CDumpContext](../../mfc/reference/cdumpcontext-class.md)します。|
-|`traceWinMsg`|MFC のメッセージの処理コードからのメッセージ。|
-|`traceMemory`|MFC のメモリ管理のコードからのメッセージ。|
-|`traceCmdRouting`|MFC の Windows からのメッセージは、ルーティングのコードをコマンドします。|
-|`traceHtml`|MFC の DHTML ダイアログのサポートからのメッセージ。|
-|`traceSocket`|MFC のソケットのサポートからのメッセージ。|
+|`traceAppMsg`|汎用、MFC メッセージ。 常にお勧めします。|
+|`traceDumpContext`|[CDumpContext](../../mfc/reference/cdumpcontext-class.md)からのメッセージ。|
+|`traceWinMsg`|MFC のメッセージ処理コードからのメッセージ。|
+|`traceMemory`|MFC のメモリ管理コードからのメッセージ。|
+|`traceCmdRouting`|MFC の Windows コマンドルーティングコードからのメッセージ。|
+|`traceHtml`|MFC の DHTML ダイアログサポートからのメッセージ。|
+|`traceSocket`|MFC のソケットサポートからのメッセージ。|
 |`traceOle`|MFC の OLE サポートからのメッセージ。|
-|`traceDatabase`|MFC のデータベースのサポートからのメッセージ。|
-|`traceInternet`|MFC のインターネットからのメッセージをサポートします。|
+|`traceDatabase`|MFC のデータベースサポートからのメッセージ。|
+|`traceInternet`|MFC のインターネットサポートからのメッセージ。|
 
-カスタム トレース カテゴリを宣言するには、宣言のグローバル インスタンス、`CTraceCategory`クラスの次のようにします。
+カスタムトレースカテゴリを宣言するには、次のように`CTraceCategory`クラスのグローバルインスタンスを宣言します。
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
-カテゴリ名、MY_CATEGORY この例を指定する名前、*カテゴリ*パラメーター。 最初のパラメーターは、ATL/MFC トレース ツールに表示されるカテゴリの名前です。 2 番目のパラメーターは、既定のトレース レベルです。 このパラメーターは省略可能で、既定のトレース レベルは 0 です。
+カテゴリ名 (この例では MY_CATEGORY) は*category*パラメーターに指定した名前です。 最初のパラメーターは、ATL/MFC トレースツールに表示されるカテゴリ名です。 2番目のパラメーターは、既定のトレースレベルです。 このパラメーターは省略可能で、既定のトレースレベルは0です。
 
-ユーザー定義のカテゴリを使用します。
+ユーザー定義のカテゴリを使用するには:
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-トレース メッセージをフィルター処理することを指定するこれらのマクロの定義を挿入する前に Stdafx.h に、`#include <atlbase.h>`ステートメント。
+トレースメッセージをフィルター処理するように指定するには、ステートメントの`#include <atlbase.h>`前にこれらのマクロの定義を stdafx.h に挿入します。
 
-代わりに、プリプロセッサ ディレクティブでフィルターを設定することができます、**プロパティ ページ** ダイアログ ボックス。 をクリックして、**プリプロセッサ** タブで、グローバルに挿入し、**プリプロセッサの定義**編集ボックス。
+または、 **[プロパティページ]** ダイアログボックスで、プリプロセッサディレクティブのフィルターを設定することもできます。 **[プリプロセッサ]** タブをクリックし、 **[プリプロセッサの定義]** 編集ボックスにグローバルを挿入します。
 
-Atlbase.h には ATLTRACE2 マクロの既定の定義が含まれています、atlbase.h が処理される前に、これらのシンボルを定義しない場合、これらの定義が使用されます。
+Atlbase. h には ATLTRACE2 マクロの既定の定義が含まれており、これらの定義は、atlbase. h が処理される前にこれらのシンボルを定義しない場合に使用されます。
 
-リリース ビルドで ATLTRACE2 にコンパイルする`(void) 0`します。
+リリースビルドでは、ATLTRACE2 は`(void) 0`にコンパイルされます。
 
-ATLTRACE2 では、書式設定後個 1023 文字まで、ダンプ デバイスに送信される文字列の内容を制限します。
+ATLTRACE2 は、ダンプデバイスに送信される文字列の内容を、書式設定後の1023文字以下に制限します。
 
-ATLTRACE ATLTRACE2 動作と同じ場合、ATLTRACE は旧バージョンとの互換性のために含まれています。
+ATLTRACE と ATLTRACE2 の動作は同じですが、旧バージョンとの互換性のために ATLTRACE が含まれています。
 
 ### <a name="example"></a>例
 

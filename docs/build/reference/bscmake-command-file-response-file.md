@@ -9,14 +9,17 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-ms.openlocfilehash: 6be6dae2ef3dd729819a5eccba5e86df479ab5ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a55fd616a00aeb3ade229bf7cff8220f86085b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295046"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE コマンド ファイル (応答ファイル)
+
+> [!WARNING]
+> BSCMAKE は、現在も Visual Studio と共にインストールされていますが、IDE では使用されなくなりました。 Visual Studio 2008 以降、ブラウザーとシンボルの情報は、ソリューション フォルダー内の SQL Server の .sdf ファイルに自動的に格納されます。
 
 コマンド ファイルでは、コマンドラインの入力の一部またはすべてを行うことができます。 次の構文を使用してコマンド ファイルを指定します。
 
@@ -45,4 +48,4 @@ file1.sbr file2.sbr file3.sbr file4.sbr
 
 ## <a name="see-also"></a>関連項目
 
-[BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)
+[BSCMAKE リファレンス](bscmake-reference.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 513e393bbc782d87b37dab108428f2970fbb92e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230478"
 ---
 # <a name="cnorowset-class"></a>CNoRowset クラス
 

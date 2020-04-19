@@ -1,5 +1,5 @@
 ---
-title: 'MFC : ドキュメントとビューを用いたデータベース クラスの使用'
+title: MFC:ドキュメントとビューを用いたデータベース クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182900"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC : ドキュメントとビューを用いたデータベース クラスの使用
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC:ドキュメントとビューを用いたデータベース クラス
 
 ドキュメント/ビュー アーキテクチャの有無は、MFC データベース クラスを使用することができます。 このトピックでは、ドキュメントとビューの操作を強調します。 これを説明します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624836"
 
 - [他の考慮事項](#_core_other_factors)します。
 
-代替方法については、次を参照してください。 [MFC: 用いないデータベース クラスとビュー](../data/mfc-using-database-classes-without-documents-and-views.md)します。
+代替方法については、次を参照してください[MFC:。ドキュメントとビューを用いないデータベース クラスを使用して](../data/mfc-using-database-classes-without-documents-and-views.md)します。
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> フォーム ベースのアプリケーションの作成
 
@@ -63,14 +63,14 @@ ms.locfileid: "50624836"
 
 ##  <a name="_core_other_factors"></a> その他の要因
 
-フォーム ベースのアプリケーションが含まれていないフレームワークのドキュメントのシリアル化機構を使用して、削除、無効にする、または置換をする可能性があります、**新規**と**オープン**コマンド、 **ファイル**メニュー。 記事をご覧ください[シリアル化: シリアル化とします。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
+フォーム ベースのアプリケーションが含まれていないフレームワークのドキュメントのシリアル化機構を使用して、削除、無効にする、または置換をする可能性があります、**新規**と**オープン**コマンド、 **ファイル**メニュー。 記事をご覧ください[シリアル化します。シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
 
 することがありますもフレームワークがサポートする多くのユーザー インターフェイス可能性を使用します。 たとえば、複数を使用できます`CRecordView`複数ドキュメント インターフェイス (MDI) 子ウィンドウは、という具合分割ウィンドウ内のオブジェクトが異なる複数のレコード セットを開きます。
 
 ビュー内のあらゆるものの印刷を実装する、フォーム実装があるかどうか`CRecordView`またはその他。 派生したクラスとして`CFormView`、`CRecordView`印刷するには、サポートされていませんをオーバーライドできます、`OnPrint`印刷を許可するメンバー関数。 詳細については、クラスを参照してください。 [CFormView](../mfc/reference/cformview-class.md)します。
 
-ドキュメントとビューをまったく使用しない可能性があります。 その場合を参照してください[MFC: 用いないデータベース クラスとビュー](../data/mfc-using-database-classes-without-documents-and-views.md)します。
+ドキュメントとビューをまったく使用しない可能性があります。 その場合を参照してください[MFC:ドキュメントとビューを用いないデータベース クラスを使用して](../data/mfc-using-database-classes-without-documents-and-views.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC データベース クラス (../data/mfc-database-classes-odbc-and-dao.md)
+[MFC データベース クラス](../data/mfc-database-classes-odbc-and-dao.md)

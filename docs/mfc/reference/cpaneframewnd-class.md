@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37ab241219f28336e73ea459a4e32ff413de8964
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450168"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502974"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd クラス
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 1 つのペインを含むミニフレーム ウィンドウを実装します。 そのペインは、ウィンドウのクライアント領域になります。
 
@@ -157,91 +157,91 @@ class CPaneFrameWnd : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneFrameWnd::AddPane](#addpane)|ペインを追加します。|
-|[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|グローバル リストに対してペインを追加または削除します。|
-|[CPaneFrameWnd::AdjustLayout](#adjustlayout)|ミニフレーム ウィンドウのレイアウトを調整します。|
-|[CPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)||
-|[CPaneFrameWnd::CalcBorderSize](#calcbordersize)|ミニフレーム ウィンドウの境界線のサイズを計算します。|
-|[CPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|ドッキング ウィンドウの予想される四角形を計算します。|
-|[CPaneFrameWnd::CanBeAttached](#canbeattached)|現在のペインを別のペインまたはフレーム ウィンドウにドッキングできるかどうかを判定します。|
-|[CPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|ミニフレーム ウィンドウをペインにドッキングできるかどうかを判定します。|
-|[CPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)||
+|[CPaneFrameWnd:: AddPane](#addpane)|ペインを追加します。|
+|[CPaneFrameWnd:: AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|グローバル リストに対してペインを追加または削除します。|
+|[CPaneFrameWnd:: AdjustLayout](#adjustlayout)|ミニフレーム ウィンドウのレイアウトを調整します。|
+|[CPaneFrameWnd:: AdjustPaneFrames](#adjustpaneframes)||
+|[CPaneFrameWnd:: CalcBorderSize](#calcbordersize)|ミニフレーム ウィンドウの境界線のサイズを計算します。|
+|[CPaneFrameWnd:: CalcExpectedDockedRect](#calcexpecteddockedrect)|ドッキング ウィンドウの予想される四角形を計算します。|
+|[CPaneFrameWnd:: CanBeAttached](#canbeattached)|現在のペインを別のペインまたはフレーム ウィンドウにドッキングできるかどうかを判定します。|
+|[CPaneFrameWnd:: Canbedoc/Pane](#canbedockedtopane)|ミニフレーム ウィンドウをペインにドッキングできるかどうかを判定します。|
+|[CPaneFrameWnd:: CheckGripperVisibility](#checkgrippervisibility)||
 |[CPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|ペインをタブ付きドキュメントに変換します。|
 |[CPaneFrameWnd::Create](#create)|ミニフレーム ウィンドウを作成し、`CPaneFrameWnd` オブジェクトにアタッチします。|
-|[CPaneFrameWnd::CreateEx](#createex)|ミニフレーム ウィンドウを作成し、`CPaneFrameWnd` オブジェクトにアタッチします。|
-|[CPaneFrameWnd::DockPane](#dockpane)|ペインをドッキングします。|
-|[CPaneFrameWnd::FindFloatingPaneByID](#findfloatingpanebyid)|フローティング ペインのグローバル リストで、指定したコントロール ID のペインを検索します。|
-|[CPaneFrameWnd::FrameFromPoint](#framefrompoint)|ユーザーが指定したポイントを含むミニフレーム ウィンドウを検索します。|
-|[CPaneFrameWnd::GetCaptionHeight](#getcaptionheight)|ミニフレーム ウィンドウのキャプションの高さを返します。|
-|[CPaneFrameWnd::GetCaptionRect](#getcaptionrect)|ミニフレーム ウィンドウのキャプションに外接する四角形を計算します。|
+|[CPaneFrameWnd:: CreateEx](#createex)|ミニフレーム ウィンドウを作成し、`CPaneFrameWnd` オブジェクトにアタッチします。|
+|[CPaneFrameWnd::D ockPane](#dockpane)|ペインをドッキングします。|
+|[CPaneFrameWnd:: FindFloatingPaneByID](#findfloatingpanebyid)|フローティング ペインのグローバル リストで、指定したコントロール ID のペインを検索します。|
+|[CPaneFrameWnd:: FrameFromPoint](#framefrompoint)|ユーザーが指定したポイントを含むミニフレーム ウィンドウを検索します。|
+|[CPaneFrameWnd:: GetCaptionHeight](#getcaptionheight)|ミニフレーム ウィンドウのキャプションの高さを返します。|
+|[CPaneFrameWnd:: GetCaptionRect](#getcaptionrect)|ミニフレーム ウィンドウのキャプションに外接する四角形を計算します。|
 |[CPaneFrameWnd::GetCaptionText](#getcaptiontext)|キャプション テキストを返します。|
-|[CPaneFrameWnd::GetDockingManager](#getdockingmanager)||
-|[CPaneFrameWnd::GetDockingMode](#getdockingmode)|ドッキングのモードを返します。|
+|[CPaneFrameWnd:: Getdoc王国マネージャー](#getdockingmanager)||
+|[CPaneFrameWnd:: Getdoc モード](#getdockingmode)|ドッキングのモードを返します。|
 |[CPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|ミニフレーム ウィンドウに含まれる最初の可視ペインを返します。|
-|[CPaneFrameWnd::GetHotPoint](#gethotpoint)||
+|[CPaneFrameWnd:: GetHotPoint](#gethotpoint)||
 |[CPaneFrameWnd::GetPane](#getpane)|ミニフレーム ウィンドウに含まれるペインを返します。|
 |[CPaneFrameWnd::GetPaneCount](#getpanecount)|ミニフレーム ウィンドウに含まれるペインの数を返します。|
 |[CPaneFrameWnd::GetParent](#getparent)||
 |[CPaneFrameWnd::GetPinState](#getpinstate)||
-|[CPaneFrameWnd::GetRecentFloatingRect](#getrecentfloatingrect)||
+|[CPaneFrameWnd:: GetRecentFloatingRect](#getrecentfloatingrect)||
 |[CPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|ミニフレーム ウィンドウに含まれる可視ペインの数を返します。|
 |[CPaneFrameWnd::HitTest](#hittest)|特定のポイントに、ミニフレーム ウィンドウのどの部分があるか判定します。|
-|[CPaneFrameWnd::IsCaptured](#iscaptured)||
+|[CPaneFrameWnd:: IsCaptured](#iscaptured)||
 |[CPaneFrameWnd::IsDelayShow](#isdelayshow)||
 |[CPaneFrameWnd::IsRollDown](#isrolldown)|ミニフレーム ウィンドウをロール ダウンするかどうかを判断します。|
-|[CPaneFrameWnd::IsRollUp](#isrollup)|ミニフレーム ウィンドウをロール アップするかどうかを判断します。|
+|[CPaneFrameWnd:: IsRollUp](#isrollup)|ミニフレーム ウィンドウをロール アップするかどうかを判断します。|
 |[CPaneFrameWnd::KillDockingTimer](#killdockingtimer)|ドッキング タイマーを停止します。|
 |[CPaneFrameWnd::LoadState](#loadstate)|レジストリからペインの状態を読み込みます。|
 |[CPaneFrameWnd::OnBeforeDock](#onbeforedock)|ドッキングが可能かどうかを判定します。|
-|[CPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|ミニフレーム ウィンドウを直前の位置にドッキングします。|
+|[CPaneFrameWnd:: OnDockToRecentPos](#ondocktorecentpos)|ミニフレーム ウィンドウを直前の位置にドッキングします。|
 |[CPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|ロールアップ タイマーを停止します。|
 |[CPaneFrameWnd::OnMovePane](#onmovepane)|ミニフレーム ウィンドウを指定したオフセットだけ移動します。|
 |[CPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|含まれているペインのレイアウトを調整します。|
 |[CPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|ロールアップ タイマーを設定します。|
-|[CPaneFrameWnd::OnShowPane](#onshowpane)|ミニフレーム ウィンドウ内のペインが非表示になるとき、または表示されるときに、フレームワークによって呼び出されます。|
-|[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。|
+|[CPaneFrameWnd:: OnShowPane](#onshowpane)|ミニフレーム ウィンドウ内のペインが非表示になるとき、または表示されるときに、フレームワークによって呼び出されます。|
+|[CPaneFrameWnd::P aneFromPoint](#panefrompoint)|ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。|
 |[CPaneFrameWnd::Pin](#pin)||
-|`CPaneFrameWnd::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。|
+|`CPaneFrameWnd::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) で使用されます。|
 |[CPaneFrameWnd::RedrawAll](#redrawall)|すべてのミニフレーム ウィンドウを再描画します。|
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|有効でないウィンドウを削除するために、フレームワークによって呼び出されます。|
 |[CPaneFrameWnd::RemovePane](#removepane)|ミニフレーム ウィンドウから、ペインを削除します。|
 |[CPaneFrameWnd::ReplacePane](#replacepane)|ペインを別のペインに置き換えます。|
-|[CPaneFrameWnd::SaveState](#savestate)|レジストリにペインの状態を保存します。|
+|[CPaneFrameWnd:: SaveState](#savestate)|レジストリにペインの状態を保存します。|
 |`CPaneFrameWnd::Serialize`|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。|
 |[CPaneFrameWnd::SetCaptionButtons](#setcaptionbuttons)|キャプションのボタンを設定します。|
-|[CPaneFrameWnd::SetDelayShow](#setdelayshow)||
-|[CPaneFrameWnd::SetDockingManager](#setdockingmanager)||
-|[CPaneFrameWnd::SetDockingTimer](#setdockingtimer)|ドッキング タイマーを設定します。|
-|[CPaneFrameWnd::SetDockState](#setdockstate)|ドッキング状態を設定します。|
-|[CPaneFrameWnd::SetHotPoint](#sethotpoint)||
-|[CPaneFrameWnd::SetPreDockState](#setpredockstate)|ドッキング前の状態を設定するために、フレームワークによって呼び出されます。|
-|[CPaneFrameWnd::SizeToContent](#sizetocontent)|含まれているペインとサイズを同じにするために、ミニフレーム ウィンドウのサイズを調整します。|
-|[CPaneFrameWnd::StartTearOff](#starttearoff)|メニューをティアオフします。|
-|[CPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
-|[CPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)||
+|[CPaneFrameWnd:: SetDelayShow](#setdelayshow)||
+|[CPaneFrameWnd:: Setdoc王国マネージャー](#setdockingmanager)||
+|[CPaneFrameWnd:: Setdoc Timer](#setdockingtimer)|ドッキング タイマーを設定します。|
+|[CPaneFrameWnd:: SetDockState](#setdockstate)|ドッキング状態を設定します。|
+|[CPaneFrameWnd:: SetHotPoint](#sethotpoint)||
+|[CPaneFrameWnd:: SetPreDockState](#setpredockstate)|ドッキング前の状態を設定するために、フレームワークによって呼び出されます。|
+|[CPaneFrameWnd:: SizeToContent](#sizetocontent)|含まれているペインとサイズを同じにするために、ミニフレーム ウィンドウのサイズを調整します。|
+|[CPaneFrameWnd:: StartTearOff](#starttearoff)|メニューをティアオフします。|
+|[CPaneFrameWnd:: StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
+|[CPaneFrameWnd:: StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)||
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|ミニフレーム ウィンドウをロール アップまたはロール ダウンするかどうかを判断します。|
+|[CPaneFrameWnd:: OnCheckRollState](#oncheckrollstate)|ミニフレーム ウィンドウをロール アップまたはロール ダウンするかどうかを判断します。|
 |[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|ミニフレーム ウィンドウの境界線を描画します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|CS_SAVEBITS クラスのスタイルを使用して、ウィンドウ クラスを登録するかどうかを指定します。|
+|[CPaneFrameWnd:: m_bUseSaveBits](#m_busesavebits)|ウィンドウクラスを CS_SAVEBITS クラススタイルで登録するかどうかを指定します。|
 
 ## <a name="remarks"></a>Remarks
 
 ペインがドッキング状態からフローティング状態に切り替わるときに、フレームワークは自動的に `CPaneFrameWnd` オブジェクトを作成します。
 
-ミニフレーム ウィンドウは内容を表示した状態でドラッグ (直接ドッキング) するか、ドラッグ四角形を使用してドラッグ (標準ドッキング) することができます。 ミニフレームのコンテナー ペインのドッキング モードにより、ミニフレームのドラッグ動作が決まります。 詳細については、次を参照してください。 [cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)します。
+ミニフレーム ウィンドウは内容を表示した状態でドラッグ (直接ドッキング) するか、ドラッグ四角形を使用してドラッグ (標準ドッキング) することができます。 ミニフレームのコンテナー ペインのドッキング モードにより、ミニフレームのドラッグ動作が決まります。 詳細については、「 [Cbasepane:: Getdocによるモード](../../mfc/reference/cbasepane-class.md#getdockingmode)」を参照してください。
 
-ミニフレーム ウィンドウには、含まれているペインのスタイルに従って、キャプションのボタンが表示されます。 場合は、ウィンドウを閉じることができます ( [cbasepane::canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed))、[閉じる] ボタンが表示されます。 ウィンドウが AFX_CBRS_AUTO_ROLLUP スタイルは、pin が表示されます。
+ミニフレーム ウィンドウには、含まれているペインのスタイルに従って、キャプションのボタンが表示されます。 ウィンドウを閉じることができる場合は ( [Cbasepane:: can、Losed](../../mfc/reference/cbasepane-class.md#canbeclosed))、[閉じる] ボタンが表示されます。 ウィンドウに AFX_CBRS_AUTO_ROLLUP スタイルがある場合は、pin が表示されます。
 
-`CPaneFrameWnd` からクラスを派生させる場合は、フレームワークで作成方法を定義する必要があります。 オーバーライドすることで、クラスを作成するか[cpane::createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)、設定や、`CPane::m_pMiniFrameRTC`メンバーことが、クラスのランタイム クラス情報を指すようにします。
+`CPaneFrameWnd` からクラスを派生させる場合は、フレームワークで作成方法を定義する必要があります。 [CPane:: createdefaultminiframe フレーム](../../mfc/reference/cpane-class.md#createdefaultminiframe)をオーバーライドしてクラスを作成するか`CPane::m_pMiniFrameRTC` 、クラスのランタイムクラス情報を指すようにメンバーを設定します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -255,7 +255,7 @@ class CPaneFrameWnd : public CWnd
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxPaneFrameWnd.h
+**ヘッダー:** afxPaneFrameWnd
 
 ##  <a name="addpane"></a>  CPaneFrameWnd::AddPane
 
@@ -267,10 +267,10 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in]追加するウィンドウ。
+*pWnd*<br/>
+から追加するペイン。
 
-##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList
+##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd:: AddRemovePaneFromGlobalList
 
 グローバル リストに対してペインを追加または削除します。
 
@@ -282,15 +282,15 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in]追加または削除するウィンドウ。
+*pWnd*<br/>
+から追加または削除するペイン。
 
 *bAdd*<br/>
-[in]0 以外の場合は、ウィンドウを追加します。 0 の場合は、ウィンドウを削除します。
+から0以外の場合は、ペインを追加します。 0の場合は、ペインを削除します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。
+メソッドが成功した場合は0以外の。それ以外の場合は0です。
 
 ##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout
 
@@ -300,7 +300,7 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 virtual void AdjustLayout();
 ```
 
-##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
+##  <a name="adjustpaneframes"></a>CPaneFrameWnd:: AdjustPaneFrames
 
 ```
 virtual void AdjustPaneFrames();
@@ -308,9 +308,9 @@ virtual void AdjustPaneFrames();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="calcbordersize"></a>  CPaneFrameWnd::CalcBorderSize
+##  <a name="calcbordersize"></a>CPaneFrameWnd:: CalcBorderSize
 
-ミニフレーム ウィンドウの境界線のサイズを計算します。
+ミニフレームウィンドウの境界線のサイズを計算します。
 
 ```
 virtual void CalcBorderSize(CRect& rectBorderSize) const;
@@ -319,13 +319,13 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *rectBorderSize*<br/>
-[out]ミニフレーム ウィンドウの枠線のピクセル単位でサイズを格納します。
+入出力ミニフレームウィンドウの境界線のサイズをピクセル単位で格納します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウの境界線のサイズを計算するためにフレームワークによって呼び出されます。 ミニフレーム ウィンドウのツールバーにあるかどうか、返されるサイズによって異なります[CDockablePane](../../mfc/reference/cdockablepane-class.md)します。
+このメソッドは、ミニフレームウィンドウの境界線のサイズを計算するためにフレームワークによって呼び出されます。 返されるサイズは、ミニフレームウィンドウにツールバーまたは[CDockablePane](../../mfc/reference/cdockablepane-class.md)が含まれているかどうかによって異なります。
 
-##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect
+##  <a name="calcexpecteddockedrect"></a>CPaneFrameWnd:: CalcExpectedDockedRect
 
 ドッキング ウィンドウの予想される四角形を計算します。
 
@@ -341,25 +341,25 @@ virtual void CalcExpectedDockedRect(
 ### <a name="parameters"></a>パラメーター
 
 *pWndToDock*<br/>
-[in]ドッキングするウィンドウへのポインター。
+からドッキングするウィンドウへのポインター。
 
 *ptMouse*<br/>
-[in]マウスの位置。
+からマウスの位置。
 
 *rectResult*<br/>
-[out]計算される四角形。
+入出力計算された四角形。
 
-*bDrawTab*<br/>
-[out]TRUE の場合は、タブを描画します。FALSE の場合は、タブを描画できません。
+*bDrawTab タブ*<br/>
+入出力TRUE の場合は、タブを描画します。FALSE の場合は、タブを描画しません。
 
 *ppTargetBar*<br/>
-[out][ターゲット] ウィンドウへのポインター。
+入出力ターゲットペインへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ウィンドウがユーザーによって指定されたポイントに、ウィンドウをドラッグした場合に使用される四角形を計算*ptMouse*し、そこにドッキングします。
+このメソッドは、ユーザーがウィンドウを*Ptmouse*によって指定されたポイントにドラッグし、そこにドッキングした場合に、ウィンドウが占める四角形を計算します。
 
-##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached
+##  <a name="canbeattached"></a>CPaneFrameWnd:: CanBeAttached
 
 現在のペインを別のペインまたはフレーム ウィンドウにドッキングできるかどうかを判定します。
 
@@ -369,9 +369,9 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>戻り値
 
-別のウィンドウまたはフレーム ウィンドウに、ウィンドウをドッキングできる場合は TRUE。それ以外の場合は FALSE です。
+ペインを別のペインまたはフレームウィンドウにドッキングできる場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane
+##  <a name="canbedockedtopane"></a>CPaneFrameWnd:: Canbedoc/Pane
 
 ミニフレーム ウィンドウをペインにドッキングできるかどうかを判定します。
 
@@ -381,14 +381,14 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pDockingBar*<br/>
-[in]ウィンドウ。
+*Pdocのボタン*<br/>
+からペイン。
 
 ### <a name="return-value"></a>戻り値
 
-ミニ フレームにドッキングできる場合は 0 以外*pDockingBar*。 それ以外の場合に 0 です。
+ミニフレームを*Pdocの枠線*にドッキングできる場合は0以外の場合は。それ以外の場合は0です。
 
-##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
+##  <a name="checkgrippervisibility"></a>CPaneFrameWnd:: CheckGripperVisibility
 
 ```
 virtual void CheckGripperVisibility();
@@ -404,9 +404,9 @@ virtual void CheckGripperVisibility();
 virtual void ConvertToTabbedDocument();
 ```
 
-##  <a name="create"></a>  CPaneFrameWnd::Create
+##  <a name="create"></a>CPaneFrameWnd:: Create
 
-ミニフレーム ウィンドウを作成しにアタッチします、 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)オブジェクト。
+ミニフレームウィンドウを作成し、 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -419,32 +419,32 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*したとき*<br/>
-[in]ミニフレーム ウィンドウに表示されるテキストを指定します。
+*lpszWindowName*<br/>
+からミニフレームウィンドウに表示するテキストを指定します。
 
 *dwStyle*<br/>
-[in]ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
+からウィンドウスタイルを指定します。 詳細については、「[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)」を参照してください。
 
 *rect*<br/>
-[in]ミニフレーム ウィンドウの位置と初期サイズを指定します。
+からミニフレームウィンドウの初期サイズと位置を指定します。
 
 *pParentWnd*<br/>
-[入力、出力]ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。
+[入力、出力]ミニフレームウィンドウの親フレームを指定します。 この値を NULL にすることはできません。
 
 *pContext*<br/>
 [入力、出力]ユーザー定義のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウを正常に作成した場合は TRUE。それ以外の場合、FALSE です。
+ウィンドウが正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-ミニフレーム ウィンドウは、2 つの手順で作成されます。 最初に、フレームワークを作成、`CPaneFrameWnd`オブジェクト。 次から`Create`Windows ミニフレーム ウィンドウを作成し、アタッチ先に、`CPaneFrameWnd`オブジェクト。
+ミニフレームウィンドウは、2つの手順で作成されます。 最初に、フレームワークによっ`CPaneFrameWnd`てオブジェクトが作成されます。 次に、を`Create`呼び出して Windows ミニフレームウィンドウを作成し、それ`CPaneFrameWnd`をオブジェクトにアタッチします。
 
-##  <a name="createex"></a>  CPaneFrameWnd::CreateEx
+##  <a name="createex"></a>CPaneFrameWnd:: CreateEx
 
-ミニフレーム ウィンドウを作成しにアタッチします、 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)オブジェクト。
+ミニフレームウィンドウを作成し、 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)オブジェクトにアタッチします。
 
 ```
 virtual BOOL CreateEx(
@@ -458,33 +458,33 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyleEx*<br/>
-[in]拡張ウィンドウ スタイルを指定します。 詳細については、次を参照してください[拡張ウィンドウ スタイル。](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+*Dwスタイル Ex*<br/>
+から拡張ウィンドウスタイルを指定します。 詳細については、「[拡張ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)」を参照してください。
 
-*したとき*<br/>
-[in]ミニフレーム ウィンドウに表示されるテキストを指定します。
+*lpszWindowName*<br/>
+からミニフレームウィンドウに表示するテキストを指定します。
 
 *dwStyle*<br/>
-[in]ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
+からウィンドウスタイルを指定します。 詳細については、「[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)」を参照してください。
 
 *rect*<br/>
-[in]ミニフレーム ウィンドウの位置と初期サイズを指定します。
+からミニフレームウィンドウの初期サイズと位置を指定します。
 
 *pParentWnd*<br/>
-[入力、出力]ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。
+[入力、出力]ミニフレームウィンドウの親フレームを指定します。 この値を NULL にすることはできません。
 
 *pContext*<br/>
 [入力、出力]ユーザー定義のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウを正常に作成した場合は TRUE。それ以外の場合、FALSE です。
+ウィンドウが正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-ミニフレーム ウィンドウは、2 つの手順で作成されます。 最初に、フレームワークを作成、`CPaneFrameWnd`オブジェクト。 次から`Create`Windows ミニフレーム ウィンドウを作成し、アタッチ先に、`CPaneFrameWnd`オブジェクト。
+ミニフレームウィンドウは、2つの手順で作成されます。 最初に、フレームワークによっ`CPaneFrameWnd`てオブジェクトが作成されます。 次に、を`Create`呼び出して Windows ミニフレームウィンドウを作成し、それ`CPaneFrameWnd`をオブジェクトにアタッチします。
 
-##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane
+##  <a name="dockpane"></a>CPaneFrameWnd::D ockPane
 
 ペインをドッキングします。
 
@@ -494,14 +494,14 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 
 ### <a name="parameters"></a>パラメーター
 
-*bWasDocked*<br/>
-[out]ウィンドウが既にドッキングされている場合は TRUE。それ以外の場合は FALSE です。
+*Bベアドッキング*<br/>
+入出力ペインが既にドッキングされている場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-操作が成功した場合、`CDockablePane`にドッキングされた状態は NULL それ以外の場合、ウィンドウをしたことです。
+操作が成功した場合は`CDockablePane` 、ペインがドッキングされた。それ以外の場合は NULL。
 
-##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID
+##  <a name="findfloatingpanebyid"></a>CPaneFrameWnd:: FindFloatingPaneByID
 
 フローティング ペインのグローバル リストで、指定したコントロール ID のペインを検索します。
 
@@ -512,15 +512,15 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]検索する、ウィンドウのコントロール ID を表します。
+から検索するペインのコントロール ID を表します。
 
 ### <a name="return-value"></a>戻り値
 
-指定したコントロール id; ウィンドウウィンドウに指定したコントロール ID があるない場合、それ以外の場合、NULL します。
+指定されたコントロール ID を持つペイン。それ以外の場合は、指定されたコントロール ID を持つペインがない場合は NULL になります。
 
-##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint
+##  <a name="framefrompoint"></a>CPaneFrameWnd:: FrameFromPoint
 
-指定したポイントを含むミニフレーム ウィンドウを検索します。
+指定したポイントを含むミニフレームウィンドウを検索します。
 
 ```
 static CPaneFrameWnd* __stdcall FrameFromPoint(
@@ -532,23 +532,23 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-[in]画面座標にポイントします。
+*未満*<br/>
+から画面座標で表される点。
 
 *nSensitivity*<br/>
-[in]このサイズに、ミニフレーム ウィンドウの検索領域を増やします。 ミニフレーム ウィンドウは、指定したポイントが拡大された領域内にある場合に、検索条件を満たします。
+からミニフレームウィンドウの検索領域をこのサイズで増やします。 指定されたポイントが増加した領域にある場合、ミニフレームウィンドウは検索条件を満たします。
 
-*pFrameToExclude*<br/>
-[in]検索から除外ミニフレーム ウィンドウを指定します。
+*Pフレームの除外*<br/>
+から検索から除外するミニフレームウィンドウを指定します。
 
 *bFloatMultiOnly*<br/>
-[in]TRUE の場合のみ CBRS_FLOAT_MULTI スタイルのミニフレーム ウィンドウを検索します。 FALSE の場合は、すべてのミニフレーム ウィンドウを検索します。
+からTRUE の場合は、CBRS_FLOAT_MULTI スタイルを持つミニフレームウィンドウのみを検索します。 FALSE の場合は、すべてのミニフレームウィンドウを検索します。
 
 ### <a name="return-value"></a>戻り値
 
-含むミニフレーム ウィンドウへのポインター *pt*null それ以外の場合。
+*Pt*を含むミニフレームウィンドウへのポインター。それ以外の場合は NULL。
 
-##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CPaneFrameWnd:: GetCaptionHeight
 
 ミニフレーム ウィンドウのキャプションの高さを返します。
 
@@ -558,13 +558,13 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウのピクセル単位の高さ。
+ミニフレームウィンドウの高さ (ピクセル単位)。
 
 ### <a name="remarks"></a>Remarks
 
-ミニフレーム ウィンドウの高さを決定するには、このメソッドを呼び出します。 既定では、高さは SM_CYSMCAPTION に設定されます。 詳細については、次を参照してください。 [GetSystemMetrics 関数](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)します。
+ミニフレームウィンドウの高さを決定するには、このメソッドを呼び出します。 既定では、高さは SM_CYSMCAPTION に設定されています。 詳細については、「 [GetSystemMetrics 関数](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)」を参照してください。
 
-##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect
+##  <a name="getcaptionrect"></a>CPaneFrameWnd:: GetCaptionRect
 
 ミニフレーム ウィンドウのキャプションに外接する四角形を計算します。
 
@@ -575,11 +575,11 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ### <a name="parameters"></a>パラメーター
 
 *rectCaption*<br/>
-[out]ミニフレーム ウィンドウのキャプションの画面座標の位置とサイズが含まれています。
+入出力ミニフレームウィンドウキャプションのサイズと位置を画面座標で格納します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウのキャプションの外接する四角形を計算するためにフレームワークによって呼び出されます。
+このメソッドは、ミニフレームウィンドウのキャプションの外接する四角形を計算するためにフレームワークによって呼び出されます。
 
 ##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText
 
@@ -591,13 +591,13 @@ virtual CString GetCaptionText();
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウのキャプション テキスト。
+ミニフレームウィンドウのキャプションテキスト。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、キャプション テキストを表示するときにフレームワークによって呼び出されます。
+このメソッドは、キャプションテキストを表示するときにフレームワークによって呼び出されます。
 
-##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
+##  <a name="getdockingmanager"></a>CPaneFrameWnd:: Getdoc王国マネージャー
 
 ```
 CDockingManager* GetDockingManager() const;
@@ -617,7 +617,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドッキングのモード。 次のいずれかの値です。
+ドッキングモード。 次のいずれかの値です。
 
 - DT_STANDARD
 
@@ -625,7 +625,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 - DT_SMART
 
-##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane
+##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd:: GetFirstVisiblePane
 
 ミニフレーム ウィンドウに含まれる最初の可視ペインを返します。
 
@@ -635,9 +635,9 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウ、またはミニフレーム ウィンドウにペインが含まれていない場合は NULL の最初のウィンドウ。
+ミニフレームウィンドウの最初のペイン。ミニフレームウィンドウにペインが含まれていない場合は NULL。
 
-##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
+##  <a name="gethotpoint"></a>CPaneFrameWnd:: GetHotPoint
 
 ```
 CPoint GetHotPoint() const;
@@ -657,7 +657,7 @@ virtual CWnd* GetPane() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウにペインが含まれていない場合に、ミニフレーム、または NULL に含まれるウィンドウです。
+ミニフレームに含まれるペイン。ミニフレームウィンドウにペインが含まれていない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
@@ -671,7 +671,7 @@ virtual int GetPaneCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウのペインの数。 この値は 0 を指定できます。
+ミニフレームウィンドウ内のペインの数。 この値は0にすることができます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -695,7 +695,7 @@ BOOL GetPinState() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
+##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd:: GetRecentFloatingRect
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -715,7 +715,7 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-表示されているペインの数。
+表示されるペインの数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -731,11 +731,11 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[in]テストする点です。
+*視点*<br/>
+からテストするポイント。
 
-*bDetectCaption*<br/>
-[in]TRUE の場合は、キャプションに対するポイントを確認します。 FALSE の場合は、キャプションを無視します。
+*B検出キャプション*<br/>
+からTRUE の場合は、キャプションに対するポイントを確認します。 FALSE の場合は、キャプションを無視します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -743,19 +743,19 @@ virtual LRESULT HitTest(
 
 |[値]|説明|
 |-----------|-------------|
-|HTNOWHERE|ミニフレーム ウィンドウ外です。|
-|HTCLIENT|クライアント領域内です。|
-|HTCAPTION|キャプションがポイントです。|
-|HTTOP|上部にあります。|
-|HTTOPLEFT|左上にあります。|
-|HTTOPRIGHT|右上にあります。|
-|HTLEFT|ポイントは、左側にあります。|
-|HTRIGHT|右側にあります。|
-|HTBOTTOM|下部にあります。|
-|HTBOTTOMLEFT|左下です。|
-|HTBOTTOMRIGHT|右下にあります。|
+|HTNOWHERE|ポイントがミニフレームウィンドウの外側にあります。|
+|HTCLIENT|ポイントはクライアント領域にあります。|
+|HTCAPTION|ポイントはキャプション上にあります。|
+|HTTOP|ポイントが一番上にあります。|
+|HTTOPLEFT|ポイントが左上にあります。|
+|HTTOPRIGHT|ポイントは右上にあります。|
+|HTLEFT|ポイントが左側にあります。|
+|HTRIGHT|ポイントが右側にあります。|
+|HTBOTTOM|点は下部にあります。|
+|左から左|ポイントは左下にあります。|
+|HTRIGHT|ポイントが右下にあります。|
 
-##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
+##  <a name="iscaptured"></a>CPaneFrameWnd:: IsCaptured
 
 ```
 BOOL IsCaptured() const;
@@ -785,15 +785,15 @@ virtual BOOL IsRollDown() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウをロール ダウンする必要がある場合は TRUE。それ以外の場合、FALSE です。
+ミニフレームウィンドウをロールダウンする必要がある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウをロール ダウンするかどうかを判断するためにフレームワークによって呼び出されます。 プログラムのロールアップ/ロールダウン機能は、AFX_CBRS_AUTO_ROLLUP フラグが少なくとも 1 つのペインが含まれている場合に、ミニフレーム ウィンドウに有効です。 ウィンドウが作成されたときに、このフラグが設定されます。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
+このメソッドは、ミニフレームウィンドウをロールダウンする必要があるかどうかを判断するために、フレームワークによって呼び出されます。 AFX_CBRS_AUTO_ROLLUP フラグを持つペインが少なくとも1つ含まれている場合は、ミニフレームウィンドウに対して rollup/rolldown 機能が有効になります。 このフラグは、ペインが作成されるときに設定されます。 詳細については、「 [Cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)」を参照してください。
 
-既定では、フレームワークは、マウス ポインターをウィンドウをロール ダウンする必要があるかどうかを判断するミニフレーム ウィンドウ外接する四角形がかどうかをチェックします。 派生クラスでは、この動作をオーバーライドすることができます。
+既定では、フレームワークは、ウィンドウをロールダウンする必要があるかどうかを判断するために、マウスポインターがミニフレームウィンドウの外接する四角形の内側にあるかどうかを確認します。 派生クラスでは、この動作をオーバーライドできます。
 
-##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp
+##  <a name="isrollup"></a>CPaneFrameWnd:: IsRollUp
 
 ミニフレーム ウィンドウをロール アップするかどうかを判断します。
 
@@ -803,13 +803,13 @@ virtual BOOL IsRollUp() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウをロール アップする必要がある場合は TRUE。それ以外の場合、FALSE です。
+ミニフレームウィンドウをロールアップする必要がある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウをロール アップするかどうかを判断するためにフレームワークによって呼び出されます。 プログラムのロールアップ/ロールダウン機能は、AFX_CBRS_AUTO_ROLLUP フラグが少なくとも 1 つのペインが含まれている場合に、ミニフレーム ウィンドウに有効です。 ウィンドウが作成されたときに、このフラグが設定されます。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
+このメソッドは、ミニフレームウィンドウをロールアップする必要があるかどうかを判断するために、フレームワークによって呼び出されます。 AFX_CBRS_AUTO_ROLLUP フラグを持つペインが少なくとも1つ含まれている場合は、ミニフレームウィンドウに対して rollup/rolldown 機能が有効になります。 このフラグは、ペインが作成されるときに設定されます。 詳細については、「 [Cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)」を参照してください。
 
-既定では、フレームワークは、マウス ポインターが、ウィンドウが、ロール アップするかどうかを判断するミニフレーム ウィンドウ外接する四角形がかどうかをチェックします。 派生クラスでは、この動作をオーバーライドすることができます。
+既定では、フレームワークは、ウィンドウをロールアップする必要があるかどうかを判断するために、マウスポインターがミニフレームウィンドウの外接する四角形の内側にあるかどうかを確認します。 派生クラスでは、この動作をオーバーライドできます。
 
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer
 
@@ -832,18 +832,18 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>パラメーター
 
 *lpszProfileName*<br/>
-[in]プロファイルの名前。
+からプロファイル名。
 
 *uiID*<br/>
-[in]ペインの ID
+からペイン ID。
 
 ### <a name="return-value"></a>戻り値
 
-ペインの状態が正常に読み込まれている場合は TRUE。それ以外の場合は FALSE です。
+ペインの状態が正常に読み込まれた場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits
+##  <a name="m_busesavebits"></a>CPaneFrameWnd:: m_bUseSaveBits
 
-CS_SAVEBITS クラスのスタイルがウィンドウ クラスを登録するかどうかを指定します。
+CS_SAVEBITS クラススタイルを持つウィンドウクラスを登録するかどうかを指定します。
 
 ```
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
@@ -851,7 +851,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 
 ### <a name="remarks"></a>Remarks
 
-この静的なメンバーを CS_SAVEBITS スタイルがミニフレーム ウィンドウ クラスを登録する場合は true を設定します。 これにより、ミニフレーム ウィンドウをドラッグすると、ちらつきを減らすことができます。
+CS_SAVEBITS スタイルを持つミニフレームウィンドウクラスを登録するには、この静的メンバーを TRUE に設定します。 これは、ユーザーがミニフレームウィンドウをドラッグしたときのちらつきを軽減するのに役立ちます。
 
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock
 
@@ -863,9 +863,9 @@ virtual BOOL OnBeforeDock();
 
 ### <a name="return-value"></a>戻り値
 
-ドッキング可能な場合は TRUE。それ以外の場合、FALSE です。
+ドッキングできる場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState
+##  <a name="oncheckrollstate"></a>CPaneFrameWnd:: OnCheckRollState
 
 ミニフレーム ウィンドウをロール アップまたはロール ダウンするかどうかを判断します。
 
@@ -875,11 +875,11 @@ virtual void OnCheckRollState();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、上または下に、ミニフレーム ウィンドウをロールかどうかを判断するためにフレームワークによって呼び出されます。
+このメソッドは、ミニフレームウィンドウをロールアップまたはダウンする必要があるかどうかを判断するために、フレームワークによって呼び出されます。
 
-既定では、フレームワーク[CPaneFrameWnd::IsRollUp](#isrollup)と[CPaneFrameWnd::IsRollDown](#isrolldown)とだけ拡大またはミニフレーム ウィンドウを復元します。 別の視覚効果を使用する派生クラスでこのメソッドをオーバーライドすることができます。
+既定では、フレームワークは[CPaneFrameWnd:: IsRollUp](#isrollup)と[CPaneFrameWnd:: IsRollDown](#isrolldown)を呼び出し、ミニフレームウィンドウを拡大または復元します。 派生クラスでこのメソッドをオーバーライドして、別の視覚効果を使用することができます。
 
-##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos
+##  <a name="ondocktorecentpos"></a>CPaneFrameWnd:: OnDockToRecentPos
 
 ミニフレーム ウィンドウを直前の位置にドッキングします。
 
@@ -898,13 +898,13 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]境界線を描画するために使用するデバイス コンテキスト。
+から境界線の描画に使用するデバイスコンテキスト。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウの境界線を描画するためにフレームワークによって呼び出されます。
+このメソッドは、ミニフレームウィンドウの境界線を描画するためにフレームワークによって呼び出されます。
 
-##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer
+##  <a name="onkillrolluptimer"></a>CPaneFrameWnd:: OnKillRollUpTimer
 
 ロールアップ タイマーを停止します。
 
@@ -925,14 +925,14 @@ virtual void OnMovePane(
 ### <a name="parameters"></a>パラメーター
 
 *pBar*<br/>
-[in](無視) ウィンドウへのポインター。
+からペインへのポインター (無視)。
 
 *ptOffset*<br/>
-[in]ウィンドウを移動するためのオフセット。
+からペインの移動に使用するオフセット。
 
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout
 
-ミニフレーム ウィンドウ内のペインのレイアウトを調整します。
+ミニフレームウィンドウ内のペインのレイアウトを調整します。
 
 ```
 virtual void OnPaneRecalcLayout();
@@ -940,11 +940,11 @@ virtual void OnPaneRecalcLayout();
 
 ### <a name="remarks"></a>Remarks
 
-ミニフレーム ウィンドウ内のペインのレイアウトを調整する必要がありますと、フレームワークはこのメソッドを呼び出します。
+フレームワークは、ミニフレームウィンドウ内のペインのレイアウトを調整する必要がある場合に、このメソッドを呼び出します。
 
-既定では、ミニフレーム ウィンドウの完全なクライアント領域をカバーする、ウィンドウが配置されます。
+既定では、ウィンドウはミニフレームウィンドウのクライアント領域全体をカバーするように配置されています。
 
-##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer
+##  <a name="onsetrolluptimer"></a>CPaneFrameWnd:: OnSetRollUpTimer
 
 ロールアップ タイマーを設定します。
 
@@ -965,14 +965,14 @@ virtual void OnShowPane(
 ### <a name="parameters"></a>パラメーター
 
 *pBar*<br/>
-[in]ウィンドウを表示または非表示になります。
+から表示または非表示になっているペイン。
 
 *bShow*<br/>
-[in]TRUE の場合、ウィンドウは表示されています。ウィンドウが非表示の場合は FALSE です。
+からペインが表示されている場合は TRUE。ペインが非表示になっている場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-ミニフレーム ウィンドウのペインの表示または非表示のときに、フレームワークによって呼び出されます。 既定の実装では、何も行われません。
+ミニフレームウィンドウのペインが表示または非表示にされたときに、フレームワークによって呼び出されます。 既定の実装では、何も行われません。
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
@@ -982,11 +982,11 @@ void Pin(BOOL bPin = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bPin*<br/>
+から*Bpin*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="panefrompoint"></a>  CPaneFrameWnd::PaneFromPoint
+##  <a name="panefrompoint"></a>CPaneFrameWnd::P aneFromPoint
 
 ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。
 
@@ -999,22 +999,22 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[in]ポイント画面座標で、ユーザーがクリックしました。
+*視点*<br/>
+からユーザーがクリックしたポイント (画面座標)。
 
 *nSensitivity*<br/>
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されません。
 
 *bCheckVisibility*<br/>
-[in]表示されているペインのみが返されること; を指定する場合は TRUEそれ以外の場合、FALSE です。
+から表示されるペインのみを返すように指定する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーがクリックしたペインまたはウィンドウがその場所に存在しない場合は NULL です。
+ユーザーがクリックしたペイン。その場所にペインが存在しない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-指定したポイントを含むウィンドウを取得するには、このメソッドを呼び出します。
+指定されたポイントを含むペインを取得するには、このメソッドを呼び出します。
 
 ##  <a name="redrawall"></a>  CPaneFrameWnd::RedrawAll
 
@@ -1026,7 +1026,7 @@ static void RedrawAll();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出してすべてのミニフレーム ウィンドウを更新する[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)ウィンドウごとにします。
+このメソッドは、ウィンドウごとに[CWnd:: RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)を呼び出すことによって、すべてのミニフレームウィンドウを更新します。
 
 ##  <a name="removenonvalidpanes"></a>  CPaneFrameWnd::RemoveNonValidPanes
 
@@ -1049,18 +1049,18 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in]削除するウィンドウへのポインター。
+*pWnd*<br/>
+から削除するペインへのポインター。
 
 *bDestroy*<br/>
-[in]ミニフレーム ウィンドウの動作を指定します。 場合*bDestroy*が true の場合、このメソッドはすぐに、ミニフレーム ウィンドウを破棄します。 FALSE の場合、このメソッドは、特定の遅延後に、ミニフレーム ウィンドウを破棄します。
+からミニフレームウィンドウの動作を指定します。 *Bdestroy*が TRUE の場合、このメソッドはミニフレームウィンドウを直ちに破棄します。 FALSE の場合、このメソッドは、特定の遅延の後にミニフレームウィンドウを破棄します。
 
 *bNoDelayedDestroy*<br/>
-[in]TRUE の場合、遅延の破棄は無効です。 FALSE の場合、遅延の破棄が有効にします。
+からTRUE の場合、遅延破棄は無効になります。 FALSE の場合、遅延破棄が有効になります。
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、すぐに、または特定の遅延の後、ミニフレーム ウィンドウを破棄できます。 ミニフレーム ウィンドウの破棄を遅延する場合に FALSE を渡す、 *bNoDelayedDestroy*パラメーター。 遅延の破棄は、フレームワークが AFX_WM_CHECKEMPTYMINIFRAME メッセージを処理するときに発生します。
+フレームワークは、ミニフレームウィンドウを直ちに、または特定の遅延の後に破棄できます。 ミニフレームウィンドウの破棄を遅延する場合は、 *Bnodelayeddestroy*パラメーターに FALSE を渡します。 遅延破棄は、フレームワークが AFX_WM_CHECKEMPTYMINIFRAME メッセージを処理するときに発生します。
 
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane
 
@@ -1075,12 +1075,12 @@ virtual void ReplacePane(
 ### <a name="parameters"></a>パラメーター
 
 *pBarOrg*<br/>
-[in]元のウィンドウへのポインター。
+から元のペインへのポインター。
 
 *pBarReplaceWith*<br/>
-[in]元のウィンドウを置換するウィンドウへのポインター。
+から元のペインを置き換えるペインへのポインター。
 
-##  <a name="savestate"></a>  CPaneFrameWnd::SaveState
+##  <a name="savestate"></a>CPaneFrameWnd:: SaveState
 
 レジストリにペインの状態を保存します。
 
@@ -1093,14 +1093,14 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>パラメーター
 
 *lpszProfileName*<br/>
-[in]プロファイルの名前。
+からプロファイル名。
 
 *uiID*<br/>
-[in]ペインの ID
+からペイン ID。
 
 ### <a name="return-value"></a>戻り値
 
-ペインの状態が正常に保存されている場合は TRUE。それ以外の場合は FALSE です。
+ペインの状態が正常に保存された場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons
 
@@ -1113,7 +1113,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ### <a name="parameters"></a>パラメーター
 
 *dwButtons*<br/>
-[in]次の値のビットごとの OR の組み合わせです。
+から次の値のビットごとの or の組み合わせ。
 
 - AFX_CAPTION_BTN_CLOSE
 
@@ -1131,11 +1131,11 @@ void SetDelayShow(BOOL bDelayShow);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bDelayShow*<br/>
+から*Bdelayshow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
+##  <a name="setdockingmanager"></a>CPaneFrameWnd:: Setdoc王国マネージャー
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1143,7 +1143,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pManager*<br/>
+から*Pmanager*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1157,10 +1157,10 @@ void SetDockingTimer(UINT nTimeOut);
 
 ### <a name="parameters"></a>パラメーター
 
-*タイムアウト*<br/>
-[in]タイムアウト値 (ミリ秒単位)。
+*nTimeOut*<br/>
+からタイムアウト値 (ミリ秒単位)。
 
-##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState
+##  <a name="setdockstate"></a>CPaneFrameWnd:: SetDockState
 
 ドッキング状態を設定します。
 
@@ -1171,9 +1171,9 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ### <a name="parameters"></a>パラメーター
 
 *pDockManager*<br/>
-[in]ドッキングのマネージャーへのポインター。
+からドッキングマネージャーへのポインター。
 
-##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
+##  <a name="sethotpoint"></a>CPaneFrameWnd:: SetHotPoint
 
 ```
 void SetHotPoint(CPoint& ptNew);
@@ -1181,11 +1181,11 @@ void SetHotPoint(CPoint& ptNew);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ptNew*<br/>
+から*Ptnew*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setpredockstate"></a>  CPaneFrameWnd::SetPreDockState
+##  <a name="setpredockstate"></a>CPaneFrameWnd:: SetPreDockState
 
 ドッキング前の状態を設定するために、フレームワークによって呼び出されます。
 
@@ -1199,27 +1199,27 @@ virtual BOOL SetPreDockState(
 ### <a name="parameters"></a>パラメーター
 
 *preDockState*<br/>
-[in]使用可能な値:
+から使用可能な値:
 
-- PDS_NOTHING、
+- PDS_NOTHING,
 
-- PDS_DOCK_REGULAR、
+- PDS_DOCK_REGULAR,
 
 - PDS_DOCK_TO_TAB
 
 *pBarToDock*<br/>
-[in]ドッキング ウィンドウへのポインター。
+からドッキングするペインへのポインター。
 
 *dockMethod*<br/>
-[in]ドッキング メソッド。 (このパラメーターが無視されます)
+からドッキングメソッド。 (このパラメーターは無視されます)。
 
 ### <a name="return-value"></a>戻り値
 
-ミニフレーム ウィンドウがドッキング解除する場合は TRUE。ドッキングされている場合は FALSE。
+ミニフレームウィンドウがドッキング解除されている場合は TRUE。ドッキングされている場合は FALSE。
 
-##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent
+##  <a name="sizetocontent"></a>CPaneFrameWnd:: SizeToContent
 
-これは含まれているペインに相当するように、ミニフレーム ウィンドウのサイズを調整します。
+格納されているペインと同じになるように、ミニフレームウィンドウのサイズを調整します。
 
 ```
 virtual void SizeToContent();
@@ -1227,9 +1227,9 @@ virtual void SizeToContent();
 
 ### <a name="remarks"></a>Remarks
 
-含まれているペインのサイズにミニフレーム ウィンドウのサイズを調整するには、このメソッドを呼び出します。
+このメソッドを呼び出して、ミニフレームウィンドウのサイズを、含まれているペインのサイズに調整します。
 
-##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff
+##  <a name="starttearoff"></a>CPaneFrameWnd:: StartTearOff
 
 メニューをティアオフします。
 
@@ -1240,11 +1240,11 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ### <a name="parameters"></a>パラメーター
 
 *pMenu*<br/>
-[in]メニューへのポインター。
+からメニューへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
+メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
@@ -1254,11 +1254,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+から*Pbar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
+##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd:: StoreRecentTabRelatedInfo
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1268,8 +1268,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+から*Pdocのボタン*<br/>
+から*pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

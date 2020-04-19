@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161635"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView クラス
 
@@ -71,7 +71,7 @@ UnorderedMapView の C++ の具象実装、 [Windows::Foundation::Collections::I
 
 ## <a name="first"></a>  UnorderedMapView::First メソッド
 
-最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。
+最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)順序なしのマップ内の要素。
 
 ### <a name="syntax"></a>構文
 
@@ -125,11 +125,11 @@ UnorderedMapView の要素の検索に使用するキー。 型`key`typename が
 
 ### <a name="return-value"></a>戻り値
 
-`key` とペアになる値。 戻り値の型は typename *V*します。
+`key` とペアになる値。 戻り値の型は typename *V* します。
 
 ## <a name="size"></a>  UnorderedMapView::Size メソッド
 
-数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMapView 内の要素。
+数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMapView 内の要素。
 
 ### <a name="syntax"></a>構文
 

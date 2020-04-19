@@ -1,9 +1,9 @@
 ---
 title: _kbhit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _kbhit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _kbhit
 - kbhit
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667997"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953513"
 ---
-# <a name="kbhit"></a>_kbhit
+# <a name="_kbhit"></a>_kbhit
 
 キーボード入力のコンソールをチェックします。
 
@@ -53,11 +56,11 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_kbhit**キーが押された場合は、0 以外の値を返します。 それ以外の場合は、0 を返します。
+キーが押された場合は、0以外の値が返されます。 **(_l)** それ以外の場合は 0 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Kbhit**関数は、最新のキーストロークのコンソールをチェックします。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 プログラムを呼び出すことが **_getch**または **_getche**キーストロークを取得します。
+**(_L)** 関数は、コンソールで最近のキー入力を確認します。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 プログラムは、 **_getch**または **_getche**を呼び出して、キーストロークを取得できます。
 
 ## <a name="requirements"></a>必要条件
 

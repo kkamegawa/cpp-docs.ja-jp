@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 101edcf31114252911eac90d07f5f44249f98fb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 403a05a75fe3ce7bc006c903af00e7536f4a6ea2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465300"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686475"
 ---
-# <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
+# <a name="ltscoped_allocatorgt"></a>&lt;scoped_allocator&gt;
 
-コンテナーのテンプレート クラス scoped_allocator を定義します。
+コンテナークラステンプレート scoped_allocator を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,12 +32,12 @@ ms.locfileid: "50465300"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[scoped_allocator_adaptor クラス](../standard-library/scoped-allocator-adaptor-class.md)|1 つまたは複数のアロケーターの入れ子をカプセル化するテンプレート クラスです。|
+|[scoped_allocator_adaptor クラス](../standard-library/scoped-allocator-adaptor-class.md)|1つ以上のアロケーターの入れ子をカプセル化するクラステンプレート。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

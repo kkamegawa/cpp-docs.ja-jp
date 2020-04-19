@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2164
 ms.assetid: 55df5024-68a8-45a8-ae6c-e6dba35318a2
-ms.openlocfilehash: 3b1c7a94dfca1c2767e14f96204ecda670c8a586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74c4f0e24f21f21d7a7015a20cb0e27ac635c467
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460815"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301913"
 ---
 # <a name="compiler-error-c2164"></a>コンパイラ エラー C2164
 
-'function': 組み込み関数が宣言されていません
+' function ': 組み込み関数が宣言されていません。
 
-`intrinsic`プラグマが宣言されていない関数を使用して (でのみ発生します **/Oi**)。 または、そのヘッダー ファイルを含めずに使用されたコンパイラ組み込み関数のいずれか。
+`intrinsic` プラグマは宣言されていない関数を使用します ( **/Oi**でのみ発生します)。 または、コンパイラの組み込みの1つがヘッダーファイルを含めずに使用されました。
 
 次の例では、C2164 が生成されます。
 
-```
+```c
 // C2164.c
 // compile with: /c
 // processor: x86

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-ms.openlocfilehash: 38f51205eea7220f0efbc2d8821fcb2b423e0add
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4d983d53e49fc8d9c80c206f1a23078eb82f61
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411553"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>拡張コンボ ボックス コントロールでのイメージ リストの使い方
 
@@ -39,4 +39,3 @@ ms.locfileid: "50504600"
 
 [CComboBoxEx の使い方](../mfc/using-ccomboboxex.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

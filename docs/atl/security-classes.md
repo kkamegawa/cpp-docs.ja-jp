@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - security classes [C++]
 ms.assetid: 0477f1a4-c1af-4c4f-bbca-08f7b844e028
-ms.openlocfilehash: e5218e7d805a5dbe13658778b417f969691b88b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80c688baa1741e03a9f32a8ee1725c0091bbf8ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197653"
 ---
 # <a name="security-classes"></a>セキュリティ クラス
 
@@ -40,4 +40,3 @@ ms.locfileid: "50534109"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../atl/reference/security-global-functions.md)
-

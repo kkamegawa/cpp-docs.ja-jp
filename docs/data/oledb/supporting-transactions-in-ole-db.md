@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 647112f480f6470f7d893ecd1d5177618dc23708
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389269"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB でのトランザクションのサポート
 
@@ -22,11 +22,11 @@ A[トランザクション](../../data/transactions-mfc-data-access.md)グルー
 
 OLE DB では、次の 3 つの方法でトランザクションをサポートしています。
 
-- [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>セッションとトランザクションの関係
 
@@ -48,7 +48,7 @@ OLE DB では、次の 3 つの方法でトランザクションをサポート�
 
 ## <a name="nested-transactions"></a>入れ子になったトランザクション
 
-A[トランザクションを入れ子になった](https://docs.microsoft.com/previous-versions/windows/desktop/ms716985(v=vs.85))セッションにアクティブなトランザクションが存在する場合は、新しいローカル トランザクションを開始するときに発生します。 現在のトランザクションの下に入れ子になったトランザクションとしての新しいトランザクションを開始します。 プロバイダーが入れ子になったトランザクションをサポートしていない場合は、呼び出す`StartTransaction`XACT_E_XTIONEXISTS が返されます、セッションにアクティブなトランザクションがあるときにします。
+A[トランザクションを入れ子になった](/previous-versions/windows/desktop/ms716985(v=vs.85))セッションにアクティブなトランザクションが存在する場合は、新しいローカル トランザクションを開始するときに発生します。 現在のトランザクションの下に入れ子になったトランザクションとしての新しいトランザクションを開始します。 プロバイダーが入れ子になったトランザクションをサポートしていない場合は、呼び出す`StartTransaction`XACT_E_XTIONEXISTS が返されます、セッションにアクティブなトランザクションがあるときにします。
 
 ## <a name="distributed-transactions"></a>分散トランザクション
 

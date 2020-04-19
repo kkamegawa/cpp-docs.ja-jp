@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 1fd61b3e6bcb2f429c43edcabb41e166bcec95c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d249c7effc2c78e319207d82c9a963d7a61a67c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466158"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504759"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 
@@ -48,13 +48,13 @@ void CWebView::OnInitialUpdate()
 
     // TODO: This code navigates to a popular spot on the web.
     // Change the code to go where you'd like.
-    Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
+    Navigate2(_T("http://www.docs.microsoft.com/"),
         NULL,
         NULL);
 }
 ```
 
-このサイトは、独自のいずれかで置き換えることができます。 または使用できます、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数は、ビューの既定の内容として、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例えば:
+このサイトは、独自のいずれかで置き換えることができます。 または使用できます、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数は、ビューの既定の内容として、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例:
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -71,7 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [MFC サンプル MFCIE](https://github.com/Microsoft/VCSamples)<br/>
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)<br/>
-[プロパティ ページ](../../ide/property-pages-visual-cpp.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)
+[コンパイラとビルドのプロパティの設定](../../build/working-with-project-properties.md)<br/>
+[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)<br/>
+[コンパイラとビルドのプロパティの設定](../../build/working-with-project-properties.md)
 

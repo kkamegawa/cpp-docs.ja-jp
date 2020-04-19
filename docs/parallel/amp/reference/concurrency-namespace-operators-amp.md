@@ -1,15 +1,15 @@
 ---
-title: Concurrency 名前空間演算子 (AMP)
+title: コンカレンシー名前空間演算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: cd40f771cbab5651b2f33f0ed2e84ea1412855bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598043"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126921"
 ---
-# <a name="concurrency-namespace-operators-amp"></a>Concurrency 名前空間演算子 (AMP)
+# <a name="concurrency-namespace-operators-amp"></a>コンカレンシー名前空間演算子 (AMP)
 
 ||||
 |-|-|-|
@@ -17,11 +17,11 @@ ms.locfileid: "50598043"
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[operator==](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a>  operator==
+## <a name="operator_eq_eq"></a>  operator==
 
 指定した引数が等しいかどうかを判断します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -44,13 +44,13 @@ bool operator== (
 
 ### <a name="return-value"></a>戻り値
 
-**true**タプルが、それ以外の場合は**false**します。
+組が等しい場合は**true** 。それ以外の場合は**false**。
 
-##  <a name="operator_neq"></a>  operator!=
+## <a name="operator_neq"></a>  operator!=
 
 指定した引数が等しくないかどうかを判断します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -73,13 +73,13 @@ bool operator!= (
 
 ### <a name="return-value"></a>戻り値
 
-**true**タプルが、それ以外の場合**false**します。
+組が等しくない場合は**true**を返します。それ以外の場合は**false**。
 
-##  <a name="operator_add"></a>  operator+
+## <a name="operator_add"></a>  operator+
 
 指定された引数の要素ごとの合計を計算します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -120,11 +120,11 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 
 指定された引数の要素ごとの合計。
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a>  operator-
 
 指定された引数の要素ごとの差を計算します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -165,11 +165,11 @@ _Tuple_type<_Rank>   operator-(
 
 指定された引数の要素ごとの差。
 
-##  <a name="operator_star"></a>  operator*
+## <a name="operator_star"></a>  operator*
 
 指定された引数の要素ごとの積を計算します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -202,11 +202,11 @@ _Tuple_type<_Rank>   operator*(
 
 指定された引数の要素ごとの積。
 
-##  <a name="operator_div"></a>  operator/
+## <a name="operator_div"></a>  operator/
 
 指定された引数のコンポーネントごとの商を計算します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -239,11 +239,11 @@ _Tuple_type<_Rank>   operator/(
 
 指定された引数のコンポーネントごとの商。
 
-##  <a name="operator_mod"></a>  operator%
+## <a name="operator_mod"></a>  operator%
 
 2 番目の指定された引数による 1 番目の指定された引数の剰余を計算します。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -276,6 +276,6 @@ _Tuple_type<_Rank>   operator%(
 
 2 番目の指定された引数による 1 番目の指定された引数の剰余という結果。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[同時実行 Namespace ](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間](concurrency-namespace-cpp-amp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2843
 ms.assetid: 9d3f2ac4-eea5-4fed-abeb-e752f442bfcc
-ms.openlocfilehash: 9c45e0d95565d0aec1753c6e7b10659e9a8b5714
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6ab867323e629695e161f3ac001a3fb2174775e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643548"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752003"
 ---
 # <a name="compiler-error-c2843"></a>コンパイラ エラー C2843
 
@@ -21,7 +21,7 @@ ms.locfileid: "50643548"
 
 次の例では、C2843 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2843_2.cpp
 // compile with: /clr
 public ref class C {

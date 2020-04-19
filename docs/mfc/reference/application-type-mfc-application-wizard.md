@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: 79f620766e8d0888e606fcb45a0fd02c9de58fc9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c6d8a57c577dad20ac7bb8f579220a77d2a34850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522596"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708265"
 ---
 # <a name="application-type-mfc-application-wizard"></a>[アプリケーションの種類] (MFC アプリケーション ウィザード)
 
@@ -101,4 +101,4 @@ ms.locfileid: "51522596"
 ## <a name="see-also"></a>関連項目
 
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Visual C++ プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)
+[Visual Studio のファイルの種類を作成C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)

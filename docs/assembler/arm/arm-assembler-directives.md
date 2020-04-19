@@ -1,13 +1,13 @@
----
+﻿---
 title: ARM アセンブラー ディレクティブ
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167674"
 ---
 # <a name="arm-assembler-directives"></a>ARM アセンブラー ディレクティブ
 
@@ -55,7 +55,7 @@ ms.locfileid: "50592453"
 
    この構文を使用してエクスポートを指定します。
 
-   > **エクスポート**|**GLOBAL** <em>sym</em>{**[**<em>型</em>**]**}
+   > **EXPORT**|**GLOBAL** <em>sym</em>{ **[** <em>type</em> **]** }
 
    *sym*はエクスポートする記号です。  [*型*]、指定した場合いずれかになります`[DATA]`シンボル データをポイントすることを示すまたは`[FUNC]`をシンボルがコードを指していることを示します。 `GLOBAL` は `EXPORT`のシノニムです。
 
@@ -75,7 +75,7 @@ ms.locfileid: "50592453"
 
    この構文を使用してインポートを指定します。
 
-   > **インポート**|**EXTERN** *sym*{**、弱い***エイリアス*{**、型***t*}}
+   > **IMPORT**|**EXTERN** *sym*{ **, WEAK***エイリアス*{ **, TYPE***t*}}
 
    *sym*をインポートするシンボルの名前を指定します。
 

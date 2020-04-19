@@ -1,6 +1,6 @@
 ---
 title: bad_typeid 例外
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
 - bad_typeid_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 0389a6db1249ad47d4ca5cc10003169933c7a5c3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331673"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245914"
 ---
-# <a name="badtypeid-exception"></a>bad_typeid 例外
+# <a name="bad_typeid-exception"></a>bad_typeid 例外
 
-**Bad_typeid**によって例外がスローされた、 [typeid 演算子](../cpp/typeid-operator.md)ときに、オペランドの**typeid** NULL ポインターです。
+**Typeid**のオペランドが NULL ポインターの場合、 [typeid 演算子](../cpp/typeid-operator.md)によって**bad_typeid**例外がスローされます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,26 +26,30 @@ catch (bad_typeid)
    statement
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-インターフェイスを**bad_typeid**は。
+**Bad_typeid**のインターフェイスは次のとおりです。
 
 ```cpp
 class bad_typeid : public exception
 {
 public:
+   bad_typeid();
    bad_typeid(const char * _Message = "bad typeid");
    bad_typeid(const bad_typeid &);
    virtual ~bad_typeid();
+
+   bad_typeid& operator=(const bad_typeid&);
+   const char* what() const;
 };
 ```
 
-次の例は、 **typeid**スロー演算子、 **bad_typeid**例外。
+次の例は、 **bad_typeid**例外をスローする**typeid**演算子を示しています。
 
 ```cpp
 // expre_bad_typeid.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class A{
@@ -74,7 +78,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ランタイム型情報](../cpp/run-time-type-information.md)<br/>
+[ランタイム型情報](../cpp/run-time-type-information.md)\
 [キーワード](../cpp/keywords-cpp.md)

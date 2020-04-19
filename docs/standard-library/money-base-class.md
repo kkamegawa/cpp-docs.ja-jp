@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610448"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689325"
 ---
-# <a name="moneybase-class"></a>money_base クラス
+# <a name="money_base-class"></a>money_base クラス
 
-このクラスは、テンプレート クラス [moneypunct](../standard-library/moneypunct-class.md) のすべての特殊化に共通する列挙型および構造体を表します。
+クラスは、クラステンプレート[moneypunct](../standard-library/moneypunct-class.md)のすべての特殊化に共通する列挙型と構造体を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,19 +28,19 @@ struct pattern
 
 ## <a name="remarks"></a>Remarks
 
-列挙体`part`構造パターンの配列フィールドの要素で指定できる値について説明します。 値`part`は。
+列挙 `part` は、構造パターンの配列フィールドの要素で使用可能な値を示します。 @No__t_0 の値は次のとおりです。
 
-- `none` 一致する 0 個以上の空白文字か何も生成しません。
+- 0個以上の空白に一致する `none`、または何も生成しません。
 
-- `sign` 一致するか、正または負の記号を生成します。
+- 正または負の符号を一致または生成する `sign` ます。
 
-- `space` 0 個以上の空白文字と一致するか、空白を生成します。
+- 0個以上の空白に一致する `space`、またはスペースを生成します。
 
-- `symbol` 一致するか、通貨記号を生成します。
+- 通貨記号を一致または生成する `symbol` ます。
 
-- `value` 一致するか、通貨値を生成します。
+- 通貨値の一致または生成を `value` します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -48,4 +48,4 @@ struct pattern
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

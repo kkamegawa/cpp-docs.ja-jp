@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3420
 ms.assetid: 99b53c77-f36b-4574-9199-b53111becccb
-ms.openlocfilehash: 3db109598ce0741ca34a230d8925994543bcb5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e165a0c181bc27adebe75111050f49130305693
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645940"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756254"
 ---
 # <a name="compiler-error-c3420"></a>コンパイラ エラー C3420
 
@@ -19,13 +19,13 @@ ms.locfileid: "50645940"
 
 ファイナライザーは、それを囲む型から非仮想的にのみ呼び出すことができます。 したがって、仮想のファイナライザーを宣言すると、エラーになります。
 
-詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+詳細については、「[方法: クラスと構造体を定義および使用する (C++/cli)」の「デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3420 が生成されます。
 
-```
+```cpp
 // C3420.cpp
 // compile with: /clr /c
 ref class R {

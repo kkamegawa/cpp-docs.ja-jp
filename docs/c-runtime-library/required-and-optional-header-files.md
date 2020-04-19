@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: db3b05edf1496d92eaed5c7f07b9961cdde351c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539413"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744524"
 ---
 # <a name="required-and-optional-header-files"></a>必須ヘッダー ファイルと省略可能ヘッダー ファイル
 
@@ -26,6 +26,6 @@ ms.locfileid: "50539413"
 
 ランタイム ライブラリのヘッダー ファイルは、ANSI/ISO C 標準で推奨されるスタイルで関数の宣言を提供します。 コンパイラは、その関連する関数の宣言より後に発生するすべてのルーチン参照に対して型チェックを実行します。 関数の宣言は、既定の `int` 以外の一部の型の値を返すルーチンでは特に重要です。 宣言内で適切な戻り値を指定しないルーチンは、コンパイラによって `int` を返すものと見なされますが、これにより予期しない結果が生じることがあります。 詳細については、「[型チェック](../c-runtime-library/type-checking-crt.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

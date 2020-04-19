@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 29865e7986e435a4cce1ac1abb2027bc8513231e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08e481f010be688fb0b9c219caa1954c9960846f
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499020"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346259"
 ---
 # <a name="cstringlist-class"></a>CStringList クラス
 
@@ -77,7 +77,7 @@ class CStringList : public CObject
 
 `CString& CStringList::GetHead() const;`
 
-および
+と、呼び出し
 
 `POSITION AddHead( CObject* <newElement> );`
 
@@ -89,7 +89,7 @@ class CStringList : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[使われて](../../mfc/reference/coblist-class.md#coblist)|空のリストを構築します。|
+|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|空のリストを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -139,7 +139,6 @@ class CStringList : public CObject
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

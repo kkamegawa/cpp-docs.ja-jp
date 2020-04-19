@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: 7b6708e760a85a137a01718d07a5f167de849220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318629"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 
@@ -41,7 +41,7 @@ definitions
 |`SHARED`|イメージを読み込むすべてのプロセス間でセクションを共有します|
 |`WRITE`|データの書き込み操作します。|
 
-指定子の名前はスペースで区切ります。 例えば:
+指定子の名前はスペースで区切ります。 例:
 
 ```
 SECTIONS
@@ -58,8 +58,8 @@ section [CLASS 'classname'] specifier
 
 `CLASS`キーワードは互換性のため、サポートされているは無視されます。
 
-セクションの属性を指定することは、 [/section](../../build/reference/section-specify-section-attributes.md)オプション。
+セクションの属性を指定することは、 [/section](section-specify-section-attributes.md)オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[モジュール定義ステートメントに関する規則](../../build/reference/rules-for-module-definition-statements.md)
+[モジュール定義ステートメントに関する規則](rules-for-module-definition-statements.md)

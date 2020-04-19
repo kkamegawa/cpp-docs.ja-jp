@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 598ad7fd3573928d1915d01d889910c13d9cb00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373129"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager クラス
 
@@ -189,7 +189,7 @@ class CPaneContainerManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例への参照を取得する方法を示します、`CPaneContainerManager`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)します。
+次の例への参照を取得する方法を示します、`CPaneContainerManager`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 
@@ -211,7 +211,7 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBarToAdd*<br/>
+[in] *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -231,10 +231,10 @@ virtual BOOL AddPaneContainerManager(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*srcManager*<br/>
-[in]*bOuterEdge*<br/>
-[in]*pTargetControlBar*<br/>
-[in]*場合*<br/>
+[in] *srcManager*<br/>
+[in] *bOuterEdge*<br/>
+[in] *pTargetControlBar*<br/>
+[in] *dwAlignment*<br/>
 [in]*bCopy*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -251,8 +251,8 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pTargetControlBar*<br/>
-[in]*srcManager*<br/>
+[in] *pTargetControlBar*<br/>
+[in] *srcManager*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -268,7 +268,7 @@ void AddPanesToList(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*plstControlBars*<br/>
+[in] *plstControlBars*<br/>
 [in]*plstSliders*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -281,7 +281,7 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBarToAdd*<br/>
+[in] *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -295,8 +295,8 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBarToAdd*<br/>
-[in]*pRecentContainer*<br/>
+[in] *pBarToAdd*<br/>
+[in] *pRecentContainer*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -317,11 +317,11 @@ void CalcRects(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectOriginal*<br/>
-[in]*rectInserted*<br/>
-[in]*rectSlider*<br/>
-[in]*dwSliderStyle*<br/>
-[in]*場合*<br/>
+[in] *rectOriginal*<br/>
+[in] *rectInserted*<br/>
+[in] *rectSlider*<br/>
+[in] *dwSliderStyle*<br/>
+[in] *dwAlignment*<br/>
 [in]*sizeMinOriginal*<br/>
 [in]*sizeMinInserted*<br/>
 
@@ -362,7 +362,7 @@ virtual BOOL CheckForMiniFrameAndCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*ポイント*<br/>
-[in]*ppTargetControlBar*<br/>
+[in] *ppTargetControlBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -379,7 +379,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentWnd*<br/>
+[in] *pParentWnd*<br/>
 [in]*pDefaultSlider*<br/>
 [in]*pContainerRTC*<br/>
 
@@ -430,7 +430,7 @@ virtual CPaneContainer* FindPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pBar*<br/>
-[in]*bLeftBar*<br/>
+[in] *bLeftBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -517,7 +517,7 @@ virtual void GetMinMaxOffset(
 [in]*pSlider*<br/>
 [in]*nMinOffset*<br/>
 [in]*nMaxOffset*<br/>
-[in]*nStep*<br/>
+[in] *nStep*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -617,8 +617,8 @@ virtual BOOL InsertPane(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pControlBarToInsert*<br/>
-[in]*pTargetControlBar*<br/>
-[in]*場合*<br/>
+[in] *pTargetControlBar*<br/>
+[in] *dwAlignment*<br/>
 [in]*lpRect*<br/>
 [in]*dockMethod*<br/>
 
@@ -679,7 +679,7 @@ virtual int OnPaneDividerMove(
 [in]*pSlider*<br/>
 [in]*uFlags*<br/>
 [in]*nOffset*<br/>
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -718,7 +718,7 @@ virtual CDockablePane* PaneFromPoint(
 [in]*ポイント*<br/>
 [in]*nSensitivity*<br/>
 [in]*bExactBar*<br/>
-[in]*bIsTabArea*<br/>
+[in] *bIsTabArea*<br/>
 [in]*bCaption*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -811,7 +811,7 @@ virtual void ResizePaneContainers(
 [in]*nSide*<br/>
 [in]*bExpand*<br/>
 [in]*nOffset*<br/>
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 [in]*rect*<br/>
 
 ### <a name="remarks"></a>Remarks

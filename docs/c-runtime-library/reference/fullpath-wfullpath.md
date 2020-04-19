@@ -1,10 +1,10 @@
 ---
 title: _fullpath、_wfullpath
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fullpath
 - _wfullpath
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath
 - fullpath
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550398"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956265"
 ---
-# <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
+# <a name="_fullpath-_wfullpath"></a>_fullpath、_wfullpath
 
 指定された相対パス名の絶対または完全パス名を作成します。
 
@@ -59,21 +62,21 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>パラメーター
 
 *absPath*<br/>
-絶対または完全パス名を格納するバッファーへのポインターまたは**NULL**します。
+絶対パス名または完全パス名を格納しているバッファーへのポインター、または**NULL**。
 
 *relPath*<br/>
 相対パス名。
 
-*MaxLength*<br/>
-絶対パス名のバッファーの最大長 (*absPath*)。 この長さはバイト単位、 **_fullpath**がワイド文字 (**wchar_t**) の **_wfullpath**します。
+*maxLength*<br/>
+絶対パス名バッファー (*Abspath*) の最大長。 この長さは、 **_wfullpath**の場合はバイト単位**ですが、** の場合はワイド文字 (**wchar_t**) になります。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数の絶対パス名を格納するバッファーへのポインターを返します (*absPath*)。 エラーがある場合 (値が渡された場合など、 *relPath*が正しくないか、見つからないドライブ文字が含まれます場合、または作成された絶対パス名の長さ (*absPath*) より大きい*maxLength*)、関数を返します**NULL**します。
+これらの各関数は、絶対パス名 (*Abspath*) を格納しているバッファーへのポインターを返します。 エラーが発生した場合 (たとえば、 *relPath*で渡された値に有効でないドライブ文字が含まれている場合や見つからない場合、または作成された絶対パス名 (*abspath*) の長さが*maxLength*を超える場合)、関数はを返します。**NULL**。
 
 ## <a name="remarks"></a>Remarks
 
-**_Fullpath**関数内の相対パス名を展開する*relPath*その完全修飾パスまたは絶対パスとこの名前を格納する*absPath*します。 場合*absPath*は**NULL**、 **malloc**パス名を保持するために十分な長さのバッファーを確保するために使用します。 このバッファーを解放するのは、呼び出し元の役目です。 相対パス名は、現在の場所から別の場所 (現在の作業ディレクトリ "." など) にパスを指定します。 絶対パス名は、ファイル システムのルートから目的の位置に到達するために必要なパス全体を示す相対パス名の拡張です。 異なり **_makepath**、 **_fullpath**相対パスの絶対パス名を取得するために使用できます (*relPath*) が含まれる"./「または」../"の名前にします。
+**Fullpath**関数は、 *relPath*の相対パス名を完全修飾パスまたは絶対パスに拡張し、この名前を*abspath*に格納します。 *Abspath*が**NULL**の場合、 **malloc**は、パス名を保持するのに十分な長さのバッファーを割り当てるために使用されます。 このバッファーを解放するのは、呼び出し元の役目です。 相対パス名は、現在の場所から別の場所 (現在の作業ディレクトリ "." など) にパスを指定します。 絶対パス名は、ファイル システムのルートから目的の位置に到達するために必要なパス全体を示す相対パス名の拡張です。 **_Makepath**とは異なり、"./" または "." が含まれている相対パス (*relPath*) の絶対パス名を取得するために、 **[fullpath]** を使用できます。/"という名前です。
 
 たとえば、C ランタイム ルーチンを使用するには、アプリケーションに、ルーチンの宣言を含むヘッダー ファイルを含める必要があります。 各ヘッダー ファイルは、(アプリケーションの作業ディレクトリから) 相対的な方法でファイルの場所を参照するステートメントを含んでいます。
 
@@ -85,11 +88,11 @@ wchar_t *_wfullpath(
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath**自動的に現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてマルチバイト文字の文字列引数を処理します。 **_wfullpath**のワイド文字バージョンは、 **_fullpath**; への文字列引数 **_wfullpath**はワイド文字列です。 **_wfullpath**と **_fullpath**動作は同じことを除いて **_wfullpath**マルチバイト文字の文字列を処理しません。
+現在使用中のマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切に自動的に処理します **(_s)** 。 **_wfullpath**のワイド文字バージョン**です。** **_wfullpath**への文字列引数はワイド文字列です。 **_wfullpath**と**fullpath**は、 **_wfullpath**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
 
-場合 **_DEBUG**と **_CRTDBG_MAP_ALLOC**の両方が定義されている場合、呼び出しを **_fullpath**と **_wfullpath** への呼び出しによって置き換えられます **_fullpath_dbg**と **_wfullpath_dbg**デバッグのメモリ割り当てを許可します。 詳細については、「[_fullpath_dbg、_wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md)」を参照してください。
+**_Debug**と **_CRTDBG_MAP_ALLOC**の両方が定義されている場合、 **_wfullpath** **への**呼び出しは **_fullpath_dbg**および **_wfullpath_dbg**の呼び出しに置き換えられ、メモリ割り当てをデバッグできるようになります。 詳細については、「[_fullpath_dbg、_wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md)」を参照してください。
 
-」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合は、 *maxlen*が 0 未満です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**NULL**します。
+この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、" *maxlen* " が0以下の場合に、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、 **NULL**を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,7 +100,7 @@ wchar_t *_wfullpath(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-場合、 *absPath*バッファーが**NULL**、 **_fullpath**呼び出し[malloc](malloc.md)バッファーを割り当てることを無視し、 *maxLength*引数。 このバッファーを ([free](free.md) を使用して) 適切に解放するのは、呼び出し元の責任です。 場合、 *relPath*引数をディスク ドライブを指定します、このドライブの現在のディレクトリがパスに結合します。
+*Abspath*バッファーが**NULL**の場合、 **(_s)** は[malloc](malloc.md)を呼び出してバッファーを割り当て、 *maxLength*引数を無視します。 このバッファーを ([free](free.md) を使用して) 適切に解放するのは、呼び出し元の責任です。 *RelPath*引数にディスクドライブが指定されている場合、このドライブの現在のディレクトリがパスと結合されます。
 
 ## <a name="requirements"></a>必要条件
 

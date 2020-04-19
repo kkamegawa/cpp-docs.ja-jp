@@ -1,44 +1,41 @@
 ---
-title: strict_gs_check
-ms.date: 11/04/2016
+title: strict_gs_check プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - strict_gs_check
 - strict_gs_check_CPP
 helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-ms.openlocfilehash: f09a2b4b50c97faeaa986049abfc636d7cefdc8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b66e87f2280c923d05103fccfcbbc8d32daf3fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534733"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216587"
 ---
-# <a name="strictgscheck"></a>strict_gs_check
+# <a name="strict_gs_check-pragma"></a>strict_gs_check プラグマ
 
 このプラグマは、強化されたセキュリティ チェックを提供します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma strict_gs_check([push,] on )
-#pragma strict_gs_check([push,] off )
-#pragma strict_gs_check(pop)
-```
+> **#pragma strict_gs_check (** **[プッシュ,]** { **on** | **off** } **)** \
+> **#pragma strict_gs_check (pop)**
 
 ## <a name="remarks"></a>Remarks
 
-コンパイラが関数スタックにランダム クッキーを挿入し、スタック ベースのバッファー オーバーランのカテゴリの検出に役立つように指示します。 既定で、 `/GS` (バッファー セキュリティ チェック) コンパイラ オプションがすべての関数に対してクッキーを挿入できません。 詳細については、「[/GS (バッファーのセキュリティ チェック)](../build/reference/gs-buffer-security-check.md)」を参照してください。
+コンパイラが関数スタックにランダム クッキーを挿入し、スタック ベースのバッファー オーバーランのカテゴリの検出に役立つように指示します。 既定では`/GS` 、(バッファーセキュリティチェック) コンパイラオプションでは、すべての関数の cookie は挿入されません。 詳細については、「[/GS (バッファーのセキュリティ チェック)](../build/reference/gs-buffer-security-check.md)」を参照してください。
 
-コンパイルする必要があります`/GS`(バッファー セキュリティ チェック) を有効にする**strict_gs_check**します。
+を使用`/GS`してコンパイルし、 **strict_gs_check**を有効にします。
 
-このプラグマは、有害なデータに対して公開される可能性があるコード モジュールで使用してください。 このプラグマは非常に積極的です。この防御を必要としない可能性があり、ただし生成アプリケーションのパフォーマンスに対する影響を最小化するために最適化された関数に適用されます。
+このプラグマは、有害なデータに対して公開される可能性があるコード モジュールで使用してください。 **strict_gs_check**はアグレッシブなプラグマであり、この防御を必要としない可能性がある関数に適用されますが、結果のアプリケーションのパフォーマンスへの影響を最小限に抑えるように最適化されています。
 
-このプラグマを使用した場合でも、安全なコードを記述する必要があります。 つまり、コードにバッファー オーバーランがないことを確認します。 **strict_gs_check**アプリケーションをコード内で残るバッファー オーバーランから保護する場合があります。
+このプラグマを使用した場合でも、安全なコードを記述する必要があります。 つまり、コードにバッファーオーバーランがないことを確認してください。 **strict_gs_check**は、コード内に残っているバッファーオーバーランからアプリケーションを保護する可能性があります。
 
 ## <a name="example"></a>例
 
-次のコードでは、ローカル配列に配列をコピーすると、バッファー オーバーランが発生します。 このコードをコンパイルすると`/GS`配列のデータ型がポインターであるために、スタックでは、クッキーを挿入していません。 追加、 **strict_gs_check**プラグマが関数スタックにスタック クッキーを強制します。
+このサンプルでは、配列をローカル配列にコピーするときに、バッファーオーバーランが発生します。 このコードをで`/GS`コンパイルする場合、配列のデータ型はポインターであるため、スタックにクッキーは挿入されません。 **Strict_gs_check**プラグマを追加すると、スタッククッキーが関数スタックに強制されます。
 
 ```cpp
 // pragma_strict_gs_check.cpp
@@ -67,5 +64,5 @@ void ** ReverseArray(void **pData,
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/GS (バッファーのセキュリティ チェック)](../build/reference/gs-buffer-security-check.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[/GS (バッファーセキュリティチェック)](../build/reference/gs-buffer-security-check.md)

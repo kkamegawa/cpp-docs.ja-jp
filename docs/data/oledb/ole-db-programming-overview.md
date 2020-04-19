@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: d19e98d7c5743207dba224214b0d9a0e9f308e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361920"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB プログラミングの概要
 

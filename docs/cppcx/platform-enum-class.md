@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 4431f21fe71bd7b6376f2f530b844077bc1fda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387592"
 ---
 # <a name="platformenum-class"></a>Platform::Enum クラス
 
@@ -30,18 +30,18 @@ Enum クラスは、 [Platform::Object Class](../cppcx/platform-object-class.md)
 
 ### <a name="remarks"></a>Remarks
 
-列挙型を作成するには、 [パブリック列挙型クラス](../windows/enum-class-cpp-component-extensions.md) キーワードを使用します。 Platform::Enum 型は明示的に使用しないでください。 詳細については、「 [列挙体](../cppcx/enums-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
+列挙型を作成するには、 [パブリック列挙型クラス](../extensions/enum-class-cpp-component-extensions.md) キーワードを使用します。 Platform::Enum 型は明示的に使用しないでください。 詳細については、「 [列挙体](../cppcx/enums-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

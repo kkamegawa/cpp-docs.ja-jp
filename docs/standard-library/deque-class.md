@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d78bbc6e66fe97af1049fa6976ac8c5fa806ef43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525393"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448561"
 ---
 # <a name="deque-class"></a>deque クラス
 
@@ -108,11 +108,11 @@ class deque
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*各種*\
 deque に格納される要素のデータ型。
 
-*アロケーター*<br/>
-メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能で、既定値は**アロケーター\<型 >** します。
+*アロケーター*\
+メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値**は\<アロケーター型 >** です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -132,21 +132,23 @@ deque の再割り当ては、メンバー関数がシーケンスの要素を�
 
 それ以外の場合、要素を挿入または消去すると、すべての反復子および参照が無効になります。
 
+## <a name="members"></a>メンバー
+
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
-|[deque](#deque)|`deque` を構築します。 新しい内容を設定する複数のコンス トラクターが用意されて`deque`さまざまな方法で: 空の場合に空の要素数を指定して読み込まれます移動またはコピーから別の内容を`deque`; 内容をコピーしたり、反復子を使用して移動し、。1 つの要素にコピー、 `deque` `count`時間。 一部のコンストラクターでは、要素を作成するためのカスタムの `allocator` を使用できます。|
+|[deque](#deque)|`deque` を構築します。 複数のコンストラクターが用意されています。空`deque`で、指定された数の空の要素を使用して読み込まれる、別`deque`の要素からコンテンツを移動またはコピーする、反復子を使用して内容をコピーまたは移動する、などのさまざまな方法があります。1つの要素が`deque` `count`時刻にコピーされます。 一部のコンストラクターでは、要素を作成するためのカスタムの `allocator` を使用できます。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `deque` クラスを表す型。|
 |[const_iterator](#const_iterator)|`deque` 内の要素にアクセスし、読み取ることができるランダム アクセス反復子を `const` として提供する型。|
 |[const_pointer](#const_pointer)|`deque` 内の要素へのポインターを `const.` として提供する型。|
 |[const_reference](#const_reference)|読み取りと他の操作の実行のために、`deque` 内の要素への参照を `const.` として提供する型。|
-|[const_reverse_iterator](#const_reverse_iterator)|ランダム アクセス反復子を提供する型がアクセスし、内の要素を読み取ることができます、`deque`として**const**します。 deque は逆に表示されます。 詳しくは、「[reverse_iterator クラス](../standard-library/reverse-iterator-class.md)」をご覧ください。|
+|[const_reverse_iterator](#const_reverse_iterator)|内の要素に`deque`アクセスして読み取ることができるランダムアクセス反復子を**定数**として提供する型。 deque は逆に表示されます。 詳しくは、「[reverse_iterator クラス](../standard-library/reverse-iterator-class.md)」をご覧ください。|
 |[difference_type](#difference_type)|同じ `deque` 内の要素を参照する 2 つのランダム アクセス反復子の違いを提供する型。|
 |[Iterator](#iterator)|`deque` 内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
 |[pointer](#pointer)|`deque` 内の要素へのポインターを提供する型。|
@@ -155,23 +157,23 @@ deque の再割り当ては、メンバー関数がシーケンスの要素を�
 |[size_type](#size_type)|`deque` 内の要素の数をカウントする型。|
 |[value_type](#value_type)|`deque` に格納されているデータ型を表す型。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[assign](#assign)|`deque` から要素を消去し、対象の `deque` に要素の新しいシーケンスをコピーします。|
 |[at](#at)|`deque` 内の指定した位置にある要素への参照を返します。|
 |[back](#back)|`deque` の最後の要素への参照を返します。|
 |[begin](#begin)|`deque` 内の最初の要素を示すランダム アクセス反復子を返します。|
 |[cbegin](#cbegin)|`deque` 内の最初の要素への定数反復子を返します。|
-|[cend](#cend)|ランダム アクセスを返します**const**の末尾の次の位置を指す反復子、`deque`します。|
+|[cend](#cend)|の`deque`末尾の次の位置を指し示すランダムアクセス**定数**反復子を返します。|
 |[clear](#clear)|`deque` のすべての要素を消去します。|
 |[crbegin](#crbegin)|`deque` 内の最初の要素へのランダム アクセス定数反復子を返します。|
 |[crend](#crend)|`deque` 内の最初の要素へのランダム アクセス定数反復子を返します。|
 |[emplace](#emplace)|指定した位置において、構築された要素を `deque` の適切な場所に挿入します。|
 |[emplace_back](#emplace_back)|構築された要素を `deque` の末尾の適切な場所に追加します。|
 |[emplace_front](#emplace_front)|構築された要素を `deque` の先頭の適切な場所に追加します。|
-|[empty](#empty)|返します**true**場合、 `deque` 0 個の要素を含むと**false** 1 つまたは複数の要素が含まれている場合。|
+|[empty](#empty)|にゼロ要素が`deque`含まれている場合は**true** 、1つ以上の要素が含まれている場合は**false**を返します。|
 |[end](#end)|`deque` の末尾の次の位置を指し示すランダム アクセス反復子を返します。|
 |[erase](#erase)|指定した位置から `deque` の要素または要素範囲を削除します。|
 |[front](#front)|`deque` 内の最初の要素への参照を返します。|
@@ -191,16 +193,12 @@ deque の再割り当ては、メンバー関数がシーケンスの要素を�
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator&#91;&#93;](#op_at)|指定した位置における `deque` 要素への参照を返します。|
 |[operator=](#op_eq)|別の `deque` のコピーで `deque` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー**: \<deque>
-
-## <a name="allocator_type"></a>  deque::allocator_type
+## <a name="allocator_type"></a>allocator_type
 
 deque オブジェクトのアロケーター クラスを表す型。
 
@@ -216,7 +214,7 @@ typedef Allocator allocator_type;
 
 [get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="assign"></a>  deque::assign
+## <a name="assign"></a>割り当てる
 
 deque から要素を消去し、対象の deque に要素の新しいセットをコピーします。
 
@@ -235,19 +233,19 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*<br/>
+*まずは*\
 deque 引数からコピーされる要素範囲内の最初の要素の位置。
 
-*前の*<br/>
+*前の*\
 deque 引数からコピーされる要素範囲を超える最初の要素の位置。
 
-*カウント*<br/>
+*数*\
 deque に挿入される要素のコピーの数。
 
-*val*<br/>
+*Val*\
 deque に挿入される要素の値。
 
-*IList*<br/>
+*IList*\
 deque に挿入される initializer_list。
 
 ### <a name="remarks"></a>Remarks
@@ -301,7 +299,6 @@ int main()
     for (int i : c1)
         cout << i;
     cout << endl;
-
 }
 ```
 
@@ -309,7 +306,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```
 
-## <a name="at"></a>  deque::at
+## <a name="at"></a>(
 
 deque 内の指定位置にある要素への参照を返します。
 
@@ -321,12 +318,12 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*<br/>
+*po*\
 deque 内で参照する要素を示す添字 (または位置の番号)。
 
 ### <a name="return-value"></a>戻り値
 
-場合*pos* 、deque のサイズより大きい`at`例外をスローします。
+*Pos*が deque のサイズより大きい場合、 `at`は例外をスローします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -360,7 +357,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a>  deque::back
+## <a name="back"></a>戻る
 
 deque の最後の要素への参照を返します。
 
@@ -409,7 +406,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a>  deque::begin
+## <a name="begin"></a>初め
 
 deque の 1 つ目の要素を示す反復子を返します。
 
@@ -424,7 +421,7 @@ deque 内の最初の要素、または空の deque の次の位置を指すラ�
 
 ### <a name="remarks"></a>Remarks
 
-`begin` の戻り値が `const_iterator` に割り当てられている場合、deque オブジェクトを変更することはできません。 場合の戻り値`begin`に割り当てられている、 `iterator`、deque オブジェクトを変更できます。
+`begin` の戻り値が `const_iterator` に割り当てられている場合、deque オブジェクトを変更することはできません。 の`begin`戻り値が`iterator`に割り当てられている場合は、deque オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -461,9 +458,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a>  deque::cbegin
+## <a name="cbegin"></a>cbegin
 
-返します、 **const**範囲の最初の要素を指す反復子。
+範囲内の最初の要素を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cbegin() const;
@@ -471,7 +468,7 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指すランダム アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
+範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲`cbegin() == cend()`の場合は) を指す、const ランダムアクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -487,9 +484,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  deque::cend
+## <a name="cend"></a>cend
 
-返します、 **const**範囲の最後の要素の次の位置を指す反復子。
+範囲内の最後の要素の次の位置を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cend() const;
@@ -503,7 +500,7 @@ const_iterator cend() const;
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`end()`する任意の種類の変更可能な (非**定数**) コンテナー `cend()`であると見なします。
 
 ```cpp
 auto i1 = Container.end();
@@ -515,7 +512,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="clear"></a>  deque::clear
+## <a name="clear"></a>クリア
 
 deque のすべての要素を消去します。
 
@@ -551,7 +548,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0
 ```
 
-## <a name="const_iterator"></a>  deque::const_iterator
+## <a name="const_iterator"></a>const_iterator
 
 deque 内の **const** 要素にアクセスし、読み取ることができるランダム アクセス反復子を提供する型。
 
@@ -567,9 +564,9 @@ typedef implementation-defined const_iterator;
 
 [back](#back) の例を参照してください。
 
-## <a name="const_pointer"></a>  deque::const_pointer
+## <a name="const_pointer"></a>const_pointer
 
-ポインターを**const** deque 内の要素。
+Deque 内の**const**要素へのポインターを提供します。
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -579,7 +576,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 `const_pointer` 型で要素の値を変更することはできません。 deque の要素にアクセスするには、[iterator](#iterator) の方がより一般的に使われます。
 
-## <a name="const_reference"></a>  deque::const_reference
+## <a name="const_reference"></a>const_reference
 
 読み取りと **const** 操作の実行のために deque に格納された **const** 要素への参照を提供する型。
 
@@ -623,7 +620,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a>  deque::const_reverse_iterator
+## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
 deque 内の任意の **const** 要素を読み取ることができるランダム アクセス反復子を提供する型。
 
@@ -639,7 +636,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 反復子の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
 
-## <a name="crbegin"></a>  deque::crbegin
+## <a name="crbegin"></a>crbegin
 
 反転された deque 内の最初の要素への定数反復子を返します。
 
@@ -688,7 +685,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.
 ```
 
-## <a name="crend"></a>  deque::crend
+## <a name="crend"></a>crend
 
 反転された deque 内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -737,7 +734,7 @@ int main( )
 1
 ```
 
-## <a name="deque"></a>  deque::deque
+## <a name="deque"></a>deque
 
 特定のサイズ、特定の値の要素、または特定のアロケーターを持つ deque を構築します。あるいは他の deque の全体または一部のコピーとして構築します。
 
@@ -769,31 +766,42 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*Al*|このオブジェクトに対して使用するアロケーター クラス。|
-|*カウント*|構築された deque 内の要素の数。|
-|*val*|構築された deque の要素の値。|
-|*右*|構築された deque がコピーになる元の deque。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
-|* IList'|コピーされる initializer_list。|
+*ウムアルクラ*\
+このオブジェクトに対して使用するアロケーター クラス。
+
+*数*\
+構築された deque 内の要素の数。
+
+*Val*\
+構築された deque の要素の値。
+
+*そうです*\
+構築された deque がコピーになる元の deque。
+
+*まずは*\
+コピーする要素範囲内の最初の要素の位置。
+
+*前の*\
+コピーする要素範囲を超える最初の要素の位置。
+
+*IList*\
+コピーされる initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
-すべてのコンス トラクターは、アロケーター オブジェクトを格納 (*Al*) し、deque を初期化します。
+すべてのコンストラクターは、アロケーターオブジェクト (*Al*) を格納し、deque を初期化します。
 
 最初の 2 つのコンストラクターは、空の初期 deque を指定し、2 番目のコンストラクターは、使用するアロケーターの型 (`_Al`) も指定します。
 
 3 番目のコンストラクターは、`count` クラスの、指定された数 (`Type`) の既定値の要素を繰り返すことを指定します。
 
-4 番目と 5 番目のコンス トラクターの繰り返しを指定する (*カウント*) の値の要素`val`します。
+4番目と5番目のコンストラクターは、値`val`の (Count) 要素の繰り返しを指定します。
 
-6 番目のコンス トラクターには、deque のコピーを示す*右*します。
+6番目のコンストラクターは、deque*権限*のコピーを指定します。
 
 7 番目と 8 番目のコンストラクターは、deque の範囲 `[First, Last)` をコピーします。
 
-7 番目のコンス トラクターは、移動、deque*右*します。
+7番目のコンストラクターは、deque*権限*を移動します。
 
 8 番目のコンストラクターは、initializer_list の内容をコピーします。
 
@@ -1003,7 +1011,7 @@ int main( )
 }
 ```
 
-## <a name="difference_type"></a>  deque::difference_type
+## <a name="difference_type"></a>difference_type
 
 同じ deque 内の要素を参照する 2 反復子の違いを提供する型。
 
@@ -1058,7 +1066,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a>  deque::emplace
+## <a name="emplace"></a>emplace
 
 指定した位置において、構築された要素を deque の適切な場所に挿入します。
 
@@ -1070,10 +1078,11 @@ iterator emplace(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*_Where*|最初の要素を挿入する [deque](../standard-library/deque-class.md) 内の位置。|
-|*val*|`deque` に挿入される要素の値。|
+*場所 (_s)* \
+最初の要素を挿入する [deque](../standard-library/deque-class.md) 内の位置。
+
+*val*\
+`deque` に挿入される要素の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1125,7 +1134,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a>  deque::emplace_back
+## <a name="emplace_back"></a>emplace_back
 
 その場で構築した要素を deque の末尾に追加します。
 
@@ -1135,9 +1144,8 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|[deque](../standard-library/deque-class.md) の末尾に追加する要素。|
+*val*\
+[deque](../standard-library/deque-class.md) の末尾に追加する要素。
 
 ### <a name="example"></a>例
 
@@ -1175,7 +1183,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="emplace_front"></a>  deque::emplace_front
+## <a name="emplace_front"></a>emplace_front
 
 その場で構築した要素を deque の末尾に追加します。
 
@@ -1185,9 +1193,8 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|[deque](../standard-library/deque-class.md) の先頭に追加する要素。|
+*val*\
+[deque](../standard-library/deque-class.md) の先頭に追加する要素。
 
 ### <a name="example"></a>例
 
@@ -1225,7 +1232,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="empty"></a>  deque::empty
+## <a name="empty"></a>指定
 
 deque が空かどうかをテストします。
 
@@ -1262,7 +1269,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a>  deque::end
+## <a name="end"></a>終わり
 
 deque 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -1278,7 +1285,7 @@ deque 内の最後の要素の次の位置を指すランダム アクセス反�
 
 ### <a name="remarks"></a>Remarks
 
-`end` 反復子が deque の末尾に達したかどうかをテストに使用されます。
+`end`は、反復子が deque の末尾に達したかどうかをテストするために使用されます。
 
 ### <a name="example"></a>例
 
@@ -1322,7 +1329,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30
 ```
 
-## <a name="erase"></a>  deque::erase
+## <a name="erase"></a>消去
 
 指定した位置から deque 内の要素または要素範囲を削除します。
 
@@ -1334,13 +1341,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where*<br/>
+*場所 (_s)* \
 deque から削除する要素の位置。
 
-*first*<br/>
+*まずは*\
 deque から削除する最初の要素の位置。
 
-*last*<br/>
+*前の*\
 deque から削除する最後の要素の次の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1395,7 +1402,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20
 ```
 
-## <a name="front"></a>  deque::front
+## <a name="front"></a>外側
 
 deque 内の最初の要素への参照を返します。
 
@@ -1445,7 +1452,7 @@ The first integer of c1 is 10
 The second integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a>  deque::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 deque の構築に使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1484,7 +1491,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  deque::insert
+## <a name="insert"></a>insert
 
 deque の指定された位置に要素、複数の要素、または要素の範囲を挿入します。
 
@@ -1515,14 +1522,23 @@ IList);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*Where*|最初の要素が挿入される、ターゲット deque 内の位置。|
-|*val*|deque に挿入される要素の値。|
-|*カウント*|deque に挿入される要素の数。|
-|*まずは*|コピーされる引数 deque の要素範囲内にある最初の要素の位置。|
-|*前の*|コピーされる引数 deque の要素範囲外にある最初の要素の位置。|
-|*IList*|挿入する要素の initializer_list。|
+*どこ*\
+最初の要素が挿入される、ターゲット deque 内の位置。
+
+*Val*\
+deque に挿入される要素の値。
+
+*数*\
+deque に挿入される要素の数。
+
+*まずは*\
+コピーされる引数 deque の要素範囲内にある最初の要素の位置。
+
+*前の*\
+コピーされる引数 deque の要素範囲外にある最初の要素の位置。
+
+*IList*\
+挿入する要素の initializer_list。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1532,7 +1548,7 @@ IList);
 
 どの挿入操作も、負荷が大きくなる場合があります。
 
-## <a name="iterator"></a>  deque::iterator
+## <a name="iterator"></a>反
 
 deque 内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。
 
@@ -1542,13 +1558,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Remarks
 
-型`iterator`要素の値を変更するために使用できます。
+型`iterator`は、要素の値を変更するために使用できます。
 
 ### <a name="example"></a>例
 
-[begin](#begin) の例を参照してください。
+[begin](#begin) の例をご覧ください。
 
-## <a name="max_size"></a>  deque::max_size
+## <a name="max_size"></a> max_size
 
 deque の最大長を返します。
 
@@ -1579,7 +1595,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a>  deque::operator[]
+## <a name="op_at"></a> operator[]
 
 指定した位置における deque 要素への参照を返します。
 
@@ -1591,7 +1607,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*<br/>
+*po*\
 参照する deque 要素の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1622,7 +1638,6 @@ int main( )
    cout << "The first integer of c1 is " << c1[0] << endl;
    int& i = c1[1];
    cout << "The second integer of c1 is " << i << endl;
-
 }
 ```
 
@@ -1631,7 +1646,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20
 ```
 
-## <a name="op_eq"></a>  deque::operator=
+## <a name="op_eq"></a>operator =
 
 別の deque の要素を使ってこの deque の要素を置き換えます。
 
@@ -1643,13 +1658,12 @@ deque& operator=(deque&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*right*|新しい内容を提供する deque。|
+*そうです*\
+新しい内容を提供する deque。
 
 ### <a name="remarks"></a>Remarks
 
-最初のオーバーライドからこの deque に要素をコピー*右*代入のソース。 2 番目のオーバーライドからこの deque に要素を移動する*右*します。
+最初のオーバーライドは、要素を、割り当てのソースである deque *right*からこのにコピーします。 2番目のオーバーライドは、要素を*右*からこの deque に移動します。
 
 演算子の実行前にこの deque に格納されていた要素は削除されます。
 
@@ -1706,7 +1720,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  deque::pointer
+## <a name="pointer"></a>pointer
 
 [deque](../standard-library/deque-class.md) の要素へのポインターを提供します。
 
@@ -1716,9 +1730,9 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Remarks
 
-型`pointer`要素の値を変更するために使用できます。 deque の要素にアクセスするには、[iterator](#iterator) の方がより一般的に使われます。
+型`pointer`は、要素の値を変更するために使用できます。 deque の要素にアクセスするには、[iterator](#iterator) の方がより一般的に使われます。
 
-## <a name="pop_back"></a>  deque::pop_back
+## <a name="pop_back"></a>pop_back
 
 deque の末尾の要素を削除します。
 
@@ -1760,7 +1774,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1
 ```
 
-## <a name="pop_front"></a>  deque::pop_front
+## <a name="pop_front"></a>pop_front
 
 deque の先頭の要素を削除します。
 
@@ -1802,7 +1816,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2
 ```
 
-## <a name="push_back"></a>  deque::push_back
+## <a name="push_back"></a>push_back
 
 deque の末尾に要素を追加します。
 
@@ -1814,15 +1828,14 @@ void push_back(Type&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|deque の末尾に追加する要素。|
+*val*\
+deque の末尾に追加する要素。
 
 ### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、deque は変更されず、例外が再度スローされます。
 
-## <a name="push_front"></a>  deque::push_front
+## <a name="push_front"></a>push_front
 
 deque の先頭に要素を追加します。
 
@@ -1833,9 +1846,8 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|deque の先頭に追加する要素。|
+*val*\
+deque の先頭に追加する要素。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1878,7 +1890,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a>  deque::rbegin
+## <a name="rbegin"></a>rbegin
 
 反転された deque の最初の要素への反復子を返します。
 
@@ -1954,7 +1966,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.
 ```
 
-## <a name="reference"></a>  deque::reference
+## <a name="reference"></a>「
 
 deque に格納されている要素への参照を提供する型。
 
@@ -1990,7 +2002,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="rend"></a>  deque::rend
+## <a name="rend"></a>rend
 
 反転された deque 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -2075,7 +2087,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40
 ```
 
-## <a name="resize"></a>  deque::resize
+## <a name="resize"></a>サイズ
 
 deque の新しいサイズを指定します。
 
@@ -2087,17 +2099,17 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newsize*<br/>
+*Newsize (_c)* \
 deque の新しいサイズ。
 
-*val*<br/>
+*val*\
 新しいサイズが元のサイズより大きい場合に、deque に追加される新しい要素の値。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
 
 ### <a name="remarks"></a>Remarks
 
-Deque のサイズが要求されたサイズより小さい場合 *_Newsize*、要求されたサイズに達するまで、deque に要素が追加されます。
+Deque のサイズが要求されたサイズより小さい場合*は、要求*されたサイズに達するまで、要素が deque に追加されます。
 
-Deque のサイズになるまで、deque の末尾に近い要素が削除された deque のサイズが要求されたサイズより大きい場合は、 *_Newsize*します。
+Deque のサイズが要求されたサイズよりも大きい場合、deque の末尾に近い要素は、deque がサイズの*Newsize*に達するまで削除されます。
 
 deque の現在のサイズが要求されたサイズと同じ場合は、何も実行されません。
 
@@ -2143,7 +2155,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse_iterator"></a>  deque::reverse_iterator
+## <a name="reverse_iterator"></a>reverse_iterator
 
 反転された deque 内の要素の読み取りまたは変更が可能なランダム アクセス反復子を提供する型。
 
@@ -2159,7 +2171,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 rbegin の例を参照してください。
 
-## <a name="shrink_to_fit"></a>  deque::shrink_to_fit
+## <a name="shrink_to_fit"></a> shrink_to_fit
 
 余分なキャパシティを破棄します。
 
@@ -2200,7 +2212,7 @@ Current size of v1 = 1
 Current size of v1 = 1
 ```
 
-## <a name="size"></a>  deque::size
+## <a name="size"></a>幅
 
 deque 内の要素の数を返します。
 
@@ -2241,7 +2253,7 @@ The deque length is 1.
 The deque length is now 2.
 ```
 
-## <a name="size_type"></a>  deque::size_type
+## <a name="size_type"></a>size_type
 
 deque 内の要素の数をカウントする型。
 
@@ -2253,7 +2265,7 @@ typedef typename Allocator::size_type size_type;
 
 [size](#size) の例を参照してください。
 
-## <a name="swap"></a>  deque::swap
+## <a name="swap"></a>フォト
 
 2 つの deque の要素を交換します。
 
@@ -2266,11 +2278,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 交換する要素を提供する deque (deque `left` と要素を交換する deque)。
 
-*left*<br/>
-要素が deque のものと交換される deque*右*します。
+*左側*\
+要素が deque *right*の要素と交換される deque。
 
 ### <a name="example"></a>例
 
@@ -2327,7 +2339,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3
 ```
 
-## <a name="value_type"></a>  deque::value_type
+## <a name="value_type"></a> value_type
 
 deque 内に格納されているデータ型を表す型。
 
@@ -2361,5 +2373,5 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

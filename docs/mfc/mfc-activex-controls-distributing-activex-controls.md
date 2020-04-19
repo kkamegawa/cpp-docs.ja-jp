@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : ActiveX コントロールの配布'
+title: MFC ActiveX コントロール:ActiveX コントロールの配布
 ms.date: 09/12/2018
 f1_keywords:
 - GetWindowsDirectory
@@ -25,14 +25,14 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 26ea2cce8891d145740d2f91e06e15c2a1161566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 409ace2197396cf7adbd330cfbd891745a23cf53
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392701"
 ---
-# <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX コントロール : ActiveX コントロールの配布
+# <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX コントロール:ActiveX コントロールの配布
 
 この記事では、ActiveX コントロールの再配布に関連するいくつかの問題について説明します。
 
@@ -82,4 +82,3 @@ MFCx0.DLL を登録する必要があります。
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

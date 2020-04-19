@@ -1,8 +1,6 @@
 ---
 title: IDispEventImpl のサポート
 ms.date: 11/04/2016
-f1_keywords:
-- IDispEventImpl
 helpviewer_keywords:
 - event sink maps, declaring
 - IDispEventImpl class, advising and unadvising
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-ms.openlocfilehash: 909f62c88908d7dabf4141fa8ea42be7ea1facb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3652aae2a6c84833ed32e52599d3834d6e66a5ee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274288"
 ---
 # <a name="supporting-idispeventimpl"></a>IDispEventImpl のサポート
 
@@ -84,4 +82,3 @@ COM オブジェクトの一意な性質では、この手順は異なります�
 ## <a name="see-also"></a>関連項目
 
 [ATL COM オブジェクトの基礎](../atl/fundamentals-of-atl-com-objects.md)
-

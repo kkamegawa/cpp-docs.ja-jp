@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sequence [MFC]
 - windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
-ms.openlocfilehash: 07312d6c7bba219cebcfa2c73a8d66c9c97ec08e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4592e6ac0077d6bc335b50f2d67b140402b4fe2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167648"
 ---
 # <a name="window-destruction-sequence"></a>ウィンドウの破棄順序
 
@@ -29,4 +29,3 @@ ms.locfileid: "50571354"
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ オブジェクトの破棄](../mfc/destroying-window-objects.md)
-

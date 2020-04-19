@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: e4a2169d3b11b36b747f13663fdcb40baf52cd8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444683"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510781"
 ---
 # <a name="using-ctabctrl"></a>CTabCtrl の使い方
 
-「タブ コントロール」は、ノートの仕切ページまたはファイル キャビネットのラベルの付いたフォルダーに似ています。 クラスによって表される、タブ コントロールを使用して、 [CTabCtrl](../mfc/reference/ctabctrl-class.md)をピアまたは各ページの間に論理リレーションシップを示す形式で、一度に 1 つのユーザーに複数のページの情報やコントロールを表示する。
+"タブコントロール" は、ノートブック内の区切り、またはファイルキャビネット内のラベルが付いたフォルダーに似ています。 クラス[CTabCtrl](../mfc/reference/ctabctrl-class.md)で表されるタブコントロールを使用して、ユーザーに複数の情報またはコントロールを一度に1つずつ表示します。この形式では、各ページ間のピアまたは論理関係が示されます。
 
-タブ コントロールの詳細については、次を参照してください。[のタブ コントロール](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。
+タブコントロールの詳細については、「Windows SDK の[タブコントロール](/windows/win32/Controls/tab-controls)」を参照してください。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [タブ コントロールとプロパティ シート](../mfc/tab-controls-and-property-sheets.md)
 
@@ -39,4 +39,3 @@ ms.locfileid: "50444683"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

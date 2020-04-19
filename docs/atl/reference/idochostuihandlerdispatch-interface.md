@@ -1,25 +1,25 @@
 ---
 title: IDocHostUIHandlerDispatch インターフェイス
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - IDocHostUIHandlerDispatch
 - atlbase/ATL::IDocHostUIHandlerDispatch
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 5bf405f66bdef54f354f9e6c230207d2933ee352
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e672144160528e6a2fbfe4cb702c4d211ef720
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483633"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495920"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch インターフェイス
 
-Microsoft の HTML 解析およびレンダリング エンジンへのインターフェイス。
+Microsoft HTML 解析およびレンダリングエンジンへのインターフェイスです。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -32,40 +32,39 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>パブリック メソッド
 
 > [!NOTE]
->  次の表のリンクがのメンバーの INet SDK リファレンスのトピックには、 [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)インターフェイス。 `IDocHostUIHandlerDispatch` 同じ機能を持つ`IDocUIHostHandler`、いるに違い`IDocHostUIHandlerDispatch`はディスパッチ インターフェイスに対し`IDocUIHostHandler`は、カスタム インターフェイスです。
+>  次の表のリンクは、 [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))インターフェイスのメンバーに関する INet SDK のリファレンストピックです。 `IDocHostUIHandlerDispatch`はと`IDocUIHostHandler`同じ機能を持ちますが、その`IDocHostUIHandlerDispatch`違いはディスパッチ`IDocUIHostHandler`インターフェイスであり、はカスタムインターフェイスです。
 
 |||
 |-|-|
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|MSHTML の実装から呼び出されます[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)します。 MSHTML モーダル UI を表示するときとも呼ばれます。|
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|MSHTML のデータ オブジェクトを置換するホストを許可する MSHTML によってホストで呼び出されます。|
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|別の方法を指定するホストを許可する、ドロップ先として使用されている場合、MSHTML によって呼び出されます[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)します。|
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|ホストの IDispatch インターフェイスを取得する MSHTML によって呼び出されます。|
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|MSHTML ホストの UI 機能を取得します。|
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|MSHTML がユーザー設定を格納するレジストリ キーを返します。|
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|MSHTML がメニューやツールバーを削除するときに呼び出されます。|
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|MSHTML の実装から呼び出されます[::ondocwindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)します。|
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|MSHTML の実装から呼び出されます[ioleinplaceactiveobject::onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)します。|
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|MSHTML の実装から呼び出されます[ioleinplaceactiveobject:](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)します。|
-|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|コンテキスト メニューを表示する MSHTML から呼び出されます。|
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|MSHTML メニューおよびツールバーを置換するホストを使用します。|
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|MSHTML によって呼び出されるときに[ioleinplaceactiveobject::translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)または[iolecontrolsite:](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)が呼び出されます。|
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|ホストに読み込まれる URL を変更することを許可する MSHTML によって呼び出されます。|
-|[Updateui という](https://msdn.microsoft.com/library/aa753268.aspx)|コマンドの状態が変化したことをホストに通知します。|
+|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|[IOleInPlaceActiveObject:: EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)の MSHTML 実装から呼び出されます。 MSHTML がモーダル UI を表示するときにも呼び出されます。|
+|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|ホストが MSHTML のデータオブジェクトを置き換えることができるようにするために、ホスト上で MSHTML によって呼び出されます。|
+|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|ドロップターゲットとして使用されているときに MSHTML によって呼び出され、ホストが代替の[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)を提供できるようにします。|
+|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|ホストの IDispatch インターフェイスを取得するために、MSHTML によって呼び出されます。|
+|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|MSHTML ホストの UI 機能を取得します。|
+|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|MSHTML がユーザー設定を格納するレジストリキーを返します。|
+|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|MSHTML がメニューとツールバーを削除するときに呼び出されます。|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|[IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)の MSHTML 実装から呼び出されます。|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|[IOleInPlaceActiveObject:: Onフレーム Windowactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)の MSHTML 実装から呼び出されます。|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|[IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)の MSHTML 実装から呼び出されます。|
+|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|コンテキストメニューを表示するために、MSHTML から呼び出されます。|
+|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|ホストが MSHTML メニューとツールバーを置き換えることを許可します。|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|[IOleInPlaceActiveObject:: TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)または[IOleControlSite:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)が呼び出されたときに、MSHTML によって呼び出されます。|
+|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|読み込まれる URL をホストが変更できるようにするために、MSHTML によって呼び出されます。|
+|[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|コマンドの状態が変化したことをホストに通知します。|
 
 ## <a name="remarks"></a>Remarks
 
-ホストは、メニューのツールバー、および Microsoft HTML 解析およびレンダリング エンジン (MSHTML) によってこのインターフェイスを実装するために使用するコンテキスト メニューに置き換えることができます。
+ホストは、このインターフェイスを実装することによって、Microsoft HTML 解析およびレンダリングエンジン (MSHTML) で使用されるメニュー、ツールバー、およびコンテキストメニューを置き換えることができます。
 
 ## <a name="requirements"></a>必要条件
 
-このインターフェイスの定義は、次に示すように IDL または C++ では、使用可能です。
+このインターフェイスの定義は、次に示すようC++に IDL またはとして使用できます。
 
-|定義の種類|ファイル|
+|定義の種類|File|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|ATLIFace.h (ATLBase.h にも含まれています)|
+|IDL|ATLIFace|
+|C++|ATLIFace (ATLBase. h にも含まれる)|
 
 ## <a name="see-also"></a>関連項目
 
-[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
-
+[IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

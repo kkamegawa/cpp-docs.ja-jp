@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers, based
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
-ms.openlocfilehash: 7d41d1b7a4d19a7837f5aac1eb7975d6cec8c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581455"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150780"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C)
 
@@ -44,6 +44,6 @@ struct llist_t
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

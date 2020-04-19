@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコードセットの構造 (ODBC)'
+title: レコードセット:アーキテクチャ (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,31 +13,34 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651192"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707974"
 ---
-# <a name="recordset-architecture-odbc"></a>レコードセット: レコードセットの構造 (ODBC)
+# <a name="recordset-architecture-odbc"></a>レコードセット:アーキテクチャ (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-このトピックでは、レコード セット オブジェクトのアーキテクチャを構成するデータ メンバーについて説明します。
+このトピックでは、レコードセット オブジェクトのアーキテクチャを構成するデータ メンバーについて説明します。
 
 - [フィールド データ メンバー](#_core_field_data_members)
 
 - [パラメーター データ メンバー](#_core_parameter_data_members)
 
-- [M_nFields と m_nParams データ メンバーを使用します。](#_core_using_m_nfields_and_m_nparams)
+- [m_nFields と m_nParams データ メンバーの使用](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合は、アーキテクチャは似ています。 相違点を理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合も、アーキテクチャはほぼ同じです。 相違点を理解するには、「[Recordset:Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」 (レコードセット: レコードの一括フェッチ (ODBC)) を参照してください。
 
 ##  <a name="_core_a_sample_class"></a> サンプル クラス
 
-使用すると、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)から**クラスの追加**から派生したレコード セット クラスを宣言するウィザード`CRecordset`、結果として得られるクラスには単純な次に示すように、一般的な構造クラス:
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
+
+**クラス追加**ウィザードから [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)を使用して、`CRecordset` から派生したレコードセット クラスを宣言すると、結果として得られるクラスは、次の単純なクラスで示される一般的な構造クラスを持ちます。
 
 ```cpp
 class CCourse : public CRecordset
@@ -51,48 +54,48 @@ public:
 };
 ```
 
-一連のクラスの先頭には、ウィザードが書き込まれます[フィールド データ メンバーの](#_core_field_data_members)します。 クラスを作成するときに、1 つまたは複数のフィールド データ メンバーを指定する必要があります。 クラスは、パラメーター化のサンプルとクラスが (データ メンバーと`m_strIDParam`)、手動で追加する必要があります[パラメーター データ メンバー](#_core_parameter_data_members)します。 ウィザードでは、クラスに追加のパラメーターはサポートしません。
+クラスの先頭には、ウィザードによって一連の[フィールド データ メンバー](#_core_field_data_members)が書き込まれます。 クラスを作成するときに、1 つまたは複数のフィールド データ メンバーを指定する必要があります。 サンプル クラスのようにクラスが (データ メンバー `m_strIDParam` で) パラメーター化されている場合は、[パラメーター データ メンバー](#_core_parameter_data_members)を手動で追加する必要があります。 ウィザードでは、クラスへのパラメーターの追加はサポートされていません。
 
 ##  <a name="_core_field_data_members"></a> フィールド データ メンバー
 
-レコード セット クラスの最も重要なメンバーは、フィールド データ メンバーです。 各列では、データ ソースから選択するは、クラスには、その列の適切なデータ型のデータ メンバーが含まれています。 たとえば、[サンプル クラス](#_core_a_sample_class)これの冒頭で示したトピックには 2 つのフィールド データ メンバーは、両方の種類の`CString`という`m_strCourseID`と`m_strCourseTitle`します。
+レコードセット クラスの最も重要なメンバーは、フィールド データ メンバーです。 データ ソースから選択する各列のクラスには、その列に適したデータ型のデータ メンバーが含まれています。 たとえば、このトピックの冒頭で示した[サンプル クラス](#_core_a_sample_class)には、`m_strCourseID` および `m_strCourseTitle` と呼ばれる 2 つのフィールド データ メンバーがあり、どちらの型も `CString` です。
 
-フレームワークが自動的に現在のレコードの列をバインドして、レコード セットが一連のレコードを選択 (後に、`Open`呼び出し、最初のレコードが現在)、オブジェクトのフィールド データ メンバーにします。 これは、フレームワークは、レコードの列の内容を格納するバッファーとして適切なフィールド データ メンバーを使用します。
+レコードセットで一連のレコードが選択されるときに、フレームワークによって現在のレコード (`Open` を呼び出した後の、最初のレコードが現在のレコード) の列がオブジェクトのフィールド データ メンバーに自動的にバインドされます。 つまり、フレームワークでは適切なフィールド データ メンバーが、レコード列の内容を格納するバッファーとして使用されます。
 
-ユーザーが新しいレコードをスクロールすると、フレームワークは、現在のレコードを表すため、フィールド データ メンバーを使用します。 フレームワークは、前のレコードの値を置換する、フィールド データ メンバーを更新します。 フィールド データ メンバーは、現在のレコードを更新し、新しいレコードを追加するためにも使用されます。 レコードの更新のプロセスの一環として、適切なフィールド データ メンバーまたはメンバーに直接値を割り当てることで、値の更新を指定します。
+ユーザーが新しいレコードまでスクロールすると、フレームワークはフィールド データ メンバーを使用して現在のレコードを表します。 フレームワークによって前のレコードの値が置換され、フィールド データ メンバーが更新されます。 フィールド データ メンバーは、現在のレコードの更新と新しいレコードの追加にも使用されます。 レコードの更新プロセスの一環として、該当するフィールド データ メンバーまたはメンバーに値を直接割り当てて、更新値を指定します。
 
 ##  <a name="_core_parameter_data_members"></a> パラメーター データ メンバー
 
-クラスがパラメーター化された場合は、1 つまたは複数のパラメーター データ メンバーを持ちます。 パラメーター化されたクラスを使用して、レコード セットのクエリに基づく情報を取得または実行時に計算できます。
+クラスがパラメーター化されると、1 つ以上のパラメーター データ メンバーを持ちます。 パラメーター化されたクラスを使用すると、実行時に取得または計算した情報に基づいてレコードセットのクエリを実行できます。
 
-通常、パラメーターでは、次の例のように、選択範囲を絞り込むことが。 に基づいて、[サンプル クラス](#_core_a_sample_class)このトピックの先頭には、レコード セット オブジェクトは、次の SQL ステートメントを実行します。
+通常、パラメーターは、次の例のように、選択範囲を絞り込むのに役立ちます。 このトピックの冒頭の[サンプル クラス](#_core_a_sample_class)に基づいて、レコードセット オブジェクトが次の SQL ステートメントを実行できます。
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = ?
 ```
 
-"?"は実行時に指定するパラメーター値のプレース ホルダーです。 レコード セットを構築する際に設定とその`m_strIDParam`MATH101 するデータ メンバー、レコード セットの有効な SQL ステートメントになります。
+"?" は実行時に指定するパラメーター値のプレースホルダーです。 レコードセットを構築してその `m_strIDParam` データ メンバーを MATH101 に設定すると、レコードセットの有効な SQL ステートメントは次のようになります。
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 ```
 
-パラメーター データ メンバーを定義すると、SQL 文字列内のパラメーターに関する、フレームワークに指示します。 フレームワークは、ODBC のプレース ホルダーを置き換える値を取得する場所を知ることができるパラメーターをバインドします。 例では、結果のレコード セットには、値が MATH101 CourseID 列を Course テーブルからレコードのみが含まれています。 このレコードのすべての指定した列が選択されます。 多くのパラメーター (とプレース ホルダー) を指定するようにする必要があります。
+パラメーター データ メンバーを定義することで、SQL 文字列内のパラメーターについてフレームワークに指示します。 フレームワークによってパラメーターがバインドされます。これにより ODBC にプレースホルダーを置き換える値を取得する場所を知らせることができます。 例では、結果のレコード セットには、Course テーブルから CourseID 列の値が MATH101 のレコードのみが含まれます。 このレコードのすべての指定した列が選択されます。 パラメーター (とプレースホルダー) は必要なだけ指定することができます。
 
 > [!NOTE]
->  MFC は何も自体パラメーターを使用して、具体的には、テキストの置換実行されません。 代わりに、MFC ODBC に伝えます。 パラメーターを取得する場所ODBC では、データを取得し、必要なパラメーター化を実行します。
+>  MFC 自体はパラメーターに対して何も行いません。具体的には、テキストの置換は実行されません。 代わりに、MFC は ODBC にパラメーターを取得する場所を伝え、ODBC がデータを取得して、必要なパラメーター化を実行します。
 
 > [!NOTE]
->  パラメーターの順序が重要です。 これに関する情報とパラメーターの詳細については、次を参照してください。[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
+>  パラメーターの順序は重要です。 これに関する情報とパラメーターの詳細については、「[Recordset:Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)」 (レコードセット: レコードセットのパラメーター化 (ODBC)) を参照してください。
 
-##  <a name="_core_using_m_nfields_and_m_nparams"></a> M_nFields と m_nParams を使用してください。
+##  <a name="_core_using_m_nfields_and_m_nparams"></a> m_nFields と m_nParams の使用
 
-初期化ウィザードが、クラスのコンス トラクターを書き込むときに、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)の数を指定するデータ メンバー[フィールド データ メンバーの](#_core_field_data_members)クラス。 追加する場合[パラメーター](#_core_parameter_data_members) 、クラスの初期化を追加する必要がありますも、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)データ メンバーは、パラメーターのデータ メンバーの数を指定します。 フレームワークでは、これらの値を使用して、データ メンバーを使用します。
+ウィザードによってコンストラクターが自動的に書き込まれるときに、クラス内の [field data members](#_core_field_data_members) の数を指定する [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) データ メンバーの初期化も行われます。 任意の[パラメーター](#_core_parameter_data_members)をクラスに追加する場合は、パラメーター データ メンバーの数を指定する [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) データ メンバーの初期化も追加する必要があります。 フレームワークではデータ メンバーを使用するためにこれらの値が使用されます。
 
-詳細と例については、次を参照してください。[レコード フィールド エクス チェンジ: RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)します。
+詳細と例については、「[Record Field Exchange:Using RFX](../../data/odbc/record-field-exchange-using-rfx.md)」 (レコード フィールド エクスチェンジ: RFX の使用) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[レコードセット: テーブル用のクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

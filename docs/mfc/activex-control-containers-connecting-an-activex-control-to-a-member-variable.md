@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX コントロール コンテナー : ActiveX コントロールとメンバー変数の関連付け'
+title: ActiveX コントロール コンテナー:メンバー変数に ActiveX コントロールを接続します。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 2234647e933e37ff82845c4b40dc93cefeb55575
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bc063875f2a31c582c9de32e24e7dfbc7826c9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394911"
 ---
-# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX コントロール コンテナー : ActiveX コントロールとメンバー変数の関連付け
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX コントロール コンテナー:メンバー変数に ActiveX コントロールを接続します。
 
 コンテナーのアプリケーションをコントロール内での ActiveX コントロールにアクセスする最も簡単な方法では、ActiveX コントロールにコントロールを含むダイアログ クラスのメンバー変数を関連付けます。
 
@@ -42,4 +42,3 @@ ms.locfileid: "50446463"
 ## <a name="see-also"></a>関連項目
 
 [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
-

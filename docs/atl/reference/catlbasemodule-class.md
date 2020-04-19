@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: b7cba94886fe8434797c39a0d7e5f4a42714a539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247153"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule クラス
 

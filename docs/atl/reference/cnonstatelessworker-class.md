@@ -1,5 +1,5 @@
 ---
-title: CNonStatelessWorker クラス
+title: CNonStatelessWorker Class
 ms.date: 11/04/2016
 f1_keywords:
 - CNonStatelessWorker
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: 7aaae3728113cfd91c0655d2eac445cdd4b34246
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245531"
 ---
-# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker クラス
+# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker Class
 
 スレッド プールからの要求を受信し、要求ごとに作成および破棄される worker オブジェクトに渡されます。
 

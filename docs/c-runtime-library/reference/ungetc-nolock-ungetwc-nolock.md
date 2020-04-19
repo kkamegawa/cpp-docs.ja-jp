@@ -1,10 +1,10 @@
 ---
 title: _ungetc_nolock、_ungetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc_nolock
 - ungetwc_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4228a573a0277c9bacc8beea81cbff6a70e3fe83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331504"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945926"
 ---
-# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
+# <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock、_ungetwc_nolock
 
 ストリームに文字をプッシュ バックします。
 
@@ -61,18 +64,18 @@ wint_t _ungetwc_nolock(
 *c*<br/>
 プッシュする文字。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-成功すると、各これらの関数を返します。 文字引数*c*します。 場合*c*プッシュ バックできない文字を読まれなかった場合は、入力ストリームは変更されませんまたはと **_ungetc_nolock**返します**EOF**;**_ungetwc_nolock**返します**WEOF**します。 場合*ストリーム*は**NULL**、 **EOF**または**WEOF**が返されますと**errno**に設定されている**EINVAL**します。
+成功した場合、これらの各関数は、文字引数*c*を返します。 *C*をプッシュバックできない場合、または文字が読み取られなかった場合は、入力ストリームは変更されず、そのまま**EOF** **が返され**ます。 **_ungetwc_nolock**は**WEOF**を返します。 *Stream*が**NULL**の場合、 **EOF**または**WEOF**が返され、 **errno**が**EINVAL**に設定されます。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は、ロックしないバージョンの**ungetc**と**ungetwc**します。 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、 **ungetc**および**ungetwc**のロックされていないバージョンです。 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

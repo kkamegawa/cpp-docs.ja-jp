@@ -1,26 +1,27 @@
 ---
 title: '@Interface'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Interface'
 helpviewer_keywords:
 - '@Interface symbol'
 ms.assetid: 266ecba9-9e96-4086-8ee4-a3d0161b6e29
-ms.openlocfilehash: 4c9ab7bc70315f725de410b7f47803cc22cb8acc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0ae4a80ee835e5762c3fe5a1cbe14cf809bf3b1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641755"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315746"
 ---
-# <a name="interface"></a>@Interface
+# <a name="interface"></a>\@インターフェイス
 
-言語のパラメーター (数値と同等) に関する情報。
+言語パラメーターについての情報 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> @Interface
+> **\@インターフェイス**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

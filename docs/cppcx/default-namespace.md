@@ -2,16 +2,16 @@
 title: 既定の名前空間
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: ffea9e1132b4c66f38661392cbafb94635b318e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558721"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740511"
 ---
 # <a name="default-namespace"></a>既定の名前空間
 
-`default`名前空間のスコープと C + でサポートされている組み込み型/cli CX します。
+名前`default`空間は、/cxでC++サポートされている組み込み型をスコープとします。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +32,7 @@ namespace default;
 
 ### <a name="built-in-types"></a>組み込み型
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`char16`|Unicode (UTF-16) コード ポイントを表す 16 ビットの数字以外の値。|
 |`float32`|32 ビットの IEEE 754 浮動小数点数。|
@@ -52,4 +52,4 @@ namespace default;
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)
+[C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)

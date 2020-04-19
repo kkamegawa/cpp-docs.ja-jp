@@ -6,20 +6,20 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: 520537f5d562450dc4ea2a5e5a0c68af513da509
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175057"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491809"
 ---
 # <a name="atl-connection-points"></a>ATL コネクション ポイント
 
 接続可能オブジェクトは、着信インターフェイスをサポートしているオブジェクトです。 着信インターフェイスにより、オブジェクトはクライアントと通信できます。 着信インターフェイスごとに、接続可能なオブジェクトは接続ポイントを公開しています。 各着信インターフェイスは、シンクと呼ばれるオブジェクト上のクライアントによって実装されます。
 
-![接続ポイント](../atl/media/vc2zw31.gif "コネクション ポイント")
+![接続ポイント](../atl/media/vc2zw31.gif "接続ポイント")
 
-各接続ポイントをサポートしています、 [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)インターフェイス。 接続可能オブジェクトを使用してクライアントに接続ポイントを公開する、 [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)インターフェイス。
+各接続ポイントは、 [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)インターフェイスをサポートしています。 接続可能なオブジェクトは、 [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)インターフェイスを使用してクライアントへの接続ポイントを公開します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -40,4 +40,3 @@ Active Template Library を使用してプログラミングする方法に関�
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

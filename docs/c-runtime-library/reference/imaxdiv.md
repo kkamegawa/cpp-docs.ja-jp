@@ -1,9 +1,9 @@
 ---
 title: imaxdiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxdiv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxdiv
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954633"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -46,16 +49,16 @@ imaxdiv_t imaxdiv(
 *数値*<br/>
 分子。
 
-*denom*<br/>
+*デ om*<br/>
 分母。
 
 ## <a name="return-value"></a>戻り値
 
-**imaxdiv**型の引数で呼び出される[intmax_t](../../c-runtime-library/standard-types.md)型の構造体を返す[imaxdiv_t](../../c-runtime-library/standard-types.md)商と剰余で構成されます。
+**imaxdiv**型の引数を指定して呼び出された[intmax_t](../../c-runtime-library/standard-types.md)は、商と剰余で構成される[imaxdiv_t](../../c-runtime-library/standard-types.md)型の構造体を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Imaxdiv**関数は*数値*によって*denom*し、それによって、商と剰余を計算します。 **Imaxdiv_t**構造に含まれる、商**intmax_t** **quot**、し、残りの**intmax_t** **rem**.商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
+**Imaxdiv**関数は、*数値*を*デ om*で除算し、商と剰余を計算します。 **Imaxdiv_t**構造体には、商、 **intmax_t** **quot**、および剰余 ( **intmax_t** **rem**) が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
 ## <a name="requirements"></a>必要条件
 

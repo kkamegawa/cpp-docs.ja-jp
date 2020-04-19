@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152944"
 ---
 # <a name="creating-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションの作成
 
@@ -64,4 +64,3 @@ Active ドキュメント コンテナー アプリケーションを作成す�
 ## <a name="see-also"></a>関連項目
 
 [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
-

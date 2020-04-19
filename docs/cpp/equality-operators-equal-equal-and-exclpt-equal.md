@@ -15,11 +15,11 @@ helpviewer_keywords:
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
 ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392170"
 ---
 # <a name="equality-operators--and-"></a>等値演算子: == および !=
 

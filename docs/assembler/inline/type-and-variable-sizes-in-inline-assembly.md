@@ -17,23 +17,23 @@ helpviewer_keywords:
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166894"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>インライン アセンブリでの型と変数サイズ
 
 **Microsoft 固有の仕様**
 
-**長さ**、**サイズ**、および**型**演算子は、インライン アセンブリで制限の意味を持ちます。 まったく使用できません、`DUP`演算子 (MASM ディレクティブまたは演算子を使用してデータを定義することはできません) ためです。 ただし、それらを使用して、C または C++ の変数または型のサイズを確認することができます。
+**LENGTH**、**SIZE**、および**TYPE**演算子は、インライン アセンブリで制限の意味を持ちます。 まったく使用できません、`DUP`演算子 (MASM ディレクティブまたは演算子を使用してデータを定義することはできません) ためです。 ただし、それらを使用して、C または C++ の変数または型のサイズを確認することができます。
 
-- **長さ**演算子は、配列内の要素の数を返すことができます。 非配列変数の値 1 を返します。
+- **LENGTH**演算子は、配列内の要素の数を返すことができます。 配列でない変数の場合値 1 を返します。
 
-- **サイズ**演算子は、C または C++ の変数のサイズを返すことができます。 変数のサイズは、製品の**長さ**と**型**します。
+- **SIZE**演算子は、C または C++ の変数のサイズを返すことができます。 変数のサイズは、**LENGTH**と**TYPE**の積です。
 
-- **型**演算子は、C または C++ の型または変数のサイズを返すことができます。 変数が配列では、**型**配列の 1 つの要素のサイズを返します。
+- **TYPE**演算子は、C または C++ の型または変数のサイズを返すことができます。 変数が配列では、**TYPE**配列の 1 つの要素のサイズを返します。
 
 たとえば、プログラムに 8-要素**int**配列
 
@@ -45,9 +45,9 @@ C およびアセンブリの式は次のサイズの返さ`arr`とその要素�
 
 |__asm|C|サイズ|
 |-------------|-------|----------|
-|**長さ**arr|`sizeof`(処理 arr)/`sizeof`(arr[0])|8|
-|**サイズ**arr|`sizeof`処理 (arr)|32|
-|**型**arr|`sizeof`(arr[0])|4|
+|**LENGTH** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
+|**SIZE** arr|`sizeof`(arr)|32|
+|**TYPE** arr|`sizeof`(arr[0])|4|
 
 **Microsoft 固有の仕様はここまで**
 

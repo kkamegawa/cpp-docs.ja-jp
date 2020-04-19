@@ -1,6 +1,6 @@
 ---
 title: BSCMAKE リファレンス
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1f321d51d1b880ea634c835567767c528aca041b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509475"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220563"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE リファレンス
 
@@ -24,7 +24,7 @@ ms.locfileid: "50509475"
 
 Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) は、コンパイル時に作成された .sbr ファイルから、ブラウザー情報ファイル (.bsc) を作成します。 特定のサード パーティ製ツールでは、コード分析の .bsc ファイルを使用します。
 
-プログラムをビルドするときに、BSCMAKE を使用してファイルをビルドすれば、プログラムのブラウザー情報ファイルを自動的に作成できます。 Visual C++ 開発環境でブラウザー情報ファイルを作成する場合は、BSCMAKE の実行方法を知る必要はありません。 ただし、このトピックを読めば、利用可能な選択肢を理解することができます。
+プログラムをビルドするときに、BSCMAKE を使用してファイルをビルドすれば、プログラムのブラウザー情報ファイルを自動的に作成できます。 Visual Studio 開発環境でブラウザー情報ファイルを作成する場合は、BSCMAKE を実行する方法を理解する必要はありません。 ただし、このトピックを読めば、利用可能な選択肢を理解することができます。
 
 開発環境の外部でプログラムをビルドする場合は、その環境で確認することができるカスタム .bsc ファイルを作成できます。 コンパイル中に作成した .sbr ファイル上で BSCMAKE を実行します。
 
@@ -33,18 +33,18 @@ Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) は、コンパ�
 
 ここでは、次のトピックについて説明します。
 
-- [ブラウザー情報ファイルのビルド : 概要](../../build/reference/building-browse-information-files-overview.md)
+- [ブラウザー情報ファイルのビルド: 概要](building-browse-information-files-overview.md)
 
-- [.Bsc ファイルのビルド](../../build/reference/building-a-dot-bsc-file.md)
+- [.Bsc ファイルのビルド](building-a-dot-bsc-file.md)
 
-- [BSCMAKE コマンドライン](../../build/reference/bscmake-command-line.md)
+- [BSCMAKE コマンドライン](bscmake-command-line.md)
 
-- [BSCMAKE コマンド ファイル](../../build/reference/bscmake-command-file-response-file.md)
+- [BSCMAKE コマンド ファイル](bscmake-command-file-response-file.md)
 
-- [BSCMAKE オプション](../../build/reference/bscmake-options.md)
+- [BSCMAKE オプション](bscmake-options.md)
 
-- [BSCMAKE 終了コード](../../build/reference/bscmake-exit-codes.md)
+- [BSCMAKE 終了コード](bscmake-exit-codes.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)

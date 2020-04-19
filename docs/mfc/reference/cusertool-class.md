@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 6c439ace92a407c8de3a200dedd61428b9bdbc28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73cb3d3c6e244a9aa41a91a3ee9ff1efa98d496
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437372"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502241"
 ---
 # <a name="cusertool-class"></a>CUserTool クラス
 
-ユーザー ツールは、外部アプリケーションを実行するメニュー項目です。 **ツール**のタブ、**カスタマイズ** ダイアログ ボックス ( [CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) により、ユーザー ツールのユーザーを追加し、名前、コマンド、引数を指定し、各ユーザー ツールの初期ディレクトリ。
+ユーザー ツールは、外部アプリケーションを実行するメニュー項目です。 ユーザーは、 **[カスタマイズ]** ダイアログボックス ( [Cmfctoolbarscustomizedialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) の **[ツール]** タブを使用して、ユーザーツールを追加したり、各ユーザーツールの名前、コマンド、引数、および初期ディレクトリを指定したりすることができます。
 
 ## <a name="syntax"></a>構文
 
@@ -53,36 +53,36 @@ class CUserTool : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
-|[CUserTool::DrawToolIcon](#drawtoolicon)|指定した四角形でユーザーの [ツール] アイコンを描画します。|
-|[CUserTool::GetCommand](#getcommand)|ユーザー ツールに関連付けられているコマンドのテキストを含む文字列を返します。|
-|[CUserTool::GetCommandId](#getcommandid)|ユーザー ツールのメニュー項目のコマンド ID を返します。|
-|[Cusertool:](#invoke)|ユーザー ツールに関連付けられているコマンドを実行します。|
-|[CUserTool::Serialize](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
-|[CUserTool::SetCommand](#setcommand)|ユーザー ツールに関連付けられているコマンドを設定します。|
-|[CUserTool::SetToolIcon](#settoolicon)|このツールに関連付けられているアプリケーションからユーザー ツールのアイコンを読み込みます。|
+|[CUserTool:: CopyIconToClipboard](#copyicontoclipboard)||
+|[CUserTool::D rawToolIcon](#drawtoolicon)|指定した四角形にユーザーツールアイコンを描画します。|
+|[CUserTool::GetCommand](#getcommand)|ユーザーツールに関連付けられているコマンドのテキストを含む文字列を返します。|
+|[CUserTool::GetCommandId](#getcommandid)|ユーザーツールのメニュー項目のコマンド ID を返します。|
+|[CUserTool::Invoke](#invoke)|ユーザーツールに関連付けられたコマンドを実行します。|
+|[CUserTool:: Serialize](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
+|[CUserTool::SetCommand](#setcommand)|ユーザーツールに関連付けられたコマンドを設定します。|
+|[CUserTool::SetToolIcon](#settoolicon)|ツールに関連付けられているアプリケーションからユーザーツールのアイコンを読み込みます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CUserTool::LoadDefaultIcon](#loaddefaulticon)|ユーザー ツールの既定のアイコンを読み込みます。|
+|[CUserTool::LoadDefaultIcon](#loaddefaulticon)|ユーザーツールの既定のアイコンを読み込みます。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CUserTool::m_strArguments](#m_strarguments)|ユーザー ツールのコマンドライン引数。|
-|[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|ユーザー ツールの初期ディレクトリ。|
-|[CUserTool::m_strLabel](#m_strlabel)|ツールのメニュー項目に表示されるツールの名前。|
+|[CUserTool:: m_strArguments](#m_strarguments)|ユーザーツールのコマンドライン引数。|
+|[CUserTool:: m_strInitialDirectory](#m_strinitialdirectory)|ユーザーツールの初期ディレクトリ。|
+|[CUserTool:: m_strLabel](#m_strlabel)|ツールのメニュー項目に表示されるツール名。|
 
 ## <a name="remarks"></a>Remarks
 
-アプリケーションでユーザー ツールを有効にする方法の詳細については、次を参照してください。 [CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)します。
+アプリケーションでユーザーツールを有効にする方法の詳細については、「 [Cusertools Manager クラス](../../mfc/reference/cusertoolsmanager-class.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例からツールを作成する方法を示します、`CUserToolsManager`オブジェクト、設定、`m_strLabel`メンバー変数、およびユーザー ツールを実行するアプリケーションを設定します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、 `CUserToolsManager`オブジェクトからツールを作成し、 `m_strLabel`メンバー変数を設定し、ユーザーツールが実行するアプリケーションを設定する方法を示しています。 このコードスニペットは、 [Visual Studio のデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 
@@ -94,11 +94,11 @@ class CUserTool : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxusertool.h
+**ヘッダー:** afxusertool
 
 ##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 ```
 BOOL CopyIconToClipboard();
@@ -108,9 +108,9 @@ BOOL CopyIconToClipboard();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon
+##  <a name="drawtoolicon"></a>CUserTool::D rawToolIcon
 
-指定した四角形の中心にユーザーの [ツール] アイコンを描画します。
+指定した四角形の中央にユーザーツールアイコンを描画します。
 
 ```
 void DrawToolIcon(
@@ -121,14 +121,14 @@ void DrawToolIcon(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
 *rectImage*<br/>
-[in]アイコンを表示する領域の座標を指定します。
+からアイコンを表示する領域の座標を指定します。
 
 ##  <a name="getcommand"></a>  CUserTool::GetCommand
 
-ユーザー ツールに関連付けられているコマンドのテキストを含む文字列を返します。
+ユーザーツールに関連付けられているコマンドのテキストを含む文字列を返します。
 
 ```
 const CString& GetCommand() const;
@@ -136,11 +136,11 @@ const CString& GetCommand() const;
 
 ### <a name="return-value"></a>戻り値
 
-参照を`CString`ユーザー ツールに関連付けられているコマンドのテキストを格納しているオブジェクト。
+ユーザーツールに`CString`関連付けられているコマンドのテキストを格納しているオブジェクトへの参照。
 
 ##  <a name="getcommandid"></a>  CUserTool::GetCommandId
 
-ユーザー ツールのコマンド ID を返します。
+ユーザーツールのコマンド ID を返します。
 
 ```
 UINT GetCommandId() const;
@@ -148,11 +148,11 @@ UINT GetCommandId() const;
 
 ### <a name="return-value"></a>戻り値
 
-このユーザー ツールのコマンド ID。
+このユーザーツールのコマンド ID。
 
-##  <a name="invoke"></a>  Cusertool:
+##  <a name="invoke"></a>  CUserTool::Invoke
 
-ユーザー ツールに関連付けられているコマンドを実行します。
+ユーザーツールに関連付けられたコマンドを実行します。
 
 ```
 virtual BOOL Invoke();
@@ -160,15 +160,15 @@ virtual BOOL Invoke();
 
 ### <a name="return-value"></a>戻り値
 
-コマンドが正常に実行された場合、0 以外の場合それ以外の場合 0 を返します。
+コマンドが正常に実行された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)ユーザー ツールに関連付けられているコマンドを実行します。 または、コマンドが空の場合、関数は失敗[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)は失敗します。
+ユーザーツールに関連付けられているコマンドを実行するために、 [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew)を呼び出します。 コマンドが空の場合、または[ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew)が失敗した場合、関数は失敗します。
 
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon
 
-ユーザー ツールの既定のアイコンを読み込みます。
+ユーザーツールの既定のアイコンを読み込みます。
 
 ```
 virtual HICON LoadDefaultIcon();
@@ -176,17 +176,17 @@ virtual HICON LoadDefaultIcon();
 
 ### <a name="return-value"></a>戻り値
 
-読み込まれたアイコン (HICON)、または既定のアイコンを読み込むことができない場合は NULL へのハンドル。
+読み込まれたアイコン (HICON) を示すハンドル。既定のアイコンを読み込むことができない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、ツールの実行可能ファイルからユーザー定義のツールのアイコンを読み込むことができない場合、このメソッドを呼び出します。
+フレームワークは、ツールの実行可能ファイルからユーザー定義ツールのアイコンを読み込むことができない場合に、このメソッドを呼び出します。
 
-独自の既定ツール アイコンを指定するには、このメソッドをオーバーライドします。
+このメソッドをオーバーライドして、独自の既定のツールアイコンを指定します。
 
-##  <a name="m_strarguments"></a>  CUserTool::m_strArguments
+##  <a name="m_strarguments"></a>CUserTool:: m_strArguments
 
-ユーザー ツールのコマンドライン引数。
+ユーザーツールのコマンドライン引数。
 
 ```
 CString m_strArguments;
@@ -194,11 +194,11 @@ CString m_strArguments;
 
 ### <a name="remarks"></a>Remarks
 
-この文字列は、呼び出すときに、ツールに渡された[cusertool:](#invoke)またはユーザーがこのツールに関連付けられているコマンドをクリックしたとき。
+この文字列は、 [Cusertool:: Invoke](#invoke)を呼び出したとき、またはユーザーがこのツールに関連付けられたコマンドをクリックしたときに、ツールに渡されます。
 
-##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory
+##  <a name="m_strinitialdirectory"></a>CUserTool:: m_strInitialDirectory
 
-ユーザー ツールの初期ディレクトリを指定します。
+ユーザーツールの初期ディレクトリを指定します。
 
 ```
 CString m_strInitialDirectory;
@@ -206,11 +206,11 @@ CString m_strInitialDirectory;
 
 ### <a name="remarks"></a>Remarks
 
-この変数を呼び出すときに、ツールを実行する初期ディレクトリを指定する[cusertool:](#invoke)またはユーザーがこのツールに関連付けられているコマンドをクリックしたとき。
+この変数は、 [Cusertool:: Invoke](#invoke)を呼び出すとき、またはユーザーがこのツールに関連付けられたコマンドをクリックしたときに、ツールによって実行される初期ディレクトリを指定します。
 
-##  <a name="m_strlabel"></a>  CUserTool::m_strLabel
+##  <a name="m_strlabel"></a>CUserTool:: m_strLabel
 
-ツールのメニュー項目に表示されるラベルです。
+ツールのメニュー項目に表示されるラベル。
 
 ```
 CString m_strLabel;
@@ -218,7 +218,7 @@ CString m_strLabel;
 
 ##  <a name="serialize"></a>  CUserTool::Serialize
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -226,13 +226,13 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ar*<br/>
+から*ar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setcommand"></a>  CUserTool::SetCommand
 
-ユーザー ツールを実行するアプリケーションを設定します。
+ユーザーツールが実行するアプリケーションを設定します。
 
 ```
 void SetCommand(LPCTSTR lpszCmd);
@@ -241,15 +241,15 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="parameters"></a>パラメーター
 
 *lpszCmd*<br/>
-[in]ユーザー ツールに関連する新しいアプリケーションを指定します。
+からユーザーツールに関連付けられる新しいアプリケーションを指定します。
 
 ### <a name="remarks"></a>Remarks
 
-ユーザー ツールを実行する新しいアプリケーションを設定するには、このメソッドを呼び出します。 このメソッドは、古いアイコンを破棄し、特定のアプリケーションから、新しいアイコンを読み込みます。 場合は、アプリケーションからそのアイコンを読み込むことができません、呼び出すことによって、ユーザー ツールの既定のアイコンを読み込む[CUserTool::LoadDefaultIcon](#loaddefaulticon)します。
+ユーザーツールが実行する新しいアプリケーションを設定するには、このメソッドを呼び出します。 メソッドは、古いアイコンを破棄し、指定されたアプリケーションから新しいアイコンを読み込みます。 アプリケーションからアイコンを読み込むことができない場合は、 [Cusertool:: LoadDefaultIcon](#loaddefaulticon)を呼び出すことによって、ユーザーツールの既定のアイコンが読み込まれます。
 
 ##  <a name="settoolicon"></a>  CUserTool::SetToolIcon
 
-このツールを使用するアプリケーションからユーザー ツールのアイコンを読み込みます。
+ツールが使用するアプリケーションからユーザーツールのアイコンを読み込みます。
 
 ```
 virtual HICON SetToolIcon();
@@ -261,7 +261,7 @@ virtual HICON SetToolIcon();
 
 ### <a name="remarks"></a>Remarks
 
-メニュー項目に表示されるアイコンの読み込みには、このメソッドを呼び出します。 このメソッドは、ツールで使用される実行可能ファイルのアイコンを検索します。 アイコンは、によって提供される既定のアイコンを持たない場合[CUserTool::LoadDefaultIcon](#loaddefaulticon)代わりに使用されます。
+メニュー項目に表示されるアイコンを読み込むには、このメソッドを呼び出します。 このメソッドは、ツールが使用する実行可能ファイル内のアイコンを検索します。 既定のアイコンがない場合は、 [Cusertool:: LoadDefaultIcon](#loaddefaulticon)によって提供されるアイコンが代わりに使用されます。
 
 ## <a name="see-also"></a>関連項目
 

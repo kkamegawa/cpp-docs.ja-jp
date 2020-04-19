@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s_dbg、_wdupenv_s_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579593"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937676"
 ---
-# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
+# <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
 
 現在の環境から値を取得します。  追加のデバッグ情報を提供するために [_malloc_dbg](malloc-dbg.md) でメモリを割り当てる、[_dupenv_s, _wdupenv_s](dupenv-s-wdupenv-s.md) のバージョン。
 
@@ -67,33 +70,33 @@ errno_t _wdupenv_s_dbg(
 変数の値を格納するバッファー。
 
 *numberOfElements*<br/>
-サイズ*バッファー*します。
+*バッファー*のサイズ。
 
 *varname*<br/>
 環境変数名。
 
 *blockType*<br/>
-要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
 
 *ファイル名*<br/>
-ソース ファイルの名前へのポインターまたは**NULL**します。
+ソースファイルの名前へのポインター、または**NULL**。
 
 *行番号*<br/>
-ソース ファイルの数の行または**NULL**します。
+ソースファイル内の行番号または**NULL**。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-これらの関数は、パラメーターを検証します。場合*バッファー*または*varname*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+これらの関数は、パラメーターを検証します。*buffer*または*varname*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**errno**を**einval**に設定し、 **einval**を返します。
 
-設定する場合、これらの関数は、十分なメモリを割り当てることはできません、*バッファー*に**NULL**と*numberOfElements* 0、および戻り値に**ENOMEM**します。
+これらの関数が十分なメモリを割り当てられない場合、 *buffer*を**NULL**に設定し、 *numberofelements*を0に設定して、 **ENOMEM**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Dupenv_s_dbg**と **_wdupenv_s_dbg**関数と同じ **_dupenv_s**と **_wdupenv_s**する点を除いて、 **_DEBUG**が定義されている場合、これらの関数でのデバッグ バージョンを使用[malloc](malloc.md)、 [_malloc_dbg](malloc-dbg.md)メモリ、環境変数の値を割り当てられません。 デバッグ機能について **_malloc_dbg**を参照してください[_malloc_dbg](malloc-dbg.md)します。
+**_Dupenv_s_dbg**関数と **_wdupenv_s_dbg**関数は **_dupenv_s**および **_wdupenv_s**と同じですが、 **_debug**が定義されている場合、これらの関数は[malloc](malloc.md), [_malloc_dbg](malloc-dbg.md)のデバッグバージョンを使用する点が異なります。環境変数の値にメモリを割り当てる場合はです。 **_Malloc_dbg**のデバッグ機能の詳細については、 [_malloc_dbg](malloc-dbg.md)を参照してください。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 フラグを定義する代わりに、 **_CRTDBG_MAP_ALLOC**します。 ときに **_CRTDBG_MAP_ALLOC**が定義されている、呼び出し **_dupenv_s**と **_wdupenv_s**にマップし直され **_dupenv_s_dbg**と **_wdupenv_s_dbg**をそれぞれで、 *blockType*設定 **_NORMAL_BLOCK**します。 したがって、としてヒープ ブロックをマークする場合、これらの関数を明示的に呼び出す必要はない **_CLIENT_BLOCK**します。 ブロック型の詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、フラグ **_CRTDBG_MAP_ALLOC**を定義できます。 **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_dupenv_s**と **_wdupenv_s**の呼び出しはそれぞれ **_dupenv_s_dbg**と **_wdupenv_s_dbg**に再マップされ、 *blocktype*は **_NORMAL_BLOCK**に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK**としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 ブロック型の詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

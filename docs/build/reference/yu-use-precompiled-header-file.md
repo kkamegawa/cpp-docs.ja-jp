@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 8d2b02c378179ac2603ec095efe89ce78f9f1afa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316146"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (プリコンパイル済みヘッダー ファイルの使用)
 
@@ -45,7 +45,7 @@ ms.locfileid: "50505343"
 
 コマンドラインでスペースは入れません間 **/Yu**と`filename`します。
 
-指定すると、 **/Yu**ファイル名、ソース プログラムのないオプションを指定する必要があります、 [#pragma hdrstop](../../preprocessor/hdrstop.md)プラグマ プリコンパイル済みヘッダーを .pch ファイルのファイル名を指定します。 この場合、コンパイラはによってという名前のプリコンパイル済みヘッダー (.pch ファイル) が使用[/Fp (名前です。Pch ファイル)](../../build/reference/fp-name-dot-pch-file.md)します。 コンパイラは、プラグマの位置にスキップ、プラグマで指定されたプリコンパイル済みヘッダー ファイルからコンパイル済みの状態を復元およびプラグマを次のコードだけをコンパイルします。 場合 **#pragma hdrstop**拡張子 .pch を持つソース ファイルのベース名から派生した名前のファイルのコンパイラは、ファイル名を指定しません。 使用することも、 **/Fp**別の .pch ファイルを指定するオプション。
+指定すると、 **/Yu**ファイル名、ソース プログラムのないオプションを指定する必要があります、 [#pragma hdrstop](../../preprocessor/hdrstop.md)プラグマ プリコンパイル済みヘッダーを .pch ファイルのファイル名を指定します。 この場合、コンパイラはによってという名前のプリコンパイル済みヘッダー (.pch ファイル) が使用[/Fp (名前です。Pch ファイル)](fp-name-dot-pch-file.md)します。 コンパイラは、プラグマの位置にスキップ、プラグマで指定されたプリコンパイル済みヘッダー ファイルからコンパイル済みの状態を復元およびプラグマを次のコードだけをコンパイルします。 場合 **#pragma hdrstop**拡張子 .pch を持つソース ファイルのベース名から派生した名前のファイルのコンパイラは、ファイル名を指定しません。 使用することも、 **/Fp**別の .pch ファイルを指定するオプション。
 
 指定した場合、 **/Yu**ファイル名のないオプションを選択し、指定しないと、 **hdrstop**プラグマ、エラー メッセージを生成およびコンパイルが成功しました。
 
@@ -55,15 +55,15 @@ ms.locfileid: "50505343"
 
 プリコンパイル済みヘッダーの詳細についてを参照してください。
 
-- [/Y (プリコンパイル済みヘッダー)](../../build/reference/y-precompiled-headers.md)
+- [/Y (プリコンパイル済みヘッダー)](y-precompiled-headers.md)
 
-- [プリコンパイル済みヘッダー ファイルの作成](../../build/reference/creating-precompiled-header-files.md)
+- [プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. 指定[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)プロジェクトで .cpp ファイルでします。
+1. 指定[/Yc (プリコンパイル済みヘッダー ファイルの作成)](yc-create-precompiled-header-file.md)プロジェクトで .cpp ファイルでします。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -88,7 +88,7 @@ ms.locfileid: "50505343"
 
 コマンドラインを使用したコンパイル`CL /YuMYAPP.H PROG.CPP`コンパイラは、3 つを処理しないファイル (およびすべてのファイルが含まれている可能性があります) の 3 つすべての前処理に関連する時間を節約しされますのプリコンパイルを使用してコードではなくステートメントを含めます。
 
-使用することができます、 [/Fp (名前です。Pch ファイル)](../../build/reference/fp-name-dot-pch-file.md)オプションは、 **/Yu**名前がするか、ファイル名引数と異なる場合は、.pch ファイルの名前を指定するオプション **/Yc**またはのソース ファイルの基本名、次の。
+使用することができます、 [/Fp (名前です。Pch ファイル)](fp-name-dot-pch-file.md)オプションは、 **/Yu**名前がするか、ファイル名引数と異なる場合は、.pch ファイルの名前を指定するオプション **/Yc**またはのソース ファイルの基本名、次の。
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

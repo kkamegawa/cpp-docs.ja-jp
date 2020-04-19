@@ -1,17 +1,17 @@
 ---
-title: '方法: グローバル例外ハンドラーを定義およびインストールする'
+title: '方法: グローバル例外ハンドラー定義およびインストール'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387397"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>方法: グローバル例外ハンドラーを定義およびインストールする
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>方法: グローバル例外ハンドラー定義およびインストール
 
 次のコード例に示す方法未処理の例外をキャプチャできます。 フォーム例にはには、ボタンが含まれています。、、押されたときにスローされる例外を発生させる、null 参照を実行します。 この機能は、一般的なコード エラーを表します。 アプリケーション全体の例外ハンドラーがメインの関数によってインストールされている結果の例外をキャッチします。
 
@@ -73,4 +73,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[例外処理](../windows/exception-handling-cpp-component-extensions.md)
+[例外処理](../extensions/exception-handling-cpp-component-extensions.md)

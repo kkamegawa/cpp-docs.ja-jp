@@ -1,11 +1,11 @@
----
+﻿---
 title: remainder、remainderf、remainderl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remainderl
 - remainder
 - remainderf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remainderf
 - remainder
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572745"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949423"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -61,19 +64,19 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>戻り値
 
-浮動小数点の剰余*x* / *y*します。 場合の値*y* 0.0、**剰余**簡易な NaN を返します。 による簡易な NaN の表現については、 **printf**ファミリを参照してください[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)します。
+*X* / *y*の浮動小数点の剰余。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**剰余**関数は浮動小数点の剰余を計算*r*の*x* / *y*ように*x*  =  *n* \* *y* + *r*ここで、 *n*が、値を最も近い整数*x* / *y*と*n*偶数たびに&#124; *n*  - *x* / *y* &#124; = 1/2。 ときに*r* = 0、 *r*と同じ符号*x*します。
+\* **剰余**関数は、x*y* *y* /  =  の浮動小数点の剰余rを計算します(n +  *)。* *x* /  &#124; &#124;  - y の値に最も近い整数を指定します。 n x y = 1/2 の場合は、n になります。 /  *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、**剰余**を受け取って返す**float**または**長い****二重**値。 C プログラムで**剰余**常に 2 つは、**二重**引数を返す、**二重**。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、**remainder**を受け取って返す**float**または**long** **double**値。 C プログラムでは、**remainder**は常に2つの**double**引数を受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
-|**残りの部分**、 **remainderf**、 **remainderl**|\<math.h>|\<cmath> または \<math.h>|
+|**残り、残りの部分**は **、** 残って**います。**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

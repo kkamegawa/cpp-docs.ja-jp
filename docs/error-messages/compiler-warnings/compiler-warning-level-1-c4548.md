@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4548
 ms.assetid: 2cee817e-e463-4d90-bbd2-de120d48c101
-ms.openlocfilehash: 02010107c90f52f0fd2df838d90b78809fb80b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09d2d2d1b67b203ebbc6b62b5b19f4b063e312c3
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438572"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966400"
 ---
 # <a name="compiler-warning-level-1-c4548"></a>コンパイラの警告 (レベル 1) C4548
 
 コンマ前の式は無効です。有効な式を指定してください。
 
-正しくない形式のコンマ式が検出されました。
+コンパイラにより、正しくない形式のコンマ式が検出されました。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 
 次の例では、C4548 が生成されます。
 
-```
+```cpp
 // C4548.cpp
 // compile with: /W1
 #pragma warning (default : 4548)

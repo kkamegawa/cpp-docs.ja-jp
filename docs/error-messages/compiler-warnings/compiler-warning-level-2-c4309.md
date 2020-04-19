@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4309
 ms.assetid: cb3f41ef-fd8a-4def-baa1-924e751fca68
-ms.openlocfilehash: 41184571dc07213c796c039170966a0c7150bd45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78d7d8130282a67c07046004ee61e802cfd97780
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516143"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052047"
 ---
 # <a name="compiler-warning-level-2-c4309"></a>コンパイラの警告 (レベル 2) C4309
 
-'conversion': 定数値の切り捨て
+' conversion ': 定数値の切り捨て
 
-型変換によって、それに割り当てられた領域を超過する定数。 定数のより大きい型を使用する必要があります。
+型変換によって、定数が割り当てられた領域を超えています。 定数には、より大きな型を使用することが必要になる場合があります。
 
 次の例では、C4309 が生成されます。
 
-```
+```cpp
 // C4309.cpp
 // compile with: /W2
 int main()

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: ceb92181fcf1fcb17033ac9524c0b113cbc710fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17c1b30811fa1d9c3f3bc04a46553c617eff966b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708140"
 ---
-# <a name="control-names-mfc-activex-control-wizard"></a>[コントロール名] \(MFC ActiveX コントロール ウィザード)
+# <a name="control-names-mfc-activex-control-wizard"></a>[コントロール名] (MFC ActiveX コントロール ウィザード)
 
 コントロール クラスと型名、プロパティ ページ クラスの名前を指定し、コントロールの識別子を入力します。 例外として**短い名前**、他のすべてのフィールドが個別に編集がないことができます。 テキストを変更する場合**短い名前**、このページの他のすべてのフィールドの名前に変更が反映されます。 この名前付けの動作は、コントロールを開発するときに簡単に識別できるように、すべての名前に設計されています。
 
@@ -86,5 +86,5 @@ ms.locfileid: "50552712"
 [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [[アプリケーションの設定] (MFC ActiveX コントロール ウィザード)](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [[コントロールの設定] (MFC ActiveX コントロール ウィザード)](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
-[Visual C++ プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)
+[Visual Studio のファイルの種類を作成C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: d345d7a5aef53ac7975564a580f1353157a01376
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324286"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane クラス
 
@@ -53,7 +53,7 @@ class CTabbedPane : public CBaseTabbedPane
 
 |名前|説明|
 |----------|-----------------|
-|`CTabbedPane::CTabbedPane`|既定のコンストラクター|
+|`CTabbedPane::CTabbedPane`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -215,7 +215,7 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pBar*<br/>
-[in]*nTabID*<br/>
+[in] *nTabID*<br/>
 [in]*dockMethod*<br/>
 [in]*bHide*<br/>
 

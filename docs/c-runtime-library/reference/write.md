@@ -1,9 +1,9 @@
 ---
 title: _write
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _write
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _write
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519250"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821793"
 ---
-# <a name="write"></a>_write
+# <a name="_write"></a>_write
 
 ファイルにデータを書き込みます。
 
@@ -57,29 +60,29 @@ int _write(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_write**実際に書き込まれたバイト数を返します。 ディスクに残っている実際の領域が、関数が、ディスクに書き込むしようとしたバッファーのサイズより小さい場合 **_write**が失敗し、バッファーの内容をディスクにフラッシュしません。 戻り値-1 はエラーを示します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、関数は-1 を返しますと**errno** 3 つの値のいずれかに設定されている: **EBADF**、つまり、ファイル記述子が正しくないか、ファイルが書き込み用に開かれていません。**ENOSPC**、十分な空き領域が残って操作については、デバイスがないことを意味または**EINVAL**、つまり*バッファー*が null ポインターかを奇数*カウント*Unicode モードでのファイルに書き込まれるバイトが渡されました。
+成功した場合、 **_write**は書き込まれたバイト数を返します。 ディスク上に残っている実際の領域が、関数がディスクに書き込もうとしているバッファーのサイズよりも小さい場合、 **_write**は失敗し、バッファーの内容はディスクにフラッシュされません。 戻り値-1 はエラーを示します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**は3つの値のいずれかに設定され**ます。これは、ファイル**記述子が無効であるか、ファイルが書き込み用に開かれていないことを意味します。**ENOSPC**。これは、操作に必要な領域がデバイスに残っていないことを意味します。または**EINVAL**。*バッファー*が null ポインターであるか、また*は奇数のバイト数が*Unicode モードでファイルに書き込まれるように渡されたことを示します。
 
-これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-テキスト モードで、ファイルを開く場合は、それぞれのラインフィード文字がキャリッジ リターン - ライン フィードのペアで、出力に置き換えられます。 この置き換えは、戻り値には影響しません。
+ファイルがテキストモードで開かれている場合、各ラインフィード文字は出力のキャリッジリターンラインフィードのペアで置き換えられます。 置換は戻り値には影響しません。
 
-Unicode 変換モードでファイルを開いたときに、たとえば場合、 *fd*を使用して、開く**開く (_o)** または **_sopen**とを含むモード パラメーター **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を使用して開かれた場合、または**fopen**とを含むモード パラメーター **ccs =UNICODE**、 **ccs = UTF 16LE**、または**ccs = utf-8**を使用して、モードが Unicode 変換モードに変更された場合または **_setmode**—*バッファー*の配列へのポインターとして解釈される**wchar_t**を格納している**utf-16**データ。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
+ファイルが Unicode 変換モードで開かれている場合 (たとえば、 **_open**または **_sopen**と、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含むモードパラメーターを使用して*fd*が開かれている場合、または**fopen**を使用して開かれており、かつ、 **ccs = unicode**、 **ccs = 16LE**、または**ccs**を含むモードパラメーター**を使用し**て開かれている場合は、*バッファー*はへのポインターと解釈されます**utf-16**データを含む**wchar_t**の配列。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Write**関数*カウント*からバイト*バッファー*に関連付けられているファイルに*fd*します。 書き込み操作は、指定されたファイルに関連付けられたファイル ポインター (存在する場合) の現在の位置で開始されます。 ファイルが追加用に開かれている場合、操作はファイルの現在の末尾で開始されます。 書き込み操作の後、ファイル ポインターは実際に書き込まれたバイト数の分、増加します。
+**_Write**関数は、*バッファー*のバイト*数*を*fd*に関連付けられたファイルに書き込みます。 書き込み操作は、指定されたファイルに関連付けられたファイル ポインター (存在する場合) の現在の位置で開始されます。 ファイルが追加用に開かれている場合、操作はファイルの現在の末尾で開始されます。 書き込み操作の後、ファイルポインターは、書き込まれたバイト数だけ増加します。
 
-テキスト モードで開かれたファイルに書き込むときに **_write** CTRL+Z 文字を論理ファイルの終わりとして扱います。 デバイスに書き込むときに **_write**を出力の終端として、バッファー内の CTRL+Z 文字を扱います。
+テキストモードで開かれたファイルに書き込む場合、 **_write**は CTRL + Z 文字をファイルの論理終端として扱います。 デバイスに書き込む場合、 **_write**はバッファー内の CTRL + Z 文字を出力ターミネータとして扱います。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```C
 // crt__write.c
@@ -121,7 +124,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }

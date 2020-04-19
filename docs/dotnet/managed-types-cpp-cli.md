@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152775"
 ---
 # <a name="managed-types-ccli"></a>マネージド型 (C++/CLI)
 
@@ -46,19 +46,21 @@ int main(int, char*[], char*[]) {}
 
 |C++ のビジュアルの種類|.NET Framework 型|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**char を署名**(を参照してください[/J](../build/reference/j-default-char-type-is-unsigned.md)詳細)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**二重**と**long double**|**System.Double**|
-|**float**|**System.Single**|
-|**int**、 **int を署名**、**長い**、および**時間の長い署名**|**System.Int32**|
-|**符号なし int**と**unsigned long**|**System.UInt32**|
-|**_ _int64**と **_ _int64 の署名**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**短い**と**つまり署名**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**signed char** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**short**と**signed short**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**、 **signed int**、**long**、および**signed long**|<xref:System.Int32?displayProperty=nameWithType>|
+|**符号なし int**と**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**_ _int64**と **_ _int64 の署名**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**double**と**long double**|<xref:System.Double?displayProperty=nameWithType>|
+
+既定の符号付きまたは符号なしにするコンパイラ オプションの詳細については**char**を参照してください[/J (既定の char 型は符号付き)](../build/reference/j-default-char-type-is-unsigned.md)します。
 
 ## <a name="version_issues"></a> ネイティブ型に入れ子になった値の型のバージョンの問題
 
@@ -125,7 +127,7 @@ S.i = 11
 
 ただし、する別のメンバーを追加する場合`struct S`nested_value_types.cpp で (たとえば、 `double d;`) と、クライアントを再コンパイルしなくても、コンポーネントを再コンパイル、ハンドルされない例外になります (型の<xref:System.IO.FileLoadException?displayProperty=fullName>)。
 
-## <a name="test_equality"></a> 方法: 等価性をテスト
+## <a name="test_equality"></a>方法: 等しいかどうかをテストします。
 
 次の例では、c++ マネージ拡張を使用して等しいかどうかのテストはハンドルの参照先に基づいています。
 
@@ -150,7 +152,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> 方法: 診断し、アセンブリの互換性の問題を修正
+## <a name="diagnose_fix"></a>方法: 診断し、アセンブリの互換性の問題を修正
 
 このトピックでは、コンパイル時に参照されるアセンブリのバージョンは、実行時に参照されるアセンブリのバージョンと一致しないときに生じると、問題を回避する方法。
 

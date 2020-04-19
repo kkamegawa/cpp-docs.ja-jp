@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 79bdafcd4ed6af061b9c0ee27aae6eed6bc981a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62213784"
 ---
 # <a name="command-line-warning-d9041"></a>コマンド ラインの警告 D9041
 
@@ -32,4 +32,4 @@ cl /EHsc /LD /wd6001 filename.cpp
 ## <a name="see-also"></a>関連項目
 
 [コマンド ライン エラー D8000 から D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)
+[MSVC コンパイラ オプション](../../build/reference/compiler-options.md)

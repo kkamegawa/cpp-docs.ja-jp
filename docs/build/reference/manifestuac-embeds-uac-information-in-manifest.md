@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecc30baabdcb60a030418e9643e2fcffe5ba8281
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321372"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (UAC 情報をマニフェストに組み込む)
 
@@ -36,7 +36,7 @@ ms.locfileid: "50625093"
 *フラグメント*<br/>
 `level` 値および `uiAccess` 値を格納する文字列。 詳細については、このトピックで後述する「解説」を参照してください。
 
-*レベル (_l)*<br/>
+*_level*<br/>
 いずれかの*asInvoker*、 *highestAvailable*、または*requireAdministrator*します。 既定値は asInvoker です。 詳細については、このトピックで後述する「解説」を参照してください。
 
 *_uiAccess*<br/>
@@ -48,11 +48,11 @@ ms.locfileid: "50625093"
 
 /MANIFESTUAC:level に指定できるのは、次のとおりです。
 
-- `asInvoker`: アプリケーションは、アプリケーションを開始したプロセスと同じアクセス許可で実行されます。 アプリケーションを選択してより高いアクセス許可レベルに昇格させることができます**管理者として実行**します。
+- `asInvoker`:アプリケーションは、それを開始したプロセスと同じアクセス許可で実行されます。 アプリケーションを選択してより高いアクセス許可レベルに昇格させることができます**管理者として実行**します。
 
-- highestAvailable: アプリケーションは、可能な限り高いアクセス許可レベルで実行されます。 アプリケーションを開始するユーザーが管理者グループのメンバーである場合、このオプションは requireAdministrator と同じです。 使用可能な最も高いアクセス許可レベルが、開始したプロセスのレベルより高い場合は、資格情報の入力が求められます。
+- highestAvailable:アプリケーションは、可能な高い権限レベルで実行されます。 アプリケーションを開始するユーザーが管理者グループのメンバーである場合、このオプションは requireAdministrator と同じです。 使用可能な最も高いアクセス許可レベルが、開始したプロセスのレベルより高い場合は、資格情報の入力が求められます。
 
-- requireAdministrator: アプリケーションは管理者のアクセス許可で実行されます。 アプリケーションを開始するユーザーは、管理者グループのメンバーである必要があります。 開始したプロセスが管理者のアクセス許可で実行されない場合は、資格情報の入力が求められます。
+- requireAdministrator:アプリケーションは、管理者のアクセス許可で実行されます。 アプリケーションを開始するユーザーは、管理者グループのメンバーである必要があります。 開始したプロセスが管理者のアクセス許可で実行されない場合は、資格情報の入力が求められます。
 
 /MANIFESTUAC:fragment オプションを使用することにより、level 値と uiAccess 値の指定を 1 ステップで行うことができます。 fragment は、次の形式で指定します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "50625093"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -78,5 +78,5 @@ ms.locfileid: "50625093"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

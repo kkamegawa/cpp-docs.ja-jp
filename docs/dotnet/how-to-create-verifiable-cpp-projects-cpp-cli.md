@@ -1,17 +1,17 @@
 ---
-title: '方法: 確認可能な C++ プロジェクトを作成する (C++/CLI)'
+title: '方法: 検証可能な C++ プロジェクトを作成 (C +/cli CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630439"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448115"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>方法: 検証可能な C++ プロジェクトを作成 (C +/cli CLI)
 
@@ -20,7 +20,7 @@ Visual C アプリケーション ウィザードでは、検証可能なプロ�
 > [!IMPORTANT]
 > Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。
 
-ただし、以前のバージョンをサポートする Visual C コンパイラ ツールセットを使用している場合 **/clr: 純粋な**と **/clr:safe**、検証可能にするプロジェクトを変換できます。 このトピックでは、プロジェクトのプロパティを設定し、検証可能なアプリケーションを生成するために、Visual C プロジェクトを変換するプロジェクトのソース ファイルを変更する方法について説明します。
+ただしかどうかは、Microsoft の以前のバージョンを使用しているC++コンパイラ ツールセットをサポートする **/clr: 純粋な**と **/clr:safe**、検証可能にするプロジェクトを変換できます。 このトピックでは、プロジェクトのプロパティを設定し、Visual Studio を変換するソース ファイルをプロジェクトを変更する方法を説明しますC++検証可能なアプリケーションを作成するプロジェクト。
 
 ## <a name="compiler-and-linker-settings"></a>コンパイラとリンカーの設定
 
@@ -28,7 +28,7 @@ Visual C アプリケーション ウィザードでは、検証可能なプロ�
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>コンパイラとリンカーの設定を変更するには
 
-1. プロジェクトのプロパティ ページを表示します。 詳細については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトのプロパティ ページを表示します。 詳細については、次を参照してください。[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)します。
 
 1. **全般**ページで、**構成プロパティ**、ノード セット、**共通言語ランタイム サポート**プロパティを**安全な MSIL 共通言語ランタイム サポート (//clr:safe)** します。
 
@@ -56,7 +56,7 @@ Visual C アプリケーション ウィザードでは、検証可能なプロ�
 
 1. プロジェクトのメインの .cpp ファイルで Main() _tmain() に変更します。
 
-1. プロジェクトのプロパティ ページを表示します。 詳細については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトのプロパティ ページを表示します。 詳細については、次を参照してください。[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)します。
 
 1. **[詳細設定]** ページで、**リンカー**ノード、入力`Main`として、**エントリ ポイント**プロパティの値。
 

@@ -1,12 +1,12 @@
 ---
 title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 09/12/2019
+api_name:
 - _vswprintf_s_l
 - vsprintf_s
 - vswprintf_s
 - _vsprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vswprintf_s
 - vsprintf_s
@@ -35,16 +39,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84e85885acf671b49e1e3226234a1d3337577768
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945269"
 ---
-# <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
+# <a name="vsprintf_s-_vsprintf_s_l-vswprintf_s-_vswprintf_s_l"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
-引数リストへのポインターを使用して、書式付き出力を書き込みます。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、\__vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) です。
+引数リストへのポインターを使用して、書式付き出力を書き込みます。 これらの関数は、「 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの[vsprintf \_、_vsprintf_l、vswprintf、_vswprintf_l、_vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)です。
 
 ## <a name="syntax"></a>構文
 
@@ -95,12 +99,12 @@ int vswprintf_s(
 出力の格納位置。
 
 *numberOfElements*<br/>
-サイズ*バッファー*文字数。
+*バッファー*のサイズ (文字単位)。
 
 *format*<br/>
 書式の指定。
 
-*定義されています*<br/>
+*argptr*<br/>
 引数リストへのポインター。
 
 *locale*<br/>
@@ -108,27 +112,27 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>戻り値
 
-**vsprintf_s**と**vswprintf_s**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*バッファー*または*形式*カウントが 0 の場合は null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+**vsprintf_s**と**vswprintf_s**は、書き込まれた文字数を返します。終端の null 文字は含まれません。出力エラーが発生した場合は、負の値が返されます。 *バッファー*または*形式*が null ポインターの場合、 *numberofelements*がゼロの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数、引数リストへのポインターを受け取ると、書式を設定およびが指すメモリに指定されたデータを書き込みます*バッファー*します。
+これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して、*バッファー*が指すメモリに書き込みます。
 
-**vswprintf_s**の ISO C 標準に準拠している**vswprintf**、2 番目のパラメーターがありますが、*カウント*、型の**size_t**します。
+**vswprintf_s**は、 **Vswprintf**の ISO C 標準に準拠しています。これには、 **size_t**型の2番目のパラメーター *count*が必要です。
 
 これらの関数は、セキュリティ保護されたバージョンが位置指定パラメーターをサポートする点を除いて、セキュリティが万全でないバージョンと同じです。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+でC++は、これらの関数の使用はテンプレートのオーバーロードによって簡略化されています。 オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 また、セキュリティで保護されていない関数を、対応するセキュリティで保護された関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vstprintf_s**|**vsprintf_s**|**vsprintf_s**|**vswprintf_s**|
+|**vstprintf_s (_l)**|**vsprintf_s**|**vsprintf_s**|**vswprintf_s**|
 |**_vstprintf_s_l**|**_vsprintf_s_l**|**_vsprintf_s_l**|**_vswprintf_s_l**|
 
 ## <a name="requirements"></a>必要条件
@@ -146,13 +150,15 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ```C
 // crt_vsprintf_s.c
+// Compile with: cl /W4 crt_vsprintf_s.c
 // This program uses vsprintf_s to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
    va_list args;
    int len;
@@ -161,10 +167,13 @@ void test( char * format, ... )
    va_start( args, format );
    len = _vscprintf( format, args ) // _vscprintf doesn't count
                                + 1; // terminating '\0'
-   buffer = malloc( len * sizeof(char) );
-   vsprintf_s( buffer, len, format, args );
-   puts( buffer );
-   free( buffer );
+   buffer = (char *) malloc( len * sizeof(char) );
+   if ( NULL != buffer )
+   {
+      vsprintf_s( buffer, len, format, args );
+      puts( buffer );
+      free( buffer );
+   }
    va_end( args );
 }
 
@@ -188,4 +197,4 @@ This is a string
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)

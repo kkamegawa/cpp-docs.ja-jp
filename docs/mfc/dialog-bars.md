@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389638"
 ---
 # <a name="dialog-bars"></a>ダイアログ バー
 
@@ -33,5 +33,4 @@ ms.locfileid: "52175354"
 ## <a name="see-also"></a>関連項目
 
 [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
-[サンプル](../visual-cpp-samples.md)
-
+[サンプル](../overview/visual-cpp-samples.md)

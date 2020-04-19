@@ -1,0 +1,966 @@
+- name: Active Template Library (ATL)
+  href: atl-com-desktop-components.md
+- name: ATL (Active Template Library) の概念
+  expanded: false
+  items:
+    - name: ATL (Active Template Library) の概念
+      href: active-template-library-atl-concepts.md
+    - name: COM と ATL の概要
+      expanded: false
+      items:
+        - name: COM と ATL の概要
+          href: introduction-to-com-and-atl.md
+        - name: COM の概要
+          expanded: false
+          items:
+            - name: COM の概要
+              href: introduction-to-com.md
+            - name: インターフェイス (ATL)
+              href: interfaces-atl.md
+            - name: IUnknown
+              href: iunknown.md
+            - name: 参照カウント
+              href: reference-counting.md
+            - name: QueryInterface
+              href: queryinterface.md
+            - name: マーシャリング
+              href: marshaling.md
+            - name: 集約
+              href: aggregation.md
+        - name: ATL の概要
+          expanded: false
+          items:
+            - name: ATL の概要
+              href: introduction-to-atl.md
+            - name: テンプレート ライブラリの使用
+              href: using-a-template-library.md
+            - name: ATL の範囲
+              href: scope-of-atl.md
+            - name: ATL または MFC の選択に関する推奨事項
+              href: recommendations-for-choosing-between-atl-and-mfc.md
+    - name: ATL COM オブジェクトの基礎
+      expanded: false
+      items:
+        - name: ATL COM オブジェクトの基礎
+          href: fundamentals-of-atl-com-objects.md
+        - name: CComObjectRootEx の実装
+          href: implementing-ccomobjectrootex.md
+        - name: CComObject、CComAggObject、CComPolyObject の実装
+          href: implementing-ccomobject-ccomaggobject-and-ccompolyobject.md
+        - name: IDispatch と IErrorInfo のサポート
+          href: supporting-idispatch-and-ierrorinfo.md
+        - name: IDispEventImpl のサポート
+          href: supporting-idispeventimpl.md
+        - name: 既定のクラス ファクトリと集計モデルの変更
+          href: changing-the-default-class-factory-and-aggregation-model.md
+        - name: 集計オブジェクトの作成
+          href: creating-an-aggregated-object.md
+    - name: デュアル インターフェイスと ATL
+      expanded: false
+      items:
+        - name: デュアル インターフェイスと ATL
+          href: dual-interfaces-and-atl.md
+        - name: デュアル インターフェイスの実装
+          href: implementing-a-dual-interface.md
+        - name: 複数のデュアル インターフェイス
+          href: multiple-dual-interfaces.md
+        - name: nonextensible 属性
+          href: nonextensible-attribute.md
+        - name: デュアル インターフェイスとイベント
+          href: dual-interfaces-and-events.md
+    - name: ATL のコレクションと列挙子
+      expanded: false
+      items:
+        - name: ATL のコレクションと列挙子
+          href: atl-collections-and-enumerators.md
+        - name: ATL のコレクションと列挙子クラス
+          href: atl-collection-and-enumerator-classes.md
+        - name: コレクションと列挙子インターフェイスのデザインの原則
+          href: design-principles-for-collection-and-enumerator-interfaces.md
+        - name: C++ 標準ライブラリに基づくコレクションの実装
+          expanded: false
+          items:
+            - name: C++ 標準ライブラリに基づくコレクションの実装
+              href: implementing-an-stl-based-collection.md
+            - name: ATL コピー ポリシー クラス
+              href: atl-copy-policy-classes.md
+    - name: ATL 複合コントロールの基本
+      expanded: false
+      items:
+        - name: ATL 複合コントロールの基本
+          href: atl-composite-control-fundamentals.md
+        - name: 複合コントロールの挿入
+          href: inserting-a-composite-control.md
+        - name: ATL プロジェクトの変更
+          href: modifying-the-atl-project.md
+        - name: 複合コントロールに機能を追加する
+          href: adding-functionality-to-the-composite-control.md
+        - name: ATL プロジェクトの作成とテスト
+          href: building-and-testing-the-atl-project.md
+    - name: ATL コントロール コンテインメントの FAQ
+      href: atl-control-containment-faq.md
+    - name: ATL COM プロパティ ページ
+      expanded: false
+      items:
+        - name: ATL COM プロパティ ページ
+          href: atl-com-property-pages.md
+        - name: プロパティ ページの指定
+          href: specifying-property-pages.md
+        - name: プロパティ ページの実装
+          expanded: false
+          items:
+            - name: プロパティ ページの実装
+              href: implementing-property-pages.md
+            - name: '例:プロパティ ページの実装'
+              href: example-implementing-a-property-page.md
+    - name: DHTML コントロールに対する ATL のサポート
+      expanded: false
+      items:
+        - name: DHTML コントロールに対する ATL のサポート
+          href: atl-support-for-dhtml-controls.md
+        - name: DHTML コントロール プロジェクトの要素の特定
+          href: identifying-the-elements-of-the-dhtml-control-project.md
+        - name: DHTML から C++ コードを呼び出す
+          href: calling-cpp-code-from-dhtml.md
+        - name: ATL DHTML コントロールの作成
+          href: creating-an-atl-dhtml-control.md
+        - name: ATL DHTML コントロールのテスト
+          href: testing-the-atl-dhtml-control.md
+        - name: ATL DHTML コントロールの変更
+          href: modifying-the-atl-dhtml-control.md
+        - name: 変更した ATL DHTML コントロールのテスト
+          href: testing-the-modified-atl-dhtml-control.md
+    - name: ATL コネクション ポイント
+      expanded: false
+      items:
+        - name: ATL コネクション ポイント
+          href: atl-connection-points.md
+        - name: ATL 接続ポイント クラス
+          href: atl-connection-point-classes.md
+        - name: オブジェクトへの接続ポイントの追加
+          href: adding-connection-points-to-an-object.md
+        - name: ATL 接続ポイントの例
+          href: atl-connection-point-example.md
+    - name: イベント処理と ATL
+      expanded: false
+      items:
+        - name: イベント処理と ATL
+          href: event-handling-and-atl.md
+        - name: イベント処理の原則
+          href: event-handling-principles.md
+        - name: イベント処理インターフェイスの実装
+          href: implementing-the-event-handling-interface.md
+        - name: IDispEventImpl の使用
+          href: using-idispeventimpl.md
+        - name: IDispEventSimpleImpl の使用
+          href: using-idispeventsimpleimpl.md
+        - name: ATL イベント処理の概要
+          href: atl-event-handling-summary.md
+    - name: ATL とフリー スレッド マーシャラー
+      href: atl-and-the-free-threaded-marshaler.md
+    - name: プロジェクトのスレッド モデルの指定 (ATL)
+      href: specifying-the-threading-model-for-a-project-atl.md
+    - name: ATL モジュール クラス
+      href: atl-module-classes.md
+    - name: ATL サービス
+      expanded: false
+      items:
+        - name: ATL サービス
+          href: atl-services.md
+        - name: 'CAtlServiceModuleT::Start 関数'
+          href: catlservicemodulet-start-function.md
+        - name: 'CAtlServiceModuleT::ServiceMain 関数'
+          href: catlservicemodulet-servicemain-function.md
+        - name: 'CAtlServiceModuleT::Run 関数'
+          href: catlservicemodulet-run-function.md
+        - name: 'CAtlServiceModuleT::Handler 関数'
+          href: catlservicemodulet-handler-function.md
+        - name: レジストリ エントリ
+          href: registry-entries.md
+        - name: DCOMCNFG
+          href: dcomcnfg.md
+        - name: デバッグのヒント
+          expanded: false
+          items:
+            - name: デバッグのヒント
+              href: debugging-tips.md
+            - name: タスク マネージャーの使用
+              href: using-task-manager.md
+            - name: アサーションの表示
+              href: displaying-assertions.md
+            - name: ローカル サーバーとしてプログラムを実行する
+              href: running-the-program-as-a-local-server.md
+    - name: ATL ウィンドウ クラス
+      expanded: false
+      items:
+        - name: ATL ウィンドウ クラス
+          href: atl-window-classes.md
+        - name: ATL ウィンドウ クラスの概要
+          href: introduction-to-atl-window-classes.md
+        - name: ウィンドウの使用
+          href: using-a-window.md
+        - name: ウィンドウの実装
+          expanded: false
+          items:
+            - name: ウィンドウの実装
+              href: implementing-a-window.md
+            - name: ATL メッセージ ハンドラーの追加
+              href: adding-an-atl-message-handler.md
+            - name: メッセージ マップ (ATL)
+              href: message-maps-atl.md
+            - name: メッセージ ハンドラー関数
+              expanded: false
+              items:
+                - name: メッセージ ハンドラー関数
+                  href: message-handler-functions.md
+                - name: CommandHandler
+                  href: commandhandler.md
+                - name: MessageHandler
+                  href: messagehandler.md
+                - name: NotifyHandler
+                  href: notifyhandler.md
+            - name: CWindowImpl でウィンドウを実装する
+              href: implementing-a-window-with-cwindowimpl.md
+        - name: ダイアログ ボックスの実装
+          href: implementing-a-dialog-box.md
+        - name: 含まれているウィンドウの使用
+          href: using-contained-windows.md
+        - name: ウィンドウの特徴を理解する
+          href: understanding-window-traits.md
+    - name: ATL コレクション クラス
+      href: atl-collection-classes.md
+    - name: ATL レジストリ コンポーネント (レジストラー)
+      expanded: false
+      items:
+        - name: ATL レジストリ コンポーネント (レジストラー)
+          href: atl-registry-component-registrar.md
+        - name: レジストラー スクリプトの作成
+          expanded: false
+          items:
+            - name: レジストラー スクリプトの作成
+              href: creating-registrar-scripts.md
+            - name: Backus-Naur form (BNF) 構文を理解する
+              href: understanding-backus-naur-form-bnf-syntax.md
+            - name: パース ツリーを理解する
+              href: understanding-parse-trees.md
+            - name: レジストリ スクリプトの例
+              href: registry-scripting-examples.md
+            - name: 置き換え可能パラメーターの使用 (レジストラー プリプロセッサ)
+              href: using-replaceable-parameters-the-registrar-s-preprocessor.md
+            - name: スクリプトの呼び出し
+              href: invoking-scripts.md
+        - name: レジストラー コードに静的リンクを設定する (C++ のみ)
+          href: setting-up-a-static-link-to-the-registrar-code-cpp-only.md
+    - name: ATL および C ランタイム コードによるプログラミング
+      expanded: false
+      items:
+        - name: ATL および C ランタイム コードによるプログラミング
+          href: programming-with-atl-and-c-run-time-code.md
+        - name: CRT へのリンクに使用される方法の長所と短所
+          href: benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md
+        - name: ATL プロジェクトで CRT にリンクする
+          href: linking-to-the-crt-in-your-atl-project.md
+    - name: CComBSTR を使用したプログラミング (ATL)
+      href: programming-with-ccombstr-atl.md
+    - name: ATL のエンコーディングのリファレンス
+      href: atl-encoding-reference.md
+    - name: ATL ユーティリティのリファレンス
+      href: atl-utilities-reference.md
+- name: Active Template Library (ATL) のチュートリアル
+  expanded: false
+  items:
+    - name: Active Template Library (ATL) のチュートリアル
+      href: active-template-library-atl-tutorial.md
+    - name: プロジェクトの作成 (ATL チュートリアル、パート 1)
+      href: creating-the-project-atl-tutorial-part-1.md
+    - name: コントロールの追加 (ATL チュートリアル、パート 2)
+      href: adding-a-control-atl-tutorial-part-2.md
+    - name: コントロールへのプロパティの追加 (ATL チュートリアル、パート 3)
+      href: adding-a-property-to-the-control-atl-tutorial-part-3.md
+    - name: 描画コードの変更 (ATL チュートリアル、パート 4)
+      href: changing-the-drawing-code-atl-tutorial-part-4.md
+    - name: イベントの追加 (ATL チュートリアル、パート 5)
+      href: adding-an-event-atl-tutorial-part-5.md
+    - name: プロパティ ページの追加 (ATL チュートリアル、パート 6)
+      href: adding-a-property-page-atl-tutorial-part-6.md
+    - name: Web ページへのコントロールの配置 (ATL チュートリアル、パート 7)
+      href: putting-the-control-on-a-web-page-atl-tutorial-part-7.md
+- name: ATL のクラスのカテゴリ別概要
+  expanded: false
+  items:
+    - name: ATL のクラスの概要
+      href: atl-class-overview.md
+    - name: クラス ファクトリ クラス
+      href: class-factories-classes.md
+    - name: クラス情報クラス
+      href: class-information-classes.md
+    - name: コレクション クラス
+      href: collection-classes.md
+    - name: COM モジュール クラス
+      href: com-modules-classes.md
+    - name: 複合コントロール クラス
+      href: composite-controls-classes.md
+    - name: コネクション ポイント クラス
+      href: connection-points-classes.md
+    - name: コントロール コンテインメント クラス
+      href: control-containment-classes.md
+    - name: 'コントロール: 一般的サポート クラス'
+      href: controls-general-support-classes.md
+    - name: データ転送クラス
+      href: data-transfer-classes.md
+    - name: データ型クラス
+      href: data-types-classes.md
+    - name: デバッグと例外のクラス
+      href: debugging-and-exceptions-classes.md
+    - name: デュアル インターフェイス クラス
+      href: dual-interfaces-classes.md
+    - name: 列挙子とコレクションのクラス
+      href: enumerators-and-collections-classes.md
+    - name: エラー情報クラス
+      href: error-information-classes.md
+    - name: ファイル処理クラス
+      href: file-handling-classes.md
+    - name: インターフェイス ポインター クラス
+      href: interface-pointers-classes.md
+    - name: IUnknown 実装クラス
+      href: iunknown-implementation-classes.md
+    - name: メモリ管理クラス
+      href: memory-management-classes.md
+    - name: MMC スナップイン クラス
+      href: mmc-snap-in-classes.md
+    - name: オブジェクト安全性クラス
+      href: object-safety-classes.md
+    - name: 永続化クラス
+      href: persistence-classes.md
+    - name: プロパティとプロパティ ページのクラス
+      href: properties-and-property-pages-classes.md
+    - name: レジストリ サポート クラス
+      href: registry-support-classes.md
+    - name: 実行中オブジェクト クラス
+      href: running-objects-classes.md
+    - name: セキュリティ クラス
+      href: security-classes.md
+    - name: サービス プロバイダー サポート クラス
+      href: service-provider-support-classes.md
+    - name: サイト情報クラス
+      href: site-information-classes.md
+    - name: 文字列とテキストのクラス
+      href: string-and-text-classes.md
+    - name: ティアオフ インターフェイス クラス
+      href: tear-off-interfaces-classes.md
+    - name: スレッド プール クラス
+      href: thread-pooling-classes.md
+    - name: スレッド モデルとクリティカル セクションのクラス
+      href: threading-models-and-critical-sections-classes.md
+    - name: UI サポート クラス
+      href: ui-support-classes.md
+    - name: ユーティリティ クラス
+      href: utility-classes.md
+    - name: Windows サポート クラス
+      href: windows-support-classes.md
+- name: ATL ライブラリ リファレンス
+  expanded: false
+  items:
+    - name: ATL クラスと構造体のリファレンス
+      expanded: false
+      items:
+        - name: ATL クラスと構造体
+          href: reference/atl-classes.md
+        - name: _ATL_BASE_MODULE70 構造体
+          href: reference/atl-base-module70-structure.md
+        - name: _ATL_COM_MODULE70 構造体
+          href: reference/atl-com-module70-structure.md
+        - name: _ATL_FUNC_INFO 構造体
+          href: reference/atl-func-info-structure.md
+        - name: _ATL_MODULE70 構造体
+          href: reference/atl-module70-structure.md
+        - name: _ATL_WIN_MODULE70 構造体
+          href: reference/atl-win-module70-structure.md
+        - name: _AtlCreateWndData 構造体
+          href: reference/atlcreatewnddata-structure.md
+        - name: ATL_DRAWINFO 構造体
+          href: reference/atl-drawinfo-structure.md
+        - name: _U_MENUorID クラス
+          href: reference/u-menuorid-class.md
+        - name: _U_RECT クラス
+          href: reference/u-rect-class.md
+        - name: _U_STRINGorID クラス
+          href: reference/u-stringorid-class.md
+        - name: CA2AEX クラス
+          href: reference/ca2aex-class.md
+        - name: CA2CAEX クラス
+          href: reference/ca2caex-class.md
+        - name: CA2WEX クラス
+          href: reference/ca2wex-class.md
+        - name: CAccessToken クラス
+          href: reference/caccesstoken-class.md
+        - name: CAcl クラス
+          href: reference/cacl-class.md
+        - name: CAdapt クラス
+          href: reference/cadapt-class.md
+        - name: CAtlArray クラス
+          href: reference/catlarray-class.md
+        - name: CAtlAutoThreadModule クラス
+          href: reference/catlautothreadmodule-class.md
+        - name: CAtlAutoThreadModuleT クラス
+          href: reference/catlautothreadmodulet-class.md
+        - name: CAtlBaseModule クラス
+          href: reference/catlbasemodule-class.md
+        - name: CAtlComModule クラス
+          href: reference/catlcommodule-class.md
+        - name: CAtlDebugInterfacesModule クラス
+          href: reference/catldebuginterfacesmodule-class.md
+        - name: CAtlDllModuleT クラス
+          href: reference/catldllmodulet-class.md
+        - name: CAtlException クラス
+          href: reference/catlexception-class.md
+        - name: CAtlExeModuleT クラス
+          href: reference/catlexemodulet-class.md
+        - name: CAtlFile クラス
+          href: reference/catlfile-class.md
+        - name: CAtlFileMapping クラス
+          href: reference/catlfilemapping-class.md
+        - name: CAtlFileMappingBase クラス
+          href: reference/catlfilemappingbase-class.md
+        - name: CAtlList クラス
+          href: reference/catllist-class.md
+        - name: CAtlMap クラス
+          href: reference/catlmap-class.md
+        - name: CAtlModule クラス
+          href: reference/catlmodule-class.md
+        - name: CAtlModuleT クラス
+          href: reference/catlmodulet-class.md
+        - name: CAtlPreviewCtrlImpl クラス
+          href: reference/catlpreviewctrlimpl-class.md
+        - name: CAtlServiceModuleT クラス
+          href: reference/catlservicemodulet-class.md
+        - name: CAtlTemporaryFile クラス
+          href: reference/catltemporaryfile-class.md
+        - name: CAtlTransactionManager クラス
+          href: reference/catltransactionmanager-class.md
+        - name: CAtlWinModule クラス
+          href: reference/catlwinmodule-class.md
+        - name: CAutoPtr クラス
+          href: reference/cautoptr-class.md
+        - name: CAutoPtrArray クラス
+          href: reference/cautoptrarray-class.md
+        - name: CAutoPtrElementTraits クラス
+          href: reference/cautoptrelementtraits-class.md
+        - name: CAutoPtrList クラス
+          href: reference/cautoptrlist-class.md
+        - name: CAutoRevertImpersonation クラス
+          href: reference/cautorevertimpersonation-class.md
+        - name: CAutoVectorPtr クラス
+          href: reference/cautovectorptr-class.md
+        - name: CAutoVectorPtrElementTraits クラス
+          href: reference/cautovectorptrelementtraits-class.md
+        - name: CAxDialogImpl クラス
+          href: reference/caxdialogimpl-class.md
+        - name: CAxWindow クラス
+          href: reference/caxwindow-class.md
+        - name: CAxWindow2T クラス
+          href: reference/caxwindow2t-class.md
+        - name: CBindStatusCallback クラス
+          href: reference/cbindstatuscallback-class.md
+        - name: CComAggObject クラス
+          href: reference/ccomaggobject-class.md
+        - name: CComAllocator クラス
+          href: reference/ccomallocator-class.md
+        - name: CComApartment クラス
+          href: reference/ccomapartment-class.md
+        - name: CComAutoCriticalSection クラス
+          href: reference/ccomautocriticalsection-class.md
+        - name: CComAutoDeleteCriticalSection クラス
+          href: reference/ccomautodeletecriticalsection-class.md
+        - name: CComAutoThreadModule クラス
+          href: reference/ccomautothreadmodule-class.md
+        - name: CComBSTR クラス
+          href: reference/ccombstr-class.md
+        - name: CComCachedTearOffObject クラス
+          href: reference/ccomcachedtearoffobject-class.md
+        - name: CComClassFactory クラス
+          href: reference/ccomclassfactory-class.md
+        - name: CComClassFactory2 クラス
+          href: reference/ccomclassfactory2-class.md
+        - name: CComClassFactoryAutoThread クラス
+          href: reference/ccomclassfactoryautothread-class.md
+        - name: CComClassFactorySingleton クラス
+          href: reference/ccomclassfactorysingleton-class.md
+        - name: CComCoClass クラス
+          href: reference/ccomcoclass-class.md
+        - name: CComCompositeControl クラス
+          href: reference/ccomcompositecontrol-class.md
+        - name: CComContainedObject クラス
+          href: reference/ccomcontainedobject-class.md
+        - name: CComControl クラス
+          href: reference/ccomcontrol-class.md
+        - name: CComControlBase クラス
+          href: reference/ccomcontrolbase-class.md
+        - name: CComCriticalSection クラス
+          href: reference/ccomcriticalsection-class.md
+        - name: CComCritSecLock クラス
+          href: reference/ccomcritseclock-class.md
+        - name: CComCurrency クラス
+          href: reference/ccomcurrency-class.md
+        - name: CComDynamicUnkArray クラス
+          href: reference/ccomdynamicunkarray-class.md
+        - name: CComEnum クラス
+          href: reference/ccomenum-class.md
+        - name: CComEnumImpl クラス
+          href: reference/ccomenumimpl-class.md
+        - name: CComEnumOnSTL クラス
+          href: reference/ccomenumonstl-class.md
+        - name: CComFakeCriticalSection クラス
+          href: reference/ccomfakecriticalsection-class.md
+        - name: CComGITPtr クラス
+          href: reference/ccomgitptr-class.md
+        - name: CComHeap クラス
+          href: reference/ccomheap-class.md
+        - name: CComHeapPtr クラス
+          href: reference/ccomheapptr-class.md
+        - name: CComModule クラス
+          href: reference/ccommodule-class.md
+        - name: CComMultiThreadModel クラス
+          href: reference/ccommultithreadmodel-class.md
+        - name: CComMultiThreadModelNoCS クラス
+          href: reference/ccommultithreadmodelnocs-class.md
+        - name: CComObject クラス
+          href: reference/ccomobject-class.md
+        - name: CComObjectGlobal クラス
+          href: reference/ccomobjectglobal-class.md
+        - name: CComObjectNoLock クラス
+          href: reference/ccomobjectnolock-class.md
+        - name: CComObjectRoot クラス
+          href: reference/ccomobjectroot-class.md
+        - name: CComObjectRootEx クラス
+          href: reference/ccomobjectrootex-class.md
+        - name: CComObjectStack クラス
+          href: reference/ccomobjectstack-class.md
+        - name: CComPolyObject クラス
+          href: reference/ccompolyobject-class.md
+        - name: CComPtr クラス
+          href: reference/ccomptr-class.md
+        - name: CComPtrBase クラス
+          href: reference/ccomptrbase-class.md
+        - name: CComQIPtr クラス
+          href: reference/ccomqiptr-class.md
+        - name: CComQIPtrElementTraits クラス
+          href: reference/ccomqiptrelementtraits-class.md
+        - name: CComSafeArray クラス
+          href: reference/ccomsafearray-class.md
+        - name: CComSafeArrayBound クラス
+          href: reference/ccomsafearraybound-class.md
+        - name: CComSafeDeleteCriticalSection クラス
+          href: reference/ccomsafedeletecriticalsection-class.md
+        - name: CComSimpleThreadAllocator クラス
+          href: reference/ccomsimplethreadallocator-class.md
+        - name: CComSingleThreadModel クラス
+          href: reference/ccomsinglethreadmodel-class.md
+        - name: CComTearOffObject クラス
+          href: reference/ccomtearoffobject-class.md
+        - name: CComUnkArray クラス
+          href: reference/ccomunkarray-class.md
+        - name: CComVariant クラス
+          href: reference/ccomvariant-class.md
+        - name: CContainedWindowT クラス
+          href: reference/ccontainedwindowt-class.md
+        - name: CCRTAllocator クラス
+          href: reference/ccrtallocator-class.md
+        - name: CCRTHeap クラス
+          href: reference/ccrtheap-class.md
+        - name: CDacl クラス
+          href: reference/cdacl-class.md
+        - name: CDebugReportHook クラス
+          href: reference/cdebugreporthook-class.md
+        - name: CDefaultCharTraits クラス
+          href: reference/cdefaultchartraits-class.md
+        - name: CDefaultCompareTraits クラス
+          href: reference/cdefaultcomparetraits-class.md
+        - name: CDefaultElementTraits クラス
+          href: reference/cdefaultelementtraits-class.md
+        - name: CDefaultHashTraits クラス
+          href: reference/cdefaulthashtraits-class.md
+        - name: CDialogImpl クラス
+          href: reference/cdialogimpl-class.md
+        - name: CDynamicChain クラス
+          href: reference/cdynamicchain-class.md
+        - name: CElementTraits クラス
+          href: reference/celementtraits-class.md
+        - name: CElementTraitsBase クラス
+          href: reference/celementtraitsbase-class.md
+        - name: CFirePropNotifyEvent クラス
+          href: reference/cfirepropnotifyevent-class.md
+        - name: CGlobalHeap クラス
+          href: reference/cglobalheap-class.md
+        - name: CHandle クラス
+          href: reference/chandle-class.md
+        - name: CHeapPtr クラス
+          href: reference/cheapptr-class.md
+        - name: CHeapPtrBase クラス
+          href: reference/cheapptrbase-class.md
+        - name: CHeapPtrElementTraits クラス
+          href: reference/cheapptrelementtraits-class.md
+        - name: CHeapPtrList クラス
+          href: reference/cheapptrlist-class.md
+        - name: CInterfaceArray クラス
+          href: reference/cinterfacearray-class.md
+        - name: CInterfaceList クラス
+          href: reference/cinterfacelist-class.md
+        - name: CLocalHeap クラス
+          href: reference/clocalheap-class.md
+        - name: CMessageMap クラス
+          href: reference/cmessagemap-class.md
+        - name: CNonStatelessWorker クラス
+          href: reference/cnonstatelessworker-class.md
+        - name: CNoWorkerThread クラス
+          href: reference/cnoworkerthread-class.md
+        - name: CPathT クラス
+          href: reference/cpatht-class.md
+        - name: CPrimitiveElementTraits クラス
+          href: reference/cprimitiveelementtraits-class.md
+        - name: CPrivateObjectSecurityDesc クラス
+          href: reference/cprivateobjectsecuritydesc-class.md
+        - name: CRBMap クラス
+          href: reference/crbmap-class.md
+        - name: CRBMultiMap クラス
+          href: reference/crbmultimap-class.md
+        - name: CRBTree クラス
+          href: reference/crbtree-class.md
+        - name: CRegKey クラス
+          href: reference/cregkey-class.md
+        - name: CRTThreadTraits クラス
+          href: reference/crtthreadtraits-class.md
+        - name: CSacl クラス
+          href: reference/csacl-class.md
+        - name: CSecurityAttributes クラス
+          href: reference/csecurityattributes-class.md
+        - name: CSecurityDesc クラス
+          href: reference/csecuritydesc-class.md
+        - name: CSid クラス
+          href: reference/csid-class.md
+        - name: CSimpleArray クラス
+          href: reference/csimplearray-class.md
+        - name: CSimpleArrayEqualHelper クラス
+          href: reference/csimplearrayequalhelper-class.md
+        - name: CSimpleArrayEqualHelperFalse クラス
+          href: reference/csimplearrayequalhelperfalse-class.md
+        - name: CSimpleDialog クラス
+          href: reference/csimpledialog-class.md
+        - name: CSimpleMap クラス
+          href: reference/csimplemap-class.md
+        - name: CSimpleMapEqualHelper クラス
+          href: reference/csimplemapequalhelper-class.md
+        - name: CSimpleMapEqualHelperFalse クラス
+          href: reference/csimplemapequalhelperfalse-class.md
+        - name: CSnapInItemImpl クラス
+          href: reference/csnapinitemimpl-class.md
+        - name: CSnapInPropertyPageImpl クラス
+          href: reference/csnapinpropertypageimpl-class.md
+        - name: CSocketAddr クラス
+          href: reference/csocketaddr-class.md
+        - name: CStockPropImpl クラス
+          href: reference/cstockpropimpl-class.md
+        - name: CStringElementTraits クラス
+          href: reference/cstringelementtraits-class.md
+        - name: CStringElementTraitsI クラス
+          href: reference/cstringelementtraitsi-class.md
+        - name: CStringRefElementTraits クラス
+          href: reference/cstringrefelementtraits-class.md
+        - name: CThreadPool クラス
+          href: reference/cthreadpool-class.md
+        - name: CTokenGroups クラス
+          href: reference/ctokengroups-class.md
+        - name: CTokenPrivileges クラス
+          href: reference/ctokenprivileges-class.md
+        - name: CUrl クラス
+          href: reference/curl-class.md
+        - name: CW2AEX クラス
+          href: reference/cw2aex-class.md
+        - name: CW2CWEX クラス
+          href: reference/cw2cwex-class.md
+        - name: CW2WEX クラス
+          href: reference/cw2wex-class.md
+        - name: CWin32Heap クラス
+          href: reference/cwin32heap-class.md
+        - name: CWindow クラス
+          href: reference/cwindow-class.md
+        - name: CWindowImpl クラス
+          href: reference/cwindowimpl-class.md
+        - name: CWinTraits クラス
+          href: reference/cwintraits-class.md
+        - name: CWinTraitsOR クラス
+          href: reference/cwintraitsor-class.md
+        - name: CWndClassInfo クラス
+          href: reference/cwndclassinfo-class.md
+        - name: CWorkerThread クラス
+          href: reference/cworkerthread-class.md
+        - name: IAtlAutoThreadModule クラス
+          href: reference/iatlautothreadmodule-class.md
+        - name: IAtlMemMgr クラス
+          href: reference/iatlmemmgr-class.md
+        - name: IAxWinAmbientDispatch インターフェイス
+          href: reference/iaxwinambientdispatch-interface.md
+        - name: IAxWinAmbientDispatchEx インターフェイス
+          href: reference/iaxwinambientdispatchex-interface.md
+        - name: IAxWinHostWindow インターフェイス
+          href: reference/iaxwinhostwindow-interface.md
+        - name: IAxWinHostWindowLic インターフェイス
+          href: reference/iaxwinhostwindowlic-interface.md
+        - name: ICollectionOnSTLImpl クラス
+          href: reference/icollectiononstlimpl-class.md
+        - name: IConnectionPointContainerImpl クラス
+          href: reference/iconnectionpointcontainerimpl-class.md
+        - name: IConnectionPointImpl クラス
+          href: reference/iconnectionpointimpl-class.md
+        - name: IDataObjectImpl クラス
+          href: reference/idataobjectimpl-class.md
+        - name: IDispatchImpl クラス
+          href: reference/idispatchimpl-class.md
+        - name: IDispEventImpl クラス
+          href: reference/idispeventimpl-class.md
+        - name: IDispEventSimpleImpl クラス
+          href: reference/idispeventsimpleimpl-class.md
+        - name: IDocHostUIHandlerDispatch インターフェイス
+          href: reference/idochostuihandlerdispatch-interface.md
+        - name: IEnumOnSTLImpl クラス
+          href: reference/ienumonstlimpl-class.md
+        - name: IObjectSafetyImpl クラス
+          href: reference/iobjectsafetyimpl-class.md
+        - name: IObjectWithSiteImpl クラス
+          href: reference/iobjectwithsiteimpl-class.md
+        - name: IOleControlImpl クラス
+          href: reference/iolecontrolimpl-class.md
+        - name: IOleInPlaceActiveObjectImpl クラス
+          href: reference/ioleinplaceactiveobjectimpl-class.md
+        - name: IOleInPlaceObjectWindowlessImpl クラス
+          href: reference/ioleinplaceobjectwindowlessimpl-class.md
+        - name: IOleObjectImpl クラス
+          href: reference/ioleobjectimpl-class.md
+        - name: IPerPropertyBrowsingImpl クラス
+          href: reference/iperpropertybrowsingimpl-class.md
+        - name: IPersistPropertyBagImpl クラス
+          href: reference/ipersistpropertybagimpl-class.md
+        - name: IPersistStorageImpl クラス
+          href: reference/ipersiststorageimpl-class.md
+        - name: IPersistStreamInitImpl クラス
+          href: reference/ipersiststreaminitimpl-class.md
+        - name: IPointerInactiveImpl クラス
+          href: reference/ipointerinactiveimpl-class.md
+        - name: IPropertyNotifySinkCP クラス
+          href: reference/ipropertynotifysinkcp-class.md
+        - name: IPropertyPage2Impl クラス
+          href: reference/ipropertypage2impl-class.md
+        - name: IPropertyPageImpl クラス
+          href: reference/ipropertypageimpl-class.md
+        - name: IProvideClassInfo2Impl クラス
+          href: reference/iprovideclassinfo2impl-class.md
+        - name: IQuickActivateImpl クラス
+          href: reference/iquickactivateimpl-class.md
+        - name: IRegistrar インターフェイス
+          href: reference/iregistrar-class.md
+        - name: IRunnableObjectImpl クラス
+          href: reference/irunnableobjectimpl-class.md
+        - name: IServiceProviderImpl クラス
+          href: reference/iserviceproviderimpl-class.md
+        - name: ISpecifyPropertyPagesImpl クラス
+          href: reference/ispecifypropertypagesimpl-class.md
+        - name: ISupportErrorInfoImpl クラス
+          href: reference/isupporterrorinfoimpl-class.md
+        - name: IThreadPoolConfig インターフェイス
+          href: reference/ithreadpoolconfig-interface.md
+        - name: IViewObjectExImpl クラス
+          href: reference/iviewobjecteximpl-class.md
+        - name: IWorkerThreadClient インターフェイス
+          href: reference/iworkerthreadclient-interface.md
+        - name: Win32ThreadTraits クラス
+          href: reference/win32threadtraits-class.md
+        - name: ワーカーのアーキタイプ
+          href: reference/worker-archetype.md
+    - name: ATL_URL_SCHEME 列挙型
+      href: reference/atl-url-scheme-enum.md
+    - name: ATL 関数リファレンス
+      expanded: false
+      items:
+        - name: ATL 関数
+          href: reference/atl-functions.md
+        - name: ATL HTTP ユーティリティ関数
+          href: reference/atl-http-utility-functions.md
+        - name: ATL テキスト エンコード関数
+          href: reference/atl-text-encoding-functions.md
+        - name: ATL パス関数
+          href: reference/atl-path-functions.md
+        - name: COM マップに関するグローバル関数
+          href: reference/com-map-global-functions.md
+        - name: 複合コントロールに関するグローバル関数
+          href: reference/composite-control-global-functions.md
+        - name: コネクション ポイントに関するグローバル関数
+          href: reference/connection-point-global-functions.md
+        - name: デバッグとエラー報告に関するグローバル関数
+          href: reference/debugging-and-error-reporting-global-functions.md
+        - name: デバイス コンテキストに関するグローバル関数
+          href: reference/device-context-global-functions.md
+        - name: イベント処理に関するグローバル関数
+          href: reference/event-handling-global-functions.md
+        - name: マーシャリングに関するグローバル関数
+          href: reference/marshaling-global-functions.md
+        - name: ピクセル HIMETRIC 変換に関するグローバル関数
+          href: reference/pixel-himetric-conversion-global-functions.md
+        - name: レジストリとタイプ ライブラリに関するグローバル関数
+          href: reference/registry-and-typelib-global-functions.md
+        - name: セキュリティに関するグローバル関数
+          href: reference/security-global-functions.md
+        - name: セキュリティ識別子に関するグローバル関数
+          href: reference/security-identifier-global-functions.md
+        - name: サーバー登録に関するグローバル関数
+          href: reference/server-registration-global-functions.md
+        - name: WinModule に関するグローバル関数
+          href: reference/winmodule-global-functions.md
+    - name: ATL マクロ リファレンス
+      expanded: false
+      items:
+        - name: ATL マクロ
+          href: reference/atl-macros.md
+        - name: 集計とクラス ファクトリに関するマクロ
+          href: reference/aggregation-and-class-factory-macros.md
+        - name: カテゴリに関するマクロ
+          href: reference/category-macros.md
+        - name: COM マップに関するマクロ
+          href: reference/com-map-macros.md
+        - name: COM インターフェイス エントリ マクロ
+          href: reference/com-interface-entry-macros.md
+        - name: コンパイラ オプションに関するマクロ
+          href: reference/compiler-options-macros.md
+        - name: 複合コントロールに関するマクロ
+          href: reference/composite-control-macros.md
+        - name: 接続ポイントに関するマクロ
+          href: reference/connection-point-macros.md
+        - name: デバッグとエラー報告に関するマクロ
+          href: reference/debugging-and-error-reporting-macros.md
+        - name: 例外処理に関するマクロ
+          href: reference/exception-handling-macros.md
+        - name: メッセージ マップ マクロ (ATL)
+          href: reference/message-map-macros-atl.md
+        - name: オブジェクト マップに関するマクロ
+          href: reference/object-map-macros.md
+        - name: オブジェクト ステータスに関するマクロ
+          href: reference/object-status-macros.md
+        - name: プロパティ マップに関するマクロ
+          href: reference/property-map-macros.md
+        - name: レジストリ データ交換に関するマクロ
+          href: reference/registry-data-exchange-macros.md
+        - name: レジストリに関するマクロ
+          href: reference/registry-macros.md
+        - name: サービス マップに関するマクロ
+          href: reference/service-map-macros.md
+        - name: スナップイン オブジェクトに関するマクロ
+          href: reference/snap-in-object-macros.md
+        - name: 文字列変換に関するマクロ
+          href: reference/string-conversion-macros.md
+        - name: Windows クラスに関するマクロ
+          href: reference/window-class-macros.md
+        - name: Windows メッセージに関するマクロ
+          href: reference/windows-messages-macros.md
+    - name: ATL 演算子のリファレンス
+      href: reference/atl-operators.md
+    - name: ATL グローバル変数のリファレンス
+      href: reference/atl-global-variables.md
+    - name: ATL typedef のリファレンス
+      href: reference/atl-typedefs.md
+- name: Visual Studio の ATL プロジェクト
+  expanded: false
+  items:
+    - name: ATL ウィザードとダイアログ ボックスのリファレンス
+      expanded: false
+      items:
+        - name: ATL ウィザードとダイアログ ボックス
+          href: reference/atl-wizards-and-dialog-boxes.md
+        - name: ATL Active Server Page コンポーネント ウィザード リファレンス
+          expanded: false
+          items:
+            - name: ATL Active Server Page コンポーネント ウィザード
+              href: reference/atl-active-server-page-component-wizard.md
+            - name: ATL Active Server Page コンポーネント ウィザード、ASP
+              href: reference/asp-atl-active-server-page-component-wizard.md
+            - name: ATL Active Server Page コンポーネント ウィザード、オプション
+              href: reference/options-atl-active-server-page-component-wizard.md
+        - name: ATL COM+ 1.0 コンポーネント ウィザード リファレンス
+          expanded: false
+          items:
+            - name: ATL COM+ 1.0 コンポーネント ウィザード
+              href: reference/atl-com-plus-1-0-component-wizard.md
+            - name: COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
+              href: reference/com-plus-1-0-atl-com-plus-1-0-component-wizard.md
+        - name: ATL コントロール ウィザード リファレンス
+          expanded: false
+          items:
+            - name: ATL コントロール ウィザード
+              href: reference/atl-control-wizard.md
+            - name: ATL コントロール ウィザード、外観
+              href: reference/appearance-atl-control-wizard.md
+            - name: ATL コントロール ウィザード、インターフェイス
+              href: reference/interfaces-atl-control-wizard.md
+            - name: ATL コントロール ウィザード、オプション
+              href: reference/options-atl-control-wizard.md
+            - name: ATL コントロール ウィザード、ストック プロパティ
+              href: reference/stock-properties-atl-control-wizard.md
+        - name: ATL ダイアログ ウィザード リファレンス
+          href: reference/atl-dialog-wizard.md
+        - name: ATL OLE DB コンシューマー ウィザード リファレンス
+          href: reference/atl-ole-db-consumer-wizard.md
+        - name: ATL OLE DB プロバイダー ウィザード リファレンス
+          href: reference/atl-ole-db-provider-wizard.md
+        - name: ATL プロジェクト ウィザード リファレンス
+          expanded: false
+          items:
+            - name: ATL プロジェクト ウィザード
+              href: reference/atl-project-wizard.md
+            - name: '[アプリケーションの設定] (ATL プロジェクト ウィザード)'
+              href: reference/application-settings-atl-project-wizard.md
+        - name: ATL プロパティ ページ ウィザード リファレンス
+          expanded: false
+          items:
+            - name: ATL プロパティ ページ ウィザード
+              href: reference/atl-property-page-wizard.md
+            - name: ATL プロパティ ページ ウィザード、オプション
+              href: reference/options-atl-property-page-wizard.md
+            - name: ATL プロパティ ページ ウィザード、文字列
+              href: reference/strings-atl-property-page-wizard.md
+        - name: ATL シンプル オブジェクト ウィザード リファレンス
+          expanded: false
+          items:
+            - name: ATL シンプル オブジェクト ウィザード
+              href: reference/atl-simple-object-wizard.md
+            - name: ATL シンプル オブジェクト ウィザード、オプション
+              href: reference/options-atl-simple-object-wizard.md
+    - name: ATL プロジェクトでの新しいインターフェイスの追加
+      href: reference/adding-a-new-interface-in-an-atl-project.md
+    - name: ATL Active Server Page コンポーネントの追加
+      href: reference/adding-an-atl-active-server-page-component.md
+    - name: ATL COM+ 1.0 コンポーネントの追加
+      href: reference/adding-an-atl-com-plus-1-0-component.md
+    - name: ATL コントロールの追加
+      href: reference/adding-an-atl-control.md
+    - name: ATL ダイアログ ボックスの追加
+      href: reference/adding-an-atl-dialog-box.md
+    - name: ATL OLE DB コンシューマーの追加
+      href: reference/adding-an-atl-ole-db-consumer.md
+    - name: ATL OLE DB プロバイダーの追加
+      href: reference/adding-an-atl-ole-db-provider.md
+    - name: ATL プロパティ ページの追加
+      href: reference/adding-an-atl-property-page.md
+    - name: ATL シンプル オブジェクトの追加
+      href: reference/adding-an-atl-simple-object.md
+    - name: ATL プロジェクトへのオブジェクトとコントロールの追加
+      href: reference/adding-objects-and-controls-to-an-atl-project.md
+    - name: ATL プロジェクトの作成
+      href: reference/creating-an-atl-project.md
+    - name: ATL プロジェクトでの COM+ 1.0 のサポート
+      href: reference/com-plus-1-0-support-in-atl-projects.md
+    - name: ATL プロジェクトの既定の構成
+      href: reference/default-atl-project-configurations.md
+    - name: ATL オブジェクトを作成できないようにする
+      href: reference/making-an-atl-object-noncreatable.md
+    - name: ATL プロジェクトでの MFC のサポート
+      href: reference/mfc-support-in-atl-projects.md
+    - name: ATL プロジェクトのコンパイラ最適化の指定
+      href: reference/specifying-compiler-optimization-for-an-atl-project.md

@@ -1,6 +1,6 @@
 ---
 title: CHandle クラス
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 f1_keywords:
 - CHandle
 - ATLBASE/ATL::CHandle
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 64c2cb1531d9330e075a06c65ff022115d0fb6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499919"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693407"
 ---
 # <a name="chandle-class"></a>CHandle クラス
 
@@ -85,7 +85,7 @@ void Attach(HANDLE h) throw();
 
 ### <a name="remarks"></a>Remarks
 
-割り当てます、`CHandle`オブジェクトを*h*を処理します。 デバッグ ビルドは atlassert 場合*h*は NULL です。 ハンドルの妥当性に関するその他のチェックは行われません。
+割り当てます、`CHandle`オブジェクトを*h*ハンドルに呼び出し**h.Detach()** します。 デバッグ ビルドは atlassert 場合*h*は NULL です。 ハンドルの妥当性に関するその他のチェックは行われません。
 
 ##  <a name="chandle"></a>  CHandle::CHandle
 

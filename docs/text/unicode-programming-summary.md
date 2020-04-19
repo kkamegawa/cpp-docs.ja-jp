@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 130c9027a882de2aae7fb339e4761b0cc81b3a6a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410513"
 ---
 # <a name="unicode-programming-summary"></a>Unicode プログラミングの要約
 

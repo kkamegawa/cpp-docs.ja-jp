@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442563"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051343"
 ---
 # <a name="compiler-warning-level-1-c4717"></a>コンパイラの警告 (レベル 1) C4717
 
-'function': すべてのコントロール パスで再帰的で、関数には、ランタイム スタック オーバーフローが発生します
+' function ': すべてのコントロールパスで再帰的に行われます。関数は、ランタイムスタックオーバーフローを発生させます
 
-関数のすべてのパスには、関数の呼び出しが含まれています。 最初の呼び出さず自体に関数を再帰的に終了する方法はありません、ため、関数は終了しません。
+関数を使用するすべてのパスには、関数の呼び出しが含まれます。 最初にそれ自体を再帰的に呼び出すことなく関数を終了する方法がないため、関数は終了しません。
 
 次の例では、C4717 が生成されます。
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

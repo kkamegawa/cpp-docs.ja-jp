@@ -2,17 +2,15 @@
 title: COM モジュール クラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.COM
 helpviewer_keywords:
 - COM modules classes
 ms.assetid: 0a8a82dd-a153-47cd-9bbe-1a1ad5d1a6ff
-ms.openlocfilehash: dc18d35c52d99877ed493e61040547a983117ecf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4123fc6bc29b6bd657cf972575d52f2c1f10cd4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261983"
 ---
 # <a name="com-modules-classes"></a>COM モジュール クラス
 
@@ -44,4 +42,3 @@ ms.locfileid: "50428055"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [モジュール クラス](../atl/atl-module-classes.md)
-

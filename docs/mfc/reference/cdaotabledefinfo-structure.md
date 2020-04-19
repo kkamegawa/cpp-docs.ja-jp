@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-ms.openlocfilehash: 10ff07ebcd9c6877d9bafc0b7c8724acb0bc45b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5785ed19c6929e19c7d376efa012dd1c059611c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152099"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 構造体
 

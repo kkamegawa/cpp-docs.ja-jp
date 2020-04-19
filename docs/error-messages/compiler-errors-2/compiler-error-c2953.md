@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2953
 ms.assetid: 8dbcfa24-8296-4e40-bdc4-5526c07d8892
-ms.openlocfilehash: 8fa0e533b23f735f948fdad0ecf11beb3766f452
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a8d591bfbfa30a4ad2fbed171b5febbd46524b0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747671"
 ---
 # <a name="compiler-error-c2953"></a>コンパイラ エラー C2953
 
@@ -21,7 +21,7 @@ ms.locfileid: "50591046"
 
 次の例では C2953 が生成されます。
 
-```
+```cpp
 // C2953.cpp
 // compile with: /c
 template <class T>  class A {};

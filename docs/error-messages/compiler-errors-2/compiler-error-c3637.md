@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3637
 ms.assetid: 72391377-8519-43d9-870a-73a6423deb74
-ms.openlocfilehash: c79a4113e20e3798877ccda8f1392b276dee19fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84bb6717a563db20b2ce0c66f301d8e38d7722c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574461"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742549"
 ---
 # <a name="compiler-error-c3637"></a>コンパイラ エラー C3637
 
-'function': friend 関数の定義は、関数型の特殊化をすることはできません
+' function ': フレンド関数の定義を関数型の特殊化として使用することはできません
 
-フレンド関数は、テンプレートまたはジェネリックに対して適切に定義されました。
+フレンド関数がテンプレートまたはジェネリックに対して正しく定義されていません。
 
 次の例では、C3637 が生成されます。
 
-```
+```cpp
 // C3637.cpp
 template <class T>
 void f();
@@ -31,9 +31,9 @@ struct S {
 };
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3637b.cpp
 // compile with: /c
 template <class T>
@@ -44,9 +44,9 @@ struct S {
 };
 ```
 
-C3637 は、ジェネリックを使用しているときにも発生します。
+C3637 は、ジェネリックを使用する場合にも発生する可能性があります。
 
-```
+```cpp
 // C3637c.cpp
 // compile with: /clr
 
@@ -58,9 +58,9 @@ struct S {
 };
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3637d.cpp
 // compile with: /clr /c
 generic <class T>

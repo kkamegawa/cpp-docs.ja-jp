@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: eda3dd38449f89d9b8d767b460970d659f6c9dc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316172"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (デバッグ情報のオブジェクト ファイルへの取り込み)
 
-使用する場合は、プリコンパイル済みヘッダー (.pch) ファイルから作成されるデバッグ情報をすべてのオブジェクト ファイルの完全な性能を試します、 [/Yc](../../build/reference/yc-create-precompiled-header-file.md)と[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)オプション。 非推奨。
+使用する場合は、プリコンパイル済みヘッダー (.pch) ファイルから作成されるデバッグ情報をすべてのオブジェクト ファイルの完全な性能を試します、 [/Yc](yc-create-precompiled-header-file.md)と[/Z7](z7-zi-zi-debug-information-format.md)オプション。 非推奨。
 
 ## <a name="syntax"></a>構文
 
@@ -28,9 +28,9 @@ ms.locfileid: "50430018"
 
 ## <a name="remarks"></a>Remarks
 
-**/Yd への取り込み**は非推奨とされます。Visual C では、複数のオブジェクトが 1 つの .pdb ファイルへの書き込みをサポートを使用して **/Zi**代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
+**/Yd への取り込み**は非推奨とされます。Visual C では、複数のオブジェクトが 1 つの .pdb ファイルへの書き込みをサポートを使用して **/Zi**代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
 
-使用して、デバッグ情報を含むライブラリを配布する必要がない限り、 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)オプションなく **/Z7**と **/yd への取り込み**します。
+使用して、デバッグ情報を含むライブラリを配布する必要がない限り、 [/Zi](z7-zi-zi-debug-information-format.md)オプションなく **/Z7**と **/yd への取り込み**します。
 
 すべての .obj ファイルに詳細なデバッグ情報を格納するは、デバッグ情報が含まれているライブラリを配布する場合にのみ必要があります。 これにより、コンパイル速度が低下し、かなりのディスク領域が必要です。 ときに **/Yc**と **/Z7**されずに使用されます **/yd への取り込み**コンパイラが .pch ファイルから作成された最初の .obj ファイル内の一般的なデバッグ情報を格納します。 コンパイラが .obj ファイルの .pch ファイルから作成された後にこの情報を挿入できません。相互参照情報を挿入します。 .Obj ファイルの数は、.pch ファイルを使用して、関係なく 1 つだけの .obj ファイルには、一般的なデバッグ情報が含まれています。
 
@@ -38,13 +38,13 @@ ms.locfileid: "50430018"
 
 プリコンパイル済みヘッダーの詳細についてを参照してください。
 
-- [/Y (プリコンパイル済みヘッダー)](../../build/reference/y-precompiled-headers.md)
+- [/Y (プリコンパイル済みヘッダー)](y-precompiled-headers.md)
 
-- [プリコンパイル済みヘッダー ファイルの作成](../../build/reference/creating-precompiled-header-files.md)
+- [プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -83,5 +83,5 @@ G.obj オブジェクト ファイルでは、プリコンパイル済みヘッ�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

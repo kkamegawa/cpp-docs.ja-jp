@@ -1,12 +1,12 @@
 ---
 title: fprintf、_fprintf_l、fwprintf、_fwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwprintf
 - fprintf
 - _fprintf_l
 - _fwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fprintf
 - fwprintf
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a296b8ac97a7f20a3834814c1ca3b7319720148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956988"
 ---
-# <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf、_fprintf_l、fwprintf、_fwprintf_l
+# <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf、_fprintf_l、fwprintf、_fwprintf_l
 
 書式付きデータをストリームに出力します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)」をご覧ください。
 
@@ -75,7 +78,7 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
@@ -89,17 +92,17 @@ int _fwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**fprintf**書き込まれたバイト数を返します。 **fwprintf**書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。 場合*ストリーム*または*形式*は**NULL**、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。 使用する場合は、有効な書式設定文字の書式指定文字列がチェックされません**fprintf_s**または**fwprintf_s**します。
+**fprintf**は、書き込まれたバイト数を返します。 **fwprintf**は、書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。 *Stream*または*format*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。 書式指定文字列は、 **fprintf_s**または**fwprintf_s**を使用する場合と同じように、有効な書式指定文字に対してチェックされません。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**fprintf**書式化して、一連の文字や、出力値を出力*ストリーム*します。 各関数*引数*(ある場合) は変換されに対応する書式指定に応じて*形式*します。 **Fprintf**、*形式*引数が同じ構文と使用ができるように**printf**します。
+**fprintf**は、一連の文字と値を書式設定し、出力*ストリーム*に出力します。 各関数の*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* **Fprintf**の場合、 *format*引数の構文と、 **printf**で使用される構文は同じです。
 
-**fwprintf**のワイド文字バージョンは、 **fprintf**、 **fwprintf**、*形式*はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf** UNICODE ストリームへ現在出力をサポートしません。
+**fwprintf**は、 **fprintf**のワイド文字バージョンです。**fwprintf**では、 *format*はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf**は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
@@ -108,8 +111,8 @@ int _fwprintf_l(
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
-|**_ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
+|**ftprintf (_d)**|**fprintf**|**fprintf**|**fwprintf**|
+|**ftprintf_l (_d)**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
 
 詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
 

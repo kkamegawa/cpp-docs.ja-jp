@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: a26df26849302ae1cce449f92cdeb5ee6dfd9baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271360"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (関数のエクスポート)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50456132"
 
 ## <a name="syntax"></a>構文
 
-> **/EXPORT:**<em>entryname</em>[**、\@**<em>序数</em>**[、NONAME]** **[、データ]**
+> **/EXPORT:**<em>entryname</em>[**,\@**<em>ordinal</em>**[,NONAME]** **[,DATA]**
 
 ## <a name="remarks"></a>Remarks
 
@@ -36,7 +36,7 @@ ms.locfileid: "50456132"
 
 1. [方式](../../cpp/dllexport-dllimport.md)でソース コード
 
-1. [エクスポート](../../build/reference/exports.md).def ファイル内のステートメント
+1. [エクスポート](exports.md).def ファイル内のステートメント
 
 1. LINK コマンドで、/EXPORT 仕様
 
@@ -44,7 +44,7 @@ ms.locfileid: "50456132"
 
 これらすべてのメソッドは、同じプログラム内で使用できます。 リンクは、エクスポートを含むプログラムをビルドも作成、インポート ライブラリのビルドで .exp ファイルを使用しない場合。
 
-リンクは、装飾された識別子の形式。 コンパイラは、.obj ファイルの作成時に識別子を修飾します。 場合*entryname*その非装飾にはリンカーに指定された形式 (ソース コードに表示されます)、リンクは、名前を照合しようとしています。 一意の一致が見つからない場合、リンクは、エラー メッセージを発行します。 使用して、 [DUMPBIN](../../build/reference/dumpbin-reference.md)を取得するためのツール、[装飾名](../../build/reference/decorated-names.md)リンカーに指定する必要がある場合は、識別子の形式。
+リンクは、装飾された識別子の形式。 コンパイラは、.obj ファイルの作成時に識別子を修飾します。 場合*entryname*その非装飾にはリンカーに指定された形式 (ソース コードに表示されます)、リンクは、名前を照合しようとしています。 一意の一致が見つからない場合、リンクは、エラー メッセージを発行します。 使用して、 [DUMPBIN](dumpbin-reference.md)を取得するためのツール、[装飾名](decorated-names.md)リンカーに指定する必要がある場合は、識別子の形式。
 
 > [!NOTE]
 > 宣言されている C 識別子の装飾形式を指定しない`__cdecl`または`__stdcall`します。
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

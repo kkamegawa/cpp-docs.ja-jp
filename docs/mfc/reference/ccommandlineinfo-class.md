@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408148"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo クラス
 
@@ -57,7 +57,7 @@ class CCommandLineInfo : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[その](#parseparam)|個別のパラメーターを解析するには、このコールバックをオーバーライドします。|
+|[CCommandLineInfo::ParseParam](#parseparam)|個別のパラメーターを解析するには、このコールバックをオーバーライドします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -79,7 +79,7 @@ MFC アプリケーションがこのクラスでのローカル インスタン
 
 このオブジェクトを使用すると、次のコマンド ライン オプションとパラメーターをカプセル化します。
 
-|コマンドライン引数|実行されたコマンド|
+|コマンド ライン引数|実行されたコマンド|
 |----------------------------|----------------------|
 |*app*|新しいファイルです。|
 |*アプリ*ファイル名|ファイルを開く.|
@@ -269,7 +269,7 @@ CString m_strRestartIdentifier;
 
 再起動マネージャーは、アプリケーションを終了するし、再起動するように構成、再起動マネージャーは、任意のパラメーターとしての再起動の識別子を使用してコマンドラインからアプリケーションを実行します。 再起動マネージャーは、再起動の識別子を使用する場合、アプリケーションが以前に開かれているドキュメントを再び開くし、自動保存されたファイルを回復することができます。
 
-##  <a name="parseparam"></a>  その
+##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam
 
 フレームワークは、コマンドラインからの個々 のパラメーターの解析/解釈には、この関数を呼び出します。 最初から 2 番目のバージョンとは異なる Unicode プロジェクトでのみです。
 
@@ -302,7 +302,7 @@ virtual void ParseParam(
 
 この関数の既定の実装は、次のフラグを認識: `/p`、 `/pt`、 `/dde`、 `/Automation`、および`/Embedding`次の表に示すように、します。
 
-|コマンドライン引数|実行されたコマンド|
+|コマンド ライン引数|実行されたコマンド|
 |----------------------------|----------------------|
 |*app*|新しいファイルです。|
 |*アプリ*ファイル名|ファイルを開く.|
@@ -328,4 +328,3 @@ virtual void ParseParam(
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-ms.openlocfilehash: c94c4085d822e397a8ffc5fed4648a40eec4d1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bd60ca13ff4a162ddd674e271291a1a3f09a856
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372128"
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition クラス
 

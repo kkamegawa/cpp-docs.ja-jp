@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471449"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747931"
 ---
 # <a name="using-generic-text-mappings"></a>汎用テキスト マップの使用
 
 **Microsoft 固有の仕様**
 
-さまざまな国際市場に対応したコード開発を容易にするために、Microsoft ランタイム ライブラリには、多くのデータ型やルーチン、オブジェクトなどで利用できる Microsoft 固有の "汎用テキスト" マップが用意されています。 これらのマップは、TCHAR.H で定義されています。 これらの名前のマップを使用して、`#define` ステートメントを使用して定義するマニフェスト定数に応じて ASCII (SBCS)、MBCS、Unicode という 3 種類の文字セットのいずれかにコンパイルされるジェネリック コードを書き込むことができます。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
+さまざまな国際市場に対応したコード開発を容易にするために、Microsoft ランタイム ライブラリには、多くのデータ型やルーチン、オブジェクトなどで利用できる Microsoft 固有の "汎用テキスト" マップが用意されています。 これらのマップは、TCHAR.H で定義されています。 これらの名前のマップを使用して、`#define` ステートメントを使用して定義するマニフェスト定数に応じて ASCII (SBCS)、MBCS、Unicode という 3 種類の文字セットのいずれかにコンパイル可能なジェネリック コードを書き込むことができます。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>汎用テキスト マッピング用のプリプロセッサ ディレクティブ
 
@@ -97,7 +97,7 @@ RetVal = strrev(szString);
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)<br/>
 [データ型のマップ](../c-runtime-library/data-type-mappings.md)<br/>

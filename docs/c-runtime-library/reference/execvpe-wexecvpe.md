@@ -1,10 +1,10 @@
 ---
 title: _execvpe、_wexecvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvpe
 - _wexecvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecvpe
 - execvpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431695"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941740"
 ---
-# <a name="execvpe-wexecvpe"></a>_execvpe、_wexecvpe
+# <a name="_execvpe-_wexecvpe"></a>_execvpe、_wexecvpe
 
 新しい子プロセスを読み込んで実行します。
 
@@ -70,7 +73,7 @@ intptr_t _wexecvpe(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -85,9 +88,9 @@ intptr_t _wexecvpe(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は、新しいプロセスを読み込んで実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数を使用して、**パス**環境変数を実行するファイルを検索します。
+これらの関数は、新しいプロセスを読み込んで実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数は、 **PATH**環境変数を使用して、実行するファイルを検索します。
 
-**_Execvpe**関数は、パラメーターを検証します。 場合、 *cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインターまたは最初の引数として空の文字列を格納している配列へのポインターが、これらの関数は無効なを呼び出すパラメーターのハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
+パラメーター**の検証には**、どのような方法がありますか。 *Cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインター、または最初の引数として空の文字列を含む配列へのポインターである場合、「」で[説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。パラメーターの検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
 
 ## <a name="requirements"></a>必要条件
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223447"
 ---
 # <a name="atl-collection-classes"></a>ATL コレクション クラス
 
@@ -84,8 +84,8 @@ ATL は、少数のオブジェクトを処理するための次のような配�
 
 |形式|順序あり|インデックスを作成|挿入します。<br /><br /> 要素|検索<br /><br /> 指定された要素|重複<br /><br /> 要素|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|リスト|はい|いいえ|高速 (定数時間)|低速の o (n)|はい|
-|配列|はい|Int (定数時間) で|最後に挿入する場合を除く低速の o (n)|低速の o (n)|はい|
+|リスト|[はい]|いいえ|高速 (定数時間)|低速の o (n)|[はい]|
+|配列|[はい]|Int (定数時間) で|最後に挿入する場合を除く低速の o (n)|低速の o (n)|[はい]|
 |マップ|いいえ|キー (定数時間)|高速 (定数時間)|高速 (定数時間)|いいえ (キー)、はい (値)|
 |レッド ブラック マップ|[はい] (キー) を|キーの O (log n)|高速の O (log n)|高速の O (log n)|いいえ|
 |レッド ブラック Multimap|[はい] (キー) を|キー O(log n) (キーごとの複数の値) に|高速の O (log n)|高速の O (log n)|[はい] (キーごとの複数の値)|
@@ -116,13 +116,13 @@ CTraits クラスの一覧は、次を参照してください。[コレクシ�
 
 次のサンプルは、コレクション クラスを示しています。
 
-- [MMXSwarm サンプル](../visual-cpp-samples.md)
+- [MMXSwarm サンプル](../overview/visual-cpp-samples.md)
 
-- [DynamicConsumer サンプル](../visual-cpp-samples.md)
+- [DynamicConsumer サンプル](../overview/visual-cpp-samples.md)
 
 - [UpdatePV サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [マーキーのサンプル](../visual-cpp-samples.md)
+- [マーキーのサンプル](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>関連項目
 

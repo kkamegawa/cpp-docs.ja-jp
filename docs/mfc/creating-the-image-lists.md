@@ -6,26 +6,25 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 52f375c98b5f73e0f5721c951c94e4b24f0bc224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6687b62b70103894d957a21019008e8781385feb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608677"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508786"
 ---
 # <a name="creating-the-image-lists"></a>イメージ リストの作成
 
-使用するかどうかは、同じイメージのリストを作成する[CListView](../mfc/reference/clistview-class.md)または[CListCtrl](../mfc/reference/clistctrl-class.md)します。
+[CListView](../mfc/reference/clistview-class.md)と[CListCtrl](../mfc/reference/clistctrl-class.md)のどちらを使用する場合でも、イメージリストの作成は同じです。
 
 > [!NOTE]
->  のみ必要がありますをイメージ リスト、リスト コントロールが含まれている場合、`LVS_ICON`スタイル。
+>  リストコントロールに`LVS_ICON`スタイルが含まれている場合にのみ、イメージリストが必要になります。
 
-クラスを使用して`CImageList`(フルサイズのアイコン、小さいアイコン、および状態) の 1 つまたは複数のイメージ リストを作成します。 参照してください[CImageList](../mfc/reference/cimagelist-class.md)を参照してくださいと[リスト ビューのイメージが一覧表示](/windows/desktop/Controls/using-list-view-controls)Windows SDK にします。
+クラス`CImageList`を使用して、1つまたは複数のイメージリストを作成します (フルサイズのアイコン、小さいアイコン、状態)。 「 [CImageList](../mfc/reference/cimagelist-class.md)」を参照し、Windows SDK の[リストビューのイメージリスト](/windows/win32/Controls/using-list-view-controls)を参照してください。
 
-呼び出す[CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist)各イメージ リスト; に適切なポインターを渡す`CImageList`オブジェクト。
+各イメージリストに対して、 [CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist)を呼び出します。適切な`CImageList`オブジェクトへのポインターを渡します。
 
 ## <a name="see-also"></a>関連項目
 
 [CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

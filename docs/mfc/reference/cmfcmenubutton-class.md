@@ -1,6 +1,6 @@
 ---
 title: CMFCMenuButton クラス
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 4e29fd64540b52a8e6b70ee4d520b14a5a7d712b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d7c23cbda0a5af4dc3fa6b2d9f59497acc9bf5ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505208"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton クラス
 
@@ -45,34 +47,35 @@ class CMFCMenuButton : public CMFCButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|`CMFCMenuButton` オブジェクトを構築します。|
+|[CMFCMenuButton:: CMFCMenuButton](#cmfcmenubutton)|`CMFCMenuButton` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|ディスパッチされる前に、ウィンドウ メッセージを変換するためにフレームワークによって呼び出されます。 ( `CMFCButton::PreTranslateMessage`をオーバーライドします)。|
-|[CMFCMenuButton::SizeToContent](#sizetocontent)|そのテキストとイメージのサイズに応じてボタンのサイズを変更します。|
+|[CMFCMenuButton::P reTranslateMessage](#pretranslatemessage)|ディスパッチされる前にウィンドウメッセージを変換するために、フレームワークによって呼び出されます。 ( `CMFCButton::PreTranslateMessage`をオーバーライドします)。|
+|[CMFCMenuButton:: SizeToContent](#sizetocontent)|テキストとイメージのサイズに応じて、ボタンのサイズを変更します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|使用するか、既定のシステムのポップアップ メニューを表示するかどうかを指定します[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)します。|
-|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|下にあるか、ボタンの右側に、ポップアップ メニューに表示されるかどうかを指定します。|
-|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|メニュー ボタンが、ボタンを離した後に、状態を変更するかどうかを指定します。|
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|関連付けられた Windows メニューへのハンドル。|
-|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|項目を示す識別子、ユーザーは、ポップアップ メニューから選択します。|
+|[CMFCMenuButton:: m_bOSMenu](#m_bosmenu)|既定のシステムポップアップメニューを表示するか、 [CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)を使用するかを指定します。|
+|[CMFCMenuButton:: m_bRightArrow](#m_brightarrow)|ポップアップメニューをボタンの下または右に表示するかどうかを指定します。|
+|[CMFCMenuButton:: m_bStayPressed](#m_bstaypressed)|ユーザーがボタンを離した後にメニューボタンの状態を変更するかどうかを指定します。|
+|[CMFCMenuButton:: m_hMenu](#m_hmenu)|アタッチされた Windows メニューへのハンドル。|
+|[CMFCMenuButton:: m_nMenuResult](#m_nmenuresult)|ポップアップメニューからユーザーが選択した項目を示す識別子。|
+|[CMFCMenuButton:: m_bDefaultClick](#m_bdefaultclick)| 既定の (ボタンテキスト/イメージの) 処理を許可します。|
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCMenuButton`から派生したクラスは、 [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)からさらに、派生元が、 [CButton クラス](../../mfc/reference/cbutton-class.md)します。 したがって、使用できる`CMFCMenuButton`、コードを使用する場合と同じ方法で`CButton`します。
+クラスは、 [CButton クラス](../../mfc/reference/cbutton-class.md)から派生する[cmfcbutton クラス](../../mfc/reference/cmfcbutton-class.md)から派生します。 `CMFCMenuButton` そのため、を使用`CMFCMenuButton` `CButton`する場合と同じ方法でをコード内で使用できます。
 
-作成するときに、 `CMFCMenuButton`、関連付けられたポップアップ メニューへのハンドルで渡す必要があります。 次に、関数を呼び出して`CMFCMenuButton::SizeToContent`します。 `CMFCMenuButton::SizeToContent` ボタンのサイズが、ポップアップ ウィンドウが表示される場所の下に具体的には、または、ボタンの右側に場所を指す矢印に含められることを確認します。
+を作成`CMFCMenuButton`する場合は、関連するポップアップメニューへのハンドルを渡す必要があります。 次に、関数`CMFCMenuButton::SizeToContent`を呼び出します。 `CMFCMenuButton::SizeToContent`ボタンのサイズが、ポップアップウィンドウが表示される場所を指す矢印を含めるために十分であることを確認します。これは、ボタンの下または右に表示されます。
 
 ## <a name="example"></a>例
 
-次の例では、ボタン メニューのハンドルを設定し、テキストとイメージのサイズに応じてボタンのサイズを変更して、フレームワークによって表示されるポップアップ メニューを設定する方法を示します。 このコード スニペットの一部、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、ボタンに関連付けられているメニューのハンドルを設定する方法、テキストとイメージのサイズに応じてボタンのサイズを変更する方法、およびフレームワークによって表示されるポップアップメニューを設定する方法を示します。 このコードスニペットは、[新しいコントロールのサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]
@@ -93,11 +96,11 @@ class CMFCMenuButton : public CMFCButton
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxmenubutton.h
+**ヘッダー:** afxmenubutton
 
-##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton:: CMFCMenuButton
 
-新しい[CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)オブジェクト。
+新しい[Cmfcmenubutton](../../mfc/reference/cmfcmenubutton-class.md)オブジェクトを構築します。
 
 ```
 CMFCMenuButton();
@@ -105,7 +108,7 @@ CMFCMenuButton();
 
 ##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu
 
-ポップアップ メニューを示すブール型のメンバー変数、framework が表示されます。
+フレームワークに表示されるポップアップメニューを示すブール型メンバー変数。
 
 ```
 BOOL m_bOSMenu;
@@ -113,11 +116,11 @@ BOOL m_bOSMenu;
 
 ### <a name="remarks"></a>Remarks
 
-場合`m_bOSMenu`が true の場合、フレームワークは、継承された呼び出します`TrackPopupMenu`のこのオブジェクトのメソッド。 それ以外の場合、フレームワーク[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)します。
+が`m_bOSMenu` TRUE の場合、フレームワークはこのオブジェクト`TrackPopupMenu`の継承されたメソッドを呼び出します。 それ以外の場合、フレームワークは[CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)を呼び出します。
 
-##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow
+##  <a name="m_brightarrow"></a>CMFCMenuButton:: m_bRightArrow
 
-ポップアップ メニューの場所を示すブール型のメンバー変数。
+ポップアップメニューの場所を示すブール型メンバー変数。
 
 ```
 BOOL m_bRightArrow;
@@ -125,11 +128,11 @@ BOOL m_bRightArrow;
 
 ### <a name="remarks"></a>Remarks
 
-ユーザーは、メニュー ボタンを押すと、アプリケーションには、ポップアップ メニューが表示されます。 フレームワークは、ボタンの下、または、ボタンの右側に、ポップアップ メニューに表示されます。 ボタンには、ポップアップ メニューが表示される場所を示す小さな矢印もあります。 場合`m_bRightArrow`が true の場合、フレームワーク、ボタンの右側に、ポップアップ メニューが表示されます。 それ以外の場合、ボタンの下のポップアップ メニューが表示されます。
+ユーザーがメニューボタンを押すと、アプリケーションにポップアップメニューが表示されます。 フレームワークによって、ボタンの下または右にポップアップメニューが表示されます。 このボタンには、ポップアップメニューが表示される場所を示す小さな矢印もあります。 が`m_bRightArrow` TRUE の場合、フレームワークはボタンの右側にポップアップメニューを表示します。 それ以外の場合は、ボタンの下にポップアップメニューが表示されます。
 
-##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed
+##  <a name="m_bstaypressed"></a>CMFCMenuButton:: m_bStayPressed
 
-メニュー ボタンが表示されるかどうかを示すブール型のメンバー変数を押した、ユーザーは、ポップアップ メニューから選択します。
+ユーザーがポップアップメニューから選択したときにメニューボタンが押されたかどうかを示すブール型メンバー変数。
 
 ```
 BOOL m_bStayPressed;
@@ -137,13 +140,13 @@ BOOL m_bStayPressed;
 
 ### <a name="remarks"></a>Remarks
 
-場合、`m_bStayPressed`メンバーが FALSE で、メニュー ボタンが押されていないになる状態ときに、使用がボタンをクリックします。 この場合、フレームワークには、ポップアップ メニューのみが表示されます。
+`m_bStayPressed`メンバーが FALSE の場合、[使用] ボタンをクリックしたときにメニューボタンが押されなくなります。 この場合、フレームワークにはポップアップメニューのみが表示されます。
 
-場合、`m_bStayPressed`メンバーは TRUE、ユーザーがボタンをクリックすると、メニュー ボタンが押されたになります。 ユーザーがいずれか、選択を行ったか、取り消すことによって、ポップアップ メニューを閉じた後まで押されたままです。
+`m_bStayPressed`メンバーが TRUE の場合、ユーザーがボタンをクリックすると、メニューボタンが押された状態になります。 ユーザーがポップアップメニューを閉じるか、選択を行うかキャンセルするかを選択するまで、押された状態のままになります。
 
-##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu
+##  <a name="m_hmenu"></a>CMFCMenuButton:: m_hMenu
 
-関連付けられたメニューへのハンドル。
+添付メニューへのハンドル。
 
 ```
 HMENU m_hMenu;
@@ -151,11 +154,11 @@ HMENU m_hMenu;
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークには、ユーザーがメニュー ボタンをクリックすると、このメンバー変数によって示されるメニューが表示されます。
+フレームワークでは、ユーザーがメニューボタンをクリックしたときに、このメンバー変数によって示されるメニューが表示されます。
 
-##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+##  <a name="m_nmenuresult"></a>CMFCMenuButton:: m_nMenuResult
 
-どの項目を示す整数をユーザーは、ポップアップ メニューから選択します。
+ポップアップメニューからユーザーが選択した項目を示す整数。
 
 ```
 int m_nMenuResult;
@@ -163,11 +166,33 @@ int m_nMenuResult;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー変数の値は、メニューを選択せずに取り消された場合、またはエラーが発生した場合、0 です。
+このメンバー変数の値は、ユーザーが選択を行わずにメニューをキャンセルした場合、またはエラーが発生した場合は0になります。
+
+##  <a name="m_bdefaultclick"></a>CMFCMenuButton:: m_bDefaultClick
+
+ボタン上のテキストまたはイメージの既定の処理を許可します。
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Remarks
+
+M_bDefaultClick を false に設定すると、ボタンの任意の場所をクリックすると、ボタンがメニューを表示します。
+
+##  <a name="m_nmenuresult"></a>CMFCMenuButton:: m_nMenuResult
+
+ポップアップメニューからユーザーが選択した項目を示す整数。
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Remarks
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 
-ディスパッチされる前に、ウィンドウ メッセージを変換するためにフレームワークによって呼び出されます。
+ディスパッチされる前にウィンドウメッセージを変換するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -176,17 +201,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-[in]指す、 [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)処理するメッセージを含む構造体。
+から処理するメッセージを含む[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
-以外の場合は、メッセージが変換されたおよびディスパッチできないする必要があります。メッセージが変換されていないと、ディスパッチする必要がある場合は 0。
+メッセージが変換され、ディスパッチされない場合は0以外の。メッセージが変換されず、ディスパッチする必要がある場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent
+##  <a name="sizetocontent"></a>CMFCMenuButton:: SizeToContent
 
-テキストのサイズとイメージのサイズに応じてボタンのサイズを変更します。
+テキストのサイズとイメージのサイズに応じて、ボタンのサイズを変更します。
 
 ```
 virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
@@ -195,17 +220,17 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ### <a name="parameters"></a>パラメーター
 
 *bCalcOnly*<br/>
-[in]このメソッドが、ボタンをサイズ変更するかどうかを示すブール値パラメーター。
+からこのメソッドがボタンのサイズを変更するかどうかを示すブール型パラメーター。
 
 ### <a name="return-value"></a>戻り値
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md)ボタンの新しいサイズを指定するオブジェクト。
+ボタンの新しいサイズを指定する[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-この関数を呼び出す場合と*bCalcOnly*が true の場合、`SizeToContent`ボタンの新しいサイズのみが計算されます。
+この関数を呼び出し、 *bcalconly* TRUE の場合、 `SizeToContent`はボタンの新しいサイズのみを計算します。
 
-ボタンのテキスト、イメージ、および矢印に合わせてボタンの新しいサイズが計算されます。 フレームワークは、水平方向の端に 10 ピクセルおよび垂直方向の端の 5 ピクセルの定義済みのマージンでも追加します。
+ボタンの新しいサイズは、ボタンのテキスト、イメージ、および矢印に応じて計算されます。 また、フレームワークは、水平エッジに対して10ピクセル、垂直エッジに5ピクセルの定義済みの余白を追加します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592613"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957012"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 浮動小数点パッケージをリセットします。
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Remarks
 
-**_Fpreset**関数は浮動小数点演算パッケージを再初期化します。 **_fpreset**通常併用**信号**、**システム**、または **_exec**または **_spawn**関数。 プログラムは、浮動小数点エラー シグナルをトラップする場合 (**SIGFPE**) と**信号**、安全に呼び出すことによって浮動小数点エラーから回復ができる **_fpreset** を使用して、**longjmp**します。
+**_Fpreset**関数は、浮動小数点数値演算パッケージを再初期化します。 **_fpreset**は通常、 **signal**、 **system**、または **_exec**関数または **_spawn**関数と共に使用されます。 プログラムが**シグナル**で浮動小数点エラー信号 (**SIGFPE**) をトラップする場合、 **_fpreset**を呼び出し、 **longjmp**を使用して、浮動小数点エラーから安全に復旧できます。
 
-コンパイルするときに、この関数は非推奨[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のため、共通言語ランタイムは浮動小数点の既定の精度のみをサポートします。
+共通言語ランタイムは浮動小数点の既定の精度のみをサポートするため、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルする場合、この関数は非推奨とされます。
 
 ## <a name="requirements"></a>必要条件
 

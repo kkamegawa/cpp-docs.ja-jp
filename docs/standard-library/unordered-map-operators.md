@@ -5,12 +5,12 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: a27ef8e320f59464f15603c330346db86bc30aac
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454775"
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 演算子
 
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `unordered_map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `unordered_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true** unordered_map が等しくない場合**false**が等しい場合は。
+unordered_maps が等しくない場合は**true**を返します。等しい場合は**false** 。
 
 ### <a name="remarks"></a>Remarks
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `unordered_map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `unordered_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、unordered_map は等しくなります。**false**等しくない場合。
+unordered_maps が等しい場合は**true** 。等しくない場合は**false** 。
 
 ### <a name="remarks"></a>Remarks
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `unordered_multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `unordered_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true** unordered_multimap が等しくない場合**false**が等しい場合は。
+unordered_multimaps が等しくない場合は**true**を返します。等しい場合は**false** 。
 
 ### <a name="remarks"></a>Remarks
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `unordered_multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `unordered_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、unordered_multimap は等しくなります。**false**等しくない場合。
+unordered_multimaps が等しい場合は**true** 。等しくない場合は**false** 。
 
 ### <a name="remarks"></a>Remarks
 
@@ -278,4 +278,4 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
 ms.openlocfilehash: 1fac3a74ca259fe3b680355fadc7f9bbd6e3cc13
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368709"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl クラス
 
@@ -117,7 +117,7 @@ class CRowsetImpl :
 
 いずれかを実装するために、 `CRowsetImpl`-派生`Execute`メソッドを内部データ バッファーを設定する必要があります ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md))。
 
-## <a name="namefromdbid"></a> Crowsetimpl::namefromdbid
+## <a name="namefromdbid"></a> CRowsetImpl::NameFromDBID
 
 文字列を抽出、`DBID`にコピーし、 *bstr*で渡されます。
 
@@ -148,7 +148,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 このメソッドを呼び出して、`CRowsetImpl`の実装[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)と[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)します。
 
-## <a name="setcommandtext"></a> Crowsetimpl::setcommandtext
+## <a name="setcommandtext"></a> CRowsetImpl::SetCommandText
 
 検証し、格納、`DBID`で 2 つの文字列 ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[その](../../data/oledb/crowsetimpl-m-strindextext.md))。
 
@@ -177,7 +177,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 このメソッドは、呼び出すことによって作業を委任[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)と[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)アップ キャストされたポインターを使用します。
 
-## <a name="getcolumninfo"></a> Crowsetimpl::getcolumninfo
+## <a name="getcolumninfo"></a> CRowsetImpl::GetColumnInfo
 
 特定のクライアント要求の列情報を取得します。
 
@@ -210,7 +210,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]
 
-## <a name="getcommandfromid"></a> Crowsetimpl::getcommandfromid
+## <a name="getcommandfromid"></a> CRowsetImpl::GetCommandFromID
 
 いずれかまたは両方のパラメーターには、文字列値が含まれている場合とそうである場合に表示するためのチェックは、データ メンバーに、文字列値をコピー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[その](../../data/oledb/crowsetimpl-m-strindextext.md)します。
 
@@ -237,7 +237,7 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 このメソッドは、静的キャスト`CRowsetImpl`データ メンバーを設定する[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[その](../../data/oledb/crowsetimpl-m-strindextext.md)します。 既定では、このメソッドは、いずれかまたは両方のパラメーターに文字列値が含まれているかどうかにチェックします。 文字列値が含まれている場合、このメソッドは、データ メンバーに文字列値をコピーします。 このシグネチャを持つメソッドを配置することで、 `CRowsetImpl`-派生クラスでは、基本の実装ではなく、メソッドが呼び出されます。
 
-## <a name="validatecommandid"></a> Crowsetimpl::validatecommandid
+## <a name="validatecommandid"></a> CRowsetImpl::ValidateCommandID
 
 参照のいずれかまたは両方をチェックします`DBID`s は、文字列の値が含まれ、場合は、そのデータ メンバーにコピー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[その](../../data/oledb/crowsetimpl-m-strindextext.md)します。
 
@@ -264,7 +264,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 このメソッドは、静的キャスト`CRowsetImpl`そのデータ メンバーを設定する[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[その](../../data/oledb/crowsetimpl-m-strindextext.md)します。 既定では、このメソッドは参照のいずれかまたは両方をチェックします。 `DBID`s は、文字列の値が含まれると、場合は、そのデータ メンバーにコピーします。 このシグネチャを持つメソッドを配置することで、 `CRowsetImpl`-派生クラスでは、基本の実装ではなく、メソッドが呼び出されます。
 
-## <a name="rgrowdata"></a> Crowsetimpl::m_rgrowdata
+## <a name="rgrowdata"></a> CRowsetImpl::m_rgRowData
 
 既定で、`CAtlArray`へのユーザー レコードのテンプレート引数に templatizes を`CRowsetImpl`します。
 
@@ -288,7 +288,7 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
 CComBSTR CRowsetBaseImpl::m_strCommandText;
 ```
 
-## <a name="strindextext"></a> Crowsetimpl::m_strindextext
+## <a name="strindextext"></a> CRowsetImpl::m_strIndexText
 
 行セットの最初のインデックスが含まれています。
 

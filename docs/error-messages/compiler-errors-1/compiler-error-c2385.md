@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571393"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745255"
 ---
 # <a name="compiler-error-c2385"></a>コンパイラ エラー C2385
 
-'member' のあいまいなアクセス
+' member ' のあいまいなアクセス
 
-メンバーは、1 つ以上のオブジェクト (1 つ以上のオブジェクトから継承されて) から派生できます。  このエラーを解決するのには
+メンバーは複数のオブジェクトから派生できます (複数のオブジェクトから継承されます)。  このエラーを解決するには、
 
-- キャストを提供することで、メンバー明確にします。
+- キャストを提供して、メンバーを明確にします。
 
-- あいまいな基底クラス メンバーの名前を変更します。
+- 基底クラスのあいまいなメンバーの名前を変更します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2385 が生成されます。
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538997"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339603"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx クラス
 
@@ -31,7 +31,7 @@ class CSplitterWndEx : public CSplitterWnd
 
 |名前|説明|
 |----------|-----------------|
-|`CSplitterWndEx::CSplitterWndEx`|既定のコンストラクター|
+|`CSplitterWndEx::CSplitterWndEx`|既定のコンストラクターです。|
 |`CSplitterWndEx::~CSplitterWndEx`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -77,7 +77,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。 このパラメーターが NULL の場合、フレームワークには、アクティブなウィンドウが再描画します。
 
-*%n タイプ*<br/>
+*nType*<br/>
 [in]1 つ、`CSplitterWnd::ESplitType`描画するためにスプリッター ウィンドウの要素を指定する列挙値。 正しい値は `splitBox`、`splitBar`、`splitIntersection`、`splitBorder` です。
 
 *rect*<br/>

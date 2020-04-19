@@ -5,12 +5,12 @@ helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 55eaac9d800730f3a01dcdb2eef943eb48d147b1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311157"
 ---
 # <a name="keyboard-and-mouse-customization"></a>キーボードとマウスのカスタマイズ
 
@@ -22,7 +22,7 @@ MFC は、キーボードとマウス入力の処理方法をカスタマイズ�
 
 次の図は、**キーボード**のタブ、**カスタマイズ** ダイアログ ボックス。
 
-![[カスタマイズ] ダイアログ ボックスの [キーボード] タブ](../mfc/media/mfcnextkeyboardtab.png "カスタマイズ] ダイアログ ボックスでは、[キーボード] タブ") <br/>
+![[カスタマイズ] ダイアログ ボックスの [キーボード] タブ](../mfc/media/mfcnextkeyboardtab.png "カスタマイズ ダイアログ ボックスでは、[キーボード] タブ") <br/>
 キーボードのカスタマイズタブ
 
 ユーザーがコマンドに 1 つまたは複数のキーボード ショートカットを割り当てるには、[キーボード] タブを操作します。 タブの左側にある使用可能なコマンドが表示されます。ユーザーは、メニューから使用可能なコマンドを選択できます。 メニュー コマンドのみをキーボード ショートカットと関連付けることができます。 ユーザーが、新しいショートカットを入力した後、**割り当てる**ボタンが有効になります。 ユーザーは、このボタンをクリックすると、アプリケーションは、そのショートカットを選択したコマンドを関連付けます。
@@ -37,7 +37,7 @@ MFC は、キーボードとマウス入力の処理方法をカスタマイズ�
 
 次の図は、**マウス**のタブ、**カスタマイズ** ダイアログ ボックス。
 
-![[カスタマイズ] ダイアログ ボックスの [マウス] タブ](../mfc/media/mfcnextmousetab.png "カスタマイズ] ダイアログ ボックスでは、[マウス] タブ") <br/>
+![[カスタマイズ] ダイアログ ボックスの [マウス] タブ](../mfc/media/mfcnextmousetab.png "カスタマイズ ダイアログ ボックスでは、[マウス] タブ") <br/>
 マウスのカスタマイズタブ
 
 ユーザーがメニューを割り当てるには、このタブを操作コマンドをマウスのダブルクリック処理します。 ユーザーは、ウィンドウの左側にあるビューを選択し、右側にあるコントロールを使用して、コマンド、ダブルクリック アクションと関連付けます。 ユーザー後がクリックした**閉じる**ユーザーが、ビューの任意の場所をダブルクリックしたときに、アプリケーションが関連付けられているコマンドを実行します。
@@ -72,4 +72,3 @@ MFC は、キーボードとマウス入力の処理方法をカスタマイズ�
 [CKeyboardManager クラス](../mfc/reference/ckeyboardmanager-class.md)<br/>
 [CMouseManager クラス](../mfc/reference/cmousemanager-class.md)<br/>
 [カスタマイズによるセキュリティへの影響](../mfc/security-implications-of-customization.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3350
 ms.assetid: cfbbc338-92b5-4f34-999e-aa2d2376bc70
-ms.openlocfilehash: a19dbde6409afaae29e9110315c7c68fe9d43d62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39d4b4c1cef0febe8845db3e74799b2d240dbdb3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547213"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736959"
 ---
 # <a name="compiler-error-c3350"></a>コンパイラ エラー C3350
 
@@ -21,7 +21,7 @@ ms.locfileid: "50547213"
 
 次の例では C3350 が生成されます。
 
-```
+```cpp
 // C3350.cpp
 // compile with: /clr
 delegate void SumDelegate();

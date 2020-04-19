@@ -11,12 +11,12 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 082308acaeddcb173a0d873c0f50e2e40fd8fe12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242407"
 ---
 # <a name="creating-stack-and-queue-collections"></a>スタック コレクションとキュー コレクションの作成
 
@@ -51,4 +51,3 @@ ms.locfileid: "50569226"
 ## <a name="see-also"></a>関連項目
 
 [コレクション](../mfc/collections.md)
-

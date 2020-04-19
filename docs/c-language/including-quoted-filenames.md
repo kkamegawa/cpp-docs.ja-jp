@@ -2,12 +2,12 @@
 title: 引用符で囲まれたファイル名を含む
 ms.date: 11/04/2016
 ms.assetid: 789a047e-ea38-4c99-b71d-a2ad9c81daee
-ms.openlocfilehash: 11beaa3a91f476348c57b12ab3febad7cb9c89fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4083519d6f6b9b4d037b0c2998737f3a5062c6cf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656717"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149870"
 ---
 # <a name="including-quoted-filenames"></a>引用符で囲まれたファイル名を含む
 
@@ -17,6 +17,6 @@ ms.locfileid: "50656717"
 
 [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec" に指定されたインクルード ファイルでは、ディレクトリの検索は親ファイルのディレクトリから始まり、その後にすべての祖父母ファイルのディレクトリが検索されます。 したがって、検索は現在処理中のソース ファイルが含まれるディレクトリに対して相対的に開始されます。 親の親ファイルが存在せず、見つからなかった場合は、ファイル名が山かっこで囲まれているものとして検索が続行されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プリプロセス ディレクティブ](../c-language/preprocessing-directives.md)

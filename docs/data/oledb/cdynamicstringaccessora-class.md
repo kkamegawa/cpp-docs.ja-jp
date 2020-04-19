@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-ms.openlocfilehash: bfe4cf2d6aa107c21ed0d8b226616ebaa8488102
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a0da9c779230fc1bf58bfa1d685623f844012c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231039"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA クラス
 

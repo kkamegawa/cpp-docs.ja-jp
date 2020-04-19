@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-ms.openlocfilehash: bedf78ef1cea9f17903fd05f9440c6baa69f7333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b57b67e8f4542266818ad5b3d90d78a1a943d55
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481238"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756228"
 ---
 # <a name="compiler-error-c3450"></a>コンパイラ エラー C3450
 
@@ -19,13 +19,13 @@ ms.locfileid: "50481238"
 
 ユーザー定義のマネージド属性は <xref:System.ComponentModel.AttributeCollection.%23ctor%2A> から継承する必要があります。 Windows ランタイム属性は、`Windows::Foundation::Metadata` 名前空間で定義する必要があります。
 
-詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3450 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C3450.cpp
 // compile with: /clr
 // C3450 expected

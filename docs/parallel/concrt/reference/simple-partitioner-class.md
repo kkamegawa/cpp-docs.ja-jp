@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: f3c5792a13d9e63a05ce6710dea77828f2510f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 503f36b90c5eb3319f9aa2d56528172ffa95bb11
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522448"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142504"
 ---
-# <a name="simplepartitioner-class"></a>simple_partitioner クラス
+# <a name="simple_partitioner-class"></a>simple_partitioner クラス
 
 `simple_partitioner` クラスは、`parallel_for` によって反復処理される範囲の静的パーティション分割を表します。 パーティショナーは範囲をチャンクに分割します。各チャンクには、少なくともチャンク サイズによって指定された数のイテレーションが含まれます。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class simple_partitioner;
 ```
 
@@ -29,7 +29,7 @@ class simple_partitioner;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[simple_partitioner](#ctor)|`simple_partitioner` オブジェクトを構築します。|
 |[~ simple_partitioner デストラクター](#dtor)|`simple_partitioner` オブジェクトを破棄します。|
@@ -38,33 +38,33 @@ class simple_partitioner;
 
 `simple_partitioner`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** ppl.h
+**ヘッダー:** ppl
 
 **名前空間:** concurrency
 
-##  <a name="dtor"></a> ~simple_partitioner
+## <a name="dtor"></a>~ simple_partitioner
 
 `simple_partitioner` オブジェクトを破棄します。
 
-```
+```cpp
 ~simple_partitioner();
 ```
 
-##  <a name="ctor"></a> simple_partitioner
+## <a name="ctor"></a>simple_partitioner
 
 `simple_partitioner` オブジェクトを構築します。
 
-```
+```cpp
 explicit simple_partitioner(_Size_type _Chunk_size);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *_Chunk_size*<br/>
-パーティションの最小サイズ。
+最小パーティションサイズ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

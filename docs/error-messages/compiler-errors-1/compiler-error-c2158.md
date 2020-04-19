@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2158
 ms.assetid: 39028899-e95c-4809-8e65-6111118641ee
-ms.openlocfilehash: a84c803d45184c19bab0f855ae1eb33744c4e02d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f098af90d3052d6961eb0892085c02f2e42bbed4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597393"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755865"
 ---
 # <a name="compiler-error-c2158"></a>コンパイラ エラー C2158
 
@@ -19,11 +19,11 @@ ms.locfileid: "50597393"
 
 [make_public](../../preprocessor/make-public.md) プラグマは、ネイティブの非テンプレート型にのみ適用できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2158 が生成されます。
 
-```
+```cpp
 // C2158.cpp
 // compile with: /clr /c
 ref class A {};

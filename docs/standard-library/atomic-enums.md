@@ -6,12 +6,12 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: 03247f6abd01b00fbbed3b33016cd4a12d8a13f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14b816177593a9f6dade60e36676a37f724fc209
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457593"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; 列挙型
 
@@ -30,7 +30,7 @@ typedef enum memory_order {
 } memory_order;
 ```
 
-### <a name="enumeration-members"></a>列挙型メンバー
+### <a name="enumeration-members"></a>列挙型のメンバー
 
 |||
 |-|-|
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>関連項目
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

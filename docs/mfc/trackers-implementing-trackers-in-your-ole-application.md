@@ -1,5 +1,5 @@
 ---
-title: 'トラッカー : OLE アプリケーションでのトラッカーの実装'
+title: トラッカー:OLE アプリケーションでのトラッカーの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - trackers [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-ms.openlocfilehash: 19ffa94b7be4b96c57317f63d9cfd9242bff061f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1d33327ec3d926d5475f9b4610a212a021cbc17
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181890"
 ---
-# <a name="trackers-implementing-trackers-in-your-ole-application"></a>トラッカー : OLE アプリケーションでのトラッカーの実装
+# <a name="trackers-implementing-trackers-in-your-ole-application"></a>トラッカー:OLE アプリケーションでのトラッカーの実装
 
 トラッカーは、OLE クライアント アイテムと対話するユーザーを有効にするためのグラフィカル インターフェイスを提供します。 トラッカーの異なるスタイルを使用すると、OLE クライアント斜線の境界線で表示できるアイテムのサイズ変更ハンドル、またはその他の視覚効果のさまざまな。 この記事について説明します。
 
@@ -24,9 +24,8 @@ ms.locfileid: "50613097"
 
 - [ラバー バンド処理とトラッカー](../mfc/rubber-banding-and-trackers.md)します。
 
-トラッカーのスタイルの使用についても取り上げています。 また、MFC OLE サンプルをいくつかの参照を[OCLIENT](../visual-cpp-samples.md)します。
+トラッカーのスタイルの使用についても取り上げています。 また、MFC OLE サンプルをいくつかの参照を[OCLIENT](../overview/visual-cpp-samples.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [トラッカー](../mfc/trackers.md)
-

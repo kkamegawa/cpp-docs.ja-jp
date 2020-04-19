@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2057
+title: コンパイラエラー C2057
 ms.date: 11/04/2016
 f1_keywords:
 - C2057
 helpviewer_keywords:
 - C2057
 ms.assetid: 038a99d6-1f5a-42fa-8449-03b4ff11ee0b
-ms.openlocfilehash: 6c8b171a878a8f370a024fa7374be6925695bd4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c873a0ba956adedea3311ac8e1844a629caa44b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548708"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302030"
 ---
-# <a name="compiler-error-c2057"></a>コンパイラ エラー C2057
+# <a name="compiler-error-c2057"></a>コンパイラエラー C2057
 
 定数式が必要です。
 
@@ -21,11 +21,11 @@ ms.locfileid: "50548708"
 
 コンパイラは、型のインスタンスに領域を割り当てるため、コンパイル時にその型のサイズを認識する必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2057 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2057.cpp
 int i;
 int b[i];   // C2057 - value of i is unknown at compile time
@@ -35,11 +35,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 C 言語の定数式には、より制限の厳しい規則があります。  次の例では、C2057 を生成し、その修正方法を示しています。
 
-```
+```c
 // C2057b.c
 #define ArraySize1 10
 int main() {

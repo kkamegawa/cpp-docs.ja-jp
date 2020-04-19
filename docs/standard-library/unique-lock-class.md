@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 655d7b08c452bed94277aaed2cc8368aaeb462c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574422"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454931"
 ---
 # <a name="uniquelock-class"></a>unique_lock クラス
 
@@ -26,7 +26,7 @@ class unique_lock;
 
 テンプレート引数 `Mutex` には *mutex 型*を指定する必要があります。
 
-内部的を`unique_lock`、関連付けられているへのポインターを格納`mutex`オブジェクトと**bool** 、現在のスレッドが所有しているかどうかを示す、`mutex`します。
+内部的に`unique_lock`は、は、関連付け`mutex`られたオブジェクトへのポインターと、現在の`mutex`スレッドがを所有しているかどうかを示すブール値を格納します。
 
 ## <a name="members"></a>メンバー
 
@@ -66,11 +66,11 @@ class unique_lock;
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-*unique_lock*<br/>
+*unique_lock*
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<mutex >
+**ヘッダー:** \<ミューテックス >
 
 **名前空間:** std
 
@@ -84,11 +84,11 @@ void lock();
 
 ### <a name="remarks"></a>Remarks
 
-場合、格納されている`mutex`ポインターが NULL で、このメソッドは、 [system_error](../standard-library/system-error-class.md)のエラー コードを持つ`operation_not_permitted`します。
+格納さ`mutex`れているポインターが NULL の場合、 [](../standard-library/system-error-class.md)このメソッドは、エラーコード`operation_not_permitted`がである system_error をスローします。
 
 呼び出し元のスレッドが、関連付けられた `mutex` を既に所有している場合、このメソッドはエラー コード `resource_deadlock_would_occur` で `system_error` をスローします。
 
-それ以外の場合、このメソッドを呼び出す`lock`、関連付けられている`mutex`、内部スレッド所有権フラグを設定**true**します。
+それ以外の場合、 `lock`このメソッドは`mutex` 、関連付けられたに対してを呼び出し、内部スレッド所有権フラグを**true**に設定します。
 
 ## <a name="mutex"></a>  mutex
 
@@ -108,7 +108,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>戻り値
 
-**true**スレッドにミュー テックスを所有している場合それ以外の場合**false**します。
+スレッドがミューテックスを所有している場合は**true** 。それ以外の場合は**false**。
 
 ## <a name="op_eq"></a>  operator=
 
@@ -120,7 +120,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*他の*\
 `unique_lock` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 呼び出し元のスレッドが前に関連付けられていた `mutex` を所有している場合、このメソッドでは、`mutex` の `unlock` を呼び出す前に、新しい値を割り当てます。
 
-コピー後、このメソッドは設定*他*を既定で構築される状態にします。
+コピー後、このメソッドは、*他の*を既定で構築された状態に設定します。
 
 ## <a name="owns_lock"></a>  owns_lock
 
@@ -143,7 +143,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**スレッドが所有している場合、 `mutex`、それ以外の**false**します。
+スレッドがを`mutex`所有している場合は true、それ以外の場合は**false**。
 
 ## <a name="release"></a>  release
 
@@ -159,7 +159,7 @@ mutex_type *release() noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドの格納されている値を設定`mutex`0 と、内部のセットへのポインター`mutex`所有権フラグを**false**します。
+このメソッドは、格納さ`mutex`れているポインターの値を0に設定し、内部`mutex`所有権フラグを**false**に設定します。
 
 ## <a name="swap"></a>  swap
 
@@ -171,7 +171,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*他の*\
 `unique_lock` オブジェクト。
 
 ## <a name="try_lock"></a>  try_lock
@@ -184,11 +184,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-場合、格納されている`mutex`ポインターが NULL、メソッドをスローする[system_error](../standard-library/system-error-class.md)のエラー コードを持つ`operation_not_permitted`します。
+格納さ`mutex`れているポインターが NULL の場合、 [](../standard-library/system-error-class.md)メソッドは、エラーコード`operation_not_permitted`がである system_error をスローします。
 
 呼び出し元のスレッドが既に `mutex` を所有している場合、このメソッドはエラー コード `resource_deadlock_would_occur` で `system_error` をスローします。
 
@@ -204,16 +204,16 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*<br/>
+*Rel_time*\
 メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-場合、格納されている`mutex`ポインターが NULL、メソッドをスローする[system_error](../standard-library/system-error-class.md)のエラー コードを持つ`operation_not_permitted`します。
+格納さ`mutex`れているポインターが NULL の場合、 [](../standard-library/system-error-class.md)メソッドは、エラーコード`operation_not_permitted`がである system_error をスローします。
 
 呼び出し元のスレッドが既に `mutex` を所有している場合、このメソッドはエラー コード `resource_deadlock_would_occur` で `system_error` をスローします。
 
@@ -230,16 +230,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*<br/>
+*Abs_time*\
 メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-場合、格納されている`mutex`ポインターが NULL、メソッドをスローする[system_error](../standard-library/system-error-class.md)のエラー コードを持つ`operation_not_permitted`します。
+格納さ`mutex`れているポインターが NULL の場合、 [](../standard-library/system-error-class.md)メソッドは、エラーコード`operation_not_permitted`がである system_error をスローします。
 
 呼び出し元のスレッドが既に `mutex` を所有している場合、このメソッドはエラー コード `resource_deadlock_would_occur` で `system_error` をスローします。
 
@@ -273,25 +273,25 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>パラメーター
 
-*続け*<br/>
+*Mtx.exe*\
 mutex 型オブジェクト。
 
-*Rel_time*<br/>
+*Rel_time*\
 メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
-*Abs_time*<br/>
+*Abs_time*\
 メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
-*その他*<br/>
+*他の*\
 `unique_lock` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
 1 番目のコンストラクターは、関連付けられたミューテックス ポインター値が 0 であるオブジェクトを構築します。
 
-2 番目のコンス トラクターに移動しますから関連付けられたミュー テックス状態*他*します。 移動後*他*に関連付けられたミュー テックスが不要になった。
+2番目のコンストラクターは、関連する mutex の状態を*Other*に移動します。 移動後、*他の*はミューテックスと関連付けられなくなります。
 
-残りのコンス トラクター ストア (& a)*続け*として格納されている`mutex`ポインター。 `mutex` の所有権は、2 番目の引数 (存在する場合) によって決まります。
+残りのコンストラクターは、 格納さ`mutex`れているポインターとして & mtx.exe を格納します。 `mutex` の所有権は、2 番目の引数 (存在する場合) によって決まります。
 
 |||
 |-|-|
@@ -326,9 +326,9 @@ void unlock();
 
 呼び出し元のスレッドが、関連付けられた `mutex` を所有していない場合、このメソッドはエラー コード `operation_not_permitted` で [system_error](../standard-library/system-error-class.md) をスローします。
 
-それ以外の場合、このメソッドを呼び出す`unlock`、関連付けられている`mutex`、内部スレッド所有権フラグを設定**false**します。
+それ以外の場合、 `unlock`このメソッドは`mutex` 、関連付けられたに対してを呼び出し、内部スレッド所有権フラグを**false**に設定します。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

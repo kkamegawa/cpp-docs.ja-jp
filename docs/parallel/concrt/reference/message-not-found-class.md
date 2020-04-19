@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 7b6bd33e69d24e452414b2537ad70bf31e6b722f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458475"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139573"
 ---
-# <a name="messagenotfound-class"></a>message_not_found クラス
+# <a name="message_not_found-class"></a>message_not_found クラス
 
 このクラスは、要求されたメッセージがメッセージング ブロックで見つからない場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class message_not_found : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class message_not_found : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[message_not_found](#ctor)|オーバーロードされます。 `message_not_found` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class message_not_found : public std::exception;
 
 `message_not_found`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> message_not_found
+## <a name="ctor"></a>message_not_found
 
 `message_not_found` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
@@ -57,11 +57,10 @@ message_not_found() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)
-

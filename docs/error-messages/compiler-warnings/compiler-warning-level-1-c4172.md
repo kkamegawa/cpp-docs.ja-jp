@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536620"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624827"
 ---
 # <a name="compiler-warning-level-1-c4172"></a>コンパイラの警告 (レベル 1) C4172
 
-ローカル変数またはテンポラリのアドレスを返します。
+ローカル変数または一時アドレスを返す
 
-関数は、ローカル変数または一時オブジェクトのアドレスを返します。 返されたアドレスが有効でないために、ローカル変数と一時オブジェクトが関数から制御が戻るときに破棄されます。
+関数は、ローカル変数または一時オブジェクトのアドレスを返します。 ローカル変数と一時オブジェクトは、関数がを返したときに破棄されるので、返されたアドレスは無効です。
 
-関数は、ローカル オブジェクトのアドレスを返さないように再設計します。
+関数を再設計して、ローカルオブジェクトのアドレスが返されないようにします。
 
 次の例では、C4172 が生成されます。
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

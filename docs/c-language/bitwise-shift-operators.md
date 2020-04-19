@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: d0873e3975e69bbfac01d437006561f0bf88ee31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485359"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150416"
 ---
 # <a name="bitwise-shift-operators"></a>ビット処理シフト演算子
 
@@ -60,6 +60,6 @@ z = ( x << 8 ) + ( y >> 8 );
 
 右シフトでは符号ビットが保持されます。 符号付き整数を右にシフトすると、最上位ビットはセットされたままになります。 符号なし整数を右にシフトすると、最上位ビットはクリアされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [左シフト演算子および右シフト演算子 (<< および >>)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

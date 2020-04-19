@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAddLargeStatistic
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAddLargeStatistic
 - _InterlockedAddLargeStatistic_cpp
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 88ada0a906b777ab8ac676ddfe0a5166e906999d
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: de8c5b7dfd2462dddcb98324ebacc44c8148d85e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627473"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222091"
 ---
-# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
+# <a name="_interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
 **Microsoft 固有の仕様**
 
-最初のオペランドが 64 ビット値はインタロックされた加算を実行します。
+最初のオペランドが64ビット値である、インタロックされた加算を実行します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 long _InterlockedAddLargeStatistic(
    __int64 volatile * Addend,
    long Value
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*加数*<br/>
-[入力、出力]追加操作の最初のオペランドへのポインター。 指す値は、加算の結果によって置き換えられます。
+*加数*\
+[入力、出力]追加操作の最初のオペランドへのポインター。 が指す値は、加算の結果に置き換えられます。
 
-*[値]*<br/>
-[in]2 番目のオペランド。最初のオペランドを加算する値。
+*数値*\
+から2番目のオペランド。1番目のオペランドに追加する値。
 
 ## <a name="return-value"></a>戻り値
 
-2 番目のオペランドの値。
+2番目のオペランドの値。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ long _InterlockedAddLargeStatistic(
 |---------------|------------------|
 |`_InterlockedAddLargeStatistic`|x86|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この組み込みはアトミックため 2 つの個別のロックされている指示として実装されます。 組み込みこれの実行中に別のスレッドで発生するアトミックの 64 ビット読み取りは、読み取られる一貫性のない値になる可能性があります。
+組み込み`_InterlockedAddLargeStatistic`はアトミックではありません。これは、2つの個別のロックされた命令として実装されるためです。 組み込みのの実行中に別のスレッドで発生したアトミックの64ビット読み取りは、一貫性のない値の読み取りにつながる可能性があります。
 
-この関数は、読み取り/書き込みバリアとして動作します。 詳細については、次を参照してください。 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)します。
+`_InterlockedAddLargeStatistic`読み取り/書き込みのバリアとして動作します。 詳細については、「 [Readwriteバリア](../intrinsics/readwritebarrier.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

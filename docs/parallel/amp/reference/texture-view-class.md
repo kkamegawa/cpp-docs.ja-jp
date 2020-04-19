@@ -14,20 +14,20 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 6bf4b9666d746199cea92fa2bd52b691c67e4a5b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657501"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126350"
 ---
-# <a name="textureview-class"></a>texture_view クラス
+# <a name="texture_view-class"></a>texture_view クラス
 
 テクスチャへの読み取りアクセスおよび書き込みアクセスを提供します。 `texture_view` は、既定の 32 ビット bpse である `int`、`unsigned int`、または `float` の値型のテクスチャを読み取るためにのみ使用できます。 他のテクスチャ形式を読み取るには、`texture_view<const value_type, _Rank>` を使用します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<typename value_type,int _Rank>
 class texture_view;
 
@@ -40,7 +40,7 @@ class texture_view<const value_type, _Rank>
    : public details::_Texture_base<value_type, _Rank>;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *value_type*<br/>
 テクスチャ集合体の要素型です。
@@ -52,7 +52,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`|テクスチャ集合体の要素型です。|
 |`coordinates_type`|`texture_view` のテクセルを指定するために使用する座標の型。つまり、値型が `short_vector` である関連するテクスチャと同じランクの `float` です。|
@@ -60,14 +60,14 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[texture_view コンス トラクター](#ctor)|オーバーロードされます。 `texture_view` インスタンスを構築します。|
+|[texture_view コンストラクター](#ctor)|オーバーロードされます。 `texture_view` インスタンスを構築します。|
 |[~ texture_view デストラクター](#ctor)|`texture_view` インスタンスを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[gather_alpha](#gather_alpha)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。|
 |[gather_blue](#gather_blue)|オーバーロードされます。 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。|
@@ -79,7 +79,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[演算子 ()](#operator_call)|オーバーロードされます。 インデックスで要素の値を取得します。|
 |[operator\[\]](#operator_at)|オーバーロードされます。 インデックスで要素の値を取得します。|
@@ -87,7 +87,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[value_type](#value_type)|`texture_view` の要素の値型です。|
 
@@ -97,25 +97,25 @@ class texture_view<const value_type, _Rank>
 
 `texture_view`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_graphics.h
+**ヘッダー:** amp_graphics
 
-**Namespace:** concurrency::graphics
+**名前空間:** concurrency:: graphics
 
-##  <a name="dtor"></a> ~texture_view
+## <a name="dtor"></a>~ texture_view
 
 `texture_view` インスタンスを破棄します。
 
-```
+```cpp
 ~texture_view() restrict(amp, cpu);
 ```
 
-##  <a name="ctor"></a> texture_view
+## <a name="ctor"></a>texture_view
 
 `texture_view` インスタンスを構築します。
 
-```
+```cpp
 texture_view(// [1] constructor
     texture<value_type, _Rank>& _Src) restrict(amp);
 
@@ -146,14 +146,14 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>パラメーター
 
 *_Src*<br/>
-[1, 2]コンス トラクター、`texture`を書き込み可能な`texture_view`が作成されます。
+[1, 2]書き込み可能な `texture_view` を作成する `texture` をコンストラクターします。
 
-[3, 4]コンス トラクター、`texture`を書き込みで非`texture_view`が作成されます。
+[3, 4]コンストラクター: 書き込み可能でない `texture_view` を作成する `texture`。
 
 *_Other*<br/>
-[書き込み可能なソースの 5] コピー コンス トラクター`texture_view`します。
+[5] ソース書き込み可能 `texture_view`のコンストラクターをコピーします。
 
-[6, 7]コピー コンス トラクターの書き込みを可能なソース`texture_view`します。
+[6, 7]ソースの書き込み不可の `texture_view`をコピーします。
 
 *_Mipmap_level*<br/>
 この書き込み可能な `texture` がバインドするソース `texture_view` の特定の MIPMAP レベル。 既定値は 0 で、トップ レベル (最も詳細な) MIPMAP レベルを表します。
@@ -164,11 +164,11 @@ texture_view(// [7] copy constructor
 *_Mip_levels*<br/>
 `texture_view` を使用してアクセスできる MIPMAP レベルの数。
 
-##  <a name="gather_red"></a> gather_red
+## <a name="gather_red"></a>gather_red
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの赤 (x) 要素を返します。
 
-```
+```cpp
 const gather_return_type gather_red(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -195,11 +195,11 @@ const gather_return_type gather_red(
 
 4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。
 
-##  <a name="gather_green"></a> gather_green
+## <a name="gather_green"></a>gather_green
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの緑 (y) 要素を返します。
 
-```
+```cpp
 const gather_return_type gather_green(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -226,11 +226,11 @@ const gather_return_type gather_green(
 
 4 つのサンプリングされたテクセル値の緑 (y) 要素を含むランク 4 の短いベクター。
 
-##  <a name="gather_blue"></a> gather_blue
+## <a name="gather_blue"></a>gather_blue
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。
 
-```
+```cpp
 const gather_return_type gather_blue(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -257,11 +257,11 @@ const gather_return_type gather_blue(
 
 4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。
 
-##  <a name="gather_alpha"></a> gather_alpha
+## <a name="gather_alpha"></a>gather_alpha
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。
 
-```
+```cpp
 const gather_return_type gather_alpha(
     const sampler& _Sampler,
     const coordinates_type& _Coord) const restrict(amp);
@@ -288,11 +288,11 @@ const gather_return_type gather_alpha(
 
 4 つのサンプリングされたテクセル値のアルファ (w) 要素を含むランク 4 の短いベクター。
 
-##  <a name="get"></a> 取得
+## <a name="get"></a>取得
 
 指定したインデックス位置にある要素の値を取得します。
 
-```
+```cpp
 const value_type get(
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -313,11 +313,11 @@ value_type get(
 
 要素の値。
 
-##  <a name="operator_eq"></a> 演算子 =
+## <a name="operator_eq"></a>operator =
 
 指定された `texture_view` と同じテクスチャのビューをこの `texture_view` インスタンスに割り当てます。
 
-```
+```cpp
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor
     const texture_view<value_type, _Rank>& _Other) restrict(amp, cpu);
 
@@ -331,19 +331,19 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="parameters"></a>パラメーター
 
 *_Other*<br/>
-[1, 2]書き込み可能なコピー コンス トラクター`texture_view`オブジェクト。
+[1, 2]書き込み可能な `texture_view` オブジェクトをコンストラクターにコピーします。
 
-[書き込み不可を 3] コピー コンス トラクター`texture_view`オブジェクト。
+[3] コピーコンストラクターが書き込み可能でない `texture_view` オブジェクトをコピーします。
 
 ### <a name="return-value"></a>戻り値
 
 この `texture_view` インスタンスへの参照。
 
-##  <a name="operator_at"></a> operator[]
+## <a name="operator_at"></a>演算子 []
 
 インデックスごとの要素の値を返します。
 
-```
+```cpp
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
 
 const value_type operator[] (int _I0) const restrict(amp);
@@ -365,11 +365,11 @@ value_type operator[] (int _I0) const restrict(amp);
 
 `_Index` でインデックス付けされている要素の値。
 
-##  <a name="operator_call"></a> operator()
+## <a name="operator_call"></a>operator ()
 
 インデックスごとの要素の値を返します。
 
-```
+```cpp
 const value_type operator() (
     const index<_Rank>& _Index) const restrict(amp);
 
@@ -418,11 +418,11 @@ value_type operator() (
 
 `_Index` でインデックス付けされている要素の値。
 
-##  <a name="sample"></a> サンプル
+## <a name="sample"></a>サンプル
 
 指定されたサンプリング構成を使用して詳細な指定された座標およびレベルでテクスチャをサンプリングします。
 
-```
+```cpp
 value_type sample(
     const sampler& _Sampler,
     const coordinates_type& _Coord,
@@ -458,11 +458,11 @@ texture_view をサンプリングするために使用するサンプラー構�
 
 補間されたサンプル値。
 
-##  <a name="set"></a> 設定
+## <a name="set"></a>一連
 
 指定したインデックス位置にある要素の値を指定した値に設定します。
 
-```
+```cpp
 void set(
     const index<_Rank>& _Index,
     const value_type& value) const restrict(amp);
@@ -476,14 +476,14 @@ void set(
 *value*<br/>
 要素を設定する値。
 
-##  <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 texture_view の要素の値型です。
 
-```
+```cpp
 typedef typename const value_type value_type;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

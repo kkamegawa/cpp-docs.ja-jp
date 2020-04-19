@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323753"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager クラス
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in]ツールヒントの親です。
 
-*%n タイプ*<br/>
+*nType*<br/>
 [in]ツールヒントの型。
 
 ### <a name="return-value"></a>戻り値
@@ -124,7 +124,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 このメソッドの各呼び出し[CToolTipCtrl クラス](../../mfc/reference/ctooltipctrl-class.md)によって作成された[CTooltipManager::CreateToolTip](#createtooltip)します。 親コントロールからこのメソッドを呼び出す必要があります、`OnDestroy`ハンドラー。 これは、framework からヒントを正しく削除に必要です。 このメソッドは、設定*pToolTip*を返す前に NULL にします。
 
-##  <a name="settooltipparams"></a>  :Settooltipparams
+##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
 
 指定した種類の Windows コントロールのツールヒント コントロールの外観をカスタマイズします。
 
@@ -156,7 +156,7 @@ void SetTooltipParams(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラス。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
+次の例では、使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラス。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
@@ -181,7 +181,7 @@ static void SetTooltipText(
 *pToolTip*<br/>
 [入力、出力]テキストと説明を設定する対象のツールヒント コントロールへのポインター。
 
-*%n タイプ*<br/>
+*nType*<br/>
 [in]このツールヒントが関連付けられているコントロールの種類を指定します。
 
 *strText*<br/>

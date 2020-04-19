@@ -1,13 +1,13 @@
 ---
 title: tolower、_tolower、towlower、_tolower_l、_towlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _totlower
 - tolower
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: f7d017235eddb19b08353dceb332a2721e7434aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470071"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957451"
 ---
-# <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
+# <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
 
 文字を小文字に変換します。
 
@@ -86,13 +89,13 @@ int _towlower_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンのコピーを変換*c*を小文字の場合は、変換が可能であり、結果を返します。 エラーを示す戻り値は予約されていません。
+これらの各ルーチンは、変換が可能な場合は*c*のコピーを小文字に変換し、結果を返します。 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各ルーチンは、変換が可能で適切な場合に、指定した大文字を適宜小文字に変換します。 大文字/小文字変換**towlower**ロケールに固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 せず、関数、 **_l**サフィックスを使用して、現在設定されているロケール。 これらの関数がのバージョン、 **_l**サフィックス ロケールをパラメーターとして受け取って現在設定されているのではなく使用するロケール。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各ルーチンは、変換が可能で適切な場合に、指定した大文字を適宜小文字に変換します。 **Towlower**の大文字と小文字の変換は、ロケール固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 **_L**サフィックスが付いていない関数は、現在設定されているロケールを使用します。 **_L**サフィックスを持つこれらの関数のバージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-順序で **_tolower**予想どおりの結果を[_ _isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)がどちらも返す 0 以外の値。
+**_Tolower**が予期した結果を得るためには、 [__ isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)の両方が0以外の値を返す必要があります。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -102,7 +105,7 @@ int _towlower_l(
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**と **_towlower_l**ロケールの依存関係はありません。 して直接呼び出すためのものではありません。 による内部使用に提供されます **_totlower_l**します。
+> **_l**と **_towlower_l**はロケールに依存せず、直接呼び出すためのものではありません。 これらは、 **_l**で内部使用するために用意されています。
 
 ## <a name="requirements"></a>必要条件
 

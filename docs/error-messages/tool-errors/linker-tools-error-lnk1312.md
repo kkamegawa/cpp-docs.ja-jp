@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: 49fa7e7963d6bb561e1602b58fe1f26c5f3d54bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436232"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990905"
 ---
 # <a name="linker-tools-error-lnk1312"></a>リンカ ツール エラー LNK1312
 
-無効または壊れたファイル: アセンブリをインポートできません。
+ファイルが無効であるか壊れています: アセンブリをインポートできません
 
-アセンブリ、モジュールまたはアセンブリでコンパイルされた以外のファイルを作成するときに **/clr**に渡された、 **/ASSEMBLYMODULE**リンカー オプション。  オブジェクト ファイルが渡された場合 **/ASSEMBLYMODULE**、のみ、オブジェクトに直接渡す、リンカーの代わりを **/ASSEMBLYMODULE**します。
+アセンブリをビルドするときに、 **/clr**でコンパイルされたモジュールまたはアセンブリ以外のファイルが、 **/assemblymodule**リンカーオプションに渡されました。  オブジェクトファイルを **/Dns モジュール**に渡した場合は、 **/assemblymodule**ではなく、直接リンカーにオブジェクトを渡します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、.obj ファイルを作成します。
+次の例では、.obj ファイルを作成しました。
 
-```
+```cpp
 // LNK1312.cpp
 // compile with: /clr /LD
 public ref class A {
@@ -32,11 +32,11 @@ public:
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、LNK1312 が生成されます。
 
-```
+```cpp
 // LNK1312_b.cpp
 // compile with: /clr /LD /link /assemblymodule:LNK1312.obj
 // LNK1312 error expected

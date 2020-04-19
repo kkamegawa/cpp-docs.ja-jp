@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630517"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447986"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible クラス
 
@@ -26,14 +26,14 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*T*は自明なコピー コンス トラクターを持つ、それ以外の場合は false を保持するクラスです。
+型*T*が自明なコピーコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラスのコピー コンス トラクター *T*は暗黙的に宣言しても、クラスに自明*T* 、仮想関数または仮想基底クラス、すべての直接基本クラスのない*T*が自明なコピー コンス トラクターは、クラス型のすべての非静的データ メンバーのクラスに自明なコピー コンス トラクターがあるし、クラスの型配列のすべての非静的データ メンバーのクラスが自明なコピー コンス トラクターを持ちます。
+クラス*t*のコピーコンストラクターは、暗黙的に宣言されている場合は単純です *。クラス t*には仮想関数も仮想基底もありません。クラス*t*のすべての直接基底に自明なコピーコンストラクター、すべての非静的データメンバーのクラスが含まれます。クラス型のに自明なコピーコンストラクターがあり、クラスの型配列のすべての非静的データメンバーのクラスに自明なコピーコンストラクターが含まれています。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,4 +43,4 @@ struct is_trivially_copy_constructible;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

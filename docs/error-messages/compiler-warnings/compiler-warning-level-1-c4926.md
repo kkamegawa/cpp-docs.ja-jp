@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4926
 ms.assetid: 5717fce0-146f-4ef2-bde0-e9a01c0922d1
-ms.openlocfilehash: 839d0b8ffad947e7031ca618b255588f54b82770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a68e251209cb9664552b4324de108f2cf7ce3f37
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634903"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050212"
 ---
 # <a name="compiler-warning-level-1-c4926"></a>コンパイラの警告 (レベル 1) C4926
 
@@ -21,7 +21,7 @@ ms.locfileid: "50634903"
 
 次の例では C4926 警告が生成されます。
 
-```
+```cpp
 // C4926.cpp
 // compile with: /W1
 [module(name="MyLib")];

@@ -1,9 +1,9 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - _set_abort_behavior
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_abort_behavior
 - set_abort_behavior
@@ -23,19 +26,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a63d4e77a91dafa4500d5fef8e9b5e94ee28cfbd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643054"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948667"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 プログラムが異常終了した場合に実行するアクションを指定します。
 
 > [!NOTE]
-> 使用しないでください、[中止](abort.md)関数をテストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンします。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
+> テストシナリオまたはデバッグシナリオ以外では、 [abort](abort.md)関数を使用して Microsoft Store アプリをシャットダウンしないでください。 プログラムまたは UI がストアアプリを閉じる方法は、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)によっては許可されていません。 詳細については、「 [UWP アプリのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -49,10 +52,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>パラメーター
 
 *flags*<br/>
-新しい値、[中止](abort.md)フラグ。
+[中止](abort.md)フラグの新しい値。
 
-*マスク*<br/>
-マスク、[中止](abort.md)フラグのビットを設定します。
+*隠す*<br/>
+設定する[abort](abort.md)フラグビットのマスク。
 
 ## <a name="return-value"></a>戻り値
 
@@ -60,7 +63,7 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>Remarks
 
-2 つ[中止](abort.md)フラグ: **_WRITE_ABORT_MSG**と **_CALL_REPORTFAULT**します。 **_WRITE_ABORT_MSG**プログラムが異常終了したときに、テキスト メッセージが印刷されるかどうかを決定します。 メッセージは、アプリケーションが呼び出されていることを示す、[中止](abort.md)関数。 既定の動作はメッセージを表示することです。 **_CALL_REPORTFAULT**場合は、設定、報告されたときにワトソン クラッシュ ダンプが生成されることを指定します[中止](abort.md)が呼び出されます。 既定では、クラッシュ ダンプのレポートは、非デバッグ ビルドで有効になっています。
+[Abort](abort.md)フラグには **、次の**2 つのフラグがあります。 プログラムが異常終了したときに、役に立つテキストメッセージを出力するかどうか**を指定します。 (_d** ) このメッセージは、アプリケーションが[abort](abort.md)関数を呼び出したことを示しています。 既定の動作はメッセージを表示することです。 設定した場合は、Watson クラッシュダンプが生成され、 [abort](abort.md)が呼び出されたときに報告されます。 ( **_d)** 既定では、クラッシュ ダンプのレポートは、非デバッグ ビルドで有効になっています。
 
 ## <a name="requirements"></a>必要条件
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 806ed86076d8b27662bcd9a328d43cabf5df5c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fddd4b3af6155d0663b9c01edfab4fcf4a60426
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260988"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 構造体
 
@@ -50,7 +50,7 @@ struct _ATL_BASE_MODULE70 {
 オペレーティング システムのバージョン情報。 ATL で内部的に使用
 
 `dwAtlBuildVer`<br/>
-ATL のバージョンが格納されます。 現在は 0x0700 です。
+ATL のバージョンが格納されます。 Currently 0x0700.
 
 `pguidVer`<br/>
 ATL の内部の GUID です。
@@ -72,4 +72,3 @@ ATL が対応であるすべてのリソース インスタンス内のリソー
 ## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../../atl/reference/atl-classes.md)
-

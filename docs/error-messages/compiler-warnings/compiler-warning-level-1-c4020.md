@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4020
 ms.assetid: 8c4cd6be-9371-4c8c-b0ff-a5ad367bbab0
-ms.openlocfilehash: 75148c210ddd2a611061d58c036d12c084f442cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccab8eaac42932491fc8b88cd28f2d3334b2e849
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482031"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626318"
 ---
 # <a name="compiler-warning-level-1-c4020"></a>コンパイラの警告 (レベル 1) C4020
 
-'function': 実引数が多すぎます
+' function ': 実引数が多すぎます。
 
-関数呼び出しで指定された実引数の数は、関数プロトタイプまたは定義の仮引数の数を超えています。 コンパイラは、関数の呼び出し規約に従って実際の余分なパラメーターを渡します。
+関数呼び出しの実際のパラメーターの数が、関数プロトタイプまたは定義内の仮引数の数を超えています。 コンパイラは、関数の呼び出し規則に従って、余分な実際のパラメーターを渡します。
 
 次の例では、C4020 が生成されます。
 
-```
+```c
 // C4020.c
 // compile with: /W1 /c
 void f(int);
@@ -32,7 +32,7 @@ int main() {
 
 考えられる解決方法:
 
-```
+```c
 // C4020b.c
 // compile with: /c
 void f(int);

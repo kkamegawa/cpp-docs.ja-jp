@@ -4,88 +4,88 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639347"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837375"
 ---
 # <a name="clr-restrictions"></a>/clr の制約
 
-使用には、次の制限に注意してください **/clr**:
+**/clr** の使用に関する次の制限事項に注意してください。
 
-- 構造化例外ハンドラーでは、使用に関する制限事項`_alloca`でコンパイルするときに **/clr**します。 詳細については、次を参照してください。 [_alloca](../../c-runtime-library/reference/alloca.md)します。
+- 構造化例外ハンドラーでは、 **/clr** でコンパイルする際の `_alloca` の使用に関する制限事項があります。 詳細については、「[_alloca](../../c-runtime-library/reference/alloca.md)」を参照してください。
 
-- 実行時エラー チェックの使用に無効な **/clr**します。 詳細については、「[How to: Use Native Run-Time Checks (方法: ネイティブ ランタイム チェックを使用する)](/visualstudio/debugger/how-to-use-native-run-time-checks)」をご覧ください。
+- **/clr** では実行時エラー チェックは使用できません。 詳細については、「[方法 :ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)」を参照してください。
 
-- ときに **/clr**はのみに C++ の標準構文を使用するプログラムをコンパイルするために使用、インライン アセンブリの使用に次のガイドラインが適用されます。
+- **/clr** を使用して、標準の C++ 構文のみを使用するプログラムをコンパイルする場合は、インライン アセンブリの使用に次のガイドラインが適用されます。
 
-  - インライン アセンブリ コード、ネイティブ スタック レイアウトの知識を前提としていますが、呼び出し規則は、現在の関数、またはコンピューターに関するその他の低レベルの情報の外部ではエラーに関する知識は、マネージ関数のスタック フレームに適用されます。 せずにコンパイルされた個別のモジュール内に置かれた場合、アンマネージ関数は、インライン アセンブラー コードを含む関数が生成される **/clr**します。
+  - ネイティブ スタック レイアウト、現在の関数の外部の呼び出し規則、またはコンピューターに関するその他の低レベルの情報に関する知識を想定しているインライン アセンブリ コードは、その知識がマネージド関数のスタック フレームに適用される場合、エラーになる可能性があります。 インライン アセンブラー コードを含む関数は、 **/clr** なしでコンパイルされた別個のモジュール内に配置された場合と同様に、アンマネージド関数として生成されます。
 
-  - コピーで構築される関数のパラメーターを渡す関数内でインライン アセンブリ コードがサポートされていません。
+  - コピーで構築された関数のパラメーターを渡す関数内のインライン アセンブリ コードはサポートされていません。
 
-- [Vprintf 系関数](../../c-runtime-library/vprintf-functions.md)でコンパイルされたプログラムから呼び出すことができません **/clr**します。
+- **/clr** でコンパイルされたプログラムから [Vprintf 系関数](../../c-runtime-library/vprintf-functions.md)を呼び出すことはできません。
 
-- [Naked](../../cpp/naked-cpp.md) [_ _declspec](../../cpp/declspec.md)修飾子は/clr で無視されます。
+- /clr では [naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) 修飾子は無視されます。
 
-- 変換関数を設定[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)は、アンマネージ コードでキャッチのみに影響します。 参照してください[例外処理](../../windows/exception-handling-cpp-component-extensions.md)詳細についてはします。
+- [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) で設定された変換関数は、アンマネージド コード内のキャッチにのみ影響を与えます。 詳細については、「[例外処理](../../extensions/exception-handling-cpp-component-extensions.md)」を参照してください。
 
-- 関数ポインターの比較が下で許可されていない **/clr**します。
+- **/clr** では、関数ポインターの比較は許可されません。
 
-- 完全にプロトタイプ宣言されていない関数の使用が許可されていません **/clr**します。
+- **/clr** では、完全なプロトタイプ関数以外の関数は使用できません。
 
-- 次のコンパイラ オプションはサポートされていません **/clr**:
+- **/clr** では、次のコンパイラ オプションはサポートされていません。
 
-  - **/EHsc**と **/EHs** (**/clr**意味 **/EHa** (を参照してください[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md))
+  - **/EHsc** と **/EHs** ( **/clr** は **/EHa** を意味します) (「[/EH (例外処理モデル)](eh-exception-handling-model.md)」を参照)
 
-  - **/fp: 厳密な**と **/fp: 除く**(を参照してください[/fp (浮動小数点の動作の指定)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/fp:strict** と **/fp:except** (「[/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md)」を参照)
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- 組み合わせ、`_STATIC_CPPLIB`プリプロセッサの定義 (`/D_STATIC_CPPLIB`) および **/clr**コンパイラ オプションはサポートされていません。 これは、定義は、静的なマルチ スレッド C++ 標準ライブラリ、サポートされていないとリンクするアプリケーションになるためです。 詳細については、次を参照してください。、 [/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)トピック。
+- `_STATIC_CPPLIB` プリプロセッサの定義 (`/D_STATIC_CPPLIB`) と **/clr** コンパイラ オプションの組み合わせはサポートされていません。 この定義により、アプリケーションが、サポートされていない静的なマルチスレッド C++ 標準ライブラリとリンクされるためです。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](md-mt-ld-use-run-time-library.md)」のトピックを参照してください。
 
-- 使用する場合 **/Zi**で **/clr**パフォーマンスに影響があります。 詳細については、次を参照してください。 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)します。
+- **/clr** で **/Zi** を使用すると、パフォーマンスに影響を与えます。 詳細については、「[/Zi](z7-zi-zi-debug-information-format.md)」を参照してください。
 
-- 指定しないルーチンを出力する .NET Framework にワイド文字を渡す[/Zc:wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)に文字をキャストしていない場合、または`__wchar_t`として表示される出力になります、`unsigned short int`します。 例えば:
+- [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md) を一緒に指定せずに、またはこの文字を `__wchar_t` にキャストせずに、ワイド文字を .NET Framework 出力ルーチンに渡すと、出力が`unsigned short int`として表示されます。 次に例を示します。
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md)でコンパイルする場合は無視されます **/clr**関数がある場合を除き、 `#pragma` [アンマネージ](../../preprocessor/managed-unmanaged.md)場合、コンパイラは生成場合は、関数は、ネイティブにコンパイルする必要があります、または警告 C4793 で、既定ではオフです。
+- 関数が `#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md) 下にない場合、または関数をネイティブにコンパイルする必要がある場合、 **/clr** でコンパイルすると [/GS](gs-buffer-security-check.md) は無視されます。この場合、コンパイラで警告 C4793 が生成され、これは既定ではオフになります。
 
-- 参照してください[/ENTRY](../../build/reference/entry-entry-point-symbol.md)のマネージ アプリケーションの関数署名要件。
+- マネージド アプリケーションの関数シグネチャ要件については、「[/ENTRY](entry-entry-point-symbol.md)」を参照してください。
 
-- コンパイルされたアプリケーション **/openmp**と **/clr** 1 つの appdomain のプロセスでのみ実行できます。  参照してください[/openmp (OpenMP 2.0 サポートの有効化)](../../build/reference/openmp-enable-openmp-2-0-support.md)詳細についてはします。
+- **/openmp** と **/clr** でコンパイルされたアプリケーションは、1 つの AppDomain プロセスでのみ実行できます。  詳細については、「[/openmp (OpenMP 2.0 サポートの有効化)](openmp-enable-openmp-2-0-support.md)」を参照してください。
 
-- ネイティブ関数としては、可変個の引数 (vararg) を受け取る関数が生成されます。 可変個引数の位置に任意のマネージ データ型は、ネイティブ型にマーシャ リングされます。 なお<xref:System.String?displayProperty=fullName>型は、実際にはワイド文字の文字列が、それらが 1 バイト文字の文字列をマーシャ リングします。 したがって、printf 関数指定子が %S (wchar_t *) の場合にマーシャ リング %s 文字列に代わりにします。
+- 可変個引数 (vararg) を受け取る関数は、ネイティブ関数として生成されます。 可変個引数の位置にあるすべてのマネージド データ型は、ネイティブ型にマーシャリングされます。 <xref:System.String?displayProperty=fullName> 型は、実際にはワイド文字の文字列ですが、1 バイト文字の文字列にマーシャリングされます。 したがって、printf 指定子が %S (wchar_t*) である場合、代わりに %s 文字列にマーシャリングされます。
 
-- コンパイルするときに予期しない結果が取得 va_arg マクロを使用して、 **/clr: 純粋な**します。 詳細については、次を参照してください。 [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)します。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。 「純粋」または「安全」にする必要があるコードを移植する必要があるC#します。
+- va_arg マクロを使用する場合、 **/clr:pure** でコンパイルすると予期しない結果が生じる可能性があります。 詳細については、「[va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)」を参照してください。 **/clr:pure** および **/clr:safe** コンパイラ オプションは Visual Studio 2015 では非推奨とされており、Visual Studio 2017 以降ではサポートされていません。 "純粋" または "安全" でなければならないコードは C# に移植する必要があります。
 
-- 呼び出す必要はありません、マネージ コード、パラメーター情報 (関数の引数) を取得するスタック ウォークをすべての関数からP/invoke レイヤーには、スタックをさらにその情報が原因です。  たとえば、プロキシ/スタブをコンパイルできない **/clr**します。
+- マネージド コードから、パラメーター情報 (関数の引数) を取得するためにスタックを調べる関数を呼び出さないでください。P/invoke レイヤーにより、その情報がスタック内のさらに下位に移動します。  たとえば、 **/clr** でプロキシ/スタブをコンパイルしないでください。
 
-- 関数は可能であれば、マネージ コードにコンパイルされますが、すべての C++ 構造体をマネージ コードに変換できます。  関数ごとに決定されます。 関数の任意の部分は、マネージ コードに変換できない場合関数全体が変換をネイティブ コードに代わりにします。 次の場合は、コンパイラがマネージ コードを生成するようにします。
+- 関数は、可能な限りマネージド コードにコンパイルされますが、すべての C++ コンストラクトをマネージド コードに変換できるわけではありません。  この判断は関数ごとに行われます。 関数のいずれかの部分をマネージド コードに変換できない場合は、代わりに関数全体がネイティブ コードに変換されます。 次の場合は、コンパイラでマネージド コードが生成されません。
 
-  - コンパイラによって生成されたサンクまたはヘルパー関数。 仮想関数の呼び出しなど、関数ポインターを通じて関数呼び出しでは、ネイティブのサンクが生成されます。
+  - コンパイラによって生成されたサンクまたはヘルパー関数。 仮想関数呼び出しなど、関数ポインターを介したすべての関数呼び出しで、ネイティブ サンクが生成されます。
 
-  - 関数を呼び出す`setjmp`または`longjmp`します。
+  - `setjmp` または `longjmp` を呼び出す関数。
 
-  - 特定の組み込みルーチンを使用して、マシンのリソースを直接操作する関数。 使用例:`__enable`と`__disable`、`_ReturnAddress`と`_AddressOfReturnAddress`、マルチ メディアの組み込み関数は、ネイティブ コードですべての結果。
+  - 特定の組み込みルーチンを使用して、マシン リソースを直接操作する関数。 たとえば、`__enable` と `__disable`、`_ReturnAddress` と `_AddressOfReturnAddress`、またはマルチメディアの組み込み関数を使用すると、すべてネイティブ コードになります。
 
-  - その次の関数、`#pragma unmanaged`ディレクティブ。 (なお、逆`#pragma managed`もサポートされています)。
+  - `#pragma unmanaged` ディレクティブに続く関数  (なお、逆の `#pragma managed` もサポートされています)。
 
-  - 関数への参照を含む配置の種類は、型宣言を使用して`__declspec(align(...))`します。
+  - 配列型 (`__declspec(align(...))` を使用して宣言された型) への参照を含む関数。
 
 ## <a name="see-also"></a>関連項目
 
-- [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)

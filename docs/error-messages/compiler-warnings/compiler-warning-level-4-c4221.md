@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: f552a5d76d1a778cdf72cbe079138f609350ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa87c240472df2926753781f0f14cbd69752de00
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511242"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541927"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>コンパイラの警告 (レベル 4) C4221
 
-使用される標準の拡張機能: 'identifier': 自動変数のアドレスを使用して初期化することはできません
+非標準の拡張機能が使用されています: ' identifier ': 自動変数のアドレスを使用して初期化することはできません
 
-既定の Microsoft 拡張子 (/Ze) を持つ集約型を初期化することができます (**配列**、 `struct`、または**共用体**) (自動) のローカル変数のアドレスを使用します。
+既定の Microsoft 拡張機能 (/Ze) を使用すると、ローカル (自動) 変数のアドレスを使用して集計の種類 (**配列**、`struct`、または**共用体**) を初期化できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // C4221.c
 // compile with: /W4
 struct S
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-このような初期化が有効で ANSI 互換でない ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+このような初期化は、ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) では無効です。

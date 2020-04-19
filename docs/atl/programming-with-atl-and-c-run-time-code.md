@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-ms.openlocfilehash: a14f8155545666df7ec64b15072258163f559266
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e44f2d944d64eb4eefc7bbd543eaaaa04c8a9de
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62249666"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>ATL および C ランタイム コードによるプログラミング
 
@@ -40,4 +40,3 @@ C ランタイム ライブラリを構成するさまざまな .lib ファイ�
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

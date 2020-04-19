@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2768
+title: コンパイラエラー C2768
 ms.date: 11/04/2016
 f1_keywords:
 - C2768
 helpviewer_keywords:
 - C2768
 ms.assetid: a7f6047a-6a80-4737-ad5c-c12868639fb5
-ms.openlocfilehash: 9c0fb8fb0a98830aaf061ba980e7bdd7903f25e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc801bb5802598e936d577f08729214bb7e13a1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626175"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759790"
 ---
-# <a name="compiler-error-c2768"></a>コンパイラ エラー C2768
+# <a name="compiler-error-c2768"></a>コンパイラエラー C2768
 
-'function': 明示的なテンプレート引数の不正な使用
+' function ': 明示的なテンプレート引数が不適切に使用しています
 
-コンパイラは関数の定義が、関数テンプレートの明示的な特殊化になる場合、または関数の定義が、新しい関数になる場合を判断できませんでした。
+コンパイラは、関数定義が関数テンプレートの明示的な特殊化であることが想定されていたか、または関数定義が新しい関数に対して想定されているかどうかを判断できませんでした。
 
-このエラーは、Visual Studio .NET 2003 でコンパイラ準拠の機能強化の一部として導入されました。
+このエラーは、コンパイラ準拠の強化の一環として、Visual Studio .NET 2003 で導入されました。
 
 次の例では、C2768 が生成されます。
 
-```
+```cpp
 // C2768.cpp
 template<typename T>
 void f(T) {}

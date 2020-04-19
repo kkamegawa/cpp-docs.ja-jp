@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-ms.openlocfilehash: 87e216f1959a7c169673822ffa7041ed511817d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308072"
 ---
 # <a name="serializing-data-to-and-from-files"></a>データのファイルへのシリアル化
 
@@ -48,4 +48,3 @@ MFC アプリケーション ウィザードは配置のスケルトンのオー
 ## <a name="see-also"></a>関連項目
 
 [ドキュメントの使い方](../mfc/using-documents.md)
-

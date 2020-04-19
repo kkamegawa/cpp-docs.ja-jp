@@ -9,34 +9,33 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-ms.openlocfilehash: c4b2a9b295997c809acf9b037cd5f124f0752c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8644fc087d7f0a651724c40d2868e96c9b6ec96a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439378"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491821"
 ---
 # <a name="atl-connection-point-classes"></a>ATL 接続ポイント クラス
 
-ATL 接続ポイントをサポートするために、次のクラスを使用します。
+ATL では、次のクラスを使用して接続ポイントをサポートします。
 
-- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)接続ポイントを実装します。 表すアウトゴーイング インターフェイスの IID は、テンプレート パラメーターとして渡されます。
+- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)は接続ポイントを実装します。 それが表す送信インターフェイスの IID は、テンプレートパラメーターとして渡されます。
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md)接続ポイント コンテナーを実装およびの一覧を管理`IConnectionPointImpl`オブジェクト。
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md)は、接続ポイントコンテナーを実装し、オブジェクト`IConnectionPointImpl`の一覧を管理します。
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)を表す接続ポイントを実装して、 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス。
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)は、 [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイスを表す接続ポイントを実装します。
 
-- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md)任意の数の接続ポイントとそのシンク間の接続を管理します。
+- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md)は、コネクションポイントとシンクの間の任意の数の接続を管理します。
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md)テンプレート パラメーターで指定された接続の定義済みの数を管理します。
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md)は、テンプレートパラメーターで指定された数の接続を管理します。
 
-- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md)オブジェクトのプロパティが変更されたかを変更するには、クライアントのシンクに通知します。
+- [C焼討 Propnotifyevent](../atl/reference/cfirepropnotifyevent-class.md)は、オブジェクトのプロパティが変更されたか変更されようとしていることをクライアントのシンクに通知します。
 
-- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) ATL COM オブジェクトの接続ポイントのサポートを提供します。 これらの接続ポイントは、COM オブジェクトによって提供されているイベント シンク マップにマップされます。
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md)は ATL COM オブジェクトの接続ポイントのサポートを提供します。 これらのコネクションポイントは、COM オブジェクトによって提供されるイベントシンクマップにマップされます。
 
-- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)適切なハンドラー関数にイベントをルーティングするクラスでイベント シンク マップと連携します。
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)は、クラスのイベントシンクマップと組み合わせて、適切なハンドラー関数にイベントをルーティングします。
 
 ## <a name="see-also"></a>関連項目
 
 [接続ポイント](../atl/atl-connection-points.md)
-

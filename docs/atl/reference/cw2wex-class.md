@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-ms.openlocfilehash: 647d233f25f27c96eeb3281272c1542057cabd4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6d68f4f5c0f3532c39fee3f513e7b3102ec075d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277137"
 ---
 # <a name="cw2wex-class"></a>CW2WEX クラス
 
@@ -99,7 +99,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 変換するテキスト文字列。
 
 *nCodePage*<br/>

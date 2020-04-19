@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-ms.openlocfilehash: b281cbeb4670af0efd232152010fdc90795af103
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7fa989d1a3b799cf6b427e27142d4479be900bf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308187"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>OLE アプリケーションの作成手順
 
@@ -32,4 +32,3 @@ ms.locfileid: "50437350"
 [MFC アプリケーションの作成手順](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [ActiveX コントロールの作成手順](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [データベース アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-database-applications.md)
-

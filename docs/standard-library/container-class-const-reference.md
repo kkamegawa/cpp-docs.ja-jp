@@ -4,31 +4,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
-ms.openlocfilehash: 0e4ff9c1ada05dadc7efa468073406a1313af6be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3960934b075ae43db0dd14a7754fface5a8d44cf
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604270"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258212"
 ---
-# <a name="container-classconstreference"></a>コンテナー クラス::const_reference
+# <a name="container-classconst_reference"></a>コンテナー クラス::const_reference
 
 > [!NOTE]
-> このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
 
 被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
-```
-
+```cpp
 typedef T3 const_reference;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-説明されている、ここで指定されていない型のシノニムとして`T3`(通常`Alloc::const_reference`)。
+ここでは、指定されていない型 `T3` (通常 `Alloc::const_reference`) のシノニムとして記述されています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)<br/>
+[サンプル コンテナー クラス](../standard-library/sample-container-class.md)

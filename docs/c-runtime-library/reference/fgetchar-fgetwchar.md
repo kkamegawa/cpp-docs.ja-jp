@@ -1,10 +1,10 @@
 ---
 title: _fgetchar、_fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940865"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
-文字を読み取ります**stdin**します。
+**Stdin**から文字を読み取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>戻り値
 
-**\_fgetchar**として読み取られた文字を返します、 **int**返しますまたは`EOF`エラーまたはファイルの終わりを示します。 **\_fgetwchar**から制御が戻るとして、 [wint_t](../../c-runtime-library/standard-types.md)、ワイド文字を読み取る文字に対応する値または`WEOF`エラーまたはファイルの終わりを示します。 両方の関数を使用して、 **feof**または**ferror**エラーと、ファイルの終わり条件とを区別します。
+fgetchar は、読み取り文字を**int**として`EOF`返すか、エラーまたはファイルの末尾を示すを返します。  **\_** fgetwchar は、読み取られた文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返す`WEOF`か、エラーまたはファイルの末尾を示すを返します。  **\_** どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数から単一の文字を読み取る**stdin**します。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
+これらの関数は、 **stdin**から1文字を読み取ります。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**_fgetchar**と等価`fgetc( stdin )`します。 等しくも**getchar**が、関数とマクロではなく関数としてのみを実装します。 **_fgetwchar**のワイド文字バージョンは、 **_fgetchar**します。
+**_fgetchar**はと同じ`fgetc( stdin )`です。 これは**getchar**とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar**は、 **_fgetchar**のワイド文字バージョンです。
 
 これらの関数は ANSI 規格と互換性がありません。
 
@@ -75,7 +78,7 @@ wint_t _fgetwchar( void );
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル、**stdin**、 **stdout**、および**stderr**-C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

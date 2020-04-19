@@ -1,12 +1,12 @@
 ---
 title: scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
-ms.date: 11/04/2016
-apiname:
+ms.date: 03/26/2019
+api_name:
 - wscanf_s
 - _wscanf_s_l
 - scanf_s
 - _scanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wscanf_s
 - _tscanf_s_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528613"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948877"
 ---
-# <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
+# <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
 標準入力ストリームから書式付きデータを読み取ります。 これらのバージョンの [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md) は、「[CRT のセキュリティ強化](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
@@ -89,51 +92,51 @@ int _wscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換され、代入されたフィールドの数を返します。この数には、読み取られても代入されなかったフィールドは含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は**EOF**エラー、またはファイルの終端文字または文字列の終端文字が文字を読み取るには、最初の試行で発生した場合。 場合*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**scanf_s**と**wscanf_s**返す**EOF**設定と**errno**に**EINVAL**.
+正常に変換されて割り当てられたフィールドの数を返します。 戻り値には、読み取られたが割り当てられていないフィールドは含まれません。 戻り値が0の場合は、フィールドが割り当てられていないことを示します。 戻り値は、エラーの場合は**EOF** 、ファイルの終端文字または文字列の末尾の文字が最初に文字を読み取ろうとしたときに見つかった場合はです。 *Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **scanf_s**と**wscanf_s**は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Scanf_s**関数は、標準入力ストリームからデータを読み取る**stdin**で指定された場所にデータを書き込みます*引数*します。 各*引数*に型指定子に対応する型の変数へのポインターである必要があります*形式*します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Scanf_s**関数は、標準入力ストリーム ( **stdin**) からデータを読み取り、それを*引数*に書き込みます。 各*引数*は、*形式*の型指定子に対応する変数型へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**wscanf_s**のワイド文字バージョンです**scanf_s**、*形式*引数**wscanf_s**はワイド文字列です。 **wscanf_s**と**scanf_s**ストリームが ANSI モードで開かれている場合の動作は同じです。 **scanf_s** UNICODE ストリームからの入力を現在サポートされていません。
+**wscanf_s**は、 **scanf_s**のワイド文字バージョンです。**wscanf_s**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wscanf_s**と**scanf_s**は同じように動作します。 **scanf_s**は、現在 UNICODE ストリームからの入力をサポートしていません。
 
-これらの関数がのバージョン、 **_l**現在のスレッド ロケールの代わりに渡されるロケール パラメーターを使用することを除き、サフィックスは同じです。
+**_L**サフィックスが付いているこれらの関数のバージョンは、現在のスレッドロケールの代わりに*locale*パラメーターを使用する点を除いて同じです。
 
-異なり**scanf**と**wscanf**、 **scanf_s**と**wscanf_s**バッファー サイズをすべての種類の入力パラメーターを指定する必要があります**c**、 **C**、 **s**、 **S**、または文字列コントロール セットで囲まれた **:operator[]** します。 バッファー サイズ (文字単位) は、バッファーまたは変数のポインターの直後に追加パラメーターとして渡されます。 たとえば、文字列を読み込む場合、その文字列のバッファー サイズは次のように渡されます。
+**Scanf**と**wscanf**とは異なり、 **scanf_s**と**wscanf_s**では、一部のパラメーターに対してバッファーサイズを指定する必要があります。 すべての**c**、 **c**、 **s**、 **s**、または文字列コントロールセットの **[]** パラメーターのサイズを指定します。 文字単位のバッファーサイズは、追加のパラメーターとして渡されます。 バッファーまたは変数へのポインターの直後に続きます。 たとえば、文字列を読み取る場合、その文字列のバッファーサイズは次のように渡されます。
 
 ```C
 char s[10];
 scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specification is 9
 ```
 
-バッファー サイズには、終端 null も含まれます。 幅指定フィールドを使用して、読み取られたトークンがバッファーに確実に収まるようにすることができます。 幅指定フィールドが使用されない場合で、読み取られたトークンがバッファーに収まらない場合、そのバッファーには何も書き込まれません。
+バッファーサイズには、ターミナルの null が含まれます。 [幅指定] フィールドを使用して、読み取られたトークンがバッファーに確実に収まるようにすることができます。 トークンが大きすぎて収まりきらない場合、幅指定がない限り、バッファーには何も書き込まれません。
 
 > [!NOTE]
-> 型のサイズのパラメーターが**符号なし**ではなく、 **size_t**します。 静的キャストを使用して変換を**size_t**値を**符号なし**64 ビット用の構成をビルドします。
+> Size パラメーターは、 **size_t**ではなく**unsigned**型です。 64ビットのビルド構成では、静的なキャストを使用して**size_t**値を**unsigned**に変換します。
 
-バッファー サイズ パラメーターで、バイトではなく、文字の最大数を指定する例を次に示します。 呼び出しで**wscanf_s**バッファーの種類によって示される文字の幅が、書式指定子で示される文字の幅と一致しません。
+バッファーサイズのパラメーターは、バイトではなく最大文字数を示します。 この例では、バッファーの種類の幅が書式指定子の幅と一致しません。
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-**S**書式指定子は、「反対」、関数でサポートされている既定の幅は、文字幅の使用を示します。 文字幅は 1 バイトですが、関数は 2 バイト文字をサポートしています。 この例では、最大で 9 つの 1 バイト幅文字の文字列が読み取られ、2 バイト幅文字バッファーに格納されます。 文字は 1 バイト値として処理されます。したがって、最初の 2 文字は `ws[0]` に格納され、次の 2 文字は `ws[1]` に格納され、以降も同様に処理されます。
+**S**書式指定子は、関数によってサポートされる既定の幅の "反対" の文字幅を使用することを意味します。 文字幅は1バイトですが、関数は2バイト文字をサポートします。 この例では、最大9つの1バイトワイド文字の文字列を読み取り、2バイト幅の文字バッファーに格納します。 文字は 1 バイト値として処理されます。したがって、最初の 2 文字は `ws[0]` に格納され、次の 2 文字は `ws[1]` に格納され、以降も同様に処理されます。
 
-文字の場合、次のように 1 文字読み込む場合もあります。
+この例では、1つの文字を読み取ります。
 
 ```C
 char c;
 scanf_s("%c", &c, 1);
 ```
 
-null で終わらない文字列に対して複数の文字列を読み込む場合、幅指定とバッファー サイズとして整数が使用されます。
+Null で終わらない文字列に対して複数の文字を読み取る場合、幅指定とバッファーサイズの両方に整数が使用されます。
 
 ```C
 char c[4];
-scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
+scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 ```
 
 詳細については、「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
@@ -154,7 +157,7 @@ scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
 |**scanf_s**、 **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**、 **_wscanf_s_l**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 標準ストリームは、C ランタイム関数が UWP アプリで使用できるようにするために、 **stdin**、 **stdout**、 **stderr**を処理する必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

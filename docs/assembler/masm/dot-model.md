@@ -1,60 +1,60 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: e72101d2d9cdea90b3304ccdb82e7b81fe2975d3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328548"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317631"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>.モデル (32 ビット MASM)
 
-プログラムのメモリ モデルを初期化します。
+プログラム メモリ モデルを初期化します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .モデルの memorymodel [, langtype] [、stackoption]
+> **.モデル***メモリ-model* ⟦ __、__ *language type*⟧⟦ __、__ *stack option*⟧
 
 ### <a name="parameters"></a>パラメーター
 
-*memorymodel*<br/>
-コードとデータのポインターのサイズを決定する必須パラメーターです。
+*メモリモデル*\
+コードとデータ ポインターのサイズを決定する必須パラメーターです。
 
-*langtype*<br/>
-プロシージャとパブリック シンボルの呼び出し元と名前付け規則を設定する省略可能なパラメーター。
+*言語の種類の*\
+プロシージャとパブリック シンボルの呼び出しと名前付けの規則を設定する省略可能なパラメーターです。
 
-*stackoption*<br/>
+*スタックオプション*\
 省略可能なパラメーターです。
 
-*stackoption*場合は使用されません*memorymodel*は`FLAT`します。
+*stack オプション*は *、メモリモデル*が**フラット**な場合は使用されません。
 
-指定する`NEARSTACK`スタック セグメントを 1 つの物理セグメントにグループ化 (`DGROUP`) のデータと共にします。 スタック セグメント レジスタ (`SS`) がデータ セグメントの登録と同じアドレスを保持するために使用されます (`DS`)。 `FARSTACK` スタックにはグループ化されません`DGROUP`ため`SS`と等しくない`DS`します。
+**NEARSTACK**を指定すると、スタックセグメントがデータと共に1つの物理セグメント (**dgroup**) にグループ化されます。 スタックセグメントレジスタ (**SS**) は、データセグメントレジスタ (**DS**) と同じアドレスを保持することを前提としています。 **FARSTACK**はスタックを**dgroup**でグループ化しません。そのため、 **SS**は**DS**とは等しくありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-.`MODEL` 使用されていない[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+**.モデル**は、 [x64 (ml64.exe) の MASM](masm-for-x64-ml64-exe.md)では使用されません。
 
-次の表は、16 ビットおよび 32 ビットのプラットフォームを対象とする場合に、各パラメーターの値を示します。
+次の表は、16 ビットおよび 32 ビットのプラットフォームを対象とする場合に各パラメーターで使用できる値を示しています。
 
-|パラメーター|32 ビット値|16 ビット値 (以前の 16 ビットの開発のサポート)|
+|パラメータ|32 ビットの値|16 ビットの値 (以前の 16 ビット開発のサポート)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|未使用|`NEARSTACK`, `FARSTACK`|
+|*メモリ-モデル*|**現状**|**極小**、**小**、**コンパクト**、**中**、**大**、**特大**、**フラット**|
+|*言語の種類*|**C**、 **STDCALL**|**C**、 **BASIC**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**|
+|*stack-オプション*|不使用|**NEARSTACK**、 **FARSTACK**|
 
 ## <a name="code"></a>コード
 
-MASM 関連のサンプルでは、コンパイラ、サンプルのダウンロード[Visual C のサンプルおよび関連ドキュメントを Visual Studio 2010 の](http://go.microsoft.com/fwlink/p/?linkid=178749)します。
+MASM 関連のサンプルについては、[Visual Studio 2010 向けの Visual C++ サンプルと関連ドキュメント](https://go.microsoft.com/fwlink/p/?linkid=178749)からコンパイラのサンプルをダウンロードしてください。
 
-次の例では、使用、`.MODEL`ディレクティブ。
+`.MODEL` ディレクティブの使用例を次に示します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```asm
 ; file simple.asm
@@ -88,5 +88,5 @@ end
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

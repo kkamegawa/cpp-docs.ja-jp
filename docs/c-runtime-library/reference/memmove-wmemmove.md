@@ -1,10 +1,10 @@
 ---
 title: memmove、wmemmove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memmove
 - wmemmove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memmove
 - wmemmove
@@ -24,12 +28,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 8801e43ee10f99b5c18a6b2340449da7a433aaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599863"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951773"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -59,19 +63,19 @@ wchar_t *wmemmove(
 コピー元のオブジェクト。
 
 *count*<br/>
-バイト数 (**memmove**) または文字 (**wmemmove**) にコピーします。
+コピーするバイト数 (**memmove**) または文字 (**wmemmove**)。
 
 ## <a name="return-value"></a>戻り値
 
-値*dest*します。
+*Dest*の値。
 
 ## <a name="remarks"></a>Remarks
 
-コピー*カウント*バイト (**memmove**) または文字 (**wmemmove**) から*src*に*dest*します。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
+*カウント*バイト (**memmove**) または文字 (**wmemmove**) を*src*から*dest*にコピーします。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
 
-**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**Memmove**と**wmemmove**場合、関数は廃止のみ定数 **_CRT_SECURE_DEPRECATE_MEMORY**の順序でインクルード ステートメントの前に定義されます次の例に示すように、非推奨にする関数。
+**Memmove**関数と**wmemmove**関数は、次の例のように、関数を非推奨にするために、include ステートメントの前に定数 **_CRT_SECURE_DEPRECATE_MEMORY**が定義されている場合にのみ非推奨となります。
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

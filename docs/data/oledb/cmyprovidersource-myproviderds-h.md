@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 5a3df325fbef3744fadc24cad77dd067b17c6487
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230557"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
 
@@ -178,7 +178,7 @@ struct UPROPINFO
 
 Visual C では、ユーザー定義のプロパティ セットをサポートします。 オーバーライドする必要はありません`GetProperties`または`GetPropertyInfo`します。 代わりに、テンプレートでは、任意のユーザー定義のプロパティ セットを検出し、適切なオブジェクトに追加します。
 
-初期化時に使用する必要があるユーザー定義のプロパティ セットがある場合 (つまり、コンシューマーを呼び出す前に`IDBInitialize::Initialize`)、BEGIN_PROPERTY_SET_EX マクロと共に UPROPSET_USERINIT フラグを使用してこれを指定することができます。 プロパティ セットは、これを行う (OLE DB 仕様が必要です)、データ ソース オブジェクトでなければなりません。 例えば:
+初期化時に使用する必要があるユーザー定義のプロパティ セットがある場合 (つまり、コンシューマーを呼び出す前に`IDBInitialize::Initialize`)、BEGIN_PROPERTY_SET_EX マクロと共に UPROPSET_USERINIT フラグを使用してこれを指定することができます。 プロパティ セットは、これを行う (OLE DB 仕様が必要です)、データ ソース オブジェクトでなければなりません。 例:
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)

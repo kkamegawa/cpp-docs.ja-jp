@@ -1,138 +1,146 @@
 ---
-title: プロパティ ページ (ATL) の実装
-ms.date: 11/19/2018
+title: プロパティ ページの実装 (ATL)
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492378"
 ---
-# <a name="example-implementing-a-property-page"></a>例: プロパティ ページの実装
+# <a name="example-implementing-a-property-page"></a>例:プロパティ ページの実装
 
-この例は、プロパティ ページのプロパティを表示します (および変更することができます) を作成する方法を示しています、[ドキュメント クラス](../mfc/document-classes.md)インターフェイス。
+::: moniker range="vs-2019"
 
-この例がに基づいて、[例](../visual-cpp-samples.md)します。
+ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降では使用できません。
 
-この例を完了するには、ことができます。
+::: moniker-end
 
-- [ATL プロパティ ページ クラスを追加](#vcconusing_the_atl_object_wizard)クラスの追加 ダイアログ ボックスと ATL プロパティ ページ ウィザードを使用します。
+::: moniker range="<=vs-2017"
 
-- [ダイアログ リソースの編集](#vcconediting_the_dialog_resource)の興味深いプロパティ用の新しいコントロールを追加することで、`Document`インターフェイス。
+この例では、[ドキュメント クラス](../mfc/document-classes.md) インターフェイスのプロパティを表示する (変更することもできる)プロパティ ページの作成方法を示します。
 
-- [メッセージ ハンドラーを追加する](#vcconadding_message_handlers)プロパティ ページのサイトを保持する、ユーザーが行った変更の通知。
+この例は、[ATLPages の例](../overview/visual-cpp-samples.md)をベースにしています。
 
-- いくつか追加`#import`ステートメントとの typedef、[ハウスキーピング](#vcconhousekeeping)セクション。
+この例を完了するには、以下を行います。
 
-- [オーバーライドのために](#vcconoverriding_ipropertypageimpl_setobjects)プロパティ ページに渡されるオブジェクトを検証します。
+- [クラスの追加] ダイアログ ボックスと ATL プロパティ ページ ウィザードを使用して、[Add the ATL プロパティ ページ クラスを追加します](#vcconusing_the_atl_object_wizard)。
 
-- [オーバーライドのために](#vcconoverriding_ipropertypageimpl_activate)プロパティ ページのインターフェイスを初期化します。
+- `Document` インターフェイスの関心のあるプロパティ用の新しいコントロールを追加することで、[ダイアログ リソースを編集します](#vcconediting_the_dialog_resource)。
 
-- [オーバーライド IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply)を最新のプロパティ値を持つオブジェクトを更新します。
+- ユーザーが行った変更のプロパティ ページ サイトへの通知を維持するために、[メッセージ ハンドラーを追加します](#vcconadding_message_handlers)。
 
-- [プロパティ ページを表示](#vccontesting_the_property_page)簡単なヘルパー オブジェクトを作成します。
+- いくつかの `#import` ステートメントと typedef を [ハウスキープ処理](#vcconhousekeeping)セクションに追加します。
 
-- [マクロを作成する](#vcconcreating_a_macro)プロパティ ページをテストするされます。
+- プロパティ ページに渡されるオブジェクトを検証するために [IPropertyPageImpl::SetObjects をオーバーライドします](#vcconoverriding_ipropertypageimpl_setobjects)。
+
+- プロパティ ページのインターフェイスを初期化するために [IPropertyPageImpl::Activate をオーバーライドします](#vcconoverriding_ipropertypageimpl_activate)。
+
+- オブジェクトを最新のプロパティ値で更新するために [ IPropertyPageImpl::Apply をオーバーライドします](#vcconoverride_ipropertypageimpl_apply)。
+
+- シンプルなヘルパー オブジェクトを作成することで、[プロパティ ページを表示します](#vccontesting_the_property_page)。
+
+- プロパティ ページをテストする[マクロを作成します](#vcconcreating_a_macro)。
 
 ##  <a name="vcconusing_the_atl_object_wizard"></a> ATL プロパティ ページ クラスの追加
 
-まず、という名前の DLL サーバーの新しい ATL プロジェクト作成`ATLPages7`です。 使用して、 [ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)プロパティ ページを生成します。 プロパティ ページ、**短い名前**の**DocProperties**に切り替えて、**文字列**ページを次の表に示すように、プロパティ ページ固有の項目を設定します。
+まず、`ATLPages7` という名前の DLL サーバー用の新しい ATL プロジェクトを作成します。 次に、[ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)を使用してプロパティ ページを生成します。 プロパティ ページに **DocProperties** という**短い名前**を付けた後、 **[文字列]** ページに切り替えて、次の表に示すプロパティ ページに固有の項目を設定します。
 
-|アイテム|[値]|
+|アイテム|値|
 |----------|-----------|
 |Title|TextDocument|
-|ドキュメント文字列|VCUE TextDocument プロパティ|
-|Helpfile|*\<空白 >*|
+|Doc String|VCUE TextDocument のプロパティ|
+|Helpfile|*\<空白>*|
 
-呼び出すときにそのウィザードのこのページで設定した値がプロパティ ページのコンテナーに返される`IPropertyPage::GetPageInfo`します。 コンテナーに対する依存ですが、ユーザーに、ページを識別するために使用される通常後の文字列に動作します。 タイトルが、ページ上部のタブに表示されます、通常、およびドキュメント文字列は (ただし、標準のプロパティのフレームは、この文字列をまったく使用しない)、ステータス バーまたはツールヒントに表示される可能性があります。
+このウィザード ページに設定した値は、プロパティ ページ コンテナーが `IPropertyPage::GetPageInfo` を呼び出したときに返されます。 その後の文字列の処理はコンテナーによって決まりますが、通常は、ユーザーがページを識別するために使用されます。 Title は、通常、ページ上部のタブに表示され、Doc String は、ステータス バーまたはツールヒント上に表示できます (ただし、標準プロパティ フレームではこの文字列はまったく使用されません)。
 
 > [!NOTE]
->  ここで設定した文字列は、ウィザードによって、プロジェクトでの文字列リソースとして格納されます。 ページのコードが生成された後に、この情報を変更する必要がある場合は、リソース エディターを使用してこれらの文字列を簡単に編集できます。
+>  ここで設定した文字列は、ウィザードによって、文字列リソースとしてプロジェクトに格納されます。 ページのコードが生成された後でこれらの文字列の情報を変更する必要がある場合は、リソース エディターを使用して簡単に編集できます。
 
-をクリックして**OK**ウィザードで、プロパティ ページを生成します。
+**[OK]** をクリックして、ウィザードでプロパティ ページを生成します。
 
 ##  <a name="vcconediting_the_dialog_resource"></a> ダイアログ リソースの編集
 
-プロパティ ページが生成されたら、これで、いくつかのコントロール、ページを表すダイアログ リソースを追加する必要があります。 編集ボックス、静的テキスト コントロール、およびチェック ボックスを追加し、次に示すように、その Id を設定します。
+これでプロパティ ページが生成されたので、ページを表すダイアログ リソースにいくつかのコントロールを追加する必要があります。 次に示すように、編集ボックス、静的テキスト コントロール、およびチェック ボックスを追加し、それらの ID を設定します。
 
 ![ダイアログ リソースの編集](../atl/media/ppgresourcelabeled.gif "ダイアログ リソースの編集")
 
-これらのコントロールは、ドキュメントとその読み取り専用状態のファイル名の表示に使用されます。
+これらのコントロールは、ドキュメントのファイル名とその読み取り専用状態を表示するために使用されます。
 
 > [!NOTE]
->  タブ付きファイルの場所を必要とする必要もダイアログ リソースは、フレームまたはコマンド ボタンは含まれません。 これらの機能は、呼び出すことによって作成されたものなどのプロパティ ページ フレームによって提供される[持つ](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe)します。
+>  期待に反して、ダイアログ リソースには、フレームもコマンド ボタンも含まれず、タブも表示されません。 これらの機能は、たとえば [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe) を呼び出すことで作成されるプロパティ ページ フレームによって提供されます。
 
-##  <a name="vcconadding_message_handlers"></a> メッセージ ハンドラーを追加します。
+##  <a name="vcconadding_message_handlers"></a> メッセージ ハンドラーの追加
 
-インプレース コントロールとコントロールのいずれかの値が変更されたときに、ダーティ ページの状態を更新するメッセージ ハンドラーを追加できます。
+コントロールを用意したら、いずれかのコントロールの値が変更されたダーティ状態のページを更新するためのメッセージ ハンドラーを追加できます。
 
 [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]
 
-このコードは呼び出すことで、編集コントロールまたはチェック ボックスをオンに加えられた変更に応答[IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty)ページが変更されたページのサイトに通知します。 ページのサイトを有効または無効に応答が通常、**適用**プロパティ ページ フレームのボタンをクリックします。
+このコードは、[IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) を呼び出すことで、編集コントロールまたはチェック ボックスに対して行われた変更に応答し、ページが変更されたことをページ サイトに通知します。 通常、ページ サイトは、プロパティ ページ フレームの **[適用]** ボタンを有効または無効にすることで応答します。
 
 > [!NOTE]
->  プロパティ ページには、正確にどのプロパティがユーザーによって変更されたが変更されていないプロパティの更新を回避できますを追跡する必要があります。 この例では、元のプロパティ値の追跡し、変更を適用する時間がある場合に、UI から現在の値と比較してそのコードを実装します。
+>  プロパティ ページでは、どのプロパティがユーザーによって変更されたかを正確に追跡して、変更されていないプロパティの更新を回避できるようにする必要があります。 この例では、元のプロパティの値を追跡し、変更を適用するときに、それらを UI の現在の値と比較することで、そのコードを実装しています。
 
-##  <a name="vcconhousekeeping"></a> ハウスキーピング
+##  <a name="vcconhousekeeping"></a> ハウスキープ処理
 
-いくつかの追加`#import`DocProperties.h ステートメントについて、コンパイラが認識できるように、`Document`インターフェイス。
+次に、2 つの `#import` ステートメントを DocProperties.h に追加して、コンパイラが `Document` インターフェイスを認識できるようにします。
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-参照する必要も、`IPropertyPageImpl`基本クラスは、次の追加**typedef**を`CDocProperties`クラス。
+さらに、`IPropertyPageImpl` 基底クラスを参照する必要があります。次の **typedef** を `CDocProperties` クラスに追加します。
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> ためにオーバーライドします。
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> IPropertyPageImpl::SetObjects のオーバーライド
 
-最初の`IPropertyPageImpl`メソッドをオーバーライドする必要があるは[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)します。 ここでは、1 つのオブジェクトのみが渡されたことと、サポートしていることをチェックするコードを追加します、`Document`想定しているインターフェイス。
+オーバーライドする必要がある最初の `IPropertyPageImpl` メソッドは [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects) です。 ここでは、単一のオブジェクトのみが渡されていること、および想定している `Document` インターフェイスがサポートされていることをチェックするコードを追加します。
 
 [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]
 
 > [!NOTE]
->  オブジェクトのファイル名を設定するユーザーを許可するために、このページの 1 つのオブジェクトのみをサポートするために合理的: 任意の 1 つの場所で 1 つのファイルが存在できます。
+>  このページでは、オブジェクトのファイル名の設定をユーザーに許可するため、単一のオブジェクトのみをサポートするのが合理的であり、任意の 1 つの場所には 1 つのファイルのみが存在できます。
 
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> ためにオーバーライドします。
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> IPropertyPageImpl::Activate のオーバーライド
 
-次の手順では、ページが最初に作成したときに基になるオブジェクトのプロパティ値を持つプロパティ ページを初期化します。
+次の手順は、ページの初回の作成時に、基になるオブジェクトのプロパティ値を使用してプロパティ ページを初期化することです。
 
-この場合、ページのユーザーがその変更を適用したときの比較プロパティの初期値に使用することもありますので、次のメンバーをクラスに追加する必要があります。
+ここでは、プロパティの初期値は、ページのユーザーが変更を適用したときに比較対象としても使用するため、次のメンバーをクラスに追加する必要があります。
 
 [!code-cpp[NVC_ATL_Windowing#77](../atl/codesnippet/cpp/example-implementing-a-property-page_5.h)]
 
-基本クラスの実装、[アクティブ化](../atl/reference/ipropertypageimpl-class.md#activate)メソッドは、このメソッドをオーバーライドして基底クラスを呼び出した後、独自の初期化処理を追加できるように、ダイアログ ボックスとそのコントロールの作成を担当します。
+[Activate](../atl/reference/ipropertypageimpl-class.md#activate) メソッドの基底クラスの実装がダイアログ ボックスとそのコントロールの作成を担当するため、このメソッドをオーバーライドし、基底クラスを呼び出した後で独自の初期化処理を追加できます。
 
 [!code-cpp[NVC_ATL_Windowing#78](../atl/codesnippet/cpp/example-implementing-a-property-page_6.h)]
 
-このコードの COM メソッドを使用して、`Document`に関心があるプロパティを取得するインターフェイス。 によって提供される Win32 API のラッパーを使用して、 [CDialogImpl](../atl/reference/cdialogimpl-class.md)とその基本クラスをユーザーに、プロパティの値を表示します。
+このコードでは、`Document` インターフェイスの COM メソッドを使用して、関心があるプロパティを取得します。 その後、[CDialogImpl](../atl/reference/cdialogimpl-class.md) によって提供される Win32 API ラッパーとその基底クラスを使用して、プロパティの値をユーザーに表示します。
 
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a> IPropertyPageImpl::Apply をオーバーライドします。
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> IPropertyPageImpl::Apply のオーバーライド
 
-ユーザーは、オブジェクトにその変更を適用する場合、プロパティ ページのサイトが呼び出す、[適用](../atl/reference/ipropertypageimpl-class.md#apply)メソッド。 これは、コードでの逆を行います`Activate`: 一方`Activate`オブジェクトから値を [プロパティ] ページで、コントロールにプッシュして`Apply`プロパティ ページのコントロールから値を取得し、プッシュに、オブジェクト。
+ユーザーがオブジェクトに変更を適用すると、プロパティ ページ サイトによって [Apply](../atl/reference/ipropertypageimpl-class.md#apply) メソッドが呼び出されます。 ここでは、`Activate` のコードとは逆の操作が行われます。`Activate` では、オブジェクトの値が取得されてプロパティ ページ上のコントロールにプッシュされますが、`Apply` では、プロパティ ページ上のコントロールから値が取得されてオブジェクトにプッシュされます。
 
 [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]
 
 > [!NOTE]
->  に対してチェック[方](../atl/reference/ipropertypageimpl-class.md#m_bdirty)場合に、オブジェクトの不要な更新を回避するために最初のチェックは、この実装の先頭に`Apply`1 回以上呼び出されます。 チェックの各メソッドの呼び出しで結果の変更のみことを確認するプロパティの値に対しても、`Document`します。
+>  この実装の先頭にある[m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) に対するチェックは、`Apply` が 2 回以上呼び出されたときに、オブジェクトの不必要な更新を回避するための初期チェックと同一です。 変更のみが `Document` へのメソッド呼び出しになるように、各プロパティ値に対するチェックも存在します。
 
 > [!NOTE]
-> `Document` 公開`FullName`読み取り専用プロパティとして。 プロパティ ページに加えられた変更に基づいて、ドキュメントのファイル名を更新するを使用する必要がある、`Save`メソッドを別の名前でファイルを保存します。 自体を制限するプロパティ ページのコードはありませんので、取得または設定のプロパティにします。
+> `Document` は `FullName` を読み取り専用プロパティとして公開します。 プロパティ ページに加えられた変更に基づいて、ドキュメントのファイル名を更新するには、`Save` メソッドを使用して、別の名前でファイルを保存する必要があります。 このため、プロパティ ページのコード自体をプロパティの取得または設定に制限する必要はありません。
 
-##  <a name="vccontesting_the_property_page"></a> プロパティ ページを表示します。
+##  <a name="vccontesting_the_property_page"></a> プロパティ ページの表示
 
-このページを表示するには、単純なヘルパー オブジェクトを作成する必要があります。 ヘルパー オブジェクトが簡素化するメソッドを提供、 `OleCreatePropertyFrame` 1 つのページを表示するための API が 1 つのオブジェクトに接続します。 このヘルパーは、Visual Basic から使用できるように設計されます。
+このページを表示するには、単純なヘルパー オブジェクトを作成する必要があります。 ヘルパー オブジェクトは、単一のオブジェクトに接続された単一のページを表示するための `OleCreatePropertyFrame` API を簡素化するメソッドを提供します。 このヘルパーは、Visual Basic から使用できるように設計されます。
 
-使用して、[クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md)と[ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)新しいクラスを生成して使用する`Helper`としてその短い名前。 作成されたら、次の表に示すように、メソッドを追加します。
+[[クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)と [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用して新しいクラスを作成し、その短い名前として `Helper` を使用します。 作成したら、次の表に示すように、メソッドを追加します。
 
-|アイテム|[値]|
+|アイテム|値|
 |----------|-----------|
 |メソッド名|`ShowPage`|
 |パラメーター|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
 
-*BstrCaption*パラメーターは、ダイアログ ボックスのタイトルとして表示されるキャプション。 *BstrID*パラメーターは、CLSID または ProgID プロパティ ページの表示を表す文字列。 *PUnk*パラメーターになります、`IUnknown`プロパティ ページによって構成されるプロパティを持つオブジェクトのポインター。
+*bstrCaption* パラメーターは、ダイアログ ボックスのタイトルとして表示されるキャプションです。 *bstrID* パラメーターは、CLSID または表示するプロパティ ページの ProgID を表す文字列です。 *pUnk* パラメーターは、プロパティがプロパティ ページによって構成されるオブジェクトの `IUnknown` ポインターになります。
 
 次に示すように、メソッドを実装します。
 
@@ -140,7 +148,7 @@ ms.locfileid: "52176472"
 
 ##  <a name="vcconcreating_a_macro"></a> マクロの作成
 
-プロジェクトを作成したら、プロパティ ページと、ヘルパー オブジェクトを作成して、Visual Studio 開発環境で実行する単純なマクロを使用してテストできます。 このマクロは、ヘルパーを作成オブジェクトを呼び出してその`ShowPage`メソッドの ProgID を使用して、 **DocProperties**プロパティ ページ、 `IUnknown` Visual Studio エディターで現在アクティブなドキュメントのポインター。 このマクロに必要なコードは、以下に示します。
+プロジェクトを作成したら、Visual Studio 開発環境で作成して実行できる単純なマクロを使用して、プロパティ ページとヘルパー オブジェクトをテストできます。 このマクロは、ヘルパー オブジェクトを作成した後、**DocProperties** プロパティ ページの ProgID と Visual Studio エディターで現在アクティブになっているドキュメントの `IUnknown` ポインターを使用して、`ShowPage` メソッドを呼び出します。 このマクロで必要なコードを次に示します。
 
 ```vb
 Imports EnvDTE
@@ -159,9 +167,11 @@ End Sub
 End Module
 ```
 
-このマクロを実行すると、ファイル名と現在アクティブなテキスト ドキュメントの読み取り専用の状態を示すプロパティ ページが表示されます。 ドキュメントの読み取り専用の状態は、開発環境でドキュメントに書き込む機能のみが反映されます。ディスク上のファイルの読み取り専用の属性には影響しません。
+このマクロを実行すると、ファイル名と現在アクティブなテキスト ドキュメントの読み取り専用状態を示すプロパティ ページが表示されます。 ドキュメントの読み取り専用状態は、開発環境でドキュメントに書き込むことができることを反映しているだけです。それは、ディスク上のファイルの読み取り専用属性には影響しません。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 
 [プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
-[例](../visual-cpp-samples.md)
+[ATLPages の例](../overview/visual-cpp-samples.md)

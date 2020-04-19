@@ -10,31 +10,28 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 771d3ee132e4cd63499fec886ef9f7cd06ec0260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676370"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857698"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 
-**Microsoft 固有の仕様**
-
-**_ _Based**キーワードでは、ポインター (既存のポインターからのオフセットであるポインター) に基づくポインターを宣言できます。
+**__Based**キーワードを使用すると、ポインター (既存のポインターからのオフセットであるポインター) に基づいてポインターを宣言できます。 **__Based**キーワードは Microsoft 固有です。
 
 ## <a name="syntax"></a>構文
 
 ```
-
 type __based( base ) declarator
 ```
 
 ## <a name="remarks"></a>Remarks
 
-ポインター アドレスに基づくポインターは唯一の形式では、 **_ _based** 32 ビットまたは 64 ビット コンパイルで有効なキーワード。 Microsoft の 32 ビット C/C++ コンパイラでは、based ポインターは 32 ビットのポインター ベースからの 32 ビットのオフセットになります。 同様の制限は 64 ビット環境にもあり、based ポインターは 64 ビット ベースからの 64 ビット オフセットになります。
+ポインターアドレスに基づくポインターは、32ビットまたは64ビットのコンパイルで有効な **__based**キーワードの唯一の形式です。 Microsoft の 32 ビット C/C++ コンパイラでは、based ポインターは 32 ビットのポインター ベースからの 32 ビットのオフセットになります。 同様の制限は 64 ビット環境にもあり、based ポインターは 64 ビット ベースからの 64 ビット オフセットになります。
 
-ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例えば:
+ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例:
 
 ```cpp
 // based_pointers1.cpp
@@ -49,13 +46,13 @@ struct llist_t {
 ポインター `vpBuffer` には、プログラムの後の段階で割り当てられるメモリ アドレスが代入されます。 リンク リストは `vpBuffer` の値を基準として再配置されます。
 
 > [!NOTE]
->  使用してポインターを含む識別子の永続化を行うことできますも[メモリ マップト ファイル](/windows/desktop/Memory/file-mapping)します。
+>  ポインターを含む識別子の永続化は、[メモリマップトファイル](/windows/win32/Memory/file-mapping)を使用して行うこともできます。
 
 based ポインターを逆参照する場合、ベースは、明示的に指定されているか、または宣言によって暗黙的に認識されている必要があります。
 
-以前のバージョンとの互換性のため **_based**のシノニムです **_ _based**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
+以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_based**は **__based**のシノニムになります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のコードは、ベースの変更による based ポインターの変更を示します。
 
@@ -92,7 +89,7 @@ int main() {
 11
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [alloc_text](../preprocessor/alloc-text.md)

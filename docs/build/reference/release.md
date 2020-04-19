@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /RELEASE editbin option
 - checksum setting
 ms.assetid: 183422eb-6b3c-474e-9589-04a0e69dec5d
-ms.openlocfilehash: 1fe3688de14b61ed840c29a868897a6f97ddc485
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0437e67a977512cb0ba6f327ad3d1bda0c147485
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318915"
 ---
 # <a name="release"></a>/RELEASE
 
@@ -30,4 +30,4 @@ ms.locfileid: "50677254"
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

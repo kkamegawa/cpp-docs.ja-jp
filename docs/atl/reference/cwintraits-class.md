@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276784"
 ---
 # <a name="cwintraits-class"></a>CWinTraits クラス
 
@@ -60,15 +60,15 @@ ATL では、このテンプレートをウィンドウ スタイルの一般的
 
 - `CControlWinTraits`
 
-   標準コントロール ウィンドウの設計されています。 次の標準的なスタイルを使用: WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 拡張スタイルはありません。
+   標準コントロール ウィンドウの設計されています。 次の標準的なスタイルが使用されます。WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 拡張スタイルはありません。
 
 - `CFrameWinTraits`
 
-   標準のフレーム ウィンドウの設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_APPWINDOW と WS_EX_WINDOWEDGE します。
+   標準のフレーム ウィンドウの設計されています。 使用される標準のスタイルは、次のとおりです。WS_OVERLAPPEDWINDOW、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS です。 使用する拡張スタイルは、次のとおりです。WS_EX_APPWINDOW WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   標準の MDI 子ウィンドウに設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_MDICHILD します。
+   標準の MDI 子ウィンドウに設計されています。 使用される標準のスタイルは、次のとおりです。WS_OVERLAPPEDWINDOW、WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルは、次のとおりです。WS_EX_MDICHILD します。
 
 インスタンスごとに設定するには、その他のスタイルを許容しつつ、ウィンドウ クラスのすべてのインスタンスを使用して、特定のスタイルが設定されていることを確認する場合[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)代わりにします。
 

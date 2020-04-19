@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-ms.openlocfilehash: 3f9f6df9f72608f0c1197e0602c3f54548f8efcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9be67c8148b85167d10cd53318f5ef3b41b1340
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600747"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990925"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>コンパイラの警告 (レベル 4) C4365
 
-'action': 'type_1' から 'type_2'、符号付き/符号なしの不一致への変換
+' action ': ' type_1 ' から ' type_2 ' への変換、符号付き/符号なしの不一致
 
-たとえば、符号なしの値を符号付きの値に変換しようとしました。
+たとえば、符号なしの値を符号付きの値に変換しようとしたとします。
 
-C4365 は既定で無効にします。  詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
+C4365 は既定ではオフになっています。  詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4365 が生成されます。
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)

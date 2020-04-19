@@ -1,17 +1,17 @@
 ---
-title: '方法: C++/CLI で配列を使用する'
+title: '方法: 配列を使用して、c++/cli CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387189"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>方法: C++/CLI で配列を使用する
+# <a name="how-to-use-arrays-in-ccli"></a>方法: 配列を使用して、c++/cli CLI
 
 この記事は、C + で配列を使用する方法を説明します/cli CLI。
 
@@ -503,7 +503,7 @@ int main() {
 
 標準の C++ 配列とは異なりマネージ配列は、共通の動作を継承する元となる配列の基本クラスから暗黙的に派生します。 例としては、`Sort`メソッドは、配列内の項目の並べ替えに使用できます。
 
-呼び出すことができます、基本的な組み込み型を含む配列に対して、`Sort`メソッド。 並べ替えの条件をオーバーライドしては、必要な複雑な型の配列の並べ替えを行うときにします。 この場合、配列要素の型を実装する必要があります、 [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)メソッド。
+呼び出すことができます、基本的な組み込み型を含む配列に対して、`Sort`メソッド。 並べ替えの条件をオーバーライドしては、必要な複雑な型の配列の並べ替えを行うときにします。 この場合、配列要素の型を実装する必要があります、<xref:System.IComparable.CompareTo%2A>メソッド。
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>カスタム条件を使用して配列の並べ替え
 
-基本的な組み込み型を含む配列を並べ替えるを呼び出すだけです、`Array::Sort`メソッド。 ただし、複合型を含んでいるか、既定の並べ替え条件を上書きするにはオーバーライド並べ替え配列を[IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx)メソッド。
+基本的な組み込み型を含む配列を並べ替えるを呼び出すだけです、`Array::Sort`メソッド。 ただし、複合型を含んでいるか、既定の並べ替え条件を上書きするにはオーバーライド並べ替え配列を<xref:System.IComparable.CompareTo%2A>メソッド。
 
 構造体では、次の例では、名前`Element`から派生<xref:System.IComparable>、提供に書き込まれると、<xref:System.IComparable.CompareTo%2A>並べ替え条件として 2 つの整数の平均値を使用するメソッド。
 
@@ -620,4 +620,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[配列](../windows/arrays-cpp-component-extensions.md)
+[配列](../extensions/arrays-cpp-component-extensions.md)

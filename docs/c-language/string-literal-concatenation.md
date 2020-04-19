@@ -5,12 +5,12 @@ helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: 167ebd2cf9f7f8f2f073b5de68f36aebd1a3951a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654497"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152574"
 ---
 # <a name="string-literal-concatenation"></a>文字列リテラルの連結
 
@@ -35,7 +35,7 @@ ken into two or more pieces."
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-文字列は、ソース コード内の任意の列から開始でき、長い文字列は次の行の任意の列で続行できるため、ソース コードが読みやすくなるように文字列を配置できます。 どのようにした場合も、出力時の画面上の表現は影響を受けません。 例:
+文字列は、ソース コード内の任意の列から開始でき、長い文字列は次の行の任意の列で続行できるため、ソース コードが読みやすくなるように文字列を配置できます。 どのようにした場合も、出力時の画面上の表現は影響を受けません。 次に例を示します。
 
 ```
 printf_s ( "This is the first half of the string, "
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 隣接する文字列リテラルまたは隣接するワイド文字列リテラルの任意のシーケンスで指定されたマルチバイト文字シーケンスは、変換フェーズ 6 で連結され、単一のマルチバイト文字シーケンスになります。 したがって、実行時に文字列リテラルの変更を許可するようにプログラムをデザインしないでください。 ANSI C 規格では、文字列の変更結果は未定義であると規定されています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 文字列リテラル](../c-language/c-string-literals.md)

@@ -1,9 +1,9 @@
 ---
 title: _aligned_free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627540"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939916"
 ---
-# <a name="alignedfreedbg"></a>_aligned_free_dbg
+# <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
 [_aligned_malloc](aligned-malloc.md) または [_aligned_offset_malloc](aligned-offset-malloc.md) で割り当てられたメモリ ブロックを解放します (デバッグのみ)。
 
@@ -44,13 +47,13 @@ void _aligned_free_dbg(
 ### <a name="parameters"></a>パラメーター
 
 *memblock*<br/>
-返されたメモリ ブロックへのポインター、 [_aligned_malloc](aligned-malloc.md)または[_aligned_offset_malloc](aligned-offset-malloc.md)関数。
+[_Aligned_malloc](aligned-malloc.md)または[_aligned_offset_malloc](aligned-offset-malloc.md)関数に返されたメモリブロックへのポインター。
 
 ## <a name="remarks"></a>Remarks
 
-**_Aligned_free_dbg**関数のデバッグ バージョンは、 [_aligned_free](aligned-free.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_free_dbg**への呼び出しに減少`_aligned_free`します。 両方`_aligned_free`と **_aligned_free_dbg**ベースのヒープにメモリ ブロックを解放が **_aligned_free_dbg**対応のデバッグ機能: 解放されたを保持する機能ブロックをヒープのリンク リストメモリ不足の状態をシミュレートします。
+**_Aligned_free_dbg**関数は、 [_aligned_free](aligned-free.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_free_dbg**の各呼び出しはの`_aligned_free`呼び出しに限定されます。 と`_aligned_free` **_aligned_free_dbg**はどちらもベースヒープ内のメモリブロックを解放しますが、 **_aligned_free_dbg**はデバッグ機能に対応しています。これは、解放されたブロックをヒープのリンクリストに保持してメモリ不足の状態をシミュレートする機能です。
 
-**_aligned_free_dbg**解放操作を実行する前に指定したすべてのファイルとブロックの場所の有効性チェックを実行します。 アプリケーションは、この情報を提供する必要はありません。 メモリ ブロックが解放されると、デバッグ ヒープ マネージャーはユーザー部分の前後のバッファーの整合性を自動的にチェックし、それらのバッファーが上書きされていた場合はエラー レポートを発行します。 _CRTDBG_DELAY_FREE_MEM_DF、ビット フィールドの場合、 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグが設定されて、解放されたブロックは値 0 xdd 値を入力、_FREE_BLOCK ブロックの型が割り当てられているメモリ ブロックのヒープのリンクされたリストに保持されます。
+**_aligned_free_dbg**は、無料操作を実行する前に、指定されたすべてのファイルとブロックの場所に対して有効性チェックを実行します。 アプリケーションは、この情報を提供する必要はありません。 メモリ ブロックが解放されると、デバッグ ヒープ マネージャーはユーザー部分の前後のバッファーの整合性を自動的にチェックし、それらのバッファーが上書きされていた場合はエラー レポートを発行します。 [_CrtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグの _CRTDBG_DELAY_FREE_MEM_DF ビットフィールドが設定されている場合、解放されたブロックは値0xdd を格納し、_FREE_BLOCK ブロック型が割り当てられ、ヒープのメモリブロックのリンクリストに保持されます。
 
 メモリの解放でエラーが発生すると、エラーの性質に関するオペレーティング システムからの情報が `errno` に設定されます。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366460"
 ---
 # <a name="csession-class"></a>CSession クラス
 
@@ -78,7 +78,7 @@ class CSession
 
 各プロバイダー接続 (データ ソース) で表される 1 つまたは複数のセッションを関連付けることができます、 [CDataSource](../../data/oledb/cdatasource-class.md)オブジェクト。 新たに作成する`CSession`の`CDataSource`、呼び出す[csession::open](../../data/oledb/csession-open.md)します。 データベースのトランザクションを開始する`CSession`提供、`StartTransaction`メソッド。 トランザクションが開始されるを使用してコミットすることができます、`Commit`メソッド、またはキャンセルを使用して、`Abort`メソッド。
 
-## <a name="abort"></a> Csession::abort
+## <a name="abort"></a> CSession::Abort
 
 トランザクションを終了します。
 
@@ -92,7 +92,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[itransaction::abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[itransaction::abort](/previous-versions/windows/desktop/ms709833(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -112,7 +112,7 @@ void Close() throw();
 
 リリース、`m_spOpenRowset`ポインター。
 
-## <a name="commit"></a> Csession::commit
+## <a name="commit"></a> CSession::Commit
 
 トランザクションをコミットします。
 
@@ -126,7 +126,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[itransaction::commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -134,9 +134,9 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [itransaction::commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))します。
+詳細については、次を参照してください。 [itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))します。
 
-## <a name="gettransactioninfo"></a> Csession::gettransactioninfo
+## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
 トランザクションに関する情報を返します。
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -156,9 +156,9 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、次を参照してください。 [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="open"></a> Csession::open
+## <a name="open"></a> CSession::Open
 
 データ ソース オブジェクトの新しいセッションを開きます。
 
@@ -176,10 +176,10 @@ HRESULT Open(const CDataSource& ds,
 [in]データ ソースは、セッションが開かれているのです。
 
 *pPropSet*<br/>
-[in]配列へのポインター [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。
+[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -189,7 +189,7 @@ HRESULT Open(const CDataSource& ds,
 
 使用してデータ ソース オブジェクトを開く必要があります[cdatasource::open](../../data/oledb/cdatasource-open.md)に渡す前に`CSession::Open`します。
 
-## <a name="starttransaction"></a> Csession::starttransaction
+## <a name="starttransaction"></a> CSession::StartTransaction
 
 このセッション用の新しいトランザクションを開始します。
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[itransactionlocal::starttransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -212,10 +212,10 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [itransactionlocal::starttransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、次を参照してください。 [itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 
-[CatDB](../../visual-cpp-samples.md)<br/>
+[CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 3e38aebf3eadceafad3e70463d5bcf2d26fef96e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246825"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule クラス
 
@@ -37,7 +37,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |名前|説明|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|コンストラクターです。|
-|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|デストラクターです。|
+|[CAtlWinModule::~CAtlWinModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -74,11 +74,11 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ポインター、`_AtlCreateWndData`構造体を初期化して、現在のモジュールに追加します。
 
 *pObject*<br/>
-オブジェクトへのポインター**この**ポインター。
+オブジェクトへのポインター**this**ポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)どの初期化、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体。 この構造体を格納する、**この**ポインターをウィンドウ プロシージャ内のクラスのインスタンスを取得するために使用します。
+このメソッドを呼び出す[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)どの初期化、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体。 この構造体を格納する、**this**ポインターをウィンドウ プロシージャ内のクラスのインスタンスを取得するために使用します。
 
 ##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule
 
@@ -92,7 +92,7 @@ CAtlWinModule();
 
 初期化に失敗した場合、 **EXCEPTION_NONCONTINUABLE**例外が発生します。
 
-##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule
+##  <a name="dtor"></a>  CAtlWinModule::~CAtlWinModule
 
 デストラクターです。
 

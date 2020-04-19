@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_lvalue_reference class
 - is_lvalue_reference
 ms.assetid: 7f11896b-935c-4de1-9c87-9d0127f904e2
-ms.openlocfilehash: e032522e790b7027886ba1a6199ed7fdf86c0936
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcd5c8333f011475cb11a452759c8986ab22215
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460178"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456204"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference クラス
 
@@ -27,12 +27,12 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合はこの型述語のインスタンスは true を保持型*Ty*または関数の場合、それ以外の場合は false を保持するオブジェクトへの参照です。 なお*Ty*右辺値参照ができない可能性があります。 右辺値の詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」をご覧ください。
+型*Ty*がオブジェクトへの参照または関数への参照である場合、この型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 *Ty*は右辺値参照でない場合があることに注意してください。 右辺値の詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,5 +42,5 @@ struct is_lvalue_reference;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)

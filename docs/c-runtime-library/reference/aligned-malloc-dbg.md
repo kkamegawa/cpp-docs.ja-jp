@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc_dbg
 - aligned_malloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3db61d494ea94c9ccbf2844c9f47df66dad87ff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977811"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939895"
 ---
-# <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
+# <a name="_aligned_malloc_dbg"></a>_aligned_malloc_dbg
 
 デバッグ ヘッダーと上書きバッファー用の追加の領域を持つメモリを、指定された配置境界に割り当てます (デバッグ バージョンのみ)。
 
@@ -60,15 +63,15 @@ void * _aligned_malloc_dbg(
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリ ブロックへのポインターまたは NULL の場合は、操作に失敗しました。
+割り当てられたメモリブロックへのポインター。操作が失敗した場合は NULL。
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_malloc_dbg**のデバッグ バージョンです、 [_aligned_malloc](aligned-malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_malloc_dbg**への呼び出しに減少`_aligned_malloc`します。 両方`_aligned_malloc`と **_aligned_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_aligned_malloc_dbg**いくつかのデバッグ機能を提供しています: のユーザー部分の両側のバッファー、リークをテストするブロックと*filename*/*linenumber*割り当て要求の起点を特定する情報。 ブロックの型パラメーターを持つ特定の割り当ての種類の追跡は、アラインされた割り当てのサポートされているデバッグ機能ではありません。 アラインされた割り当ては、_NORMAL_BLOCK ブロックの型として表示されます。
+**_aligned_malloc_dbg**は、 [_aligned_malloc](aligned-malloc.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_malloc_dbg**の各呼び出しはの`_aligned_malloc`呼び出しに限定されます。 と`_aligned_malloc` **_aligned_malloc_dbg**はどちらもベースヒープ内にメモリブロックを割り当てますが、 **_aligned_malloc_dbg**にはいくつかのデバッグ機能があります。リークをテストするための、ブロックのユーザー部分の両側のバッファーと*ファイル名です。* linenumber 情報を参照して、割り当て要求の発生元を特定します。 / ブロックの型パラメーターを使用して特定の割り当ての種類を追跡することは、固定された割り当てのデバッグ機能としてサポートされていません。 アラインされた割り当ては、_NORMAL_BLOCK ブロック型として表示されます。
 
-**_aligned_malloc_dbg**メモリ ブロックを要求したよりも少し多い領域を割り当てます*サイズ*します。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
+**_aligned_malloc_dbg**は、要求された*サイズ*よりも若干多くの領域でメモリブロックを割り当てます。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
 
-**_aligned_malloc_dbg**設定`errno`に`ENOMEM`メモリ割り当てが失敗した場合、または (以前に説明したオーバーヘッドを含む) に必要なメモリの量を超えた場合`_HEAP_MAXREQ`します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。 また、 **_aligned_malloc_dbg**パラメーターを検証します。 場合*配置*が 2 の累乗でないまたは*サイズ*ゼロ、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、この関数は NULL を返し、セットを許可された場合`errno`に`EINVAL`します。
+**_aligned_malloc_dbg**は`errno` 、メモリ割り当てが失敗した場合、または必要なメモリの量 (前に説明し`_HEAP_MAXREQ`たオーバーヘッドを含む) がを超えた場合に、をに`ENOMEM`設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。 また、 **_aligned_malloc_dbg**はそのパラメーターを検証します。 *Alignment*が2の累乗でない場合、または*size*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は`errno` NULL `EINVAL`を返し、をに設定します。
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
 

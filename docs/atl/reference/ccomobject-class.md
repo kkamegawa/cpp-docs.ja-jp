@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2051932413d8658eb7cedb67ed0eab2077b599d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660474"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497134"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
 
-このクラスは実装`IUnknown`非集約オブジェクト。
+このクラスは`IUnknown` 、非集計オブジェクトに対してを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,8 +32,8 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*<br/>
-派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のすべてのインターフェイスからも、します。
+*常用*<br/>
+[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -42,22 +42,22 @@ class CComObject : public Base
 |名前|説明|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|コンストラクターです。|
-|[CComObject:: ~ CComObject](#dtor)|デストラクターです。|
+|[CComObject::~CComObject](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[CComObject::AddRef](#addref)|オブジェクトの参照カウントをインクリメントします。|
-|[CComObject::CreateInstance](#createinstance)|(静的)新たに作成`CComObject`オブジェクト。|
+|[CComObject::CreateInstance](#createinstance)|雑音新しい`CComObject`オブジェクトを作成します。|
 |[CComObject::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|
 |[CComObject::Release](#release)|オブジェクトの参照カウントをデクリメントします。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComObject` 実装[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非集約オブジェクト。 ただし、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`します。
+`CComObject`非集計オブジェクトの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。 ただし、、 `AddRef`、 `QueryInterface`および`Release`への呼び出しはに`CComObjectRootEx`委任されます。
 
-使用しての詳細については`CComObject`、記事をご覧ください[ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)します。
+の使用`CComObject`方法の詳細については、「 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -67,7 +67,7 @@ class CComObject : public Base
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
 ##  <a name="addref"></a>  CComObject::AddRef
 
@@ -79,11 +79,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-この関数は、オブジェクトの新しいインクリメントされた参照カウントを返します。 この値は、診断やテストに便利な可能性があります。
+この関数は、オブジェクトに対してインクリメントされた新しい参照カウントを返します。 この値は、診断またはテストに便利な場合があります。
 
 ##  <a name="ccomobject"></a>  CComObject::CComObject
 
-コンス トラクターは、モジュールのロック カウントをインクリメントします。
+コンストラクターは、モジュールのロックカウントをインクリメントします。
 
 ```
 CComObject(void* = NULL);
@@ -92,15 +92,15 @@ CComObject(void* = NULL);
 ### <a name="parameters"></a>パラメーター
 
 <em>void\*</em><br/>
-[in]この名前のないパラメーターは使用されません。 他の対称性が存在する`CComXXXObjectXXX`コンス トラクター。
+からこの無名パラメーターは使用されません。 これは、他の`CComXXXObjectXXX`コンストラクターとの対称のために存在します。
 
 ### <a name="remarks"></a>Remarks
 
-デストラクターをデクリメントこと。
+デストラクターはこれをデクリメントします。
 
-場合、 `CComObject`-を使用して派生オブジェクトが正常に作成、**新しい**オペレーターは、初期の参照カウントが 0 です。 参照カウントを適切な値 (1) を設定するへの呼び出しを行い、 [AddRef](#addref)関数。
+派生オブジェクトが new 演算子を使用して正常に構築された場合、最初の参照カウントは0になります。 `CComObject` 参照カウントを適切な値 (1) に設定するには、 [AddRef](#addref)関数を呼び出します。
 
-##  <a name="dtor"></a>  CComObject:: ~ CComObject
+##  <a name="dtor"></a>CComObject:: ~ CComObject
 
 デストラクターです。
 
@@ -110,11 +110,11 @@ CComObject();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し、割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)、およびモジュールのロック カウントをデクリメントします。
+割り当てられたすべてのリソースを解放し、 [FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出して、モジュールのロックカウントをデクリメントします。
 
 ##  <a name="createinstance"></a>  CComObject::CreateInstance
 
-この静的関数では、新たに作成することができます**CComObject <** `Base` **>** のオーバーヘッドがなく、オブジェクト[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。
+この静的関数を使用すると、 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させることなく、新しい**CComObject <** `Base` **>** オブジェクトを作成できます。
 
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -122,8 +122,8 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*pp*<br/>
-[out]ポインターを**CComObject <** `Base` **>** ポインター。 場合`CreateInstance`が成功すると、 *pp* NULL に設定されます。
+*ページ*<br/>
+入出力**CComObject <** `Base` **ポインターへのポインター。>** が`CreateInstance`失敗した場合、 *pp*は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -131,9 +131,9 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="remarks"></a>Remarks
 
-返されるオブジェクトが参照カウントを 0、ためコール`AddRef`しを使用して、すぐに`Release`完了すると、オブジェクトへのポインターの参照を解放します。
+返されるオブジェクトは、参照カウントが0であるため`AddRef` 、をすぐに`Release`呼び出し、を使用してオブジェクトポインターの参照を解放します。
 
-オブジェクトへのアクセスが直接必要ありませんが、引き続きのオーバーヘッドなしの新しいオブジェクトを作成する場合`CoCreateInstance`を使用して、[あって](../../atl/reference/ccomcoclass-class.md#createinstance)代わりにします。
+オブジェクトへの直接アクセスが不要でも、の`CoCreateInstance`オーバーヘッドなしで新しいオブジェクトを作成する場合は、代わりに[CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)を使用します。
 
 ### <a name="example"></a>例
 
@@ -154,13 +154,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>パラメーター
 
 *iid*<br/>
-[in]要求されているインターフェイスの識別子。
+から要求されているインターフェイスの識別子。
 
 *ppvObject*<br/>
-[out]によって識別されるインターフェイス ポインターへのポインター *iid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。
+入出力*Iid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject*は NULL に設定されます。
 
-*pp*<br/>
-[out]型によって識別されるインターフェイス ポインターへのポインター`Q`します。 オブジェクトは、このインターフェイスをサポートしていない場合*pp* NULL に設定されます。
+*ページ*<br/>
+入出力型`Q`によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *pp*は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -176,7 +176,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-この関数は、オブジェクトの新しいデクリメントの参照カウントを返します。 デバッグ ビルドでは、戻り値は診断に役立ちますやテストを使用可能性があります。 非デバッグ ビルドで`Release`常に 0 を返します。
+この関数は、オブジェクトの新しいデクリメントされた参照カウントを返します。 デバッグビルドでは、診断またはテストに戻り値が役立つ場合があります。 非デバッグビルドでは、 `Release`は常に0を返します。
 
 ## <a name="see-also"></a>関連項目
 

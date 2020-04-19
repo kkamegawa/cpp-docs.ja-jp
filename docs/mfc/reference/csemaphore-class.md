@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: e8e71af6fa33dc748bfb8d19266a72495f216502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5a0e4187107aaab7cedf4e7a0e2fc47b9f9f305
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447022"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502582"
 ---
 # <a name="csemaphore-class"></a>CSemaphore クラス
 
-クラスのオブジェクト`CSemaphore`「セマフォ」を表します: 現在、指定したリソースにアクセスするスレッドの数にアクセスを管理する 1 つまたは複数のプロセスでのスレッドの数に制限ができるようにする同期オブジェクト。
+クラス`CSemaphore`のオブジェクトは、"セマフォ" を表します。これは、1つ以上のプロセス内の限られた数のスレッドがにアクセスできるようにする同期オブジェクトです。これにより、指定したリソースに現在アクセスしているスレッド数のカウントが保持されます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,21 +31,21 @@ class CSemaphore : public CSyncObject
 
 |名前|説明|
 |----------|-----------------|
-|[CSemaphore::CSemaphore](#csemaphore)|`CSemaphore` オブジェクトを構築します。|
+|[CSemaphore:: CSemaphore](#csemaphore)|`CSemaphore` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>Remarks
 
-セマフォは、ユーザーの数に制限をサポートできるだけ共有リソースへのアクセス制御に役立ちます。 現在のカウント、`CSemaphore`オブジェクトが許可されているその他のユーザーの数。 によって制御されるリソースを使用する試みがすべて、カウントがゼロに達すると、`CSemaphore`カウントが 0 またはオブジェクトがシステム キューに挿入され、タイムアウトされるまで待機します。 構築時に、制御されるリソースを同時にアクセスできるユーザーの最大数が指定されて、`CSemaphore`オブジェクト。
+セマフォは、限られた数のユーザーのみをサポートする共有リソースへのアクセスを制御する場合に役立ちます。 `CSemaphore`オブジェクトの現在の数は、許可されている追加ユーザーの数です。 カウントがゼロになると、その`CSemaphore`オブジェクトによって制御されるリソースを使用しようとするすべての試行がシステムキューに挿入され、タイムアウトになるか、カウントが0を超えるまで待機します。 コントロールされたリソースに一度にアクセスできるユーザーの最大数は、 `CSemaphore`オブジェクトの構築時に指定します。
 
-使用する、`CSemaphore`オブジェクト、構築、`CSemaphore`必要がある場合のオブジェクトします。 待機、セマフォの名前を指定し、アプリケーションが最初に所有する必要があります。 コンス トラクターは、返されるときに、セマフォをアクセスできます。 呼び出す[したら](../../mfc/reference/csyncobject-class.md#unlock)が終わったら、被制御リソースにアクセスします。
+`CSemaphore`オブジェクトを使用するには、 `CSemaphore`必要に応じてオブジェクトを構築します。 待機するセマフォの名前を指定し、アプリケーションで最初に所有する必要があることを指定します。 コンストラクターが返されたときに、セマフォにアクセスできます。 制御されたリソースへのアクセスが完了したら、 [CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock)を呼び出します。
 
-代替の方法を使用して`CSemaphore`オブジェクトは、型の変数を追加する`CSemaphore`を制御するクラスにデータ メンバーとして。 コンス トラクターを呼び出し、制御されるオブジェクトの構築時に、`CSemaphore`初期を指定するデータ メンバーがアクセス数、アクセスの最大数、(プロセスの境界を越えて使用) 場合、セマフォの名前および必要なセキュリティの属性。
+オブジェクトを使用`CSemaphore`する別の方法として、制御する`CSemaphore`クラスにデータメンバーとして型の変数を追加する方法があります。 制御されたオブジェクトの構築時に、初期アクセス`CSemaphore`数、最大アクセス数、セマフォの名前 (プロセスの境界を越えて使用される場合)、および必要なセキュリティ属性を指定して、データメンバーのコンストラクターを呼び出します。
 
-によって制御されるリソースにアクセスする`CSemaphore`オブジェクトが、この方法では、いずれかの型の変数をまず作成[CSingleLock](../../mfc/reference/csinglelock-class.md)または型[CMultiLock](../../mfc/reference/cmultilock-class.md)リソースのアクセス メンバー関数。 呼び出して、ロック オブジェクトの`Lock`メンバー関数 (たとえば、 [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 この時点では、スレッドはいずれか、リソースにアクセスを待機してから、リソースを解放して、アクセスを取得またはリソースが解放されると、リソースへのアクセスに失敗したときのタイムアウトを待ちます。 いずれの場合も、リソースがスレッド セーフな方法でアクセスされました。 リソースを解放するロック オブジェクトを使用して、`Unlock`メンバー関数 (たとえば、 [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))、またはロック オブジェクトがスコープから除外できるようにします。
+この方法でオブジェクトに`CSemaphore`よって制御されるリソースにアクセスするには、まず、 [CSingleLock](../../mfc/reference/csinglelock-class.md)型の変数を作成するか、リソースのアクセスメンバー関数に[CMultiLock](../../mfc/reference/cmultilock-class.md)を入力します。 次に、lock オブジェクトの`Lock`メンバー関数 (たとえば、 [CSingleLock:: lock](../../mfc/reference/csinglelock-class.md#lock)) を呼び出します。 この時点で、スレッドはリソースへのアクセスを取得し、リソースが解放されてアクセスできるまで待機します。または、リソースが解放され、タイムアウトになるまで待機し、リソースへのアクセスを取得できなくなります。 いずれの場合も、スレッドセーフな方法でリソースにアクセスしています。 リソースを解放するには、lock オブジェクトの`Unlock`メンバー関数 (たとえば、 [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)) を使用するか、ロックオブジェクトがスコープ外に出ることを許可します。
 
-また、作成することができます、 `CSemaphore` 、スタンドアロン オブジェクトし、制御されたリソースへのアクセスを試みる前に明示的にアクセスします。 だれかが、ソース コードを読むにはわかり、このメソッドは、エラーが発生しやすいです。
+または、オブジェクトを`CSemaphore`スタンドアロンで作成し、制御されたリソースにアクセスする前に明示的にアクセスすることもできます。 このメソッドは、ソースコードを読んでいるユーザーにとってわかりやすく、エラーが発生しやすくなります。
 
-使用する方法の詳細についての`CSemaphore`オブジェクトは、記事を参照して[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+オブジェクトの使用`CSemaphore`方法の詳細については、「 [マルチスレッド:同期クラス](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)の使用方法について説明します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -57,11 +57,11 @@ class CSemaphore : public CSyncObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxmt.h
+**ヘッダー:** afxmt
 
-##  <a name="csemaphore"></a>  CSemaphore::CSemaphore
+##  <a name="csemaphore"></a>CSemaphore:: CSemaphore
 
-名前付きセーブポイントまたは名前のない、コンストラクト`CSemaphore`オブジェクト。
+名前付き`CSemaphore`オブジェクトまたは名前のないオブジェクトを構築します。
 
 ```
 CSemaphore(
@@ -74,26 +74,25 @@ CSemaphore(
 ### <a name="parameters"></a>パラメーター
 
 *lInitialCount*<br/>
-セマフォの使用状況の初期数。 0 以上にする必要がありますに等しいまたはそれよりも小さいと*lMaxCount*します。
+セマフォの初期の使用カウント。 0以上、 *lMaxCount*以下である必要があります。
 
 *lMaxCount*<br/>
-セマフォの最大使用率カウントします。 1 以上であることが必要です。
+セマフォの最大使用回数。 1 以上であることが必要です。
 
 *pstrName*<br/>
-セマフォの名前。 プロセスの境界を越えて、セマフォがアクセスされる場合を指定する必要があります。 場合`NULL`オブジェクトの名前付きが解除されます。 名前が既存のセマフォに一致する場合、コンス トラクターは新しい`CSemaphore`その名前のセマフォを参照するオブジェクト。 名前には、セマフォではない既存の同期オブジェクトが一致すると、構築は失敗します。
+セマフォの名前。 セマフォがプロセスの境界を越えてアクセスされる場合は、を指定する必要があります。 の`NULL`場合、オブジェクトには名前が付いていません。 名前が既存のセマフォと一致する場合、コンストラクターはその`CSemaphore`名前のセマフォを参照する新しいオブジェクトを作成します。 名前がセマフォではない既存の同期オブジェクトと一致する場合、構築は失敗します。
 
 *lpsaAttributes*<br/>
-セマフォ オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。
+セマフォオブジェクトのセキュリティ属性。 この構造の詳細については、Windows SDK の「 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-アクセスまたはリリースを`CSemaphore`オブジェクトを作成、 [CMultiLock](../../mfc/reference/cmultilock-class.md)または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトと呼び出しの[ロック](../../mfc/reference/csinglelock-class.md#lock)と[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数。
+`CSemaphore`オブジェクトにアクセスしたり解放したりするには、 [CMultiLock](../../mfc/reference/cmultilock-class.md)オブジェクトまたは[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトを作成し、その[Lock](../../mfc/reference/csinglelock-class.md#lock)および[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数を呼び出します。
 
 > [!IMPORTANT]
->  作成した後、`CSemaphore`オブジェクトを使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスがまだ存在しないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。
+>  `CSemaphore`オブジェクトを作成した後、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を使用して、ミューテックスが既に存在していないことを確認します。 ミューテックスが予期せずに存在する場合は、不正なプロセスがスクワッティングであることを示している可能性があります。また、ミューテックスを悪用する可能性があります。 この場合、推奨されるセキュリティ意識の高い手順は、ハンドルを閉じて、オブジェクトの作成でエラーが発生したかのように続行することです。
 
 ## <a name="see-also"></a>関連項目
 
 [CSyncObject クラス](../../mfc/reference/csyncobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

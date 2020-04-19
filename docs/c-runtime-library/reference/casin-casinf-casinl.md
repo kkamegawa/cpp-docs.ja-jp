@@ -1,11 +1,11 @@
 ---
 title: casin、casinf、casinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casin
 - casinf
 - casinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casin
 - casinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539621"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943392"
 ---
 # <a name="casin-casinf-casinl"></a>casin、casinf、casinl
 
-実軸に沿って区間 [-1, +1] の外側の分岐線法を複素数のアークサインを取得します。
+実数軸に沿って区間 [-1, + 1] の外側に分岐がある場合に、複素数のアークサインを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -68,17 +71,17 @@ _Lcomplex casinl(
 
 ## <a name="return-value"></a>戻り値
 
-アークサイン*z*、(ラジアン単位)。 結果は、虚軸の間隔で [-π/2, + π/2]、実軸。
+*Z*のアークサイン (ラジアン)。 結果は、虚数軸に沿って、実際の軸に沿って [-π/2, + π/2] の間隔で無制限になります。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **casin**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**casin**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**casin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **casin**は常にを受け取り **、戻り値を**返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**casin**、 **casinf**、 **casinl**|\<complex.h>|\<ccomplex>|
+|**casin**、 **casin**、 **casinl**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

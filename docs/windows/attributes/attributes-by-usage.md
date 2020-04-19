@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-ms.openlocfilehash: 2536309025506ca66d9c4b7cdfbaabf5787945e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148454"
 ---
 # <a name="attributes-by-usage"></a>使用法別の属性
 
@@ -22,7 +22,7 @@ ms.locfileid: "50449367"
 |属性|説明|
 |---------------|-----------------|
 |[モジュール属性](module-attributes.md)|適用されます、[モジュール](module-cpp.md)属性。|
-|[インターフェイス属性](interface-attributes.md)|適用されます、 [_ _interface](../../cpp/interface.md) C++ のキーワード。|
+|[インターフェイス属性](interface-attributes.md)|適用されます、 [_ _interface](../../cpp/interface.md) C++キーワード。|
 |[クラス属性](class-attributes.md)|C++ のキーワードを適用します。|
 |[メソッド属性](method-attributes.md)|クラス、コクラスまたはインターフェイスのメソッドに適用されます。|
 |[パラメーター属性](parameter-attributes.md)|クラスまたはインターフェイスのメソッドのパラメーターに適用されます。|
@@ -41,7 +41,7 @@ ms.locfileid: "50449367"
 
 ## <a name="interface-attributes"></a>インターフェイス属性
 
-次の属性を適用する、[インターフェイス (または _ _interface)](../../cpp/interface.md) C++ のキーワード。
+次の属性を適用する、[インターフェイス (または _ _interface)](../../cpp/interface.md) C++キーワード。
 
 |属性|説明|
 |---------------|-----------------|

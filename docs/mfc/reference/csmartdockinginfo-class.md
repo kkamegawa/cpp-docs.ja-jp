@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324006"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo クラス
 
@@ -49,7 +49,7 @@ class CSmartDockingInfo : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|`CSmartDockingInfo::CSmartDockingInfo`|既定のコンストラクター|
+|`CSmartDockingInfo::CSmartDockingInfo`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

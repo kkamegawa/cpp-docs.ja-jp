@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3824
 ms.assetid: b6c6adf1-0a29-401c-a06e-616fd50d4c37
-ms.openlocfilehash: d7c55ede285d027b1a65b33adbf6407df243f068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47363da66416c326755cad12fe4cfd448e3154e2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741730"
 ---
 # <a name="compiler-error-c3824"></a>コンパイラ エラー C3824
 
-'member': この型は、(関数のパラメーター、戻り値の型、または静的メンバー) は、このコンテキストで表示されることはできません
+' member ': この型はこのコンテキストには記述できません (関数パラメーター、戻り値の型、または静的メンバー)
 
-固定ポインターの型を返す、関数パラメーターにすることはできませんまたは宣言`static`します。
+固定ポインターは、関数パラメーター、戻り値の型、または宣言された `static`にすることはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3824 が生成されます。
 
-```
+```cpp
 // C3824a.cpp
 // compile with: /clr /c
 void func() {

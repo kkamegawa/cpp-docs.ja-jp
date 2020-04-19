@@ -1,6 +1,6 @@
 ---
-title: code_seg
-ms.date: 11/04/2016
+title: code_seg プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - code_seg_CPP
 - vc-pragma.code_seg
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: 0144b3ed220c39cd30aeb8e53bc2aa3c0381b668
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597704"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218315"
 ---
-# <a name="codeseg"></a>code_seg
-関数が格納される .obj ファイル内のテキスト セグメントを指定します。
+# <a name="code_seg-pragma"></a>code_seg プラグマ
+
+関数がオブジェクト (.obj) ファイルに格納されるテキストセクション (セグメント) を指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma code_seg (** ["*section-name*" [ **,** "*section-class*"]] **)** \
+> **#pragma code_seg (** { **push** | **pop** } [ **,** *identifier* ] [ **,** "*section-name*" [ **,** "*section-class*"]] **)**
 
 ### <a name="parameters"></a>パラメーター
 
-**push**<br/>
-(省略可能)内部コンパイラ スタックには、レコードを設定します。 A**プッシュ**できますが、*識別子*と*セグメント名*します。
+**押し付け**\
+Optional内部コンパイラスタックにレコードを格納します。 **プッシュ**は*識別子*と*セクション名*を持つことができます。
 
-**pop**<br/>
-(省略可能)内部コンパイラ スタックの上部からレコードを削除します。
+**ショート**\
+Optional内部コンパイラスタックの先頭からレコードを削除します。 **Pop**は*識別子*と*セクション名*を持つことができます。 *識別子*を使用して、 **pop**コマンドを1つだけ使用して複数のレコードをポップできます。 *セクション名*は、pop の後のアクティブなテキストセクション名になります。
 
-*identifier*<br/>
-(省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると**pop**、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。
+*識別子*\
+Optional**Push**と共に使用すると、内部コンパイラスタックのレコードに名前が割り当てられます。 **Pop**と共に使用する場合、ディレクティブは、*識別子*が削除されるまで、レコードを内部スタックからポップします。 *識別子*が内部スタックで見つからない場合は、何もポップされません。
 
-*識別子*により、複数のレコードを 1 つだけでポップできます**pop**コマンド。
+"*section-name*" \
+Optionalセクションの名前。 **Pop**と共に使用すると、スタックがポップされ、*セクション名*がアクティブなテキストセクション名になります。
 
-"*セグメント名*"<br/>
-(省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*アクティブなテキスト セグメント名になります。
-
-"*セグメント クラス*"<br/>
-(省略可能)バージョン 2.0 より前のバージョンの C との互換性が無視されます。
+"*セクションクラス*" \
+Optionalは無視されますが、バージョン2.0 よりC++前のバージョンの Microsoft との互換性のために含まれています。
 
 ## <a name="remarks"></a>Remarks
 
-**Code_seg**プラグマ ディレクティブは、インスタンス化されたテンプレートは、生成されたオブジェクト コードも、コンパイラによって暗黙的に生成されたコードの配置を制御しません-たとえば、特殊なメンバー関数。 使用することをお勧め、 [__declspec(code_seg(...)](../cpp/code-seg-declspec.md)属性の代わりに使用するすべてのオブジェクト コードの配置を制御します。 コンパイラによって生成されたコードの格納場所も制御できるためです。
+オブジェクトファイルの*セクション*は、1つの単位としてメモリに読み込まれるデータの名前付きブロックです。 *テキストセクション*は、実行可能コードを含むセクションです。 この記事では、*セグメント*と*セクション*は同じ意味を持ちます。
 
-A*セグメント*.obj ファイルは名前付きのユニットとしてメモリに読み込まれるデータのブロック。 A*テキスト セグメント*は実行可能コードを含むセグメントです。 この記事で、条項*セグメント*と*セクション*は同義です。
+**Code_seg**プラグマディレクティブは、翻訳単位の後続のすべてのオブジェクトコードを、*セクション名*という名前のテキストセクションに配置するようコンパイラに指示します。 既定では、オブジェクトファイルの関数に使用される text セクションに`.text`はという名前が付けられます。 *-Name*パラメーターを指定せずに**code_seg**プラグマディレクティブを実行すると、その後のオブジェクト`.text`コードのテキストセクション名がにリセットされます。
 
-**Code_seg**プラグマ ディレクティブを指定すると、翻訳単位からの後続のオブジェクトのすべてのコードをという名前のテキスト セグメントに配置*セグメント名*します。 既定では、.obj ファイル内の関数に使用されるテキスト セグメントには .text という名前が付けられます。
+**Code_seg**プラグマディレクティブは、インスタンス化されたテンプレート用に生成されたオブジェクトコードの配置を制御しません。 また、特殊なメンバー関数など、コンパイラによって暗黙的に生成されるコードも制御しません。 そのコードを制御するには、代わりに[__declspec (code_seg (...))](../cpp/code-seg-declspec.md)属性を使用することをお勧めします。 コンパイラによって生成されるコードを含め、すべてのオブジェクトコードの配置を制御できます。
 
-A **code_seg**プラグマ ディレクティブ パラメーターを指定せず、後続のオブジェクト コードのテキスト セグメント名を .text にリセットします。
+セクションの作成に使用しない名前の一覧については、「 [/SECTION](../build/reference/section-specify-section-attributes.md)」を参照してください。
 
-使用することができます、 [DUMPBIN します。EXE](../build/reference/dumpbin-command-line.md) .obj ファイルを表示するアプリケーション。 各サポートされているターゲット アーキテクチャの DUMPBIN のバージョンは Visual Studio に含まれています。
+初期化されたデータのセクション ([data_seg](../preprocessor/data-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md)) を指定することもできます。
+
+DUMPBIN を使用でき[ます。](../build/reference/dumpbin-command-line.md)オブジェクトファイルを表示する EXE アプリケーション。 サポートされている各ターゲットアーキテクチャの DUMPBIN のバージョンは、Visual Studio に含まれています。
 
 ## <a name="example"></a>例
 
-この例は、使用する方法を示します、 **code_seg**プラグマ ディレクティブをオブジェクト コードの格納場所を制御します。
+次の例では、 **code_seg**プラグマディレクティブを使用して、オブジェクトコードが配置される場所を制御する方法を示します。
 
 ```cpp
 // pragma_directive_code_seg.cpp
@@ -80,11 +80,7 @@ int main() {
 }
 ```
 
-セクションを作成する使わないで名の一覧は、次を参照してください。 [/section](../build/reference/section-specify-section-attributes.md)します。
-
-初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。
-
 ## <a name="see-also"></a>関連項目
 
-[code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)\
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

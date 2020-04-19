@@ -1,10 +1,10 @@
 ---
 title: vsscanf、vswscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vsscanf
 - vswscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vstscanf
 - vsscanf
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dabe603c1cd0c95411fec87b9c0344f28c5c698
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478585"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945110"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf、vswscanf
 
@@ -63,26 +66,26 @@ int vswscanf(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は**EOF**エラーの最初の変換の前に、文字列の末尾に達した場合またはします。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は**EOF**になります。
 
-場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
+*Buffer*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Vsscanf**関数からデータを読み取る*バッファー*の各引数で指定されている場所に、 *arglist*引数リスト。 リスト内のすべての引数に型指定子に対応する型を持つ変数へのポインターである必要があります*形式*します。 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Vsscanf**関数は、 *arglist*引数リストの各引数によって指定された場所に*バッファー*からデータを読み取ります。 リスト内のすべての引数は、*形式*の型指定子に対応する型を持つ変数へのポインターである必要があります。 *Format*引数は、入力フィールドの解釈を制御し、 **scanf**関数の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 使用すると**vsscanf**の幅を常に文字列を読み取り、指定、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**);それ以外の場合、正しくない形式の入力には、バッファー オーバーランを可能性があります。
+> **Vsscanf**を使用して文字列を読み取る場合は、常に **% s**形式の幅を指定します (たとえば、 **"% s"** ではなく **"% 32s"** )。それ以外の場合、入力が正しくないとバッファーオーバーランが発生する可能性があります。
 
-**vswscanf**のワイド文字バージョンは、 **vsscanf**; 引数**vswscanf**はワイド文字列です。 **vsscanf**マルチバイトの 16 進数の文字を処理しません。 **vswscanf** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **vswscanf**と**vsscanf**動作は同じです。
+**vswscanf**は、 **vsscanf**のワイド文字バージョンです。**vswscanf**の引数はワイド文字列です。 **vsscanf**は、マルチバイトの16進文字を処理しません。 **vswscanf**では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **vswscanf**と**vsscanf**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vstscanf**|**vsscanf**|**vsscanf**|**vswscanf**|
+|**vstscanf (_l)**|**vsscanf**|**vsscanf**|**vswscanf**|
 
 ## <a name="requirements"></a>必要条件
 

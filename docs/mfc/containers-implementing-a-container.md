@@ -5,65 +5,64 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed95324b8df978a6ab2f7582c0ddf626a45e7fe1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546706"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127921"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー : コンテナーの実装
 
-この記事では、コンテナーを実装する手順を概説し、コンテナーの実装についての説明の詳細を提供するその他の記事へのリンクします。 オプションの OLE 機能を実装することも、これらの機能を説明する記事も一覧表示されます。
+この記事では、コンテナーを実装する手順の概要を説明し、コンテナーの実装に関する詳細な説明が記載されている他の記事を紹介します。 また、実装するオプションの OLE 機能と、これらの機能について説明している記事も示しています。
 
-#### <a name="to-prepare-your-cwinapp-derived-class"></a>CWinApp から派生したクラスを準備するには
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>CWinApp 派生クラスを準備するには
 
-1. OLE ライブラリを呼び出すことによって初期化`AfxOleInit`で、`InitInstance`メンバー関数。
+1. `InitInstance` メンバー関数で `AfxOleInit` を呼び出して、OLE ライブラリを初期化します。
 
-1. 呼び出す`CDocTemplate::SetContainerInfo`で`InitInstance`埋め込み項目が使用されているリソースをメニューとアクセラレータを割り当てるには、インプレースをアクティブ化します。 このトピックの詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)します。
+1. `InitInstance` で `CDocTemplate::SetContainerInfo` を呼び出して、埋め込み項目がインプレースでアクティブになったときに使用されるメニューおよびアクセラレータリソースを割り当てます。 このトピックの詳細については、「 [Activation](../mfc/activation-cpp.md)」を参照してください。
 
-これらの機能は、MFC アプリケーション ウィザードを使用して、コンテナー アプリケーションを作成するときに自動的に提供します。 参照してください[MFC アプリケーション ウィザードを作成する](../mfc/reference/mfc-application-wizard.md)します。
+これらの機能は、MFC アプリケーションウィザードを使用してコンテナーアプリケーションを作成するときに、自動的に提供されます。 「 [MFC EXE プログラムの作成」を](../mfc/reference/mfc-application-wizard.md)参照してください。
 
-#### <a name="to-prepare-your-view-class"></a>ビュー クラスを作成するには
+#### <a name="to-prepare-your-view-class"></a>ビュークラスを準備するには
 
-1. 選択した項目のポインターを維持することでの追跡または一覧の選択項目への複数選択をサポートしている場合、ポインター。 `OnDraw`関数は、すべての OLE 項目を描画する必要があります。
+1. 選択された項目を、ポインター、または複数選択をサポートしている場合はポインターのリストを保持して、選択した項目を追跡します。 `OnDraw` 関数は、すべての OLE 項目を描画する必要があります。
 
-1. オーバーライド`IsSelected`を渡された項目が現在選択されているかどうかを確認します。
+1. `IsSelected` をオーバーライドして、渡された項目が現在選択されているかどうかを確認します。
 
-1. 実装を`OnInsertObject`を表示するメッセージ ハンドラー、**オブジェクトの挿入** ダイアログ ボックス。
+1. **[オブジェクトの挿入]** ダイアログボックスを表示するための `OnInsertObject` メッセージハンドラーを実装します。
 
-1. 実装を`OnSetFocus`メッセージに埋め込まれた項目をビューから、インプレース アクティブ OLE にフォーカスを転送するハンドラー。
+1. `OnSetFocus` メッセージハンドラーを実装して、ビューからインプレースアクティブ OLE 埋め込みアイテムにフォーカスを転送します。
 
-1. 実装を`OnSize`OLE に通知するメッセージ ハンドラーが含まれているそのビューのサイズの変更を反映するように、四角形を変更する必要がある埋め込みアイテム。
+1. 四角形を変更する必要があることを OLE 埋め込み項目に通知する `OnSize` メッセージハンドラーを実装します。これにより、含まれるビューのサイズの変更が反映されます。
 
-これらの機能の実装が次の 1 つのアプリケーションと大幅に異なりますので、アプリケーション ウィザードは、基本的な実装のみを提供します。 これらの関数を適切に機能するアプリケーションの取得をカスタマイズする必要があります可能性があります。 これの例は、次を参照してください。、[コンテナー](../visual-cpp-samples.md)サンプル。
+これらの機能の実装はアプリケーションによって大きく異なるため、アプリケーションウィザードには基本的な実装のみが用意されています。 アプリケーションを正しく機能させるには、これらの関数をカスタマイズする必要があります。 この例については、[コンテナー](../overview/visual-cpp-samples.md)のサンプルを参照してください。
 
-#### <a name="to-handle-embedded-and-linked-items"></a>埋め込みおよびリンクされた項目を処理するには
+#### <a name="to-handle-embedded-and-linked-items"></a>埋め込み項目とリンクされた項目を処理するには
 
-1. クラスを派生[COleClientItem](../mfc/reference/coleclientitem-class.md)します。 このクラスのオブジェクトに埋め込まれたまたは、OLE ドキュメントにリンクされている項目を表します。
+1. [COleClientItem](../mfc/reference/coleclientitem-class.md)からクラスを派生させます。 このクラスのオブジェクトは、OLE ドキュメントに埋め込まれている、またはリンクされている項目を表します。
 
-1. オーバーライド`OnChange`、 `OnChangeItemPosition`、および`OnGetItemPosition`します。 これらの関数は、サイズ変更、配置、および埋め込みおよびリンクされた項目の変更を処理します。
+1. `OnChange`、`OnChangeItemPosition`、および `OnGetItemPosition`をオーバーライドします。 これらの関数は、埋め込みおよびリンクされた項目のサイズ変更、配置、および変更を処理します。
 
-アプリケーション ウィザードでは、クラスを派生させ、されますが、オーバーライドする必要があります`OnChange`し、手順 2. で、前の手順とその他の関数が一覧表示します。 スケルトンの実装は、これらの関数は、次の 1 つのアプリケーションから異なる方法で実装されるため、ほとんどのアプリケーションでカスタマイズする必要があります。 この例については、MFC のサンプルを参照してください。 [DRAWCLI](../visual-cpp-samples.md)と[コンテナー](../visual-cpp-samples.md)します。
+クラスはアプリケーションウィザードによって派生されますが、前述の手順 2. で一覧表示された `OnChange` とその他の関数をオーバーライドする必要が生じる可能性があります。 スケルトン実装は、アプリケーションごとに異なる方法で実装されるため、ほとんどのアプリケーションに合わせてカスタマイズする必要があります。 この例については、MFC のサンプル[DRAWCLI](../overview/visual-cpp-samples.md)と[コンテナー](../overview/visual-cpp-samples.md)を参照してください。
 
-項目の数は、OLE をサポートするために、コンテナー アプリケーションのメニュー構造に追加する必要があります。 これらの詳細については、次を参照してください。[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
+OLE をサポートするには、コンテナーアプリケーションのメニュー構造に複数の項目を追加する必要があります。 これらの詳細については、「[メニューとリソース: コンテナーの追加](../mfc/menus-and-resources-container-additions.md)」を参照してください。
 
-コンテナー アプリケーションで、次の機能の一部をサポートすることもします。
+コンテナーアプリケーションで、次の機能の一部をサポートすることもできます。
 
-- 埋め込みアイテムを編集するときに、インプレース アクティブ化
+- 埋め込み項目を編集するときのインプレースアクティブ化。
 
-   詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)します。
+   詳細については、「 [Activation](../mfc/activation-cpp.md)」を参照してください。
 
-- OLE アイテムの作成をドラッグ アンド サーバー アプリケーションから選択をドロップします。
+- サーバーアプリケーションから選択項目をドラッグアンドドロップして、OLE 項目を作成します。
 
-   詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)します。
+   詳細については、「 [OLE ドラッグアンドドロップ](../mfc/drag-and-drop-ole.md)」を参照してください。
 
-- 埋め込みオブジェクトやコンテナー/サーバー アプリケーションの組み合わせへのリンク。
+- 埋め込みオブジェクトまたは組み合わせたコンテナー/サーバーアプリケーションへのリンク。
 
-   詳細については、次を参照してください。[コンテナー: 高度な機能](../mfc/containers-advanced-features.md)します。
+   詳細については、「[コンテナー: 高度な機能](../mfc/containers-advanced-features.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[コンテナー](../mfc/containers.md)<br/>
+[Containers](../mfc/containers.md)<br/>
 [コンテナー: クライアント アイテム](../mfc/containers-client-items.md)
-

@@ -1,9 +1,9 @@
 ---
 title: _set_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_new_handler
 - set_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640311"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948472"
 ---
-# <a name="setnewhandler"></a>_set_new_handler
+# <a name="_set_new_handler"></a>_set_new_handler
 
 **new** 演算子がメモリの割り当てに失敗した場合は、独自のエラー処理機構に制御を移します。
 
@@ -49,17 +52,17 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="return-value"></a>戻り値
 
-前の例外処理によって登録された関数へのポインターを返します **_set_new_handler**、前の関数を後で復元できるようにします。 既定の動作を復元する戻り値を使用できますの前の関数が設定されていない場合この値は**NULL**します。
+前の関数を後で復元できるように、 **_set_new_handler**によって登録された前の例外処理関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値には**NULL**を指定できます。
 
 ## <a name="remarks"></a>Remarks
 
-C++ **_set_new_handler**関数を場合は、制御を獲得する例外処理関数を指定します、**新しい**演算子がメモリの割り当てに失敗します。 場合**新しい**失敗した場合、実行時のシステムは自動的に例外処理関数に引数として渡された呼び出し **_set_new_handler**します。 **_PNH**New.h に定義されている型を返す関数へのポインターには、 **int**型の引数を取ります**size_t**します。 使用**size_t**に割り当てられる領域の量を指定します。
+C++ **_Set_new_handler**関数は、 **new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定します。 **新しい**エラーが発生した場合は、 **_set_new_handler**に引数として渡された例外処理関数がランタイムシステムによって自動的に呼び出されます。 New .h で定義された**Pnh**は、型**int**を返す関数へのポインターであり、 **size_t**型の引数を受け取ります。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
 
 既定のハンドラーはありません。
 
-**_set_new_handler**は基本的に、ガベージ コレクション スキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
+**_set_new_handler**は、基本的にはガベージコレクションスキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
 
-発生、 **_set_new_handler**プログラムで関数が実行時のシステムと、引数リストで指定された例外処理関数を登録します。
+プログラムで **_set_new_handler**関数が発生すると、引数リストで指定された例外処理関数がランタイムシステムに登録されます。
 
 ```cpp
 // set_new_handler1.cpp
@@ -77,7 +80,7 @@ int main( void )
 }
 ```
 
-最後に渡された関数のアドレスを保存することができます、 **_set_new_handler**関数を後で再開します。
+最後に **_set_new_handler**関数に渡された関数のアドレスを保存し、後で再開することができます。
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -88,7 +91,7 @@ int main( void )
    // . . .
 ```
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 **_set_new_handler**します。 既定では、 **malloc**でメモリの割り当ての失敗によって新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドするように、 **malloc** 、メモリの割り当てに失敗した**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子が同じ理由で失敗しました。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に、 **malloc**が、 **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -96,11 +99,11 @@ _set_new_mode(1);
 
 この呼び出しはプログラムの最初の方で指定するか、Newmode.obj にリンクします。
 
-ユーザー定義する場合`operator new`が指定されて、失敗した場合、新しいハンドラー関数が自動的に呼び出されません。
+ユーザー定義`operator new`が指定されている場合、新しいハンドラー関数は失敗時に自動的には呼び出されません。
 
 詳細については、「*C++ 言語リファレンス*」の「[new](../../cpp/new-operator-cpp.md)」および「[delete](../../cpp/delete-operator-cpp.md)」を参照してください。
 
-1 つは **_set_new_handler**ハンドラーを動的にリンクされる Dll または; の実行可能ファイルを呼び出す場合でも **_set_new_handler**別、ハンドラーが置き換えられること、または置換する、ハンドラーが別の DLL または実行可能ファイルで設定します。
+動的にリンクされたすべての Dll または実行可能ファイルに対して1つの **_set_new_handler**ハンドラーがあります。 **_set_new_handler**を呼び出す場合でも、ハンドラーは別のハンドラーに置き換えられるか、または別の DLL または実行可能ファイルで設定されたハンドラーを置き換えることができます。
 
 ## <a name="requirements"></a>必要条件
 

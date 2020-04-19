@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455617"
 ---
 # <a name="iterator-struct"></a>iterator 構造体
 
-ユーザー定義の iterator クラスが適切に動作することを確認するために使用する空の基底構造体`iterator_trait`秒。
+ユーザー定義の反復子クラスが s で`iterator_trait`正常に動作するようにするために使用される空の基本構造体。
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `reference` (テンプレート パラメーター `Reference` のシノニム)。
 
-なお`value_type`定数型の場合でもをすることはできません`pointer`のオブジェクトを指して**const** `Type`参照のオブジェクトを指定して**const** `Type`します。
+`value_type` `Type` `pointer`  Constの`Type`オブジェクトを指し、参照が**const**のオブジェクトを指定している場合でも、は定数型である必要はないことに注意してください。
 
 ## <a name="example"></a>例
 
@@ -61,6 +61,6 @@ struct iterator {
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

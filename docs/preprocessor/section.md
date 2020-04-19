@@ -1,6 +1,6 @@
 ---
-title: section
-ms.date: 11/04/2016
+title: section プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - section_CPP
 - vc-pragma.section
@@ -8,32 +8,30 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47ae2ff2503317e937e2b3a497357afbd5522a64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462141"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216600"
 ---
-# <a name="section"></a>section
+# <a name="section-pragma"></a>section プラグマ
 
 .obj ファイルにセクションを作成します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma section( "section-name" [, attributes] )
-```
+> **#pragma セクション (** "*section-name*" [ **,** *attributes* ] **)**
 
 ## <a name="remarks"></a>Remarks
 
-用語の意味*セグメント*と*セクション*はこのトピックでは互換性があります。
+この記事では、*セグメント*と*セクション*という用語は同じ意味を持ちます。
 
-セクションを定義すると、そのセクションはそれ以降のコンパイルで有効になります。 ただし、使用する必要があります[__declspec(allocate)](../cpp/allocate.md)セクションに何も配置されますか。
+セクションを定義すると、そのセクションはそれ以降のコンパイルで有効になります。 ただし、 [__declspec (allocate)](../cpp/allocate.md)を使用する必要があります。または、セクションに何も配置されていません。
 
-*セクション名*セクションの名前となる必須パラメーターです。 標準セクション名と競合する名前は付けられません。 参照してください[/section](../build/reference/section-specify-section-attributes.md)に対して一連の名前のセクションを作成するときに使用する必要があります。
+*section-name*は、セクションの名前になる必須パラメーターです。 標準セクション名と競合する名前は付けられません。 セクションを作成するときに使用しない名前の一覧については、「 [/SECTION](../build/reference/section-specify-section-attributes.md) 」を参照してください。
 
-*属性*属性から成る 1 つまたは複数コンマで区切られた、セクションに割り当てる省略可能なパラメーターです。 考えられる*属性*は。
+*attributes*は、セクションに割り当てる1つ以上のコンマ区切りの属性で構成される省略可能なパラメーターです。 使用できる*属性*は次のとおりです。
 
 |属性|説明|
 |-|-|
@@ -41,16 +39,16 @@ ms.locfileid: "50462141"
 |**write**|データの書き込み操作を有効にします。|
 |**execute**|コードを実行できるようにします。|
 |**shared**|イメージを読み込んだすべてのプロセス間でセクションを共有します。|
-|**nopage**|セクションをページング不可にします。Win32 デバイス ドライバー用です。|
-|**nocache**|セクションをキャッシュ不可にします。Win32 デバイス ドライバー用です。|
-|**discard**|セクションを破棄可能にします。Win32 デバイス ドライバー用です。|
-|**remove**|セクションをメモリ非常駐; としてマークします。仮想デバイス ドライバー (V*x*D) のみです。|
+|**nopage**|セクションをページング不可としてマークします。 Win32 デバイスドライバーに便利です。|
+|**nocache**|セクションをキャッシュ不可能としてマークします。 Win32 デバイスドライバーに便利です。|
+|**discard**|セクションを破棄不可としてマークします。 Win32 デバイスドライバーに便利です。|
+|**remove**|セクションをメモリ常駐ではないとしてマークします。 仮想デバイスドライバー (V*x*D) のみ。|
 
-属性を指定しない場合、セクションには読み取り属性と書き込み属性が設定されます。
+属性を指定しない場合、セクションには**読み取り**属性と**書き込み**属性があります。
 
 ## <a name="example"></a>例
 
-次の例では、最初の命令でセクションとその属性を指定しています。 `j` を使用して宣言していないので、整数 `mysec` は `__declspec(allocate)` に追加されません。`j` はデータ セクションに配置されます。 整数 `i` は、その `mysec` ストレージ クラス属性の結果として `__declspec(allocate)` に追加されます。
+この例では、最初のセクションのプラグマはセクションとその属性を識別します。 を使用`j` `mysec` して宣言されていないため、整数はに格納さ`__declspec(allocate)`れません。 代わりに、 `j`データセクションに移動します。 整数 `i` は、その `mysec` ストレージ クラス属性の結果として `__declspec(allocate)` に追加されます。
 
 ```cpp
 // pragma_section.cpp
@@ -65,4 +63,4 @@ int main(){}
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

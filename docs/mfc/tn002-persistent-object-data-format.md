@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 2: 永続オブジェクトのデータ形式'
+title: TN002:永続的なオブジェクトのデータ形式
 ms.date: 11/04/2016
 f1_keywords:
 - vc.data
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 5f5bde68d9fd4175ed97a7b61d807887d07e9e12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306195"
 ---
-# <a name="tn002-persistent-object-data-format"></a>テクニカル ノート 2: 永続オブジェクトのデータ形式
+# <a name="tn002-persistent-object-data-format"></a>TN002:永続的なオブジェクトのデータ形式
 
 ここでは、ファイルに格納されるときに、永続的な C++ オブジェクトと、オブジェクトのデータの形式をサポートする MFC ルーチンについて説明します。 これでクラスにのみ適用されます、 [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)マクロ。
 
@@ -111,4 +111,3 @@ Null チェックが行われます (通常は、グローバル挿入演算子�
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

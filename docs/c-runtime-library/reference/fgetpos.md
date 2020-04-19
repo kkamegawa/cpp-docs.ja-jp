@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940840"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,19 +47,19 @@ int fgetpos(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 対象のストリーム。
 
-*pos*<br/>
+*po*<br/>
 位置インジケーターのストレージ。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **fgetpos** 0 を返します。 失敗した場合、0 以外の値を返す設定と**errno**次のいずれかのマニフェスト定数 (STDIO で定義されています。H): **EBADF**、つまり、指定したストリームが有効なファイル ポインターでないまたはアクセスできない、または**EINVAL**、つまり、*ストリーム*値またはの値*pos*がいる場合など、有効ないずれかが null ポインターでないです。 場合*ストリーム*または*pos*は、 **NULL**ポインター、関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md).
+成功した場合、 **fgetpos**は0を返します。 エラーが発生した場合、0以外の値を返し、 **errno**に次のマニフェスト定数のいずれかを設定します (STDIO で定義されています)。H):**EBADF**。指定されたストリームが有効なファイルポインターではない、アクセスできない、または**EINVAL**であることを意味します。これは、*ストリーム*値または*pos*の値が無効であることを意味します (いずれかが null ポインターの場合など)。 *Stream*または*pos*が**NULL**ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。
 
 ## <a name="remarks"></a>Remarks
 
-**Fgetpos**関数の現在の値を取得、*ストリーム*引数のファイル位置インジケーターとストアによって、オブジェクトで示される*pos*します。**Fsetpos**関数は、保存されている情報を後で使用できる*pos*をリセットする、*ストリーム*時にその位置への引数のポインター **fgetpos**が呼び出されました。 *Pos*値は、内部形式で格納し、でのみで使用は想定されて**fgetpos**と**fsetpos**します。
+**Fgetpos**関数は、*ストリーム*引数のファイル位置インジケーターの現在の値を取得し、 *pos*が指すオブジェクトに格納します。**Fsetpos**関数は、後で*pos*に格納されている情報を使用して、 **fgetpos**が呼び出された時点の*ストリーム*引数のポインターをその位置にリセットできます。 *Pos*値は内部形式で格納され、 **fgetpos**と**fsetpos**でのみ使用されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>入力: crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>入力: crt_fgetpos.txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>出力: crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>出力: crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream

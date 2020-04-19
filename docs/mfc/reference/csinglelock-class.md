@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324104"
 ---
 # <a name="csinglelock-class"></a>CSingleLock クラス
 
@@ -55,7 +55,7 @@ class CSingleLock
 
 使用する、`CSingleLock`オブジェクト、被制御リソースのクラスのメンバー関数内でそのコンス トラクターを呼び出します。 呼び出して、 [IsLocked](#islocked)メンバー関数は、リソースが使用可能なかどうかを判断します。 である場合は、メンバー関数の残りの部分を続行します。 リソースが利用できない場合は、一定のリソースが解放されるまでの時間を待つか、エラーを返します。 リソースの使用が完了したら、後、 [Unlock](#unlock)関数の場合、`CSingleLock`オブジェクトがもう一度、使用するか、許可するが、`CSingleLock`オブジェクトを破棄します。
 
-`CSingleLock` オブジェクトから派生したオブジェクトの存在を必要と[CSyncObject](../../mfc/reference/csyncobject-class.md)します。 これは、通常は、被制御リソースのクラスのデータ メンバーです。 使用する方法の詳細についての`CSingleLock`オブジェクトは、記事を参照して[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+`CSingleLock` オブジェクトから派生したオブジェクトの存在を必要と[CSyncObject](../../mfc/reference/csyncobject-class.md)します。 これは、通常は、被制御リソースのクラスのデータ メンバーです。 使用する方法の詳細についての`CSingleLock`オブジェクトは、記事をご覧ください。[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

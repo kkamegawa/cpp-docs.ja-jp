@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
-ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
+ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53587890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320247"
 ---
 # <a name="opt-optimizations"></a>/OPT (最適化)
 
@@ -31,33 +31,33 @@ LINK がビルド時に実行する最適化を制御します。
 ## <a name="syntax"></a>構文
 
 > **/OPT:**{**REF** | **NOREF**}<br/>
-> **/OPT:**{**ICF**[**=**_イテレーション_] |**NOICF**}<br/>
+> **/OPT:**{**ICF**[**=**_iterations_] | **NOICF**}<br/>
 > **/OPT:**{**LBR** | **NOLBR**}
 
 ## <a name="arguments"></a>引数
 
-**REF** &AMP;#124; **NOREF**
+**REF** &#124; **NOREF**
 
 **/OPT:REF**関数と; 参照されないデータを排除 **/OPT:NOREF**関数および参照されないデータが保持されます。
 
 未参照のパッケージ化された関数と呼ばれる、データ リンクの削除/OPT:REF を有効にすると、 *Comdat*します。 この最適化は、中間 COMDAT 除去として知られています。 **/OPT:REF**もオプションではインクリメンタル リンクを無効になります。
 
-インライン関数とクラス宣言内で定義されているメンバー関数は comdat 形式では常にです。 すべてのオブジェクト ファイルに関数を使用してコンパイルされる場合 Comdat を行う、 [/Gy](../../build/reference/gy-enable-function-level-linking.md)オプション。 配置する**const** comdat 形式でデータをする必要がありますを宣言することを使用して`__declspec(selectany)`します。 データの削除または折りたたみを指定する方法については、次を参照してください。 [selectany](../../cpp/selectany.md)します。
+インライン関数とクラス宣言内で定義されているメンバー関数は comdat 形式では常にです。 すべてのオブジェクト ファイルに関数を使用してコンパイルされる場合 Comdat を行う、 [/Gy](gy-enable-function-level-linking.md)オプション。 配置する**const** comdat 形式でデータをする必要がありますを宣言することを使用して`__declspec(selectany)`します。 データの削除または折りたたみを指定する方法については、次を参照してください。 [selectany](../../cpp/selectany.md)します。
 
-既定では、 **/OPT:REF**がリンカーによって有効になっていない限り **/OPT:NOREF**または[/debug](../../build/reference/debug-generate-debug-info.md)を指定します。 この既定のオーバーライドをプログラムで参照されない Comdat の保持は、次のように指定します。 **/OPT:NOREF**します。 使用することができます、 [/include](../../build/reference/include-force-symbol-references.md)特定のシンボルの削除のオーバーライド オプションを指定します。
+既定では、 **/OPT:REF**がリンカーによって有効になっていない限り **/OPT:NOREF**または[/debug](debug-generate-debug-info.md)を指定します。 この既定のオーバーライドをプログラムで参照されない Comdat の保持は、次のように指定します。 **/OPT:NOREF**します。 使用することができます、 [/include](include-force-symbol-references.md)特定のシンボルの削除のオーバーライド オプションを指定します。
 
-場合[/debug](../../build/reference/debug-generate-debug-info.md)指定するの既定の **/opt**は**NOREF**、し、すべての関数は、イメージに保存されます。 この既定のオーバーライドをデバッグ ビルドの最適化は、次のように指定します。 **/OPT:REF**します。 これは、実行可能ファイルのサイズを小さくことができ、デバッグの場合でも有効な最適化を構築することができます。 指定することをお勧めします。 **/OPT:NOICF**構築デバッグ機能と同じに維持します。 これにより、スタック トレースを読み取って、圧縮された関数にブレークポイントを設定しやすくなります。
+場合[/debug](debug-generate-debug-info.md)指定するの既定の **/opt**は**NOREF**、し、すべての関数は、イメージに保存されます。 この既定のオーバーライドをデバッグ ビルドの最適化は、次のように指定します。 **/OPT:REF**します。 これは、実行可能ファイルのサイズを小さくことができ、デバッグの場合でも有効な最適化を構築することができます。 指定することをお勧めします。 **/OPT:NOICF**構築デバッグ機能と同じに維持します。 これにより、スタック トレースを読み取って、圧縮された関数にブレークポイントを設定しやすくなります。
 
 **ICF**\[**=**_イテレーション_] &#124; **NOICF**
 
 使用**ICF**\[**=**_イテレーション_] と同一の COMDAT の圧縮を実行します。 リンカー出力から余分な COMDAT シンボルを削除できます。 省略可能な*イテレーション*パラメーターをシンボル重複の走査回数を指定します。 既定のイテレーションの数には 1 です。 イテレーションの回数を増やすと、前回のイテレーションで圧縮されなかった重複が検出されることがあります。
 
-既定では、 **/OPT:ICF**がリンカーによって有効になっていない限り **/OPT:NOICF**または[/debug](../../build/reference/debug-generate-debug-info.md)を指定します。 この既定をオーバーライドし、プログラムで折りたたまれているから Comdat を防止するのには、指定 **/OPT:NOICF**します。
+既定では、 **/OPT:ICF**がリンカーによって有効になっていない限り **/OPT:NOICF**または[/debug](debug-generate-debug-info.md)を指定します。 この既定をオーバーライドし、プログラムで折りたたまれているから Comdat を防止するのには、指定 **/OPT:NOICF**します。
 
 デバッグ ビルドである必要があります明示的に指定する **/OPT:ICF** COMDAT の圧縮を有効にします。 ただし、ため **/OPT:ICF**同一のデータや関数をマージすることができます、スタック トレースに表示される関数名を変更することができます。 またなります。 あり得ないのは、特定の関数にブレークポイントを設定するか、デバッガーでのいくつかのデータを確認し、予期しない関数にかかるときに、コードをシングル ステップ実行します。 コードの動作は同じですが、デバッガーのプレゼンテーションを非常に混乱を招くことができます。 そのため、しないで使用する **/OPT:ICF**デバッグでより小さなコードの利点がこうした欠点を上回らない限りが構築されます。
 
 > [!NOTE]
-> **/OPT:ICF**異なる関数または読み取り専用データ メンバーに割り当てられるのと同じアドレスが発生することができます (つまり、 **const**を使用してコンパイルするときに変数 **/Gy**)、関数または読み取り専用データ メンバーの一意のアドレスに依存するプログラムを壊すことできます。 詳細については、「[/Gy (関数レベルのリンクの有効化)](../../build/reference/gy-enable-function-level-linking.md)」を参照してください。
+> **/OPT:ICF**異なる関数または読み取り専用データ メンバーに割り当てられるのと同じアドレスが発生することができます (つまり、 **const**を使用してコンパイルするときに変数 **/Gy**)、関数または読み取り専用データ メンバーの一意のアドレスに依存するプログラムを壊すことできます。 詳細については、「[/Gy (関数レベルのリンクの有効化)](gy-enable-function-level-linking.md)」を参照してください。
 
 **LBR** &AMP;#124; **NOLBR**
 
@@ -75,13 +75,13 @@ LINK がビルド時に実行する最適化を制御します。
 
 **/Opt**引数が同時に指定する、コンマで区切られました。 たとえばの代わりに **/OPT:REF/OPT:NOICF**を指定できます **/OPT:REF、NOICF**します。
 
-使用することができます、 [/verbose](../../build/reference/verbose-print-progress-messages.md)によって削除される関数を表示するリンカー オプション **/OPT:REF**および関数によって折りたたむが **/OPT:ICF**します。
+使用することができます、 [/verbose](verbose-print-progress-messages.md)によって削除される関数を表示するリンカー オプション **/OPT:REF**および関数によって折りたたむが **/OPT:ICF**します。
 
 **/Opt**引数は多くの場合を使用して作成されたプロジェクトの設定、**新しいプロジェクト**ダイアログは、Visual Studio IDE で、通常、デバッグに別の値を持って構成とリリース構成します。 プロジェクトでこれらのリンカー オプションの値が設定されていない場合は、プロジェクトの既定値は、コマンドラインで、リンカーによって使用される既定値と異なる場合がありますを取得可能性があります。
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で OPT:ICF リンカー オプションまたは OPT:REF リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
 
@@ -93,7 +93,7 @@ LINK がビルド時に実行する最適化を制御します。
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で OPT:LBR リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -107,5 +107,5 @@ LINK がビルド時に実行する最適化を制御します。
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
-- [リンカー オプション](../../build/reference/linker-options.md)
+- [MSVC リンカーのリファレンス](linking.md)
+- [MSVC リンカー オプション](linker-options.md)

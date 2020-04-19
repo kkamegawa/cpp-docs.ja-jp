@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CString objects, passing arguments
 - string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-ms.openlocfilehash: bf18265e19e4b1c1db010a4d7638fa959c357bca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1729167786d71c107fe6a4369d5a0c7e7c8594f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236386"
 ---
 # <a name="cstring-argument-passing"></a>CString 引数の渡し方
 
@@ -45,4 +45,3 @@ ms.locfileid: "50562397"
 ## <a name="see-also"></a>関連項目
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

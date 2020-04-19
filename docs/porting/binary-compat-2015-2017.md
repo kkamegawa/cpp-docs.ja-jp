@@ -1,26 +1,44 @@
 ---
-title: Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性
-ms.date: 09/24/2018
+title: 2015 と 2019 間の C++ のバイナリの互換性
+description: Visual Studio 2015、2017、およびC++ 2019 でのコンパイル済みファイル間のバイナリ互換性のしくみについて説明します。 Microsoft Visual C++再頒布可能パッケージの1つは、3つのバージョンすべてに対応しています。
+ms.date: 11/18/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: e526002bdca0eee122531f39c195aef3474cc61c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: b729cdcc4a494e60ec58314fe23b02c1816e8412
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329827"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188785"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性
+# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++Visual Studio 2015、2017、および2019間のバイナリの互換性
 
-以前のバージョンの Visual Studio では、バージョンの異なるコンパイラ ツールセットやランタイム ライブラリで構築されたオブジェクト ファイル (OBJ)、スタティック ライブラリ (LIB)、ダイナミック ライブラリ (DLL)、実行可能ファイル (EXE) の間のバイナリ互換性が保証されていませんでした。 これが Visual Studio 2017 で変わりました。 Visual Studio 2015 と Visual Studio 2017 では、C++ ツールセットのメジャー番号が 14 になります (Visual Studio 2015 は v140、Visual Studio 2017 は v141)。 これは、ランタイム ライブラリといずれかのバージョンのコンパイラでコンパイルされたアプリケーションの両方に、ほとんどの部分において、バイナリ互換性があるという事実を反映するものです。 つまり、たとえば Visual Studio 2015 の DLL がある場合、Visual Studio 2017 でビルドされたアプリケーションからこの DLL を使用するために再コンパイルする必要はありません。
+Visual Studio 2013 以前C++の Microsoft (MSVC) コンパイラツールセットでは、バージョン間のバイナリの互換性は保証されません。 異なるバージョンでビルドされたオブジェクトファイル、スタティックライブラリ、動的ライブラリ、および実行可能ファイルをリンクすることはできません。 ABIs、オブジェクト形式、およびランタイムライブラリには互換性がありません。
 
-このルールには例外が 2 つあります。 以下の場合、バイナリ互換性は保証されません。
+この動作は、Visual Studio 2015、2017、および2019で変更されています。 これらのいずれかのバージョンのコンパイラによってコンパイルされたランタイムライブラリとアプリは、バイナリと互換性があります。 C++ツールセットのメジャー番号に反映されます。これは、3つのすべてのバージョンで14です。 (ツールセットのバージョンは、Visual Studio 2015 の場合は v140、2017の場合は v141、2019の場合は v142) です。 たとえば、Visual Studio 2015 によってビルドされたサードパーティ製のライブラリがあるとします。 Visual Studio 2017 または2019でビルドされたアプリケーションで引き続き使用できます。 一致するツールセットを使用して再コンパイルする必要はありません。 最新バージョンの Microsoft Visual C++再頒布可能パッケージ (再頒布可能パッケージ) は、すべてのバージョンで動作します。
 
-1. スタティック ライブラリまたはオブジェクト ファイルが `/GL` コンパイラ スイッチでコンパイルされる場合。
+バイナリの互換性には、次の3つの重要な制限があります。
 
-2. アプリケーションのコンパイルとリンクで使用されたツールセットよりもバージョンが新しいツールセットで構築されたライブラリを使用する場合。 たとえば、コンパイラ バージョン 19.12 でコンパイルしてリンクされたプログラムは、19.0 から 19.12 でコンパイルされたライブラリを使用することができます。 また、バイナリ互換性は Visual Studio 2015 と Visual Studio 2017 の間にのみ存在します。Visual Studio 2013 以前で生成されたライブラリと 19.x のプログラムとのリンクはサポートされていません。
+- さまざまなバージョンのツールセットでビルドされたバイナリを混在させることができます。 ただし、アプリをリンクするには、少なくとも最新のバイナリのツールセットを使用する必要があります。 次に例を示します。2017ツールセットを使用してコンパイルされたアプリを、2019ツールセットを使用してリンクされている場合は、2019を使用してコンパイルされたスタティックライブラリにリンクすることができます。
+
+- アプリが使用する再頒布可能パッケージには、同様のバイナリ互換性制限があります。 サポートされているさまざまなバージョンのツールセットでビルドされたバイナリを混合する場合、再頒布可能バージョンは、すべてのアプリコンポーネントで使用される最新のツールセットと同じである必要があります。
+
+- [/Gl (プログラム全体の最適化)](../build/reference/gl-whole-program-optimization.md)コンパイラスイッチを使用してコンパイルされたスタティックライブラリまたはオブジェクトファイルは、バージョン間ではバイナリ互換ではあり*ません*。 `/GL` を使用してコンパイルされたすべてのオブジェクトファイルとライブラリは、コンパイルと最終的なリンクにまったく同じツールセットを使用する必要があります。
+
+## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Visual Studio 2015 またC++は2017から visual studio 2019 に Microsoft visual 再頒布可能パッケージをアップグレードする
+
+Microsoft Visual C++再頒布可能パッケージのメジャーバージョン番号は、visual Studio 2015、2017、および2019でも同じです。 つまり、再頒布可能パッケージのインスタンスは一度に1つしかインストールできません。 新しいバージョンは、既にインストールされている古いバージョンを上書きします。 たとえば、1つのアプリで Visual Studio 2015 から再頒布可能パッケージをインストールできます。 次に、別のアプリが Visual Studio 2019 から再頒布可能パッケージをインストールします。 2019バージョンでは古いバージョンが上書きされますが、バイナリに互換性があるため、以前のアプリは正常に動作します。 最新バージョンの再頒布可能パッケージには、最新の機能、セキュリティ更新プログラム、およびバグ修正がすべて含まれていることを確認します。 そのため、常に使用可能な最新バージョンにアップグレードすることをお勧めします。
+
+同様に、新しいバージョンが既にインストールされている場合は、古い再頒布可能パッケージをインストールすることはできません。 実行しようとすると、インストーラーによってエラーが報告されます。 既に2019バージョンを搭載しているコンピューターに2015または2017再頒布可能パッケージをインストールすると、次のようなエラーが表示されます。
+
+```Output
+0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
+```
+
+このエラーは仕様によるものです。 最新バージョンをインストールしておくことをお勧めします。 インストーラーがこのエラーから自動的に回復できることを確認します。
 
 ## <a name="see-also"></a>参照
 
-[Visual C++ の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)
+[ビジュアルC++の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)\
+[サポートされてC++いる最新の Visual 再頒布可能パッケージのダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

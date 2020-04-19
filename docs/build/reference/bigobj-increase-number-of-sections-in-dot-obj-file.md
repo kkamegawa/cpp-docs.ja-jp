@@ -1,6 +1,6 @@
 ---
 title: /bigobj (.obj ファイル内のセクションの数を増やす)
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - /bigobj
 helpviewer_keywords:
@@ -8,40 +8,36 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: d2deaf7b3e248dd1269d9f04037c9d38651a5b56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649710"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493113"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (.obj ファイル内のセクションの数を増やす)
 
-**/bigobj**のセクションでは、オブジェクト ファイルを格納できる数を増やします。
+**/bigobj**は、オブジェクトファイルに含めることができるセクションの数を増やします。
 
 ## <a name="syntax"></a>構文
 
-```
-/bigobj
-```
+> **/bigobj**
 
 ## <a name="remarks"></a>Remarks
 
-既定では、オブジェクト ファイルはアドレス指定可能なセクションを最大 65,536 (2^16) 保持できます。 これは、どのターゲット プラットフォームを指定したかにかかわらない場合です。 **/bigobj** 4,294,967,296 するアドレスの量が増加 (2 ^32)。
+既定では、オブジェクトファイルは、最大 65279 (約 2 ^ 16) のアドレス指定可能なセクションを保持できます。 この制限は、どのターゲットプラットフォームが指定されているかに関係なく適用されます。 **/bigobj**は、そのアドレス容量を 4294967296 (2 ^ 32) に増やします。
 
-ほとんどのモジュールでは、65,536 を超えるセクションを格納する .obj ファイルを生成することはありません。 しかし、マシンによって生成されるコード、またはテンプレート ライブラリを多用するコードでは、より多くのセクションを保持できる .obj ファイルを必要とする可能性があります。 **/bigobj**がユニバーサル Windows プラットフォーム (UWP) プロジェクトで既定で有効になって、コンピューターによって生成された XAML コードに含まれるヘッダーの数が多いためです。 UWP アプリ プロジェクトでこのオプションを無効にした場合は、コンパイラ エラー C1128 が発生する可能性があります。
+ほとんどのモジュールでは、65279を超えるセクションを含む .obj ファイルは生成されません。 ただし、コンピューターによって生成されるコード、またはテンプレートライブラリを多用するコードでは、より多くのセクションを保持できる .obj ファイルが必要になる場合があります。 コンピューターで生成された XAML コードに含まれるヘッダーの数が多いため、ユニバーサル Windows プラットフォーム (UWP) プロジェクトでは、 **/bigobj**が既定で有効になっています。 UWP アプリプロジェクトでこのオプションを無効にすると、コードによってコンパイラエラー C1128 が生成される場合があります。
 
-Visual C 2005 より前に付属していたリンカーで生成された .obj ファイルを読み取ることができません **/bigobj**します。
+PE COFF オブジェクトファイル形式の詳細については、Windows ドキュメントの「 [Pe 形式](/windows/win32/debug/pe-format)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[C/C++]** フォルダーをクリックします。
+1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
-1. **[コマンド ライン]** プロパティ ページをクリックします。
-
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. **[追加オプション]** ボックスに、「 **/bigobj** 」コンパイラオプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -49,5 +45,5 @@ Visual C 2005 より前に付属していたリンカーで生成された .obj 
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

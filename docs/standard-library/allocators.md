@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493874"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457541"
 ---
 # <a name="allocators"></a>アロケーター
 
@@ -28,7 +28,7 @@ C++ 標準ライブラリでは、アロケーターの既定の実装が提供�
 
 ## <a name="writing-your-own-allocator-c11"></a>独自のアロケーターの記述 (C++ 11)
 
-既定のアロケーターを使用して**新しい**と**削除**を割り当てたり、メモリの割り当てを解除します。 メモリの割り当てに、共有メモリなど、別の方法を使用する場合は、独自のアロケーターを作成する必要があります。 対象が C++ 11 で、かつ新しいカスタム アロケーターを作成する必要がある場合、可能であれば最小アロケーターを作成することをお勧めします。 既に旧式のアロケーターを実装している場合でも、自動的に提供される、より効率的な `construct()` メソッドを利用するため、それを*最小アロケーター*に変更することを検討してください。
+既定のアロケーターは、 **new**と**delete**を使用してメモリの割り当てと割り当て解除を行います。 メモリの割り当てに、共有メモリなど、別の方法を使用する場合は、独自のアロケーターを作成する必要があります。 対象が C++ 11 で、かつ新しいカスタム アロケーターを作成する必要がある場合、可能であれば最小アロケーターを作成することをお勧めします。 既に旧式のアロケーターを実装している場合でも、自動的に提供される、より効率的な `construct()` メソッドを利用するため、それを*最小アロケーター*に変更することを検討してください。
 
 最小アロケーターは、必要な定型句が大幅に少なくなっているため、すべての処理を担う `allocate` と `deallocate` メンバー関数に集中することができます。 最小アロケーターを作成する場合は、次の例に示すものを除き、いずれのメンバーも実装しないでください。
 
@@ -123,4 +123,4 @@ C++ 03 では、C++ 標準ライブラリのコンテナーで使用されるア
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

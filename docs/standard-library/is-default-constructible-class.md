@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 7fc1c70a1244688888174b834fe653d5d6d2497b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520934"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452786"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible クラス
 
@@ -26,12 +26,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*T*既定コンス トラクターを持つ、それ以外の場合は false を保持するクラス型です。 これは、述語 `is_constructible<T>`と同じです。 型*T*完全な型である必要があります**void**、または不明なバインドの配列。
+型*T*が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型*T*は、完全な型、 **void**、または不明なバインドの配列である必要があります。
 
 ## <a name="example"></a>例
 
@@ -75,4 +75,4 @@ is_default_constructible<Simple2> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

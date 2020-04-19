@@ -8,12 +8,12 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: 22111a8b2f7048d9f62d9e3e2f6c270fdc9bace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc13384454c4732d3efbf99def5d05dd4f2d44aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394967"
 ---
 # <a name="active-document-containment"></a>Active ドキュメント コンテインメント
 
@@ -35,9 +35,8 @@ Active ドキュメント コンテナー アプリケーションのユーザ�
 
 ## <a name="sample-programs"></a>サンプル プログラム
 
-- [MFCBIND](../visual-cpp-samples.md)サンプルは、active ドキュメント コンテナー アプリケーションの実装を示しています。
+- [MFCBIND](../overview/visual-cpp-samples.md)サンプルは、active ドキュメント コンテナー アプリケーションの実装を示しています。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC COM](../mfc/mfc-com.md)
-

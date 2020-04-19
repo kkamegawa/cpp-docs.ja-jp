@@ -1,6 +1,6 @@
 ---
 title: __inbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbytestring
 - __inbytestring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep insb instruction
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-ms.openlocfilehash: 494c57625bc6f93e09817171476267ff5fb27c3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb6e811c809c6069c47415e87804641f30a3897b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556781"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217814"
 ---
-# <a name="inbytestring"></a>__inbytestring
+# <a name="__inbytestring"></a>__inbytestring
 
 **Microsoft 固有の仕様**
 
-使用して、指定されたポートからデータを読み取り、`rep insb`命令。
+`rep insb`命令を使用して、指定されたポートからデータを読み取ります。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __inbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __inbytestring(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]読み取るポート。
+*ポート*\
+から読み取り元のポート。
 
-*Buffer*<br/>
-[out]ここでは、ポートから読み取ったデータを書き込まれます。
+*格納*\
+入出力このポートから読み取られたデータがここに書き込まれます。
 
-*カウント*<br/>
-[in]読み取るデータのバイト数。
+*数*\
+から読み取るデータのバイト数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,7 +48,7 @@ void __inbytestring(
 |---------------|------------------|
 |`__inbytestring`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

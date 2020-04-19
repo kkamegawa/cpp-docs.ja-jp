@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: 081d96fcf9b0d0d8d5183e3ed6d0fc69c5a29206
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220232"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744695"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 構造体の st_mode フィールド定数
 
@@ -50,7 +50,7 @@ ms.locfileid: "54220232"
 #include <sys/stat.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの定数は、[_stat 構造体](../c-runtime-library/standard-types.md)の **st_mode** フィールドでファイルの種類を示すために使用されます。
 
@@ -66,7 +66,7 @@ ms.locfileid: "54220232"
 |`_S_IWRITE`|書き込みアクセス許可、所有者|
 |`_S_IEXEC`|実行/検索アクセス許可、所有者|
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [_stat、_wstat 関数](../c-runtime-library/reference/stat-functions.md)<br/>
 [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 8a1525539c84ea427815a03057bb6d2f9213fec7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431112"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757957"
 ---
 # <a name="compiler-error-c3707"></a>コンパイラ エラー C3707
 
-'function': dispinterface メソッドは dispid を持つ必要があります
+' function ': ディスパッチインターフェイスには dispid が必要です
 
-使用する場合、`dispinterface`メソッドを割り当てる必要がありますが、`dispid`します。 このエラーを修正するのには、割り当て、`dispid`を`dispinterface`メソッド、たとえば、コメントを解除して、`id`メソッドは、次の例の属性。 詳細については、属性を参照してください。 [dispinterface](../../windows/dispinterface.md)と[id](../../windows/id.md)します。
+`dispinterface` メソッドを使用する場合は、`dispid`に割り当てる必要があります。 このエラーを解決するには、次のサンプルのメソッドの `id` 属性をコメント解除するなどして、`dispinterface` メソッドに `dispid` を割り当てます。 詳細については、「属性の[ディスパッチインターフェイス](../../windows/dispinterface.md)と[id](../../windows/id.md)」を参照してください。
 
 次の例では、C3707 が生成されます。
 
-```
+```cpp
 // C3707.cpp
 #include <atlbase.h>
 #include <atlcom.h>

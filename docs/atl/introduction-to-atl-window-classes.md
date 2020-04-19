@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-ms.openlocfilehash: 987e2eab5fe4eec32d88b7c1528f1e3189fc925a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c3bc70b5edfb089a6276003625b876d8c553dcb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250481"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL ウィンドウ クラスの概要
 
@@ -40,4 +40,3 @@ ms.locfileid: "50459801"
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ クラス](../atl/atl-window-classes.md)
-

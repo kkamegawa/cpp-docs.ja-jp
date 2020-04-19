@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2157
 ms.assetid: babbca24-16dc-4b69-be14-a675029249c1
-ms.openlocfilehash: 1338a0f0ceb1a42ed84fe74e4ed9a2d774979075
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fa73148c9dbce843d3d1d075ca836f47b5ae074
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450948"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755890"
 ---
 # <a name="compiler-error-c2157"></a>コンパイラ エラー C2157
 
@@ -21,7 +21,7 @@ ms.locfileid: "50450948"
 
 次の例では C2157 が生成されます。
 
-```
+```cpp
 // C2157.cpp
 // compile with: /c
 #pragma alloc_text( "func", func)   // C2157

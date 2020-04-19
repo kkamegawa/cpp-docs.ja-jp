@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
-ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b573127518969accdfdcc4a25a50269dd6aa002
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502818"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456402"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
-_ITERATOR_DEBUG_LEVEL マクロ コントロールかどうか[反復子がチェック](../standard-library/checked-iterators.md)と[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)を有効にします。 このマクロよりも優先され、以前の _SECURE_SCL および _HAS_ITERATOR_DEBUGGING マクロの機能を結合します。
+チェックを行う[反復子](../standard-library/checked-iterators.md)と[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)を有効にするかどうかを制御する (_s)。 このマクロは、以前の _SECURE_SCL マクロとデバッグマクロの機能を置き換え、その機能を組み合わせたものです。
 
 ## <a name="macro-values"></a>マクロの値
 
-次の表では、_ITERATOR_DEBUG_LEVEL マクロの値をまとめたものです。
+次の表に、使用可能な値をまとめます。
 
 |コンパイル モード|マクロの値|説明|
 |----------------------|----------------|-----------------|
@@ -31,13 +31,13 @@ _ITERATOR_DEBUG_LEVEL マクロ コントロールかどうか[反復子がチ�
 ||0 (既定値)|チェックを行う反復子を無効にします。|
 ||1|チェックを行う反復子を有効にします。反復子のデバッグは関連しません。|
 
-リリース モードでは、コンパイラは、_ITERATOR_DEBUG_LEVEL を 2 として指定する場合に、エラーを生成します。
+リリースモードでは、[レベル] を2に指定すると、コンパイラによってエラーが生成されます。
 
 ## <a name="remarks"></a>Remarks
 
-_ITERATOR_DEBUG_LEVEL マクロ コントロールかどうか[反復子がチェック](../standard-library/checked-iterators.md)が有効にして、デバッグ モードでかどうか、[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)を有効にします。 _ITERATOR_DEBUG_LEVEL が 1 または 2 として定義される場合、checked 反復子は、コンテナーの境界が上書きされないことを確認します。 _ITERATOR_DEBUG_LEVEL が 0 の場合、反復子はチェックされません。 _ITERATOR_DEBUG_LEVEL が 1 として定義されると、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 _ITERATOR_DEBUG_LEVEL は 2 として定義されている、安全でない反復子は、アサートとすることができます、ランタイム エラー ダイアログがデバッガーに割り込む原因を使用します。
+チェックを行う[反復子](../standard-library/checked-iterators.md)を有効にするかどうかを制御するマクロ (_s) を制御します。デバッグモードでは、[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)が有効かどうかを制御します。 レベルが1または2と定義されている場合、チェックを行う反復子は、コンテナーの境界が上書きされないようにします。 デバッグレベルが0の場合、反復子はチェックされません。 デバッグレベルが1と定義されている場合、安全ではない反復子の使用によってランタイムエラーが発生し、プログラムが終了します。 レベルを2として定義した場合、アンセーフ反復子の使用により、アサートと、デバッガーを中断するランタイムエラーダイアログが生成されます。
 
-_ITERATOR_DEBUG_LEVEL マクロが、_SECURE_SCL マクロおよび _HAS_ITERATOR_DEBUGGING マクロと同様の機能をサポートするため、場合があります特定するマクロおよびマクロは、特定の状況で使用する値します。 混乱を防ぐためには、_ITERATOR_DEBUG_LEVEL マクロのみを使用することをお勧めします。 このテーブルには、_SECURE_SCL と既存のコードで _HAS_ITERATOR_DEBUGGING のさまざまな値を使用する同等の _ITERATOR_DEBUG_LEVEL マクロの値について説明します。
+_SECURE_SCL マクロは、デバッグマクロと同様の機能をサポートしているため、特定の状況で使用するマクロとマクロの値がわからない場合があります。 混乱を防ぐために、このマクロを使用することをお勧めします。 次の表では、_SECURE_SCL のさまざまな値に使用する同等のレベルのマクロ値と、既存のコードでのデバッグを行います (_d)。
 
 |**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
 |---|---|---|
@@ -49,7 +49,7 @@ _ITERATOR_DEBUG_LEVEL マクロが、_SECURE_SCL マクロおよび _HAS_ITERATO
 
 ### <a name="example"></a>例
 
-_ITERATOR_DEBUG_LEVEL マクロの値を指定するには、使用、 [/D](../build/reference/d-preprocessor-definitions.md)コンパイラ オプションで、コマンドラインで定義または使用`#define`ソース ファイルで、C++ 標準ライブラリの前にヘッダーが含まれています。 コンパイル、コマンドラインでなど*sample.cpp*デバッグ モードで、反復子のデバッグのサポートを使用するには、_ITERATOR_DEBUG_LEVEL マクロの定義を指定することができます。
+このマクロの値を指定するには、 [/d](../build/reference/d-preprocessor-definitions.md)コンパイラオプションを使用してコマンドラインで定義します。または、 `#define` C++標準ライブラリヘッダーがソースファイルに含まれる前にを使用します。 たとえば、コマンドラインで、デバッグモードで*サンプル .cpp*をコンパイルし、デバッグ反復子のサポートを使用するには、次のように指定します。
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 
@@ -67,6 +67,6 @@ _ITERATOR_DEBUG_LEVEL マクロの値を指定するには、使用、 [/D](../b
 
 ## <a name="see-also"></a>関連項目
 
-[Checked Iterators](../standard-library/checked-iterators.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[チェックを行う反復子](../standard-library/checked-iterators.md)\
+[反復子のデバッグのサポート](../standard-library/debug-iterator-support.md)\
+[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)

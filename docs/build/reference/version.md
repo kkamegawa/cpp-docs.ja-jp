@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -VERSION editbin option
 - VERSION editbin option
 ms.assetid: 1fa08266-3088-4261-8d84-d4408e1cef46
-ms.openlocfilehash: a893eb13c3df11299101fcd4b17ec6c310e7e3d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b8d0eb291cc09e96af1a3e471ead4d00519e927
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316653"
 ---
 # <a name="version"></a>/VERSION
 
@@ -29,4 +29,4 @@ ms.locfileid: "50444175"
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

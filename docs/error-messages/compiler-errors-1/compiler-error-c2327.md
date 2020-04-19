@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652310"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747775"
 ---
 # <a name="compiler-error-c2327"></a>コンパイラ エラー C2327
 
-'symbol': 型名、スタティック、または列挙子でないです。
+' symbol ': 型名、静的、または列挙子ではありません
 
-入れ子になったクラス内のコードは、型名を静的メンバー、または列挙子は外側のクラスのメンバーにアクセスしようとします。
+入れ子になったクラス内のコードは、外側のクラスのメンバーにアクセスしようとします。このメンバーは、型名、静的メンバー、または列挙子ではありません。
 
-コンパイルするときに **/clr**C2327 の一般的な原因は、プロパティの型と同じ名前のプロパティです。
+**/Clr**を使用してコンパイルする場合、C2327 の一般的な原因は、プロパティの型と同じ名前を持つプロパティです。
 
 次の例では、C2327 が生成されます。
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-C2327 は、メンバーの名前で型の名前が表示されていない場合にも発生します。
+C2327 は、メンバーの名前によって型の名前が非表示になっている場合にも発生する可能性があります。
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-C2327 は完全にパラメーターのデータ型を指定する必要がある、このような状況でも起動できます。
+この状況では、C2327 を起動することもできます。この場合、パラメーターのデータ型を完全に指定する必要があります。
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -71,7 +71,7 @@ struct B {
 
 次の例では、C2327 が生成されます。
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-次の例では、プロパティがプロパティの型と同じ名前を持つとき、C2327 が示しています。
+次の例は、プロパティの名前がプロパティの型と同じである場合の C2327 を示しています。
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: be231a92-c712-464e-ae25-a4becb20f7f5
-ms.openlocfilehash: c7ae46278fa76f2ca1a6f24a376f84dd77a97b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f308864e6e85f74e40d9c9df200a0254fea366a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477897"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152626"
 ---
 # <a name="blocks"></a>ブロック
 
@@ -20,6 +20,6 @@ ms.locfileid: "50477897"
 
 複合ステートメントはすべて中かっこで囲まれますが、中かっこで囲まれたすべてが複合ステートメントではないことに注意してください。 たとえば、配列、構造体、または列挙体の要素を指定する際に中かっこで囲む場合がありますが、これらは複合ステートメントではありません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ソース ファイルとソース プログラム](../c-language/source-files-and-source-programs.md)

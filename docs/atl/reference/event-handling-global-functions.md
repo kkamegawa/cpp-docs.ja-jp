@@ -7,12 +7,12 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-ms.openlocfilehash: 02066f2e6cd215fdb68fcdb594307b646ee69cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb109c63b497420ad6e797cd8e0b366ce4dc0475
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276344"
 ---
 # <a name="event-handling-global-functions"></a>イベント処理に関するグローバル関数
 

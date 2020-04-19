@@ -1,31 +1,31 @@
 ---
-title: 'MFC ActiveX コントロール : ストック メソッドの追加'
+title: MFC ActiveX コントロール:ストック メソッドの追加
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396393"
 ---
-# <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX コントロール : ストック メソッドの追加
+# <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX コントロール:ストック メソッドの追加
 
 ストック メソッドは、クラスによって既に実装されている点で、カスタム メソッドとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)します。 たとえば、`COleControl`コントロールの更新メソッドをサポートしている定義済みのメンバー関数が含まれています。 このストック メソッドのディスパッチ マップ エントリは、DISP_STOCKFUNC_REFRESH です。
 
 >[!IMPORTANT]
 > ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
-`COleControl` 2 つのメソッドをサポートしています: DoClick および更新します。 更新は、すぐに、コントロールの外観を更新するコントロールのユーザーによって呼び出されます。コントロールのクリックを起動する DoClick が呼び出されるイベント。
+`COleControl` 2 つのメソッドをサポートしています。DoClick および更新します。 更新は、すぐに、コントロールの外観を更新するコントロールのユーザーによって呼び出されます。コントロールのクリックを起動する DoClick が呼び出されるイベント。
 
 |メソッド|ディスパッチ マップ エントリ|コメント|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK)**|クリック イベントを発生させます。|
-|`Refresh`|**DISP_STOCKPROP_REFRESH)**|コントロールの外観はすぐに更新します。|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|クリック イベントを発生させます。|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|コントロールの外観はすぐに更新します。|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> ストック メソッドを使用して、追加、メソッド追加ウィザード
 
@@ -64,4 +64,3 @@ ms.locfileid: "50585030"
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

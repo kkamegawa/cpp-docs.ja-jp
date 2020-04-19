@@ -1,6 +1,6 @@
 ---
 title: _BitScanReverse、_BitScanReverse64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: f1c33f90fc8e44388068f0588d33effd80fc203c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586421"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216948"
 ---
-# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
+# <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 
 **Microsoft 固有の仕様**
 
@@ -26,7 +26,7 @@ ms.locfileid: "50586421"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char _BitScanReverse(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*Index*<br/>
-[out]見つかった最初のビット セット (1) のビット位置が読み込まれます。
+*化*\
+入出力見つかった最初のセットビット (1) のビット位置を使用して読み込まれます。
 
-*マスク*<br/>
-[in]検索する 32 ビットまたは 64 ビット値。
+*隠す*\
+から検索する32ビットまたは64ビットの値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -53,12 +53,12 @@ unsigned char _BitScanReverse64(
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86、ARM、x64|\<intrin.h>|
-|`_BitScanReverse64`|ARM、x64||
+|`_BitScanReverse`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64、x64|\<intrin.h>|
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // BitScanReverse.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -87,15 +87,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>入力
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>出力例
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```

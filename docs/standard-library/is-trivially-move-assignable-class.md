@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: b25d16658def4e3cf620ab707d2dabacb2620f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b349d328da995105a6217f4ab597da5d7eafc38
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435540"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689487"
 ---
-# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable クラス
+# <a name="is_trivially_move_assignable-class"></a>is_trivially_move_assignable クラス
 
 型が自明なムーブ代入演算子を持つかどうかをテストします。
 
@@ -26,26 +26,22 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*は自明なムーブ代入演算子を持つ、それ以外の場合は false を保持するクラスです。
+型*Ty*が自明なムーブ代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラスの移動代入演算子*Ty*は簡単では場合。
+クラス*Ty*の移動代入演算子は、次のような場合に自明です。
 
-暗黙的に指定されている
+- 暗黙的に指定されている
+- クラス*Ty*に仮想関数がありません。
+- クラス*Ty*に仮想基底がありません
+- クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
+- クラスの型配列のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
-クラスは、 *Ty*仮想関数がありません
-
-クラスは、 *Ty*仮想基底クラスがありません
-
-クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
-
-クラスの型配列のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
-
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 
@@ -53,4 +49,4 @@ struct is_trivially_move_assignable;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

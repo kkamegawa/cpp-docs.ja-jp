@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3212
 ms.assetid: 9e271bb6-a51f-4b96-b26b-9f4ca28fca0a
-ms.openlocfilehash: ac3e632894d269bb37860492c2bc63881fabe665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4881100cd76473f87b597989010376e8809ef7ff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462349"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736738"
 ---
 # <a name="compiler-error-c3212"></a>コンパイラ エラー C3212
 
@@ -21,7 +21,7 @@ ms.locfileid: "50462349"
 
 次の例では C3212 が生成されます。
 
-```
+```cpp
 // C3212.cpp
 // compile with: /LD
 template <class T>

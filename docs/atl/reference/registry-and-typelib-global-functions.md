@@ -1,6 +1,6 @@
 ---
 title: レジストリとタイプ ライブラリに関するグローバル関数
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275080"
 ---
 # <a name="registry-and-typelib-global-functions"></a>レジストリとタイプ ライブラリに関するグローバル関数
 
@@ -33,12 +33,12 @@ ms.locfileid: "50486589"
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|指定されたレジストリ キーを作成します。|
-|[AfxRegDeleteKey](#afxrefdeletekey)|指定されたレジストリ キーを削除します。|
+|[AfxRegCreateKey](#afxregcreatekey)|指定されたレジストリ キーを作成します。|
+|[AfxRegDeleteKey](#afxregdeletekey)|指定されたレジストリ キーを削除します。|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|プレビュー ハンドラーを登録するためのヘルパー。|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| プレビュー ハンドラーの登録を解除するヘルパー。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|この関数は、タイプ ライブラリを登録するために呼び出されます。|
-|[この代替](#atlunregistertypelib)|この関数は、タイプ ライブラリの登録を解除するには|
+|[AtlUnRegisterTypeLib](#atlunregistertypelib)|この関数は、タイプ ライブラリの登録を解除するには|
 |[AfxRegOpenKey](#afxregopenkey)|指定されたレジストリ キーを開きます。|
 |[AfxRegOpenKeyEx](#afxregopenkeyex)|指定されたレジストリ キーを開きます。|
 |[AtlLoadTypeLib](#atlloadtypelib)|この関数は、タイプ ライブラリを読み込むために呼び出されます。|
@@ -317,7 +317,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 **ヘッダー:** atlbase.h
 
-##  <a name="atlunregistertypelib"></a>  この代替
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
 この関数は、タイプ ライブラリの登録を解除するために呼び出されます。
 
@@ -343,7 +343,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="remarks"></a>Remarks
 
-このヘルパー関数が利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)します。
+このヘルパー関数が利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)します。
 
 ### <a name="requirements"></a>必要条件
 

@@ -1,9 +1,9 @@
 ---
 title: _RTC_GetErrDesc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_GetErrDesc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-ms.openlocfilehash: d164626ea89bbe10f5b2ffe4224bf6381e40bab0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7174e9242b77a904df817886df4f8c763e3e0b2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590308"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949054"
 ---
-# <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
+# <a name="_rtc_geterrdesc"></a>_RTC_GetErrDesc
 
 実行時エラー チェック (RTC) の種類に関する簡単な説明を返します。
 
@@ -49,7 +52,7 @@ const char * _RTC_GetErrDesc(
 
 ## <a name="return-value"></a>戻り値
 
-実行時エラー チェック システムによって検出されたエラーの 1 つの種類に関する簡単な説明が含まれている文字列。 エラーが 0 未満またはより大きいかによって返される値と等しい場合[_RTC_NumErrors](rtc-numerrors.md)、 **_RTC_GetErrDesc**返します**NULL**します。
+実行時エラー チェック システムによって検出されたエラーの 1 つの種類に関する簡単な説明が含まれている文字列。 エラーが 0[未満である](rtc-numerrors.md)か、または _RTC_GetErrDesc によって返された値以上である場合、は**NULL**を返します。
 
 ## <a name="requirements"></a>必要条件
 

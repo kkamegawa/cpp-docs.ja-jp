@@ -1,11 +1,11 @@
 ---
 title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacosh
 - cacoshf
 - cacoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacosh
 - cacoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668196"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943400"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -68,15 +71,15 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>戻り値
 
-逆双曲線余弦*z*、(ラジアン単位)。 結果は、unbounded と実際の軸に沿ったとの間隔で負でない [-π、+ π] 虚軸。
+*Z*の逆双曲線余弦 (ラジアン)。 結果は、実数軸に対しては無制限で負ではなく、虚数軸に沿って区間 [-iπ, + iπ] になります。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cacosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cacosh**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cacosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cacosh** **は常に値を**取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cacosh**、 **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
 

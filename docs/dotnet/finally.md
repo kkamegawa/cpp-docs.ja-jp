@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: 5849a24d7b5d3d4f4a6d24d8cab3dd32f9d1de14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223015"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ ms.locfileid: "50490767"
 
 目的、`finally`ブロックは、例外が発生した後に残されているリソースをクリーンアップします。 なお、`finally`例外がスローされなかった場合でも、ブロックは実行常にされます。 `catch`マネージ例外がスローされた場合にのみ、ブロックが実行に関連付けられている`try`ブロックします。
 
-`finally` 状況依存のキーワードは、します。参照してください[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)詳細についてはします。
+`finally` 状況依存のキーワードは、します。参照してください[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)詳細についてはします。
 
 ## <a name="example"></a>例
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>関連項目
 
-[例外処理](../windows/exception-handling-cpp-component-extensions.md)
+[例外処理](../extensions/exception-handling-cpp-component-extensions.md)

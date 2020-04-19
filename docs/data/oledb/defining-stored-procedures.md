@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 06618d1a468116855ccad149a150c0b621497f2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f4c4ad84abf2a5de2cdf09e7064396ea01eeebe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176396"
 ---
 # <a name="defining-stored-procedures"></a>ストアド プロシージャの定義
 

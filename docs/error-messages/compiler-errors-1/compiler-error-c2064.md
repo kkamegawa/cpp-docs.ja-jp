@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2064
+title: コンパイラエラー C2064
 ms.date: 11/04/2016
 f1_keywords:
 - C2064
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-ms.openlocfilehash: 8af20c5172cddd0194ed018c13960bbed7859674
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: cd62ea825e3ae7d9e4acc1cb6d93d4bc102be0eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737323"
 ---
-# <a name="compiler-error-c2064"></a>コンパイラ エラー C2064
+# <a name="compiler-error-c2064"></a>コンパイラエラー C2064
 
 N 引数を取り込む関数には評価されません。
 
@@ -21,7 +21,7 @@ N 引数を取り込む関数には評価されません。
 
 この例のコードでは、関数ではないものを関数として呼び出そうとしています。 次の例では C2064 が生成されます。
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -33,7 +33,7 @@ void func() {
 
 オブジェクト インスタンスのコンテキストから、静的でないメンバー関数へのポインターを呼び出す必要があります。 次の例では C2064 が生成され、その修正方法が示されています。
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -52,7 +52,7 @@ int main() {
 
 クラス内で、メンバー関数ポインターは、呼び出し元のオブジェクトのコンテキストも示す必要があります。 次の例では C2064 が生成され、その修正方法が示されています。
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

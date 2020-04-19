@@ -1,10 +1,10 @@
 ---
 title: system、_wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328657"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957676"
 ---
-# <a name="system-wsystem"></a>system、_wsystem
+# <a name="system-_wsystem"></a>system、_wsystem
 
 コマンドを実行します。
 
@@ -61,7 +64,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>戻り値
 
-場合*コマンド*は**NULL**コマンド インタープリターが見つかると、0 以外の値を返します。 コマンド インタープリターが見つからない場合は 0 を設定**errno**に**ENOENT**します。 場合*コマンド*ない**NULL**、**システム**コマンド インタープリターから返される値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値 1 のエラーを示すと**errno**値は次のいずれかに設定されます。
+*Command*が**NULL**でコマンドインタープリターが見つかった場合、は0以外の値を返します。 コマンドインタープリターが見つからない場合、は0を返し、 **errno**を**ENOENT**に設定します。 *Command*が**NULL**でない場合、 **system**はコマンドインタープリターによって返された値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ int _wsystem(
 
 ## <a name="remarks"></a>Remarks
 
-**システム**関数パス*コマンド*はコマンド インタープリターに文字列として、オペレーティング システムのコマンドを実行します。 **システム**を使用して、 **COMSPEC**と**パス**環境変数の検索コマンド インタープリター ファイル CMD.exe です。 場合*コマンド*は**NULL**関数がだけコマンド インタープリターが存在するかどうかを確認します。
+**System**関数は、コマンドインタープリターに*コマンド*を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム**は、 **COMSPEC**および**PATH**環境変数を使用して、コマンドインタープリターファイル cmd.exe を検索します。 *Command*が**NULL**の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
 
-使用して、フラッシュ明示的に[fflush](fflush.md)または[_flushall](flushall.md)を呼び出す前に、任意のストリームを閉じる**システム**します。
+[Fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、または**システム**を呼び出す前にストリームを閉じる必要があります。
 
-**_wsystem**のワイド文字バージョンです**システム**、*コマンド*引数 **_wsystem**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wsystem**は、**システム**のワイド文字バージョンです。 **_wsystem**の*コマンド*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,7 +100,7 @@ int _wsystem(
 
 ## <a name="example"></a>例
 
-この例では**システム**をテキスト ファイルを入力します。
+この例では、**システム**を使用してテキストファイルを入力します。
 
 ```C
 // crt_system.c
@@ -110,14 +113,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>入力: crt_system.txt
+### <a name="input-crt_systemtxt"></a>入力: crt_system.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Line one.

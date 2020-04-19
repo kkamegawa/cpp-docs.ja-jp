@@ -1,7 +1,7 @@
 ---
-title: /DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
-description: /DEPENDENTLOADFLAG オプションは、LoadLibrary を使用して読み込まれた Dll の既定のフラグを設定します。
-ms.date: 05/18/2018
+title: /DEPENDENTLOADFLAG (既定の依存ロード フラグの設定)
+description: /Dependentloadflag オプションは、このモジュールによって読み込まれる Dll に対して、既定の依存読み込みフラグを設定します。
+ms.date: 01/22/2020
 f1_keywords:
 - dependentloadflag
 helpviewer_keywords:
@@ -10,53 +10,70 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
+ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326161"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725709"
 ---
-# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
+# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定の依存ロード フラグの設定)
 
-既定の負荷のフラグを設定するときに使用`LoadLibrary`Dll を読み込むために使用します。
+::: moniker range="vs-2015"
+
+**/Dependentloadflag**オプションには、Visual Studio 2017 以降が必要です。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+オペレーティングシステムが、静的にリンクされたモジュールのインポートを解決するときに使用される既定の読み込みフラグを設定します。
 
 ## <a name="syntax"></a>構文
 
-> **/DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/Dependentloadflag**[ __:__ *load_flags*]
 
 ### <a name="arguments"></a>引数
 
-*loadflags*<br/>
-10 進数、先行ゼロの場合は、8 進数または先頭の 16 進数のオプション"C"スタイル 16 ビット整数値`0x`、すべてに適用する依存読み込みフラグを指定する[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)呼び出し。 既定値は 0 です。
+*load_flags*<br/>
+モジュールの静的にリンクされたインポート依存関係を解決するときに適用する読み込みフラグを指定する、省略可能な整数値。 既定値は 0 です。 サポートされているフラグ値の一覧については、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)の `LOAD_LIBRARY_SEARCH_*` エントリを参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このオプションは、Visual Studio 2017 の新機能は、Windows 10 RS1 以降で実行されているアプリにのみ適用されます。 このオプションは、アプリを実行するその他のオペレーティング システムで無視されます。
+オペレーティングシステムによって、静的にリンクされたモジュールのインポートが解決されると、[既定の検索順序](/windows/win32/dlls/dynamic-link-library-search-order)が使用されます。 **/Dependentloadflag**オプションを使用して、これらのインポートの解決に使用される検索パスを変更する*load_flags*値を指定します。 サポートされているオペレーティングシステムでは、`LOAD_LIBRARY_SEARCH` パラメーターを使用する場合の[LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa)の場合と同様に、静的なインポートの解決の検索順序を変更します。 *Load_flags*による検索順序の詳細については、「 [LOAD_LIBRARY_SEARCH フラグを使用し](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags)た検索順序」を参照してください。
 
-サポートされるオペレーティング システムでは、このオプションがへの呼び出しを変更した効果`LoadLibrary("dependent.dll")`を同等の`LoadLibraryEx("dependent.dll", 0, loadflags)`します。 呼び出す[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)は影響を受けません。 このオプションでは、アプリを読み込んだ Dll を再帰的には適用されません。
+このフラグを使用すると、1つの[DLL 植栽攻撃](/windows/win32/dlls/dynamic-link-library-security)ベクトルをより困難にすることができます。 たとえば、DLL を静的にリンクしたアプリについて考えてみましょう。
 
-このフラグは、攻撃を仕掛ける DLL を防ぐために使用できます。 たとえば、アプリで使用`LoadLibrary`依存 DLL を読み込むには、攻撃者で使用される検索パスに同じ名前の DLL を工場でした`LoadLibrary`、現在のディレクトリなどセーフ DLL の検索モードがある場合、システムのディレクトリの前にするチェック可能性があります無効になります。 セーフ DLL の検索モードでは、検索の順序で後で、ユーザーの現在のディレクトリに配置し、Windows XP SP2 以降では既定で有効にします。 詳細については、次を参照してください。[ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)します。
+- 攻撃者は、アプリケーションディレクトリなど、インポート解決の検索パスで前に同じ名前の DLL をプラントに送り込むことができます。 保護されたディレクトリは、攻撃者が変更するのが困難ですが、不可能ではありません。
 
-リンク オプションを指定する場合`/DEPENDENTLOADFLAG:0xA00`(結合フラグの値`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`)、DLL 検索パスは、攻撃者がより困難である保護されたディレクトリに制限ユーザーのコンピューターに安全な DLL の検索モードが無効の場合でも変更します。 使用可能なフラグと、そのシンボリックと数値の値は、次を参照してください。、 *dwFlags*パラメーターの説明を[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)します。
+- アプリケーション、%windows%\system32、および% windows% ディレクトリに DLL がない場合、インポートの解決は現在のディレクトリに分類されます。 攻撃者は、そこに DLL を送り込むことができます。
 
-### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で DEPENDENTLOADFLAG リンカー オプションを設定するには
+どちらの場合も `/DEPENDENTLOADFLAG:0x800` リンクオプション (フラグ `LOAD_LIBRARY_SEARCH_SYSTEM32`の値) を指定すると、モジュールの検索パスは%windows%\system32 ディレクトリに制限されます。 他のディレクトリに対する植栽攻撃からの保護を提供します。 詳細については、「[ダイナミックリンクライブラリのセキュリティ](/windows/win32/dlls/dynamic-link-library-security)」を参照してください。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+任意の DLL の **/dependentloadflag**オプションによって設定された値を表示するには、 [DUMPBIN](dumpbin-reference.md)コマンドを使用して、 [/loadconfig](loadconfig.md)オプションです。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+**/Dependentloadflag**オプションは、Visual Studio 2017 の新機能です。 これは、Windows 10 RS1 以降のバージョンで実行されているアプリにのみ適用されます。 このオプションは、アプリを実行する他のオペレーティングシステムでは無視されます。
 
-1. オプションを入力して**追加オプション**します。
+### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で DEPENDENTLOADFLAG リンカーオプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+
+1. **[構成プロパティ]** > [**リンカー** >**コマンドライン**] プロパティページを選択します。
+
+1. **[追加オプション]** にオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
+- 「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](setting-linker-options.md)
-- [リンカー オプション](linker-options.md)
-- [DLL と暗黙的にリンクする方法](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [リンク方式の使用](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
-- [ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [MSVC リンカーのリファレンス](linking.md)
+- [MSVC リンカーオプション](linker-options.md)
+- [実行可能ファイルを DLL に暗黙的にリンクする](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [使用するリンク方法を決定する](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)
+- [ダイナミックリンクライブラリの検索順序](/windows/win32/Dlls/dynamic-link-library-search-order)
+- [ダイナミックリンクライブラリのセキュリティ](/windows/win32/dlls/dynamic-link-library-security)
+
+::: moniker-end

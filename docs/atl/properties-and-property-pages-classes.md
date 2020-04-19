@@ -2,19 +2,17 @@
 title: プロパティとプロパティ ページ クラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.properties
 helpviewer_keywords:
 - property pages, classes
 - properties [ATL], classes
 - properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-ms.openlocfilehash: 9c56638c72328a59223f3323d55f4dcc6ced2609
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05c3a67e278389bb2ab1b07e9d6cf63cbe347c63
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62249627"
 ---
 # <a name="properties-and-property-pages-classes"></a>プロパティとプロパティ ページ クラス
 
@@ -44,4 +42,3 @@ ms.locfileid: "50474062"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [プロパティ マップに関するマクロ](../atl/reference/property-map-macros.md)
-

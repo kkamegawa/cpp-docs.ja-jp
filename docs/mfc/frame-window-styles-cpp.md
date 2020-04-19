@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, frame windows
 - styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
-ms.openlocfilehash: 01eb593e6a7c896b3c6e4acf9f753b73a346e3e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cade8e7e50779437feb73a94058dc62118c03c10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219744"
 ---
 # <a name="frame-window-styles-c"></a>フレーム ウィンドウ スタイル (C++)
 
@@ -35,4 +35,3 @@ ms.locfileid: "50510748"
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウ](../mfc/frame-windows.md)
-

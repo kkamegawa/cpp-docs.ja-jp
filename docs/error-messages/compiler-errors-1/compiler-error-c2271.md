@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2271
 ms.assetid: ea47bf57-f55d-4171-8e98-95a71d62820e
-ms.openlocfilehash: 68de819ca62e117036bb415a1708afc0ecd6028c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bddd5a413c0ca16d7b344e5d6c478b07f82ca1a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572823"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758711"
 ---
 # <a name="compiler-error-c2271"></a>コンパイラ エラー C2271
 
-'operator': 新規/削除の仮引数リストの修飾子を設定することはできません
+' operator ': new/delete に仮引数リスト修飾子を含めることはできません
 
-演算子 (`new`または`delete`) がメモリ モデル修飾子で宣言されています。
+演算子 (`new` または `delete`) は、メモリモデル指定子を使用して宣言されています。
 
 次の例では、C2271 が生成されます。
 
-```
+```cpp
 // C2271.cpp
 // compile with: /c
 void* operator new(size_t) const {   // C2271

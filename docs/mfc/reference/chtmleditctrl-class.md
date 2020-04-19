@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: ce2db15b801d84ed0315345f5ab8084c437ef8ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389412"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl クラス
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |名前|説明|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|WebBrowser ActiveX コントロールを作成しにアタッチします、`CHtmlEditCtrl`オブジェクト。 この関数では、WebBrowser ActiveX コントロールが編集モードに自動的に保存されます。|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|取得、 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)ドキュメント上のインターフェイスは、コンテナー内の WebBrowser コントロールに現在読み込まれています。|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|取得、 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))ドキュメント上のインターフェイスは、コンテナー内の WebBrowser コントロールに現在読み込まれています。|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|内の WebBrowser コントロールでのロードに既定のドキュメントの URL を取得します。|
 
 ## <a name="remarks"></a>Remarks
@@ -92,7 +92,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 このパラメーターは使用されません。
 
 *dwStyle*<br/>
@@ -116,7 +116,7 @@ virtual BOOL Create(
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-取得、 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)ドキュメント上のインターフェイスは、コンテナー内の WebBrowser コントロールに現在読み込まれて
+取得、 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))ドキュメント上のインターフェイスは、コンテナー内の WebBrowser コントロールに現在読み込まれて
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -138,4 +138,3 @@ virtual LPCTSTR GetStartDocument();
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

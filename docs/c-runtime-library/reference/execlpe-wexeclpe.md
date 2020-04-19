@@ -1,10 +1,10 @@
 ---
 title: _execlpe、_wexeclpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execlpe
 - _wexeclpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclpe
 - execlpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941907"
 ---
-# <a name="execlpe-wexeclpe"></a>_execlpe、_wexeclpe
+# <a name="_execlpe-_wexeclpe"></a>_execlpe、_wexeclpe
 
 新しい子プロセスを読み込んで実行します。
 
@@ -66,7 +69,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 実行するファイルのパス。
 
-*arg0*、.*argn*<br/>
+*arg0*、...*argn*<br/>
 パラメーターへのポインターのリスト。
 
 *envp*<br/>
@@ -74,7 +77,7 @@ intptr_t _wexeclpe(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -90,9 +93,9 @@ intptr_t _wexeclpe(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は、新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡し、環境設定へのポインターの配列も渡します。 これらの関数を使用して、**パス**環境変数を実行するファイルを検索します。
+これらの関数は、新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡し、環境設定へのポインターの配列も渡します。 これらの関数は、 **PATH**環境変数を使用して、実行するファイルを検索します。
 
-**_Execlpe**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0* null ポインターまたは空の文字列では、これらの関数は」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
+これらの関数は、パラメーターを検証します **(_t)** 。 *Cmdname*または*arg0*が null ポインターまたは空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは開始されません。
 
 ## <a name="requirements"></a>必要条件
 

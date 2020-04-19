@@ -1,27 +1,27 @@
 ---
 title: __readcr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr8
 helpviewer_keywords:
 - __readcr8 intrinsic
 ms.assetid: fce16953-87ff-4fbe-8081-7962b97ae46c
-ms.openlocfilehash: 041d1b1574ff3d6d3f8bf14575758d1b3ea62e15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 525775fde4cb96cecfcabef878780d5a2aa6743a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602809"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221237"
 ---
-# <a name="readcr8"></a>__readcr8
+# <a name="__readcr8"></a>__readcr8
 
 **Microsoft 固有の仕様**
 
-CR8 レジスタを読み取り、その値を返します。
+CR8 register を読み取り、その値を返します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 __readcr8(void);
 ```
 
@@ -35,11 +35,11 @@ CR8 レジスタの値。
 |---------------|------------------|
 |`__readcr8`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
+組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 

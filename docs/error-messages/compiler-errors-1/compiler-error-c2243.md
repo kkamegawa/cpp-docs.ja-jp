@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2243
 ms.assetid: b90065bb-d251-4ba9-8b4c-280ee13fa9c0
-ms.openlocfilehash: ded5a3d459e4b5d1412998aadbaa385864f505a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a62b1c12b94735d0383697bf7a92d12d64b21f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445553"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757801"
 ---
 # <a name="compiler-error-c2243"></a>コンパイラ エラー C2243
 
@@ -21,7 +21,7 @@ ms.locfileid: "50445553"
 
 次の例では C2243 が生成されます。
 
-```
+```cpp
 // C2243.cpp
 // compile with: /c
 class B {};

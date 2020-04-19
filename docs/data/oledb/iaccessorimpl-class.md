@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409045"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl クラス
 
-実装を提供、 [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))インターフェイス。
+実装を提供、 [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -91,9 +91,9 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 ## <a name="remarks"></a>Remarks
 
-これは、機能は、行セットおよびコマンドに必須です。 OLE DB、HACCESSOR を実装するプロバイダーを必要とタグの配列をある[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))構造体。 によって提供される HACCESSORs`IAccessorImpl`のアドレス、`BindType`構造体。 既定では、`BindType`として定義されている場合は、`ATLBINDINGS`で`IAccessorImpl`のテンプレートの定義。 `BindType` 使用されるメカニズムを提供します。`IAccessorImpl`内の要素の数を追跡するためにその`DBBINDING`参照カウントおよびアクセサーのフラグと配列。
+これは、機能は、行セットおよびコマンドに必須です。 OLE DB、HACCESSOR を実装するプロバイダーを必要とタグの配列をある[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))構造体。 によって提供される HACCESSORs`IAccessorImpl`のアドレス、`BindType`構造体。 既定では、`BindType`として定義されている場合は、`ATLBINDINGS`で`IAccessorImpl`のテンプレートの定義。 `BindType` 使用されるメカニズムを提供します。`IAccessorImpl`内の要素の数を追跡するためにその`DBBINDING`参照カウントおよびアクセサーのフラグと配列。
 
-## <a name="iaccessorimpl"></a> Iaccessorimpl::iaccessorimpl
+## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
 コンストラクターです。
 
@@ -103,7 +103,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a> Iaccessorimpl::addrefaccessor
+## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
 
 既存のアクセサーには、参照カウントを追加します。
 
@@ -116,9 +116,9 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="createaccessor"></a> Iaccessorimpl::createaccessor
+## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
 バインドのセットからアクセサーを作成します。
 
@@ -135,9 +135,9 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[iaccessor::createaccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[iaccessor::createaccessor](/previous-versions/windows/desktop/ms720969(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="getbindings"></a> Iaccessorimpl::getbindings
+## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
 アクセサーのコンシューマーからの列の基本的なバインディングを返します。
 
@@ -152,9 +152,9 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="releaseaccessor"></a> Iaccessorimpl::releaseaccessor
+## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
 アクセサーを解放します。
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[iaccessor::releaseaccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[iaccessor::releaseaccessor](/previous-versions/windows/desktop/ms719717(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

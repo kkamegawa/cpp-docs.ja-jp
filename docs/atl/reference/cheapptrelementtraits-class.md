@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-ms.openlocfilehash: 4e5d66c3e596383fecfcf730c81c4d41c08d5e2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e535afb3a49a5720c8394cc1ab9186c360527fea
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258924"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits クラス
 

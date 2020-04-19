@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C3000 から C3099
-ms.date: 11/17/2017
+title: コンパイラ エラー (C3000 - C3099)
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856923"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>コンパイラ エラー C3000 から C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>コンパイラ エラー (C3000 - C3099)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -58,7 +58,7 @@ ms.locfileid: "50475492"
 |コンパイラ エラー C3000|互換性のために残されています。|
 |[コンパイラ エラー C3001](compiler-error-c3001.md)|'*メッセージ*': OpenMP ディレクティブ名が必要です|
 |[コンパイラ エラー C3002](compiler-error-c3002.md)|'*name1* *name2*': 複数の OpenMP ディレクティブ名|
-|[コンパイラ エラー C3003](compiler-error-c3003.md)|'*ディレクティブ*': OpenMP ディレクティブ名は、ディレクティブ句の後に許可されていません|
+|[コンパイラ エラー C3003](compiler-error-c3003.md)|'*ディレクティブ*'。OpenMP ディレクティブ名は、ディレクティブ句の後に許可されていません|
 |[コンパイラ エラー C3004](compiler-error-c3004.md)|'*句*': 句は OpenMP では有効でない'*ディレクティブ*' ディレクティブ|
 |[コンパイラ エラー C3005](compiler-error-c3005.md)|'*メッセージ*': OpenMP で予期しないトークン'*ディレクティブ*' ディレクティブ|
 |[コンパイラ エラー C3006](compiler-error-c3006.md)|'*句*': OpenMP 句'*ディレクティブ*' ディレクティブには、必要な引数がありません|
@@ -73,7 +73,7 @@ ms.locfileid: "50475492"
 |[コンパイラ エラー C3015](compiler-error-c3015.md)|OpenMP 'for' ステートメントの初期化には、正しくない形式が含まれています|
 |[コンパイラ エラー C3016](compiler-error-c3016.md)|'*識別子*': OpenMP 'for' ステートメントのインデックス変数に整数型を署名する必要がありますが|
 |[コンパイラ エラー C3017](compiler-error-c3017.md)|OpenMP 'for' ステートメントの終了テストには、正しくない形式が含まれています|
-|[コンパイラ エラー C3018](compiler-error-c3018.md)|'*識別子*': OpenMP 'for' テストまたはインクリメントは、インデックス変数を使用する必要があります'*変数*'|
+|[コンパイラ エラー C3018](compiler-error-c3018.md)|'*識別子*'。OpenMP 'for' テストまたはインクリメントは、インデックス変数を使用する必要があります '*変数*'|
 |[コンパイラ エラー C3019](compiler-error-c3019.md)|openmp 'for' ステートメントの増分値が正しくない形式|
 |[コンパイラ エラー C3020](compiler-error-c3020.md)|'*変数*': OpenMP の 'for' ループのインデックス変数は、ループの本体では変更できません|
 |[コンパイラ エラー C3021](compiler-error-c3021.md)|'*引数*': 引数が空では、OpenMP'*ディレクティブ*' ディレクティブ|
@@ -155,3 +155,8 @@ ms.locfileid: "50475492"
 |[コンパイラ エラー C3097](compiler-error-c3097.md)|'*属性*': 属性はと共にスコープされなければなりません' アセンブリ:' または ' モジュール:'|
 |コンパイラ エラー C3098|'*識別子*': 属性には、ユーザー定義のコンス トラクターがありません|
 |[コンパイラ エラー C3099](compiler-error-c3099.md)|'*キーワード*': 使用して、[system::attributeusageattribute]/[Windows::Foundation::Metadata::AttributeUsageAttribute] マネージまたは WinRT 属性|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

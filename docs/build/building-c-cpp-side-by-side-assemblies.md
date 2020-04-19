@@ -4,33 +4,32 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: b904dd3e9c10470151bdb8e01435aaf6359179b8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6e49ba72a397efb97437a2f7e6d721c782875c48
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693663"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493326"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 
-A[サイド バイ サイド アセンブリ](/windows/desktop/SbsCs/about-side-by-side-assemblies-)リソースのコレクションです: Dll、windows のクラス、COM サーバー、タイプ ライブラリ、またはインターフェイスのグループ-実行時に使用するアプリケーションで使用できます。 アセンブリ Dll を再パッケージ化の主な利点は、更新プログラムのリリースが発生した場合、サービスが現在インストールされているアセンブリを行うことが、アセンブリの複数のバージョンは、同時にアプリケーションで使用できます。
+[Side-by-side アセンブリ](/windows/win32/SbsCs/about-side-by-side-assemblies-)は、アプリケーションが実行時に使用できるリソース (dll のグループ、windows クラス、COM サーバー、タイプライブラリ、またはインターフェイス) のコレクションです。 アセンブリに Dll を再パッケージ化する主な利点は、複数のバージョンのアセンブリを同時にアプリケーションで使用できることと、更新プログラムのリリース時に現在インストールされているアセンブリに対してサービスを実行できることです。
 
-Visual C アプリケーションでは、アプリケーションのさまざまな部分の 1 つまたは複数の Dll を使用できます。 、実行時に、メイン プロセスに Dll が読み込まれ、必要なコードが実行されます。 アプリケーションは、要求された Dll を見つけ、読み込むと、要求された DLL と共にロードがあるその他の依存 Dll を理解するには、オペレーティング システムに依存します。 Windows オペレーティング システムのバージョンで Windows XP、Windows Server 2003、および Windows Vista より前のオペレーティング システム ローダー依存 Dll を検索、アプリケーションのローカル フォルダーまたはシステム パスで指定した別のフォルダーのいずれかで。 Windows XP、Windows Server 2003、および Windows Vista の場合で、オペレーティング システム ローダーを使用して依存 Dll の検索もできます、[マニフェスト](/windows/desktop/sbscs/manifests)ファイルとこれらの Dll を含むサイド バイ サイド アセンブリを検索します。
+C++アプリケーションでは、アプリケーションのさまざまな部分で1つまたは複数の dll を使用できます。 実行時には、Dll がメインプロセスに読み込まれ、必要なコードが実行されます。 アプリケーションは、要求された Dll を検索するためにオペレーティングシステムに依存しており、他の依存 Dll を読み込む必要があることを理解し、要求された DLL と一緒に読み込む必要があります。 Windows XP、Windows Server 2003、および Windows Vista より前のバージョンの Windows オペレーティングシステムでは、オペレーティングシステムローダーは、アプリケーションのローカルフォルダーまたはシステムパスで指定された別のフォルダーのいずれかで依存 Dll を検索します。 Windows XP、Windows Server 2003、および Windows Vista では、オペレーティングシステムローダーは、[マニフェスト](/windows/win32/sbscs/manifests)ファイルを使用して依存 dll を検索し、これらの dll が含まれている side-by-side アセンブリを検索することもできます。
 
-既定で、Visual Studio を使用して、DLL のビルド時に、[アプリケーション マニフェスト](/windows/desktop/SbsCs/application-manifests)ID 2 RT_MANIFEST のリソースとして埋め込まれています。 、実行可能ファイルと同じ動作は、このマニフェストは、他のアセンブリでこの DLL の依存関係を記述します。 これには、DLL でサイド バイ サイド アセンブリの一部でないし、この DLL に依存するアプリケーションは、アプリケーション マニフェストを使用して、読み込んでが代わりに、システム パスにこの DLL を検索するオペレーティング システム ローダーに依存するしないことが前提としています。
-
-> [!NOTE]
-> ID 2 のリソースとして埋め込まれたマニフェストに、アプリケーション マニフェストが使用される dll は重要です。 DLL は実行時に動的に読み込まれた場合 (たとえばを使用して、 [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)関数)、オペレーティング システム ローダーが DLL のマニフェストで指定された依存アセンブリを読み込みます。 Dll の外部のアプリケーション マニフェストは、中にはチェックされません、`LoadLibrary`呼び出します。 マニフェストが埋め込まれていない場合、ローダーしようと不適切なバージョンのアセンブリを読み込んだり、依存アセンブリの検索に失敗します。
-
-1 つまたは複数の関連の Dll が対応するサイド バイ サイド アセンブリに再パッケージ化する[アセンブリ マニフェスト](/windows/desktop/SbsCs/assembly-manifests)ファイルの他のサイド バイ サイド アセンブリの依存関係と同様に、アセンブリを形成するについて説明しますアセンブリ。
+既定では、Visual Studio でビルドされた DLL には、ID が2に等しい RT_MANIFEST リソースとして埋め込まれた[アプリケーションマニフェスト](/windows/win32/SbsCs/application-manifests)があります。 このマニフェストは、実行可能ファイルの場合と同様に、この DLL の依存関係を他のアセンブリに記述します。 これは、DLL が side-by-side アセンブリに含まれておらず、この DLL に依存しているアプリケーションがアプリケーションマニフェストを読み込んで使用するのではなく、オペレーティングシステムローダーに依存してシステムパスでこの DLL を検索することを前提としています。
 
 > [!NOTE]
-> アセンブリに 1 つの DLL が含まれている場合は、id が 1 に、この DLL にリソースとしてアセンブリ マニフェストを埋め込むし、プライベート アセンブリ、DLL と同じ名前を指定することをお勧めします。 たとえば、DLL の名前が mylibrary.dll の場合は、名前属性の値はで使用される、 \<assemblyIdentity > mylibrary、マニフェストの要素があります。 場合によって、ライブラリに .dll 以外の拡張子がある場合 (たとえば、.ocx ライブラリを作成、MFC ActiveX コントロール プロジェクト)、外部アセンブリ マニフェストを作成できます。 この場合、アセンブリとそのマニフェストの名前 (たとえば、MyAssembly、MyAssembly.manifest、および mylibrary.ocx) DLL の名前とは異なる必要があります。 ただし、拡張子.dll を付けがあり、このアセンブリの将来のメンテナンス コストを削減するリソースとしてマニフェストを埋め込むには、このようなライブラリの名前を変更することはお勧めもします。 オペレーティング システムでプライベート アセンブリを検索する方法の詳細については、次を参照してください。 [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence)します。
+> DLL は、アプリケーションマニフェストを使用して、ID が2に等しいリソースとしてマニフェストを埋め込むことが重要です。 DLL が実行時に動的に読み込まれる場合 (たとえば、 [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)関数を使用する場合)、オペレーティングシステムローダーは、dll のマニフェストで指定されている依存アセンブリを読み込みます。 Dll の外部アプリケーションマニフェストは、 `LoadLibrary`呼び出し中にチェックされません。 マニフェストが埋め込まれていない場合、ローダーは、正しくないバージョンのアセンブリを読み込もうとしたり、依存アセンブリを検索するために見つからなかったりすることがあります。
 
-この変更は、対応する Dll の展開を許可することがあります、[プライベート アセンブリ](/windows/desktop/Msi/private-assemblies)アプリケーション ローカル フォルダーまたはとして、[アセンブリを共有](/windows/desktop/Msi/shared-assemblies)WinSxS アセンブリ キャッシュにします。 この新しいアセンブリの正しい実行時の動作を実現するために従う必要はいくつかの手順記述されて[サイド バイ サイド アセンブリを作成するためのガイドライン](/windows/desktop/SbsCs/guidelines-for-creating-side-by-side-assemblies)します。 アセンブリが正しく作成した後は、いずれかを共有またはプライベート アセンブリとしてに依存しているアプリケーションと共にデプロイできます。 共有アセンブリとサイド バイ サイド アセンブリをインストールするときにガイドラインが記載されているいずれかに従ってことがあります[Windows XP でのサイド バイ サイドでの共有用の Win32 アセンブリのインストール](/windows/desktop/Msi/installing-win32-assemblies-for-side-by-side-sharing-on-windows-xp)使用または[マージ モジュール](/windows/desktop/msi/merge-modules)。 プライベート アセンブリとサイド バイ サイド アセンブリをインストールするときに可能性がありますだけコピーする、対応する DLL、リソース、およびアセンブリ マニフェストのインストール プロセスの一環として、対象のコンピューター上のアプリケーション ローカル フォルダーにこのアセンブリができること実行時に、ローダーによって検出された (を参照してください[Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence))。 別の方法は、使用する[Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)しで説明されているガイドラインに従う[Windows XP 上のアプリケーションの秘密を使用するための Win32 アセンブリのインストール](/windows/desktop/Msi/installing-win32-assemblies-for-the-private-use-of-an-application-on-windows-xp)します。
+1つまたは複数の関連する Dll を、対応する[アセンブリマニフェスト](/windows/win32/SbsCs/assembly-manifests)と共に side-by-side アセンブリに再パッケージ化できます。これにより、アセンブリを形成するファイルと、他の side-by-side アセンブリでのアセンブリの依存関係が記述されます。
+
+> [!NOTE]
+> アセンブリに1つの DLL が含まれている場合は、アセンブリマニフェストをこの DLL に1と等しい ID を持つリソースとして埋め込み、プライベートアセンブリに DLL と同じ名前を付けることをお勧めします。 たとえば、dll の名前が mylibrary .dll の場合、マニフェストの\<assemblyIdentity > 要素で使用されている name 属性の値は、mylibrary でもかまいません。 場合によっては、ライブラリに .dll 以外の拡張子が付いている (たとえば、MFC ActiveX コントロールプロジェクトで .ocx ライブラリが作成される) と、外部アセンブリマニフェストを作成できます。 この場合、アセンブリとそのマニフェストの名前は、DLL の名前と異なる必要があります (たとえば、MyAssembly、MyAssembly、mylibrary .ocx など)。 ただし、このようなライブラリの名前を拡張子 .dll に変更し、マニフェストをリソースとして埋め込んで、このアセンブリの将来のメンテナンスコストを削減することもお勧めします。 オペレーティングシステムがプライベートアセンブリを検索する方法の詳細については、「[アセンブリの検索シーケンス](/windows/win32/SbsCs/assembly-searching-sequence)」を参照してください。
+
+この変更により、対応する Dll をアプリケーションのローカルフォルダー内の[プライベートアセンブリ](/windows/win32/Msi/private-assemblies)として、または WinSxS アセンブリキャッシュ内の[共有アセンブリ](/windows/win32/Msi/shared-assemblies)として配置できます。 この新しいアセンブリの正しい実行時動作を実現するために、いくつかの手順に従う必要があります。これらの詳細については、「 [Side-by-side アセンブリを作成するためのガイドライン](/windows/win32/SbsCs/guidelines-for-creating-side-by-side-assemblies)」を参照してください。 アセンブリが正しく作成されると、共有アセンブリまたはプライベートアセンブリとして、またはそれに依存するアプリケーションと共に配置できます。 Side-by-side アセンブリを共有アセンブリとしてインストールする場合は、「 [WINDOWS XP でのサイドバイサイド共有のための Win32 アセンブリのインストール](/windows/win32/Msi/installing-win32-assemblies-for-side-by-side-sharing-on-windows-xp)」に記載されているガイドラインに従うか、または[マージモジュール](/windows/win32/msi/merge-modules)を使用することができます。 Side-by-side アセンブリをプライベートアセンブリとしてインストールする場合は、インストールプロセスの一部として、対応する DLL、リソース、およびアセンブリマニフェストをターゲットコンピューターのアプリケーションローカルフォルダーにコピーするだけで、このアセンブリが実行時にローダーによって検出されました (「[アセンブリ検索シーケンス](/windows/win32/SbsCs/assembly-searching-sequence)」を参照してください)。 もう1つの方法として、 [Windows インストーラー](/windows/win32/Msi/windows-installer-portal)を使用し、「Win32 アセンブリのインストール」で説明されているガイドラインに従って[、Windows XP でアプリケーションをプライベートに使用](/windows/win32/Msi/installing-win32-assemblies-for-the-private-use-of-an-application-on-windows-xp)します。
 
 ## <a name="see-also"></a>関連項目
 
-[配置例](../ide/deployment-examples.md)<br/>
-[C/C++ 分離アプリケーションのビルド](../build/building-c-cpp-isolated-applications.md)<br/>
-[C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[C/C++ 分離アプリケーションのビルド](building-c-cpp-isolated-applications.md)<br/>
+[C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

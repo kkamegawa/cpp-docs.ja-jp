@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
-ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fe21414fcadef13b7af3acf4f8e1635fb12802e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438017"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756644"
 ---
 # <a name="compiler-error-c3459"></a>コンパイラ エラー C3459
 
@@ -19,13 +19,13 @@ ms.locfileid: "50438017"
 
 クラス インデクサー プロパティに適用されるように設計された属性が正しく使用されていません。
 
-詳細については、次を参照してください。[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
+詳細については、「[方法:/cli でC++プロパティを使用](../../dotnet/how-to-use-properties-in-cpp-cli.md)する」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3459 が生成されます。
 
-```
+```cpp
 // C3459.cpp
 // compile with: /clr /c
 public ref class MyString {

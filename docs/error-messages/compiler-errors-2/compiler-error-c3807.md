@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: b5599914666af95a29667acc1ad4ad35eef7608f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591127"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755266"
 ---
 # <a name="compiler-error-c3807"></a>コンパイラ エラー C3807
 
-'type': ComImport 属性を持つクラスを 'type2' から派生させることはできません、インターフェイスの実装のみが許可されています。
+' type ': ComImport 属性を持つクラスは ' ' 型 ' から派生できません。インターフェイスの実装のみが許可されます。
 
-派生した型<xref:System.Runtime.InteropServices.ComImportAttribute>のみインターフェイスを実装できます。
+<xref:System.Runtime.InteropServices.ComImportAttribute> から派生した型は、インターフェイスのみを実装できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3807 が生成されます。
 
-```
+```cpp
 // C3807.cpp
 // compile with: /clr /c
 ref struct S {};

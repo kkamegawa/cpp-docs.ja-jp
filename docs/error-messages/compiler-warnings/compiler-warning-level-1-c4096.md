@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f526b26eda4c02825d225aa007c6029cc4b03dd
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436551"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627072"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>コンパイラの警告 (レベル 1) C4096
 
-'a': インターフェイスは、COM インターフェイスです。IDL には出力されません。
+' a ': インターフェイスは COM インターフェイスではありません。IDL には出力されません
 
-COM インターフェイスとして意図していた可能性がありますをインターフェイス定義では、COM インターフェイスとして定義されなかったし、そのため、IDL ファイルには出力されません。
+COM インターフェイスとして指定したインターフェイス定義は COM インターフェイスとして定義されていないため、IDL ファイルには出力されません。
 
-参照してください[インターフェイス属性](../../windows/attributes/interface-attributes.md)のインターフェイスが COM インターフェイスであることを示す属性のリスト。
+インターフェイスが COM インターフェイスであることを示すリスト属性については、「[インターフェイス属性](../../windows/attributes/interface-attributes.md)」を参照してください。
 
 次の例では、C4096 が生成されます。
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

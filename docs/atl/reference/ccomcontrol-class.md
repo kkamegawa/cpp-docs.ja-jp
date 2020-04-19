@@ -19,19 +19,19 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 3fe01128fc5f0a9d3058df2d6f95a6c038b28062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0f64d8c7b8e8a3347e4c0fcad902b9e8a0ecb4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644198"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497532"
 ---
 # <a name="ccomcontrol-class"></a>CComControl クラス
 
-このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。
+このクラスには、ATL コントロールを作成および管理するためのメソッドが用意されています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -44,10 +44,10 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コントロールを実装するクラスです。
+コントロールを実装するクラス。
 
-*WinBase*<br/>
-ウィンドウ関数を実装する基本クラス。 既定値は[CWindowImpl](../../atl/reference/cwindowimpl-class.md)します。
+*Winbase.h*<br/>
+ウィンドウ関数を実装する基本クラス。 既定値は[CWindowImpl](../../atl/reference/cwindowimpl-class.md)です。
 
 ## <a name="members"></a>メンバー
 
@@ -61,19 +61,19 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 |名前|説明|
 |----------|-----------------|
-|[CComControl::ControlQueryInterface](#controlqueryinterface)|要求されたインターフェイスへのポインターを取得します。|
+|[CComControl:: ControlQueryInterface](#controlqueryinterface)|要求されたインターフェイスへのポインターを取得します。|
 |[CComControl::CreateControlWindow](#createcontrolwindow)|コントロールのウィンドウを作成します。|
-|[CComControl::FireOnChanged](#fireonchanged)|コントロールのプロパティが変更されたコンテナーのシンクに通知します。|
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|コントロールのプロパティを変更することと、オブジェクトが要求している、シンクの続行方法、コンテナーのシンクに通知します。|
-|[CComControl::MessageBox](#messagebox)|作成、表示、およびメッセージ ボックスを操作するには、このメソッドを呼び出します。|
+|[CComControl::FireOnChanged](#fireonchanged)|コントロールプロパティが変更されたことをコンテナーのシンクに通知します。|
+|[CComControl:: 焼討 Onrequestedit](#fireonrequestedit)|コントロールプロパティが変更されようとしていること、およびオブジェクトがシンクに続行する方法を要求していることをコンテナーのシンクに通知します。|
+|[CComControl:: MessageBox](#messagebox)|メッセージボックスを作成、表示、および操作するには、このメソッドを呼び出します。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComControl` 便利なコントロールのヘルパー関数と ATL のコントロールの重要なデータ メンバーのセットです。 標準のコントロールまたは ATL コントロール ウィザードを使用して、DHTML コントロールを作成するときにウィザードが自動的にからクラスを派生`CComControl`します。 `CComControl` メソッドのほとんどを派生[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)します。
+`CComControl`は、ATL コントロールの便利なコントロールヘルパー関数と基本データメンバーのセットです。 ATL コントロールウィザードを使用して標準コントロールまたは DHTML コントロールを作成すると、ウィザードによってから`CComControl`クラスが自動的に派生されます。 `CComControl`ほとんどのメソッドを[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)から派生します。
 
-コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
+コントロールの作成の詳細については、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。 ATL プロジェクトウィザードの詳細については、「 [Atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)」を参照してください。
 
-例については`CComControl`メソッドと、データ メンバーを参照してください、[円](../../visual-cpp-samples.md)サンプル。
+メソッドとデータメンバー `CComControl`のデモンストレーションについては、 [CIRC](../../overview/visual-cpp-samples.md)サンプルを参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,9 +85,9 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
-##  <a name="ccomcontrol"></a>  CComControl::CComControl
+##  <a name="ccomcontrol"></a>CComControl::CComControl
 
 コンストラクターです。
 
@@ -97,7 +97,7 @@ CComControl();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し、 [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase)コンス トラクターを渡して、`m_hWnd`を通じてデータ メンバーが継承[CWindowImpl](../../atl/reference/cwindowimpl-class.md)します。
+[CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase)コンストラクターを呼び出し、 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)を`m_hWnd`介して継承されたデータメンバーを渡します。
 
 ##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface
 
@@ -110,22 +110,22 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="parameters"></a>パラメーター
 
 *iid*<br/>
-[in]要求されているインターフェイスの GUID です。
+から要求されているインターフェイスの GUID。
 
 *ppv*<br/>
-[out]によって識別されるインターフェイス ポインターへのポインター *iid*インターフェイスが見つからない場合は null です。
+入出力*Iid*によって識別されるインターフェイスポインターへのポインター。インターフェイスが見つからない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-COM マップ テーブル内のインターフェイスのみを処理します。
+は COM マップテーブル内のインターフェイスのみを処理します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]
 
-##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow
+##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow
 
-既定では、呼び出すことによって、コントロールのウィンドウを作成します。`CWindowImpl::Create`します。
+既定では、はを呼び出し`CWindowImpl::Create`て、コントロールのウィンドウを作成します。
 
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
@@ -134,22 +134,22 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="parameters"></a>パラメーター
 
 *hWndParent*<br/>
-[in]親またはオーナー ウィンドウへのハンドルします。 有効なウィンドウ ハンドルを指定する必要があります。 コントロールのウィンドウは、親ウィンドウの領域に限定されます。
+から親ウィンドウまたはオーナーウィンドウへのハンドル。 有効なウィンドウハンドルを指定する必要があります。 コントロールウィンドウは、親ウィンドウの領域に限定されます。
 
 *rcPos*<br/>
-[in]初期サイズと作成するウィンドウの位置。
+から作成されるウィンドウの初期サイズと位置。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドをオーバーライドして、作業を行う場合以外の 1 つのウィンドウを作成、コントロールのツールバーになりますうちの 1 つを 2 つのウィンドウを作成するには、たとえば、します。
+このメソッドは、1つのウィンドウを作成する以外に、たとえば、2つのウィンドウを作成する場合にオーバーライドします。1つはコントロールのツールバーになります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]
 
-##  <a name="fireonchanged"></a>  CComControl::FireOnChanged
+##  <a name="fireonchanged"></a>CComControl::FireOnChanged
 
-コントロールのプロパティが変更されたコンテナーのシンクに通知します。
+コントロールプロパティが変更されたことをコンテナーのシンクに通知します。
 
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -158,17 +158,17 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="parameters"></a>パラメーター
 
 *dispID*<br/>
-[in]変更されたプロパティの識別子。
+から変更されたプロパティの識別子。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-場合は、コントロール クラスから派生[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定したコントロールプロパティが変更されました。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。
+コントロールクラスが[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)から派生した場合、このメソッドは[c焼討 propnotifyevent:: FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)を呼び出し`IPropertyNotifySink`て、指定されたコントロールプロパティが変更したすべての接続されたインターフェイスに通知します。 コントロールクラスがから`IPropertyNotifySink`派生していない場合、このメソッドは S_OK を返します。
 
-このメソッドは、安全に呼び出す場合でも、コントロールは、接続ポイントをサポートしません。
+コントロールが接続ポイントをサポートしていない場合でも、このメソッドは安全に呼び出すことができます。
 
 ### <a name="example"></a>例
 
@@ -176,7 +176,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit
 
-コントロールのプロパティを変更することと、オブジェクトが要求している、シンクの続行方法、コンテナーのシンクに通知します。
+コントロールプロパティが変更されようとしていること、およびオブジェクトがシンクに続行する方法を要求していることをコンテナーのシンクに通知します。
 
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -185,25 +185,25 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="parameters"></a>パラメーター
 
 *dispID*<br/>
-[in]変更するプロパティの識別子。
+から変更するプロパティの識別子。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-場合は、コントロール クラスから派生[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)、このメソッドを呼び出す[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)すべてに通知するには接続`IPropertyNotifySink`インターフェイスを指定されました。コントロールのプロパティがこれから変更します。 コントロール クラスがから派生していない場合`IPropertyNotifySink`、このメソッドは、S_OK を返します。
+コントロールクラスが[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)から派生した場合、このメソッドは[c焼討 propnotifyevent:: 焼討 onrequestedit](cfirepropnotifyevent-class.md#fireonrequestedit)を呼び出し`IPropertyNotifySink`て、指定されたコントロールプロパティが変更されようとしているすべての接続されているインターフェイスに通知します。 コントロールクラスがから`IPropertyNotifySink`派生していない場合、このメソッドは S_OK を返します。
 
-このメソッドは、安全に呼び出す場合でも、コントロールは、接続ポイントをサポートしません。
+コントロールが接続ポイントをサポートしていない場合でも、このメソッドは安全に呼び出すことができます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]
 
-##  <a name="messagebox"></a>  CComControl::MessageBox
+##  <a name="messagebox"></a>CComControl:: MessageBox
 
-作成、表示、およびメッセージ ボックスを操作するには、このメソッドを呼び出します。
+メッセージボックスを作成、表示、および操作するには、このメソッドを呼び出します。
 
 ```
 int MessageBox(
@@ -215,21 +215,21 @@ int MessageBox(
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-メッセージ ボックスに表示されるテキスト。
+メッセージボックスに表示されるテキスト。
 
 *lpszCaption*<br/>
-ダイアログ ボックスのタイトル。 場合は NULL (既定)、「エラー」が使用されるタイトル。
+ダイアログボックスのタイトル。 NULL (既定値) の場合は、"Error" というタイトルが使用されます。
 
-*%n タイプ*<br/>
-内容と、ダイアログ ボックスの動作を指定します。 参照してください、[メッセージ ボックス](/windows/desktop/api/winuser/nf-winuser-messagebox)使用可能なさまざまなメッセージ ボックスの一覧については、Windows SDK ドキュメント内のエントリ。 既定では、単純な**OK**ボタンをクリックします。
+*nType*<br/>
+ダイアログボックスの内容と動作を指定します。 使用可能なさまざまなメッセージボックスの一覧については、Windows SDK ドキュメントの[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)エントリを参照してください。 既定では、簡単な **[OK** ] ボタンが提供されます。
 
 ### <a name="return-value"></a>戻り値
 
-下に表示 メニュー項目の値のいずれかを示す整数値を返します[メッセージ ボックス](/windows/desktop/api/winuser/nf-winuser-messagebox)Windows SDK のドキュメント。
+Windows SDK ドキュメントの[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)の下に一覧表示されているメニュー項目の値の1つを指定する整数値を返します。
 
 ### <a name="remarks"></a>Remarks
 
-`MessageBox` 開発時とユーザーにエラーまたは警告メッセージを表示する簡単な方法としては役立ちます。
+`MessageBox`は、開発中にも、ユーザーにエラーまたは警告メッセージを表示する簡単な方法としても役立ちます。
 
 ## <a name="see-also"></a>関連項目
 

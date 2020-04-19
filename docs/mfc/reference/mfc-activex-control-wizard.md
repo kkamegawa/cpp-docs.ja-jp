@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: d916517342bd28aaf77cdce20e2479eb80dec024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3341f840c46584c4e45afe3607c83433976e6c37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446593"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217648"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザード
 
@@ -64,7 +64,6 @@ MFC のスターター プログラムには、C++ ソース (.cpp) ファイル
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ プロジェクトの作成と管理](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)<br/>
+[Visual Studio プロジェクト - C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++Visual Studio でプロジェクトの種類](../../build/reference/visual-cpp-project-types.md)<br/>
 [概念](../../atl/active-template-library-atl-concepts.md)
-

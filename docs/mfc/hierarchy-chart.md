@@ -1,19 +1,17 @@
 ---
 title: 階層図
 ms.date: 11/19/2018
-f1_keywords:
-- vc.mfc
 helpviewer_keywords:
 - object models, MFC
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 0af7f6b9e2bb3027287ec33540c51e0784d3c56b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 703008b78994a9400bd5dfa1dfa64072fea949bd
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611953"
 ---
 # <a name="hierarchy-chart"></a>階層図
 
@@ -29,7 +27,7 @@ ms.locfileid: "52175471"
 
 ![CObject から派生しないクラス](../mfc/media/mfc_hierarchy_chart3of3.png "CObject から派生しないクラス")
 
-完全なグラフは、次の場所からダウンロードできます: [MFC 階層グラフ ダウンロード](https://aka.ms/hxgg8e)します。
+完全なグラフは、次の場所からダウンロードできます。[MFC 階層グラフ ダウンロード](https://aka.ms/hxgg8e)します。
 
 ## <a name="see-also"></a>関連項目
 

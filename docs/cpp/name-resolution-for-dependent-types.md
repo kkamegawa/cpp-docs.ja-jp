@@ -2,12 +2,12 @@
 title: 依存する型の名前解決
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563154"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222403"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>テンプレートのあいまいさの解消
 
-Visual Studio 2012 では、c++ 98/03/11 標準の規則"template"キーワードで曖昧性除去を適用します。 次の例では、Visual C 2010 は準拠していない行と準拠している行の両方を受け入れるとします。  Visual Studio 2012 では、準拠している行のみを受け入れます。
+Visual Studio 2012 では、c++ 98/03/11 標準の規則"template"キーワードで曖昧性除去を適用します。 次の例では、Visual Studio 2010 は準拠していない行と準拠している行の両方を受け入れるとします。  Visual Studio 2012 では、準拠している行のみを受け入れます。
 
 ```cpp
 #include <iostream>

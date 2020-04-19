@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3069
 ms.assetid: ca94291b-2bb4-4e3f-9acf-534234b83513
-ms.openlocfilehash: 6c6451d31da2bb708d3f233225be713981b062e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 230d2569ea314bde2ea9ef0c4fc58d1a9743807f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474439"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749517"
 ---
 # <a name="compiler-error-c3069"></a>コンパイラ エラー C3069
 
 'operator': 列挙型には使用できません
 
-演算子は CLR 列挙体ではサポートされていません。  詳細については、次を参照してください。[方法: 定義および c++ の列挙型を使用する/cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)します。
+演算子は CLR 列挙体ではサポートされていません。  詳細については、「[方法:/cli でC++列挙型を定義および使用する](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3069 が生成されます。
 
-```
+```cpp
 // C3069.cpp
 // compile with: /clr
 enum struct E { e1 };

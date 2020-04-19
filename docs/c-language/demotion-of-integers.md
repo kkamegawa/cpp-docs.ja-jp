@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-ms.openlocfilehash: 5dca8d414e7cf7dd04d405208ad6a86dd4372542
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfb8f03094c10cf0cf33b0eb799d5d822ac017d
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480909"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152652"
 ---
 # <a name="demotion-of-integers"></a>Demotion of Integers (整数の下位変換)
 
@@ -33,6 +33,6 @@ char y = (char)0x1234;
 
 符号付き変数が符号なしに変換されるときと、その逆で、ビット パターンは変わりません。 たとえば、-2 (0xFE) を符号なしの値にキャストすると、254 (これも 0xFE) になります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [整数](../c-language/integers.md)

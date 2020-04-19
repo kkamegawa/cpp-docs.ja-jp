@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: dc457fd4efba538e96200f7f42f84a73fc1b5228
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438651"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456579"
 ---
 # <a name="addconst-class"></a>add_const クラス
 
@@ -27,12 +27,12 @@ struct add_const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-型修飾子のインスタンスを保持する、修飾型である*Ty*場合*Ty*の参照、関数、または const で修飾された型では、それ以外の場合は、`const Ty`します。
+この型修飾子のインスタンスは、 *ty*が参照、関数、または const で修飾された型で*ある場合は*、修飾型を保持`const Ty`します。それ以外の場合は、を保持します。
 
 ## <a name="example"></a>例
 
@@ -66,5 +66,5 @@ add_const<int> == int
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const クラス](../standard-library/remove-const-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const クラス](../standard-library/remove-const-class.md)

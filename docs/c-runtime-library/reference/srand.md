@@ -1,9 +1,9 @@
 ---
 title: srand
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - srand
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - srand
 helpviewer_keywords:
@@ -28,16 +32,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: e1670c030d8f073d928ccf23f38ac4b611e68632
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530222"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957999"
 ---
 # <a name="srand"></a>srand
 
-使用される擬似乱数ジェネレーターのシード開始値を設定、 **rand**関数。
+**Rand**関数によって使用される擬似乱数ジェネレーターの開始シード値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,7 +58,7 @@ void srand(
 
 ## <a name="remarks"></a>Remarks
 
-**Srand**関数は、現在のスレッドで、一連の整数の擬似乱数を生成するための開始点を設定します。 結果の同じシーケンスを作成するコード ジェネレーターを再初期化を呼び出し、 **srand**関数を使用して、同じ*シード*引数を再度します。 その他の値の*シード*ジェネレーター擬似乱数シーケンス内のさまざまな開始点を設定します。 **rand**生成される擬似乱数を取得します。 呼び出す**rand**への呼び出しの前に**srand**呼び出すことと同じシーケンスを生成**srand**で*シード*1 として渡されます。
+**Srand**関数は、現在のスレッドで一連の擬似乱数を生成するための開始点を設定します。 ジェネレーターを再初期化して同じ結果シーケンスを作成するには、 **srand**関数を呼び出し、同じ*シード*引数を再度使用します。 *シード*のその他の値は、擬似乱数シーケンスの異なる開始位置にジェネレーターを設定します。 **rand**は、生成される擬似乱数を取得します。 **Srand**の呼び出しの前に**rand**を呼び出すと、*シード*が1として渡された**srand**を呼び出す場合と同じシーケンスが生成されます。
 
 ## <a name="requirements"></a>必要条件
 

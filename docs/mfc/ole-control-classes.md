@@ -12,12 +12,12 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 909da3dc7b4f0298e6e5476ed7716257cc4d101d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186089"
 ---
 # <a name="ole-control-classes"></a>OLE コントロール クラス
 
@@ -67,4 +67,3 @@ OLE コントロールのプロパティの永続化の実装をサポートし�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

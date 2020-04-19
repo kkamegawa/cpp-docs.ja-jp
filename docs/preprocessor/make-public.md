@@ -1,6 +1,6 @@
 ---
-title: make_public
-ms.date: 11/04/2016
+title: make_public プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.make_public
 - make_public_CPP
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: cfc8d13ead28c0b817d7de015b9c507db152de6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508967"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218818"
 ---
-# <a name="makepublic"></a>make_public
+# <a name="make_public-pragma"></a>make_public プラグマ
+
 ネイティブ型はパブリック アセンブリのアクセシビリティが必要であることを示します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma make_public(type)
-```
+> **#pragma make_public (** *型* **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*型*パブリック アセンブリ アクセシビリティを持つ型の名前を指定します。
+*type*\
+パブリックアセンブリのアクセシビリティを設定する型の名前。
 
 ## <a name="remarks"></a>Remarks
 
-**make_public**は変更できない .h ファイルから参照するネイティブな型の場合に適しています。 パブリック関数のシグニチャでパブリック アセンブリ可視性を持つ型としてネイティブ型を使用する場合は、ネイティブ型にパブリック アセンブリ アクセシビリティもある必要があります。そうでない場合、コンパイラは警告を発行します。
+**make_public**は、参照するネイティブ型が、変更できないヘッダーファイルからのものである場合に便利です。 パブリック関数のシグネチャでネイティブ型を使用する場合は、公開されている型のアセンブリの参照可能範囲を使用する必要があります。または、ネイティブ型にパブリックアセンブリのアクセシビリティがあること、またはコンパイラが警告を発行する必要があります。
 
-**make_public**グローバル スコープで指定する必要があり、あり、宣言されてからソース コード ファイルの末尾にのみ、ポイントから有効です。
+グローバルスコープで**make_public**を指定する必要があります。 これは、ソースコードファイルの末尾までを通じて宣言されているポイントからのみ有効です。
 
-ネイティブな型が暗黙的または明示的に private 可能性があります。参照してください[型の可視性](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)詳細についてはします。
+ネイティブ型は、暗黙的または明示的にプライベートにすることができます。 詳細については、「[型の可視性](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)」を参照してください。
 
 ## <a name="examples"></a>使用例
 
-次のサンプルは、2 つのネイティブ構造体の定義を含む .h ファイルの内容です。
+次の例は、2つのネイティブ構造体の定義を含むヘッダーファイルの内容を示しています。
 
 ```cpp
 // make_public_pragma.h
@@ -46,7 +46,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };
 ```
 
-次のコード サンプル、ヘッダー ファイルを使用し、明示的にマークする、パブリックとしてネイティブ構造体を使用しない限り、ことを示しています**make_public**コンパイラでネイティブ構造体を使用しようとしたときに警告が生成されます、パブリック マネージ型のパブリック関数のシグネチャです。
+次のコードサンプルでは、ヘッダーファイルを使用します。 **Make_public**を使用してネイティブ構造体をパブリックとして明示的にマークしない限り、パブリックなマネージ型のパブリック関数のシグネチャでネイティブ構造体を使用しようとすると、コンパイラは警告を生成します。
 
 ```cpp
 // make_public_pragma.cpp
@@ -63,4 +63,4 @@ public ref struct A {
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

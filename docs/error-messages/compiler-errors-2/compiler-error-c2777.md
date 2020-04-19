@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2777
+title: コンパイラエラー C2777
 ms.date: 11/04/2016
 f1_keywords:
 - C2777
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: cfbe2c729141108565f00b7b5a7fd581b49e516d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589255"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740014"
 ---
-# <a name="compiler-error-c2777"></a>コンパイラ エラー C2777
+# <a name="compiler-error-c2777"></a>コンパイラエラー C2777
 
-プロパティごとに 1 つだけの 'put' メソッドを指定できます。
+プロパティごとに指定できる ' put ' メソッドは1つだけです
 
-A[プロパティ](../../cpp/property-cpp.md)declspec 修飾子が 1 つ以上`put`プロパティ。
+[プロパティ](../../cpp/property-cpp.md)declspec modifier に複数の `put` プロパティがありました。
 
 次の例では、C2777 が生成されます。
 
-```
+```cpp
 // C2777.cpp
 struct A {
    __declspec(property(put=PutProp,put=PutPropToo))   // C2777

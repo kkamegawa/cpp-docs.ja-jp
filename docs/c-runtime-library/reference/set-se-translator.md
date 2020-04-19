@@ -1,9 +1,9 @@
 ---
 title: _set_se_translator
 ms.date: 02/21/2018
-apiname:
+api_name:
 - _set_se_translator
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_se_translator
 - set_se_translator
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 6435b5bfa2f1f238ae608e68d97d356af7fb03dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521153"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948391"
 ---
-# <a name="setsetranslator"></a>_set_se_translator
+# <a name="_set_se_translator"></a>_set_se_translator
 
-C++ には、Win32 例外 (C 構造化例外) を変換するスレッドごとのコールバック関数の型指定例外を設定します。
+Win32 例外 (C 構造化例外) を型指定された例外にC++変換するスレッドごとのコールバック関数を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,29 +52,29 @@ _se_translator_function _set_se_translator(
 
 ## <a name="return-value"></a>戻り値
 
-によって登録された前の変換関数へのポインターを返し **_set_se_translator**、前の関数を後で復元できるようにします。 既定の動作を復元する戻り値を使用できますの前の関数が設定されていない場合この値は**nullptr**します。
+前の関数を後で復元できるように、 **_set_se_translator**によって登録されている前の変換関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値は**nullptr**にすることができます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Set_se_translator**関数として C++ Win32 例外 (C 構造化例外) を処理する方法を提供する型指定例外。 C++ で処理する C の例外を許可する**キャッチ**ハンドラーでは、まず、使用するかを C 例外の特定のクラス型の属性に由来する C 例外のラッパー クラスを定義します。 このクラスを使用するには、C 例外が発生するたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 一致する C++ でキャッチできる任意の型例外をスローする変換関数内で**キャッチ**ハンドラー。
+**_Set_se_translator**関数は、型指定された例外としてC++ Win32 例外 (C 構造化例外) を処理する方法を提供します。 各 c 例外がC++ **catch**ハンドラーによって処理されるようにするには、まず、特定のクラス型を c 例外に属性化するために使用または派生できる c 例外ラッパークラスを定義します。 このクラスを使用するには、C 例外が発生するたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 変換関数内では、一致C++する**catch**ハンドラーによってキャッチされる可能性のある型指定された例外をスローできます。
 
-使用する必要があります[/EHa](../../build/reference/eh-exception-handling-model.md)を使用する場合 **_set_se_translator**します。
+**_Set_se_translator**を使用する場合は、 [/eha](../../build/reference/eh-exception-handling-model.md)を使用する必要があります。
 
-カスタム変換関数を指定するには、呼び出す **_set_se_translator**引数として、変換関数の名前を使用します。 作成した変換関数を持つスタックの関数呼び出しごとに 1 回呼び出されます**お試しください**ブロックします。 既定の変換関数はありません。
+カスタム変換関数を指定するには、変換関数の名前を引数として使用して **_set_se_translator**を呼び出します。 記述する変換関数は、 **try**ブロックを持つスタック上の関数呼び出しごとに1回呼び出されます。 既定の変換関数はありません。
 
 変換関数は、C++ 型の例外をスローする以外のことは何もすべきではありません。 スローに加えて何かを行う場合 (たとえば、ログ ファイルへの書き込みなど)、プログラムが期待どおりに動作しない可能性があります。それは、変換関数が呼び出される回数がプラットフォームに依存するためです。
 
-マルチスレッド環境では、変換関数は各スレッドとは別に管理されます。 新しい各スレッドは、それぞれの変換関数をインストールする必要があります。 したがって、各スレッドが、それぞれの変換処理を担当します。 **_set_se_translator** 1 つのスレッドに固有では別の DLL が別の変換関数をインストールできます。
+マルチスレッド環境では、変換関数は各スレッドとは別に管理されます。 新しい各スレッドは、それぞれの変換関数をインストールする必要があります。 したがって、各スレッドが、それぞれの変換処理を担当します。 **_set_se_translator**は、1つのスレッドに固有です。別の DLL で別の変換関数をインストールすることもできます。
 
-*SeTransFunction*関数を記述する必要があります (/clr でコンパイルされません)、ネイティブ コンパイルされた関数。 Win32 に符号なし整数およびポインターをかかる必要があります **_EXCEPTION_POINTERS**引数として構造体。 引数は、Win32 API 呼び出しの戻り値では**GetExceptionCode**と**GetExceptionInformation**関数、それぞれします。
+記述する*Setransfunction*関数は、ネイティブコンパイル関数 (/clr でコンパイルされません) である必要があります。 これは、引数として、符号なし整数と Win32**例外ポインター**構造体へのポインターを受け取る必要があります。 引数は、それぞれ Win32 API **Getexceptioncode**関数と**getexceptioncode**関数への呼び出しの戻り値です。
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-**_Set_se_translator**、CRT に動的にリンクするときに影響がある; プロセス内の DLL を呼び出す別 **_set_se_translator**ハンドラーを独自に置き換えます。
+**_Set_se_translator**の場合、CRT に動的にリンクするときには影響があります。プロセス内の別の DLL が **_set_se_translator**を呼び出し、ハンドラーをそれ自体のに置き換える場合があります。
 
-使用する場合 **_set_se_translator**マネージ コード (/clr でコンパイルされたコード) からでも、ネイティブおよびマネージ コードを混在トランスレーターがネイティブ コードのみで生成される例外を影響に注意してください。 マネージド コードで生成されるマネージド例外 (`System::Exception` の発生時のものなど) はいずれも、変換関数経由ではルーティングされません。 Win32 関数を使用してマネージ コードで発生する例外**RaiseException**トランスレーター経由、0 除算例外などのシステム例外が原因か。
+マネージコード (/clr でコンパイルされたコード) または混合ネイティブコードまたはマネージコードから **_set_se_translator**を使用する場合は、変換プログラムがネイティブコードでのみ生成される例外に影響することに注意してください。 マネージド コードで生成されるマネージド例外 (`System::Exception` の発生時のものなど) はいずれも、変換関数経由ではルーティングされません。 Win32 関数**RaiseException**を使用してマネージコードで発生した例外や、ゼロ除算例外などのシステム例外によって発生した例外は、変換プログラムを通じてルーティングされます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -83,21 +86,34 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 ## <a name="example"></a>例
 
+このサンプルでは、の呼び出しをラップして、構造化例外変換器を設定し、RAII クラス`Scoped_SE_Translator`で古いものを復元します。 このクラスを使用すると、スコープ固有の変換を1つの宣言として導入できます。 クラスデストラクターは、コントロールがスコープから外れたときに元のトランスレーターを復元します。
+
 ```cpp
 // crt_settrans.cpp
 // compile with: cl /W4 /EHa crt_settrans.cpp
 #include <stdio.h>
 #include <windows.h>
 #include <eh.h>
+#include <exception>
 
-class SE_Exception
+class SE_Exception : public std::exception
 {
 private:
-    unsigned int nSE;
+    const unsigned int nSE;
 public:
-    SE_Exception() : nSE{ 0 } {}
-    SE_Exception( unsigned int n ) : nSE{ n } {}
-    unsigned int getSeNumber() { return nSE; }
+    SE_Exception() noexcept : SE_Exception{ 0 } {}
+    SE_Exception( unsigned int n ) noexcept : nSE{ n } {}
+    unsigned int getSeNumber() const noexcept { return nSE; }
+};
+
+class Scoped_SE_Translator
+{
+private:
+    const _se_translator_function old_SE_translator;
+public:
+    Scoped_SE_Translator( _se_translator_function new_SE_translator ) noexcept
+        : old_SE_translator{ _set_se_translator( new_SE_translator ) } {}
+    ~Scoped_SE_Translator() noexcept { _set_se_translator( old_SE_translator ); }
 };
 
 void SEFunc()
@@ -116,23 +132,22 @@ void SEFunc()
     }
 }
 
-void trans_func(unsigned int u, EXCEPTION_POINTERS*)
+void trans_func( unsigned int u, EXCEPTION_POINTERS* )
 {
-    throw SE_Exception(u);
+    throw SE_Exception( u );
 }
 
 int main()
 {
-    auto original = _set_se_translator(trans_func);
+    Scoped_SE_Translator scoped_se_translator{ trans_func };
     try
     {
         SEFunc();
     }
-    catch(SE_Exception& e)
+    catch( const SE_Exception& e )
     {
-        printf("Caught a __try exception, error %8.8x.\n", e.getSeNumber());
+        printf( "Caught a __try exception, error %8.8x.\n", e.getSeNumber() );
     }
-    _set_se_translator(original);
 }
 ```
 
@@ -144,64 +159,75 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>例
 
-によって提供される機能が **_set_se_translator**はマネージ コードでは使用できない、することができる場合でも、ネイティブ コードがコンパイル下では、ネイティブ コードでこのマッピングを使用して、 **/clr**切り替えるを使用してネイティブ コードが示される限り`#pragma unmanaged`します。 マップするのには、マネージ コードで、構造化例外がスロー、場合を生成し、例外を処理するコードをマークする必要があります`#pragma unmanaged`します。 次のコードは考えられる使用法を示しています。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
+**_Set_se_translator**によって提供される機能はマネージコードでは使用できませんが、ネイティブコードが **/clr**スイッチの下のコンパイルにある場合でも、ネイティブコードでこのマッピングを使用することができます。を使用`#pragma unmanaged`して指定されます。 構造化例外が、マップされるマネージコードでスローされている場合は、例外を生成して処理するコードを`#pragma unmanaged`としてマークする必要があります。 次のコードは考えられる使用法を示しています。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
 ```cpp
 // crt_set_se_translator_clr.cpp
 // compile with: cl /W4 /clr crt_set_se_translator_clr.cpp
 #include <windows.h>
 #include <eh.h>
-#include <assert.h>
 #include <stdio.h>
+#include <exception>
 
-int thrower_func(int i) {
+int thrower_func( int i ) {
    int y = 0;
    int *p = &y;
    *p = i / *p;
    return 0;
 }
 
-class CMyException{
+class SE_Exception : public std::exception
+{
 private:
-    unsigned int nSE;
+    const unsigned int nSE;
 public:
-    CMyException() : nSE{ 0 } {}
-    CMyException(unsigned int n) : nSE{ n } {}
-    unsigned int getSeNumber() { return nSE; }
+    SE_Exception() noexcept : SE_Exception{ 0 } {}
+    SE_Exception( unsigned int n ) noexcept : nSE{ n } {}
+    unsigned int getSeNumber() const noexcept { return nSE; }
+};
+
+class Scoped_SE_Translator
+{
+private:
+    const _se_translator_function old_SE_translator;
+public:
+    Scoped_SE_Translator( _se_translator_function new_SE_translator ) noexcept
+        : old_SE_translator{ _set_se_translator( new_SE_translator ) } {}
+    ~Scoped_SE_Translator() noexcept { _set_se_translator( old_SE_translator ); }
 };
 
 #pragma unmanaged
-void my_trans_func(unsigned int u, PEXCEPTION_POINTERS)
+void my_trans_func( unsigned int u, PEXCEPTION_POINTERS )
 {
-    throw CMyException(u);
+    throw SE_Exception( u );
 }
 
 void DoTest()
 {
     try
     {
-        thrower_func(10);
+        thrower_func( 10 );
     }
-    catch(CMyException e)
+    catch( const SE_Exception& e )
     {
-        printf("Caught CMyException.\n");
+        printf( "Caught SE_Exception, error %8.8x\n", e.getSeNumber() );
     }
     catch(...)
     {
-        printf("Caught unexpected SEH exception.\n");
+        printf( "Caught unexpected SEH exception.\n" );
     }
 }
 #pragma managed
 
 int main() {
-    auto original = _set_se_translator(my_trans_func);
+    Scoped_SE_Translator scoped_se_translator{ my_trans_func };
+
     DoTest();
-    _set_se_translator(original);
 }
 ```
 
 ```Output
-Caught CMyException, error c0000094
+Caught SE_Exception, error c0000094
 ```
 
 ## <a name="see-also"></a>関連項目

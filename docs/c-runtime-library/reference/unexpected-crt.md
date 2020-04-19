@@ -1,9 +1,9 @@
 ---
 title: unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - unexpected
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 796f5ddbf8467656b5430de1d504f162d891864d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534021"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957818"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-呼び出し**終了**または関数を使用して指定する**set_unexpected**します。
+**Set_unexpected**を使用して、指定した**終了**または関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,7 +42,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Remarks
 
-**予期しない**ルーチンは、C++ 例外処理の現在の実装では使用されません。 **予期しない**呼び出し**終了**既定。 この既定の動作を変更するには、カスタム終了関数を作成し、呼び出すことによって**set_unexpected**引数として関数の名前に置き換えます。 **予期しない**への引数として渡された最後関数を呼び出す**set_unexpected**します。
+**予期**しないルーチンは、現在の例外処理のC++実装では使用されません。 既定では、**予期しない**呼び出しは**終了**します。 この既定の動作を変更するには、カスタムの終了関数を作成し、引数として関数の名前を指定して**set_unexpected**を呼び出します。 **予期しない**呼び出し**set_unexpected**の引数として渡された最後の関数。
 
 ## <a name="requirements"></a>必要条件
 

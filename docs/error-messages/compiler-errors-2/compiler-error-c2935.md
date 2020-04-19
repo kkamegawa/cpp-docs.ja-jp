@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2935
 ms.assetid: e11ef90d-0756-4e43-8a09-4974c6aa72a3
-ms.openlocfilehash: f44a8060910b1aeeaa4b85d1df081a559e720df8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676c238dfb0ae78dbe5b144b5242bfb4ccbda76c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756150"
 ---
 # <a name="compiler-error-c2935"></a>コンパイラ エラー C2935
 
@@ -23,7 +23,7 @@ ms.locfileid: "50549657"
 
 次の例では C2935 が生成されます。
 
-```
+```cpp
 // C2935.cpp
 // compile with: /c
 template<class T>
@@ -37,7 +37,7 @@ void TC2() {}
 
 C2935 は、ジェネリックを使用しているときも発生します。
 
-```
+```cpp
 // C2935b.cpp
 // compile with: /clr /c
 generic<class T>

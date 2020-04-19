@@ -1,6 +1,6 @@
 ---
 title: _AddressOfReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _AddressOfReturnAddress_cpp
 - _AddressOfReturnAddress
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: 678128c4b09b083b4afe3a86c9b2315eb3c87b1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584484"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221078"
 ---
-# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+# <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
 **Microsoft 固有の仕様**
 
-現在の関数の戻り値のアドレスを保持するメモリの場所のアドレスを提供します。 このアドレスを使用して、その他のメモリ位置 (たとえば、関数の引数) にアクセスすることはできません。
+現在の関数の戻りアドレスを保持するメモリ位置のアドレスを提供します。 このアドレスは、他のメモリ位置 (関数の引数など) へのアクセスには使用できません。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void * _AddressOfReturnAddress();
 ```
 
@@ -31,19 +31,19 @@ void * _AddressOfReturnAddress();
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_AddressOfReturnAddress`|x86、x64|
+|`_AddressOfReturnAddress`|x86、x64、ARM、ARM64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-ときに`_AddressOfReturnAddress`でコンパイルされたプログラムで使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)、関数を含む、`_AddressOfReturnAddress`呼び出しは、ネイティブ関数としてコンパイルされます。 含まれる関数呼び出しとして関数をコンパイルするときに管理されている`_AddressOfReturnAddress`、`_AddressOfReturnAddress`期待どおりに動作しない可能性があります。
+[/clr](../build/reference/clr-common-language-runtime-compilation.md) でコンパイルされたプログラムで `_AddressOfReturnAddress` を使用する場合、 `_AddressOfReturnAddress`呼び出しを含む関数はネイティブ関数としてコンパイルされます。 を含む`_AddressOfReturnAddress`関数へのマネージ呼び出しとしてコンパイルさ`_AddressOfReturnAddress`れた関数が、予期したとおりに動作しないことがあります。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // compiler_intrinsics_AddressOfReturnAddress.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -77,5 +77,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [キーワード](../cpp/keywords-cpp.md)

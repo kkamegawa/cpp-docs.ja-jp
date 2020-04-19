@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-ms.openlocfilehash: 6e30ff0fad945cbe44029558efc26cf60b88ac95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7796e1abb2d7d22f17ac704091e62cc65c428405
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338520"
 ---
 # <a name="ready-to-use-list-classes"></a>使用可能なリスト クラス
 
@@ -31,4 +31,3 @@ ms.locfileid: "50523997"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

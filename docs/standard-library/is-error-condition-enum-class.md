@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-ms.openlocfilehash: 1b5b55431db806bb109a58199ad9d2d7c16f38ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c40f8f6eb93a33098cfbcf8133f08c56285abb43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612720"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452604"
 ---
 # <a name="iserrorconditionenum-class"></a>is_error_condition_enum クラス
 
@@ -21,7 +21,7 @@ ms.locfileid: "50612720"
 
 ```cpp
 template <_Enum>
-class is_error_condition_enum;
+    class is_error_condition_enum;
 ```
 
 ## <a name="remarks"></a>Remarks
@@ -30,13 +30,6 @@ class is_error_condition_enum;
 
 ユーザー定義型のこの型に特殊化を追加できます。
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<system_error>
-
-**名前空間:** std
-
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[<system_error>](../standard-library/system-error.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

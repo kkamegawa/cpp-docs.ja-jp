@@ -1,10 +1,10 @@
 ---
 title: getc、getwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getwc
 - getc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gettc
 - getwc
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955492"
 ---
 # <a name="getc-getwc"></a>getc、getwc
 
@@ -56,27 +59,27 @@ wint_t getwc(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 入力ストリーム。
 
 ## <a name="return-value"></a>戻り値
 
-読み取られた文字を返します。 読み取りエラーまたはファイルの終わりの条件を示す**getc**返します**EOF**と**getwc**返します**WEOF**します。 **Getc**を使用して、 **ferror**または**feof**エラーまたはファイルの終わりを確認します。 場合*ストリーム*は**NULL**、 **getc**と**getwc** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF** (または**WEOF**の**getwc**) を設定および**errno**に**EINVAL**します。
+読み取られた文字を返します。 読み取りエラーまたはファイルの終端状態を示すには、 **getc**は**EOF**を返し、 **getwc**は**WEOF**を返します。 **Getc**の場合は、 **ferror**または**feof**を使用して、エラーまたはファイルの終端を確認します。 *Stream*が**NULL**の場合、 **getc**および**getwc**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EOF** (または**getwc**の**WEOF** ) を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-各ルーチンはファイルの現在の位置から 1 文字読み取り、関連付けられたファイル ポインター (定義されている場合) をインクリメントして次の文字を指します。 ファイルが関連付けられている*ストリーム*します。
+各ルーチンはファイルの現在の位置から 1 文字読み取り、関連付けられたファイル ポインター (定義されている場合) をインクリメントして次の文字を指します。 ファイルは*ストリーム*に関連付けられています。
 
 これらの関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「[_getc_nolock、_getwc_nolock](getc-nolock-getwc-nolock.md)」をご覧ください。
 
 ルーチン固有の解説は、次のとおりです。
 
-|ルーチンによって返される値|Remarks|
+|ルーチン|Remarks|
 |-------------|-------------|
-|**getc**|同じ**fgetc**が、関数およびマクロとして実装されています。|
-|**getwc**|ワイド文字バージョン**getc**します。 マルチバイト文字またはワイド文字かどうかに従って読み取り*ストリーム*はテキスト モードとバイナリ モードで開かれます。|
+|**getc**|**Fgetc**と同じですが、関数およびマクロとして実装されています。|
+|**getwc**|**Getc**のワイド文字バージョン。 *ストリーム*がテキストモードとバイナリモードのどちらで開かれているかに応じて、マルチバイト文字またはワイド文字を読み取ります。|
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -130,14 +133,14 @@ int main()
 }
 ```
 
-### <a name="input-crtgetctxt"></a>入力: crt_getc.txt
+### <a name="input-crt_getctxt"></a>入力: crt_getc.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Input was: Line one.

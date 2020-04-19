@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 16: MFC における C++ の多重継承'
+title: TN016:MFC での C++ の多重継承の使用
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
 ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306130"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>テクニカル ノート 16: MFC における C++ の多重継承
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016:MFC での C++ の多重継承の使用
 
 ここでは、Microsoft Foundation Classes を多重継承 (MI) を使用する方法について説明します。 多重継承の使用は、MFC では必要ありません。 MI は、すべての MFC クラスで使用されていないと、クラス ライブラリを作成する必要はありません。
 

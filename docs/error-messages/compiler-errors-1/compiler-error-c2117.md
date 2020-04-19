@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2117
 ms.assetid: b947379d-5861-42fc-ac26-170318579cbd
-ms.openlocfilehash: 2f6a1e26972f093e50c5e655935f750195ab7d3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7166ba4e5f3a0fb66360d388fb18367bf553492e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435166"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750456"
 ---
 # <a name="compiler-error-c2117"></a>コンパイラ エラー C2117
 
-'identifier': 配列の境界オーバーフロー
+' identifier ': 配列の範囲がオーバーフローしています
 
-配列は、初期化子が多すぎますがあります。
+配列の初期化子が多すぎます。
 
-- 配列の要素と初期化子は、サイズと数は一致しません。
+- 配列要素および初期化子のサイズと数が一致しません。
 
-- 文字列内の null 終端文字用の領域がありません。
+- 文字列内の null 終端文字を格納するスペースがありません。
 
 次の例では、C2117 が生成されます。
 
-```
+```cpp
 // C2117.cpp
 int main() {
    char abc[4] = "abcd";   // C2117

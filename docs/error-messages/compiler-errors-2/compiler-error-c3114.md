@@ -1,31 +1,31 @@
 ---
-title: コンパイラ エラー C3114
+title: コンパイラエラー C3114
 ms.date: 11/04/2016
 f1_keywords:
 - C3114
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606675"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760762"
 ---
-# <a name="compiler-error-c3114"></a>コンパイラ エラー C3114
+# <a name="compiler-error-c3114"></a>コンパイラエラー C3114
 
-'argument': 属性引数のない有効な名前
+' argument ': 有効な名前付き属性引数ではありません
 
-属性クラスのデータ メンバーを引数の名前が有効にするためには、する必要がありますいないマークする必要が`static`、 `const`、または`literal`します。 プロパティがある必要がありますいない場合、プロパティ、`static`とする必要があります get および set アクセサー。
+属性クラスのデータメンバーが有効な名前付き引数であるためには、`static`、`const`、または `literal`としてマークすることはできません。 プロパティの場合、プロパティを `static` せずに、get アクセサーと set アクセサーを指定する必要があります。
 
-詳細については、次を参照してください。[プロパティ](../../windows/property-cpp-component-extensions.md)と[ユーザー定義の属性](../../windows/user-defined-attributes-cpp-component-extensions.md)します。
+詳細については、「[プロパティ](../../extensions/property-cpp-component-extensions.md)と[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3114 が生成されます。
 
-```
+```cpp
 // C3114.cpp
 // compile with: /clr /c
 public ref class A : System::Attribute {

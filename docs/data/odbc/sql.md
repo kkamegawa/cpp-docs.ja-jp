@@ -1,83 +1,86 @@
 ---
 title: SQL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - database classes [C++], SQL statements
 - SQL [C++]
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 68c01623ef97e89623dff3f46a952c75ea31a774
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576819"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707818"
 ---
 # <a name="sql"></a>SQL
 
-SQL (Structured Query Language) は、クエリの定義、変更、およびデータを制御できるようにリレーショナル データベースと通信する方法です。 SQL 構文を使用すると、指定した条件に従ってレコードを抽出するステートメントを構築できます。
+SQL (構造化照会言語) は、データの定義、照会、変更、制御を可能にするリレーショナル データベースと通信する方法です。 SQL 構文を使用することで、指定した条件を満たすレコードを抽出するステートメントを構築できます。
 
 > [!NOTE]
->  この情報は、MFC ODBC クラスに適用されます。 MFC DAO クラスを使用する場合は、トピックの比較の Microsoft Jet データベース エンジン SQL と ANSI SQL DAO のヘルプを参照してください。
+>  この情報は、MFC ODBC クラスに該当します。 MFC DAO クラスを使用している場合、DAO Help の「Comparison of Microsoft Jet Database Engine SQL and ANSI SQL」 (Microsoft Jet Database Engine SQL と ANSI SQL の比較) というトピックを参照してください。
 
-SQL ステートメントの begin キーワード動詞を使用してなど**作成**または**選択**します。 SQL は、非常に強力な言語です。1 つのステートメントは、テーブル全体に影響を与えます。
+SQL ステートメントは、**CREATE** や **SELECT** など、キーワード動詞から始まります。 SQL は非常に強力な言語であり、1 つのステートメントがテーブル全体に影響を与えることがあります。
 
-SQL の多くのバージョンが存在する、各開発で特定の DBMS に注意してください。 MFC データベース クラスでは、一連の X と開いている場合に対応する SQL ステートメントおよび SQL アクセス グループ一般的なアプリケーション環境 (CAE) SQL ドラフト仕様 (1991) を認識します。 これらのステートメントの構文については、付録 C を参照してください、 *ODBC SDK* *プログラマーズ リファレンス*MSDN ライブラリ CD に収録されています。
+SQL にはさまざまなバージョンが存在します。いずれも特定の DBMS を念頭に開発されています。 MFC データベース クラスでは、X/Open と SQL Access Group Common Applications Environment (CAE) SQL ドラフト仕様 (1991) に対応する一連の SQL ステートメントが認識されます。 これらのステートメントの構文については、MSDN Library CD の *ODBC SDK* *Programmer's Reference* の付録 C を参照してください。
 
 このトピックでは、次の内容について説明します。
 
-- [ODBC と SQL 間のリレーションシップ](#_core_open_database_connectivity_.28.odbc.29)します。
+- [ODBC と SQL の関係](#_core_open_database_connectivity_.28.odbc.29)。
 
-- [データベース クラスで使用される最も一般的な SQL キーワード](#_core_the_database_classes)します。
+- [データベース クラスで使用される最も一般的な SQL キーワード](#_core_the_database_classes)。
 
-- [SQL データベース クラスの使用方法](#_core_how_the_database_classes_use_sql)します。
+- [データベース クラスによる SQL の使用方法](#_core_how_the_database_classes_use_sql)。
 
 ##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
 
-データベース クラスは、odbc でのコードで SQL コマンドを埋め込むのではなく、呼び出しレベルのインターフェイスでの SQL を使用して実装されます。 ODBC SQL を使用して通信する、[データソース](../../data/odbc/data-source-odbc.md)ODBC ドライバーをします。 これらのドライバーは、SQL を解釈し、必要に応じて、Microsoft Access などの特定のデータベース形式で使用するために変換するため、します。 ODBC SQL の使用方法の詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と ODBC SDK*プログラマーズ リファレンス*、MSDN ライブラリ cd。
+データベース クラスは ODBC で実装されます。ODBC では、コードに SQL コマンドを埋め込むのではなく、呼び出しレベルのインターフェイスで SQL が使用されます。 ODBC では、ODBC ドライバー経由で[データ ソース](../../data/odbc/data-source-odbc.md)と通信する際、SQL が使用されます。 このようなドライバーでは、SQL が解釈され、必要に応じて、Microsoft Access など、特定のデータベース形式で使用する目的で変換されます。 ODBC による SQL の使用の詳細については、[ODBC](../../data/odbc/odbc-basics.md) と MSDN Library CD の ODBC SDK *Programmer's Reference* を参照してください。
 
 ##  <a name="_core_the_database_classes"></a> データベース クラス
 
-データベース クラスが操作し、既存のデータを更新できるように設計[データソース](../../data/odbc/data-source-odbc.md)します。 [MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)(を使用してアクセス**クラスの追加**)、データベース クラスでは、ほとんどの SQL ステートメントを構築するとします。
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
-データベース クラスでは、データ操作言語 (DML) と呼ばれる SQL の一部を使用します。 これらのコマンドでは、データ ソースのすべてまたは一部を使用、新しいレコードを追加、編集、およびレコードを削除できます。 次の表に、最も一般的な SQL キーワードおよび方法は、データベース クラスに使用します。
+データベース クラスは、既存の[データ ソース](../../data/odbc/data-source-odbc.md)でデータを操作し、更新できるように設計されています。 [MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)、[MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (**[クラスの追加]** 経由でアクセス)、データベース クラスでは、ほとんどの SQL ステートメントが自動的に構築されます。
+
+データベース クラスでは、データ操作言語 (DML) と呼ばれる SQL の一部が使用されます。 これらのコマンドでは、データ ソースの全部または一部を使用したり、新しいレコードを追加、編集、削除したりできます。 次の表は、最も一般的な SQL キーワードとデータベース クラスによるその使用方法をまとめたものです。
 
 ### <a name="some-common-sql-keywords"></a>一般的な SQL キーワード
 
-|SQL キーワード|ウィザードおよびデータベース クラス|
+|SQL キーワード|ウィザードとデータベース クラスでそれを使用する目的|
 |-----------------|---------------------------------------------|
-|**SELECT**|対象のテーブルとデータ ソース内の列が使用されることを確認します。|
-|**WHERE**|選択範囲を限定するフィルターを適用します。|
-|**ORDER BY**|レコード セットを並べ替え順序を適用します。|
-|**挿入します。**|レコード セットには、新しいレコードを追加します。|
-|**DELETE**|レコード セットからレコードを削除します。|
-|**更新プログラム**|レコードのフィールドを変更します。|
+|**SELECT**|データ ソースの中から使用されるテーブルと列を特定する|
+|**WHERE**|選択を絞り込むフィルターを適用する|
+|**ORDER BY**|レコードセットに並べ替え順序を適用する|
+|**INSERT**|レコードセットに新しいレコードを追加する|
+|**DELETE**|レコードセットから新しいレコードを削除する|
+|**UPDATE**|レコードのフィールドを変更する|
 
-データベース クラスがさらに、ODBC を認識**呼び出す**ステートメントで、一部のデータ ソースの定義済みクエリ (またはストアド プロシージャ) の呼び出しに使用できます。 ODBC データベース ドライバーでは、これらのステートメントを解釈し、各 DBMS 用の適切なコマンドに置換されます。
+また、データベース クラスでは、ODBC **CALL** ステートメントが認識されます。このステートメントを利用し、事前定義されたクエリ (またはストアド プロシージャ) を一部のデータ ソースで呼び出すことができます。 ODBC データベース ドライバーではこれらのステートメントが解釈され、各 DBMS に適したコマンドが代用されます。
 
 > [!NOTE]
->  Dbms のすべてのサポート**呼び出す**ステートメント。
+>  一部の DBMS では **CALL** ステートメントがサポートされていません。
 
-クラス内のユーザーが指定したステートメントが認識されない`CRecordset::Open`テーブル名として解釈されます。
+クラスで `CRecordset::Open` のユーザー指定のステートメントを認識できない場合、テーブル名として解釈されます。
 
-フレームワークでの SQL ステートメントの作成方法の詳細については、次を参照してください。[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
+フレームワークで SQL ステートメントが構築されるしくみについては、「[レコードセット:レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)」と「[SQL:レコードセットの SQL ステートメントのカスタマイズ (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)」を参照してください。
 
-SQL データベースでは、C および C++ で使用されるもののようなデータ型を使用します。 これらの類似点の詳細については、次を参照してください。 [SQL: SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)します。
+SQL データベースでは、C と C++ で使用されるものに似たデータ型が使用されます。 このような類似点については、「[SQL:SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)」を参照してください。
 
-サポートされている SQL ステートメント、データ型、SQL コアの文法、および SQL に関する推奨されるパブリケーションの読み取りリストの一覧を含む、SQL の詳細についてを見つけることができます、 *ODBC SDK* *プログラマー リファレンス* MSDN ライブラリ CD に収録されています。
+サポートされている SQL ステートメント、データ型、SQL 中心的文法、SQL に関するおすすめ図書リストなど、SQL に関する詳細は、MSDN Library CD の *ODBC SDK* *Programmer's Reference* にあります。
 
-##  <a name="_core_how_the_database_classes_use_sql"></a> SQL データベース クラスの使用方法
+##  <a name="_core_how_the_database_classes_use_sql"></a> データベース クラスによる SQL の使用方法
 
-データベース クラスから派生したレコード セットでは、ODBC を使用して、データ ソースと通信し、ODBC SQL ステートメントを送信することによって、データ ソースからレコードを取得します。 このトピックでは、データベース クラスと SQL 間のリレーションシップについて説明します。
+データベース クラスから派生されたレコードセットでは、データ ソースと通信するために ODBC が使用されます。ODBC では、SQL ステートメントを送信することでデータ ソースからレコードが取得されます。 このトピックでは、データベース クラスと SQL の関係について説明します。
 
-レコード セットを SQL ステートメントの要素を構築することにより、SQL ステートメントを構築します、`CString`します。 として文字列は、**選択**ステートメントで、レコードのセットを返します。
+レコードセットでは、SQL ステートメントの断片を集めて `CString` を組み立てることで SQL ステートメントが作られます。 文字列は **SELECT** ステートメントとして構築されます。このステートメントからは一連のレコードが返されます。
 
-レコード セットを呼び出す ODBC データ ソースに SQL ステートメントを送信すると ODBC ドライバー マネージャーが ODBC ドライバーにステートメントを渡しますドライバーが基になる DBMS に送信します。 DBMS は、レコードの結果セットを返し、ODBC ドライバーは、アプリケーションに、レコードを返します。 データベース クラスでは、タイプ セーフな C++ クラスで結果セットから派生した、プログラムのアクセスを使用できます。`CRecordset`します。
+SQL ステートメントをデータ ソースに送信する目的でレコードセットにより ODBC が呼び出されるとき、ODBC Driver Manager によってステートメントが ODBC ドライバーに渡され、ドライバーによってそれが基礎 DBMS に送信されます。 DBMS によってレコードの結果セットが返され、ODBC ドライバーによってアプリケーションにレコードが返されます。 データベース クラスによって、`CRecordset` から誘導されたタイプ セーフな C++ クラスの結果セットにプログラムはアクセスできます。
 
-SQL データベース クラスの使用方法の詳細については、以下のトピックです。
+次のトピックでは、データベース クラスによって SQL が使用されるしくみについて説明します。
 
-- [SQL: レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL: レコードセットの SQL ステートメントのカスタマイズ (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [SQL: SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 

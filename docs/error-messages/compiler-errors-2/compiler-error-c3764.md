@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 498aefae4dfe8fd13184b9da1685494d533575dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556430"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757236"
 ---
 # <a name="compiler-error-c3764"></a>コンパイラ エラー C3764
 
-'override_function': 基底クラス メソッド 'base_class_function' をオーバーライドすることはできません
+' override_function ': 基底クラスのメソッド ' base_class_function ' をオーバーライドできません
 
-正しくない形式のオーバーライドが検出されました。 たとえば、基底クラスの関数が`virtual`します。 詳細については、次を参照してください。[オーバーライド](../../windows/override-cpp-component-extensions.md)します。
+コンパイラで、正しくない形式のオーバーライドが検出されました。 たとえば、基底クラスの関数が `virtual`ませんでした。 詳細については、「 [override](../../extensions/override-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3764 が生成されます。
 
-```
+```cpp
 // C3764.cpp
 // compile with: /clr /c
 public ref struct A {
@@ -37,11 +37,11 @@ public ref struct B : A {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C3764 基底クラスのメソッドは、両方を明示的にはときも発生し、という名前をオーバーライドします。 次の例では、C3764 が生成されます。
+C3764 は、基底クラスのメソッドが明示的かつ名前付きでオーバーライドされた場合にも発生することがあります。 次の例では、C3764 が生成されます。
 
-```
+```cpp
 // C3764_b.cpp
 // compile with: /clr /c
 ref struct A {

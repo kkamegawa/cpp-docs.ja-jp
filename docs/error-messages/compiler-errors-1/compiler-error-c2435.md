@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
 ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166647"
 ---
 # <a name="compiler-error-c2435"></a>コンパイラ エラー C2435
 

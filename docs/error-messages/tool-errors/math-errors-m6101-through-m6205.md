@@ -1,18 +1,34 @@
 ---
-title: 数値演算エラー M6101 から M6205
-ms.date: 11/17/2017
+title: 数値演算エラー
+ms.date: 04/16/2019
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
-ms.openlocfilehash: ef922f8057f25cb6e206f9f7bfbb099fdf81ac17
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7d89a7b9f89342b973307f592e59d05cfe44f84f
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856702"
 ---
-# <a name="math-errors-m6101-through-m6205"></a>数値演算エラー M6101 から M6205
+# <a name="math-errors-mxxxx"></a>数値演算エラー (Mxxxx)
 
-このセクションでは、実行時の浮動小数点数値演算ライブラリによって生成されるエラーの参照です。
+このセクションでは、実行時の浮動小数点数値演算ライブラリによって生成されるエラーの参照です。 数値演算の実行時エラーと警告があるフォーム M*xxxx*ここで、 *xxxx*は 4 桁の番号です。
 
-Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com)サイト。 [Visual C 全般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)フォーラムではその他のフォーラムで議論されていない Visual C についての質問。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)します。
+## <a name="math-errors"></a>数値演算エラー
+
+[数値演算エラー M6101](math-error-m6101.md) \
+[数値演算エラー M6102](math-error-m6102.md) \
+[数値演算エラー M6107](math-error-m6107.md) \
+[数値演算エラー M6108](math-error-m6108.md) \
+[数値演算エラー M6110](math-error-m6110.md) \
+[数値演算エラー M6111](math-error-m6111.md) \
+[数値演算エラー M6201](math-error-m6201.md) \
+[数値演算エラー M6202](math-error-m6202.md) \
+[数値演算エラー M6203](math-error-m6203.md) \
+[数値演算エラー M6205](math-error-m6205.md)
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[数値演算と浮動小数点サポート](../../c-runtime-library/floating-point-support.md)

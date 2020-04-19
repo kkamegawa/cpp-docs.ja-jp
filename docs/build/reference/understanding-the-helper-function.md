@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: ee2a8b66eaf4a8ba29ba3de7e63407bea738d626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317667"
 ---
 # <a name="understanding-the-helper-function"></a>ヘルパー関数について
 
@@ -53,16 +53,16 @@ DLL またはインポートの名前に基づく特定の処理を実行する�
 
 次のトピックでは、ヘルパー関数について説明します。
 
-- [Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [呼び出し規約、パラメーター、および戻り値の型](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [呼び出し規約、パラメーター、および戻り値の型](calling-conventions-parameters-and-return-type.md)
 
-- [構造体と定数の定義](../../build/reference/structure-and-constant-definitions.md)
+- [構造体と定数の定義](structure-and-constant-definitions.md)
 
-- [必要な値の計算](../../build/reference/calculating-necessary-values.md)
+- [必要な値の計算](calculating-necessary-values.md)
 
-- [遅延読み込みした DLL のアンロード](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [遅延読み込みした DLL のアンロード](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

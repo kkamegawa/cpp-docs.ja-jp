@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942334"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 特定のデバッグ ヒープ ブロック ポインターに関連付けられたブロックの型および細分化された型を返します。
 
@@ -52,11 +55,11 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>戻り値
 
-有効なデバッグ ヒープのポインターが渡されたときに、 **_CrtReportBlockType**関数の形式で、ブロックの型とサブタイプを返します、 **int**します。無効なポインターを渡された場合、関数は -1 を返します。
+有効なデバッグヒープポインターが渡されると、 **_CrtReportBlockType**関数は、ブロックの型とサブタイプを**int**の形式で返します。無効なポインターを渡された場合、関数は -1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-型とサブタイプによって返されるを抽出する **_CrtReportBlockType**、マクロを使用して **_BLOCK_TYPE**と **_BLOCK_SUBTYPE** (どちらも Crtdbg.h で定義されている)、戻り値。
+**_CrtReportBlockType**によって返される型と**サブタイプを**抽出するには、戻り値に対してマクロの **_BLOCK_TYPE**と crtdbg.h (両方で定義されている) を使用します。
 
 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 

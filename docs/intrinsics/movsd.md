@@ -1,6 +1,6 @@
 ---
 title: __movsd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 89c2e7bf6045821d01b23608552776aaf389b0cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331010"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221757"
 ---
-# <a name="movsd"></a>__movsd
+# <a name="__movsd"></a>__movsd
 
 **Microsoft 固有の仕様**
 
-移動の文字列が生成されます (`rep movsd`) 命令。
+Move String (`rep movsd`) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*ソース*<br/>
-[in]操作のソース。
+*Source*\
+から操作のソース。
 
-*カウント*<br/>
-[in]コピーするダブルワードの数。
+*数*\
+からコピーするダブルワードの数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __movsd(
 |---------------|------------------|
 |`__movsd`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-その結果、最初の`Count`によって示されるダブルワード`Source`にコピーされます、`Dest`文字列。
+結果として、*ソース*によってポイントされている最初の*カウント*ダブルワードが、コピー*先*の文字列にコピーされます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>

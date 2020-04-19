@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4600
 ms.assetid: f023a2a1-7fc4-463f-a434-dc93fcd3f4e9
-ms.openlocfilehash: fcfefd5b858df653551e7f3061a41d168c8ff3f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6eae37d006b5fcd6bd1c5e2993f1752c0534ee45
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489610"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966227"
 ---
 # <a name="compiler-warning-level-1-c4600"></a>コンパイラの警告 (レベル 1) C4600
 
-\#プラグマ 'macro name': 無効な空でない文字列が必要です
+\#プラグマ ' macro name ': 有効な空でない文字列が必要です。
 
-プッシュまたはいずれかで、マクロ名を表示するときに、空の文字列を指定することはできません、 [pop_macro](../../preprocessor/pop-macro.md)または[push_macro](../../preprocessor/push-macro.md)します。
+[Pop_macro](../../preprocessor/pop-macro.md)または[push_macro](../../preprocessor/push-macro.md)でマクロ名をプッシュまたはポップするときに、空の文字列を指定することはできません。
 
 次の例では、C4600 が生成されます。
 
-```
+```cpp
 // C4600.cpp
 // compile with: /W1
 int main()

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_handle
 ms.assetid: 505e967a-b75f-4bd8-8f46-57eb66c53538
-ms.openlocfilehash: 24b068df7ef34854bb8b1c0504fd5b4dcaaea799
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05fe344514099a4fdd53315cf979a2be0fec1695
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364494"
 ---
 # <a name="autohandle"></a>auto_handle
 

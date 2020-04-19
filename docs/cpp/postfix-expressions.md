@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245064"
 ---
 # <a name="postfix-expressions"></a>後置式
 
@@ -23,7 +23,7 @@ ms.locfileid: "51332440"
 |-------------------|-----------------------|
 |[添字演算子](../cpp/subscript-operator.md)|**[ ]**|
 |[関数呼び出し演算子](../cpp/function-call-operator-parens.md)|**( )**|
-|[明示的な型変換演算子](../cpp/explicit-type-conversion-operator-parens.md)|*型名* **)**|
+|[明示的な型変換演算子](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[メンバー アクセス演算子](../cpp/member-access-operators-dot-and.md)|**.** または **->**|
 |[後置インクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[後置デクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -82,7 +82,7 @@ simple-type-name ( expression-list )
 
    かっこ構文ではなく、等号構文を使用しているように初期化が実行されることに注意してください。 `i` のコピーは、関数に値を渡す前に作成されます (詳細については、次を参照してください。[初期化子](../cpp/initializers.md)と[変換](../cpp/user-defined-type-conversions-cpp.md))。
 
-   そのため、型の引数、関数プロトタイプ (宣言) を呼び出す場合**長い**、呼び出し元のプログラムの種類の実引数を提供する場合と**int**を使用して、実引数を昇格、型への標準の型変換**長い**(を参照してください[標準変換](../cpp/standard-conversions.md))。
+   そのため、型の引数、関数プロトタイプ (宣言) を呼び出す場合**long**、呼び出し元のプログラムの種類の実引数を提供する場合と**int**を使用して、実引数を昇格、型への標準の型変換**long**(を参照してください[標準変換](../cpp/standard-conversions.md))。
 
    仮引数の型への標準変換またはユーザー定義変換がない実際の引数を指定するとエラーになります。
 
@@ -111,7 +111,7 @@ void func( long param1, double param2 )
 }
 ```
 
-ときに`func`main、仮パラメーターから呼び出される`param1`の値で初期化されます`i`(`i`型に変換されます**長い**標準を使用して、正しい型に対応するには変換) などと仮パラメーター`param2`の値で初期化されます`j`(`j`型に変換されます**二重**標準変換を使用して)。
+ときに`func`main、仮パラメーターから呼び出される`param1`の値で初期化されます`i`(`i`型に変換されます**long**標準を使用して、正しい型に対応するには変換) などと仮パラメーター`param2`の値で初期化されます`j`(`j`型に変換されます**double**標準変換を使用して)。
 
 ## <a name="treatment-of-argument-types"></a>引数の型の処理
 
@@ -141,15 +141,15 @@ double& func2( double& d, const char *c ) {
 
 省略記号は、引数が必要だが、宣言で数と型を指定しないことを示します。 この方法は、C++ の利点の 1 つであるタイプ セーフが活用できないため、C++ のプログラミングとしてお勧めできません。 省略記号を使用して宣言された関数と、正式な実引数の型が指定された関数とでは適用される変換方式が異なります。
 
-- 実際の引数が型の場合**float**、型に昇格**二重**関数呼び出しの前にします。
+- 実際の引数が型の場合**float**、型に昇格**double**関数呼び出しの前にします。
 
-- 符号付きまたは符号なしの**char**、**短い**、列挙型、またはビット フィールドは符号付きまたは符号なしのいずれかに変換**int**整数の上位変換を使用します。
+- 符号付きまたは符号なしの**char**、**short**、列挙型、またはビット フィールドは符号付きまたは符号なしのいずれかに変換**int**整数の上位変換を使用します。
 
 - クラス型のすべての引数は、データ構造体として値渡しされます。またクラスのコピー コンストラクター (存在する場合) を起動するのではなく、バイナリのコピーによってコピーが作成されます。
 
 省略記号を使用する場合、省略記号は引数リストの最後に宣言する必要があります。 可変個の引数を渡す方法についての詳細については、の説明を参照してください。 [va_arg、va_start、および va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)で、*ランタイム ライブラリ リファレンス*します。
 
-CLR プログラミングの既定の引数については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+CLR プログラミングの既定の引数については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 既定の引数では、関数呼び出しで引数を指定しない場合に、自動的に使用される引数の値を指定できます。 次のコード片では、既定の引数がどのように機能するかを示します。 既定の引数を指定する方法の制限の詳細については、次を参照してください。[既定の引数](../cpp/default-arguments.md)します。
 

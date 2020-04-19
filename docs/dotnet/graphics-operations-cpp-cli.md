@@ -18,12 +18,12 @@ helpviewer_keywords:
 - GDI+ [C++], converting image file formats
 - graphics [C++], converting image file formats
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
-ms.openlocfilehash: dd27fc603454d18f30fb367399e0ee18be74015e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7c6d62eb4059069e6e266544ce6323c63dd15c0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393741"
 ---
 # <a name="graphics-operations-ccli"></a>グラフィック操作 (C++/CLI)
 

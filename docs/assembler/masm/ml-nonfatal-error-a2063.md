@@ -1,27 +1,27 @@
 ---
 title: ML の致命的でないエラー A2063
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2063
 helpviewer_keywords:
 - A2063
 ms.assetid: 12976b25-2159-4e0c-9df3-dcfac61091ee
-ms.openlocfilehash: d10117948690b88eebdc2b3ce0bf8c360f6220f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c34b7ad19263a0524d874dad8c3e0daca4946941
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514349"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317982"
 ---
 # <a name="ml-nonfatal-error-a2063"></a>ML の致命的でないエラー A2063
 
-**2 の累乗にのみ配置ができます式。**
+**2の累乗のみに揃える: 式**
 
-指定された式、 [ALIGN](../../assembler/masm/align-masm.md)ディレクティブが無効です。
+[ALIGN](align-masm.md)ディレクティブで指定された式が無効です。
 
-**ALIGN**式が 2 ~ 256 の間の 2 の累乗である必要があり、現在のセグメント、構造体、共用体のアラインメント未満でなければなりません。
+**ALIGN**式は、2 ~ 256 の2の累乗でなければなりません。また、現在のセグメント、構造体、または共用体のアラインメントの値以下である必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

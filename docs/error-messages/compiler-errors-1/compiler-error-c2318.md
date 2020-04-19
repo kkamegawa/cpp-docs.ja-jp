@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2318
 ms.assetid: 169e30b9-df78-46cb-90bf-576ad3c32fd4
-ms.openlocfilehash: a68a333c9cb817a653597acb011dfbb9291c4d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0af0b0e0fbf8894e5f29482a80c05c9ed1ce141d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615771"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748087"
 ---
 # <a name="compiler-error-c2318"></a>コンパイラ エラー C2318
 
@@ -21,7 +21,7 @@ ms.locfileid: "50615771"
 
 次の例では C2318 が生成されます。
 
-```
+```cpp
 // C2318.cpp
 // compile with: /EHsc
 #include <eh.h>
@@ -31,9 +31,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2318b.cpp
 // compile with: /EHsc
 #include <eh.h>

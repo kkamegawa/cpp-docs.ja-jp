@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 1902ba61417be457b4c296b513e1632bfdd8cec6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492730"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514196"
 ---
 # <a name="propput"></a>propput
 
@@ -25,11 +25,11 @@ ms.locfileid: "50492730"
 
 ## <a name="remarks"></a>Remarks
 
-**Propput** C++ 属性と同じ機能を持つ、 [propput](/windows/desktop/Midl/propput) MIDL 属性。
+**Propput** C++属性には、 [propput](/windows/win32/Midl/propput) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)の使用サンプル**propput**します。
+**Propput**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

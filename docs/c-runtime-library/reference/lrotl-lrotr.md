@@ -1,10 +1,10 @@
 ---
 title: _lrotl、_lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953031"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl、_lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl、_lrotr
 
-左側のビットを回転 (**_lrotl**) または右 (**_lrotr**)。
+ビットを左 ( **_lrotl**) または右 ( **_lrotr**) に回転させます。
 
 ## <a name="syntax"></a>構文
 
@@ -51,7 +54,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 回転させる値。
 
 *shift*<br/>
@@ -63,7 +66,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="remarks"></a>Remarks
 
-**_Lrotl**と **_lrotr**関数回転*値*によって*shift*ビット。 **_lrotl**は値を最上位ビットに向かって、左に回転します。 **_lrotr**重要度の低いビットに向かって、値右方向に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
+**_Lrotl**関数と **_lrotr**関数は、*シフト*ビットごとに*値*を回転させます。 **_lrotl**は、より重要なビットに向かって値を左に回転させます。 **_lrotr**は、重要度の低いビットに向かって値を右に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
 
 ## <a name="requirements"></a>必要条件
 

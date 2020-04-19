@@ -2,19 +2,19 @@
 title: logical_and 構造体
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::logical_and
+- functional/std::logical_and
 helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 27cb49b851bce1d63b7e3a11e7a3bbb9db06fefa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495616"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821617"
 ---
-# <a name="logicaland-struct"></a>logical_and 構造体
+# <a name="logical_and-struct"></a>logical_and 構造体
 
 引数に対して論理積演算 (`operator&&`) を実行する定義済みの関数オブジェクト。
 
@@ -39,13 +39,14 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*をサポートする任意の型、`operator&&`指定または推論された型のオペランドを受け取る。
+*型*、 *T*、 *U*\
+指定または推論された型のオペランドを受け取る `operator&&` をサポートする任意の型。
 
-*左*<br/>
-論理積演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左*\
+論理積演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
 
-*右*<br/>
-論理積演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+*右*\
+論理積演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 
@@ -55,7 +56,7 @@ struct logical_and<void>
 
 ユーザー定義型の場合、オペランドの評価のショートサーキットはありません。 どちらの引数も `operator&&` によって評価されます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // functional_logical_and.cpp
@@ -111,29 +112,18 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
-*/
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

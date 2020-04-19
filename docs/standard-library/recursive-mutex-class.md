@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534408"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451684"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex クラス
 
@@ -50,7 +50,7 @@ class recursive_mutex;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<mutex >
+**ヘッダー:** \<ミューテックス >
 
 **名前空間:** std
 
@@ -96,11 +96,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、`mutex`または呼び出し元のスレッドが既に所有している場合、`mutex**; otherwise, **false`します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。呼び出し元`mutex**; otherwise, **false`のスレッドがを既に所有している場合は。
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し元のスレッドが既に所有している場合、 `mutex`、関数をすぐに返します**true**、および以前のロックが有効になります。
+呼び出し元のスレッドが既に`mutex`を所有している場合、関数はすぐに**true**を返し、前のロックは有効のままになります。
 
 ## <a name="unlock"></a>  unlock
 
@@ -118,5 +118,5 @@ void unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

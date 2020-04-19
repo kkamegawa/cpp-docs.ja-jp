@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 1d57251e48f2496b07a4eb4f94976c7a44b165f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176071"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor クラス
 
@@ -62,7 +62,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> Cxmlaccessor::getxmlcolumndata
+## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
 
 列で、XML 形式の文字列データとして、テーブルの列の型情報を取得します。
 
@@ -74,7 +74,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*キャンセルします。*<br/>
+*strOutput*<br/>
 [out]取得する列の型情報を含む文字列バッファーへの参照。 文字列には、データ ストアの列名に一致する XML タグ名が表示されます。
 
 ### <a name="return-value"></a>戻り値
@@ -91,7 +91,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> Cxmlaccessor::getxmlrowdata
+## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
 
 行で、XML 形式の文字列データとして、テーブルの内容全体を取得します。
 
@@ -104,7 +104,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 #### <a name="parameters"></a>パラメーター
 
-*キャンセルします。*<br/>
+*strOutput*<br/>
 [out]取得するテーブルのデータを格納するバッファーへの参照。 データは、データ ストアの列名に一致する XML タグ名でデータを文字列として書式設定します。
 
 *bAppend*<br/>

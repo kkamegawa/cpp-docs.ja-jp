@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2425
 ms.assetid: 0ce59404-9aff-4e01-aa8d-27d23e92eb30
-ms.openlocfilehash: fcbcf06df3330320bf014c132abc543e2e2e8087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b723ecdc3544865aa4adb63c4fb21db62f4b726
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479024"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744655"
 ---
 # <a name="compiler-error-c2425"></a>コンパイラ エラー C2425
 
@@ -23,7 +23,7 @@ ms.locfileid: "50479024"
 
 次の例では警告 C2425 が生成されます。
 
-```
+```cpp
 // C2425.cpp
 // processor: x86
 int main() {

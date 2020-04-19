@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-ms.openlocfilehash: 1899e3153300bbfbfce068d29351de601f336b6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdaee3d13a8ceab47f62100953a0eb6e51bfc255
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410656"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>ポインターのインクリメントとデクリメント
 

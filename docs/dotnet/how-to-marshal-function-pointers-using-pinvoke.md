@@ -1,5 +1,5 @@
 ---
-title: '方法: PInvoke を使用して関数ポインターをマーシャリングする'
+title: '方法: 関数ポインターをマーシャ リングを使用して PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400566"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>方法: PInvoke を使用して関数ポインターをマーシャリングする
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>方法: 関数ポインターをマーシャ リングを使用して PInvoke
 
 このトピックでは、マネージ デリゲートを説明します。 .NET Framework P/invoke 機能を使用して関数をアンマネージとの相互運用時に、関数ポインターの代わりに使用できます。 ただし、Visual C プログラマは、P/invoke は、ほとんどのコンパイル時エラーを報告するには、タイプ セーフでないし、実装に時間がかかることができますを提供するため (可能な) 場合、代わりに、C++ Interop 機能を使用することが推奨されます。 アンマネージ API が DLL としてパッケージ化、ソース コードが使用できない場合は、P/invoke、唯一のオプションです。 それ以外の場合、次のトピックを参照してください。
 

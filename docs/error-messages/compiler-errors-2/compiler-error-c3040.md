@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3040
 ms.assetid: 29e857ac-74f0-4ec6-becf-9026e38c160e
-ms.openlocfilehash: b0bc4956cfc08ae50026827d78136a70b82d568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a7ee7b814be1963e2d98b54e547cc5965eef9d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474491"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754954"
 ---
 # <a name="compiler-error-c3040"></a>コンパイラ エラー C3040
 
@@ -21,7 +21,7 @@ ms.locfileid: "50474491"
 
 次の例では C3040 が生成されます。
 
-```
+```cpp
 // C3040.cpp
 // compile with: /openmp /c
 #include "omp.h"

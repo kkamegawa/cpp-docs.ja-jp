@@ -8,12 +8,12 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 75ff46a829bd129c7f73bf11a303a67ab1526969
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308535"
 ---
 # <a name="sdi-and-mdi"></a>SDI と MDI
 

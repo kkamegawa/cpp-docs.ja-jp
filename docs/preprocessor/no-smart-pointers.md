@@ -1,36 +1,35 @@
 ---
-title: no_smart_pointers
-ms.date: 11/04/2016
+title: no_smart_pointers import 属性
+ms.date: 08/29/2019
 f1_keywords:
-- no_search_pointers
+- no_smart_pointers
 helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
-ms.openlocfilehash: 305c08497a600f602767496cba48d108335fdeb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fca3eb486ff3cfc7403c38e91855b799a698782
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636983"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220690"
 ---
-# <a name="nosmartpointers"></a>no_smart_pointers
-**C++ 固有の仕様**
+# <a name="no_smart_pointers-import-attribute"></a>no_smart_pointers import 属性
+
+**C++のみ**
 
 タイプ ライブラリのすべてのインターフェイスに対して、スマート ポインターの作成を抑制します。
 
 ## <a name="syntax"></a>構文
 
-```
-no_smart_pointers
-```
+> **#import***タイプライブラリ***no_smart_pointers**
 
 ## <a name="remarks"></a>Remarks
 
-既定では、`#import` を使用すると、タイプ ライブラリのすべてのインターフェイスのスマート ポインター宣言を取得できます。 これらのスマート ポインターは型[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)します。
+既定では、`#import` を使用すると、タイプ ライブラリのすべてのインターフェイスのスマート ポインター宣言を取得できます。 これらのスマートポインターの種類は[_com_ptr_t](../cpp/com-ptr-t-class.md)です。
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

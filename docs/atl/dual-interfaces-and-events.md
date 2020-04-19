@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [C++], dual interfaces
 - dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-ms.openlocfilehash: f94e87f077846af8d61b06145f776f385051e79f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01233edb63145d69d335349bb9dff91e6a4aca5a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198266"
 ---
 # <a name="dual-interfaces-and-events"></a>デュアル インターフェイスとイベント
 
@@ -24,4 +24,3 @@ ms.locfileid: "50640597"
 ## <a name="see-also"></a>関連項目
 
 [デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)
-

@@ -1,5 +1,5 @@
 ---
-title: '条件演算子: でしょうか。 :'
+title: '条件演算子: &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444136"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276808"
 ---
-# <a name="conditional-operator--"></a>条件演算子: でしょうか。 :
+# <a name="conditional-operator-quest-"></a>条件演算子: &quest; :
 
 ## <a name="syntax"></a>構文
 
@@ -23,15 +23,15 @@ ms.locfileid: "50444136"
 expression ? expression : expression
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-条件演算子 (**?:**) は三項演算子 (3 つのオペランドを受け取ります)。 条件演算子は次のように機能します。
+条件演算子 ( **?:** ) は三項演算子です (3 つのオペランドを受け取ります)。 条件演算子は次のように機能します。
 
-- 最初のオペランドが暗黙的に変換**bool**します。 これが評価され、すべての副作用が完了してから続行されます。
+- 最初のオペランドは暗黙的に**ブール**値に変換されます。 これが評価され、すべての副作用が完了してから続行されます。
 
-- 最初のオペランドが評価された場合**true** (1)、2 番目のオペランドが評価されます。
+- 最初のオペランドが**true** (1) に評価されると、2番目のオペランドが評価されます。
 
-- 最初のオペランドが評価された場合**false** (0)、3 番目のオペランドが評価されます。
+- 最初のオペランドが**false** (0) に評価される場合、3番目のオペランドが評価されます。
 
 条件演算子の結果は、2 番目と 3 番目のどちらかのオペランドの評価の結果です。 条件式では、最後の 2 つのオペランドのうちの 1 つだけが評価されます。
 
@@ -39,7 +39,7 @@ expression ? expression : expression
 
 - 両方のオペランドが同じ型である場合、結果もその型になります。
 
-- 両方のオペランドが演算型または列挙型、通常の算術変換である場合 (記載[標準変換](standard-conversions.md)) を共通型に変換を実行します。
+- 両方のオペランドが演算型または列挙型である場合は、通常の算術変換 (「[標準変換](standard-conversions.md)」で説明されています) を実行してそれらを共通型に変換します。
 
 - 両方のオペランドがポインター型である場合、または一方がポインター型でもう一方が 0 に評価される定数式である場合、それらを共通型に変換するためにポインター変換が実行されます。
 

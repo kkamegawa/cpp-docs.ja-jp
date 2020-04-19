@@ -2,23 +2,64 @@
 title: '&lt;new&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
+- new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: b5803b5fdf44392b6096f9c9a5ebdde7f94eae59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604023"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243663"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 関数
 
-|||
-|-|-|
-|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|
+## <a name="get_new_handler"></a> get_new_handler
 
-## <a name="nothrow"></a>  nothrow
+```cpp
+new_handler get_new_handler() noexcept;
+```
+
+### <a name="remarks"></a>Remarks
+
+現在を返して`new_handler`します。
+
+## <a name="launder"></a> launder
+
+```cpp
+template <class T>
+    constexpr T* launder(T* ptr) noexcept;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*ptr*\
+型を持つオブジェクトを保持するメモリのバイトのアドレスと似ています*T*します。
+
+### <a name="return-value"></a>戻り値
+
+型の値*T\**  X を指します。
+
+### <a name="remarks"></a>Remarks
+
+ポインターの最適化のバリアとも呼ばれます。
+
+引数の値定数式で使用できる定数式として使用されます。 ストレージのバイトがオブジェクトのようなポインターを使用して、別のオブジェクトによって占有されているストレージ内でオブジェクトを指しているポインター値を使用してアクセスします。
+
+### <a name="example"></a>例
+
+```cpp
+struct X { const int n; };
+
+X *p = new X{3};
+const int a = p->n;
+new (p) X{5}; // p does not point to new object because X::n is const
+const int b = p->n; // undefined behavior
+const int c = std::launder(p)->n; // OK
+```
+
+## <a name="nothrow"></a> nothrow
 
 引数として使用するオブジェクトを提供します、 **nothrow**のバージョンの**新しい**と**削除**します。
 
@@ -32,9 +73,9 @@ extern const std::nothrow_t nothrow;
 
 ### <a name="example"></a>例
 
-`std::nothrow_t` を関数パラメーターとして使用する方法の例については、「[operator new](../standard-library/new-operators.md#op_new)」および「[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)」を参照してください。
+`std::nothrow_t` を関数パラメーターとして使用する方法の例については、[operator new](../standard-library/new-operators.md#op_new) および [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) に関する記事をご覧ください。
 
-## <a name="set_new_handler"></a>  set_new_handler
+## <a name="set_new_handler"></a> set_new_handler
 
 インストールするときに呼び出されるユーザー関数**new 演算子**メモリの割り当ての試行に失敗します。
 
@@ -44,7 +85,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Pnew*<br/>
+*Pnew*\
 `new_handler`をインストールします。
 
 ### <a name="return-value"></a>戻り値
@@ -117,7 +158,3 @@ Allocating 5000000 ints.
 The new_handler is called:
 bad allocation
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<new>](../standard-library/new.md)<br/>

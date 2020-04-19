@@ -1,17 +1,15 @@
 ---
 title: タイプ ライブラリ アクセス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 4dc5a445f4a7736182350c16720686ca7e0bc27c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468381"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611532"
 ---
 # <a name="type-library-access"></a>タイプ ライブラリ アクセス
 
@@ -36,7 +34,7 @@ DECLARE_OLETYPELIB(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 タイプ ライブラリに関連するコントロール クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -57,7 +55,7 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 タイプ ライブラリに関連するコントロール クラスの名前。
 
 *tlid*<br/>

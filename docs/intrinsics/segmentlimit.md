@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 2748eee7db3a56b026e9d1896e35824c93938256
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326057"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217993"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Microsoft 固有の仕様**
 
-生成、 `lsl` (負荷のセグメントの制限) 命令。
+(セグメント`lsl`の読み込み制限) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
-[in]セグメントのセレクターを指定する定数。
+*ある*\
+からセグメントセレクターを指定する定数。
 
 ## <a name="return-value"></a>戻り値
 
-セグメントの数で指定されたセグメント セレクター`a`セレクターが現在のアクセス許可レベルで有効であり、表示されているが、します。
+セレクターが有効で現在のアクセス許可レベルで表示されている場合は、によって指定されたセグメントセレクターのセグメント制限。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,17 +43,17 @@ unsigned long __segmentlimit(
 |---------------|------------------|
 |`__segmentlimit`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-セグメントの上限を取得できない場合は、この命令が失敗します。 失敗した場合、この命令な ZF フラグをクリアして、戻り値が定義されていません。
+セグメントの上限を取得できない場合、この命令は失敗します。 エラーが発生すると、この命令は ZF フラグをクリアし、戻り値は未定義になります。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86

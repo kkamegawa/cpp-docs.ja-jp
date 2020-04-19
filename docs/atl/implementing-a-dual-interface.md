@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: 3b5363bb74a0db5b3cc5dad9bb0c0c6cb05edf15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262230"
 ---
 # <a name="implementing-a-dual-interface"></a>デュアル インターフェイスを実装します。
 
@@ -49,4 +49,3 @@ ms.locfileid: "50441224"
 ## <a name="see-also"></a>関連項目
 
 [デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)
-

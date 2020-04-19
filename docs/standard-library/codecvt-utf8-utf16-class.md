@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8_utf16 class
 ms.assetid: 4c12c881-5dba-4e39-b338-0b9caff5af29
-ms.openlocfilehash: 42c9c8643edc795748c1f12c5180471f281c4142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 879ebe6a75d76a84ef4250b95c41e02eccba5517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630673"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458646"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -24,13 +24,13 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 ワイド文字要素型。
 
-*Maxcode*<br/>
+*Maxcode*\
 ロケール ファセットの文字の最大数。
 
-*モード*<br/>
+*Mode*\
 ロケール ファセットの構成情報。
 
 ## <a name="remarks"></a>Remarks
@@ -41,4 +41,4 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ヘッダー: \<codecvt >
 
-Namespace: std
+名前空間: std

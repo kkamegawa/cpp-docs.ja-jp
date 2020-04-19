@@ -1,14 +1,14 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439534"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954789"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
 斜辺を計算します。
 
@@ -84,13 +87,13 @@ long double _hypotl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **hypot**はオーバーフローについては、斜辺の長さを返します**hypot** INF (無限) を返します、 **errno**に変数が設定されている**ERANGE**. 使用することができます **_matherr**エラー処理を修正します。
+成功した場合、 **hypot**は斜辺の長さを返します。オーバーフローの場合、 **hypot**は INF (無限大) を返し、 **Errno**変数は**ERANGE**に設定されます。 **_Matherr**を使用して、エラー処理を変更することができます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Hypot**関数が 2 つの辺の長さを指定された直角三角形の斜辺の長さを計算*x*と*y* (つまりの平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
+**Hypot**関数は、2辺の*x*と*y*の長さ (つまり、 *x*<sup>2</sup> + *y*<sup>2</sup>の平方根) を指定して、直角三角形の斜辺の長さを計算します。
 
 以前の標準との互換性のために、先頭にアンダースコアがある関数のバージョンが用意されています。 これらの動作は、先頭にアンダースコアがないバージョンと同じです。 新しいコードには、先頭にアンダースコアがないバージョンを使用することをお勧めします。
 

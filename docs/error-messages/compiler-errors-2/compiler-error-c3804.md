@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: e83380696aca3d6d45c235925b830bef9e3061a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544587"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755292"
 ---
 # <a name="compiler-error-c3804"></a>コンパイラ エラー C3804
 
-'property_accessor': アクセサー メソッドをプロパティには、いずれかが必要がありますはすべて静的、またはすべてスタティックでないです。
+' property_accessor ': プロパティのアクセサーメソッドは、すべてスタティックであるか、またはすべてスタティックでない必要があります
 
-アクセサー関数が静的にできる非 trivial プロパティを定義するときにインスタンスが両方のか。
+自明でないプロパティを定義する場合、アクセサー関数は静的またはインスタンスのどちらでもかまいませんが、両方を指定することはできません。
 
-詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。
+詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3804 が生成されます。
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

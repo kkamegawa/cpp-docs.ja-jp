@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1519fa105f2cd73c1165bb30264828aa987fbd35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551880"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458451"
 ---
 # <a name="future-class"></a>future クラス
 
@@ -69,7 +69,7 @@ class future;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<将来 >
+**ヘッダー:** \<今後の >
 
 **名前空間:** std
 
@@ -84,14 +84,14 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*他の*\
 `future` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、関連付けられた非同期状態がない `future` オブジェクトを構築します。
 
-2 番目のコンス トラクターの構成要素を`future`オブジェクトし、関連付けられた非同期状態からの転送*他*します。 *その他の*関連付けられた非同期状態にはなくなりました。
+2番目のコンストラクター `future`は、オブジェクトを構築し、関連付けられている非同期状態を*他の*から転送します。 *その他*には、関連付けられた非同期状態がありません。
 
 ## <a name="get"></a>  future::get
 
@@ -111,7 +111,7 @@ Ty get();
 
 部分的特殊化 `future<Ty&>` では、格納されている値は、実質的には非同期プロバイダーに戻り値として渡されたオブジェクトへの参照です。
 
-特殊化に格納されている値が存在しないので`future<void>`、メソッドを返します**void**します。
+特殊化`future<void>`には格納されている値が存在しないため、メソッドは**void**を返します。
 
 その他の特殊化では、メソッドは、格納されている値からその戻り値を移動します。 そのため、このメソッドを 1 回だけ呼び出します。
 
@@ -125,7 +125,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 `future` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-転送の後、*右*関連付けられた非同期状態にはなくなりました。
+転送後、*右側*には、関連付けられた非同期状態がなくなります。
 
 ## <a name="share"></a>  future::share
 
@@ -158,7 +158,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
+オブジェクトに関連付けられた非同期状態がある場合は**true** 。それ以外の場合は**false**。
 
 ## <a name="wait"></a>  future::wait
 
@@ -183,7 +183,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*<br/>
+*Rel_time*\
 スレッドがブロックする最大の時間間隔を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -205,7 +205,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*<br/>
+*Abs_time*\
 スレッドがブロックを解除できる時間を指定する [chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -218,5 +218,5 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

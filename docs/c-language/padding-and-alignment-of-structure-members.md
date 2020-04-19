@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - structure members, padding and alignment
 ms.assetid: c999820b-dd47-41fc-b923-e4c7ebbcd30f
-ms.openlocfilehash: a560c7b9491c22d16866c4fa32f80d16ca38d90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9c70ed074a11800b707aa48ec8e0e2f8b4f999
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541285"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148115"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Padding and Alignment of Structure Members (構造体メンバーのパディングとアラインメント)
 
@@ -23,6 +23,6 @@ ms.locfileid: "50541285"
 
 隣接するビット フィールドは、同じサイズの整数型で、次のビット フィールドがビット フィールドの共通のアラインメント要件によって課される境界を越えずに現在の割り当て単位に収まる場合は、同じ 1、2、または 4 バイトの割り当て単位にパックされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [構造体、共用体、列挙体、ビット フィールド](../c-language/structures-unions-enumerations-and-bit-fields.md)

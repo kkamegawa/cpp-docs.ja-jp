@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: 93cf2f2a11c34b1bbe2d62e4e4cc6afab16e2fd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238560"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC ツール バーの実装
 
@@ -84,7 +84,7 @@ MFC ツール バーには "ツール ヒント" を表示させることもで�
 > [!TIP]
 >  以前の形式の `CToolBar` を実装するために多大な労力を費やしてきた場合は、そのまま以前の形式のツール バーを使用できます。 記事をご覧ください[を使用して、古いツールバー](../mfc/using-your-old-toolbars.md)します。
 
-また、MFC 標準サンプルを参照してください[DOCKTOOL](../visual-cpp-samples.md)します。
+また、MFC 標準サンプルを参照してください[DOCKTOOL](../overview/visual-cpp-samples.md)します。
 
 ##  <a name="_core_the_toolbar_bitmap"></a> ツールバーのビットマップ
 
@@ -108,4 +108,3 @@ MFC ツール バーには "ツール ヒント" を表示させることもで�
 
 [ツールバー](../mfc/toolbars.md)<br/>
 [ツール バー エディター](../windows/toolbar-editor.md)
-

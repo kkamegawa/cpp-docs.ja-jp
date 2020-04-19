@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 75f8fcae2a51e4e8296f6f3c252888b6ca55ad20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273363"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Visual Studio でのマニフェスト生成
 
@@ -27,11 +27,8 @@ Visual Studio でビルド システムは、マニフェスト、最終的な�
 
 1. バイナリに埋め込まれたマニフェストがマニフェスト ツールによって生成されたマニフェストと同じ場合は、次のビルド ステップに、ビルドは続行します。
 
-マニフェストは最終的なバイナリ文字列リソースとして埋め込まれを Visual Studio でのファイルとして、最終的なバイナリを開いて表示できます。 マニフェストを適切なライブラリを指していることを確認するには、するで説明されている手順に従います[Visual C アプリケーションの依存関係の理解](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)前または後で説明されている推奨事項、 [のトラブルシューティング](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)セクション。
+マニフェストは最終的なバイナリ文字列リソースとして埋め込まれを Visual Studio でのファイルとして、最終的なバイナリを開いて表示できます。 マニフェストを適切なライブラリを指していることを確認するには、するで説明されている手順に従います[Visual C アプリケーションの依存関係の理解](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)前または後で説明されている推奨事項、 [のトラブルシューティング](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)セクション。
 
 ## <a name="see-also"></a>関連項目
 
-[方法 : マニフェストを C/C++ アプリケーションに埋め込む](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[プライベート アセンブリについて](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[マニフェスト ツール](/windows/desktop/SbsCs/mt-exe)<br/>
-[C/C++ プログラムのマニフェスト生成についての理解](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[C/C++ プログラムのマニフェスト生成についての理解](understanding-manifest-generation-for-c-cpp-programs.md)

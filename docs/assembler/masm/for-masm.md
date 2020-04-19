@@ -1,32 +1,33 @@
 ---
 title: FOR (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - for
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 5e365ee45396d581f0580e078496aeb2ecab165a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92e909b62331a630a9a09be6193f400ad32dc30
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554922"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318081"
 ---
-# <a name="for-masm"></a>FOR (MASM)
+# <a name="for"></a>FOR
 
-ごとに 1 回繰り返されるブロックをマーク*引数*、現在の*引数*交換*パラメーター*繰り返しのたびにします。
+各*引数*に対して1回繰り返されるブロックをマークします。各繰り返しでは、現在の*引数*が*パラメーター*を置換します。
 
 ## <a name="syntax"></a>構文
 
-> *パラメーター* [: REQ |: =*既定*]、 \<*引数*[、*引数*]] ><br/>
-> *ステートメント*<br/>
-> ENDM
+> *パラメーター* ⟦ **: REQ** |  __: =__ *default*⟧ **、\<** _引数_⟦ __、__ *argument* ...⟧ **>** \
+> *ステートメント*の\
+> **ENDM**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-同じ[IRP](../../assembler/masm/irp.md)します。
+[IRP](irp.md)と同じです。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

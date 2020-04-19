@@ -1,9 +1,9 @@
 ---
 title: toascii、__toascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __toascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __toascii
 - toascii
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09df829511b38b87cb41e32a59bee9f38a9b8f32
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578972"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957471"
 ---
-# <a name="toascii-toascii"></a>toascii、__toascii
+# <a name="toascii-__toascii"></a>toascii、__toascii
 
 切り捨てにより文字を 7 ビット ASCII に変換します。
 
@@ -54,21 +57,21 @@ int __toascii(
 
 ## <a name="return-value"></a>戻り値
 
-**_ _toascii**の値に変換*c*を 7 ビット ASCII の範囲し、結果を返します。 エラーを示す戻り値は予約されていません。
+**__ toascii**は、 *c*の値を7ビット ascii の範囲に変換し、その結果を返します。 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>Remarks
 
-**_ _Toascii**ルーチンの下位 7 ビットに切り捨てることで、ASCII 文字に、特定の文字を変換します。 その他の変換は適用されません。
+**__ Toascii**ルーチンは、指定された文字を下位7ビットに切り捨てることによって、ascii 文字に変換します。 その他の変換は適用されません。
 
-**_ _Toascii**プリプロセッサ マクロ _CTYPE_DISABLE_MACROS が定義されていない場合、ルーチンがマクロとして定義されます。 旧バージョンと互換性のため、 **toascii**はマクロとして定義されている場合にのみ[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)が定義されていないか 0 として定義されてそれ以外の場合、定義されていません。
+**__ Toascii**ルーチンは、プリプロセッサマクロ _CTYPE_DISABLE_MACROS が定義されていない限り、マクロとして定義されます。 旧バージョンとの互換性のために、 [ &#95; &#95;&#95; STDC](../../preprocessor/predefined-macros.md)が定義されていないか0として定義されている場合にのみ、 **toascii**がマクロとして定義されます。それ以外の場合は未定義です。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**toascii**、 **_ _toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
+|**toascii**、 **__ toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 
-**Toascii**マクロは POSIX の拡張機能、および **_ _toascii**は POSIX 拡張機能の Microsoft 固有の実装です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**Toascii**マクロは posix 拡張機能であり、 **__ TOASCII**は、Posix 拡張機能の Microsoft 固有の実装です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-ms.openlocfilehash: 2483e5803c5de7d63bd2fa9fed97730b7c894137
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 572aa5dc38ae1fff6116b3c3df588fc8478877d6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591114"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992080"
 ---
 # <a name="compiler-warning-level-3-c4535"></a>コンパイラの警告 (レベル 3) C4535
 
-_set_se_translator() の呼び出し元が必要です。
+_set_se_translator () の呼び出しには/EHa が必要です
 
-使用[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)が必要です、 [/EHa](../../build/reference/eh-exception-handling-model.md)コンパイラ オプションおよび not **/EHs**します。
+[_Set_se_translator](../../c-runtime-library/reference/set-se-translator.md)を使用するには、 **/ehs**ではなく、 [/eha](../../build/reference/eh-exception-handling-model.md)コンパイラオプションが必要です。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4535 が生成されます。
 
-```
+```cpp
 // C4535.cpp
 // compile with: /W3 /EHsc /c
 // C4535 expected

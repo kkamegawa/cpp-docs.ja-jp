@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489561"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514526"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
 転送する配列要素の数を指定します。
 
@@ -25,16 +25,16 @@ ms.locfileid: "50489561"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
-1 つ以上の C 言語の式。 空の引数スロットが許可されます。
+*式 (expression)*<br/>
+1つ以上の C 言語式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Length_is** C++ 属性と同じ機能を持つ、 [length_is](/windows/desktop/Midl/length-is) MIDL 属性。
+**Length_is** C++属性には、 [length_is](/windows/win32/Midl/length-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-参照してください[first_is](first-is.md)配列のセクションを指定する方法の例についてはします。
+配列のセクションを指定する方法の例については、「 [first_is](first-is.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "50489561"
 
 |||
 |-|-|
-|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**struct**または**union**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

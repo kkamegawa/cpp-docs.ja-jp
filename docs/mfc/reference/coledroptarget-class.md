@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5f101ca2c505e1b7c6b50b21af7d5aeef4ae625
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502896"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127882"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget クラス
 
@@ -45,30 +45,30 @@ class COleDropTarget : public CCmdTarget
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[COleDropTarget::COleDropTarget](#coledroptarget)|`COleDropTarget` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[COleDropTarget::OnDragEnter](#ondragenter)|カーソルが最初に、ウィンドウに入ったときに呼び出されます。|
-|[COleDropTarget::OnDragLeave](#ondragleave)|カーソルがウィンドウ外にドラッグされるときに呼び出されます。|
-|[COleDropTarget::OnDragOver](#ondragover)|ウィンドウの上でカーソルをドラッグするときに繰り返し呼び出されます。|
-|[COleDropTarget::OnDragScroll](#ondragscroll)|カーソルがウィンドウのスクロール領域にドラッグされるかどうかを判断するには、呼び出されます。|
-|[COleDropTarget::OnDrop](#ondrop)|ウィンドウの既定のハンドラーにデータが削除されるときに呼び出されます。|
-|[COleDropTarget::OnDropEx](#ondropex)|ウィンドウでは、最初のハンドラーにデータがドロップされたときに呼び出されます。|
-|[COleDropTarget::Register](#register)|有効なドロップ先として、ウィンドウを登録します。|
-|[COleDropTarget::Revoke](#revoke)|有効なドロップ ターゲットの中を中断するウィンドウをによりします。|
+|[COleDropTarget:: OnDragEnter](#ondragenter)|カーソルがウィンドウに最初に入ったときに呼び出されます。|
+|[COleDropTarget::OnDragLeave](#ondragleave)|カーソルがウィンドウの外にドラッグされると呼び出されます。|
+|[COleDropTarget::OnDragOver](#ondragover)|カーソルがウィンドウの上にドラッグされたときに繰り返し呼び出されます。|
+|[COleDropTarget:: OnDragScroll](#ondragscroll)|カーソルがウィンドウのスクロール領域にドラッグされているかどうかを判断するために呼び出されます。|
+|[COleDropTarget::OnDrop](#ondrop)|データがウィンドウの既定のハンドラーにドロップされると呼び出されます。|
+|[COleDropTarget::OnDropEx](#ondropex)|データがウィンドウの最初のハンドラーにドロップされるときに呼び出されます。|
+|[COleDropTarget:: Register](#register)|ウィンドウを有効なドロップ先として登録します。|
+|[COleDropTarget:: Revoke](#revoke)|ウィンドウが有効なドロップ先となるのを停止します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このクラスのオブジェクトを作成すると、OLE のドラッグ アンド ドロップ メカニズムを通じてデータをそのまま使用するためのウィンドウができます。
+このクラスのオブジェクトを作成すると、ウィンドウは OLE ドラッグアンドドロップメカニズムを使用してデータを受け取ることができます。
 
-Drop コマンドも受け入れるように、ウィンドウを取得するのオブジェクトを作成する必要があります最初、`COleDropTarget`クラスを呼び出して、[登録](#register)目的へのポインターを関数`CWnd`唯一のパラメーターとしてオブジェクト。
+ドロップコマンドを受け入れるウィンドウを取得するには、まず `COleDropTarget` クラスのオブジェクトを作成し、次に、必要な `CWnd` オブジェクトへのポインターを唯一のパラメーターとして[Register](#register)関数を呼び出します。
 
-ドラッグ アンド ドロップ操作の詳細については、OLE を使用して記事を参照して、[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)します。
+OLE を使用したドラッグアンドドロップ操作の詳細については、「 [ole ドラッグアンドドロップ](../../mfc/drag-and-drop-ole.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -78,25 +78,25 @@ Drop コマンドも受け入れるように、ウィンドウを取得するの
 
 `COleDropTarget`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxole.h
+**ヘッダー:** afxole
 
-##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget
+##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget
 
-クラスのオブジェクトを構築`COleDropTarget`します。
+`COleDropTarget`クラスのオブジェクトを構築します。
 
 ```
 COleDropTarget();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-呼び出す[登録](#register)ウィンドウにこのオブジェクトを関連付ける。
+このオブジェクトをウィンドウに関連付けるには、 [Register](#register)を呼び出します。
 
-##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter
+##  <a name="ondragenter"></a>COleDropTarget:: OnDragEnter
 
-カーソルが最初に、ウィンドウにドラッグされたときに、フレームワークによって呼び出されます。
+カーソルが最初にウィンドウにドラッグされたときにフレームワークによって呼び出されます。
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -108,41 +108,41 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-カーソル ウィンドウへのポインターを入力します。
+*pWnd*<br/>
+カーソルが入っているウィンドウを指します。
 
 *pDataObject*<br/>
-ドロップ可能なデータを含むデータ オブジェクトへのポインター。
+削除できるデータを格納しているデータオブジェクトを指します。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態を格納します。 これは、MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON の任意の数を組み合わせたものです。
 
-*ポイント*<br/>
-クライアント座標でのカーソルの現在の場所が含まれています。
+*視点*<br/>
+クライアント座標におけるカーソルの現在の位置を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-によって指定された場所にドロップが行われた場合に発生する影響*ポイント*します。 次の 1 つ以上を指定できます。
+*ポイント*によって指定された場所で削除が試行された場合に発生する効果。 次の1つまたは複数を指定できます。
 
-- せずドロップは許可されません。
+- DROPEFFECT_NONE 削除は許可されません。
 
 - DROPEFFECT_COPY コピー操作が実行されます。
 
-- 行った移動操作が実行されます。
+- 移動操作が実行さ DROPEFFECT_MOVE ます。
 
-- 元のデータをドロップしたデータから DROPEFFECT_LINK A リンクが確立されます。
+- DROPEFFECT_LINK、削除されたデータから元のデータへのリンクが確立されます。
 
-- DROPEFFECT_SCROLL A ドラッグのスクロール操作では、発生するか、ターゲットで発生しています。
+- ドラッグのスクロール操作が実行されようとしている DROPEFFECT_SCROLL、またはターゲットで発生しようとしています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ウィンドウにドロップ操作を許可するには、この関数をオーバーライドします。 既定の実装[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)、単に既定でせずが返されます。
+ウィンドウでドロップ操作を実行できるようにするには、この関数をオーバーライドします。 既定の実装では、 [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)が呼び出されます。この場合、既定で DROPEFFECT_NONE が返されます。
 
-詳細については、次を参照してください。 [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) 」を参照してください。
 
-##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave
+##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave
 
-ドラッグ操作の実行中に、カーソルがウィンドウを離れたときに、フレームワークによって呼び出されます。
+ドラッグ操作が有効になっている間にカーソルがウィンドウから離れると、フレームワークによって呼び出されます。
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
@@ -150,18 +150,18 @@ virtual void OnDragLeave(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-カーソルが離れることをウィンドウにポイントします。
+*pWnd*<br/>
+カーソルが出てくるウィンドウを指します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ドラッグ操作が指定したウィンドウを離れるときに特別な動作が必要な場合は、この関数をオーバーライドします。 この関数の既定の実装を呼び出す[CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)します。
+ドラッグ操作が指定したウィンドウを離れるときに特別な動作が必要な場合は、この関数をオーバーライドします。 この関数の既定の実装では、 [CView:: OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)が呼び出されます。
 
-詳細については、次を参照してください。 [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [IDropTarget::D ragleave](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragleave) 」を参照してください。
 
-##  <a name="ondragover"></a>  COleDropTarget::OnDragOver
+##  <a name="ondragover"></a>COleDropTarget::OnDragOver
 
-カーソルがウィンドウの上にドラッグされるときに、フレームワークによって呼び出されます。
+カーソルがウィンドウの上にドラッグされると、フレームワークによって呼び出されます。
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -173,45 +173,45 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-上にカーソルがウィンドウへのポインター。
+*pWnd*<br/>
+カーソルがあるウィンドウをポイントします。
 
 *pDataObject*<br/>
-削除するデータを含むデータ オブジェクトへのポインター。
+削除するデータを含むデータオブジェクトを指します。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態を格納します。 これは、MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON の任意の数を組み合わせたものです。
 
-*ポイント*<br/>
-クライアント座標でのカーソルの現在の場所が含まれています。
+*視点*<br/>
+クライアント座標におけるカーソルの現在の位置を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-によって指定された場所にドロップが行われた場合に発生する影響*ポイント*します。 次の 1 つ以上を指定できます。
+*ポイント*によって指定された場所で削除が試行された場合に発生する効果。 次の1つまたは複数を指定できます。
 
-- せずドロップは許可されません。
+- DROPEFFECT_NONE 削除は許可されません。
 
 - DROPEFFECT_COPY コピー操作が実行されます。
 
-- 行った移動操作が実行されます。
+- 移動操作が実行さ DROPEFFECT_MOVE ます。
 
-- 元のデータをドロップしたデータから DROPEFFECT_LINK A リンクが確立されます。
+- DROPEFFECT_LINK、削除されたデータから元のデータへのリンクが確立されます。
 
-- DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、またはターゲットで発生していることを示します。
+- DROPEFFECT_SCROLL は、ドラッグのスクロール操作が実行されるか、またはターゲットで発生することを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この関数は、ウィンドウにドロップ操作を許可するオーバーライドする必要があります。 この関数の既定の実装を呼び出す[直前](../../mfc/reference/cview-class.md#ondragover)既定でせずが返されます。 この関数は、ドラッグ アンド ドロップ操作中に頻繁に呼び出されると、ため、最適化してください可能な限りです。
+ウィンドウでドロップ操作を実行できるようにするには、この関数をオーバーライドする必要があります。 この関数の既定の実装では、 [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover)が呼び出されます。この場合、既定では DROPEFFECT_NONE が返されます。 この関数はドラッグアンドドロップ操作の間に頻繁に呼び出されるため、できるだけ最適化する必要があります。
 
-詳細については、次を参照してください。 [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover) 」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]
 
-##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll
+##  <a name="ondragscroll"></a>COleDropTarget:: OnDragScroll
 
-呼び出す前にフレームワークによって呼び出されます[OnDragEnter](#ondragenter)または[OnDragOver](#ondragover)を決定するかどうか*ポイント*がスクロール可能な領域。
+[Ondragenter](#ondragenter)または[OnDragOver](#ondragover)を呼び出して*ポイント*がスクロール領域にあるかどうかを判断する前に、フレームワークによって呼び出されます。
 
 ```
 virtual DROPEFFECT OnDragScroll(
@@ -222,36 +222,36 @@ virtual DROPEFFECT OnDragScroll(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-カーソルが上に現在のウィンドウへのポインター。
+*pWnd*<br/>
+カーソルが現在の上にあるウィンドウをポイントします。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態を格納します。 これは、MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON の任意の数を組み合わせたものです。
 
-*ポイント*<br/>
-画面を基準 (ピクセル単位)、カーソルの位置が含まれています。
+*視点*<br/>
+画面を基準とした、カーソルの位置 (ピクセル単位) を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-によって指定された場所にドロップが行われた場合に発生する影響*ポイント*します。 次の 1 つ以上を指定できます。
+*ポイント*によって指定された場所で削除が試行された場合に発生する効果。 次の1つまたは複数を指定できます。
 
-- せずドロップは許可されません。
+- DROPEFFECT_NONE 削除は許可されません。
 
 - DROPEFFECT_COPY コピー操作が実行されます。
 
-- 行った移動操作が実行されます。
+- 移動操作が実行さ DROPEFFECT_MOVE ます。
 
-- 元のデータをドロップしたデータから DROPEFFECT_LINK A リンクが確立されます。
+- DROPEFFECT_LINK、削除されたデータから元のデータへのリンクが確立されます。
 
-- DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、またはターゲットで発生していることを示します。
+- DROPEFFECT_SCROLL は、ドラッグのスクロール操作が実行されるか、またはターゲットで発生することを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このイベントの特別な動作を提供したい場合は、この関数をオーバーライドします。 この関数の既定の実装を呼び出す[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)せずを返すし、カーソルがウィンドウの枠線内で、既定のスクロール領域にドラッグされるときに、ウィンドウをスクロールします。
+このイベントに特別な動作を提供する場合は、この関数をオーバーライドします。 この関数の既定の実装では、 [CView:: OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)が呼び出されます。これは、カーソルがウィンドウの境界内の既定のスクロール領域にドラッグされたときに、DROPEFFECT_NONE を返し、ウィンドウをスクロールします。
 
-##  <a name="ondrop"></a>  COleDropTarget::OnDrop
+##  <a name="ondrop"></a>COleDropTarget::OnDrop
 
-ドロップ操作が発生するときに、フレームワークによって呼び出されます。
+ドロップ操作が行われるときにフレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnDrop(
@@ -263,39 +263,39 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-カーソルが上に現在のウィンドウへのポインター。
+*pWnd*<br/>
+カーソルが現在の上にあるウィンドウをポイントします。
 
 *pDataObject*<br/>
-削除するデータを含むデータ オブジェクトへのポインター。
+削除するデータを含むデータオブジェクトを指します。
 
 *dropEffect*<br/>
-ドロップ操作に対して、ユーザーが選択した結果。 次の 1 つ以上を指定できます。
+ユーザーが削除操作のために選択した効果。 次の1つまたは複数を指定できます。
 
 - DROPEFFECT_COPY コピー操作が実行されます。
 
-- 行った移動操作が実行されます。
+- 移動操作が実行さ DROPEFFECT_MOVE ます。
 
-- 元のデータをドロップしたデータから DROPEFFECT_LINK A リンクが確立されます。
+- DROPEFFECT_LINK、削除されたデータから元のデータへのリンクが確立されます。
 
-*ポイント*<br/>
-画面を基準 (ピクセル単位)、カーソルの位置が含まれています。
+*視点*<br/>
+画面を基準とした、カーソルの位置 (ピクセル単位) を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-ドロップダウンに成功した場合は 0 以外それ以外の場合 0 を返します。
+削除に成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-フレームワークの最初の呼び出し[OnDropEx](#ondropex)します。 場合、`OnDropEx`関数は、削除を処理しない、フレームワークはこのメンバー関数を呼び出して`OnDrop`します。 通常、アプリケーションがよりも優先[OnDropEx](../../mfc/reference/cview-class.md#ondropex)マウスの右ボタンを処理するためにビュー クラスでは、ドラッグ アンド ドロップします。 ビュー クラスでは通常、 [OnDrop](../../mfc/reference/cview-class.md#ondrop)単純なドラッグ アンド ドロップを処理するために使用します。
+フレームワークは最初に[OnDropEx](#ondropex)を呼び出します。 `OnDropEx` 関数が削除を処理しない場合、フレームワークはこのメンバー関数を `OnDrop`呼び出します。 通常、アプリケーションは、マウスの右ボタンのドラッグアンドドロップを処理するために、view クラスの[OnDropEx](../../mfc/reference/cview-class.md#ondropex)をオーバーライドします。 通常、ビュークラス[OnDrop](../../mfc/reference/cview-class.md#ondrop)は、単純なドラッグアンドドロップの処理に使用されます。
 
-既定の実装`COleDropTarget::OnDrop`呼び出し[この関数](../../mfc/reference/cview-class.md#ondrop)既定で FALSE を返しますこれだけです。
+`COleDropTarget::OnDrop` の既定の実装では、 [CView:: OnDrop](../../mfc/reference/cview-class.md#ondrop)が呼び出されます。この場合、既定では FALSE が返されます。
 
-詳細については、次を参照してください。 [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [IDropTarget::D の rop](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) 」を参照してください。
 
-##  <a name="ondropex"></a>  COleDropTarget::OnDropEx
+##  <a name="ondropex"></a>COleDropTarget::OnDropEx
 
-ドロップ操作が発生するときに、フレームワークによって呼び出されます。
+ドロップ操作が行われるときにフレームワークによって呼び出されます。
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -308,48 +308,48 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-カーソルが上に現在のウィンドウへのポインター。
+*pWnd*<br/>
+カーソルが現在の上にあるウィンドウをポイントします。
 
 *pDataObject*<br/>
-削除するデータを含むデータ オブジェクトへのポインター。
+削除するデータを含むデータオブジェクトを指します。
 
 *dropDefault*<br/>
-現在のキーの状態に基づいて既定のドロップ操作に対して、ユーザーが選択した結果。 せずになります。 ドロップ効果は、「解説」で説明します。
+ユーザーが現在のキーの状態に基づいて既定のドロップ操作を選択した場合の効果。 DROPEFFECT_NONE することができます。 ドロップ効果については、「解説」を参照してください。
 
-*ドロップダウン リスト*<br/>
-ドロップ ソースがサポートしているドロップ効果の一覧。 ビットごとの OR を使用して、ドロップ効果の値を結合することができます (**&#124;**) 操作。 ドロップ効果は、「解説」で説明します。
+*ドロップ*<br/>
+ドロップソースがサポートするドロップ効果の一覧。 ドロップ効果の値は、ビットごとの OR ( **&#124;** ) 演算を使用して組み合わせることができます。 ドロップ効果については、「解説」を参照してください。
 
-*ポイント*<br/>
-画面を基準 (ピクセル単位)、カーソルの位置が含まれています。
+*視点*<br/>
+画面を基準とした、カーソルの位置 (ピクセル単位) を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-によって指定された場所にドロップしようとしたときの原因となったドロップ効果*ポイント*します。 ドロップ効果は、「解説」で説明します。
+*ポイント*によって指定された位置での削除が試行された結果のドロップ効果。 ドロップ効果については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-フレームワークは、まず、この関数を呼び出します。 ドロップ、ハンドルされない場合、フレームワーク[OnDrop](#ondrop)します。 オーバーライドして、通常[OnDropEx](../../mfc/reference/cview-class.md#ondropex)マウスの右ボタンをサポートするためにビュー クラスでは、ドラッグ アンド ドロップします。 ビュー クラスでは通常、 [OnDrop](../../mfc/reference/cview-class.md#ondrop)の単純なドラッグ アンド ドロップのサポート ケースを処理するために使用します。
+フレームワークは、まずこの関数を呼び出します。 削除を処理しない場合、フレームワークは[OnDrop](#ondrop)を呼び出します。 通常は、マウスの右ボタンのドラッグアンドドロップをサポートするために、view クラスの[OnDropEx](../../mfc/reference/cview-class.md#ondropex)をオーバーライドします。 通常、ビュークラス[OnDrop](../../mfc/reference/cview-class.md#ondrop)は、単純なドラッグアンドドロップのサポートのケースを処理するために使用されます。
 
-既定の実装`COleDropTarget::OnDropEx`呼び出し[CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex)します。 既定では、 [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex)だけを示すダミー値を返します、 [OnDrop](#ondrop)メンバー関数を呼び出す必要があります。
+`COleDropTarget::OnDropEx` の既定の実装では、 [CView:: OnDropEx](../../mfc/reference/cview-class.md#ondropex)が呼び出されます。 既定では、 [CView:: OnDropEx](../../mfc/reference/cview-class.md#ondropex)は、 [OnDrop](#ondrop)メンバー関数を呼び出す必要があることを示すダミー値のみを返します。
 
-ドロップ効果には、drop 操作に関連付けられたアクションについて説明します。 次のドロップ効果の一覧を参照してください。
+ドロップ効果は、ドロップ操作に関連付けられているアクションを記述します。 次のドロップ効果の一覧を参照してください。
 
-- せずドロップは許可されません。
+- DROPEFFECT_NONE 削除は許可されません。
 
 - DROPEFFECT_COPY コピー操作が実行されます。
 
-- 行った移動操作が実行されます。
+- 移動操作が実行さ DROPEFFECT_MOVE ます。
 
-- 元のデータをドロップしたデータから DROPEFFECT_LINK A リンクが確立されます。
+- DROPEFFECT_LINK、削除されたデータから元のデータへのリンクが確立されます。
 
-- DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、またはターゲットで発生していることを示します。
+- DROPEFFECT_SCROLL は、ドラッグのスクロール操作が実行されるか、またはターゲットで発生することを示します。
 
-詳細については、次を参照してください。 [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [IDropTarget::D の rop](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) 」を参照してください。
 
-##  <a name="register"></a>  COleDropTarget::Register
+##  <a name="register"></a>COleDropTarget:: Register
 
-有効なドロップ先として OLE Dll で、ウィンドウを登録するには、この関数を呼び出します。
+この関数を呼び出して、ウィンドウを OLE Dll に有効なドロップ先として登録します。
 
 ```
 BOOL Register(CWnd* pWnd);
@@ -357,37 +357,37 @@ BOOL Register(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-ドロップ先として登録するのには、ウィンドウへのポインター。
+*pWnd*<br/>
+ドロップ先として登録されるウィンドウを指します。
 
 ### <a name="return-value"></a>戻り値
 
-登録が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+登録が成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この関数は、受け入れドロップ操作を呼び出す必要があります。
+Drop 操作を受け入れるには、この関数を呼び出す必要があります。
 
-詳細については、次を参照してください。 [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [RegisterDragDrop](/windows/win32/api/ole2/nf-ole2-registerdragdrop) 」を参照してください。
 
-##  <a name="revoke"></a>  COleDropTarget::Revoke
+##  <a name="revoke"></a>COleDropTarget:: Revoke
 
-この関数を呼び出すことによって、ドロップ先として登録されている任意のウィンドウを破棄する前に[登録](#register)ドロップ ターゲットの一覧から削除します。
+ドロップ先として登録されているすべてのウィンドウを破棄する前に、この関数を呼び出します。ドロップターゲットの一覧から削除するには、 [Register](#register)を呼び出します。
 
 ```
 virtual void Revoke();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この関数から自動的に呼び出される、 [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)が登録されている場合は、この関数を明示的に呼び出す必要は通常、ウィンドウのハンドラー。
+この関数は、登録されたウィンドウの[OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)ハンドラーから自動的に呼び出されるため、通常はこの関数を明示的に呼び出す必要はありません。
 
-詳細については、次を参照してください。 [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [RevokeDragDrop](/windows/win32/api/ole2/nf-ole2-revokedragdrop) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[MFC サンプル HIERSVR](../../visual-cpp-samples.md)<br/>
-[MFC サンプルの OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC サンプル HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleDropSource クラス](../../mfc/reference/coledropsource-class.md)

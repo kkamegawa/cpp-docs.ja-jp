@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s、_mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575052"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952634"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s、_mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
 文字列のマルチバイト文字 1 個を他の文字列にコピーします。 これらのバージョンの [_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
@@ -86,7 +89,7 @@ errno_t _mbccpy_s_l(
 コピー先のバッファーのサイズ。
 
 *pCopied*<br/>
-コピーされたバイト数が格納されます (正常終了した場合は 1 または 2)。 渡す**NULL**数に関する重要でない場合。
+コピーされたバイト数が格納されます (正常終了した場合は 1 または 2)。 数値が気にならない場合は、 **NULL**を渡します。
 
 *src*<br/>
 コピーするマルチバイト文字。
@@ -96,26 +99,26 @@ errno_t _mbccpy_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*src*または*dest*は**NULL**、数より多い場合、または**buffSizeinBytes**にバイトをコピーするは*dest*、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**と**errno**に設定されている**EINVAL**します。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Src*または*dest*が**NULL**の場合、または**buffSizeinBytes**バイト以上が*Dest*にコピーされる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**は**einval**に設定されます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbccpy_s**関数からの 1 つのマルチバイト文字のコピー *src*に*dest*します。 場合*src*への暗黙的な呼び出しによって決定されるマルチバイト文字の先行バイトを指していない[_ismbblead](ismbblead-ismbblead-l.md)、1 バイトを*src*へのポインターをコピーします。 場合*src*先行バイトが次のバイトへのポインターには、0 および無効なため、その後に 0 がコピーされます*dest*、 **errno**に設定されている**EILSEQ**、および関数が返される**EILSEQ**します。
+**_Mbccpy_s**関数は、 *src*から*dest*に1つのマルチバイト文字をコピーします。 [_Ismbblead](ismbblead-ismbblead-l.md)への暗黙の呼び出しによって、 *src*がマルチバイト文字の先行バイトを指していない場合、 *src*が指す1バイトがコピーされます。 *Src*が先行バイトを指していても、次のバイトが0であるため無効である場合、0は*dest*にコピーされ、 **errno**は**EILSEQ**に設定され、関数は**EILSEQ**を返します。
 
-**_mbccpy_s** null 終端文字を追加しません。 ただし、場合*src*を null にコピーされますが、null 文字を指す*dest* (これは通常、1 バイトのコピーだけです)。
+**_mbccpy_s**は null 終端文字を追加しません。ただし、 *src*が null 文字を指している場合、その null は*dest*にコピーされます (これは通常の1バイトのコピーにすぎません)。
 
-値*pCopied*コピーされたバイト数が入力されます。 操作が正常に終了した場合は、1 と 2 のどちらかの値となります。 場合**NULL**が渡される、このパラメーターは無視されます。
+「 *Pcopied* 」の値には、コピーされたバイト数が格納されます。 操作が正常に終了した場合は、1 と 2 のどちらかの値となります。 **NULL**が渡された場合、このパラメーターは無視されます。
 
-|*src*|コピー *dest*|*pCopied*|戻り値|
+|*src*|*dest*にコピー済み|*pCopied*|戻り値|
 |-----------|----------------------|---------------|------------------|
 |先行バイト以外|先行バイト以外|1|0|
 |0|0|1|0|
 |後続が 0 以外の先行バイト|後続が 0 以外の先行バイト|2|0|
 |後続が 0 以外の先行バイト|0|1|**EILSEQ**|
 
-2 行目は、単に 1 行目の特殊なケースです。 表では、メモも*buffSizeInBytes* >= *pCopied*します。
+2 行目は、単に 1 行目の特殊なケースです。 また、このテーブルでは*buffSizeInBytes* >= *pcopied*が想定されていることに注意してください。
 
-**_mbccpy_s**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**と同じ **_mbccpy_s**する点を除いて **_mbccpy_s_l**の任意のロケールに依存する動作に渡されたロケールを使用します。
+**_mbccpy_s**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**は **_mbccpy_s**と同じですが、ロケールに依存する動作に対して渡されたロケールが **_mbccpy_s_l**で使用される点が異なります。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

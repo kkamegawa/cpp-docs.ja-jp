@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
-ms.openlocfilehash: 0166cce6011017b8a18821666083f7c47f58b7a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e306c5a8f9175bc3c7902b20263aa2e451944182
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508110"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759933"
 ---
 # <a name="compiler-error-c2356"></a>コンパイラ エラー C2356
 
-初期化セグメントは翻訳単位の間で変更する必要があります。
+翻訳単位で初期化セグメントを変更することはできません
 
-以下の原因が考えられます。
+次の原因が考えられます。
 
-- `#pragma init_seg` セグメントの初期化コードに続く
+- セグメント初期化コードの前に `#pragma init_seg`
 
-- `#pragma init_seg` 別の前に `#pragma init_seg`
+- 前に別の `#pragma init_seg` を `#pragma init_seg`
 
-を解決するには、モジュールの先頭にセグメントの初期化コードを移動します。 複数の領域を初期化する場合は、それらを個別のモジュールを移動します。
+解決するには、セグメントの初期化コードをモジュールの先頭に移動します。 複数の領域を初期化する必要がある場合は、それらを別々のモジュールに移動します。
 
 次の例では、C2356 が生成されます。
 
-```
+```cpp
 // C2356.cpp
 #pragma warning(disable : 4075)
 

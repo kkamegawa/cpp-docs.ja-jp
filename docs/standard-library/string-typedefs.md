@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 534c51e8a627ca893ea42e023f12d8bc62d6fb5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456278"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688914"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedefs
 
@@ -23,7 +23,7 @@ ms.locfileid: "50456278"
 
 ## <a name="string"></a>  string
 
-テンプレート クラスの特殊化を表す型[basic_string](../standard-library/basic-string-class.md)型の要素を含む**char**します。
+**Char**型の要素を使用して、クラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を記述する型。
 
 `basic_string` を特殊化する他の typedef には、[wstring](../standard-library/string-typedefs.md#wstring)、[u16string](../standard-library/string-typedefs.md#u16string)、および [u32string](../standard-library/string-typedefs.md#u32string) があります。
 
@@ -45,7 +45,7 @@ basic_string<char> str("");
 
 ## <a name="u16string"></a>  u16string
 
-`char16_t` 型の要素を持つテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を記述する型。
+@No__t_1 型の要素を持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を記述する型。
 
 `basic_string` を特殊化する他の typedef には、[wstring](../standard-library/string-typedefs.md#wstring)、[string](../standard-library/string-typedefs.md#string)、および [u32string](../standard-library/string-typedefs.md#u32string) があります。
 
@@ -59,7 +59,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 
 ## <a name="u32string"></a>  u32string
 
-`char32_t` 型の要素を持つテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を記述する型。
+@No__t_1 型の要素を持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を記述する型。
 
 `basic_string` を特殊化する他の typedef には、[string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string)、および [wstring](../standard-library/string-typedefs.md#wstring) があります。
 
@@ -73,7 +73,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ## <a name="wstring"></a>  wstring
 
-テンプレート クラスの特殊化を表す型[basic_string](../standard-library/basic-string-class.md)型の要素を含む**wchar_t**します。
+**Wchar_t**型の要素を使用して、クラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を記述する型。
 
 `basic_string` を特殊化する他の typedef には、[string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string)、および [u32string](../standard-library/string-typedefs.md#u32string) があります。
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 文字列コンストラクターの一覧については、「[basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)」をご覧ください。
 
 > [!NOTE]
-> サイズ**wchar_t**実装で定義されます。 コードが依存している場合**wchar_t**一定のサイズにするには、プラットフォームの実装を確認します (たとえば、 `sizeof(wchar_t)`)。 幅をすべてのプラットフォームで同一にできる文字列の文字の型が必要な場合は、[string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string)、または [u32string](../standard-library/string-typedefs.md#u32string) を使用します。
+> **Wchar_t**のサイズは実装で定義されています。 コードが**wchar_t**によって特定のサイズに依存している場合は、プラットフォームの実装 (たとえば、`sizeof(wchar_t)`) を確認します。 幅をすべてのプラットフォームで同一にできる文字列の文字の型が必要な場合は、[string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string)、または [u32string](../standard-library/string-typedefs.md#u32string) を使用します。
 
 ## <a name="see-also"></a>関連項目
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

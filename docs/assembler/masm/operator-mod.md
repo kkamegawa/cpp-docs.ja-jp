@@ -1,6 +1,6 @@
 ---
 title: MOD 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Mod
 - operator MOD
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - Mod operator
 - operator MOD
 ms.assetid: 8e05e8c2-3f07-44f9-8216-5436dcb97cc7
-ms.openlocfilehash: 843600ce9b05bcb7a99ff9c67eaca1975e9cb65f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9891fc50a22936fbf850b56ea8f2d65441489b97
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504274"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311222"
 ---
 # <a name="operator-mod"></a>MOD 演算子
 
-除算するときに、残りの部分 (剰余) の整数値を返します*expression1*によって*expression2*します。
+*Expression1*を*expression2*で除算した場合の剰余 (剰余) の整数値を返します。
 
 ## <a name="syntax"></a>構文
 
-> expression1 MOD expression2
+> *expression1* **MOD** *expression2*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

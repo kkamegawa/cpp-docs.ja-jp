@@ -7,12 +7,12 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-ms.openlocfilehash: 5fe3297467705a9a54cf0ebc87e99801bf3a0fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549098"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150221"
 ---
 # <a name="l-value-and-r-value-expressions"></a>左辺値と右辺値の式
 
@@ -55,6 +55,6 @@ Microsoft C の既定では、Microsoft 拡張機能が有効になっていま�
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [オペランドおよび式](../c-language/operands-and-expressions.md)

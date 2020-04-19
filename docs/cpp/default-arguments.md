@@ -11,11 +11,11 @@ helpviewer_keywords:
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154517"
 ---
 # <a name="default-arguments"></a>既定の引数
 
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-実装、`print`型の 1 つだけこのような関数が存在するという事実を反映するように関数が若干変更**二重**:
+実装、`print`型の 1 つだけこのような関数が存在するという事実を反映するように関数が若干変更**double**:
 
 ```cpp
 // default_arguments.cpp
@@ -106,7 +106,7 @@ print( d, 0 ); // Override default argument to achieve other
 
 - 追加の既定の引数は、後の宣言によって追加できます。
 
-- 既定の引数は、関数へのポインターに対して指定できます。 例えば:
+- 既定の引数は、関数へのポインターに対して指定できます。 例:
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

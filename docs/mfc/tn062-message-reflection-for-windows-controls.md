@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)'
+title: TN062:Windows のコントロールのメッセージ リフレクション
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351847"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062:Windows のコントロールのメッセージ リフレクション
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
 このテクニカル ノートでは、メッセージは、MFC 4.0 の新機能について説明します。 メッセージ リフレクションを使用する単純な再利用可能なコントロールを作成する手順も含まれています。
 
-このテクニカル ノートでは、(旧称 OLE コントロール) の ActiveX コントロールに適用されるメッセージ リフレクションは説明しません。 この記事を参照してください[ActiveX コントロール: Windows コントロールをサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
+このテクニカル ノートでは、(旧称 OLE コントロール) の ActiveX コントロールに適用されるメッセージ リフレクションは説明しません。 この記事を参照してください[ActiveX コントロール。Windows コントロールをサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
 
 **メッセージ リフレクションとは**
 
@@ -63,7 +63,7 @@ WM_NOTIFY メッセージが送信されるときに、コントロールには�
 
 リフレクション メッセージ用のメッセージ マップ マクロは通常の通知よりも若干異なります。 が *_REFLECT* 、通常の名前に追加されます。 たとえば、親 WM_NOTIFY メッセージを処理するには、親のメッセージ マップ マクロ ON_NOTIFY を使用します。 子コントロールに反映されたメッセージを処理するには、子コントロールのメッセージ マップで ON_NOTIFY_REFLECT マクロを使用します。 場合によっては、パラメーターは、さまざまなも。 ClassWizard のメッセージ マップ エントリを追加および正しいパラメーターを持つ関数の骨組み実装を提供することが通常に注意してください。
 
-参照してください[TN061: ON_NOTIFY メッセージと WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)については、新しい WM_NOTIFY メッセージ。
+参照してください[TN061:ON_NOTIFY メッセージと WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)については、新しい WM_NOTIFY メッセージ。
 
 **メッセージ マップ エントリと返送されたメッセージのハンドラー関数のプロトタイプ**
 
@@ -87,28 +87,28 @@ ClassWizard は、通常、これらのメッセージ マップ エントリを
 
 |マップ エントリ|関数プロトタイプ|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **、** `memberFxn` **)**|**afx_msg void** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **、** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **、LRESULT** <strong>\*</strong>*結果* **)。**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **)。**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **、UINT** `nCtlColor` **)。**|
-|**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void [drawitem] (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **)。**|
-|**ON_WM_MEASUREITEM_REFLECT)**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **)。**|
-|**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **)。**|
-|**ON_WM_COMPAREITEM_REFLECT)**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **)。**|
-|**ON_WM_CHARTOITEM_REFLECT)**|**afx_msg int CharToItem (UINT** `nKey` **、UINT** `nIndex` **)。**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**afx_msg int VKeyToItem (UINT** `nKey` **、UINT** `nIndex` **)。**|
-|**ON_WM_HSCROLL_REFLECT)**|**afx_msg void HScroll (UINT** `nSBCode` **、UINT** `nPos` **)。**|
-|**ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **、UINT** `nPos` **)。**|
-|**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **、LPARAM** `lParam` **)。**|
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem ( LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **)。**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT( )**|**afx_msg int CharToItem (UINT** `nKey` **、UINT** `nIndex` **)。**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll (UINT** `nSBCode` **、UINT** `nPos` **)。**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll (UINT** `nSBCode` **、UINT** `nPos` **)。**|
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|
 
 ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセージを処理するために 1 つ以上のオブジェクト (コントロールとその親) などを許可するバリエーションがあります。
 
 |マップ エントリ|関数プロトタイプ|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **、** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **、LRESULT** <strong>\*</strong>*結果* **)。**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **、** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>反映済みメッセージの処理: 再利用可能なコントロールの例
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>反映されたメッセージの処理。再利用可能なコントロールの例
 
 この簡単な例と呼ばれる再利用可能なコントロールを作成する`CYellowEdit`します。 コントロールは、黄色の背景に黒のテキストが表示される点を除いて、通常のエディット コントロールと同じでは機能します。 簡単にできるようにするメンバー関数を追加することが、`CYellowEdit`さまざまな色を表示するコントロール。
 

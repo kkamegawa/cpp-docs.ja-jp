@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 269c5bd3b51e2cc65fbb9c1c7766613595f8b547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486412"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490936"
 ---
 # <a name="appobject"></a>appobject
 
-完全な .exe アプリケーションに関連付けられ、関数と、コクラスのプロパティがこのグローバルに利用できることを示しますアプリケーション オブジェクトとしてコクラスを識別する[タイプ ライブラリ](../../mfc/automation-clients-using-type-libraries.md)します。
+コクラスをアプリケーションオブジェクトとして識別します。このオブジェクトは、完全な .exe アプリケーションに関連付けられています。また、コクラスの関数とプロパティは、この[タイプライブラリ](../../mfc/automation-clients-using-type-libraries.md)でグローバルに使用できることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50486412"
 
 ## <a name="remarks"></a>Remarks
 
-**Appobject** C++ 属性と同じ機能を持つ、 [appobject](/windows/desktop/Midl/appobject) MIDL 属性。
+**Appobject** C++属性には、 [appobject](/windows/win32/Midl/appobject) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは単純なクラス定義を含む属性ブロックに続く**appobject**:
+次のコードは、 **appobject**を含む属性ブロックの前にある単純なクラス定義を示しています。
 
 ```cpp
 // cpp_attr_ref_appobject.cpp

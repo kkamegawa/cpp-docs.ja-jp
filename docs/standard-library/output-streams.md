@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-ms.openlocfilehash: c64c46acca405f948e8314fb23944682adf09c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e650f9fd0bbc7ad483363706e632686e8ec3749e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511112"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450167"
 ---
 # <a name="output-streams"></a>出力ストリーム
 
@@ -49,6 +49,6 @@ ms.locfileid: "50511112"
 
 ## <a name="see-also"></a>関連項目
 
-[ofstream](../standard-library/basic-ofstream-class.md)<br/>
-[ostringstream](../standard-library/basic-ostringstream-class.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
+[ofstream](../standard-library/basic-ofstream-class.md)\
+[ostringstream](../standard-library/basic-ostringstream-class.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)

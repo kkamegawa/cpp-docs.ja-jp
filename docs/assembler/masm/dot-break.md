@@ -1,26 +1,27 @@
 ---
 title: .BREAK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .BREAK
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: ebf5bc74eb8e639d97762b64a15d3049b898160b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3096aaf827eecb4e297e5a1d04f5e982294053de
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610679"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314134"
 ---
-# <a name="break"></a>.BREAK
+# <a name="break-32-bit-masm"></a>.中断 (32 ビット MASM)
 
-終了するコードを生成、[します。中に](../../assembler/masm/dot-while.md)または[します。繰り返し](../../assembler/masm/dot-repeat.md)ブロック*条件*は true。
+を終了するコードを生成[します。また](dot-while.md)は[。](dot-repeat.md)*条件*が true の場合、ブロックを繰り返します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .分割 [します。IF 条件]
+> **.** ⟦**を中断します。IF** *condition*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

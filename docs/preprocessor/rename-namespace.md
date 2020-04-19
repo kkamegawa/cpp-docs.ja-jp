@@ -1,44 +1,42 @@
 ---
-title: rename_namespace
-ms.date: 10/18/2018
+title: rename_namespace import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - rename_namespace
 helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-ms.openlocfilehash: 6521fe0a5bfbe482bf2aed8f5a32221abdc6d6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d319d7390e7c7dce070a35be44aad37c7a34e1a0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531596"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216655"
 ---
-# <a name="renamenamespace"></a>rename_namespace
+# <a name="rename_namespace-import-attribute"></a>rename_namespace import 属性
 
-**C++ 固有の仕様**
+**C++のみ**
 
 タイプ ライブラリの内容を含む名前空間の名前を変更します。
 
 ## <a name="syntax"></a>構文
 
-```
-rename_namespace("NewName")
-```
+> **#import***タイプライブラリ***rename_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*NewName*<br/>
+*NewName*\
 名前空間の新しい名前。
 
 ## <a name="remarks"></a>Remarks
 
-1 つの引数を受け取る*NewName*、新しい名前空間の名前を指定します。
+**Rename_namespace**属性は、名前空間の新しい名前を指定する*NewName*という単一の引数を受け取ります。
 
-名前空間を削除するには、使用、 [no_namespace](../preprocessor/no-namespace.md)属性の代わりにします。
+名前空間を削除するには、代わりに[no_namespace](../preprocessor/no-namespace.md)属性を使用します。
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

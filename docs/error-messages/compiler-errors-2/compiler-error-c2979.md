@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2979
 ms.assetid: 98bd9043-ec44-451e-a482-3a8e35fc7464
-ms.openlocfilehash: 5d9b8e025d96e448ec9494834eb1766cafd8b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71953b360739765810fa047d65be9828d7d483da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751555"
 ---
 # <a name="compiler-error-c2979"></a>コンパイラ エラー C2979
 
 明示的な特殊化はジェネリックではサポートされていません
 
-ジェネリック クラスの宣言が正しくありません。  参照してください[ジェネリック](../../windows/generics-cpp-component-extensions.md)詳細についてはします。
+ジェネリック クラスの宣言が正しくありません。  詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2979 が生成されます。
 
-```
+```cpp
 // C2979.cpp
 // compile with: /clr /c
 generic <>

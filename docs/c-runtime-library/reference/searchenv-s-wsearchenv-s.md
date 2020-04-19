@@ -1,10 +1,10 @@
 ---
 title: _searchenv_s、_wsearchenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsearchenv_s
 - _searchenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _searchenv_s
 - _wsearchenv_s
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505678"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948801"
 ---
-# <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
+# <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s、_wsearchenv_s
 
 環境のパスを使用してファイルを検索します。 これらの [_searchenv および _wsearchenv](searchenv-wsearchenv.md) のバージョンは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」(CRT のセキュリティ機能) で説明されているように、セキュリティが強化されています。
 
@@ -91,33 +94,33 @@ errno_t _wsearchenv_s(
 完全パスを格納するバッファー。
 
 *numberOfElements*<br/>
-サイズ、 *pathname*バッファー。
+*パス名*バッファーのサイズ。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-場合*filename*空の文字列には、戻り値は**ENOENT**します。
+*Filename*が空の文字列の場合、戻り値は**ENOENT**です。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*ファイル名*|*varname*|*pathname*|*numberOfElements*|戻り値|内容*パス名*|
+|*ファイル名*|*varname*|*pathname*|*numberOfElements*|戻り値|*パス名*の内容|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |任意|任意|**NULL**|任意|**EINVAL**|N/A|
 |**NULL**|任意|任意|任意|**EINVAL**|変更されない|
 |任意|任意|任意|<= 0|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Searchenv_s**日常的な指定したドメインでターゲット ファイルを検索します。 *Varname*変数が指定できる任意の環境またはユーザー定義の変数などのディレクトリのパスの一覧を示す**パス**、 **LIB**、および**インクルード**. **_Searchenv_s**と小文字は区別*varname*環境変数の大文字と小文字が一致する必要があります。 場合*varname*プロセスの環境で定義されている環境変数の名前と一致しません、関数は 0 を返します、 *pathname*変数は変更されません。
+**_Searchenv_s**ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname*変数には、 **PATH**、 **LIB**、 **INCLUDE**などのディレクトリパスのリストを指定する任意の環境変数またはユーザー定義変数を指定できます。 **_Searchenv_s**では大文字と小文字が区別されるため、 *varname*は環境変数の場合と一致している必要があります。 *Varname*がプロセスの環境で定義されている環境変数の名前と一致しない場合、この関数は0を返し、 *pathname*変数は変更されません。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 新しく作成されたパスをコピーする場合は、対象のファイルは、これらのディレクトリのいずれかでは、 *pathname*します。 場合、 *filename*ファイルが見つからない*pathname* null で終わる空の文字列が含まれています。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが*pathname*にコピーされます。 *Filename*ファイルが見つからない場合、 *pathname*には null で終わる空の文字列が含まれます。
 
-*Pathname*バッファーは以上である必要があります **_MAX_PATH**作成されるパス名の長さを格納します。 それ以外の場合、 **_searchenv_s**オーバーランの可能性があります、 *pathname*予期しない動作のバッファー。
+作成されたパス名の完全な長さを格納するには、*パス*名バッファーは、少なくとも **_max_path**文字である必要があります。 そうしないと、 **_searchenv_s**が*パス名*バッファーをオーバーランし、予期しない動作が発生する可能性があります。
 
-**_wsearchenv_s**のワイド文字バージョンは、 **_searchenv_s**; 引数 **_wsearchenv_s**はワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**動作は同じです。
+**_wsearchenv_s**は、 **_searchenv_s**のワイド文字バージョンです。 **_wsearchenv_s**の引数はワイド文字列です。 それ以外では、 **_wsearchenv_s**と **_searchenv_s**は同じように動作します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

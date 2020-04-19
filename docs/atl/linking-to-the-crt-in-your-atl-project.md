@@ -1,10 +1,6 @@
 ---
 title: ATL プロジェクトで CRT にリンクするには
 ms.date: 11/04/2016
-f1_keywords:
-- DllMainCRTStartup
-- wWinMainCRTStartup
-- WinMainCRTStartup
 helpviewer_keywords:
 - CRT, linking with ATL
 - WinMainCRTStartup method
@@ -12,12 +8,12 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-ms.openlocfilehash: fc8c3c591b04d62c6dd7cf72bedde7a668e9f146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e247897f42eea5b4ced5bc40b556137a1a5cd228
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261931"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>ATL プロジェクトで CRT にリンクするには
 
@@ -39,4 +35,3 @@ CRT に静的にリンクする場合は CRT からのコードは、実行可�
 
 [ATL および C ランタイム コードによるプログラミング](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL と Visual C++ ランタイム ライブラリの動作](../build/run-time-library-behavior.md)
-

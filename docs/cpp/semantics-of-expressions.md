@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175786"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857321"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
 
-式は、式の演算子の優先順位とグループ化に従って評価されます ([演算子の優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)で[構文規則](../cpp/lexical-conventions.md)演算子が式を課す、C++ の関係を示しています)。
+式は、式の演算子の優先順位とグループ化に従って評価されます ([構文規則](../cpp/lexical-conventions.md)における[演算子の優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)はC++ 、演算子が式に適用する関係を示します)。
 
 ## <a name="order-of-evaluation"></a>評価の順序
 
@@ -44,7 +44,7 @@ int main()
 ```
 
 ![式の評価順序](../cpp/media/vc38zv1.gif "式の評価順序") <br/>
-式の評価順序
+式-評価順序
 
 上の図に示す式が評価される順序は、演算子の優先順位と結合規則によって決まります。
 
@@ -52,25 +52,25 @@ int main()
 
 1. 次に優先順位が高いのは加算 (+) であるため、`a` と `b` の積に `c` が加算されます。
 
-1. 左シフト (<<) は最も優先順位が低いですが、2 つ出現しています。 左シフト演算子は左から右にグループ化されるため、左の部分式が最初に評価され、次に右の部分式が評価されます。
+1. 左シフト (< <) は、式の中で最も低い優先順位を持ちますが、2回出現します。 左シフト演算子は左から右にグループ化されるため、左の部分式が最初に評価され、次に右の部分式が評価されます。
 
 かっこを使用して部分式がグループ化されている場合は、優先順位が変更されるため、次の図に示すように、式の評価順序も変更されます。
 
-![かっこ付きの式の評価順序](../cpp/media/vc38zv2.gif "かっこ付きの式の評価順序") <br/>
-かっこで式の評価順序
+![かっこを使用した式の評価順序](../cpp/media/vc38zv2.gif "かっこ付きの式の評価順序") <br/>
+式-かっこを使用した評価順序
 
 上の図のような式は、純粋に式の副作用 (この場合は標準出力デバイスへの情報転送) のためだけに評価されます。
 
 ## <a name="notation-in-expressions"></a>式の表記
 
-C++ 言語では、オペランドを指定するときに、特定の互換性を指定します。 次の表は型のオペランドを必要とする演算子をオペランドの型を指定できる*型*します。
+C++ 言語では、オペランドを指定するときに、特定の互換性を指定します。 型のオペランドを必要とする演算子に対して許容されるオペランドの型を次の表に示し*ます。*
 
 ### <a name="operand-types-acceptable-to-operators"></a>演算子に適切なオペランドの型
 
 |想定される型|許可される型|
 |-------------------|-------------------|
 |*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*型* \*|*型* \*<br /> `const` *型* \*<br /> `volatile` *型* \*<br /> `volatile const` *型* \*|
+|*型*\*|*型*\*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
 |`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
 |`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
 
@@ -88,15 +88,15 @@ func( i, ++i );
 
 C++ 言語では、関数呼び出しの引数が評価される順序は保証されません。 したがって、前の例では、左から右、右から左のどちらの方向でパラメーターが評価されるかに応じて、`func` はパラメーターとして値 7 と 8、または 8 と 8 を受け取ります。
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++ シーケンス ポイント (Microsoft 固有の仕様)
+## <a name="c-sequence-points-microsoft-specific"></a>C++シーケンスポイント (Microsoft 固有)
 
 式では、連続する "シーケンス ポイント" 間で、オブジェクトの値を一度だけ変更できます。
 
 C++ 言語の定義では、現在シーケンス ポイントは指定されていません。 Microsoft C++ では、C の演算子を伴い、オーバーロードされた演算子を伴わないすべての式に、ANSI C と同じシーケンス ポイントを使用します。 演算子がオーバーロードされている場合、セマンティクスは演算子のシーケンスから関数呼び出しのシーケンスに変更されます。 Microsoft C++ は、次のシーケンス ポイントを使用します。
 
-- 論理 AND 演算子 (&&) の左オペランド。 論理 AND 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 AND 演算子の右オペランドが評価される保証はありません。
+- 論理 AND 演算子の左オペランド (& &)。 論理 AND 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 AND 演算子の右オペランドが評価される保証はありません。
 
-- 論理 OR 演算子のオペランドを左 (&#124;&#124;)。 論理 OR 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 OR 演算子の右オペランドが評価される保証はありません。
+- 論理 OR 演算子 (&#124;&#124;) の左オペランド。 論理 OR 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 OR 演算子の右オペランドが評価される保証はありません。
 
 - コンマ演算子の左オペランド。 コンマ演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 コンマ演算子のオペランドは両方とも、常に評価されます。
 
@@ -116,6 +116,6 @@ C++ 言語の定義では、現在シーケンス ポイントは指定されて
 
 - return ステートメント内の式。 式は完全に評価され、すべての副作用は呼び出し元の関数に制御が戻る前に完了します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [式](../cpp/expressions-cpp.md)

@@ -9,20 +9,23 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 63f007e567f3c1db556ba6a7f0c1a354c449f31b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a2e685d33b108ce542fdc6e3e0565cc37299c1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294071"
 ---
 # <a name="creating-an-sbr-file"></a>.sbr ファイルの作成
 
+> [!WARNING]
+> BSCMAKE は、現在も Visual Studio と共にインストールされていますが、IDE では使用されなくなりました。 Visual Studio 2008 以降、ブラウザーとシンボルの情報は、ソリューション フォルダー内の SQL Server の .sdf ファイルに自動的に格納されます。
+
 BSCMAKE の入力ファイルは、.sbr ファイルです。 コンパイラは、コンパイルされる各オブジェクト ファイル (.obj) の .sbr ファイルを作成します。 ビルドまたはブラウザー情報ファイルを更新すると、プロジェクトのすべての .sbr ファイルをディスク上にある必要があります。
 
-すべての可能な情報を含む .sbr ファイルを作成するには、指定[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)します。
+すべての可能な情報を含む .sbr ファイルを作成するには、指定[/FR](fr-fr-create-dot-sbr-file.md)します。
 
-ローカル シンボルを含まない .sbr ファイルを作成するには、指定[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)します。 .Sbr ファイルにローカル シンボルが含まれている場合でも削除できます .bsc ファイルから BSCMAKE を使用して[/El オプション](../../build/reference/bscmake-options.md)`.`
+ローカル シンボルを含まない .sbr ファイルを作成するには、指定[/Fr](fr-fr-create-dot-sbr-file.md)します。 .Sbr ファイルにローカル シンボルが含まれている場合でも削除できます .bsc ファイルから BSCMAKE を使用して[/El オプション](bscmake-options.md)`.`
 
 完全なコンパイルを実行せず、.sbr ファイルを作成できます。 たとえば、/Zs 構文チェックを実行し、まだ/FR または/fr を指定する場合、.sbr ファイルを生成するコンパイラ オプションを指定できます。
 
@@ -30,4 +33,4 @@ BSCMAKE の入力ファイルは、.sbr ファイルです。 コンパイラは
 
 ## <a name="see-also"></a>関連項目
 
-[.bsc ファイルのビルド](../../build/reference/building-a-dot-bsc-file.md)
+[.bsc ファイルのビルド](building-a-dot-bsc-file.md)

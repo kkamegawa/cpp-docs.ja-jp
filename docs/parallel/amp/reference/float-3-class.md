@@ -74,20 +74,20 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ca8da31f37c74f80579a59fc77bec522e1ff9fe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609437"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126683"
 ---
-# <a name="float3-class"></a>float_3 クラス
+# <a name="float_3-class"></a>float_3 クラス
 
 3 個の浮動小数点数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class float_3;
 ```
 
@@ -95,26 +95,26 @@ class float_3;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[float_3 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[float_3 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |float_3::get_x||
-|float_3::get_xy||
+|float_3:: get_xy||
 |float_3::get_xyz||
 |float_3::get_xz||
 |float_3::get_xzy||
-|float_3::get_y||
+|float_3:: get_y||
 |float_3::get_yx||
 |float_3::get_yxz||
 |float_3::get_yz||
@@ -122,8 +122,8 @@ class float_3;
 |float_3::get_z||
 |float_3::get_zx||
 |float_3::get_zxy||
-|float_3::get_zy||
-|float_3::get_zyx||
+|float_3:: get_zy||
+|float_3:: get_zyx||
 |float_3::ref_b||
 |float_3::ref_g||
 |float_3::ref_r||
@@ -131,57 +131,57 @@ class float_3;
 |float_3::ref_y||
 |float_3::ref_z||
 |float_3::set_x||
-|float_3::set_xy||
+|float_3:: set_xy||
 |float_3::set_xyz||
 |float_3::set_xz||
 |float_3::set_xzy||
-|float_3::set_y||
+|float_3:: set_y||
 |float_3::set_yx||
 |float_3::set_yxz||
 |float_3::set_yz||
 |float_3::set_yzx||
-|float_3::set_z||
+|float_3:: set_z||
 |float_3::set_zx||
 |float_3::set_zxy||
-|float_3::set_zy||
-|float_3::set_zyx||
+|float_3:: set_zy||
+|float_3:: set_zyx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |float_3::operator-||
 |float_3::operator--||
 |float_3::operator*=||
 |float_3::operator/=||
-|float_3::operator++||
+|float_3:: operator + +||
 |float_3::operator+=||
 |float_3::operator=||
 |float_3::operator-=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#float_3__size)||
+|[サイズ定数](#float_3__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |float_3::b||
 |float_3::bg||
-|float_3::bgr||
+|float_3:: bgr||
 |float_3::br||
-|float_3::brg||
-|float_3::g||
-|float_3::gb||
+|float_3:: brg||
+|float_3:: g||
+|float_3:: gb||
 |float_3::gbr||
-|float_3::gr||
-|float_3::grb||
+|float_3:: gr||
+|float_3:: grb||
 |float_3::r||
 |float_3::rb||
-|float_3::rbg||
+|float_3:: rbg||
 |float_3::rg||
 |float_3::rgb||
 |float_3::x||
@@ -190,31 +190,31 @@ class float_3;
 |float_3::xz||
 |float_3::xzy||
 |float_3::y||
-|float_3::yx||
+|float_3:: yx||
 |float_3::yxz||
 |float_3::yz||
-|float_3::yzx||
-|float_3::z||
-|float_3::zx||
-|float_3::zxy||
-|float_3::zy||
-|float_3::zyx||
+|float_3:: yzx||
+|float_3:: z||
+|float_3:: zx||
+|float_3:: zxy||
+|float_3:: zy||
+|float_3:: zyx||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `float_3`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,26 +256,26 @@ explicit inline float_3(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-##  <a name="float_3__size"></a> サイズ
+## <a name="float_3__size"></a>幅
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

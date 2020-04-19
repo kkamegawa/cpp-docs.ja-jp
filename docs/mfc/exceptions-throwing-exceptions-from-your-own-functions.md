@@ -1,19 +1,19 @@
 ---
-title: '例外処理 : 独自関数からの例外のスロー'
+title: 例外:独自の関数からの例外のスロー
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405860"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外処理 : 独自関数からの例外のスロー
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外:独自の関数からの例外のスロー
 
 MFC やその他のライブラリ内の関数によってスローされた例外をキャッチするためだけに MFC 例外処理のパラダイムを使用することになります。 ライブラリ コードによってスローされた例外をキャッチするだけでなく例外的な状況が発生することができます関数を記述する場合、独自のコードから例外をスローすることができます。
 
@@ -43,4 +43,3 @@ MFC やその他のライブラリ内の関数によってスローされた例�
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

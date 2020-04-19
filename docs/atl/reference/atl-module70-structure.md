@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-ms.openlocfilehash: bf733a10a0be53eafb634c645dad6a4b58b8206d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05683383fab64f027f198d49bfbf42aa593d582
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260923"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 構造体
 
@@ -56,4 +56,3 @@ ATL をシャット ダウン時に呼び出される登録されている関数
 ## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../../atl/reference/atl-classes.md)
-

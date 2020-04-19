@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: 71696e4ffae91ed1fa8a13e69e75523ce66e8361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293759"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (DLL のビルド)
 
@@ -29,9 +29,9 @@ ms.locfileid: "50546343"
 
 1. [方式](../../cpp/dllexport-dllimport.md)でソース コード
 
-1. [エクスポート](../../build/reference/exports.md).def ファイル内のステートメント
+1. [エクスポート](exports.md).def ファイル内のステートメント
 
-1. [/Export](../../build/reference/export-exports-a-function.md) LINK コマンド内の指定
+1. [/Export](export-exports-a-function.md) LINK コマンド内の指定
 
 プログラムでは、1 つ以上のメソッドを使用できます。
 
@@ -43,7 +43,7 @@ DLL をビルドする別の方法は、**ライブラリ**モジュール定義
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**構成プロパティ**フォルダー。
 
@@ -57,5 +57,5 @@ DLL をビルドする別の方法は、**ライブラリ**モジュール定義
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

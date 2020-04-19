@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590460"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757060"
 ---
 # <a name="compiler-error-c2492"></a>コンパイラ エラー C2492
 
-'*変数*': スレッド ストレージ存続期間を使用してデータを dll インターフェイスいない可能性があります
+'*variable*': スレッドストレージ存続期間を持つデータは dll インターフェイスを含むことはできません
 
-変数が宣言された、[スレッド](../../cpp/thread.md)属性し、DLL のインターフェイスします。 アドレス、`thread`変数が不明、実行時まで、DLL のインポートまたはエクスポートにリンクできないようにします。
+変数は、[スレッド](../../cpp/thread.md)属性と DLL インターフェイスを使用して宣言されます。 `thread` 変数のアドレスは実行時までわからないため、DLL のインポートまたはエクスポートにリンクすることはできません。
 
 次の例では、C2492 が生成されます。
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

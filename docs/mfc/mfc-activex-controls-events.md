@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : イベント'
+title: MFC ActiveX コントロール:イベント
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392675"
 ---
-# <a name="mfc-activex-controls-events"></a>MFC ActiveX コントロール : イベント
+# <a name="mfc-activex-controls-events"></a>MFC ActiveX コントロール:イベント
 
 ActiveX コントロールは、コントロールに何かが発生するコンテナーに通知するのにイベントを使用します。 イベントの一般的な例には、コントロール、キーボード、および変更をコントロールの状態を使用して入力データのクリックが含まれます。 これらのアクションが発生すると、コントロールは、コンテナーのアラートを生成するイベントを発生させます。
 
 イベントは、メッセージとも呼ばれます。
 
-MFC は、2 つの種類のイベントをサポートしています: 株価とカスタムです。 ストック イベントはイベント クラスを[COleControl](../mfc/reference/colecontrol-class.md)は自動的に処理します。 ストック イベントの完全な一覧は、記事を参照してください。 [MFC ActiveX コントロール: ストック イベントの追加](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)します。 カスタム イベントは、コントロールをコントロールに固有の動作が発生した場合、コンテナーに通知する機能を許可します。 いくつかの例には、コントロールの内部状態または特定のウィンドウ メッセージの受信に変更があります。
+MFC は、2 つの種類のイベントをサポートしています: 株価とカスタムです。 ストック イベントはイベント クラスを[COleControl](../mfc/reference/colecontrol-class.md)は自動的に処理します。 ストック イベントの完全な一覧は、記事を参照してください。 [MFC ActiveX コントロール。ストック イベントの追加](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)します。 カスタム イベントは、コントロールをコントロールに固有の動作が発生した場合、コンテナーに通知する機能を許可します。 いくつかの例には、コントロールの内部状態または特定のウィンドウ メッセージの受信に変更があります。
 
 コントロールのイベントが適切に通知をコントロール クラスは、コントロールの各イベントを関連するイベントの発生時に呼び出す必要がありますをメンバー関数にマップする必要があります。 このマッピングのメカニズム (イベント マップと呼ばれます) は、イベントに関する情報を一元化し、Visual Studio に簡単にアクセスして、コントロールのイベントを操作できるようにします。 このイベントのマップがヘッダーに存在する、次のマクロで宣言されている (します。H)、コントロール クラス宣言のファイル:
 

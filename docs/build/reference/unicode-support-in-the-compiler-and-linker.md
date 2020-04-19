@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317329"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>コンパイラおよびリンカーでの Unicode のサポート
 
@@ -45,8 +45,8 @@ Unicode は、次のエンコーディングのソース コード ファイル�
 
 ## <a name="asm-and-cod-dumps"></a>.asm ダンプおよび .cod ダンプ
 
-.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 使用[は/FAu](../../build/reference/fa-fa-listing-file.md)を utf-8 を出力します。 指定した場合 **/FAs**、混在したソースが直接は出力したとソース コードが utf-8 と指定しなかった場合の例については、文字が正しくなります **/FAsu**します。
+.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 使用[は/FAu](fa-fa-listing-file.md)を utf-8 を出力します。 指定した場合 **/FAs**、混在したソースが直接は出力したとソース コードが utf-8 と指定しなかった場合の例については、文字が正しくなります **/FAsu**します。
 
 ## <a name="see-also"></a>関連項目
 
-[コマンドラインでの C/C++ コードのビルド](../../build/building-on-the-command-line.md)
+[コマンド ラインから MSVC ツールセットを使用する](../building-on-the-command-line.md)

@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559706"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448728"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 演算子
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -46,7 +46,7 @@ hash_maps が等しくない場合は **true**、hash_maps が等しい場合は
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-メンバー、 [< hash_map >](hash-map.md)と[< hash_set >](hash-set.md)ヘッダー ファイル、 [ stdext Namespace](stdext-namespace.md)します。
+[Stdext 名前空間](stdext-namespace.md)の[< hash_map >](hash-map.md)ヘッダーファイルと[< > hash_set](hash-set.md)ヘッダーファイルのメンバー。
 
 ### <a name="example"></a>例
 
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>  演算子! = (hash_multimap)
+## <a name="op_neq_mm"></a>operator! = (hash_multimap)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](unordered-multimap-class.md)をご使用ください。
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>  演算子 (hash_multimap) = =
+## <a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](unordered-multimap-class.md)をご使用ください。
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -291,4 +291,4 @@ The hash_multimaps hm1 and hm3 are equal.
 
 ## <a name="see-also"></a>関連項目
 
-[<hash_map>](hash-map.md)<br/>
+[<hash_map>](hash-map.md)

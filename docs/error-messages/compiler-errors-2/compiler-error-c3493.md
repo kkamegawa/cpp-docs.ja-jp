@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: ece70a99477b018f6d7a935911f475e4fb4397cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 178d1221886dc62edd9785d211e2189fa50962f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548006"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738298"
 ---
 # <a name="compiler-error-c3493"></a>コンパイラ エラー C3493
 
@@ -25,11 +25,11 @@ ms.locfileid: "50548006"
 
 - 1 つ以上の変数を明示的にキャプチャします。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、外部変数を変更しているが、空のキャプチャ句を指定していないため、C3493 が生成されます。
 
-```
+```cpp
 // C3493a.cpp
 
 int main()
@@ -39,11 +39,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、既定のキャプチャ モードとして参照渡しを指定することによって C3493 を解決しています。
 
-```
+```cpp
 // C3493b.cpp
 
 int main()
@@ -53,6 +53,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

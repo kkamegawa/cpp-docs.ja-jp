@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
-ms.openlocfilehash: 9f24e6dfeb6544e5a6173fd844e3fe8b9ae8698e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fe64292ce6463b3b628367ef0052208e74b24d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643886"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758880"
 ---
 # <a name="compiler-error-c2252"></a>コンパイラ エラー C2252
 
-現在のスコープでテンプレートを明示的にインスタンス化できません。
+現在のスコープでテンプレートを明示的にインスタンス化できません
 
-テンプレートの明示的なインスタンス化に問題が検出されました。  たとえば、関数のテンプレートを明示的にインスタンス化できません。
+テンプレートの明示的なインスタンス化で、コンパイラによって問題が検出されました。  たとえば、関数でテンプレートを明示的にインスタンス化することはできません。
 
 次の例では、C2252 が生成されます。
 
-```
+```cpp
 // C2252.cpp
 class A {
 public:

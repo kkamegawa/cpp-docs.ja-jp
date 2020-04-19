@@ -6,32 +6,31 @@ helpviewer_keywords:
 - CListCtrl class [MFC], styles
 - CListCtrl class [MFC], changing styles
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
-ms.openlocfilehash: cfaae07d0bb96cbdf40de5afa701b73ae82485e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3cc65ce6ef0e84eaa2f6738cb18b6b862a6473a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645147"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509053"
 ---
 # <a name="changing-list-control-styles"></a>リスト コントロール スタイルの変更
 
-リスト コントロールのウィンドウ スタイルを変更することができます ([CListCtrl](../mfc/reference/clistctrl-class.md)) 作成した後、いつでもできます。 ウィンドウ スタイルを変更すると、コントロールを使用してビューの種類を変更します。 たとえば、エクスプ ローラーをエミュレートする可能性がありますを指定するメニュー項目またはツール バー ボタンのさまざまなビューでコントロールの切り替え: アイコン ビューやリスト ビュー。
+リストコントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) のウィンドウスタイルは、作成後いつでも変更できます。 ウィンドウのスタイルを変更することで、コントロールが使用するビューの種類を変更できます。 たとえば、エクスプローラーをエミュレートするために、コントロールを異なるビュー (アイコンビュー、リストビューなど) に切り替えるためのメニュー項目またはツールバーボタンを指定できます。
 
-たとえば、ユーザーは、メニュー項目を選択するときにへの呼び出しを作成できます[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)コントロールの現在のスタイルを取得し、呼び出す[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)スタイルをリセットします。 詳細については、次を参照してください。[を使用してリスト ビュー コントロール](/windows/desktop/Controls/using-list-view-controls)Windows SDK に含まれています。
+たとえば、ユーザーがメニュー項目を選択したときに、 [Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlongw)を呼び出して、コントロールの現在のスタイルを取得し、 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw)を呼び出してスタイルをリセットすることができます。 詳細については、「Windows SDK での[リストビューコントロールの使用](/windows/win32/Controls/using-list-view-controls)」を参照してください。
 
-使用可能なスタイルは、「[作成](../mfc/reference/clistctrl-class.md#create)です。 スタイル**LVS_ICON**、**だけ**、 **LVS_LIST**、および**LVS_REPORT**一覧の 4 つのコントロール ビューを指定します。
+使用可能なスタイルは、[作成](../mfc/reference/clistctrl-class.md#create)中に一覧表示されます。 **になっ**、 **LVS_SMALLICON**、 **LVS_LIST**、および**LVS_REPORT**の各スタイルは、4つのリストコントロールビューを指定します。
 
 ## <a name="extended-styles"></a>拡張スタイル
 
-リスト コントロールの標準的なスタイル、だけでなく、拡張スタイルと呼ばれる別のセットがあります。 これらのスタイルで説明した[リスト ビューのスタイルの拡張](/windows/desktop/Controls/extended-list-view-styles)Windows sdk には、さまざまなリスト コントロールの動作をカスタマイズできるさまざまな機能を提供します。 特定のスタイル (ホバー選択) などの動作を実装するへの呼び出しを行い[かざして](../mfc/reference/clistctrl-class.md#setextendedstyle)、必要なスタイルします。 次の例では、関数呼び出しを示しています。
+リストコントロールの標準スタイルに加えて、拡張スタイルと呼ばれる別のセットもあります。 Windows SDK の[拡張リストビュースタイル](/windows/win32/Controls/extended-list-view-styles)で説明したこれらのスタイルには、リストコントロールの動作をカスタマイズするための便利な機能がいくつか用意されています。 特定のスタイル (ホバー選択など) の動作を実装するには、必要なスタイルを渡して、 [CListCtrl:: SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle)を呼び出します。 関数呼び出しの例を次に示します。
 
 [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]
 
 > [!NOTE]
->  作業をホバー選択もが必要か**LVS_EX_ONECLICKACTIVATE**または**させる**オンにします。
+>  ホバー選択を機能させるには、 **LVS_EX_ONECLICKACTIVATE**または**LVS_EX_TWOCLICKACTIVATE**をオンにする必要もあります。
 
 ## <a name="see-also"></a>関連項目
 
 [CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

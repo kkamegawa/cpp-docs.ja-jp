@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 513e6bd7b1120dd710852ab61aa7603bba74907e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8635cf5d389f72972f471a4fd53ed56c3497bfe9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188796"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>__declspec(dllimport) を使った関数呼び出しのインポート
 
@@ -74,4 +74,4 @@ call DWORD PTR __imp_func1
 
 ## <a name="see-also"></a>関連項目
 
-[アプリケーションへのインポート](../build/importing-into-an-application.md)
+[アプリケーションへのインポート](importing-into-an-application.md)

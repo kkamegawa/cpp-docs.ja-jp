@@ -1,4 +1,4 @@
----
+﻿---
 title: 一次式
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
 ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312311"
 ---
 # <a name="primary-expressions"></a>一次式
 
@@ -28,9 +28,9 @@ name
 
 A*リテラル*プライマリ定数式です。 その型は、リテラルの指定の形式によって決まります。 参照してください[リテラル](../cpp/numeric-boolean-and-pointer-literals-cpp.md)リテラルを指定する詳細についてはします。
 
-**この**キーワードはクラス オブジェクトへのポインター。 非静的メンバー関数内で使用でき、その関数が呼び出されたクラスのインスタンスを参照します。 **この**クラス メンバー関数の本体の外にキーワードを使用できません。
+**this**キーワードはクラス オブジェクトへのポインター。 非静的メンバー関数内で使用でき、その関数が呼び出されたクラスのインスタンスを参照します。 **this**クラス メンバー関数の本体の外にキーワードを使用できません。
 
-種類、**この**ポインターが`type`  **\*const** (場所`type`クラスの名前を指定) 特に変更関数内で、**この**ポインター。 次の例では、関数の宣言と型のメンバーを示しています**この**:
+種類、**this**ポインターが`type` **\*const** (場所`type`クラスの名前を指定) 特に変更関数内で、**this**ポインター。 次の例では、関数の宣言と型のメンバーを示しています**this**:
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-参照してください[this ポインター](this-pointer.md)の種類の変更の詳細については、**この**ポインター。
+参照してください[this ポインター](this-pointer.md)の種類の変更の詳細については、**this**ポインター。
 
 名前の前のスコープ解決演算子 (`::`) は基本式です。  そのような名前は、メンバー名ではなく、グローバル スコープでの名前であることが必要です。  この式の型は名前の宣言によって決まります。 宣言名が左辺値である場合は、左辺値 (代入演算子式の左辺になる式) です。 スコープ解決演算子を使用すると、グローバル名が現在のスコープでは隠されていても、その名前を参照できます。 参照してください[スコープ](../cpp/scope-visual-cpp.md)スコープ解決演算子を使用する方法の例についてはします。
 

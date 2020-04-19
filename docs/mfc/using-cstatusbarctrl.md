@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: b08a32edd4378251492cc1a108970a2b5a2dda26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b02b37cee930c0fa2522583c5c331bb4e0563ef4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411696"
 ---
 # <a name="using-cstatusbarctrl"></a>CStatusBarCtrl の使い方
 
@@ -35,4 +35,3 @@ ms.locfileid: "50516169"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

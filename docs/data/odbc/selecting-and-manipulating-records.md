@@ -1,37 +1,40 @@
 ---
 title: レコードの選択と操作
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - records, selecting
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: d038a0f9d2e7ba1f0e6bcf925eadc2173339b9b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550801"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707805"
 ---
 # <a name="selecting-and-manipulating-records"></a>レコードの選択と操作
 
-SQL を使用してデータ ソースからレコードを選択すると通常**選択**ステートメントでは、一連のテーブルまたはクエリからのレコードである結果セットを取得します。 データベース クラスでは、レコード セット オブジェクトを使用するを選択し、結果セットにアクセスします。 これはクラスから派生したアプリケーションに固有のクラスのオブジェクト[CRecordset](../../mfc/reference/crecordset-class.md)します。 レコード セット クラスを定義する場合は、それを関連付けるデータ ソース、使用するには、テーブルおよびテーブルの列を指定します。 MFC アプリケーション ウィザードまたは**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 特定のデータ ソースへの接続を持つクラスを作成します。 ウィザードの記述、 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)クラスのメンバー関数`CRecordset`テーブル名を返します。 ウィザードを使用して、レコード セット クラスを作成する方法の詳細については、次を参照してください。[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)と[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)します。
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
-使用して、 [CRecordset](../../mfc/reference/crecordset-class.md) 、実行時にオブジェクトのことができます。
+通常、SQL **SELECT** ステートメントを使用してデータ ソースからレコードを選択すると、テーブルまたはクエリからの一連のレコードである、結果セットが与えられます。 データベース クラスでは、レコードセット オブジェクトを使用し、結果セットを選択し、それにアクセスします。 これは、クラス [CRecordset](../../mfc/reference/crecordset-class.md) から誘導するアプリケーション固有クラスのオブジェクトです。 レコードセット クラスを定義するとき、それを関連付けるデータ ソース、使用するテーブル、テーブルの列を指定します。 MFC アプリケーション ウィザードまたは **[クラスの追加]** (「[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」で説明されています) により、特定のデータ ソースに接続するクラスが作成されます。 ウィザードによりクラス `CRecordset` の [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) メンバー関数が記述され、テーブル名が返されます。
 
-- 現在のレコードのデータ フィールドを確認します。
+実行時に [CRecordset](../../mfc/reference/crecordset-class.md) オブジェクトを使用することでできること:
 
-- レコード セットの並べ替えまたはフィルター処理します。
+- 現在のレコードのデータ フィールドを調べる。
 
-- 既定の SQL のカスタマイズ**選択**ステートメント。
+- レコードセットをフィルターで絞り込むか、並べ替える。
 
-- 選択されたレコードをスクロールします。
+- 既定の SQL **SELECT** ステートメントをカスタマイズする。
 
-- 追加、更新、または (データ ソースとレコード セットの両方が更新可能な) 場合は、レコードを削除します。
+- スクロールして選択されたレコードを閲覧する。
 
-- レコード セットのクエリを再実行ができるかどうかをテストし、レコード セットの内容を更新します。
+- レコードを追加、更新、削除する (データ ソースもレコードセットも更新できる場合)。
 
-レコード セット オブジェクトの使用が完了したらを閉じるし、それを破棄します。 レコード セットの詳細については、次を参照してください。[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。
+- レコードセットで再度問い合わせできるかテストし、レコードセットの内容を更新する。
+
+レコードセットの使用が終わったら、それを閉じて破棄します。 レコードセットの詳細については、「[レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

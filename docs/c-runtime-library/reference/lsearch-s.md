@@ -1,9 +1,9 @@
 ---
 title: _lsearch_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch_s
 - lsearch_s
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c3c0ac41a4805acb558c75fb5ff4cbc0e3aa838
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677007"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953015"
 ---
-# <a name="lsearchs"></a>_lsearch_s
+# <a name="_lsearch_s"></a>_lsearch_s
 
 値の線形探索を実行します。 「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_lsearch](lsearch.md) です。
 
@@ -60,7 +63,7 @@ void *_lsearch_s(
 *base*<br/>
 検索する配列のベースへのポインター。
 
-*数*<br/>
+*number*<br/>
 要素の数。
 
 *size*<br/>
@@ -74,13 +77,13 @@ void *_lsearch_s(
 
 ## <a name="return-value"></a>戻り値
 
-場合*キー*が見つかると、 **_lsearch_s**配列の要素へのポインターを返します*基本*と一致する*キー*します。 場合*キー*が見つからない **_lsearch_s**配列の末尾に新しく追加された項目へのポインターを返します。
+*キー*が見つかった場合、 **_lsearch_s**は、*キー*に一致する*ベース*の配列の要素へのポインターを返します。 *Key*が見つからない場合、 **_lsearch_s**は配列の末尾に新しく追加された項目へのポインターを返します。
 
-この関数に無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続行し、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+この関数に無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*key*|*base*|*compare*|*数*|*size*|**errno**|
+|*key*|*base*|*compare*|*number*|*size*|**番号**|
 |-----------|------------|---------------|-----------|------------|-------------|
 |**NULL**|任意|任意|任意|任意|**EINVAL**|
 |任意|**NULL**|任意|!= 0|任意|**EINVAL**|
@@ -89,11 +92,11 @@ void *_lsearch_s(
 
 ## <a name="remarks"></a>Remarks
 
-**_Lsearch_s**関数は、値に関して線形探索を実行します。*キー*の配列の*数*の各要素は、*幅*バイト。 異なり**bsearch_s**、 **_lsearch_s**配列を並べ替えるには必要ありません。 場合*キー*が見つからない、 **_lsearch_s**インクリメント、配列の末尾に追加*数*します。
+**_Lsearch_s**関数は、*数値*要素の配列内の値*キー*の線形検索を実行します (各*幅*バイト)。 **Bsearch_s**とは異なり、 **_lsearch_s**では配列を並べ替える必要はありません。 Key が見つからない場合、 **_lsearch_s**は配列の末尾に*キー*を追加し、*数値*をインクリメントします。
 
-*比較*関数は、2 つの配列要素を比較し、それらの関係を示す値を返します、ユーザー指定のルーチンへのポインター。 *比較*関数も、最初の引数としてコンテキストへのポインターを受け取ります。 **_lsearch_s**呼び出し*比較*呼び出しごとに 2 つの配列要素へのポインターを渡す、検索中に 1 つ以上の時間。 *比較*要素を比較し、いずれかを返す必要があります (つまり、要素が異なる) 0 以外の値または 0 (つまり、要素が同じ場合)。
+*Compare*関数は、2つの配列要素を比較し、それらの関係を指定する値を返すユーザー指定のルーチンへのポインターです。 また、 *compare*関数は、コンテキストへのポインターを最初の引数として受け取ります。 **_lsearch_s**呼び出しは、検索中に1回以上を*比較*し、各呼び出しで2つの配列要素へのポインターを渡します。 *比較*では、要素を比較し、0以外 (要素が異なる場合) または 0 (要素が同じであることを意味します) のいずれかを返す必要があります。
 
-*コンテキスト*ポインターは検索対象のデータ構造体がオブジェクトの一部である場合に便利にできる、*比較*関数は、オブジェクトのメンバーにアクセスする必要があります。 コード例については、*比較*関数はそのオブジェクトの適切なオブジェクトの種類とアクセスのメンバーに void ポインターをキャストすることができます。 追加、*コンテキスト*ポインターにより **_lsearch_s**追加のコンテキストに関連付けられたデータを使用できるようにする静的変数を使用して、再入バグを回避するために使用できるためのより安全な*比較*関数。
+*コンテキスト*ポインターは、検索対象のデータ構造体がオブジェクトの一部であり、 *compare*関数がオブジェクトのメンバーにアクセスする必要がある場合に役立ちます。 たとえば、 *compare*関数のコードでは、void ポインターを適切なオブジェクト型にキャストし、そのオブジェクトのメンバーにアクセスできます。 *コンテキスト*ポインターを追加すると、 **_lsearch_s**がより安全になります。これは、*比較*関数でデータを使用できるようにするために静的変数を使用する場合に関連する再入バグを回避するためにコンテキストを追加できるためです。
 
 ## <a name="requirements"></a>必要条件
 

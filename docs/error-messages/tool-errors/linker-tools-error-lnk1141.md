@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: 5c19013fe0514b2142486d0e4da7af618f1f74f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255028"
 ---
 # <a name="linker-tools-error-lnk1141"></a>リンカ ツール エラー LNK1141
 
 エクスポート ファイルのビルド中にエラー
 
-[リンク](../../build/reference/linker-command-line-syntax.md)エクスポート (.exp) ファイルを構築できませんでした。
+[リンク](../../build/reference/linking.md)エクスポート (.exp) ファイルを構築できませんでした。
 
 このエラーの原因には、モジュール定義ステートメントまたはオプションが不足しているメモリと構文エラーなどのシステムの問題があります。
 

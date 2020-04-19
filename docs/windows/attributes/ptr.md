@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 7ed08403f32e5e4609266975c5c479a7b758fe89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506211"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514157"
 ---
 # <a name="ptr"></a>ptr
 
-完全なポインターとしてのポインターを指定します。
+ポインターをフルポインターとして指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50506211"
 
 ## <a name="remarks"></a>Remarks
 
-**Ptr** C++ 属性と同じ機能を持つ、 [ptr](/windows/desktop/Midl/ptr) MIDL 属性。
+**Ptr** C++属性には、 [ptr](/windows/win32/Midl/ptr) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[defaultvalue](defaultvalue.md)の使用サンプル**ptr**します。
+**Ptr**の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -37,7 +37,7 @@ ms.locfileid: "50506211"
 
 |||
 |-|-|
-|**対象**|インターフェイスのパラメーター、インターフェイスのメソッド、 **typedef**|
+|**対象**|インターフェイスパラメーター、インターフェイスメソッド、 **typedef**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

@@ -1,10 +1,10 @@
 ---
 title: _putch、_putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326993"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950043"
 ---
-# <a name="putch-putwch"></a>_putch、_putwch
+# <a name="_putch-_putwch"></a>_putch、_putwch
 
 コンソールに文字を書き込みます。
 
@@ -62,13 +65,13 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は、*c* を返します。 場合 **_putch**失敗すると、返す**EOF**場合 **_putwch**失敗すると、それを返します**WEOF**します。
+処理が正常に終了した場合は、*c* を返します。 **_Putch**が失敗した場合は**EOF**を返します。 **_putwch**が失敗した場合は、 **WEOF**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は、文字を書き込む*c*コンソールには、バッファーなしで直接、します。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
+これらの関数は、バッファーを使用せずに文字*c*をコンソールに直接書き込みます。 Windows NT では、 **_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
 
-**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、次を参照してください。 **_putch_nolock**、 **_putwch_nolock**します。
+**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、「 **_putch_nolock**、 **_putwch_nolock**」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

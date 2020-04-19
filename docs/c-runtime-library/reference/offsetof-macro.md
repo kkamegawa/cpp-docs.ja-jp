@@ -1,7 +1,7 @@
 ---
 title: offsetof マクロ
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,19 +12,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458321"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951259"
 ---
 # <a name="offsetof-macro"></a>offsetof マクロ
 
@@ -44,19 +47,19 @@ size_t offsetof(
 *structName*<br/>
 親データ構造体の名前。
 
-*メンバー名*<br/>
+*memberName*<br/>
 オフセットを決定する親データ構造体のメンバーの名前。
 
 ## <a name="return-value"></a>戻り値
 
-**offsetof**親データ構造体の先頭から指定されたメンバーのバイト オフセットを返します。 ビット フィールドには定義されません。
+**offsetof**は、親データ構造体の先頭から、指定されたメンバーのオフセットをバイト単位で返します。 ビット フィールドには定義されません。
 
 ## <a name="remarks"></a>Remarks
 
-**Offsetof**マクロのバイト オフセットを返します*memberName*によって指定された構造体の先頭から*structName*型の値として**size_t**します。 型を指定することができます、**構造体**キーワード。
+**Offsetof**マクロは、 *structName*で指定された構造体の先頭からのバイト*単位のオフセット*を**size_t**型の値として返します。 **Struct**キーワードを使用して型を指定できます。
 
 > [!NOTE]
-> **offsetof**関数ではないと、C のプロトタイプを使用して説明することはできません。
+> **offsetof**は関数ではなく、C プロトタイプを使用して記述することはできません。
 
 ## <a name="requirements"></a>必要条件
 

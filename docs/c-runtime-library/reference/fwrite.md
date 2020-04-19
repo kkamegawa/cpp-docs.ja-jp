@@ -1,9 +1,9 @@
 ---
 title: fwrite
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwrite
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwrite
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506747"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956192"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -55,20 +58,20 @@ size_t fwrite(
 *count*<br/>
 書き込む項目の最大数。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**fwrite**フルの数を返します、実際に書き込まれた項目なる可能性があるより小さい*カウント*エラーが発生した場合。 また、エラーが発生した場合は、ファイル位置インジケーターを決定できません。 いずれか*ストリーム*または*バッファー* null ポインター、または Unicode モードで奇数バイトが書き込まれるが指定されている場合、関数、無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+**fwrite**は、実際に書き込まれたすべての項目の数を返します。エラーが発生すると、 *count*よりも小さくなる場合があります。 また、エラーが発生した場合は、ファイル位置インジケーターを決定できません。 *ストリーム*または*バッファー*が null ポインターの場合、または書き込まれる奇数バイト数が Unicode モードで指定されている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Fwrite**関数は最大書き込みます*カウント*項目の*サイズ*、それぞれの長さから*バッファー*出力に*ストリーム*. 関連付けられたファイル ポインター*ストリーム*(存在する場合) が実際に書き込まれたバイト数でインクリメントされます。 場合*ストリーム*が開かれたテキスト モードでは、各ライン フィードはキャリッジ リターン - ライン フィードのペアに置き換えられます。 この置き換えは、戻り値には影響しません。
+**Fwrite**関数は、*バッファー*から出力*ストリーム*に、最大*サイズ*の項目*数*を書き込みます。 *ストリーム*に関連付けられているファイルポインター (存在する場合) は、実際に書き込まれたバイト数によってインクリメントされます。 *ストリーム*がテキストモードで開かれている場合、各ラインフィードは復帰とラインフィードのペアで置き換えられます。 この置き換えは、戻り値には影響しません。
 
-ときに*ストリーム*は Unicode 変換モードで開かれます — たとえば場合、*ストリーム*が呼び出すことによって開かれた**fopen**を含むモード パラメーターを使用して、 **ccs= UNICODE**、 **ccs = UTF 16LE**、または**ccs = utf-8**を使用して、モードが Unicode 変換モードに変更された場合または **_setmode**とモードパラメーターが含まれる **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**—*バッファー*へのポインターとして解釈されますが、配列**wchar_t** utf-16 データを格納しています。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
+*ストリーム*が unicode 変換モードで開かれている場合 (たとえば、 **fopen**を呼び出して*ストリーム*を開き、 **ccs = Unicode**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーターを使用する場合)、またはモードがの場合は、 **_setmode**と、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含む mode パラメーターを使用して Unicode 変換モードに変更されました。*buffer*は、を含む**wchar_t**の配列へのポインターとして解釈されます。UTF-16 データ。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
-この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、次を参照してください。 **_fwrite_nolock**します。
+この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 非ロックバージョンについては、「 **_fwrite_nolock**」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: fb33fd051c7639ccb77c59c5f88f46e45be58d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507283"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400531"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 関係演算子と等値演算子
 
@@ -26,7 +26,7 @@ ms.locfileid: "50507283"
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "50507283"
 
 オペランドとしては、整数型、浮動小数点型、またはポインター型を指定できます。 オペランドの型はそれぞれ異なっていてもかまいません。 関係演算子は、整数型および浮動小数点型のオペランドに対して通常の算術変換を実行します。 また、関係演算子および等値演算子とオペランド型の次の組み合わせを使用できます。
 
-- 関係演算子または等値演算子では、両方のオペランドが同じ型へのポインターである場合があります。 等値 (`==`) 演算子と非等値 (`!=`) 演算子の場合、比較の結果は、2 つのポインターが同じメモリ位置を指すかどうかを示します。 他の関係演算子 (**\<**、**>**、**\<**=、**>**=) の場合、比較の結果は、指し示されているオブジェクトの 2 つのメモリ アドレスの相対位置を表します。 関係演算子はオフセットのみを比較します。
+- 関係演算子または等値演算子では、両方のオペランドが同じ型へのポインターである場合があります。 等値 (`==`) 演算子と非等値 (`!=`) 演算子の場合、比較の結果は、2 つのポインターが同じメモリ位置を指すかどうかを示します。 他の関係演算子 ( **\<** 、 **>** 、 **\<** =、 **>** =) の場合、比較の結果は、指し示されているオブジェクトの 2 つのメモリ アドレスの相対位置を表します。 関係演算子はオフセットのみを比較します。
 
    ポインターの比較は、同じオブジェクトの一部に対してのみ定義されます。 ポインターが配列のメンバーを参照している場合、比較は対応する添字の比較と同じになります。 最初の配列要素のアドレスは、最後の要素のアドレスよりも小さくなります。 構造体の場合、後で宣言された構造体メンバーへのポインターは、構造体で既に宣言されているメンバーへのポインター "より大きく" なります。 同じ共用体のメンバーへのポインターは等しくなります。
 
@@ -90,7 +90,7 @@ enum color { red, white, green } col;
 
 これらのステートメントは、`col` タグを使用して `color` という列挙型変数を宣言します。 常に、この変数には整数値 0、1、または 2 が格納されます。これらの値は、`color` 列挙セットのいずれかの要素 (赤、白、緑) を表します。 **if** ステートメントが実行されるときに `col` に 0 が含まれていると、**if** に依存するすべてのステートメントが実行されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関係演算子: \<、>、\<=、および >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [等値演算子: == および !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

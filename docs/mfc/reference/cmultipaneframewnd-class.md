@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: edd7fcf24302de8ded4f3adda933c783c6997757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366837"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd クラス
 
@@ -155,7 +155,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 ## <a name="example"></a>例
 
-次の例へのポインターを取得する方法を示します、`CMultiPaneFrameWnd`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)します。
+次の例へのポインターを取得する方法を示します、`CMultiPaneFrameWnd`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 
@@ -233,7 +233,7 @@ virtual void CalcExpectedDockedRect(
 [in]*pWndToDock*<br/>
 [in]*ptMouse*<br/>
 [in]*rectResult*<br/>
-[in]*bDrawTab*<br/>
+[in] *bDrawTab*<br/>
 [in]*ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -311,7 +311,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDockedBar*<br/>
+[in] *pDockedBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -424,7 +424,7 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 [in]*uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -532,7 +532,7 @@ virtual void ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBarOrg*<br/>
+[in] *pBarOrg*<br/>
 [in]*pBarReplaceWith*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -547,7 +547,7 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszProfileName*<br/>
+[in] *lpszProfileName*<br/>
 [in]*uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -632,7 +632,7 @@ virtual void StoreRecentTabRelatedInfo(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

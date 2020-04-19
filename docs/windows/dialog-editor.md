@@ -1,67 +1,136 @@
 ---
-title: ダイアログ エディター (C++)
-ms.date: 11/04/2016
+title: ダイアログエディター (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
+- vc.editors.dialog
 helpviewer_keywords:
 - resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
 - dialog boxes [C++], editing
+- controls [C++], showing or hiding Dialog editor toolbar
+- toolbars [C++], showing
+- toolbars [C++], hiding
+- Dialog Editor [C++], showing or hiding toolbar
+- events [C++], viewing for controls
+- Windows messages [C++], controls
+- messages [C++], viewing for dialog boxes
+- Dialog Editor [C++], accessing code
+- code [C++], switching from Dialog Editor
+- controls [C++], jumping to code
+- Dialog Editor [C++], switching between controls and code
+- Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 9ca532e1691a5d92280c89067a943b7d2e27e3f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540882"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445004"
 ---
-# <a name="dialog-editor-c"></a>ダイアログ エディター (C++)
+# <a name="dialog-editor-c"></a>ダイアログエディター (C++)
 
-**ダイアログ**エディターでは、作成またはダイアログ ボックスのリソースを編集することができます。 ダイアログ エディターでダイアログの .rc ファイルをダブルクリックして開く、**リソース ビュー**ウィンドウ (**ビュー** > **リソース ビュー**)。 なお**リソース ビュー** Express エディションでは使用できません。
+**ダイアログエディター**では、ダイアログボックスのリソースを作成または編集できます。
 
-ダイアログ ボックスまたはダイアログ ボックス テンプレートを新規作成する場合の最初のステップの 1 つは、ダイアログ ボックスにコントロールを追加することです。 **ダイアログ** ダイアログ ボックス内で作業するには、約に移動するか、エディター、特定のサイズ、形状、または配置に合わせてコントロールを配置することができます。 また、コントロールは簡単に削除できます。
+- エディターを開くには、 **[リソースビュー]** ウィンドウでダイアログの .rc ファイルをダブルクリックするか、または メニューの **[表示]**  > **他の Windows** > **リソースビュー**にジャンプします。
+
+新しいダイアログボックスまたはダイアログボックステンプレートを作成する最初の手順の1つは、コントロールの追加です。 **ダイアログエディター**では、特定のサイズ、形状、または配置に合わせてコントロールを配置したり、ダイアログボックス内で作業するようにコントロールを移動したりすることができます。 また、コントロールは簡単に削除できます。
 
 ダイアログ ボックスをテンプレートとして格納すると、後で再利用できます。 また、ダイアログ ボックスのデザインと実装コードの編集の間の切り替えも簡単です。
 
-さらに、ダイアログ エディターでは、単一または複数のコントロールのプロパティを編集できます。 タブ オーダーを変更することができます、つまり、フォーカス コントロールを取得する順序、**タブ**キーが押された、またはユーザーがキーボードを使用してコントロールを選択できるアクセス キー (キーの組み合わせ) を定義することができます。 事前に設定されているアクセス キーの一覧については、「 [ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)」を参照してください。
+**ダイアログエディター**では、1つまたは複数のコントロールのプロパティを編集することもできます。 タブオーダー、つまり**tab**キーが押されたときにコントロールがフォーカスを取得する順序を変更したり、ユーザーがキーボードを使用してコントロールを選択できるアクセスキーまたはキーの組み合わせを定義したりすることができます。
 
-**ダイアログ**エディターでは ActiveX コントロールなどのカスタム コントロールを使用することもできます。 さらに、 [フォーム ビュー](../mfc/reference/cformview-class.md)、 [レコード ビュー](../data/record-views-mfc-data-access.md)、または [ダイアログ バー](../mfc/dialog-bars.md)も編集できます。
+**ダイアログエディター**では、ActiveX コントロールなどのカスタムコントロールを使用することもできます。 [フォームビュー](../mfc/reference/cformview-class.md)、[レコードビュー](../data/record-views-mfc-data-access.md)、または[ダイアログバー](../mfc/dialog-bars.md)を編集することもできます。
 
-Visual Studio 2015 以降では、ダイアログ エディターを使用して、コントロールの移動方法と、ユーザーがダイアログをサイズ変更時にサイズを変更する方法を指定する、動的なレイアウトを定義します。 詳細については、「 [Dynamic Layout](../mfc/dynamic-layout.md)」を参照してください。
+Visual Studio 2015 以降では、**ダイアログエディター**を使用して動的レイアウトを定義できます。動的レイアウトでは、ユーザーがダイアログボックスのサイズを変更したときにコントロールの移動方法とサイズを変更する方法を指定します。 詳細については、「 [Dynamic Layout](../mfc/dynamic-layout.md)」を参照してください。
 
-- [ダイアログ ボックスの新規作成](../windows/creating-a-new-dialog-box.md)
+リソースの詳細については、「[ダイアログボックス](../windows/creating-a-new-dialog-box.md)および[ダイアログボックスコントロール](../windows/controls-in-dialog-boxes.md)を作成する方法」を参照してください。
 
-- [ユーザーが実行時に終了できないダイアログ ボックスの作成](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+> [!TIP]
+> **ダイアログエディター**を使用しているときは、多くの場合、マウスの右ボタンをクリックすると、頻繁に使用するコマンドのショートカットメニューを表示できます。
 
-- [[ダイアログ エディター] ツール バーの表示と非表示](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+## <a name="dialog-editor-toolbar"></a>ダイアログ エディター ツール バー
 
-- [ダイアログ エディターとコードの切り替え](../windows/switching-between-dialog-box-controls-and-code.md)
+**ダイアログエディター**のツールバーには、サイズや配置など、ダイアログボックス上のコントロールのレイアウトを配置するためのボタンが含まれています。 **ダイアログエディター**のツールバーボタンは、 **[書式]** メニューのコマンドに対応しています。
 
-- [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
+|アイコン|意味|アイコン|意味|
+|----------|-------------|----------|-------------|
+|![[テスト] ダイアログボタン](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|[ダイアログのテスト]|![[間隔] ボタン](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|[左右]|
+|![揃えの配置ボタン](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|[左揃え]|![[領域の下へ移動] ボタン](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|[下へ移動]|
+|![[右揃え] ボタン](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|[右揃え]|![同じ幅に揃えるボタン](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|[同じ幅に揃える]|
+|![上部に揃えるボタン](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|[上揃え]|![[同じ高さに揃える] ボタン](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|[同じ高さに揃える]|
+|![下揃えボタン](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|[下揃え]|![[同じサイズに揃える] ボタン](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|[同じサイズに揃える]|
+|![垂直方向の中央揃えボタン](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![グリッドボタンの切り替え](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|グリッドの切り替え|
+|![水平方向の中央揃えボタン](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|[水平方向]|![ガイドの切り替えボタン](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|[ガイドの切り替え]|
 
-- [ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)
+- **ダイアログエディター**のツールバーを表示または非表示にするには、[メニュー**ビュー** > **ツールバー** > **ダイアログエディター]** にアクセスします。
 
-- [ダイアログ ボックスのテスト](../windows/testing-a-dialog-box.md)
+プロジェクトで**ダイアログエディター**を開くと、ソリューションの最上部に **[ダイアログエディター]** ツールバーが自動的に表示されます。ただし、ツールバーを明示的に閉じる場合は、**ダイアログエディター**を次回開いたときに呼び出す必要があります。 C++ 表示を切り替えるには、使用可能なツールバーとウィンドウの一覧から選択します。
 
-- [ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)
+## <a name="switch-between-dialog-box-controls-and-code"></a>ダイアログボックスコントロールとコードの切り替え
 
-- [ダイアログ エディターのトラブルシューティング](../windows/troubleshooting-the-dialog-editor.md)
+MFC アプリケーションでは、ダイアログボックスコントロールをダブルクリックすると、そのハンドラーコードにジャンプしたり、スタブハンドラー関数をすばやく作成したりできます。
 
-   > [!TIP]
-   > 使用しているときに、**ダイアログ**エディターの多くの場合で、頻繁に使用されるコマンドのショートカット メニューを表示する、マウスの右ボタンをクリックすることができます。
+コントロールを選択した状態で、[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)の **[ControlEvents]** ボタンまたは **[メッセージ]** ボタンを選択して、選択した項目で使用可能な Windows メッセージとイベントの完全な一覧を表示します。 ハンドラー関数を作成または編集するには、一覧から選択します。
 
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+- **ダイアログエディター**からコードに移動するには、ダイアログボックス内のコントロールをダブルクリックして、最後に実装されたメッセージ処理関数の宣言に移動します。
 
-## <a name="requirements"></a>必要条件
+   ATL ベースのダイアログクラスの場合は、常にコンストラクターの定義に移動します。
+
+- コントロールのイベントを表示するには、コントロールを選択し、 **[プロパティ]** ウィンドウの **[ControlEvents]** ボタンをクリックします。
+
+   ダイアログボックスに1つのコントロールにフォーカスがある場合は、右クリックして **[イベントハンドラーの追加]** を選択します。 これにより、ハンドラーを追加するクラスを指定できます。 詳細については、「[イベントハンドラーの追加](../ide/adding-an-event-handler-visual-cpp.md)」を参照してください。
+
+   > [!NOTE]
+   > ダイアログボックスにフォーカスがあるときに **[ControlEvents]** ボタンをクリックすると、ダイアログボックス内のすべてのコントロールの一覧が表示されます。このダイアログボックスを展開して、個々のコントロールのイベントを編集できます。
+
+- ダイアログボックスのメッセージを表示するには、ダイアログボックスをオンにして、 **[プロパティ]** ウィンドウの **[メッセージ]** をクリックします。
+
+## <a name="accelerator-keys"></a>アクセラレータ キー
+
+**ダイアログエディター**のコマンドの既定のアクセラレータキーを次に示します。  
+
+|コマンド|キー|説明|
+|-------------|----------|-----------------|
+|Format.AlignBottoms|**Ctrl** + **shift** + **↓**|選択したコントロールの下端を最も優先されるコントロールに揃えます。|
+|Format.AlignCenters|**Shift** + **F9**|選択したコントロールの垂直方向の中心を、最も重要なコントロールに揃えます。|
+|Format.AlignLefts|**Ctrl** + **Shift** + **←**|選択したコントロールの左端を最も優先されるコントロールに揃えます。|
+|Format.AlignMiddles|**F9**|選択したコントロールの水平方向の中心を、最も重要なコントロールに揃えます。|
+|Format.AlignRights|**Ctrl** + **Shift** + **→キー**|選択したコントロールの右端を最も優先されるコントロールに揃えます。|
+|Format.AlignTops|**Ctrl** + **Shift** + **上方向**キー|選択したコントロールの上端を最も優先されるコントロールに揃えます。|
+|Format.ButtonBottom|**Ctrl** + **B**|選択したボタンをダイアログボックスの下部中央に配置します。|
+|Format.ButtonRight|**Ctrl** + **R**|選択したボタンをダイアログボックスの右上隅に配置します。|
+|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|コントロールをダイアログボックス内で水平方向に中央揃えにします。|
+|Format.CenterVertical|**Ctrl**  +  **F9**|ダイアログボックス内のコントロールを垂直方向に中央揃えで配置します。|
+|Format.CheckMnemonics|**Ctrl** + **M**|ニーモニックの一意性を確認します。|
+|SizeToContent のフォーマット|**Shift** + **F7**|選択したコントロールのサイズをキャプションテキストに合わせて変更します。|
+|Format.SpaceAcross|**Alt**  +  **← キー**|選択したコントロールを水平方向にスペースで並べます。|
+|Format.SpaceDown|**Alt** + **↓**|選択したコントロールを垂直方向にスペースで並べます。|
+|Format.TabOrder|**Ctrl**  +  **D**|ダイアログ内のコントロールの順序を設定します。|
+|Format.TestDialog|**Ctrl**  +  **T**|ダイアログボックスを実行して、外観と動作をテストします。|
+|Format.ToggleGuides|**Ctrl**  +  **G**|ダイアログ編集用のグリッドなし、ガイドライン、グリッドの間を切り替えます。|
+
+- ショートカットキーを変更するには、[メニュー**ツール** > **オプション**] に移動し、 **[環境]** フォルダーの下の **[キーボード]** を選択します。
+
+   詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。
+
+- 設定を変更するには、メニュー **[ツール]**  >  **[設定のインポートとエクスポート]** を使用します。
+
+   ダイアログボックスで使用できるオプション、および表示されるメニューコマンドの名前と場所は、アクティブな設定またはエディションによっては、**ヘルプ**で説明されている内容と異なる場合があります。  詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
+
+## <a name="requirements"></a>要件
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リソース エディター](../windows/resource-editors.md)<br/>
-[コントロール](../mfc/controls-mfc.md)<br/>
-[コントロール クラス](../mfc/control-classes.md)<br/>
-[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)<br/>
-[ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)
+[方法: ダイアログボックスを作成する](../windows/creating-a-new-dialog-box.md)<br/>
+[ダイアログ ボックス コントロール](../windows/controls-in-dialog-boxes.md)<br/>
+<!--
+[Controls](../mfc/controls-mfc.md)<br/>
+[Control Classes](../mfc/control-classes.md)<br/>
+[Dialog Box Classes](../mfc/dialog-box-classes.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)-->

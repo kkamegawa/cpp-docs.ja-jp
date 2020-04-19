@@ -13,12 +13,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: c709e991574cef481aa8357a789701bba9831d92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269402"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (既定の char 型の unsigned への変更)
 
@@ -41,7 +41,7 @@ ANSI C および C++ での特定の実装が必要ありません、`char`型�
 > [!NOTE]
 >  ATL と MFC でこのコンパイラ オプションを使用する場合は、エラーを生成する可能性があります。 定義することによってこのエラーを無効にすることが`_ATL_ALLOW_CHAR_UNSIGNED`、この回避策はサポートされていないとが常に機能しません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。
 
@@ -55,6 +55,6 @@ ANSI C および C++ での特定の実装が必要ありません、`char`型�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)

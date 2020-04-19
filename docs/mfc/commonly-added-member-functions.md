@@ -6,19 +6,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], control-notification messages
 - dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
-ms.openlocfilehash: fbc4f7a39559a1a260624ea1ccba1ee0ea416016
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 985048643192e218dd4f4df7766e1036aee5422b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450155"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685603"
 ---
 # <a name="commonly-added-member-functions"></a>通常追加されるメンバー関数
 
-ダイアログ ボックスに [ok] または [キャンセル] 以外のプッシュ ボタンが含まれている場合は、ダイアログ クラスを生成するコントロールの通知メッセージに応答するメッセージ ハンドラー メンバー関数を記述する必要があります。 例については、次を参照してください。、 [Scribble](../visual-cpp-samples.md)サンプル プログラムです。 ダイアログ ボックスで他のコントロールからのコントロール通知メッセージを処理することもできます。
+ダイアログボックスに [OK] または [キャンセル] 以外のプッシュボタンが表示されている場合は、生成したコントロール通知メッセージに応答するために、ダイアログクラスにメッセージハンドラーメンバー関数を記述する必要があります。 例については、 [Scribble](../overview/visual-cpp-samples.md)サンプルプログラムを参照してください。 また、ダイアログボックスの他のコントロールから、コントロール通知メッセージを処理することもできます。
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [通常オーバーライドされるメンバー関数](../mfc/commonly-overridden-member-functions.md)

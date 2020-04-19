@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - MFC Feature Pack, walkthroughs
 ms.assetid: 20d5756f-ad58-46f4-8b6c-c7a1020b72eb
-ms.openlocfilehash: ecd68e04b90a1b130edfc5022c82180b4eff87d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c4b6d507615d991e950897ea07c19c94a5be559
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358256"
 ---
 # <a name="walkthroughs-mfc"></a>チュートリアル (MFC)
 

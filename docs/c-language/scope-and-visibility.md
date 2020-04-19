@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 4010025a5a80fa513c8f86c41612350b2a23c15e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656730"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151287"
 ---
 # <a name="scope-and-visibility"></a>スコープおよび可視性
 
@@ -29,6 +29,6 @@ ms.locfileid: "50656730"
 
 他のソース ファイルの変数を参照できるようにするための適切な宣言については、「[ストレージ クラス](../c-language/c-storage-classes.md)」をご覧ください。 ただし、**static** ストレージ クラスの指定子を使用して外部レベルで宣言された変数と関数は、定義されたソース ファイル内でのみ参照できます。 他の関数はすべてグローバルに参照できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)

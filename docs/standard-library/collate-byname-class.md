@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 46eb139bafcf7368688f32cce37e38362c158c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569602"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688268"
 ---
-# <a name="collatebyname-class"></a>collate_byname クラス
+# <a name="collate_byname-class"></a>collate_byname クラス
 
-特定のロケールの照合ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。文字列の並べ替え規則に関する文化的領域に固有の情報を取得できるようにします。
+特定のロケールの collate ファセットとして使用できるオブジェクトを記述する派生クラステンプレート。文字列の並べ替え規則に関するカルチャ領域に固有の情報を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -39,17 +39,17 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*<br/>
+*@No__t_1*
 名前付きのロケール。
 
-*_Refs*<br/>
+*Refs \ (_c)*
 最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、[collate](../standard-library/collate-class.md#collate)\<CharType> 型の[ロケール ファセット](../standard-library/locale-class.md#facet_class)として使用できるオブジェクトを表します。 その動作によって決定されます、[という](../standard-library/locale-class.md#name)ロケール *_Locname*します。 各コンストラクターは、[collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+クラステンプレートは、 [collate](../standard-library/collate-class.md#collate) \<CharType > 型の[ロケールファセット](../standard-library/locale-class.md#facet_class)として使用できるオブジェクトを表します。 その動作は、[名前付き](../standard-library/locale-class.md#name)ロケール*名*によって決まります。 各コンストラクターは、[collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -57,4 +57,4 @@ protected:
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

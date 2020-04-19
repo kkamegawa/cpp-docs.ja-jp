@@ -9,12 +9,12 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: d7f0cc1f9bbbfb1f950c7efc1371587d805d1e9e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edabb639d8f45680415473ad7b017d426b931ab5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480185"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745241"
 ---
 # <a name="unix"></a>UNIX
 
@@ -29,6 +29,6 @@ ms.locfileid: "50480185"
     > [!NOTE]
     >  このバージョンの Visual C++ では、UNIX と互換性のある情報は、関数の説明から削除されています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [互換性](../c-runtime-library/compatibility.md)

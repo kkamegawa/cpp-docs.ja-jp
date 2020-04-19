@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657475"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346095"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray クラス
 
@@ -253,7 +253,7 @@ void InsertAt(
 
 詳細についてを参照してください。 [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)します。
 
-##  <a name="operator_at"></a>  CTypedPtrArray::operator
+##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]
 
 これらのインライン演算子を呼び出す`BASE_CLASS` **:: 演算子**します。
 
@@ -328,7 +328,7 @@ void SetAtGrow(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray クラス](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray クラス](../../mfc/reference/cobarray-class.md)

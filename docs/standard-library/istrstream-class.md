@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581936"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448075"
 ---
 # <a name="istrstream-class"></a>istrstream クラス
 
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*数*\
 バッファーの長さ (*ptr*)。
 
-*ptr*<br/>
+*ポインター*\
 バッファーが初期化されているコンテンツ。
 
 ### <a name="remarks"></a>Remarks
 
-すべてのコンス トラクターを呼び出して基底クラスを初期化する[istream](../standard-library/istream-typedefs.md#istream)(**sb**) ここで、`sb`クラスの格納されているオブジェクトは、 [strstreambuf](../standard-library/strstreambuf-class.md)します。 最初の 2 つのコンス トラクターの初期化も`sb`呼び出して`strstreambuf`(( **const** `char` \*) `ptr`, 0)。 残りの 2 つのコンストラクターは、代わりに `strstreambuf`( ( **const**`char` *) `ptr`, `count` ) を呼び出します。
+すべてのコンストラクターは、 [istream](../standard-library/istream-typedefs.md#istream)(**sb**) を呼び出すことによっ`sb`て基底クラスを初期化します。ここで、は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初の2つのコンストラクター `sb`は、 `strstreambuf`(( **const** `char` \*) `ptr`, 0) を呼び出すことによって初期化します。 残りの 2 つのコンストラクターは、代わりに `strstreambuf`( ( **const**`char` *) `ptr`, `count` ) を呼び出します。
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -120,11 +120,11 @@ char *str();
 
 ### <a name="example"></a>例
 
-参照してください[strstream::str](../standard-library/strstreambuf-class.md#str)を使用するサンプルの`str`します。
+を使用`str`するサンプルについては、「 [strstream:: str](../standard-library/strstreambuf-class.md#str) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

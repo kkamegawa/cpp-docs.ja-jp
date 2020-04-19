@@ -9,12 +9,12 @@ helpviewer_keywords:
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: 796eeb13a210bfbfd859e20dcdd001c502560483
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb332d0c6eb55dddcd20d6d4f07fe6f666c015ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411750"
 ---
 # <a name="using-cprogressctrl"></a>CProgressCtrl の使い方
 
@@ -35,4 +35,3 @@ ms.locfileid: "50528780"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

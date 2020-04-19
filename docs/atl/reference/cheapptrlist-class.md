@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-ms.openlocfilehash: ef0224ccb9e2592daecb94204db5e1a8c785c7b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245648"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList クラス
 

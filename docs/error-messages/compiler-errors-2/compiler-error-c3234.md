@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3234
 ms.assetid: ebefc15a-e40d-424b-a3dd-d7e185d0ed7b
-ms.openlocfilehash: fd6e918c115ed121dda5d589a62b1a94d14184a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acfbd44444270f90ae79f498724fcec14aa408ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477598"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751093"
 ---
 # <a name="compiler-error-c3234"></a>コンパイラ エラー C3234
 
@@ -19,11 +19,11 @@ ms.locfileid: "50477598"
 
 ジェネリック クラスをジェネリック型パラメーターから継承することはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3234 が生成されます。
 
-```
+```cpp
 // C3234.cpp
 // compile with: /clr /c
 generic <class T>

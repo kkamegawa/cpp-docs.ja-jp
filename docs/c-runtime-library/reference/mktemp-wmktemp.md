@@ -1,10 +1,10 @@
 ---
 title: _mktemp、_wmktemp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmktemp
 - _mktemp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tmktemp
 - wmktemp
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 7cfca04d4f0df2673a2221f00a1263f73e8516ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326265"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951576"
 ---
-# <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
+# <a name="_mktemp-_wmktemp"></a>_mktemp、_wmktemp
 
 一意のファイル名を作成します。 これらの関数のセキュリティを強化したバージョンについては、「[_mktemp_s、_wmktemp_s](mktemp-s-wmktemp-s.md)」をご覧ください。
 
@@ -70,11 +73,11 @@ wchar_t *_wmktemp(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、変更後の nameTemplate にポインターを返します。 関数を返します**NULL**場合*nameTemplate*形式が正しくないか、これ以上の一意の名前は、特定の nameTemplate から作成できます。
+これらの各関数は、変更された nameTemplate へのポインターを返します。 *Nametemplate*の形式が正しくない場合、または指定された nametemplate から一意の名前を作成できない場合、関数は**NULL**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mktemp**関数を変更して一意のファイル名を作成し、 *nameTemplate*引数。 **_mktemp**マルチバイト文字の文字列引数には、実行時のシステムによって現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識するを必要に応じて、自動的に処理します。 **_wmktemp**のワイド文字バージョンは、 **_mktemp**; の引数と戻り値 **_wmktemp**はワイド文字列です。 **_wmktemp**と **_mktemp**の動作は同じ場合は、点を除いて **_wmktemp**マルチバイト文字の文字列を処理しません。
+**_Mktemp**関数は、 *nametemplate*引数を変更することによって、一意のファイル名を作成します。 **_mktemp**は、現在ランタイムシステムによって使用されているマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wmktemp**は、 **_mktemp**のワイド文字バージョンです。 **_wmktemp**の引数と戻り値はワイド文字列です。 **_wmktemp**と **_mktemp**は、 **_wmktemp**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -82,17 +85,17 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*引数の形式*基本*XXXXXX、場所*基本*提供する新しいファイル名の一部である、各 X はによって指定される文字のプレース ホルダー **_mktemp**します。 内の各プレース ホルダー文字*nameTemplate*は大文字の X をする必要があります **_mktemp**保持*基本*し、最初の後続の X を英字に置き換えます。 **_mktemp**末尾の次を置換する大文字の X を 5 桁の値です。 この値は、プロセス、またはマルチ スレッド プログラムの場合は、呼び出し元のスレッドには、呼び出し元を識別する一意の番号。
+*Nametemplate*引数の形式は*base*XXXXXX です。ここで、 *base*は指定する新しいファイル名の一部で、各 X は **_mktemp**によって提供される文字のプレースホルダーです。 *Nametemplate*内の各プレースホルダー文字は、 **_mktemp** *を保持し、先頭*の x を英字で置き換える必要があります。 **_mktemp**は、次の末尾の X を5桁の値に置き換えます。この値は、呼び出し元のプロセスを識別する一意の番号、またはマルチスレッドプログラムでの呼び出し元のスレッドを示します。
 
-呼び出しが成功した **_mktemp**変更*nameTemplate*します。 各後続の呼び出しと同じプロセスまたは同じスレッドで*nameTemplate*引数、 **_mktemp**によって返される名前と一致するファイル名に対してチェック **_mktemp**で前の呼び出し。 指定した名前のファイルが存在しない場合 **_mktemp**その名前を返します。 名前、以前に返したすべてのファイルが存在する場合 **_mktemp**英字部分 'a' ~ 'z' の順序で、[次へ] の使用可能な小文字文字を置き換えることで、新しい名前を作成します。 たとえば場合、*基本*は。
+**_Mktemp**への呼び出しが成功するたびに、 *nametemplate*が変更されます。 同じ*Nametemplate*引数を持つ同じプロセスまたはスレッドからの後続の呼び出しでは、 **_mktemp**は、前の呼び出しで **_mktemp**によって返された名前と一致するファイル名を確認します。 指定された名前のファイルが存在しない場合、 **_mktemp**はその名前を返します。 以前に返されたすべての名前のファイルが存在する場合、 **_mktemp**は、以前に返された名前で使用されていた英字を ' a ' ~ ' z ' の順に使用可能な次の小文字で置き換えることによって、新しい名前を作成します。 たとえば、 *base*がの場合は次のようになります。
 
-> **fn**
+> **1億**
 
-によって提供される 5 桁の値と **_mktemp**返される最初の名前が 12345 の場合。
+**_mktemp**によって指定された5桁の値は12345で、最初に返される名前は次のようになります。
 
 > **fna12345**
 
-この名前を使用してファイル FNA12345 を作成しており、このファイルが存在する同じプロセスまたはスレッドで、同じ呼び出しで、[次へ] の名前が返されます場合*基本*の*nameTemplate*は。
+この名前を使用してファイル FNA12345 を作成しても、このファイルがまだ存在する場合、 *Nametemplate*の同じ*ベース*を持つ同じプロセスまたはスレッドから次の名前が返されます。
 
 > **fnb12345**
 
@@ -100,9 +103,9 @@ FNA12345 が存在しない場合、次に返される名前はもう一度次�
 
 > **fna12345**
 
-**_mktemp**の任意の組み合わせの 26 の一意のファイル名の最大値を作成できます*基本*と*nameTemplate*値。 そのため、FNZ12345 は、最後の一意のファイル名 **_mktemp**を作成することができます、*基本*と*nameTemplate*この例で使用される値。
+**_mktemp**では、 *Base*と*nametemplate*の値の任意の組み合わせに対して一意のファイル名を最大26個作成できます。 したがって、FNZ12345 は、この例で使用される*base*および*nametemplate*の値に対して **_mktemp**が作成できる最後の一意のファイル名です。
 
-失敗した場合、 **errno**設定されます。 場合*nameTemplate*形式が無効です (6 より少ないなどの X)、 **errno**に設定されている**EINVAL**します。 場合 **_mktemp** 26 のすべての使用可能なファイル名が既に存在するために、一意の名前を作成するようになって **_mktemp** nameTemplate を空の文字列に設定し、返します**EEXIST**します。
+エラーが発生すると、 **errno**が設定されます。 *Nametemplate*の形式が無効な場合 (たとえば、6 X 未満)、 **errno**は**EINVAL**に設定されます。 使用可能なすべてのファイル名が既に存在するために **_mktemp**が一意の名前を作成できない場合は、 **_mktemp**が空の文字列に設定され、 **eexist**が返されます。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

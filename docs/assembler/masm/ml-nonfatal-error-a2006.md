@@ -1,39 +1,39 @@
 ---
 title: ML の致命的でないエラー A2006
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 058100984acbd42ac2993732ab619c0a27c0edd2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490065"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317085"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>ML の致命的でないエラー A2006
 
 **未定義のシンボル: 識別子**
 
-定義されていないシンボルの使用が試行されました。
+定義されていないシンボルを使用しようとしました。
 
-次のいずれかが発生した可能性があります。
+次のいずれかが発生している可能性があります。
 
 - シンボルが定義されていません。
 
-- フィールドの指定された構造体のメンバーでした。
+- フィールドが、指定された構造体のメンバーではありませんでした。
 
-- シンボルは含まれていなかったインクルード ファイルで定義されました。
+- インクルードファイルにシンボルが定義されていません。
 
-- 外部シンボルを使用していない、 [EXTERN](../../assembler/masm/extern-masm.md)または[EXTERNDEF](../../assembler/masm/externdef.md)ディレクティブ。
+- 外部シンボルが[EXTERN](extern-masm.md)または[EXTERNDEF](externdef.md)ディレクティブなしで使用されました。
 
-- シンボル名が間違っています。
+- シンボル名のスペルが間違っています。
 
-- ローカル コード ラベルは、そのスコープの外部で参照されました。
+- ローカルコードラベルがスコープ外で参照されました。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

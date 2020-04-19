@@ -11,12 +11,12 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: e3eec62e2bea92f1f308b149046b83be1b9085b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b75dd04bed4895d722939d1bf9c0a6dfff2126e0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276199"
 ---
 # <a name="snap-in-object-macros"></a>スナップイン オブジェクトに関するマクロ
 
@@ -68,7 +68,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>パラメーター
 
-*(_c)*<br/>
+*_class*<br/>
 [in]スナップイン オブジェクト クラスを指定します。
 
 ### <a name="example"></a>例
@@ -101,7 +101,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>パラメーター
 
-*(_c)*<br/>
+*_class*<br/>
 [in]スナップイン オブジェクト クラスを指定します。
 
 ### <a name="example"></a>例

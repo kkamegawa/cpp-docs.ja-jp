@@ -1,29 +1,25 @@
 ---
-title: Catlservicemodulet::run 関数
+title: 'CAtlServiceModuleT:: Run 関数'
 ms.date: 11/04/2016
-f1_keywords:
-- CServiceModule::Run
-- CServiceModule.Run
-- CSecurityDescriptor
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 91b6465dd975a1e3227d1416f2b78a8abbd441ad
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0c35020996852731a8f22c15860d4cceb7a8bdb6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694324"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491519"
 ---
-# <a name="catlservicemoduletrun-function"></a>Catlservicemodulet::run 関数
+# <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT:: Run 関数
 
-`Run` 呼び出しを含む`PreMessageLoop`、 `RunMessageLoop`、および`PostMessageLoop`します。 呼び出された後に`PreMessageLoop`最初に、サービスのスレッドの ID を格納します サービスは、この ID を使用して、Win32 API 関数を使用して WM_QUIT メッセージを送信することによってそれ自体を閉じるには[次](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea)します。
+`Run`、 `PreMessageLoop` 、`RunMessageLoop`およびへの呼び出しが含まれ`PostMessageLoop`ています。 を呼び出すと`PreMessageLoop` 、最初にサービスのスレッド ID が格納されます。 サービスは、この ID を使用して、Win32 API 関数の[Postthreadmessage](/windows/win32/api/winuser/nf-winuser-postthreadmessagew)を使用して WM_QUIT メッセージを送信することによって、この ID を閉じます。
 
-`PreMessageLoop` 呼び出して`InitializeSecurity`します。 既定では、`InitializeSecurity`呼び出し[CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)を NULL に設定するセキュリティ記述子、つまり、ユーザーが、オブジェクトへのアクセスを持っています。
+`PreMessageLoop`次に`InitializeSecurity`、を呼び出します。 既定では`InitializeSecurity` 、は、セキュリティ記述子が NULL に設定された[CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)を呼び出します。これは、すべてのユーザーがオブジェクトにアクセスできることを意味します。
 
-独自のセキュリティを指定するサービスしたくない場合は、オーバーライド`PreMessageLoop`呼び出さないでください`InitializeSecurity`COM がし、レジストリからのセキュリティ設定を確認します。 レジストリ設定を構成する便利な方法は、 [DCOMCNFG](../atl/dcomcnfg.md)ユーティリティのこのセクションで後ほど説明します。
+サービスで独自のセキュリティを指定しない場合は、をオーバーライド`PreMessageLoop`し、を`InitializeSecurity`呼び出さないでください。これにより、COM はレジストリからセキュリティ設定を決定します。 レジストリ設定を構成する便利な方法は、このセクションで後述する[DCOMCNFG](../atl/dcomcnfg.md)ユーティリティを使用することです。
 
-セキュリティを指定すると、プログラムに新しいクライアントが接続できるようにを COM オブジェクトが登録されています。 最後に、プログラムが実行されていることと、メッセージ ループに入るプログラム、サービス コントロール マネージャー (SCM) に指示します。 サービスのシャット ダウン時に quit メッセージを投稿するまで、プログラムを実行したままです。
+セキュリティを指定すると、オブジェクトは COM に登録され、新しいクライアントがプログラムに接続できるようになります。 最後に、プログラムは、実行されていることをサービスコントロールマネージャー (SCM) に伝え、プログラムはメッセージループに入ります。 サービスのシャットダウン時に終了メッセージをポストするまで、プログラムは実行されたままになります。
 
 ## <a name="see-also"></a>関連項目
 
@@ -31,5 +27,4 @@ ms.locfileid: "51694324"
 [CSecurityDesc クラス](../atl/reference/csecuritydesc-class.md)<br/>
 [CSid クラス](../atl/reference/csid-class.md)<br/>
 [CDacl クラス](../atl/reference/cdacl-class.md)<br/>
-[Catlservicemodulet::run](../atl/reference/catlservicemodulet-class.md#run)
-
+[CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)

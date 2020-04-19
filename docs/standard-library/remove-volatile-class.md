@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: b327bb8362e1f6523d22950974012747e0de99f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442004"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451260"
 ---
 # <a name="removevolatile-class"></a>remove_volatile クラス
 
@@ -30,12 +30,12 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-インスタンス`remove_volatile<T>`、修飾型であるを保持`T1`とき*T*の形式は`volatile T1`それ以外の場合、 *T*します。
+*T*の形式`remove_volatile<T>` `T1` が`volatile T1`である場合、のインスタンスは変更された型を保持します。それ以外の場合は*t*です。
 
 ## <a name="example"></a>例
 
@@ -67,5 +67,5 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_volatile クラス](../standard-library/add-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_volatile クラス](../standard-library/add-volatile-class.md)

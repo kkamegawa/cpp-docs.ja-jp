@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 2769b52e03d8d3de14fdbf431279dd9226323b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348615"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl クラス
 
@@ -70,7 +70,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bForceMove*<br/>
+[in] *bForceMove*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -86,7 +86,7 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pTabbedBar*<br/>
+[in] *pTabbedBar*<br/>
 
 [in]*bFirstTime*<br/>
 

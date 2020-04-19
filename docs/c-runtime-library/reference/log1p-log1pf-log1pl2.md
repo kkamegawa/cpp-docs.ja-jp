@@ -1,11 +1,11 @@
----
+﻿---
 title: log1p、log1pf、log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519310"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953216"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -72,7 +75,7 @@ long double log1pl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、自然対数を返します (底*e*) のログ (*x* + 1)。
+成功した場合は、(*x* + 1) の自然 (底*e*) ログを返します。
 
 それ以外の場合は、次の値のいずれかを返します。
 
@@ -85,17 +88,17 @@ long double log1pl(
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|入力と同じ値。|INVALID||
-|±QNaN、不定値|入力と同じ値。|||
+|± QNaN、不定|入力と同じ値。|||
 
-**Errno**場合、値は ERANGE に設定*x* =-1。 **Errno**値に設定されて**EDOM**場合*x* <-1。
+*X* =-1 の場合、 **ERRNO**値は ERANGE に設定されます。 *X* <-1 の場合、 **Errno**値は**EDOM**に設定されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Log1p**関数を使用するよりもより正確な可能性があります`log(x + 1)`とき*x* 0 に近いです。
+*X*が0に近い場合、 **log1p**関数`log(x + 1)`はを使用するよりも正確な場合があります。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **log1p** を受け取って返す **float** と **長い** **二重**型。 C プログラムで**log1p**は、**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **log1p** を受け取って返す **float** と **long** **double**型。 C プログラムでは、 **log1p**は常に**double**を受け取り、返します。
 
-場合*x*が自然数では、この関数は、数値の階乗の対数を返します (*x* - 1)。
+*X*が自然数の場合、この関数は (*x* -1) の階乗の対数を返します。
 
 ## <a name="requirements"></a>必要条件
 

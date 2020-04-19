@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-ms.openlocfilehash: a7fd85263531968aeb4dd86534b4e67ddc553629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58c3ebe4c2a15aa3f0d59191c37a7f2422a63ab5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261209"
 ---
 # <a name="atl-control-wizard"></a>ATL コントロール ウィザード
 
@@ -46,7 +46,7 @@ ATL プロジェクト (または ATL サポートを MFC プロジェクト) �
 
    オブジェクトの省略名を設定します。 指定した名前は、クラスを決定します。 および**コクラス**ファイルの名前 (します。CPP とします。H) 名、インターフェイス名、および**型**名、フィールドを個別に変更しない限り、します。
 
-- **クラス**
+- **Class**
 
    オブジェクトを実装するクラスの名前を設定します。 この名前がで指定した名前に基づいて**短い名前**'C'、クラス名の一般的なプレフィックスが付いた、します。
 
@@ -100,4 +100,3 @@ ATL プロジェクト (または ATL サポートを MFC プロジェクト) �
 [ATL コントロール](../../atl/reference/adding-an-atl-control.md)<br/>
 [複合コントロールに機能を追加する](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)
-

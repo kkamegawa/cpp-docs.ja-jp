@@ -1,5 +1,5 @@
 ---
-title: 'Windows ソケット : 動作シーケンス'
+title: Windows ソケット:操作の順序
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], operations
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296515"
 ---
-# <a name="windows-sockets-sequence-of-operations"></a>Windows ソケット : 動作シーケンス
+# <a name="windows-sockets-sequence-of-operations"></a>Windows ソケット:操作の順序
 
 この記事は並行してにサーバー ソケットと、クライアント ソケットの操作のシーケンスを説明します。 ソケットを使用しているため`CArchive`オブジェクトは必ずしも[ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "50578640"
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - または -<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> (または両方)|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - または -<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> (または両方)|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - または -<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - または -<br /><br /> `arOut << dwValue;`6|
 
-1. 場所*に対して*ポート番号です。 参照してください[Windows ソケット: ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)ポートの詳細について。
+1. 場所*に対して*ポート番号です。 参照してください[Windows ソケット。ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)ポートの詳細について。
 
 2. クライアントが接続できるように、サーバーは、ポートを常に指定する必要があります。 `Create`呼び出しもアドレスを指定します。 クライアント側で利用可能なポートを使用する MFC を求める既定のパラメーターを使用します。
 
@@ -72,4 +72,3 @@ ms.locfileid: "50578640"
 [CSocket クラス](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

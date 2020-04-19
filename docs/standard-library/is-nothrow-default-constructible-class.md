@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76b58800a454f42f6b5b6fcea23df161c37564b2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429810"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455930"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible クラス
 
@@ -26,12 +26,12 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty* nothrow 既定コンス トラクターを持つ、それ以外の場合は false を保持します。 型述語のインスタンスは `is_nothrow_constructible<Ty>` と同じです。
+型が nothrow の既定のコンストラクター*を持つ場合*、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 型述語のインスタンスは `is_nothrow_constructible<Ty>` と同じです。
 
 ## <a name="requirements"></a>必要条件
 
@@ -41,4 +41,4 @@ struct is_nothrow_default_constructible;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

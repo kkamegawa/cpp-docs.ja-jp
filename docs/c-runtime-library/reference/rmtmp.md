@@ -1,9 +1,9 @@
 ---
 title: _rmtmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _rmtmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rmtmp
 - _rmtmp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 314399cf174974132a3635631162a7ffa89342c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508889"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949158"
 ---
-# <a name="rmtmp"></a>_rmtmp
+# <a name="_rmtmp"></a>_rmtmp
 
 一時ファイルの削除を削除します。
 
@@ -47,11 +50,11 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_rmtmp**閉じられ削除された一時ファイルの数を返します。
+**_rmtmp**は、終了して削除された一時ファイルの数を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 関数によって作成されたファイルのみを削除します**tmpfile**; 一時ファイルが作成された同じディレクトリ内でのみ使用します。
+**_Rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 関数は、 **tmpfile**によって作成されたファイルのみを削除します。一時ファイルが作成されたディレクトリと同じディレクトリ内でのみ使用してください。
 
 ## <a name="requirements"></a>必要条件
 

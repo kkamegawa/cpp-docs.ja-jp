@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 96769c0012b1271263d2217fe9b5ea1a36ec8446
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 927b9f5031bb6262c2f4a071b535802eb9e6990a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629945"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497961"
 ---
 # <a name="ca2wex-class"></a>CA2WEX クラス
 
-このクラスは、文字列変換マクロ CA2TEX、CA2CTEX、CT2WEX、および CT2CWEX、および typedef CA2W によって使用されます。
+このクラスは、文字列変換マクロ CA2TEX、CA2CTEX、CT2WEX、CT2CWEX、および typedef CA2W によって使用されます。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +34,7 @@ class CA2WEX
 #### <a name="parameters"></a>パラメーター
 
 *t_nBufferLength*<br/>
-変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。
+変換プロセスで使用されるバッファーのサイズ。 既定の長さは128バイトです。
 
 ## <a name="members"></a>メンバー
 
@@ -49,24 +49,24 @@ class CA2WEX
 
 |名前|説明|
 |----------|-----------------|
-|[CA2WEX::operator LPWSTR](#operator_lpwstr)|変換演算子。|
+|[CA2WEX:: operator LPWSTR](#operator_lpwstr)|変換演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|ソース文字列が格納されるデータ メンバー。|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|変換後の文字列の格納に使用される静的バッファー。|
+|[CA2WEX::m_psz](#m_psz)|ソース文字列を格納するデータメンバー。|
+|[CA2WEX::m_szBuffer](#m_szbuffer)|変換された文字列を格納するために使用する静的バッファー。|
 
 ## <a name="remarks"></a>Remarks
 
-追加の機能が必要でない限り、コードで CA2TEX、CA2CTEX、CT2WEX、CT2CWEX、または CA2W を使用します。
+追加機能が必要な場合を除き、コードで CA2TEX、CA2CTEX、CT2WEX、CT2CWEX、または CA2W を使用してください。
 
-このクラスには、固定サイズの静的バッファー変換の結果を格納するために使用が含まれています。 クラスでは、メモリを使用して割り当てます、結果が大きすぎて静的バッファーに収まるように場合、 **malloc**オブジェクトがスコープ外になるときに、メモリを解放します。 これにより、テキストとは異なり、ATL のこのクラスを安全にループ内で使用して、スタックがオーバーフローするしませんの以前のバージョンで使用できる変換マクロ。
+このクラスには、変換の結果を格納するために使用される固定サイズの静的バッファーが含まれています。 結果が大きすぎて静的バッファーに格納できない場合、クラスは**malloc**を使用してメモリを割り当て、オブジェクトがスコープ外に出るとメモリを解放します。 これにより、以前のバージョンの ATL で使用されていたテキスト変換マクロとは異なり、このクラスはループ内で安全に使用でき、スタックをオーバーフローすることはありません。
 
-クラスは、失敗をヒープにメモリの割り当てを試みると、それが呼び出す`AtlThrow`E_OUTOFMEMORY の引数を指定しています。
+クラスがヒープにメモリを割り当てようとして失敗した場合は`AtlThrow` 、E_OUTOFMEMORY の引数を指定してを呼び出します。
 
-既定では、ATL 変換クラスとマクロは、変換の現在のスレッドの ANSI コード ページを使用します。 特定の変換の動作をオーバーライドする場合は、クラスのコンス トラクターの 2 番目のパラメーターとしてコード ページを指定します。
+既定では、ATL の変換クラスとマクロは、現在のスレッドの ANSI コードページを使用して変換を行います。 特定の変換に対してその動作をオーバーライドする場合は、クラスのコンストラクターの2番目のパラメーターとしてコードページを指定します。
 
 次のマクロは、このクラスに基づいています。
 
@@ -82,17 +82,17 @@ class CA2WEX
 
 - CA2W
 
-これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。
+これらのテキスト変換マクロの詳細については、「 [ATL および MFC の文字列変換マクロ](string-conversion-macros.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。
+これらの文字列変換マクロの使用例については、「 [ATL および MFC の文字列変換マクロ](string-conversion-macros.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlconv.h
+**ヘッダー:** atlconv. h
 
-##  <a name="ca2wex"></a>  CA2WEX::CA2WEX
+##  <a name="ca2wex"></a>CA2WEX::CA2WEX
 
 コンストラクターです。
 
@@ -103,17 +103,17 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
-変換するテキスト文字列。
+*psz*<br/>
+変換されるテキスト文字列。
 
 *nCodePage*<br/>
-コード ページ変換を実行するために使用します。 Windows SDK 関数のコード ページ パラメーターの説明を参照してください。 [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)の詳細。
+変換を実行するために使用するコードページ。 詳細については、Windows SDK 関数[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)のコードページパラメーターの説明を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
 変換プロセスで使用されるバッファーを割り当てます。
 
-##  <a name="dtor"></a>  CA2WEX:: ~ CA2WEX
+##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX
 
 デストラクターです。
 
@@ -127,15 +127,15 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ##  <a name="m_psz"></a>  CA2WEX::m_psz
 
-ソース文字列が格納されるデータ メンバー。
+ソース文字列を格納するデータメンバー。
 
 ```
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer
+##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer
 
-変換後の文字列の格納に使用される静的バッファー。
+変換された文字列を格納するために使用する静的バッファー。
 
 ```
 wchar_t m_szBuffer[t_nBufferLength];
@@ -151,7 +151,7 @@ operator LPWSTR() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-LPWSTR を入力すると、テキスト文字列を返します。
+LPWSTR 型のテキスト文字列を返します。
 
 ## <a name="see-also"></a>関連項目
 

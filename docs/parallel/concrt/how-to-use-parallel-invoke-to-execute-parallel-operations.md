@@ -5,16 +5,16 @@ helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199b663331e3322601100206f222e80bbb7c8db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473685"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142264"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>方法: Parallel.Invoke を使用して並列操作を実行する
+# <a name="how-to-use-parallel_invoke-to-execute-parallel-operations"></a>方法: Parallel.Invoke を使用して並列操作を実行する
 
-この例は、使用する方法を示します、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)共有データ ソースに対して複数の操作を実行するプログラムのパフォーマンスを向上させるアルゴリズム。 操作によってソースが変更されるわけではないため、簡単に並列実行できます。
+この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、共有データソースに対して複数の操作を実行するプログラムのパフォーマンスを向上させる方法を示します。 操作によってソースが変更されるわけではないため、簡単に並列実行できます。
 
 ## <a name="example"></a>例
 
@@ -32,7 +32,7 @@ ms.locfileid: "50473685"
 
 ## <a name="example"></a>例
 
-次の例ではダウンロード*The Iliad* gutenberg.org から Homer によると、そのファイルに対して複数の操作を実行します。 この例では、これらの操作を逐次的に実行してから、同じ操作を並列に実行します。
+次の例では、gutenberg.org から Homer を使用して、そのファイルに対して複数の操作を実行し、この*ad*をダウンロードします。 この例では、これらの操作を逐次的に実行してから、同じ操作を並列に実行します。
 
 [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]
 
@@ -68,16 +68,15 @@ The following palindromes appear in the text:
 
 この例では 3 つのタスクを並列に実行するので、4 つ以上のプロセッサを搭載したコンピューターではパフォーマンスの向上を期待できません。 パフォーマンスを向上させるには、最も時間のかかるタスクを小さなタスクに分割し、それらのタスクを並列に実行します。
 
-使用することができます、`parallel_invoke`アルゴリズムの代わりに、 [concurrency::task_group](reference/task-group-class.md)と[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)クラスのキャンセルのサポートを必要としない場合。 使用量を比較する例については、`parallel_invoke`アルゴリズムとタスクのグループを参照してください[方法: parallel.invoke を使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)します。
+キャンセルのサポートを必要としない場合は、 [concurrency:: task_group](reference/task-group-class.md)クラスおよび[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)クラスではなく、`parallel_invoke` アルゴリズムを使用できます。 `parallel_invoke` アルゴリズムとタスクグループの使用方法を比較する例については、「[方法: parallel_invoke を使用して並列並べ替えルーチンを記述](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)する」を参照してください。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`parallel-word-mining.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、`parallel-word-mining.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc/MD/DUNICODE 用並列 word mining.cpp**
+> **cl.exe/EHsc/MD/DUNICODE/D_AFXDLL parallel-word-mining**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_invoke 関数](reference/concurrency-namespace-functions.md#parallel_invoke)
-

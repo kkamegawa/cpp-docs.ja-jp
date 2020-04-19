@@ -1,11 +1,11 @@
 ---
 title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543196"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939394"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
-実軸に沿って区間 [-1, +1] の外側の分岐線法を複素数のアーク コサインを取得します。
+実数軸に沿って区間 [-1, + 1] の外側に分岐がある場合に、複素数のアークコサインを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,15 +64,15 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-アーク コサイン*z*、(ラジアン単位)。 結果は、虚軸方向には無制限で、実軸方向には [0, π] の区間内になります。 ドメイン エラーが発生*z*区間 [-1, +1] の外側です。
+*Z*のアークコサイン (ラジアン)。 結果は、虚軸方向には無制限で、実軸方向には [0, π] の区間内になります。 *Z*が間隔 [-1, + 1] の外側にある場合は、ドメインエラーが発生します。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cacos**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cacos**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cacos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cacos** **は常に値を**取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cacos**、 **cacosf**、 **cacosl**|\<complex.h>|\<ccomplex>|
 

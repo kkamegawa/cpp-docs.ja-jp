@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: c4b7ce80762cdb49b6007eac7f6b26019b108795
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224411"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar クラス
 
@@ -105,7 +105,7 @@ virtual BOOL Create(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC サンプル SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-ms.openlocfilehash: 8398bc999e9a62d03990fd1b205ad438b6428431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6cf32bab86d741f3b0750c150c7bbc647b27ddc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248694"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 構造体
 
@@ -68,4 +68,3 @@ IDL で定義されたディスパッチ インターフェイス メソッド�
 [クラスと構造体](../../atl/reference/atl-classes.md)<br/>
 [IDispEventSimpleImpl クラス](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
-

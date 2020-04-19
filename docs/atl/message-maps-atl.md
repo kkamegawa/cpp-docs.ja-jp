@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-ms.openlocfilehash: 92d0b4887127e1803d1d3209a6a1dd51e9a98d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8b3fcb2f10f975ebdf68a285c7d5e364b9e1b4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250133"
 ---
 # <a name="message-maps-atl"></a>メッセージ マップ (ATL)
 
@@ -34,4 +34,3 @@ ATL もサポート動的チェインことのできる別のオブジェクト�
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウの実装](../atl/implementing-a-window.md)
-

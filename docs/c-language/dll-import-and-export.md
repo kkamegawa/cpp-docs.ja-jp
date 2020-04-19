@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: ab058610-0190-4354-8955-86db66add7c6
-ms.openlocfilehash: 8166b040f016ace542873f550b196b06c7c4572a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa7a3c088b34d484a39e91f58e55c72d42ef3b43
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531958"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152145"
 ---
 # <a name="dll-import-and-export"></a>DLL のインポートとエクスポート
 
@@ -21,6 +21,6 @@ dllimport と dllexport ストレージ クラス修飾子は C 言語への Mic
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)

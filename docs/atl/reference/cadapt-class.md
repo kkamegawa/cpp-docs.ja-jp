@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260741"
 ---
 # <a name="cadapt-class"></a>CAdapt クラス
 
@@ -51,7 +51,7 @@ class CAdapt
 |[CAdapt::operator T (& a)](#operator_t_amp)|`m_T` への参照を返します。|
 |[CAdapt::operator <](#operator_lt)|適合された型のオブジェクトを `m_T` と比較します。|
 |[CAdapt::operator =](#operator_eq)|適合された型のオブジェクトを `m_T` に割り当てます。|
-|[CAdapt::operator = =](#operator_eq_eq)|適合された型のオブジェクトを `m_T` と比較します。|
+|[CAdapt::operator ==](#operator_eq_eq)|適合された型のオブジェクトを `m_T` と比較します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -168,7 +168,7 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 現在のオブジェクトへの参照。
 
-##  <a name="operator_eq_eq"></a>  CAdapt::operator = =
+##  <a name="operator_eq_eq"></a>  CAdapt::operator ==
 
 適合された型のオブジェクトと比較[m_T](#m_t)します。
 

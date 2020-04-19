@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
-ms.openlocfilehash: 3f32307e519394433927d49aa92333fdff7b70f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb6b1043d976cfeb8cb92c8780c5b84ea9700b8b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587513"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760955"
 ---
 # <a name="compiler-error-c2883"></a>コンパイラ エラー C2883
 
-'name': 'identifier' を使用して宣言によって導入されると競合して関数の宣言
+' name ': 関数宣言は using 宣言で導入された ' identifier ' と競合しています。
 
-関数を複数回定義しようとしました。 最初の定義が、名前空間から行われた、`using`宣言します。 2 つ目は、ローカルの定義をしました。
+関数を複数回定義しようとしました。 最初の定義は、`using` 宣言を使用して名前空間から作成されたものです。 2つ目はローカル定義です。
 
 次の例では、C2883 が生成されます。
 
-```
+```cpp
 // C2883.cpp
 namespace A {
    void z(int);

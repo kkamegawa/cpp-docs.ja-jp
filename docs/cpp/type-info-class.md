@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-ms.openlocfilehash: 169a54373c66c2f6b33d71e68500c3bf85e871c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0cddd2c5cc09e77e8733ca88177c3b2223fc8ce
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560720"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68242081"
 ---
 # <a name="typeinfo-class"></a>type_info Class
 
@@ -23,11 +23,14 @@ ms.locfileid: "50560720"
 ```cpp
 class type_info {
 public:
+    type_info(const type_info& rhs) = delete; // cannot be copied
     virtual ~type_info();
-    size_t hash_code() const
+    size_t hash_code() const;
     _CRTIMP_PURE bool operator==(const type_info& rhs) const;
+    type_info& operator=(const type_info& rhs) = delete; // cannot be copied
     _CRTIMP_PURE bool operator!=(const type_info& rhs) const;
     _CRTIMP_PURE int before(const type_info& rhs) const;
+    size_t hash_code() const noexcept;
     _CRTIMP_PURE const char* name() const;
     _CRTIMP_PURE const char* raw_name() const;
 };

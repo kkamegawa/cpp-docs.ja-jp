@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451021"
 ---
 # <a name="integersequence-class"></a>integer_sequence クラス
 
@@ -34,10 +34,10 @@ struct integer_sequence
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 値の型。整数型である必要があります (bool、char、char16_t、char32_t、wchar_t、符号付きまたは符号なしの整数型)。
 
-*Vals*<br/>
+*Vals*\
 整数型 T の値のシーケンスを表す非型パラメーター パック。
 
 ## <a name="members"></a>メンバー
@@ -57,7 +57,7 @@ struct integer_sequence
 
 `a2t` 関数の `index_sequence` は、`size_t` 整数型に基づく `integer_sequence` のエイリアスです。 `make_index_sequence` は、0 から始まり、呼び出し元によって渡される配列と同じ数の要素を持つ `index_sequence` をコンパイル時に作成するエイリアスです。 `a2t` は値によって `index_sequence` を `a2t_` に渡します。ここで、式 `a[I]...` により `I` がアンパックされ、要素が `make_tuple` に渡されます。ここで、要素が個々の引数として使用されます。 たとえば、シーケンスに 3 つの要素が含まれる場合、`make_tuple` は make_tuple(a[0], a[1], a[2]) として呼び出されます。 もちろん、配列の要素は任意の型を持つことができます。
 
-Apply 関数は、 [std::tuple](../standard-library/tuple-class.md)、し、生成、`integer_sequence`を使用して、`tuple_size`ヘルパー クラス。 なお[std::decay_t](../standard-library/decay-class.md)が必要なため、 [tuple_size](../standard-library/tuple-size-class-tuple.md)参照型では機能しません。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
+Apply 関数は、 [std:: tuple](../standard-library/tuple-class.md)を受け取り、 `integer_sequence` `tuple_size`ヘルパークラスを使用してを生成します。 [Tuple_size](../standard-library/tuple-size-class-tuple.md)は参照型では動作しないため、 [std::d ecay_t](../standard-library/decay-class.md)が必要であることに注意してください。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
 
 ```cpp
 #include <stddef.h>
@@ -125,4 +125,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[省略記号と可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)<br/>
+[省略記号と可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)

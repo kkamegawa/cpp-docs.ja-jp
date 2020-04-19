@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: b7f51ccd266fce1b5d614dfe2c725e20fde6f297
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245921"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits クラス
 
@@ -73,7 +73,7 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>Remarks
 
-この関数の既定の実装は、等しいかどうか (**==**) 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
+この関数の既定の実装は、等しいかどうか ( **==** ) 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
 
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
 
@@ -103,7 +103,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>Remarks
 
-この関数の既定の実装を使用して、 **==**、 **\<**、および**>** 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
+この関数の既定の実装を使用して、 **==** 、 **\<** 、および **>** 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

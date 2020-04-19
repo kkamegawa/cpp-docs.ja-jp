@@ -1,20 +1,18 @@
 ---
 title: 汎用コントロール ハンドラー
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.controls
 helpviewer_keywords:
 - handlers [MFC], ON_CONTROL
 - handlers [MFC]
 - GenericControl Handler [MFC]
 - ON_CONTROL macro [MFC]
 ms.assetid: 1e25e583-5d5a-4363-8904-839991a8570d
-ms.openlocfilehash: fed8e40b54728ee2a84f86b1a9a8ade2c44e0fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 350c0337b0b43018000c4be318821cc97cdf07c0
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586320"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612169"
 ---
 # <a name="generic-control-handler"></a>汎用コントロール ハンドラー
 
@@ -22,9 +20,8 @@ ms.locfileid: "50586320"
 
 |マップ エントリ|関数プロトタイプ|
 |---------------|------------------------|
-|ON_CONTROL ( \<wNotifyCode >、 \<id >、 \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CONTROL( \<wNotifyCode>, \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
 
 ## <a name="see-also"></a>関連項目
 
 [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)
-

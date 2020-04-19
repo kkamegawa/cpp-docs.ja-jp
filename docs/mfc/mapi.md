@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MAPI, MFC
 - enabling applications for mail [MFC]
 ms.assetid: 193449f7-b131-4ab0-9301-8d4f6cd1e7c4
-ms.openlocfilehash: 0f32b3626d23d0df0f0eb4fd6edc68188f754a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5f60e1ba8c2b68ddca312859694f532e38da965
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365163"
 ---
 # <a name="mapi"></a>MAPI
 
@@ -36,4 +36,3 @@ MAPI の詳細については、Windows SDK のガイドで Win32 MAPI (Messagin
 [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
 [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
 [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
-

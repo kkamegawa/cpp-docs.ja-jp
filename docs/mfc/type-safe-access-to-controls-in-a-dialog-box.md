@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type-safe access to dialog box controls
 - MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
-ms.openlocfilehash: 61a4df25ccc310ff65e1789b5405fcf395213a3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b8e5aef61d1a7c7277f2a6bd37b81bd156bb837
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181619"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>ダイアログ ボックスのコントロールへのタイプ セーフ アクセス
 
@@ -30,4 +30,3 @@ ms.locfileid: "50612304"
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)
-

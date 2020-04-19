@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522539"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744374"
 ---
 # <a name="global-variables"></a>グローバル変数
 
@@ -30,7 +30,7 @@ Microsoft C ランタイム ライブラリには、次のグローバル変数�
 |[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|文字分類関数によって使用される情報を格納します。|
 |[_pgmptr、_wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|非推奨。 代わりに、`_get_pgmptr` または `_get_wpgmptr` を使用します。<br /><br /> プログラムの起動時に、プログラムの呼び出し方法に応じて、プログラムの完全修飾パスまたは相対パス、完全なプログラム名、またはファイル名拡張子の付かないプログラム名に初期化されます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)<br/>

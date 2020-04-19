@@ -1,5 +1,5 @@
 ---
-title: 方法:-clr に移行
+title: '方法: -Clr に移行します。'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454445"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448092"
 ---
-# <a name="how-to-migrate-to-clr"></a>方法: /clr に移行する
+# <a name="how-to-migrate-to-clr"></a>方法: /Clr:pure に移行します。
 
 このトピックでは、ネイティブ コードをコンパイルするときに発生する問題を説明 **/clr** (を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細については)。 **/clr**ネイティブの C++ コードを呼び出し、その他のネイティブ C++ コードだけでなく、.NET アセンブリから呼び出すことができます。 参照してください[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)を使用してコンパイルの利点の詳細についての **/clr**します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50454445"
 
 Visual Studio がライブラリ プロジェクトをコンパイルするときに、既知の問題を含む **/clr**:
 
-- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例えば:
+- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例:
 
     ```
     // MFC extension DLL Header file:
@@ -41,13 +41,13 @@ Visual Studio がライブラリ プロジェクトをコンパイルすると�
 
 最も簡単なパスを指定する順番では、その後に、次の手順を **/clr**コンパイルします。 これらの手順では、手順ごとにプロジェクトをコンパイルして実行することが重要です。
 
-### <a name="versions-prior-to-visual-c-2003"></a>Visual C++ 2003 以前のバージョン
+### <a name="versions-prior-to-visual-studio-2003"></a>Visual Studio 2003 より前のバージョン
 
-Visual C++ 2003 以前のバージョンから Visual Studio 2010 にアップグレードする場合、Visual C++ 2003 の C++ 標準に対する準拠が強化されたことに関連するコンパイル エラーが発生することがあります。
+強化されたに関連するコンパイラ エラーが発生する可能性があります Visual Studio 2003 より前のバージョンから Visual Studio 2010 にアップグレードする場合C++Visual Studio 2003 で標準の準拠
 
-### <a name="upgrading-from-visual-c-2003"></a>Visual C++ 2003 からのアップグレード
+### <a name="upgrading-from-visual-studio-2003"></a>Visual Studio 2003 からアップグレードします。
 
-せず以前に Visual C 2003 で作成されたプロジェクトをコンパイルするときも、まず **/clr** ANSI/ISO 準拠といくつかの重大な変更に、Visual Studio が今すぐ増加はします。 最も注意が必要な可能性のある変更は[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)します。 CRT を使用するコードでは、廃止警告が生成される可能性があります。 これらの警告は、抑制しますですが、新しい移行[セキュリティが強化されたバージョンの CRT 関数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)はより強力なセキュリティを提供し、コードのセキュリティの問題を表示することがあります。
+せず以前に Visual Studio 2003 で作成されたプロジェクトをコンパイルするときも、まず **/clr** ANSI/ISO 準拠といくつかの重大な変更に、Visual Studio が今すぐ増加はします。 最も注意が必要な可能性のある変更は[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)します。 CRT を使用するコードでは、廃止警告が生成される可能性があります。 これらの警告は、抑制しますですが、新しい移行[セキュリティが強化されたバージョンの CRT 関数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)はより強力なセキュリティを提供し、コードのセキュリティの問題を表示することがあります。
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>C++ マネージド拡張からのアップグレード
 
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**開発環境で次の手順で選択できる[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。 既に説明したように、この手順によって競合するプロジェクト設定は自動的に無効になります。
 
 > [!NOTE]
->  マネージ ライブラリまたは web サービス プロジェクトを Visual C 2003 からアップグレードする場合、 **/Zl**に追加されたコンパイラ オプションは、**コマンドライン**プロパティ ページ。 これによって LNK2001 が発生します。 削除 **/Zl**から、**コマンドライン**解決するのには、プロパティ ページ。 参照してください[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)と[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)詳細についてはします。 または、msvcrt.lib および msvcmrt.lib をリンカーに追加**追加の依存関係**プロパティ。
+>  マネージ ライブラリまたは web サービス プロジェクトを Visual Studio 2003 からアップグレードする場合、 **/Zl**に追加されたコンパイラ オプションは、**コマンドライン**プロパティ ページ。 これによって LNK2001 が発生します。 削除 **/Zl**から、**コマンドライン**解決するのには、プロパティ ページ。 参照してください[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)と[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)詳細についてはします。 または、msvcrt.lib および msvcmrt.lib をリンカーに追加**追加の依存関係**プロパティ。
 
 メイクファイルでビルドされたプロジェクトでは、互換性のないコンパイラ オプションを後に手動で無効する必要があります **/clr**が追加されます。 参照してください/[/clr の制約](../build/reference/clr-restrictions.md)と互換性のないコンパイラ オプションについて **/clr**します。
 
@@ -152,7 +152,7 @@ MSIL に対して生成されたネイティブの C++ メソッドが (仮想�
 
 ## <a name="using-new-visual-c-features"></a>Visual C++ の新機能の使用
 
-アプリケーションのコンパイル、リンク、および実行をした後でコンパイルされたモジュールで .NET 機能の使用を開始できます **/clr**します。 詳細については、「[Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)」を参照してください。
+アプリケーションのコンパイル、リンク、および実行をした後でコンパイルされたモジュールで .NET 機能の使用を開始できます **/clr**します。 詳細については、「[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
 C++ のマネージド拡張を使用していた場合は、新しい構文を使用してコードを変換できます。 C++ マネージ拡張を変換する方法の詳細については、次を参照してください。 [C +/cli 移行ガイド](../dotnet/cpp-cli-migration-primer.md)します。
 
@@ -162,7 +162,7 @@ Visual C++ での .NET プログラミングの詳細については、以下の
 
 - [ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)
 
-- [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+- [ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>関連項目
 

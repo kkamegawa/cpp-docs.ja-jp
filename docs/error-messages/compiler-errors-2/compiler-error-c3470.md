@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3470
 ms.assetid: 170c7a9d-214d-41b1-8f15-d4a4fc38aaa5
-ms.openlocfilehash: 7d6c8627fe0904dd2fe81dd805d8f87bbebf29c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9bda55c7a65eb5eec4e1f5104a779a817ad5c36
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504457"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760492"
 ---
 # <a name="compiler-error-c3470"></a>コンパイラ エラー C3470
 
@@ -19,11 +19,11 @@ ms.locfileid: "50504457"
 
 型に既定のインデクサーと演算子 [] の両方を定義することはできません
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3470 が生成されます。
 
-```
+```cpp
 // C3470.cpp
 // compile with: /clr
 using namespace System;

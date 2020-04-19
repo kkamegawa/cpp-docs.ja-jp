@@ -18,16 +18,16 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: c18f28cac89288096b812635e77194bfb5dd224b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d55a6d6bfbcc6921fa0633753365f5799388dc27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497249"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray クラス
 
-このクラスの配列を格納する`IUnknown`ポインター。
+このクラスは、ポインターの`IUnknown`配列を格納します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,41 +41,41 @@ class CComDynamicUnkArray
 
 |名前|説明|
 |----------|-----------------|
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|コンストラクターです。 コレクション値を NULL とコレクションのサイズを 0 に初期化します。|
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|コンストラクターです。 コレクションの値を NULL に、コレクションのサイズを0に初期化します。|
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComDynamicUnkArray::Add](#add)|追加するには、このメソッドを呼び出す、`IUnknown`配列へのポインター。|
-|[CComDynamicUnkArray::begin](#begin)|最初のポインターを返します`IUnknown`コレクション内のポインター。|
-|[CComDynamicUnkArray::clear](#clear)|配列が空にします。|
-|[CComDynamicUnkArray::end](#end)|最後にポインターを返します`IUnknown`コレクション内のポインター。|
+|[CComDynamicUnkArray::Add](#add)|配列への`IUnknown`ポインターを追加するには、このメソッドを呼び出します。|
+|[CComDynamicUnkArray:: begin](#begin)|コレクション内の最初`IUnknown`のポインターへのポインターを返します。|
+|[CComDynamicUnkArray::clear](#clear)|配列を空にします。|
+|[CComDynamicUnkArray:: end](#end)|コレクション内の最後`IUnknown`のポインターの1つ後ろへのポインターを返します。|
 |[CComDynamicUnkArray::GetAt](#getat)|指定したインデックス位置にある要素を取得します。|
-|[CComDynamicUnkArray::GetCookie](#getcookie)|関連付けられているクッキーを取得するには、このメソッドを呼び出して、指定された`IUnknown`ポインター。|
+|[CComDynamicUnkArray::GetCookie](#getcookie)|指定`IUnknown`したポインターに関連付けられているクッキーを取得するには、このメソッドを呼び出します。|
 |[CComDynamicUnkArray::GetSize](#getsize)|配列の長さを返します。|
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|取得するには、このメソッドを呼び出す、`IUnknown`ポインターに関連付けられたクッキーを指定します。|
-|[CComDynamicUnkArray::Remove](#remove)|削除するには、このメソッドを呼び出す、`IUnknown`配列からポインター。|
+|[CComDynamicUnkArray:: GetUnknown](#getunknown)|特定のクッキーに関連付け`IUnknown`られているポインターを取得するには、このメソッドを呼び出します。|
+|[CComDynamicUnkArray::Remove](#remove)|配列から`IUnknown`ポインターを削除するには、このメソッドを呼び出します。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComDynamicUnkArray` 動的に割り当てられた配列を保持`IUnknown`ポインター、接続のインターフェイスの各ポイントします。 `CComDynamicUnkArray` パラメーターとして使用できる、 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)テンプレート クラス。
+`CComDynamicUnkArray`接続ポイントのインターフェイスを動的`IUnknown`に割り当てられたポインターの配列を保持します。 `CComDynamicUnkArray`は、 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)テンプレートクラスのパラメーターとして使用できます。
 
-`CComDynamicUnkArray`メソッド[開始](#begin)と[エンド](#end)(たとえば、イベントが発生したときに) すべてのコネクション ポイントをループするために使用できます。
+[begin](#begin) および [end](#end) メソッドを使用して、すべてのコネクションポイントをループ処理できます (たとえば、イベントが発生したとき)。 `CComDynamicUnkArray`
 
-参照してください[オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md)詳細については接続の作成を自動化することでプロキシをポイントします。
+接続ポイントプロキシの作成を自動化する方法の詳細については[、「オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md)」を参照してください。
 
 > [!NOTE]
-> **注**クラス`CComDynamicUnkArray`によって使用されます、**クラスの追加**接続ポイントを持つコントロールを作成するときにウィザード。 接続ポイントの数を手動で指定する場合は、変更からの参照を`CComDynamicUnkArray`に`CComUnkArray<` *n* `>`ここで、 *n*コネクション ポイントの数です必須。
+> **メモ**クラス`CComDynamicUnkArray`は、接続ポイントを持つコントロールを作成するときに、**クラスの追加**ウィザードによって使用されます。 接続ポイントの数を手動で指定する場合は、参照`CComDynamicUnkArray`をから*n* `>`に`CComUnkArray<`変更します。ここで、 *n*は必要な接続ポイントの数です。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
 ##  <a name="add"></a>  CComDynamicUnkArray::Add
 
-追加するには、このメソッドを呼び出す、`IUnknown`配列へのポインター。
+配列への`IUnknown`ポインターを追加するには、このメソッドを呼び出します。
 
 ```
 DWORD Add(IUnknown* pUnk);
@@ -84,15 +84,15 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="parameters"></a>パラメーター
 
 *pUnk*<br/>
-`IUnknown`ポインター、配列に追加します。
+配列に追加するポインター。`IUnknown`
 
 ### <a name="return-value"></a>戻り値
 
 新しく追加されたポインターに関連付けられているクッキーを返します。
 
-##  <a name="begin"></a>  CComDynamicUnkArray::begin
+##  <a name="begin"></a>CComDynamicUnkArray:: begin
 
-コレクションの先頭にポインターを返します`IUnknown`インターフェイス ポインター。
+インターフェイスポインターの`IUnknown`コレクションの先頭へのポインターを返します。
 
 ```
 IUnknown**
@@ -101,23 +101,23 @@ IUnknown**
 
 ### <a name="return-value"></a>戻り値
 
-ポインター、`IUnknown`インターフェイス ポインター。
+`IUnknown`インターフェイスポインターへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-コレクションにはとしてローカルに格納されているインターフェイスへのポインターが含まれています`IUnknown`します。 それぞれをキャストする`IUnknown`インターフェイスを実際のインターフェイス型としています。 まず、インターフェイスに対してクエリを実行する必要はありません。
+コレクションには、として`IUnknown`ローカルに格納されるインターフェイスへのポインターが含まれています。 各`IUnknown`インターフェイスを実際のインターフェイス型にキャストしてから、を呼び出します。 最初にインターフェイスを照会する必要はありません。
 
-使用する前に、`IUnknown`インターフェイス、NULL がないこと確認する必要があります。
+`IUnknown`インターフェイスを使用する前に、それが NULL でないことを確認する必要があります。
 
-##  <a name="clear"></a>  CComDynamicUnkArray::clear
+##  <a name="clear"></a>CComDynamicUnkArray:: clear
 
-配列が空にします。
+配列を空にします。
 
 ```
 void clear();
 ```
 
-##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray
+##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray
 
 コンストラクターです。
 
@@ -127,9 +127,9 @@ CComDynamicUnkArray();
 
 ### <a name="remarks"></a>Remarks
 
-コレクションのサイズを 0 に設定し、null 値を初期化します。 デストラクターは、必要に応じて、コレクションを解放します。
+コレクションのサイズをゼロに設定し、値を NULL に初期化します。 必要に応じて、デストラクターによってコレクションが解放されます。
 
-##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray
+##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray
 
 デストラクターです。
 
@@ -139,11 +139,11 @@ CComDynamicUnkArray();
 
 ### <a name="remarks"></a>Remarks
 
-クラスのコンス トラクターによって割り当てられたリソースを解放します。
+クラスコンストラクターによって割り当てられたリソースを解放します。
 
-##  <a name="end"></a>  CComDynamicUnkArray::end
+##  <a name="end"></a>CComDynamicUnkArray:: end
 
-最後にポインターを返します`IUnknown`コレクション内のポインター。
+コレクション内の最後`IUnknown`のポインターの1つ後ろへのポインターを返します。
 
 ```
 IUnknown**
@@ -152,9 +152,9 @@ IUnknown**
 
 ### <a name="return-value"></a>戻り値
 
-ポインター、`IUnknown`インターフェイス ポインター。
+`IUnknown`インターフェイスポインターへのポインター。
 
-##  <a name="getat"></a>  CComDynamicUnkArray::GetAt
+##  <a name="getat"></a>CComDynamicUnkArray:: GetAt
 
 指定したインデックス位置にある要素を取得します。
 
@@ -169,11 +169,11 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="return-value"></a>戻り値
 
-ポインター、 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)インターフェイス。
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスへのポインター。
 
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie
 
-関連付けられているクッキーを取得するには、このメソッドを呼び出して、指定された`IUnknown`ポインター。
+指定`IUnknown`したポインターに関連付けられているクッキーを取得するには、このメソッドを呼び出します。
 
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -182,17 +182,17 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="parameters"></a>パラメーター
 
 *ppFind*<br/>
-`IUnknown`ポインターに関連付けられている cookie が必要です。
+関連付けられているクッキーが必要なポインター。`IUnknown`
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられているクッキーを返します、`IUnknown`ポインター、または一致する場合は 0`IUnknown`ポインターが見つかりました。
+`IUnknown`ポインターに関連付けられているクッキーを返します。 `IUnknown`一致するポインターが見つからない場合は0を返します。
 
 ### <a name="remarks"></a>Remarks
 
-同じ 1 つ以上のインスタンスがある場合`IUnknown`ポインター、この関数は、1 つ目の cookie を返します。
+同じ`IUnknown`ポインターのインスタンスが複数ある場合、この関数は最初のインスタンスのクッキーを返します。
 
-##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize
+##  <a name="getsize"></a>CComDynamicUnkArray:: GetSize
 
 配列の長さを返します。
 
@@ -204,9 +204,9 @@ int GetSize() const;
 
 配列の長さ。
 
-##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown
+##  <a name="getunknown"></a>CComDynamicUnkArray:: GetUnknown
 
-取得するには、このメソッドを呼び出す、`IUnknown`ポインターに関連付けられたクッキーを指定します。
+特定のクッキーに関連付け`IUnknown`られているポインターを取得するには、このメソッドを呼び出します。
 
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -215,15 +215,15 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="parameters"></a>パラメーター
 
 *dwCookie*<br/>
-Cookie を関連付けられている`IUnknown`ポインターが必要です。
+関連付けら`IUnknown`れたポインターが必要なクッキー。
 
 ### <a name="return-value"></a>戻り値
 
-返します、`IUnknown`ポインター、または一致する cookie が検出されない場合は NULL です。
+`IUnknown`ポインターを返します。一致するクッキーが見つからない場合は NULL を返します。
 
 ##  <a name="remove"></a>  CComDynamicUnkArray::Remove
 
-削除するには、このメソッドを呼び出す、`IUnknown`配列からポインター。
+配列から`IUnknown`ポインターを削除するには、このメソッドを呼び出します。
 
 ```
 BOOL Remove(DWORD dwCookie);
@@ -232,11 +232,11 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="parameters"></a>パラメーター
 
 *dwCookie*<br/>
-Cookie を参照すること、`IUnknown`ポインター、配列から削除します。
+配列から削除する`IUnknown`ポインターを参照しているクッキー。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターが削除されたかどうかは TRUE を返しますそれ以外の場合は FALSE です。
+ポインターが削除された場合は TRUE を返します。それ以外の場合は FALSE。
 
 ## <a name="see-also"></a>関連項目
 

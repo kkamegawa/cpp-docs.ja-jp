@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 4ad48ea0bc09e098a41cb9aa969a08e9ead48f73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 148433f0d959985eb5a874f588f8cbf9d377e8b7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484832"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735958"
 ---
 # <a name="compiler-error-c3299"></a>コンパイラ エラー C3299
 
@@ -21,13 +21,13 @@ ms.locfileid: "50484832"
 
 オーバーライドするジェネリック関数の制約句が継承されます。
 
-詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
+詳細については、「[Constraints on Generic Type Parameters (C++/CLI) (ジェネリック型パラメーターの (C++/CLI))](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3299 が生成されます。
 
-```
+```cpp
 // C3299.cpp
 // compile with: /clr /c
 public ref struct R {

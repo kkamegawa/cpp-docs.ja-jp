@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 18b95884bb673305398739968ef2530e8c4778d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649138"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689825"
 ---
-# <a name="codecvtutf16"></a>codecvt_utf16
+# <a name="codecvt_utf16"></a>codecvt_utf16
 
 UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-16LE または UTF-16BE としてエンコードされたバイト ストリームを変換する[ロケール](../standard-library/locale-class.md) ファセットを表します。
 
@@ -24,23 +24,23 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem* \
 ワイド文字要素型。
 
-*Maxcode*<br/>
+*Maxcode* \
 ロケール ファセットの文字の最大数。
 
-*モード*<br/>
+*モード*\
 ロケール ファセットの構成情報。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスでは、UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-16LE (Mode と little_endian の場合) または UTF-16BE (その他の場合) としてエンコードされたバイト ストリームを変換します。
+このクラステンプレートは、UCS 2 または UCS 4 としてエンコードされたワイド文字と、16LE としてエンコードされたバイトストリームを変換します (モード & little_endian の場合)。それ以外の場合は UTF-16 を使用します。
 
 このバイト ストリームはバイナリ ファイルに書き込む必要があります。テキスト ファイルに書き込むと、破損する場合があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 ヘッダー: \<codecvt >
 
-Namespace: std
+名前空間: std

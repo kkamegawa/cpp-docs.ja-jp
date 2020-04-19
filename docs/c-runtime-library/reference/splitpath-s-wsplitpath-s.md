@@ -1,10 +1,10 @@
 ---
 title: _splitpath_s、_wsplitpath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath_s
 - _splitpath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsplitpath_s
 - splitpath_s
@@ -30,14 +34,14 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602905"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625837"
 ---
-# <a name="splitpaths-wsplitpaths"></a>_splitpath_s、_wsplitpath_s
+# <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s、_wsplitpath_s
 
 パス名をコンポーネントに分割します。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_splitpath、_wsplitpath](splitpath-wsplitpath.md) です。
 
@@ -87,31 +91,31 @@ errno_t _wsplitpath_s(
 ### <a name="parameters"></a>パラメーター
 
 *path*<br/>
-完全なパス。
+完全パス。
 
-*ドライブ*<br/>
-ドライブ文字、コロン (**:**)。 渡すことができます**NULL**ドライブ文字を必要としない場合は、このパラメーターにします。
+*駆動*<br/>
+ドライブ文字、コロン ( **:** ) の順に並べます。 ドライブ文字が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *driveNumberOfElements*<br/>
-サイズ、*ドライブ*1 バイト文字またはワイド文字バッファー。 場合*ドライブ*は**NULL**、この値は 0 である必要があります。
+1バイト文字またはワイド文字の*ドライブ*バッファーのサイズ。 *ドライブ*が**NULL**の場合、この値は0にする必要があります。
 
-*dir*<br/>
-末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、または両方を使用できます。 渡すことができます**NULL**ディレクトリ パスを必要としない場合は、このパラメーターにします。
+*エイリアス*<br/>
+末尾のスラッシュを含む、ディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、またはその両方を使用できます。 ディレクトリパスが不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *dirNumberOfElements*<br/>
-サイズ、 *dir* 1 バイト文字またはワイド文字バッファー。 場合*dir*は**NULL**、この値は 0 である必要があります。
+1バイト文字またはワイド文字の*dir*バッファーのサイズ。 *Dir*が**NULL**の場合、この値は0である必要があります。
 
-*fname*<br/>
-拡張子なしの基本ファイル名。 渡すことができます**NULL**ファイル名を必要としない場合は、このパラメーターにします。
+*氏名*<br/>
+拡張子なしの基本ファイル名。 ファイル名が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *nameNumberOfElements*<br/>
-サイズ、 *fname* 1 バイト文字またはワイド文字バッファー。 場合*fname*は**NULL**、この値は 0 である必要があります。
+1バイト文字またはワイド文字の*fname*バッファーのサイズ。 *Fname*が**NULL**の場合、この値は0である必要があります。
 
 *ext*<br/>
-先頭のピリオドを含むファイル名の拡張子 (**.**)。渡すことができます**NULL**ファイル名拡張子が必要ない場合は、このパラメーターにします。
+先頭のピリオド ( **.** ) を含むファイル名の拡張子。ファイル名の拡張子が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *extNumberOfElements*<br/>
-サイズ*ext* 1 バイト文字またはワイド文字バッファー。 場合*ext*は**NULL**、この値は 0 である必要があります。
+1バイト文字またはワイド文字の*ext*バッファーのサイズ。 *Ext*が**NULL**の場合、この値は0である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
@@ -121,23 +125,23 @@ errno_t _wsplitpath_s(
 
 |条件|戻り値|
 |---------------|------------------|
-|*パス*は**NULL**|**EINVAL**|
-|*ドライブ*は**NULL**、 *driveNumberOfElements* 0 以外の場合|**EINVAL**|
-|*ドライブ*以外**NULL**、 *driveNumberOfElements*は 0 です|**EINVAL**|
-|*dir*は**NULL**、 *dirNumberOfElements* 0 以外の場合|**EINVAL**|
-|*dir*以外**NULL**、 *dirNumberOfElements*は 0 です|**EINVAL**|
-|*fname*は**NULL**、 *nameNumberOfElements* 0 以外の場合|**EINVAL**|
-|*fname*以外**NULL**、 *nameNumberOfElements*は 0 です|**EINVAL**|
-|*ext*は**NULL**、 *extNumberOfElements* 0 以外の場合|**EINVAL**|
-|*ext*以外**NULL**、 *extNumberOfElements*は 0 です|**EINVAL**|
+|*パス*が**NULL**です|**EINVAL**|
+|*ドライブ*が**NULL**で、 *driveNumberOfElements*が0ではない|**EINVAL**|
+|*ドライブ*が**NULL**以外で、 *driveNumberOfElements*が0です。|**EINVAL**|
+|*dir*が**NULL**です。 *dirnumberofelements*が0ではありません|**EINVAL**|
+|*dir*が**NULL**ではありません。 *dirnumberofelements*が0です。|**EINVAL**|
+|*fname*が**NULL**で、 *nameNumberOfElements*が0ではありません|**EINVAL**|
+|*fname*が**NULL**以外で、 *nameNumberOfElements*が0です。|**EINVAL**|
+|*ext*が**NULL**で、 *extnumberofelements*が0ではありません|**EINVAL**|
+|*ext*が**NULL**ではなく、 *extnumberofelements*が0です。|**EINVAL**|
 
-上記のいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+上記のいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
-これらの関数がオフに設定すると、空の文字列のすべてのバッファーでバッファーのいずれかが、結果を保持するには短すぎる場合は、 **errno**に**ERANGE**、戻って**ERANGE**します。
+バッファーのいずれかが短すぎて結果を保持できない場合、これらの関数はすべてのバッファーを空の文字列にクリアし、 **errno**を**ERANGE**に設定し、 **ERANGE**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Splitpath_s**関数は、4 つのコンポーネントにパスを解除します。 **_splitpath_s**自動的に現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてマルチバイト文字の文字列引数を処理します。 **_wsplitpath_s**のワイド文字バージョンは、 **_splitpath_s**; 引数 **_wsplitpath_s**はワイド文字列です。 それ以外では、これらの関数の動作は同じです
+**_Splitpath_s**関数は、パスを4つのコンポーネントに分割します。 **_splitpath_s**は、現在使用中のマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wsplitpath_s**は、 **_splitpath_s**のワイド文字バージョンです。 **_wsplitpath_s**の引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -145,31 +149,31 @@ errno_t _wsplitpath_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-完全なパスの各コンポーネントが別々 のバッファーに格納されています。マニフェスト定数 **_MAX_DRIVE**、 **_MAX_DIR**、 **_MAX_FNAME**、および **_MAX_EXT** (STDLIB で定義されています。H) ファイルの各コンポーネントの最大許容サイズを指定します。 対応するマニフェスト定数よりも大きいファイル コンポーネントでは、ヒープ破損が発生します。
+完全パスの各コンポーネントは、個別のバッファーに格納されます。マニフェスト**定数 (** **_MAX_DIR**、 **_MAX_FNAME**、および stdlib.h> で定義されて**いる)。** H) 各ファイルコンポーネントに許容される最大サイズを指定します。 対応するマニフェスト定数よりも大きいファイル コンポーネントでは、ヒープ破損が発生します。
 
 マニフェスト定数の値を次の表に示します。
 
-|名前|[値]|
+|名|[値]|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-完全なパスにコンポーネント (たとえば、filename) が含まれていない場合 **_splitpath_s**対応するバッファーに空の文字列を割り当てます。
+完全なパスにコンポーネント (たとえばファイル名) が含まれていない場合、 **_splitpath_s**は対応するバッファーに空の文字列を割り当てます。
 
-C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

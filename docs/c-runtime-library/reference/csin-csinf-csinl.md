@@ -1,11 +1,11 @@
 ---
 title: csin、csinf、csinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csin
 - csinf
 - csinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csin
 - csinf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633494"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941988"
 ---
 # <a name="csin-csinf-csinl"></a>csin、csinf、csinl
 
@@ -68,17 +71,17 @@ _Lcomplex csinl(
 
 ## <a name="return-value"></a>戻り値
 
-サイン*z*、(ラジアン単位)。
+*Z*のサイン (ラジアン)。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **csin**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**csin**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す、 **csin**オーバーロードを呼び出すことができます。 C プログラムでは、 **csin**は常にを受け取り、**戻り値を**返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**csin**、 **csinf**、 **csinl**|\<complex.h>|\<ccomplex>|
+|**csin**、 **csinf**、 **csinf**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

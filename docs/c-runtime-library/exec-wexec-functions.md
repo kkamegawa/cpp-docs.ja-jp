@@ -1,7 +1,7 @@
 ---
 title: _exec、_wexec 系関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _texecve
 - texecl
@@ -53,14 +56,14 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573369"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300307"
 ---
-# <a name="exec-wexec-functions"></a>_exec、_wexec 系関数
+# <a name="_exec-_wexec-functions"></a>_exec、_wexec 系関数
 
 この系列の各関数は、新しいプロセスを読み込んで実行します。
 
@@ -82,7 +85,7 @@ ms.locfileid: "50573369"
 
 ## <a name="remarks"></a>コメント
 
-各 `_exec` 関数は、新しいプロセスを読み込んで実行します。 `_exec` 系関数はすべて、同じオペレーティング システム関数 ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)) を使います。 `_exec` 系関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wexec` 系関数は、`_exec` 系関数のワイド文字バージョンです。 `_wexec` 系関数の処理内容は `_exec` 系関数とほぼ同様ですが、マルチバイト文字列は処理しません。
+各 `_exec` 関数は、新しいプロセスを読み込んで実行します。 `_exec` 系関数はすべて、同じオペレーティング システム関数 ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)) を使います。 `_exec` 系関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wexec` 系関数は、`_exec` 系関数のワイド文字バージョンです。 `_wexec` 系関数の処理内容は `_exec` 系関数とほぼ同様ですが、マルチバイト文字列は処理しません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -105,7 +108,7 @@ ms.locfileid: "50573369"
 >  文字列に空白が含まれる場合、予期しない動作になることがあります。たとえば、`_exec` を `"hi there"` という文字列に渡すと、新しいプロセスは `"hi"` と `"there"` という 2 つの引数を使用する結果になります。 新しいプロセスでは "hi there" というファイルを開こうとするため、プロセスは失敗します。 この問題を回避するには、`"\"hi there\""` のように文字列を引用符で囲みます。
 
 > [!IMPORTANT]
->  ユーザー入力のコンテンツを明示的にチェックしないまま `_exec` に渡さないでください。 `_exec` によって [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
+>  ユーザー入力のコンテンツを明示的にチェックしないまま `_exec` に渡さないでください。 `_exec` によって [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
 
 `_exec` 関数は、パラメーターを検証します。 いずれかのパラメーターが null ポインター、空の文字列、または省略されている場合、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、`_exec` 関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、-1 を返します。 新しいプロセスは実行されません。
 
@@ -115,15 +118,15 @@ ms.locfileid: "50573369"
 
 `_execv`、`_execve`、`_execvp`、および `_execvpe` の各呼び出しは、新しいプロセスのパラメーターの数が変化する場合に便利です。 パラメーターへのポインターは、配列 `argv` として渡されます。 通常の場合、パラメーター `argv`[0] は `cmdname` へのポインターです。 パラメーター `argv`[1] ～ `argv`[`n`] は、新しいパラメーター リストを構成する文字列を指します。 パラメーター リストの終端を示すために、パラメーター `argv`[`n`+1] は **NULL** ポインターである必要があります。
 
-`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 `value` は二重引用符で囲みません。`envp` 配列の最後の要素は **NULL** にする必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
+`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 (`value` は二重引用符で囲まれていないことに注意してください)。`envp` 配列の最後の要素は**NULL**にする必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
 
 `_exec` 系関数で実行されるプログラムは、常に、プログラムの .exe ファイル ヘッダーの maximum allocation フィールドが既定値 0xFFFFH であるかのように、メモリに読み込まれます。
 
 `_exec` 呼び出しは、開いているファイルの変換モードを保持しません。 呼び出しプロセスから継承されたファイルを新しいプロセスで使う必要がある場合は、[_setmode](../c-runtime-library/reference/setmode.md) ルーチンを使って、ファイルの変換モードを必要なモードに設定します。 `fflush` 系関数を呼び出す前に、`_flushall` または `_exec` を使用してストリームを明示的にフラッシュするか、ストリームを閉じる必要があります。 `_exec` ルーチンの呼び出しによって作成された新しいプロセスでは、呼び出し側のシグナル設定が保持されません。 シグナル設定は、新しいプロセスでは既定値にリセットされます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -154,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 次のプログラムを使用して Crt_args.exe を実行します。
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -229,11 +232,11 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** process.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロセス制御と環境制御](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

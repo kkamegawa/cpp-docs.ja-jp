@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetdcwd_nolock
 - tgetdcwd_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955188"
 ---
-# <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
+# <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
 指定されたドライブの現在の作業ディレクトリの完全なパスを取得します。
 
@@ -65,14 +68,14 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドライブ*<br/>
+*駆動*<br/>
 ディスク ドライブ。
 
 *バッファー*<br/>
 パスの格納場所。
 
 *maxlen*<br/>
-文字内のパスの最大長: **char**の **_getdcwd**と**wchar_t**の **_wgetdcwd**します。
+文字数でのパスの最大長: **_getdcwd**の場合は**char** 、 **_wgetdcwd**の場合は**wchar_t**です。
 
 ## <a name="return-value"></a>戻り値
 
@@ -80,7 +83,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>Remarks
 
-**_getdcwd_nolock**と **_wgetdcwd_nolock**と同じ **_getdcwd**と **_wgetdcwd**をそれぞれから保護されない点を除いて、他のスレッドによる干渉します。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getdcwd_nolock**と **_wgetdcwd_nolock**はそれぞれ **_getdcwd**と **_wgetdcwd**と同じですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

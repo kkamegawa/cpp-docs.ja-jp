@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8e9675a673462c8eaab94d29a3ae36a4786737b7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521883"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687851"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
-iostream の抽出を仲介するテンプレート クラス basic_istream と、挿入と抽出の両方を仲介するテンプレート クラス basic_iostream を定義します。 ヘッダーは、関連するマニピュレーターも定義します。 このヘッダー ファイルは通常、別の iostream ヘッダーに含まれているため、ほとんどの場合、直接含める必要はありません。
+Iostreams の抽出を仲介するクラステンプレート basic_istream と、挿入と抽出の両方を仲介するクラステンプレート basic_iostream を定義します。 ヘッダーは、関連するマニピュレーターも定義します。 このヘッダー ファイルは通常、別の iostream ヘッダーに含まれているため、ほとんどの場合、直接含める必要はありません。
 
 ## <a name="syntax"></a>構文
 
@@ -29,8 +29,8 @@ iostream の抽出を仲介するテンプレート クラス basic_istream と�
 
 |型名|説明|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|型`basic_iostream`に特殊化された**char**します。|
-|[istream](../standard-library/istream-typedefs.md#istream)|型`basic_istream`に特殊化された**char**します。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|**Char**に特化された型 `basic_iostream`。|
+|[istream](../standard-library/istream-typedefs.md#istream)|**Char**に特化された型 `basic_istream`。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|**wchar** に特殊化された型 `basic_iostream`。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|**wchar** に特殊化された型 `basic_istream`。|
 
@@ -49,13 +49,13 @@ iostream の抽出を仲介するテンプレート クラス basic_istream と�
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|入力と出力の両方を行うことができるストリーム クラス。|
-|[basic_istream](../standard-library/basic-istream-class.md)|テンプレート クラスは、型の要素を含むストリーム バッファーからエンコードされたオブジェクトと要素の抽出を制御するオブジェクトについて説明します`Elem`とも呼ばれる、 [char_type](../standard-library/basic-ios-class.md#char_type)、その文字特性はクラスによって決まります。`Tr`とも呼ばれる、 [traits_type](../standard-library/basic-ios-class.md#traits_type)します。|
+|[basic_istream](../standard-library/basic-istream-class.md)|クラステンプレートは、`Elem` 型の要素を含むストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します。これは[char_type](../standard-library/basic-ios-class.md#char_type)とも呼ばれ、その文字特性はクラス `Tr`[によって決定されます。traits_type](../standard-library/basic-ios-class.md#traits_type)。|
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

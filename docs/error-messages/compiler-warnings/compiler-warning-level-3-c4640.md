@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4640
 ms.assetid: f76871f6-e436-4c35-9793-d2f22f7e1c7f
-ms.openlocfilehash: ccfb82852325437a739d7a8f8a5c5b06ce5f9714
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00160a45e9597cfb125eaa8f50cde5fe5cfbc42d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538537"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991869"
 ---
 # <a name="compiler-warning-level-3-c4640"></a>コンパイラの警告 (レベル 3) C4640
 
-'instance': ローカル スタティック オブジェクトの構築がスレッド セーフではありません
+' instance ': ローカルの静的オブジェクトの構築はスレッドセーフではありません
 
-オブジェクトの静的インスタンスは、スレッド セーフではありません。
+オブジェクトの静的インスタンスは、スレッドセーフではありません。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-次の例では、(c4640) が生成されます。
+次の例では、(C4640) が生成されます。
 
-```
+```cpp
 // C4640.cpp
 // compile with: /W3
 #pragma warning(default:4640)

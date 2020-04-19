@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396328"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush クラス
 
@@ -165,7 +165,7 @@ Center、グラデーションの原点のオフセットと x 半径と y 半�
 *colorInterpolationGamma*<br/>
 グラデーションの分岐点間の補間を実行する色で領域。
 
-*オン*<br/>
+*extendMode*<br/>
 [0, 1] の正規化された範囲外のグラデーションの動作です。
 
 *pBrushProperties*<br/>
@@ -287,7 +287,7 @@ Center、グラデーションの原点のオフセットと x 半径と y 半�
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *
+##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*
 
 返します ID2D1RadialGradientBrush インターフェイス
 

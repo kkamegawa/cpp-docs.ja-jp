@@ -1,18 +1,18 @@
 ---
-title: '方法: 既存の MFC リボンをリボン リソースに変換する'
+title: '方法: 既存の MFC リボンをリボン リソースに変換します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389490"
 ---
-# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>方法: 既存の MFC リボンをリボン リソースに変換する
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>方法: 既存の MFC リボンをリボン リソースに変換します。
 
 リボン リソースは、視覚化、変更、および手動でコード化されたリボンより管理しやすくします。 このトピックでは、MFC プロジェクトで手動でコード化されたリボンをリボン リソースに変換する方法について説明します。
 
@@ -47,4 +47,3 @@ ms.locfileid: "51524366"
 ## <a name="see-also"></a>関連項目
 
 [リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
-

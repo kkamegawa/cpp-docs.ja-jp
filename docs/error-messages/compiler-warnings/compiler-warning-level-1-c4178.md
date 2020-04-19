@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4178
 ms.assetid: 2c2c8f97-a5c4-47cd-8dd2-beea172613f3
-ms.openlocfilehash: 76e2b0e6ee42e8f32eb462336721d860cff006a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00cd451ba2e7a50ebeaa260c3466e5889d22125e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540089"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626257"
 ---
 # <a name="compiler-warning-level-1-c4178"></a>コンパイラの警告 (レベル 1) C4178
 
@@ -21,7 +21,7 @@ case 定数 'constant' が switch 式の型としては大きすぎます
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4178.cpp
 // compile with: /W1
 int main()

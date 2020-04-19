@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 6c00a3bb388130d9a570e9fd731a9ed1200ed179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f803d6f575d78fd7a9a9157f06b3f64c4eeb3d77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622184"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748789"
 ---
 # <a name="compiler-error-c3911"></a>コンパイラ エラー C3911
 
-'event_accessor_method': 関数は、型 'signature' をいる必要があります
+' event_accessor_method ': 関数は ' signature ' 型でなければなりません
 
-イベントのアクセサー メソッドが適切に宣言されていません。
+イベントのアクセサーメソッドが正しく宣言されていません。
 
-詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)します。
+詳細については、「 [event](../../extensions/event-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3911 が生成されます。
 
-```
+```cpp
 // C3911.cpp
 // compile with: /clr
 using namespace System;

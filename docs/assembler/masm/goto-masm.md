@@ -1,30 +1,31 @@
 ---
 title: GOTO (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - goto
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: a03cbda5a8ff64f6c167766f416e7744a5382ad5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f198658f9a4b85e0b5ec9b7a0c122241e57286f6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654669"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317280"
 ---
-# <a name="goto-masm"></a>GOTO (MASM)
+# <a name="goto"></a>GOTO
 
-マークされた行にアセンブリを転送 **:**_macrolabel_します。
+アセンブリを、"_マクロラベル_"**とマークさ**れた行に転送します。
 
 ## <a name="syntax"></a>構文
 
-> **GOTO** *macrolabel*
+> **GOTO** *マクロラベル*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**GOTO**内でのみ使用が[マクロ](macro.md)、[の](for-masm.md)、 [FORC](forc.md)、[繰り返します](repeat.md)、および[中に](while-masm.md)ブロックします。 *Macrolabel*ターゲット行でのみのディレクティブである必要があります、先頭のコロンを付ける必要があります。
+**GOTO** [は、](for-masm.md)[マクロ](macro.md)内、 [forc](forc.md)、 [REPEAT](repeat.md)、および[WHILE](while-masm.md)ブロックでのみ許可されます。 *マクロラベル*のターゲットは、行の唯一のディレクティブである必要があります。先頭にはコロンを付ける必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

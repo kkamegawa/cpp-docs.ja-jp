@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: a4e15e2a0481f10b58517135c5dc283549f358af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384557"
 ---
 # <a name="swap-function-autohandle"></a>swap 関数 (auto_handle)
 
@@ -31,10 +31,10 @@ void swap(
 
 #### <a name="parameters"></a>パラメーター
 
-*_ 左*<br/>
+*_left*<br/>
 `auto_handle`。
 
-*(_r)*<br/>
+*_right*<br/>
 もう 1 つ`auto_handle`します。
 
 ## <a name="example"></a>例

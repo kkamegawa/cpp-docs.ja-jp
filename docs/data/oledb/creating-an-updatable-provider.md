@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361874"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 
@@ -109,13 +109,13 @@ ms.locfileid: "51521402"
 
    実装する場合`IRowsetChangeImpl`プロバイダーに、次のプロパティを設定する必要があります。 これらのプロパティは、主にを介してインターフェイスを要求する使用`ICommandProperties::SetProperties`します。
 
-   - `DBPROP_IRowsetChange`: 設定セットでは自動的にこの`DBPROP_IRowsetChange`します。
+   - `DBPROP_IRowsetChange`:自動的にこの設定`DBPROP_IRowsetChange`します。
 
-   - `DBPROP_UPDATABILITY`: でサポートされているメソッドを指定するビットマスク`IRowsetChange`: `SetData`、 `DeleteRows`、または`InsertRow`します。
+   - `DBPROP_UPDATABILITY`:サポートされているメソッドを指定するビットマスク`IRowsetChange`: `SetData`、 `DeleteRows`、または`InsertRow`します。
 
-   - `DBPROP_CHANGEINSERTEDROWS`。 呼び出すことができますコンシューマー`IRowsetChange::DeleteRows`または`SetData`新しく挿入された行の。
+   - `DBPROP_CHANGEINSERTEDROWS`:コンシューマーが呼び出すことができます`IRowsetChange::DeleteRows`または`SetData`新しく挿入された行のできます。
 
-   - `DBPROP_IMMOBILEROWS`: 行セットは、挿入または更新された行を並べ替えられません。
+   - `DBPROP_IMMOBILEROWS`:行セットは、挿入または更新された行を並べ替えられません。
 
    **IRowsetUpdateImpl を実装する場合**
 
@@ -123,15 +123,15 @@ ms.locfileid: "51521402"
 
    - `DBPROP_IRowsetUpdate`。
 
-   - `DBPROP_OWNINSERT`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OWNINSERT`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
-   - `DBPROP_OWNUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OWNUPDATEDELETE`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
-   - `DBPROP_OTHERINSERT`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OTHERINSERT`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
-   - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OTHERUPDATEDELETE`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
-   - `DBPROP_REMOVEDELETED`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_REMOVEDELETED`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
    - `DBPROP_MAXPENDINGROWS`。
 
@@ -413,7 +413,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>列のフラグ
 
-内のメタデータを使用して設定する必要があります、列の既定値をサポートする場合、\<プロバイダー クラス\>SchemaRowset クラス。 設定`m_bColumnHasDefault = VARIANT_TRUE`します。
+内のメタデータを使用して設定する必要があります、列の既定値をサポートする場合、\<プロバイダー クラス\>SchemaRowset クラス。 `m_bColumnHasDefault = VARIANT_TRUE` を設定します。
 
 また、DBCOLUMNFLAGS を使用して列挙型指定されている列のフラグを設定する責任があります。 列のフラグには、列の特性について説明します。
 

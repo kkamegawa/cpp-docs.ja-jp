@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1018
 ms.assetid: 2ceb8a99-30b2-4b80-bf42-e9f3305b3c52
-ms.openlocfilehash: 327bc0d5200fc348611da107257f2086063648fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3273288f1d60fad840fd8e9c459ce5d209ddb6a4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532660"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756930"
 ---
 # <a name="fatal-error-c1018"></a>致命的なエラー C1018
 
@@ -21,7 +21,7 @@ ms.locfileid: "50532660"
 
 次の例では C1018 が生成されます。
 
-```
+```cpp
 // C1018.cpp
 #elif      // C1018
 #endif
@@ -29,9 +29,9 @@ ms.locfileid: "50532660"
 int main() {}
 ```
 
-考えられる解決策:
+解決方法:
 
-```
+```cpp
 // C1018b.cpp
 #if 1
 #elif

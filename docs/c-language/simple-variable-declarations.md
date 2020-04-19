@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615320"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149987"
 ---
 # <a name="simple-variable-declarations"></a>単純変数の宣言
 
@@ -33,7 +33,7 @@ ms.locfileid: "50615320"
 
 演算型、構造体型、共用体型、列挙型、void 型、および `typedef` の名前によって表される型については、型指定子がすべての型情報を提供するため、単純な宣言子を宣言で使用できます。 ポインター型、配列型、および関数型では、より複雑な宣言子が必要です。
 
-同じ宣言で複数の変数を指定するために、コンマ (**,**) で区切られた識別子のリストを使用できます。 宣言で定義されているすべての変数に、同じ基本型があります。 例:
+同じ宣言で複数の変数を指定するために、コンマ (**,**) で区切られた識別子のリストを使用できます。 宣言で定義されているすべての変数に、同じ基本型があります。 次に例を示します。
 
 ```C
 int x, y;        /* Declares two simple variables of type int */
@@ -51,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 この例では、両方の変数 (`reply` と `flag`) は `unsigned long` 型を持ち、符号なし整数値を保持します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

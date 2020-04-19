@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: c19b2f2018caf380c7ac3a09c65955c924fed3e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4065cf2175b69e6aa87b70f7e00c4170f5b0d924
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272561"
 ---
 # <a name="editbin-command-line"></a>EDITBIN コマンド ライン
 
@@ -27,5 +27,5 @@ EDITBIN [options] files...
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
-[EDITBIN リファレンス](../../build/reference/editbin-reference.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[EDITBIN リファレンス](editbin-reference.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552751"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490912"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-ユーザーには、この要素に関する情報を表示できるようにコンテキスト ID を指定します、**ヘルプ**ファイル。
+**ヘルプ**ファイル内のこの要素に関する情報をユーザーが表示できるようにするコンテキスト ID を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "50552751"
 ### <a name="parameters"></a>パラメーター
 
 *ID*<br/>
-ヘルプ トピックのコンテキスト ID。 参照してください[HTML ヘルプ: プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)コンテキスト Id の詳細についてはします。
+ヘルプトピックのコンテキスト ID。 HTML [ヘルプを参照してください。コンテキスト id の詳細について](../../mfc/html-help-context-sensitive-help-for-your-programs.md)は、プログラムの状況依存のヘルプを参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**Helpcontext** C++ 属性と同じ機能を持つ、 [helpcontext](/windows/desktop/Midl/helpcontext) MIDL 属性。
+**Helpcontext** C++属性には、 [helpcontext](/windows/win32/Midl/helpcontext) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[defaultvalue](defaultvalue.md)を使用する方法の例については**helpcontext**します。
+**Helpcontext**の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "50552751"
 
 |||
 |-|-|
-|**対象**|**インターフェイス**、 **typedef**、**クラス**メソッド、プロパティ|
+|**対象**|**interface**、 **typedef**、 **class**、method、property|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

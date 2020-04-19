@@ -5,15 +5,15 @@ helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
 ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430031"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345868"
 ---
 # <a name="override-specifier"></a>override 指定子
 
-使用することができます、**オーバーライド**キーワードを基底クラスで仮想関数をオーバーライドする関数のメンバーを指定します。
+使用することができます、**override**キーワードを基底クラスで仮想関数をオーバーライドする関数のメンバーを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>Remarks
 
-**オーバーライド**状況依存であり、つまり場合にのみ特別なは、メンバー関数宣言の後に使用されます。 それ以外の場合は、予約済みキーワード。
+**override**状況依存であり、つまり場合にのみ特別なは、メンバー関数宣言の後に使用されます。 それ以外の場合は、予約済みキーワード。
 
 ## <a name="example"></a>例
 
-使用**オーバーライド**コードでの誤った継承動作を防ぐためです。 次の例を使用せず、where を示しています**オーバーライド**、派生クラスのメンバー関数の動作が意図されていません。 このコードに対してコンパイラ エラーは発生しません。
+使用**override**コードでの誤った継承動作を防ぐためです。 次の例を使用せず、where を示しています**override**、派生クラスのメンバー関数の動作が意図されていません。 このコードに対してコンパイラ エラーは発生しません。
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-使用すると**オーバーライド**コンパイラは自動的に新しいメンバー関数を作成するのではなくエラーを生成します。
+使用すると**override**コンパイラは自動的に新しいメンバー関数を作成するのではなくエラーを生成します。
 
 ```cpp
 class BaseClass

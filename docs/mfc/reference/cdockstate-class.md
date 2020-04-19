@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391180"
 ---
 # <a name="cdockstate-class"></a>CDockState クラス
 
@@ -58,7 +58,7 @@ class CDockState : public CObject
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate)フレーム ウィンドウのすべての状態情報を取得`CControlBar`オブジェクトを配置に、`CDockState`オブジェクト。 内容を記述することができますし、`CDockState`オブジェクトを使用してストレージに[Serialize](../../mfc/reference/cobject-class.md#serialize)または[後](#savestate)します。 後で、フレーム ウィンドウにコントロール バーの状態を復元する場合での状態を読み込むことができます`Serialize`または[CDockState::LoadState](#loadstate)を使用して[CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate)保存されたを適用するにはフレーム ウィンドウのコントロール バーの状態です。
 
-ドッキング コントロール バーの詳細については、記事をご覧ください。[コントロール バー](../../mfc/control-bars.md)、[ツールバー: ドッキングとフローティング](../../mfc/docking-and-floating-toolbars.md)、および[フレーム Windows](../../mfc/frame-windows.md)します。
+ドッキング コントロール バーの詳細については、記事をご覧ください。[コントロール バー](../../mfc/control-bars.md)、[ツールバー。ドッキングとフローティング](../../mfc/docking-and-floating-toolbars.md)、および[Windows フレーム](../../mfc/frame-windows.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -123,7 +123,7 @@ A`CPtrArray`ストアド コントロール バー情報の状態の情報が保
 CPtrArray m_arrBarInfo;
 ```
 
-##  <a name="savestate"></a>  後
+##  <a name="savestate"></a>  CDockState::SaveState
 
 状態情報をレジストリに保存するには、この関数を呼び出すか。INI ファイルです。
 
@@ -144,4 +144,3 @@ void SaveState(LPCTSTR lpszProfileName);
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

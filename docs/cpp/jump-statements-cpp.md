@@ -5,15 +5,15 @@ helpviewer_keywords:
 - jump statements
 ms.assetid: 7d8ff59c-b1bd-4164-85e9-f508851ed62c
 ms.openlocfilehash: 6207b500e643179bd3ce064e62effc01b93c6612
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366629"
 ---
 # <a name="jump-statements-c"></a>ジャンプ ステートメント (C++)
 
-C ++ のジャンプ ステートメントは、コントロールをローカルで即座に移動します。
+C++ のジャンプ ステートメントは、コントロールをローカルで即座に移動します。
 
 ## <a name="syntax"></a>構文
 

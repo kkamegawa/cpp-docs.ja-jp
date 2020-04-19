@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-ms.openlocfilehash: 2588a3b2a55ebfca4b57be875e26bb0348db83a0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3b4ecb38054748f36d75ca43e32d6447d3d2428
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307290"
 ---
 # <a name="specifying-levels-of-functionality"></a>継承機能のレベルの指定
 

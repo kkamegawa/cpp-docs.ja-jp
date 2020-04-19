@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4144
 ms.assetid: a37b445d-dbc6-43b4-8d95-ffd0e4225464
-ms.openlocfilehash: b2406357baf70e45566f2d2f25839d151bac4186
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e780c2a4f83106bfa298ef5320ddc85daf2d44c4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484868"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624982"
 ---
 # <a name="compiler-warning-level-1-c4144"></a>コンパイラの警告 (レベル 1) C4144
 
-'expression': switch 式としてのリレーショナル表現
+' expression ': switch 式としての関係式
 
-指定した関係式は、の制御式として使用された、[切り替える](../../cpp/switch-statement-cpp.md)ステートメント。 関連付けられた case ステートメントには、ブール値が提供されます。 次の例では、C4144 が生成されます。
+指定された関係式は[switch](../../cpp/switch-statement-cpp.md)ステートメントの制御式として使用されました。 関連する case ステートメントには、ブール値が提供されます。 次の例では、C4144 が生成されます。
 
-```
+```cpp
 // C4144.cpp
 // compile with: /W1
 int main()

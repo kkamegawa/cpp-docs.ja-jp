@@ -1,11 +1,11 @@
 ---
 title: cbrt、cbrtf、cbrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cbrt
 - cbrtf
 - cbrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cbrtl
 - cbrt
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505535"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939290"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -65,21 +68,21 @@ long double cbrtl(
 
 ## <a name="return-value"></a>戻り値
 
-**Cbrt**関数の立方根を返します*x*します。
+**Cbrt**関数は、 *x*の cube ルートを返します。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|none|none|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cbrt**を受け取る**float**または**長い****二重**型。 C プログラムで**cbrt**は**二重**します。
+でC++はオーバーロードが可能であるため、 **float**型または**long** **double**型を受け取る**cbrt**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cbrt**は常にを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**、 **cbrtf**、 **cbrtf**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

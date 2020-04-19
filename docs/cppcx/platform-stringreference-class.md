@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182991"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference クラス
 
@@ -50,15 +50,15 @@ class StringReference
 |名前|説明|
 |----------|-----------------|
 |[StringReference::operator=](#operator-assign)|`StringReference` を新しい `StringReference` インスタンスに割り当てます。|
-|[Stringreference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|
+|[StringReference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **ヘッダー:** vccorlib.h
 
@@ -150,7 +150,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 `StringReference`は標準の C++ クラスと ref クラスではなくに表示されない、**オブジェクト ブラウザー**します。
 
-## <a name="operator-call"></a>  Stringreference::operator() 演算子
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 
 `StringReference` オブジェクトを `Platform::String^` オブジェクトに変換します。
 

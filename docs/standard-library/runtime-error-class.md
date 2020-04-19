@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-ms.openlocfilehash: 8c5453ef7ced55535806570f458c5e08c0a64962
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4c4436c32f5f23c6bea119e95b165631384f583
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583899"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451116"
 ---
 # <a name="runtimeerror-class"></a>runtime_error クラス
 
@@ -69,5 +69,5 @@ Type class std::runtime_error
 
 ## <a name="see-also"></a>関連項目
 
-[exception クラス](../standard-library/exception-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[exception クラス](../standard-library/exception-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

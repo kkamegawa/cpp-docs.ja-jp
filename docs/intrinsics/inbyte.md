@@ -1,6 +1,6 @@
 ---
 title: __inbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbyte
 - __inbyte_cpp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: 63d4e9229eb7c5058587975d0ea04696786a9c73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562150"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222144"
 ---
-# <a name="inbyte"></a>__inbyte
+# <a name="__inbyte"></a>__inbyte
 
 **Microsoft 固有の仕様**
 
-生成、`in`で指定されたポートからの命令、1 バイトを返す読み取り`Port`します。
+命令を生成し、によって`Port`指定されたポートから読み取った1バイトを返します。 `in`
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char __inbyte(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]読み取るポート。
+*ポート*\
+から読み取り元のポート。
 
 ## <a name="return-value"></a>戻り値
 
-指定されたポートから読み取られたバイト。
+指定したポートから読み取ったバイト。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,7 +44,7 @@ unsigned char __inbyte(
 |---------------|------------------|
 |`__inbyte`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 **Microsoft 固有の仕様はここまで**
 

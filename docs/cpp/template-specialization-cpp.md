@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 7688649ad68c35b5f62d8895675650adfc63974f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96f755b20e1de21eae47c4de0a181aa5d0738bf2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330506"
 ---
 # <a name="template-specialization-c"></a>テンプレートの特殊化 (C++)
 
@@ -49,8 +49,6 @@ struct S{};
 extern "C" int printf_s(const char*,...);
 
 int main() {
-   S s, *pS;
-   int S::*ptm;
    printf_s("PTS<S>::IsPointer == %d PTS<S>::IsPointerToDataMember == %d\n",
            PTS<S>::IsPointer, PTS<S>:: IsPointerToDataMember);
    printf_s("PTS<S*>::IsPointer == %d PTS<S*>::IsPointerToDataMember ==%d\n"

@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635673"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948920"
 ---
-# <a name="rtcseterrortype"></a>_RTC_SetErrorType
+# <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
 ランタイム エラー チェック (RTC) で検出されたエラーを特定の種類に関連付けます。 エラー ハンドラーは、指定した型のエラーを出力する方法を処理します。
 
@@ -49,17 +52,17 @@ int _RTC_SetErrorType(
 0 から [_RTC_NumErrors](rtc-numerrors.md) によって戻される値より 1 少ない値までの範囲の数値。
 
 *ErrType*<br/>
-この *errnum*に割り当てる値。 たとえば、 **_CRT_ERROR**を使用できます。 使用する場合 **_CrtDbgReport**エラー ハンドラーとして*ErrType*で定義されたシンボルのいずれかを指定することができますのみ[_CrtSetReportMode](crtsetreportmode.md)します。 独自のエラー ハンドラー ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)) がある場合、 *errnum*の数だけ *ErrType*を指定できます。
+この *errnum*に割り当てる値。 たとえば、 **_CRT_ERROR**を使用できます。 **_CrtDbgReport**をエラーハンドラーとして使用している場合、 *Errtype*には[_CrtSetReportMode](crtsetreportmode.md)で定義されているシンボルの1つのみを指定できます。 独自のエラー ハンドラー ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)) がある場合、 *errnum*の数だけ *ErrType*を指定できます。
 
-*ErrType* _RTC_ERRTYPE_IGNORE の特別な意味を持つ **_CrtSetReportMode**; エラーは無視されます。
+**_CrtSetReportMode**の*errtype*には特別な意味があります (_s)このエラーは無視されます。
 
 ## <a name="return-value"></a>戻り値
 
-エラーの種類の以前の値*型*します。
+エラーの種類の*種類*の以前の値。
 
 ## <a name="remarks"></a>Remarks
 
-既定では、すべてのエラーは *_CRT_ERROR* に対応する **ErrType**= 1 に設定されます。 既定のエラーの種類 (**_CRT_ERROR** など) について詳しくは、[_CrtDbgReport](crtdbgreport-crtdbgreportw.md) をご覧ください。
+既定では、すべてのエラーは *_CRT_ERROR* に対応する **ErrType**= 1 に設定されます。 既定のエラーの種類 ( **_CRT_ERROR** など) について詳しくは、[_CrtDbgReport](crtdbgreport-crtdbgreportw.md) をご覧ください。
 
 この関数を呼び出すには、まず、実行時エラー チェックの初期化関数の 1 つを呼び出す必要があります。「[Using Run-Time Checks without the C Run-Time Library (C ランタイム ライブラリなしのランタイム チェックの使用)](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)」をご覧ください
 

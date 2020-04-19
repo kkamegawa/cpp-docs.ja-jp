@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429732"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458354"
 ---
 # <a name="queue-class"></a>queue クラス
 
@@ -42,19 +42,19 @@ class queue
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*各種*\
 キューに格納される要素のデータ型。
 
-*コンテナー*<br/>
+*コンテナー*\
 キューの実装に使用する基になるコンテナーの型。
 
 ## <a name="remarks"></a>Remarks
 
-クラスの要素`Type`最初のテンプレートで規定されているキュー オブジェクトのパラメーター [value_type](#value_type)基になるコンテナー クラス内の要素の型に一致する必要がありますと`Container`によって規定、2 番目のテンプレート パラメーター。 `Type`その型のオブジェクトをコピーして、その型の変数に値を割り当てることができるように、割り当てることがあります。
+Queue オブジェクトの最初`Type`のテンプレートパラメーターで指定されるクラスの要素は[value_type](#value_type)と同義であり、2つ目のテンプレートによって指定`Container`される、基になるコンテナークラスの要素の型と一致している必要があります。引き. その`Type`型のオブジェクトをコピーし、その型の変数に値を割り当てることができるように、は割り当て可能である必要があります。
 
-キューに適したの基になるコンテナー クラスを含める[deque](../standard-library/deque-class.md)と[一覧](../standard-library/list-class.md)、またはの操作をサポートするその他のすべてのシーケンス コンテナー `front`、 `back`、 `push_back`、`pop_front`します。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
+キューに適した基になるコンテナークラスには、 [deque](../standard-library/deque-class.md)と[list](../standard-library/list-class.md)、 `front`または、 `back` `push_back`、、および`pop_front`の操作をサポートするその他のシーケンスコンテナーが含まれます。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
 
-キュー オブジェクトは等値比較できる場合と場合にのみ、クラスの要素`Type`は等しいかどうかを比較、および小さい-なり場合にのみ、クラスの要素`Type`小さい-比較対象より。
+Queue オブジェクトは、クラス`Type`の要素が等価比較できる場合にのみ等価比較が可能で、クラス`Type`の要素が比較可能な値よりも小さい場合に限り、小なり比較できます。
 
 C++ 標準ライブラリで定義されたコンテナー アダプターには、stack、queue、および priority_queue の 3 つの種類があります。 それぞれが、基になるコンテナー クラスの機能を制限して、標準的なデータ構造に対して精密に制御されたインターフェイスを提供します。
 
@@ -64,23 +64,25 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 
 - [priority_queue クラス](../standard-library/priority-queue-class.md)は、最も大きな要素が常に先頭の位置になるように、その要素を並べ替えます。 要素の挿入、および先頭の要素の検査と削除をサポートしています。 思い描くのに助けとなるのは、年齢、身長、またはその他の条件によって整列している人です。
 
+## <a name="members"></a>メンバー
+
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[queue](#queue)|空であるか、基本のコンテナー オブジェクトのコピーである `queue` を構築します。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[container_type](#container_type)|`queue` によって適合されるように、基本のコンテナーを提供する型。|
 |[size_type](#size_type)|`queue` 内の要素の数を表すことができる符号なし整数型。|
 |[value_type](#value_type)|`queue` 内に要素として格納されるオブジェクトの種類を表す型。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[back](#back)|`queue` の後ろに最も直近に追加された要素への参照を返します。|
 |[empty](#empty)|`queue` が空かどうかをテストします。|
@@ -89,13 +91,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[push](#push)|`queue` の後ろに要素を追加します。|
 |[size](#size)|`queue` 内の要素数を返します。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<queue>
-
-**名前空間:** std
-
-## <a name="back"></a>  queue::back
+## <a name="back"></a>戻る
 
 キューの後ろに最も直近に追加された要素への参照を返します。
 
@@ -111,9 +107,9 @@ const_reference back() const;
 
 ### <a name="remarks"></a>Remarks
 
-`back` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 場合の戻り値`back`に割り当てられている、 `reference`、キュー オブジェクトを変更できます。
+`back` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 の`back`戻り値が`reference`に割り当てられている場合は、queue オブジェクトを変更できます。
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 として定義してコンパイルすると、空のキュー内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md) 」を参照してください。
+[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 として定義してコンパイルすると、空のキュー内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  queue::container_type
+## <a name="container_type"></a>container_type
 
 適合される基本のコンテナーを提供する型。
 
@@ -159,7 +155,7 @@ typedef Container container_type;
 
 `container_type` の宣言方法や使用方法の例については、[queue](#queue) の例をご覧ください。
 
-## <a name="empty"></a>  queue::empty
+## <a name="empty"></a>指定
 
 キューが空かどうかをテストします。
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  queue::front
+## <a name="front"></a>外側
 
 キューの一番前にある最初の要素への参照を返します。
 
@@ -221,11 +217,11 @@ const_reference front() const;
 
 ### <a name="remarks"></a>Remarks
 
-`front` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 場合の戻り値`front`に割り当てられている、 `reference`、キュー オブジェクトを変更できます。
+`front` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 の`front`戻り値が`reference`に割り当てられている場合は、queue オブジェクトを変更できます。
 
-メンバー関数を返します、`reference`被制御シーケンスの最初の要素を空にすることです。
+このメンバー関数は、 `reference`被制御シーケンスの最初の要素にを返します。この要素は空でなければなりません。
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 として定義してコンパイルすると、空のキュー内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md) 」を参照してください。
+[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 として定義してコンパイルすると、空のキュー内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  queue::pop
+## <a name="pop"></a>ショート
 
 キューの一番前から要素を削除します。
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  queue::push
+## <a name="push"></a>押し付け
 
 キューの一番後ろに要素を追加します。
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 キューの一番後ろに追加する要素。
 
 ### <a name="remarks"></a>Remarks
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  queue::queue
+## <a name="queue"></a>再生
 
 空であるか、基本のコンテナー オブジェクトのコピーであるキューを構築します。
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 構築されるキューのコピー元となる **const** コンテナ―。
 
 ### <a name="remarks"></a>Remarks
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  queue::size
+## <a name="size"></a>幅
 
 キュー内の要素の数を返します。
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  queue::size_type
+## <a name="size_type"></a>size_type
 
 キュー内の要素の数を表すことができる符号なし整数型。
 
@@ -486,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 `size_type` の宣言方法や使用方法の例については、[queue::front](#front) の例をご覧ください。
 
-## <a name="value_type"></a>  queue::value_type
+## <a name="value_type"></a> value_type
 
 キュー内に要素として格納されるオブジェクトの型を表す型。
 
@@ -530,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

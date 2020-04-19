@@ -1,10 +1,10 @@
 ---
 title: _ismbbgraph、_ismbbgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbgraph_l
 - _ismbbgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbgraph
 - _ismbbgraph_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 096450869f9a150585b3102cea155ecd948c5751
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662877"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954185"
 ---
-# <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph、_ismbbgraph_l
+# <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph、_ismbbgraph_l
 
 特定のマルチバイト文字がグラフィカルな文字かどうかを判定します。
 
@@ -65,7 +68,7 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-0 以外の場合は、 *c*、または 0 でない場合。 **_ismbbgraph**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbgraph_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*c*の場合は0以外の。それ以外の場合は0。 **_ismbbgraph**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbgraph_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

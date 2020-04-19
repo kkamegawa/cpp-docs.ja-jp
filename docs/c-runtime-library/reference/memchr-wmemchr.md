@@ -1,10 +1,10 @@
 ---
 title: memchr、wmemchr
-ms.date: 11/04/2016
-apiname:
+ms.date: 03/31/2019
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -23,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 1de8826d2f072c689ed3363902d1e4742cf187b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951941"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -82,13 +86,13 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合の最初の場所にポインターを返します*c*で*バッファー*します。 それ以外の場合は NULL を返します。
+成功した場合は、*バッファー*内の*c*の最初の位置へのポインターを返します。 それ以外の場合は、NULL を返します。
 
 ## <a name="remarks"></a>Remarks
 
-`memchr` `wmemchr`最初に見つかった検索*c*最初の*カウント*バイトの*バッファー*します。 見つけたときに停止する*c*ときに、最初のチェックがまたは*カウント*バイト。
+`memchr`次に、 *buffer*の最初の*count*文字で c の最初の出現箇所を探します。 `wmemchr` *C*が見つかったとき、または最初の*カウント*文字をチェックしたときに停止します。
 
-C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方 C++ オーバー ロードについても、C++ の動作は、シンボル _CONST_RETURN を定義します。
+C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 マクロ\_CRT\_const正しい\_オーバーロードは、これらの関数の const バージョンと非 const バージョンの両方が使用可能な場合に定義されます。\_ C++のC++両方のオーバーロードに非**定数**の動作が必要な場合は、const \_\_RETURN シンボルを定義します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -134,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 String to be searched:

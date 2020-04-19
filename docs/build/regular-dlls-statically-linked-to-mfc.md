@@ -9,12 +9,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: fee2d3b84949241cda421d6ea587e1ab9c6e58e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314781"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>MFC と静的にリンクされるレギュラー MFC Dll
 
@@ -62,24 +62,24 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
 
 MFC と静的にリンクされている DLL は、共有 MFC Dll に動的にリンクできません。 MFC と静的にリンクする DLL がその他の DLL と同じようにアプリケーションを動的にバインドされています。アプリケーションは、その他の DLL と同じようにリンクします。
 
-標準の MFC のスタティック リンク ライブラリの名前がで説明されている規則に従って[MFC Dll の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)します。 ただし、mfc バージョン 3.0 以降でリンクする MFC ライブラリのバージョンをリンカーに手動で指定する必要は不要になった。 代わりに、MFC ヘッダー ファイルを自動的に決定に基づいてプリプロセッサでリンクする MFC ライブラリの正しいバージョンを定義するよう**\_デバッグ**または **_UNICODE**します。 MFC ヘッダー ファイルでは、特定のバージョンの MFC ライブラリにリンクする、リンカーに指示する/DEFAULTLIB ディレクティブを追加します。
+標準の MFC のスタティック リンク ライブラリの名前がで説明されている規則に従って[MFC Dll の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)します。 ただし、mfc バージョン 3.0 以降でリンクする MFC ライブラリのバージョンをリンカーに手動で指定する必要は不要になった。 代わりに、MFC ヘッダー ファイルを自動的に決定に基づいてプリプロセッサでリンクする MFC ライブラリの正しいバージョンを定義するよう **\_デバッグ** または **_UNICODE** します。 MFC ヘッダー ファイルでは、特定のバージョンの MFC ライブラリにリンクする、リンカーに指示する/DEFAULTLIB ディレクティブを追加します。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [レギュラー MFC Dll を初期化します。](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [レギュラー MFC Dll を初期化します。](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
 - [DLL の一部としての MFC の使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [MFC DLL を作成します。](../mfc/reference/mfc-dll-wizard.md)
 
-- [MFC と動的にリンクされるレギュラー MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [MFC と動的にリンクされるレギュラー MFC DLL](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 拡張 DLL](../build/extension-dlls-overview.md)
+- [MFC 拡張 DLL](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL の種類](../build/kinds-of-dlls.md)
+[DLL の種類](kinds-of-dlls.md)

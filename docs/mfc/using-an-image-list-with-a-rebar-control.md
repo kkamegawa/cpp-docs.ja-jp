@@ -5,12 +5,12 @@ helpviewer_keywords:
 - image lists [MFC], rebar controls
 - rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
-ms.openlocfilehash: 3cf359a5d06396f9c2c31cbec511c04784053e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa5307c201850fc42439c79a1c638a0707379913
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180499"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Rebar コントロールでのイメージ リストの使い方
 
@@ -38,4 +38,3 @@ ms.locfileid: "50641435"
 
 [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

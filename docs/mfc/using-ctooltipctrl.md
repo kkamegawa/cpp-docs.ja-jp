@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 039b57d5dce71a090dd238016b593b195f356719
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411625"
 ---
 # <a name="using-ctooltipctrl"></a>CToolTipCtrl の使い方
 
@@ -32,4 +32,3 @@ ms.locfileid: "50654377"
 
 [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

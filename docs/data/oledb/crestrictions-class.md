@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361881"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>パラメーター
 
-*セッション*<br/>
+*session*<br/>
 [in]データ ソースに接続するため、既存のセッション オブジェクトを指定します。
 
 *lpszParam*<br/>
@@ -92,7 +92,7 @@ HRESULT Open(const CSession& session,
 
 スキーマ行セットでは、7 個の制限の最大数を指定できます。
 
-参照してください[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))定義されている制限については、各スキーマ行セットにします。
+参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))定義されている制限については、各スキーマ行セットにします。
 
 ## <a name="see-also"></a>関連項目
 

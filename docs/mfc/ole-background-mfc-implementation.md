@@ -1,5 +1,5 @@
 ---
-title: 'OLE の背景知識 : MFC における実装'
+title: OLE の背景知識:MFC における実装
 ms.date: 11/04/2016
 f1_keywords:
 - IMarshall
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186730"
 ---
-# <a name="ole-background-mfc-implementation"></a>OLE の背景知識 : MFC における実装
+# <a name="ole-background-mfc-implementation"></a>OLE の背景知識:MFC における実装
 
 サイズと生 OLE API の複雑さは、OLE アプリケーションを作成するには、直接呼び出す非常に時間がかかることができます。 OLE の Microsoft Foundation Class ライブラリの実装の目的は、すべての機能を OLE 対応のアプリケーションを作成するために必要な作業の量を削減します。
 
@@ -35,7 +35,7 @@ IMoniker インターフェイス、`IMoniker`インターフェイス、クラ�
 
 IUnknown と IMarshal インターフェイス、`IUnknown`インターフェイス、クラス ライブラリによって実装されますが、プログラマは公開されません。 `IMarshal`インターフェイスはクラス ライブラリによって実装されていませんが、内部的に使用されます。 既にクラス ライブラリを使用して作成したオートメーション サーバーがある機能が組み込まれたをマーシャ リングします。
 
-Docfiles (複合ファイル) 複合ファイルは、クラス ライブラリによって部分的にサポートします。 ファイルの作成以外の複合を直接操作する関数のサポートされていません。 MFC クラスを使用して`COleFileStream`ファイルの標準的な関数を含むストリームの操作をサポートします。 詳細については、この記事を参照してください。[コンテナー: 複合ファイル](../mfc/containers-compound-files.md)します。
+Docfiles (複合ファイル) 複合ファイルは、クラス ライブラリによって部分的にサポートします。 ファイルの作成以外の複合を直接操作する関数のサポートされていません。 MFC クラスを使用して`COleFileStream`ファイルの標準的な関数を含むストリームの操作をサポートします。 詳細については、この記事を参照してください。[コンテナー。複合ファイル](../mfc/containers-compound-files.md)します。
 
 インプロセス サーバー、およびオブジェクト ハンドラーのプロセスでサーバーおよびオブジェクト ハンドラーは、ビジュアルのデータを編集またはダイナミック リンク ライブラリ (DLL) で完全なコンポーネント オブジェクト モデル (COM) オブジェクトの実装を使用できます。 これを行うには、OLE API を直接呼び出すことによって、DLL を実装できます。 ただし、オートメーション サーバーを作成しているユーザー インターフェイスを持っていない場合は、サーバー、プロセスでサーバーにし、DLL に完全に配置する AppWizard を使用できます。 これらのトピックの詳細については、次を参照してください。[オートメーション サーバー](../mfc/automation-servers.md)します。
 
@@ -47,5 +47,4 @@ Microsoft Foundation OLE クラスが OLE インターフェイスを実装す�
 ## <a name="see-also"></a>関連項目
 
 [OLE の背景知識](../mfc/ole-background.md)<br/>
-[OLE の背景知識: 実装の方法](../mfc/ole-background-implementation-strategies.md)
-
+[OLE の背景知識: 実装戦略](../mfc/ole-background-implementation-strategies.md)

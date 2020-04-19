@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 4c76be874752a577aaeb4c3641818f8a2850b465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556599"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345200"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>シリアル化機構のバイパス
 
@@ -32,4 +32,3 @@ ms.locfileid: "50556599"
 ## <a name="see-also"></a>関連項目
 
 [ドキュメントの使い方](../mfc/using-documents.md)
-

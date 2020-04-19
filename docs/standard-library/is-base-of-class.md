@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647877"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456618"
 ---
 # <a name="isbaseof-class"></a>is_base_of クラス
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>パラメーター
 
-*ベース*<br/>
+*常用*\
 テスト対象の基底クラス。
 
-*派生*<br/>
+*導出*\
 テスト対象の派生型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*基本*型の基本クラスは、*派生*、それ以外の場合は false を保持します。
+型の述語のインスタンスは、型の*ベース*が*派生*型の基底クラスである場合は true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -80,5 +80,5 @@ is_base_of<derived, base> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible クラス](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible クラス](../standard-library/is-convertible-class.md)

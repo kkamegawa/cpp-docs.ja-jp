@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 047b2cc0ebc65d29f5f25d1bdf50b68da58c75d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384531"
 ---
 # <a name="user-defined-conversions-ccli"></a>ユーザー定義変換 (C++/CLI)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50553729"
 
 ネイティブ クラスに参照または値の型を変換するネイティブ クラスのコンス トラクターを使用できます。
 
-変換の詳細については、次を参照してください。[ボックス化](../windows/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)します。
+変換の詳細については、次を参照してください。[ボックス化](../extensions/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)します。
 
 ```
 // mcpp_User_Defined_Conversions.cpp
@@ -321,4 +321,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::Details
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-ms.openlocfilehash: b61470d865f751957d796bed7ebf23c24037dd51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f7885397a56391581f9e3d0fe985311164d0219
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161564"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details 名前空間
 

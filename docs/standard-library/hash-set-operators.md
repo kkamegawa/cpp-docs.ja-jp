@@ -1,16 +1,16 @@
 ---
 title: '&lt;hash_set&gt; 演算子'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 3cb0b743eefa52b178a89be1c2cc766352bf4849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564841"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452032"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 演算子
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_set` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -46,7 +46,7 @@ hash_sets が等しくない場合は **true**、hash_sets が等しい場合は
 
 hash_set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_sets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-メンバー、 [< hash_map >](../standard-library/hash-map.md)と[< hash_set >](../standard-library/hash-set.md)ヘッダー ファイルは、 [stdext Namespace](../standard-library/stdext-namespace.md)します。
+[< Hash_map >](../standard-library/hash-map.md)と[< > hash_set](../standard-library/hash-set.md)ヘッダーファイルのメンバーは、 [stdext 名前空間](../standard-library/stdext-namespace.md)にあります。
 
 ### <a name="example"></a>例
 
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_set` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="neq_hash_multiset"></a>  operator!= (hash_multiset)
+## <a name="op_neq_hash_multiset"></a>  operator!= (hash_multiset)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_multiset` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="eq_eq_hash_multiset"></a>  operator== (hash_multiset)
+## <a name="op_eq_eq_hash_multiset"></a>  operator== (hash_multiset)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_set クラス](../standard-library/unordered-set-class.md)を使用してください。
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 `hash_multiset` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `hash_multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -287,4 +287,4 @@ The hash_multisets s1 and s2 are equal.
 
 ## <a name="see-also"></a>関連項目
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

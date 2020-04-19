@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: c798c1ad81395465e7aa5405ab786ddfb67b71d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375718"
 ---
 # <a name="coledialog-class"></a>COleDialog クラス
 
@@ -95,4 +95,3 @@ UINT GetLastError() const;
 
 [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

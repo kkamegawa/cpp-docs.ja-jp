@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 26: DDX ルーチンおよび DDV ルーチン'
+title: TN026:DDX ルーチンおよび DDV ルーチン
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305867"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>テクニカル ノート 26: DDX ルーチンおよび DDV ルーチン
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026:DDX ルーチンおよび DDV ルーチン
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -85,11 +85,11 @@ DDV_Custom(pDX, field, ...);
 
 その他の 3 つの興味深いがある`CDataExchange`メンバー。
 
-- `m_pDlgWnd`コントロールを含んでいる: ウィンドウ (通常はダイアログ)。 これは、すべて DDX/DDV ルーチンに DDX_ と DDV_ のグローバル関数の呼び出し元が 'this' を渡さずにすることを防ぐためには。
+- `m_pDlgWnd`:コントロールを格納するウィンドウ (通常はダイアログ) です。 これは、すべて DDX/DDV ルーチンに DDX_ と DDV_ のグローバル関数の呼び出し元が 'this' を渡さずにすることを防ぐためには。
 
-- `PrepareCtrl`、および`PrepareEditCtrl`: データ交換ダイアログのコントロールを準備します。 検証が失敗した場合、フォーカスを設定するため、そのコントロールのハンドルを格納します。 `PrepareCtrl` 非編集コントロールの使用と`PrepareEditCtrl`編集コントロールが使用されます。
+- `PrepareCtrl`、および`PrepareEditCtrl`:データ交換用のダイアログ コントロールを準備します。 検証が失敗した場合、フォーカスを設定するため、そのコントロールのハンドルを格納します。 `PrepareCtrl` 非編集コントロールの使用と`PrepareEditCtrl`編集コントロールが使用されます。
 
-- `Fail`: ユーザーが入力エラーを警告メッセージ ボックスの後に呼び出されます。 このルーチンは、最後のコントロールにフォーカスを復元 (最後の呼び出し`PrepareCtrl`または`PrepareEditCtrl`)、例外をスローします。 このメンバー関数は、DDX_ と DDV_ ルーチンから呼び出すことができます。
+- `Fail`:ユーザーが入力エラーを警告メッセージ ボックスの後に呼び出されます。 このルーチンは、最後のコントロールにフォーカスを復元 (最後の呼び出し`PrepareCtrl`または`PrepareEditCtrl`)、例外をスローします。 このメンバー関数は、DDX_ と DDV_ ルーチンから呼び出すことができます。
 
 ## <a name="user-extensions"></a>ユーザーの拡張機能
 
@@ -143,15 +143,15 @@ else
 
 ClassWizard では、ClassWizard のユーザー インターフェイスに、独自の DDX_ と DDV_ ルーチンを統合することを許可することで DDX/DDV カスタマイズのサブセットをサポートしています。 費用効果は、特定 DDX ルーチンおよび DDV ルーチンまたは多くのプロジェクトでプロジェクトを再利用する予定の場合、これを行います。
 
-これを行うには、特殊なエントリは、DDX で行われます。CLW (以前のバージョンの Visual C は、APSTUDIO にこの情報を格納します。INI) またはプロジェクトの。CLW ファイルです。 特殊なエントリは、プロジェクトの [一般情報] セクションでいずれかを入力します。CLW ファイルまたは、DDX の [ExtraDDX] セクション。\Program Files\Microsoft Visual Studio\Visual c++ \bin ディレクトリに CLW ファイルです。 DDX を作成する必要があります。存在しない場合は、ファイルを CLW です。 特定のプロジェクトでのみカスタム DDX_/ddv ルーチンを使用する場合は、プロジェクトの [一般情報] セクションにエントリを追加します。CLW ファイルを代わりにします。 多くのプロジェクトで、ルーチンを使用する場合は、DDX の [ExtraDDX] セクションにエントリを追加します。CLW します。
+これを行うには、特殊なエントリは、DDX で行われます。CLW (以前のバージョンの Visual C は、APSTUDIO にこの情報を格納します。INI) またはプロジェクトの。CLW ファイルです。 特殊なエントリは、プロジェクトの [一般情報] セクションでいずれかを入力します。CLW ファイルまたは、DDX の [ExtraDDX] セクション。\Program Files\Microsoft Visual Studio\Visual CLW ファイルC++\bin ディレクトリ。 DDX を作成する必要があります。存在しない場合は、ファイルを CLW です。 特定のプロジェクトでのみカスタム DDX_/ddv ルーチンを使用する場合は、プロジェクトの [一般情報] セクションにエントリを追加します。CLW ファイルを代わりにします。 多くのプロジェクトで、ルーチンを使用する場合は、DDX の [ExtraDDX] セクションにエントリを追加します。CLW します。
 
 これらの特殊なエントリの一般的な形式です。
 
-> ExtraDDXCount =*n*
+> ExtraDDXCount=*n*
 
 場所*n* ExtraDDX の数ですかには、フォームの行。
 
-> ExtraDDX? =*キー*;*vb キー*;*プロンプト*;*型*;*initValue*;*DDX_Proc* [;*DDV_Proc*;*prompt1*;*arg1* [;*prompt2*;*fmt2*]
+> ExtraDDX?=*keys*; *vb-keys*; *prompt*; *type*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
 
 どこ。 数値 1 - *n* DDX 型で定義されている一覧を示します。
 
@@ -174,7 +174,7 @@ ClassWizard では、ClassWizard のユーザー インターフェイスに、�
   n | 並べ替えられたボックスの一覧
   1 | DDX 挿入リストの先頭に追加する必要があります (既定値は末尾に追加) これは、通常使用の DDX ルーチン 'コントロール' プロパティを転送します。
 
-- *vb キー*
+- *vb-keys*
 
   このフィールドは、(VBX コントロールは、32 ビットの製品ではサポートされません) VBX コントロールの 16 ビットの製品でのみ使用されます。
 
@@ -186,7 +186,7 @@ ClassWizard では、ClassWizard のユーザー インターフェイスに、�
 
   ヘッダー ファイルに出力する型の単一の識別子。 DDX_Time で上記の例では、これは CTime に設定が。
 
-- *vb キー*
+- *vb-keys*
 
   このバージョンでは使用されず、空は常に
 
@@ -196,7 +196,7 @@ ClassWizard では、ClassWizard のユーザー インターフェイスに、�
 
 - *DDX_Proc*
 
-  DDX_ プロシージャの 1 つの識別子。 C++ の関数名は"DDX"で開始する必要がありますに"このを含めないでください、 \<DDX_Proc > 識別子。 上記の例では、 \<DDX_Proc > 識別子は時間になります。 ClassWizard の関数呼び出しで、実装ファイルを書き込む場合、{{AFX_DATA_MAP セクションでは、この名前に追加 DDX DDX_Time に到着するためです。
+  DDX_ プロシージャの 1 つの識別子。 C++関数名は"DDX"で開始する必要がありますに"このを含めないでください、 \<DDX_Proc > 識別子。 上記の例では、 \<DDX_Proc > 識別子は時間になります。 ClassWizard の関数呼び出しで、実装ファイルを書き込む場合、{{AFX_DATA_MAP セクションでは、この名前に追加 DDX DDX_Time に到着するためです。
 
 - *comment*
 
@@ -208,7 +208,7 @@ ClassWizard では、ClassWizard のユーザー インターフェイスに、�
 
 - *arg*
 
-  DDV_ プロシージャの 1 つの識別子。 C++ の関数名は"DDV_"で開始する必要がありますが、"このに含めないでください、 \<DDX_Proc > 識別子。
+  DDV_ プロシージャの 1 つの識別子。 C++関数名は"DDV_"で開始する必要がありますが、"このに含めないでください、 \<DDX_Proc > 識別子。
 
   *arg* DDV 引数を 1 つまたは 2 が続きます。
 
@@ -226,8 +226,8 @@ ClassWizard では、ClassWizard のユーザー インターフェイスに、�
       |u | unsigned int|
       |D | int を長時間かかる場合 (つまり、時間の長い)|
       |U | 符号なし長 (つまり、DWORD)|
-      |f | float|
-      |F | double|
+      |f | フローティング|
+      |F | 二重線|
       |s | string|
 
 ## <a name="see-also"></a>関連項目

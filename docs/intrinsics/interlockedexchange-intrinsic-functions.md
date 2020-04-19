@@ -1,6 +1,6 @@
 ---
-title: _InterlockedExchange の組み込み関数
-ms.date: 12/17/2018
+title: _InterlockedExchange 組み込み関数
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627177"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221997"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange の組み込み関数
+# <a name="_interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 組み込み関数
 
 **Microsoft 固有の仕様**
 
@@ -59,7 +59,7 @@ ms.locfileid: "53627177"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 long _InterlockedExchange(
    long volatile * Target,
    long Value
@@ -142,13 +142,13 @@ __int64 _InterlockedExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*Target*<br/>
+*接続*\
 [入力、出力]交換する値へのポインター。 この関数は、この変数を `Value` に設定し、変数の前の値を返します。
 
-*[値]*<br/>
-[in]によって示される値と交換される値`Target`します。
+*数値*\
+からが指す`Target`値と交換される値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -156,21 +156,23 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|ヘッダー|
+|組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchange`、 `_InterlockedExchange8`、 `_InterlockedExchange16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedExchange64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedExchange_acq`、`_InterlockedExchange_nf`、`_InterlockedExchange_rel`、`_InterlockedExchange8_acq`、`_InterlockedExchange8_nf`、`_InterlockedExchange8_rel`、`_InterlockedExchange16_acq`、`_InterlockedExchange16_nf`、`_InterlockedExchange16_rel`、`_InterlockedExchange64_acq`、`_InterlockedExchange64_nf`、`_InterlockedExchange64_rel`、|ARM、ARM64|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange)関数。
+`_InterlockedExchange`Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange)関数のコンパイラ組み込みサポートを提供します。
 
 `_InterlockedExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
 `_InterlockedExchange` 関数は 32 ビット整数値で動作しますが、`_InterlockedExchange8` は 8 ビット整数値、`_InterlockedExchange16` は 16 ビット整数値、および `_InterlockedExchange64` は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みは、メモリバリアとしては機能しません。
 
 Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。
 
@@ -178,12 +180,12 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 ## <a name="example"></a>例
 
-使用する方法の例については`_InterlockedExchange`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
+の使用`_InterlockedExchange`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
+[キーワード](../cpp/keywords-cpp.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

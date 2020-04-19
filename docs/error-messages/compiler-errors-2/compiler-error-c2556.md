@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-ms.openlocfilehash: 4a2b4dc9dcd71d518845651dee97c566b778eb0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b6f08ac52eff355f0857968817a681818e3c3dc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484150"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756774"
 ---
 # <a name="compiler-error-c2556"></a>コンパイラ エラー C2556
 
-'identifier': オーバー ロードされた関数は、戻り値の型のみが異なる
+' identifier ': オーバーロードされた関数は戻り値の型のみが異なります
 
-オーバー ロードされた関数では、同じパラメーター リストが異なる戻り値の型があります。 各オーバー ロードされた関数は、個別の仮パラメーター リストにあります。
+オーバーロードされた関数の戻り値の型は異なりますが、同じパラメーターリストが指定されています。 オーバーロードされた各関数には、個別の仮パラメーターリストが必要です。
 
 次の例では、C2556 が生成されます。
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

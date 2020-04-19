@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597237"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952371"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -46,11 +49,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>戻り値
 
-0 以外の値*ps*は**NULL**変換実行中でない場合。
+*Ps*が NULL の場合、または変換の途中でない場合は0以外の**値**です。
 
 ## <a name="remarks"></a>Remarks
 
-受け取る ANSI 関数のいずれかを使用する場合、 **mbstate_t**ポインターのアドレスを渡す、 **mbstate_t**バッファー内の最後のバイトが変換されたかどうかについての情報が返されます。
+**Mbstate_t**ポインターを受け取る ANSI 関数のいずれかを使用する場合、 **mbstate_t**のアドレスを渡すと、バッファーの最後のバイトが変換されたかどうかに関する情報が返されます。
 
 マルチバイト文字をサポートするには適切なコード ページをインストールする必要があります。
 

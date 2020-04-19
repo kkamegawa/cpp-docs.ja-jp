@@ -4,36 +4,35 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa1951211283ddf7e4823a920d5cdf19bd6d977d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454082"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141838"
 ---
 # <a name="memory-management-functions"></a>メモリ管理関数
 
-このドキュメントでは、割り当てし、同時実行方式でメモリを解放するために、同時実行ランタイムを提供するメモリ管理関数について説明します。
+このドキュメントでは、同時実行方式でメモリの割り当てと解放を支援するために同時実行ランタイムに用意されているメモリ管理関数について説明します。
 
 > [!TIP]
->  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+> コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 タスクスケジューラはアプリケーションのパフォーマンスを微調整するのに役立ちます。そのため、同時実行ランタイムを初めて使用する場合は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)から始めることをお勧めします。
 
-同時実行ランタイムでは、割り当てと、同時実行方式でメモリのブロックを解放するために最適化された 2 つのメモリ管理関数を提供します。 [Concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)関数は、指定したサイズを使用してメモリ ブロックを割り当てます。 [Concurrency::free](reference/concurrency-namespace-functions.md#free)関数で割り当てられたメモリを解放する`Alloc`します。
-
-> [!NOTE]
->  `Alloc`と`Free`関数は互いに依存します。 使用して、`Free`を使用して割り当てたメモリを解放するためのもの、`Alloc`関数。 また、使用、`Alloc`メモリを割り当て、のみを使用する関数、`Free`そのメモリを解放する関数。
-
-使用して、`Alloc`と`Free`割り当ておよび割り当てのサイズ別のスレッドまたはタスクからの固定セットを解放するときに機能します。 同時実行ランタイムでは、C ランタイム ヒープから割り当てるメモリをキャッシュします。 同時実行ランタイムは、各実行中のスレッドの個別のメモリ キャッシュを保持します。そのため、ランタイムは、ロックまたはメモリ バリアを使用せずにメモリを管理します。 アプリケーションでは、その他のメリットがあります、`Alloc`と`Free`メモリ キャッシュをより頻繁にアクセスするときに機能します。 両方を頻繁に呼び出す、スレッドなど`Alloc`と`Free`メリットよりも主を呼び出すスレッド`Alloc`または`Free`します。
+同時実行ランタイムには、同時にメモリブロックの割り当てと解放を行うために最適化された、2つのメモリ管理関数が用意されています。 [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc)関数は、指定されたサイズを使用してメモリのブロックを割り当てます。 [Concurrency:: Free](reference/concurrency-namespace-functions.md#free)関数は、`Alloc`によって割り当てられたメモリを解放します。
 
 > [!NOTE]
->  これらのメモリ管理関数を使用すると、入力できるは、アプリケーションは大量のメモリ、アプリケーション メモリ不足の状態より早くするよりも期待しています。 1 つのスレッドによってキャッシュされたメモリ ブロックが 1 つのスレッドは、大量のメモリを保持している場合、他のスレッドを利用できないため、そのメモリは使用できません。
+> `Alloc` 関数と `Free` 関数は相互に依存しています。 `Free` 関数は、`Alloc` 関数を使用して割り当てたメモリを解放する場合にのみ使用します。 また、`Alloc` 関数を使用してメモリを割り当てる場合は、`Free` 関数だけを使用してそのメモリを解放します。
+
+さまざまなスレッドまたはタスクから固定された割り当てサイズのセットを割り当てて解放するときに、`Alloc` および `Free` 関数を使用します。 同時実行ランタイムは、C ランタイムヒープから割り当てられたメモリをキャッシュします。 同時実行ランタイムは、実行中のスレッドごとに個別のメモリキャッシュを保持します。このため、ランタイムは、ロックやメモリバリアを使用せずにメモリを管理します。 アプリケーションでは、メモリキャッシュへのアクセス頻度が高くなると、`Alloc` と `Free` の機能が向上します。 たとえば、`Alloc` と `Free` の両方を頻繁に呼び出すスレッドは、主に `Alloc` または `Free`を呼び出すスレッドよりも優れています。
+
+> [!NOTE]
+> これらのメモリ管理機能を使用し、アプリケーションで大量のメモリを使用すると、アプリケーションは、予想よりも早くメモリ不足の状態になる可能性があります。 1つのスレッドによってキャッシュされたメモリブロックは、他のスレッドでは使用できないため、1つのスレッドが大量のメモリを保持している場合、そのメモリは使用できません。
 
 ## <a name="example"></a>例
 
-使用する例については、`Alloc`と`Free`メモリのパフォーマンスを向上させるために関数を参照してください[方法: 使用 Alloc と Free メモリ パフォーマンスを向上させる](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
+`Alloc` および `Free` 関数を使用してメモリパフォーマンスを向上させる例については、「[方法: Alloc と Free を使用してメモリパフォーマンスを向上](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)させる」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [方法: Alloc および Free を使用してメモリ パフォーマンスを改善する](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
-

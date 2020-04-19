@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4623
 ms.assetid: e630d8d0-f6ea-469c-a74f-07b027587225
-ms.openlocfilehash: d1b659a6aed593a2e3f01ac1b82e60878cb09c80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0dd9aec19fb21870a1233cd3b713337fa15aaa
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585433"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990633"
 ---
 # <a name="compiler-warning-level-4-c4623"></a>コンパイラの警告 (レベル 4) C4623
 
@@ -21,11 +21,11 @@ ms.locfileid: "50585433"
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C4623 警告が生成されます。
 
-```
+```cpp
 // C4623.cpp
 // compile with: /W4
 #pragma warning(default : 4623)

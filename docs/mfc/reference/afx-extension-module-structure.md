@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
-ms.openlocfilehash: ee39fcec3083145dbc23c7739897bf89d47578a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1bdc9d744424ab0ad59be3bd7b815b5122bcd10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338637"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 構造体
 
@@ -59,7 +59,7 @@ MFC 拡張 Dll の 2 つの作業を実行しなければ、`DllMain`関数。
 
 [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]
 
-格納されているモジュールの情報、`AFX_EXTENSION_MODULE`構造にコピーできる、`CDynLinkLibrary`オブジェクト。 例えば:
+格納されているモジュールの情報、`AFX_EXTENSION_MODULE`構造にコピーできる、`CDynLinkLibrary`オブジェクト。 例:
 
 [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]
 
@@ -72,4 +72,3 @@ MFC 拡張 Dll の 2 つの作業を実行しなければ、`DllMain`関数。
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)<br/>
 [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
-

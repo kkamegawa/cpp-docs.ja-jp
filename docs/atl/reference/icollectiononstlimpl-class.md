@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 1b76ec9840fbee53a9003ca3a6064021a0f8d751
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275788"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl クラス
 
@@ -163,5 +163,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>関連項目
 
-[ATLCollections サンプル](../../visual-cpp-samples.md)<br/>
+[ATLCollections サンプル](../../overview/visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

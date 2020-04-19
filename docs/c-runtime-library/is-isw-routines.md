@@ -1,14 +1,17 @@
 ---
 title: is、isw 系ルーチン
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isw
 - is
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 65dc5bbfbaeab59e91cdca23c4f0f01b5ef7ebbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620173"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940172"
 ---
 # <a name="is-isw-routines"></a>is、isw 系ルーチン
 
@@ -36,18 +39,18 @@ ms.locfileid: "50620173"
 |[_isctype、iswctype、_isctype_l、_iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper、_isupper_l、iswupper、_iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit、iswdigit、_isdigit_l、_iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらのルーチンは、文字が指定条件を満たしているかどうかをテストします。
 
-**is`EOF` ルーチンは、-1 (**) から **UCHAR_MAX** (0xFF) までの任意の整数の引数に対して意味のある結果を生成します。 `int` 型の引数が必要です。
+**is`EOF` ルーチンは、-1 (** ) から **UCHAR_MAX** (0xFF) までの任意の整数の引数に対して意味のある結果を生成します。 `int` 型の引数が必要です。
 
 > [!CAUTION]
 > **is** ルーチンで `char` 型の引数を渡すと、予測できない結果が発生する可能性があります。 0x7F よりも大きい値を持つ `char` 型の SBCS または MBCS の 1 バイト文字は負になります。 `char` が渡されると、コンパイラはその値を符号付き `int` または符号付き **long** に変換することがあります。 この値は、コンパイラによって符号拡張されることがあり、予想外の結果になることがあります。
 
 **isw** ルーチンは、-1 (**WEOF**) から 0xFFFF までの任意の整数値に対して意味のある結果を生成します。 **wint_t** データ型は、WCHAR.H で **unsigned short** として定義されており、任意のワイド文字またはワイド文字のファイル終端 (**WEOF**) 値を保持できます。
 
-出力値は、ロケールの `LC_CTYPE` カテゴリの設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
+出力値は、ロケールの `LC_CTYPE` カテゴリの設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
 
 "C" ロケールでは、**is** ルーチンのテスト条件は次のようになります。
 
@@ -156,7 +159,7 @@ ASCII 文字のワイド文字表現 (0x0000 - 0x007F)。
 空白ワイド文字 (L' ') および `iswalnum` が 0 以外になるワイド文字を除く、印刷できるワイド文字。
 
 `iswspace`<br/>
-標準の空白文字に対応するワイド文字、または `iswalnum` が false になるワイド文字の実装定義セットに含まれるワイド文字。 標準の空白文字は、空白 (L' ')、フォーム フィード (L'\f')、改行 (L'\n')、復帰 (L'\r')、水平タブ (L'\t')、および垂直タブ (L'\v') です。
+標準の空白文字に対応するワイド文字、または `iswalnum` が false になるワイド文字の実装定義セットに含まれるワイド文字。 標準の空白文字は、スペース (L' ')、フォーム フィード (L'\f')、改行 (L'\n')、復帰 (L'\r')、水平タブ (L'\t')、および垂直タブ (L'\v') です。
 
 `iswupper`<br/>
 大文字のワイド文字、または `iswcntrl`、`iswdigit`、`iswpunct`、または `iswspace` がいずれも 0 になるワイド文字の実装定義セットに含まれるワイド文字。 `iswupper` は、大文字に対応するワイド文字に対してのみ、0 以外の値を返します。
@@ -202,7 +205,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```Output
 00            AS  C                              .
@@ -335,7 +338,7 @@ int main( void )
 7f            AS  C                              .
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [文字分類](../c-runtime-library/character-classification.md)<br/>
 [ロケール](../c-runtime-library/locale.md)<br/>

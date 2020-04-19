@@ -1,9 +1,9 @@
 ---
 title: _set_controlfp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _set_controlfp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_controlfp
 - _set_controlfp
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d39406db0f4c9ba6374776da62aea2dbb61e23d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499027"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948683"
 ---
-# <a name="setcontrolfp"></a>_set_controlfp
+# <a name="_set_controlfp"></a>_set_controlfp
 
 浮動小数点制御ワードを設定します。
 
@@ -46,10 +49,10 @@ void __cdecl _set_controlfp(
 
 ### <a name="parameters"></a>パラメーター
 
-*newControl*<br/>
+*基準*<br/>
 新しい制御ワードのビット値。
 
-*マスク*<br/>
+*隠す*<br/>
 新しく設定する制御ワード ビットのマスク。
 
 ## <a name="return-value"></a>戻り値
@@ -58,9 +61,9 @@ void __cdecl _set_controlfp(
 
 ## <a name="remarks"></a>Remarks
 
-**_Set_controlfp**機能に似ています **_control87**浮動小数点制御ワード設定だけを行いますが、 *newControl*します。 この値のビットは、浮動小数点のコントロールの状態を示します。 浮動小数点のコントロールの状態を使用すると、プログラムで使用する浮動小数点演算パッケージの精度、丸め、無限大の各モードを変更できます。 マスクを使用して浮動小数点の例外をマスクの **_set_controlfp**します。 詳細については、「[_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)」を参照してください。
+**_Set_controlfp**関数は **_control87**に似ていますが、浮動小数点制御ワードのみが*newcontrol*に設定されます。 この値のビットは、浮動小数点のコントロールの状態を示します。 浮動小数点のコントロールの状態を使用すると、プログラムで使用する浮動小数点演算パッケージの精度、丸め、無限大の各モードを変更できます。 **_Set_controlfp**を使用して、浮動小数点例外のマスクまたはマスク解除を行うこともできます。 詳細については、「[_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)」を参照してください。
 
-コンパイルするときに、この関数は非推奨[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のため、共通言語ランタイムは浮動小数点の既定の精度のみをサポートします。
+共通言語ランタイムは浮動小数点の既定の精度のみをサポートするため、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルする場合、この関数は非推奨とされます。
 
 ## <a name="requirements"></a>必要条件
 

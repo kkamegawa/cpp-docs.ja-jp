@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: e4a399ffb4c0d2161479ed7c84e66eb58a9260ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11be0eba080085c507ed718ea23219ca1c93aeba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552842"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341183"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException クラス
 
@@ -69,4 +69,3 @@ CMemoryException();
 
 [CException クラス](cexception-class.md)<br/>
 [階層図](../hierarchy-chart.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: da1729834076ebc62eee9e482934f9410c03e78c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408025"
 ---
 # <a name="drawing-in-a-view"></a>ビューの描画
 
@@ -42,9 +42,8 @@ A[デバイス コンテキスト](../mfc/device-contexts.md)ディスプレイ�
 
 例では、ビューの中央に、ドキュメントから取得した文字列を出力します。 場合、`OnDraw`画面の描画の呼び出しは、`CDC`で渡されるオブジェクト*pDC*は、`CPaintDC`コンス トラクターは既に呼び出されて`BeginPaint`します。 関数の描画呼び出しは、デバイス コンテキスト ポインターを通じて行われます。 デバイス コンテキストおよび描画呼び出しについては、クラスを参照してください。 [CDC](../mfc/reference/cdc-class.md)で、 *MFC リファレンス*と[ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)します。
 
-記述する方法の例について`OnDraw`を参照してください、 [MFC サンプル](../visual-cpp-samples.md)します。
+記述する方法の例について`OnDraw`を参照してください、 [MFC サンプル](../overview/visual-cpp-samples.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [ビューの使い方](../mfc/using-views.md)
-

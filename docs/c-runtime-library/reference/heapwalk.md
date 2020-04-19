@@ -1,9 +1,9 @@
 ---
 title: _heapwalk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapwalk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapwalk
 - _heapwalk
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454900"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954773"
 ---
-# <a name="heapwalk"></a>_heapwalk
+# <a name="_heapwalk"></a>_heapwalk
 
 ヒープを走査し、次のエントリに関する情報を返します。
 
@@ -51,22 +54,22 @@ int _heapwalk( _HEAPINFO *entryinfo );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapwalk** Malloc.h に定義されている次の整数マニフェスト定数のいずれかを返します。
+**_heapwalk**は、次のいずれかの整数マニフェスト定数を返します Malloc. h です。
 
 |戻り値|説明|
 |-|-|
 |**_HEAPBADBEGIN**| 初期ヘッダー情報が無効または見つかりません。|
 |**_HEAPBADNODE**| ヒープが破損しているか、不適切なノードが見つかりました。|
-|**_HEAPBADPTR**| **_Heapinfo**のフィールド、 **_HEAPINFO**構造体に、ヒープへの有効なポインターを含まないまたは*entryinfo* null ポインターです。|
+|**_HEAPBADPTR**| **_HEAPINFO**構造体の **_pentry**フィールドにヒープへの有効なポインターが含まれていないか、 *entryinfo*が null ポインターです。|
 |**_HEAPEND**| ヒープの終わりに正常に到達しました。|
 |**_HEAPEMPTY**| ヒープが初期化されていません。|
-|**_HEAPOK**| このエラーは、これまではなし*entryinfo*は、次のヒープ エントリに関する情報で更新します。|
+|**_HEAPOK**| これまでのエラーはありません。*entryinfo*は、次のヒープエントリに関する情報で更新されます。|
 
-さらに、エラーが発生する場合に **_heapwalk**設定**errno**に**返る**します。
+さらに、エラーが発生した場合、 **_heapwalk**は**errno**をに設定**します。**
 
 ## <a name="remarks"></a>Remarks
 
-**_Heapwalk**関数により、プログラムでヒープ関連の問題をデバッグします。 関数はヒープは、呼び出しごとに 1 つのエントリを走査し、型の構造体へのポインターを返します **_HEAPINFO**次のヒープ エントリに関する情報を格納します。 **_HEAPINFO**は、Malloc.h に定義された型には、次の要素が含まれています。
+**_Heapwalk**関数は、プログラムのヒープ関連の問題をデバッグするのに役立ちます。 関数は、ヒープを走査し、呼び出しごとに1つのエントリを走査し、次のヒープエントリに関する情報を含む **_HEAPINFO**型の構造体へのポインターを返します。 **_HEAPINFO**型には、次の要素が含まれています。
 
 |フィールド|説明|
 |-|-|
@@ -74,9 +77,9 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |`size_t _size`|ヒープ エントリのサイズ。|
 |`int _useflag`|ヒープ エントリが使用中かどうかを示すフラグ。|
 
-呼び出し **_heapwalk**を返す **_HEAPOK**内のエントリのサイズを格納、**サイズ _s**フィールドとセット、 **_heapinfo**フィールド **_FREEENTRY**または **_USEDENTRY** (両方とも Malloc.h に定義されている定数です)。 このヒープ内の最初のエントリに関する情報を取得する渡す **_heapwalk**へのポインターを **_HEAPINFO**持つ **_heapinfo**メンバーが**NULL**. オペレーティング システムがサポートされていない場合 **_heapwalk**関数を返します (たとえば、Windows 98) **_HEAPEND**設定と**errno**に**返る**.
+**_HEAPOK**を返す **_heapwalk**の呼び出しでは、 **size**フィールドにエントリのサイズが格納さ**れ、** **_FREEENTRY**エントリまたは**エントリ**(両方とも Malloc で定義された定数) のいずれかに設定されます。 ヒープ内の最初のエントリに関するこの情報を取得するには、 **_pentry**メンバーが**NULL**である **_HEAPINFO**構造体へのポインターを **_heapwalk**に渡します。 オペレーティングシステムが **_heapwalk**(Windows 98 など) をサポートしていない場合、関数は **_HEAPEND**を返し、 **errno**を**に設定**します。
 
-この関数は、そのパラメーターを検証します。 場合*entryinfo* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します **_HEAPBADPTR**します。
+この関数は、そのパラメーターを検証します。 *Entryinfo*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は **_HEAPBADPTR**を返します。
 
 ## <a name="requirements"></a>必要条件
 

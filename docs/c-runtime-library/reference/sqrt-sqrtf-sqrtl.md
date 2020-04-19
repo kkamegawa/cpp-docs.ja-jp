@@ -1,11 +1,11 @@
----
+﻿---
 title: sqrt、sqrtf、sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560577"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958109"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -68,13 +72,13 @@ long double sqrtl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**長い****二重**型。 C プログラムで**sqrt**は**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**long** **double**型。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
 
 ## <a name="return-value"></a>戻り値
 
-**Sqrt**関数の平方根を返します*x*します。 既定では場合、 *x*が負の値、 **sqrt**は不定値 NaN を返します。
+**Sqrt**関数は*x*の平方根を返します。 既定では、 *x*が負の場合、 **sqrt**は無限の NaN を返します。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
@@ -84,7 +88,7 @@ long double sqrtl(
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**、 **sqrtf**、 **sqrtf**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
 

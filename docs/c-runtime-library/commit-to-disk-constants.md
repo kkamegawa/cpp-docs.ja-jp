@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: f4da66c913cd8a046257158e837e5bdb20ed71c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581397"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750612"
 ---
 # <a name="commit-to-disk-constants"></a>ディスク コミット定数
 
@@ -23,7 +23,7 @@ ms.locfileid: "50581397"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの Microsoft 固有の定数は、開いているファイルに関連付けられているバッファーが、オペレーティング システムのバッファーまたはディスクにフラッシュされるかどうかを指定します。 このモードは、読み取り/書き込みのアクセス権の種類 (**"r"**、**"w"**、**"a"**、**"r+"**、**"w+"**、**"a+"**) を指定する文字列に含まれます。
 
@@ -48,7 +48,7 @@ ms.locfileid: "50581397"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 009ef74d810976eb9f054b45e388ceb0fe612b2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521031"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246069"
 ---
 # <a name="exception-class"></a>exception クラス
 
@@ -29,7 +29,7 @@ class exception {
    exception& operator=(const exception &right);
    virtual ~exception();
    virtual const char *what() const;
-   };
+};
 ```
 
 ## <a name="remarks"></a>Remarks
@@ -44,13 +44,3 @@ class exception {
 ## <a name="example"></a>例
 
 `exception` クラスから継承する標準の例外クラスの使用例については、[\<stdexcept>](../standard-library/stdexcept.md) で定義されているクラスを参照してください。
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<exception>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

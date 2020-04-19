@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 4ac6b72095620a3e857f2877d776e91b273e8f33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566648"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514049"
 ---
 # <a name="retval"></a>retval
 
@@ -25,13 +25,13 @@ ms.locfileid: "50566648"
 
 ## <a name="remarks"></a>Remarks
 
-**Retval** C++ 属性と同じ機能を持つ、 [retval](/windows/desktop/Midl/retval) MIDL 属性。
+**Retval** C++属性には、 [retval](/windows/win32/Midl/retval) MIDL 属性と同じ機能があります。
 
-**retval**関数の宣言の最後の引数に表示する必要があります。
+**retval**は、関数の宣言の最後の引数に指定されている必要があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)の使用サンプル**retval**します。
+**Retval**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -39,7 +39,7 @@ ms.locfileid: "50566648"
 
 |||
 |-|-|
-|**対象**|インターフェイスのパラメーター、インターフェイス メソッド|
+|**対象**|インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|**out**|
 |**無効な属性**|**in**|

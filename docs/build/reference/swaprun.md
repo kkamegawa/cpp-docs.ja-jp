@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SWAPRUN editbin option
 - SWAPRUN editbin option
 ms.assetid: 6eefd7f3-ca47-48e3-8509-323d27cf4ae7
-ms.openlocfilehash: 0440d268a807e6f3f43beb9f38bd1950dee55ffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff11e64ae8ec0eb5236369e8322e051ee40b26bd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317758"
 ---
 # <a name="swaprun"></a>/SWAPRUN
 
@@ -35,4 +35,4 @@ ms.locfileid: "50550723"
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

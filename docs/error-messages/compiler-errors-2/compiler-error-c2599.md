@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
-ms.openlocfilehash: 872c3a66d4738c1a69990dffdbbc59cee9e90002
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c722335660653df7e533ec25d4708f42c16846ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544639"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740768"
 ---
 # <a name="compiler-error-c2599"></a>コンパイラ エラー C2599
 
-'enum': 列挙型の事前宣言することはできません
+' enum ': 列挙型の事前宣言は許可されていません
 
-コンパイラは、マネージ列挙型の事前宣言をサポートしていません。
+コンパイラは、マネージ列挙型の事前宣言をサポートしなくなりました。
 
-列挙型の事前宣言することはできません[/Za](../../build/reference/za-ze-disable-language-extensions.md)します。
+Enum 型の事前宣言は、 [/za](../../build/reference/za-ze-disable-language-extensions.md)では許可されていません。
 
-次の例では、c2599 エラーが生成されます。
+次の例では、C2599 が生成されます。
 
-```
+```cpp
 // C2599.cpp
 // compile with: /clr /c
 enum class Status;   // C2599

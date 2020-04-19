@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-ms.openlocfilehash: ebe221cf38be563b2fc9e3c0f41ad3ef2c95caf1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 39d5fd4707f1c03de78cf9fd078655389c93ba17
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323545"
 ---
 # <a name="cuintarray-class"></a>CUIntArray クラス
 
@@ -128,4 +128,3 @@ class CUIntArray : public CObject
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

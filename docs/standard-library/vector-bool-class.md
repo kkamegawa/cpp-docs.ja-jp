@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521987"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452266"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
-`vector<bool>`クラスの部分的特殊化は、[ベクター](../standard-library/vector-class.md)型の要素に対して**bool**します。 1 つを格納することで、スペースの最適化を提供する特殊化で使用される基になる型のアロケーターを**bool**ビットごとの値。
+クラスは、 **bool**型の要素の [vector](../standard-library/vector-class.md) の部分的特殊化です。`vector<bool>` これには、特殊化によって使用される基になる型のアロケーターがあり、1ビットあたり1つの**ブール**値を格納することによって領域を最適化します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,14 +37,14 @@ class vector<bool, Allocator>
 
 このクラス テンプレートの特殊化は vector と同様に動作しますが、この記事で説明する違いがあります。
 
-処理する操作、 **bool**型は、コンテナーのストレージの値に対応します。 `allocator_traits::construct` はこれらの値の構築には使用されません。
+**Bool**型を処理する操作は、コンテナーストレージの値に対応します。 `allocator_traits::construct` はこれらの値の構築には使用されません。
 
 ### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` のブール型要素への定数ポインターとして使用できる `vector<bool>` への typedef。|
-|[const_reference](#const_reference)|Typedef **bool**します。 初期化後に、元の値への更新を確認しません。|
+|[const_reference](#const_reference)|**Bool**の typedef。 初期化後に、元の値への更新を確認しません。|
 |[pointer](#pointer)|`iterator` のブール型要素へのポインターとして使用できる `vector<bool>` への typedef。|
 
 ### <a name="member-functions"></a>メンバー関数
@@ -142,7 +142,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |パラメーター|説明|
 |-|-|
-|*pos*|`vector<bool>` 要素の位置。|
+|*Po*|`vector<bool>` 要素の位置。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -152,7 +152,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>Remarks
 
-_ITERATOR_DEBUG_LEVEL セットでコンパイルする場合、実行時エラーには、ベクターの境界外にある要素にアクセスしようとした場合に発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
+コンパイルしたときに [レベルの設定] を使用した場合、ベクターの境界の外にある要素にアクセスしようとすると、実行時エラーが発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -257,7 +257,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-暗黙的な変換`vector<bool>::reference`に**bool**します。
+からブール型への`vector<bool>::reference`暗黙の型変換を提供します。
 
 ```cpp
 operator bool() const;
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 値がビットに割り当てられている要素の参照。
 
-*val*<br/>
+*Val*\
 ビットに割り当てられるブール値。
 
 #### <a name="example"></a>例
@@ -371,11 +371,11 @@ static void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
-要素と交換される、*右*要素。
+*左側*\
+*右*の要素と交換される要素。
 
-*右*<br/>
-要素と交換される、*左*要素。
+*そうです*\
+*左*要素と交換される要素。
 
 ### <a name="remarks"></a>Remarks
 
@@ -383,5 +383,5 @@ static void swap(
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

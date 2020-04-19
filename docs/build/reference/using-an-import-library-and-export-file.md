@@ -6,12 +6,12 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: e23b729bdca102ec24c4426e9784e3aab267bff2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317784"
 ---
 # <a name="using-an-import-library-and-export-file"></a>インポート ライブラリとエクスポート ファイルの使用
 
@@ -29,4 +29,4 @@ ms.locfileid: "50484961"
 
 ## <a name="see-also"></a>関連項目
 
-[インポート ライブラリとエクスポート ファイル](../../build/reference/working-with-import-libraries-and-export-files.md)
+[インポート ライブラリとエクスポート ファイル](working-with-import-libraries-and-export-files.md)

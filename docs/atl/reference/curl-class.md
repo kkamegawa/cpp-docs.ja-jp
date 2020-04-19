@@ -1,6 +1,6 @@
 ---
 title: CUrl クラス
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CUrl
 - ATLUTIL/ATL::CUrl
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: fe91a01fbe67580bf82ae57c0317d06057fc9098
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471514"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221493"
 ---
 # <a name="curl-class"></a>CUrl クラス
 
@@ -92,7 +92,7 @@ class CUrl
 |[CUrl::SetPassword](#setpassword)|パスワードを設定するには、このメソッドを呼び出します。|
 |[CUrl::SetPortNumber](#setportnumber)|ATL_URL_PORT の観点から、ポート番号を設定するには、このメソッドを呼び出します。|
 |[CUrl::SetScheme](#setscheme)|URL スキームを設定するには、このメソッドを呼び出します。|
-|[スキーム](#setschemename)|URL のスキーム名を設定するには、このメソッドを呼び出します。|
+|[CUrl::SetSchemeName](#setschemename)|URL のスキーム名を設定するには、このメソッドを呼び出します。|
 |[CUrl::SetUrlPath](#seturlpath)|URL パスを設定するには、このメソッドを呼び出します。|
 |[CUrl::SetUserName](#setusername)|ユーザー名を設定するには、このメソッドを呼び出します。|
 
@@ -122,9 +122,9 @@ class CUrl
 
 - ホスト名:"`www.microsoft.com`"
 
-- PortNumber: 80
+- ポート番号:80
 
-- UrlPath:"visualc/stuff.htm"
+- UrlPath: "visualc/stuff.htm"
 
 - ExtraInfo:"#contents"
 
@@ -147,17 +147,17 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 *dwFlags*<br/>
 正規化を制御するフラグ。 フラグが指定されていない場合 (*dwFlags* = 0)、メソッドは、すべての安全でない文字およびメタ シーケンスに変換します。 (など\\。、\..、と\\...) をエスケープするシーケンス。 *dwFlags*値は次のいずれかを指定できます。
 
-- ATL_URL_BROWSER_MODE: はエンコードまたは「#」の後に文字をデコードまたは""、末尾の空白文字の後に削除されません""です。 この値が指定されていない場合は、URL 全体はエンコードされ、後続の空白が削除されます。
+- ATL_URL_BROWSER_MODE:「#」の後に文字をデコードまたはエンコードしませんまたは""、末尾の空白文字の後に削除されません""です。 この値が指定されていない場合は、URL 全体はエンコードされ、後続の空白が削除されます。
 
-- ATL_URL _DECODE: URL が解析される前に、エスケープ シーケンスを含む文字をすべて %XX シーケンスに変換します。
+- ATL_URL _DECODE:URL が解析される前に、エスケープ シーケンスを含む文字すべて %XX シーケンスに変換します。
 
-- ATL_URL _ENCODE_PERCENT: 発生した任意のパーセント記号をエンコードします。 既定では、パーセント記号はエンコードされません。
+- ATL_URL _ENCODE_PERCENT:発生した任意のパーセント記号をエンコードします。 既定では、パーセント記号はエンコードされません。
 
-- ATL_URL _ENCODE_SPACES_ONLY: spaces only. をエンコードします。
+- ATL_URL _ENCODE_SPACES_ONLY:Spaces only. をエンコードします。
 
-- ATL_URL _NO_ENCODE: 安全でない文字をエスケープ シーケンスでは変換されません。
+- ATL_URL _NO_ENCODE:安全でない文字をエスケープ シーケンスは変換されません。
 
-- ATL_URL _NO_META: メタ シーケンスは削除されません (など".「と」..")、URL から。
+- ATL_URL _NO_META:メタ シーケンスは削除されません (など".「と」..")、URL から。
 
 ### <a name="return-value"></a>戻り値
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 URL。
 
 *dwFlags*<br/>
-内のすべてのエスケープ文字を変換するには、ATL_URL_DECODE または ATL_URL_ESCAPE 指定*lpszUrl*に解析後に実際の値。 (Visual C 2005 では、以前 ATL_URL_DECODE 変換すべてのエスケープ文字を解析する前にします。)
+内のすべてのエスケープ文字を変換するには、ATL_URL_DECODE または ATL_URL_ESCAPE 指定*lpszUrl*に解析後に実際の値。 (Visual の前にC++2005 では、解析する前に変換されたすべてのエスケープ文字を ATL_URL_DECODE)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -225,7 +225,7 @@ inline BOOL CreateUrl(
 
 このメソッドは、次の形式を使用して、完全な URL 文字列を構築するために個別のフィールドを追加します。
 
-**\<スキーム >://\<ユーザー >:\<渡す >\@\<ドメイン >:\<ポート >\<パス >\<追加 >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 このメソッドを呼び出すときに、 *pdwMaxLength*パラメーターは、によって参照される文字列バッファーの最大長を含める必要があります最初に、 *lpszUrl*パラメーター。 値、 *pdwMaxLength*パラメーターは、URL 文字列の実際の長さで更新されます。
 
@@ -482,7 +482,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpszHost*<br/>
-ホスト名。
+ホスト名です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -543,7 +543,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 名前で、スキームを設定することもできます (を参照してください[スキーム](#setschemename))。
 
-##  <a name="setschemename"></a>  スキーム
+##  <a name="setschemename"></a>  CUrl::SetSchemeName
 
 URL のスキーム名を設定するには、このメソッドを呼び出します。
 

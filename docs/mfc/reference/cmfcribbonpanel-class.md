@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389555"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
 
@@ -145,7 +145,7 @@ class CMFCRibbonPanel : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[Cmfcribbonpanel::add](#add)|パネルには、リボン要素を追加します。|
+|[CMFCRibbonPanel::Add](#add)|パネルには、リボン要素を追加します。|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|リボン パネルには、区切り記号を追加します。|
 |[CMFCRibbonPanel::AddToolBar](#addtoolbar)|リボン パネルには、ツールバーを追加します。|
 |[CMFCRibbonPanel::FindByData](#findbydata)||
@@ -207,7 +207,7 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCRibbonPanel`オブジェクトでさまざまなメソッドを使用して、`CMFCRibbonPanel`クラス。 この例では、リボン パネルを表示するキーボード ショートカットを設定し、列で、パネル内の要素を垂直方向に配置して、列の位置合わせを有効にする方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CMFCRibbonPanel`オブジェクトでさまざまなメソッドを使用して、`CMFCRibbonPanel`クラス。 この例では、リボン パネルを表示するキーボード ショートカットを設定し、列で、パネル内の要素を垂直方向に配置して、列の位置合わせを有効にする方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
@@ -221,7 +221,7 @@ class CMFCRibbonPanel : public CObject
 
 **ヘッダー:** afxRibbonPanel.h
 
-##  <a name="add"></a>  Cmfcribbonpanel::add
+##  <a name="add"></a>  CMFCRibbonPanel::Add
 
 リボン パネルに含まれるリボン要素の配列に指定されたリボン要素を追加します。
 
@@ -315,7 +315,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]リボン要素に関連付けられたデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -854,7 +854,7 @@ int nHeight);
 *pDC*<br/>
 [in]リボン パネル用のデバイス コンテキストへのポインター。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]リボン パネルの高さ。
 
 ### <a name="remarks"></a>Remarks
@@ -976,7 +976,7 @@ void SetData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]設定するユーザー定義データを指定します。
 
 ### <a name="remarks"></a>Remarks

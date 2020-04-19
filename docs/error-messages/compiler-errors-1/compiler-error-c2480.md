@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 90016b65d4ddd58da3fb3c5ab6d81322dc0ef394
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566726"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743524"
 ---
 # <a name="compiler-error-c2480"></a>コンパイラ エラー C2480
 
-'identifier': 'thread' は有効な静的データ項目に対してのみ
+' identifier ': ' thread ' は静的なデータ項目に対してのみ有効です
 
-使用することはできません、`thread`属性または関数宣言または定義で、自動変数、非静的データ メンバー、関数のパラメーターを使用します。
+`thread` 属性を、自動変数、非静的データメンバー、関数パラメーター、または関数の宣言または定義で使用することはできません。
 
-使用して、`thread`グローバル変数、静的データ メンバー、およびローカル静的変数の属性。
+グローバル変数、静的データメンバー、およびローカルの静的変数に対してのみ、`thread` 属性を使用します。
 
 次の例では、C2480 が生成されます。
 
-```
+```cpp
 // C2480.cpp
 // compile with: /c
 __declspec( thread ) void func();   // C2480

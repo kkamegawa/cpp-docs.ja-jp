@@ -8,12 +8,12 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 2abcd1592316ef5bea01adbf738e3d0a2cae93df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96c45cad5da0bf16edfa71cb7e357ae4d66e318d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405834"
 ---
 # <a name="file-and-database-classes"></a>ファイルおよびデータベース クラス
 
@@ -32,4 +32,3 @@ ms.locfileid: "50661943"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

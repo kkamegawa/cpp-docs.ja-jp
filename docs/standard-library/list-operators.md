@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537543"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246464"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクトと等しくないかどうかを調べます。
 
@@ -42,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `list` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -81,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクトより小さいかどうかを調べます。
 
@@ -93,10 +88,10 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `list` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -136,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクト以下かどうかを調べます。
 
@@ -148,10 +143,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `list` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -191,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクトと等しいかどうかを調べます。
 
@@ -203,10 +198,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `list` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -242,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクトより大きいかどうかを調べます。
 
@@ -254,10 +249,10 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `list` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -297,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクト以上かどうかを調べます。
 
@@ -309,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `list` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -352,7 +347,3 @@ int main( )
 List c1 is greater than or equal to list c2.
 */
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<list>](../standard-library/list.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: C と Win32 を使用するマルチスレッド
-ms.date: 02/02/2018
+ms.date: 08/09/2019
 helpviewer_keywords:
 - Windows API [C++], multithreading
 - multithreading [C++], C and Win32
@@ -10,41 +10,115 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-ms.openlocfilehash: a544586cb3f78aed83d50ef10c083a4edbba5cb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1764561e0b2b43b8a89d8a1eb2e85d84ce33c4fc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460191"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141971"
 ---
 # <a name="multithreading-with-c-and-win32"></a>C と Win32 を使用するマルチスレッド
 
-Microsoft Visual C では、マルチ スレッド アプリケーションを作成するためのサポートを提供します。 複数のスレッドを使用して、アプリケーションがユーザー インターフェイスが応答しなくなる原因となる負荷の高い操作を実行する必要がある場合を検討してください。
+Microsoft C/C++コンパイラ (MSVC) では、マルチスレッドアプリケーションの作成がサポートされています。 アプリケーションで、ユーザーインターフェイスが応答しなくなる可能性のある高価な操作を実行する必要がある場合は、複数のスレッドを使用することを検討してください。
 
-Visual C++ では、複数のスレッドを含むプログラムを作成する方法として、MFC (Microsoft Foundation Class) ライブラリを使用する方法と、C ランタイム ライブラリと Win32 API を使用する方法の 2 つがあります。 MFC でマルチ スレッド アプリケーションを作成する方法の詳細については、次を参照してください[C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)c 言語でのマルチ スレッドに関する次のトピックを読む。
+MSVC では、複数のスレッドでプログラミングする方法がいくつかありますC++。/WinRT と Windows ランタイムライブラリ、Microsoft Foundation CLASS (MFC) ライブラリ、 C++/cli と .net ランタイム、または C ランタイムライブラリと Win32 API を使用できます。 この記事では、C のマルチスレッドについて説明します。コード例については、「 [C でのマルチスレッドプログラムの例](sample-multithread-c-program.md)」を参照してください。
 
-以下のトピックでは、マルチスレッド プログラムの作成をサポートする Visual C++ の機能について説明します。
+## <a name="multithread-programs"></a>マルチスレッド プログラム
 
-## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
+スレッドは、基本的にプログラムを通じて実行されるパスです。 また、Win32 でスケジュールされる実行の最小単位でもあります。 スレッドは、スタック、CPU レジスタの状態、およびシステムスケジューラの実行リスト内のエントリで構成されます。 各スレッドは、すべてのプロセスのリソースを共有します。
 
-- [どのようなマルチ スレッドの詳細については、](multithread-programs.md)
+プロセスは、1つまたは複数のスレッドと、メモリ内のプログラムのコード、データ、およびその他のリソースで構成されます。 一般的なプログラムリソースは、開いているファイル、セマフォ、および動的に割り当てられたメモリです。 プログラムは、システムスケジューラによって、そのスレッドの実行コントロールの1つが付与されたときに実行されます。 スケジューラは、実行するスレッドと実行するタイミングを決定します。 優先度の低いスレッドは、優先度の高いスレッドがタスクを完了するまで待機する必要がある場合があります。 マルチプロセッサコンピューターでは、スケジューラは個々のスレッドを異なるプロセッサに移動して、CPU 負荷を分散させることができます。
 
-- [ライブラリのサポートのマルチ スレッド](library-support-for-multithreading.md)
+プロセス内の各スレッドは、独立して動作します。 相互に見えるようにしない限り、スレッドは個別に実行され、プロセス内の他のスレッドを認識しません。 ただし、共通リソースを共有するスレッドでは、セマフォや、プロセス間通信の別の方法を使用して、作業を調整する必要があります。 スレッドの同期の詳細については、「[マルチスレッド Win32 プログラムの作成](#writing-a-multithreaded-win32-program)」を参照してください。
 
-- [インクルード ファイルのマルチ スレッド](include-files-for-multithreading.md)
+## <a name="library-support-for-multithreading"></a>ライブラリのマルチスレッド サポート
 
-- [スレッド コントロールのための C ランタイム ライブラリ関数](c-run-time-library-functions-for-thread-control.md)
+CRT のすべてのバージョンでマルチスレッドがサポートされるようになりました。ただし、一部の関数の非ロックバージョンは例外です。 詳細については、「[マルチスレッドライブラリのパフォーマンス](../c-runtime-library/multithreaded-libraries-performance.md)」を参照してください。 コードへのリンクに使用できる CRT のバージョンの詳細については、「 [crt ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
 
-- [C のサンプルのマルチ スレッド プログラム](sample-multithread-c-program.md)
+## <a name="include-files-for-multithreading"></a>マルチスレッドのためのインクルード ファイル
 
-- [マルチ スレッド Win32 プログラムの作成](writing-a-multithreaded-win32-program.md)
+標準の CRT インクルードファイルは、ライブラリに実装されている C ランタイムライブラリ関数を宣言します。 コンパイラオプションで[__fastcall または __vectorcall](../build/reference/gd-gr-gv-gz-calling-convention.md)の呼び出し規約を指定した場合、コンパイラは、すべての関数がレジスタ呼び出し規約を使用して呼び出されることを前提としています。 ランタイムライブラリ関数は C の呼び出し規約を使用し、標準のインクルードファイルの宣言は、これらの関数への正しい外部参照を生成するようにコンパイラに指示します。
 
-- [コンパイルとリンクのマルチ スレッド プログラム](compiling-and-linking-multithread-programs.md)
+## <a name="crt-functions-for-thread-control"></a>スレッド制御の CRT 関数
 
-- [マルチ スレッド プログラムの問題を回避](avoiding-problem-areas-with-multithread-programs.md)
+Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っています。 どのスレッドでも新しいスレッドを作成できます。 スレッドには、作業をすばやく完了して終了するものもあれば、プログラムの実行中アクティブ状態を続けるものもあります。
 
-- [スレッド ローカル ストレージ (TLS)](thread-local-storage-tls.md)
+CRT ライブラリには、スレッドの作成と終了を行うための次の関数が用意されています。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)、 [_endthread、および _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)です。
 
-## <a name="see-also"></a>関連項目
+`_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成し、スレッドが正常に作成されるとスレッド識別子を返します。 スレッドは、実行が完了すると自動的に終了します。 または、`_endthread` または `_endthreadex`を呼び出すことによって、自身を終了させることもできます。
 
-[旧形式のコードのためのマルチスレッド サポート (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)
+> [!NOTE]
+> Libcmt.lib でビルドされたプログラムから C ランタイムルーチンを呼び出す場合は、`_beginthread` または `_beginthreadex` 関数を使用してスレッドを開始する必要があります。 Win32 の `ExitThread` 関数および `CreateThread` 関数は使用しないでください。 また、C ランタイム ライブラリのデータ構造体へアクセス中のスレッドがあって、その完了を待っている複数のスレッドが存在する場合に `SuspendThread` を使うと、デッドロック状態になります。
+
+### <a name="_core_the__beginthread_function"></a>_Beginthread 関数と _beginthreadex 関数
+
+`_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。
+
+`_beginthread` と `_beginthreadex` は、Win32 API の[CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数に似ていますが、次のような違いがあります。
+
+- これらの関数は、特定の C ランタイム ライブラリ変数を初期化します。 これは、スレッドで C ランタイムライブラリを使用する場合にのみ重要です。
+
+- `CreateThread` は、セキュリティ属性を制御します。 CreateThread を使うと、一時的に停止状態になっているスレッドの実行を再開できます。
+
+`_beginthread` および `_beginthreadex` は、正常に終了した場合は新しいスレッドのハンドルを、エラーが発生した場合はエラー コードをそれぞれ返します。
+
+### <a name="_core_the__endthread_function"></a>_Endthread 関数と _endthreadex 関数
+
+[_Endthread](../c-runtime-library/reference/endthread-endthreadex.md)関数は、`_beginthread` によって作成されたスレッドを終了します (同様に、`_endthreadex` `_beginthreadex`によって作成されたスレッドを終了します)。 これらの関数が終了すると、スレッドは自動的に終了します。 `_endthread` および `_endthreadex` は、スレッドの内部条件に基づいて終了させる場合に便利です。 たとえば、通信ポートを制御できないときに、通信処理専用のスレッドを終了する場合があります。
+
+## <a name="writing-a-multithreaded-win32-program"></a>マルチスレッド Win32 プログラムの作成
+
+複数のスレッドを使用してプログラムを作成する場合は、[プログラムの動作とプログラムのリソースの使用](#_core_sharing_common_resources_between_threads)を調整する必要があります。 また、各スレッドが[独自のスタック](#_core_thread_stacks)を受け取るようにしてください。
+
+### <a name="_core_sharing_common_resources_between_threads"></a>スレッド間で共通のリソースを共有する
+
+> [!NOTE]
+> MFC の観点から見た同様の説明については、「[マルチスレッド: プログラミングのヒント](multithreading-programming-tips.md)と[マルチスレッド: 同期クラスを使用する場合](multithreading-when-to-use-the-synchronization-classes.md)」を参照してください。
+
+各スレッドは、専用のスタックと CPU レジスタの専用コピーを持っています。 ファイル、静的データ、ヒープ メモリなどのリソースは、プロセス内のすべてのスレッドで共有します。 これらの共通リソースを使うスレッドは、同期をとる必要があります。 Win32 には、セマフォや、クリティカル セクション、イベント、ミューテックスなど、リソースの同期をとるためにさまざまな方法が用意されています。
+
+複数のスレッドが静的データにアクセスするときには、リソースの競合に備える必要があります。 1つのスレッドが、別のスレッドによって表示される項目の*x*、*y*座標を含む静的なデータ構造体を更新するプログラムについて考えてみます。 更新スレッドが*x*座標を変更し、 *y*座標を変更する前に割り込みが発生した場合は、 *y*座標が更新される前に表示スレッドがスケジュールされることがあります。 その結果、項目は間違った場所に表示されます。 このような問題は、セマフォを使って構造体へのアクセスを制御することにより解決できます。
+
+Mutex ( *mut*ual *ex*clusion) は、相互に非同期に実行されているスレッドまたはプロセス間で通信する方法です。 この通信は、複数のスレッドまたはプロセスのアクティビティを調整するために使用できます。通常は、リソースのロックとロック解除によって共有リソースへのアクセスを制御します。 この*y*座標の*更新の問題*を解決するために、更新スレッドは、更新を実行する前にデータ構造が使用されていることを示すミューテックスを設定します。 両方の座標が更新されたら、ミューテックスを解除します。 表示スレッドは、ミューテックスが解除されるのを待ってから画面を更新する必要があります。 ミューテックスを待機するこのプロセスは、ミューテックスでの*ブロック*と呼ばれることがあります。これは、プロセスがブロックされ、ミューテックスがクリアされるまで続行できないためです。
+
+[マルチスレッド c プログラムのサンプル](sample-multithread-c-program.md)に示されているバウンス. c プログラムは、`ScreenMutex` という名前のミューテックスを使用して画面の更新を調整します。 表示スレッドの1つが画面に書き込む準備が整うと、そのたびに、`WaitForSingleObject` `ScreenMutex` を呼び出して、`WaitForSingleObject` の呼び出しがミューテックスでブロックされ、タイムアウトしないことを示します。`ScreenMutex` がオフの場合、待機関数は、他のスレッドが表示を妨げることができないようにミューテックスを設定し、スレッドの実行を継続します。 ScreenMutex が解除されない場合、スレッドはミューテックスが解除されるまでブロックされます。 スレッドが表示の更新を完了すると、`ReleaseMutex`を呼び出すことによって、ミューテックスを解放します。
+
+画面表示と静的データは、注意深く管理する必要がある 2 つのリソース例にすぎません。 たとえば、プログラムには、同じファイルにアクセスする複数のスレッドが存在する場合があります。 別のスレッドがファイル ポインターを移動した可能性があるので、それぞれのスレッドは、読み書きする前にファイル ポインターをリセットする必要があります。 さらに、各スレッドは、ポインターを配置する時刻とファイルにアクセスする時間の間に割り込まれないようにする必要があります。 これらのスレッドでは、セマフォを使用して、各ファイルアクセスを `WaitForSingleObject` および `ReleaseMutex` の呼び出しによって、ファイルへのアクセスを調整する必要があります。 この手法を説明するコード例を次に示します。
+
+```C
+HANDLE    hIOMutex = CreateMutex (NULL, FALSE, NULL);
+
+WaitForSingleObject( hIOMutex, INFINITE );
+fseek( fp, desired_position, 0L );
+fwrite( data, sizeof( data ), 1, fp );
+ReleaseMutex( hIOMutex);
+```
+
+### <a name="_core_thread_stacks"></a>スレッドスタック
+
+アプリケーションの既定のスタック領域はすべて、スレッド 1 と呼ばれる、最初に実行されるスレッドに必ず割り当てられます。 したがって、2 番目以降のスレッドのスタックに割り当てるメモリの量を指定する必要があります。 オペレーティング システムは、必要に応じて、スレッドに対してスタック領域をさらに割り当てますが、既定値は指定する必要があります。
+
+`_beginthread` 呼び出しの最初の引数は、スレッドを実行する `BounceProc` 関数へのポインターです。 2 番目の引数では、スレッドに対する既定のスタック サイズを指定します。 最後の引数は、`BounceProc`に渡される ID 番号です。 `BounceProc` は、ID 番号を使用して乱数ジェネレーターをシード処理し、スレッドの色属性と表示文字を選択します。
+
+C のランタイム ライブラリまたは Win32 API を呼び出すスレッドは、呼び出すライブラリと API 関数のために十分なスタック領域を用意する必要があります。 C `printf` 関数では、500バイトを超えるスタック領域が必要であり、Win32 API ルーチンを呼び出すときには、2Kb バイトのスタック領域が使用可能である必要があります。
+
+スレッドはそれぞれ自分自身のスタックを持っているので、できる限り静的データを使わないことで、データ項目に対して起こりうる衝突を避けることができます。 スレッドが持つ各データに対しては、すべて auto 自動スタック変数を使うようにプログラムをデザインします。 バウンス. c プログラムのグローバル変数は、ミューテックスまたは初期化後に変更されない変数のいずれかです。
+
+Win32 では、スレッドごとのデータを格納するためのスレッドローカルストレージ (TLS) も用意されています。 詳細については、「[スレッドローカルストレージ (TLS)](thread-local-storage-tls.md)」を参照してください。
+
+## <a name="avoiding-problem-areas-with-multithread-programs"></a>マルチスレッド プログラムの問題を回避する方法
+
+マルチスレッドの C プログラムを作成、リンク、または実行する際に発生する可能性のある問題がいくつかあります。 次の表では、一般的な問題のいくつかについて説明します。 (MFC の観点から見ると同様の説明については、「[マルチスレッド: プログラミングのヒント](multithreading-programming-tips.md)」を参照してください)。
+
+|Problem|考えられる原因|
+|-------------|--------------------|
+|プログラムによって保護違反が発生したことを示すメッセージボックスが表示されます。|多くの Win32 プログラミングエラーが原因で、保護違反が発生します。 保護違反の一般的な原因は、データを null ポインターに間接的に割り当てることです。 プログラムは、属していないメモリにアクセスしようとするので、保護違反が発行されます。<br /><br /> 保護違反の原因を検出する簡単な方法は、デバッグ情報を使用してプログラムをコンパイルし、Visual Studio 環境でデバッガーを使用してプログラムを実行することです。 保護エラーが発生すると、Windows はデバッガーに制御を転送し、カーソルは問題の原因となった行に配置されます。|
+|プログラムによって多数のコンパイルおよびリンクエラーが生成されます。|多くの潜在的な問題を排除するには、コンパイラの警告レベルを最高値の1つに設定し、警告メッセージを heeding します。 レベル3またはレベル4の警告レベルのオプションを使用すると、意図しないデータ変換、不足している関数プロトタイプ、ANSI 以外の機能の使用を検出できます。|
+
+## <a name="see-also"></a>参照
+
+[以前のコード (ビジュアルC++)\ のマルチスレッドサポート](multithreading-support-for-older-code-visual-cpp.md)
+[C\ のマルチスレッドプログラムの例](sample-multithread-c-program.md)
+[スレッドローカルストレージ (TLS)](thread-local-storage-tls.md)の\
+[/WinRT\ を使用C++した同時実行と非同期操作](/windows/uwp/cpp-and-winrt-apis/concurrency)
+[C++ と MFC を使用するマルチスレッド](multithreading-with-cpp-and-mfc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3772
 ms.assetid: 63e938d4-088d-41cc-a562-5881a05b5710
-ms.openlocfilehash: 9a72cb9ee5d1d839f6ca5d113c25795f83dab811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 420e1eb12cbb178459a96f55efab444a538e6c2b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400176"
 ---
 # <a name="compiler-error-c3772"></a>コンパイラ エラー C3772
 

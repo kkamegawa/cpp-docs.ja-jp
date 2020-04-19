@@ -1,15 +1,23 @@
 ---
 title: リモート ビルド イベント (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-ms.openlocfilehash: 87647948b641fff7370003a59775a5680c176fb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e5c453da05fe65871fa7f6b0d4ca6528a96d4dd
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653870"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821479"
 ---
 # <a name="build-event-properties-linux-c"></a>ビルド イベント プロパティ (Linux C++)
+
+::: moniker range="vs-2015"
+
+Linux サポートは Visual Studio 2017 以降で使用できます。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="pre-build-event"></a>ビルド前のイベント
 
@@ -64,3 +72,7 @@ ms.locfileid: "50653870"
 説明 | 表示するビルド後イベント ツールの説明を指定します。
 ビルドで使用 | このビルド イベントを現在の構成のビルドから除外するかどうかを指定します。
 コピーする追加ファイル | リモート システムからコピーする追加ファイルを指定します。 オプションで、次のような構文を使用して、一覧をローカル マッピング ペアにリモートとして指定することができます: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2。ここで、リモート ファイルをローカル コンピューター上の指定した場所にコピーできます。
+
+::: moniker-end
+
+

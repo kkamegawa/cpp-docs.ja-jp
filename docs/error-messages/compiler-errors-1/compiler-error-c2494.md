@@ -1,4 +1,4 @@
----
+﻿---
 title: コンパイラ エラー C2494
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2494
 ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
-ms.openlocfilehash: 0a8be1dd5ce8d906bc4d0b1ce72295a57f68b6cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e46eff4ec2b1afdb309b3c4db89c9283e2fc8971
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507706"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757034"
 ---
 # <a name="compiler-error-c2494"></a>コンパイラ エラー C2494
 
-'keyword' は、フィルター式内から呼び出すことはできませんまたは _ _finally/finally にブロック
+' keyword ' は、フィルター式または __finally/finally ブロック内から呼び出すことはできません。
 
-使用することはできません`keyword`で、`__finally`または finally ブロックします。
+`__finally` または finally ブロックで `keyword` を使用することはできません。
 
 次の例では、C2494 が生成されます。
 
-```
+```cpp
 // C2494.cpp
 #include <malloc.h>
 
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-C2494 を使用する場合にも発生することが **/clr**します。
+C2494 は、 **/clr**を使用しているときにも発生する可能性があります。
 
-```
+```cpp
 // C2494b.cpp
 // compile with: /clr
 #include <malloc.h>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3032
 ms.assetid: 6a92bd8e-319f-4a99-aef4-a9021f6f9928
-ms.openlocfilehash: 8e103d36bf3e49cfbb0a3724c044794601aabcee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9ea9d1baa0bab1141b1a0f3882df78f32208d0b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567246"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748308"
 ---
 # <a name="compiler-error-c3032"></a>コンパイラ エラー C3032
 
@@ -21,7 +21,7 @@ ms.locfileid: "50567246"
 
 次の例では C3032 が生成されます。
 
-```
+```cpp
 // C3032.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

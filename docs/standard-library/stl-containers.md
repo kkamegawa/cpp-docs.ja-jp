@@ -2,15 +2,15 @@
 title: C++ 標準ライブラリのコンテナー
 ms.date: 11/04/2016
 helpviewer_keywords:
-- C++ Standard Library, template class containers
+- C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518646"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686104"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準ライブラリのコンテナー
 
@@ -155,7 +155,7 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 ## <a name="accessing-container-elements"></a>コンテナー要素へのアクセス
 
-コンテナーの要素には、反復子を使用してアクセスします。 詳細については、「 [反復子](../standard-library/iterators.md)」を参照してください。
+コンテナーの要素には、反復子を使用してアクセスします。 詳細については、「[反復子](../standard-library/iterators.md)」をご覧ください。
 
 > [!NOTE]
 > また、C++ 標準ライブラリ コレクションに対する反復処理には[範囲ベースの for ループ](../cpp/range-based-for-statement-cpp.md)を使用できます。
@@ -166,11 +166,11 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 ### <a name="comparing-dissimilar-containers-c14"></a>異なるコンテナーの比較 (C++ 14)
 
-異なるコンテナー型や要素型を比較のいずれかを使用して c++ 14 以降では、 `std::equal`、 `std::mismatch`、または`std::is_permutation`関数オーバー ロードを 2 つの完全な範囲です。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
+C++ 14 以降では、2つの完全な範囲を受け取る `std::equal`、`std::mismatch`、または `std::is_permutation` 関数のオーバーロードのいずれかを使用して、異なるコンテナーや要素の種類を比較できます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
 
 ## <a name="see-also"></a>関連項目
 
-[コンテナー](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<sample container>](../standard-library/sample-container.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[コンテナー](../cpp/containers-modern-cpp.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)\
+[\<sample container>](../standard-library/sample-container.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

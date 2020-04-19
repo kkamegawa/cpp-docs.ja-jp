@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: e2fa1ddc0acfd0d6680ebd58c7762adb96ac180a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571796"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514319"
 ---
 # <a name="odl"></a>odl
 
-オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。 MIDL コンパイラは必要ありません、 **odl**属性; 古い .odl ファイルと互換性のためだけ認識されます。
+オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。 MIDL コンパイラでは、 **odl**属性は必要ありません。これは、古い odl ファイルとの互換性のためにのみ認識されます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ ms.locfileid: "50571796"
 
 ## <a name="remarks"></a>Remarks
 
-**Odl** C++ 属性と同じ機能を持つ、 [odl](/windows/desktop/Midl/odl) MIDL 属性。
+**Odl** C++属性には、 [odl](/windows/win32/Midl/odl) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 

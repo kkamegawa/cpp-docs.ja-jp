@@ -1,10 +1,10 @@
 ---
 title: _beginthread、_beginthreadex
 ms.date: 02/27/2018
-apiname:
+api_name:
 - _beginthread
 - _beginthreadex
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - beginthread
 - _beginthread
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 8714e945464dd98483f9347c4226321a96cda61c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894212"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943639"
 ---
-# <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
+# <a name="_beginthread-_beginthreadex"></a>_beginthread、_beginthreadex
 
 スレッドを作成します。
 
@@ -74,65 +77,65 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>パラメーター
 
 *start_address*<br/>
-新しいスレッドの実行を開始するルーチンの開始アドレス。 **_Beginthread**、呼び出し規則[_ _cdecl](../../cpp/cdecl.md) (ネイティブ コード) のまたは[_ _clrcall](../../cpp/clrcall.md) (のマネージ コード) は **_beginthreadex**、いずれかが[_ _stdcall](../../cpp/stdcall.md) (ネイティブ コード) のまたは[_ _clrcall](../../cpp/clrcall.md) (のマネージ コード)。
+新しいスレッドの実行を開始するルーチンの開始アドレス。 **_Beginthread**の場合、呼び出し規約は、 [__cdecl](../../cpp/cdecl.md) (ネイティブコードの場合) または[__clrcall](../../cpp/clrcall.md) (マネージコードの場合) のいずれかになります。 **_beginthreadex**の場合は、 [__stdcall](../../cpp/stdcall.md) (ネイティブコードの場合) または[__clrcall](../../cpp/clrcall.md) (マネージコードの場合) のいずれかになります。
 
 *stack_size*<br/>
 新しいスレッドのスタック サイズまたは 0。
 
 *arglist*<br/>
-新しいスレッドに渡される引数リストまたは**NULL**します。
+新しいスレッドに渡される引数リストまたは**NULL**。
 
-*セキュリティ*<br/>
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*は**NULL**ハンドルを継承することはできません。 必要があります**NULL** Windows 95 アプリケーション。
+*Security*<br/>
+[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 *セキュリティ*が**NULL**の場合、ハンドルを継承することはできません。 Windows 95 アプリケーションの場合は**NULL**にする必要があります。
 
 *initflag*<br/>
-新しいスレッドの初期状態を制御するフラグ。 設定*initflag*をすぐに実行するには 0 または**CREATE_SUSPENDED**停止状態でスレッドを作成するを使用して、 [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread)スレッドを実行します。 設定*initflag*に**STACK_SIZE_PARAM_IS_A_RESERVATION**フラグを使用する*stack_size*初期予約サイズ (バイト単位)、スタックは、このフラグが指定されていないので、 *stack_size*コミット サイズを指定します。
+新しいスレッドの初期状態を制御するフラグ。 *Initflag*を0に設定して直ちに実行するか、 **CREATE_SUSPENDED**に設定して、中断状態のスレッドを作成します。[ResumeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread)を使用してスレッドを実行します。 *Initflag*を**STACK_SIZE_PARAM_IS_A_RESERVATION**フラグに設定して、スタックの初期予約サイズとして*STACK_SIZE*を使用します (バイト単位)。このフラグが指定されていない場合、 *stack_size*はコミットサイズを指定します。
 
 *thrdaddr*<br/>
-スレッド識別子を受け取る 32 ビット変数へのポインター。 場合は**NULL**は使用されません。
+スレッド識別子を受け取る 32 ビット変数へのポインター。 **NULL**の場合は使用されません。
 
 ## <a name="return-value"></a>戻り値
 
-新しく作成されたスレッド。 ハンドルを返します成功した場合、これらの各関数ただし、新しく作成されたスレッドの終了が早すぎる場合は、 **_beginthread**有効なハンドルを返さない可能性があります。 (「解説」の説明を参照)。エラーが発生、 **_beginthread** -1 L を返しますと**errno**に設定されている**EAGAIN**に多数のスレッドがある場合**EINVAL**引数の場合無効であるかスタック サイズが正しくないまたは**EACCES**が不足しているリソース (メモリなど) がある場合。 エラー、 **_beginthreadex** 0 を返しますと**errno**と **_doserrno**設定されます。
+成功した場合、これらの各関数は、新しく作成されたスレッドへのハンドルを返します。ただし、新しく作成されたスレッドが短時間で終了した場合、 **_beginthread**は有効なハンドルを返さない可能性があります。 (「解説」の説明を参照)。エラーが発生した場合、 **_beginthread**は-1l を返し、スレッドの数が多すぎる場合は**errno**が**EAGAIN**に設定され、引数が無効であるかスタックサイズが正しくない場合は**EINVAL** 、またはリソースが不足している場合は**EACCES**になります。(メモリなど)。 エラーが発生した場合、 **_beginthreadex**は0を返し、 **errno**と **_doserrno**が設定されます。
 
-場合*start_address*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+*Start_address*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-詳細については**uintptr_t**を参照してください[標準型](../../c-runtime-library/standard-types.md)します。
+**Uintptr_t**の詳細については、「[標準型](../../c-runtime-library/standard-types.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Beginthread**関数で指定されるルーチンの実行を開始したスレッドを作成する*start_address*します。 あるルーチン*start_address*を使用する必要があります、 **_ _cdecl** (ネイティブ コード用または **_ _clrcall** (マネージ コード) の呼び出し規約、戻り値はありません。 スレッドは、ルーチンから戻ると自動的に終了します。 スレッドの詳細については、「[旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
+**_Beginthread**関数は、 *start_address*でルーチンの実行を開始するスレッドを作成します。 *Start_address*のルーチンは、 **__cdecl** (ネイティブコードの場合) または **__clrcall** (マネージコードの場合) の呼び出し規約を使用する必要があり、戻り値を持つことはできません。 スレッドは、ルーチンから戻ると自動的に終了します。 スレッドの詳細については、「[旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
 
-**_beginthreadex**よう Win32 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) API の詳細についてより密接に **_beginthread**は。 **_beginthreadex**異なります **_beginthread**次のようにします。
+**_beginthreadex**は、 **_beginthread**よりもはるかに近い Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API に似ています。 **_beginthreadex**は、次の点で **_beginthread**とは異なります。
 
-- **_beginthreadex**は 3 つの追加パラメーターがあります: *initflag*、*セキュリティ*、および**threadaddr**します。 新しいスレッドのセキュリティを指定の中断状態で作成でき、使用してアクセスできる*thrdaddr*は、スレッド識別子。
+- **_beginthreadex**には、 *initflag*、 *Security*、 **threadaddr**という3つのパラメーターが追加されています。 新しいスレッドは、指定されたセキュリティを使用して中断状態で作成でき、スレッド識別子である*thrdaddr*を使用してアクセスできます。
 
-- あるルーチン*start_address*に渡される **_beginthreadex**を使用する必要があります、 **_ _stdcall** (ネイティブ コード用または **_ _clrcall** (マネージ コードの) 呼び出し規則と、スレッドの終了コードを返す必要があります。
+- **_Beginthreadex**に渡される*start_address*のルーチンは、 **__stdcall** (ネイティブコードの場合) または **__clrcall** (マネージコードの場合) の呼び出し規約を使用する必要があり、スレッドの終了コードを返す必要があります。
 
-- **_beginthreadex** -1 L ではなく、失敗、0 を返します。
+- **_beginthreadex**は、エラーが発生した場合に-1l ではなく0を返します。
 
-- 使用して作成されるスレッド **_beginthreadex**への呼び出しで終了[_endthreadex](endthread-endthreadex.md)します。
+- **_Beginthreadex**を使用して作成されたスレッドは、 [_endthreadex](endthread-endthreadex.md)への呼び出しによって終了されます。
 
-**_Beginthreadex**関数を使用するよりも、スレッドを作成する方法より詳細に制御 **_beginthread**は。 **_Endthreadex**関数はまたより柔軟です。 たとえば、 **_beginthreadex**、セキュリティ情報を使用して、(実行中または中断)、スレッドの初期状態を設定し、新しく作成されたスレッドのスレッドの識別子を取得します。 によって返されたスレッド ハンドルを使用することもできます。 **_beginthreadex**同期は実行できない Api を **_beginthread**します。
+**_Beginthreadex**関数を使用すると、 **_beginthread**よりもスレッドの作成方法をより細かく制御できます。 **_Endthreadex**関数もより柔軟です。 たとえば、 **_beginthreadex**では、セキュリティ情報の使用、スレッドの初期状態 (実行中または一時停止) の設定、新しく作成されたスレッドのスレッド識別子の取得を行うことができます。 **_Beginthreadex**によって返されたスレッドハンドルを同期 api と共に使用することもできます。この場合、 **_beginthread**を使用することはできません。
 
-使用する方が安全 **_beginthreadex**より **_beginthread**します。 場合によって生成されるスレッド **_beginthread**の呼び出し元に返されるハンドルを迅速に終了 **_beginthread**無効である可能性があります、または別のスレッドをポイントします。 ただし、によって返されるハンドル **_beginthreadex**の呼び出し元によって閉じられますが、 **_beginthreadex**ので、有効なハンドルである場合は必ず **_beginthreadex**エラーを返しませんでした。
+**_Beginthread**より **_beginthreadex**を使用する方が安全です。 **_Beginthread**によって生成されるスレッドがすぐに終了する場合は、 **_beginthread**の呼び出し元に返されるハンドルが無効であるか、別のスレッドを指している可能性があります。 ただし、 **_beginthreadex**によって返されるハンドルは **_beginthreadex**の呼び出し元によって閉じられる必要があるため、 **_beginthreadex**がエラーを返さない場合は、有効なハンドルであることが保証されます。
 
-呼び出すことができます[_endthread](endthread-endthreadex.md)または **_endthreadex**明示的にスレッドを終了しますただし、 **_endthread**または **_endthreadex**が呼び出されます。スレッド返すパラメーターとして渡されたルーチンから場合自動的に表示します。 呼び出しのスレッドを終了 **_endthread**または **_endthreadex**確実にスレッドに割り当てられているリソースの解放できます。
+[_Endthread](endthread-endthreadex.md)または **_endthreadex**を明示的に呼び出してスレッドを終了できます。ただし、 **_endthread**または **_endthreadex**は、パラメーターとして渡されるルーチンからスレッドが戻ると自動的に呼び出されます。 **_Endthread**または **_endthreadex**を呼び出してスレッドを終了すると、スレッドに割り当てられているリソースを正しく回復できます。
 
-**_endthread**一方には、スレッド ハンドルを自動的に閉じます **_endthreadex**はありません。 したがって、使用 **_beginthread**と **_endthread**、Win32 を呼び出すことによって明示的にスレッド ハンドルを終了しないでください[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API。 この動作は、Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API とは異なります。
+**_endthread**はスレッドハンドルを自動的に閉じるのに対し、 **_endthreadex**は自動的に終了しません。 したがって、 **_beginthread**と **_endthread**を使用する場合は、Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API を呼び出してスレッドハンドルを明示的に閉じないでください。 この動作は、Win32 [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API とは異なります。
 
 > [!NOTE]
-> Libcmt.lib にリンクされている実行可能ファイルを呼び出さないでください Win32 **ExitThread** API 実行時のシステムを防ぐため再利用しないようにはリソースを割り当てられます。 **_endthread**と **_endthreadex**割り当てられているスレッド リソースを解放し、呼び出す**ExitThread**します。
+> Libcmt.lib にリンクされている実行可能ファイルの場合、Win32 **Exitthread** API を呼び出さないでください。これにより、割り当てられたリソースをランタイムシステムで再利用できなくなります。 **_endthread**と **_endthreadex**は、割り当てられたスレッドリソースを解放し、 **exitthread**を呼び出します。
 
-スタックの割り当てなど、オペレーティング システムの処理時にいずれか **_beginthread**または **_beginthreadex**が呼び出されます。 これらの関数のいずれかにスレッド スタックのアドレスを渡す必要はありません。 さらに、 *stack_size*引数は、オペレーティング システムを使用する同じの値として指定されているスタックのメイン スレッドの 0 を指定できます。
+**_Beginthread**または **_beginthreadex**が呼び出されると、オペレーティングシステムはスタックの割り当てを処理します。スレッドスタックのアドレスをこれらの関数のいずれかに渡す必要はありません。 また、 *stack_size*引数は0にすることができます。この場合、オペレーティングシステムはメインスレッドに指定されているスタックと同じ値を使用します。
 
-*arglist*は新しく作成されたスレッドに渡されるパラメーターです。 通常、文字列などのデータ項目のアドレスを指定します。 *arglist*できる**NULL**必要でない場合、 **_beginthread**と **_beginthreadex**新しいスレッドに渡すのいくつかの値を指定する必要があります。 いずれかのスレッドの呼び出しのすべてのスレッドが終了[中止](abort.md)、**終了**、 **_exit**、または**ExitProcess**します。
+*arglist*は、新しく作成されたスレッドに渡すパラメーターです。 通常、文字列などのデータ項目のアドレスを指定します。 *arglist*は、不要な場合は**NULL**にすることができますが、 **_beginthread**と **_beginthreadex**には、新しいスレッドに渡す値を指定する必要があります。 いずれかのスレッドが[abort](abort.md)、 **exit**、 **_exit**、または**ExitProcess**を呼び出すと、すべてのスレッドが終了します。
 
-新しいスレッドのロケールは、現在でグローバル、プロセスごとのロケール情報を使用して初期化されます。 呼び出してスレッドごとのロケールが有効になっているかどうかは[_configthreadlocale](configthreadlocale.md) (グローバルまたは新しいスレッドのみ)、スレッドなく変更できますロケール個別に他のスレッドから呼び出すことによって**setlocale**または **_wsetlocale**します。 スレッドごとのロケールのフラグが設定がないスレッドですべての新しく作成されたスレッドだけでなく、設定すると、スレッドごとのロケールのフラグがないことも、その他のすべてのスレッド ロケール情報に影響を与えることができます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+新しいスレッドのロケールは、プロセスごとのグローバル現在のロケール情報を使用して初期化されます。 スレッドごとのロケールが (グローバルまたは新しいスレッドに対してのみ) [configthreadlocale](configthreadlocale.md)の呼び出しによって有効にされている場合、スレッドは**setlocale**または **_wsetlocale**を呼び出すことによって、他のスレッドとは別にロケールを変更できます。 スレッドごとのロケールフラグが設定されていないスレッドは、スレッドごとのロケールフラグが設定されていない他のすべてのスレッドのロケール情報や、新しく作成されたすべてのスレッドのロケール情報に影響を与える可能性があります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**/Clr**コード、 **_beginthread**と **_beginthreadex**ある 2 つのオーバー ロードします。 ネイティブ呼び出し規約関数ポインターを受け取るものとは、その他、 **_ _clrcall**関数ポインター。 最初のオーバーロードは、アプリケーション ドメインセーフではなく、以降もそうなることはありません。 作成する場合 **/clr**マネージ リソースもコードにアクセスする前に、新しいスレッドが正しいアプリケーション ドメインが移行することを確認する必要があります。 そのためには、[call_in_appdomain 関数](../../dotnet/call-in-appdomain-function.md)などを使用します。 2 番目のオーバー ロードは、アプリケーション ドメイン セーフです。呼び出し元のアプリケーション ドメイン内に新しく作成されたスレッド、最終的に必ず **_beginthread**または **_beginthreadex**します。
+**/Clr**コードの場合、 **_beginthread**と **_beginthreadex**にはそれぞれ2つのオーバーロードがあります。 一方はネイティブの呼び出し規約関数ポインターを受け取り、もう1つは **__clrcall**関数ポインターを受け取ります。 最初のオーバーロードは、アプリケーション ドメインセーフではなく、以降もそうなることはありません。 **/Clr**コードを記述する場合は、新しいスレッドがマネージリソースにアクセスする前に正しいアプリケーションドメインに入るようにする必要があります。 そのためには、[call_in_appdomain 関数](../../dotnet/call-in-appdomain-function.md)などを使用します。 2番目のオーバーロードは、アプリケーションドメインセーフです。新しく作成されたスレッドは、常に **_beginthread**または **_beginthreadex**の呼び出し元のアプリケーションドメインで終了します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -147,11 +150,11 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 [C ランタイム ライブラリ](../../c-runtime-library/crt-library-features.md) のマルチスレッド バージョンのみ。
 
-使用する **_beginthread**または **_beginthreadex**アプリケーションをマルチ スレッドの C ランタイム ライブラリのいずれかでリンクする必要があります。
+**_Beginthread**または **_beginthreadex**を使用するには、アプリケーションをマルチスレッドの C ランタイムライブラリの1つにリンクする必要があります。
 
 ## <a name="example"></a>例
 
-次の例では **_beginthread**と **_endthread**します。
+次の例では、 **_beginthread**と **_endthread**を使用します。
 
 ```C
 // crt_BEGTHRD.C
@@ -271,7 +274,7 @@ void Bounce( void * parg )
 
 ## <a name="example"></a>例
 
-次のサンプル コードがによって返されたスレッド ハンドルを使用する方法を示します **_beginthreadex**を同期 API [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)します。 メイン スレッドは、2 番目のスレッドが終了するのを待って処理を継続します。 2 番目のスレッドを呼び出すと **_endthreadex**、シグナル状態に移動するのには、そのスレッド オブジェクトになります。 これにより、1 番目のスレッドの実行が継続されます。 これで実行できない **_beginthread**と **_endthread**ため、 **_endthread**呼び出し**CloseHandle**スレッドを破棄します。シグナル状態にする前にオブジェクトを設定できます。
+次のサンプルコードは、 **_beginthreadex**から返されたスレッドハンドルを同期 API [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)と共に使用する方法を示しています。 メイン スレッドは、2 番目のスレッドが終了するのを待って処理を継続します。 2番目のスレッドが **_endthreadex**を呼び出すと、そのスレッドオブジェクトがシグナル状態になります。 これにより、1 番目のスレッドの実行が継続されます。 これは **_beginthread**および **_endthread**では実行できません。 **_endthread**は**CloseHandle**を呼び出します。これにより、スレッドオブジェクトがシグナル状態に設定される前に破棄されます。
 
 ```cpp
 // crt_begthrdex.cpp
@@ -325,4 +328,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread、_endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit、_Exit、_exit](exit-exit-exit.md)
-- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)
+- [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

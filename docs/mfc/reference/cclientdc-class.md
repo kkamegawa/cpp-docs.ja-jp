@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: 5304fa322c62f67ed075be7912697f8c87b27392
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46428740d052c70218d4443395777428cdf3c3b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643834"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507336"
 ---
 # <a name="cclientdc-class"></a>CClientDC クラス
 
-Windows 関数の呼び出しを行います[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)構築時に、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)破棄時にします。
+は、構築時に Windows functions [GetDC](/windows/win32/api/winuser/nf-winuser-getdc)を呼び出し、破棄時に[ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc)を行います。
 
 ## <a name="syntax"></a>構文
 
@@ -33,19 +33,19 @@ class CClientDC : public CDC
 
 |名前|説明|
 |----------|-----------------|
-|[CClientDC::CClientDC](#cclientdc)|構築、`CClientDC`オブジェクトに接続されている、`CWnd`します。|
+|[CClientDC:: CClientDC](#cclientdc)|に接続`CClientDC`されたオブジェクトを構築します。`CWnd`|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CClientDC::m_hWnd](#m_hwnd)|このウィンドウの HWND`CClientDC`は有効です。|
+|[CClientDC:: m_hWnd](#m_hwnd)|この`CClientDC`が有効なウィンドウの HWND。|
 
 ## <a name="remarks"></a>Remarks
 
-こうすることに関連付けられているデバイス コンテキスト、`CClientDC`オブジェクトは、ウィンドウのクライアント領域。
+これは、 `CClientDC`オブジェクトに関連付けられているデバイスコンテキストがウィンドウのクライアント領域であることを意味します。
 
-詳細については`CClientDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)します。
+の`CClientDC`詳細については、「[デバイスコンテキスト](../../mfc/device-contexts.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -59,9 +59,9 @@ class CClientDC : public CDC
 
 **ヘッダー:** afxwin.h
 
-##  <a name="cclientdc"></a>  CClientDC::CClientDC
+##  <a name="cclientdc"></a>CClientDC:: CClientDC
 
-構築、`CClientDC`のクライアント領域にアクセスするオブジェクト、 [CWnd](../../mfc/reference/cwnd-class.md)によって示される*我が物*します。
+PWnd が`CClientDC`指す[CWnd](../../mfc/reference/cwnd-class.md)のクライアント領域にアクセスするオブジェクトを構築します。
 
 ```
 explicit CClientDC(CWnd* pWnd);
@@ -69,22 +69,22 @@ explicit CClientDC(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。
+*pWnd*<br/>
+デバイスコンテキストオブジェクトがアクセスするクライアント領域があるウィンドウ。
 
 ### <a name="remarks"></a>Remarks
 
-コンス トラクターは、Windows の関数を呼び出します。 [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)します。
+コンストラクターは、Windows 関数[GetDC](/windows/win32/api/winuser/nf-winuser-getdc)を呼び出します。
 
-例外 (型の`CResourceException`) 場合にスローされる、Windows`GetDC`呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。
+`CResourceException` Windows`GetDC`の呼び出しが失敗した場合、例外 (型) がスローされます。 Windows によって使用可能なデバイスコンテキストがすべて既に割り当てられている場合、デバイスコンテキストを使用できない可能性があります。 アプリケーションは、Windows で任意の時点で使用可能な5つの共通表示コンテキストを競合しています。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]
 
-##  <a name="m_hwnd"></a>  CClientDC::m_hWnd
+##  <a name="m_hwnd"></a>CClientDC:: m_hWnd
 
-`HWND`の`CWnd`ポインターの構築に使用される、`CClientDC`オブジェクト。
+オブジェクトを構築`CWnd`するために使用する`HWND` `CClientDC`ポインターの。
 
 ```
 HWND m_hWnd;
@@ -96,11 +96,11 @@ HWND m_hWnd;
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CClientDC::CClientDC](#cclientdc)します。
+  [Cclientdc:: cclientdc](#cclientdc)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
+[MFC のサンプル MDI](../../overview/visual-cpp-samples.md)<br/>
 [CDC クラス](../../mfc/reference/cdc-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CDC クラス](../../mfc/reference/cdc-class.md)

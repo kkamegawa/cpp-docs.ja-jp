@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, implicit
 ms.assetid: 33f7fc7d-5674-44a2-a859-0e6a04fae519
-ms.openlocfilehash: 086de06159b8d9195b4a4a275af8a95f56a46ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b771f9e9c1dc05fcd2ead19f5202747d7c475a09
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384622"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>標準変換と暗黙のボックス化
 
@@ -40,4 +40,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ボックス化](../windows/boxing-cpp-component-extensions.md)
+[ボックス化](../extensions/boxing-cpp-component-extensions.md)

@@ -1,8 +1,6 @@
 ---
 title: Unicode と MBCS
 ms.date: 11/04/2016
-f1_keywords:
-- _mbcs
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -13,12 +11,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-ms.openlocfilehash: 3296b5204faec393d3d503dc106733f97b32b248
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e884dcfaa22bf720e9579bf2d5d866d595501887
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410526"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode と MBCS
 

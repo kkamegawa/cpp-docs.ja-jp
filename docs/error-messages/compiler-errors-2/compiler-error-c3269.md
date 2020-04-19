@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3269
 ms.assetid: c575f067-244d-4dd5-bf58-9e7630ea58b7
-ms.openlocfilehash: 406b388460b3d449471c884dd6461f2ce59a10f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95f71c9312faaf5c14bd8990898257002c528c0e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622951"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754018"
 ---
 # <a name="compiler-error-c3269"></a>コンパイラ エラー C3269
 
-'function': マネージまたは WinRTtype のメンバー関数は '...' と共に宣言できません
+' function ': マネージまたは WinRTtype のメンバー関数を '... ' と共に宣言することはできません
 
 マネージド クラスと WinRT クラスのメンバー関数では可変長のパラメーター リストを宣言できません。
 
 次の例では C3269 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C3269_2.cpp
 // compile with: /clr
 

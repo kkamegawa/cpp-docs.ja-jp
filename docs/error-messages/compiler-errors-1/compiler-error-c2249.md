@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f3f82549cf5d9230adfee7e83248e92f8e93e769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555632"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758893"
 ---
 # <a name="compiler-error-c2249"></a>コンパイラ エラー C2249
 
-'member': アクセス メンバーにアクセス可能なパスを仮想ベース 'class' で宣言されていません。
+' member ': 仮想基底クラス ' class ' で宣言されているアクセスメンバーへのアクセス可能なパスがありません
 
-`member`を非公開から継承されて`virtual`基底クラスまたは構造体。
+`member` は、非パブリック `virtual` 基底クラスまたは構造体から継承されます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2249 が生成されます。
 
-```
+```cpp
 // C2249.cpp
 class A {
 private:
@@ -40,11 +40,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C2249 は、C++ 標準ライブラリから別のストリームに割り当てられるストリームしようとする場合にも発生します。  次の例では、C2249 が生成されます。
+C2249 は、 C++標準ライブラリから別のストリームにストリームを割り当てようとした場合にも発生する可能性があります。  次の例では、C2249 が生成されます。
 
-```
+```cpp
 // C2249_2.cpp
 #include <iostream>
 using namespace std;

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: db3ed1d1575a52b8d54466f763f348821c458f31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587166"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147141"
 ---
 # <a name="continue-statement-c"></a>continue ステートメント (C)
 
@@ -43,6 +43,6 @@ while ( i-- > 0 )
 
 この例では、ステートメント本体は、`i` が 0 を超える場合に実行されます。 最初に、`f(i)` は `x` に割り当てられています。次に、`x` が 1 に等しい場合は、`continue` ステートメントが実行されます。 本体のステートメントの残りの部分は無視され、ループ テストの評価がループの先頭から再び実行されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [continue ステートメント](../cpp/continue-statement-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3027
 ms.assetid: 6562a5c2-2f28-4b36-91ca-2a64c0f0501a
-ms.openlocfilehash: 4fa01d6fe29aa010c877c7352563d20b3a6943c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6551a667ba65d860e77c2c372b74abda8b705bb8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588137"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741782"
 ---
 # <a name="compiler-error-c3027"></a>コンパイラ エラー C3027
 
@@ -19,11 +19,11 @@ ms.locfileid: "50588137"
 
 演算またはポインター式を必要とする句に、別の種類の式が渡されました。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3027 が生成されます。
 
-```
+```cpp
 // C3027.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

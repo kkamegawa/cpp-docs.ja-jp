@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 21b951b01b413a703bb28b76426da86a5996b99d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14efffeca11a87f4c3bcaa3241af5cf6784d01e9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542286"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708345"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>[生成されたクラス] (MFC アプリケーション ウィザード)
 
@@ -42,5 +42,5 @@ ms.locfileid: "50542286"
 ## <a name="see-also"></a>関連項目
 
 [[高度な機能] (MFC アプリケーション ウィザード)](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
-[Visual C++ プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)
+[Visual Studio のファイルの種類を作成C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3141
 ms.assetid: b4fd65c3-50cc-46cd-8de0-6a6d24cb9cda
-ms.openlocfilehash: e19de95b5b2c967d71a4b06aca431df8ffe9dc14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71f5a69bf96098b41bc2eb3945e1360955870657
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552165"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746189"
 ---
 # <a name="compiler-error-c3141"></a>コンパイラ エラー C3141
 
-'interface_name': インターフェイスはパブリック継承のみをサポート
+' interface_name ': インターフェイスはパブリック継承のみをサポートしています
 
-インターフェイスで定義されている、[インターフェイス (または _ _interface)](../../cpp/interface.md)キーワードはパブリック継承のみをサポートします。
+[インターフェイス (または __interface)](../../cpp/interface.md)キーワードで定義されたインターフェイスは、パブリック継承のみをサポートします。
 
 次の例では、C3141 が生成されます。
 
-```
+```cpp
 // C3141.cpp
 __interface IBase {};
 __interface IDerived1 : protected IBase {};  // C3141

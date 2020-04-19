@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2888
 ms.assetid: 244f593e-ff25-4dad-b31f-84dafa3bc84a
-ms.openlocfilehash: c5b547f1c4d62a6f48b6c5f8f901be309e81a67c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93fe37c72a04e8c942f910ed3a631e5ba2a542bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662907"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760916"
 ---
 # <a name="compiler-error-c2888"></a>コンパイラ エラー C2888
 
-'identifier': 名前空間 'namespace' 内でシンボルを定義することはできません
+' identifier ': シンボルを名前空間 ' namespace ' 内で定義することはできません
 
-A. を囲む名前空間の名前空間に属しているシンボルを定義する必要があります。
+名前空間 A に属するシンボルは、を囲む名前空間で定義されている必要があります。
 
 次の例では、C2888 が生成されます。
 
-```
+```cpp
 // C2888.cpp
 // compile with: /c
 namespace M {

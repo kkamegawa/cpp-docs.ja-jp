@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3838e215ffac42ec6902ab6a9837f638153cf184
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523768"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689166"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-テンプレート クラス [basic_ostream](../standard-library/basic-ostream-class.md) を定義します。これは iostreams への挿入を仲介します。 ヘッダーは、関連する複数のマニピュレーターを定義します  (通常このヘッダーは、別の iostream ヘッダーに含まれています。 まれに、直接含めなければならないことがあります)。
+Iostreams の挿入を仲介するクラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)を定義します。 ヘッダーは、関連する複数のマニピュレーターを定義します (通常このヘッダーは、別の iostream ヘッダーに含まれています。 まれに、直接含めなければならないことがあります)。
 
 ## <a name="syntax"></a>構文
 
@@ -29,8 +29,8 @@ ms.locfileid: "51523768"
 
 |型名|説明|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|型を作成します。`basic_ostream`に特殊化した**char**と`char_traits`に特殊化された**char**します。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|型を作成します。`basic_ostream`に特殊化した**wchar_t**と`char_traits`に特殊化された**wchar_t**します。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|**Char で**特殊化された `basic_ostream` から型を作成し、 **char**に特化した `char_traits` します。|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|**Wchar_t で**特殊化された `basic_ostream` から型を作成し、 **wchar_t**に特化した `char_traits` します。|
 
 ### <a name="manipulators"></a>マニピュレーター
 
@@ -49,13 +49,13 @@ ms.locfileid: "51523768"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|このテンプレート クラスは、要素とエンコードされたオブジェクトをストリーム バッファーに挿入する操作を制御するオブジェクトを記述します。|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|クラステンプレートは、要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクトを表します。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

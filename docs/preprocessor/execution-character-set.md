@@ -1,46 +1,44 @@
 ---
-title: execution_character_set
-ms.date: 10/18/2018
+title: execution_character_set プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - execution_character_set
 - vc-pragma.execution_character_set
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: ff6ff550f39dc746bb687d8d3147baa0837a6cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2c812f27634f397af91eace7a41c0e71c1eb99
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472671"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218629"
 ---
-# <a name="executioncharacterset"></a>execution_character_set
+# <a name="execution_character_set-pragma"></a>execution_character_set プラグマ
 
-文字列と文字リテラルに使用する実行文字セットを指定します。 U8 プレフィックスの付いたリテラルでは、このディレクティブは必要ありません。
+文字列リテラルおよび文字リテラルに使用される実行文字セットを指定します。 このディレクティブは、 `u8`プレフィックスでマークされているリテラルには必要ありません。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma execution_character_set("target")
-```
+> **#pragma execution_character_set (** "*target*" **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*target*<br/>
-ターゲットの実行文字セットを指定します。 現在サポートされている設定のみのターゲットの実行は"utf-8"です。
+*接続*\
+ターゲットの実行文字セットを指定します。 現在サポートされているターゲット実行セットは "utf-8" だけです。
 
 ## <a name="remarks"></a>Remarks
 
-このコンパイラ ディレクティブは、Visual Studio 2015 Update 2 以降廃止されています。 使用することをお勧め、`/execution-charset:utf-8`または`/utf-8`コンパイラ オプションを使用してと共に、`u8`拡張文字が含まれているナロー文字と文字列リテラルでのプレフィックス。 詳細については、`u8`プレフィックスを参照してください[String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。 コンパイラ オプションの詳細については、次を参照してください。 [(実行文字セット)/execution-charset](../build/reference/execution-charset-set-execution-character-set.md)と[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)します。
+このコンパイラディレクティブは、Visual Studio 2015 Update 2 以降では廃止されました。 または`/execution-charset:utf-8` `/utf-8`のコンパイラ`u8`オプションは、拡張文字を含むナロー文字とリテラル文字列のプレフィックスを使用することをお勧めします。 プレフィックスの`u8`詳細については、「[文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)」を参照してください。 コンパイラオプションの詳細については、「[文字セット (実行文字セット](../build/reference/execution-charset-set-execution-character-set.md)の設定)」および「 [8 (ソースと実行可能文字セットを utf-8 に設定する)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)」を参照してください。
 
-`#pragma execution_character_set("utf-8")`ディレクティブを指定すると、実行可能ファイル、ナロー文字と、ソース コード内のナロー文字列リテラルを utf-8 としてエンコードします。 この出力エンコードは、使用されるソース ファイルのエンコーディング関係ありません。
+ディレクティブ`#pragma execution_character_set("utf-8")`は、ソースコード内のナロー文字とナロー文字列リテラルを実行可能ファイルの utf-8 としてエンコードするようコンパイラに指示します。 この出力エンコーディングは、使用されるソースファイルのエンコードに依存しません。
 
-既定では、コンパイラは、現在のコード ページを使用して、実行文字セットとして、ナロー文字とナロー文字列をエンコードします。 つまり、リテラルには、現在のコード ページの範囲外にある Unicode または DBCS 文字は、出力の既定の置換文字に変換されます。 Unicode と DBCS 文字は、下位バイトに切り捨てられます。 これは、ほぼ間違いなく望ましくないです。 Utf-8 を使用してソース ファイル内のリテラルのエンコードを指定できます、`u8`プレフィックス。 コンパイラは、変更されずに出力に、これらの utf-8 でエンコードされた文字列を渡します。 による u8 プレフィックス付きナロー文字リテラルが 1 つのバイトに収まる必要があるか、出力時に切り捨てられる。
+既定では、コンパイラは、現在のコードページを実行文字セットとして使用して、ナロー文字とナロー文字列をエンコードします。 これは、現在のコードページの範囲外にあるリテラルの Unicode または DBCS 文字が、出力の既定の置換文字に変換されることを意味します。 Unicode および DBCS 文字は、下位バイトに切り捨てられます。 これはほとんどの場合、意図したものではありません。 `u8`プレフィックスを使用して、ソースファイル内のリテラルに utf-8 エンコードを指定できます。 コンパイラは、これらの UTF-8 でエンコードされた文字列を出力に変更せずに渡します。 U8 を使用してプレフィックスが付けられたナロー文字リテラルは、1バイトにする必要があります。一致しない場合、出力時に切り捨てられます。
 
-既定では、Visual Studio は、出力のソース コードを解釈するために使用するソース文字セットとして現在のコード ページを使用します。 ファイルが読み取られると、Visual Studio の解釈が現在のコード ページに従ってファイルのコード ページが設定されていない場合、またはファイルの先頭にバイト オーダー マーク (BOM) または utf-16 文字が検出された場合を除き、します。 自動検出は、BOM なしの utf-8 としてエンコードされたソース ファイルを検出すると、として、現在のコード ページ utf-8 を設定することはできません、ため、Visual Studio では、現在のコード ページを使用してエンコードされている前提としています。 範囲指定された、または自動的に検出されたコード ページ コンパイラの警告とエラーが発生することができます、ソース ファイル内の文字。
+既定では、Visual Studio は、出力のソースコードを解釈するために使用されるソース文字セットとして、現在のコードページを使用します。 ファイルが読み込まれると、Visual Studio は、ファイルコードページが設定されていない場合、またはファイルの先頭でバイト順マーク (BOM) または UTF-16 文字が検出されなかった場合に、現在のコードページに従って解釈します。 UTF-8 を現在のコードページとして設定することはできません。自動検出では、BOM なしで UTF-8 としてエンコードされたソースファイルが検出されると、Visual Studio は、現在のコードページを使用してエンコードされているものと見なします。 ソースファイル内の指定したコードページまたは自動的に検出されたコードページの範囲外にある文字は、コンパイラの警告とエラーを引き起こす可能性があります。
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと\_\_プラグマ キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/execution-charset (実行文字セット)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[プラグマディレクティブと\_ \_プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[/文字セット (実行文字セットの設定)](../build/reference/execution-charset-set-execution-character-set.md)\
 [/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

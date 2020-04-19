@@ -1,10 +1,10 @@
 ---
 title: _execl、_wexecl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execl
 - _wexecl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execl
 - _wexecl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 714ef80c4909e92100c4fa869b7544239f8edeb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530309"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941950"
 ---
-# <a name="execl-wexecl"></a>_execl、_wexecl
+# <a name="_execl-_wexecl"></a>_execl、_wexecl
 
 新しい子プロセスを読み込んで実行します。
 
@@ -63,12 +66,12 @@ intptr_t _wexecl(
 *cmdname*<br/>
 実行されるファイルのパス。
 
-*arg0*、.*argn*<br/>
+*arg0*、...*argn*<br/>
 パラメーターへのポインターのリスト。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |errno の値|説明|
 |-----------------|-----------------|
@@ -84,7 +87,7 @@ intptr_t _wexecl(
 
 これらの各関数は新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡します。 1 番目の引数はコマンドまたは実行可能ファイルの名前で、2 番目の引数は、1 番目と同じにする必要があります。 これは、実行されるプロセスの `argv[0]` になります。 3 番目の引数は、実行されるプロセスの 1 番目の引数 `argv[1]` です。
 
-**_Execl**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0*が null ポインターまたは空の文字列」の説明に従って、これらの関数は無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合の実行これらの関数の設定、継続が許可された**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは実行されません。
+これら**の関数は**、パラメーターを検証します。 *Cmdname*または*arg0*が null ポインターまたは空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。実行の継続が許可された場合、これらの関数は**errno**をに**設定します。EINVAL**を返し、-1 を返します。 新しいプロセスは実行されません。
 
 ## <a name="requirements"></a>必要条件
 

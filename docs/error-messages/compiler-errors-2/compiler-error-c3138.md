@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C3138
+title: コンパイラエラー C3138
 ms.date: 11/04/2016
 f1_keywords:
 - C3138
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614475"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761254"
 ---
-# <a name="compiler-error-c3138"></a>コンパイラ エラー C3138
+# <a name="compiler-error-c3138"></a>コンパイラエラー C3138
 
-'interface': 'attribute' インターフェイスは IDispatch から継承するインターフェイスから、または IDispatch から継承する必要が
+' interface ': ' attribute ' インターフェイスは IDispatch、または IDispatch から継承したインターフェイスから継承する必要があります
 
-持つインターフェイス、[デュアル](../../windows/dual.md)または[dispinterface](../../windows/dispinterface.md)属性がない`IDispatch`直接的または間接的な基底インターフェイスとして。
+[デュアル](../../windows/dual.md)または[ディスパッチ](../../windows/dispinterface.md)インターフェイスの属性を持つインターフェイスは、直接または間接の基本インターフェイスとして `IDispatch` を持ちません。
 
 次の例では、C3138 が生成されます。
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

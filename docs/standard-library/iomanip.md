@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524665"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449205"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-含める、`iostreams`標準ヘッダー \<iomanip > 複数のマニピュレーターを定義するそのそれぞれ 1 つの引数を受け取ります。
+標準ヘッダー `iostreams` \<iomanip > をインクルードして、それぞれが1つの引数を受け取る複数のマニピュレーターを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,7 +26,7 @@ ms.locfileid: "51524665"
 
 ## <a name="remarks"></a>Remarks
 
-これらのマニピュレーターの各と呼ばれる、未指定の型を返します`T1`を通じて`T10`、両方をオーバー ロード`basic_istream` \< **Elem**、 **Tr** >`::`[演算子 >>](../standard-library/istream-operators.md#op_gt_gt)と`basic_ostream` \< **Elem**、 **Tr** > `::` [演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)します。
+これらの`T1`各マニピュレーターは、 **Elem**、 **Tr** `T10` \< `basic_istream`[演算子>>](../standard-library/istream-operators.md#op_gt_gt)`::`をオーバーロードするを通じて、指定されていない型を返します。>`basic_ostream` **Elem**、Tr`::`[演算子<<](../standard-library/ostream-operators.md#op_lt_lt)。\<>
 
 ### <a name="manipulators"></a>マニピュレーター
 
@@ -46,7 +46,7 @@ ms.locfileid: "51524665"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

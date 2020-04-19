@@ -15,19 +15,19 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-ms.openlocfilehash: 320ef54c6148adf5354a6a7b1860a84e118dc6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5b5dd4e5be43d01f00687ed9b96a3f27abcad0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668989"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495691"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl クラス
 
-このクラスは、実装、 [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)インターフェイス。
+このクラスは、 [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage)インターフェイスを実装します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IPersistStorageImpl`します。
+から`IPersistStorageImpl`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -47,21 +47,21 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 
 |名前|説明|
 |----------|-----------------|
-|[IPersistStorageImpl::GetClassID](#getclassid)|オブジェクトの CLSID を取得します。|
-|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|オブジェクトのすべてのストレージ オブジェクトを解放し、HandsOff モードに入るように指示します。 ATL の実装では、S_OK を返します。|
-|[IPersistStorageImpl::InitNew](#initnew)|新しい記憶域を初期化します。|
-|[IPersistStorageImpl::IsDirty](#isdirty)|最後に保存してから、オブジェクトのデータが変更されたかどうかを確認します。|
-|[IPersistStorageImpl::Load](#load)|指定された記憶域からオブジェクトのプロパティを読み込みます。|
-|[IPersistStorageImpl::Save](#save)|オブジェクトのプロパティを指定したストレージに保存します。|
-|[IPersistStorageImpl::SaveCompleted](#savecompleted)|そのストレージ オブジェクトへの書き込みを通常モードに戻ることができますをオブジェクトに通知します。 ATL の実装では、S_OK を返します。|
+|[IPersistStorageImpl:: GetClassID](#getclassid)|オブジェクトの CLSID を取得します。|
+|[IPersistStorageImpl:: ハンドラー Soffstorage](#handsoffstorage)|オブジェクトに対して、すべてのストレージオブジェクトを解放し、HandsOff モードに移行するように指示します。 ATL 実装は S_OK を返します。|
+|[IPersistStorageImpl:: InitNew](#initnew)|新しいストレージを初期化します。|
+|[IPersistStorageImpl:: IsDirty](#isdirty)|オブジェクトのデータが最後に保存されてから変更されたかどうかを確認します。|
+|[IPersistStorageImpl:: Load](#load)|指定されたストレージからオブジェクトのプロパティを読み込みます。|
+|[IPersistStorageImpl:: Save](#save)|オブジェクトのプロパティを指定されたストレージに保存します。|
+|[IPersistStorageImpl::SaveCompleted](#savecompleted)|ストレージオブジェクトに書き込むために通常モードに戻ることができることをオブジェクトに通知します。 ATL 実装は S_OK を返します。|
 
 ## <a name="remarks"></a>Remarks
 
-`IPersistStorageImpl` 実装して、 [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)インターフェイス、オブジェクトの読み込みを要求するクライアントのできるし、ストレージを使用して、永続的なデータを保存します。
+`IPersistStorageImpl`[IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage)インターフェイスを実装します。これにより、クライアントは、オブジェクトがストレージを使用して、永続データを読み込んだ後保存するように要求できます。
 
-このクラスの実装には、クラスが必要です。`T`の実装を、`IPersistStreamInit`インターフェイスを介して使用できる`QueryInterface`します。 通常これはそのクラス`T`から派生する必要があります[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)、エントリを提供`IPersistStreamInit`で、 [COM マップ](com-map-macros.md)を使用して、[プロパティ マップ](property-map-macros.md)クラスの永続的なデータを記述します。
+このクラスを実装するには`T` 、を介し`QueryInterface`て`IPersistStreamInit`使用可能なインターフェイスの実装を行うクラスが必要です。 通常、これは、 `T`クラスが[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)から派生し、 `IPersistStreamInit` [COM マップ](com-map-macros.md)にのエントリを提供し、[プロパティマップ](property-map-macros.md)を使用してクラスの永続データを記述する必要があることを意味します。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -71,9 +71,9 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="getclassid"></a>  IPersistStorageImpl::GetClassID
+##  <a name="getclassid"></a>IPersistStorageImpl:: GetClassID
 
 オブジェクトの CLSID を取得します。
 
@@ -83,11 +83,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK にします。
+Windows SDK の「 [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 」を参照してください。
 
-##  <a name="handsoffstorage"></a>  IPersistStorageImpl::HandsOffStorage
+##  <a name="handsoffstorage"></a>IPersistStorageImpl:: ハンドラー Soffstorage
 
-オブジェクトのすべてのストレージ オブジェクトを解放し、HandsOff モードに入るように指示します。
+オブジェクトに対して、すべてのストレージオブジェクトを解放し、HandsOff モードに移行するように指示します。
 
 ```
 STDMETHOD(HandsOffStorage)(void);
@@ -99,11 +99,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersistStorage::HandsOffStorage](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) Windows SDK にします。
+Windows SDK の「 [IPersistStorage::](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage)の実行」を参照してください。
 
 ##  <a name="initnew"></a>  IPersistStorageImpl::InitNew
 
-新しい記憶域を初期化します。
+新しいストレージを初期化します。
 
 ```
 STDMETHOD(InitNew)(IStorage*);
@@ -111,13 +111,13 @@ STDMETHOD(InitNew)(IStorage*);
 
 ### <a name="remarks"></a>Remarks
 
-ATL の実装のデリゲートを[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイス。
+ATL 実装は、 [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスにデリゲートします。
 
-参照してください[IPersistStorage:InitNew](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-initnew) Windows SDK にします。
+Windows SDK の「 [IPersistStorage: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) 」を参照してください。
 
 ##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty
 
-最後に保存してから、オブジェクトのデータが変更されたかどうかを確認します。
+オブジェクトのデータが最後に保存されてから変更されたかどうかを確認します。
 
 ```
 STDMETHOD(IsDirty)(void);
@@ -125,13 +125,13 @@ STDMETHOD(IsDirty)(void);
 
 ### <a name="remarks"></a>Remarks
 
-ATL の実装のデリゲートを[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイス。
+ATL 実装は、 [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスにデリゲートします。
 
-参照してください[IPersistStorage:IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty) Windows SDK にします。
+Windows SDK の「 [IPersistStorage: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) 」を参照してください。
 
 ##  <a name="load"></a>  IPersistStorageImpl::Load
 
-指定された記憶域からオブジェクトのプロパティを読み込みます。
+指定されたストレージからオブジェクトのプロパティを読み込みます。
 
 ```
 STDMETHOD(Load)(IStorage* pStorage);
@@ -139,13 +139,13 @@ STDMETHOD(Load)(IStorage* pStorage);
 
 ### <a name="remarks"></a>Remarks
 
-ATL の実装のデリゲートを[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイス。 `Load` 「コンテンツ」という名前のストリームを使用して、オブジェクトのデータを取得します。 [保存](#save)メソッドが最初にこのストリームを作成します。
+ATL 実装は、 [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスにデリゲートします。 `Load`"Contents" という名前のストリームを使用して、オブジェクトのデータを取得します。 [Save](#save)メソッドは、このストリームを最初に作成します。
 
-参照してください[IPersistStorage:Load](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-load) Windows SDK にします。
+「 [IPersistStorage: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) in the Windows SDK」を参照してください。
 
 ##  <a name="save"></a>  IPersistStorageImpl::Save
 
-オブジェクトのプロパティを指定したストレージに保存します。
+オブジェクトのプロパティを指定されたストレージに保存します。
 
 ```
 STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
@@ -153,13 +153,13 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 
 ### <a name="remarks"></a>Remarks
 
-ATL の実装のデリゲートを[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイス。 ときに`Save`最初が呼び出されると、指定された記憶域に「コンテンツ」をという名前のストリームを作成します。 このストリームは以降の呼び出しで使用し、`Save`と呼び出し[ロード](#load)します。
+ATL 実装は、 [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスにデリゲートします。 が`Save`最初に呼び出されると、指定されたストレージに "Contents" という名前のストリームが作成されます。 このストリームは`Save` 、後での呼び出しと、[読み込み](#load)の呼び出しで使用されます。
 
-参照してください[IPersistStorage:Save](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-save) Windows SDK にします。
+Windows SDK の「 [IPersistStorage: Save](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save) 」を参照してください。
 
 ##  <a name="savecompleted"></a>  IPersistStorageImpl::SaveCompleted
 
-そのストレージ オブジェクトへの書き込みを通常モードに戻ることができますをオブジェクトに通知します。
+ストレージオブジェクトに書き込むために通常モードに戻ることができることをオブジェクトに通知します。
 
 ```
 STDMETHOD(SaveCompleted)(IStorage*);
@@ -171,11 +171,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersistStorage:SaveCompleted](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-savecompleted) Windows SDK にします。
+Windows SDK の「 [IPersistStorage: SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[記憶域とストリーム](/windows/desktop/Stg/storages-and-streams)<br/>
+[ストレージとストリーム](/windows/win32/Stg/storages-and-streams)<br/>
 [IPersistStreamInitImpl クラス](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
 [IPersistPropertyBagImpl クラス](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

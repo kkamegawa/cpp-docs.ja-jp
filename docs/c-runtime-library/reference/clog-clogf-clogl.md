@@ -1,11 +1,11 @@
 ---
 title: clog、clogf、clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636554"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942924"
 ---
 # <a name="clog-clogf-clogl"></a>clog、clogf、clogl
 
@@ -68,27 +71,27 @@ _Lcomplex clogl(
 
 ## <a name="return-value"></a>戻り値
 
-自然対数*z*します。 結果は、実軸の間隔で [-π、+ π] 虚軸。
+*Z*の自然対数。 結果は、実数軸に沿って、虚数軸に沿って [-iπ, + iπ] の間隔で、無制限になります。
 
 戻り値には次のようなものがあります。
 
 |z パラメーター|戻り値|
 |-----------------|------------------|
 |正|z の底 10 の対数|
-|0|- ∞|
+|Zero|- ∞|
 |負|NaN|
 |NaN|NaN|
 |+ ∞|+ ∞|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **clog**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**clog**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す、オーバー**ロードのオーバーロード**を呼び出すことができます。 C プログラムでは、**いっぱい**になると、常**に値が**取得され、返されます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**clog**、 **clogf**、 **clogl**|\<complex.h>|\<ccomplex>|
+|**いっぱい**、 **clogf**、 **clogf**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

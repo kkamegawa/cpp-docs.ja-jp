@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: a55a1a8cd5d63a9e775038824a7bbbe91adbae01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566739"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505037"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage クラス
 
-`CMFCPropertyPage`クラスは、[プロパティ] ページのポップアップ メニューの表示をサポートしています。
+クラス`CMFCPropertyPage`は、プロパティページでのポップアップメニューの表示をサポートしています。
 
 ## <a name="syntax"></a>構文
 
@@ -31,7 +31,7 @@ class CMFCPropertyPage : public CPropertyPage
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|`CMFCPropertyPage` オブジェクトを構築します。|
+|[CMFCPropertyPage:: CMFCPropertyPage](#cmfcpropertypage)|`CMFCPropertyPage` オブジェクトを構築します。|
 |`CMFCPropertyPage::~CMFCPropertyPage`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -39,15 +39,15 @@ class CMFCPropertyPage : public CPropertyPage
 |名前|説明|
 |----------|-----------------|
 |`CMFCPropertyPage::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCPropertyPage::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
-|`CMFCPropertyPage::OnSetActive`|このメンバー関数は、ページは、ユーザーが選択され、アクティブになったときにフレームワークによって呼び出されます。 (上書き[CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive))。|
-|`CMFCPropertyPage::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 ( `CPropertyPage::PreTranslateMessage`をオーバーライドします)。|
+|`CMFCPropertyPage::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|`CMFCPropertyPage::OnSetActive`|このメンバー関数は、ページがユーザーによって選択され、アクティブページになったときにフレームワークによって呼び出されます。 ( [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive)をオーバーライドします。)|
+|`CMFCPropertyPage::PreTranslateMessage`|[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)の Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換します。 詳細およびメソッドの構文については、「 [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)」を参照してください。 ( `CPropertyPage::PreTranslateMessage`をオーバーライドします)。|
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCPropertyPage`クラスは、[タブ] ダイアログ ボックスとも呼ばれる、プロパティ シートの各ページを表します。
+クラス`CMFCPropertyPage`は、プロパティシートの個々のページを表します。これは、タブダイアログボックスとも呼ばれます。
 
-使用して、`CMFCPropertyPage`クラスと組み合わせて、 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)クラス。 プロパティ ページ メニューを使用するには、すべての出現箇所を置き換えます、`CPropertyPage`クラス、`CMFCPropertyPage`クラス。
+クラスは`CMFCPropertyPage` 、 [cmfcpropertysheet プロパティ](../../mfc/reference/cmfcpropertysheet-class.md)クラスと共に使用します。 プロパティページでメニューを使用するには、 `CPropertyPage`クラス`CMFCPropertyPage`のすべての出現箇所をクラスに置き換えます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,9 +65,9 @@ class CMFCPropertyPage : public CPropertyPage
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxpropertypage.h
+**ヘッダー:** afxpropertypage
 
-##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
+##  <a name="cmfcpropertypage"></a>CMFCPropertyPage:: CMFCPropertyPage
 
 `CMFCPropertyPage` オブジェクトを構築します。
 
@@ -87,7 +87,7 @@ CMFCPropertyPage(
 このページのテンプレートのリソース ID。
 
 *nIDCaption*<br/>
-このページのタブに配置する、ラベルのリソース ID。 0 の場合、名前は、このページのダイアログ ボックス テンプレートから取得されます。 既定値は 0 です。
+このページのタブに配置するラベルのリソース ID。 0の場合、このページのダイアログボックステンプレートから名前が取得されます。 既定値は 0 です。
 
 *lpszTemplateName*<br/>
 このページのテンプレートの名前を指します。 Nll は指定できません。
@@ -96,7 +96,7 @@ CMFCPropertyPage(
 
 ### <a name="remarks"></a>Remarks
 
-コンス トラクターのパラメーターの詳細については、次を参照してください。 [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)します。
+コンストラクターのパラメーターの詳細については、「 [CPropertyPage:: CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

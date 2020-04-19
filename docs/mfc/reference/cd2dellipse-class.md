@@ -1,6 +1,6 @@
 ---
 title: CD2DEllipse クラス
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: aa280215aaac55e3aaa9542ca1ab2bd9d21655e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642040"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177214"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse クラス
 
@@ -31,7 +31,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|オーバーロードされます。 構築、`CD2DEllipse`オブジェクトから`D2D1_ELLIPSE`オブジェクト。|
+|[CD2DEllipse:: CD2DEllipse](#cd2dellipse)|オーバーロードされます。 オブジェクトから`CD2DEllipse` `D2D1_ELLIPSE`オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,16 +41,16 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+##  <a name="cd2dellipse"></a>CD2DEllipse:: CD2DEllipse
 
 CD2DRectF オブジェクトから CD2DEllipse オブジェクトを構築します。
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
-  CD2DEllipse(const D2D1_ELLIPSE* ellipse);
+CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,
@@ -60,16 +60,16 @@ CD2DEllipse(
 ### <a name="parameters"></a>パラメーター
 
 *rect*<br/>
-元の四角形
+ソース四角形
 
 *楕円*<br/>
-ソース楕円
+変換元の楕円
 
 *ptCenter*<br/>
 楕円の中心点。
 
 *sizeRadius*<br/>
-X 半径と楕円の Y 半径。
+楕円の X 半径と Y 半径。
 
 ## <a name="see-also"></a>関連項目
 

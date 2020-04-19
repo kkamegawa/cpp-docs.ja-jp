@@ -1,18 +1,16 @@
 ---
 title: インターネット URL 解析用グローバル関数とヘルパー
 ms.date: 04/03/2017
-f1_keywords:
-- vc.mfc.macros.isapi
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477156"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611033"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>インターネット URL 解析用グローバル関数とヘルパー
 
@@ -89,7 +87,7 @@ BOOL AFXAPI AfxParseURL(
 *strObject*<br/>
 URL を参照するオブジェクト (空でもかまいません)。
 
-*ポート*<br/>
+*nPort*<br/>
 いずれかが存在する場合に、URL のサーバーまたはオブジェクトのいずれかの部分から決定されます。
 
 ### <a name="return-value"></a>戻り値
@@ -106,9 +104,9 @@ URL 文字列を解析し、サービスとそのコンポーネントの型を�
 
 *strObject* = ="/dir/dir/object/object.ext"
 
-*ポート*#port = =
+*nPort* == #port
 
-*dwServiceType* #service = =
+*dwServiceType* == #service
 
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.
@@ -177,7 +175,7 @@ BOOL AFXAPI AfxParseURLEx(
 *strObject*<br/>
 URL を参照するオブジェクト (空でもかまいません)。
 
-*ポート*<br/>
+*nPort*<br/>
 いずれかが存在する場合に、URL のサーバーまたはオブジェクトのいずれかの部分から決定されます。
 
 *strUsername*<br/>
@@ -189,7 +187,7 @@ URL を参照するオブジェクト (空でもかまいません)。
 *dwFlags*<br/>
 URL を解析する方法を制御するフラグ。 次の値の組み合わせになります。
 
-|[値]|説明|
+|値|説明|
 |-----------|-------------|
 |ICU_DECODE|%XX エスケープ シーケンスを文字に変換します。|
 |ICU_NO_ENCODE|安全でない文字をエスケープ シーケンスに変換されません。|
@@ -213,10 +211,6 @@ URL を解析する方法を制御するフラグ。 次の値の組み合わせ
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxinet.h
-
-## <a name="see-also"></a>関連項目
-
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
@@ -274,11 +268,6 @@ WININET で定義されているインターネット サービスの種類の�
 
 **ヘッダー:** afxinet.h
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 インターネットの例外をスローします。
@@ -291,7 +280,7 @@ WININET で定義されているインターネット サービスの種類の�
 
 ### <a name="parameters"></a>パラメーター
 
-*独自*<br/>
+*dwContext*<br/>
 エラーの原因となった操作のコンテキスト id。 既定値*独自*で最初に指定された[CInternetSession](cinternetsession-class.md)に渡されると[CInternetConnection](cinternetconnection-class.md)- と[CInternetFile](cinternetfile-class.md)-クラスを派生します。 既定のオーバーライドは、通常、接続や、ファイルに対して実行される特定の操作、*独自*独自の。 この値に返されます、[対応](cinternetsession-class.md#onstatuscallback)特定の操作の状態を識別するためにします。
 
 *dwError*<br/>
@@ -308,9 +297,8 @@ WININET で定義されているインターネット サービスの種類の�
 
 **ヘッダー:** afxinet.h
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [CInternetException クラス](cinternetexception-class.md)<br/>
-[スローします。](#throw)
-
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)

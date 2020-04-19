@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3890
 ms.assetid: 2f22c2fd-c14e-45e1-b936-b739ffc0b135
-ms.openlocfilehash: 2354be5ac7299fc0361e1b3ad50554e9949f8c1d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d93afa2ac8e365eff2f9256235b391f561cb977
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599481"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736543"
 ---
 # <a name="compiler-error-c3890"></a>コンパイラ エラー C3890
 
-'var': リテラル データ メンバーのアドレスを取得することはできません
+' var ': リテラルデータメンバーのアドレスを取得することはできません。
 
-リテラル データ メンバーは、ガベージ コレクション ヒープに存在します。  アドレスは役に立ちませんため、ガベージ コレクション ヒープ上のオブジェクトを移動できます。
+リテラルデータメンバーは、ガベージコレクションヒープに存在します。  ガベージコレクションヒープ上のオブジェクトは移動できるので、アドレスを使用しても役に立ちません。
 
 次の例では、C3890 が生成されます。
 
-```
+```cpp
 // C3890.cpp
 // compile with: /clr
 ref struct Y1 {

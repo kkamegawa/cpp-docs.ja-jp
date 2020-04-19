@@ -1,5 +1,5 @@
 ---
-title: 'MFC: ドキュメントとビューを用いないデータベース クラスの使用'
+title: MFC:ドキュメントとビューを用いないデータベース クラスの使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396016"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: ドキュメントとビューを用いないデータベース クラスの使用
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC:ドキュメントとビューを用いないデータベース クラスの使用
 
 場合があります、データベース アプリケーションのフレームワークのドキュメント/ビュー アーキテクチャを使用しない場合があります。 このトピックでは、次の内容について説明します。
 
@@ -59,7 +59,7 @@ MFC アプリケーション ウィザードのいくつかのオプションが
 |**ファイル サポートのないデータベース ビュー**|を派生 `CRecordView`|ドキュメントのサポートがないシリアル化のサポートを提供します。 ドキュメントはレコード セットを格納して、複数のビューを調整シリアル化をサポートしていませんまたは**新規**、**オープン**、**保存**、および**名前を付けて保存**コマンド。 参照してください[最小限ドキュメント アプリケーション](#_core_applications_with_minimal_documents)します。 データベース ビューを含める場合は、データのソースを指定する必要があります。<br /><br /> データベースのヘッダー ファイル、ライブラリのリンク、レコード ビュー、およびレコード セットが含まれています。 (アプリケーションでのみ使用できます、**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択、[アプリケーションの種類、MFC アプリケーション ウィザード](../mfc/reference/application-type-mfc-application-wizard.md)ページです)。|
 |**ファイルのサポートのあるデータベース ビュー**|を派生 `CRecordView`|シリアル化を含む、完全なドキュメントのサポートを提供し、ドキュメントに関連する**ファイル**メニュー コマンド。 ファイルあたりの単位とその必要はありませんシリアル化ではなく、データベース アプリケーションは通常、レコード単位で動作します。 ただし、シリアル化のための特別な用途があります。 参照してください[最小限ドキュメント アプリケーション](#_core_applications_with_minimal_documents)します。 データベース ビューを含める場合は、データのソースを指定する必要があります。<br /><br /> データベースのヘッダー ファイル、ライブラリのリンク、レコード ビュー、およびレコード セットが含まれています。 (アプリケーションでのみ使用できます、**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択、[アプリケーションの種類、MFC アプリケーション ウィザード](../mfc/reference/application-type-mfc-application-wizard.md)ページです)。|
 
-シリアル化とシリアル化のための代替の使用に代わる方法の詳細については、次を参照してください。[シリアル化: シリアル化とします。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
+シリアル化とシリアル化のための代替の使用に代わる方法の詳細については、次を参照してください。[シリアル化します。シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
 
 ##  <a name="_core_applications_with_minimal_documents"></a> 最小限のドキュメントでのアプリケーション
 
@@ -81,7 +81,7 @@ MFC アプリケーション ウィザードでは、フォーム ベースの�
 
 ###  <a name="_core_a_document_with_file_support"></a> ファイルをサポート ドキュメント
 
-アプリケーション ウィザードのデータベース オプションを選択します。**ファイルのサポートのあるデータベース ビュー**ドキュメントに関連する用途がある場合**ファイル**メニュー コマンドやドキュメントのシリアル化します。 プログラムの部分のデータ アクセスできるドキュメントを使用する、同じ方法で」の説明に従って[ファイルをサポートしないドキュメント](#_core_a_document_without_file_support)します。 たとえば、ドキュメントのシリアル化の機能を使用するユーザーの設定やその他の有用な情報を格納するシリアル化されたユーザー プロファイルのドキュメントを読み書きします。 詳細については、次を参照してください。[シリアル化: シリアル化とします。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
+アプリケーション ウィザードのデータベース オプションを選択します。**ファイルのサポートのあるデータベース ビュー**ドキュメントに関連する用途がある場合**ファイル**メニュー コマンドやドキュメントのシリアル化します。 プログラムの部分のデータ アクセスできるドキュメントを使用する、同じ方法で」の説明に従って[ファイルをサポートしないドキュメント](#_core_a_document_without_file_support)します。 たとえば、ドキュメントのシリアル化の機能を使用するユーザーの設定やその他の有用な情報を格納するシリアル化されたユーザー プロファイルのドキュメントを読み書きします。 詳細については、次を参照してください。[シリアル化します。シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
 
 アプリケーション ウィザードが、このオプションをサポートしますが、ドキュメントをシリアル化するコードを記述する必要があります。 ドキュメント データ メンバーのシリアル化された情報を格納します。
 

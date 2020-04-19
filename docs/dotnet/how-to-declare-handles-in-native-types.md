@@ -1,5 +1,5 @@
 ---
-title: '方法: ネイティブ型のハンドルを宣言する'
+title: '方法: ネイティブ型のハンドルを宣言します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387410"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>方法: ネイティブ型のハンドルを宣言する
+# <a name="how-to-declare-handles-in-native-types"></a>方法: ネイティブ型のハンドルを宣言します。
 
 ネイティブ型のハンドル型を宣言することはできません。 vcclr.h でタイプ セーフ ラッパー テンプレートを提供する`gcroot`C++ ヒープから CLR オブジェクトを参照します。 このテンプレートでは、ネイティブ型に仮想のハンドルを埋め込むし、基になる型の場合と同様に扱うことできます。 ほとんどの場合、使用することができます、`gcroot`キャストは必要ありません、埋め込み型としてのオブジェクト。 ただし、[ごとで](../dotnet/for-each-in.md)を使用して`static_cast`を基になるマネージ参照を取得します。
 

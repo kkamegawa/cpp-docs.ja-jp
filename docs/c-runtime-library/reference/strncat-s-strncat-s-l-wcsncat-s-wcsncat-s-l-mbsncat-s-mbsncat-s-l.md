@@ -1,14 +1,14 @@
 ---
 title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsncat_s_l
 - wcsncat_s
 - _mbsncat_s_l
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strncat_s_l
 - _mbsncat_s_l
@@ -47,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500751"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626182"
 ---
-# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
+# <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
 文字列に文字を追加します。 これらのバージョンの [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbsncat_s**と **_mbsncat_s_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsncat_s**と **_mbsncat_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -167,19 +171,19 @@ NULL で終わる元の文字列。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*strDestination*|*numberOfElements*|*strSource*|戻り値|内容*strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|戻り値|*Strdestination*の内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**または終端文字なし|任意|任意|**EINVAL**|変更されない|
+|**NULL**または未終了|任意|任意|**EINVAL**|変更されない|
 |任意|任意|**NULL**|**EINVAL**|変更されない|
 |任意|0 または小さすぎる|任意|**ERANGE**|変更されない|
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数が、最初に追加しようとしています*D*の文字*strSource*の末尾に*追加される文字*ここで、 *D* のうちの小さい方が *。カウント*の長さと*strSource*します。 追加された場合は*D*内に収まる文字*追加される文字*(としてサイズが指定されて*numberOfElements*) し、null 終端記号をこれらの文字の余裕と追加すると、元の null の終端から始まる*追加される文字*、新しい終端の null は追加されるそれ以外と*追加される文字*[0] と無効なパラメーターの null 文字に設定されている。ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+これらの関数は、 *Strsource*の最初の*D*文字を*strsource*の末尾に追加しようとします。ここで、 *d*は、 *count*の小さい方、および*strsource*の長さです。 (サイズが*Numberofelements*として指定されている) *strdest*内にこれらの*D*文字を追加しても、null 終端文字のスペースを残す場合、これらの文字が追加され、元の*終端の null がstrDest*と新しい終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
-これには例外があります。 場合*数*は[_TRUNCATE](../../c-runtime-library/truncate.md)だけの*strSource*に合わせる を追加だけでなく*追加される文字*を追加する空きを残して、null 終了しています。
+これには例外があります。 *Count*が[TRUNCATE](../../c-runtime-library/truncate.md)の場合、に収まるように*Strsource*の多くが*strsource*に追加されますが、終端の null を追加するための領域が残ったままになります。
 
-例えば以下のようにします。
+たとえば、オブジェクトに適用された
 
 ```C
 char dst[5];
@@ -187,15 +191,15 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-確認していることを意味**strncat_s**バッファー 5 の 2 つの文字に 3 つの文字を追加する文字の長い; これは余裕がありません、null の終端ため**strncat_s**文字列をゼロ無効なパラメーター ハンドラーを呼び出します。
+は、5文字のバッファー内の2文字に3文字を追加するように**strncat_s**に要求していることを意味します。この場合、null 終端文字にはスペースが残されないため、 **strncat_s**は文字列をゼロにして、無効なパラメーターハンドラーを呼び出します。
 
-切り捨て動作が必要な場合は **_TRUNCATE**を調整したり、*サイズ*パラメーターに応じて。
+切り捨て動作が必要な場合は、 **TRUNCATE**を使用するか、必要に応じて*サイズ*パラメーターを調整します。
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-または
+、または
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -203,15 +207,15 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 結果の文字列はすべて、null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-場合*strSource*または*追加される文字*は**NULL**、または*numberOfElements* 0 の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**せず、パラメーターを変更します。
+*Strsource*または*Strsource*が**NULL**の場合、または*numberofelements*が0の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数はパラメーターを変更せずに**EINVAL**を返します。
 
-**wcsncat_s**と **_mbsncat_s**のワイド文字とマルチバイト文字バージョン**strncat_s**します。 文字列引数と戻り値の**wcsncat_s**はワイド文字列 **_mbsncat_s**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**wcsncat_s**と **_mbsncat_s**は、 **strncat_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncat_s**の文字列引数と戻り値はワイド文字列です。これらの **_mbsncat_s**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -220,9 +224,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**と **_wcsncat_s_l**ロケール依存性を持ちません。 に対してのみ用意されて **_tcsncat_s_l**します。
+**_strncat_s_l**と **_wcsncat_s_l**は、ロケールに依存しません。これらは **_tcsncat_s_l**に対してのみ提供されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -230,7 +234,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**wcsncat_s**|\<string.h> または \<wchar.h>|
 |**_mbsncat_s**、 **_mbsncat_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

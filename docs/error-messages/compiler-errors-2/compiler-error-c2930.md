@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2930
 ms.assetid: f07eecd1-e5d1-4518-bd89-b1fd2a003a17
-ms.openlocfilehash: 20fa3e81e66bb30bd63e579a863b6071de4ef871
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b30e614236298cf9a07cbc29e028039903f9748f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434828"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760981"
 ---
 # <a name="compiler-error-c2930"></a>コンパイラ エラー C2930
 
@@ -23,7 +23,7 @@ ms.locfileid: "50434828"
 
 次の例では C2930 が生成されます。
 
-```
+```cpp
 // C2930.cpp
 // compile with: /c
 template<class T>
@@ -36,7 +36,7 @@ enum SomeEnum { y };
 
 C2930 は、ジェネリックを使用する場合にも発生することがあります。
 
-```
+```cpp
 // C2930c.cpp
 // compile with: /clr /c
 generic<class T>

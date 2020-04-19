@@ -7,12 +7,12 @@ helpviewer_keywords:
 - make_signed class
 - make_signed
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
-ms.openlocfilehash: c9fe9d54d503f1aa1dfb3debfaeb7649f2e5c18d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3c35e28dec3270299329c0186273e324effc2bb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631648"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453677"
 ---
 # <a name="makesigned-class"></a>make_signed クラス
 
@@ -30,12 +30,12 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-型修飾子のインスタンスを保持する、修飾型である*T*場合`is_signed<T>`true を保持します。 それ以外の場合は、`sizeof (T) <= sizeof (UT)` である最小の符号なしの型 `UT` になります。
+型修飾子のインスタンスは、が true を保持している場合`is_signed<T>`は T である修飾型を保持します。 それ以外の場合は、`sizeof (T) <= sizeof (UT)` である最小の符号なしの型 `UT` になります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -45,4 +45,4 @@ using make_signed_t = typename make_signed<T>::type;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -1,6 +1,6 @@
 ---
 title: __emul、__emulu
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __emulu_cpp
 - __emul
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 9144ce4f25d2e8e5554602533c13d5619e15360a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542455"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216746"
 ---
-# <a name="emul-emulu"></a>__emul、__emulu
+# <a name="__emul-__emulu"></a>__emul、__emulu
 
 **Microsoft 固有の仕様**
 
-Overflow 保持できるは 32 ビット整数の乗算を実行します。
+32ビット整数で保持できる値をオーバーフローする乗算を実行します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 __int64 __emul(
    int a,
    int b
@@ -36,13 +36,13 @@ unsigned __int64 __emulu(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
-[in]乗算の最初の整数オペランド。
+*ある*\
+から乗算の1番目の整数オペランド。
 
-*b*<br/>
-[in]乗算の 2 番目の整数オペランド。
+*b*\
+から乗算の2番目の整数オペランド。
 
 ## <a name="return-value"></a>戻り値
 
@@ -55,17 +55,17 @@ unsigned __int64 __emulu(
 |`__emul`|x86、x64|
 |`__emulu`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-`__emul` 2 つの 32 ビット符号付きの値を受け取り、64 ビット符号付き整数値として乗算の結果を返します。
+`__emul`2 32 ビットの符号付きの値を受け取り、乗算の結果を64ビットの符号付き整数値として返します。
 
-`__emulu` 2 つの 32 ビット符号なし整数値を受け取り、64 ビット符号なし整数値として乗算の結果を返します。
+`__emulu`2 32 ビット符号なし整数値を取得し、乗算の結果を64ビット符号なし整数値として返します。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // emul.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -97,7 +97,7 @@ int main()
 
 ## <a name="output"></a>出力
 
-```
+```Output
 -268435456 * 2 = -536870912
 4294967295 * 251658240 = 1080863910317260800
 ```

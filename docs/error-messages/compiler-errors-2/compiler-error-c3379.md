@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d99214f3ad7e7db1edc215d94c98e9cf9ec4ca2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553505"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742900"
 ---
 # <a name="compiler-error-c3379"></a>コンパイラ エラー C3379
 
-'class': 入れ子になったクラス宣言の一部としてアセンブリ アクセス指定子を含めることはできません
+' class ': 入れ子になったクラスは、宣言の一部としてアセンブリアクセス指定子を持つことはできません
 
-クラスまたは構造体などのマネージ型に適用すると、[パブリック](../../cpp/public-cpp.md)と[プライベート](../../cpp/private-cpp.md)キーワードは、クラスがアセンブリ メタデータを通じて公開するかどうかを示します。 `public` または`private`は外側のクラスのアセンブリのアクセス権を継承する入れ子になったクラスに適用することはできません。
+クラスや構造体などのマネージ型に適用される場合、 [public](../../cpp/public-cpp.md)キーワードと[private](../../cpp/private-cpp.md)キーワードは、クラスがアセンブリメタデータを通じて公開されるかどうかを示します。 `public` または `private` を入れ子になったクラスに適用することはできません。入れ子になったクラスには、外側のクラスのアセンブリアクセスが継承されます。
 
-使用すると[/clr](../../build/reference/clr-common-language-runtime-compilation.md)、`ref`と`value`キーワードは、クラスが管理されていることを示します (を参照してください[クラスと構造体](../../windows/classes-and-structs-cpp-component-extensions.md))。
+[/Clr](../../build/reference/clr-common-language-runtime-compilation.md)と共に使用する場合、`ref` キーワードと `value` キーワードは、クラスがマネージであることを示します (「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください)。
 
 次の例では、C3379 が生成されます。
 
-```
+```cpp
 // C3379a.cpp
 // compile with: /clr
 using namespace System;

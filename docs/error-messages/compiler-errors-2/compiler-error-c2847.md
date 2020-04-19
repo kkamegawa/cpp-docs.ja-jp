@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2847
 ms.assetid: 9ad9a0e0-8b16-49d9-a5be-f8eda2372aa9
-ms.openlocfilehash: 99c49be746cea6fb80c5e24667bcd97556a0ad04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8b31dc461c1d589151701c6946f6ac1a95c5517
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481485"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738987"
 ---
 # <a name="compiler-error-c2847"></a>コンパイラ エラー C2847
 
@@ -21,7 +21,7 @@ ms.locfileid: "50481485"
 
 たとえば、次の例では C2847 が生成されます。
 
-```
+```cpp
 // C2847.cpp
 // compile with: /clr
 ref class A {};

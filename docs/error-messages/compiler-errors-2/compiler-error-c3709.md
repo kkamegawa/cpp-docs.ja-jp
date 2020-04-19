@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
-ms.openlocfilehash: 3eb2963916cbbcbd925f755f9162ce59e9bff569
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47320c79dbbfc2152c126c80d1eb8c061f3ceb3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432764"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757918"
 ---
 # <a name="compiler-error-c3709"></a>コンパイラ エラー C3709
 
-'function': _ _hook でイベントを指定するための構文が正しくありません/\__unhook
+' function ': __hook/\_でイベントを指定する構文が正しくありません _unhook
 
-持つイベント ソースを指定すると[_ _hook](../../cpp/hook.md)または[_ _unhook](../../cpp/unhook.md)最初のパラメーターは有効なイベント メソッドである必要があります、2 番目のパラメーターは有効なイベント ソース オブジェクト (メソッドではない) である必要があります。
+[__Hook](../../cpp/hook.md)または[__unhook](../../cpp/unhook.md)でイベントソースを指定する場合、最初のパラメーターは有効なイベントメソッドである必要があり、2番目のパラメーターは、(メソッドではなく) 有効なイベントソースオブジェクトである必要があります。
 
 次の例では、C3709 が生成されます。
 
-```
+```cpp
 // C3709.cpp
 // compile with: /LD
 [event_source(native)]

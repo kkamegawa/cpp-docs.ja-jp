@@ -1,6 +1,6 @@
 ---
 title: __outdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdword
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: dd2192842e2122ebb65dcfba9f1f68ec5fc468d5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ce1358e7cef0136ccf7d314038d06d271916e0bc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331231"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221660"
 ---
-# <a name="outdword"></a>__outdword
+# <a name="__outdword"></a>__outdword
 
 **Microsoft 固有の仕様**
 
-生成、`out`ダブルワードを送信する命令`Data`ポート`Port`します。
+ダブルワード*データ*をポート*ポート*に送信する命令を生成します。`out`
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __outdword(
    unsigned short Port,
    unsigned long Data
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]データを送信するポート。
+*ポート*\
+からデータの送信先のポート。
 
-*データ*<br/>
-[in]送信するダブルワードします。
+*データ*\
+から送信されるダブルワード。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,7 +44,7 @@ void __outdword(
 |---------------|------------------|
 |`__outdword`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

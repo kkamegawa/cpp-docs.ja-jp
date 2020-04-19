@@ -1,26 +1,27 @@
 ---
-title: GROUP
-ms.date: 08/30/2018
+title: グループ
+ms.date: 11/05/2019
 f1_keywords:
 - group
 helpviewer_keywords:
 - GROUP directive
 ms.assetid: 55dc9548-154e-486d-849a-135e4631eca9
-ms.openlocfilehash: 5ca0baab5eb131c2eb0b7e3eadc1d8c595530b9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbf152b85db6d2c492b429190b8a6cd761b8e9d1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495824"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317306"
 ---
-# <a name="group"></a>GROUP
+# <a name="group"></a>グループ
 
-指定した追加*セグメント*というグループに*名前*します。
+(32 ビット MASM のみ。)指定された*セグメント*を*名前*と呼ばれるグループに追加します。
 
 ## <a name="syntax"></a>構文
 
-> 名前のグループ セグメント [] セグメント].
+> *名前***グループ***セグメント*⟦ __、__ *セグメント*...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

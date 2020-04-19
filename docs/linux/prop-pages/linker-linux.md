@@ -1,15 +1,23 @@
 ---
 title: リンカー プロパティ (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678341"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821296"
 ---
 # <a name="linker-properties-linux-c"></a>リンカー プロパティ (Linux C++)
+
+::: moniker range="vs-2015"
+
+Linux サポートは Visual Studio 2017 以降で使用できます。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="general"></a>全般
 
@@ -55,3 +63,5 @@ Version | -version オプションは、実行ファイルのヘッダーにバ�
 即時関数バインディングの有効化 | このオプションは、即時関数バインディング用にオブジェクトをマークします。
 実行可能スタックは必要ありません | このオプションは、実行可能スタックを必要としないものとして出力をマークします。
 アーカイブ全体 | アーカイブ全体は、ソースおよびその他の依存関係のすべてのコードを使用します。
+
+::: moniker-end

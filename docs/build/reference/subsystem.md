@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638738"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450728"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Windows キャラクター モード アプリケーション。 オペレーテ
 **EFI_RUNTIME_DRIVER**<br/>
 拡張可能なファームウェア インターフェイス (EFI) イメージ
 
-EFI サブシステムのオプションは、拡張可能なファームウェア インターフェイスの環境で実行できる実行可能イメージを設定します。 この環境は通常、ハードウェアと共に提供され、オペレーティング システムが読み込まれる前に実行されます。 EFI のイメージの種類による主な相違点は、イメージが読み込まれるメモリ位置、およびイメージへの呼び出しが返されるときに実行される処理です。 EFI_APPLICATION イメージは、制御が返されるとアンロードされます。 EFI_BOOT_SERVICE_DRIVER または EFI_RUNTIME_DRIVER は、エラー コードと共に制御が返された場合にのみアンロードされます。 EFI_ROM イメージは ROM から実行されます。 詳細については、上の仕様を参照してください。、 [Unified EFI Forum](http://www.uefi.org/) web サイト。
+EFI サブシステムのオプションは、拡張可能なファームウェア インターフェイスの環境で実行できる実行可能イメージを設定します。 この環境は通常、ハードウェアと共に提供され、オペレーティング システムが読み込まれる前に実行されます。 EFI のイメージの種類による主な相違点は、イメージが読み込まれるメモリ位置、およびイメージへの呼び出しが返されるときに実行される処理です。 EFI_APPLICATION イメージは、制御が返されるとアンロードされます。 EFI_BOOT_SERVICE_DRIVER または EFI_RUNTIME_DRIVER は、エラー コードと共に制御が返された場合にのみアンロードされます。 EFI_ROM イメージは ROM から実行されます。 詳細については、上の仕様を参照してください。、 [Unified EFI Forum](https://www.uefi.org/) web サイト。
 
 **ネイティブ**<br/>
 サブシステム環境なしで実行されるコード、たとえばカーネル モード デバイス ドライバーやネイティブ システム プロセス。 このオプションは、通常、Windows システムの機能のために予約されています。
@@ -65,10 +65,10 @@ WINDOWSCE サブシステムは、アプリケーションが Windows CE カー�
 
 - `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
 
-選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](../../build/reference/entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
+選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
 
-詳細については、各サブシステムのメジャーおよびマイナー バージョン番号の最小値と既定値を含む、次を参照してください。、 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)リンカー オプション。
+詳細については、各サブシステムのメジャーおよびマイナー バージョン番号の最小値と既定値を含む、次を参照してください。、 [/SUBSYSTEM](subsystem-specify-subsystem.md)リンカー オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

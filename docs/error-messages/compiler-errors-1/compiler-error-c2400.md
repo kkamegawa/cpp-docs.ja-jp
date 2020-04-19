@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2400
 ms.assetid: 1ba441ee-73f9-42a5-bfe9-fbeab93808eb
-ms.openlocfilehash: 3ede43ec5ddb61b85c48094193d01d18bacae2bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61043f3f97d4d91b66c3902cc33ed4be526541ae
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667182"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744772"
 ---
 # <a name="compiler-error-c2400"></a>コンパイラ エラー C2400
 
-'context'; でのインライン アセンブラーの構文エラー'token' が見つかりません
+' context ' でインラインアセンブラー構文エラーが発生しています。' token ' が見つかりました
 
-トークンには、指定したコンテキストで構文エラーが発生しました。
+トークンにより、指定されたコンテキストで構文エラーが発生しました。
 
 次の例では、C2400 が生成されます。
 
-```
+```cpp
 // C2400.cpp
 // processor: x86
 int main() {

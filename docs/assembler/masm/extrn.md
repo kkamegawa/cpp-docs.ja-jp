@@ -1,28 +1,29 @@
 ---
 title: EXTRN
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - EXTRN
 helpviewer_keywords:
 - EXTRN directive
 ms.assetid: 090f8ec7-28e7-451e-88a8-29c2e77fb956
-ms.openlocfilehash: d15471cc850bbf288f97a1d00c13b8f663d80821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85edfae3a1af85c4ad102fe840d4be0f7c72abf2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644211"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317332"
 ---
 # <a name="extrn"></a>EXTRN
 
 ## <a name="syntax"></a>構文
 
-> EXTRN
+> **EXTRN**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[EXTERN](../../assembler/masm/extern-masm.md)します。
+「 [EXTERN](extern-masm.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

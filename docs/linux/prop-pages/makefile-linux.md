@@ -1,15 +1,23 @@
 ---
 title: 全般プロパティ (Linux C++ メイクファイル プロジェクト)| Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524593"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821458"
 ---
 # <a name="makefile-project-properties-linux-c"></a>メイクファイル プロジェクトのプロパティ (Linux C++)
+
+::: moniker range="vs-2015"
+
+Linux サポートは Visual Studio 2017 以降で使用できます。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 これは、Linux メイクファイル プロジェクトで使用できるプロパティの一覧の一部です。 多くのメイクファイル プロジェクトのプロパティは Linux C++ コンソール アプリケーション プロジェクトのプロパティと同じです。
 
@@ -101,3 +109,5 @@ IntelliSense プロパティはプロジェクトまたはファイル レベル
 すべてリビルド コマンド ライン | [すべてリビルド] コマンドを実行するためのコマンド ラインを指定します。 これはリモート システム上で実行されます。
 クリーン コマンド ライン | [クリーン] コマンドで実行するコマンド ラインを指定します。 これはリモート システム上で実行されます。
 出力 | リモート システム上のリモート ビルドで生成される出力を指定します。
+
+::: moniker-end

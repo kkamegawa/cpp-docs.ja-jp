@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 5a281f9f88412df4d3ee18bff1302b19433e07f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466951"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501762"
 ---
-# <a name="cppquote"></a>cpp_quote
+# <a name="cpp_quote"></a>cpp_quote
 
-生成された .idl ファイルに、引用符なしの指定した文字列を出力します。
+指定された文字列を、引用符ではなく、生成された .idl ファイルに出力します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,15 +30,15 @@ C 命令。
 
 ## <a name="remarks"></a>Remarks
 
-**Cpp_quote** C++ 属性は、.idl ファイル内のプリプロセッサ ディレクティブを配置する場合に便利です。
+**Cpp_quote** C++属性は、.idl ファイルにプリプロセッサディレクティブを配置する場合に便利です。
 
-使用することも**cpp_quote** MIDL コンパイルの一部として、.h ファイルを生成します。 たとえば、C の IDL 属性を使用していて、このファイルをいくつかのタスクを使用することはできません、C++ ヘッダー ファイルがある場合は、しをコンパイルできますを使用できる MIDL で生成された .h ファイルを作成すること。
+また、 **cpp_quote**を使用して、MIDL コンパイルの一部として .h ファイルを生成することもできます。 たとえば、IDL 属性を使用C++ C++しているが、一部のタスクでこのファイルを使用できないヘッダーファイルがある場合は、それをコンパイルして、MIDL によって生成された .h ファイルを作成できます。このファイルを使用できます。
 
-**Cpp_quote**属性と同じ機能を持つ、 [cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL 属性。
+**Cpp_quote**属性には、 [cpp_quote](/windows/win32/Midl/cpp-quote) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[デュアル](dual.md)例については、使用する方法を使用して、 **cpp_quote**します。
+**Cpp_quote**の使用例については、「[デュアル](dual.md)の例」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

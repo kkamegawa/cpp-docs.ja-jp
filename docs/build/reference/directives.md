@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DIRECTIVES dumpbin option
 - -DIRECTIVES dumpbin option
 ms.assetid: cb85d679-6d20-4244-ba0b-6f495228e970
-ms.openlocfilehash: cb87e04e1732f1603ed4dc606ffb33cabc587a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df25ca2c57cd15883b8ba1a9e2254b57a2c24a5d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293772"
 ---
 # <a name="directives"></a>/DIRECTIVES
 
@@ -25,8 +25,8 @@ ms.locfileid: "50610666"
 
 このオプションは、イメージのコンパイラが生成した .drective セクションをダンプします。
 
-のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+[DUMPBIN オプション](dumpbin-options.md)

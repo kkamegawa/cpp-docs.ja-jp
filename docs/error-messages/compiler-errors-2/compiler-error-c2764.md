@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2764
+title: コンパイラエラー C2764
 ms.date: 11/04/2016
 f1_keywords:
 - C2764
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d318742a367487f3688717046a6a798c2add87a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587101"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759842"
 ---
-# <a name="compiler-error-c2764"></a>コンパイラ エラー C2764
+# <a name="compiler-error-c2764"></a>コンパイラエラー C2764
 
-'param': テンプレート パラメーターは、使用または部分的特殊化 'specialization' を推論できません。
+' param ': テンプレートパラメーターが、部分的特殊化 ' 特殊化 ' で使用されていないか、推論できされています
 
-テンプレート パラメーターは、部分的特殊化では使用されません。 これにより、部分的特殊化をテンプレート パラメーターを推測できないため、使用できなくなります。
+テンプレートパラメーターは部分的特殊化では使用されません。 これにより、テンプレートパラメーターを推測できないため、部分的特殊化は使用できなくなります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2764 が生成されます。
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

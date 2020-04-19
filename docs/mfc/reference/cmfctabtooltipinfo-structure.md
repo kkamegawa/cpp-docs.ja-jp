@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: b785754a7970573c42fcc1d0736541416f522c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252959"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 構造体
 
@@ -39,7 +39,7 @@ struct CMFCTabToolTipInfo
 
 ## <a name="example"></a>例
 
-次の例はどのように`CMFCTabToolTipInfo`で使用されて、 [MDITabsDemo サンプル: MFC タブ付き MDI アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`CMFCTabToolTipInfo`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -65,7 +65,7 @@ int m_nTabIndex;
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_nTabIndex`で使用されて、 [MDITabsDemo サンプル: MFC タブ付き MDI アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`m_nTabIndex`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_pTabWnd`で使用されて、 [MDITabsDemo サンプル: MFC タブ付き MDI アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`m_pTabWnd`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ CString m_strText;
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_strText`で使用されて、 [MDITabsDemo サンプル: MFC タブ付き MDI アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`m_strText`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

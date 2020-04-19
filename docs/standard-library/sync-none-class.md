@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: eba2c60e621df717f29c0b25c735df3fda285fa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cb311289207dbcf78186e11b2c7f03c503389e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510202"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450318"
 ---
 # <a name="syncnone-class"></a>sync_none クラス
 
@@ -104,10 +104,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-メンバー関数は常に返します**true**します。
+このメンバー関数は常に**true**を返します。
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

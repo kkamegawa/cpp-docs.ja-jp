@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, creating
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-ms.openlocfilehash: c7d3b571a429d780c0c5eea0ad498499c615245f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddcf83cafd5f499158f3116f04e40397b7f8d0a8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320085"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (プログラム データベースの使用)
 
@@ -31,17 +31,17 @@ ms.locfileid: "50589545"
 
 ## <a name="remarks"></a>Remarks
 
-既定では、ときに[/debug](../../build/reference/debug-generate-debug-info.md)を指定すると、リンカーはデバッグ情報を保持するプログラム データベース (PDB) を作成します。 PDB の既定のファイル名は、プログラムと拡張子 .pdb の基本の名前を持ちます。
+既定では、ときに[/debug](debug-generate-debug-info.md)を指定すると、リンカーはデバッグ情報を保持するプログラム データベース (PDB) を作成します。 PDB の既定のファイル名は、プログラムと拡張子 .pdb の基本の名前を持ちます。
 
 /PDB を使用して:*filename* PDB ファイルの名前を指定します。 /DEBUG が指定されていない場合は、/PDB オプションは無視されます。
 
 PDB ファイルには、最大 2 GB を指定できます。
 
-詳細については、次を参照してください。[リンカー入力としての .pdb ファイル](../../build/reference/dot-pdb-files-as-linker-input.md)します。
+詳細については、次を参照してください。[リンカー入力としての .pdb ファイル](dot-pdb-files-as-linker-input.md)します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -55,5 +55,5 @@ PDB ファイルには、最大 2 GB を指定できます。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

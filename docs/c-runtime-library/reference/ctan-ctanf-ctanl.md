@@ -1,11 +1,11 @@
 ---
 title: ctan、ctanf、ctanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctan
 - ctanf
 - ctanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctan
 - ctanf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661748"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938445"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan、ctanf、ctanl
 
@@ -68,20 +71,20 @@ _Lcomplex ctanl(
 
 ## <a name="return-value"></a>戻り値
 
-タンジェント*z*します。
+*Z*のタンジェント。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|none|_DOMAIN|
-|± ∞ (**tan**、 **tanf**)|INVALID|_DOMAIN|
+|±∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ctan**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ctan**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**ctan**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ctan**は常にを受け取り、**戻り値を**返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ctan**、 **ctanf**、 **ctanl**|\<complex.h>|\<ccomplex>|
 

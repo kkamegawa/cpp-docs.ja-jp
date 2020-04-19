@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2430
 ms.assetid: 07c20f76-63e1-4d22-b2a9-98b0d45c5cac
-ms.openlocfilehash: 754758e652539e4f2d9b12e568b8ef5ccf41d8db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f82eb4914ec36aa513822964f551a05fbb77aa97
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676474"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744577"
 ---
 # <a name="compiler-error-c2430"></a>コンパイラ エラー C2430
 
-1 つ以上のインデックスが 'identifier' の登録します。
+' identifier ' に複数のインデックスレジスタがあります
 
-1 つ以上の登録でスケーリングします。 コンパイラは、インデックスのスケーリングをサポートしていますが、レジスタは 1 つまでしかスケールすることができます。
+複数のレジスタがスケールされています。 コンパイラは、スケーリングされたインデックス作成をサポートしていますが、拡張できるのは1つのレジスタだけです。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2430 が生成されます。
 
-```
+```cpp
 // C2430.cpp
 // processor: x86
 int main() {

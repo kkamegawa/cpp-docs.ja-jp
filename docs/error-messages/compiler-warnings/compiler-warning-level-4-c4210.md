@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4210
 ms.assetid: f8600adf-dfe2-4022-a37a-3d4997641dfd
-ms.openlocfilehash: 3435e18f60568cad390dcb0ef7900658a21ea959
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b27a711187af21dac093bdcc3e3af84502fe153
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638721"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541848"
 ---
 # <a name="compiler-warning-level-4-c4210"></a>コンパイラの警告 (レベル 4) C4210
 
-使用される標準の拡張機能: ファイル スコープを指定された関数
+非標準の拡張機能が使用されています: 関数が指定したファイルスコープ
 
-既定の Microsoft 拡張機能 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))、関数の宣言は、ファイル スコープを持ちます。
+既定の Microsoft 拡張機能 ([/ze](../../build/reference/za-ze-disable-language-extensions.md)) では、関数宣言にファイルスコープがあります。
 
-```
+```c
 // C4210.c
 // compile with: /W4 /c
 void func1()
@@ -33,4 +33,4 @@ int main()
 }                //  /Za passes 4 as type int
 ```
 
-この拡張機能にコードを他のコンパイラに移植されるを防ぐことができます。
+この拡張機能により、コードが他のコンパイラに移植されるのを防ぐことができます。

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - encoding
 - encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-ms.openlocfilehash: f23c6ee3354521d0edbd2772f9a2fdf3ec6a184c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9c7689e49efce0d65e945f1a032a680e2277594
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492717"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375868"
 ---
 # <a name="atl-encoding-reference"></a>ATL のエンコーディングのリファレンス
 
-Atlenc.h の関数のコードでは、uuencode、16 進数などの一般的なインターネット標準の範囲と UTF8 でエンコードがサポートされています。
+Uuencode、16進数、UTF8 などの一般的なインターネット標準の範囲内でのエンコードは、atlenc で見つかったコードによってサポートされています。
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
 |[AtlGetHexValue](reference/atl-text-encoding-functions.md#atlgethexvalue)|16 進数の数値を取得します。|
-|[AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode)|以前の呼び出しで 16 進テキストとしてエンコードされたデータの文字列をデコード[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)します。|
+|[AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode)|[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)の以前の呼び出しによって、16進数のテキストとしてエンコードされたデータの文字列をデコードします。|
 |[AtlHexDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexdecodegetrequiredlength)|指定した長さの 16 進エンコードされた文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
 |[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)|一部のデータを 16 進テキストの文字列としてエンコードします。|
 |[AtlHexEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
@@ -30,14 +30,14 @@ Atlenc.h の関数のコードでは、uuencode、16 進数などの一般的な
 |[BEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#bencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 |[EscapeXML](reference/atl-text-encoding-functions.md#escapexml)|XML での使用には安全でない文字を安全な文字に変換します。|
 |[GetExtendedChars](reference/atl-text-encoding-functions.md#getextendedchars)|文字列に含まれる拡張文字の数を取得します。|
-|[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|指定された文字が拡張文字 (文字コードが 31 以下または 127 以上で、タブ、ラインフィード、キャリッジ リターン以外の文字) かどうかを判断します。|
+|[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|この関数を呼び出して、特定の文字が拡張文字 (32 未満、126より大きい、タブ、ラインフィード、またはキャリッジリターンではない) であるかどうかを確認します。|
 |[QEncode](reference/atl-text-encoding-functions.md#qencode)|"Q" エンコーディングを使用して一部のデータを変換します。|
 |[QEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
-|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|以前の呼び出しによってなど quoted-printable 形式でエンコードされているデータの文字列をデコード[QPEncode](reference/atl-text-encoding-functions.md#qpencode)します。|
+|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|前回の[qの](reference/atl-text-encoding-functions.md#qpencode)呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコードされたデータの文字列をデコードします。|
 |[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
-|[QPEncode](reference/atl-text-encoding-functions.md#qpencode)|一部のデータを quoted-printable 形式にエンコードします。|
+|[Qのコード](reference/atl-text-encoding-functions.md#qpencode)|一部のデータを quoted-printable 形式にエンコードします。|
 |[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
-|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|呼び出しなど、以前の呼び出しによって uuencode されているデータの文字列をデコード[UUEncode](reference/atl-text-encoding-functions.md#uuencode)します。|
+|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|[Uuencode](reference/atl-text-encoding-functions.md#uuencode)の前回の呼び出しによって、uuencode されたデータの文字列をデコードします。|
 |[UUDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#uudecodegetrequiredlength)|指定した長さの uuencode された文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
 |[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|データを uuencode します。|
 |[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
@@ -46,4 +46,3 @@ Atlenc.h の関数のコードでは、uuencode、16 進数などの一般的な
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)
-

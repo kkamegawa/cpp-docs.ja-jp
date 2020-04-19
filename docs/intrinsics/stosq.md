@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: f395a8b0fc7194f36bb3388d631628a829f33aca
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331309"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219953"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Microsoft 固有の仕様**
 
-ストアの文字列の命令が生成されます (`rep stosq`)。
+ストア文字列命令 (`rep stosq`) を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*データ*<br/>
-[in]格納するデータ。
+*データ*\
+から格納するデータ。
 
-*カウント*<br/>
-[in]\(クワドワード)。 書き込むのブロックの長さ。
+*数*\
+から書き込む quadwords のブロックの長さ。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-結果は、quadword`Data`のブロックに書き込まれる`Count`で (クワドワード)。、`Dest`文字列。
+結果として、quadword*データ*は、*コピー先*の文字列の*Count* quadwords のブロックに書き込まれます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>出力
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 

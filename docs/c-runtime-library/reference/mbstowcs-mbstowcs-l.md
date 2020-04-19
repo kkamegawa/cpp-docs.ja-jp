@@ -1,10 +1,10 @@
 ---
 title: mbstowcs、_mbstowcs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbstowcs
 - _mbstowcs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbstowcs
 helpviewer_keywords:
@@ -25,14 +29,14 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 18e86ce359ff3b384ff8ef7dd5977d3be8d4785f
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702766"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952033"
 ---
-# <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
+# <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs、_mbstowcs_l
 
 マルチバイト文字のシーケンスを、対応するワイド文字のシーケンスに変換します。 これらの関数のセキュリティを強化したバージョンについては、「[mbstowcs_s、_mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)」を参照してください。
 
@@ -81,20 +85,20 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 
 ## <a name="return-value"></a>戻り値
 
-場合**mbstowcs**元の文字列を変換が正常に変換されたマルチバイト文字の数を返します。 場合、 *wcstr*引数が**NULL**、コピー先の文字列のワイド文字) の「必要なサイズを返します。 場合**mbstowcs**無効なマルチバイト文字が検出された-1 を返します。 戻り値が場合*カウント*、ワイド文字の文字列が null で終わっていません。
+**Mbstowcs**がソース文字列を正常に変換した場合は、変換されたマルチバイト文字の数を返します。 *Wcstr*引数が**NULL**の場合、関数は、変換先文字列の必要なサイズ (ワイド文字) を返します。 **Mbstowcs**で無効なマルチバイト文字が検出されると、-1 が返されます。 戻り値が*count*の場合、ワイド文字の文字列は null で終了しません。
 
 > [!IMPORTANT]
-> いることを確認*wcstr*と*mbstr*重複しないと*数*変換するマルチバイト文字の数を正確に反映します。
+> *Wcstr*と*mbstr*が重複しないようにし、その*カウント*に変換するマルチバイト文字数が正しく反映されていることを確認します。
 
 ## <a name="remarks"></a>Remarks
 
-**Mbstowcs**関数はの最大数に変換*カウント*がマルチバイト文字が指す*mbstr*は対応するワイド文字の文字列に現在のロケールによって決まります。 結果として得られるワイド文字の文字列で表されるアドレスにある格納*wcstr*します。 結果は、一連の呼び出しに似ています[mbtowc](mbtowc-mbtowc-l.md)します。 場合**mbstowcs**前に、か、1 バイトの null 文字 ('\0') が発生した*カウント*null 文字をワイド文字の null 文字 (L '\0') および停止変換が発生します。 したがって、ワイド文字の文字列で*wcstr*は null 終端 null 文字が変換中に発生した場合にのみです。 によって、シーケンスを指している場合*wcstr*と*mbstr*重なっているため、の動作は未定義です。
+**Mbstowcs**関数は、 *mbstr*が指すマルチバイト文字の*最大数を*、現在のロケールによって決定される対応するワイド文字の文字列に変換します。 結果のワイド文字列は、 *wcstr*によって表されるアドレスに格納されます。 結果は、 [mbtowc](mbtowc-mbtowc-l.md)の一連の呼び出しに似ています。 **Mbstowcs**が1バイトの null 文字 (' \ 0 ') を検出する前または*カウント*が発生した場合は、null 文字をワイド文字の null 文字 (L ' \ 0 ') に変換して停止します。 したがって、 *wcstr*のワイド文字文字列は、変換中に null 文字が検出された場合にのみ null で終了します。 *Wcstr*と*mbstr*が指すシーケンスが重なっている場合、動作は未定義です。
 
-場合、 *wcstr*引数が**NULL**、 **mbstowcs** null 終端文字を含まない、変換によって得られるワイド文字の数を返します。 正しい値を返すには、ソース文字列が null で終わっている必要があります。 結果のワイド文字列を null で終了する必要がある場合は、戻り値に 1 を追加します。
+*Wcstr*引数が**null**の場合、 **mbstowcs**は、null 終端文字を含まない、変換によって生成されるワイド文字数を返します。 正しい値を返すには、ソース文字列が null で終わっている必要があります。 結果のワイド文字列を null で終了する必要がある場合は、戻り値に 1 を追加します。
 
-場合、 *mbstr*引数が**NULL**、または*カウント*は > **INT_MAX** 」の説明に従って、無効なパラメーターハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 Errno に設定されて実行の継続が許可された場合**EINVAL**関数は-1 を返します。
+*Mbstr*引数が**NULL**の場合、または*count*が**INT_MAX**> 場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、errno は**EINVAL**に設定され、この関数は-1 を返します。
 
-**mbstowcs**ロケールに依存する動作に現在のロケールを使用 **_mbstowcs_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**mbstowcs**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbstowcs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -211,4 +215,4 @@ Convert back to wide-character string:
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

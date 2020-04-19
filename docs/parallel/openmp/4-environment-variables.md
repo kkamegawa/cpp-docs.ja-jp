@@ -2,12 +2,12 @@
 title: 4. 環境変数
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363194"
 ---
 # <a name="4-environment-variables"></a>4.環境変数
 
@@ -31,7 +31,7 @@ ksh:
 DOS:  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
 `OMP_SCHEDULE` のみ適用されます`for`と`parallel for`をスケジュールの種類を持つディレクティブ`runtime`します。 このようなすべてのループのスケジュールの種類とチャンクのサイズは、実行時に設定できます。 この環境変数を設定どの種類の認識されているスケジュールし、省略可能な設定*chunk_size*します。
 
@@ -49,7 +49,7 @@ setenv OMP_SCHEDULE "dynamic"
 - [ディ](2-directives.md#241-for-construct)レクティブ
 - [並列](2-directives.md#251-parallel-for-construct)ディレクティブ
 
-## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
 
 `OMP_NUM_THREADS`環境変数は、実行中に使用するスレッドの既定の数を設定します。 `OMP_NUM_THREADS` その数は、明示的に呼び出すことによって変更する場合は無視されます、`omp_set_num_threads`ライブラリ ルーチン。 明示的ながある場合も無視されます`num_threads`句、`parallel`ディレクティブ。
 
@@ -73,7 +73,7 @@ setenv OMP_NUM_THREADS 16
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)関数
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)関数
 
-## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
 `OMP_DYNAMIC`環境変数が有効にまたは並行領域の実行に使用できるスレッドの数を動的に調整を無効にします。 `OMP_DYNAMIC` 動的に調整が明示的に有効になっているまたは呼び出すことによって無効になっている場合は無視されます、`omp_set_dynamic`ライブラリ ルーチン。 その値である必要があります`TRUE`または`FALSE`します。
 
@@ -90,7 +90,7 @@ setenv OMP_DYNAMIC TRUE
 - [並列領域](2-directives.md#23-parallel-construct)
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)関数
 
-## <a name="44-ompnested"></a>4.4 OMP_NESTED
+## <a name="44-omp_nested"></a>4.4 OMP_NESTED
 
 `OMP_NESTED`環境変数を有効または入れ子になった並列処理が有効になっているか、呼び出すことによって無効になっている場合を除き、入れ子になった並列処理を無効になります、`omp_set_nested`ライブラリ ルーチン。 場合`OMP_NESTED`に設定されている`TRUE`、入れ子になった並列処理を有効にします。 場合`OMP_NESTED`に設定されている`FALSE`、入れ子になった並列処理が無効になっています。 既定値は `FALSE` です。
 

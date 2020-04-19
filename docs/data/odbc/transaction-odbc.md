@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329921"
 ---
 # <a name="transaction-odbc"></a>トランザクション (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50615814"
 呼び出し、`AddNew`と`Edit`のメンバー関数は、`CRecordset`オブジェクトのデータ ソースを呼び出すとすぐに影響`Update`します。 `Delete` 呼び出しもすぐに反映します。 複数の呼び出しで構成されるトランザクションを使用する一方、 `AddNew`、 `Edit`、 `Update`、および`Delete`、これは実行しますが、呼び出すまで、コミットされていない`CommitTrans`明示的にします。 トランザクションを確立するには、それらをロールバックする機能を維持しながら、一連のような呼び出しを実行できます。 重要なリソースが利用できない、またはその他のいくつかの条件により、全体のトランザクションの完了、することができます、トランザクション ロールバック、そのコミットではなく。 その場合は、データ ソースのどのトランザクションに属する変更に影響します。
 
 > [!NOTE]
->  現時点では、クラス`CRecordset`バルク行フェッチを実装している場合は、データ ソースへの更新をサポートしません。 つまりへの呼び出しを行うことはできません`AddNew`、 `Edit`、 `Delete`、または`Update`します。 ただし、ことに、更新プログラムを実行し、特定のトランザクション内でこれらの関数を呼び出す独自の関数を作成できます。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  現時点では、クラス`CRecordset`バルク行フェッチを実装している場合は、データ ソースへの更新をサポートしません。 つまりへの呼び出しを行うことはできません`AddNew`、 `Edit`、 `Delete`、または`Update`します。 ただし、ことに、更新プログラムを実行し、特定のトランザクション内でこれらの関数を呼び出す独自の関数を作成できます。 バルク行フェッチの詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 > [!NOTE]
 >  トランザクションの ODBC を使用する限り、直接実行する SQL ステートメントの影響だけでなく、レコード セットに影響を与える、 **HDBC**に関連付けられている、`CDatabase`オブジェクトまたは ODBC **HSTMT**に基づいて**HDBC**します。
@@ -43,7 +43,7 @@ ms.locfileid: "50615814"
 
 トランザクションの実行方法の詳細については、以下のトピックです。
 
-- [トランザクション: レコードセットからのトランザクション実行 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [トランザクション: レコードセットでのトランザクションの実行 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
 - [トランザクション: トランザクションが更新処理に与える影響 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 

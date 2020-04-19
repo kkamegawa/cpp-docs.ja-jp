@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 63affcced5dfc5bb56b0226021e1c32d93ec5d4f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: b914d3e6e7a2865ec610249ff51d320d7890adcb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292823"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (アーキテクチャ固有の最適化)
 
@@ -39,11 +39,11 @@ ms.locfileid: "53626748"
 > [!NOTE]
 > Intel64 アーキテクチャは、以前メモリ 64 テクノロジの拡張と呼ばれていましたし、対応するコンパイラ オプションが **/favor:EM64T**します。
 
-X64 をプログラムする方法については、アーキテクチャを参照してください[x64 ソフトウェア規約](../../build/x64-software-conventions.md)します。
+X64 をプログラムする方法については、アーキテクチャを参照してください[x64 ソフトウェア規約](../x64-software-conventions.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、 **C/C++** フォルダー。
 
@@ -57,5 +57,5 @@ X64 をプログラムする方法については、アーキテクチャを参�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: df1f65f231f72f2efa90458fe9b21339dda80080
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668430"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756462"
 ---
 # <a name="compiler-error-c3059"></a>コンパイラ エラー C3059
 
@@ -21,7 +21,7 @@ ms.locfileid: "50668430"
 
 次の例では C3059 が生成されます。
 
-```
+```cpp
 // C3059.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3059b.cpp
 // compile with: /openmp
 #include "omp.h"

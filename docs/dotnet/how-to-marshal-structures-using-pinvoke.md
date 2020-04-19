@@ -1,5 +1,5 @@
 ---
-title: '方法: PInvoke を使用して構造体をマーシャリングする'
+title: '方法: 構造体のマーシャ リングを使用して PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387241"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>方法: PInvoke を使用して構造体をマーシャリングする
+# <a name="how-to-marshal-structures-using-pinvoke"></a>方法: 構造体のマーシャ リングを使用して PInvoke
 
 このドキュメントでは、C スタイルの構造体から呼び出せるマネージ関数を P/invoke を使用してそのまま使用するネイティブ関数について説明します。 代わりに、C++ Interop 機能を使用することをお勧めします。 P/invoke P/invoke は、ほとんどのコンパイル時エラーを報告するため、タイプ セーフでないし、実装、アンマネージ API が DLL としてパッケージ化され、ソース コードがない場合に時間がかかることができます。P/invoke は、使用可能な唯一のオプションです。 それ以外の場合、次のドキュメントを参照してください。
 

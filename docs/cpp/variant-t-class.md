@@ -11,11 +11,11 @@ helpviewer_keywords:
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165951"
 ---
 # <a name="variantt-class"></a>_variant_t クラス
 
@@ -29,14 +29,14 @@ A **_variant_t**オブジェクトによってカプセル化、`VARIANT`デー�
 |-|-|
 |[_variant_t](../cpp/variant-t-variant-t.md)|構築、 **_variant_t**オブジェクト。|
 
-### <a name="operations"></a>オペレーション
+### <a name="operations"></a>操作
 
 |||
 |-|-|
-|[添付](../cpp/variant-t-attach.md)|アタッチを`VARIANT`オブジェクトを **_variant_t**オブジェクト。|
+|[Attach](../cpp/variant-t-attach.md)|アタッチを`VARIANT`オブジェクトを **_variant_t**オブジェクト。|
 |[クリア](../cpp/variant-t-clear.md)|カプセル化されたクリア`VARIANT`オブジェクト。|
 |[ChangeType](../cpp/variant-t-changetype.md)|型を変更、 **_variant_t**オブジェクトを指定された`VARTYPE`します。|
-|[デタッチ](../cpp/variant-t-detach.md)|カプセル化されたデタッチ`VARIANT`オブジェクトからこの **_variant_t**オブジェクト。|
+|[Detach](../cpp/variant-t-detach.md)|カプセル化されたデタッチ`VARIANT`オブジェクトからこの **_variant_t**オブジェクト。|
 |[SetString](../cpp/variant-t-setstring.md)|これに文字列を割り当てます **_variant_t**オブジェクト。|
 
 ### <a name="operators"></a>演算子
@@ -51,9 +51,9 @@ A **_variant_t**オブジェクトによってカプセル化、`VARIANT`デー�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<comutil.h >
+**Header:** \<comutil.h >
 
-**Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)
+**Lib:** comsuppw.lib または comsuppwd.lib (詳細は「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください)
 
 ## <a name="see-also"></a>関連項目
 

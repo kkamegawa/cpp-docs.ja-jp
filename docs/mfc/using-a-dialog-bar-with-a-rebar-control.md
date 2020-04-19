@@ -1,48 +1,45 @@
 ---
 title: Rebar コントロールでのダイアログ バーの使い方
 ms.date: 11/04/2016
-f1_keywords:
-- WM_EX_TRANSPARENT
 helpviewer_keywords:
 - WS_EX_TRANSPARENT style
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: fdef763db5085d6419f082ecd4dddca27a5b39b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e786d3670ec74b734739e29aa7e3e33b5af384
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554376"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302368"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Rebar コントロールでのダイアログ バーの使い方
 
-説明したよう[Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)、各バンドは、1 つだけの子ウィンドウ (またはコントロール) に含めることができます。 バンドごとに 1 つ以上の子ウィンドウを用意する場合、制限があります。 便利な回避策では、ダイアログ バー リソースの複数のコントロールを作成し、rebar コントロールに rebar バンド (ダイアログ バーを含む) を追加します。
+「 [Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)」で説明したように、各バンドには子ウィンドウ (またはコントロール) を1つだけ含めることができます。 これは、1つの帯域につき複数の子ウィンドウを使用する場合に制限されることがあります。 便利な回避策として、複数のコントロールを含むダイアログバーリソースを作成し、rebar コントロールに rebar バンド (ダイアログバーを含む) を追加します。
 
-通常、ダイアログ バー バンドを透明に表示する場合は、WS_EX_TRANSPARENT の拡張ダイアログ バーのオブジェクトのスタイルを設定します。 ただし、WS_EX_TRANSPARENT は正しくダイアログ バーの背景が描画いくつかの問題があるため、目的の効果を実現するために少しの余分な作業を行う必要があります。
+通常、ダイアログバーのバンドを透明に見えるようにするには、ダイアログバーオブジェクトの WS_EX_TRANSPARENT 拡張スタイルを設定します。 ただし、WS_EX_TRANSPARENT には、ダイアログバーの背景を適切に描画するためのいくつかの問題があるため、必要な効果を実現するために、少し余分な作業を行う必要があります。
 
-次の手順の詳細、WS_EX_TRANSPARENT を使用せず、透過性を実現するために必要な手順は、スタイルを拡張します。
+次の手順では、WS_EX_TRANSPARENT 拡張スタイルを使用せずに透明度を実現するために必要な手順について説明します。
 
-### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Rebar バンドで透明なダイアログ バーを実装するには
+### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Rebar バンドに透過的なダイアログバーを実装するには
 
-1. 使用して、[クラスの追加 ダイアログ ボックス](../mfc/reference/adding-an-mfc-class.md)、新しいクラスを追加 (たとえば、 `CMyDlgBar`)、ダイアログ バー オブジェクトを実装します。
+1. [[クラスの追加] ダイアログボックス](../mfc/reference/adding-an-mfc-class.md)を使用して、ダイアログバーオブジェクトを実装する新しいクラス (`CMyDlgBar`など) を追加します。
 
 1. WM_ERASEBKGND メッセージのハンドラーを追加します。
 
-1. 新しいハンドラーでは、次の例では、一致するように、既存のコードを変更します。
+1. 新しいハンドラーで、次の例に一致するように既存のコードを変更します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
-1. WM_MOVE メッセージ用のハンドラーを追加します。
+1. WM_MOVE メッセージのハンドラーを追加します。
 
-1. 新しいハンドラーでは、次の例では、一致するように、既存のコードを変更します。
+1. 新しいハンドラーで、次の例に一致するように既存のコードを変更します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
-新しいハンドラーは、転送 WM_ERASEBKGND メッセージを親ウィンドウとダイアログ バーのオブジェクトを移動するたびに再描画を強制して、ダイアログ バーの透明度をシミュレートします。
+新しいハンドラーは、WM_ERASEBKGND メッセージを親ウィンドウに転送し、ダイアログバーオブジェクトが移動されるたびに再描画を強制することによって、ダイアログバーの透明度をシミュレートします。
 
 ## <a name="see-also"></a>関連項目
 
 [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

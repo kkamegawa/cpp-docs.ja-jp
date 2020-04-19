@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
-ms.openlocfilehash: 369aa5f21c072472808ffba06c3bc5c5e608ac22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e53a0c08f07bf69378fbb7603f63c596f641355
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640116"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758659"
 ---
 # <a name="compiler-error-c2524"></a>コンパイラ エラー C2524
 
-'デコンス トラクター': デストラクターまたはファイナライザーには、'void' パラメーター リストが必要です。
+' デストラクター ': デストラクターまたはファイナライザーには ' void ' パラメーターリストが必要です
 
-デストラクターまたはファイナライザーがないパラメーター リスト[void](../../cpp/void-cpp.md)します。 その他のパラメーターの型を指定することはできません。
+デストラクターまたはファイナライザーに、 [void](../../cpp/void-cpp.md)ではないパラメーターリストがありました。 その他のパラメーターの型は使用できません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次のコードでは、C2524 を再現します。
+次のコードは、C2524 を再現します。
 
-```
+```cpp
 // C2524.cpp
 // compile with: /c
 class A {
@@ -34,11 +34,11 @@ class A {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次のコードでは、C2524 を再現します。
+次のコードは、C2524 を再現します。
 
-```
+```cpp
 // C2524_b.cpp
 // compile with: /clr /c
 ref struct I1 {

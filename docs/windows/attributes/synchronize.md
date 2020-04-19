@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: e5afec6257c421c0d3d5c95ba77c29767d0df280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407134"
 ---
-# <a name="synchronize"></a>同期
+# <a name="synchronize"></a>synchronize
 
 ターゲット メソッドへのアクセスを同期します。
 

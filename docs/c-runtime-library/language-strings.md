@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620286"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500074"
 ---
 # <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数と [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 関数は、Unicode コード ページを使用しないオペレーティング システム上では、Windows NLS API をサポートする言語を使用できます。 オペレーティング システムのバージョンごとにサポートされる言語の一覧については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)」(付録 A: 製品の動作) をご覧ください。 言語識別文字列には、サポートされる言語の一覧の **[Language]** 列と **[Language tag]** 列の任意の値を指定できます。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/desktop/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数と [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 関数は、Unicode コード ページを使用しないオペレーティング システム上では、Windows NLS API をサポートする言語を使用できます。 オペレーティング システムのバージョンによってサポートされている言語の一覧については、「[付録 A:Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)」(付録 A: 製品の動作) にある表内) をご覧ください。これは、[MS-LCID]:Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) にあります。 言語識別文字列には、サポートされる言語の一覧の **[Language]** 列と **[Language tag]** 列の任意の値を指定できます。 利用できるロケール名と関連する値を列挙するコードの例については、次をご覧ください: 「[NLS:名前ベースの API のサンプル](/windows/win32/intl/nls--name-based-apis-sample)」。
 
 ## <a name="additional-supported-language-strings"></a>サポートされるその他の言語識別文字列
 

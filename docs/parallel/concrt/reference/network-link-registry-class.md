@@ -12,140 +12,140 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 430190c11ec06a4f26eb9d8c4237552848420ad7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492266"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138886"
 ---
-# <a name="networklinkregistry-class"></a>network_link_registry クラス
+# <a name="network_link_registry-class"></a>network_link_registry クラス
 
 `network_link_registry` 抽象基底クラスによって、ソース ブロックとターゲット ブロック間のリンクを管理します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<class _Block>
 class network_link_registry;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*(_B)*<br/>
-ブロックのデータ型に格納されている、`network_link_registry`します。
+*_Block*<br/>
+`network_link_registry`に格納されているブロックデータ型。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`const_pointer`|ポインターを提供する型、`const`内の要素を`network_link_registry`オブジェクト。|
-|`const_reference`|参照を提供する型、`const`に要素が格納されている、`network_link_registry`の読み取りと const の操作を実行するオブジェクト。|
-|`iterator`|反復子を提供する型の読み取りまたはの任意の要素の変更ができる、`network_link_registry`オブジェクト。|
-|`type`|格納されているブロックの型を表す型を`network_link_registry`オブジェクト。|
+|`const_pointer`|`network_link_registry` オブジェクト内の `const` 要素へのポインターを提供する型。|
+|`const_reference`|読み取りと const 操作の実行のために `network_link_registry` オブジェクトに格納されている `const` 要素への参照を提供する型。|
+|`iterator`|`network_link_registry` オブジェクト内の任意の要素の読み取りまたは変更ができる反復子を提供する型。|
+|`type`|`network_link_registry` オブジェクトに格納されているブロック型を表す型。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[add](#add)|派生クラスでオーバーライドされるへのリンクを追加、`network_link_registry`オブジェクト。|
-|[begin](#begin)|派生クラスでオーバーライドされると、最初の要素に反復子を返します、`network_link_registry`オブジェクト。|
-|[contains](#contains)|派生クラスでオーバーライドされると、検索、`network_link_registry`の指定されたブロックのオブジェクト。|
-|[count](#count)|派生クラスでオーバーライドされると、内の項目の数を返します、`network_link_registry`オブジェクト。|
-|[remove](#remove)|派生クラスでオーバーライドされると、削除、指定されたブロックから、`network_link_registry`オブジェクト。|
+|[add](#add)|派生クラスでオーバーライドされた場合、`network_link_registry` オブジェクトへのリンクを追加します。|
+|[begin](#begin)|派生クラスでオーバーライドされた場合、`network_link_registry` オブジェクト内の最初の要素を指す反復子を返します。|
+|[contains](#contains)|派生クラスでオーバーライドされると、指定したブロックの `network_link_registry` オブジェクトを検索します。|
+|[count](#count)|派生クラスでオーバーライドされると、`network_link_registry` オブジェクト内の項目の数を返します。|
+|[remove](#remove)|派生クラスでオーバーライドされると、指定したブロックを `network_link_registry` オブジェクトから削除します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`network link registry`同時アクセスの安全ではありません。
+`network link registry` は、同時アクセスには安全ではありません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `network_link_registry`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-##  <a name="add"></a> 追加します。
+## <a name="add"></a>アドイン
 
-派生クラスでオーバーライドされるへのリンクを追加、`network_link_registry`オブジェクト。
+派生クラスでオーバーライドされた場合、`network_link_registry` オブジェクトへのリンクを追加します。
 
-```
+```cpp
 virtual void add(_EType _Link) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*リンク (_l)*<br/>
+*_Link*<br/>
 追加するブロックへのポインター。
 
-##  <a name="begin"></a> 開始
+## <a name="begin"></a>初め
 
-派生クラスでオーバーライドされると、最初の要素に反復子を返します、`network_link_registry`オブジェクト。
+派生クラスでオーバーライドされた場合、`network_link_registry` オブジェクト内の最初の要素を指す反復子を返します。
 
-```
+```cpp
 virtual iterator begin() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-最初の要素を示す反復子、`network_link_registry`オブジェクト。
+`network_link_registry` オブジェクト内の最初の要素を指す反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって、反復子の最終の状態が示される、`NULL`リンク。
+反復子の終了状態は、`NULL` リンクによって示されます。
 
-##  <a name="contains"></a> 含まれています
+## <a name="contains"></a>は
 
-派生クラスでオーバーライドされると、検索、`network_link_registry`の指定されたブロックのオブジェクト。
+派生クラスでオーバーライドされると、指定したブロックの `network_link_registry` オブジェクトを検索します。
 
-```
+```cpp
 virtual bool contains(_EType _Link) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*リンク (_l)*<br/>
-検索対象のブロックへのポインター、`network_link_registry`オブジェクト。
+*_Link*<br/>
+`network_link_registry` オブジェクト内で検索されているブロックへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-**true**ブロックが見つかった場合**false**それ以外の場合。
+ブロックが見つかった場合は**true** 、それ以外の場合は**false** 。
 
-##  <a name="count"></a> カウント
+## <a name="count"></a>数
 
-派生クラスでオーバーライドされると、内の項目の数を返します、`network_link_registry`オブジェクト。
+派生クラスでオーバーライドされると、`network_link_registry` オブジェクト内の項目の数を返します。
 
-```
+```cpp
 virtual size_t count() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-内の項目の数、`network_link_registry`オブジェクト。
+`network_link_registry` オブジェクト内の項目の数。
 
-##  <a name="remove"></a> 削除します。
+## <a name="remove"></a>から
 
-派生クラスでオーバーライドされると、削除、指定されたブロックから、`network_link_registry`オブジェクト。
+派生クラスでオーバーライドされると、指定したブロックを `network_link_registry` オブジェクトから削除します。
 
-```
+```cpp
 virtual bool remove(_EType _Link) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*リンク (_l)*<br/>
-削除する場合、ブロックへのポインターが見つかりました。
+*_Link*<br/>
+削除するブロックへのポインター (見つかった場合)。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、リンクが見つかり、削除、 **false**それ以外の場合。
+リンクが見つかり、削除された場合は**true** 、それ以外の場合は**false** 。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [single_link_registry クラス](single-link-registry-class.md)<br/>

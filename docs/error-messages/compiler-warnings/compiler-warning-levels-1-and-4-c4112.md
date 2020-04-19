@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4112
 ms.assetid: aff64897-bb79-4a67-9b6f-902c6d44f3dc
-ms.openlocfilehash: 3678d0ce5d9eb9568f0272da4173e72502b0557f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f614373e1b96de2c8167d7981c0a87a4e1c58435
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655833"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991234"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>コンパイラの警告 (レベル 1 および 4) C4112
 
-\#行が 1 から数までの整数が必要です。
+\#の行には1から number までの整数が必要です
 
 許可された範囲を超えた整数パラメーターが [#line](../../preprocessor/hash-line-directive-c-cpp.md) ディレクティブに指定されています。
 
@@ -23,7 +23,7 @@ ms.locfileid: "50655833"
 
 次の例では C4112 が生成されます。
 
-```
+```cpp
 // C4112.cpp
 // compile with: /W4
 #line 0   // C4112, value must be between 1 and number

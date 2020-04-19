@@ -1,10 +1,10 @@
 ---
 title: fputc、fputwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputc
 - fputwc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputc
 - fputwc
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447178"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956964"
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
 
@@ -57,29 +60,29 @@ wint_t fputwc(
 *c*<br/>
 書き込む文字。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、書き込まれた文字を返します。 **Fputc**、戻り値の**EOF**はエラーを示します。 **Fputwc**、戻り値の**WEOF**はエラーを示します。 場合*ストリーム*は**NULL**、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
+これらの各関数は、書き込まれた文字を返します。 **Fputc**の場合、 **EOF**の戻り値はエラーを示します。 **Fputwc**の場合、 **WEOF**の戻り値はエラーを示します。 *Stream*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数が 1 文字を書き込み*c*位置にあるファイルで示され、関連付けられたファイル位置インジケーター (定義されている) 場合、適切なインジケーターを進めます。 場合に**fputc**と**fputwc**、ファイルが関連付けられている*ストリーム*します。 ファイルが配置要求をサポートできない場合、または追加モードでファイルが開かれた場合、文字はストリームの末尾に追加されます。
+これらの各関数は、関連付けられたファイルの位置インジケーター (定義されている場合) によって示される位置にあるファイルに1文字*c*を書き込み、必要に応じてインジケーターを進めます。 **Fputc**と**fputwc**の場合、ファイルは*stream*に関連付けられています。 ファイルが配置要求をサポートできない場合、または追加モードでファイルが開かれた場合、文字はストリームの末尾に追加されます。
 
-ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **fputc** UNICODE ストリームへ現在出力をサポートしません。
+ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **fputc**は、現在 UNICODE ストリームへの出力をサポートしていません。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、「[_fputc_nolock、_fputwc_nolock](fputc-nolock-fputwc-nolock.md)」を参照してください。
 
 ルーチン固有の解説は、次のとおりです。
 
-|ルーチンによって返される値|Remarks|
+|ルーチン|Remarks|
 |-------------|-------------|
-|**fputc**|等価**putc**が、関数とマクロではなく関数としてのみを実装します。|
-|**fputwc**|ワイド文字バージョン**fputc**します。 書き込みます*c*マルチバイト文字またはワイド文字かどうかに従ってとして*ストリーム*はテキスト モードとバイナリ モードで開かれます。|
+|**fputc**|**Putc**と同じですが、関数およびマクロとしてではなく、関数としてのみ実装されます。|
+|**fputwc**|**Fputc**のワイド文字バージョン。 *ストリーム*がテキストモードとバイナリモードのどちらで開かれているかに従って、 *c*をマルチバイト文字またはワイド文字として書き込みます。|
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,7 +97,7 @@ wint_t fputwc(
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> または \<wchar.h>|
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル、**stdin**、 **stdout**、および**stderr**-C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

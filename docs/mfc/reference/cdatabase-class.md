@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253715"
 ---
 # <a name="cdatabase-class"></a>CDatabase クラス
 
@@ -86,16 +86,16 @@ class CDatabase : public CObject
 |[CDatabase::CanUpdate](#canupdate)|場合は 0 以外の値を返します、`CDatabase`オブジェクトが更新可能な (いない読み取り専用)。|
 |[CDatabase::Close](#close)|データ ソース接続を閉じます。|
 |[CDatabase::CommitTrans](#committrans)|によって開始されたトランザクションが完了すると`BeginTrans`します。 トランザクション内のデータ ソースを変更するコマンドが実行されます。|
-|[:Executesql](#executesql)|SQL ステートメントを実行します。 データ レコードは返されません。|
+|[CDatabase::ExecuteSQL](#executesql)|SQL ステートメントを実行します。 データ レコードは返されません。|
 |[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|レコード セット オブジェクトで使用されるブックマークを永続化操作を識別します。|
-|[Cdatabase::getconnect](#getconnect)|接続に使用する ODBC 接続文字列を返します、`CDatabase`オブジェクトをデータ ソースにします。|
+|[CDatabase::GetConnect](#getconnect)|接続に使用する ODBC 接続文字列を返します、`CDatabase`オブジェクトをデータ ソースにします。|
 |[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|開いているレコード セット オブジェクトでのトランザクションのコミットの効果を識別します。|
 |[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|開いているレコード セット オブジェクトのトランザクションのロールバックの効果を識別します。|
 |[CDatabase::GetDatabaseName](#getdatabasename)|現在使用中のデータベースの名前を返します。|
 |[CDatabase::IsOpen](#isopen)|場合は 0 以外の値を返します、`CDatabase`オブジェクトが現在データ ソースに接続されています。|
 |[CDatabase::OnSetOptions](#onsetoptions)|標準的な接続オプションを設定するためにフレームワークによって呼び出されます。 既定の実装では、クエリのタイムアウト値を設定します。 事前にこれらのオプションを確立するには呼び出すことによって`SetQueryTimeout`します。|
-|[Cdatabase::open](#open)|(ODBC ドライバー) を通じてデータ ソースへの接続を確立します。|
-|[Cdatabase::openex](#openex)|(ODBC ドライバー) を通じてデータ ソースへの接続を確立します。|
+|[CDatabase::Open](#open)|(ODBC ドライバー) を通じてデータ ソースへの接続を確立します。|
+|[CDatabase::OpenEx](#openex)|(ODBC ドライバー) を通じてデータ ソースへの接続を確立します。|
 |[CDatabase::Rollback](#rollback)|現在のトランザクションで加えられた変更を反転させます。 定義されている以前の状態、データ ソースを返します、`BeginTrans`呼び出し、そのままです。|
 |[CDatabase::SetLoginTimeout](#setlogintimeout)|その後、データ ソースの接続試行がタイムアウトになります秒数を設定します。|
 |[CDatabase::SetQueryTimeout](#setquerytimeout)|データベースの後の秒数のクエリ操作のセットがタイムアウトになります。後続のすべてのレコード セットの影響を与える`Open`、 `AddNew`、 `Edit`、および`Delete`呼び出し。|
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 データ ソースは、いくつかのデータベース管理システム (DBMS) によってホストされているデータの特定のインスタンスです。 例としては、Microsoft SQL Server、Microsoft Access、Borland dBASE、xBASE です。 1 つまたは複数を持てる`CDatabase`アプリケーションで一度にアクティブなオブジェクト。
 
 > [!NOTE]
->  Open Database Connectivity (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスを使用している場合は、クラスを使用して[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)代わりにします。 詳細については、この記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
+>  Open Database Connectivity (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスを使用している場合は、クラスを使用して[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)代わりにします。 詳細については、この記事を参照してください。[概要。データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
 
 使用する`CDatabase`、構築、`CDatabase`オブジェクトと呼び出しの`OpenEx`メンバー関数。 これは、接続を開きます。 構築する際に`CRecordset`、接続されているデータ ソースに対する操作のためのオブジェクトへのポインターをレコード セットのコンス トラクターに渡す、`CDatabase`オブジェクト。 接続を使用してが完了したら、呼び出し、`Close`メンバー関数し、破棄、`CDatabase`オブジェクト。 `Close` 閉じられていないすべてのレコード セットを閉じます。
 
-詳細については`CDatabase`、記事を参照して[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)と[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
+詳細については`CDatabase`、記事を参照して[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)と[概要。データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -146,7 +146,7 @@ BOOL BeginTrans();
 > [!CAUTION]
 >  ODBC ドライバーによって呼び出す前にレコード セットを開く`BeginTrans`を呼び出すときに問題が発生する可能性があります`Rollback`します。 使用する特定のドライバーを確認する必要があります。 たとえば、Microsoft ODBC デスクトップ Driver パック 3.0 に含まれる Microsoft Access ドライバーを使用する場合、開いているカーソルのある任意のデータベースのトランザクションを開始する必要がありますいない Jet データベース エンジンの要件の考慮する必要があります。 MFC データベース クラスで、開いているカーソルは開いていることを意味`CRecordset`オブジェクト。 詳細については、次を参照してください。[テクニカル ノート 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)します。
 
-`BeginTrans` 要求された同時実行とデータ ソースの機能に応じて、サーバー上のデータ レコードをロックも可能性があります。 データのロックについては、記事を参照してください。[レコード セット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)します。
+`BeginTrans` 要求された同時実行とデータ ソースの機能に応じて、サーバー上のデータ レコードをロックも可能性があります。 データのロックについては、記事を参照してください。[レコード セット。レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)します。
 
 ユーザー定義のトランザクションについては、この記事で[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
 
@@ -161,7 +161,7 @@ BOOL BeginTrans();
 
 ### <a name="example"></a>例
 
-  記事をご覧ください[トランザクション: レコード セット (ODBC) でトランザクションを実行する](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)します。
+  記事をご覧ください[トランザクション。レコード セット (ODBC) からのトランザクション実行](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)します。
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Remarks
 
-MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564)します。 詳細については、次を参照してください。[非同期実行](/previous-versions/windows/desktop/ms713563)Windows SDK に含まれています。
+MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)します。 詳細については、次を参照してください。[非同期実行](/sql/odbc/reference/develop-app/asynchronous-execution)します。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 
@@ -288,9 +288,9 @@ BOOL CommitTrans();
 
 ### <a name="example"></a>例
 
-  記事をご覧ください[トランザクション: レコード セット (ODBC) でトランザクションを実行する](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)します。
+  記事をご覧ください[トランザクション。レコード セット (ODBC) からのトランザクション実行](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)します。
 
-##  <a name="executesql"></a>  :Executesql
+##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
 SQL コマンドを直接実行する必要がある場合は、このメンバー関数を呼び出します。
 
@@ -341,9 +341,9 @@ DWORD GetBookmarkPersistence() const;
 |SQL_BP_UPDATE|行のブックマークが後に有効では、`Update`行に対して操作します。|
 |SQL_BP_OTHER_HSTMT|1 つのレコードセット オブジェクトに関連付けられたブックマークは、別のレコードセットで有効です。|
 
-この戻り値の詳細については、ODBC API 関数を参照してください。 `SQLGetInfo` Windows SDK に含まれています。 ブックマークの詳細については、記事を参照してください。[レコード セット: ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)します。
+この戻り値の詳細については、ODBC API 関数を参照してください。 `SQLGetInfo` Windows SDK に含まれています。 ブックマークの詳細については、記事を参照してください。[レコード セット。ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)します。
 
-##  <a name="getconnect"></a>  Cdatabase::getconnect
+##  <a name="getconnect"></a>  CDatabase::GetConnect
 
 このメンバー関数を呼び出すことで、`OpenEx` オブジェクトをデータ ソースに接続した `Open` または `CDatabase` の呼び出し時に使用された接続文字列を取得します。
 
@@ -477,7 +477,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 オーバーライド`OnSetOptions`追加オプションを設定する場合。 オーバーライドは基本クラスを呼び出す必要があります`OnSetOptions`前に、または ODBC API 関数を呼び出した後`SQLSetStmtOption`します。 フレームワークの既定の実装で示されているメソッドに従ってください`OnSetOptions`します。
 
-##  <a name="open"></a>  Cdatabase::open
+##  <a name="open"></a>  CDatabase::Open
 
 新しく構築された初期化するためにこのメンバー関数を呼び出す`CDatabase`オブジェクト。
 
@@ -504,7 +504,7 @@ virtual BOOL Open(
 *lpszConnect*<br/>
 接続文字列を指定します。 接続文字列は、データ ソース名、データ ソース、ユーザー認証の文字列 (パスワード、データ ソースでは、1 つが必要な場合)、およびその他の情報に有効なユーザー ID を含めることも、情報を連結します。 接続文字列全体を文字列"ODBC;"によってプレフィックス指定する必要があります。(大文字または小文字)。 "ODBC;"文字列を使用して、ODBC データ ソースに接続があることを示すこれは、クラス ライブラリの今後のバージョンは非 ODBC データ ソースをサポート可能性がある場合の上位互換性を確保します。
 
-*データ*<br/>
+*bUseCursorLib*<br/>
 ODBC カーソル ライブラリの DLL を読み込む場合は TRUE。 カーソル ライブラリでは、基になる、ODBC ドライバー (ドライバーには、それらがサポートしている) 場合に、ダイナセットの使用を有効に防ぐための機能の一部をマスクします。 カーソル ライブラリが読み込まれている場合にサポートされている専用のカーソルには、静的なスナップショットと順方向専用カーソルです。 既定値は TRUE です。 直接 recordset オブジェクトを作成する予定のかどうか`CRecordset`せず、そこから派生する、カーソル ライブラリをしないに読み込む必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -530,7 +530,7 @@ ODBC カーソル ライブラリの DLL を読み込む場合は TRUE。 カー
 
 [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]
 
-##  <a name="openex"></a>  Cdatabase::openex
+##  <a name="openex"></a>  CDatabase::OpenEx
 
 新しく構築された初期化するためにこのメンバー関数を呼び出す`CDatabase`オブジェクト。
 
@@ -600,7 +600,7 @@ BOOL Rollback();
 
 ### <a name="example"></a>例
 
-  記事をご覧ください[トランザクション: レコード セット (ODBC) でトランザクションを実行する](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)します。
+  記事をご覧ください[トランザクション。レコード セット (ODBC) からのトランザクション実行](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)します。
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DLLs [C++], Automation
 - Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
-ms.openlocfilehash: b9d4f7a71ceb384069fcbef6bf791f0c5fd1b933
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: dedc832d6726dccf8c0c2e88f9f4d5c67590c1c2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536540"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220919"
 ---
 # <a name="automation-in-a-dll"></a>DLL でのオートメーション
 
@@ -32,4 +32,4 @@ MFC DLL ウィザード [オートメーション] オプションを選択す�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: b533cc1590b0c9c1b86407a8d55ae4995b10250a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348602"
 ---
 # <a name="using-cdatetimectrl"></a>CDateTimeCtrl の使い方
 
@@ -37,4 +37,3 @@ ms.locfileid: "50542949"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

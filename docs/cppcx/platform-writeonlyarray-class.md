@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330618"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500521"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray クラス
 
 メソッドで設定する配列を呼び出し元から渡すときに入力パラメーターとして使用される 1 次元配列を表します。
 
-この ref クラスは vccorlib.h でプライベートとして宣言されています。したがって、メタデータには出力されず、C++ からのみ使用できます。 このクラスは、呼び出し元が割り当てた配列を受け取る入力パラメーターとして使用することのみを目的としています。 ユーザー コードから構築することはできません。 このクラスでは、C++ メソッドでその配列に直接書き込むことができます。このパターンは、 *FillArray* パターンと呼ばれます。 詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
+この ref クラスは vccorlib.h でプライベートとして宣言されています。したがって、メタデータには出力されず、C++ からのみ使用できます。 このクラスは、呼び出し元が割り当てた配列を受け取る入力パラメーターとして使用することのみを目的としています。 ユーザー コードから構築することはできません。 このクラスでは、C++ メソッドでその配列に直接書き込むことができます。このパターンは、 *FillArray* パターンと呼ばれます。 詳細については、「 [array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -39,12 +39,12 @@ private ref class WriteOnlyArray<T, 1>
 
 |名前|説明|
 |----------|-----------------|
-|[Writeonlyarray::begin](#begin)|配列内の最初の要素を指す反復子。|
-|[Writeonlyarray::data](#data)|データ バッファーへのポインター。|
-|[Writeonlyarray::end](#end)|配列内の最後の要素の 1 つ後ろを指す反復子。|
-|[Writeonlyarray::fastpass](#fastpass)|配列が FastPass 機構を使用できるかどうかを示します。この機構は、システムで透過的に実行される最適化です。 コード内でこのプロパティを使用しないでください。|
-|[Writeonlyarray::length](#length)|配列内の要素の数を返します。|
-|[Writeonlyarray::set](#set)|指定した要素を指定した値に設定します。|
+|[WriteOnlyArray:: begin](#begin)|配列内の最初の要素を指す反復子。|
+|[WriteOnlyArray::D ata](#data)|データ バッファーへのポインター。|
+|[WriteOnlyArray:: end](#end)|配列内の最後の要素の 1 つ後ろを指す反復子。|
+|[WriteOnlyArray:: FastPass](#fastpass)|配列が FastPass 機構を使用できるかどうかを示します。この機構は、システムで透過的に実行される最適化です。 コード内でこのプロパティを使用しないでください。|
+|[WriteOnlyArray::Length](#length)|配列内の要素の数を返します。|
+|[WriteOnlyArray::set](#set)|指定した要素を指定した値に設定します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,9 +54,9 @@ private ref class WriteOnlyArray<T, 1>
 
 コンパイラ オプション: **/ZW**
 
-**メタデータ:** Platform.winmd
+**Metadata**Platform. winmd
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 ## <a name="begin"></a>  WriteOnlyArray::begin メソッド
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 配列が FastPass かどうかを示すブール値。
 
-## <a name="get"></a>  Writeonlyarray::get メソッド
+## <a name="get"></a>WriteOnlyArray:: get メソッド
 
 指定したインデックス位置にある要素を返します。
 
@@ -176,7 +176,7 @@ T& set(
 *indexArg*<br/>
 設定する要素のインデックス。
 
-*valueArg*<br/>
+*Valu氏 g*<br/>
 `indexArg` に設定する値。
 
 ### <a name="return-value"></a>戻り値
@@ -185,9 +185,9 @@ T& set(
 
 ### <a name="remarks"></a>Remarks
 
-HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)します。
+HRESULT 値を解釈する方法の詳細については、「 [COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[Platform 名前空間](platform-namespace-c-cx.md)<br/>
 [C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

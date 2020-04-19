@@ -1,8 +1,6 @@
 ---
 title: MFC クラス オブジェクトの型キャスト
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.classes
 helpviewer_keywords:
 - macros [MFC], type casting
 - pointers [MFC], type casting
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7586f3c3f3aefd78fa868cc847df27e8aac58ab
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584146"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611651"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC クラス オブジェクトの型キャスト
 
@@ -62,7 +60,7 @@ STATIC_DOWNCAST(class_name, pobject)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 キャストされているクラスの名前。
 
 *pobject*<br/>
@@ -72,7 +70,7 @@ STATIC_DOWNCAST(class_name, pobject)
 
 *pobject*する必要がありますか、null の場合、またはオブジェクトの直接派生するクラスまたはから間接的に指す*class_name*します。 _DEBUG プリプロセッサ シンボルを定義、アプリケーションのビルドで、マクロはアサート場合*pobject*が NULL でないでないオブジェクトを指している場合やで指定されたクラス「の種類」、 *class_name*パラメーター (を参照してください[使うため](../../mfc/reference/cobject-class.md#iskindof))。 以外で **_DEBUG**ビルドでは、マクロが型チェックを行わず、キャストを実行します。
 
-指定したクラス、 *class_name*パラメーターから派生する必要があります`CObject`DECLARE_DYNAMIC と IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE とする場合、または DECLARE_SERIAL と IMPLEMENT_ を使用する必要がありますこの記事で説明されているシリアル マクロとして[CObject クラス: CObject からクラスを派生する](../../mfc/deriving-a-class-from-cobject.md)します。
+指定したクラス、 *class_name*パラメーターから派生する必要があります`CObject`DECLARE_DYNAMIC と IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE とする場合、または DECLARE_SERIAL と IMPLEMENT_ を使用する必要がありますこの記事で説明されているシリアル マクロとして[CObject クラス。CObject からクラスを派生する](../../mfc/deriving-a-class-from-cobject.md)します。
 
 たとえばへのポインターをキャストする場合があります`CMyDoc`という`pMyDoc`へのポインターに`CDocument`この式を使用して。
 

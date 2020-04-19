@@ -2,12 +2,12 @@
 title: ポインター値の読み取り
 ms.date: 11/04/2016
 ms.assetid: 3dd1cf15-30ac-4dec-9b14-258d20501fcf
-ms.openlocfilehash: 0b8451399813d48db16d5d52205b25757b039af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 164192eba57208af0f771c0af01b6f9b38a1b9b3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479509"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148284"
 ---
 # <a name="reading-pointer-values"></a>ポインター値の読み取り
 
@@ -15,6 +15,6 @@ ms.locfileid: "50479509"
 
 **%p** 書式指定文字を指定すると、`fscanf` 関数は、ポインターを 16 進 ASCII 値から正しいアドレスに変換します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ライブラリ関数](../c-language/library-functions.md)

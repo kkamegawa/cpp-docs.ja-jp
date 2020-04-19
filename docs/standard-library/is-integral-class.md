@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520700"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456239"
 ---
 # <a name="isintegral-class"></a>is_integral クラス
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*は整数の型のいずれかまたは`cv-qualified`形式のいずれかの整数型、それ以外の場合は false を保持します。
+型*Ty*が整数型の1つ、または`cv-qualified`整数型の1つの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-整数型は、のいずれかの**bool**、 **char**、 **unsigned char**、 **char を署名**、 **wchar_t**、 **短い**、 **unsigned short**、 **int**、**符号なし int**、**長い**、および**unsigned long**します。 さらに、それらを提供するコンパイラでは、整数型のいずれかできます**long**、 **unsigned long long 型**、 **_ _int64**、および**符号なし _ _int64**.
+整数型は、 **bool**、 **char**、 **unsigned char**、 **signed char**、 **wchar_t**、 **short**、 **unsigned short**、 **int**、 **unsigned int**、 **long**、 **unsigned long**のいずれかです。 また、これらを提供するコンパイラでは、整数型は long 長、 **unsigned long long**、 **__int64**、 **unsigned __int64** **のいずれ**かになります。
 
 ## <a name="example"></a>例
 
@@ -76,6 +76,6 @@ is_integral<float> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_enum クラス](../standard-library/is-enum-class.md)<br/>
-[is_floating_point クラス](../standard-library/is-floating-point-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_enum クラス](../standard-library/is-enum-class.md)\
+[is_floating_point クラス](../standard-library/is-floating-point-class.md)

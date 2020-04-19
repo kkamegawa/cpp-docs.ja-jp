@@ -1,30 +1,31 @@
 ---
 title: .386P
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .386P
 helpviewer_keywords:
 - .386P directive
 ms.assetid: 15199091-3bb7-4270-bb9b-878c1c2f2146
-ms.openlocfilehash: 98b0b5d40f9c9ae47995698a53d3f16c14850071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac968911ed851472e63241abd82cdb11b97b96d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555013"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314628"
 ---
-# <a name="386p"></a>.386P
+# <a name="386p-32-bit-masm"></a>386P (32 ビット MASM)
 
-アセンブリの 80386 プロセッサのすべての命令 (特権を含む)以降のプロセッサで導入された命令のアセンブリを無効にします。
+80386プロセッサのすべての命令 (特権を含む) のアセンブリを有効にします。以降のプロセッサで導入された命令のアセンブリを無効にします。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .386P
+> **.386P**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-手順については 80387 こともできます。
+では、80387命令も有効になっています。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール: フォントの使用'
+title: MFC ActiveX コントロール:フォントの使用
 ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239516"
 ---
-# <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール: フォントの使用
+# <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール:フォントの使用
 
 ActiveX コントロールには、テキストが表示されている場合は、コントロールのフォント プロパティを変更することで、テキストの外観を変更するユーザーを許可できます。 フォントのプロパティは、フォント オブジェクトとして実装され、2 種類のいずれかを指定できます: 株価またはカスタム。 ストック フォント プロパティは、プロパティの追加ウィザードを使用して追加できるあらかじめ実装されているフォントのプロパティです。 カスタム フォントのプロパティがあらかじめ実装されていないと、コントロールの開発者が、プロパティの動作と使用状況を判断します。
 
@@ -42,7 +42,7 @@ ActiveX コントロールには、テキストが表示されている場合は
 
 使用してフォント オブジェクトへのアクセス、 [GetFont](../mfc/reference/colecontrol-class.md#getfont)、 [SetFont](../mfc/reference/colecontrol-class.md#setfont)、および[InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont)関数の`COleControl`します。 コントロールのユーザーが経由でのフォント オブジェクトへのアクセス、`GetFont`と`SetFont`他の取得/設定プロパティと同様に機能します。 フォント オブジェクトへのアクセスがコントロール内から必要な場合は、使用、`InternalGetFont`関数。
 
-説明したよう[MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)、ストック プロパティの追加を簡単に、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。 フォント プロパティを選択して、プロパティの追加ウィザードが自動的にコントロールのディスパッチ マップには、ストックのフォント エントリを挿入します。
+説明したよう[MFC ActiveX コントロール。プロパティ](../mfc/mfc-activex-controls-properties.md)、ストック プロパティの追加を簡単に、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。 フォント プロパティを選択して、プロパティの追加ウィザードが自動的にコントロールのディスパッチ マップには、ストックのフォント エントリを挿入します。
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>プロパティの追加ウィザードを使用して、ストック フォント プロパティを追加するには
 
@@ -238,4 +238,3 @@ BEGIN_PROPPAGEIDS マクロのカウント パラメーターは、いずれか�
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [MFC ActiveX コントロール: ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-

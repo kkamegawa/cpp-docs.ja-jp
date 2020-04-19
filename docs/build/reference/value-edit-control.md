@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Value edit control
 ms.assetid: 129d8f74-2629-4a29-981f-ddb3c1e174cd
-ms.openlocfilehash: 1203b020b5e4d34e4d81dfc10505786638f567ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2638b904482503ae4645302264f1b06bf6ba3ded
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316796"
 ---
 # <a name="value-edit-control"></a>[値] エディット コントロール
 
@@ -17,4 +17,4 @@ ms.locfileid: "50482642"
 
 ## <a name="see-also"></a>関連項目
 
-[ERRLOOK リファレンス](../../build/reference/errlook-reference.md)
+[ERRLOOK リファレンス](errlook-reference.md)

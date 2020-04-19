@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652456"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456021"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable クラス
 
-値かどうかをテスト*から*型に割り当てることができます*に*型および割り当てがスローしないと判明します。
+型*の値*を型*に*割り当てることができるかどうかをテストし、割り当てがスローしないことがわかっていることを確認します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*目的*<br/>
+*宛先*\
 代入を受け取るオブジェクトの型。
 
-*From*<br/>
+*差出人*\
 値を渡すオブジェクトの型。
 
 ## <a name="remarks"></a>Remarks
 
-式 `declval<To>() = declval<From>()` は正しい形式である必要があり、スローしないことがコンパイラに判明している必要があります。 両方*から*と*に*完全な型は、必要があります**void**、または不明なバインドの配列。
+式 `declval<To>() = declval<From>()` は正しい形式である必要があり、スローしないことがコンパイラに判明している必要があります。 と*の*両方で、完全な型、 **void**、または不明なバインドの配列を指定する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,4 +44,4 @@ struct is_nothrow_assignable;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

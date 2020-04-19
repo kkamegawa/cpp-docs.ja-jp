@@ -1,9 +1,9 @@
 ---
 title: fesetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615879"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972142"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -45,18 +48,18 @@ int fesetexceptflag(
 ### <a name="parameters"></a>パラメーター
 
 *pstatus*<br/>
-ポインター、 **fexcept_t**例外状態フラグを設定する値を含むオブジェクト。 オブジェクトは、以前の [fegetexceptflag](fegetexceptflag2.md) の呼び出しで設定される可能性があります。
+例外状態フラグを設定する値を格納している**fexcept_t**オブジェクトへのポインター。 オブジェクトは、以前の [fegetexceptflag](fegetexceptflag2.md) の呼び出しで設定される可能性があります。
 
-*除く*<br/>
+*removed*<br/>
 設定する浮動小数点例外状態フラグ。
 
 ## <a name="return-value"></a>戻り値
 
 すべての指定した例外状態フラグが正常に設定された場合は、0 を返します。 それ以外の場合は、0 以外の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**Fesetexceptflag**関数で指定された浮動小数点例外状態フラグの状態を設定する*除く*内の対応する値を**fexcept_t**によって指されるオブジェクト*pstatus*します。  この結果で例外は発生しません。 *Pstatus*を有効なポインターがポイントする必要があります**fexcept_t**オブジェクト、またはその後の動作が定義されていません。 **Fesetexceptflag**関数でこれらの例外マクロの値をサポートしている*除く*で定義された\<fenv.h >:
+**Fesetexceptflag**関数は、 *removed*によって指定された浮動小数点例外状態フラグの状態を、 *pstatus*が指す**fexcept_t**オブジェクトに設定されている対応する値に設定します。  この結果で例外は発生しません。 *Pstatus*ポインターが有効な**fexcept_t**オブジェクトを指しているか、後続の動作が定義されていません。 **Fesetexceptflag**関数は、> で定義さ \<れている、次の例外マクロ値を*removed*でサポートします。
 
 |例外処理マクロ|説明|
 |---------------------|-----------------|
@@ -65,19 +68,19 @@ int fesetexceptflag(
 |FE_INVALID|前の浮動小数点演算でドメイン エラーが発生しました。|
 |FE_OVERFLOW|範囲エラーが発生しました。前の浮動小数点演算結果は大きすぎて表現できませんでした。|
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
-|FE_ALLEXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
+|FE_ALL_EXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
-*除く*引数が、0 にすることがありますまたはマクロの 2 つ以上のサポートされる浮動小数点例外マクロ、またはビットごとの 1 つ。 他の引数値の結果は未定義です。
+*Removed*引数には、0、サポートされている浮動小数点例外マクロの1つ、または2つ以上のマクロのビットごとの or を指定できます。 他の引数値の結果は未定義です。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

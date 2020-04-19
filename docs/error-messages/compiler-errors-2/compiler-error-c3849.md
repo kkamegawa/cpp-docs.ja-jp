@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598563"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754889"
 ---
 # <a name="compiler-error-c3849"></a>コンパイラ エラー C3849
 
-型 'type' の式における関数スタイルの呼び出しはすべての数値の使用可能な演算子のオーバー ロードの const または volatile 修飾子が失われます
+型 ' type ' の式で関数形式の呼び出しを行うと、使用可能なすべての演算子オーバーロードの const または volatile 修飾子が失われます
 
-指定した const volatile 型の変数は、メンバーが const volatile の制限が同じかそれ以上定義されている関数を呼び出すのみできます。
+Const volatile 型が指定された変数は、同じまたはそれ以上の const volatile 修飾子で定義されたメンバー関数のみを呼び出すことができます。
 
-このエラーを解決するを適切なメンバー関数を提供します。 資格の変換が失わ場合は、const または volatile の修飾オブジェクトに変換を実行できません。 修飾子を取得することができますが、変換で修飾子が失われることはできません。
+このエラーを修正するには、適切なメンバー関数を指定します。 変換によって修飾が失われる場合、const または volatile で修飾されたオブジェクトに対して変換を実行することはできません。 修飾子を取得することはできますが、変換で修飾子を失うことはできません。
 
-次の例では、C3849 を生成します。
+次のサンプルでは、C3849 が生成されます。
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

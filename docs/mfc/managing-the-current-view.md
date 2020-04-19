@@ -11,12 +11,12 @@ helpviewer_keywords:
 - deactivating views [MFC]
 - current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
-ms.openlocfilehash: c53193a2e8121274246eabd9c7b614ad986146c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a926a9e31f7c43ab625220a4d759f6d536c2a77f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173341"
 ---
 # <a name="managing-the-current-view"></a>現在のビューの管理
 
@@ -29,4 +29,3 @@ ms.locfileid: "50575488"
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
-

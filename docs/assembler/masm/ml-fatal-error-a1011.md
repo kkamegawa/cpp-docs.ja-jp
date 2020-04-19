@@ -1,39 +1,39 @@
 ---
 title: ML の致命的なエラー A1011
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 591755a1d7066d8251f61d2a22b9601a9ccb9dcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5607d6d56e0b3889332dcf2624d519529819b1c9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520199"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318080"
 ---
 # <a name="ml-fatal-error-a1011"></a>ML の致命的なエラー A1011
 
-**ディレクティブは、コントロール ブロックである必要があります。**
+**ディレクティブはコントロールブロック内になければなりません**
 
-アセンブラーでは、高度なディレクティブを 1 つは必要ありませんでしたが見つかりました。 次のディレクティブのいずれかが検出されました。
+アセンブラーは、予期されていない上位レベルのディレクティブを検出しました。 次のいずれかのディレクティブが見つかりました。
 
-- [.ELSE](../../assembler/masm/dot-else.md)せず[します。もし](../../assembler/masm/dot-if.md)
+- [.それ以外](dot-else.md)の場合は[。IF](dot-if.md)
 
-- [.ENDIF](../../assembler/masm/dot-endif.md)せず[します。もし](../../assembler/masm/dot-if.md)
+- [.ENDIF](dot-endif.md)が[ありません。IF](dot-if.md)
 
-- [.ENDW](../../assembler/masm/dot-endw.md)せず[します。WHILE](../../assembler/masm/dot-while.md)
+- [.ENDW](dot-endw.md)なし[。しばらく](dot-while.md)
 
-- [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md) without [.REPEAT](../../assembler/masm/dot-repeat.md)
+- [.UNTILCXZ](dot-untilcxz.md) without [.REPEAT](dot-repeat.md)
 
-- [.引き続き](../../assembler/masm/dot-continue.md)せず[します。中に](../../assembler/masm/dot-while.md)または[します。繰り返し](../../assembler/masm/dot-repeat.md)
+- [.](dot-continue.md)を指定せずに続行[します。また](dot-while.md)は[。繰り返し](dot-repeat.md)
 
-- [.中断](../../assembler/masm/dot-break.md)せず[します。中に](../../assembler/masm/dot-while.md)または[します。繰り返し](../../assembler/masm/dot-repeat.md)
+- [.](dot-break.md)を使用せずに中断[します。また](dot-while.md)は[。繰り返し](dot-repeat.md)
 
-- [.ELSE](../../assembler/masm/dot-else.md)以下 `.ELSE`
+- [.その他](dot-else.md)の `.ELSE`
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

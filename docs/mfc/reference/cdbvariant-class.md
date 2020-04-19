@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 2a600aa893ae86abebb4146eda4864e69da3c35c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253323"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant クラス
 
@@ -77,10 +77,10 @@ class CDBVariant
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|型の値を含む**BOOL**します。|
 |[CDBVariant::m_chVal](#m_chval)|型の値を含む**unsigned char**します。|
-|[CDBVariant::m_dblVal](#m_dblval)|型の値を含む**二重**します。|
+|[CDBVariant::m_dblVal](#m_dblval)|型の値を含む**double**します。|
 |[CDBVariant::m_fltVal](#m_fltval)|型の値を含む**float**します。|
-|[CDBVariant::m_iVal](#m_ival)|型の値を含む**短い**します。|
-|[CDBVariant::m_lVal](#m_lval)|型の値を含む**長い**します。|
+|[CDBVariant::m_iVal](#m_ival)|型の値を含む**short**します。|
+|[CDBVariant::m_lVal](#m_lval)|型の値を含む**long**します。|
 |[CDBVariant::m_pbinary](#m_pbinary)|型のオブジェクトへのポインターを含む`CLongBinary`します。|
 |[CDBVariant::m_pdate](#m_pdate)|型のオブジェクトへのポインターを含む**TIMESTAMP_STRUCT**します。|
 |[CDBVariant::m_pstring](#m_pstring)|型のオブジェクトへのポインターを含む`CString`します。|
@@ -147,7 +147,7 @@ BOOL 型の値を格納します。
 
 ##  <a name="m_dblval"></a>  CDBVariant::m_dblVal
 
-型の値を格納**二重**します。
+型の値を格納**double**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -186,7 +186,7 @@ BOOL 型の値を格納します。
 
 ##  <a name="m_ival"></a>  CDBVariant::m_iVal
 
-型の値を格納**短い**します。
+型の値を格納**short**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -194,7 +194,7 @@ BOOL 型の値を格納します。
 
 ##  <a name="m_lval"></a>  CDBVariant::m_lVal
 
-型の値を格納**長い**します。
+型の値を格納**long**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -216,7 +216,7 @@ TIMESTAMP_STRUCT 型のオブジェクトへのポインターを格納します
 
 `m_pdate`共用体へのデータ メンバーが属しています。 アクセスする前に`m_pdate`、最初の値をチェック[CDBVariant::m_dwType](#m_dwtype)します。 場合`m_dwType`DBVT_DATE に設定し、`m_pdate`の有効なポインターが含まれています。 それ以外の場合、にアクセスする`m_pdate`信頼性のない結果が生成されます。
 
-TIMESTAMP_STRUCT のデータ型の詳細については、トピックを参照してください。 [C データ型](/previous-versions/windows/desktop/ms714556)の付録 d、 *ODBC プログラマ リファレンス*Windows SDK にします。
+TIMESTAMP_STRUCT のデータ型の詳細については、トピックを参照してください。 [C データ型](/sql/odbc/reference/appendixes/c-data-types)の付録 d、 *ODBC プログラマ リファレンス*Windows SDK にします。
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

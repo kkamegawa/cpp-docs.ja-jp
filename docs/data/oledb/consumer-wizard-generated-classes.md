@@ -1,31 +1,34 @@
 ---
 title: コンシューマー ウィザードで生成されたクラス
-ms.date: 10/17/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- attribute-injected classes and methods
-- wizard-generated classes and methods
-- OLE DB consumers, wizard-generated classes and methods
-- command classes in OLE DB consumer
-- classes [C++], OLE DB Consumer Wizard-generated
-- consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 2ebc2094ba7f12087de51119a134e2ef65ef92d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641139"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707750"
 ---
 # <a name="consumer-wizard-generated-classes"></a>コンシューマー ウィザードで生成されたクラス
 
-使用すると、 **ATL OLE DB コンシューマー ウィザード**OLE DB テンプレートと OLE DB 属性を使用する選択肢があるコンシューマーを生成します。 どちらの場合も、ウィザードによってコマンド クラスとユーザー レコード クラスが生成されます。 コマンド クラスには、ウィザードで指定したデータ ソースと行セットを開くためのコードが含まれています。 ユーザー レコード クラスには、選択したデータベース テーブルの列マップが含まれています。 ただし、生成されるコードはそれぞれ異なります。
 
-- テンプレート コンシューマーを選択した場合、ウィザードはコマンド クラスとユーザー レコード クラスを生成します。 コマンド クラスに入力した名前になります、**クラス**ボックス、ウィザードに (たとえば、 `CProducts`)、ユーザー レコード クラスは、フォームの名前が"*ClassName*アクセサー"(たとえば、`CProductsAccessor`). どちらのクラスも、コンシューマーのヘッダー ファイルに格納されます。
+::: moniker range="vs-2019"
 
-- 属性コンシューマーを選択した場合は、ユーザー レコード クラスのフォームは、"_*ClassName*Accessor" の名前で挿入されます。 つまり、ことができます、テキスト エディターで、コマンド クラスのみを表示するにはユーザー レコード クラスは、挿入されたコードとしてのみ表示できます。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。
+ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。
 
-次の例で作成したコマンド クラスを使用して、`Products`のテーブル、`Northwind`コマンド クラスとユーザー レコード クラスのコンシューマーのウィザードで生成されたコードを示すためにデータベース。
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+**ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーを生成する場合、OLE DB テンプレートと OLE DB 属性のどちらかを使用するよう選択できます。 どちらの場合も、ウィザードによってコマンド クラスとユーザー レコード クラスが生成されます。 コマンド クラスには、ウィザードで指定したデータ ソースと行セットを開くためのコードが含まれています。 ユーザー レコード クラスには、選択したデータベース テーブルの列マップが含まれています。 ただし、生成されるコードはそれぞれ異なります。
+
+- テンプレート コンシューマーを選択した場合、ウィザードはコマンド クラスとユーザー レコード クラスを生成します。 コマンド クラスは、ウィザードの **[クラス]** ボックスに入力した名前 (`CProducts` など) になり、ユーザー レコード クラスは、"*ClassName*Accessor" 形式の名前 (`CProductsAccessor` など) になります。 どちらのクラスも、コンシューマーのヘッダー ファイルに格納されます。
+
+- 属性コンシューマーを選択した場合は、ユーザー レコード クラスのフォームは、"_*ClassName*Accessor" の名前で挿入されます。 つまり、テキスト エディターではコマンド クラスの表示のみが可能になり、ユーザー レコード クラスは挿入されたコードとして表示されます。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。
+
+次の例では、`Northwind` データベースの `Products` テーブルで作成されたコマンド クラスを使用して、コマンド クラスとユーザー レコード クラスに対してウィザードで生成されたコンシューマー コードの使用例を示します。
 
 ## <a name="templated-user-record-classes"></a>テンプレート化されたユーザー レコード クラス
 
@@ -39,7 +42,7 @@ OLE DB 属性ではなく、OLE DB テンプレートを使用して OLE DB コ�
 > ユーザー レコード クラスを変更するか、独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。
 
 > [!NOTE]
-> ATL OLE DB コンシューマー ウィザードを使用して、`DB_NUMERIC`数値データ型のバインド先の型。 これを使用していた`DBTYPE_VARNUMERIC`(される形式は、`DB_VARNUMERIC`入力は、Oledb.h を参照してください)。 コンシューマーの作成には、ウィザードを使用しない場合は、使用することをお勧め`DB_NUMERIC`します。
+> ATL OLE DB コンシューマー ウィザードでは、`DB_NUMERIC` 型を使用して数値データ型をバインドします。 これまでは、`DBTYPE_VARNUMERIC` (`DB_VARNUMERIC` 型で説明される形式については、Oledb.h を参照) が使用されていました。 コンシューマーの作成にウィザードを使用しない場合は、`DB_NUMERIC` を使用することをお勧めします。
 
 ```cpp
 // Products.H : Declaration of the CProducts class
@@ -86,7 +89,7 @@ public:
 
 ### <a name="rowset-properties"></a>行セット プロパティ
 
-次に、ウィザードは行セット プロパティを設定します。 ATL OLE DB コンシューマー ウィザードで **[変更]**、 **[挿入]**、または **[削除]** を選択した場合、適切なプロパティがここで設定されます (DBPROP_IRowsetChange は常に設定され、それぞれの場合に DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT、DBPROPVAL_UP_DELETE のいずれかが設定されます)。
+次に、ウィザードは行セット プロパティを設定します。 ATL OLE DB コンシューマー ウィザードで **[変更]** 、 **[挿入]** 、または **[削除]** を選択した場合、適切なプロパティがここで設定されます (DBPROP_IRowsetChange は常に設定され、それぞれの場合に DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT、DBPROPVAL_UP_DELETE のいずれかが設定されます)。
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -148,11 +151,11 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>属性が挿入されたユーザー レコード クラス
 
-データベース属性 ([db_command](../../windows/db-command.md) または [db_table](../../windows/db-table.md)) を使用して OLE DB コンシューマーを作成する場合、この属性によって "_*ClassName*Accessor" の形式の名前でユーザー レコード クラスが挿入されます。 たとえば、コマンド クラスに `COrders`と名前を付けると、ユーザー レコード クラスは `_COrdersAccessor`となります。 表示されますが、ユーザー レコード クラス**クラス ビュー**、それをダブルクリックすると、ヘッダー ファイルでコマンドまたはテーブル クラスに代わりに移動します。 このような場合は、属性が挿入されたコードを表示すると、ユーザー レコード クラスの実際の宣言のみが表示されます。
+データベース属性 ([db_command](../../windows/db-command.md) または [db_table](../../windows/db-table.md)) を使用して OLE DB コンシューマーを作成する場合、この属性によって "_*ClassName*Accessor" の形式の名前でユーザー レコード クラスが挿入されます。 たとえば、コマンド クラスに `COrders`と名前を付けると、ユーザー レコード クラスは `_COrdersAccessor`となります。 ユーザー レコード クラスは**クラス ビュー**に表示されますが、ダブルクリックすると、コマンドまたはヘッダー ファイルのテーブル クラスに移動します。 このような場合は、属性が挿入されたコードを表示すると、ユーザー レコード クラスの実際の宣言のみが表示されます。
 
-属性付きコンシューマーでメソッドを追加またはオーバーライドすると、問題が発生することがあります。 たとえば、 `_COrdersAccessor` コンストラクターは `COrders` 宣言に追加できますが、実際には、このコンストラクターは挿入された `COrdersAccessor` クラスに追加されます。 このようなコンス トラクターは、列やパラメーターを初期化できますが作成できませんコピー コンス トラクターをこのようにして、直接インスタンス化できないため、`COrdersAccessor`オブジェクト。 上で直接コンス トラクター (またはその他のメソッド) が必要がある場合、`COrders`クラス、お勧めから派生する新しいクラスを定義する`COrders`し、必要なメソッドを追加します。
+属性付きコンシューマーでメソッドを追加またはオーバーライドすると、問題が発生することがあります。 たとえば、 `_COrdersAccessor` コンストラクターは `COrders` 宣言に追加できますが、実際には、このコンストラクターは挿入された `COrdersAccessor` クラスに追加されます。 このようなコンストラクターは列やパラメーターを初期化できますが、`COrdersAccessor` オブジェクトを直接インスタンス化できないため、この方法でコンストラクターのコピーを作成することはできません。 `COrders` クラス上で直接コンストラクター (またはその他のメソッド) が必要な場合は、`COrders` から派生した新しいクラスを定義し、そこに必要なメソッドを追加することをお勧めします。
 
-次の例では、ウィザードはクラスの宣言を生成`COrders`、ユーザー レコード クラスが、`COrdersAccessor`属性を挿入するため、表示されません。
+次の例では、ウィザードがクラス `COrders` の宣言を生成していますが、ユーザー レコード クラス `COrdersAccessor` は属性によって挿入されるため表示されません。
 
 ```cpp
 #define _ATL_ATTRIBUTES
@@ -183,6 +186,8 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 挿入されたコードのほとんどは、テンプレート バージョンと同じか類似するものです。 主な相違点は、「 [コンシューマー ウィザード生成メソッド](../../data/oledb/consumer-wizard-generated-methods.md)」で説明されている挿入されたメソッドの部分です。
 
 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

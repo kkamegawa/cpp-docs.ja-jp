@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4214
 ms.assetid: 9b8db279-1f12-4a6b-a923-2db22acd1947
-ms.openlocfilehash: 31711d3709b7c2ae3658d760f538ea9e841d33a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85f37810708eff43574129f42dd8444fe7dc37c2
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655729"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541898"
 ---
 # <a name="compiler-warning-level-4-c4214"></a>コンパイラの警告 (レベル 4) C4214
 
-使用される標準の拡張機能: int 型以外のフィールド型のビット
+非標準の拡張機能が使用されています: int 以外のビットフィールド型
 
-既定の Microsoft 拡張 (/Ze) で、任意の整数型の構造体メンバーのビット フィールドができます。
+既定の Microsoft 拡張機能 (/Ze) では、ビットフィールド構造体のメンバーは任意の整数型にすることができます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // C4214.c
 // compile with: /W4
 struct bitfields
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-このようなビット フィールドは ANSI 互換の無効な ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) では、このようなビットフィールドは無効です。

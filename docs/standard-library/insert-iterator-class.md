@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567805"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447662"
 ---
 # <a name="insertiterator-class"></a>insert_iterator クラス
 
@@ -30,12 +30,12 @@ class insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-*コンテナー*<br/>
+*コンテナー*\
 要素が `insert_iterator` によって挿入されるコンテナーの型。
 
 ## <a name="remarks"></a>Remarks
 
-型のコンテナー`Container`可変サイズのコンテナーの要件を満たす必要があり、型のパラメーターは引数が 2 つの insert メンバー関数がある`Container::iterator`と`Container::value_type`型を返すと`Container::iterator`します。 C++ 標準ライブラリ シーケンスおよび並べ替えられた連想コンテナーはこれらの要件を満たしており、`insert_iterator` で使用するために適合させることができます。 連想コンテナーでは、位置の引数はヒントとして扱われ、ヒントの品質に応じてパフォーマンスを向上させる場合も、低下させる場合もあります。 `insert_iterator` は、常に、コンテナーで初期化されている必要があります。
+型`Container`のコンテナーは、可変サイズのコンテナーの要件を満たし、2つの引数を持つ insert メンバー関数を持つ必要があります`Container::iterator` 。これらのパラメーターの型`Container::iterator`はと`Container::value_type`で、型を返します。 C++ 標準ライブラリ シーケンスおよび並べ替えられた連想コンテナーはこれらの要件を満たしており、`insert_iterator` で使用するために適合させることができます。 連想コンテナーでは、位置の引数はヒントとして扱われ、ヒントの品質に応じてパフォーマンスを向上させる場合も、低下させる場合もあります。 `insert_iterator` は、常に、コンテナーで初期化されている必要があります。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*<br/>
+*続き*\
 `insert_iterator` によって要素が挿入されるコンテナ―です。
 
-*_It*<br/>
+*It (_c)* \
 挿入の位置。
 
 ### <a name="remarks"></a>Remarks
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-出力反復子式 **\*Iter** = **value** を実装するために使用されます。 場合`Iter`し、シーケンス内の要素を指す反復子は、  **\*Iter** = **値**その要素の値を置き換えますの合計数は変わりません。シーケンス内の要素。
+出力反復子式 **\*Iter** = **value** を実装するために使用されます。 が`Iter`シーケンス内の要素をアドレス指定する反復子である場合 =   **\*、Iter** **value**はその要素を値に置き換え、シーケンス内の要素の合計数を変更しません。
 
 ### <a name="example"></a>例
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 コンテナーに割り当てられる値。
 
 ### <a name="return-value"></a>戻り値
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

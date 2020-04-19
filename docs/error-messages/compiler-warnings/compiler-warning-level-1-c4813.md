@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4813
 ms.assetid: c30bf877-ab04-4fe4-897e-8162092426f0
-ms.openlocfilehash: c6aaf3cc8e17cd1be1d9c964c03bb18b3bb0ff77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 517349dacc9081d2d34a861bb55ba734089124e2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605193"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051272"
 ---
 # <a name="compiler-warning-level-1-c4813"></a>コンパイラの警告 (レベル 1) C4813
 
@@ -21,7 +21,7 @@ ms.locfileid: "50605193"
 
 次の例では C4813 が生成されます。
 
-```
+```cpp
 // C4813.cpp
 // compile with: /W1 /LD
 void MyClass()

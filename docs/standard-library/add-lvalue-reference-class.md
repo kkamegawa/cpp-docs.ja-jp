@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 8dbb4f91da8d7a0bf0a90b3edc4fce2918d52a9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668547"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456572"
 ---
 # <a name="addlvaluereference-class"></a>add_lvalue_reference クラス
 
@@ -29,12 +29,12 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-型修飾子のインスタンスを保持する、修飾型である*T*場合*T*左辺値参照をそれ以外の場合は`T&`します。
+T が左辺値参照の場合、型修飾子のインスタンスは*t*である修飾型を保持します`T&`。それ以外の場合はを保持します。
 
 ## <a name="example"></a>例
 
@@ -67,5 +67,5 @@ add_lvalue_reference_t<int> == int
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_reference クラス](../standard-library/remove-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_reference クラス](../standard-library/remove-reference-class.md)

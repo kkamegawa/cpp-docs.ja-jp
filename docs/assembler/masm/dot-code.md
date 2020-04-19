@@ -1,33 +1,36 @@
 ---
 title: .CODE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .CODE
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 65d336d2829c97fdf21e6f4b0fcb3063cc7776ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0975e96e670400b7fa221ae2d1b9982b5cee613b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630806"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314147"
 ---
 # <a name="code"></a>.CODE
 
-使用すると[します。モデル](../../assembler/masm/dot-model.md)、コード セグメントの開始を示します。
+(32 ビット MASM のみ。)と共に使用[します。モデル](dot-model.md)は、コードセグメントの開始を示します。
 
 ## <a name="syntax"></a>構文
 
-> .コード [name]
+> **.CODE** ⟦*name*⟧ \
+> ⟦ *segmentItem* ⟧... \
+> ⟦ *codesegmentnameId*の**終わり**;;⟧\
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|`name`|コード セグメントの名前を指定する省略可能なパラメーター。 既定の名前は小さな、s、compact、およびフラット _TEXT[モデル](../../assembler/masm/dot-model.md)します。 既定の名前は*modulename*_TEXT 他のモデル。|
+*名前*\
+コードセグメントの名前を指定する省略可能なパラメーターです。 既定の名前は、小さい、小さい、コンパクト、およびフラット[モデル](dot-model.md)の場合に **_TEXT**ます。 既定の名前は、他のモデルの場合は*modulename*_TEXT です。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[.DATA](../../assembler/masm/dot-data.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[.データ](dot-data.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)
+

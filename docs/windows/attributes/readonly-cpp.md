@@ -1,17 +1,17 @@
 ---
-title: 読み取り専用 (C++ COM 属性)
+title: readonly (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: d174399b213bc6c8dbaeb0a01f3e457cfcf3a3e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653038"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514135"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50653038"
 
 ## <a name="remarks"></a>Remarks
 
-**readonly** C++ 属性には、 [readonly](/windows/desktop/Midl/readonly) MIDL 属性と同じ機能があります。
+**readonly** C++ 属性には、 [readonly](/windows/win32/Midl/readonly) MIDL 属性と同じ機能があります。
 
 メソッド パラメーターの変更を禁止する場合は、 [in](in-cpp.md) 属性を使用します。
 

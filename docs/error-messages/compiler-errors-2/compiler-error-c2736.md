@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2736
+title: コンパイラエラー C2736
 ms.date: 11/04/2016
 f1_keywords:
 - C2736
 helpviewer_keywords:
 - C2736
 ms.assetid: 95a6bc28-c0cb-49dc-87e6-e993dbbba881
-ms.openlocfilehash: 7ce63c1e9d9e6ab04a7f7200c5b34f346100733b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a7781ebcd7cefdbcff13599912c06062f20501e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658981"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759686"
 ---
-# <a name="compiler-error-c2736"></a>コンパイラ エラー C2736
+# <a name="compiler-error-c2736"></a>コンパイラエラー C2736
 
-'keyword' キーワードはキャストでは許可されていません
+' keyword ' キーワードはキャストでは使用できません
 
-キーワードは、キャストでは無効です。
+キーワードはキャストでは無効です。
 
 次の例では、C2736 が生成されます。
 
-```
+```cpp
 // C2736.cpp
 int main() {
    return (virtual) 0;   // C2736

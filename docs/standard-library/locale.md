@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-ms.openlocfilehash: 16248a93b557a92d89e35aac8eba912a8294af76
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71182f4a527fba0ef2c91dc84be5a8faad9fc99f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524262"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687798"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
-文字分類と文字列の照合順序の国際化サポートを含む、数値、通貨、暦のデータの表示や書式設定に関するさまざまな文化的慣習をカプセル化および操作するために、C++ プログラムで使用できるテンプレート クラスおよび関数を定義します。
+数値、通貨、および暦C++データ (国際化サポートを含む) の表現と書式設定に関するさまざまなカルチャ規則を、プログラムでカプセル化して操作するために使用できるクラステンプレートと関数を定義します。文字分類と文字列の照合順序。
 
 ## <a name="syntax"></a>構文
 
@@ -27,7 +27,7 @@ ms.locfileid: "51524262"
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[has_facet](../standard-library/locale-functions.md#has_facet)|特定のファセットが指定されたロケールに格納されているかどうかをテストします。|
 |[isalnum](../standard-library/locale-functions.md#isalnum)|ロケールの要素が英字または数字であるかどうかをテストします。|
@@ -47,40 +47,40 @@ ms.locfileid: "51524262"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[codecvt](../standard-library/codecvt-class.md)|内部と外部の文字エンコーディングの変換に使用されるファセットを提供するテンプレート クラス。|
-|[codecvt_base](../standard-library/codecvt-base-class.md)|列挙型を定義するために使用される codecvt クラスの基本クラスとして参照`result`変換の結果を示すためにファセットのメンバー関数の戻り値の型として使用されます。|
-|[codecvt_byname](../standard-library/codecvt-byname-class.md)|特定のロケールの照合ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。変換に関する文化的領域に固有の情報を取得できるようにします。|
-|[collate](../standard-library/collate-class.md)|文字列の並べ替え規則を処理するためのファセットを提供する照合テンプレート クラス。|
-|[collate_byname](../standard-library/collate-byname-class.md)|特定のロケールの照合ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。文字列の並べ替え規則に関する文化的領域に固有の情報を取得できるようにします。|
-|[ctype](../standard-library/ctype-class.md)|文字の分類、大文字と小文字の変換、およびネイティブ文字セットとロケールで使用される文字セットとの変換に使用されるファセットを提供するテンプレート クラス。|
-|[ctype\<char>](../standard-library/ctype-char-class.md)|テンプレート クラスの明示的な特殊化であるクラス`ctype<CharType>`入力**char**、型の文字のさまざまなプロパティを設定するロケール ファセットとして使用できるオブジェクトを記述する**char**.|
+|[codecvt](../standard-library/codecvt-class.md)|内部および外部の文字エンコーディングの変換に使用されるファセットを提供するクラステンプレート。|
+|[codecvt_base](../standard-library/codecvt-base-class.md)|@No__t_0 と呼ばれる列挙型を定義するために使用される codecvt クラスの基本クラスです。変換の結果を示すためにファセットメンバー関数の戻り値の型として使用されます。|
+|[codecvt_byname](../standard-library/codecvt-byname-class.md)|特定のロケールの collate ファセットとして使用できるオブジェクトを表す派生クラステンプレート。変換に関してカルチャ領域に固有の情報を取得できます。|
+|[collate](../standard-library/collate-class.md)|文字列の並べ替え規則を処理するファセットを提供する collate クラステンプレート。|
+|[collate_byname](../standard-library/collate-byname-class.md)|特定のロケールの collate ファセットとして使用できるオブジェクトを記述する派生クラステンプレート。文字列の並べ替え規則に関するカルチャ領域に固有の情報を取得できます。|
+|[ctype](../standard-library/ctype-class.md)|文字の分類、大文字と小文字の変換、およびネイティブ文字セットとロケールで使用される設定の間の変換に使用されるファセットを提供するクラステンプレート。|
+|[ctype \<char >](../standard-library/ctype-char-class.md)|クラステンプレートの明示的な特殊化であるクラスは**char**型に `ctype<CharType>` します。これは、 **char**型の文字のさまざまなプロパティを特徴付けるためにロケールファセットとして使用できるオブジェクトを記述します。|
 |[ctype_base](../standard-library/ctype-base-class.md)|個々の文字または範囲全体の文字を分類またはテストするための列挙型を定義するために使用される ctype クラスの基底クラス。|
-|[ctype_byname](../standard-library/ctype-byname-class.md)|特定のロケールの ctype ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。文字の分類や、大文字と小文字およびネイティブと指定されたロケールの文字セットでの文字の変換を実行できるようにします。|
+|[ctype_byname](../standard-library/ctype-byname-class.md)|特定のロケールの ctype ファセットとして使用できるオブジェクトを表す派生クラステンプレート。文字の分類を有効にし、大文字と小文字の区別とネイティブの文字セットとロケールが指定した文字セットとの間の文字変換を可能にします。|
 |[locale](../standard-library/locale-class.md)|特定のローカライズされた環境を集合的に定義する一連のファセットとして、カルチャ固有の情報をカプセル化するロケール オブジェクトを表すクラス。|
-|[messages](../standard-library/messages-class.md)|このテンプレート クラスは、特定のロケールの国際化メッセージのカタログからローカライズされたメッセージを取得するためにロケールのファセットとして使用できるオブジェクトを表します。|
-|[messages_base](../standard-library/messages-base-class.md)|表す基本クラス、 **int**メッセージのカタログの型。|
-|[messages_byname](../standard-library/messages-byname-class.md)|特定のロケールのメッセージ ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。ローカライズされたメッセージを取得できるようにします。|
+|[messages](../standard-library/messages-class.md)|特定のロケールの国際化メッセージのカタログからローカライズされたメッセージを取得するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[messages_base](../standard-library/messages-base-class.md)|メッセージのカタログの**int**型を記述する基本クラス。|
+|[messages_byname](../standard-library/messages-byname-class.md)|特定のロケールのメッセージファセットとして使用できるオブジェクトを表す派生クラステンプレート。ローカライズされたメッセージを取得できるようにします。|
 |[money_base](../standard-library/money-base-class.md)|個々の文字または範囲全体の文字を分類またはテストするための列挙型を定義するために使用される ctype クラスの基底クラス。|
-|[money_get](../standard-library/money-get-class.md)|型のシーケンスの変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**通貨値にします。|
-|[money_put](../standard-library/money-put-class.md)|型のシーケンスを通貨値の変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**します。|
-|[moneypunct](../standard-library/moneypunct-class.md)|型のシーケンスを表すためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**通貨入力フィールドまたは通貨出力フィールドを表すために使用します。|
-|[moneypunct_byname](../standard-library/moneypunct-byname-class.md)|特定のロケールの moneypunct ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。通貨の入力または出力フィールドを書式設定できるようにします。|
-|[num_get](../standard-library/num-get-class.md)|型のシーケンスの変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**に数値を指定します。|
-|[num_put](../standard-library/num-put-class.md)|型のシーケンスを数値の変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**します。|
-|[numpunct](../standard-library/numpunct-class.md)|型のシーケンスを表すロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**数値とブール式の区切り記号と書式設定に関する情報を表すために使用します。|
-|[numpunct_byname](../standard-library/numpunct-byname-class.md)|特定のロケールの moneypunct ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。数値とブール式の書式設定および区切りを有効にします。|
-|[time_base](../standard-library/time-base-class.md)|time_get テンプレート クラスのファセットの基底クラスとして使用されるクラス。dateorder 列挙型とこの方の複数の定数のみを定義します。|
-|[time_get](../standard-library/time-get-class.md)|型のシーケンスの変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**時刻値。|
-|[time_get_byname](../standard-library/time-get-byname-class.md)|型 time_get のためにロケール ファセットとして使用できるオブジェクトを表す派生テンプレート クラス\<**CharType**、 **InputIterator**>。|
-|[time_put](../standard-library/time-put-class.md)|型のシーケンスを時刻値の変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス**CharType**します。|
-|[time_put_byname](../standard-library/time-put-byname-class.md)|型のためにロケール ファセットとして使用できるオブジェクトを表す派生テンプレート クラス`time_put` \< **CharType**、 **OutputIterator**>。|
+|[money_get](../standard-library/money-get-class.md)|**Chartype**型のシーケンスから通貨値への変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[money_put](../standard-library/money-put-class.md)|通貨値から**Chartype**型のシーケンスへの変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[moneypunct](../standard-library/moneypunct-class.md)|通貨入力フィールドまたは通貨出力フィールドを表すために使用される**chartype**型のシーケンスを表すロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[moneypunct_byname](../standard-library/moneypunct-byname-class.md)|指定されたロケールの moneypunct ファセットとして使用できるオブジェクトを表す派生クラステンプレート。通貨入力または出力フィールドの書式設定を有効にします。|
+|[num_get](../standard-library/num-get-class.md)|**Chartype**型のシーケンスから数値への変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[num_put](../standard-library/num-put-class.md)|数値から**Chartype**型のシーケンスへの変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[numpunct](../standard-library/numpunct-class.md)|数値とブール式の書式設定および区切りに関する情報を表すために使用される**chartype**型のシーケンスを記述するローカルファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[numpunct_byname](../standard-library/numpunct-byname-class.md)|特定のロケールの moneypunct ファセットとして使用できるオブジェクトを表す派生クラステンプレート。数値とブール式の書式設定と区切り記号を有効にします。|
+|[time_base](../standard-library/time-base-class.md)|クラステンプレート time_get のファセットの基底クラスとして機能するクラスで、列挙型 dateorder とこの型のいくつかの定数だけを定義します。|
+|[time_get](../standard-library/time-get-class.md)|**Chartype**型のシーケンスから時刻値への変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[time_get_byname](../standard-library/time-get-byname-class.md)|Time_get \<**Chartype**、 **InputIterator**> 型のロケールファセットとして使用できるオブジェクトを表す派生クラステンプレート。|
+|[time_put](../standard-library/time-put-class.md)|時間値から**Chartype**型のシーケンスへの変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。|
+|[time_put_byname](../standard-library/time-put-byname-class.md)|型 `time_put` \<**Chartype**, **OutputIterator**> のロケールファセットとして使用できるオブジェクトを表す派生クラステンプレート。|
 |[wbuffer_convert クラス](../standard-library/wbuffer-convert-class.md)|バイト ストリーム バッファーとの間の要素の転送を制御するストリーム バッファーを説明します。|
-|[wstring_convert クラス](../standard-library/wstring-convert-class.md)|ワイド文字列とバイト文字列間の変換を実行するテンプレート クラス。|
+|[wstring_convert クラス](../standard-library/wstring-convert-class.md)|ワイド文字列とバイト文字列の間の変換を実行するクラステンプレート。|
 
 ## <a name="see-also"></a>関連項目
 
-[コード ページ](../c-runtime-library/code-pages.md)<br/>
-[ロケール名、言語、および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[コード ページ](../c-runtime-library/code-pages.md)\
+[ロケール名、言語、および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

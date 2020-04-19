@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3001
 ms.assetid: d0e03478-1b44-47e5-8f5b-70415fa1f8bc
-ms.openlocfilehash: 1eaf34b0830722b5eae61ec24b54a9edf6cea24c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 737754eb314b577ac73e91a5aab1ad31773fc5f3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526599"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302212"
 ---
 # <a name="compiler-error-c3001"></a>コンパイラ エラー C3001
 
@@ -21,7 +21,7 @@ ms.locfileid: "50526599"
 
 次の例では C3001 が生成されます。
 
-```
+```c
 // C3001.c
 // compile with: /openmp
 int main()

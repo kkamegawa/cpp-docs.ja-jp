@@ -1,6 +1,6 @@
 ---
 title: __popcnt16、__popcnt、__popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522460"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221358"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16、__popcnt、__popcnt64
 
 **Microsoft 固有の仕様**
 
-1 つの数をカウント 16 ビット、32 ビットまたは 64 バイト符号なし整数のビット (カタログ作成数)。
+16、32、 `1`または64ビットの符号なし整数のビット数 (母数) をカウントします。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,14 +38,14 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*値*<br/>
-[in]16 ビット、32 ビットまたは 64 ビット符号なし整数のビットの数をいたします。
+*value*\
+から母集団の数を求める16、32、または64ビットの符号なし整数。
 
 ## <a name="return-value"></a>戻り値
 
-1 つのビット数、`value`パラメーター。
+Value パラメーターの`1`ビット数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -53,19 +53,19 @@ unsigned __int64 __popcnt64(
 |---------------|------------------|
 |`__popcnt16`|高度なビット操作|
 |`__popcnt`|高度なビット操作|
-|`__popcnt64`|64 ビット モードでの高度なビット操作。|
+|`__popcnt64`|64ビットモードでの高度なビット操作。|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-これらの組み込みの生成、`popcnt`命令。  値のサイズを`popcnt`命令は、引数のサイズと同じを返します。  32 ビット モードではありません 64 ビット汎用レジスタ、したがっていいえ 64 ビット`popcnt`します。
+各組み込みは、命令を`popcnt`生成します。 32ビットモードでは、64ビットの汎用レジスタがないため、64ビット`popcnt`はサポートされていません。
 
-ハードウェア サポートの決定を`popcnt`命令、呼び出し、`__cpuid`で組み込み`InfoType=0x00000001`のビット 23 をチェックし、`CPUInfo[2] (ECX)`します。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。 `popcnt`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。
+`popcnt`命令のハードウェアサポートを確認するには、 `__cpuid`で`InfoType=0x00000001`組み込みのを呼び出し、の`CPUInfo[2] (ECX)`ビット23を確認します。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。 `popcnt`命令をサポートしていないハードウェアでこれらの組み込みを使用するコードを実行すると、結果は予測できません。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -101,7 +101,7 @@ __popcnt(0xffffffff) = 32
 
 **Microsoft 固有の仕様はここまで**
 
-高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
+高度なマイクロデバイス (Inc.) による部分の著作権2007All rights reserved. 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
 
 ## <a name="see-also"></a>関連項目
 

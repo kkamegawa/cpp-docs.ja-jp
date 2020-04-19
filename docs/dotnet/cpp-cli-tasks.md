@@ -3,11 +3,11 @@ title: C++/CLI タスク
 ms.date: 11/04/2016
 ms.assetid: 5851b113-91f9-4062-9427-c0669f333636
 ms.openlocfilehash: a3cd7ef99511c3ad2dc6e14d0d5374a86ab3a85f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209155"
 ---
 # <a name="ccli-tasks"></a>C++/CLI タスク
 
@@ -15,7 +15,7 @@ ms.locfileid: "50645108"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [方法 : 空の CLR プロジェクトを作成する](../dotnet/how-to-create-clr-empty-projects.md)
+- [方法: 空の CLR プロジェクトを作成する](../dotnet/how-to-create-clr-empty-projects.md)
 - [方法: CLR コンソール アプリケーションを作成する (C++/CLI)](../dotnet/how-to-create-clr-console-applications-cpp-cli.md)
 - [方法: C++/CLI で追跡参照を使用する](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 - [方法: C++/CLI で配列を使用する](../dotnet/how-to-use-arrays-in-cpp-cli.md)

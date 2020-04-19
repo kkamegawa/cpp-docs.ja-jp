@@ -1,5 +1,5 @@
 ---
-title: TN001:ウィンドウ クラスの登録
+title: テクニカル ノート 1:ウィンドウクラスの登録
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,74 +8,74 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 95e35ddd6f55c955bc2adb7b4db2460ae84a6dc7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894264"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513547"
 ---
-# <a name="tn001-window-class-registration"></a>TN001:ウィンドウ クラスの登録
+# <a name="tn001-window-class-registration"></a>テクニカル ノート 1:ウィンドウクラスの登録
 
-このノートには、特殊なを登録する MFC ルーチンがについて説明[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es の Microsoft Windows が必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性については説明します。
+このメモでは、Microsoft Windows で必要な特殊な[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)を登録する MFC ルーチンについて説明します。 MFC `WNDCLASS`と Windows で使用される特定の属性について説明します。
 
 ## <a name="the-problem"></a>問題を
 
-属性を[CWnd](../mfc/reference/cwnd-class.md)オブジェクトなど、 `HWND` Windows での処理、2 つの場所に格納されます: ウィンドウ オブジェクトと`WNDCLASS`します。 名前、`WNDCLASS`など全般的なウィンドウ作成関数に渡される[cwnd::create](../mfc/reference/cwnd-class.md#create)と[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)で、 *lpszClassName*パラメーター。
+[CWnd](../mfc/reference/cwnd-class.md)オブジェクトの属性 (Windows の`HWND`ハンドルなど) は、ウィンドウオブジェクトとの`WNDCLASS`2 か所に格納されます。 の名前は、 `WNDCLASS` *lpszclassname*パラメーターの[CWnd:: create](../mfc/reference/cwnd-class.md#create)や[CFrameWnd:: create](../mfc/reference/cframewnd-class.md#create)などの一般的なウィンドウ作成関数に渡されます。
 
-これは、 `WNDCLASS` 4 つの手段の 1 つを登録する必要があります。
+これ`WNDCLASS`は、次の4つのいずれかの方法で登録する必要があります。
 
-- 指定された MFC を使用して暗黙的に`WNDCLASS`します。
+- 指定さ`WNDCLASS`れた MFC を使用して暗黙的に。
 
-- Windows のコントロール (またはその他のコントロール) をサブクラス化によって暗黙的にします。
+- Windows コントロール (またはその他のコントロール) をサブクラス化することによって暗黙的にします。
 
-- MFC を呼び出すことによって明示的に[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)または[AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass)します。
+- MFC の[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)または[AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass)を呼び出すことによって明示的に指定します。
 
-- Windows のルーチンを呼び出すことによって明示的に[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)します。
+- Windows ルーチン[RegisterClass](/windows/win32/api/winuser/nf-winuser-registerclassw)を呼び出して明示的に指定します。
 
-## <a name="wndclass-fields"></a>WNDCLASS フィールド
+## <a name="wndclass-fields"></a>WNDCLASS のフィールド
 
-`WNDCLASS`ウィンドウ クラスを記述するさまざまなフィールドの構造で構成されます。 次の表では、フィールドが表示され、MFC アプリケーションで使用する方法を指定します。
+構造`WNDCLASS`体は、ウィンドウクラスを記述するさまざまなフィールドで構成されます。 次の表は、これらのフィールドと、それらを MFC アプリケーションで使用する方法を示しています。
 
 |フィールド|説明|
 |-----------|-----------------|
-|*lpfnWndProc*|ウィンドウのプロシージャである必要があります、 `AfxWndProc`|
-|*cbClsExtra*|使用しない (0 にする必要があります)|
-|*cbWndExtra*|使用しない (0 にする必要があります)|
-|*hInstance*|自動的に[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
-|*hIcon*|フレーム ウィンドウ、アイコンは、以下を参照してください。|
-|*hCursor*|下のウィンドウで、上にマウスがときにカーソルを参照してください。|
-|*hbrBackground*|背景色、以下をご覧ください。|
-|*lpszMenuName*|使用されません (NULL にする必要があります)|
-|*lpszClassName*|クラス名では、以下を参照してください。|
+|*lpfnWndProc*|ウィンドウプロシージャは、である必要があります。`AfxWndProc`|
+|*cbClsExtra*|使用されていません (ゼロにする必要があります)|
+|*cbWndExtra*|使用されていません (ゼロにする必要があります)|
+|*hInstance*|[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)で自動的に入力されます|
+|*hIcon*|フレームウィンドウのアイコン、以下を参照|
+|*hCursor*|マウスがウィンドウ上にあるときのカーソル。以下を参照|
+|*hbrBackground*|背景色、以下を参照|
+|*lpszMenuName*|使用されていません (NULL にする必要があります)|
+|*lpszClassName*|クラス名、以下を参照|
 
-## <a name="provided-wndclasses"></a>WNDCLASSes の提供
+## <a name="provided-wndclasses"></a>指定された WNDCLASSes
 
-以前のバージョンの MFC (MFC 4.0 の場合) の前に、いくつかの定義済みウィンドウ クラスが用意されています。 これらのウィンドウ クラスは既定で備わっていません。 アプリケーションを使用する必要があります`AfxRegisterWndClass`適切なパラメーターを使用します。
+以前のバージョンの MFC (MFC 4.0 より前) では、いくつかの定義済みのウィンドウクラスが用意されています。 これらのウィンドウクラスは、既定では提供されなくなりました。 アプリケーションでは`AfxRegisterWndClass` 、適切なパラメーターを指定してを使用する必要があります。
 
-アプリケーションでは、指定されたリソース ID (たとえば、AFX_IDI_STD_FRAME) を持つリソースを提供する場合、MFC はそのリソースを使用します。 それ以外の場合、既定のリソースが使用されます。 アイコンに、標準的なアプリケーションのアイコンを使用すると、カーソルでは、標準の矢印カーソルを使用します。
+アプリケーションが、指定されたリソース ID (たとえば、AFX_IDI_STD_FRAME) を持つリソースを提供する場合、MFC はそのリソースを使用します。 それ以外の場合は、既定のリソースが使用されます。 アイコンの場合は標準のアプリケーションアイコンが使用され、カーソルの場合は標準の矢印カーソルが使用されます。
 
-2 つのアイコンは、1 つのドキュメント型を持つ MDI アプリケーションをサポートします。 メイン アプリケーションの 1 つのアイコン、あります windows のその他のアイコン。 アイコンが異なる複数のドキュメントの種類を追加する必要があります登録`WNDCLASS`es または使用して、 [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)関数。
+2つのアイコンは、1つのドキュメントの種類を持つ MDI アプリケーションをサポートします。メインアプリケーション用の1つのアイコンです。ドキュメント/MDIChild ウィンドウをアイコン化するためのアイコンです。 アイコンが異なる複数のドキュメントの種類については`WNDCLASS`、追加の es を登録するか、 [CFrameWnd:: LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)関数を使用する必要があります。
 
-`CFrameWnd::LoadFrame` 登録は、`WNDCLASS`最初のパラメーターと、次の標準属性として指定したアイコン ID を使用します。
+`CFrameWnd::LoadFrame`は、最初`WNDCLASS`のパラメーターとして指定したアイコン ID と、次の標準属性を使用してを登録します。
 
-- クラス スタイル:CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
+- クラススタイル:CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- AFX_IDI_STD_FRAME アイコン
+- アイコン AFX_IDI_STD_FRAME
 
 - 矢印カーソル
 
-- COLOR_WINDOW 背景色
+- COLOR_WINDOW の背景色
 
-背景色とのカーソルの値は、 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)以降のクライアント領域は使用されません、`CMDIFrameWnd`に完全に覆わ、 **MDICLIENT**ウィンドウ。 Microsoft がサブクラス化が促進されません、 **MDICLIENT**ウィンドウは、そのため、標準の色と可能な場合、カーソルの種類に使用します。
+の`CMDIFrameWnd`クライアント領域は**MDICLIENT**ウィンドウで完全にカバーされているため、[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) の背景色とカーソルの値は使用されません。 Microsoft では、可能な限り標準の色とカーソルの種類を使用するように、 **MDICLIENT**ウィンドウのサブクラス化を推奨していません。
 
-## <a name="subclassing-and-superclassing-controls"></a>サブクラスとスーパークラス化コントロール
+## <a name="subclassing-and-superclassing-controls"></a>サブクラス化と Superclassing コントロール
 
-サブクラスまたは、Windows のスーパークラスで制御できる場合 (たとえば、 [CButton](../mfc/reference/cbutton-class.md)) クラスが自動的に取得し、`WNDCLASS`そのコントロールの Windows 実装で指定された属性。
+Windows コントロール (たとえば、 [CButton](../mfc/reference/cbutton-class.md)) をサブクラス化またはスーパークラス化すると、その`WNDCLASS`コントロールの windows 実装で提供されている属性がクラスによって自動的に取得されます。
 
 ## <a name="the-afxregisterwndclass-function"></a>AfxRegisterWndClass 関数
 
-MFC には、ウィンドウ クラスを登録するためのヘルパー関数が用意されています。 一連の属性 (ウィンドウ クラス スタイル、カーソル、背景のブラシ、およびアイコン) を指定するには、合成名が生成され、結果のウィンドウ クラスが登録されています。 例えば以下のようにします。
+MFC には、ウィンドウクラスを登録するためのヘルパー関数が用意されています。 一連の属性 (ウィンドウクラスのスタイル、カーソル、背景ブラシ、アイコン) を指定すると、合成名が生成され、結果のウィンドウクラスが登録されます。 例えば以下のようにします。
 
 ```
 const char* AfxRegisterWndClass(UINT nClassStyle,
@@ -84,9 +84,9 @@ const char* AfxRegisterWndClass(UINT nClassStyle,
     HICON hIcon);
 ```
 
-この関数は、生成された登録済みのウィンドウ クラス名の一時的な文字列を返します。 この関数の詳細については、次を参照してください。 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)します。
+この関数は、生成された登録済みウィンドウクラス名の一時文字列を返します。 この関数の詳細については、「 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)」を参照してください。
 
-返される文字列は、静的な文字列バッファーへの一時的なポインターです。 次の呼び出しまで有効です`AfxRegisterWndClass`します。 周りには、この文字列を保持する場合は、保存、 [CString](../atl-mfc-shared/using-cstring.md)この例のように、変数。
+返される文字列は、静的な文字列バッファーへの一時ポインターです。 これは、次に`AfxRegisterWndClass`が呼び出されるまで有効です。 この文字列をそのままにしたい場合は、次の例のように、 [CString](../atl-mfc-shared/using-cstring.md)変数に格納します。
 
 ```
 CString strWndClass = AfxRegisterWndClass(CS_DBLCLK, ...);
@@ -98,16 +98,15 @@ pWnd->Create(strWndClass, ...);
 ...
 ```
 
-`AfxRegisterWndClass` スローされます、 [CResourceException](../mfc/reference/cresourceexception-class.md)ウィンドウ クラスが (ため不適切なパラメーター、または Windows のメモリ不足) の登録に失敗したかどうか。
+`AfxRegisterWndClass`ウィンドウクラスの登録に失敗した場合 (パラメーターが正しくないか、Windows のメモリが不足しているため)、は[Cresourceexception](../mfc/reference/cresourceexception-class.md)をスローします。
 
-## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass と AfxRegisterClass 関数
+## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass 関数と AfxRegisterClass 関数
 
-実行する場合は、何もより高度なよりも`AfxRegisterWndClass`を提供する Windows API を呼び出すことができます`RegisterClass`または MFC 関数`AfxRegisterClass`します。 `CWnd`、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`関数、 *lpszClassName*最初のパラメーターとして、ウィンドウ クラスの文字列名。 登録時に使用する方法に関係なく、すべての登録済みのウィンドウ クラス名を使用することができます。
+より高度な`AfxRegisterWndClass`操作を行う場合は、Windows API `RegisterClass`または MFC 関数`AfxRegisterClass`を呼び出すことができます。 、 `CWnd` [CFrameWnd](../mfc/reference/cframewnd-class.md) 、および[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`関数は、最初のパラメーターとして window クラスの*lpszclassname*文字列名を受け取ります。 登録時に使用したメソッドに関係なく、任意の登録済みウィンドウクラス名を使用できます。
 
-使用することが重要`AfxRegisterClass`(または`AfxRegisterWndClass`) Win32 の DLL にします。 Win32 は自動的に登録解除されないため、DLL が終了したときを明示的に登録を解除する必要があります、DLL が登録されているクラス。 使用して`AfxRegisterClass`の代わりに`RegisterClass`を自動的にこの処理されます。 `AfxRegisterClass` 一意のクラスの一覧は、DLL に登録されているし、は自動的に登録を解除して、DLL の終了時に維持します。 使用すると`RegisterClass`DLL で DLL が終了したときにすべてのクラスが登録されているいないを確認する必要があります (で、 [DllMain](/windows/desktop/Dlls/dllmain)関数)。 そのために問題が発生する可能性があります`RegisterClass`別のクライアント アプリケーションが DLL を使用しようとしたときに予期せず失敗します。
+Win32 の DLL で ( `AfxRegisterClass`または`AfxRegisterWndClass`) を使用することが重要です。 Win32 では、DLL によって登録されたクラスの登録が自動的に解除されないため、DLL を終了するときに明示的にクラスの登録を解除する必要があります。 では`AfxRegisterClass` `RegisterClass`なくを使用すると、自動的に処理されます。 `AfxRegisterClass`は、DLL によって登録された一意のクラスのリストを保持し、DLL が終了したときに自動的に登録を解除します。 Dll でを`RegisterClass`使用する場合は、( [DllMain](/windows/win32/Dlls/dllmain)関数で) dll が終了したときに、すべてのクラスが登録解除されるようにする必要があります。 そうしないと、別`RegisterClass`のクライアントアプリケーションが DLL を使用しようとしたときに、が予期せず失敗する可能性があります。
 
 ## <a name="see-also"></a>関連項目
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

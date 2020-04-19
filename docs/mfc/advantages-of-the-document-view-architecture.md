@@ -5,12 +5,12 @@ helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-ms.openlocfilehash: ccb2e786eb2397efd2d8b34e118f0935fdb05283
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e250630bf3c9714fc01ff66b66fba3ac0d5b1cc1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394729"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの利点
 
@@ -39,4 +39,3 @@ Mfc では、スプレッドシートのビューとグラフ ビューが基に
 ## <a name="see-also"></a>関連項目
 
 [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
-

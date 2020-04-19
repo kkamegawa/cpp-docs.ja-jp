@@ -5,12 +5,12 @@ helpviewer_keywords:
 - storage [C++], addresses
 - addresses [C++], storage of
 ms.assetid: 423b2402-b847-4788-ad70-943b7c9c5c8b
-ms.openlocfilehash: 2a0e218d4d34fa1482986ecccd7da8adba38086b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47b09ab6cd0b2045206daaee4badad32858ff934
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539374"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148739"
 ---
 # <a name="storage-of-addresses"></a>アドレスの格納
 
@@ -22,6 +22,6 @@ Microsoft C コンパイラでは、**sizeof(char \*)** は **sizeof(int \*)** �
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ポインター宣言](../c-language/pointer-declarations.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-ms.openlocfilehash: d050a127fe3e62bf8f4eb4ce56fe25e33f88c041
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ee506838ea723b82f04bba301c19c0149d986bf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535880"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451009"
 ---
 # <a name="allocatorfixedsize-class"></a>allocator_fixed_size クラス
 
-記憶域の割り当てと型のオブジェクトの解放を管理するオブジェクトを表します*型*型のキャッシュを使用して[cache_freelist](../standard-library/cache-freelist-class.md)によって管理されている長さを[max_fixed_size](../standard-library/max-fixed-size-class.md).
+[Max_fixed_size](../standard-library/max-fixed-size-class.md)によって管理される長さを持つ[cache_freelist](../standard-library/cache-freelist-class.md)型のキャッシュ*を使用し*て、型型のオブジェクトのストレージ割り当てと解放を管理するオブジェクトを記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ class allocator_fixed_size;
 
 ## <a name="remarks"></a>Remarks
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)マクロとしてこのクラスを渡す、*名前*次のステートメントのパラメーター。 `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)マクロは、このクラスを次のステートメントの*name*パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
 ## <a name="requirements"></a>必要条件
 
@@ -45,4 +45,4 @@ class allocator_fixed_size;
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

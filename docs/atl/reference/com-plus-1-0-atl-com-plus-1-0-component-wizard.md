@@ -1,58 +1,67 @@
 ---
 title: COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83b7beafe537f6b271b254d16505b515a41acf27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562059"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496692"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 
-ATL COM + 1.0 コンポーネント ウィザードのこのページを使用すると、サポートするのにには、インターフェイスの種類と追加のインターフェイスを指定できます。
+::: moniker range="vs-2019"
 
-ATL プロジェクトや ATL COM クラスの詳細については、次を参照してください。 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)します。
+このウィザードは Visual Studio 2019 以降で使用できません。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+ATL COM+ 1.0 コンポーネント ウィザードのこのページを使用して、サポートするインターフェイスの種類と追加のインターフェイスを指定します。
+
+ATL プロジェクトや ATL COM クラスの詳細については、「[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)」を参照してください。
 
 - **Interface**
 
-   オブジェクトがサポートするインターフェイスの種類を示します。 既定では、オブジェクトは、デュアル インターフェイスをサポートします。
+   オブジェクトでサポートされるインターフェイスの種類を示します。 既定で、オブジェクトではデュアル インターフェイスがサポートされます。
 
    |オプション|説明|
    |------------|-----------------|
-   |**デュアル**|オブジェクトがデュアル インターフェイスをサポートしていることを指定します (その vtable がカスタム インターフェイス関数と遅延バインディング`IDispatch`メソッド)。 COM クライアントおよびオートメーション コント ローラーがオブジェクトへのアクセスを許可します。|
-   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスをオートメーションのサポートを追加します。 属性付きプロジェクトは、設定、 **oleautomation**コクラスの属性。|
+   |**デュアル**|オブジェクトでデュアル インターフェイス (その vtable にカスタム インターフェイス関数と遅延バインディング `IDispatch` メソッドがある) をサポートするように指定します。 COM クライアントとオートメーション コントローラーの両方に、オブジェクトへのアクセスを許可します。|
+   |**Custom**|オブジェクトでカスタム インターフェイス (その vtable にカスタム インターフェイス関数がある) をサポートするように指定します。 カスタム インターフェイスは、特にプロセスの境界間で、デュアル インターフェイスよりも速い可能性があります。<br /><br /> - **オートメーション互換** カスタム インターフェイスにオートメーションのサポートを追加します。 属性付きプロジェクトの場合は、コクラスに **oleautomation** 属性を設定します。|
 
 - **Queueable**
 
-   クライアントが非同期的にメッセージ キューを使用して、このコンポーネントを呼び出すことを示します。 .H ファイル (属性付きプロジェクト) または .idl ファイル (プロジェクト属性なし) には、コンポーネントの属性マクロ カスタム (TLBATTR_QUEUEABLE 0) を追加します。
+   クライアントがメッセージ キューを使用して、非同期的にこのコンポーネントを呼び出すことができることを示します。 .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に、コンポーネント属性付きマクロ custom(TLBATTR_QUEUEABLE, 0) を追加します。
 
 - **サポート**
 
-   エラー処理とオブジェクトのコントロールの追加サポートを示します。
+   エラー処理とオブジェクト コントロールの追加サポートを示します。
 
    |オプション|説明|
    |------------|-----------------|
-   |**ISupportErrorInfo**|作成のサポート、 [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)インターフェイスのため、オブジェクトは、クライアントにエラー情報を返すことができます。|
-   |**IObjectControl**|3 つに、オブジェクトへのアクセスを提供します。 [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)メソッド:[アクティブ化](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、 [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)、および[非アクティブ化](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)します。|
-   |**IObjectConstruct**|作成のサポート、 [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)他のメソッドやオブジェクトからパラメーターの受け渡しを管理するインターフェイス。|
+   |**ISupportErrorInfo**|オブジェクトがクライアントにエラー情報を返すことができるように、[ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) インターフェイスのサポートを作成します。|
+   |**IObjectControl**|オブジェクトで次の 3 つの [IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol) メソッドにアクセスできるようにします。[Activate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、[CanBePooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)、[Deactivate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
+   |**IObjectConstruct**|他のメソッドやオブジェクトからのパラメーターの受け渡しを管理するための [IObjectConstruct](/windows/win32/api/comsvcs/nn-comsvcs-iobjectconstruct) インターフェイスのサポートを作成します。|
 
 - **トランザクション**
 
-   オブジェクトがトランザクションをサポートすることを示します。 .Idl ファイル (プロジェクト属性なし) では、ファイル mtxattr.h が含まれています。
+   オブジェクトがトランザクションをサポートすることを示します。 .idl ファイル (属性なしプロジェクト) に mtxattr.h ファイルを含めます。
 
    |オプション|説明|
    |------------|-----------------|
-   |**サポート状況**|オブジェクトではないことをトランザクション ストリームのルート コンポーネントの属性マクロ custom(TLBATTR_TRANS_SUPPORTED,0) .h ファイル (属性付きプロジェクト) または .idl ファイル (プロジェクト属性なし) を追加することでを指定します。|
-   |**必須**|オブジェクトは可能性がありますか、コンポーネントの属性マクロ custom(TLBATTR_TRANS_REQUIRED,0) .h ファイル (属性付きプロジェクト) または .idl ファイル (プロジェクト属性なし) を追加することによってトランザクション ストリームのルートができない可能性がありますを指定します。|
-   |**サポートされていません**|オブジェクトがトランザクションを除外することを指定します。 .H ファイル (属性付きプロジェクト) または .idl ファイル (プロジェクト属性なし) には、コンポーネントの属性マクロ custom(TLBATTR_TRANS_NOTSUPP,0) を追加します。|
-   |**新しいが必要です。**|オブジェクトが常にトランザクション ストリームのルート コンポーネントの属性マクロ custom(TLBATTR_TRANS_REQNEW,0) .h ファイル (属性付きプロジェクト) または .idl ファイル (プロジェクト属性なし) を追加することでを指定します。|
+   |**サポート状況**|コンポーネント属性マクロ custom(TLBATTR_TRANS_SUPPORTED,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトがトランザクション ストリームのルートにならないことを指定します。|
+   |**必須**|コンポーネント属性マクロ custom(TLBATTR_TRANS_REQUIRED,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトがトランザクション ストリームのルートになる場合もならない場合もあることを指定します。|
+   |**サポートされていません**|オブジェクトでトランザクションを除外することを指定します。 コンポーネント属性マクロ custom(TLBATTR_TRANS_NOTSUPP,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加します。|
+   |**新しく必要**|コンポーネント属性マクロ custom(TLBATTR_TRANS_REQNEW,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトが常にトランザクション ストリームのルートになることを指定します。|
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 
 [ATL COM+ 1.0 コンポーネント ウィザード](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
-[ATL COM + 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-
+[ATL COM+ 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

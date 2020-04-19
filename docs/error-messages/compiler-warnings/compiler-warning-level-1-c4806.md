@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4806
 ms.assetid: 79eb74cd-b925-4b5b-84e1-8ae6f33e38b3
-ms.openlocfilehash: b6fc5708d4e2f9982ceaab57260f13e134e4d247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae6ed7d7a38daf0ce525ae62409823212db711b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578260"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052363"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>コンパイラの警告 (レベル 1) C4806
 
@@ -19,7 +19,7 @@ ms.locfileid: "50578260"
 
 このメッセージは、 `b == 3`に `b` 型がある `bool`などのコードに対して警告を行います。 上位変換の規則に従って、 `bool` が `int`に上位変換されます。 これは有効ですが、 **true**にすることはできません。 次の例では C4806 が生成されます。
 
-```
+```cpp
 // C4806.cpp
 // compile with: /W1
 int main()

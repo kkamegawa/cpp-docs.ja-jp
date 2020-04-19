@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_si64x
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: 11b289deeb2fd4aadf9b5d500a3379d8af26fbb9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330438"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221749"
 ---
-# <a name="mmstreamsi64x"></a>_mm_stream_si64x
+# <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Microsoft 固有の仕様**
 
-MOVNTI 命令を生成します。 において、データを書き込む`Source`で指定されたメモリ位置へ`Dest`キャッシュの汚染なし。
+MOVNTI 命令を生成します。 キャッシュを汚染せずに、転送*元*のデータを*変換先*によって指定されたメモリ位置に書き込みます。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void _mm_stream_si64x(
-   __int64 * Dest,
+   __int64 * Destination,
    __int64 Source
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]ソース データを書き込む場所へのポインター。
+*インストール*\
+入出力ソースデータの書き込み先の場所を指すポインター。
 
-*ソース*<br/>
-[in]書き込むデータ。
+*Source*\
+から書き込むデータ。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,7 +43,7 @@ void _mm_stream_si64x(
 |---------------|------------------|
 |`_mm_stream_si64x`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

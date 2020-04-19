@@ -1,33 +1,33 @@
 ---
-title: コンパイラ エラー C2743
+title: コンパイラエラー C2743
 ms.date: 11/04/2016
 f1_keywords:
 - C2743
 helpviewer_keywords:
 - C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
-ms.openlocfilehash: 03cd7c13e093be5073b3df7e7cf29dda870bc47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d679ce0df0d43772a6c32aa8e00869ac1a4a082b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759647"
 ---
-# <a name="compiler-error-c2743"></a>コンパイラ エラー C2743
+# <a name="compiler-error-c2743"></a>コンパイラエラー C2743
 
-'type': _ _clrcall デストラクターまたはコピー コンス トラクターでネイティブをキャッチすることはできません
+' type ': __clrcall デストラクターまたはコピーコンストラクターでネイティブ型をキャッチすることはできません
 
-コンパイルされたモジュール **/clr**ネイティブ型と型のデストラクターまたはコピー コンス トラクターの使用の例外をキャッチしようとしています。`__clrcall`呼び出し規約。
+**/Clr**でコンパイルされたモジュールがネイティブ型の例外をキャッチしようとしましたが、型のデストラクターまたはコピーコンストラクターが `__clrcall` 呼び出し規約を使用しています。
 
-コンパイルされたときに **/clr**、例外処理をネイティブ型でメンバー関数を想定[_ _cdecl](../../cpp/cdecl.md)および not [_ _clrcall](../../cpp/clrcall.md)します。 ネイティブ型を使用してメンバー関数で`__clrcall`でコンパイルされたモジュールの呼び出し規約をキャッチできない **/clr**します。
+**/Clr**を指定してコンパイルする場合、例外処理では、ネイティブ型のメンバー関数が[__clrcall](../../cpp/clrcall.md)ではなく[__cdecl](../../cpp/cdecl.md)されることを想定しています。 `__clrcall` 呼び出し規約を使用するメンバー関数を持つネイティブ型は、 **/clr**でコンパイルされたモジュールでキャッチできません。
 
 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2743 が生成されます。
 
-```
+```cpp
 // C2743.cpp
 // compile with: /clr
 public struct S {

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-ms.openlocfilehash: a319dc0612f68c4d513b7d5ab36ecf67a854bda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cbf1137a15a9f86a6377980526e6d188f4d0a69
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433645"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504778"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog クラス
 
@@ -45,23 +45,23 @@ class COleChangeIconDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|ダイアログ ボックスで指定した変更を実行します。|
-|[COleChangeIconDialog::DoModal](#domodal)|OLE 2 アイコンの変更 ダイアログ ボックスが表示されます。|
-|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|この項目の象徴的な形式に関連付けられているメタファイルを識別するハンドルを取得します。|
+|[COleChangeIconDialog::D oChangeIcon](#dochangeicon)|ダイアログボックスで指定された変更を実行します。|
+|[COleChangeIconDialog::D oModal](#domodal)|OLE 2 の [アイコンの変更] ダイアログボックスを表示します。|
+|[COleChangeIconDialog:: Geが Onicmetafile](#geticonicmetafile)|この項目のアイコン化形式に関連付けられているメタファイルへのハンドルを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleChangeIconDialog::m_ci](#m_ci)|ダイアログ ボックスの動作を制御する構造体。|
+|[COleChangeIconDialog::m_ci](#m_ci)|ダイアログボックスの動作を制御する構造体。|
 
 ## <a name="remarks"></a>Remarks
 
-クラスのオブジェクトを作成`COleChangeIconDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COleChangeIconDialog`オブジェクトが構築された、使用することができます、[各](#m_ci)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ci`型 OLEUICHANGEICON 構造です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。
+このダイアログボックスを呼び`COleChangeIconDialog`出す必要がある場合は、クラスのオブジェクトを作成します。 オブジェクトが構築されたら、[m_ci](#m_ci) 構造体を使用して、ダイアログボックス内のコントロールの値または状態を初期化できます。`COleChangeIconDialog` `m_ci`構造体の型は OLEUICHANGEICON です。 このダイアログクラスの使用方法の詳細については、「 [DoModal](#domodal)メンバー関数」を参照してください。
 
-詳細については、次を参照してください。、 [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK の構造体。
+詳細については、Windows SDK の[OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw)構造体を参照してください。
 
-OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。
+OLE 固有のダイアログボックスの詳細については、 [ole の記事のダイアログボックス](../../mfc/dialog-boxes-in-ole.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -81,11 +81,11 @@ OLE に固有のダイアログ ボックスの詳細については、記事を
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxodlgs.h
+**ヘッダー:** afxodlgs
 
-##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog
 
-この関数の作成のみを`COleChangeIconDialog`オブジェクト。
+この関数は、オブジェクト`COleChangeIconDialog`のみを構築します。
 
 ```
 explicit COleChangeIconDialog(
@@ -97,33 +97,33 @@ explicit COleChangeIconDialog(
 ### <a name="parameters"></a>パラメーター
 
 *pItem*<br/>
-変換する項目へのポインター。
+変換する項目をポイントします。
 
 *dwFlags*<br/>
-作成フラグは、次の値の任意の数が含まれていますが、ビットごとの使用を組み合わせるの or 演算子。
+作成フラグ。ビットごとの or 演算子を使用して、次の値を組み合わせて指定します。
 
-- CIF_SELECTCURRENT 指定、現在のラジオ ボタンとなる最初に選択 ダイアログ ボックスが呼び出された場合。 既定値です。
+- CIF_SELECTCURRENT ダイアログボックスが呼び出されたときに、現在のオプションボタンが最初に選択されることを指定します。 既定値です。
 
-- CIF_SELECTDEFAULT 指定既定のオプション ボタンとなる最初に選択 ダイアログ ボックスが呼び出された場合。
+- CIF_SELECTDEFAULT ダイアログボックスが呼び出されたときに、既定のオプションボタンが最初に選択されることを指定します。
 
-- CIF_SELECTFROMFILE 指定からファイルのオプション ボタンとなる最初に選択 ダイアログ ボックスが呼び出された場合。
+- CIF_SELECTFROMFILE ダイアログボックスが呼び出されたときに、最初に [ファイルから] オプションボタンが選択されることを指定します。
 
-- CIF_SHOWHELP では、ダイアログ ボックスが呼び出されたときに、[ヘルプ] ボタンが表示されることを指定します。
+- CIF_SHOWHELP を指定すると、ダイアログボックスが呼び出されたときに [ヘルプ] ボタンが表示されます。
 
-- CIF_USEICONEXE のアイコンがで指定された実行可能ファイルから抽出することを指定します、`szIconExe`フィールド[各](#m_ci)の代わりに、型から取得します。 これは、埋め込みまたは非 OLE ファイルへのリンクに便利です。
+- CIF_USEICONEXE は、型から取得するのではなく、 [m_ci](#m_ci)の`szIconExe`フィールドで指定された実行可能ファイルからアイコンを抽出するように指定します。 これは、OLE 以外のファイルの埋め込みまたはリンクに役立ちます。
 
 *pParentWnd*<br/>
-親またはオーナー ウィンドウのオブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ ボックスの親ウィンドウは、メイン アプリケーション ウィンドウに設定されます。
+ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト ( `CWnd`型) を指します。 NULL の場合は、ダイアログボックスの親ウィンドウがメインアプリケーションウィンドウに設定されます。
 
 ### <a name="remarks"></a>Remarks
 
-ダイアログ ボックスを表示するには[DoModal](#domodal)関数。
+ダイアログボックスを表示するには、 [DoModal](#domodal)関数を呼び出します。
 
-詳細については、次を参照してください。、 [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK の構造体。
+詳細については、Windows SDK の[OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw)構造体を参照してください。
 
-##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon
+##  <a name="dochangeicon"></a>COleChangeIconDialog::D oChangeIcon
 
-後のダイアログ ボックスで選択されている 1 つに項目を表すアイコンに変更するには、この関数を呼び出す[DoModal](#domodal) IDOK を返します。
+この関数を呼び出して、 [DoModal](#domodal)から IDOK が返された後に、項目を表すアイコンをダイアログボックスで選択したアイコンに変更します。
 
 ```
 BOOL DoChangeIcon(COleClientItem* pItem);
@@ -132,15 +132,15 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="parameters"></a>パラメーター
 
 *pItem*<br/>
-そのアイコンを変更する項目へのポインター。
+アイコンが変更されている項目を指します。
 
 ### <a name="return-value"></a>戻り値
 
-変更に成功した場合は 0 以外それ以外の場合 0 を返します。
+変更が成功した場合は0以外の。それ以外の場合は0です。
 
-##  <a name="domodal"></a>  COleChangeIconDialog::DoModal
+##  <a name="domodal"></a>COleChangeIconDialog::D oModal
 
-OLE の [アイコンの変更] ダイアログ ボックスを表示するには、この関数を呼び出します。
+OLE の [アイコンの変更] ダイアログボックスを表示するには、この関数を呼び出します。
 
 ```
 virtual INT_PTR DoModal();
@@ -148,23 +148,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスの完了ステータス。 次のいずれかの値です。
+ダイアログボックスの完了ステータス。 次のいずれかの値です。
 
-- IDOK ダイアログ ボックスが正常に表示されている場合。
+- IDOK ダイアログボックスが正常に表示された場合は。
 
-- ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。
+- ユーザーがダイアログボックスをキャンセルした場合は IDCANCEL。
 
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) Windows SDK 内の関数。
+- エラーが発生した場合は IDABORT。 Idabort が返された場合は`COleDialog::GetLastError` 、メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の「 [OleUIChangeIcon](/windows/win32/api/oledlg/nf-oledlg-oleuichangeiconw)関数」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[各](#m_ci)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。
+[M_ci](#m_ci)構造体のメンバーを設定してさまざまなダイアログボックスコントロールを初期化する場合は、を呼び出す`DoModal`前に、ダイアログオブジェクトが構築された後に、この操作を行う必要があります。
 
-場合`DoModal`返します IDOK、他のメンバーの設定や、ダイアログ ボックスに、ユーザーが入力した情報を取得する関数を呼び出すことができます。
+が`DoModal` IDOK を返す場合は、他のメンバー関数を呼び出して、ダイアログボックスにユーザーが入力した設定または情報を取得できます。
 
-##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog:: Geが Onicmetafile
 
-選択した項目のアイコンの外観を含むメタファイルを識別するハンドルを取得するには、この関数を呼び出します。
+選択した項目のアイコンの側面を含むメタファイルへのハンドルを取得するには、この関数を呼び出します。
 
 ```
 HGLOBAL GetIconicMetafile() const;
@@ -172,11 +172,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>戻り値
 
-選択して、ダイアログ ボックスを閉じた場合、新しいアイコンのアイコンの外観を持つメタファイルを識別するハンドル**OK**。 それ以外とアイコンが、ダイアログ ボックスが表示される前にします。
+**[OK**] をクリックしてダイアログボックスを閉じた場合の、新しいアイコンのアイコン化された側面を含むメタファイルへのハンドル。それ以外の場合は、ダイアログが表示される前のアイコンです。
 
-##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci
+##  <a name="m_ci"></a>COleChangeIconDialog::m_ci
 
-OLEUICHANGEICON 型の構造体、アイコンの変更 ダイアログ ボックスの動作を制御するために使用します。
+[アイコンの変更] ダイアログボックスの動作を制御するために使用される OLEUICHANGEICON 型の構造。
 
 ```
 OLEUICHANGEICON m_ci;
@@ -184,9 +184,9 @@ OLEUICHANGEICON m_ci;
 
 ### <a name="remarks"></a>Remarks
 
-この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。
+この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。
 
-詳細については、次を参照してください。、 [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK の構造体。
+詳細については、Windows SDK の[OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw)構造体を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

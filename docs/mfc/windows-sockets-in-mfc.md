@@ -10,41 +10,41 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-ms.openlocfilehash: 0c4f83ccd9bf431f7eb910f77409199da2b1325f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44a4838a1cd863bd484701966a156be9f61f8988
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476103"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510617"
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC における Windows ソケット
 
 > [!NOTE]
->  MFC は Windows Sockets 1 をサポートしていますが、サポートしていません[Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2)します。 まず、Windows Sockets 2 は、Windows 98 に付属し、Windows 2000 に付属するバージョンは、します。
+>  MFC は Windows Sockets 1 をサポートしますが、 [Windows sockets 2](/windows/win32/WinSock/windows-sockets-start-page-2)はサポートしていません。 Windows Sockets 2 は windows 98 に付属しており、windows 2000 に含まれるバージョンです。
 
-MFC では、Windows ソケット、2 つの MFC クラスに組み込まれていると、ネットワーク通信を行うプログラムを記述するための 2 つのモデルを提供します。 この記事では、これらのモデルをについて説明し、さらに詳細 MFC ソケットのサポート。 「ソケット」は、通信のエンドポイント: アプリケーション通信に使用する他の Windows ソケット アプリケーションをネットワーク経由でのオブジェクト。
+MFC には、Windows ソケットを使用したネットワーク通信プログラムを作成するための2つのモデルが用意されています この記事では、これらのモデルについて説明し、MFC ソケットのサポートについて詳しく説明します。 "Socket" は通信のエンドポイントであり、アプリケーションがネットワーク経由で他の Windows Sockets アプリケーションと通信するために使用されるオブジェクトです。
 
-Windows ソケット、ソケットの概念の説明などを含むに関する情報を参照してください。 [Windows ソケット: バック グラウンド](../mfc/windows-sockets-background.md)します。
+ソケットの概念の説明など、windows ソケットの詳細については[、「windows sockets:バックグラウンド](../mfc/windows-sockets-background.md)。
 
-##  <a name="_core_sockets_programming_models"></a> ソケット プログラミング モデル
+##  <a name="_core_sockets_programming_models"></a>ソケットプログラミングモデル
 
-次のクラスでは、2 つの MFC Windows ソケット プログラミング モデルがサポートされています。
+2つの MFC Windows Sockets プログラミングモデルは、次のクラスによってサポートされています。
 
 - `CAsyncSocket`
 
-   このクラスは、Windows ソケット API をカプセル化します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)ネットワーク プログラミングを理解し、ソケット API に対して直接プログラミングの柔軟性もネットワーク イベントの通知のコールバック関数の利便性を必要するプログラマにとっては。 C++ で使用するためのフォームのオブジェクト指向のソケットをパッケージ化、以外、のみ追加の抽象化がこのクラスは提供はコールバックに特定のソケットに関連する Windows メッセージを変換します。 詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../mfc/windows-sockets-socket-notifications.md)します。
+   このクラスは、Windows Sockets API をカプセル化します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)は、ネットワークプログラミングについて理解していて、ソケット API に直接プログラミングする柔軟性を必要としているが、ネットワークイベントの通知にコールバック関数の利便性を必要としているプログラマを対象としています。 で使用するためにオブジェクト指向の形式でソケットをC++パッケージ化する以外に、このクラスで提供される唯一の抽象化は、特定のソケット関連の Windows メッセージをコールバックに変換することです。 詳細については[、「Windows Sockets:ソケット通知](../mfc/windows-sockets-socket-notifications.md)。
 
 - `CSocket`
 
-   このクラスから派生した`CAsyncSocket`、MFC からソケットを操作するためより高いレベルの抽象化を提供[CArchive](../mfc/reference/carchive-class.md)オブジェクト。 アーカイブを使用して、ソケットを使用すると、大幅にするには、MFC のファイルのシリアル化プロトコルを使用してに似ています。 これによりより使いやすく、`CAsyncSocket`モデル。 [CSocket](../mfc/reference/csocket-class.md)から多くのメンバー関数を継承`CAsyncSocket`Windows Sockets Api をカプセル化する。 これらの関数を使用して、ソケットの通常のプログラミングを理解する必要があります。 `CSocket`生 API またはクラスのいずれかを使用して自分で行う必要がありますの通信の多くの側面を管理`CAsyncSocket`します。 最も重要なは、 `CSocket` (バック グラウンド処理の Windows メッセージ) を使用してブロックを提供するための同期操作に不可欠である`CArchive`します。
+   から`CAsyncSocket`派生したこのクラスは、MFC の[CArchive](../mfc/reference/carchive-class.md)オブジェクトを介してソケットを操作するための、より高いレベルの抽象化を提供します。 アーカイブでソケットを使用することは、MFC のファイルシリアル化プロトコルを使用する場合とよく似ています。 これにより、 `CAsyncSocket`モデルよりも使いやすくなります。 [CSocket](../mfc/reference/csocket-class.md)は、Windows ソケット api `CAsyncSocket`をカプセル化するの多くのメンバー関数を継承します。これらの関数のいくつかを使用し、一般的にソケットプログラミングについて理解する必要があります。 では、未加工の API またはクラス`CAsyncSocket`を使用して自分で行う必要がある通信の多くの側面を管理します。`CSocket` 最も重要な`CSocket`のは、(Windows メッセージをバックグラウンドで処理する) ブロックを提供することです。 `CArchive`これは、の同期操作に不可欠です。
 
-作成と使用`CSocket`と`CAsyncSocket`オブジェクトについては、「 [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)と[Windows ソケット: を使用してクラス CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)します。
+オブジェクトとオブジェクト`CSocket`の`CAsyncSocket`作成と使用に[ついては、「Windows Sockets:アーカイブ](../mfc/windows-sockets-using-sockets-with-archives.md) と[Windows ソケットでのソケットの使用:クラス CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)を使用します。
 
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows Sockets Dll
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows ソケット Dll
 
-Microsoft Windows オペレーティング システムでは、Windows ソケットのダイナミック リンク ライブラリ (DLL) を指定します。 Visual C では、適切なヘッダー ファイルとライブラリ、および Windows Sockets の仕様を提供します。
+Microsoft Windows オペレーティングシステムには、Windows Sockets ダイナミックリンクライブラリ (DLL) が用意されています。 ビジュアルC++には、適切なヘッダーファイルとライブラリ、および Windows ソケット仕様が用意されています。
 
-Windows ソケットの詳細についてを参照してください。
+Windows ソケットの詳細については、次を参照してください。
 
 - [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
@@ -75,4 +75,3 @@ Windows ソケットの詳細についてを参照してください。
 ## <a name="see-also"></a>関連項目
 
 [Windows ソケット](../mfc/windows-sockets.md)
-

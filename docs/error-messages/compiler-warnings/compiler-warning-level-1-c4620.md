@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4620
 ms.assetid: fed29934-b797-47e8-bbea-c7e5f8dd6e93
-ms.openlocfilehash: 8e2d11d63704c86c824fd80e1c8a933c10e062d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d03c7d845923b918fbb665933147d8ff97cda7ab
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532739"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051461"
 ---
 # <a name="compiler-warning-level-1-c4620"></a>コンパイラの警告 (レベル 1) C4620
 
@@ -21,7 +21,7 @@ ms.locfileid: "50532739"
 
 この警告は、後置 `++` 演算子を定義することで回避できます。 次に示すように、引数が 2 つのバージョンの `++` 演算子を作成します。
 
-```
+```cpp
 // C4620.cpp
 // compile with: /W1
 class A

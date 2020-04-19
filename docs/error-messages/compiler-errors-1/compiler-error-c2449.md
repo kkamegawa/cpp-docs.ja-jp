@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2449
 ms.assetid: 544bf0b6-daa0-40e8-9f21-8e583d472a2d
-ms.openlocfilehash: f674bbec7cee8c00792848ee7e51b1e46299dd58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fd62813fdf3b50c0e329fc423e100d55a36ae12
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655331"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299024"
 ---
 # <a name="compiler-error-c2449"></a>コンパイラ エラー C2449
 
-検出された '{0}' ファイルのスコープ (関数のヘッダーがありません)。
+ファイルスコープで ' {' が見つかりました (関数ヘッダーがありませんか?)
 
-かっこは、ファイル スコープで発生します。
+ファイルスコープで左中かっこが発生します。
 
-このエラーは、関数のヘッダーと、関数定義の中かっこの間のセミコロンで発生することができます。
+このエラーは、関数ヘッダーと関数定義の左中かっこの間にセミコロンがあると発生することがあります。
 
 次の例では、C2499 が生成されます。
 
-```
+```c
 // C2449.c
 // compile with: /c
 void __stdcall func(void) {}   // OK

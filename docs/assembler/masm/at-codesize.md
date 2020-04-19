@@ -1,26 +1,27 @@
 ---
 title: '@CodeSize'
-ms.date: 08/30/2018
+ms.date: 11/21/2019
 f1_keywords:
 - '@CodeSize'
 helpviewer_keywords:
 - '@CodeSize symbol'
 ms.assetid: 6e18d99f-9999-41fe-9330-b80de8f735d5
-ms.openlocfilehash: 36befca435c6aedcad442711caaa8a884cc52394
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae6b510add3c6e68a82f67f95a9b5a02b65cc32f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524940"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316422"
 ---
-# <a name="codesize"></a>@CodeSize
+# <a name="codesize"></a>\@の方法
 
-場合は 0**極小**、**小さな**、 **COMPACT**、および**フラット**モデル、および 1 **MEDIUM**、 **大規模な**、および**莫大**モデル (数値と同等)。
+**小さい、小さい**、**コンパクト**、および**フラット** **モデルの場合**は0、**中規模**、**大規模**、**および大規模な**モデルの場合は 1 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> @CodeSize
+> **\@の方法**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

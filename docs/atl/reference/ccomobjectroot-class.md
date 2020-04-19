@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
-ms.openlocfilehash: 4761aa9ae9c8ffacfb393311d7e058b1450b4628
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a9ffa1813fb15297d209894050b6bcce6802df2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259366"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot クラス
 

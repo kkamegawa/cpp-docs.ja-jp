@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : MFC 3.0 での変更点'
+title: 例外:バージョン 3.0 での例外処理マクロの変更
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173279"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外処理 : MFC 3.0 での変更点
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外:バージョン 3.0 での例外処理マクロの変更
 
 これは、高度なトピックです。
 
@@ -28,17 +28,17 @@ Mfc バージョン 3.0 以降では、例外処理マクロが C++ 例外を使
 
 ##  <a name="_core_exception_types_and_the_catch_macro"></a> 例外の種類と、CATCH マクロ
 
-MFC の以前のバージョンで、**キャッチ**マクロでは、MFC の実行時の型情報を使用例外の種類を確認するには例外の型が決定されます、つまり、キャッチ側でします。 C++ の例外を除き、ただし、例外の型は常にスロー サイトによって決まりますスローされる例外オブジェクトの型。 スローされたオブジェクトへのポインターの型がスローされたオブジェクトの種類を異なる場所まれなケースで互換性が失われます。
+MFC の以前のバージョンで、**CATCH**マクロでは、MFC の実行時の型情報を使用例外の種類を確認するには例外の型が決定されます、つまり、キャッチ側でします。 C++ の例外を除き、ただし、例外の型は常にスロー サイトによって決まりますスローされる例外オブジェクトの型。 スローされたオブジェクトへのポインターの型がスローされたオブジェクトの種類を異なる場所まれなケースで互換性が失われます。
 
 次の例は、MFC バージョン 3.0 と以前のバージョンの間には、この違いの結果を示しています。
 
 [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-このコードはバージョン 3.0 で異なる動作制御が常に最初に渡されるため、**キャッチ**と一致する例外-宣言ブロックします。 スロー式の結果
+このコードはバージョン 3.0 で異なる動作制御が常に最初に渡されるため、**catch**と一致する例外-宣言ブロックします。 スロー式の結果
 
 [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
-としてスローされる、`CException*`として構築した場合でも、`CCustomException`します。 **キャッチ**以前使用して MFC バージョン 2.5 マクロ`CObject::IsKindOf`実行時に、型をテストします。 式
+としてスローされる、`CException*`として構築した場合でも、`CCustomException`します。 **CATCH**以前使用して MFC バージョン 2.5 マクロ`CObject::IsKindOf`実行時に、型をテストします。 式
 
 [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
@@ -56,11 +56,10 @@ Catch ブロックでは、その例外はキャッチ例外ポインターと�
 
 [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
 
-使用して**スロー** catch ブロックが、ポインター`e`外側の catch のサイトは無効なポインターを受け取れるように、削除します。 使用**THROW_LAST**再スローする`e`します。
+使用して**THROW** catch ブロックが、ポインター`e`外側の catch のサイトは無効なポインターを受け取れるように、削除します。 使用**THROW_LAST**再スローする`e`します。
 
-詳細については、次を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、次を参照してください。[例外:キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

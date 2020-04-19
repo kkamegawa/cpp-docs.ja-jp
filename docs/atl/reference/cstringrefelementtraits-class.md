@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: 86b8db169cbb0f0f43ebf37a8ea9bf959ee0ee06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277410"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits クラス
 

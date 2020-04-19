@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2、_CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446775"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942220"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
 
 C ランタイム デバッグ レポート プロセスにフックして、クライアント定義レポート関数をインストールまたはアンインストールします (デバッグ バージョンのみ)。
 
@@ -54,22 +57,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>パラメーター
 
 *モード*<br/>
-実行するアクション: **_CRT_RPTHOOK_INSTALL**または **_CRT_RPTHOOK_REMOVE**します。
+実行するアクション: **_CRT_RPTHOOK_INSTALL**または **_CRT_RPTHOOK_REMOVE**。
 
-*pfnNewHook*<br/>
-この関数のナロー文字またはワイド文字バージョンでインストールまたは削除するレポート フック。
+*Pfn*<br/>
+この関数のナロー文字またはワイド文字バージョンでインストールまたは削除するレポートフック。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は-1 で**EINVAL**または**ENOMEM**設定は、それ以外の場合の参照カウントを返します*pfnNewHook*呼び出しの後にします。
+エラーが発生した場合は、 **EINVAL**または**ENOMEM** set で-1 を返します。それ以外の場合は、呼び出しの後に*Pfnneの*参照カウントを返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_CrtSetReportHook2**と **_CrtSetReportHookW2**一方を使用すると、フックまたはアンフック関数の場合、 [_CrtSetReportHook](crtsetreporthook.md)のみ関数をフックすることができます。
+**_CrtSetReportHook2**と **_CrtSetReportHookW2**を使用すると、関数のフックやアンフックを行うことができます。一方、 [_CrtSetReportHook](crtsetreporthook.md)では関数をフックできます。
 
-**_CrtSetReportHook2**または **_CrtSetReportHookW2**の代わりに使用する必要があります **_CrtSetReportHook** DLL でフックの呼び出しが行われる場合および複数の Dll が読み込まれることがときに、独自に設定関数をフックします。 そのような状況では、DLL はロードされたときとは異なる順序でアンロードできます。フック関数はアンロードされた DLL をポイントしたままにできます。 デバッグ出力用のフック関数を使用して追加された場合、プロセスがクラッシュする **_CrtSetReportHook**します。
+**_CrtSetReportHook2**または **_CRTSETREPORTHOOKW2**は、dll でフック呼び出しが行われ、複数の dll が読み込まれ、独自のフック関数が設定されている場合に、 **_CrtSetReportHook**の代わりに使用する必要があります。 そのような状況では、DLL はロードされたときとは異なる順序でアンロードできます。フック関数はアンロードされた DLL をポイントしたままにできます。 **_CrtSetReportHook**を使用してフック関数を追加すると、デバッグ出力によってプロセスがクラッシュします。
 
-フック関数を使用して追加 **_CrtSetReportHook**関数が追加でフックがない場合に呼び出される **_CrtSetReportHook2**または **_CrtSetReportHookW2**またはすべてのフック関数を使用して追加 **_CrtSetReportHook2**と **_CrtSetReportHookW2**返す**FALSE**します。
+**_CrtSetReportHook**で追加されたフック関数は、 **_CrtSetReportHook2**または **_CrtSetReportHookW2**を使用して追加されたフック関数がない場合、または、すべてのフック関数が **_CrtSetReportHook2**および _ で追加された場合に呼び出されます。 **CrtSetReportHookW2**は**FALSE**を返します。
 
 関数のワイド文字バージョンが利用できます。 レポート用のフック関数は、使用されたこの関数のバージョンと型 (ワイド文字またはナロー文字) が一致しなければならない文字列を受け取ります。 この関数のワイド文字バージョンで使用されたレポート フックには、次の関数プロトタイプを使用します。
 
@@ -83,10 +86,10 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-これらの関数では、パラメーターの検証が行われます。 場合*モード*または**pfnNewNook**は無効な場合は、これらの関数、無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+これらの関数では、パラメーターの検証が行われます。 *Mode*または**Pfnnewnook**が無効である場合、これらの関数は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 > [!NOTE]
-> アプリケーションをコンパイルした場合 **/clr**およびレポート関数を呼び出すと、アプリケーションの終了後にメイン、レポートの関数が CRT 関数を呼び出す場合に、CLR が例外をスローします。
+> アプリケーションが **/clr**でコンパイルされ、アプリケーションが main を終了した後でレポート関数が呼び出された場合、レポート関数が CRT 関数を呼び出すと clr は例外をスローします。
 
 ## <a name="requirements"></a>必要条件
 
@@ -235,7 +238,7 @@ int   main(int argc, char* argv[])
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 _CrtSetReportHook2(_CRT_RPTHOOK_INSTALL, TestHook1) returned 0

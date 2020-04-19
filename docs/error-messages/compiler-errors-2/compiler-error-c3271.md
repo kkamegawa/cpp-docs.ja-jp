@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3271
 ms.assetid: 16d8bd1d-2e30-4c6a-a07f-0c4f3342fab5
-ms.openlocfilehash: f94ef54408584e40dc406935e36053352ecf38e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 646f42f1bc9724d8f0a2a47b17836cda4092ad12
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651863"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753992"
 ---
 # <a name="compiler-error-c3271"></a>コンパイラ エラー C3271
 
@@ -21,7 +21,7 @@ ms.locfileid: "50651863"
 
 次の例では C3271 が生成されます。
 
-```
+```cpp
 // C3271.cpp
 // compile with: /clr /c
 using namespace System;

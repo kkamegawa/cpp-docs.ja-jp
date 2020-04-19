@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 743069c0ed3103a2ed8d459def65083146b971e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b83b3b33727db300367156e10f902aaa6ff4bfdb
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497020"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990779"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>コンパイラの警告(レベル 4) C4487
 
-'derived_class_function': 継承された非仮想メソッド 'base_class_function' と一致しますが、'new' に明示的に設定されていません
+' derived_class_function ': 継承された仮想でないメソッド ' base_class_function ' と一致しますが、' new ' として明示的に設定されていません
 
-派生クラスで、関数には、非仮想基底クラス関数と同じシグネチャがあります。 C4487 は、派生クラスの関数が基底クラスの関数をオーバーライドできません。 派生クラスとしての関数を明示的にマーク`new`この警告を解決します。
+派生クラスの関数は、非仮想基底クラスの関数と同じシグネチャを持っています。 C4487 は、派生クラスの関数が基底クラスの関数をオーバーライドしないことを通知します。 この警告を解決するには、派生クラスの関数を明示的に `new` としてマークします。
 
-詳細については、次を参照してください。 [new (新規のスロット vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)します。
+詳細については、「 [new (vtable の新しいスロット)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4487 が生成されます。
 
-```
+```cpp
 // C4487.cpp
 // compile with: /W4 /clr
 using namespace System;

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: bc1b21bad1f7d4515774dbe76c2567280cdbf1f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ad93e640a4e961f7670077227bb5c35a42c20f
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620572"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342107"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>__declspec(dllimport) を使ったデータのインポート
 
@@ -58,4 +58,4 @@ __declspec(dllexport) ULONG ulDataInDLL;
 
 ## <a name="see-also"></a>関連項目
 
-[アプリケーションへのインポート](../build/importing-into-an-application.md)
+[アプリケーションへのインポート](importing-into-an-application.md)

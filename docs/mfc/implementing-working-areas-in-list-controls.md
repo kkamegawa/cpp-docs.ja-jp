@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: eac4c28497f4a00a333f5396fa71cdb2176106c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b166243c9032a113d46ff297b9f6e53429da21
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297217"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>リスト コントロールの作業領域の実装
 
@@ -41,4 +41,3 @@ ms.locfileid: "50525193"
 
 [CListCtrl の使い方](../mfc/using-clistctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

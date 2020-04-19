@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409176"
 ---
 # <a name="method-attributes"></a>メソッド属性
 
@@ -45,7 +45,7 @@ ms.locfileid: "50667923"
 |[propputref](propputref.md)|値の代わりに参照を使用するプロパティ設定関数を指定します。|
 |[ptr](ptr.md)|完全なポインターとしてのポインターを指定します。|
 |[range](range-cpp.md)|引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。|
-|[requestedit](requestedit.md)|プロパティをサポートしていることを示します、`OnRequestEdit`通知します。|
+|[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
 |[restricted](restricted.md)|モジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを任意に呼び出すことはできませんを指定します。|
 |[satype](satype.md)|データ型を指定します、`SAFEARRAY`構造体。|
 |[source](source-cpp.md)|コネクション ポイントのソース インターフェイスのコントロールのクラスを指定します。 プロパティまたはメソッドで、`source`属性では、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。|

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - file names [C++], CL compiler
 - file names [C++]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
-ms.openlocfilehash: 929096ed169a33e0876c3afb68f3594757d61e4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b20f88e69c6e0d1774f1cd81b3ee833c4f0ff696
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272696"
 ---
 # <a name="cl-filename-syntax"></a>CL ファイル名の構文
 
@@ -26,4 +26,4 @@ CL は、名前が FAT、HPFS、NTFS のいずれかの名前付け規則に従�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ コマンド ラインの構文](../../build/reference/compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

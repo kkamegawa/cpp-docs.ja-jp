@@ -7,43 +7,42 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 4949e8cff59a40b25c2015bf776d0844d29116a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 502bedb1773dc2a6edbd6679d50e9c5946228283
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617285"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491896"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL のコレクションと列挙子
 
-A `collection` (生データまたはその他のオブジェクト) のデータ項目のグループにアクセスできるようにするインターフェイスを提供する COM オブジェクトです。 呼ばれるオブジェクトのグループへのアクセスを提供することは、一定の基準に従ってインターフェイスを*コレクション インターフェイス*します。
+`collection`は、データ項目のグループ (生データまたはその他のオブジェクト) へのアクセスを可能にするインターフェイスを提供する COM オブジェクトです。 オブジェクトのグループへのアクセスを提供するための標準に従うインターフェイスを、*コレクションインターフェイス*と呼びます。
 
-コレクション インターフェイスを提供する必要がありますには、少なくとも、`Count`プロパティをコレクション内の項目の数を返す、`Item`をインデックスに基づいてコレクションから項目を返すプロパティと`_NewEnum`を返すプロパティをコレクションの列挙子。 コレクション インターフェイスを提供できます必要に応じて、`Add`と`Remove`項目を挿入したり、コレクションから削除されるようにするメソッドと`Clear`すべての項目を削除する方法。
+コレクションインターフェイスは、少なくともコレクション内`Count`の項目数を返すプロパティ`Item` 、インデックスに基づいてコレクションから項目を返すプロパティ、および`_NewEnum`を返すプロパティを提供する必要があります。コレクションの列挙子。 必要に応じて`Add` `Remove` 、コレクションインターフェイスは、コレクションへの項目の挿入または削除を許可するメソッドと`Clear`メソッド、およびすべての項目を削除するメソッドを提供できます。
 
-`enumerator`はコレクション内の項目を反復処理するインターフェイスを提供する COM オブジェクトです。 列挙子インターフェイスが必要な 4 つのメソッドを使用して、コレクションの要素にシリアル アクセスを提供します。 `Next`、 `Skip`、 `Reset`、および`Clone`します。
+`enumerator`は、コレクション内の項目を反復処理するためのインターフェイスを提供する COM オブジェクトです。 `Next`列挙子インターフェイスは`Skip` `Clone`、、、、およびの4つの必須メソッドを使用して、コレクションの要素へのシリアルアクセスを提供します。 `Reset`
 
-詳細については、読み取り、列挙子インターフェイスのリファレンス コンテンツを学習できます[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)インターフェイス。
+列挙子インターフェイスの詳細については、 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring)インターフェイスなどの参照コンテンツを参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [ATL のコレクションと列挙子クラス](../atl/atl-collection-and-enumerator-classes.md)<br/>
-簡単な説明し、コレクションと列挙子を実装するのに役立つ ATL クラスへのリンクを提供します。
+コレクションと列挙子の実装に役立つ ATL クラスへのリンクを簡単に説明し、提供します。
 
 [コレクションと列挙子インターフェイスのデザインの原則](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
-インターフェイスの種類ごとの背後にあるさまざまな設計原則をについて説明します。
+各種類のインターフェイスの背後にあるさまざまな設計原則について説明します。
 
 [C++ 標準ライブラリに基づくコレクションの実装](../atl/implementing-an-stl-based-collection.md)<br/>
-C++ 標準ライブラリに基づくコレクションの実装を説明する詳細な例です。
+C++標準ライブラリベースのコレクションの実装について説明する拡張された例。
 
 ## <a name="related-sections"></a>関連項目
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
-[ATLCollections サンプル](../visual-cpp-samples.md)<br/>
-使用方法を示すサンプル`ICollectionOnSTLImpl`と`CComEnumOnSTL`、およびカスタム コピー ポリシー クラスの実装。
+[ATLCollections サンプル](../overview/visual-cpp-samples.md)<br/>
+`ICollectionOnSTLImpl` と`CComEnumOnSTL`の使用方法、およびカスタムコピーポリシークラスの実装方法を示すサンプル。
 
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

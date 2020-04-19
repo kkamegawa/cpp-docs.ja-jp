@@ -1,6 +1,6 @@
 ---
 title: _mm_extract_si64、_mm_extracti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: 21e2b23ca4ac3b98c44ea7152badc5c79f386c09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfd7029966c29f876f0e4f671830e20e2eacc940
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630101"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217408"
 ---
-# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64、_mm_extracti_si64
+# <a name="_mm_extract_si64-_mm_extracti_si64"></a>_mm_extract_si64、_mm_extracti_si64
 
 **Microsoft 固有の仕様**
 
-生成、`extrq`最初の引数の下位 64 ビットから指定のビットを抽出する命令です。
+最初の引数の下位64ビットから指定されたビットを抽出する命令を生成します。`extrq`
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 __m128i _mm_extract_si64(
    __m128i Source,
    __m128i Descriptor
@@ -36,23 +36,23 @@ __m128i _mm_extracti_si64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ソース*<br/>
-[in]下位 64 ビットの入力データでは、128 ビット フィールドです。
+*Source*\
+から64ビットの下位に入力データが含まれている128ビットのフィールド。
 
-*記述子*<br/>
-[in]抽出するビット フィールドを表す 128 ビット フィールドです。
+*ディスクリプタ*\
+から抽出するビットフィールドを記述する128ビットフィールド。
 
-*長さ*<br/>
-[in]抽出するフィールドの長さを指定する整数。
+*数*\
+から抽出するフィールドの長さを指定する整数です。
 
-*Index*<br/>
-[in]抽出するフィールドのインデックスを指定する整数
+*化*\
+から抽出するフィールドのインデックスを指定する整数です。
 
 ## <a name="return-value"></a>戻り値
 
-抽出された、最下位ビット フィールドは、128 ビット フィールドです。
+最下位ビットに抽出されたフィールドを含む128ビットのフィールド。
 
 ## <a name="requirements"></a>必要条件
 
@@ -61,21 +61,21 @@ __m128i _mm_extracti_si64(
 |`_mm_extract_si64`|SSE4a|
 |`_mm_extracti_si64`|SSE4a|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この組み込みを生成、`extrq`からビットを抽出する命令`Source`します。この 2 つのバージョンがある組み込み:`_mm_extracti_si64`即時のバージョンと`_mm_extract_si64`緊急であります。  各バージョンの抽出から`Source`その長さと、その最下位ビットのインデックスで定義されたビット フィールド。 Mod 64 を長さとインデックスの値が表示されます、-1 から 127 文字の両方が 63 として解釈されます。 (縮小) のインデックスと (縮小) フィールドの長さの合計が 64 よりも大きい場合は、結果は定義されていません。 フィールド長に 0 の値は、64 として解釈されます。 場合、フィールドの長さとビットのインデックスの両方で 0 ビット 63:0`Source`抽出されます。 フィールドの長さが 0 ビットのインデックスが 0 でない場合、結果は定義されていません。
+これらの組み込みは`extrq` 、*ソース*からビットを抽出する命令を生成します。 2つのバージョンが`_mm_extracti_si64`あります。は、直接`_mm_extract_si64`のバージョンであり、ただちには存在しません。 各バージョンでは、*ソース*からその長さで定義されたビットフィールドと最下位ビットのインデックスを抽出します。 長さとインデックスの値は mod 64 であるため、-1 と127の両方が63として解釈されます。 (減少) インデックスと (削減された) フィールドの長さの合計が64より大きい場合、結果は未定義になります。 フィールド長の値が0の場合は、64と解釈されます。 フィールド長とビットインデックスの両方がゼロの場合、*ソース*のビット63:0 が抽出されます。 フィールド長が0でも、ビットインデックスが0以外の場合、結果は未定義になります。
 
-_Mm_extract_si64 への呼び出しで、`Descriptor`ビット 13:8 ビット 5:0 で抽出するデータのフィールドの長さでインデックスが含まれています.
+の呼び出し`_mm_extract_si64`では、*記述子*にビット13:8 のインデックスと、ビット5:0 で抽出されるデータのフィールド長が含まれています。
 
-呼び出す場合`_mm_extracti_si64`、コンパイラをコンパイラは、整数定数である判断できない引数を持つには、これらの値を XMM レジスタにパックするコードを生成します (`Descriptor`) を呼び出すと`_mm_extract_si64`します。
+引数を指定`_mm_extracti_si64`してを呼び出すと、コンパイラが整数定数であると判断できない場合、コンパイラはそれらの値を XMM register (*記述子*) `_mm_extract_si64`にパックしてを呼び出すためのコードを生成します。
 
-ハードウェア サポートの決定を`extrq`命令、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 6 をチェックし、`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1、0 になります。 この組み込みのハードウェアがサポートされていないを使用するコードを実行するかどうか、`extrq`命令の場合、結果は予測できません。
+`extrq`命令のハードウェアサポートを確認するには、 `__cpuid`で`InfoType=0x80000001`組み込みを呼び出し、の`CPUInfo[2] (ECX)`ビット6を確認します。 命令がサポートされている場合、このビットは1になり、それ以外の場合は0になります。 `extrq`命令をサポートしていないこの組み込みのハードウェアを使用するコードを実行する場合、結果は予測できません。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -110,9 +110,9 @@ result3 = 0x30eca86
 
 **Microsoft 固有の仕様はここまで**
 
-高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
+高度なマイクロデバイス (Inc.) による部分の著作権2007All rights reserved. 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
 
 ## <a name="see-also"></a>関連項目
 
-[_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)<br/>
+[64、64、または64を配置する (_d)](../intrinsics/mm-insert-si64-mm-inserti-si64.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

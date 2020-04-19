@@ -1,0 +1,59 @@
+---
+title: C1DLL クラス
+description: C++ BUILD INSIGHTS SDK C1DLL クラスリファレンス。
+ms.date: 02/12/2020
+helpviewer_keywords:
+- C++ Build Insights
+- C++ Build Insights SDK
+- C1DLL
+- throughput analysis
+- build time analysis
+- vcperf.exe
+ms.openlocfilehash: f843e7dcd14dc9e9649317933008b575ff4eddf0
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335004"
+---
+# <a name="c1dll-class"></a>C1DLL クラス
+
+::: moniker range="<=vs-2015"
+
+Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+
+::: moniker-end
+::: moniker range=">=vs-2017"
+
+`C1DLL` クラスは、 [Matchevent](../functions/match-event.md)、 [matcheventinmemberfunction](../functions/match-event-in-member-function.md)、 [Matcheventstack](../functions/match-event-stack.md)、および[matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 [C1_DLL](../event-table.md#c1-dll)イベントと一致させるには、これを使用します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+class C1DLL : public Activity
+{
+public:
+    C1DLL(const RawEvent& event);
+};
+```
+
+## <a name="members"></a>メンバー
+
+[アクティビティ](activity.md)基本クラスから継承されたメンバーと共に、`C1DLL` クラスには次のメンバーが含まれます。
+
+### <a name="constructors"></a>コンストラクター
+
+[C1DLL](#c1-dll)
+
+## <a name="c1-dll"></a>C1DLL
+
+```cpp
+C1DLL(const RawEvent& event);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*event*\
+[C1_DLL](../event-table.md#c1-dll)イベントです。
+
+::: moniker-end

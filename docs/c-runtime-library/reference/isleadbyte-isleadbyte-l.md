@@ -1,10 +1,10 @@
 ---
 title: isleadbyte、_isleadbyte_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531890"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954309"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
 文字がマルチバイト文字の先行バイトかどうかを判定します。
 
@@ -56,15 +59,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>戻り値
 
-**isleadbyte**そうでない場合、テスト条件または 0 を引数が満たしている場合は、0 以外の値を返します。 文字セット (SBCS) のロケールの"C"ロケールでは 1 バイトで**isleadbyte**常に 0 を返します。
+引数がテスト条件を満たしている場合、 **isリードバイト**は0以外の値を返します。そうでない場合は0を返します。 "C" ロケールと1バイト文字セット (SBCS) のロケールでは、 **isリードバイト**は常に0を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Isleadbyte**マクロが、引数がマルチバイト文字の最初のバイトの場合、0 以外の値を返します。 **isleadbyte** -1 から任意の整数引数に対して意味のある結果が生成されます (**EOF**) に**UCHAR_MAX** (0 xff) まで。
+**Isリードバイト**マクロは、引数がマルチバイト文字の最初のバイトの場合、0以外の値を返します。 **isリードバイト**は、-1 (**EOF**) から**UCHAR_MAX** (0xff) までの任意の整数引数に対して意味のある結果を生成します。
 
-予想される引数の型の**isleadbyte**は**int**符号付き文字が渡された場合は、コンパイラが整数に変換が符号拡張、予期しない結果を生成しています。
+**Isリードバイト**の予期される引数の型は**int**です。符号付き文字が渡された場合、コンパイラはそれを符号拡張によって整数に変換することで、予測できない結果が発生する可能性があります。
 
-この関数のバージョン、 **_l**サフィックスは、そのロケールに依存する動作の現在のロケールではなく渡されたロケールを使用すると同じです。
+**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

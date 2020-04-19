@@ -1,6 +1,6 @@
 ---
-title: /execution-charset (実行文字セット)
-ms.date: 11/04/2016
+title: /文字セット (実行文字セットの設定)
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44e83524867bc8a914706e1f5b45b61bc4a48087
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663971"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492911"
 ---
-# <a name="execution-charset-set-execution-character-set"></a>/execution-charset (実行文字セット)
+# <a name="execution-charset-set-execution-character-set"></a>/文字セット (実行文字セットの設定)
 
-実行文字セットの実行可能ファイルで指定できます。
+実行可能ファイルの実行文字セットを指定できます。
 
 ## <a name="syntax"></a>構文
 
@@ -28,33 +28,33 @@ ms.locfileid: "50663971"
 ## <a name="arguments"></a>引数
 
 *IANA_name*<br/>
-IANA で定義されている文字セットの名前。
+IANA によって定義された文字セット名。
 
 *CPID*<br/>
-コード ページ id。
+コードページ識別子。
 
 ## <a name="remarks"></a>Remarks
 
-使用することができます、 **/execution-charset**実行文字セットを指定するオプション。 実行文字セットは、すべての前処理ステップ コンパイル フェーズに入力されるプログラムのテキストに使用されるエンコーディングします。 この文字セットは、コンパイルされたコード内の文字列または文字リテラルの内部表現に使用されます。 ソース ファイルがない基本実行文字セットで表現できる文字を含めるときに使用する拡張実行文字セットを指定するには、このオプションを設定します。 IANA のいずれかを使用する ISO 文字セットの名前、またはドット (.) の後に使用する文字セットを指定する 3 ~ 5 桁の 10 進コード ページ識別子。 一覧には、コード ページ識別子がサポートされている文字セットの名前を参照してください。[コード ページ識別子](/windows/desktop/Intl/code-page-identifiers)します。
+**/Executioncharset**オプションを使用すると、実行文字セットを指定できます。 実行文字セットは、すべての前処理手順の後にコンパイルフェーズに入力されるプログラムのテキストに使用されるエンコーディングです。 この文字セットは、コンパイルされたコード内の任意の文字列リテラルまたは文字リテラルの内部表現に使用されます。 基本実行文字セットで表現できない文字がソースファイルに含まれる場合に使用する拡張実行文字セットを指定するには、このオプションを設定します。 使用する文字セットを指定するには、IANA または ISO の文字セット名、またはドット (.) の後に 3 ~ 5 桁の10進数コードページ識別子を使用できます。 サポートされているコードページ識別子と文字セット名の一覧については、「[コードページ識別子](/windows/win32/Intl/code-page-identifiers)」を参照してください。
 
-既定では、Visual Studio は、utf-8 または utf-16、たとえば、ソース ファイルが、エンコードされた Unicode 形式であるか判断のバイト順マークを検出します。 バイト順マークが見つからない場合は、ソース ファイルを使ってエンコードされるユーザーの現在のコード ページで、文字を使用して名前またはコード ページの設定を指定していない限り想定しています、 **/source-charset**オプションまたは **/utf-8。** オプション。 Visual Studio では、いくつかの文字エン コードのいずれかを使用して、C++ ソース コードを保存できます。 ソースと実行文字セットの詳細については、次を参照してください。[文字セット](../../cpp/character-sets.md)言語ドキュメント。
+既定では、Visual Studio は、ソースファイルがエンコードされた Unicode 形式であるかどうかを判断するためにバイト順マークを検出します (UTF-16 や UTF-8 など)。 バイト順マークが見つからない場合、 **/source-charset**オプションまたは **/utf8**オプションを使用して文字セット名またはコードページを指定していない限り、現在のユーザーコードページを使用してソースファイルがエンコードされているものと見なされます。 Visual Studio では、いくつかC++の文字エンコーディングのいずれかを使用して、ソースコードを保存できます。 ソース文字セットと実行文字セットの詳細については、言語ドキュメントの「[文字セット](../../cpp/character-sets.md)」を参照してください。
 
-使用することができます、ソース文字セットと、実行文字セットの両方を utf-8 に設定する場合、 **/utf-8**ショートカットとしてコンパイラ オプション。 指定することと同じである **/source -charset:utf-8/execution-charset:utf-8**コマンド行にします。 これらのいずれかのオプションも有効、 **/validate-charset**既定ではオプションです。
+ソース文字セットと実行文字セットの両方を UTF-8 に設定する場合は、 **8**つのコンパイラオプションをショートカットとして使用できます。 これは、コマンドラインで **/source-charset: utf-8/executioncharset: utf-8**を指定することと同じです。 これらのオプションのいずれでも、既定では、**文字セット**オプションが有効になります。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. 展開、**構成プロパティ**、 **C/C++**、**コマンドライン**フォルダー。
+1. **[構成プロパティ]** 、 **[CC++/]** 、 **[コマンドライン]** フォルダーの順に展開します。
 
-1. **オプションの高度な**、追加、 **/execution-charset**オプション、および、使用するエンコーディングを指定します。
+1. **[追加オプション]** で、 **[文字セット]** オプションを追加し、任意のエンコードを指定します。
 
 1. **OK** を選択して変更を保存してください。
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/source-charset (ソース文字セットの設定)](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
-[/validate-charset (互換性のある文字の検証)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[/source-charset (ソース文字セットの設定)](source-charset-set-source-character-set.md)<br/>
+[/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (互換性のある文字の検証)](validate-charset-validate-for-compatible-characters.md)

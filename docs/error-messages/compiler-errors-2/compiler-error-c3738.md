@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: e313c7d66bc030183e330dd961fad2fb35f02ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539322"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752770"
 ---
 # <a name="compiler-error-c3738"></a>コンパイラ エラー C3738
 
-'calling_convention': 明示的なインスタンス化の呼び出し規約がインスタンス化されているテンプレートの一致する必要があります
+' calling_convention ': 明示的なインスタンス化の呼び出し規約は、インスタンス化されているテンプレートの規約と一致しなければなりません
 
-明示的なインスタンス化の呼び出し規約を指定しないことをお勧めします。 、必要な場合、呼び出し規約に一致する必要があります。
+明示的なインスタンス化では、呼び出し規約を指定しないことをお勧めします。 ただし、必要な場合は、呼び出し規則を一致させる必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3738 が生成されます。
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

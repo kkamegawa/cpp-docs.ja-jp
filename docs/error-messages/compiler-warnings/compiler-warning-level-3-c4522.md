@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-ms.openlocfilehash: de163f0a3925b711f2f3437b700f75bbe994b3e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e791e490929daa4742a4db985f5a4f99f4db9d37
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622964"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992046"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>コンパイラの警告 (レベル 3) C4522
 
-'class': 指定された複数の代入演算子
+' class ': 複数の代入演算子が指定されています。
 
-クラスには、1 つの型の複数の代入演算子があります。 この警告は参照用です。コンス トラクターは、プログラムで呼び出し可能です。
+クラスには、1つの型の複数の代入演算子があります。 この警告は情報提供を目的としています。コンストラクターは、プログラムで呼び出すことができます。
 
-使用して、[警告](../../preprocessor/warning.md)この警告を抑制するプラグマ。
+この警告を非表示にするには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4522 が生成されます。
 
-```
+```cpp
 // C4522.cpp
 // compile with: /EHsc /W3
 #include <iostream>

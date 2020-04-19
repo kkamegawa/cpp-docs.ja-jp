@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230841"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
-公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。
+公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。
 
 ## <a name="syntax"></a>構文
 
@@ -79,9 +79,9 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Remarks
 
-この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイス。
+この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイス。
 
-## <a name="getmoniker"></a> Cenumerator::getmoniker
+## <a name="getmoniker"></a> CEnumerator::GetMoniker
 
 モニカーに変換できる文字列の部分を抽出する表示名を解析します。
 
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 ## <a name="open"></a> Cenumerator::open
 
-指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85))します。
+指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))します。
 
 ### <a name="syntax"></a>構文
 
@@ -137,6 +137,6 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[DBViewer](../../visual-cpp-samples.md)<br/>
+[DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

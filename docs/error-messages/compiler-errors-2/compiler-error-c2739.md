@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2739
+title: コンパイラエラー C2739
 ms.date: 11/04/2016
 f1_keywords:
 - C2739
 helpviewer_keywords:
 - C2739
 ms.assetid: 5b63e435-7631-43d7-805e-f2adefb7e517
-ms.openlocfilehash: f7e7b20f64c8975e747fe84138cbcb18c3fd14fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18cece8d9630aa93e867329acc7cefea30da3286
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623224"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759660"
 ---
-# <a name="compiler-error-c2739"></a>コンパイラ エラー C2739
+# <a name="compiler-error-c2739"></a>コンパイラエラー C2739
 
 'number': 明示的なマネージドまたは WinRT 配列の次元は 1 から 32 の間でなければなりません
 
@@ -21,7 +21,7 @@ ms.locfileid: "50623224"
 
 次の例では、C2739 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2739.cpp
 // compile with: /clr
 int main() {

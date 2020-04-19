@@ -1,19 +1,19 @@
 ---
-title: 'MFC ActiveX コントロール : 高度なプロパティの実装'
+title: MFC ActiveX コントロール:高度なプロパティの実装
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392805"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール : 高度なプロパティの実装
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール:高度なプロパティの実装
 
 この記事では、ActiveX コントロールのプロパティを高度な実装に関連するトピックについて説明します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "50568026"
 
 読み取り専用または書き込み専用にする既存のプロパティを変更する場合は、ディスパッチ マップを手動で編集し、コントロール クラスから不要な設定または取得関数を削除します。
 
-プロパティを読み取り専用または書き込み専用 (たとえば、コントロールが特定のモードで動作している場合のみ) では条件付きでを実行する場合に、通常どおり、Set または Get 関数を提供および呼び出し、`SetNotSupported`または`GetNotSupported`適切な場所に機能します。 例えば:
+プロパティを読み取り専用または書き込み専用 (たとえば、コントロールが特定のモードで動作している場合のみ) では条件付きでを実行する場合に、通常どおり、Set または Get 関数を提供および呼び出し、`SetNotSupported`または`GetNotSupported`適切な場所に機能します。 例:
 
 [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
@@ -62,14 +62,14 @@ ms.locfileid: "50568026"
 
 ##  <a name="_core_returning_error_codes_from_a_property"></a> プロパティから返されるエラー コード
 
-プロパティを取得または設定しようとしています。 中にエラーが発生したことを示す、を使用して、`COleControl::ThrowError`関数は、パラメーターとして SCODE (状態コード) をとります。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。 定義済みの SCODEs とカスタム SCODEs を定義するための手順の一覧は、次を参照してください。 [、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)、記事の ActiveX コントロール: 高度なトピックです。
+プロパティを取得または設定しようとしています。 中にエラーが発生したことを示す、を使用して、`COleControl::ThrowError`関数は、パラメーターとして SCODE (状態コード) をとります。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。 定義済みの SCODEs とカスタム SCODEs を定義するための手順の一覧は、次を参照してください。[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)、記事の ActiveX コントロール。高度なトピックです。
 
 定義済み SCODEs などを最も一般的なのヘルパー関数が存在[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
 >  `ThrowError` プロパティの Get または Set 内からのエラーを返すための手段としてのみ使用するものでは関数またはオートメーション メソッド。 これらは、唯一のスタックの適切な例外ハンドラーとなる時間を表示します。
 
-コードの他の領域で例外をレポートの詳細については、次を参照してください[COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) 」、および[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)で ActiveX コントロール: 高度な。トピックを示します。
+コードの他の領域で例外をレポートの詳細については、次を参照してください。 [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) 」、および[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX コントロールの記事。高度なトピックです。
 
 ## <a name="see-also"></a>関連項目
 

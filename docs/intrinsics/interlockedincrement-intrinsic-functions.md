@@ -1,6 +1,6 @@
 ---
-title: _InterlockedIncrement の組み込み関数
-ms.date: 12/17/2018
+title: _InterlockedIncrement 組み込み関数
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,22 +44,22 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626934"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221990"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
+# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 組み込み関数
 
 **Microsoft 固有の仕様**
 
-Win32 Windows SDK のコンパイラ組み込みサポートを提供[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)関数。
+Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)関数のコンパイラ組み込みサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,10 +98,10 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*lpAddend*<br/>
-[入力、出力]インクリメントされる変数へのポインター。
+*lpAddend*\
+[入力、出力]インクリメントする変数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
@@ -111,8 +111,9 @@ __int64 _InterlockedIncrement64_nf(
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`、 `_InterlockedIncrement16`、 `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM、ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Remarks
 
@@ -120,9 +121,9 @@ __int64 _InterlockedIncrement64_nf(
 
 `_InterlockedIncrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedIncrement16` は 16 ビット整数値および `_InterlockedIncrement64` は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みは、メモリバリアとしては機能しません。
 
-`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
+`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、「 [align](../cpp/align-cpp.md)」を参照してください。
 
 Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
@@ -130,12 +131,12 @@ Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
 ## <a name="example"></a>例
 
-使用する方法の例については`_InterlockedIncrement`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
+の使用`_InterlockedIncrement`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
+[キーワード](../cpp/keywords-cpp.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PDBPATH dumpbin option
 - PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-ms.openlocfilehash: d77ab2eb056326ba372a60cc79688d26b252ac44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29b8e61fbfbdb0f373e3e7510cb3f1fe0b9cc2a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319851"
 ---
 # <a name="pdbpath"></a>/PDBPATH
 
@@ -51,5 +51,5 @@ Visual Studio デバッガーを使用する場合、デバッガーがデバッ
 
 ## <a name="see-also"></a>関連項目
 
-[DUMPBIN オプション](../../build/reference/dumpbin-options.md)<br/>
-[/PDBALTPATH (別の PDB パスを使用)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+[DUMPBIN オプション](dumpbin-options.md)<br/>
+[/PDBALTPATH (別の PDB パスを使用)](pdbaltpath-use-alternate-pdb-path.md)

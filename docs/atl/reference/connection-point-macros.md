@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-ms.openlocfilehash: ac00b1c5a937c32ecc02e11e735541119c388588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278203"
 ---
 # <a name="connection-point-macros"></a>コネクション ポイントに関するマクロ
 

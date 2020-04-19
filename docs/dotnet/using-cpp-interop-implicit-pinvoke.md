@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384518"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>C++ Interop (暗黙の PInvoke) の使用
 
@@ -59,7 +59,7 @@ COM を使用する直接または、CRCW 経由かどうか、単純で、blitt
 
 ## <a name="blittable-types"></a>blittable 型
 
-シンプルな組み込み型を使用するアンマネージ Api の (を参照してください[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types))、特別なコーディングは必要ありませんので、これらのデータ型、メモリ内で同じ表現であるより複雑なデータ型が必要です明示的なデータをマーシャ リングします。 例については、次を参照してください。[方法: PInvoke を使用してコードのマネージからネイティブ Dll を呼び出す](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)します。
+シンプルな組み込み型を使用するアンマネージ Api の (を参照してください[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types))、特別なコーディングは必要ありませんので、これらのデータ型、メモリ内で同じ表現であるより複雑なデータ型が必要です明示的なデータをマーシャ リングします。 例については、「[方法: PInvoke を使用してマネージ コードからネイティブ Dll を呼び出す](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)します。
 
 ## <a name="example"></a>例
 
@@ -111,13 +111,13 @@ Done
 
 - [方法: char * 文字列を System::Byte 配列に変換する](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [方法: system::string を wchar_t * または char に変換\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [方法: System::string を wchar_t * または char に変換します。\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [方法: System::String を標準文字列に変換する](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
 - [方法: 標準文字列を System::String に変換する](../dotnet/how-to-convert-standard-string-to-system-string.md)
 
-- [方法 : バイト配列へのポインターを取得する](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
+- [方法: バイト配列へのポインターを取得する](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
 - [方法: アンマネージ リソースをバイト配列に読み込む](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
@@ -131,19 +131,19 @@ Done
 
 - [方法: アンマネージ メモリ内にオブジェクト参照を保持する](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [方法:/clr コンパイルを検出](../dotnet/how-to-detect-clr-compilation.md)
+- [方法: /Clr のコンパイルを検出します。](../dotnet/how-to-detect-clr-compilation.md)
 
 - [方法: System::Guid と _GUID の間で変換を行う](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [方法: out パラメーターを指定する](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [方法:/clr コンパイルでネイティブ型を使用](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [方法: /Clr のコンパイルでネイティブ型を使用します。](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [方法: ネイティブ型のハンドルを宣言する](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [方法: ネイティブ クラスを C# で使用できるようにラップする](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-相互運用機能のシナリオではデリゲートの使用方法の詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)します。
+相互運用機能のシナリオではデリゲートの使用方法の詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

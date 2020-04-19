@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - arrays [C++], attributes
 ms.assetid: 36f80b76-7f20-41ae-a6bf-460e5379f26b
-ms.openlocfilehash: 9b980ce1f971fb8a00b60ee0b342e5e8bb6e9367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6bcaf4c0ae6b199d6c0bb12e7efb5b976295e0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368774"
 ---
 # <a name="array-attributes"></a>配列属性
 

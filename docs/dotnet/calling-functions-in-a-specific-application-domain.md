@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application domains [C++], calling functions
 - functions [C++], calling in specific application domains
 ms.assetid: e1f59b39-8ffe-4a03-8e40-99593ce18d57
-ms.openlocfilehash: a6bc7d4e55cdb249f39636e3e84d8a4b8b381368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329b3ad217a93028b506059dfa6eda1c9a579e38
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209257"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>特定のアプリケーション ドメイン内での関数の呼び出し
 

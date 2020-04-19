@@ -6,12 +6,12 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: c43061ccb462fe472821c76251430b5e3b0f0809
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176011"
 ---
 # <a name="data-sources-and-sessions"></a>データ ソースとセッション
 

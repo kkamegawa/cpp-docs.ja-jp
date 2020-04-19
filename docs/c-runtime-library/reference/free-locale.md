@@ -1,9 +1,9 @@
 ---
 title: _free_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __free_locale
 - free_locale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 92dc8cd711087e8e797b484d6c7e3c6c3b031b5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31a8e3191c5e370acb00aaf12e21f0c712c51dd1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537385"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956757"
 ---
-# <a name="freelocale"></a>_free_locale
+# <a name="_free_locale"></a>_free_locale
 
 ロケール オブジェクトを解放します。
 
@@ -52,9 +55,9 @@ void _free_locale(
 
 ## <a name="remarks"></a>Remarks
 
-**_Free_locale**への呼び出しから取得したロケール オブジェクトを解放する関数が使用される **_get_current_locale**または **_create_locale**します。
+**_Free_locale**関数は、 **_get_current_locale**または**locale**の呼び出しから取得したロケールオブジェクトを解放するために使用されます。
 
-この関数は、の以前の名前 **_ _free_locale** (先頭にアンダー スコア 2 つ) では推奨されていません。
+この関数の以前の**名前 (2 つの先頭**のアンダースコア) は非推奨とされました。
 
 ## <a name="requirements"></a>必要条件
 

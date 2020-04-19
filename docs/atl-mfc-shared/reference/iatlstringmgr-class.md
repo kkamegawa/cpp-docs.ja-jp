@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199828"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr クラス
 
@@ -97,7 +97,7 @@ IAtlStringMgr* Clone() throw();
 
 ### <a name="remarks"></a>Remarks
 
-新しい文字列の文字列のマネージャーが必要なときにフレームワークによって呼び出さ一般的です。 ほとんどの場合、**この**ポインターが返されます。
+新しい文字列の文字列のマネージャーが必要なときにフレームワークによって呼び出さ一般的です。 ほとんどの場合、**this**ポインターが返されます。
 
 ただし、メモリ マネージャーでの複数のインスタンスで使用されているがサポートされていない場合`CSimpleStringT`、共有可能な文字列のマネージャーへのポインターが返される必要があります。
 

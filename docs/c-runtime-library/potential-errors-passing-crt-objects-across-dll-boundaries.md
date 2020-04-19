@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562774"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446655"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー
 
@@ -19,11 +19,11 @@ ms.locfileid: "50562774"
 
 この問題の別の兆候には、次のようなデバッグ中の出力ウィンドウのエラーがあります。
 
-HEAP[]: Invalid Address specified to RtlValidateHeap(#,#)
+HEAP[]:Invalid Address specified to RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>原因
 
-CRT ライブラリのコピーはそれぞれ状態が異なります。アプリまたは DLL により、スレッド ローカル ストレージに保存されます。 そのため、ファイル ハンドル、環境変数、ロケールなどの CRT オブジェクトは、オブジェクトが割り当てられている、または設定されているアプリまたは DLL の CRT コピーに対してのみ有効になります。 DLL とそのアプリ クライアントで CRT ライブラリの異なるコピーが使用されているとき、DLL 境界を越えてそのような CRT オブジェクトを渡しても、向こう側で正しく取得されることは期待できません。 これは特に、Visual Studio 2015 以降で、Universal CR より前のバージョンの CRT に当てはまります。 Visual C++ 2013 以前で構築されたあらゆるバージョンの Visual Studio について、バージョン固有の CRT ライブラリがありました。 データ構造や命名規則など、CRT の内部実装詳細はバージョンごとに異なります。 あるバージョンの CRT のためにコンパイルされたコードを別のバージョンの CRT DLL に動的にリンクすることは以前はできませんでした。動的にリンクされる場合もありましたが、それは偶然であり、設計によるものではありませんでした。
+CRT ライブラリのコピーはそれぞれ状態が異なります。アプリまたは DLL により、スレッド ローカル ストレージに保存されます。 そのため、ファイル ハンドル、環境変数、ロケールなどの CRT オブジェクトは、オブジェクトが割り当てられている、または設定されているアプリまたは DLL の CRT コピーに対してのみ有効になります。 DLL とそのアプリ クライアントで CRT ライブラリの異なるコピーが使用されているとき、DLL 境界を越えてそのような CRT オブジェクトを渡しても、向こう側で正しく取得されることは期待できません。 これは特に、Visual Studio 2015 以降で、Universal CR より前のバージョンの CRT に当てはまります。 Visual Studio 2013 以前で構築されたあらゆるバージョンの Visual Studio について、バージョン固有の CRT ライブラリがありました。 データ構造や命名規則など、CRT の内部実装詳細はバージョンごとに異なります。 あるバージョンの CRT のためにコンパイルされたコードを別のバージョンの CRT DLL に動的にリンクすることは以前はできませんでした。動的にリンクされる場合もありましたが、それは偶然であり、設計によるものではありませんでした。
 
 また、CRT ライブラリの各コピーには独自のヒープ マネージャーが与えられているため、1 つの CRT ライブラリでメモリを割り当て、DLL 境界を越えてポインターを渡し、CRT ライブラリの別のコピーで解放すると、ヒープ破損の原因になることがあります。 境界を越えて CRT オブジェクトを渡すか、メモリを割り当て、DLL の外でそれを解放することを要求するように DLL を設計する場合、DLL と同じ CRT ライブラリ コピーを使用するように DLL のアプリ クライアントを制限します。 DLL とそのクライアントは通常、読み込み時に両方とも同じバージョンの CRT DLL にリンクされている場合にのみ、CRT ライブラリの同じコピーを使用します。 Windows 10 で Visual Studio 2015 以降により使用される Universal CRT ライブラリの DLL バージョンが現在、一元的に配置される Windows コンポーネント、ucrtbase.dll になったため、Visual Studio 2015 以降のバージョンで開発されたアプリで同じになります。 ただし、CRT コードが同じでも、あるヒープで割り当てられたメモリを別のヒープを使用するコンポーネントに渡すことはできません。
 
@@ -122,6 +122,6 @@ CRT のコピーが 1 つだけ使用されるように DLL と .exe ファイ�
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

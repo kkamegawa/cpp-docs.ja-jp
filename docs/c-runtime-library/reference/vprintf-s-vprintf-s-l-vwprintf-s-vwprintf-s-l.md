@@ -1,12 +1,12 @@
 ---
 title: vprintf_s、_vprintf_s_l、vwprintf_s、_vwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vwprintf_s_l
 - vwprintf_s
 - _vprintf_s_l
 - vprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vprintf_s
 - vwprintf_s
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vprintf_s function
 ms.assetid: cf864996-a530-4b40-9c30-54c4cef439c8
-ms.openlocfilehash: 7fc49cbac375bdf1ecb3a6b977dfcc3e2b5ce170
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85da6993048982db35320a7d9c6be101ff6d7fb4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561617"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945489"
 ---
-# <a name="vprintfs-vprintfsl-vwprintfs-vwprintfsl"></a>vprintf_s、_vprintf_s_l、vwprintf_s、_vwprintf_s_l
+# <a name="vprintf_s-_vprintf_s_l-vwprintf_s-_vwprintf_s_l"></a>vprintf_s、_vprintf_s_l、vwprintf_s、_vwprintf_s_l
 
 引数リストへのポインターを使用して、書式付き出力を書き込みます。 これらのバージョンの [vprintf、_vprintf_l、vwprintf、_vwprintf_l](vprintf-vprintf-l-vwprintf-vwprintf-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
@@ -74,7 +77,7 @@ int _vwprintf_s_l(
 *format*<br/>
 書式の指定。
 
-*定義されています*<br/>
+*argptr*<br/>
 引数リストへのポインター。
 
 *locale*<br/>
@@ -84,28 +87,28 @@ int _vwprintf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-**vprintf_s**と**vwprintf_s**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+**vprintf_s**と**vwprintf_s**は、書き込まれた文字数を返します。終端の null 文字は含まれません。出力エラーが発生した場合は、負の値が返されます。 *Format*が null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数、引数リストへのポインターを受け取る書式設定して、特定のデータを書き込みます**stdout**します。
+これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して**stdout**に書き込みます。
 
-これらの関数のセキュリティで保護されたバージョンが異なる**vprintf**と**vwprintf**安全なバージョンは、書式指定文字列に有効な書式指定文字が含まれているを確認します。
+これらの関数のセキュリティで保護されたバージョンは、 **vprintf**および**vwprintf**とは異なります。セキュリティで保護されたバージョンでは、書式指定文字列に有効な書式指定文字が含まれていることを確認します
 
-**vwprintf_s**のワイド文字バージョンは、 **vprintf_s**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **vprintf_s** UNICODE ストリームへの出力をサポートされていません。
+**vwprintf_s**は、 **vprintf_s**のワイド文字バージョンです。ストリームが ANSI モードで開かれている場合、2つの関数の動作は同じになります。 **vprintf_s**は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_vtprintf_s**|**vprintf_s**|**vprintf_s**|**vwprintf_s**|
+|**vtprintf_s (_s)**|**vprintf_s**|**vprintf_s**|**vwprintf_s**|
 |**_vtprintf_s_l**|**_vprintf_s_l**|**_vprintf_s_l**|**_vwprintf_s_l**|
 
 ## <a name="requirements"></a>必要条件
@@ -117,7 +120,7 @@ int _vwprintf_s_l(
 
 \* UNIX V との互換性用。
 
-ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

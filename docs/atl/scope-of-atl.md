@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, scope
 ms.assetid: 381adf50-3cb0-4d0f-a79a-07da093bc280
-ms.openlocfilehash: 1196d4ec0cce66e3ea62c1ee0653da649e670832
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45516dfdfb317adde787a51194a9f9deac19887
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274409"
 ---
 # <a name="scope-of-atl"></a>ATL の範囲
 
@@ -21,4 +21,3 @@ ATL は、アプリケーションに組み込むソース コードが付属し
 
 [ATL の概要](../atl/introduction-to-atl.md)<br/>
 [ATL プロジェクト ウィザード](../atl/reference/atl-project-wizard.md)
-

@@ -1,11 +1,11 @@
 ---
 title: localtime、_localtime32、_localtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _localtime64
 - _localtime32
 - localtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - localtime64
 - _localtime64
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e2f39b3a1b6376e24d8a812d1074840862f398a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629971"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953345"
 ---
-# <a name="localtime-localtime32-localtime64"></a>localtime、_localtime32、_localtime64
+# <a name="localtime-_localtime32-_localtime64"></a>localtime、_localtime32、_localtime64
 
 時刻値を変換し、ローカル タイム ゾーンに合わせて修正します。 これらの関数にはセキュリティを強化したバージョンがあります。[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) を参照してください。
 
@@ -58,52 +61,52 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>戻り値
 
-構造体の結果へのポインターを返しますまたは**NULL**日付が関数に渡される場合は。
+構造体の結果へのポインターを返すか、関数に渡された日付がの場合は**NULL**を返します。
 
 - 1970 年 1 月 1 日午前 0 時より前。
 
-- UTC 2038 年 1 月 19 日 03時 14分: 07 秒後 (を使用して **_time32**と**time32_t**)。
+- 03:14:07 年1月 2038 19 日、UTC ( **_time32**および**time32_t**を使用)。
 
-- UTC 3000 年 12 月 31 日 23時 59分: 59 秒後 (を使用して **_time64**と **_ _time64_t**)。
+- 23:59:59 年12月 31 3000 日の後、 **_time64**と **__time64_t**を使用します。
 
-**_localtime64**、使用、 **_ _time64_t**構造体、ことができますを世界協定時刻 (UTC)、3000 年 12 月 31 日 23時 59分: 59 秒を表す日付 **_localtime32**2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。
+**__time64_t**構造体を使用する **_localtime64**では、23:59:59 年12月31日から3000年12月31日までの日付を表すことができます。一方、 **_Localtime32**は2038年1月18日から23:59:59 までの日付を表します。形式.
 
-**localtime**に評価されるインライン関数は、 **_localtime64**、および**time_t**と等価 **_ _time64_t**します。 強制的にコンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**します。 これにより**localtime**を評価する **_localtime32**します。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**localtime**は、 **_localtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **localtime**が **_localtime32**に評価されます。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-構造体型のフィールド[tm](../../c-runtime-library/standard-types.md)はそれぞれ、次の値を格納する**int**:
+Structure 型[tm](../../c-runtime-library/standard-types.md)のフィールドは、次の値を格納します。各値は**int**です。
 
 |フィールド|説明|
 |-|-|
-|**tm_sec**|秒 (0 - 59)。|
-|**未満**|分 (0 - 59)。|
-|**tm_hour**|午前 0 時からの経過時間 (0 - 23)。|
-|**tm_mday**|(1 ~ 31) の月の日。|
-|**tm_mon**|月 (0 - 11年 1 月 = 0 です)。|
+|**tm_sec**|秒後 (0-59)。|
+|**tm_min**|分後 (0-59)。|
+|**tm_hour**|深夜からの時間 (0-23)。|
+|**tm_mday**|月の通算日 (1-31)。|
+|**tm_mon**|月 (0-11;1月 = 0)。|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
-|**tm_wday**|週の曜日 (0 ~ 6 です。日曜日 = 0)。|
-|**tm_yday**|年の通算日 (0 - 365;1 月 1 日 = 0)。|
+|**tm_wday**|曜日 (0-6;日曜日 = 0)。|
+|**tm_yday**|年の通算日 (0-365;1月1日 = 0)。|
 |**tm_isdst**|夏時間が有効な場合は正の値、夏時間が無効な場合は 0、夏時間かどうか状態が不明な場合は負の値。|
 
-場合、 **TZ**環境変数が設定されている、C ランタイム ライブラリで規則を前提を米国に適切な夏時間 (DST) の計算の実装します。
+**TZ**環境変数が設定されている場合、C ランタイムライブラリは、夏時間 (DST) の計算を実装するために、米国に適した規則を前提としています。
 
 ## <a name="remarks"></a>Remarks
 
-**Localtime**関数として格納されている時刻の変換、 [time_t](../../c-runtime-library/standard-types.md)値し、その結果の種類の構造に格納[tm](../../c-runtime-library/standard-types.md)します。 **長い**値*sourceTime*午前 0 時以降の経過秒数を表します (00: 00:00)、UTC 1970 年 1 月 1 日です。 通常、この値はから取得、[時間](time-time32-time64.md)関数。
+**Localtime**関数は、 [time_t](../../c-runtime-library/standard-types.md)値として格納されている時間を変換し、その結果を[tm](../../c-runtime-library/standard-types.md)型の構造体に格納します。 **Long** Value *sourcetime*は、午前0時 (00:00:00)、1970年1月1日からの経過秒数を表します。 通常、この値は[time](time-time32-time64.md)関数から取得されます。
 
-32 ビットおよび 64 ビット バージョンの両方[gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)、および**localtime** 、1 つを使用して、すべて**tm**変換スレッドごとの構造体。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
+[Gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)、および**localtime**の32ビットバージョンと64ビットバージョンの両方で、変換にスレッドごとに1つの**tm**構造が使用されます。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-**localtime** 、ユーザーが最初にグローバル環境変数を設定する場合、ローカル タイム ゾーンに合わせて修正**TZ**します。 ときに**TZ**設定は、その他の 3 つの環境変数 (**_timezone**、 **_daylight**、および **_tzname**) も自動的に設定します。 場合、 **TZ**変数が設定されていない**localtime**コントロール パネルの 日付/時刻で指定されているタイム ゾーン情報を使用します。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能との ANSI 標準定義の一部ではない**localtime**します。
+**localtime**は、ユーザーが最初にグローバル環境変数**TZ**を設定した場合、ローカルタイムゾーンを修正します。 **TZ**が設定されている場合、他の3つの環境変数 ((**timezone**、 **_tzname** **、および**) も自動的に設定されます。 **TZ**変数が設定されていない場合、 **Localtime**は、コントロールパネルの [日付/時刻] アプリケーションで指定されたタイムゾーン情報を使用しようとします。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能であり、 **localtime**の ANSI 標準定義の一部ではありません。
 
 > [!NOTE]
 > 対象の環境は、夏時間が有効かどうかを判断しようとします。
 
-これらの関数では、パラメーターの検証が行われます。 場合*sourceTime*が null ポインターの場合は、 *sourceTime*値が負の値、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 関数を返すかどうかは、引き続き実行が許可された、 **NULL**設定と**errno**に**EINVAL**します。
+これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime > または\<time.h >|
+|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime > また\<は time .h >|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754850"
 ---
 # <a name="compiler-error-c3854"></a>コンパイラ エラー C3854
 
-関数に '=' の左辺の式が評価されます。 関数 (関数は左辺値ではありません) に割り当てることはできません。
+' = ' の左側の式は関数に評価されます。 関数に割り当てることはできません (関数は左辺値ではありません)
 
-参照を再初期化することはできません。 関数への参照を逆参照には、関数、割り当てることはできません、右辺値が生成されます。 そのため、関数への参照を割り当てることはできません。
+参照を再初期化することはできません。 関数への参照を逆参照すると、代入できない右辺値である関数が生成されます。 したがって、関数への参照を使用してを割り当てることはできません。
 
 次の例では、C3854 が生成されます。
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

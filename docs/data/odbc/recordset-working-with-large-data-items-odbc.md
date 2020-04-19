@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: 大量のデータの処理 (ODBC)'
+title: レコード セット:大規模なデータ アイテム (ODBC) の操作
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BLOB (binary large object), recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230983"
 ---
-# <a name="recordset-working-with-large-data-items-odbc"></a>レコードセット: 大量のデータの処理 (ODBC)
+# <a name="recordset-working-with-large-data-items-odbc"></a>レコード セット:大規模なデータ アイテム (ODBC) の操作
 
 このトピックでは、MFC ODBC クラスと MFC DAO クラスの両方に適用されます。
 
 > [!NOTE]
->  MFC DAO クラスを使用している場合は、クラスを使用して、大量のデータ項目を管理[CByteArray](../../mfc/reference/cbytearray-class.md)クラスではなく[CLongBinary](../../mfc/reference/clongbinary-class.md)します。 MFC ODBC クラスにバルク行フェッチを使用している場合は、使用`CLongBinary`なく`CByteArray`します。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  MFC DAO クラスを使用している場合は、クラスを使用して、大量のデータ項目を管理[CByteArray](../../mfc/reference/cbytearray-class.md)クラスではなく[CLongBinary](../../mfc/reference/clongbinary-class.md)します。 MFC ODBC クラスにバルク行フェッチを使用している場合は、使用`CLongBinary`なく`CByteArray`します。 バルク行フェッチの詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 たとえば、データベースは、ビットマップ (従業員の写真、マップ、製品や OLE オブジェクトの画像) などのデータの大部分を格納できるとします。 この種のデータは、ために、バイナリ ラージ オブジェクト (または BLOB) と呼ばれるに多くの場合。
 
@@ -62,5 +62,5 @@ A [CLongBinary](../../mfc/reference/clongbinary-class.md)オブジェクトが�
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 集計値の計算 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[レコードセット: 合計とその他の集計結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

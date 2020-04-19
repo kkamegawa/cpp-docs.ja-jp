@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293070"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50512399"
 
 ## <a name="syntax"></a>構文
 
-> **/DYNAMICBASE****[: NO]**
+> **/DYNAMICBASE** **[:NO]**
 
 ## <a name="remarks"></a>Remarks
 
@@ -31,7 +31,7 @@ ms.locfileid: "50512399"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
 
@@ -43,7 +43,7 @@ ms.locfileid: "50512399"
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
-- [リンカー オプション](../../build/reference/linker-options.md)
+- [MSVC リンカーのリファレンス](linking.md)
+- [MSVC リンカー オプション](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Windows ISV Software Security Defenses](https://msdn.microsoft.com/library/bb430720.aspx)

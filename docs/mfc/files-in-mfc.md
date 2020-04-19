@@ -14,12 +14,12 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-ms.openlocfilehash: 815239b0d4de1938a810153cb98f39b2642b6e2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf53c498e61bdf0a233d7638649b30e498e27cc5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392857"
 ---
 # <a name="files-in-mfc"></a>MFC のファイル
 

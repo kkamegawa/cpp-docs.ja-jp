@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d26e679135f6e8c8236803bae0343e956000c9e8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373642"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows クラス
 
@@ -165,7 +165,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|既定のコンストラクター|
+|`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -252,7 +252,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ## <a name="example"></a>例
 
-次の例を使用する方法を示します`CMFCVisualManagerWindows`します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。
+次の例を使用する方法を示します`CMFCVisualManagerWindows`します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 
@@ -290,7 +290,7 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bIsTemporary*<br/>
+[in] *bIsTemporary*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -310,8 +310,8 @@ virtual BOOL DrawComboBorderWinXP(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -333,8 +333,8 @@ virtual BOOL DrawComboDropButtonWinXP(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -355,7 +355,7 @@ virtual BOOL DrawPushButtonWinXP(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*pButton*<br/>
-[in]*uiState*<br/>
+[in] *uiState*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -528,7 +528,7 @@ virtual void OnDrawBarGripper(
 
 [in]*pDC*<br/>
 [in]*rectGripper*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 [in]*pBar*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -592,7 +592,7 @@ virtual void OnDrawButtonSeparator(
 [in]*pButton*<br/>
 [in]*rect*<br/>
 [in]*状態*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -614,10 +614,10 @@ virtual void OnDrawCaptionButton(
 [in]*pDC*<br/>
 [in]*pButton*<br/>
 [in]*描画*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 [in]*bMaximized*<br/>
 [in]*bDisabled*<br/>
-[in]*nImageID*<br/>
+[in] *nImageID*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -660,7 +660,7 @@ virtual void OnDrawCheckBoxEx(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*状態*<br/>
+[in] *nState*<br/>
 [in]*bHighlighted*<br/>
 [in]*bPressed*<br/>
 [in]*bEnabled*<br/>
@@ -684,8 +684,8 @@ virtual void OnDrawComboBorder(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -707,8 +707,8 @@ virtual void OnDrawComboDropButton(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*bDisabled*<br/>
-[in]*bIsDropped*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -721,7 +721,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndCtrl*<br/>
+[in] *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -741,7 +741,7 @@ virtual void OnDrawEditBorder(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*bDisabled*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsHighlighted*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -760,8 +760,8 @@ virtual void OnDrawExpandingBox(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*bIsOpened*<br/>
-[in]*colorBox*<br/>
+[in] *bIsOpened*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -778,9 +778,9 @@ virtual void OnDrawFloatingToolbarBorder(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pToolBar*<br/>
-[in]*rectBorder*<br/>
-[in]*rectBorderSize*<br/>
+[in] *pToolBar*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -800,8 +800,8 @@ virtual void OnDrawHeaderCtrlBorder(
 [in]*pCtrl*<br/>
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -856,7 +856,7 @@ virtual void OnDrawMenuSystemButton(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*uiSystemCommand*<br/>
+[in] *uiSystemCommand*<br/>
 [in]*nStyle*<br/>
 [in]*bHighlight*<br/>
 
@@ -876,8 +876,8 @@ virtual void OnDrawMiniFrameBorder(
 
 [in]*pDC*<br/>
 [in]*pFrameWnd*<br/>
-[in]*rectBorder*<br/>
-[in]*rectBorderSize*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -894,9 +894,9 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectBtn*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
+[in] *rectBtn*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -933,7 +933,7 @@ virtual COLORREF OnDrawPaneCaption(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*描画*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*rectButtons*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -952,7 +952,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectClient*<br/>
+[in] *rectClient*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -972,7 +972,7 @@ virtual void OnDrawScrollButtons(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*nBorderSize*<br/>
+[in] *nBorderSize*<br/>
 [in]*画像を*<br/>
 [in]*bHilited*<br/>
 
@@ -993,7 +993,7 @@ virtual void OnDrawSeparator(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*rect*<br/>
-[in]*bIsHoriz*<br/>
+[in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1011,8 +1011,8 @@ virtual void OnDrawSpinButtons(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectSpin*<br/>
-[in]*状態*<br/>
+[in] *rectSpin*<br/>
+[in] *nState*<br/>
 [in]*bOrientation*<br/>
 [in]*pSpinCtrl*<br/>
 
@@ -1057,14 +1057,14 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pStatusBar*<br/>
-[in]*rectProgress*<br/>
-[in]*nProgressTotal*<br/>
-[in]*nProgressCurr*<br/>
+[in] *pStatusBar*<br/>
+[in] *rectProgress*<br/>
+[in] *nProgressTotal*<br/>
+[in] *nProgressCurr*<br/>
 [in]*clrBar*<br/>
 [in]*clrProgressBarDest*<br/>
-[in]*clrProgressText*<br/>
-[in]*bProgressText*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1080,8 +1080,8 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pStatBar*<br/>
-[in]*rectSizeBox*<br/>
+[in] *pStatBar*<br/>
+[in] *rectSizeBox*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1099,9 +1099,9 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectTab*<br/>
+[in] *rectTab*<br/>
 [in]*iTab*<br/>
-[in]*bIsActive*<br/>
+[in] *bIsActive*<br/>
 [in]*pTabWnd*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -1123,9 +1123,9 @@ virtual void OnDrawTabCloseButton(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*pTabWnd*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsDisabled*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1145,8 +1145,8 @@ virtual void OnDrawTabsButtonBorder(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*pButton*<br/>
-[in]*uiState*<br/>
-[in]*pWndTab*<br/>
+[in] *uiState*<br/>
+[in] *pWndTab*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1166,8 +1166,8 @@ virtual void OnDrawTask(
 [in]*pDC*<br/>
 [in]*pTask*<br/>
 [in]*pIcons*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsSelected*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1205,8 +1205,8 @@ virtual void OnDrawTasksGroupCaption(
 
 [in]*pDC*<br/>
 [in]*pGroup*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsSelected*<br/>
 [in]*bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -1224,7 +1224,7 @@ virtual void OnDrawTearOffCaption(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*bIsActive*<br/>
+[in] *bIsActive*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1240,7 +1240,7 @@ virtual void OnErasePopupWindowButton(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectClient*<br/>
+[in] *rectClient*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -1277,7 +1277,7 @@ virtual void OnEraseTabsButton(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*pButton*<br/>
-[in]*pWndTab*<br/>
+[in] *pWndTab*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1315,8 +1315,8 @@ virtual void OnFillBarBackground(
 
 [in]*pDC*<br/>
 [in]*pBar*<br/>
-[in]*rectClient*<br/>
-[in]*rectClip*<br/>
+[in] *rectClient*<br/>
+[in] *rectClip*<br/>
 [in]*bNCArea*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -1353,7 +1353,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsSelected*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1372,7 +1372,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*pFrameWnd*<br/>
 [in]*描画*<br/>
 
@@ -1395,8 +1395,8 @@ virtual void OnFillOutlookPageButton(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
 [in]*clrText*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -1463,7 +1463,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectRarelyUsed*<br/>
+[in] *rectRarelyUsed*<br/>
 
 ### <a name="remarks"></a>Remarks
 

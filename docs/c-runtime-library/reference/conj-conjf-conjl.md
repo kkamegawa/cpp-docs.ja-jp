@@ -1,11 +1,11 @@
 ---
 title: conj、conjf、conjl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - conj
 - conjf
 - conjl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - conj
 - conjf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939039"
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
 
@@ -68,15 +71,15 @@ _Lcomplex conjl(
 
 ## <a name="return-value"></a>戻り値
 
-複素共役*z*します。  結果は、実数部と虚数部と同じ部分*z*が、逆の符号。
+*Z*の複素共役。  結果の実数部と虚数部は*z*と同じですが、符号が逆になっています。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **conj**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**conj**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**conj**のオーバーロードを呼び出すことができます。 C プログラムでは、 **conj**は常にを受け取り、**戻り値を**返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**conj**、 **conjf**、 **conjl**|\<complex.h>|\<ccomplex>|
 

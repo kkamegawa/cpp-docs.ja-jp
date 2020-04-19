@@ -1,36 +1,37 @@
 ---
 title: .IF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .IF
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: cf9c594d843c937dd2191bee2a7cebadbc615c82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6992ec8b151a83b3f9fa920997845c20caf0476d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483639"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317748"
 ---
-# <a name="if"></a>.IF
+# <a name="if-32-bit-masm"></a>.IF (32 ビット MASM)
 
-テスト コードを生成`condition1`(たとえば、AX > 7 の) 実行と、*ステートメント*その条件が true の場合。
+*Condition1* (たとえば、AX > 7) をテストし、その条件が true の場合に*ステートメント*を実行するコードを生成します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .IF 条件 1<br/>
-> ステートメント<br/>
-> [[.ELSEIF condition2<br/>
-> ステートメント]<br/>
-> [[.その他<br/>
-> ステートメント]<br/>
-> .ENDIF
+> **.** *Condition1*\
+> *ステートメント*の\
+> ⟦ **。ELSEIF** *condition2*\
+> *ステートメント*⟧ \
+> ⟦ **。それ以外**の\
+> *ステートメント*⟧ \
+> **.ENDIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-場合、[します。ELSE](../../assembler/masm/dot-else.md)元の条件が false であった場合は、次のように、そのステートメントが実行されます。 実行時に、条件が評価されることに注意してください。
+の場合は[。それ以外](dot-else.md)の場合は、元の条件が false の場合にステートメントが実行されます。 条件は実行時に評価されることに注意してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

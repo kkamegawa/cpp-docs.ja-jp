@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4925
 ms.assetid: a4b206c0-016a-4f28-873a-bb8bb41bad50
-ms.openlocfilehash: cb7b416fe15380dc914bd57152e8a0ce3618ee85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88eb09bdde1fa8dc50fa601cf7ae200d2851ac03
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614566"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052301"
 ---
 # <a name="compiler-warning-level-1-c4925"></a>コンパイラの警告 (レベル 1) C4925
 
@@ -23,7 +23,7 @@ ms.locfileid: "50614566"
 
 次の例では C4925 が生成されます。
 
-```
+```cpp
 // C4925.cpp
 // compile with: /LD /W1
 #define _ATL_ATTRIBUTES 1

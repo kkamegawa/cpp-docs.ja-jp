@@ -1,39 +1,39 @@
 ---
-title: Concurrency 名前空間定数 (AMP)
+title: コンカレンシー名前空間定数 (AMP)
 ms.date: 11/04/2016
 f1_keywords:
 - amp/Concurrency::HLSL_MAX_NUM_BUFFERS
 - amp/Concurrency::MODULENAME_MAX_LENGTH
 ms.assetid: 13a8e8cd-2eec-4e60-a91d-5d271072747b
-ms.openlocfilehash: e345fcf052fe3e293fbe1df14138873aa6977a18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d304728f5bdca8f4bfb39cdb26baad984e63097
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551997"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126928"
 ---
-# <a name="concurrency-namespace-constants-amp"></a>Concurrency 名前空間定数 (AMP)
+# <a name="concurrency-namespace-constants-amp"></a>コンカレンシー名前空間定数 (AMP)
 
 |||
 |-|-|
 |[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|
 
-##  <a name="hlsl_max_num_buffers"></a>  HLSL_MAX_NUM_BUFFERS 定数
+## <a name="hlsl_max_num_buffers"></a>HLSL_MAX_NUM_BUFFERS 定数
 
 DirectX で許容される最大バッファー数。
 
-```
+```cpp
 static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;
 ```
 
-##  <a name="modulename_max_length"></a>  MODULENAME_MAX_LENGTH Constant
+## <a name="modulename_max_length"></a>MODULENAME_MAX_LENGTH 定数
 
 モジュール名の最大長を格納します。 この値は、コンパイラとランタイムで同じにする必要があります。
 
-```
+```cpp
 static const UINT MODULENAME_MAX_LENGTH = 1024;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,6 +1,6 @@
 ---
 title: CStdioFile クラス
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CStdioFile
 - AFX/CStdioFile
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b667f4121d92863335befda3a7beef74f29ad1a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456213"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177483"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile クラス
 
-実行時の関数で開かれた C ランタイム ストリーム ファイルを表す[fopen](../../c-runtime-library/reference/fopen-wfopen.md)します。
+ランタイム関数[fopen](../../c-runtime-library/reference/fopen-wfopen.md)によって開かれた C ランタイムストリームファイルを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,34 +41,34 @@ class CStdioFile : public CFile
 
 |名前|説明|
 |----------|-----------------|
-|[CStdioFile::CStdioFile](#cstdiofile)|構築、`CStdioFile`パスまたはファイルのポインターからのオブジェクト。|
+|[CStdioFile::CStdioFile](#cstdiofile)|パスまた`CStdioFile`はファイルポインターからオブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CStdioFile::Open](#open)|オーバーロードされます。 開くが、既定で使用するために設計された`CStdioFile`コンス トラクター (オーバーライド[CFile::Open](../../mfc/reference/cfile-class.md#open))。|
-|[CStdioFile::ReadString](#readstring)|1 行のテキストを読み取ります。|
-|[CStdioFile::Seek](#seek)|現在のファイル ポインターを移動します。|
-|[CStdioFile::WriteString](#writestring)|1 行のテキストを書き込みます。|
+|[CStdioFile::Open](#open)|オーバーロードされます。 Open は、既定`CStdioFile`のコンストラクターで使用するように設計されています ( [CFile:: Open](../../mfc/reference/cfile-class.md#open)をオーバーライドします)。|
+|[CStdioFile::ReadString](#readstring)|1行のテキストを読み取ります。|
+|[CStdioFile::Seek](#seek)|現在のファイルポインターを配置します。|
+|[CStdioFile::WriteString](#writestring)|1行のテキストを書き込みます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CStdioFile::m_pStream](#m_pstream)|開いているファイルへのポインターが含まれています。|
+|[CStdioFile::m_pStream](#m_pstream)|開いているファイルへのポインターを格納します。|
 
 ## <a name="remarks"></a>Remarks
 
-Stream ファイルは、バッファーに格納され、テキスト モード (既定値) またはバイナリ モードのいずれかで開くことができます。
+ストリームファイルはバッファーされ、テキストモード (既定) またはバイナリモードで開くことができます。
 
-テキスト モードでは、復帰と改行のペアの特殊な処理を提供します。 改行文字を記述するとき文字 (0x0A) テキスト モードを`CStdioFile`オブジェクト、バイトのペア (0x0D、0x0A) ファイルに送信されます。 読み込みのときは、バイトのペア (0x0D、0x0A) 1 0x0A バイトに変換されます。
+テキストモードでは、復帰とラインフィードのペアに対して特別な処理を行います。 ラインフィード (改行) 文字 (0x0a) をテキストモード`CStdioFile`オブジェクトに書き込むと、バイトペア (0x0D、0x0a) がファイルに送信されます。 を読み取ると、バイトペア (0x0D、0x0A) が1つの0x0A バイトに変換されます。
 
-[CFile](../../mfc/reference/cfile-class.md)関数[複製](../../mfc/reference/cfile-class.md#duplicate)、 [LockRange](../../mfc/reference/cfile-class.md#lockrange)、および[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)はサポートされていません`CStdioFile`します。
+[CFile](../../mfc/reference/cfile-class.md)関数[Duplicate](../../mfc/reference/cfile-class.md#duplicate)、 [LockRange](../../mfc/reference/cfile-class.md#lockrange)、および[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)は、で`CStdioFile`はサポートされていません。
 
-これらの関数を呼び出す場合、`CStdioFile`が表示されます、 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)します。
+でこれらの関数`CStdioFile`を呼び出すと、 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)が得られます。
 
-使用しての詳細については`CStdioFile`、記事をご覧ください[MFC のファイル](../../mfc/files-in-mfc.md)と[ファイル処理](../../c-runtime-library/file-handling.md)で、*ランタイム ライブラリ リファレンス*します。
+の使用`CStdioFile`方法の詳細については、「 [MFC の記事ファイル](../../mfc/files-in-mfc.md)」と「*ランタイムライブラリリファレンス*」の「[ファイル処理](../../c-runtime-library/file-handling.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -82,14 +82,14 @@ Stream ファイルは、バッファーに格納され、テキスト モード
 
 **ヘッダー:** afx.h
 
-##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile
+##  <a name="cstdiofile"></a>CStdioFile::CStdioFile
 
 `CStdioFile` オブジェクトを構築して初期化します。
 
 ```
 CStdioFile();
 CStdioFile(CAtlTransactionManager* pTM);
-  CStdioFile(FILE* pOpenStream);
+CStdioFile(FILE* pOpenStream);
 
 CStdioFile(
     LPCTSTR lpszFileName,
@@ -104,30 +104,30 @@ CStdioFile(
 ### <a name="parameters"></a>パラメーター
 
 *pOpenStream*<br/>
-C ランタイム関数の呼び出しによって返されたファイル ポインターを指定します[fopen](../../c-runtime-library/reference/fopen-wfopen.md)します。
+C ランタイム関数[fopen](../../c-runtime-library/reference/fopen-wfopen.md)への呼び出しによって返されるファイルポインターを指定します。
 
-*場合*<br/>
-目的のファイルへのパスを表す文字列を指定します。 相対パスまたは絶対パスができます。
+*lpszFileName*<br/>
+目的のファイルへのパスを表す文字列を指定します。 相対パスと絶対パスのどちらでも構いません。
 
-*nOpenFlags*<br/>
-ファイルの作成、ファイルの共有、およびファイル アクセス モードのオプションを指定します。 ビットごとの OR を使用して複数のオプションを指定することができます ( **|** ) 演算子。
+*Noペンフラグ*<br/>
+ファイルの作成、ファイル共有、およびファイルアクセスモードのオプションを指定します。 複数のオプションを指定するには、ビットごと **|** の or () 演算子を使用します。
 
-1 つのファイル アクセス モード オプションが必要です。その他のモードでは、省略可能です。 参照してください[ほか](../../mfc/reference/cfile-class.md#cfile)モード オプションとその他のフラグの一覧についてはします。 Mfc バージョン 3.0 以降では、共有フラグが許可されます。
+1つのファイルアクセスモードオプションが必要です。その他のモードは省略可能です。 モードオプションとその他のフラグの一覧については、「 [cfile:: cfile](../../mfc/reference/cfile-class.md#cfile) 」を参照してください。 MFC バージョン3.0 以降では、共有フラグが許可されています。
 
 *pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-既定のコンス トラクターにファイルをアタッチできません、`CStdioFile`オブジェクト。 使用する必要がありますこのコンス トラクターを使用する場合、`CStdioFile::Open`にファイルを開くし、アタッチ先のメソッド、`CStdioFile`オブジェクト。
+既定のコンストラクターでは、ファイルは`CStdioFile`オブジェクトにアタッチされません。 このコンストラクターを使用する場合は、 `CStdioFile::Open`メソッドを使用してファイルを開き、 `CStdioFile`オブジェクトにアタッチする必要があります。
 
-単一パラメーター コンス トラクターは、アタッチするためのファイルを開くストリーム、`CStdioFile`オブジェクト。 ポインター値に定義済みの入力/出力ファイル ポインターは、許可されている*stdin*、 *stdout*、または*stderr*します。
+1つのパラメーターを持つコンストラクターは、開いている`CStdioFile`ファイルストリームをオブジェクトにアタッチします。 使用できるポインター値には、事前定義された入力/出力ファイルポインター *stdin*、 *stdout*、または*stderr*が含まれます。
 
-2 つのパラメーターのコンス トラクターを作成、`CStdioFile`オブジェクトし、指定されたパスに対応するファイルを開きます。
+2つのパラメーターを持つコンストラクター `CStdioFile`は、オブジェクトを作成し、指定されたパスを持つ対応するファイルを開きます。
 
-いずれかの場合は NULL を渡す場合*pOpenStream*または*場合*、コンス トラクターがスローされます、`CInvalidArgException*`します。
+*Popenstream*または*LPSZFILENAME*に NULL を渡すと、コンストラクターはを`CInvalidArgException*`スローします。
 
-コンス トラクターがスローする場合は、ファイルを開けないか、作成、`CFileException*`します。
+ファイルを開くことも作成することもできない場合、 `CFileException*`コンストラクターはをスローします。
 
 ### <a name="example"></a>例
 
@@ -135,7 +135,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ##  <a name="m_pstream"></a>  CStdioFile::m_pStream
 
-`m_pStream`データ メンバーは、C ランタイム関数によって返される、開いているファイルへのポインターを`fopen`します。
+データメンバーは、C ランタイム関数`fopen`によって返される開いているファイルへのポインターです。 `m_pStream`
 
 ```
 FILE* m_pStream;
@@ -143,11 +143,11 @@ FILE* m_pStream;
 
 ### <a name="remarks"></a>Remarks
 
-ファイルが開かれていなかったかが閉じられている場合は NULL になります。
+ファイルが開かれたことがない場合、または閉じられた場合は NULL になります。
 
 ##  <a name="open"></a>  CStdioFile::Open
 
-オーバーロードされます。 開くが、既定で使用するために設計された`CStdioFile`コンス トラクター。
+オーバーロードされます。 Open は、既定`CStdioFile`のコンストラクターで使用するように設計されています。
 
 ```
 virtual BOOL Open(
@@ -164,17 +164,17 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
-目的のファイルのパスを表す文字列。 相対パスまたは絶対パスができます。
+*lpszFileName*<br/>
+目的のファイルへのパスを表す文字列。 相対パスと絶対パスのどちらでも構いません。
 
-*nOpenFlags*<br/>
-共有とアクセス モード。 ファイルを開くときに実行するアクションを指定します。 ビットごとの OR を使用してオプションを組み合わせることができます (&#124;) 演算子。 1 つのアクセス許可と 1 つの共有オプションが必要です。modeCreate と modeNoInherit モードでは、省略可能です。
+*Noペンフラグ*<br/>
+共有とアクセスモード。 ファイルを開くときに実行するアクションを指定します。 ビットごとの OR (&#124;) 演算子を使用して、オプションを組み合わせることができます。 1つのアクセス許可と1つの共有オプションが必要です。modeCreate モードと modeNoInherit モードは省略可能です。
 
 *pError*<br/>
-失敗した操作の状態を受信する既存のファイルの例外オブジェクトへのポインター。
+失敗した操作の状態を受け取る既存のファイル例外オブジェクトへのポインター。
 
 *pTM*<br/>
-ポインターを`CAtlTransactionManager`オブジェクト。
+オブジェクトへの`CAtlTransactionManager`ポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -184,7 +184,7 @@ virtual BOOL Open(
 
 ##  <a name="readstring"></a>  CStdioFile::ReadString
 
-上限まで、バッファーにテキスト データを読み取ります*nMax*に関連付けられているファイルから、-1 が文字、`CStdioFile`オブジェクト。
+`CStdioFile`オブジェクトに関連付けられているファイルから、 *n1 日*文字の制限まで、テキストデータをバッファーに読み込みます。
 
 ```
 virtual LPTSTR ReadString(
@@ -197,26 +197,26 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="parameters"></a>パラメーター
 
 *lpsz*<br/>
-Null で終わる文字列を受け取るユーザーが指定したバッファーへのポインターを指定します。
+Null で終わるテキスト文字列を受け取るユーザー指定のバッファーへのポインターを指定します。
 
-*nMax*<br/>
-終端の null 文字をカウントせず、読み取る文字の最大数を指定します。
+*N1 日*<br/>
+読み取る文字の最大数を指定します。終端の null 文字は含まれません。
 
 *rString*<br/>
-参照を`CString`関数が戻るときに、文字列を格納するオブジェクト。
+関数が返され`CString`たときに文字列を格納するオブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-テキスト データを格納しているバッファーへのポインター。 すべてのデータを読み取り中にファイルの終わりに達した場合は NULL です。または、データを読み込まずにブール型、FALSE の場合、ファイルの終わりに達した場合。
+テキストデータを格納しているバッファーへのポインター。 データを読み取らずにファイルの終わりに到達した場合は NULL です。ブール値の場合は、データを読み取らずにファイルの終わりに到達した場合は FALSE になります。
 
 ### <a name="remarks"></a>Remarks
 
-最初の改行文字では、読み取りが停止します。 その場合より少ない場合、 *nMax*-1 文字が読み取られた、改行文字がバッファーに格納します。 いずれの場合も、null 文字 ('\0') が追加されます。
+読み取りは、最初の改行文字によって停止されます。 この場合、 *n1 日*文字が読み取られていない場合は、改行文字がバッファーに格納されます。 どちらの場合も、null 文字 (' \ 0 ') が追加されます。
 
-[:Read](../../mfc/reference/cfile-class.md#read)はテキスト モードの入力が復帰と改行のペアで終了しないにも使用できます。
+[CFile:: Read](../../mfc/reference/cfile-class.md#read)は、テキストモード入力でも使用できますが、復帰とラインフィードのペアで終了しません。
 
 > [!NOTE]
->  `CString`この関数のバージョンを削除、 `'\n'` LPTSTR バージョンは含みません。 存在する場合。
+>  この`CString`関数のバージョンでは、 `'\n'`存在する場合、が削除されます。 LPTSTR のバージョンでは削除されません。
 
 ### <a name="example"></a>例
 
@@ -224,7 +224,7 @@ Null で終わる文字列を受け取るユーザーが指定したバッファ
 
 ##  <a name="seek"></a>  CStdioFile::Seek
 
-以前に開かれたファイルでポインターを移動します。
+以前に開いたファイル内のポインターを再配置します。
 
 ```
 virtual ULONGLONG Seek(
@@ -237,36 +237,36 @@ virtual ULONGLONG Seek(
 *lOff*<br/>
 ポインターを移動するバイト数。
 
-*nFrom*<br/>
-ポインターの移動モード。 値は次のいずれかを指定する必要があります。
+*n*<br/>
+ポインターの移動モード。 次のいずれかの値を指定する必要があります。
 
-- `CFile::begin`: ファイル ポインターを移動する*lOff*ファイルの先頭からバイトを転送します。
+- `CFile::begin`:ファイルポインターをファイルの先頭から*lOff*バイト前に移動します。
 
-- `CFile::current`: ファイル ポインターを移動する*lOff*ファイル内の現在位置からのバイト数。
+- `CFile::current`:ファイルポインターをファイルの現在位置から*lOff*バイトに移動します。
 
-- `CFile::end`: ファイル ポインターを移動する*lOff*ファイルの終端からのバイト。 なお*lOff*する必要がありますが負では、既存をシークするファイル; 正の値は、ファイルの末尾を越えたシークします。
+- `CFile::end`:ファイルポインターをファイルの末尾から*lOff*バイトに移動します。 既存のファイルを検索するには、 *lOff*に負の値を指定する必要があることに注意してください。正の値は、ファイルの末尾を越えてシークします。
 
 ### <a name="return-value"></a>戻り値
 
-要求された位置が、有効な場合`Seek`ファイルの先頭から新しいバイト オフセットを返します。 それ以外の場合、戻り値は未定義と`CFileException`オブジェクトがスローされます。
+要求された位置が有効`Seek`な場合は、ファイルの先頭からの新しいバイトオフセットを返します。 それ以外の場合、戻り値は未定義`CFileException`となり、オブジェクトがスローされます。
 
 ### <a name="remarks"></a>Remarks
 
-`Seek`関数を使用するランダム アクセス ファイルの内容をポインターを移動することによって、指定した時間、絶対的または相対的です。 データは、検索中に実際には読み込まれません。 要求された位置がファイルのサイズよりも大きい場合は、ファイルの長さは、その位置まで拡張して、例外はスローされません。
+関数`Seek`は、ポインターを指定された量 (完全または相対的) に移動することによって、ファイルの内容にランダムにアクセスできるようにします。 シーク中にデータが実際に読み取られることはありません。 要求された位置がファイルのサイズより大きい場合、ファイルの長さはその位置まで拡張され、例外はスローされません。
 
-ファイルが開かれたときに、ファイル ポインターがオフセット 0 で、ファイルの先頭に配置されます。
+ファイルが開かれると、ファイルポインターは、ファイルの先頭であるオフセット0に位置します。
 
-この実装の`Seek`ランタイム ライブラリ (CRT) 関数に基づく`fseek`します。 使用法にいくつかの制限があります`Seek`テキスト モードで開かれたストリームにします。 詳細については、次を参照してください。 [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)します。
+の`Seek`この実装は、ランタイムライブラリ (CRT) 関数`fseek`に基づいています。 テキストモードで開かれたストリームで`Seek`のの使用にはいくつかの制限があります。 詳細については、「 [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-次の例は、使用する方法を示します`Seek`の先頭から 1,000 バイトのポインターを移動する、`cfile`ファイル。 なお`Seek`後で呼び出す必要があるため、データを読み取らない[CStdioFile::ReadString](#readstring)データを読み取る。
+次の例は、を使用`Seek`して、ポインターを`cfile`ファイルの先頭から1000バイト移動する方法を示しています。 はデータ`Seek`を読み取らないことに注意してください。そのため、後で[CStdioFile:: ReadString](#readstring)を呼び出してデータを読み取る必要があります。
 
 [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]
 
 ##  <a name="writestring"></a>  CStdioFile::WriteString
 
-バッファーからデータに関連付けられているファイルに書き込みます、`CStdioFile`オブジェクト。
+バッファーから`CStdioFile`オブジェクトに関連付けられたファイルにデータを書き込みます。
 
 ```
 virtual void WriteString(LPCTSTR lpsz);
@@ -275,17 +275,17 @@ virtual void WriteString(LPCTSTR lpsz);
 ### <a name="parameters"></a>パラメーター
 
 *lpsz*<br/>
-Null で終わる文字列を格納しているバッファーへのポインターを指定します。
+Null で終わる文字列を含むバッファーへのポインターを指定します。
 
 ### <a name="remarks"></a>Remarks
 
-終端の null 文字 ( `\0`) は、ファイルに書き込まれません。 このメソッドでは、改行文字を書き込みます*lpsz*キャリッジ リターンとライン フィードのペアとしてファイルにします。
+終端の null 文字 ( `\0`) は、ファイルに書き込まれません。 このメソッドは、キャリッジリターンとラインフィードのペアとして、 *lpsz*内の改行文字をファイルに書き込みます。
 
-Null で終わるファイルを使用するデータを書き込む場合`CStdioFile::Write`または[CFile::Write](../../mfc/reference/cfile-class.md#write)します。
+Null で終了しないデータをファイルに書き込む場合は、または`CStdioFile::Write` [CFile:: write](../../mfc/reference/cfile-class.md#write)を使用します。
 
-このメソッドは、 `CInvalidArgException*` NULL を指定する場合、 *lpsz*パラメーター。
+Lpsz パラメーターに NULL `CInvalidArgException*`を指定した場合、このメソッドはをスローします。
 
-このメソッドは、`CFileException*`ファイル システム エラーに応答します。
+このメソッドは、 `CFileException*`ファイルシステムエラーに応答してをスローします。
 
 ### <a name="example"></a>例
 

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
-ms.openlocfilehash: a5753fc99efcdb1064a21981c62faaba84d44189
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 152546fce8f3ee63f8b95595bff052f18cd4ebda
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746969"
 ---
 # <a name="compiler-error-c2500"></a>コンパイラ エラー C2500
 
-'identifier1': 'identifier2' である直接の基本クラス
+' identifier1 ': ' identifier2 ' は既に直接基底クラスです
 
-クラスまたは構造体は、基本クラスの一覧で複数回表示されます。
+クラスまたは構造体が基底クラスのリストに複数回出現します。
 
-直接の基本クラスは基底のリストに記載されています。 間接基底は、基底のリスト内のクラスのいずれかの基本クラスです。
+直接ベースは、基本リストに記載されています。 間接基本は、基本リスト内のいずれかのクラスの基本クラスです。
 
-クラスは、直接基底クラスとして複数回指定することはできません。 クラスは、2 回以上の間接基底クラスとして使用できます。
+クラスは、直接基底クラスとして複数回指定することはできません。 クラスは、間接的な基底クラスとして複数回使用できます。
 
 次の例では、C2500 が生成されます。
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

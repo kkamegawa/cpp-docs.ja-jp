@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3244
 ms.assetid: dae6c49b-5212-4206-8f61-d4010c0b9969
-ms.openlocfilehash: fe17ac0f20c5644fd5bb81094242403b244bd1d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11de2ac8a652687d9826319f13b7c531534d5fe3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521264"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754538"
 ---
 # <a name="compiler-error-c3244"></a>コンパイラ エラー C3244
 
@@ -21,7 +21,7 @@ ms.locfileid: "50521264"
 
 次の例では C3244 が生成されます。
 
-```
+```cpp
 // C3244.cpp
 #pragma warning(disable:4199)
 

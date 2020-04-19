@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: 196928d7a171aa7ffe2d6b8f38b529d3d3588bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624784"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753446"
 ---
 # <a name="compiler-error-c3345"></a>コンパイラ エラー C3345
 
@@ -23,11 +23,11 @@ ms.locfileid: "50624784"
 
 1. *識別子* に空白またはその他の無効な文字が含まれていないことを確認します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のコード例では、 `name` 属性の `module` パラメーターに空白が含まれているので、エラー メッセージ C3345 が発生します。
 
-```
+```cpp
 // cpp_attr_name_module.cpp
 // compile with: /LD /link /OPT:NOREF
 #include <atlbase.h>
@@ -52,7 +52,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [文字分類](../../c-runtime-library/character-classification.md)<br/>

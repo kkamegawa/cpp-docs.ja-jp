@@ -10,12 +10,12 @@ helpviewer_keywords:
 - = operator, with specific C++ Standard Library objects
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
-ms.openlocfilehash: b829a0b6224ca93192f15b088fcb98155bc3963a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 738f86bd6163a827b43d78f29c6e3a7124400fb7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517933"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452163"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -31,10 +31,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 値がビットに割り当てられている要素の参照。
 
-*val*<br/>
+*Val*\
 ビットに割り当てられるブール値。
 
 ## <a name="example"></a>例
@@ -95,7 +95,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```Output
 The vector is: true false false true true
@@ -118,5 +118,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="see-also"></a>関連項目
 
-[ベクター\<bool >:: クラスを参照](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference クラス](../standard-library/vector-bool-reference-class.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: d1bed6f3b0dddf0d4ae5e8309d683e52c9e82410
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0cdb368dc70b73ba70b3721fecdaf47de36686d5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338370"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC モジュールの状態データの管理
 

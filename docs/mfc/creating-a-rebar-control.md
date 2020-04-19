@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rebar controls [MFC], creating
 - CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
-ms.openlocfilehash: 3cc4795a0d4500a53c775ba6f44c3dce520e5110
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fb651aef599b64b787d96a668e2e1496c1dff8e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153346"
 ---
 # <a name="creating-a-rebar-control"></a>Rebar コントロールの作成
 
@@ -38,4 +38,3 @@ ms.locfileid: "50644679"
 
 [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

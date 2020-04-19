@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: a1b631c093ea6997d89a738b4818aaf66f561836
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400722"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar クラス
 
@@ -143,7 +143,7 @@ CBRS_TOP または CBRS_BOTTOM 配置スタイルを指定する場合は、ダ�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CFormView クラス](../../mfc/reference/cformview-class.md)<br/>

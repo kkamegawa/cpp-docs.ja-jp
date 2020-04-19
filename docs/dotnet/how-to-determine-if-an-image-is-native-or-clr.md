@@ -1,5 +1,5 @@
 ---
-title: '方法: イメージがネイティブであるか CLR であるかを確認する'
+title: '方法: イメージがネイティブ モードまたは CLR を確認します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: ad8603827f5d1c951411403a62f8ffff58bfca88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387345"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>方法: イメージがネイティブであるか CLR であるかを確認する
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>方法: イメージがネイティブ モードまたは CLR を確認します。
 
 共通言語ランタイムを使用するイメージをビルドしたかどうかを判断する方法の 1 つ**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)します。
 
-共通言語ランタイムのイメージをビルドしたかどうかをプログラムで確認できます。 詳細については、次を参照してください。[方法:/clr コンパイルを検出](../dotnet/how-to-detect-clr-compilation.md)します。
+共通言語ランタイムのイメージをビルドしたかどうかをプログラムで確認できます。 詳細については、「[方法 :/Clr のコンパイルを検出](../dotnet/how-to-detect-clr-compilation.md)します。
 
 ## <a name="example"></a>例
 

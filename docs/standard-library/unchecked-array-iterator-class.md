@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - stdext::unchecked_array_iterator
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-ms.openlocfilehash: 9b3db474bedca50922334bd4dbd09c71d4e6e987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5344a108f32b694b9dafac78dbb8eb7064cdf4cc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626201"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455009"
 ---
 # <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator クラス
 
@@ -39,5 +39,5 @@ class unchecked_array_iterator;
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

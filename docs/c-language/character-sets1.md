@@ -2,12 +2,12 @@
 title: 文字セット
 ms.date: 11/04/2016
 ms.assetid: ef21daa0-b4b4-4f1a-86f4-25904d83fc86
-ms.openlocfilehash: 4f8cc9f1d33a33848396dab7199b5eee65727e9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64e83eb1932c3ee379b67351f0f283f1ea7c9836
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640961"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375880"
 ---
 # <a name="character-sets"></a>文字セット
 

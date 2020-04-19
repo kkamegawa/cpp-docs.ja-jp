@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3485
 ms.assetid: d67536f9-67a1-4ad9-9a94-d8bbbca3d0dc
-ms.openlocfilehash: 09080a402767835cda9711c2f0fc4d7c8d787439
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0eacb6ce6426674d23fc78596ead3730f46ae370
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508022"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743043"
 ---
 # <a name="compiler-error-c3485"></a>コンパイラ エラー C3485
 
@@ -23,11 +23,11 @@ ms.locfileid: "50508022"
 
 - ラムダ式の定義から `const` 修飾子または `volatile` 修飾子を削除します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、ラムダ式の定義の一部として `const` 修飾子を使用しているため、C3485 が生成されます。
 
-```
+```cpp
 // C3485.cpp
 
 int main()
@@ -36,6 +36,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

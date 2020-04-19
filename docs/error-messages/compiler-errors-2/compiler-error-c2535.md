@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2535
 ms.assetid: a958f83e-e2bf-4a59-b44b-d406ec325d7e
-ms.openlocfilehash: b2b5452cfe59284d56b019674ffbabbda0dc62d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5cecd847837214f6392bead624e5377cef4833f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574024"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758646"
 ---
 # <a name="compiler-error-c2535"></a>コンパイラ エラー C2535
 
@@ -19,11 +19,11 @@ ms.locfileid: "50574024"
 
 このエラーは、オーバーロードされた関数の定義または宣言で、同じ仮パラメーター リストを繰り返し使用した場合に発生します。
 
-Dispose 関数が原因で C2535 が発生した場合は、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはします。
+Dispose 関数のために C2535 を取得した場合は、「[デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 」で詳細を確認してください。
 
 次の例では、C2535 が生成されます。
 
-```
+```cpp
 // C2535.cpp
 // compile with: /c
 class C {

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 42: ODBC ドライバーの開発に関する推奨事項'
+title: TN042:ODBC ドライバーの開発に関する推奨事項
 ms.date: 11/04/2016
 f1_keywords:
 - vc.odbc
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305412"
 ---
-# <a name="tn042-odbc-driver-developer-recommendations"></a>テクニカル ノート 42: ODBC ドライバーの開発に関する推奨事項
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042:ODBC ドライバーの開発に関する推奨事項
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -120,4 +120,3 @@ MFC データベース クラスでは、多くの場合ほとんどレベル 1 
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

@@ -2,30 +2,27 @@
 title: QueryInterface
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- QueryInterface
 helpviewer_keywords:
 - interfaces, pointers
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 552d0a0f5cbc93bd0d8fc6eb4a77eecee851add6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37bb7a8c7fef963f340704561e24e33cc36707f3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477936"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298637"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
-COM の基本的なメカニズムは、使用するにはオブジェクトが静的に (前にインスタンス化されます) を提供する機能が express されるメカニズムは、`IUnknown`メソッドと呼ばれる[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))します。
+オブジェクトが静的に提供する機能を (インスタンス化される前に) 表現できるメカニズムもありますが、基本的な COM 機構は、 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))と呼ばれる `IUnknown` メソッドを使用することです。
 
-派生したすべてのインターフェイスは`IUnknown`ですべてのインターフェイスの実装があるため、`QueryInterface`します。 実装に関係なくは、このメソッドは、インターフェイスを呼び出し元が、ポインターの IID を使用して、オブジェクトを照会します。 オブジェクトは、そのインターフェイスをサポートしている場合`QueryInterface`も呼び出し中に、インターフェイスへのポインターを取得します。`AddRef`します。 それ以外の場合、E_NOINTERFACE エラー コードを返します。
+すべてのインターフェイスは `IUnknown`から派生するため、すべてのインターフェイスに `QueryInterface`の実装があります。 実装に関係なく、このメソッドは、呼び出し元がポインターを必要とするインターフェイスの IID を使用してオブジェクトを照会します。 オブジェクトがそのインターフェイスをサポートしている場合、`QueryInterface` は、インターフェイスへのポインターを取得し、`AddRef`も呼び出します。 それ以外の場合は、E_NOINTERFACE エラーコードを返します。
 
-従う必要がありますので注意[参照カウント](../atl/reference-counting.md)常時ルール。 呼び出す場合`Release`参照カウントがゼロにデクリメントするためのインターフェイス ポインターでする必要がありますいないポインターを使用する、もう一度です。 場合によっては、オブジェクトへの弱い参照を取得する必要があります (つまり、たい場合がありますの参照カウントをインクリメントせずにそのインターフェイスのいずれかへのポインターを取得) を呼び出すことでこれを実行する余裕がないが、`QueryInterface`続けて`Release`します。 このような方法で取得されたポインターは無効でありは使用できません。 これより簡単に明らかにいつ[_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces)が定義されている場合は、検索の参照カウントのバグの便利な方法は、このマクロを定義するようにします。
+[参照カウント](../atl/reference-counting.md)ルールは常に従う必要があることに注意してください。 インターフェイスポインターで `Release` を呼び出して、参照カウントを0にデクリメントする場合は、そのポインターを再度使用しないでください。 場合によっては、オブジェクトへの弱い参照を取得しなければならないことがあります (つまり、参照カウントをインクリメントせずにインターフェイスの1つへのポインターを取得することもできます) が、`QueryInterface` を呼び出した後に `Release`を呼び出すことはできません。 このような方法で取得したポインターは無効であるため、使用しないでください。 これは[_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces)が定義されている場合にも簡単に明らかになるため、このマクロを定義すると、参照カウントのバグを見つけるのに便利です。
 
 ## <a name="see-also"></a>関連項目
 
 [COM の概要](../atl/introduction-to-com.md)<br/>
-[オブジェクト内の移動を QueryInterface:](/windows/desktop/com/queryinterface--navigating-in-an-object)
-
+[QueryInterface: オブジェクト内の移動](/windows/win32/com/queryinterface--navigating-in-an-object)

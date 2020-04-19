@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
-ms.openlocfilehash: 51ecf5fbc793c02a23e2aa02fb08e37ebe4b0ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dbb0328aa1810d55f2d974aed822992b53101b5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559771"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736660"
 ---
 # <a name="compiler-error-c3883"></a>コンパイラ エラー C3883
 
-'var': initonly 静的データ メンバーを初期化する必要があります
+' var ': initonly 静的データメンバーは初期化されなければなりません
 
-マークされた変数[initonly](../../dotnet/initonly-cpp-cli.md)正しく初期化されませんでした。
+[Initonly](../../dotnet/initonly-cpp-cli.md)でマークされた変数が正しく初期化されませんでした。
 
 次の例では、C3883 が生成されます。
 
-```
+```cpp
 // C3883.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -32,7 +32,7 @@ ref struct Y1 {
 
 次の例では、考えられる解決策を示しています。
 
-```
+```cpp
 // C3883b.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -41,9 +41,9 @@ ref struct Y1 {
 };
 ```
 
-次の例では、静的コンス トラクターで初期化する方法を示します。
+次の例は、静的コンストラクターでを初期化する方法を示しています。
 
-```
+```cpp
 // C3883c.cpp
 // compile with: /clr /LD
 ref struct Y1 {

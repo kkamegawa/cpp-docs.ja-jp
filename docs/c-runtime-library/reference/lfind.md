@@ -1,9 +1,9 @@
 ---
 title: _lfind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind
 - _lfind
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579167"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953386"
 ---
-# <a name="lfind"></a>_lfind
+# <a name="_lfind"></a>_lfind
 
 指定されたキーの線形探索を実行します。 この関数のセキュリティが強化されたバージョンについては、「[_lfind_s](lfind-s.md)」を参照してください。
 
@@ -58,7 +61,7 @@ void *_lfind(
 *base*<br/>
 検索データのベースへのポインター。
 
-*数*<br/>
+*number*<br/>
 配列要素の数。
 
 *width*<br/>
@@ -69,13 +72,13 @@ void *_lfind(
 
 ## <a name="return-value"></a>戻り値
 
-キーが見つかった場合 **_lfind**配列の要素へのポインターを返します*基本*と一致する*キー*します。 キーが見つからない場合 **_lfind**返します**NULL**します。
+キーが見つかった場合、 **_lfind**は、*キー*に一致する*ベース*の配列の要素へのポインターを返します。 キーが見つからない場合、 **_lfind**は**NULL**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Lfind**関数は、値に関して線形探索を実行します。*キー*の配列の*数*の各要素は、*幅*バイト。 異なり**bsearch**、 **_lfind**配列を並べ替えるには必要ありません。 *基本*引数は、検索する配列のベースへのポインター。 *比較*引数が 2 つの配列要素を比較し、その関係を示す値を返します、ユーザー指定のルーチンへのポインター。 **_lfind**呼び出し、*比較*ルーチンを 1 つまたは複数回呼び出しごとに 2 つの配列要素へのポインターを渡す、検索中にします。 *比較*ルーチンが要素を比較し、し (つまり、要素が異なる) 0 以外の値を返す必要があります (つまり、要素が同じ場合) は 0。
+**_Lfind**関数は、*数値*要素の配列内の値*キー*の線形検索を実行します (各*幅*バイト)。 **Bsearch**とは異なり、 **_lfind**では配列を並べ替える必要はありません。 *基本*引数は、検索する配列のベースへのポインターです。 *Compare*引数は、2つの配列要素を比較し、それらの関係を指定する値を返すユーザー指定のルーチンへのポインターです。 **_lfind**は、検索中に*比較*ルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。 *比較*ルーチンは、要素を比較し、0以外の値 (要素が異なる場合) または 0 (要素が同一であることを意味します) を返す必要があります。
 
-この関数は、パラメーターを検証します。 場合*比較*、*キー*または*数*は**NULL**、または*基本*は**NULL**と*数*0 以外の場合、または*幅*が小さい」の説明に従って、0 よりも、無効なパラメーター ハンドラーが呼び出さは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。
+この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で、 *number*が0以外の場合、または*width*が0未満の場合は、「パラメーター」に説明されているように、無効なパラメーターハンドラーが呼び出されます。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。
 
 ## <a name="requirements"></a>必要条件
 

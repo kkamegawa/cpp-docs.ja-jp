@@ -7,27 +7,26 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-ms.openlocfilehash: ca74f85228a7b428d277395dfdd1d7172f8247f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a02194ccef8eca81971bb4e8ae24d859e578bcc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544977"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513962"
 ---
 # <a name="tree-control-parent-and-child-items"></a>ツリー コントロールの親項目と子項目
 
-ツリー コントロールの項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 関連付けられている子アイテムと呼ばれるサブ項目の一覧を持つことができます。 1 つまたは複数の子項目が含まれている項目は、親アイテムと呼ばれます。 子項目は、親項目の下に表示され、親の下位であることを示すインデントされます。 親を持たない項目は、階層の最上部にし、ルート項目が呼び出されます。
+ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 内のすべての項目には、子項目と呼ばれるサブ項目のリストが関連付けられています。 1つ以上の子項目を持つ項目を親項目と呼びます。 子項目は親項目の下に表示され、親の下位要素であることを示すためにインデントされます。 親を持たないアイテムは、階層の最上位にあり、ルートアイテムと呼ばれます。
 
-、特定の時点子項目の親項目の一覧の状態か、展開または折りたたまれています。 状態が展開されている場合は、親項目の下に子項目が表示されます。 折りたたまれている場合は、子項目は表示されません。 親がある場合またはユーザーが親項目をダブルクリックすると、この一覧は、自動的に展開された、折りたたまれた状態の間を切り替えます、**切り替え**スタイル、ユーザーが親項目に関連付けられたボタンをクリックするとします。 アプリケーションの展開またはを使用して子項目を折りたたむことができます、[展開](../mfc/reference/ctreectrl-class.md#expand)メンバー関数。
+任意の時点で、親項目の子項目のリストの状態を展開または折りたたむことができます。 状態が展開されると、子項目が親項目の下に表示されます。 折りたたまれている場合、子項目は表示されません。 ユーザーが親項目をダブルクリックすると、展開された状態と折りたたまれた状態が自動的に切り替わります。親が**TVS_HASBUTTONS**の場合は、ユーザーが親項目に関連付けられているボタンをクリックしたときに表示されます。 アプリケーションでは、 [expand](../mfc/reference/ctreectrl-class.md#expand)メンバー関数を使用して子項目を展開または折りたたむことができます。
 
-呼び出すことによって、ツリー コントロールに項目を追加する、 [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)メンバー関数。 この関数のハンドルを返します、 **HTREEITEM**型で、アイテムを一意に識別します。 項目を追加する場合は、新しい項目の親項目のハンドルを指定する必要があります。 指定した場合**NULL**または**TVI_ROOT**で親項目のハンドルではなく値、 [TVINSERTSTRUCT](/windows/desktop/api/commctrl/ns-commctrl-tagtvinsertstructa)構造または*hParent*パラメーター項目は、ルート項目として追加されます。
+項目をツリーコントロールに追加するには、 [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)メンバー関数を呼び出します。 この関数は、項目を一意に識別する**HTREEITEM**型のハンドルを返します。 項目を追加するときは、新しい項目の親項目のハンドルを指定する必要があります。 [TVINSERTSTRUCT](/windows/win32/api/commctrl/ns-commctrl-tvinsertstructw) structure または*hparent*パラメーターで親項目ハンドルの代わりに**NULL**または**TVI_ROOT**値を指定すると、項目がルート項目として追加されます。
 
-ツリー コントロールが送信する、 [TVN_ITEMEXPANDING](/windows/desktop/Controls/tvn-itemexpanding)子項目の親項目の一覧が展開したり折りたたんだりするときに通知メッセージ。 通知では、営業案件を変更を防ぐために、または子項目の一覧の状態に依存する親項目の属性を設定できます。 ツリー コントロールの送信、リストの状態を変更した後、 [TVN_ITEMEXPANDED](/windows/desktop/Controls/tvn-itemexpanded)通知メッセージ。
+親項目の子項目のリストが展開または折りたたまれようとしているときに、ツリーコントロールは[TVN_ITEMEXPANDING](/windows/win32/Controls/tvn-itemexpanding)通知メッセージを送信します。 通知を使用すると、子項目の一覧の状態に依存する親項目の属性を変更したり、設定したりすることができます。 リストの状態を変更すると、ツリーコントロールは[TVN_ITEMEXPANDED](/windows/win32/Controls/tvn-itemexpanded)通知メッセージを送信します。
 
-子アイテムの一覧が展開されている場合は、親アイテムに対して相対的インデントされます。 使用してインデントの量を設定することができます、 [SetIndent](../mfc/reference/ctreectrl-class.md#setindent)メンバー関数または取得を使用して現在の量、 [GetIndent](../mfc/reference/ctreectrl-class.md#getindent)メンバー関数。
+子項目のリストが展開されると、親項目に対して相対的にインデントされます。 インデントの量を設定するには、 [Setindent](../mfc/reference/ctreectrl-class.md#setindent)メンバー関数を使用するか、 [getindent](../mfc/reference/ctreectrl-class.md#getindent)メンバー関数を使用して現在の量を取得します。
 
 ## <a name="see-also"></a>関連項目
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3230
 ms.assetid: 5ec53f25-59f6-4801-81e7-7b68bf04994d
-ms.openlocfilehash: a4d5edeb5898a57b99839b7e044f909cea1ec199
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69ea279ac5e11c03f366711484ba0c250fc50225
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428250"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743316"
 ---
 # <a name="compiler-error-c3230"></a>コンパイラ エラー C3230
 
@@ -21,7 +21,7 @@ ms.locfileid: "50428250"
 
 次の例では C3230 が生成されます。
 
-```
+```cpp
 // C3230.cpp
 // compile with: /clr /LD
 template <class S>

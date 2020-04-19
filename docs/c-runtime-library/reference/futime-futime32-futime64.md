@@ -1,11 +1,11 @@
 ---
 title: _futime、_futime32、_futime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _futime64
 - _futime32
 - _futime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - futime
 - _futime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3de638f08882e2aae4743311730afcd888c43a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652505"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956231"
 ---
-# <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
+# <a name="_futime-_futime32-_futime64"></a>_futime、_futime32、_futime64
 
 開いているファイルの変更時刻を設定します。
 
@@ -65,18 +68,18 @@ int _futime64(
 *fd*<br/>
 開いているファイルのファイル記述子。
 
-*filetime*<br/>
+*返る*<br/>
 新しい変更日を含む構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は 0 を返します。 エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**、無効なファイル記述子を示すまたは**EINVAL**無効なことを示すパラメーター。
+処理が正常に終了した場合は 0 を返します。 エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**は無効なファイル記述子を示す**EBADF**に設定されるか、無効なパラメーターを示す**EINVAL**に設定されます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Futime**ルーチンに関連付けられている開いているファイルの変更日とアクセス時間を設定する*fd*します。 **_futime**ヲェヒェケェ ・ [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)の引数は、開いているファイルのファイル記述子ではなく、ファイルまたはファイルへのパスの名前を点が異なります。 **_Utimbuf**構造体には新しい変更日とアクセス時刻のフィールドが含まれています。 両方のフィールドに、有効な値が含まれている必要があります。 **_utimbuf32**と **_utimbuf64**と同じ **_utimbuf**それぞれを除くの 32 ビットおよび 64 ビットの時刻型を使用します。 **_futime**と **_utimbuf** 64 ビット時刻型を使用し、 **_futime**動作と同じ **_futime64**。 以前の動作を強制する必要がある場合は、定義 **_USE_32BIT_TIME_T**します。 これにより **_futime**動作と同じでなければ **_futime32**により、 **_utimbuf** と同じですので、32ビット時刻型を使用する構造体 **__utimbuf32**します。
+**_Futime**ルーチンは、 *fd*に関連付けられている開いているファイルの変更日とアクセス時刻を設定します。 **_futime**は[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)と同じですが、引数がファイルの名前またはファイルのパスではなく、開いているファイルのファイル記述子である点が異なります。 **_Utimbuf**構造体には、新しい変更日とアクセス時間のフィールドが含まれています。 両方のフィールドに、有効な値が含まれている必要があります。 **_utimbuf32**と **_utimbuf64**は、それぞれ32ビットと64ビットの時刻型を使用する点を除いて **_utimbuf**と同じです。 **_futime**と **_utimbuf**は、64ビットの時刻型を使用し、 **_futime**は **_futime64**に対する動作と同じです。 以前の動作を強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義します。 これを行うと、 **_futime**が **_futime32**と同じ動作になり、 **_utimbuf**構造体で32ビットの時刻型が使用され、 **__utimbuf32**と同等になります。
 
-**_futime64**、使用、 **_ _utimbuf64**構造体を読み取り、変更は UTC 3000 年 12 月 31 日 23時 59分: 59 秒までの日付のファイルへの呼び出し **_futime32**場合は、ファイルの日付が失敗しました。2038 年 1 月 18 日 23時 59分: 59 までよりも後。 これらの関数の日付範囲の下限は、1970 年 1 月 1 日の午前 0 時です。
+**__utimbuf64**構造体を使用する **_futime64**は、23:59:59 年12月 31 3000 日、UTC; の形式でファイルの日付の読み取りと変更を行うことができます。一方、ファイルの日付が23:59:59 年1月 2038 18 日より後の場合、 **_futime32**の呼び出しは失敗します。 これらの関数の日付範囲の下限は、1970 年 1 月 1 日の午前 0 時です。
 
 ## <a name="requirements"></a>必要条件
 
@@ -124,7 +127,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfutimecinput"></a>Input: crt_futime.c_input
+### <a name="input-crt_futimec_input"></a>Input: crt_futime.c_input
 
 ```Input
 Arbitrary file contents.

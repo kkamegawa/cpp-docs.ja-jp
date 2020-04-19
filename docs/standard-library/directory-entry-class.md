@@ -34,14 +34,14 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&lt;=
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
-ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b0dc55bf5db2f799d9ade28cd5968ceab3332b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533823"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458959"
 ---
-# <a name="directoryentry-class"></a>directory_entry クラス
+# <a name="directory_entry-class"></a>directory_entry クラス
 
 `*X` によって返されるオブジェクトを表します。*X* は、[directory_iterator](../standard-library/directory-iterator-class.md) または [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) です。
 
@@ -61,17 +61,17 @@ class directory_entry;
 
 |コンストラクター|説明|
 |-|-|
-|[directory_entry](#directory_entry)|既定のコンストラクターは想定どおりの動作をします。 4 番目のコンス トラクターによって初期化`mypath`に*pval*、`mystat`に*stat_arg*、および`mysymstat`に*symstat_arg と置き換えます。* します。|
+|[directory_entry](#directory_entry)|既定のコンストラクターは想定どおりの動作をします。 4番目の`mypath`コンストラクターは、 `mystat` *pval*、 *stat_arg*、 `mysymstat`および*symstat_arg*に初期化します。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[assign](#assign)|メンバー関数は、代入*pval*に`mypath`、 *stat*に`mystat`、および*symstat*に`mysymstat`します。|
+|[assign](#assign)|このメンバー関数は 、pval `mypath`to 、stat `mystat`to、および*symstat*をに`mysymstat`割り当てます。|
 |[path](#path)|このメンバー関数は、`mypath` を返します。|
-|[replace_filename](#replace_filename)|メンバー関数は、`mypath`で`mypath.parent_path()`  /  *pval*、`mystat`で*stat_arg*、および`mysymstat`で*symstat_arg と置き換えます。*|
-|[status](#status)|両方のメンバー関数が返す`mystat`最初に変更される可能性があります。|
-|[symlink_status](#symlink_status)|両方のメンバー関数が返す`mysymstat`最初に変更される可能性があります。|
+|[replace_filename](#replace_filename)|このメンバー関数は`mypath` 、 `mypath.parent_path()`  /  *pval*、 `mysymstat` stat_arg、および symstat_arg を使用して置き換えます。 `mystat`|
+|[status](#status)|どちらのメンバー関数`mystat`も、最初に変更された可能性があるものを返します。|
+|[symlink_status](#symlink_status)|どちらのメンバー関数`mysymstat`も、最初に変更された可能性があるものを返します。|
 
 ### <a name="operators"></a>演算子
 
@@ -88,13 +88,13 @@ class directory_entry;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:**  \< /ファイル システムの実験&gt;
+**ヘッダー:** \<試験的/ファイルシステム&gt;
 
 **名前空間:** std::experimental::filesystem
 
-## <a name="assign"></a> 割り当てる
+## <a name="assign"></a>割り当てる
 
-メンバー関数は、代入*pval*に`mypath`、 *stat_arg*に`mystat`、および*symstat_arg と置き換えます。* に`mysymstat`します。
+このメンバー関数は 、pval `mypath`to 、stat_arg `mystat`to、および symstat_arg `mysymstat`をに割り当てます。
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -104,18 +104,18 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>パラメーター
 
-*pval*<br/>
+*pval*\
 格納されているファイル名のパス。
 
-*stat_arg*<br/>
+*stat_arg*\
 格納されているファイル名の状態。
 
-*symstat_arg と置き換えます。*<br/>
-格納されているファイル名のシンボリック リンクの状態。
+*symstat_arg*\
+格納されているファイル名のシンボリックリンクの状態。
 
-## <a name="directory_entry"></a> directory_entry
+## <a name="directory_entry"></a>directory_entry
 
-既定のコンストラクターは想定どおりの動作をします。 4 番目のコンス トラクターによって初期化`mypath`に*pval*、`mystat`に*stat_arg*、および`mysymstat`に*symstat_arg と置き換えます。* します。
+既定のコンストラクターは想定どおりの動作をします。 4番目の`mypath`コンストラクターは、 `mystat` *pval*、 *stat_arg*、 `mysymstat`および*symstat_arg*に初期化します。
 
 ```cpp
 directory_entry() = default;
@@ -128,14 +128,14 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>パラメーター
 
-*pval*<br/>
+*pval*\
 格納されているファイル名のパス。
 
-*stat_arg*<br/>
+*stat_arg*\
 格納されているファイル名の状態。
 
-*symstat_arg と置き換えます。*<br/>
-格納されているファイル名のシンボリック リンクの状態。
+*symstat_arg*\
+格納されているファイル名のシンボリックリンクの状態。
 
 ## <a name="op_neq"></a> operator!=
 
@@ -147,10 +147,10 @@ bool operator!=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
+*そうです*\
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
-## <a name="op_as"></a> 演算子 =
+## <a name="op_as"></a>operator =
 
 この既定のメンバー代入演算子は想定どおりに動作します。
 
@@ -161,10 +161,10 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)にコピーされる、`directory_entry`します。
+*そうです*\
+に`directory_entry`コピーされる[directory_entry](../standard-library/directory-entry-class.md) 。
 
-## <a name="op_eq"></a> 演算子 = =
+## <a name="op_eq"></a>operator = =
 
 このメンバー関数は、`mypath == right.mypath` を返します。
 
@@ -174,8 +174,8 @@ bool operator==(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
+*そうです*\
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_lt"></a> 演算子&lt;
 
@@ -187,10 +187,10 @@ bool operator<(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
+*そうです*\
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
-## <a name="op_lteq"></a> 演算子&lt;=
+## <a name="op_lteq"></a>operator&lt;=
 
 このメンバー関数は、`!(right < *this)` を返します。
 
@@ -200,8 +200,8 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
+*そうです*\
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_gt"></a> 演算子&gt;
 
@@ -213,10 +213,10 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
+*そうです*\
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
-## <a name="op_gteq"></a> 演算子&gt;=
+## <a name="op_gteq"></a>operator&gt;=
 
 このメンバー関数は、`!(*this < right)` を返します。
 
@@ -226,10 +226,10 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md)と比較される、`directory_entry`します。
+*そうです*\
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
-## <a name="path_type"></a> operator const path_type &
+## <a name="path_type"></a>operator const path_type &
 
 このメンバー演算子は、 `mypath`を返します。
 
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 operator const std::experimental::filesystem::path&() const;
 ```
 
-## <a name="path"></a> パス
+## <a name="path"></a>道
 
 このメンバー関数は、`mypath` を返します。
 
@@ -245,9 +245,9 @@ operator const std::experimental::filesystem::path&() const;
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-## <a name="replace_filename"></a> replace_filename
+## <a name="replace_filename"></a>replace_filename
 
-メンバー関数は、`mypath`で`mypath.parent_path()`  /  *pval*、`mystat`で*stat_arg*、および`mysymstat`で*symstat_arg と置き換えます。*
+このメンバー関数は`mypath` 、 `mypath.parent_path()`  /  *pval*、 `mysymstat` stat_arg、および symstat_arg を使用して置き換えます。 `mystat`
 
 ```cpp
 void replace_filename(
@@ -258,22 +258,22 @@ void replace_filename(
 
 ### <a name="parameters"></a>パラメーター
 
-*pval*<br/>
+*pval*\
 格納されているファイル名のパス。
 
-*stat_arg*<br/>
+*stat_arg*\
 格納されているファイル名の状態。
 
-*symstat_arg と置き換えます。*<br/>
-格納されているファイル名のシンボリック リンクの状態。
+*symstat_arg*\
+格納されているファイル名のシンボリックリンクの状態。
 
-## <a name="status"></a> 状態
+## <a name="status"></a>オンライン
 
-両方のメンバー関数が返す`mystat`可能性がありますまずように変更します。
+どちらのメンバー関数`mystat`も、最初に次のように変更される可能性があります。
 
-1. 場合`status_known(mystat)`し何も操作を行います。
+1. の`status_known(mystat)`場合は、何も実行しません。
 
-1. の場合`!status_known(mysymstat) && !is_symlink(mysymstat)`し`mystat = mysymstat`します。
+1. それ以外の`!status_known(mysymstat) && !is_symlink(mysymstat)`場合`mystat = mysymstat`は。
 
 ```cpp
 file_status status() const;
@@ -282,12 +282,12 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*ec*<br/>
-状態エラー コード。
+*c*\
+ステータスエラーコード。
 
-## <a name="symlink_status"></a> symlink_status
+## <a name="symlink_status"></a>symlink_status
 
-両方のメンバー関数が返す`mysymstat`可能性があります最初に変更される次のように: 場合`status_known(mysymstat)`し何も操作を行います。 それ以外の場合は `mysymstat = symlink_status(mypval)`。
+どちらのメンバー関数`mysymstat`も、最初に次のように変更される可能性があります。の`status_known(mysymstat)`場合は、何も実行しません。 それ以外の場合は `mysymstat = symlink_status(mypval)`。
 
 ```cpp
 file_status symlink_status() const;
@@ -296,10 +296,10 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*ec*<br/>
-状態エラー コード。
+*c*\
+ステータスエラーコード。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem&gt;](../standard-library/filesystem.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem&gt;](../standard-library/filesystem.md)

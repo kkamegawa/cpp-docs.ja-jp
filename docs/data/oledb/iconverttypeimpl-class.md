@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 0b3c0f239b3c80d0b4d3c8425b03a3612a0e6db2
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408993"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl クラス
 
-実装を提供、 [IConvertType](https://docs.microsoft.com/previous-versions/windows/desktop/ms715926(v=vs.85))インターフェイス。
+実装を提供、 [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 このインターフェイスは、コマンド、行セット、およびインデックスの行セットでは必須です。 `IConvertTypeImpl` OLE DB によって指定されている変換オブジェクトに委任することで、インターフェイスを実装します。
 
-## <a name="canconvert"></a> Iconverttypeimpl::canconvert
+## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
 
 コマンドまたは行セットでは、型変換の可用性に関する情報を示します。
 
@@ -68,7 +68,7 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IConvertType::CanConvert](https://docs.microsoft.com/previous-versions/windows/desktop/ms711224(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 

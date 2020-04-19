@@ -2,17 +2,17 @@
 title: negate 構造体
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::negate
+- functional/std::negate
 helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: 029fd73faf5326a0d1b99885864b1ed992080e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654715"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240554"
 ---
 # <a name="negate-struct"></a>negate 構造体
 
@@ -39,15 +39,15 @@ struct negate<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*型*\
 指定または推論された型のオペランドを受け取る `operator-` をサポートする任意の型。
 
-*左*<br/>
+*左*\
 符号を反転されるオペランド。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
 
 ## <a name="return-value"></a>戻り値
 
-`-Left.` の結果。特殊化されたテンプレートは、結果の完全転送を行います。結果には単項 `operator-` によって返された型が含まれます。
+`-Left` の結果。 特殊化されたテンプレートに完全に単項によって返される型の結果の転送を行います`operator-`します。
 
 ## <a name="example"></a>例
 
@@ -85,19 +85,9 @@ int main( )
       cout << *Iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
-The vector v1 = ( -10 -5 0 5 10 15 20 25 )
-The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
-*/
 ```
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
+```

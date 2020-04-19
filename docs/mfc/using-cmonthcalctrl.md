@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: 4a7747b74058ab1d566108c0f834a01d71ab1fa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e21cba7062a21913c5be230d3488d963fb8b769b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461675"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631680"
 ---
 # <a name="using-cmonthcalctrl"></a>CMonthCalCtrl の使い方
 
-月間予定表コントロール ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) の予定表のようなユーザー インターフェイスを実装します。 これにより、ユーザーが入力するか、日付の選択の非常に直感的かつ認識可能なメソッドを使用します。 コントロールには、取得し、既存のデータ型を使用して、コントロールで日付の情報を設定するための手段を使用してアプリケーションも用意されています。 既定では、月間予定表のコントロールには、現在の日付と月が表示されます。 ただし、ユーザーは、前後の月にスクロールし、特定の月または年を選択することができます。
+月間予定表コントロール ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) は、カレンダーに似たユーザーインターフェイスを実装します。 これにより、ユーザーは、非常に直感的で認識しやすい方法で日付を入力または選択できます。 また、コントロールは、既存のデータ型を使用してコントロールの日付情報を取得および設定する手段をアプリケーションに提供します。 既定では、月間予定表コントロールに現在の日付と月が表示されます。 ただし、ユーザーは前月と翌月までスクロールし、特定の月または年を選択できます。
 
 > [!NOTE]
->  使用する、`CMonthCalCtrl`クラス プロジェクトでは、AFXDTCTL を含める必要があります。H、STDAFX で通常します。H.
+>  プロジェクトで`CMonthCalCtrl`クラスを使用するには、AFXDTCTL を含める必要があります。H。通常は*stdafx.h*です。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [月間予定表コントロールの作成](../mfc/creating-the-month-calendar-control.md)
 
@@ -33,4 +33,3 @@ ms.locfileid: "50461675"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

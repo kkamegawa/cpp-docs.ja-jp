@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2200 C2299 から
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2200 - C2299)
+ms.date: 04/21/2019
 f1_keywords:
 - C2202
 - C2209
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2291
 - C2294
 ms.assetid: 9b36d11b-9510-4390-96f1-0c9235124d14
-ms.openlocfilehash: b41887e941796e7f8f2f919ed76fbaaa624227ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5af97ab46a97d3019abcc937cc0a74c5f865a9ff
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432527"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857099"
 ---
-# <a name="compiler-errors-c2200-through-c2299"></a>コンパイラ エラー C2200 C2299 から
+# <a name="compiler-errors-c2200-through-c2299"></a>コンパイラ エラー (C2200 - C2299)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -131,7 +131,7 @@ ms.locfileid: "50432527"
 |[コンパイラ エラー C2259](compiler-error-c2259.md)|'*クラス*': 抽象クラスをインスタンス化できません。|
 |コンパイラ エラー C2260|'*指定子*': 無効な InternalsVisibleToAttribute のフレンド アセンブリ指定子|
 |[コンパイラ エラー C2261](compiler-error-c2261.md)|'*文字列*': アセンブリ参照が有効でないし、解決することはできません|
-|[コンパイラ エラー C2262](compiler-error-c2262.md)|'*指定子*': InternalsVisibleTo 宣言に指定されたバージョン、カルチャ、またはプロセッサ アーキテクチャを持つことはできません|
+|[コンパイラ エラー C2262](compiler-error-c2262.md)|'*指定子*'。InternalsVisibleTo 宣言に指定されたバージョン、カルチャ、またはプロセッサ アーキテクチャを持つことはできません。|
 |コンパイラ エラー C2263|互換性のために残されています。|
 |[コンパイラ エラー C2264](compiler-error-c2264.md)|'*関数*': 関数宣言か定義のエラー関数が呼び出されません。|
 |コンパイラ エラー C2265|互換性のために残されています。|
@@ -149,7 +149,7 @@ ms.locfileid: "50432527"
 |[コンパイラ エラー C2277](compiler-error-c2277.md)|'*関数*': このメンバー関数のアドレスを取得することはできません|
 |コンパイラ エラー C2278|互換性のために残されています。|
 |[コンパイラ エラー C2279](compiler-error-c2279.md)|例外の指定は、typedef 宣言に記述できません。|
-|[コンパイラ エラー C2280](compiler-error-c2280.md)|'*クラス*::*関数*': 削除された関数を参照しようとしています。|
+|[コンパイラ エラー c2280 を発行](compiler-error-c2280.md)|'*クラス*::*関数*': 削除された関数を参照しようとしています。|
 |コンパイラ エラー C2281|'*クラス*::*関数*': 関数は、最初の宣言でのみ削除できます|
 |コンパイラ エラー C2282|'*function1*オーバーライドできません'*function2*'|
 |[コンパイラ エラー C2283](compiler-error-c2283.md)|'*識別子*': 純粋指定子または抽象オーバーライド指定子の名前のないクラス/構造体では使用できません|
@@ -169,3 +169,8 @@ ms.locfileid: "50432527"
 |[コンパイラ エラー C2297](compiler-error-c2297.md)|'*演算子*': 無効な右オペランドには型'*型*'|
 |[コンパイラ エラー C2298](compiler-error-c2298.md)|欠落しているメンバー関数へのポインターをバインドの呼び出し|
 |[コンパイラ エラー C2299](compiler-error-c2299.md)|'*関数*': 動作変更: 明示的な特殊化は、コピー コンス トラクターまたはコピー代入演算子をすることはできません|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
-ms.openlocfilehash: 581aae7e1f979b3dd39caf2ce3d263fdb856c56a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9976cb2425f8f855ffb2903c07de22822c781e20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543777"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755825"
 ---
 # <a name="compiler-error-c3628"></a>コンパイラ エラー C3628
 
-'base class': マネージまたは WinRTclasses はパブリック継承のみをサポート
+' base class ': マネージクラスまたは WinRTclasses は、パブリック継承のみをサポートしています
 
-マネージまたは WinRT を使用しようとしたクラスとして、[プライベート](../../cpp/private-cpp.md)または[保護](../../cpp/protected-cpp.md)基本クラス。 マネージ配列または WinRT クラスを持つ基本クラスとしてのみ使用できます[パブリック](../../cpp/public-cpp.md)アクセスします。
+マネージクラスまたは WinRT クラスを[プライベート](../../cpp/private-cpp.md)または[プロテクト](../../cpp/protected-cpp.md)基底クラスとして使用しようとしました。 マネージクラスまたは WinRT クラスは、[パブリック](../../cpp/public-cpp.md)アクセスを持つ基底クラスとしてのみ使用できます。
 
 次の例は C3628 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

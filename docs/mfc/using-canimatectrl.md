@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: 00b285ba2ec1bcd7fa524d5e20190f806819947f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b967cc6dde6b4f639ef081b3821f6a7e5a2fe295
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351642"
 ---
 # <a name="using-canimatectrl"></a>CAnimateCtrl の使い方
 
@@ -32,4 +32,3 @@ ms.locfileid: "50449222"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

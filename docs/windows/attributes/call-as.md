@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579898"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501807"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-により、[ローカル](local-cpp.md)リモート関数が呼び出されると、ローカル関数が呼び出されるように、リモート関数にマップする関数。
+リモート関数が呼び出されたときにローカル関数が呼び出されるように、[ローカル](local-cpp.md)関数をリモート関数にマップできるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "50579898"
 ### <a name="parameters"></a>パラメーター
 
 *function*<br/>
-ローカル関数をリモート関数を呼び出すときに呼び出されます。
+リモート関数が呼び出されたときに呼び出されるローカル関数。
 
 ## <a name="remarks"></a>Remarks
 
-**Call_as** C++ 属性と同じ機能を持つ、 [call_as](/windows/desktop/Midl/call-as) MIDL 属性。
+**Call_as** C++属性には、 [call_as](/windows/win32/Midl/call-as) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法を示しています。 **call_as**リモート処理不可能関数をマップする (`f1`) リモート処理可能な関数に (`Remf1`)。
+次のコードは、 **call_as**を使用して、リモート処理不可能関数 (`f1`) をリモート処理可能な関数 (`Remf1`) にマップする方法を示しています。
 
 ```cpp
 // cpp_attr_ref_call_as.cpp

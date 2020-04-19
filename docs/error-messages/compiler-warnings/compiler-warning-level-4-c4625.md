@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4625
 ms.assetid: 4cc99e50-846c-4784-97da-48b977067851
-ms.openlocfilehash: edcb43bf11c073e6ce721ba999fd99d28a8df15d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d98e295a9a48da16b58202bc172e112b5c0287d9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563073"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990714"
 ---
 # <a name="compiler-warning-level-4-c4625"></a>コンパイラの警告 (レベル 4) C4625
 
@@ -21,11 +21,11 @@ ms.locfileid: "50563073"
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C4625 が生成され、その修正方法が示されています。
 
-```
+```cpp
 // C4625.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4625)

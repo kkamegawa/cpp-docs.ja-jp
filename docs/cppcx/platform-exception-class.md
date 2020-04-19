@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368735"
 ---
 # <a name="platformexception-class"></a>Platform::Exception クラス
 
@@ -37,7 +37,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 |メンバー|説明|
 |------------|-----------------|
-|[Exception::exception](#ctor)|`Exception` クラスの新しいインスタンスを初期化します。|
+|[Exception::Exception](#ctor)|`Exception` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="methods"></a>メソッド
 
@@ -58,11 +58,11 @@ Exception クラスには、次のプロパティもあります。
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 
@@ -149,8 +149,8 @@ Windows ランタイムで発生する例外では、システムで用意され
 
 ### <a name="remarks"></a>Remarks
 
-Windows 8 で、このプロパティは読み取り専用ため、そのバージョンの Windows ランタイムで例外が HRESULT として ABI 間で転送されます。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、次を参照してください。[例外 (C + + CX)](../cppcx/exceptions-c-cx.md)します。
+Windows 8 で、このプロパティは読み取り専用ため、そのバージョンの Windows ランタイムで例外が HRESULT として ABI 間で転送されます。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、次を参照してください。[例外 (C++/CX)](../cppcx/exceptions-c-cx.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

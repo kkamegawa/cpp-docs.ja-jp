@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636775"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447192"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 関数
 
-これらで定義されたグローバル テンプレート関数は、 &lt;ostream&gt;します。 メンバー関数は、次を参照してください。、 [basic_ostream クラス](basic-ostream-class.md)ドキュメント。
+これらは、ostream &lt;&gt;で定義されているグローバルテンプレート関数です。 メンバー関数については、 [Basic_ostream クラス](basic-ostream-class.md)のドキュメントを参照してください。
 
 ||||
 |-|-|-|
@@ -40,22 +40,22 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 要素型。
 
-*Ostr*<br/>
-型のオブジェクト**basic_ostream**します。
+*Ostr*\
+**Basic_ostream**型のオブジェクト。
 
-*Tr*<br/>
+*Tr*\
 文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
 
-型のオブジェクト**basic_ostream**します。
+**Basic_ostream**型のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターが*Ostr*.[put](../standard-library/basic-ostream-class.md#put)(*Ostr*.[拡大変換](../standard-library/basic-ios-class.md#widen)('\n'))、号餧ェヒェマル*Ostr*.[フラッシュ](../standard-library/basic-ostream-class.md#flush)します。 返します*Ostr*します。
+マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Ostr*。[拡大](../standard-library/basic-ios-class.md#widen)(' \n ')) を呼び出し、 *Ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
 
 ### <a name="example"></a>例
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 要素型。
 
-*Ostr*<br/>
+*Ostr*\
 `basic_ostream` 型のオブジェクト。
 
-*Tr*<br/>
+*Tr*\
 文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターが*Ostr*.[put](../standard-library/basic-ostream-class.md#put)(*Elem*('\0'))。 返します*Ostr*します。
+マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 *Ostr*が返されます。
 
 ### <a name="example"></a>例
 
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 要素型。
 
-*Ostr*<br/>
+*Ostr*\
 `basic_ostream` 型のオブジェクト。
 
-*Tr*<br/>
+*Tr*\
 文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
@@ -151,7 +151,7 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターが*Ostr*.[フラッシュ](../standard-library/basic-ostream-class.md#flush)します。 返します*Ostr*します。
+マニピュレーターは*Ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
 
 ### <a name="example"></a>例
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 要素型。
 
-*Tr*<br/>
+*Tr*\
 文字の特徴 (traits)。
 
-*left*<br/>
+*左側*\
 `basic_ostream` オブジェクトへの左辺値参照。
 
-*right*<br/>
+*そうです*\
 `basic_ostream` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks

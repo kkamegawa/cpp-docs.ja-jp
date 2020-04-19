@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: ddd3755a4fcabf8c097c359f31c9cc189b36f79a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521113"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740807"
 ---
 # <a name="compiler-error-c2552"></a>コンパイラ エラー C2552
 
@@ -19,7 +19,7 @@ ms.locfileid: "50521113"
 
 集約識別子は正しく初期化されませんでした。
 
-[集計](../../c-language/initializing-aggregate-types.md)として定義されます。
+[集計](../../c-language/initializing-aggregate-types.md)は次のように定義されます。
 
 - 配列
 
@@ -51,7 +51,7 @@ ms.locfileid: "50521113"
 
 次の例では警告 C2552 が生成されます。
 
-```
+```cpp
 // C2552.cpp
 // compile with: /clr
 #include <string>

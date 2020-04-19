@@ -1,8 +1,6 @@
 ---
-title: 'テクニカル ノート 33: MFC の DLL バージョン'
+title: 'TN033:テクニカル ノート 33: MFC の DLL バージョン'
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.dll
 helpviewer_keywords:
 - MFC DLLs [MFC], writing MFC extension DLLS
 - AFXDLL library
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fda256043027dbff249cedf490b150b6ad30a5fb
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523967"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611106"
 ---
-# <a name="tn033-dll-version-of-mfc"></a>テクニカル ノート 33: MFC の DLL バージョン
+# <a name="tn033-dll-version-of-mfc"></a>TN033:テクニカル ノート 33: MFC の DLL バージョン
 
 ここでは、MFCxx.DLL を使用して MFCxxD.DLL (x は MFC のバージョン番号です) は、MFC アプリケーションや MFC 拡張 Dll とダイナミック リンク ライブラリを共有する方法について説明します。 レギュラー MFC Dll の詳細については、次を参照してください。 [MFC DLL の一部として](../mfc/tn011-using-mfc-as-part-of-a-dll.md)します。
 
@@ -31,44 +29,44 @@ ms.locfileid: "51523967"
 
 (レギュラー MFC DLL と呼ばれます) の非 MFC アプリケーションで使用できる MFC を使用して DLL を構築する場合を参照してください。[テクニカル ノート 11:](../mfc/tn011-using-mfc-as-part-of-a-dll.md)します。
 
-## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>MFCxx.DLL サポートの概要: 用語とファイル
+## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>MFCxx.DLL サポートの概要:用語とファイル
 
-**レギュラー MFC DLL**: レギュラー MFC DLL を使用して、一部の MFC クラスを使用してスタンドアロンの DLL をビルドします。 アプリまたは DLL の境界を越えてインターフェイスは、"C"インターフェイス、およびクライアント アプリケーションが MFC アプリケーションする必要はありません。
+**レギュラー MFC DLL**:一部の MFC クラスを使用してスタンドアロンの DLL をビルドするのにには、レギュラー MFC DLL を使用します。 アプリまたは DLL の境界を越えてインターフェイスは、"C"インターフェイス、およびクライアント アプリケーションが MFC アプリケーションする必要はありません。
 
-これは、MFC の 1.0 でサポートされている DLL のサポートのバージョンです。 説明されている、[テクニカル ノート 11:](../mfc/tn011-using-mfc-as-part-of-a-dll.md)と MFC Advanced Concepts サンプル[は](../visual-cpp-samples.md)します。
+これは、MFC の 1.0 でサポートされている DLL のサポートのバージョンです。 説明されている、[テクニカル ノート 11:](../mfc/tn011-using-mfc-as-part-of-a-dll.md)と MFC Advanced Concepts サンプル[は](../overview/visual-cpp-samples.md)します。
 
 > [!NOTE]
 > Visual C バージョン 4.0 の時点で、用語**USRDLL**は廃止され、静的にリンクされるレギュラー MFC DLL によって置き換えられました。 レギュラー MFC と動的にリンクする MFC DLL をビルドすることもできます。
 
 MFC 3.0 (以降)、OLE、およびデータベース クラスを含むすべての新しい機能によりレギュラー MFC Dll をサポートしています。
 
-**AFXDLL**: これは、別名 MFC ライブラリの共有バージョン。 これは、MFC 2.0 で追加された新しい DLL サポートです。 MFC ライブラリ自体は、多くの Dll (後述) であり、必要な Dll が動的にリンク、クライアント アプリケーションまたは DLL。 アプリケーションまたは DLL の境界を越えてインターフェイスは、C +/cli MFC クラスのインターフェイス。 クライアント アプリケーションは、MFC アプリケーションである必要があります。 これは MFC 3.0 のすべての機能をサポート (例外: データベース クラス用 UNICODE がサポートされていません)。
+**AFXDLL**:これは、MFC ライブラリの共有バージョンとも呼ばれます。 これは、MFC 2.0 で追加された新しい DLL サポートです。 MFC ライブラリ自体は、多くの Dll (後述) であり、必要な Dll が動的にリンク、クライアント アプリケーションまたは DLL。 アプリケーションまたは DLL の境界を越えてインターフェイスは、C +/cli MFC クラスのインターフェイス。 クライアント アプリケーションは、MFC アプリケーションである必要があります。 これは MFC 3.0 のすべての機能をサポート (例外。UNICODE がサポートされていませんデータベース クラス用)。
 
 > [!NOTE]
 > Visual C バージョン 4.0 の時点でこの種類の DLL と呼びます「拡張 DLL です」
 
 この注を含む MFC DLL を設定する全体を参照する MFCxx.DLL を使用します。
 
-- デバッグ: MFCxxD.DLL (結合) と MFCSxxD.LIB (静的)。
+- デバッグ:MFCxxD.DLL (結合) と MFCSxxD.LIB (静的)。
 
-- リリース: (結合) MFCxx.DLL および MFCSxx.LIB (静的)。
+- リリース:(結合) MFCxx.DLL および MFCSxx.LIB (静的)。
 
-- Unicode のデバッグ: MFCxxUD.DLL (結合) と MFCSxxD.LIB (静的)。
+- Unicode のデバッグ:(結合) MFCxxUD.DLL と MFCSxxD.LIB (静的)。
 
-- Unicode のリリース: MFCxxU.DLL (結合) と MFCSxxU.LIB (静的)。
+- Unicode のリリース:(結合) MFCxxU.DLL と MFCSxxU.LIB (静的)。
 
 > [!NOTE]
 > MFCSxx [U] [D] でします。LIB ライブラリ提供されると共に、MFC Dll を共有します。 これらのライブラリには、アプリケーションまたは DLL に静的にリンクする必要がありますコードが含まれています。
 
 アプリケーションのリンクに対応するインポート ライブラリには:
 
-- デバッグ: MFCxxD.LIB
+- デバッグ:MFCxxD.LIB
 
-- リリース: MFCxx.LIB
+- リリース:MFCxx.LIB
 
-- Unicode のデバッグ: MFCxxUD.LIB
+- Unicode のデバッグ:MFCxxUD.LIB
 
-- Unicode のリリース: MFCxxU.LIB
+- Unicode のリリース:MFCxxU.LIB
 
 "MFC 拡張 DLL"は、MFCxx.DLL に基づいて構築された DLL (またはその他の MFC Dll を共有する)。 ここは、MFC コンポーネントのアーキテクチャが開始されます。 MFC クラスから便利なクラスを派生するか、または別の MFC のようなツールキットをビルドする場合は、DLL に配置できます。 最終的なクライアント アプリケーションは、DLL として MFCxx.DLL を使用します。 これは、再利用可能なリーフ クラス、再利用可能な基本クラス、および再利用可能なビュー/ドキュメント クラスを許可します。
 
@@ -98,7 +96,7 @@ MFC 拡張 DLL は、クラスと MFC クラスの機能を装飾するために
 
 - MFC 拡張 DLL は初期化ルーチンを作成する、通常、 `CDynLinkLibrary` MFC 拡張 DLL がエクスポートする場合`CRuntimeClass`es またはアプリケーションにリソース。 派生クラスの`CDynLinkLibrary`MFC 拡張 DLL で、アプリケーションごとのデータを維持しなければならない場合に使用される可能性があります。
 
-これらの考慮事項については、以下で詳しく説明します。 MFC Advanced Concepts サンプルを参照することも必要があります。 [DLLHUSK](../visual-cpp-samples.md)ためを示しています。
+これらの考慮事項については、以下で詳しく説明します。 MFC Advanced Concepts サンプルを参照することも必要があります。 [DLLHUSK](../overview/visual-cpp-samples.md)ためを示しています。
 
 - 共有ライブラリを使用してアプリケーションを構築します。 (DLLHUSK します。EXE はに加えてその他の Dll を MFC ライブラリに動的にリンクする MFC アプリケーション) です。
 
@@ -139,7 +137,7 @@ MFC 拡張 DLL の目的は、その機能を使用できる 1 つまたは複�
 
 これを実行するには、各メンバー関数がマークされているようにインポートまたはエクスポートする適切なを確認する必要があります。 これには、特別な宣言が必要です:`__declspec(dllexport)`と`__declspec(dllimport)`します。 として宣言することが必要なクライアント アプリケーションによって、クラスを使用している場合`__declspec(dllimport)`します。 MFC 拡張 DLL 自体が構築されるときに、として宣言する必要がある`__declspec(dllexport)`します。 さらに、関数は、実際をエクスポート、クライアント プログラムが読み込み時にバインドするようにします。
 
-使用して、クラス全体をエクスポートする`AFX_EXT_CLASS`クラス定義にします。 として framework でこのマクロが定義されている`__declspec(dllexport)`とき`_AFXDLL`と`_AFXEXT`は定義されている、として定義されている`__declspec(dllimport)`とき`_AFXEXT`が定義されていません。 `_AFXEXT` 前述のようは、MFC 拡張 DLL を作成するときにのみ定義されます。 例えば:
+使用して、クラス全体をエクスポートする`AFX_EXT_CLASS`クラス定義にします。 として framework でこのマクロが定義されている`__declspec(dllexport)`とき`_AFXDLL`と`_AFXEXT`は定義されている、として定義されている`__declspec(dllimport)`とき`_AFXEXT`が定義されていません。 `_AFXEXT` 前述のようは、MFC 拡張 DLL を作成するときにのみ定義されます。 例:
 
 ```cpp
 class AFX_EXT_CLASS CExampleExport : public CObject
@@ -150,7 +148,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 
 場合があります、クラスの個々 のために必要なメンバーだけをエクスポートすることがあります。 エクスポートする場合など、 `CDialog`-派生クラスでコンス トラクターをエクスポートする必要がありますのみ、`DoModal`を呼び出します。 DLL を使用してこれらのメンバーをエクスポートすることができます。DEF ファイルを使用できるも`AFX_EXT_CLASS`でほぼ同じ方法で、個々 のメンバーをエクスポートする必要があります。
 
-例えば:
+例:
 
 ```cpp
 class CExampleDialog : public CDialog
@@ -180,7 +178,7 @@ protected: \
 
 前述したように、`AFX_EXT_CLASS`はこの方法で既に定義されています。 再定義するだけ`AFX_DATA`と同じである`AFX_EXT_CLASS`クラス定義をします。
 
-例えば:
+例:
 
 ```cpp
 #undef  AFX_DATA
@@ -249,7 +247,7 @@ A.DLL をビルドするときに構築されて **/DA_IMPL** B.DLL をビルド
 
 ここでも、クラス全体にエクスポートするときに、特別な注意する必要があります。 MFC マクロによって作成されたために必要なデータ項目が正常にエクスポートすることを確認する必要があります。 これは、再定義して行うことができます`AFX_DATA`特定のクラスのマクロにします。 これはクラス全体をエクスポートしない場合はいつ実行する必要があります。
 
-例えば:
+例:
 
 ```cpp
 // A.H
@@ -324,7 +322,7 @@ C++ のクラス名を指定して C++ オブジェクトの動的作成は似�
 
 MFC 拡張 DLL であるクラスを使用するクライアント アプリケーションの場合`DECLARE_SERIAL`、クライアント アプリケーションに表示される、クラスをエクスポートする必要があります。 ウォークすることによってこれはまた、`CDynLinkLibrary`一覧。
 
-MFC Advanced Concepts サンプルの場合[DLLHUSK](../visual-cpp-samples.md)の一覧は次のようなもの。
+MFC Advanced Concepts サンプルの場合[DLLHUSK](../overview/visual-cpp-samples.md)の一覧は次のようなもの。
 
 ```Example
 head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
@@ -339,7 +337,7 @@ head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
 
 MFCxx.DLL は、通常の最後に、リソースやクラス リストです。 MFCxx.DLL には、すべてのプロンプト文字列をすべての標準コマンド Id など、標準 MFC リソースが含まれます。 リストの末尾に置くことにより、Dll としないクライアント アプリケーション自体を独自に依存する、MFCxx.DLL 内の共有リソースには、標準 MFC リソースのコピー。
 
-どのような Id を注意する必要がある欠点や名前を選択するには、クライアント アプリケーションの名前空間にリソースとすべての Dll のクラス名を結合します。 もちろんを無効にできますこの機能によって、いずれかをエクスポートしないリソースまたは`CDynLinkLibrary`をクライアント アプリケーションのオブジェクト。 [DLLHUSK](../visual-cpp-samples.md)サンプルは、複数のヘッダー ファイルを使用して、共有リソースの名前空間を管理します。 参照してください[テクニカル ノート 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)共有リソース ファイルの使用に関するヒントを表示します。
+どのような Id を注意する必要がある欠点や名前を選択するには、クライアント アプリケーションの名前空間にリソースとすべての Dll のクラス名を結合します。 もちろんを無効にできますこの機能によって、いずれかをエクスポートしないリソースまたは`CDynLinkLibrary`をクライアント アプリケーションのオブジェクト。 [DLLHUSK](../overview/visual-cpp-samples.md)サンプルは、複数のヘッダー ファイルを使用して、共有リソースの名前空間を管理します。 参照してください[テクニカル ノート 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)共有リソース ファイルの使用に関するヒントを表示します。
 
 ### <a name="initializing-the-dll"></a>DLL の初期化
 
@@ -411,8 +409,8 @@ MFC の共有バージョンを使用するアプリケーションは、いく�
 
 コンパイラ フラグが必要です。
 
-- **/方法/MD**
-  **用**
+- **/D_AFXDLL /MD**
+   **/D_AFXDLL**
 
 MFC の標準ヘッダーには、このシンボルを定義する必要があります。
 
@@ -432,7 +430,7 @@ MFC の標準ヘッダーには、このシンボルを定義する必要があ�
 
 MFCxx.DLL を使用するためのサンプルのいずれかに変換するを読み込むことができます、します。MAK は、ファイルを Visual C にし、前述のようにプロジェクト オプションを設定します。 指定できます (nmake の) ビルドを使用しているかどうか、"AFXDLL = 1"、NMAKE でとコマンド ラインがサンプルをビルド共有 MFC ライブラリを使用します。
 
-MFC Advanced Concepts サンプル[DLLHUSK](../visual-cpp-samples.md)が MFC の DLL バージョンを使って構築します。 このサンプルがだけでなく、MFCxx.DLL にリンクされているアプリケーションを構築する方法を示していますが、このテクニカル ノートの後半で説明されている MFC 拡張 Dll などの MFC DLL のパッケージ化オプションの他の機能も示しています。
+MFC Advanced Concepts サンプル[DLLHUSK](../overview/visual-cpp-samples.md)が MFC の DLL バージョンを使って構築します。 このサンプルがだけでなく、MFCxx.DLL にリンクされているアプリケーションを構築する方法を示していますが、このテクニカル ノートの後半で説明されている MFC 拡張 Dll などの MFC DLL のパッケージ化オプションの他の機能も示しています。
 
 ### <a name="packaging-notes"></a>パッケージのノート
 
@@ -476,7 +474,7 @@ MFCxx.DLL を使用して、アプリケーションでは、MSVCRTxx.DLL、共�
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序数とクラスの関数および DLL の名前を付ける
 
-使用していません、 `class` **方式**C コンパイラの機能です。 代わりに、エクスポートの一覧は、クラス ライブラリのソース (MFCxx.DEF および MFCxxD.DEF) に含まれています。 これら選択のエントリ ポイント (関数とデータ) のセットのみがエクスポートされます。 MFC のプライベートな実装の関数やクラスなどの他の記号はエクスポートされません常駐または非常駐型の名前テーブルでの文字列名を指定せずに序数ですべてのエクスポートが完了します。
+使用していません、 `class` **方式**の機能、C++コンパイラ。 代わりに、エクスポートの一覧は、クラス ライブラリのソース (MFCxx.DEF および MFCxxD.DEF) に含まれています。 これら選択のエントリ ポイント (関数とデータ) のセットのみがエクスポートされます。 MFC のプライベートな実装の関数やクラスなどの他の記号はエクスポートされません常駐または非常駐型の名前テーブルでの文字列名を指定せずに序数ですべてのエクスポートが完了します。
 
 使用して`class`**方式**小さい Dll を構築するため、MFC では、既定のメカニズムをエクスポートするような大きな DLL の場合、利用可能な方法が効率性と容量があります制限します。
 

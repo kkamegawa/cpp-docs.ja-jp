@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2637
+title: コンパイラエラー C2637
 ms.date: 11/04/2016
 f1_keywords:
 - C2637
 helpviewer_keywords:
 - C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
-ms.openlocfilehash: 4231a811911fdf600b47962e929f6f3cff1f1bca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a17bd95cf1727d058e0cbd9e3dfb93c500da9fb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602537"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758256"
 ---
-# <a name="compiler-error-c2637"></a>コンパイラ エラー C2637
+# <a name="compiler-error-c2637"></a>コンパイラエラー C2637
 
-'identifier': データ メンバーへのポインターを変更することはできません
+' identifier ': データメンバーへのポインターを変更できません
 
-データ メンバーへのポインターは、呼び出し規約を持つことはできません。 を解決するには、呼び出し規則を削除するかのメンバー関数へのポインターを宣言します。
+データメンバーへのポインターは、呼び出し規約を持つことはできません。 解決するには、呼び出し規則を削除するか、またはメンバー関数へのポインターを宣言します。
 
 次の例では、C2637 が生成されます。
 
-```
+```cpp
 // C2637.cpp
 // compile with: /c
 struct S {};

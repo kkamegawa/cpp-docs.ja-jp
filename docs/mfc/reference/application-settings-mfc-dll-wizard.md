@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-ms.openlocfilehash: 66e7b907e3ed50c97e5cc864d51c621713cbf992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f021f2023af839413306c1e3d56dc741749cf216
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152047"
 ---
-# <a name="application-settings-mfc-dll-wizard"></a>[アプリケーションの設定] \(MFC DLL ウィザード)
+# <a name="application-settings-mfc-dll-wizard"></a>[アプリケーションの設定] (MFC DLL ウィザード)
 
 MFC DLL ウィザードのこのページを使用すると、設計し、新しい MFC DLL プロジェクトに基本的な機能を追加します。
 
@@ -51,4 +51,3 @@ MFC DLL は、オートメーションをサポートするかどうか、およ
 
 [MFC DLL ウィザード](../../mfc/reference/mfc-dll-wizard.md)<br/>
 [MFC DLL プロジェクトの作成](../../mfc/reference/creating-an-mfc-dll-project.md)
-

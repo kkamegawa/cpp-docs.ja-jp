@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564516"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991003"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>コンパイラの警告 (レベル 4) C4512
 
@@ -29,15 +29,15 @@ ms.locfileid: "50564516"
 
 - クラスに対する代入演算子を明示的に定義します。
 
-- 削除**const**またはクラス内のデータ項目から参照演算子。
+- クラスのデータ項目から、 **const**または参照演算子を削除します。
 
-- #Pragma を使用して、[警告](../../preprocessor/warning.md)警告を抑制するステートメント。
+- 警告を非表示にするには、#pragma [warning](../../preprocessor/warning.md)ステートメントを使用します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C4512 エラーが生成されます。
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

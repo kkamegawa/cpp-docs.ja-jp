@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _ATL_DEBUG_QI macro
 - CAtlDebugInterfacesModule class
 ms.assetid: a193b567-8191-4115-a963-a10805972bac
-ms.openlocfilehash: 014d9ad3e503b0927dabac2cacb43fa38c48114a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a056ccd4f78daaf16a97f0447999a8fbc828b99
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260624"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule クラス
 

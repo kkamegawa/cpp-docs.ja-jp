@@ -1,12 +1,12 @@
 ---
 title: fscanf、_fscanf_l、fwscanf、_fwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fscanf
 - _fwscanf_l
 - _fscanf_l
 - fwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fscanf
 - fwscanf
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594506"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956621"
 ---
-# <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
+# <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
 書式付きデータをストリームから読み出します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)」を参照してください。
 
@@ -80,7 +83,7 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
@@ -94,26 +97,26 @@ int _fwscanf_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または戻り値は、ファイル ストリームの末尾に達した場合は、最初の変換の前に、 **EOF**の**fscanf**と**fwscanf**します。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **fscanf**と**fwscanf**の戻り値は**EOF**になります。
 
-これらの関数では、パラメーターの検証が行われます。 場合*ストリーム*または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
+これらの関数では、パラメーターの検証が行われます。 *Stream*または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Fscanf**関数は、の現在位置からデータを読み取る*ストリーム*で指定した位置に*引数*(ある場合)。 各*引数*に型指定子に対応する型の変数へのポインターである必要があります*形式*します。 *形式*コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*引数**scanf**; を参照してください[scanf](scanf-scanf-l-wscanf-wscanf-l.md)の説明*形式*します。
+**Fscanf**関数は、*ストリーム*の現在位置から、*引数*によって指定された位置 (存在する場合) にデータを読み取ります。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf**の*format*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 」を参照してください。
 
-**fwscanf**のワイド文字バージョンは、 **fscanf**; 引数 format **fwscanf**はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf** UNICODE ストリームからの入力を現在サポートされていません。
+**fwscanf**は、 **fscanf**のワイド文字バージョンです。**fwscanf**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 現在、 **fscanf**では UNICODE ストリームからの入力はサポートされていません。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
-|**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
+|**ftscanf (_s)**|**fscanf**|**fscanf**|**fwscanf**|
+|**ftscanf_l (_d)**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-詳細については、次を参照してください。 [scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)します。
+詳細については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -1,12 +1,12 @@
 ---
-title: ldexp、ldexpf、ldexpl
+title: ldexp、ldexp、ldexp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502610"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953501"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexp、ldexp
 
 浮動小数点数に整数である 2 の累乗を乗算します。
 
@@ -80,19 +83,19 @@ long double ldexpl(
 
 ## <a name="return-value"></a>戻り値
 
-**Ldexp**関数の値を返す*x* \* 2<sup>*exp* </sup>成功した場合。 オーバーフローについてとの符号に応じて*x*、 **ldexp** +/-返します**HUGE_VAL**、 **errno**値に設定されて**ERANGE**.
+**Ldexp**関数は、成功した場合、 *x* \* 2<sup>*exp*</sup>の値を返します。 オーバーフローでは、 *x*の符号によっては、 **ldexp**は +/- **HUGE_VAL**; を返します。**errno**値は**ERANGE**に設定されます。
 
-詳細については**errno**および考えられるエラー戻り値は、「 [errno _doserrno _sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。
+**Errno**および考えられるエラーの戻り値の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ldexp**を受け取る**float**または**長い****二重**型。 C プログラムで**ldexp**は常に、**二重**と**int**を返します、**二重**します。
+でC++はオーバーロードが可能であるため、**浮動小数点**型または**long** **double**型を受け取る**ldexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ldexp**は常に**double**と**int**を受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**、 **ldexp**、 **ldexp**|\<math.h>|\<cmath>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
 
@@ -114,7 +117,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```Output
 4.0 times two to the power of 3 is 32.0

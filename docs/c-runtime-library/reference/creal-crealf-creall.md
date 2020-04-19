@@ -1,11 +1,11 @@
 ---
 title: creal、crealf、creall
 ms.date: 03/30/2018
-apiname:
+api_name:
 - creal
 - crealf
 - creall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - creal
 - crealf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604306"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942600"
 ---
 # <a name="creal-crealf-creall"></a>creal、crealf、creall
 
@@ -61,19 +64,19 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-実数部*z*します。
+*Z*の実数部。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **creal**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**long double**値。 C プログラムで**creal**は常に、 **_Dcomplex**値を返します、**二重**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**値または **_Lcomplex**値を受け取る**creal**のオーバーロードを呼び出し、 **float**型または**long double 型**の値を返すことができます。 C プログラムでは、 **creal**は常に**値を受け取り、** **double**値を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**creal**、 **crealf**、 **creall**|\<complex.h>|\<ccomplex>|
+|**creal**、 **crealf**、 **creal**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex**型が実装されていないネイティブ C99 型の対応する Microsoft 固有**float _Complex**、 **double _Complex**、および**long double _Complex**、それぞれします。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Fcomplex**、_Lcomplex **、および**型は、それぞれ、実装されていないネイティブの C99 型**float**、Complex、 **double complex**、および**long double complex**の各型に相当します。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

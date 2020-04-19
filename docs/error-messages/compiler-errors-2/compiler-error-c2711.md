@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2711
+title: コンパイラエラー C2711
 ms.date: 11/04/2016
 f1_keywords:
 - C2711
 helpviewer_keywords:
 - C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
-ms.openlocfilehash: 568128d6199d16380b6a540173eded25f5588d23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65612e4a7d19295a8fa49576fb1d72c852a76b82
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757437"
 ---
-# <a name="compiler-error-c2711"></a>コンパイラ エラー C2711
+# <a name="compiler-error-c2711"></a>コンパイラエラー C2711
 
-'function': この関数にすることはできませんマネージとしてコンパイル #pragma アンマネージドを使用を検討してください
+' function ': この関数はマネージとしてコンパイルできません。 #pragma アンマネージドを使用することを検討してください
 
-一部の命令すると、コンパイラが、外側の関数の MSIL を生成できなくなります。
+指示によっては、外側の関数の MSIL をコンパイラが生成できないようにします。
 
 次の例では、C2711 が生成されます。
 
-```
+```cpp
 // C2711.cpp
 // compile with: /clr
 // processor: x86

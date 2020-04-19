@@ -1,33 +1,40 @@
 ---
 title: '&lt;ccomplex&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - <ccomplex>
+- ccomplex
+helpviewer_keywords:
+- ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: ab9e95eb7b432a85a75d73d388ec069b0d04ac62
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517203"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341143"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-C++ 標準ライブラリ ヘッダー [\<complex>](../standard-library/complex.md) をインクルードします。これにより、標準 C ライブラリ ヘッダー \<complex.h> がインクルードされ、関連する名前が `std` 名前空間に追加されます。
+標準ライブラリC++ヘッダー [ \<の複合 >](complex.md)が含まれます。
 
-## <a name="syntax"></a>構文
+> [!NOTE]
+> C 標準\<ライブラリの > ヘッダーは、ccomplex > に\<は含まれていません。これは、 C++複雑な\<> および\<ccomplex > のオーバーロードによって実質的に置き換えられるためです。 これにより\<、ccomplex > ヘッダーが冗長になります。 の\<複雑な .h > ヘッダーは、でC++は非推奨とされます。 \<Ccomplex > ヘッダーは c++ 17 では非推奨とされており、draft c++ 20 標準では削除されています。
 
-```cpp
-#include <ccomplex>
-```
+## <a name="requirements"></a>必要条件
+
+**ヘッダー:** \<ccomplex >
+
+**名前空間:** std
 
 ## <a name="remarks"></a>Remarks
 
-このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
-
-\<complex.h> で宣言される名前 `clog` は `std` 名前空間に定義されていません。これは、[\<iostream>](../standard-library/iostream.md) で宣言されている `clog` と競合する可能性があるためです。
+> で`clog`宣言\< `std` `clog`されていると競合する[可能性があるため、> の名前は、名前空間で定義されていません。 \<](iostream.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
+[\<複雑な >](complex.md)\
+[\<cmath>](cmath.md)\
+[ヘッダーファイルのリファレンス](cpp-standard-library-header-files.md)\
+[C++標準ライブラリの概要](cpp-standard-library-overview.md)\
+[C++標準ライブラリのスレッドセーフ](thread-safety-in-the-cpp-standard-library.md)

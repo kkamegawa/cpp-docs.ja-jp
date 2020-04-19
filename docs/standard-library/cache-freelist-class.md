@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7840d114acfa0f3daa01c8dfdb6c6114829d93d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620091"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689916"
 ---
-# <a name="cachefreelist-class"></a>cache_freelist クラス
+# <a name="cache_freelist-class"></a>cache_freelist クラス
 
 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除する[ブロック アロケーター](../standard-library/allocators-header.md)を定義します。
 
@@ -32,14 +32,14 @@ class cache_freelist
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*sz*|割り当てられる配列内の要素の数。|
+|*Sz*|割り当てられる配列内の要素の数。|
 |*Max*|フリー リストの最大サイズを表す max クラスです。 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_variable_size](../standard-library/max-variable-size-class.md) のいずれかにすることができます。|
 
 ## <a name="remarks"></a>Remarks
 
-Cache_freelist テンプレート クラスは、メモリ ブロックのサイズのフリー リストを保持する*Sz*します。 使用して、フリー リストがいっぱいになったとき**delete 演算子**メモリの割り当てを解除するブロックします。 使用して、フリー リストが空の場合**演算子 new**新しいメモリ ブロックを割り当てる。 フリー リストの最大サイズは、クラスに渡される最大クラスによって決まります、*最大*パラメーター。
+Cache_freelist クラステンプレートは、サイズ*Sz*のメモリブロックの空きリストを保持します。 フリーリストがいっぱいの場合は、 **operator delete**を使用してメモリブロックの割り当てを解除します。 フリーリストが空の場合は、 **operator new**を使用して新しいメモリブロックを割り当てます。 フリーリストの最大サイズは、 *max*パラメーターで渡されるクラス max クラスによって決まります。
 
-各メモリ ブロックを保持*Sz*使用可能なメモリと、データのバイトを**演算子 new**と**delete 演算子**が必要です。
+各メモリブロックは、使用可能なメモリの*Sz*バイトと、 **operator new**および**operator delete**に必要なデータを保持します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -54,7 +54,7 @@ Cache_freelist テンプレート クラスは、メモリ ブロックのサイ
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

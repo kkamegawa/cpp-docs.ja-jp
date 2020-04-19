@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: e3f7359b60e1ba22c2646cecfd35b827919ae033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c8c0183c356900ba8f95d39e427d56eb1ec96b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295007"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (コルーチン サポートを有効にする)
 
@@ -26,7 +26,7 @@ ms.locfileid: "50590434"
 
 ## <a name="remarks"></a>Remarks
 
-**/Await**コンパイラ オプションにより、C++ コルーチンとキーワードのコンパイラ サポート**co_await**、 **co_yield**、および**co_return**. このオプションの既定値はオフです。 Visual Studio でのコルーチンのサポートについては、次を参照してください。、 [Visual Studio チームのブログ](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/)します。 コルーチンの標準提案書の詳細については、次を参照してください。 [N4628 ワーキング ドラフト、コルーチンの C++ 拡張機能の技術仕様](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf)します。
+**/Await**コンパイラ オプションにより、コンパイラ サポートC++コルーチンとキーワード**co_await**、 **co_yield**、および**co_return**. このオプションの既定値はオフです。 Visual Studio でのコルーチンのサポートについては、次を参照してください。、 [Visual Studio チームのブログ](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/)します。 コルーチンの標準提案書の詳細については、次を参照してください。 [N4628 ワーキング ドラフト、コルーチンの C++ 拡張機能の技術仕様](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf)します。
 
 **/Await**オプションは、Visual Studio 2015 以降を使用できます。
 
@@ -44,5 +44,5 @@ ms.locfileid: "50590434"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

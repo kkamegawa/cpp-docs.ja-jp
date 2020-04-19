@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-ms.openlocfilehash: 7a16c81cf2b9c2a815d2e35d10ae82d5a75547b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d61bcb7364e90f5b5137f549989da769223a04f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586967"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742198"
 ---
 # <a name="compiler-error-c3018"></a>コンパイラ エラー C3018
 
@@ -21,7 +21,7 @@ OpenMP ステートメント内の `for` ループは、インデックスに使
 
 次の例では C3018 が生成されます。
 
-```
+```cpp
 // C3018.cpp
 // compile with: /openmp
 int main()

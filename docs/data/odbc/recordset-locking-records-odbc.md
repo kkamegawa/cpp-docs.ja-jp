@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコードのロック (ODBC)'
+title: レコード セット:レコードのロック (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397797"
 ---
-# <a name="recordset-locking-records-odbc"></a>レコードセット: レコードのロック (ODBC)
+# <a name="recordset-locking-records-odbc"></a>レコード セット:レコードのロック (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "50438698"
 レコード セットを使用して、データ ソースのレコードを更新するときに、アプリケーションは、その他のユーザーを更新できないレコードと同時に、レコードをロックできます。 システムは 2 人のユーザーがレコードを同時に更新できないことを保証できる場合を除き、同時に 2 人のユーザーによって更新されたレコードの状態は定義されません。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、`Edit`と`Update`メンバー関数。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、`Edit`と`Update`メンバー関数。 バルク行フェッチの詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 ##  <a name="_core_record.2d.locking_modes"></a> レコードのロック モード
 
@@ -66,5 +66,5 @@ ms.locfileid: "50438698"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[レコードセット: 結合の実行 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
 [レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

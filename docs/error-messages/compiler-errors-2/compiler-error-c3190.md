@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C3190
+title: コンパイラエラー C3190
 ms.date: 11/04/2016
 f1_keywords:
 - C3190
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-ms.openlocfilehash: 1f30026d8f853aedc863bef4ecfa32b0bd3262b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbdd54ad0e87557b62d42c8ef5651122d9ebc205
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761609"
 ---
-# <a name="compiler-error-c3190"></a>コンパイラ エラー C3190
+# <a name="compiler-error-c3190"></a>コンパイラエラー C3190
 
-指定されたテンプレート引数のインスタンス化は、'type' のメンバー関数の明示的なインスタンス化ではありません。
+指定されたテンプレート引数を持つ ' インスタンス化 ' は、' type ' のメンバー関数の明示的なインスタンス化ではありません
 
-明示的な関数のインスタンス生成。 しようという試みが検出されましたただし、指定された型引数が一致しません、可能な関数のいずれか。
+コンパイラは、明示的な関数のインスタンス化を試行しました。ただし、指定された型引数は、使用可能な関数のいずれとも一致しません。
 
 次の例では、C3190 が生成されます。
 
-```
+```cpp
 // C3190.cpp
 // compile with: /LD
 template<class T>

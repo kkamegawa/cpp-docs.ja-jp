@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408928"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl クラス
 
@@ -62,9 +62,9 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>Remarks
 
-[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85))はデータ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイス。 ただし、列挙子を公開する場合[IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))、それを公開する必要があります`IDBProperties`します。 `IDBPropertiesImpl` 実装`IDBProperties`によって定義された静的関数を使用して[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)します。
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85))はデータ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイス。 ただし、列挙子を公開する場合[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))、それを公開する必要があります`IDBProperties`します。 `IDBPropertiesImpl` 実装`IDBProperties`によって定義された静的関数を使用して[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)します。
 
-## <a name="getproperties"></a> Idbpropertiesimpl::getproperties
+## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
 現在、データ ソース オブジェクトまたは現在に設定されている初期化プロパティ グループ内のプロパティの値に設定されているデータ ソース、データ ソースの情報、および初期化プロパティ グループ内のプロパティの値を返します、列挙子。
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[idbproperties::getproperties](/previous-versions/windows/desktop/ms714344(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBProperties::GetProperties`:
 
@@ -94,7 +94,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 このメソッドがされた DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO でのプロパティの値を返します、プロバイダーが初期化されている場合、データ ソース オブジェクトに現在設定されている DBPROPSET_DBINIT プロパティ グループ。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみを返します。
 
-## <a name="getpropertyinfo"></a> Idbpropertiesimpl::getpropertyinfo
+## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
 
 データ ソースでサポートされるプロパティの情報を返します。
 
@@ -110,7 +110,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::getpropertyinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[idbproperties::getpropertyinfo](/previous-versions/windows/desktop/ms718175(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBProperties::GetPropertyInfo`:
 
@@ -123,7 +123,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 使用して[idbinitializeimpl::m_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)この機能を実装します。
 
-## <a name="setproperties"></a> Idbpropertiesimpl::setproperties
+## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
 
 列挙子のデータ ソースと初期化プロパティ グループのデータ ソース オブジェクト、または、初期化プロパティ グループのプロパティを設定します。
 
@@ -136,7 +136,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::setproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[idbproperties::setproperties](/previous-versions/windows/desktop/ms723049(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 

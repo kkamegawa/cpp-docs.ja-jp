@@ -1,11 +1,11 @@
 ---
 title: _ftime、_ftime32、_ftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftime64
 - _ftime
 - _ftime32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftime32
 - _ftime
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: 26178f8e559bddd3dafb7fa21edb822874244e93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8cc46a0a5470892e0bdfdcb0918c2757cdaf4c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956333"
 ---
-# <a name="ftime-ftime32-ftime64"></a>_ftime、_ftime32、_ftime64
+# <a name="_ftime-_ftime32-_ftime64"></a>_ftime、_ftime32、_ftime64
 
 現在の時刻を取得します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_ftime_s、_ftime32_s、_ftime64_s](ftime-s-ftime32-s-ftime64-s.md)」を参照してください。
 
@@ -57,24 +60,24 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>パラメーター
 
 *timeptr*<br/>
-ポインターを **_timeb**、 **__timeb32**、または **_ _timeb64**構造体。
+**_Timeb**、 **__ timeb32**、または **__ timeb64**構造体へのポインター。
 
 ## <a name="remarks"></a>Remarks
 
-**_Ftime**関数は、現在の現地時刻を取得しが指す構造体に格納*timeptr*します。 **_Timeb**、 **__timeb32**、および **_ _timeb64**で構造が定義されている\<sys\\timeb.h >。 これらは、次の表に示す 4 つのフィールドを含んでいます。
+**_Ftime**関数は、現在の現地時刻を取得し、 *timeptr*によって示される構造体に格納します。 **_Timeb**、 **__ timeb32**、および **__ timeb64**構造体は、sys \<\\timeb-tree. h > で定義されています。 これらは、次の表に示す 4 つのフィールドを含んでいます。
 
 |フィールド|説明|
 |-|-|
-|**dstflag**|ローカルのタイム ゾーンで夏時間が現在有効になっている場合は 0 以外の値です  (夏時間を判断する方法の詳細については、[_tzset](tzset.md) を参照してください)。|
+|**dstflag**|ローカルのタイム ゾーンで夏時間が現在有効になっている場合は 0 以外の値です (夏時間を判断する方法の詳細については、[_tzset](tzset.md) を参照してください)。|
 |**millitm**|ミリ秒単位での秒の小数部。|
 |**time**|世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位)。|
-|**timezone**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 値**タイムゾーン**グローバル変数の値から設定されている **_timezone** (を参照してください **_tzset**)。|
+|**timezone**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 **タイムゾーン**の値は、グローバル変数の**タイムゾーン**の値から設定されます (「 **_tzset**」を参照してください)。|
 
-**_Ftime64**関数を使用して、 **_ _timeb64**構造体、ことができますを UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表すファイルの作成日 **_ftime32**のみの 2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+**_Ftime64**関数では、 **__ timeb64**構造体を使用して、ファイル作成日を23:59:59 年12月 31 3000 日 (UTC) で表すことができます。一方2038、 **_ftime32**は、23:59:59 年1月18日からまでの日付のみを表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-**_Ftime**関数は等価 **_ftime64**、および **_timeb**しない限り、64 ビットの時刻が含まれています **_USE_32BIT_TIME_T**で、定義は、この場合、以前の動作が有効になります。**_ftime**は 32 ビットの時刻を使用し、 **_timeb** 32 ビットの時刻が含まれています。
+**_Ftime**関数は **_ftime64**に相当します。 **_USE_32BIT_TIME_T**が定義されている場合を除き、 **_timeb**には64ビットの時刻が含まれます。この場合、以前の動作が有効になります。 **_ftime**は32ビットの時刻を使用し、 **_timeb**には32ビットの時刻が含まれます。
 
-**_ftime**パラメーターを検証します。 として null ポインターを渡された場合*timeptr*、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**します。
+**_ftime**は、そのパラメーターを検証します。 *Timeptr*として null ポインターが渡された場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_convertible class
 - is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
-ms.openlocfilehash: cdc3276f229fb9c1ac059a9eeb29e77655b4fc69
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c90fe5687992e4df49e8655387cfdd14b40aa529
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520085"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454622"
 ---
 # <a name="isconvertible-class"></a>is_convertible クラス
 
@@ -27,10 +27,10 @@ struct is_convertible;
 
 ### <a name="parameters"></a>パラメーター
 
-*From*<br/>
+*差出人*\
 変換前の型。
 
-*Ty*<br/>
+*~* \
 変換後の型。
 
 ## <a name="remarks"></a>Remarks
@@ -77,5 +77,5 @@ is_convertible<char, int> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_base_of クラス](../standard-library/is-base-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_base_of クラス](../standard-library/is-base-of-class.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154904"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t クラス
 
@@ -40,9 +40,9 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||
 |-|-|
 |[AddRef](../cpp/com-ptr-t-addref.md)|呼び出し、`AddRef`のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。|
-|[添付](../cpp/com-ptr-t-attach.md)|このスマート ポインターの型の生のインターフェイス ポインターをカプセル化します。|
+|[Attach](../cpp/com-ptr-t-attach.md)|このスマート ポインターの型の生のインターフェイス ポインターをカプセル化します。|
 |[CreateInstance](../cpp/com-ptr-t-createinstance.md)|指定したオブジェクトの新しいインスタンスを作成、`CLSID`または`ProgID`します。|
-|[デタッチ](../cpp/com-ptr-t-detach.md)|カプセル化されたインターフェイス ポインターを抽出して返します。|
+|[Detach](../cpp/com-ptr-t-detach.md)|カプセル化されたインターフェイス ポインターを抽出して返します。|
 |[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|指定したオブジェクトの既存のインスタンスにアタッチ、`CLSID`または`ProgID`します。|
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|カプセル化されたインターフェイス ポインターを返します。|
 |[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|呼び出し、`QueryInterface`のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。|
@@ -52,7 +52,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 |||
 |-|-|
-|[演算子 =](../cpp/com-ptr-t-operator-equal.md)|既存の新しい値を割り当てます **_com_ptr_t**オブジェクト。|
+|[operator=](../cpp/com-ptr-t-operator-equal.md)|既存の新しい値を割り当てます **_com_ptr_t**オブジェクト。|
 |[演算子 = =、! =、 \<、>、 \<=、> =](../cpp/com-ptr-t-relational-operators.md)|別のスマート ポインター、生のインターフェイス ポインターの場合は、スマート ポインター オブジェクトを比較または NULL。|
 |[エクス トラクター](../cpp/com-ptr-t-extractors.md)|カプセル化された COM インターフェイス ポインターを抽出します。|
 
@@ -62,7 +62,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 **ヘッダー:** \<comip.h >
 
-**Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)
+**Lib:** comsuppw.lib または comsuppwd.lib (詳細は「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください)
 
 ## <a name="see-also"></a>関連項目
 

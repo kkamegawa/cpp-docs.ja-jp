@@ -1,11 +1,11 @@
 ---
-title: timespec_get、_timespec32_get、_timespec64_get1
+title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524613"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957627"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
 指定された時間の基準に基づいて、最初の引数が指す間隔を現在のカレンダーの時間に設定します。
 
@@ -71,15 +74,15 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>戻り値
 
-値*基本*かどうか成功すると、それ以外の場合、0 を返します。
+成功した場合は*base*の値。それ以外の場合は0を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Timespec_get**関数によって示される構造体で、現在の時刻の設定、 *time_spec*引数。 この構造体のすべてのバージョンが 2 つのメンバーを持つ**tv_sec**と**tv_nsec**します。 **Tv_sec**秒の整数に値を設定し、 **tv_nsec** によって指定されるエポックの開始以降、システム時計の解像度に丸められますナノ秒の整数に、*基本*します。
+**Timespec_get**関数は、 *time_spec*引数によって示される構造体の現在の時刻を設定します。 この構造体のすべてのバージョンには、 **tv_sec**と**tv_nsec**の2つのメンバーがあります。 **Tv_sec**の値は、秒の整数に設定され、 **tv_nsec**は*base*で指定されたエポックの開始以降、システムクロックの解像度に丸められます。
 
 **Microsoft 固有の仕様**
 
-これらの関数のサポートのみ**TIME_UTC**として、*基本*値。 これにより設定、 *time_spec*秒およびナノ秒エポックの開始、世界協定時刻 (UTC) の 1970 年 1 月 1 日午前 0 時からの数の値。 **構造体** **_timespec32**、 **tv_sec**は、 **_ _time32_t**値。 **構造体** **_timespec64**、 **tv_sec**は、 **_ _time64_t**値。 **構造体** **timespec**、 **tv_sec**は、 **time_t**型で、32 ビットまたは 64 ビット長かどうかに応じて、プリプロセッサマクロ _USE_32BIT_TIME_T が定義されます。 **Timespec_get**関数がインライン関数を呼び出す **_timespec32_get** _USE_32BIT_TIME_T が定義されている場合は、それ以外の場合、呼び出し **_timespec64_get**します。
+これらの関数は、*ベース*値として**TIME_UTC**のみをサポートします。 これにより、 *time_spec*の値が、現地時刻 (UTC) であるエポックの開始日1970午前0時 (UTC) の秒数とナノ秒数に設定されます。 **構造体**では、 **tv_sec**は **__time32_t** **の値**です。 **構造体** **の場合、** **tv_sec**は **__time64_t**値です。 **構造体**の**timespec**では、 **tv_sec**は、プリプロセッサマクロ _USE_32BIT_TIME_T が定義されているかどうかに応じて、32ビットまたは64ビットの長さの**time_t**型です。 **Timespec_get**関数は、_USE_32BIT_TIME_T が定義されている場合に **_timespec32_get**を呼び出すインライン関数です。それ以外の場合は、 **_timespec64_get**を呼び出します。
 
 **END Microsoft 固有の仕様**
 

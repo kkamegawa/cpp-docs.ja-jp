@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410114"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup クラス
 
@@ -77,7 +77,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>例
 
-`CMFCRibbonButtonsGroup` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、作成する方法を示しています、`CMFCRibbonButtonsGroup`オブジェクト、イメージをリボン ボタンのグループに割り当てるし、リボン ボタンのグループにボタンを追加します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
+`CMFCRibbonButtonsGroup` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、作成する方法を示しています、`CMFCRibbonButtonsGroup`オブジェクト、イメージをリボン ボタンのグループに割り当てるし、リボン ボタンのグループにボタンを追加します。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
@@ -238,7 +238,7 @@ virtual void OnDrawImage(
 [in]イメージを描画するためのボタンをクリックします。
 
 *nImageIndex*<br/>
-[in](通常、強調表示されている、または無効になっているボタンの 3 つのイメージの配列のいずれか) のボタンを描画するイメージのインデックス。
+[in] (通常、強調表示されている、または無効になっているボタンの 3 つのイメージの配列のいずれか) のボタンを描画するイメージのインデックス。
 
 ### <a name="remarks"></a>Remarks
 

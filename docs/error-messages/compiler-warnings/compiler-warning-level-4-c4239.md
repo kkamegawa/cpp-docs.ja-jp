@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 067d1aef41280f4d14fe799e4f4ee26a9f1b9f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a882fa7f78f68cb2400e4924a9ba2f17e6ee7003
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451513"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991462"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>コンパイラの警告 (レベル 4) C4239
 
-標準の拡張機能を使用します 'token': 'type' から 'type' への変換。
+非標準の拡張機能が使用されています: ' token ': ' type ' から ' type ' への変換
 
-この型の変換は、C++ 標準で許可されていませんが、許可されている拡張機能としては、ここです。 この警告が常に、少なくとも 1 つの行の説明の言語規則が違反していることを示す続きます。
+この型変換はC++標準では許可されていませんが、ここでは拡張機能として許可されています。 この警告には、違反している言語規則について説明する、少なくとも1行の説明が続きます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4239 が生成されます。
 
-```
+```cpp
 // C4239.cpp
 // compile with: /W4 /c
 struct C {
@@ -37,13 +37,13 @@ void func(void) {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-整数型から列挙型への変換は厳密には許可されません。
+整数型から列挙型への変換は、厳密には許可されていません。
 
 次の例では、C4239 が生成されます。
 
-```
+```cpp
 // C4239b.cpp
 // compile with: /W4 /c
 enum E { value };

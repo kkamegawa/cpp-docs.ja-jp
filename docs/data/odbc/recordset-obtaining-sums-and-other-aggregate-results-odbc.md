@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: 集計値の計算 (ODBC)'
+title: 'レコードセット: 合計とその他の集計結果 (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,56 +10,59 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 7a63e6b0e4ac26fb2806d8505e3fcd8f5daf0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491587"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707842"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>レコードセット: 集計値の計算 (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>レコードセット: 合計とその他の集計結果 (ODBC)
+
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-このトピックでは、次を使用して集計の結果を取得する方法を説明します[SQL](../../data/odbc/sql.md)キーワード。
+このトピックでは、次の [SQL](../../data/odbc/sql.md) キーワードを使用して集計の結果を取得する方法について説明します。
 
-- **合計**数値データ型の列の値の合計を計算します。
+- **SUM** では、数値データ型の列において値の合計を計算します。
 
-- **MIN**数値データ型の列の最小値を抽出します。
+- **MIN** では、数値データ型の列において最小値を抽出します。
 
-- **最大**数値データ型の列の最大値を抽出します。
+- **MAX** では、数値データ型の列において最大値を抽出します。
 
-- **AVG**数値データ型の列のすべての値の平均値を計算します。
+- **AVG** では、数値データ型の列において、すべての値の平均値を計算します。
 
-- **カウント**任意のデータ型の列内のレコードの数をカウントします。
+- **COUNT** では、任意のデータ型の列においてレコードの数をカウントします。
 
-データ ソースからレコードを抽出するのではなく、データ ソース内のレコードについての統計情報を取得するは、これらの SQL 関数を使用します。 通常作成されるレコード セットは、1 つの値を含む (すべての列は、集計が) 場合に記録します。 (を使用した場合、1 つ以上のレコードにすることがあります、 **GROUP BY**句)。この値は計算または SQL 関数で実行される抽出の結果です。
+これらの SQL 関数は、データ ソースからレコードを抽出するためではなく、データ ソース内のレコードに関する統計情報を取得するために使用します。 作成されるレコードセットは通常、1 つの値を含む 1 つのレコードで構成されます (すべての列が集計列である場合)。 (**GROUP BY** 句を使用した場合は、複数のレコードがある可能性があります。)この値は SQL 関数によって実行された計算または抽出の結果です。
 
 > [!TIP]
->  SQL を追加する**GROUP BY**句 (および場合によって、 **HAVING**句) するには、SQL ステートメントの末尾に追加`m_strFilter`します。 例えば:
+>  SQL **GROUP BY** 句 (および場合によって **HAVING** 句) を SQL ステートメントに追加するには、`m_strFilter`の末尾に追加します。 次に例を示します。
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 ```
 
-フィルター選択、列の並べ替えと集計の結果を得るために使用するレコードの数を制限することができます。
+列をフィルターおよび並べ替えすることによって、集計結果を得るために使用するレコードの数を制限できます。
 
 > [!CAUTION]
->  いくつかの集計演算子は、集計される列から別のデータ型を返します。
+>  一部の集計演算子では、集計される列とは異なるデータ型が返されます。
 
-- **合計**と**AVG**次の大きいデータ型を返す可能性があります (などを呼び出す`int`返します**長い**または**二重**)。
+- **SUM** および **AVG** では、次に大きいデータ型が返される場合があります (たとえば、`int` を使用した呼び出しで **LONG** や **double** が返されます)。
 
-- **カウント**通常返します**長い**ターゲット列の種類に関係なく。
+- **COUNT** では通常、ターゲット列の型に関係なく **LONG** が返されます。
 
-- **最大**と**MIN**計算列と同じデータ型を返します。
+- **MAX** および **MIN** では、計算する列と同じデータ型が返されます。
 
-     たとえば、**クラスの追加**ウィザードによって作成されます`long``m_lSales`が Sales 列では、対応するために、これを置き換える必要があります、`double m_dblSumSales`集計結果に対応するデータ メンバー。 次の例を参照してください。
+     たとえば、**クラスの追加**ウィザードでは、Sales 列に対応する `long` `m_lSales` が作成されますが、集計結果を対応するためには、これを `double m_dblSumSales` データ メンバーに置き換える必要があります。 次の例を参照してください。
 
-#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>レコード セットの集計結果を取得するには
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>レコードセットの集計結果を取得するには
 
-1. レコード セットの作成」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)集計結果を取得する列を格納しています。
+1. 「[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」の説明に従って、集計結果を取得する基になる列を含むレコードセットを作成します。
 
-1. 変更、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)レコード セットの関数。 列名を表す文字列に置き換えます (2 番目の引数の[RFX](../../data/odbc/record-field-exchange-using-rfx.md)関数呼び出し) 列の集計関数を表す文字列を使用します。 たとえば、次のように置き換えます。
+1. レコードセットの [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 関数を変更します。 列名を表す文字列 ([RFX](../../data/odbc/record-field-exchange-using-rfx.md) 関数呼び出しの 2 番目の引数) を、列の集計関数を表す文字列に置き換えます。 たとえば、次を置き換えるとします。
 
     ```
     RFX_Long(pFX, "Sales", m_lSales);
@@ -71,12 +74,12 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
     ```
 
-1. レコード セットを開きます。 集計操作の結果のままに`m_dblSumSales`します。
+1. レコードセットを開きます。 集計操作の結果は `m_dblSumSales` に残されています。
 
 > [!NOTE]
->  ウィザードは、実際には、ハンガリー語プレフィックスなしのデータ メンバー名を割り当てます。 ウィザードは、たとえば、 `m_Sales` 、売上の列ではなく、`m_lSales`名の前の図に使用します。
+>  ウィザードでは、実際にはハンガリアン記法の接頭辞を付けずにデータ メンバー名が割り当てられます。 たとえば、ウィザードによって Sales 列に対して生成されるのは、先ほどの説明に使用した `m_lSales` 名ではなく、`m_Sales` です。
 
-使用する場合、 [CRecordView](../../mfc/reference/crecordview-class.md)クラスのデータを表示する、新しいデータ メンバー値を表示する、DDX 関数の呼び出しを変更する必要がここでは、変更することから。
+データを表示するために [CRecordView](../../mfc/reference/crecordview-class.md) クラスを使用している場合は、新しいデータ メンバー値を表示するように DDX 関数呼び出しを変更する必要があります。この場合、以下を変更します。
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
@@ -91,4 +94,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

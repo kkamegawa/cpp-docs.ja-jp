@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-ms.openlocfilehash: 00cb13d1999b00dfcaa5a2bc7bfb3b8eb16af5f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b111448e7e9d8260a5101d05996a670013936894
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661878"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746410"
 ---
 # <a name="compiler-error-c2533"></a>コンパイラ エラー C2533
 
@@ -23,7 +23,7 @@ ms.locfileid: "50661878"
 
 次の例では、C2533 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2533.cpp
 // compile with: /c
 class X {

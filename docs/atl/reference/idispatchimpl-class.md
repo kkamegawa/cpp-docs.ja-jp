@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: 078bbaec870f6661bb33a9bbb844f5e062bba6f2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523257"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495956"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl クラス
 
-既定の実装を提供します、`IDispatch`デュアル インターフェイスの一部です。
+デュアルインターフェイスの`IDispatch`一部の既定の実装を提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -43,22 +43,22 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-[in]デュアル インターフェイスです。
+からデュアルインターフェイス。
 
 *piid*<br/>
-[in]ポインターの IID を*T*します。
+から*T*の IID へのポインター。
 
 *plibid*<br/>
-[in]インターフェイスに関する情報を格納するタイプ ライブラリの LIBID へのポインター。 既定では、サーバー レベルのタイプ ライブラリが渡されます。
+からインターフェイスに関する情報を格納しているタイプライブラリの LIBID へのポインター。 既定では、サーバーレベルのタイプライブラリが渡されます。
 
 *wMajor*<br/>
-[in]タイプ ライブラリのメジャー バージョン。 既定では、値は 1 です。
+からタイプライブラリのメジャーバージョンです。 既定値は1です。
 
 *wMinor*<br/>
-[in]タイプ ライブラリのマイナー バージョン。 既定では、値は 0 です。
+からタイプライブラリのマイナーバージョン。 既定値は0です。
 
 *tihclass*<br/>
-[in]型情報を管理するために使用するクラス*T*します。既定では、値は `CComTypeInfoHolder` です。
+から*T*の型情報の管理に使用されるクラス。既定では、値は `CComTypeInfoHolder` です。
 
 ## <a name="members"></a>メンバー
 
@@ -66,28 +66,28 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 |名前|説明|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|コンストラクターです。 呼び出し`AddRef`デュアル インターフェイスの型情報を管理する、プロテクト メンバー変数にします。 このデストラクターは `Release` を呼び出します。|
+|[IDispatchImpl:: IDispatchImpl](#idispatchimpl)|コンストラクターです。 デュアル`AddRef`インターフェイスの型情報を管理するプロテクトメンバー変数に対してを呼び出します。 このデストラクターは `Release` を呼び出します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[IDispatchImpl::GetIDsOfNames](#getidsofnames)|一連の名前を対応する一連のディスパッチ識別子に割り当てます。|
-|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|デュアル インターフェイスの型情報を取得します。|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|デュアル インターフェイスの使用可能な型情報があるかどうかを判断します。|
-|[IDispatchImpl::Invoke](#invoke)|メソッドとデュアル インターフェイスによって公開されるプロパティへのアクセスを提供します。|
+|[IDispatchImpl:: Idispatch.getidsofnames](#getidsofnames)|一連の名前を対応する一連のディスパッチ識別子に割り当てます。|
+|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|デュアルインターフェイスの型情報を取得します。|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|デュアルインターフェイスに使用できる型情報があるかどうかを判断します。|
+|[IDispatchImpl::Invoke](#invoke)|デュアルインターフェイスによって公開されるメソッドとプロパティへのアクセスを提供します。|
 
 ## <a name="remarks"></a>Remarks
 
-`IDispatchImpl` 既定の実装を提供します、`IDispatch`オブジェクトのデュアル インターフェイスの一部です。 デュアル インターフェイスから派生`IDispatch`Automation と互換性のある型のみを使用しています。 ディスパッチのようなデュアル インターフェイスには事前バインディングと遅延バインディングをサポートしていますただし、デュアル インターフェイスには、vtable のバインドもサポートしています。
+`IDispatchImpl`オブジェクトの任意のデュアルインターフェイス`IDispatch`の一部の既定の実装を提供します。 デュアルインターフェイスはから`IDispatch`派生し、オートメーションと互換性のある型のみを使用します。 デュアルインターフェイスは、ディスパッチインターフェイスと同様に、事前バインディングと遅延バインディングをサポートします。ただし、デュアルインターフェイスでは、vtable バインドもサポートされています。
 
-次の例は、の一般的な実装を示しています。`IDispatchImpl`します。
+次の例は、の`IDispatchImpl`一般的な実装を示しています。
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-既定で、`IDispatchImpl`クラスの型情報を調べ*T*レジストリにします。 未登録のインターフェイスを実装するために使用することができます、`IDispatchImpl`定義済みのバージョン番号を使用して、レジストリにアクセスしなくてもクラス。 作成する場合、`IDispatchImpl`オブジェクトの値として 0 xffff を含む*wMajor*しの値として 0 xffff *wMinor*、`IDispatchImpl`クラスの代わりに、.dll ファイルからタイプ ライブラリを取得する、レジストリ。
+既定では、 `IDispatchImpl`クラスは、レジストリ内の*T*の型情報を検索します。 登録されていないインターフェイスを実装する`IDispatchImpl`には、定義済みのバージョン番号を使用してレジストリにアクセスすることなく、クラスを使用できます。 Wmajor と 0xffff `IDispatchImpl`の値が*wmajor*の値として0xffff のオブジェクトを作成した場合、クラス`IDispatchImpl`はレジストリではなく .dll ファイルからタイプライブラリを取得します。
 
-`IDispatchImpl` 型の静的メンバーを含む`CComTypeInfoHolder`デュアル インターフェイスの型情報を管理します。 同じデュアルを実装する複数のオブジェクトがある場合のインターフェイスを 1 つだけ`CComTypeInfoHolder`使用されます。
+`IDispatchImpl`デュアルインターフェイスの型情報を`CComTypeInfoHolder`管理する型の静的メンバーを格納します。 同じデュアルインターフェイスを実装する複数のオブジェクトがある場合は、の`CComTypeInfoHolder`インスタンスを1つだけ使用します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -97,9 +97,9 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispatchImpl:: Idispatch.getidsofnames
 
 一連の名前を対応する一連のディスパッチ識別子に割り当てます。
 
@@ -114,11 +114,11 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
+Windows SDK の「 [IDispatch:: idispatch.getidsofnames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) 」を参照してください。
 
 ##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
 
-デュアル インターフェイスの型情報を取得します。
+デュアルインターフェイスの型情報を取得します。
 
 ```
 STDMETHOD(GetTypeInfo)(
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[が](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo)Windows SDK にします。
+Windows SDK の「 [IDispatch:: GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) 」を参照してください。
 
 ##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
 
-デュアル インターフェイスの使用可能な型情報があるかどうかを判断します。
+デュアルインターフェイスに使用できる型情報があるかどうかを判断します。
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -141,11 +141,11 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください`IDispatch::GetTypeInfoCount`Windows SDK にします。
+Windows SDK `IDispatch::GetTypeInfoCount`の「」を参照してください。
 
 ##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
 
-コンストラクターです。 呼び出し`AddRef`デュアル インターフェイスの型情報を管理する、プロテクト メンバー変数にします。 このデストラクターは `Release` を呼び出します。
+コンストラクターです。 デュアル`AddRef`インターフェイスの型情報を管理するプロテクトメンバー変数に対してを呼び出します。 このデストラクターは `Release` を呼び出します。
 
 ```
 IDispatchImpl();
@@ -153,7 +153,7 @@ IDispatchImpl();
 
 ##  <a name="invoke"></a>  IDispatchImpl::Invoke
 
-メソッドとデュアル インターフェイスによって公開されるプロパティへのアクセスを提供します。
+デュアルインターフェイスによって公開されるメソッドとプロパティへのアクセスを提供します。
 
 ```
 STDMETHOD(Invoke)(
@@ -169,7 +169,7 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
+Windows SDK の「 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

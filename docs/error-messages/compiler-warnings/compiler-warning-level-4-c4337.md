@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5080c600e37468d5c3617769ddb4596a31be47f0
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479561"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991220"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>コンパイラの警告 (レベル 4) C4337
 
-クロスレファレンスしたタイプ ライブラリ 'typelib1' で 'typelib2' が自動的にインポートされています。
+' typelib2 ' の相互参照タイプライブラリ ' typelib1 ' が自動的にインポートされています
 
-Auto_search 属性[#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)暗黙的にインポートするタイプ ライブラリの原因となった。
+[#Import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)の auto_search 属性により、タイプライブラリが暗黙的にインポートされました。
 
-(Midl.exe でコンパイルされた) 次の 2 つのファイルから作成したディスクの特定の 2 つのタイプ ライブラリ:
+次の2つのファイルから作成されたディスク上の2つのタイプライブラリを指定します (midl でコンパイル)。
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-2 つ目 .idl ファイル
+次に、2番目の .idl ファイルを
 
 ```
 // C4337b.idl
@@ -60,7 +60,7 @@ library C4337bLib
 
 次の例では、C4337 が生成されます。
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337

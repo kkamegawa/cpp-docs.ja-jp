@@ -1,13 +1,12 @@
 ---
-title: コンパイラ エラーs C2100 through C2199
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2100 - C2199)
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857397"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>コンパイラ エラーs C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>コンパイラ エラー (C2100 - C2199)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -72,7 +71,7 @@ ms.locfileid: "50546560"
 |[コンパイラ エラー C2128](compiler-error-c2128.md)|'*関数*': alloc_text/same_seg C リンケージを持つ関数にのみ|
 |[コンパイラ エラー C2129](compiler-error-c2129.md)|静的関数 '*識別子*' 宣言しますが、定義されていません|
 |[コンパイラ エラー C2130](compiler-error-c2130.md)|#line が検出されたファイル名を含む文字列が必要です '*トークン*'|
-|コンパイラ エラー C2131|式は定数に評価されませんでした。|
+|[コンパイラ エラー C2131](compiler-error-c2131.md)|式は定数に評価されませんでした。|
 |[コンパイラ エラー C2132](compiler-error-c2132.md)|構文エラー: 予期しない識別子|
 |[コンパイラ エラー C2133](compiler-error-c2133.md)|'*識別子*': サイズが不明です|
 |[コンパイラ エラー C2134](compiler-error-c2134.md)|'*関数*': 定数式の呼び出しは行われません|
@@ -125,7 +124,7 @@ ms.locfileid: "50546560"
 |[コンパイラ エラー C2181](compiler-error-c2181.md)|else 文が if と一致しません。|
 |[コンパイラ エラー C2182](compiler-error-c2182.md)|'*識別子*': 'void' 型の不正な使用|
 |[コンパイラ エラー C2183](compiler-error-c2183.md)|構文エラー: 翻訳単位が空です|
-|[コンパイラ エラー C2184](compiler-error-c2184.md)|'*型*': _ _except 式に対する無効な型|
+|[コンパイラ エラー C2184](compiler-error-c2184.md)|'*型*': __except 式に対する無効な型|
 |[コンパイラ エラー C2185](compiler-error-c2185.md)|'*識別子*': 無効です based の割り当て。|
 |[コンパイラ エラー C2186](compiler-error-c2186.md)|'*演算子*': 'void' 型の無効なオペランド|
 |コンパイラ エラー C2187|構文エラー: '*トークン*' が予期しないここ|
@@ -141,3 +140,8 @@ ms.locfileid: "50546560"
 |[コンパイラ エラー C2197](compiler-error-c2197.md)|'*関数*': 呼び出しの引数が多すぎます|
 |[コンパイラ エラー C2198](compiler-error-c2198.md)|'*関数*': 呼び出しの引数が少なすぎます|
 |[コンパイラ エラー C2199](compiler-error-c2199.md)|構文エラー: 検出された '*識別子*(' グローバル スコープで (宣言のためのものでしたか?)|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

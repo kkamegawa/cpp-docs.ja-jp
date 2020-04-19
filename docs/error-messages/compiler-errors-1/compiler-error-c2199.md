@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2199
 ms.assetid: 6a92a1b7-7906-49e6-a31f-e8bffbc7706a
-ms.openlocfilehash: e5892a537cbf337b23ff2356583cec4bf5925677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bd6d587d28b8e7c190f7d3d58448fda501796cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530975"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758984"
 ---
 # <a name="compiler-error-c2199"></a>コンパイラ エラー C2199
 
-構文エラー: 検出された ' 識別子 (' グローバル スコープで (宣言のためのものでしたか?)
+構文エラー: グローバルスコープで ' identifier (' が見つかりました (宣言が意図されていたかどうか)
 
-指定したコンテキストでは、構文エラーが発生しました。 正しくない宣言の構文である可能性があります。
+指定されたコンテキストにより、構文エラーが発生しました。 宣言の構文が正しくありません。
 
 次の例では、C2199 が生成されます。
 
-```
+```cpp
 // C2199.cpp
 // compile with: /c
 int j = int(1) int(1);   // C2199

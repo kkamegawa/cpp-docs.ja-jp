@@ -38,14 +38,14 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a04e0f1c202717bb6d40a10f07475d78453ffd7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484059"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689040"
 ---
-# <a name="regextraits-class"></a>regex_traits クラス
+# <a name="regex_traits-class"></a>regex_traits クラス
 
 照合する要素の特性を記述します。
 
@@ -58,12 +58,12 @@ class regex_traits
 
 ## <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem* \
 記述する文字要素の型。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、型のさまざまな正規表現の特性を表します*Elem*します。 テンプレート クラスは、 [basic_regex クラス](../standard-library/basic-regex-class.md)この情報を使用して型の要素を操作する*Elem*します。
+クラステンプレートでは、 *Elem*型のさまざまな正規表現の特徴が記述されています。 クラステンプレート[Basic_regex クラス](../standard-library/basic-regex-class.md)は、 *Elem*型の要素を操作するためにこの情報を使用します。
 
 各 `regex_traits` オブジェクトは、そのオブジェクトの一部のメンバー関数が使用する `regex_traits::locale` 型のオブジェクトを保持します。 既定のロケールは、 `regex_traits::locale()`のコピーです。 メンバー関数 `imbue` は、ロケール オブジェクトを置き換えます。また、メンバー関数 `getloc` は、ロケール オブジェクトのコピーを返します。
 
@@ -97,9 +97,9 @@ class regex_traits
 |[transform_primary](#transform_primary)|同等のケースレス順序付きシーケンスに変換します。|
 |[翻訳](#translate)|一致する同等の要素に変換します。|
 |[translate_nocase](#translate_nocase)|一致する同等のケースレス要素に変換します。|
-|[値](#value)|要素を数値に変換します。|
+|[value](#value)|要素を数値に変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<regex>
 
@@ -197,7 +197,7 @@ typedef Elem char_type;
 
 ### <a name="remarks"></a>Remarks
 
-この typedef は、テンプレート引数 `Elem` のシノニムです。
+この typedef は、テンプレート引数 `Elem`のシノニムです。
 
 ## <a name="getloc"></a>  regex_traits::getloc
 
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*<br/>
+*loc* \
 格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数のコピー *loc*に格納されている`locale`オブジェクトし、格納されているは、前の値のコピーを返します`locale`オブジェクト。
+このメンバー関数は、格納されている `locale` オブジェクトに*loc*をコピーし、格納されている `locale` オブジェクトの前の値のコピーを返します。
 
 ## <a name="isctype"></a>  regex_traits::isctype
 
@@ -238,15 +238,15 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*<br/>
+*ch* \
 テストする要素。
 
-*cls*<br/>
+*cls* \
 テストするクラス。
 
 ### <a name="remarks"></a>Remarks
 
-場合にのみ、メンバー関数は true を返します文字*ch*によって指定された文字クラスでは、 *cls*します。
+このメンバー関数は、 *cls*によって指定された文字クラスに*ch*がある場合にのみ true を返します。
 
 ## <a name="length"></a>  regex_traits::length
 
@@ -258,9 +258,8 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
-
-Null 終端シーケンス。
+*str* \
+Null で終わるシーケンス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -276,7 +275,7 @@ typedef T7 locale_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、ロケールをカプセル化する型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、`std::locale` の同意語です。
+typedef は、ロケールをカプセル化する型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、 `std::locale`の同意語です。
 
 ## <a name="lookup_classname"></a>  regex_traits::lookup_classname
 
@@ -289,10 +288,10 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*最初*の \
 検索するシーケンスの最初。
 
-*last*<br/>
+*最後*の \
 検索するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
@@ -314,15 +313,15 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*最初*の \
 検索するシーケンスの最初。
 
-*last*<br/>
+*最後*の \
 検索するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、シーケンス `[first, last)` に対応する照合要素を含んだ文字列オブジェクトを返します。シーケンスが有効な照合要素でない場合は、空の文字列を返します。
+このメンバー関数は、シーケンス `[first, last)`に対応する照合要素を含んだ文字列オブジェクトを返します。シーケンスが有効な照合要素でない場合は、空の文字列を返します。
 
 ## <a name="regex_traits"></a>  regex_traits::regex_traits
 
@@ -346,9 +345,9 @@ typedef T6 size_type;
 
 ### <a name="remarks"></a>Remarks
 
-Typedef は符号なし整数型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、`std::size_t` の同意語です。
+Typedef は符号なし整数型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、 `std::size_t`の同意語です。
 
-typedef は、`std::size_t` の同意語です。
+typedef は、 `std::size_t`のシノニムです。
 
 ## <a name="string_type"></a>  regex_traits::string_type
 
@@ -360,7 +359,7 @@ typedef basic_string<Elem> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、`basic_string<Elem>` の同意語です。
+typedef は、 `basic_string<Elem>`のシノニムです。
 
 ## <a name="transform"></a>  regex_traits::transform
 
@@ -373,10 +372,10 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
-変換するシーケンスの最初。
+*最初*の \
+変換するシーケンスの先頭。
 
-*last*<br/>
+*最後*の \
 変換するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
@@ -394,10 +393,10 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
-変換するシーケンスの最初。
+*最初*の \
+変換するシーケンスの先頭。
 
-*last*<br/>
+*最後*の \
 変換するシーケンスの最後。
 
 ### <a name="remarks"></a>Remarks
@@ -414,7 +413,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*<br/>
+*ch* \
 変換する要素。
 
 ### <a name="remarks"></a>Remarks
@@ -431,7 +430,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*<br/>
+*ch* \
 変換する要素。
 
 ### <a name="remarks"></a>Remarks
@@ -448,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*<br/>
+*ch* \
 変換する要素。
 
-*radix*<br/>
+*基数*\
 使用する算術的な基数。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は文字で表される値を返します*ch*ベース*基数*、場合は-1 *ch*ベースで有効な数字でない*基数*. 関数でのみ呼び出される、*基数*8、10、または 16 の引数。
+このメンバー関数は、基本*基数*の*ch*によって表される値を返します。また、 *ch*がベース*基数*の有効な数字でない場合は-1 を返します。 関数は、8、10、または16の*基数*引数を使用してのみ呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 系演算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > クラス](../standard-library/regex-traits-char-class.md)<br/>
-[regex_traits\<wchar_t> クラス](../standard-library/regex-traits-wchar-t-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Regex_constants クラス](../standard-library/regex-constants-class.md)\
+[Regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[Regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex > 演算子](../standard-library/regex-operators.md)\
+[Regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[\<regex > typedef](../standard-library/regex-typedefs.md) \
+[regex_traits\<char> クラス](../standard-library/regex-traits-char-class.md)\
+[regex_traits\<wchar_t> クラス](../standard-library/regex-traits-wchar-t-class.md)

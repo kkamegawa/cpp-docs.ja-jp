@@ -1,11 +1,14 @@
 ---
 title: errno、_doserrno、_sys_errlist、および _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487726"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944553"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
 
 プログラムの実行中に設定されるエラー コードと、エラー コードに相当する表示用の文字列を保持するグローバル マクロ。
 
@@ -41,7 +44,7 @@ ms.locfileid: "50487726"
 #define _sys_nerr (*__sys_nerr())
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `errno` と `_doserrno` は両方とも、プログラムの起動中にランタイムによって 0 に設定されます。 システム レベルの呼び出しでエラーが発生すると、`errno` が設定されます。 `errno` には最後の呼び出しで設定された値が保持されるため、この値は、その後の呼び出しによって変更される可能性があります。 エラーの発生時に `errno` を設定するランタイム ライブラリの呼び出しでは、正常に完了しても、`errno` はクリアされません。 `errno` は、これを設定する呼び出しの直前に `_set_errno(0)` を呼び出して必ずクリアし、呼び出しの直後に確認します。
 
@@ -107,11 +110,11 @@ ms.locfileid: "50487726"
 |グローバル マクロ|必須ヘッダー|オプション ヘッダー|
 |------------------|---------------------|---------------------|
 |`errno`|\<errno.h> または \<stdlib.h>、\<cerrno> または \<cstdlib> (C++)||
-|`_doserrno`、 `_sys_errlist`、 `_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+|`_doserrno`、`_sys_errlist`、`_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 
-`_doserrno`、`_sys_errlist`、および `_sys_nerr` マクロは Microsoft 拡張機能です。 互換性について詳しくは、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
+`_doserrno`、`_sys_errlist`、および `_sys_nerr` マクロは Microsoft 拡張機能です。 互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)<br/>
 [errno 定数](../c-runtime-library/errno-constants.md)<br/>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3223
 ms.assetid: 1f4380b4-0413-40db-a868-62f97babaf78
-ms.openlocfilehash: 9c53f7c91cc0e8f4c56d8d780b222b199702310e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1897492dd5ae0e3290b2d1a2a36b53a62bde839
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486451"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753615"
 ---
 # <a name="compiler-error-c3223"></a>コンパイラ エラー C3223
 
 'property' : 'typeid' をプロパティに適用できません
 
-[typeid](../../windows/typeid-cpp-component-extensions.md) をプロパティに適用できません。
+[typeid](../../extensions/typeid-cpp-component-extensions.md) をプロパティに適用できません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3223 が生成されます。
 
-```
+```cpp
 // C3223.cpp
 // compile with: /clr
 ref class R {

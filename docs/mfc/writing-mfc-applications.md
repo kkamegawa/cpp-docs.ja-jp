@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application wizards [MFC], Internet applications
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
-ms.openlocfilehash: 09d337f2b2a137c997665b6fad4f2fef7235f723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63636e8c5738eb3823de0befa6237f7ae5b3491d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399461"
 ---
 # <a name="writing-mfc-applications"></a>MFC アプリケーションの作成
 
@@ -46,4 +46,3 @@ ms.locfileid: "50428536"
 
 [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
-

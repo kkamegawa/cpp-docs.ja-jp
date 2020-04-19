@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: 177f66222a054c3305418ffcd0acdda5c82ccf43
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 0caecc797a3175d5769f98e181e1d99ef6b1ad16
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389100"
 ---
 # <a name="transaction-object-interfaces"></a>トランザクション オブジェクト インターフェイス
 
@@ -25,8 +25,8 @@ ms.locfileid: "51556180"
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|
 |---------------|---------------|--------------------------------------|
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|必須|いいえ|
-|[ITransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms723053(v=vs.85))|必須|いいえ|
-|[ISupportErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|いいえ|
+|[ITransaction](/previous-versions/windows/desktop/ms723053(v=vs.85))|必須|いいえ|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|いいえ|
 
 ## <a name="see-also"></a>関連項目
 

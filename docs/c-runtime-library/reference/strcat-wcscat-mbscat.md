@@ -1,11 +1,11 @@
 ---
 title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -39,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546394"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958273"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat、wcscat、_mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat、wcscat、_mbscat
 
 文字列を追加します。 これらの関数にはセキュリティが強化されたバージョンがあります、「[strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **_mbscat_s** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscat_s**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -95,16 +99,16 @@ NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の各コピー先の文字列を返します (*strDestination*)。 エラーを示す戻り値は予約されていません。
+これらの各関数は、変換先文字列 (*strdestination*) を返します。 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>Remarks
 
-**Strcat**関数は、追加*strSource*に*strDestination*し、結果の文字列を null 文字で終了します。 最初の文字の*strSource*の終端の null 文字を上書き*strDestination*します。 動作**strcat**元とコピー先文字列が重なり合う場合は定義されません。
+**Strcat**関数は、 *Strsource*を*strsource*に追加し、結果の文字列を null 文字で終了します。 *Strsource*の最初の文字は、 *strsource*の終端の null 文字を上書きします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcat**の動作は未定義です。
 
 > [!IMPORTANT]
-> **Strcat**に十分な領域をチェックしません*strDestination*追加の前に*strSource*、バッファー オーバーランの潜在的な原因になります。 代わりに [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) の使用を検討してください。
+> **Strcat**は*strdestination*を追加する前に、 *strdestination*に十分な領域があるかどうかを確認しないため、バッファーオーバーランの可能性があります。 代わりに [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) の使用を検討してください。
 
-**wcscat**と **_mbscat**のワイド文字とマルチバイト文字バージョン**strcat**します。 引数と戻り値の**wcscat**はワイド文字列 **_mbscat**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**wcscat**と **_mbscat**は、 **strcat**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscat**の引数と戻り値はワイド文字列です。これらの **_mbscat**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

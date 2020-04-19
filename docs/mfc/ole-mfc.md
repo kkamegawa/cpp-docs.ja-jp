@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user interfaces, OLE
 - applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
-ms.openlocfilehash: 69418136f87ecacf571aec2b5ff2989cff9cf120
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37b1439462e36787baee6a77413de3d56f2cca5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403975"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 

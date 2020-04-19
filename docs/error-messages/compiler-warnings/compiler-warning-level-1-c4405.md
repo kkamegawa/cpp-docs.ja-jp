@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-ms.openlocfilehash: e85bdc995fe16f91e2e9c734dacc65ca0b7b622d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 182f9ff061fd2a8ebe5ea0046545412fca5f646a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654914"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965586"
 ---
 # <a name="compiler-warning-level-1-c4405"></a>コンパイラの警告 (レベル 1) C4405
 
-'identifier': 識別子は予約語
+' identifier ': 識別子は予約語です
 
-インライン アセンブリの予約語は、変数名として使用されます。 予期しない結果がある可能性があります。 この警告を解決するには、インライン アセンブリの予約語で名前付けの変数をしないでください。 次の例では、C4405 が生成されます。
+インラインアセンブリ用に予約された単語は、変数名として使用されます。 これにより、予測できない結果が生じる可能性があります。 この警告を解決するには、インラインアセンブリ用に予約されている単語に変数の名前を付けないようにします。 次の例では、C4405 が生成されます。
 
-```
+```cpp
 // C4405.cpp
 // compile with: /W1
 // processor: x86

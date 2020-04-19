@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394539"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog クラス
 
@@ -99,7 +99,7 @@ CMFCImageEditorDialog(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCImageEditorDialog`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCImageEditorDialog`クラス。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

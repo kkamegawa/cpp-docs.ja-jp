@@ -3,67 +3,67 @@ title: コントロールへのプロパティの追加 (ATL チュートリア�
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: 9b8744e964274acb35c32a1ace02f71d0fed5c2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288dc9f5af57c02639d15a9a971419a633cfc08d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466860"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127588"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>コントロールへのプロパティの追加 (ATL チュートリアル、パート 3)
 
-`IPolyCtl` コントロールのカスタム メソッドとプロパティを格納しているインターフェイスは、プロパティを追加します。
+`IPolyCtl` は、コントロールのカスタムメソッドとプロパティを含むインターフェイスであり、プロパティを追加します。
 
-### <a name="to-add-the-property-definitions-to-your-project"></a>プロパティの定義をプロジェクトに追加するには
+### <a name="to-add-the-property-definitions-to-your-project"></a>プロパティ定義をプロジェクトに追加するには
 
-1. **クラス ビュー**、展開、`Polygon`分岐します。
+1. **クラスビュー**で、`Polygon` の分岐を展開します。
 
-1. 右クリックして`IPolyCtl`します。
+1. [`IPolyCtl`] を右クリックします。
 
-1. ショートカット メニューで、**追加**、 をクリックし、**プロパティの追加**します。 **プロパティの追加**ウィザードが表示されます。
+1. ショートカットメニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。 **プロパティの追加**ウィザードが表示されます。
 
-1. 型`Sides`として、**プロパティ名**します。
+1. **プロパティ名**として「`Sides`」と入力します。
 
-1. ドロップダウン リストで**プロパティ型**、`short`します。
+1. **プロパティの種類**のドロップダウンリストで、[`short`] を選択します。
 
-1. クリックして**OK**プロパティの追加を完了します。
+1. [ **OK** ] をクリックして、プロパティの追加を完了します。
 
-1. **ソリューション エクスプ ローラー**Polygon.idl を開き、次の行の末尾に置き換えます、`IPolyCtl : IDispatch`インターフェイス。
+1. **ソリューションエクスプローラー**から、Polygon を開き、`IPolyCtl : IDispatch` インターフェイスの末尾にある次の行を置き換えます。
 
     ```cpp
     short get_Sides();
     void set_Sides(short value);
     ```
 
-    代入
+    with
 
     ```cpp
     [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. **ソリューション エクスプ ローラー**PolyCtl.h を開いての定義後に、次の行を追加`m_clrFillColor`:
+1. **ソリューションエクスプローラー**から polyctl.htm を開き、`m_clrFillColor`の定義の後に次の行を追加します。
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-スケルトンの関数を設定し、プロパティおよびプロパティを格納する変数を取得するようになりましたが、それに応じて関数を実装する必要があります。
+プロパティを設定および取得するためのスケルトン関数が用意されていますが、プロパティを格納する変数を取得するには、それに応じて関数を実装する必要があります。
 
-### <a name="to-update-the-get-and-put-methods"></a>Get を更新し、put メソッド
+### <a name="to-update-the-get-and-put-methods"></a>Get メソッドと put メソッドを更新するには
 
-1. 既定値を設定`m_nSides`します。 PolyCtl.h でコンス トラクターに 1 行を追加することで、三角形を図形の既定を行います。
+1. `m_nSides`の既定値を設定します。 Polyctl.htm のコンストラクターに行を追加して、既定の図形を三角形にします。
 
     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-1. 実装、`Get`と`Put`メソッド。 `get_Sides`と`put_Sides`PolyCtl.h に関数の宣言が追加されました。 コードを追加`get_Sides`と`put_Sides`PolyCtl.cpp を次に。
+1. `Get` メソッドと `Put` メソッドを実装します。 `get_Sides` および `put_Sides` 関数の宣言が Polyctl.htm に追加されました。 次のように、`get_Sides` のコードを追加し、Polyctl.htm に `put_Sides` します。
 
     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
-`get_Sides`メソッドの現在の値を返します、`Sides`プロパティを介して、`pVal`ポインター。 `put_Sides`メソッド、コードにより、ユーザーの設定、`Sides`プロパティに許容される値。 最小値は 3 である必要があり、100 は最大値として妥当な制限でそれぞれの側のポイントの配列を使用するためです。
+`get_Sides` メソッドは、`pVal` ポインターを介して `Sides` プロパティの現在の値を返します。 `put_Sides` メソッドでは、コードによって、ユーザーが `Sides` プロパティを受け入れ可能な値に設定していることが確認されます。 最小値は3である必要があります。また、点の配列が各辺に使用されるため、100は最大値に対して妥当な制限となります。
 
-という名前のプロパティがあるようになりました`Sides`します。 次の手順では、それを使用する描画コードを変更します。
+これで `Sides`という名前のプロパティが作成されました。 次の手順では、描画コードを使用するように変更します。
 
-[手順 2 に戻る](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [手順 4 に](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+手順[2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [.](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)に戻ります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [チュートリアル](../atl/active-template-library-atl-tutorial.md)

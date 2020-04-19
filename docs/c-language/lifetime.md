@@ -17,12 +17,12 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-ms.openlocfilehash: 5e5d3b852148284312d2e1fb4cee1df432ac161b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665219"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149441"
 ---
 # <a name="lifetime"></a>有効期間
 
@@ -42,6 +42,6 @@ ms.locfileid: "50665219"
 
 `malloc` などの特別なライブラリ ルーチンを使用して作成された場合は、必要に応じて (動的に) メモリを割り当てることができます。 動的メモリ割り当てはライブラリ ルーチンを使用するため、言語の一部とは見なされません。 「*ランタイム ライブラリ リファレンス*」の [malloc](../c-runtime-library/reference/malloc.md) 関数を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)

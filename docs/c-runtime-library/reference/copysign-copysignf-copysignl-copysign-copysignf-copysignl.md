@@ -1,14 +1,14 @@
 ---
 title: copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - copysignf
 - copysignl
 - _copysignl
 - _copysign
 - _copysignf
 - copysign
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _copysignl
 - copysign
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662814"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942853"
 ---
-# <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
+# <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 
 ある引数の絶対値と別の引数の符号を持つ値を返します。
 
@@ -92,11 +95,11 @@ long double _copysignl(
 
 ## <a name="return-value"></a>戻り値
 
-**Copysign**関数の絶対値を組み合わせた浮動小数点値を返す*x*の符号と*y*します。 エラーの戻り値はありません。
+**Copysign**関数は、 *x*の大きさと*y*の符号を組み合わせた浮動小数点値を返します。 エラーの戻り値はありません。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **copysign**を受け取って返す**float**または**長い****二重**値。 C プログラムで**copysign**は、**二重**します。
+でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**copysign**のオーバーロードを呼び出すことができます。 C プログラムでは、 **copysign**は常に、 **double**を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 

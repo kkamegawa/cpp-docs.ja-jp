@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595573"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448530"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -26,11 +26,11 @@ Visual C の現在のバージョンでサポートされていない IDL コン
 ### <a name="parameters"></a>パラメーター
 
 *テキスト*<br/>
-コンパイラ エラーを返さずに生成された .idl ファイルに渡す Visual C コンパイラが意図されている属性名。
+Microsoft をする属性名C++コンパイラはコンパイラ エラーを返さずに生成された .idl ファイルにパススルーします。
 
 ## <a name="remarks"></a>Remarks
 
-場合、 **idl_quote** C++ 属性は、(セミコロン、右かっこの後)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote**シンボルで使用されて*テキスト*シンボルに対する属性ブロック内に配置されます。
+場合、 **idl_quote** C++属性は、(セミコロン、右かっこの後)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote**シンボルで使用されて*テキスト*シンボルに対する属性ブロック内に配置されます。
 
 ## <a name="example"></a>例
 

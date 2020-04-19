@@ -20,12 +20,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 1bfb13309ae4bd667a5e128300740f4c903f08be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580949"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742755"
 ---
 # <a name="spawn-constants"></a>spawn 定数
 
@@ -35,7 +35,7 @@ ms.locfileid: "50580949"
 #include <process.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `mode` 引数は、生成操作の前とその実行中に、呼び出し元のプロセスによって実行されるアクションを決定します。 `mode` に指定できる値は次のとおりです。
 
@@ -46,7 +46,7 @@ ms.locfileid: "50580949"
 |`_P_NOWAIT`、 `_P_NOWAITO`|新しいプロセスと同時に呼び出し元のプロセスを実行し続けます (非同期 `_spawn`)。|
 |`_P_DETACH`|呼び出し元のプロセスの実行を継続します。新しいプロセスは、コンソールまたはキーボードへのアクセスなしでバックグラウンドで実行されます。 新しいプロセスに対する `_cwait` 呼び出しは失敗します。 これは、非同期の `_spawn` です。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_spawn 系関数と _wspawn 系関数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

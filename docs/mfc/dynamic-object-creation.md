@@ -7,12 +7,12 @@ helpviewer_keywords:
 - objects [MFC], creating dynamically at run time
 - dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
-ms.openlocfilehash: 75d4a055f047abfcac4451c04bcd1cc75650c89a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3478e5481c177e0ebca1e6b5c2cd07509371c5ef
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173360"
 ---
 # <a name="dynamic-object-creation"></a>オブジェクトの動的生成
 
@@ -27,4 +27,3 @@ ms.locfileid: "50563724"
 ## <a name="see-also"></a>関連項目
 
 [CObject の使い方](../mfc/using-cobject.md)
-

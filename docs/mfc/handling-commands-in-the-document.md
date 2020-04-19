@@ -9,12 +9,12 @@ helpviewer_keywords:
 - command handling [MFC], commands in documents
 - documents [MFC], handling messages in
 ms.assetid: c7375584-27af-4275-b2fd-afea476785d0
-ms.openlocfilehash: d2f0a7271452ace9b9e06ff995af61881db4403c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3cce539d52bd04e97a6b5f84cbd833b05afb5bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240575"
 ---
 # <a name="handling-commands-in-the-document"></a>ドキュメントでのコマンドの処理
 
@@ -23,4 +23,3 @@ ms.locfileid: "50548955"
 ## <a name="see-also"></a>関連項目
 
 [ドキュメントの使い方](../mfc/using-documents.md)
-

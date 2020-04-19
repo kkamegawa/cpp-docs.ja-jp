@@ -1,6 +1,6 @@
 ---
 title: /FORCE (ターゲットを強制的に出力)
-ms.date: 11/04/2016
+ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceLink
 - /force
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: 5555a76cc792c15bea9c6c393debbd0fb38e30e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445657"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299717"
 ---
 # <a name="force-force-file-output"></a>/FORCE (ターゲットを強制的に出力)
 
@@ -25,29 +25,31 @@ ms.locfileid: "50445657"
 
 ## <a name="remarks"></a>Remarks
 
-/FORCE オプション、リンカーは有効な .exe ファイルを作成する、または DLL のシンボルが参照されている場合でも定義されているまたは複数回定義されました。
+/FORCE オプションは、シンボルが参照されているが定義されていないか、または乗算が定義されている場合でも、有効な .exe ファイルまたは DLL を作成するようにリンカーに指示します。
 
-/FORCE オプションは、省略可能な引数を実行できます。
+/FORCE オプションは、省略可能な引数を受け取ることができます。
 
-- /Force:multiple をリンク、シンボルの 1 つ以上の定義を検索するかどうかは、出力ファイルを作成します。
+- リンクがシンボルに対して複数の定義を検出したかどうかにかかわらず、/FORCE: MULTIPLE を使用して出力ファイルを作成します。
 
-- /Force:unresolved: 未解決のリンクに未定義のシンボルを検索するかどうかは、出力ファイルを作成します。 /強制: 未解決のエントリ ポイント シンボルが解決しない場合は無視されます。
+- /FORCE: 未解決を使用して、リンクが未定義のシンボルを見つけたかどうかにかかわらず、出力ファイルを作成します。 /FORCE: エントリポイントシンボルが未解決の場合、未解決のは無視されます。
 
-/FORCE 引数なしでは、両方の複数のことを意味し、未解決のします。
+引数を指定せずに/FORCE を指定すると、multiple と未解決の両方が示されます。
 
-このオプションで作成されたファイルは、正常に動作しない可能性があります。 /FORCE オプションを指定した場合、リンカーはインクリメンタル リンクされません。
+このオプションを使用して作成されたファイルは、予期したとおりに実行されない可能性があります。 /FORCE オプションが指定されている場合、リンカーは段階的にリンクされません。
 
-モジュールをコンパイルした場合 **/clr**、 **/force**イメージは作成されません。
+モジュールが **/clr**でコンパイルされた場合、 **/force**はイメージを作成しません。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. **ソリューションエクスプローラー**でプロジェクトを右クリックし、 **[プロパティ]** を選択します。 
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. オプションを入力、**追加オプション**ボックス。
+1. **[追加オプション]** ボックスにオプションを入力します。
+
+詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -55,5 +57,5 @@ ms.locfileid: "50445657"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: b58136cc03efda83071c531b25889743de3485f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456746"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761570"
 ---
 # <a name="compiler-error-c3536"></a>コンパイラ エラー C3536
 
-'symbol': 初期化前に使用することはできません
+' symbol ': 初期化する前に使用することはできません
 
-初期化される前に、指定されたシンボルを使用できません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。
+指定されたシンボルを初期化する前に使用することはできません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. それ自体と変数を初期化できません。
+1. 変数をそれ自体で初期化しないでください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例は、それ自体と各変数が初期化されて C3536 を生成します。
+次の例では、各変数がそれ自体で初期化されるため、C3536 が生成されます。
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()
@@ -41,6 +41,6 @@ int main()
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto キーワード](../../cpp/auto-keyword.md)

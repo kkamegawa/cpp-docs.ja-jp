@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 76e643cb45d8a87408015e6e0726e47d423147f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409253"
 ---
 # <a name="libraryblock"></a>library_block
 

@@ -1,6 +1,6 @@
 ---
 title: 数値演算と浮動小数点のサポート
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558237"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821513"
 ---
 # <a name="math-and-floating-point-support"></a>数値演算と浮動小数点のサポート
 
@@ -25,7 +25,7 @@ ms.locfileid: "50558237"
 
 ## <a name="supported-math-and-floating-point-routines"></a>サポートされている数値演算と浮動小数点のルーチン
 
-|ルーチンによって返される値|使用|
+|ルーチンによって返される値|[使用]|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|整数型の絶対値を計算します
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|アーク コサインを計算します
@@ -69,11 +69,10 @@ ms.locfileid: "50558237"
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|指定した浮動小数点丸めモードを設定します
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|設定されている浮動小数点例外状態フラグを確認します
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|浮動小数点環境を復元してから、前の例外を発生させます
-[_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)|ある値が有限かどうかを確認します
 [floor、floorf、floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|切り捨てを計算します
 [fma、fmaf、fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|融合型積和演算を計算します
 [fmax、fmaxf、fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|引数の最大値を計算します
-[fmin、fminf、fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|引数の最小値を計算します
+[fmin、fminf、fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|引数の最小値を計算します。
 [fmod、fmodf、fmodl](../c-runtime-library/reference/fmod-fmodf.md)|浮動小数点の剰余を計算します
 [_fpclass、_fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|浮動小数点値の分類を返します
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|浮動小数点値の分類を返します
@@ -87,7 +86,11 @@ ms.locfileid: "50558237"
 [ilogb、ilogbf、ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|整数の 2 進数の指数を計算します
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|整数型の絶対値を計算します
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|2 つの整数値の商と剰余を計算します
+[isfinite、_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)|ある値が有限かどうかを確認します
+[isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered](../c-runtime-library/reference/floating-point-ordering.md)|2 つの浮動小数点値の順序を比較します
+[isinf](../c-runtime-library/reference/isinf.md)|浮動小数点値が無限かどうかを決定します
 [isnan、_isnan、_isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|NaN の浮動小数点値をテストします
+[isnormal](../c-runtime-library/reference/isnormal.md)|浮動小数点値が有限であり、非正規ではないかどうかをテストします
 [_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Bessel 関数を計算します
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|x*2<sup>n</sup> を計算します
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|ガンマ関数の絶対値の自然対数を計算します
@@ -118,12 +121,13 @@ ms.locfileid: "50558237"
 [scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|浮動小数点数に整数である **FLT_RADIX** の累乗を乗算します
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|浮動小数点制御ワードを設定します
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|SSE2 命令を有効または無効にします
+[signbit](../c-runtime-library/reference/signbit.md)|浮動小数点値の符号ビットをテストします
 [sin、sinf、sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|サインを計算します
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|双曲線サインを計算します
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|平方根を計算します
 [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|浮動小数点ステータス ワードを取得します
 [strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|文字列を **float** に変換します
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|文字列を **long** **double** に変換します
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|文字列を**long** **double**に変換します。
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|タンジェントを計算します
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|双曲線タンジェントを計算します
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|ガンマ関数を計算します
@@ -134,3 +138,4 @@ ms.locfileid: "50558237"
 ## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[浮動小数点プリミティブ](../c-runtime-library/reference/floating-point-primitives.md)<br/>

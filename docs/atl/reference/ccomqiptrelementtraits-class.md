@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: df1bbf5cb36e45b6b47acbd4263c34a7353fd6ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246169"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits クラス
 

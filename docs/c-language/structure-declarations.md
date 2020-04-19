@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: 5c557b3db2e58001fa0b7a1a5bef5b1043e2cd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607286"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152288"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 
@@ -122,7 +122,7 @@ struct sample   /* Defines a structure named x */
 
 この構造体の最初の 2 つのメンバーは `char` 変数と **float** 値へのポインターです。 3 番目のメンバー `next` は、定義されている構造体型へのポインターとして宣言されています (`sample`)。
 
-無名構造体は、名前が付いたタグが不要な場合に便利です。 1 つの宣言ですべての構造体インスタンスが定義される場合は、これに該当します。 例:
+無名構造体は、名前が付いたタグが不要な場合に便利です。 1 つの宣言ですべての構造体インスタンスが定義される場合は、これに該当します。 次に例を示します。
 
 ```C
 struct
@@ -175,6 +175,6 @@ p_s->b = 100;  /* A reference to a field in the s structure */
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

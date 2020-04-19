@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet classes
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
-ms.openlocfilehash: 7e0b4dd19c023229386c1af9d1e50ad18fe7f224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd8e85d236f451c2d6e5e03ed3495cf02f5f3ba7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389425"
 ---
 # <a name="internet-related-mfc-classes"></a>インターネット関連の MFC クラス
 
@@ -68,4 +68,3 @@ ms.locfileid: "50516130"
 ## <a name="see-also"></a>関連項目
 
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
-

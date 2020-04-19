@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2957
 ms.assetid: 9cb4526f-4af8-47e9-b786-56192627ca72
-ms.openlocfilehash: 51745b60d89c28280c8c48cdbba3762d92529073
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 122d6919271a165ceb0dad31a344e59cb3457a25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600502"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742770"
 ---
 # <a name="compiler-error-c2957"></a>コンパイラ エラー C2957
 
@@ -21,7 +21,7 @@ ms.locfileid: "50600502"
 
 次の例では C2957 が生成されます。
 
-```
+```cpp
 // C2957.cpp
 // compile with: /clr /LD
 generic << class T>   // C2957

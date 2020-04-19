@@ -1,8 +1,6 @@
 ---
-title: 'TN039: MFC/OLE オートメーションの実装'
+title: TN039:MFC OLE オートメーションの実装
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - MFC, COM support
 - IDispatch interface
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e71b3795396aa73135e8dac022182d4371bb19ac
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658992"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611244"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>テクニカル ノート 39: MFC/OLE オートメーションの実装
+# <a name="tn039-mfcole-automation-implementation"></a>TN039:しかし、MFC/OLE オートメーションの実装
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -40,7 +38,7 @@ MFC の決定、 **DISPID**と各メソッドのプロパティは、次の 2 �
 
 - 最派生クラス (0 相対) からディスパッチ マップの距離は、
 
-**DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **HIWORD**最派生クラスからの距離が含まれています。 例えば:
+**DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **HIWORD**最派生クラスからの距離が含まれています。 例:
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -120,7 +118,7 @@ DISP_PROPERTY_NOTIFY(
 *pszName*<br/>
 プロパティの外部名。
 
-*メンバー名*<br/>
+*memberName*<br/>
 プロパティが格納されているメンバー変数の名前。
 
 *pfnAfterSet*<br/>
@@ -156,7 +154,7 @@ DISP_PROPERTY_PARAM(
 *memberGet*<br/>
 プロパティを取得するために使用するメンバー関数の名前。
 
-*メンバー セット*<br/>
+*memberSet*<br/>
 プロパティを設定するために使用するメンバー関数の名前。
 
 *vtPropType*<br/>
@@ -237,7 +235,7 @@ DISP_PROPERTY_PARAM_ID(
 *pfnSet*<br/>
 プロパティを設定するために使用するメンバー関数の名前。
 
-*メンバー名*<br/>
+*memberName*<br/>
 プロパティにマップするメンバー変数の名前
 
 *vtPropType*<br/>

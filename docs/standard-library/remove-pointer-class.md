@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-ms.openlocfilehash: 6bc735af1c1af292b32b56aae599eef019836254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 786a1cba5fc35014e33e3e19245271adefec1372
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450650"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451256"
 ---
 # <a name="removepointer-class"></a>remove_pointer クラス
 
@@ -30,12 +30,12 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-インスタンス`remove_pointer<T>`、修飾型であるを保持`T1`とき*T*の形式は`T1*`、 `T1* const`、 `T1* volatile`、または`T1* const volatile`それ以外の場合、 *T*します。
+`remove_pointer<T>`のインスタンスは、 *t*が、 `T1*` `T1* const` `T1` 、、または`T1* const volatile`の形式である場合に、変更後の型を保持します。それ以外の場合は t です。 `T1* volatile`
 
 ## <a name="example"></a>例
 
@@ -67,5 +67,5 @@ remove_pointer_t<int *> == int
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_pointer クラス](../standard-library/add-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_pointer クラス](../standard-library/add-pointer-class.md)

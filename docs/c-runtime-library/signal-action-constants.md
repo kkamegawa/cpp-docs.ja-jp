@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 71c2eb796680e90cd16b1798fd478506ce7aa2c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444656"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743870"
 ---
 # <a name="signal-action-constants"></a>signal のアクション定数
 
@@ -26,7 +26,7 @@ ms.locfileid: "50444656"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `func` 引数は、関数のアドレス、または SIGNAL.H に定義されている以下のマニフェスト定数のいずれかにする必要があります。
 
@@ -38,7 +38,7 @@ ms.locfileid: "50444656"
 | `SIG_ACK`  | 受信確認を受け取ったことを示します。  |
 | `SIG_ERR`  | エラーが発生したことを示すシグナルからの戻り値の型。  |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

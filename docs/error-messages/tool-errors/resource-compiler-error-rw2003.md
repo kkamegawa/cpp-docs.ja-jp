@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
 ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396783"
 ---
 # <a name="resource-compiler-error-rw2003"></a>リソース コンパイラ エラー RW2003
 
@@ -19,15 +19,15 @@ ms.locfileid: "51520609"
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. **エラー: ビットマップ ファイル リソース ファイルは 3.00 形式で**
+1. **エラー: ビットマップ ファイル リソース-ファイルは 3.00 形式ではありません。**
 
    Windows バージョン 2.x 形式を使用するビットマップは、バージョン 3.x のリソース ファイルには使用できません。 ビットマップの描画または 3.x 形式に変換する必要があります。
 
-1. **エラー: リソース名に古い DIB が。SDKPAINT をパススルーします。**
+1. **エラー: リソース名に古い dib があります。SDKPAINT をパススルーします。**
 
    指定したリソースでデバイス独立ビットマップ (DIB) は、Windows 3.0 形式と互換性がありません。 ビットマップの描画または 3.x 形式に変換する必要があります。
 
-1. **エラー: リソース ファイル リソース名は 3.00 形式で**
+1. **エラー: リソース ファイル リソース名は 3.00 形式でないです。**
 
    アイコンまたはカーソルを指定されたリソースは、Windows の以前のバージョンからの形式を使用します。 アイコンまたはカーソルを再描画されるか、3.x 形式に変換します。
 

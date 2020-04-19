@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 8f77ebf41e741d74443fbae3398589c77fbf6c01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5704c10393026a14ac66b632559fc376f008f8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284519"
 ---
 # <a name="accessing-xml-data"></a>XML データへのアクセス
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
-ms.openlocfilehash: aef9df0718d013378f88c1a34d08d1b1e05e214c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0153ec9d48225d153221f2192761da4023fab96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667007"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746514"
 ---
 # <a name="compiler-error-c2514"></a>コンパイラ エラー C2514
 
-'class': クラスにコンス トラクターがありません
+' class ': クラスにコンストラクターがありません。
 
-クラス、構造体または共用体にインスタンス化するために使用されるパラメーターに一致するパラメーター リストを持つコンス トラクターがありません。
+クラス、構造体、または共用体に、インスタンス化に使用されているパラメーターと一致するパラメーターリストを持つコンストラクターがありません。
 
-インスタンス化する前に、クラスを完全に宣言する必要があります。
+クラスをインスタンス化する前に、完全に宣言する必要があります。
 
 次の例では、C2514 が生成されます。
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

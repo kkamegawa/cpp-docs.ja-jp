@@ -1,6 +1,6 @@
 ---
-title: 'レコード フィールド エクスチェンジ: ウィザード コードの操作'
-ms.date: 11/04/2016
+title: レコード フィールド エクスチェンジ:ウィザード コードの操作
+ms.date: 05/09/2019
 helpviewer_keywords:
 - DoFieldExchange method, overriding
 - Unicode, with database classes
@@ -15,31 +15,34 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 81b26e61f64623d1e3da5ed207d0e8e43350229d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492119"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707999"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクスチェンジ: ウィザード コードの操作
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクスチェンジ:ウィザード コードの操作
 
-このトピックでは、コードを説明する MFC アプリケーション ウィザードと**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) rfx 関数とそのコードを変更する方法をサポートするために記述します。
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
+
+このトピックでは、RFX をサポートするために MFC アプリケーション ウィザードと (「[Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」 (MFC ODBC コンシューマーの追加) で説明した) **クラスの追加**で記述されるコードについて、およびこれらのコードを変更する方法について説明します。
 
 > [!NOTE]
->  このトピックの対象から派生したクラス`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクス チェンジ (Bulk RFX) が実装されます。 バルク rfx 関数は、rfx 関数に似ています。 相違点を理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` から派生したクラスを対象にしています。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクスチェンジ (Bulk RFX) が実装されます。 Bulk RFX は、RFX に似ています。 相違点を理解するには、「[Recordset:Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」 (レコードセット: レコードの一括フェッチ (ODBC)) を参照してください。
 
-MFC アプリケーション ウィザードを使用してレコード セット クラスを作成する場合または**クラスの追加**ウィザードでは、テーブル、データ ソースに基づいてして、ウィザードで行った列の選択の RFX に関連する次の要素が書き込まれます。
+MFC アプリケーション ウィザードまたは**クラスの追加**を使用してレコードセット クラスを作成すると、ウィザードで選択したデータ ソース、テーブル、列に基づいて、ウィザードによって RFX に関連する次の要素が自動的に記述されます。
 
-- レコード セット クラスでは、レコード セット フィールド データ メンバーの宣言
+- レコードセット クラスでのレコードセット フィールド データ メンバーの宣言
 
-- オーバーライド `CRecordset::DoFieldExchange`
+- `CRecordset::DoFieldExchange` のオーバーライド
 
-- レコード セット クラスのコンス トラクターでレコード セット フィールド データ メンバーの初期化
+- レコードセット クラス コンストラクターでのレコードセット フィールド データ メンバーの初期化
 
 ##  <a name="_core_the_field_data_member_declarations"></a> フィールド データ メンバーの宣言
 
-ウィザードでは、クラスの次のような .h ファイルでレコード セット クラスの宣言を記述`CSections`:
+ウィザードによって、`CSections` クラスに対してレコード セット クラスの宣言が次のような .h ファイルに書き込まれます。
 
 ```cpp
 class CSections : public CRecordset
@@ -71,15 +74,15 @@ public:
 };
 ```
 
-パラメーター データ メンバーまたは自分でバインドする新しいフィールド データ メンバーを追加する場合は、ウィザードで生成された規則の後に追加します。
+パラメーター データ メンバーまたは自分でバインドする新しいフィールド データ メンバーを追加する場合は、ウィザードで生成されたメンバーの後にそれらを追加します。
 
-ウィザードをオーバーライドする通知も、`DoFieldExchange`クラスのメンバー関数`CRecordset`します。
+また、ウィザードによってクラス `CRecordset` のメンバー関数 `DoFieldExchange` がオーバーライドされることにも注意してください。
 
-##  <a name="_core_the_dofieldexchange_override"></a> メンバーのオーバーライド
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange オーバーライド
 
-[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) RFX の心臓部です。 Framework 呼び出し`DoFieldExchange`いつでもデータ ソースにレコード セットにデータ ソースから、またはレコード セットからデータを移動する必要があります。 `DoFieldExchange` サポートに関する情報を取得するフィールドからのデータ メンバーのも、 [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty)と[調べる](../../mfc/reference/crecordset-class.md#isfieldnull)メンバー関数。
+[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) は RFX の中心部です。 フレームワークでデータ ソースからレコードセットに、またはレコードセットからデータ ソースにデータを移動する必要がある場合にはいつでも `DoFieldExchange` が呼び出されます。 `DoFieldExchange` では、メンバー関数 [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) と [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) を使用したフィールド データ メンバーに関する情報の入手もサポートされています。
 
-次`DoFieldExchange`オーバーライドは、`CSections`クラス。 ウィザードでは、レコード セット クラスの .cpp ファイルで、関数が書き込まれます。
+次の `DoFieldExchange` オーバーライドは、`CSections` クラス用です。 ウィザードによって関数がレコードセット クラスの .cpp ファイルに書き込まれます。
 
 ```cpp
 void CSections::DoFieldExchange(CFieldExchange* pFX)
@@ -95,26 +98,26 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 関数の次の主要機能に注目してください。
 
-- 関数のこのセクションでは、フィールド マップと呼ばれます。
+- 関数のこのセクションは、フィールド マップと呼ばれます。
 
-- 呼び出し`CFieldExchange::SetFieldType`を使用して、`pFX`ポインター。 この呼び出しは、すべての RFX 関数の末尾に呼び出しを指定します`DoFieldExchange`または次回の呼び出し`SetFieldType`は出力列です。 詳細については、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)します。
+- `pFX` ポインターを使用した `CFieldExchange::SetFieldType` への呼び出し。 この呼び出しによって、`DoFieldExchange` の末尾までのすべての RFX 関数呼び出し、または次の `SetFieldType` への呼び出しが出力列であることが指定されます。 詳細については、「[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)」を参照してください。
 
-- いくつかの呼び出し、`RFX_Text`グローバル関数、フィールド データ メンバーごとに 1 つ (は他のすべて`CString`の例では、変数)。 これらの呼び出しでは、データ ソースに列名とフィールドのデータ メンバー間のリレーションシップを指定します。 RFX 関数は、実際のデータ転送を行います。 クラス ライブラリでは、RFX 関数の一般的なすべてのデータ型を提供します。 RFX 関数の詳細については、次を参照してください。[レコード フィールド エクス チェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)します。
+- グローバル関数 `RFX_Text` への複数の呼び出し (フィールド データ メンバーごとに 1 つ、この例ではすべて `CString` 変数)。 これらの呼び出しでは、データ ソースの列名とフィールド データ メンバー間のリレーションシップが指定されます。 RFX 関数では、実際のデータ転送が行われます。 クラス ライブラリによって、一般的なすべてのデータ型の RFX 関数が提供されます。 RFX 関数の詳細については、「[Record Field Exchange:Using the RFX Functions](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)」 (レコード フィールド エクスチェンジ: RFX 関数の使い方) を参照してください。
 
     > [!NOTE]
-    >  結果セットの列の順序では、RFX 関数の呼び出しの順序が一致する必要があります`DoFieldExchange`します。
+    >  結果セットの列の順序は、`DoFieldExchange` での RFX 関数の呼び出しの順序と一致している必要があります。
 
-- `pFX`へのポインターを[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)を呼び出すときに、フレームワークが渡すオブジェクト`DoFieldExchange`します。 `CFieldExchange`オブジェクトは、操作を指定しますを`DoFieldExchange`転送、およびその他のコンテキスト情報の方向を実行することです。
+- フレームワークが `DoFieldExchange` を呼び出すときに渡す [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) オブジェクトへの `pFX` ポインター。 `CFieldExchange` オブジェクトは、`DoFieldExchange` によって実行される操作、転送の方向、およびその他のコンテキスト情報を指定します。
 
-##  <a name="_core_the_recordset_constructor"></a> レコード セットのコンス トラクター
+##  <a name="_core_the_recordset_constructor"></a> レコードセット コンストラクター
 
-ウィザードが作成するレコード セットのコンス トラクターには、RFX に関連する次の 2 つが含まれています。
+ウィザードによって記述されるレコードセット コンストラクターには、RFX に関連する次の 2 つが含まれています。
 
 - 各フィールド データ メンバーの初期化
 
-- 初期化、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)フィールド データ メンバーの数を格納するデータ メンバー
+- [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) データ メンバーの初期化。これにはフィールド データ メンバーの数が含まれます。
 
-コンス トラクター、`CSections`次のようなレコード セットの使用例。
+`CSections` レコードセットのコンストラクターの例は次のようになります。
 
 ```cpp
 CSections::CSections(CDatabase* pdb)
@@ -130,13 +133,13 @@ CSections::CSections(CDatabase* pdb)
 ```
 
 > [!NOTE]
->  インクリメントする必要がありますフィールド データ メンバーを新しい列を動的にバインドする場合、手動で追加する場合`m_nFields`します。 など、コードの別の行を追加して、操作を行います。
+>  新しい列を動的にバインドするなど、任意のフィールド データ メンバーを手動で追加した場合、`m_nFields` をインクリメントする必要があります。 これを行うには、次のような別のコード行を追加します。
 
 ```cpp
 m_nFields += 3;
 ```
 
-これは、次の 3 つの新しいフィールドを追加するコードです。 初期化する必要があります、パラメーターのデータ メンバーを追加する場合、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)データ メンバーは、パラメーターのデータ メンバーの数が含まれています。 配置、`m_nParams`かっこの外側に初期化します。
+これは、3 つの新しいフィールドを追加するコードです。 任意のパラメーター データ メンバーを追加する場合は、パラメーター データ メンバーの数が含まれている [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)データ メンバーを初期化する必要があります。 `m_nParams` の初期化はかっこの外側に配置します。
 
 ## <a name="see-also"></a>関連項目
 

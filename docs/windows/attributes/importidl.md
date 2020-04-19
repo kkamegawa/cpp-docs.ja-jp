@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8d0d891f74da8df2351b0a861fb7501e72f5e2de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409435"
 ---
 # <a name="importidl"></a>importidl
 
@@ -30,7 +30,7 @@ ms.locfileid: "50587171"
 
 ## <a name="remarks"></a>Remarks
 
-**Importidl** C++ 属性ライブラリ ブロックの外側でセクションの配置 (で*idl_file*)、プログラムの生成された .idl ファイルとライブラリ セクションに (で*idl_file*) のプログラムのセクションは、ライブラリに .idl ファイルを生成します。
+**Importidl** C++属性ライブラリ ブロックの外側でセクションの配置 (で*idl_file*)、プログラムの生成された .idl ファイルとライブラリ セクションに (で*idl_file*)ライブラリには、プログラムのセクションには、.idl ファイルが生成されます。
 
 使用することがあります**importidl**、たとえば、生成された .idl ファイルを手動でコーディングの .idl ファイルを使用する場合。
 

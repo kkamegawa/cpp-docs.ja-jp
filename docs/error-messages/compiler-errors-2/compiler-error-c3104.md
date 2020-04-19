@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540324"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755867"
 ---
 # <a name="compiler-error-c3104"></a>コンパイラ エラー C3104
 
-無効な属性引数
+無効な属性引数です
 
-属性に無効な引数を指定したとします。
+属性に無効な引数が指定されました。
 
-参照してください[属性パラメーターの型](../../windows/attribute-parameter-types-cpp-component-extensions.md)詳細についてはします。
+詳細については、「[属性パラメーターの型](../../extensions/attribute-parameter-types-cpp-component-extensions.md)」を参照してください。
 
-このエラーは、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: 集約の初期化リストから配列の型が推測不要になったときに、カスタム属性には、マネージ配列を渡すことです。 これで、コンパイラでは初期化子リストと同様に、配列の型を指定することが必要です。
+このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。マネージ配列をカスタム属性に渡すときに、配列の型が集計初期化リストから推測されなくなりました。 コンパイラでは、初期化子リストだけでなく、配列の型も指定する必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3104 が生成されます。
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -44,11 +44,11 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3104 が生成されます。
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

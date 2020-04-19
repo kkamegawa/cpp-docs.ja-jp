@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365664"
 ---
 # <a name="compiler-error-c3268"></a>コンパイラ エラー C3268
 
@@ -21,7 +21,7 @@ ms.locfileid: "50480536"
 
 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-参照してください[ジェネリック](../../windows/generics-cpp-component-extensions.md)詳細についてはします。
+参照してください[ジェネリック](../../extensions/generics-cpp-component-extensions.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

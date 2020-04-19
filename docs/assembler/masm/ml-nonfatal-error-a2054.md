@@ -1,25 +1,25 @@
 ---
 title: ML の致命的でないエラー A2054
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2054
 helpviewer_keywords:
 - A2054
 ms.assetid: 878a2ced-0b88-49e5-bea5-0a014efb08b6
-ms.openlocfilehash: 85c83455bc9455b42ded1f63e9e6d1b036fecd2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6c4312b3a3c19644b95556b6ef44ec898ccc9e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552244"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316968"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>ML の致命的でないエラー A2054
 
-**エラーを強制します値を 0 に等しくない。**
+**強制エラー: 値が0と等しくありません**
 
-条件付きエラー ディレクティブ[します。ERRNZ](../../assembler/masm/dot-errnz.md)このエラーを生成するために使用されました。
+条件付きエラーディレクティブ[。](dot-errnz.md)このエラーを生成するために ERRNZ が使用されました。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

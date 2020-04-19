@@ -1,6 +1,6 @@
 ---
 title: _bstr_t 関係演算子
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - _bstr_t::operator>
 - _bstr_t::operator==
@@ -10,31 +10,14 @@ f1_keywords:
 - _bstr_t::operator<=
 - _bstr_t::operator!
 helpviewer_keywords:
-- '>= operator [C++], comparing specific objects'
-- operator<= [C++], bstr
-- '!= operator'
-- operator == [C++], bstr
-- operator!= [C++], relational operators
-- < operator [C++], comparing specific objects
-- relational operators [C++], _bstr_t class
-- operator== [C++], bstr
-- <= operator [C++], with specific objects
-- operator <= [C++], bstr
-- operator >= [C++], bstr
-- operator != [C++], relational operators
-- '> operator [C++], comparing specific objects'
-- operator< [C++], bstr
-- == operator [C++], with specific Visual C++ objects
-- operator>= [C++], bstr
-- operator < [C++], bstr
-- operator > [C++], bstr
+- _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: f454c8bcfeb28ada8c07564e9bb562e18a537e45
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: MT
+ms.openlocfilehash: 57a9379be6d90cfb574ea0dcc033692762c47990
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330953"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222239"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t 関係演算子
 

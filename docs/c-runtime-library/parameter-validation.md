@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: b0ccc589809fc5204659ad5af28ece0096855d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c7b2ae50fdcbf59cd23cc309a4ddc4c0803e24e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677592"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748425"
 ---
 # <a name="parameter-validation"></a>パラメーターの検証
 
@@ -25,7 +25,7 @@ C ランタイム ライブラリ関数は、無効なパラメーターを検�
 
 関数 [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) または [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) を使用して無効なパラメーター ハンドラーを独自の関数に設定すれば、この動作を変更できます。 指定した関数がアプリケーションを終了しない場合、無効なパラメーターを取得した関数に制御が返されます。 CRT では、通常、これらの関数は関数の実行を中断し、`errno` をエラー コードに設定し、エラー コードを返します。 多くの場合、`errno` 値と戻り値はどちらも `EINVAL` です。これは、無効なパラメーターを示します。 場合によっては、より具体的なエラー コードが返されます。たとえば、無効なファイル ポインターがパラメーターとして渡された場合の `EBADF` などです。 `errno` の詳細については、[errno、_doserrno、_sys_errlist, and _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)<br/>
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

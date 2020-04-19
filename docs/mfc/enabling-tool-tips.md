@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tool tips [MFC], initializing
 - tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
-ms.openlocfilehash: 270eb8bad03679cd6e605e3279c0e4ffc499a765
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 892ed76ef7e021544505600110cd2569d6078312
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62174953"
 ---
 # <a name="enabling-tool-tips"></a>ツール ヒントを有効にする方法
 
@@ -27,4 +27,3 @@ ms.locfileid: "50571149"
 ## <a name="see-also"></a>関連項目
 
 [CFrameWnd から派生していないウィンドウのツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

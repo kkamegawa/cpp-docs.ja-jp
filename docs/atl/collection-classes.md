@@ -5,84 +5,84 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a67afdf00f0a524a94b50643d6541251feca2c2c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520258"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739519"
 ---
 # <a name="collection-classes"></a>コレクション クラス
 
-次のクラスは、配列、リスト、マップ、およびもの比較と、要素へのアクセスに役立つ特徴メソッドをサポートします。
+次のクラスは、配列、リスト、マップ、および比較と要素アクセスを支援する特徴メソッドをサポートしています。
 
 - [CAtlArray](../atl/reference/catlarray-class.md)このクラスは、配列オブジェクトを実装します。
 
-- [CAtlList](../atl/reference/catllist-class.md)このクラスを作成して、リスト オブジェクトを管理するためのメソッドを提供します。
+- [CAtlList](../atl/reference/catllist-class.md)このクラスには、リストオブジェクトを作成および管理するためのメソッドが用意されています。
 
-- [CAtlMap](../atl/reference/catlmap-class.md)このクラスを作成して、map オブジェクトを管理するためのメソッドを提供します。
+- [CAtlMap](../atl/reference/catlmap-class.md)このクラスには、マップオブジェクトを作成および管理するためのメソッドが用意されています。
 
-- [CAutoPtrArray](../atl/reference/cautoptrarray-class.md)このクラスは、スマート ポインターの配列を構築するときに便利なメソッドを提供します。
+- [CAutoPtrArray](../atl/reference/cautoptrarray-class.md)このクラスには、スマートポインターの配列を構築するときに役立つメソッドが用意されています。
 
-- [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md)スマート ポインターのコレクションを作成するときにメソッド、静的関数、および便利な typedef をこのクラスが提供されます。
+- [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md)このクラスには、スマートポインターのコレクションを作成するときに役立つメソッド、静的関数、および typedef が用意されています。
 
-- [CAutoPtrList](../atl/reference/cautoptrlist-class.md)このクラスは、スマート ポインターのリストを構築するときに便利なメソッドを提供します。
+- [CAutoPtrList](../atl/reference/cautoptrlist-class.md)このクラスには、スマートポインターのリストを構築するときに役立つメソッドが用意されています。
 
-- [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md)このクラスは、静的関数、および typedef を使用して、スマート ポインターのコレクションを作成するときに便利です。 は、新しいベクトルと、オペレーターを削除します。
+- [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md)このクラスは、vector new および delete 演算子を使用してスマートポインターのコレクションを作成するときに役立つメソッド、静的関数、および typedef を提供します。
 
-- [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md)このクラスは、静的関数、およびインターフェイス ポインターの typedef の COM のコレクションを作成するときに便利です。
+- [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md)このクラスには、COM インターフェイスポインターのコレクションを作成するときに役立つメソッド、静的関数、および typedef が用意されています。
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md)このクラスは、のラッパー、 [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)構造体。
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md)このクラスは、 [SAFEARRAY データ型](/windows/win32/api/oaidl/ns-oaidl-safearray)の構造体のラッパーです。
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)このクラスは、のラッパーを[SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)構造体。
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)このクラスは、 [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound)構造体のラッパーです。
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md)このクラスは格納**IUnknown**ポインターへのパラメーターとして使用するものでは、 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)テンプレート クラス。
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md)このクラスは、 **IUnknown**ポインターを格納し、 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)テンプレートクラスのパラメーターとして使用するように設計されています。
 
-- [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md)このクラスは、大文字と小文字の文字に変換する 2 つの静的関数を提供します。
+- [Cdefaultchartraits](../atl/reference/cdefaultchartraits-class.md)このクラスは、文字を大文字に変換するための2つの静的関数を提供します。
 
-- [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md)このクラスは既定の要素の比較関数を提供します。
+- [Cdefaultcomparetraits](../atl/reference/cdefaultcomparetraits-class.md)このクラスには、既定の要素比較関数が用意されています。
 
-- [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md)このクラスのコレクション クラスに既定のメソッドおよび関数を提供します。
+- [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md)このクラスは、コレクションクラスの既定のメソッドと関数を提供します。
 
-- [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md)このクラスは、ハッシュ値を計算するため、静的関数を提供します。
+- [Cdefaulthashtraits](../atl/reference/cdefaulthashtraits-class.md)このクラスは、ハッシュ値を計算するための静的関数を提供します。
 
-- [CElementTraits](../atl/reference/celementtraits-class.md)このクラスは、移動、コピー、比較、およびハッシュ操作のメソッドや関数を提供するコレクション クラスによって使用されます。
+- [Celementtraits](../atl/reference/celementtraits-class.md)このクラスは、移動、コピー、比較、およびハッシュ操作のためのメソッドと関数を提供するために、コレクションクラスによって使用されます。
 
-- [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md)このクラスは既定のコレクション クラスのコピーおよび移動メソッドを提供します。
+- [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md)このクラスは、コレクションクラスの既定のコピーおよび移動メソッドを提供します。
 
-- [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md)ヒープ ポインターのコレクションを作成するときにメソッド、静的関数、および typedef の便利なをこのクラスが提供されます。
+- [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md)このクラスは、ヒープポインターのコレクションを作成するときに便利なメソッド、静的関数、および typedef を提供します。
 
-- [CHeapPtrList](../atl/reference/cheapptrlist-class.md)このクラスは、ヒープのポインターのリストを構築するときに便利なメソッドを提供します。
+- 不正の[Apptrlist](../atl/reference/cheapptrlist-class.md)このクラスには、ヒープポインターのリストを構築するときに役立つメソッドが用意されています。
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md)このクラスは、COM インターフェイス ポインターの配列を構築するときに便利なメソッドを提供します。
+- [Cinterfacearray](../atl/reference/cinterfacearray-class.md)このクラスには、COM インターフェイスポインターの配列を構築するときに役立つメソッドが用意されています。
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md)このクラスは、COM インターフェイス ポインターのリストを構築するときに便利なメソッドを提供します。
+- [Cinterfacelist](../atl/reference/cinterfacelist-class.md)このクラスには、COM インターフェイスポインターのリストを構築するときに役立つメソッドが用意されています。
 
-- [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md)このクラスは、既定のメソッドを提供し、プリミティブ データ型のコレクション クラスの関数で構成されます。
+- [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md)このクラスは、プリミティブデータ型で構成されるコレクションクラスの既定のメソッドと関数を提供します。
 
-- [CRBMap](../atl/reference/crbmap-class.md)このクラスは、バイナリ レッド ブラック ツリーを使用して、マッピング構造体を表します。
+- [CRBMap](../atl/reference/crbmap-class.md)このクラスは、レッドブラックのバイナリツリーを使用して、マッピング構造を表します。
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md)このクラスは、各キーに関連付けるバイナリ レッド ブラック ツリーを使用して、1 つ以上の値は、マッピング構造体を表します。
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md)このクラスは、赤黒のバイナリツリーを使用して、各キーが複数の値に関連付けられるようにするマッピング構造を表します。
 
-- [CRBTree](../atl/reference/crbtree-class.md)このクラスを作成して、レッド ブラック ツリーを利用するためのメソッドを提供します。
+- [CRBTree](../atl/reference/crbtree-class.md)このクラスは、赤の黒のツリーを作成および利用するためのメソッドを提供します。
 
-- [CSimpleArray](../atl/reference/csimplearray-class.md)このクラスは、単純な配列を管理するためのメソッドを提供します。
+- [CSimpleArray](../atl/reference/csimplearray-class.md)このクラスには、単純な配列を管理するためのメソッドが用意されています。
 
-- [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md)このクラスのヘルパーは、 [CSimpleArray](../atl/reference/csimplearray-class.md)クラス。
+- [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md)このクラスは、 [CSimpleArray](../atl/reference/csimplearray-class.md)クラスのヘルパーです。
 
-- [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md)このクラスのヘルパーは、 [CSimpleArray](../atl/reference/csimplearray-class.md)クラス。
+- [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md)このクラスは、 [CSimpleArray](../atl/reference/csimplearray-class.md)クラスのヘルパーです。
 
-- [CSimpleMap](../atl/reference/csimplemap-class.md)このクラスは、単純なマッピングの配列のサポートを提供します。
+- [CSimpleMap](../atl/reference/csimplemap-class.md)このクラスは、単純なマッピング配列をサポートします。
 
-- [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md)このクラスのヘルパーは、 [CSimpleMap](../atl/reference/csimplemap-class.md)クラス。
+- [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md)このクラスは、 [CSimpleMap](../atl/reference/csimplemap-class.md)クラスのヘルパーです。
 
-- [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md)このクラスのヘルパーは、 [CSimpleMap](../atl/reference/csimplemap-class.md)クラス。
+- [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md)このクラスは、 [CSimpleMap](../atl/reference/csimplemap-class.md)クラスのヘルパーです。
 
-- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md)このクラスを格納するコレクション クラスで使用される静的関数を提供する`CString`オブジェクト。
+- [Cstringelementtraits](../atl/reference/cstringelementtraits-class.md)このクラスは、オブジェクトを格納`CString`するコレクションクラスによって使用される静的関数を提供します。
 
-- [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md)このクラスには、コレクション クラスのオブジェクトに格納された文字列に関連する静的関数が用意されています。 似ています[CStringElementTraits](../atl/reference/cstringelementtraits-class.md)が小文字の比較を実行します。
+- [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md)このクラスは、コレクションクラスオブジェクトに格納されている文字列に関連する静的関数を提供します。 これは[Cstringelementtraits](../atl/reference/cstringelementtraits-class.md)に似ていますが、大文字と小文字を区別しない比較を実行します。
 
-- [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md)このクラスには、コレクション クラスのオブジェクトに格納された文字列に関連する静的関数が用意されています。 文字列オブジェクトの参照として処理します。
+- [Cstringrefelementtraits](../atl/reference/cstringrefelementtraits-class.md)このクラスは、コレクションクラスオブジェクトに格納されている文字列に関連する静的関数を提供します。 文字列オブジェクトは参照として処理されます。
 
 ## <a name="related-articles"></a>関連トピック
 
@@ -92,4 +92,3 @@ ms.locfileid: "51520258"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [コレクション クラス](../atl/atl-collection-classes.md)
-

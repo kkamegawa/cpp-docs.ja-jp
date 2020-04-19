@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 14acaa6ad96f74b2a3f88ca366a43caa9199a1d8
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404495"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>プロバイダーでのフリー スレッドのサポート
 
@@ -37,7 +37,7 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-クリティカル セクションを保護する方法の詳細についての`Lock`と`Unlock`を参照してください[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+クリティカル セクションを保護する方法の詳細についての`Lock`と`Unlock`を参照してください[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 オーバーライドするメソッドを確認します (など`Execute`) スレッド セーフです。
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2833
 ms.assetid: b9418ce1-e2ee-4599-8959-6fde89c27569
-ms.openlocfilehash: dad6a64f145c3d49d3b43044ea76a11d35827943
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1467a3c67cccf28cc6b9bd0f987fe77b8da8988
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460542"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757879"
 ---
 # <a name="compiler-error-c2833"></a>コンパイラ エラー C2833
 
-'operator 演算子' は認識されている演算子または型ではありません。
+' operator operator ' は、演算子または型として認識されません。
 
-単語`operator`続くをオーバーライドする演算子または型に変換する必要があります。
+`operator` 単語には、オーバーライドする演算子または変換する型を指定する必要があります。
 
-マネージ型で定義できる演算子の一覧は、次を参照してください。[ユーザー定義演算子](../../dotnet/user-defined-operators-cpp-cli.md)します。
+マネージ型で定義できる演算子の一覧については、「[ユーザー定義演算子](../../dotnet/user-defined-operators-cpp-cli.md)」を参照してください。
 
 次の例では、C2833 が生成されます。
 
-```
+```cpp
 // C2833.cpp
 // compile with: /c
 class A {};

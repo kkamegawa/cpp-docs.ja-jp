@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 615c113082e2ef0dbfc40bafbfa040c06e628da5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656951"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446685"
 ---
 # <a name="crt-initialization"></a>CRT の初期化
 
@@ -41,7 +41,7 @@ C と C++ の標準に従えば、`func()` は `main()` を実行する前に呼
 
 スタック上の関数を参照すると、CRT が関数ポインターのリスト内をループしており、見つかるたびに 1 つの関数を呼び出していることがわかります。 これらの関数は `func()` またはクラス インスタンスのコンストラクターに似ています。
 
-CRT は Visual C++ コンパイラから関数ポインターのリストを取得します。 コンパイラがグローバル初期化子を確認すると、`.CRT$XCU` セクション内に動的初期化子を生成します (`CRT` はセクション名、`XCU` はグループ名です)。 これらの動的初期化子を取得するには、**dumpbin /all main.obj** コマンドを実行し、(main.cpp が C ファイルではなく C++ ファイルとしてコンパイルされるときに) `.CRT$XCU` セクションを検索します 。 これは次のようになります。
+CRT では Microsoft C++ コンパイラから関数ポインターのリストが取得されます。 コンパイラがグローバル初期化子を確認すると、`.CRT$XCU` セクション内に動的初期化子を生成します (`CRT` はセクション名、`XCU` はグループ名です)。 これらの動的初期化子を取得するには、**dumpbin /all main.obj** コマンドを実行し、(main.cpp が C ファイルではなく C++ ファイルとしてコンパイルされるときに) `.CRT$XCU` セクションを検索します 。 これは次のようになります。
 
 ```
 SECTION HEADER #6
@@ -73,11 +73,11 @@ CRT では、2 つのポインターを定義します。
 
 - 『`__xc_a`』の「`.CRT$XCA`」
 
-- 『`__xc_z`』の「`.CRT$XCZ`」
+- 『`.CRT$XCZ`』の「`__xc_z`」
 
 両グループとも、`__xc_a` と `__xc_z` を除いては、定義された他のシンボルはありません。
 
-リンカーがさまざまな `.CRT` グループを読み取るとき、グループを 1 つのセクションに結合し、アルファベット順に並べ替えます。 つまり、ユーザー定義のグローバル初期化子 (Visual C++ コンパイラではこれは `.CRT$XCU` 内にあります) は常に `.CRT$XCA` の後にあり、`.CRT$XCZ` の前にあります。
+リンカーがさまざまな `.CRT` グループを読み取るとき、グループを 1 つのセクションに結合し、アルファベット順に並べ替えます。 つまり、ユーザー定義のグローバル初期化子 (Microsoft C++ コンパイラでは `.CRT$XCU` 内にあります) は常に `.CRT$XCA` の後にあり、`.CRT$XCZ` の前にあります。
 
 セクションは次のようになります。
 
@@ -93,6 +93,6 @@ CRT では、2 つのポインターを定義します。
 
 イメージが読み込まれたあとに初期化子がメモリに配置されるため、CRT ライブラリは `__xc_a` と `__xc_z` の両方を使用してグローバル初期化子リストの先頭と末尾を決定します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

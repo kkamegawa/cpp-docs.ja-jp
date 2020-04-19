@@ -1,5 +1,5 @@
 ---
-title: IQuickActivateImpl クラス
+title: Iquickの Impl クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IQuickActivateImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-ms.openlocfilehash: 5dacdd4986580ca665d2199568584faafa8d6699
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2169686ebbf756c5caf9232f5031532c62ac8265
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560811"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495518"
 ---
-# <a name="iquickactivateimpl-class"></a>IQuickActivateImpl クラス
+# <a name="iquickactivateimpl-class"></a>Iquickの Impl クラス
 
-このクラスは、1 つの呼び出しにコンテナーのコントロールの初期化を結合します。
+このクラスは、コンテナーのコントロールの初期化を1回の呼び出しに結合します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IQuickActivateImpl`します。
+から`IQuickActivateImpl`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -46,14 +46,14 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |名前|説明|
 |----------|-----------------|
 |[IQuickActivateImpl::GetContentExtent](#getcontentextent)|実行中のコントロールの現在の表示サイズを取得します。|
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|読み込む対象のコントロールの初期化を迅速に実行します。|
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|コンテナーに割り当てられている表示領域の量のコントロールに通知します。|
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|読み込まれるコントロールのクイック初期化を実行します。|
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|コンテナーに割り当てられている表示領域の大きさをコントロールに通知します。|
 
 ## <a name="remarks"></a>Remarks
 
-[IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate)インターフェイス コンテナーは 1 回の呼び出しで初期化を組み合わせることでコントロールを読み込むときに遅延を避けるために役立ちます。 `QuickActivate`メソッドにより、コンテナーへのポインターを渡す、 [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer)構造、コントロールにすべてのインターフェイス ポインターを保持する必要があります。 返された場合、制御が渡されるバックアップへのポインターを[戻り値](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)コンテナーで使用される、独自のインターフェイス ポインターを保持する構造体。 クラス`IQuickActivateImpl`の既定の実装を提供します。`IQuickActivate`実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[Iquickactivate](/windows/win32/api/ocidl/nn-ocidl-iquickactivate)インターフェイスを使用すると、1回の呼び出しで初期化を組み合わせることによって、コントロールを読み込むときの遅延を回避できます。 メソッドを使用すると、コンテナーは、コントロールが必要とするすべてのインターフェイスへのポインターを保持する [QACONTAINER](/windows/win32/api/ocidl/ns-ocidl-qacontainer) 構造体へのポインターを渡すことができます。`QuickActivate` 制御が戻ったとき、コントロールは、コンテナーによって使用される独自のインターフェイスへのポインターを保持する[qacontrol](/windows/win32/api/ocidl/ns-ocidl-qacontrol)の構造体へのポインターを渡します。 クラス`IQuickActivateImpl`は、の既定の`IQuickActivate`実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
 ##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent
 
@@ -75,13 +75,13 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Remarks
 
-サイズは、コントロールの完全なレンダリングは、HIMETRIC 単位で指定されます。
+このサイズは、コントロールを完全にレンダリングするためのものであり、HIMETRIC 単位で指定されています。
 
-参照してください[IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) Windows SDK にします。
+Windows SDK の「 [Iquickactivate:: GetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) 」を参照してください。
 
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate
 
-読み込む対象のコントロールの初期化を迅速に実行します。
+読み込まれるコントロールのクイック初期化を実行します。
 
 ```
 STDMETHOD(QuickActivate)(
@@ -91,13 +91,13 @@ STDMETHOD(QuickActivate)(
 
 ### <a name="remarks"></a>Remarks
 
-構造体には、コントロールと一部のアンビエント プロパティの値で必要なインターフェイスへのポインターが含まれています。 戻り時に、コントロールがへのポインターを渡す、[戻り値](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)コンテナーが必要とする独自のインターフェイスと追加の状態情報へのポインターを含む構造体。
+構造体には、コントロールが必要とするインターフェイスへのポインターと、一部のアンビエントプロパティの値が含まれます。 制御が戻ったとき、コントロールは、コンテナーが必要とする独自のインターフェイスへのポインターと追加のステータス情報を含む[qacontrol](/windows/win32/api/ocidl/ns-ocidl-qacontrol)構造体へのポインターを渡します。
 
-参照してください[IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) Windows SDK にします。
+Windows SDK の「 [Iquickactivate:: QuickActivate](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-quickactivate) 」を参照してください。
 
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent
 
-コンテナーに割り当てられている表示領域の量のコントロールに通知します。
+コンテナーに割り当てられている表示領域の大きさをコントロールに通知します。
 
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
@@ -105,9 +105,9 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Remarks
 
-サイズは、HIMETRIC 単位で指定されます。
+サイズは、HIMETRIC 単位で指定します。
 
-参照してください[IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) Windows SDK にします。
+Windows SDK の「 [Iquickactivate:: SetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

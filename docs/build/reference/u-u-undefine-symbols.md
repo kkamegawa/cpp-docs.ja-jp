@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317004"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (定義済みマクロ シンボルの未定義化)
 
@@ -46,18 +46,18 @@ ms.locfileid: "50624446"
 
 |シンボル|関数|
 |------------|--------------|
-|_CHAR_UNSIGNED|既定の char 型が署名されていません。 定義されているときに、 [/J](../../build/reference/j-default-char-type-is-unsigned.md)オプションを指定します。|
-|_CPPRTTI|コンパイルされたコードに対して定義された、 [/GR](../../build/reference/gr-enable-run-time-type-information.md)オプション。|
-|_CPPUNWIND|コンパイルされたコードに対して定義された、 [/EHsc](../../build/reference/eh-exception-handling-model.md)オプション。|
-|_DLL|定義されているときに、 [/MD](../../build/reference/md-mt-ld-use-run-time-library.md)オプションを指定します。|
+|_CHAR_UNSIGNED|既定の char 型が署名されていません。 定義されているときに、 [/J](j-default-char-type-is-unsigned.md)オプションを指定します。|
+|_CPPRTTI|コンパイルされたコードに対して定義された、 [/GR](gr-enable-run-time-type-information.md)オプション。|
+|_CPPUNWIND|コンパイルされたコードに対して定義された、 [/EHsc](eh-exception-handling-model.md)オプション。|
+|_DLL|定義されているときに、 [/MD](md-mt-ld-use-run-time-library.md)オプションを指定します。|
 |_M_IX86|既定では 600 x86 用に定義されているターゲット。|
 |_MSC_VER|詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。|
 |_WIN32|WIN32 アプリケーションで定義されています。 これは、常に定義されます。|
-|_MT|定義されているときに、 [/MD、/MT または](../../build/reference/md-mt-ld-use-run-time-library.md)オプションを指定します。|
+|_MT|定義されているときに、 [/MD、/MT または](md-mt-ld-use-run-time-library.md)オプションを指定します。|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -71,9 +71,9 @@ ms.locfileid: "50624446"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/J (既定の char 型の unsigned への変更)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (ランタイム型情報の有効化)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[/J (既定の char 型の unsigned への変更)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (ランタイム型情報の有効化)](gr-enable-run-time-type-information.md)<br/>
+[/EH (例外処理モデル)](eh-exception-handling-model.md)<br/>
+[/MD、/MT、/LD (ランタイム ライブラリの使用)](md-mt-ld-use-run-time-library.md)

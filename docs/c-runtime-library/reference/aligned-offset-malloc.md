@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943858"
 ---
-# <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
+# <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
 指定された配置の境界にメモリを割り当てます。
 
@@ -57,17 +60,17 @@ void * _aligned_offset_malloc(
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリ ブロックへのポインターまたは**NULL**場合は、操作に失敗しました。
+割り当てられたメモリブロックへのポインター。操作が失敗した場合は**NULL** 。
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_offset_malloc** ; 入れ子になった要素の配置が必要な場合に便利ですたとえば、入れ子になったクラスに対するアラインメントが必要です。
+**_aligned_offset_malloc**は、入れ子になった要素にアラインメントが必要な場合に役立ちます。たとえば、入れ子になったクラスでアラインメントが必要な場合です。
 
-**_aligned_offset_malloc**に基づいて**malloc**; 詳細についてを参照してください[malloc](malloc.md)します。
+**_aligned_offset_malloc**は**malloc**に基づいています。詳細については、「 [malloc](malloc.md)」を参照してください。
 
-**_aligned_offset_malloc**がマークされている`__declspec(noalias)`と`__declspec(restrict)`、グローバル変数を変更することがなく、関数が保証されると、返されるポインターがエイリアス化されないを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**_aligned_offset_malloc**はと`__declspec(noalias)` `__declspec(restrict)`マークされています。つまり、関数は、グローバル変数を変更せず、返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
-この関数は、設定**errno**に**ENOMEM** 、メモリの割り当てに失敗した場合、または要求されたサイズより大きい場合 **_HEAP_MAXREQ**します。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。 また、 **_aligned_offset_malloc**パラメーターを検証します。 場合*配置*が 2 の累乗でない場合、または*オフセット*がより大きいまたは等しい*サイズ*0 以外の場合、この関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って、[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返します**NULL**設定と**errno**に**EINVAL**します。
+メモリ割り当てが失敗した場合、または要求されたサイズが **_HEAP_MAXREQ**より大きい場合、この関数は**errno**を**ENOMEM**に設定します。 **Errno**の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_offset_malloc**はそのパラメーターを検証します。 *Alignment*が2の累乗でない場合、または*offset*が*size*以上で0以外の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="requirements"></a>必要条件
 

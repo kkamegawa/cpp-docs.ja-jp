@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400579"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR における例外処理動作の相違点
 
@@ -18,7 +18,7 @@ ms.locfileid: "50551334"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック
 
-ネイティブ C/C++ コードで、_ _ からジャンプ**最後に**警告が生成されますが、構造化例外処理 (SEH) を使用してブロックが許可されています。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**最後に**ブロックが発生したエラー。
+ネイティブ C で/C++コードでは、警告を生成しますが、構造化例外処理（SEH）を使用して__**finally**ブロックからジャンプできます。  [/clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**finallyに**ブロックが発生したエラー。
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -88,7 +88,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Caught a nested exception
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> 分離再スロー
 
-**/clr**は catch ハンドラーが (関連付けを解除 rethrow と呼ばれます) の外部で例外を再スローをサポートしていません。 この種類の例外が扱われるとして標準の C++ 再スローします。 アクティブなマネージ例外がある場合に、分離の再スローが発生した場合は、例外が C++ 例外としてラップされ、再スローされます。 この種類の例外は、型の例外としてのみキャッチできます[System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)します。
+**/clr**は catch ハンドラーが (関連付けを解除 rethrow と呼ばれます) の外部で例外を再スローをサポートしていません。 この種類の例外が扱われるとして標準の C++ 再スローします。 アクティブなマネージ例外がある場合に、分離の再スローが発生した場合は、例外が C++ 例外としてラップされ、再スローされます。 この種類の例外は、型の例外としてのみキャッチできます<xref:System.Runtime.InteropServices.SEHException>します。
 
 次の例では、マネージ例外として、C++ 例外を再スローを示しています。
 
@@ -141,7 +141,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 caught an SEH Exception
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターと EXCEPTION_CONTINUE_EXECUTION
 
-フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。
+フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、[try-except ステートメント](../cpp/try-except-statement.md)を参照してください。
 
 次の例では、この違いを示しています。
 
@@ -182,7 +182,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Counter=-3
@@ -267,7 +267,7 @@ int main( int argc, char ** argv ) {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 This is invoked since _set_se_translator is not supported when /clr is used
@@ -277,6 +277,6 @@ Caught an SEH exception with exception code: e0000101
 
 ## <a name="see-also"></a>関連項目
 
-[例外処理](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[例外処理](../extensions/exception-handling-cpp-component-extensions.md)<br/>
+[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
 [例外処理](../cpp/exception-handling-in-visual-cpp.md)

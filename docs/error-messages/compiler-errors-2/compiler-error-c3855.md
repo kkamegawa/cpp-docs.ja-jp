@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
-ms.openlocfilehash: 12ee1c6aa5f414a9cf3084831c956514593102c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 226f87ad428e9f005e36823834cedc2b3ee0b8c6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754824"
 ---
 # <a name="compiler-error-c3855"></a>コンパイラ エラー C3855
 
-'class': 型パラメーター 'param' には、宣言と互換性がありません
+' class ': 型パラメーター ' param ' は宣言と互換性がありません
 
-非型テンプレート、または異なる名前を持つジェネリック パラメーターが見つかりました。 これは、テンプレートの特殊化の定義で指定したテンプレート パラメーターは、その宣言と互換性がないときに発生します。
+コンパイラは、異なる名前を持つ非型テンプレートまたはジェネリックパラメーターを検出しました。 これは、テンプレートの特殊化の定義で指定されたテンプレートパラメーターがその宣言と互換性がない場合に発生する可能性があります。
 
 次の例では、C3855 が生成されます。
 
-```
+```cpp
 // C3855.cpp
 template <int N>
 struct C {
@@ -32,9 +32,9 @@ template <char N>
 void C<N>::f() {}   // C3855
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3855b.cpp
 // compile with: /c
 template <int N>
@@ -46,9 +46,9 @@ template <int N>
 void C<N>::f() {}
 ```
 
-C3855 は、ジェネリックを使用しているときにも発生します。
+C3855 は、ジェネリックを使用する場合にも発生する可能性があります。
 
-```
+```cpp
 // C3855c.cpp
 // compile with: /clr
 generic <class T>
@@ -63,9 +63,9 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3855d.cpp
 // compile with: /clr /c
 generic <class T>

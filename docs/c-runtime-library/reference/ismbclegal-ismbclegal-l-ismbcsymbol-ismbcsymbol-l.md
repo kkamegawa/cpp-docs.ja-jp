@@ -1,12 +1,12 @@
 ---
 title: _ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclegal_l
 - _ismbclegal
 - _ismbcsymbol
 - _ismbcsymbol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbcsymbol_l
 - _ismbcsymbol_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e040db584725322e98d0a82b28912eea100aff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454575"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953803"
 ---
-# <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
+# <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 
 マルチバイト文字が有効な文字または記号かどうかをチェックします。
 
@@ -85,24 +88,24 @@ int _ismbcsymbol_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c*< = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**)、結果は、戻り値に対応する **_ismbb 系**ルーチン。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C*< = 255 で、対応する **_ismbb**ルーチンが存在する場合 (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応している場合)、結果は対応する **_ismbb**ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>Remarks
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
+|ルーチン|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|有効なマルチバイト|最初のバイト 0 以外の値と場合にのみを返します*c*は 0x81-0x81-0x9f または 0xe0-0xfc の範囲内で 0 xfc、2 番目のバイトが範囲 0x40 ~ 0x7E または 0x80 ~ FC します。|
-|**_ismbcsymbol**|マルチバイトの記号|場合にのみ、0 以外の値を返します 0x8141 < =*c*< = 0x81AC します。|
+|**_ismbclegal**|有効なマルチバイト|*C*の最初のバイトが 0X81 ~ 0x9f または 0Xe0-0xfc の範囲内にあり、2番目のバイトが 0X40 ~ 0x7e または 0X80-FC の範囲内にある場合に限り、0以外の値を返します。|
+|**_ismbcsymbol**|マルチバイトの記号|0x8141 < =*c*< = 0X8141 の場合に限り、0以外の値を返します。|
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlegal**|常に false を返します|**_ismbclegal**|常に false を返します。|
+|**istlegal (_s)**|常に false を返します|**_ismbclegal**|常に false を返します。|
 |**_istlegal_l**|常に false を返します|**_ismbclegal_l**|常に false を返します。|
 
 ## <a name="requirements"></a>必要条件

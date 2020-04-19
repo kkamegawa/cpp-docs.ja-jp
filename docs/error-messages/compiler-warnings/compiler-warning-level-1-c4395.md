@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676357"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964872"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>コンパイラの警告 (レベル 1) C4395
 
-'function': initonly データ メンバー 'member' のコピーでメンバー関数が呼び出されます
+' function ': メンバー関数は、initonly データメンバー ' member ' のコピーで呼び出されます
 
-メンバー関数が呼び出された、 [initonly (C +/cli CLI)](../../dotnet/initonly-cpp-cli.md)データ メンバー。  C4395、 **initonly**データ メンバーは、関数によって変更されることはできません。
+[Initonly (C++/cli)](../../dotnet/initonly-cpp-cli.md)データメンバーでメンバー関数が呼び出されました。  C4395 は、 **initonly**データメンバーが関数によって変更できないことを警告します。
 
 次の例では、C4395 が生成されます。
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

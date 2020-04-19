@@ -1,42 +1,41 @@
 ---
 title: スピン ボタンのスタイル
-ms.date: 11/04/2016
+ms.date: 09/09/2019
 helpviewer_keywords:
 - styles [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl class [MFC], styles
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: 73042dbbdc28819ecc736c282599189ee074ce77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1aae4b7e4c63929ebe03c97d50f05754bc13ec26
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457110"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907856"
 ---
 # <a name="spin-button-styles"></a>スピン ボタンのスタイル
 
-スピン ボタンの設定の多く ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) スタイルによって制御されます。 使用して、次のスタイルを設定することができます、**プロパティ**ダイアログ エディターのウィンドウ。
+スピンボタン ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) の設定の多くは、スタイルによって制御されます。 [クラスウィザード](reference/mfc-class-wizard.md)を使用して、次のスタイルを設定できます。
 
-- **印刷の向き**垂直または水平方向のいずれか。 矢印ボタンの表示方向を制御します。 関連付けられた UDS_HORZ スタイル。
+- **向き**垂直方向または水平方向。 矢印ボタンの向きを制御します。 UDS_HORZ スタイルに関連付けられています。
 
-- **配置**接続されていない、左右のいずれか。 スピン ボタンの場所を制御します。 左と右が連動ウィンドウの横にあるスピン ボタンを配置します。 スピン ボタンを対応するために連動ウィンドウの幅が減少します。 関連付けられた UDS_ALIGNLEFT と UDS_ALIGNRIGHT スタイル。
+- **配置**未接続、左、または右のいずれかです。 スピンボタンの位置を制御します。 左と右にある [関連] ウィンドウの横にスピンボタンを配置します。 スピンボタンに合わせて、関連ウィンドウの幅が小さくなります。 UDS_ALIGNLEFT スタイルと UDS_ALIGNRIGHT スタイルに関連付けられています。
 
-- **Auto Buddy**スピン ボタンを連動ウィンドウとして Z オーダーの前のウィンドウを自動的に選択します。 ダイアログ テンプレートで、これは、タブ オーダーのスピン ボタンの前に、コントロールです。 関連付けられた UDS_AUTOBUDDY スタイル。
+- **自動メンバー**は、前のウィンドウを自動的に [関連] ウィンドウとしてスピンボタンに選択します。 ダイアログテンプレートでは、これは、タブオーダーのスピンボタンの前にあるコントロールです。 UDS_AUTOBUDDY スタイルに関連付けられています。
 
-- **設定 Buddy Integer**インクリメントし、現在の位置が変更されると連動ウィンドウのキャプションをデクリメントするには、スピン コントロールします。 関連付けられた UDS_SETBUDDYINT スタイル。
+- 関連する**整数の設定**現在の位置が変更されたときに、スピンコントロールが関連ウィンドウのキャプションをインクリメントおよびデクリメントします。 UDS_SETBUDDYINT スタイルに関連付けられています。
 
-- **Nothousands**も桁は挿入されませんが連動ウィンドウのキャプションの値の区切り記号。 関連付けられた UDS_NOTHOUSANDS スタイル。
+- **何千もありません**は、関連ウィンドウのキャプションの値に桁区切り記号を挿入しません。 UDS_NOTHOUSANDS スタイルに関連付けられています。
 
     > [!NOTE]
-    >  アップダウン コントロールから整数値を取得するダイアログ データ エクス (チェンジ DDX) を使用する場合は、このスタイルを設定します。 `DDX_Text` 埋め込みの桁区切り記号は受け入れられません。
+    >  ダイアログデータエクスチェンジ (DDX) を使用して、関連コントロールから整数値を取得する場合は、このスタイルを設定します。 `DDX_Text`には、桁区切り記号を埋め込むことはできません。
 
-- **ラップ**によって「ラップ」値がインクリメントまたはデクリメント コントロールの範囲外に位置します。 関連付けられた UDS_WRAP スタイル。
+- **折り返し**値がコントロールの範囲を超えてインクリメントまたはデクリメントされると、位置が "wrap" になります。 UDS_WRAP スタイルに関連付けられています。
 
-- **方向キー** ↑ キーおよび ↓ キーが押されたときに、位置を増減するスピン ボタンします。 関連付けられた UDS_ARROWKEYS スタイル。
+- **方向キー**上方向キーと下方向キーが押されたときに、スピンボタンが位置を増減するようにします。 UDS_ARROWKEYS スタイルに関連付けられています。
 
 ## <a name="see-also"></a>関連項目
 
 [CSpinButtonCtrl の使い方](../mfc/using-cspinbuttonctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

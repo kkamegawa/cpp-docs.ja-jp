@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514427"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052146"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>コンパイラの警告 (レベル 2) C4156
 
-'delete'; の形式は、配列を使用せず、配列式の削除配列形式の代わりに使用
+' delete ' の配列形式を使用せずに配列式を削除しています。配列形式の置換
 
-非配列形式の**削除**配列を削除することはできません。 コンパイラの翻訳**削除**形式は、配列にします。
+配列以外の形式の**delete**では、配列を削除できません。 コンパイラが**delete**を配列形式に変換しました。
 
 この警告は、Microsoft 拡張機能 (/Ze) でのみ発生します。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540271"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767692"
 ---
 # <a name="crt-library-features"></a>CRT ライブラリの機能
 
@@ -33,7 +33,7 @@ ms.locfileid: "50540271"
 
 C ランタイム ライブラリ (CRT) は、ISO C99 標準ライブラリが組み込まれている C++ 標準ライブラリの一部です。 この CRT を実装する Visual C++ ライブラリは、ネイティブ コードの開発と、ネイティブとマネージドの混在コードの開発をサポートします。 CRT のすべてのバージョンがマルチスレッド開発をサポートします。 ほとんどのライブラリが、ライブラリを直接コードにリンクする静的リンクと、コードで共通 DLL ファイルを使用できるようにする動的リンクの両方をサポートします。
 
-Visual Studio 2015 より、CRT が新しいバイナリにリファクタリングされました。 ユニバーサル CRT (UCRT) には、標準の C99 CRT ライブラリからエクスポートされた関数とグローバルが含まれています。 UCRT は Windows コンポーネントであり、Windows 10 の一部として出荷されます。 UCRT 用のスタティック ライブラリ、DLL インポート ライブラリ、およびヘッダー ファイルが Windows 10 SDK に含まれています。 Visual C++ をインストールすると、Visual Studio セットアップによって、UCRT を使用するために必要な Windows 10 SDK のサブセットがインストールされます。 UCRT は、Visual Studio 2015 以降のバージョンでサポートされている Windows の任意のバージョンで使用できます。 Windows 10 以外のサポートされているバージョンの Windows では、vcredist を使用して再配布することができます。 詳細については、「 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)」を参照してください。
+Visual Studio 2015 より、CRT が新しいバイナリにリファクタリングされました。 ユニバーサル CRT (UCRT) には、標準の C99 CRT ライブラリからエクスポートされた関数とグローバルが含まれています。 UCRT は Windows コンポーネントであり、Windows 10 の一部として出荷されます。 UCRT 用のスタティック ライブラリ、DLL インポート ライブラリ、およびヘッダー ファイルが Windows 10 SDK に含まれています。 Visual C++ をインストールすると、Visual Studio セットアップによって、UCRT を使用するために必要な Windows 10 SDK のサブセットがインストールされます。 UCRT は、Visual Studio 2015 以降のバージョンでサポートされている Windows の任意のバージョンで使用できます。 Windows 10 以外のサポートされているバージョンの Windows では、vcredist を使用して再配布することができます。 詳細については、「 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)」を参照してください。
 
 次の表に、UCRT を実装するライブラリの一覧を示します。
 
@@ -96,7 +96,7 @@ C ランタイム ライブラリを指定するコンパイラ オプション�
 |libcpmtd.lib|マルチスレッド、静的リンク|**/MTd**|_DEBUG、_MT|
 |msvcprtd.lib|マルチスレッド、動的リンク (MSVCP*version*D.DLL 用のインポート ライブラリ)|**/MDd**|_DEBUG、_MT、_DLL|
 
-プロジェクトのリリース バージョンをビルドすると、既定では、選択したコンパイラ オプション (マルチスレッド、DLL、/clr) に応じて、基本 C ランタイム ライブラリ (libcmt.lib, msvcmrt.lib, msvcrt.lib) の 1 つがリンクされます。 コードに [C++ 標準ライブラリのヘッダー ファイル](../standard-library/cpp-standard-library-header-files.md)の 1 つがインクルードされている場合は、コンパイル時に Visual C++ によって自動的に C++ 標準ライブラリがリンクされます。 例:
+プロジェクトのリリース バージョンをビルドすると、既定では、選択したコンパイラ オプション (マルチスレッド、DLL、/clr) に応じて、基本 C ランタイム ライブラリ (libcmt.lib, msvcmrt.lib, msvcrt.lib) の 1 つがリンクされます。 コードに [C++ 標準ライブラリのヘッダー ファイル](../standard-library/cpp-standard-library-header-files.md)の 1 つがインクルードされている場合は、コンパイル時に Visual C++ によって自動的に C++ 標準ライブラリがリンクされます。 次に例を示します。
 
 ```cpp
 #include <ios>

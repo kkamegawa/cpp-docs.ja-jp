@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522942"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454120"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator クラス
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-*コンテナー*<br/>
+*コンテナー*\
 要素が `front_insert_iterator` によって前方に挿入されるコンテナーの型。
 
 ## <a name="remarks"></a>Remarks
@@ -54,9 +54,9 @@ class front_insert_iterator;
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  =  `x`前方挿入の。|
+|[operator*](#op_star)|前方挿入のための出力反復子式\* `i`  =  `x`を実装するために使用される逆参照演算子。|
 |[operator++](#op_add_add)|値を格納できる次の位置に `front_insert_iterator` をインクリメントします。|
-|[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`前方挿入の。|
+|[operator=](#op_eq)|前方挿入のための出力反復子式\* `i`  =  `x`を実装するために使用される代入演算子。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -116,7 +116,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*<br/>
+*続き*\
 `front_insert_iterator` によって要素が挿入されるオブジェクト コンテナーです。
 
 ### <a name="return-value"></a>戻り値
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-出力反復子式 **\*Iter** = **value** を実装するために使用されます。 場合`Iter`し、シーケンス内の要素を指す反復子は、  **\*Iter** = **値**その要素の値を置き換えますの合計数は変わりません。シーケンス内の要素。
+出力反復子式 **\*Iter** = **value** を実装するために使用されます。 が`Iter`シーケンス内の要素をアドレス指定する反復子である場合 =   **\*、Iter** **value**はその要素を値に置き換え、シーケンス内の要素の合計数を変更しません。
 
 ### <a name="example"></a>例
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 コンテナーに割り当てられる値。
 
 ### <a name="return-value"></a>戻り値
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

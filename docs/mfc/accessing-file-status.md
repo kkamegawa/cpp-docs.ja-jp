@@ -8,12 +8,12 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 3e16f8b11d17cd911646c3c9206d1d7deb577ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392961"
 ---
 # <a name="accessing-file-status"></a>ファイルの状態の操作
 
@@ -32,4 +32,3 @@ ms.locfileid: "50629789"
 ## <a name="see-also"></a>関連項目
 
 [ファイル](../mfc/files-in-mfc.md)
-

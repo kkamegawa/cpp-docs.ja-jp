@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-ms.openlocfilehash: 3d4163fac83e24d30f29aed92e7a1ec1fc9e362f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da7b49d30866b9fa5ab27a93357fd2812aaa2806
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482005"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742926"
 ---
 # <a name="compiler-error-c3415"></a>コンパイラ エラー C3415
 
@@ -19,7 +19,7 @@ ms.locfileid: "50482005"
 
 競合する値が [section](../../preprocessor/section.md) プラグマで指定されました。
 
-`value` は、ntimage.h で指定された、セクションの現在の設定です。 例えば:
+`value` は、ntimage.h で指定された、セクションの現在の設定です。 例:
 
 ```
 // Section contains extended relocations.
@@ -42,7 +42,7 @@ ms.locfileid: "50482005"
 
 次の例では C3415 が生成されます。
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

@@ -1,26 +1,27 @@
 ---
 title: DOSSEG
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - DOSSEG
 helpviewer_keywords:
 - DOSSEG directive
 ms.assetid: 4312826a-1547-4d48-bfd7-cfaf6d037609
-ms.openlocfilehash: 889533a775829d8751e64ce38c712491df97e32e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cfeb19b1a77262c01c3049838d7de02ec7b3be6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471228"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314654"
 ---
 # <a name="dosseg"></a>DOSSEG
 
-同じ[します。DOSSEG](../../assembler/masm/dot-dosseg.md)、優先される形式であります。
+(32 ビット MASM のみ。)と同じ[です.DOSSEG](dot-dosseg.md)。これは推奨される形式です。
 
 ## <a name="syntax"></a>構文
 
-> DOSSEG
+> **DOSSEG**
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

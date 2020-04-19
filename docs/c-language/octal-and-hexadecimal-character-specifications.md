@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: 3fccc6513f3507e4b1763336ac5ecbb78b31d847
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518626"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148934"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8 進文字と 16 進文字の仕様
 
@@ -37,6 +37,6 @@ ms.locfileid: "50518626"
 "\xab" "c" /* two characters */
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 文字定数](../c-language/c-character-constants.md)

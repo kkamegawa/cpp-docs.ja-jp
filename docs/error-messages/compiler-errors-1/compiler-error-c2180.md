@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2180
 ms.assetid: ea71b39e-b977-48a7-b7bd-af68ef5e263b
-ms.openlocfilehash: 16fcf15eb29743f74bbf2edcb1016f2e15228e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e9444356e536a8369dbcf62cac3c7538d9da5dd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553319"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301900"
 ---
 # <a name="compiler-error-c2180"></a>コンパイラ エラー C2180
 
@@ -21,7 +21,7 @@ ms.locfileid: "50553319"
 
 次の例では C2180 が生成されます。
 
-```
+```c
 // C2180.c
 
 int main() {

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging [MFC], Web applications
 - Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
-ms.openlocfilehash: 934d336f8c7544bafa412a7b52404a657e8dc9ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e582fd006a49e672fb21c86b054b8d35f489698f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306471"
 ---
 # <a name="testing-internet-applications"></a>インターネット アプリケーションのテスト
 
@@ -27,4 +27,3 @@ ms.locfileid: "50439365"
 
 [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
-

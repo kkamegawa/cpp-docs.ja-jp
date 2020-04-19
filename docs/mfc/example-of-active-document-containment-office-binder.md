@@ -1,5 +1,5 @@
 ---
-title: 'Active ドキュメント コンテインメントの例 : Office バインダー'
+title: Active ドキュメント コンテインメントの例:Office バインダー
 ms.date: 11/04/2016
 helpviewer_keywords:
 - active documents [MFC], containers
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358865"
 ---
-# <a name="example-of-active-document-containment-office-binder"></a>Active ドキュメント コンテインメントの例 : Office バインダー
+# <a name="example-of-active-document-containment-office-binder"></a>Active ドキュメント コンテインメントの例:Office バインダー
 
 Microsoft Office のバインダーでは、active ドキュメント コンテナーの例を示します。 Office バインダーには、コンテナーと同様の 2 つの主要なペインが含まれています。 左側のウィンドウには、バインダー内のアクティブなドキュメントに対応するアイコンが含まれています。 各ドキュメントと呼ばれる、*セクション*バインダー内。 たとえば、バインダーは、Word 文書、PowerPoint ファイル、Excel スプレッドシート、および具合に含めることができます。
 
@@ -31,4 +31,3 @@ Microsoft Office のバインダーでは、active ドキュメント コンテ�
 ## <a name="see-also"></a>関連項目
 
 [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
-

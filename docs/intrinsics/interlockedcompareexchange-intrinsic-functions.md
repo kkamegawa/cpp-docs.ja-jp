@@ -1,6 +1,6 @@
 ---
-title: _InterlockedCompareExchange の組み込み関数
-ms.date: 12/17/2018
+title: _InterlockedCompareExchange 組み込み関数
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
 - _InterlockedCompareExchange8_nf
@@ -48,22 +48,22 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 26dff1c902fff495d5efe45d8da10b1c5da72878
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627300"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222047"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange の組み込み関数
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 組み込み関数
 
 **Microsoft 固有の仕様**
 
-インタロックされた比較および交換を実行します。
+インタロックされた比較と交換を行います。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 long _InterlockedCompareExchange(
    long volatile * Destination,
    long Exchange,
@@ -176,16 +176,16 @@ __int64 _InterlockedCompareExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*変換先*<br/>
-[入力、出力]宛先値へのポインター。 符号は無視されます。
+*インストール*\
+[入力、出力]対象の値へのポインター。 符号は無視されます。
 
-*Exchange*<br/>
-[in]Exchange の値。 符号は無視されます。
+*エクスチェンジ*\
+から値を交換します。 符号は無視されます。
 
-*比較対照値*<br/>
-[in]対象と比較する値。 符号は無視されます。
+*比較対照値*\
+からDestination と比較する値。 符号は無視されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -193,36 +193,36 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|ヘッダー|
+|組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM、ARM64|\<intrin.h>|
 |`_InterlockedCompareExchange_np`、 `_InterlockedCompareExchange16_np`、 `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedCompareExchange` は、`Destination` 値と `Comparand` 値のアトミックな比較を実行します。 `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は演算が実行されません。
+`_InterlockedCompareExchange``Destination` 値`Comparand`と値をアトミックに比較します。 `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は、操作は実行されません。
 
-`_InterlockedCompareExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange)関数。
+`_InterlockedCompareExchange`Win32 Windows SDK [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange)関数のコンパイラ組み込みサポートを提供します。
 
-`_InterlockedCompareExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
+には、関連する`_InterlockedCompareExchange`データ型や、プロセッサ固有の取得または解放のセマンティクスが使用されているかどうかによって、いくつかのバリエーションがあります。
 
-`_InterlockedCompareExchange` 関数は long 型の整数値で動作しますが、`_InterlockedCompareExchange8` は 8 ビット整数値、`_InterlockedCompareExchange16` は short 型の整数値、および `_InterlockedCompareExchange64` は 64 ビット整数値で動作します。
+関数は`_InterlockedCompareExchange`長整数値で動作します`_InterlockedCompareExchange8`が、は8ビット整数`_InterlockedCompareExchange16`値で動作し、short 整数値に`_InterlockedCompareExchange64`対して演算を実行し、64ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
-Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。
+Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 これらの組み込みが HLE をサポートしていないプラットフォームで呼び出された場合、ヒントは無視されます。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 マルチスレッド プログラミングの基本であるこの方法には制限がありますが、インタロックされた組み込みの代表的な使用例を示すために紹介します。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、次を参照してください。[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)です。
+次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 このアプローチには、マルチスレッドプログラミングの基礎として制限があります。ここでは、インタロックされた組み込みの一般的な使用方法について説明します。 最適な結果を得るには Windows API を使用してください。 マルチスレッドプログラミングの詳細については、「[マルチスレッド Win32 プログラムの作成](../parallel/multithreading-with-c-and-win32.md#writing-a-multithreaded-win32-program)」を参照してください。
 
-```
+```cpp
 // intrinExample.cpp
 // compile with: /EHsc /O2
 // Simple example of using _Interlocked* intrinsics to
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want
@@ -296,7 +296,6 @@ namespace MyInterlockedIntrinsicLock
 }
 
 // ------------------------------------------------------------------
-
 // Data shared by threads
 
 queue<int> SharedQueue;
@@ -435,8 +434,8 @@ int main(
 
 ## <a name="see-also"></a>関連項目
 
-[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
-[_InterlockedCompareExchangePointer の組み込み関数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)\
+[_InterlockedCompareExchangePointer 組み込み関数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)\
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
+[キーワード](../cpp/keywords-cpp.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

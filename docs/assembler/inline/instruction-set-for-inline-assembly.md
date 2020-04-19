@@ -8,18 +8,18 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 5d73b70603c3a3f51944a95fe54af11ecb50a9c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 97794261c0dc77ca41d543aa34a1fc2111c83619
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579050"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445909"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>インライン アセンブリの命令セット
 
 **Microsoft 固有の仕様**
 
-Visual C コンパイラでは、Pentium 4、AMD Athlon してすべてのオペコードをサポートします。 ターゲット プロセッサでサポートされている追加の手順で作成できる、 [_emit 疑似命令](../../assembler/inline/emit-pseudoinstruction.md)します。
+MicrosoftC++コンパイラは、Pentium 4、AMD Athlon してすべてのオペコードをサポートしています。 ターゲット プロセッサでサポートされている追加の手順で作成できる、 [_emit 疑似命令](../../assembler/inline/emit-pseudoinstruction.md)します。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -1,12 +1,12 @@
 ---
 title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563163"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954402"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-テスト*c* ctype プロパティで指定された、 *desc*引数。 有効な各値に対して*desc*、同等のワイド文字分類ルーチンがあります。
+*Desc*引数で指定された ctype プロパティについて*c*をテストします。 *Desc*の有効な値ごとに、同等のワイド文字分類ルーチンがあります。
 
 ## <a name="syntax"></a>構文
 
@@ -77,7 +80,7 @@ int _iswctype_l(
 *c*<br/>
 テストする整数。
 
-*desc*<br/>
+*順*<br/>
 テストするプロパティ。 これは通常、ctype または [wctype](wctype.md) を使用して取得されます。
 
 *locale*<br/>
@@ -85,9 +88,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_isctype**と**iswctype**場合は、0 以外の値を返す*c*で指定されたプロパティを持つ*desc*で現在のロケールまたはそうでない場合は 0。 これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_isctype**と**iswctype**は、 *c*が現在のロケールで*desc*によって指定されたプロパティを持っている場合は0以外の値を返し、そうでない場合は0を返します。 **_L**サフィックスを持つこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作 **_isctype**と **_isctype_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
+*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **_isctype**と **_isctype_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

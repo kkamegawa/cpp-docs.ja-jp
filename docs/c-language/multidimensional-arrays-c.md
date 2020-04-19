@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: cd17eb060a6151417cbbe8dfdbfdc42ffe88ce98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623939"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62233364"
 ---
 # <a name="multidimensional-arrays-c"></a>多次元配列 (C)
 
@@ -68,6 +68,6 @@ ipp = prop[2];
 
 同様に、2 番目のステートメント `prop[2]` の式 `ipp = prop[2];` の結果は、1 つの 2 次元配列のアドレスを指すポインター値です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [添字演算子:](../cpp/subscript-operator.md)

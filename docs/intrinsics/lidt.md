@@ -1,6 +1,6 @@
 ---
 title: __lidt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lidt
 - __lidt_cpp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 8ac86674dfa0dc269328854d363db24922cf20ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24778b761ada56830b155a2fc65e90f54ba729ed
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623887"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217509"
 ---
-# <a name="lidt"></a>__lidt
+# <a name="__lidt"></a>__lidt
 
 **Microsoft 固有の仕様**
 
-指定されたメモリ位置の値が割り込みの記述子テーブル レジスタ (IDTR) を読み込みます。
+指定されたメモリ位置の値を使用して、割り込み記述子テーブルレジスタ (IDTR) を読み込みます。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __lidt(void * Source);
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*ソース*|[in]IDTR にコピーされる値へのポインター。|
+|*ソース*|からIDTR にコピーされる値へのポインター。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -39,15 +39,15 @@ void __lidt(void * Source);
 |---------------|------------------|
 |`__lidt`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-`__lidt`関数は、`LIDT`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+関数は`LIDT`コンピューター命令と同じであり、カーネルモードでのみ使用できます。 `__lidt` 詳細については、「Intel Architecture Software Developer's Manual, Volume 2:命令セットリファレンス、「 [」を参照してください](https://software.intel.com/articles/intel-sdm)。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [__sidt](../intrinsics/sidt.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315002"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされるレギュラー MFC Dll
 
@@ -33,7 +33,7 @@ MFC と動的にリンクされている MFC DLL の場合は、通常は、次�
 
 - 静的にリンクされるレギュラー MFC DLL とは異なりこの種類の DLL が MFC DLL (共有 MFC DLL とも呼ばれます) に動的にリンクします。
 
-- この種類の DLL にリンクされている MFC のインポート ライブラリは、MFC 拡張 Dll または MFC DLL を使用してアプリケーションに使用されるものと同じ: MFCxx (D) .lib します。
+- この種類の DLL にリンクされている MFC のインポート ライブラリは、MFC 拡張 Dll または MFC DLL を使用してアプリケーションに使用される 1 つと同じです。(D) MFCxx .lib します。
 
 MFC と動的にリンクされている MFC DLL の場合は、通常は、次の要件があります。
 
@@ -83,18 +83,18 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [レギュラー MFC Dll を初期化します。](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [レギュラー MFC Dll を初期化します。](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [MFC を動的にリンクされているレギュラー MFC DLL のモジュール状態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [MFC を動的にリンクされているレギュラー MFC DLL のモジュール状態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [MFC モジュールの状態データを管理します。](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [DLL の一部としての MFC の使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL の種類](../build/kinds-of-dlls.md)
+[DLL の種類](kinds-of-dlls.md)

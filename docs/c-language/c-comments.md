@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-ms.openlocfilehash: 4065ce6396b713decf4a246b54901d44fb21d2f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645020"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152730"
 ---
 # <a name="c-comments"></a>C コメント
 
@@ -80,6 +80,6 @@ Microsoft C の既定では、Microsoft 拡張機能が有効になっていま�
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C トークン](../c-language/c-tokens.md)

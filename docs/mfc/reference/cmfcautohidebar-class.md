@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403920"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 
@@ -137,7 +137,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
 *pAutoHideWnd*<br/>
 [in]非表示にウィンドウです。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]アプリケーション ウィンドウを自動的に隠すボタンの配置を指定する値。
 
 ### <a name="return-value"></a>戻り値
@@ -176,7 +176,7 @@ virtual CSize CalcFixedLayout(
 
 [in]*bStretch*<br/>
 
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -321,7 +321,7 @@ void SetRecentVisibleState(BOOL bState);
 
 ### <a name="parameters"></a>パラメーター
 
-*この*<br/>
+*this*<br/>
 [in]設定する状態。
 
 ### <a name="remarks"></a>Remarks
@@ -366,7 +366,7 @@ virtual CSize StretchPane(
 
 ### <a name="parameters"></a>パラメーター
 
-*されて*<br/>
+*nLength*<br/>
 [in]値では、基本の実装では使用されません。 派生実装では、サイズを変更するウィンドウの長さを指定するためにこの値を使用します。
 
 *bVert*<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: aba4bd1b36bfda35be9e567851596fbedecf38ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43239efe70cc555d1a7e03c5d67e99e40ccd480e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654919"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492703"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)
 
@@ -23,25 +23,25 @@ ms.locfileid: "50654919"
 
 ## <a name="remarks"></a>Remarks
 
-/MANIFESTDEPENDENCY を使用してでは、属性を指定できます、\<依存関係 > マニフェスト ファイルのセクション。
+/Manifestdependency を使用すると、マニフェストファイルの\<dependency > セクションに配置される属性を指定できます。
 
-参照してください[/MANIFEST (アセンブリ マニフェストを作成して並列)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)についてはマニフェスト ファイルを作成する方法。
+マニフェストファイルの作成方法については、「[マニフェスト (Side-by-side アセンブリマニフェストを作成する)](manifest-create-side-by-side-assembly-manifest.md) 」を参照してください。
 
-詳細については、\<依存関係 > セクションのマニフェスト ファイルを参照してください。[発行者構成ファイル](/windows/desktop/SbsCs/publisher-configuration-files)します。
+マニフェストファイルの\<依存関係 > セクションの詳細については、「[パブリッシャー構成ファイル](/windows/win32/SbsCs/publisher-configuration-files)」を参照してください。
 
-/MANIFESTDEPENDENCY 情報は、2 つの方法のいずれかでリンカーに渡すことができます。
+/Manifestdependency 情報は、次の2つの方法のいずれかでリンカーに渡すことができます。
 
-- コマンドラインで直接 (または応答ファイル内)/MANIFESTDEPENDENCY を使用します。
+- コマンドライン (または応答ファイル内) で、/manifestdependencyを直接使用します。
 
-- 使用して、[コメント](../../preprocessor/comment-c-cpp.md)プラグマ。
+- [Comment](../../preprocessor/comment-c-cpp.md)プラグマを使用します。
 
-次の例では、プラグマを使用して渡す/MANIFESTDEPENDENCY コメント
+次の例では、プラグマで渡された/manifestdependency コメントを示しています。
 
 ```cpp
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")
 ```
 
-その結果、マニフェスト ファイルで次のエントリには。
+この結果、マニフェストファイルに次のエントリが生成されます。
 
 ```xml
 <dependency>
@@ -51,21 +51,21 @@ ms.locfileid: "50654919"
 </dependency>
 ```
 
-同じ/MANIFESTDEPENDENCY コメントは、コマンドラインで渡されることができます。
+次のように、同じ/manifestdependency コメントをコマンドラインで渡すことができます。
 
 ```cmd
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"
 ```
 
-リンカーは/MANIFESTDEPENDENCY コメントの収集、重複するエントリを削除し、マニフェスト ファイルに結果の XML 文字列を追加します。  リンカーは、競合するエントリを検出します。、マニフェスト ファイルは破損し、アプリケーションは起動に失敗場合、(エントリは、エラーの原因を示す、イベント ログに追加される可能性があります)。
+リンカーによって、依存関係のコメントが収集され、重複するエントリが削除されてから、結果として生成された XML 文字列がマニフェストファイルに追加されます。  リンカーが競合するエントリを検出すると、マニフェストファイルが破損し、アプリケーションを起動できなくなります (エラーの原因を示すエントリがイベントログに追加される場合があります)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **マニフェスト ファイル**プロパティ ページ。
+1. [**構成プロパティ** > ] [**リンカー** > **マニフェストファイル**] プロパティページを選択します。
 
-1. 変更、**追加のマニフェストの依存関係**プロパティ。
+1. "**追加のマニフェストの依存関係**" プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -73,5 +73,5 @@ ms.locfileid: "50654919"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

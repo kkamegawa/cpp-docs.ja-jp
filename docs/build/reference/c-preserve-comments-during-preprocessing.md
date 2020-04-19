@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: b37e279af3995bd1d61c97dc88b49cdd95495c75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442602"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988359"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (プリプロセス時のコメントの保持)
 
@@ -31,11 +31,11 @@ ms.locfileid: "50442602"
 
 ## <a name="remarks"></a>Remarks
 
-このコンパイラ オプションが必要です、 **/E**、 **/P**、または **/EP**オプション。
+このコンパイラオプションには、 **/e**、 **/p**、または **/ep**オプションが必要です。
 
-次のコード サンプル ソース コードのコメントが表示されます。
+次のコードサンプルでは、ソースコードのコメントが表示されます。
 
-```
+```cpp
 // C_compiler_option.cpp
 // compile with: /E /C /c
 int i;   // a variable
@@ -50,22 +50,22 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
-1. をクリックして、**プリプロセッサ**プロパティ ページ。
+1. **[プリプロセッサ]** プロパティページをクリックします。
 
-1. 変更、**コメントを残す**プロパティ。
+1. "**コメントの保持**" プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
 - 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/E (stdout に前処理する)](../../build/reference/e-preprocess-to-stdout.md)<br/>
-[/P (ファイルの前処理)](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[/EP (#line ディレクティブなしで stdout に前処理する)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[/E (stdout に前処理する)](e-preprocess-to-stdout.md)<br/>
+[/P (ファイルの前処理)](p-preprocess-to-a-file.md)<br/>
+[/EP (#line ディレクティブなしで stdout に前処理する)](ep-preprocess-to-stdout-without-hash-line-directives.md)

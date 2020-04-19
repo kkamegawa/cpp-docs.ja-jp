@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - HEAPSIZE .def file statement
 ms.assetid: 3c4d3117-491d-41e6-a693-648b3a35eeb9
-ms.openlocfilehash: 7761390f4175121ca12eed06c503d23c0eab91b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71baa6558ec3ffe9db009c7d264f5e4c1a72f92d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270342"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 
-同じ機能を公開、 [ヒープ/](../../build/reference/heap-set-heap-size.md)リンカー オプション。
+同じ機能を公開、 [ヒープ/](heap-set-heap-size.md)リンカー オプション。
 
 ```
 /HEAP:reserve[,commit]
@@ -23,4 +23,4 @@ ms.locfileid: "50617153"
 
 ## <a name="see-also"></a>関連項目
 
-[モジュール定義ステートメントに関する規則](../../build/reference/rules-for-module-definition-statements.md)
+[モジュール定義ステートメントに関する規則](rules-for-module-definition-statements.md)

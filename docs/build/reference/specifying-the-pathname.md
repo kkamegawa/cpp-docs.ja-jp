@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-ms.openlocfilehash: f83adcb87994d13edd1c1579183377a365e2051e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcff3610255c40f4e06201e52a53eb5dd965a4be
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317940"
 ---
 # <a name="specifying-the-pathname"></a>パス名の指定
 
@@ -21,7 +21,7 @@ ms.locfileid: "50638361"
 
 または、 *pathname*引数は、ファイル名ではなくデバイスの名前 (AUX、CON、PRN、または NUL) を指定できます。 デバイス名の一部として、オプションや、デバイス名、コロンの間にスペースを使わないでください。
 
-|デバイス名|説明|
+|デバイス名|表現|
 |-----------------|----------------|
 |AUX|補助デバイス|
 |CON|コンソール|
@@ -38,6 +38,6 @@ CL /FmPRN HELLO.CPP
 
 ## <a name="see-also"></a>関連項目
 
-[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[出力ファイル (/F) オプション](output-file-f-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: e11e072ad3133d5df9614afa8753178e11b2d025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d34c141fc9a2b53eab6a4c0b0ce1799ff5243d84
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186393"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE コモン ダイアログ クラス
 
@@ -53,4 +53,3 @@ Windows の一般的な OLE プロパティ ダイアログ ボックスをカ�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 194f8d2c87eb6aa307f417ff022e7975edf2ccc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270394"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (外部名の長さの制限)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50489831"
 
 ## <a name="arguments"></a>引数
 
-*数*<br/>
+*number*<br/>
 プログラムで許可される外部名の最大長を指定します。
 
 ## <a name="remarks"></a>Remarks
@@ -68,13 +68,13 @@ void func2(void) {}
 
 使用する場合は注意が必要があります、 **/H**コンパイラの定義済みの識別子のためのオプション。 識別子の最大長が小さすぎる場合は、特定済みの識別子が未解決と特定のライブラリ関数の呼び出しになります。 たとえば場合、`printf`関数を使用してとオプション **/H5**がシンボル、コンパイル時に指定されて **_prin**が参照するために作成されます`printf`、し、これは検出されませんライブラリ。
 
-使用 **/H**と互換性がない[/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md)します。
+使用 **/H**と互換性がない[/GL (Whole Program Optimization)](gl-whole-program-optimization.md)します。
 
-**/H**オプションが Visual Studio 2005 以降非推奨です。 最大長の上限が引き上げられましたと **/H**は不要です。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
+**/H**オプションが Visual Studio 2005 以降非推奨です。 最大長の上限が引き上げられましたと **/H**は不要です。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -86,5 +86,5 @@ void func2(void) {}
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

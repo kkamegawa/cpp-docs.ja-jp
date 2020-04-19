@@ -1,6 +1,6 @@
 ---
 title: CMultiPageDHtmlDialog クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMultiPageDHtmlDialog
 - AFXDHTML/CMultiPageDHtmlDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 680c485241b7a377d1c6f0ec2785dbbade01ed3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366902"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog クラス
 
@@ -32,7 +32,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |名前|説明|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|マルチページ (ウィザード スタイル) DHTML ダイアログ オブジェクトを構築します。|
-|[CMultiPageDHtmlDialog:: ~ 関数](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|マルチページ DHTML ダイアログ オブジェクトを破棄します。|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|マルチページ DHTML ダイアログ オブジェクトを破棄します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -111,7 +111,7 @@ HTML のリソースの名前を表す null で終わる文字列。
 *nHtmlResID*<br/>
 HTML リソースの ID 番号が含まれています。
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ 関数
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
 
 マルチページ DHTML ダイアログ オブジェクトを破棄します。
 

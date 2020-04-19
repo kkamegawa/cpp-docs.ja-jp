@@ -1,9 +1,9 @@
 ---
 title: _commit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _commit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _commit
 - commit
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523072"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939047"
 ---
-# <a name="commit"></a>_commit
+# <a name="_commit"></a>_commit
 
 ファイルを直接ディスクにフラッシュします。
 
@@ -52,13 +55,13 @@ int _commit(
 
 ## <a name="return-value"></a>戻り値
 
-**_commit** 0 を返します、ファイルが正常にディスクにフラッシュします。 戻り値-1 はエラーを示します。
+ファイルが正常にディスクにフラッシュされた場合、 **_commit**は0を返します。 戻り値-1 はエラーを示します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Commit**関数は、オペレーティング システムに関連付けられているファイルを書き込む*fd*をディスクにします。 この関数を呼び出すと、オペレーティング システムのタイミングではなく、即時に指定したファイルがフラッシュされます。
+**_Commit**関数は、 *fd*に関連付けられたファイルをディスクに書き込むようにオペレーティングシステムに強制します。 この関数を呼び出すと、オペレーティング システムのタイミングではなく、即時に指定したファイルがフラッシュされます。
 
-場合*fd*は、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**します。
+*Fd*が無効なファイル記述子の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**は**EBADF**に設定されます。
 
 ## <a name="requirements"></a>必要条件
 

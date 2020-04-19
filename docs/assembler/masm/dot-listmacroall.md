@@ -1,30 +1,31 @@
 ---
 title: .LISTMACROALL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTMACROALL
 helpviewer_keywords:
 - .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-ms.openlocfilehash: 6b9e5a028d607ea1d3d3dfdb497bf0b8f61ade12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50787e952921c759a91c09ff3ae6b7a654a4625a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639232"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317657"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-マクロのすべてのステートメントの一覧表示を開始します。
+マクロ内のすべてのステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
-> .LISTMACROALL
+> **.LISTMACROALL**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-同じ[します。LALL](../../assembler/masm/dot-lall.md)します。
+と同じ[です。LALL](dot-lall.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

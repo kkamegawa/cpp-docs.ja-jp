@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2216
 ms.assetid: 250f6bdc-a5e1-495f-a1e8-6e8e7021ad9d
-ms.openlocfilehash: 66c29c0e296a0eb13ef36ddb543b26af504b3230
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78426722a4d23f8cf0b94c0b1989002e6a23f90b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741314"
 ---
 # <a name="compiler-error-c2216"></a>コンパイラ エラー C2216
 
@@ -19,11 +19,11 @@ ms.locfileid: "50476805"
 
 相互に排他的である 2 つのキーワードが共に使用されました。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2216 が生成されます。
 
-```
+```cpp
 // C2216.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -32,11 +32,11 @@ ref struct Y1 {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2216 が生成されます。
 
-```
+```cpp
 // C2216b.cpp
 // compile with: /clr /c
 public ref class X {
@@ -45,11 +45,11 @@ public ref class X {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2216 が生成されます。
 
-```
+```cpp
 // C2216c.cpp
 // compile with: /clr /c
 public interface struct I {

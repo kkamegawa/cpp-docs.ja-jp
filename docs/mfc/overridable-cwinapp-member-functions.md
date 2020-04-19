@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application class [MFC]
 - CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
-ms.openlocfilehash: 9f1098e305606df9463e308466b7864b019d5a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35db009f86a0cb984f70a349a3ecdd93bfefb0f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297087"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>オーバーライド可能な CWinApp のメンバー関数
 
 [CWinApp](../mfc/reference/cwinapp-class.md)いくつかのキーのオーバーライド可能なメンバー関数を提供します (`CWinApp`クラスからこれらのメンバーをオーバーライド[CWinThread](../mfc/reference/cwinthread-class.md)、元の`CWinApp`派生)。
 
-- [Initinstance 関数](../mfc/initinstance-member-function.md)
+- [InitInstance](../mfc/initinstance-member-function.md)
 
 - [実行](../mfc/run-member-function.md)
 

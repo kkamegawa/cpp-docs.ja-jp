@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175499"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>コンシューマーに返される列の動的な判断
 
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-この例では、静的配列を使用して、列情報を保持します。 場合は、コンシューマーはブックマーク列、配列内の 1 つのエントリは使用されません。 情報を処理する配列の 2 つのマクロを作成する: ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX します。 ADD_COLUMN_ENTRY_EX は追加のパラメーターを受け取る*フラグ*はブックマーク列を指定する場合に必要です。
+この例では、静的配列を使用して、列情報を保持します。 場合は、コンシューマーはブックマーク列、配列内の 1 つのエントリは使用されません。 情報を処理するには、配列の 2 つのマクロを作成します。ADD_COLUMN_ENTRY ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX は追加のパラメーターを受け取る*フラグ*はブックマーク列を指定する場合に必要です。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  

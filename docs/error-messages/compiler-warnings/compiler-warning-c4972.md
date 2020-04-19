@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
-ms.openlocfilehash: dcf08f26809c7c61e3e00c41c555416c95f4a0e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 785d845c3dce556c4d3182ddec07a42a666154f0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598836"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626337"
 ---
 # <a name="compiler-warning-c4972"></a>コンパイラの警告 C4972
 
@@ -19,13 +19,13 @@ ms.locfileid: "50598836"
 
 ハンドルの値型への逆参照 (ボックス化解除) およびその後の割り当てを検証できません。
 
-詳細については、「 [ボックス化](../../windows/boxing-cpp-component-extensions.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
+詳細については、「 [ボックス化](../../extensions/boxing-cpp-component-extensions.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
 ## <a name="example"></a>例
 
 次の例では C4972 警告が生成されます。
 
-```
+```cpp
 // C4972.cpp
 // compile with: /clr:safe
 using namespace System;

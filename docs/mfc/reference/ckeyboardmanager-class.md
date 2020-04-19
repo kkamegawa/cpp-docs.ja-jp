@@ -1,5 +1,5 @@
 ---
-title: CKeyboardManager クラス
+title: Cのマネージャークラス
 ms.date: 11/04/2016
 f1_keywords:
 - CKeyboardManager
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4f8f678e76113b5d012242f474ff0ab8b0628dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694271"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505777"
 ---
-# <a name="ckeyboardmanager-class"></a>CKeyboardManager クラス
+# <a name="ckeyboardmanager-class"></a>Cのマネージャークラス
 
 メイン フレーム ウィンドウおよび子フレーム ウィンドウのショートカット キーのテーブルを管理します。
 
@@ -54,34 +54,34 @@ class CKeyboardManager : public CObject
 |||
 |-|-|
 |名前|説明|
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|`CKeyboardManager` オブジェクトを構築します。|
+|[C# manager:: Cのマネージャー](#ckeyboardmanager)|`CKeyboardManager` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |||
 |-|-|
 |名前|説明|
-|[CKeyboardManager::CleanUp](#cleanup)|ショートカット キーのテーブルをクリアします。|
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|指定されたコマンドおよびウィンドウの既定のショートカット キーを取得します。|
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|アクセラレータ テーブルで、キーが処理されるかどうかを判断します。|
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|文字が印刷可能かどうかを示します。|
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|メニューには、コマンドのすべてのショートカット キーまたは既定のショートカット キーのみが表示されるかどうかを示します。|
-|[CKeyboardManager::LoadState](#loadstate)|Windows レジストリから、ショートカット キーのテーブルを読み込みます。|
-|[CKeyboardManager::ResetAll](#resetall)|アプリケーション リソースからのショートカット キーのテーブルを再読み込みします。|
-|[CKeyboardManager::SaveState](#savestate)|ショートカット キーのテーブルを Windows レジストリに保存します。|
-|[:Showallaccelerators](#showallaccelerators)|フレームワークは、すべてのコマンドのショートカット キーのすべてまたはコマンドごとに 1 つのショートカット キーを表示するかどうかを指定します。 このメソッドは、1 つだけの関連付けられているショートカット キーを持つコマンドには影響しません。|
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|文字を大文字レジスタに変換します。|
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|新しいショートカット キー テーブルのショートカット キーのテーブルを更新します。|
+|[C、Manager:: CleanUp](#cleanup)|ショートカットキーのテーブルを消去します。|
+|[C/Manager:: FindDefaultAccelerator](#finddefaultaccelerator)|指定したコマンドおよびウィンドウの既定のショートカットキーを取得します。|
+|[C、Manager:: IsKeyHandled](#iskeyhandled)|キーがアクセラレータテーブルによって処理されるかどうかを判断します。|
+|[CIsKeyPrintable Manager::](#iskeyprintable)|文字が印刷可能かどうかを示します。|
+|[CIsShowAllAccelerators Manager::](#isshowallaccelerators)|メニューがコマンドのすべてのショートカットキーを表示するか、既定のショートカットキーのみを表示するかを示します。|
+|[CLoadState Manager::](#loadstate)|Windows レジストリからショートカットキーのテーブルを読み込みます。|
+|[C、Manager:: ResetAll](#resetall)|アプリケーションリソースからショートカットキーテーブルを再読み込みします。|
+|[CSaveState Manager::](#savestate)|ショートカットキーテーブルを Windows レジストリに保存します。|
+|[CShowAllAccelerators Manager::](#showallaccelerators)|フレームワークですべてのコマンドのすべてのショートカットキーを表示するか、各コマンドの単一のショートカットキーを表示するかを指定します。 このメソッドは、関連付けられたショートカットキーを1つだけ持つコマンドには影響しません。|
+|[CTranslateCharToUpper Manager::](#translatechartoupper)|文字を上位レジスタに変換します。|
+|[CUpdateAccelTable Manager::](#updateacceltable)|ショートカットキーテーブルを新しいショートカットキーテーブルで更新します。|
 
 ## <a name="remarks"></a>Remarks
 
-このクラスのメンバーを使用すると、保存、Windows レジストリへのショートカット キーのテーブルを読み込むと、テンプレートを使用して、ショートカット キーのテーブルを更新し、フレーム ウィンドウで、コマンドの既定のショートカット キーを検索します。 さらに、`CKeyboardManager`オブジェクトでは、ユーザーのショートカット キーの表示方法を制御することができます。
+このクラスのメンバーを使用すると、Windows レジストリにショートカットキーテーブルを保存して読み込むことができ、テンプレートを使用してショートカットキーテーブルを更新し、フレームウィンドウ内のコマンドの既定のショートカットキーを見つけることができます。 また`CKeyboardManager` 、オブジェクトを使用すると、ユーザーにショートカットキーを表示する方法を制御できます。
 
-作成しないようにする、`CKeyboardManager`手動でのオブジェクトします。 アプリケーションのフレームワークによって自動的に作成されます。 ただし、呼び出す必要があります[CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)アプリケーションの初期化プロセス中にします。 アプリケーションのキーボード マネージャーへのポインターを取得する[CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)します。
+オブジェクトを`CKeyboardManager`手動で作成しないでください。 アプリケーションのフレームワークによって自動的に作成されます。 ただし、アプリケーションの初期化プロセスでは、 [CWinAppEx:: Init manager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)を呼び出す必要があります。 アプリケーションのキーボードマネージャーへのポインターを取得するには、 [CWinAppEx:: Getkeyboard manager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)を呼び出します。
 
 ## <a name="example"></a>例
 
-次の例へのポインターを取得する方法を示します、`CKeyboardManager`オブジェクトから、`CWinAppEx`クラス、およびメニュー コマンドに関連付けられているすべてのショートカット キーを表示する方法。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+次の例は、 `CKeyboardManager` `CWinAppEx`クラスからオブジェクトへのポインターを取得する方法と、メニューコマンドに関連付けられているすべてのショートカットキーを表示する方法を示しています。 このコードスニペットは、[カスタムページサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -93,9 +93,9 @@ class CKeyboardManager : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxkeyboardmanager.h
+**ヘッダー:** afxkeyboardmanager
 
-##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager
+##  <a name="ckeyboardmanager"></a>C# manager:: Cのマネージャー
 
 `CKeyboardManager` オブジェクトを構築します。
 
@@ -105,11 +105,11 @@ CKeyboardManager();
 
 ### <a name="remarks"></a>Remarks
 
-ほとんどの場合は作成する必要はありません、`CKeyboardManager`直接します。 既定では、フレームワークの 1 つを作成します。 ポインターを取得する、 `CKeyboardManager`、呼び出す[CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)します。 いずれかを手動で作成する場合、は、メソッドを使用して初期化する必要があります[CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)します。
+ほとんどの場合、を`CKeyboardManager`直接作成する必要はありません。 既定では、フレームワークによって作成されます。 への`CKeyboardManager`ポインターを取得するには、 [CWinAppEx:: 表示 manager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)を呼び出します。 手動で作成する場合は、メソッド[CWinAppEx:: Init、manager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)を使用して初期化する必要があります。
 
-##  <a name="cleanup"></a>  CKeyboardManager::CleanUp
+##  <a name="cleanup"></a>C、Manager:: CleanUp
 
-解放、`CKeyboardManager`リソースをすべてのショートカット キーのマッピングをクリアします。
+リソースを`CKeyboardManager`解放し、すべてのショートカットキーマッピングをクリアします。
 
 ```
 static void CleanUp();
@@ -117,13 +117,13 @@ static void CleanUp();
 
 ### <a name="remarks"></a>Remarks
 
-ショートカット キーの詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)します。
+ショートカットキーの詳細については、「[キーボードおよびマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)」を参照してください。
 
-フレームワークはアプリケーションの終了時に自動的に呼び出しがあるため、アプリケーションの終了時に、この関数を呼び出す必要はありません。
+アプリケーションの終了時にフレームワークによって自動的に呼び出されるため、アプリケーションの終了時にこの関数を呼び出す必要はありません。
 
-##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator
+##  <a name="finddefaultaccelerator"></a>C/Manager:: FindDefaultAccelerator
 
-指定されたコマンドおよびウィンドウの既定のショートカット キーを取得します。
+指定したコマンドおよびウィンドウの既定のショートカットキーを取得します。
 
 ```
 static BOOL FindDefaultAccelerator(
@@ -136,28 +136,28 @@ static BOOL FindDefaultAccelerator(
 ### <a name="parameters"></a>パラメーター
 
 *uiCmd*<br/>
-[in]コマンド id。
+からコマンド ID。
 
 *str*<br/>
-[out]参照を`CString`オブジェクト。
+入出力`CString`オブジェクトへの参照。
 
 *pWndFrame*<br/>
-[in]フレーム ウィンドウへのポインター。
+からフレームウィンドウへのポインター。
 
 *bIsDefaultFrame*<br/>
-[in]フレーム ウィンドウが既定のフレーム ウィンドウであるかどうかを指定します。
+からフレームウィンドウが既定のフレームウィンドウであるかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ショートカットが見つかった場合は 0 以外それ以外の場合 0 を返します。
+ショートカットが見つかった場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドで指定されたコマンドを検索*uiCmd*既定のショートカット キーを取得します。 メソッドは、このショートカット キーに関連付けられている文字列を取得しに値を書き込みます、 *str*パラメーター。
+このメソッドは、 *uiCmd*によって指定されたコマンドを検索し、既定のショートカットキーを取得します。 次に、このショートカットキーに関連付けられている文字列を取得し、その値を*str*パラメーターに書き込みます。
 
-##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled
+##  <a name="iskeyhandled"></a>C、Manager:: IsKeyHandled
 
-指定したキーが処理するかどうかを決定します、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)します。
+指定されたキーが[Cのマネージャークラス](../../mfc/reference/ckeyboardmanager-class.md)によって処理されるかどうかを判断します。
 
 ```
 static BOOL __stdcall IsKeyHandled(
@@ -172,20 +172,20 @@ static BOOL __stdcall IsKeyHandled(
 |||
 |-|-|
 |パラメーター|説明|
-|*nKey*|[in]チェックするキー。|
-|*fVirt*|[in]ショートカット キーの動作を指定します。 使用可能な値の一覧は、次を参照してください。[アクセル構造](/windows/desktop/api/winuser/ns-winuser-tagaccel)します。|
-|*pWndFrame*|[in]フレーム ウィンドウです。 このメソッドは、ショートカット キーがこのフレームで処理されるかどうかを判断します。|
-|*bIsDefaultFrame*|[in]示すブール値パラメーターかどうか*pWndFrame*は既定のフレーム ウィンドウです。|
+|*nKey*|から確認するキー。|
+|*fVirt*|からショートカットキーの動作を指定します。 使用可能な値の一覧については、「 [ACCEL Structure](/windows/win32/api/winuser/ns-winuser-accel)」を参照してください。|
+|*pWndFrame*|からフレームウィンドウ。 このメソッドは、ショートカットキーをこのフレームで処理するかどうかを決定します。|
+|*bIsDefaultFrame*|から*PWndFrame*が既定のフレームウィンドウであるかどうかを示すブール型パラメーターです。|
 
 ### <a name="return-value"></a>戻り値
 
-ショートカット キーが処理される場合は TRUE。 FALSE、キーが処理されない場合、または場合*pWndFrame*は NULL です。
+ショートカットキーが処理される場合は TRUE。 キーが処理されない場合、または*pWndFrame*が NULL の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-入力パラメーターは、アクセラレータ テーブルで両方のエントリと一致する必要があります*nKey*と*fVirt*でショートカット キーが処理されるかどうかを判断する*pWndFrame*します。
+入力パラメーターは、 *pWndFrame*でショートカットキーが処理されるかどうかを判断*するために*、アクセスキーと*fVirt*の両方のアクセラレータテーブルのエントリと一致する必要があります。
 
-##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable
+##  <a name="iskeyprintable"></a>CIsKeyPrintable Manager::
 
 文字が印刷可能かどうかを示します。
 
@@ -198,19 +198,19 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |パラメーター|説明|
-|*NChar*|[in]このメソッドをチェックする文字。|
+|*nChar*|からこのメソッドがチェックする文字。|
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の文字が印刷可能な場合は、0 でない場合。
+文字が印刷可能な場合は0以外の値。それ以外の場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドへの呼び出しが失敗した[GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate)は失敗します。
+[Getの](/windows/win32/api/winuser/nf-winuser-getkeyboardstate)呼び出しが失敗した場合、このメソッドは失敗します。
 
-##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
+##  <a name="isshowallaccelerators"></a>CIsShowAllAccelerators Manager::
 
-メニューにメニュー コマンドに関連付けられているすべてのショートカット キーまたは既定のショートカット キーのみが表示されるかどうかを示します。
+メニューコマンドに関連付けられているすべてのショートカットキーまたは既定のショートカットキーのみをメニューに表示するかどうかを示します。
 
 ```
 static BOOL IsShowAllAccelerators();
@@ -218,15 +218,15 @@ static BOOL IsShowAllAccelerators();
 
 ### <a name="return-value"></a>戻り値
 
-メニュー コマンドのショートカット キーのすべてが一覧表示する場合は 0 以外アプリケーションが既定のショートカット キーのみを表示する場合は 0 を返します。
+アプリケーションがメニューコマンドのすべてのショートカットキーを一覧表示する場合は0以外の。アプリケーションが既定のショートカットキーのみを表示する場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-アプリケーションは、メニュー バーでメニュー コマンドのショートカット キーを一覧表示します。 関数を使用して[:showallaccelerators](#showallaccelerators)を制御するかどうか、アプリケーションを一覧表示、すべてのショートカット キーまたは既定のショートカット キーを持つユーザーだけです。
+アプリケーションには、メニューバーのメニューコマンドのショートカットキーが一覧表示されます。 関数[ckeys manager:: ShowAllAccelerators](#showallaccelerators)を使用して、アプリケーションがすべてのショートカットキーを一覧表示するか、既定のショートカットキーだけを表示するかを制御します。
 
-##  <a name="loadstate"></a>  CKeyboardManager::LoadState
+##  <a name="loadstate"></a>CLoadState Manager::
 
-Windows レジストリから、ショートカット キーのテーブルを読み込みます。
+Windows レジストリからショートカットキーのテーブルを読み込みます。
 
 ```
 BOOL LoadState(
@@ -237,24 +237,24 @@ BOOL LoadState(
 ### <a name="parameters"></a>パラメーター
 
 *lpszProfileName*<br/>
-[in]レジストリ パスを`CKeyboardManager`データを保存します。
+からデータが保存さ`CKeyboardManager`れるレジストリパス。
 
 *pDefaultFrame*<br/>
-[in]既定のウィンドウとして使用するフレーム ウィンドウへのポインター。
+から既定のウィンドウとして使用するフレームウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-以外の場合は、状態が正常に読み込まれたか 0 それ以外の場合。
+状態が正常に読み込まれた場合は0以外の場合は。それ以外の場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-場合、 *lpszProfileName*パラメーターが NULL で、このメソッドの既定のレジストリの場所をチェックする`CKeyboardManager`データ。 既定のレジストリの場所がで指定された、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)します。 メソッドを使用して以前データを記述する必要があります[CKeyboardManager::SaveState](#savestate)します。
+*Lpszprofilename*パラメーターが NULL の場合、このメソッドは、データの`CKeyboardManager`既定のレジストリの場所を確認します。 既定のレジストリの場所は、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)によって指定されます。 データは、前に[CSaveState manager::](#savestate)メソッドを使用して書き込む必要があります。
 
-既定のウィンドウを指定しない場合、アプリケーションのメイン フレーム ウィンドウが使用されます。
+既定のウィンドウを指定しない場合は、アプリケーションのメインフレームウィンドウが使用されます。
 
-##  <a name="resetall"></a>  CKeyboardManager::ResetAll
+##  <a name="resetall"></a>C、Manager:: ResetAll
 
-アプリケーション リソースからのショートカット キーのテーブルを再読み込みします。
+アプリケーションリソースからショートカットキーテーブルを再読み込みします。
 
 ```
 void ResetAll();
@@ -262,11 +262,11 @@ void ResetAll();
 
 ### <a name="remarks"></a>Remarks
 
-この関数に格納されているショートカットのクリア、`CKeyboardManager`インスタンス。 アプリケーション リソースからキーボード マネージャーの状態が 再読み込みします。
+この関数は、 `CKeyboardManager`インスタンスに格納されているショートカットをクリアします。 その後、アプリケーションリソースからキーボードマネージャーの状態が再度読み込まれます。
 
-##  <a name="savestate"></a>  CKeyboardManager::SaveState
+##  <a name="savestate"></a>CSaveState Manager::
 
-ショートカット キーのテーブルを Windows レジストリに保存します。
+ショートカットキーテーブルを Windows レジストリに保存します。
 
 ```
 BOOL SaveState(
@@ -277,24 +277,24 @@ BOOL SaveState(
 ### <a name="parameters"></a>パラメーター
 
 *lpszProfileName*<br/>
-[in]保存するためのレジストリ パス、`CKeyboardManager`状態。
+から状態を`CKeyboardManager`保存するためのレジストリパス。
 
 *pDefaultFrame*<br/>
-[in]既定のウィンドウになったフレーム ウィンドウへのポインター。
+から既定のウィンドウになるフレームウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-キーボード マネージャーの状態が正常に保存されている場合は 0 以外。 それ以外の場合は 0。
+キーボードマネージャーの状態が正常に保存された場合は0以外。それ以外の場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-場合、 *lpszProfileName*パラメーターが NULL でこのメソッドは、書き込み、`CKeyboardManager`状態で指定された既定の場所に、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)します。 場所を指定する場合は、後で、メソッドを使用してデータを読み込むことができます[CKeyboardManager::LoadState](#loadstate)します。
+*Lpszprofilename*パラメーターが NULL の場合、このメソッドは、 `CKeyboardManager` [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)によって指定された既定の場所に状態を書き込みます。 場所を指定する場合は、後で[CLoadState manager::](#loadstate)メソッドを使用してデータを読み込むことができます。
 
-既定のウィンドウを指定しない場合は、メイン フレーム ウィンドウを使用して既定のウィンドウとして。
+既定のウィンドウを指定しない場合は、メインフレームウィンドウが既定のウィンドウとして使用されます。
 
-##  <a name="showallaccelerators"></a>  :Showallaccelerators
+##  <a name="showallaccelerators"></a>CShowAllAccelerators Manager::
 
-メニュー コマンドに関連付けられているすべてのショートカット キーを示します。
+メニューコマンドに関連付けられているすべてのショートカットキーを表示します。
 
 ```
 static void ShowAllAccelerators(
@@ -305,20 +305,20 @@ static void ShowAllAccelerators(
 ### <a name="parameters"></a>パラメーター
 
 *bShowAll*<br/>
-[in]TRUE の場合、すべてのショートカット キーが表示されます。 FALSE の場合、最初のショートカット キーのみが表示されます。
+からTRUE の場合、すべてのショートカットキーが表示されます。 FALSE の場合は、最初のショートカットキーのみが表示されます。
 
 *lpszDelimiter*<br/>
-[in]ショートカット キーの間に挿入する文字列。 1 つのショートカット キーが表示されている場合のみ、この区切り記号による影響はありません。
+からショートカットキーの間に挿入する文字列。 ショートカットキーが1つだけ表示されている場合、この区切り記号は効果がありません。
 
 ### <a name="remarks"></a>Remarks
 
-既定では、コマンドは、1 つ以上のショートカット キーがそれに関連付けられている場合、最初のショートカット キーのみ表示されます。 この関数では、すべてのコマンドに関連付けられているすべてのショートカット キーを一覧表示することができます。
+既定では、コマンドに複数のショートカットキーが関連付けられている場合、最初のショートカットキーのみが表示されます。 この関数を使用すると、すべてのコマンドに関連付けられているすべてのショートカットキーを一覧表示できます。
 
-ショートカット キーは、メニュー バーで、コマンドの横に表示されます。 文字列がによって提供されるすべてのショートカット キーが表示される場合*lpszDelimiter*個々 のショートカット キーを分離します。
+ショートカットキーは、メニューバーのコマンドの横に一覧表示されます。 すべてのショートカットキーが表示されている場合は、 *Lpszdelimiter*によって指定された文字列によって、個々のショートカットキーが分離されます。
 
-##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper
+##  <a name="translatechartoupper"></a>CTranslateCharToUpper Manager::
 
-文字を大文字レジスタに変換します。
+文字を上位レジスタに変換します。
 
 ```
 static UINT TranslateCharToUpper(const UINT nChar);
@@ -326,16 +326,16 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>パラメーター
 
-*NChar*<br/>
-[in]変換する文字。
+*nChar*<br/>
+から変換する文字。
 
 ### <a name="return-value"></a>戻り値
 
-入力パラメーターの大文字のレジスタにある文字。
+入力パラメーターの上位レジスタである文字。
 
-##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable
+##  <a name="updateacceltable"></a>CUpdateAccelTable Manager::
 
-新しいショートカット キー テーブルのショートカット キーのテーブルを更新します。
+ショートカットキーテーブルを新しいショートカットキーテーブルで更新します。
 
 ```
 BOOL UpdateAccelTable(
@@ -353,33 +353,32 @@ BOOL UpdateAccelTable(
 ### <a name="parameters"></a>パラメーター
 
 *pTemplate*<br/>
-[in]ドキュメント テンプレートへのポインター。
+からドキュメントテンプレートへのポインター。
 
 *lpAccel*<br/>
-[in]新しいショートカット キーへのポインター。
+から新しいショートカットキーへのポインター。
 
 *nSize*<br/>
-[in]新しいショートカットのテーブルのサイズ。
+から新しいショートカットテーブルのサイズ。
 
 *pDefaultFrame*<br/>
-[in]既定のフレーム ウィンドウへのポインター。
+から既定のフレームウィンドウへのポインター。
 
 *hAccelNew*<br/>
-[in]新しいショートカット テーブルへのハンドル。
+から新しいショートカットテーブルへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合、0 以外の場合それ以外の場合 0 を返します。
+メソッドが成功した場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>Remarks
 
-この関数を使用して、既存のショートカットの表をいくつかのフレーム ウィンドウ オブジェクトの新しいショートカット キーに置き換えます。 関数は、特定のドキュメント テンプレートに接続されているすべてのフレーム ウィンドウ オブジェクトへのアクセスを取得するパラメーターとして、ドキュメント テンプレートを受け取ります。
+この関数を使用すると、既存のショートカットテーブルを複数のフレームウィンドウオブジェクトの新しいショートカットキーに置き換えることができます。 関数は、ドキュメントテンプレートをパラメーターとして受け取り、指定されたドキュメントテンプレートに接続されているすべてのフレームウィンドウオブジェクトへのアクセスを取得します。
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)<br/>
-[CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
+[CWinAppEx:: Init# manager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)
-

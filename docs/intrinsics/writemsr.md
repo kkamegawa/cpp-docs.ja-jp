@@ -1,6 +1,6 @@
 ---
 title: __writemsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writemsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: f4af272ccafec9789497d0321c0769c2906f76b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330295"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219135"
 ---
-# <a name="writemsr"></a>__writemsr
+# <a name="__writemsr"></a>__writemsr
 
 **Microsoft 固有の仕様**
 
-モデル専用レジスタへの書き込みが生成されます (`wrmsr`) 命令。
+モデル固有のレジスタ (`wrmsr`) 命令への書き込みを生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __writemsr(
    unsigned long Register,
    unsigned __int64 Value
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*登録*<br/>
-[in]モデル専用レジスタの場合。
+*取引*\
+からモデル固有のレジスタ。
 
-*[値]*<br/>
-[in]書き込む値。
+*数値*\
+から書き込む値。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,11 +44,11 @@ void __writemsr(
 |---------------|------------------|
 |`__writemsr`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この関数は、カーネル モードでのみ使用可能性があり、このルーチンは組み込みとして使用できるのみです。
+この関数はカーネルモードでのみ使用でき、このルーチンは組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 

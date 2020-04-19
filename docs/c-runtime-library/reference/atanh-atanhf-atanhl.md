@@ -1,11 +1,11 @@
 ---
 title: atanh、atanhf、atanhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atanhl
 - atanhf
 - atanh
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atanhl
 - atanhf
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435361"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939597"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -58,16 +61,16 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Atanh**関数の逆ハイパーボリック タンジェント (アーク ハイパーボリック タンジェント) を返す*x*します。 場合*x*が 1、または-1 より小さい場合よりも大きい**errno**に設定されている**EDOM**され、結果は簡易な NaN です。 場合*x*は 1 または-1 に等しいか、正または負の無限大が返されます、それぞれ、および**errno**に設定されている**ERANGE**します。
+**Atanh**関数は、 *x*の逆ハイパーボリックタンジェント (アークハイパーボリックタンジェント) を返します。 *X*が1より大きいか、または-1 未満の場合、 **errno**は**EDOM**に設定され、結果は簡易な NaN になります。 *X*が1または-1 の場合、それぞれ正または負の無限大が返され、 **errno**は**ERANGE**に設定されます。
 
-|入力|SEH 例外|**Matherr**例外|
+|入力|SEH 例外|**Matherr**例外的|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|none|none|
-|*X* ≥ 1 になります。*x* ≤-1|none|none|
+|*X* ≥ 1;*x* ≤-1|none|none|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **atanh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**atanh**は**二重**します。
+でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**atanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **atanh**は常にを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 

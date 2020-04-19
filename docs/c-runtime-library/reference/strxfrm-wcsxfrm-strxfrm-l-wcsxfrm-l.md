@@ -1,12 +1,12 @@
 ---
 title: strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strxfrm
 - _wcsxfrm_l
 - _strxfrm_l
 - wcsxfrm
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strxfrm
 - _tcsxfrm
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 4e4f5bb6639cbeee0f004f94f09177c08394d43e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 411fe3a5a6f66614f0a22e0f623b73685a6e0844
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590984"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957606"
 ---
-# <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
+# <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
 ロケール固有の情報に基づいて文字列を変換します。
 
@@ -82,24 +85,24 @@ size_t wcsxfrm_l(
 ソース文字列。
 
 *count*<br/>
-配置する文字の最大数*追加される文字*します。
+*Strdest*に挿入する最大文字数。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-変換された文字列の長さを返します。終端の null 文字は含まれません。 かどうか、戻り値はより大きいまたは等しい*カウント*、コンテンツの*追加される文字*は予測できません。 各関数の設定エラーが発生、 **errno**返します**INT_MAX**。 無効な文字**errno**に設定されている**EILSEQ**します。
+変換された文字列の長さを返します。終端の null 文字は含まれません。 戻り値が*count*以上の場合、 *strdest*の内容は予測できません。 エラーが発生すると、各関数は**errno**を設定し、 **INT_MAX**を返します。 無効な文字の場合、 **errno**は**EILSEQ**に設定されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Strxfrm**関数が指す文字列を変換する*strSource*を新しい照合フォームに格納されている*追加される文字*します。 超える*カウント*null 文字を含む文字は変換され、結果の文字列に配置されます。 ロケールを使用して、変換が行われた**LC_COLLATE**カテゴリの設定。 詳細については**LC_COLLATE**を参照してください[setlocale](setlocale-wsetlocale.md)します。 **strxfrm**そのロケールに依存する動作に現在のロケールを使用 **_strxfrm_l**は、現在のロケールの代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Strxfrm**関数は、 *strsource*が指す文字列を、 *strsource*に格納されている新しい照合形式に変換します。 Null 文字を含む*count*文字を超える文字は変換されず、結果の文字列に格納されます。 変換は、ロケールの**LC_COLLATE** category 設定を使用して行われます。 **LC_COLLATE**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **strxfrm**は、ロケールに依存する動作に現在のロケールを使用します。 **_strxfrm_l**は、現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-呼び出し、変換後**strcmp** 2 つの変換された文字列を使用した呼び出しのものと同じ結果が得られます**strcoll 系**元の 2 つの文字列に適用します。 同様**strcoll 系**と**stricoll**、 **strxfrm**として適切なマルチバイト文字の文字列が自動的に処理します。
+変換後、2つの変換された文字列を使用して**strcmp**を呼び出すと、元の2つの文字列に適用される**strcoll 系**への呼び出しと同じ結果が得られます。 **Strcoll 系**と**stricoll**の場合と同様に、 **strxfrm**では、マルチバイト文字列が必要に応じて自動的に処理されます。
 
-**wcsxfrm**のワイド文字バージョンは、 **strxfrm**; の文字列引数**wcsxfrm**はワイド文字のポインターです。 **Wcsxfrm**後に、文字列変換の呼び出しを**wcscmp** 2 つの変換された文字列を使用した呼び出しのものと同じ結果が得られます**wcscoll**に適用される、元の 2 つの文字列。 **wcsxfrm**と**strxfrm**動作は同じです。 **wcsxfrm**そのロケールに依存する動作に現在のロケールを使用 **_wcsxfrm_l**現在のロケールの代わりに渡されたロケールを使用します。
+**wcsxfrm**は、 **strxfrm**のワイド文字バージョンです。**wcsxfrm**の文字列引数はワイド文字ポインターです。 **Wcsxfrm**の場合、文字列変換の後、2つの変換された文字列を使用して**wcscmp**を呼び出すと、元の2つの文字列に適用される**wcscoll**の呼び出しと同じ結果が得られます。 それ以外では、 **wcsxfrm**と**strxfrm**は同じように動作します。 **wcsxfrm**は、ロケールに依存する動作に現在のロケールを使用します。 **_wcsxfrm_l**は、現在のロケールの代わりに渡されたロケールを使用します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*strSource* null ポインターの場合は、または*追加される文字*は、 **NULL**ポインター (しない限りカウントがゼロです)、または*カウント*より大きい**INT_MAX**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**INT_MAX**します。
+これらの関数では、パラメーターの検証が行われます。 *Strsource*が null ポインターの場合、または*Strsource*が**null**ポインターである場合 (count がゼロの場合を除く)、または*count*が**INT_MAX**より大きい場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **INT_MAX**を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -108,17 +111,17 @@ size_t wcsxfrm_l(
 |**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
-"C" ロケールでは、文字セット (ASCII 文字セット) 内の文字の順序は、辞書式文字順序と同じです。 ただし、その他のロケールでは、文字セット内の文字の順序が辞書式文字順序と異なる場合があります。 たとえば、ヨーロッパの特定のロケールでは、文字 'a' a (値) の前に文字 ' &\#x00E4;'(0xE4 の値)、文字セットが、文字 'ä' の前に文字 'a' 辞書式。
+"C" ロケールでは、文字セット (ASCII 文字セット) 内の文字の順序は、辞書式文字順序と同じです。 ただし、その他のロケールでは、文字セット内の文字の順序が辞書式文字順序と異なる場合があります。 たとえば、特定のヨーロッパロケールでは、文字 ' a ' (値 0x61) が文字 ' &\#x00E4; ' の前に置かれます。文字セット内では (値 0xE4)、文字 ' ä ' は文字 ' a ' 辞書式の前に置かれます。
 
-対象の文字セットと辞書式文字順序が異なるロケールで使用**strxfrm** 、元の文字列にし、 **strcmp**辞書式の文字列を生成するために、結果の文字列に現在のロケールに従って比較**LC_COLLATE**カテゴリの設定。 したがって、上記のロケールの辞書式の 2 つの文字列を比較するには、次のように使用します。 **strxfrm**し、元の文字列で**strcmp** 、結果の文字列にします。 また、使用することができます**strcoll 系**なく**strcmp**元の文字列にします。
+文字セットと辞書式文字順序が異なるロケールでは、元の文字列に対して**strxfrm**を使用し、結果の文字列で**strcmp**を使用して、現在のロケールに従って辞書式文字列比較を生成します。**LC_COLLATE**カテゴリ設定。 したがって、上記のロケールで辞書式2つの文字列を比較するには、元の文字列で**strxfrm**を使用し、結果の文字列で**strcmp**を使用します。 また、元の文字列で**strcmp**ではなく**strcoll 系**を使用することもできます。
 
-**strxfrm**のラッパーでは基本的に[LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)で**LCMAP_SORTKEY**します。
+**strxfrm**は、基本的に**LCMAP_SORTKEY**と[LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw)のラッパーです。
 
-次の式の値が保持するために必要な配列のサイズ、 **strxfrm**ソース文字列の変換。
+次の式の値は、ソース文字列の**strxfrm**変換を保持するために必要な配列のサイズです。
 
 `1 + strxfrm( NULL, string, 0 )`
 
-"C"ロケールのみ、 **strxfrm**は、次に相当します。
+"C" ロケールの場合のみ、 **strxfrm**は次のようになります。
 
 ```C
 strncpy( _string1, _string2, _count );

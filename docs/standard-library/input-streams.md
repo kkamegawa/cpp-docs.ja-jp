@@ -7,12 +7,12 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 0f56f5ffc8e61c0881eddbbd65e1c431b9219674
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504768"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449323"
 ---
 # <a name="input-streams"></a>入力ストリーム
 
@@ -40,4 +40,4 @@ ms.locfileid: "50504768"
 
 ## <a name="see-also"></a>関連項目
 
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
+[iostream プログラミング](../standard-library/iostream-programming.md)

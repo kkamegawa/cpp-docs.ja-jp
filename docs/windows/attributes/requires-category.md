@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: e6621e2cec92eadb0ca4b4ac989b4ca7d578b2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407368"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -31,7 +31,7 @@ ms.locfileid: "50429845"
 
 ## <a name="remarks"></a>Remarks
 
-**Requires_category** C++ 属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../../atl/reference/category-macros.md#required_category)します。
+**Requires_category** C++属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../../atl/reference/category-macros.md#required_category)します。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 
@@ -53,7 +53,7 @@ ms.locfileid: "50429845"
 class CMyClass {};
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 

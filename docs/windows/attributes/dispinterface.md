@@ -1,17 +1,17 @@
 ---
-title: ディスパッチ インターフェイス (C++ COM 属性)
+title: ディスパッチインターフェイスC++ (COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: d0ace76fdbbc1ff930bccb4e6fc203895b4f1637
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677280"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501625"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ ms.locfileid: "50677280"
 
 基底クラスを指定しないと、ディスパッチ インターフェイスは `IDispatch`から派生します。 ディスパッチ インターフェイスのメンバーの [id](id.md) を指定する必要があります。
 
-MIDL のドキュメントには [dispinterface](/windows/desktop/Midl/dispinterface) の次のような使用例があります。
+MIDL のドキュメントには [dispinterface](/windows/win32/Midl/dispinterface) の次のような使用例があります。
 
 ```cpp
 dispinterface helloPro

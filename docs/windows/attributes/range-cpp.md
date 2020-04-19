@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644972"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514145"
 ---
 # <a name="range-c"></a>range (C++)
 
-引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。
+実行時に値が設定される引数またはフィールドに使用できる値の範囲を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,7 +33,7 @@ ms.locfileid: "50644972"
 
 ## <a name="remarks"></a>Remarks
 
-**範囲**C++ 属性と同じ機能を持つ、[範囲](/windows/desktop/Midl/range)MIDL 属性。
+**Range** C++属性には、 [range](/windows/win32/Midl/range) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -57,7 +57,7 @@ __interface ICustom {
 
 |||
 |-|-|
-|**対象**|インターフェイスのメソッド、インターフェイス パラメーター|
+|**対象**|インターフェイスメソッド、インターフェイスパラメーター|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

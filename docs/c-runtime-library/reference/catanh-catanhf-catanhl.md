@@ -1,11 +1,11 @@
 ---
 title: catanh、catanhf、catanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catanh
 - catanhf
 - catanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catanh
 - catanhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646363"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943234"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
-実軸に沿って区間 [-1; +1] の外側の分岐線法を複素数の逆ハイパーボリック タンジェントを取得します。
+実数軸に沿って区間 [-1; + 1] の外側に分岐がある場合に、複素数の逆双曲線正接を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -68,17 +71,17 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>戻り値
 
-逆ハイパーボリック タンジェント*z*、(ラジアン単位)。 結果は、実軸に沿って、間隔 [-π/2; + π/2] 虚軸。 ドメイン エラーが発生*z*区間 [-1, +1] の外側です。 極エラーが発生*z*が-1 または +1。
+*Z*の逆双曲線タンジェント (ラジアン)。 結果は、実数軸に沿って無制限になり、虚数軸に沿って [-iπ/2; + iπ/2] の間隔で計算されます。 *Z*が間隔 [-1, + 1] の外側にある場合は、ドメインエラーが発生します。 *Z*が-1 または + 1 の場合、極エラーが発生します。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **catanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**catanh**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**catanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **catanh**は常にを受け取り、**戻り値を**返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**catanh**、 **catanhf**、 **catanhl**|\<complex.h>|\<ccomplex>|
+|**catanh**、 **catanh**、 **catanh**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

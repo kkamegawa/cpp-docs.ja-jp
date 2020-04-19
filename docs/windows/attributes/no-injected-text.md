@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409292"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -25,12 +25,12 @@ ms.locfileid: "50618118"
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール値*<br/>
+*boolean*<br/>
 (省略可能)**true** 、挿入されたコードが必要ない場合**false**挿入するコードを許可します。 **true**既定値です。
 
 ## <a name="remarks"></a>Remarks
 
-最も一般的な用途、 **no_injected_text** C++ 属性は、 [/Fx](../../build/reference/fx-merge-injected-code.md)コンパイラ オプションは、挿入、 **no_injected_text**属性が .mrg ファイルにします。
+最も一般的な用途、 **no_injected_text** C++属性は、 [/Fx](../../build/reference/fx-merge-injected-code.md)コンパイラ オプションは、挿入、 **no_injected_text**属性が .mrg ファイルにします。
 
 ## <a name="requirements"></a>必要条件
 

@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513803"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142161"
 ---
-# <a name="norm3-class"></a>norm_3 クラス
+# <a name="norm_3-class"></a>norm_3 クラス
 
 3 個の正規数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class norm_3;
 ```
 
@@ -93,19 +93,19 @@ class norm_3;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[norm_3 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[norm_3 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
@@ -146,7 +146,7 @@ class norm_3;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
@@ -159,13 +159,13 @@ class norm_3;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#size)||
+|[サイズ定数](#size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |norm_3::b||
 |norm_3::bg||
@@ -188,13 +188,13 @@ class norm_3;
 |norm_3::xz||
 |norm_3::xzy||
 |norm_3::y||
-|norm_3::yx||
+|norm_3:: yx||
 |norm_3::yxz||
 |norm_3::yz||
-|norm_3::yzx||
+|norm_3:: yzx||
 |norm_3::z||
 |norm_3::zx||
-|norm_3::zxy||
+|norm_3:: zxy||
 |norm_3::zy||
 |norm_3::zyx||
 
@@ -202,19 +202,19 @@ class norm_3;
 
 `norm_3`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a> norm_3 コンス トラクター
+## <a name="ctor"></a>norm_3 コンストラクター
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-## <a name="syntax"></a>構文
+### <a name="syntax"></a>構文
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,31 +257,31 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-## <a name="a-namesize-size-constant"></a><a name="size"> 定数のサイズ
+## <a name="a-namesize-size-constant"></a><a name="size"> サイズ定数
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

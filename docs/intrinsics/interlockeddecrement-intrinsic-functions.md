@@ -1,6 +1,6 @@
 ---
-title: _InterlockedDecrement の組み込み関数
-ms.date: 12/17/2018
+title: 組み込み関数の _InterlockedDecrement
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,22 +44,22 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: d180ed8d416483d1be5e2bbd52f1a8752996f3f9
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627487"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857919"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
+# <a name="_interlockeddecrement-intrinsic-functions"></a>組み込み関数の _InterlockedDecrement
 
 **Microsoft 固有の仕様**
 
-Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)関数。
+Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)関数のコンパイラ組み込みサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 long _InterlockedDecrement(
    long * lpAddend
 );
@@ -98,23 +98,24 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*lpAddend*<br/>
+*Lpaddend*\
 [入力、出力]デクリメントする変数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 戻り値は、デクリメントして生成された値です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_InterlockedDecrement`、 `_InterlockedDecrement16`、 `_InterlockedDecrement64`|x86、ARM、x64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
+|`_InterlockedDecrement`、 `_InterlockedDecrement16`|x86、ARM、x64、ARM64|
+|`_InterlockedDecrement64`|ARM、x64、ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM、ARM64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<に存在します。 h >
 
 ## <a name="remarks"></a>Remarks
 
@@ -122,13 +123,13 @@ __int64 _InterlockedDecrement64_nf(
 
 `_InterlockedDecrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedDecrement16` は 16 ビット整数値および `_InterlockedDecrement64` は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスを持つ組み込みは、メモリバリアとしては機能しません。
 
-`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
+`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、「 [align](../cpp/align-cpp.md)」を参照してください。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // compiler_intrinsics_interlocked.cpp
@@ -196,8 +197,10 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+**Microsoft 固有の仕様はここまで**
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
+## <a name="see-also"></a>参照
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
+[キーワード](../cpp/keywords-cpp.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

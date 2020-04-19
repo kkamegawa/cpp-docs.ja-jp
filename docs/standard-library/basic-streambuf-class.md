@@ -94,14 +94,14 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b43c2291499af87f2be1e5bec25717a30c28bfd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524678"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688422"
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf クラス
+# <a name="basic_streambuf-class"></a>basic_streambuf クラス
 
 ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。
 
@@ -114,19 +114,19 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem* \
 [char_type](#char_type)。
 
-*Tr*<br/>
+*Tr* \
 文字の [traits_type](#traits_type)。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。 クラスのオブジェクト`basic_streambuf`型の要素を含むストリームを制御するのに役立ちます*Tr*とも呼ばれる、 [char_type](#char_type)、その文字特性はクラスによって決まります[char_traits](../standard-library/char-traits-struct.md)とも呼ばれる、 [traits_type](#traits_type)します。
+クラステンプレートは、ストリームの特定の表現との間での要素の伝送を制御する、ストリームバッファーを派生させるための抽象基本クラスを記述します。 クラス `basic_streambuf` のオブジェクトは、 [char_type](#char_type)とも呼ばれる*Tr*型の要素を含むストリームを制御するのに役立ちます。この型の文字特性は、 [traits_type](#traits_type)とも呼ばれる[char_traits](../standard-library/char-traits-struct.md)クラスによって決まります。
 
 各ストリーム バッファーは、抽出 (入力) 用ストリームと挿入 (出力) 用ストリームという 2 つの独立したストリームを概念上制御します。 ただし、特定の表現によってこれらのストリームのいずれか、もしくは両方がアクセス不可になる場合があります。 通常、そのような表現は、これら 2 つのストリームの何らかの関係を保持しています。 たとえば、[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> オブジェクトの出力ストリームに挿入したものが、その入力ストリームから後で抽出するものになります。 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> オブジェクトの 1 つのストリームを配置するときは、もう一方のストリームを直列に配置します。
 
-テンプレート クラス `basic_streambuf` のパブリック インターフェイスでは、すべてのストリーム バッファーに共通な操作をそれぞれに特殊化して行えます。 保護されたインターフェイスでは、ストリームの特定の表現を動作させるのに必要な操作を行えます。 プロテクト仮想メンバー関数を使用することにより、ストリームの特定の表現に対する派生ストリーム バッファーの動作を調整できます。 このライブラリ内の各派生ストリーム バッファーで、各バッファーのプロテクト仮想メンバー関数に特殊化した動作方法について記述します。 基底クラスに対する既定の動作については (多くの場合、何の動作も発生しない)、このトピックで説明します。
+クラステンプレートへのパブリックインターフェイス `basic_streambuf` は、すべてのストリームバッファーに共通する操作を提供します。ただし、特に特殊化されています。 保護されたインターフェイスでは、ストリームの特定の表現を動作させるのに必要な操作を行えます。 プロテクト仮想メンバー関数を使用することにより、ストリームの特定の表現に対する派生ストリーム バッファーの動作を調整できます。 このライブラリ内の各派生ストリーム バッファーで、各バッファーのプロテクト仮想メンバー関数に特殊化した動作方法について記述します。 基底クラスに対する既定の動作については (多くの場合、何の動作も発生しない)、このトピックで説明します。
 
 残りのプロテクト メンバー関数は、ストリームとのバッファーのやり取りに提供されるストレージとのコピーのやり取りを制御します。 たとえば、入力バッファーには以下の特性を指定できます。
 
@@ -224,7 +224,7 @@ class basic_streambuf;
 |-|-|
 |[operator=](#op_eq)|別の `basic_streambuf` オブジェクトの値をこのオブジェクトに割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<streambuf>
 
@@ -242,14 +242,14 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*右*\
 この `basic_streambuf` オブジェクトに値を設定するために使用される `basic_streambuf` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
 最初の保護されたコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、`locale::classic` をロケール オブジェクトに格納します。 詳細については、「[locale::classic](../standard-library/locale-class.md#classic)」を参照してください。
 
-2 番目のプロテクト コンス トラクターのコピー、ポインターとロケールから*右*します。
+2番目のプロテクトコンストラクターは、ポインターとロケールを*右*からコピーします。
 
 ## <a name="char_type"></a>  basic_streambuf::char_type
 
@@ -297,7 +297,7 @@ char_type *epptr() const;
 
 ## <a name="gbump"></a>  basic_streambuf::gbump
 
-追加するプロテクト関数*カウント*入力バッファーのネクスト ポインターにします。
+入力バッファーの次のポインターに*カウント*を追加するプロテクト関数。
 
 ```cpp
 void gbump(int count);
@@ -305,7 +305,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*カウント*\
 マウス ポインターを進める量。
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
@@ -364,7 +364,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Loc*<br/>
+*@No__t_1*
 ロケールへの参照。
 
 ### <a name="remarks"></a>Remarks
@@ -385,7 +385,7 @@ streamsize in_avail();
 
 ### <a name="remarks"></a>Remarks
 
-場合、[読み取り位置](../standard-library/basic-streambuf-class.md)は、使用可能なメンバー関数を返します[egptr](#egptr) - [gptr](#gptr)します。 それ以外の場合は、[showmanyc](#showmanyc) を返します。
+[読み取り位置](../standard-library/basic-streambuf-class.md)が使用可能な場合、メンバー関数は[egptr](#egptr)  - [gptr](#gptr)を返します。 それ以外の場合は、[showmanyc](#showmanyc) を返します。
 
 ### <a name="example"></a>例
 
@@ -431,12 +431,12 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*右*\
 このオブジェクトに値を代入するために使用される `basic_streambuf` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト メンバー演算子がからコピー*右*入力バッファーと出力バッファーを制御するポインター。 また、`right.`[getloc()](#getloc) を `locale object` に格納します。 `*this` を返します。
+プロテクトメンバー演算子は、入力バッファーと出力バッファーを制御するポインターを*右*からコピーします。 また、`right.`[getloc()](#getloc) を `locale object` に格納します。 `*this` を返します。
 
 ## <a name="overflow"></a>  basic_streambuf::overflow
 
@@ -448,16 +448,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*<br/>
-バッファーまたは **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) に挿入する文字。
+*メタ \ (_s)*
+バッファーまたは **traits_type::** [eof](../standard-library/char-traits-struct.md#eof) に挿入する文字。
 
 ### <a name="return-value"></a>戻り値
 
-関数は失敗すると、**traits_type::eof** を返すか、例外をスローします。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。 既定の動作では、**traits_type::eof** を返します。
+関数は失敗すると、**traits_type::eof** を返すか、例外をスローします。 それ以外の場合は、**traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。 既定の動作では、**traits_type::eof** を返します。
 
 ### <a name="remarks"></a>Remarks
 
-場合 *\_メタ* にも等しく**traits_type::eof**、プロテクト仮想メンバー関数は、要素を挿入しようと**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*) 出力ストリームにします。 これはさまざまな方法で行うことができます。
+*@No__t_1Meta*が**traits_type:: eof**と等しくない場合、プロテクト仮想メンバー関数は、要素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) を出力ストリームに挿入しようとします。 これはさまざまな方法で行うことができます。
 
 - `write position` が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 
@@ -483,8 +483,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*<br/>
-バッファーまたは **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) に挿入する文字。
+*メタ \ (_s)*
+バッファーまたは **traits_type::** [eof](../standard-library/char-traits-struct.md#eof) に挿入する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -492,7 +492,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>Remarks
 
-場合 *\_メタ* 等しく **traits_type::eof**、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*)。 この関数は、さまざまな方法で要素を戻すことができます。
+*@No__t_1Meta*が**traits_type:: eof**と等しい場合、プッシュバックする要素は、実際には、現在の要素の前に既にストリームにある要素になります。 それ以外の場合、その要素は**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) に置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
 - 戻り位置が使用可能な場合は、戻り位置に要素を格納し、入力バッファーのネクスト ポインターをデクリメントできます。
 
@@ -514,7 +514,7 @@ char_type *pbase() const;
 
 ## <a name="pbump"></a>  basic_streambuf::pbump
 
-追加するプロテクト関数*カウント*出力バッファーのネクスト ポインターにします。
+出力バッファーの次のポインターに*カウント*を追加するプロテクト関数。
 
 ```cpp
 void pbump(int count);
@@ -522,7 +522,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*カウント*\
 書き込み位置を前方に移動する文字数。
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
@@ -555,7 +555,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Loc*<br/>
+*@No__t_1*
 ロケールへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -582,13 +582,13 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
-に対して相対的にシークする位置 *_Way*します。
+*オフ \ (_r)*
+に対して相対的にシークする*位置。*
 
-*_Way*<br/>
+@No__t_1*方法 (_d)*
 オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*<br/>
+*@No__t_1*
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -597,7 +597,7 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="remarks"></a>Remarks
 
-に対して相対的にポインターを移動 *_Way*します。
+ポインターを相対*方向*に移動します。
 
 ## <a name="pubseekpos"></a>  basic_streambuf::pubseekpos
 
@@ -609,10 +609,10 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*<br/>
+*Sp \ (_s)*
 シークする位置。
 
-*_Which*<br/>
+*@No__t_1*
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -635,10 +635,10 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Buffer*<br/>
+*バッファーの \ (_l)*
 このインスタンス化の `char_type` を指すポインター。
 
-*count*<br/>
+*カウント*\
 バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
@@ -655,7 +655,7 @@ int pubsync();
 
 ### <a name="return-value"></a>戻り値
 
-返します[同期](#sync)-1 の場合、または失敗します。
+[同期](#sync)を返します。失敗した場合は-1 を返します。
 
 ## <a name="sbumpc"></a>  basic_streambuf::sbumpc
 
@@ -671,7 +671,7 @@ int_type sbumpc();
 
 ### <a name="remarks"></a>Remarks
 
-読み取り位置が使用可能な場合、メンバー関数は **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr)) を返し、入力バッファーのネクスト ポインターをインクリメントします。 それ以外の場合は、[uflow](#uflow) を返します。
+読み取り位置が使用可能な場合、メンバー関数は **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr)) を返し、入力バッファーのネクスト ポインターをインクリメントします。 それ以外の場合は、[uflow](#uflow) を返します。
 
 ### <a name="example"></a>例
 
@@ -711,13 +711,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
-に対して相対的にシークする位置 *_Way*します。
+*オフ \ (_r)*
+に対して相対的にシークする*位置。*
 
-*_Way*<br/>
+@No__t_1*方法 (_d)*
 オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*<br/>
+*@No__t_1*
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -748,10 +748,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*<br/>
+*Sp \ (_s)*
 シークする位置。
 
-*_Which*<br/>
+*@No__t_1*
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -778,10 +778,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Buffer*<br/>
+*バッファーの \ (_l)*
 バッファーへのポインター。
 
-*count*<br/>
+*カウント*\
 バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
@@ -804,18 +804,18 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Gbeg*<br/>
+*_Gbeg* \
 バッファーの先頭を指すポインター。
 
-*_Gnext*<br/>
+*次の \ (_s)*
 バッファーの中心付近を指すポインター。
 
-*_Gend*<br/>
+*Gend \ (_c)*
 バッファーの末尾を指すポインター。
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-格納するプロテクト関数 *_Pbeg*開始ポインターと *_Pend*で出力バッファーの最後のポインター。
+*_Pbeg*を開始ポインターに格納し、出力バッファーのエンドポインターで*保留*するプロテクト関数。
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -823,10 +823,10 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pbeg*<br/>
+*_Pbeg* \
 バッファーの先頭を指すポインター。
 
-*_Pend*<br/>
+*保留 \ (_r)*
 バッファーの末尾を指すポインター。
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
@@ -843,7 +843,7 @@ int_type sgetc();
 
 ### <a name="remarks"></a>Remarks
 
-読み取り位置が使用可能な場合、メンバー関数は **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)) を返します。 それ以外の場合は、[underflow](#underflow) を返します。
+読み取り位置が使用可能な場合、メンバー関数は **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)) を返します。 それ以外の場合は、[underflow](#underflow) を返します。
 
 ### <a name="example"></a>例
 
@@ -867,7 +867,7 @@ int main( )
 
 ## <a name="sgetn"></a>  basic_streambuf::sgetn
 
-最大抽出*カウント*入力バッファーから文字し、指定されたバッファーに格納*ptr*します。
+最大文字*数*を入力バッファーから抽出し、指定されたバッファー *ptr*に格納します。
 
 渡された値が正しいことの確認を呼び出し元に依存するため、このメソッドは安全ではない可能性があります。
 
@@ -879,10 +879,10 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr* \
 抽出した文字を格納するバッファー。
 
-*count*<br/>
+*カウント*\
 読み取られる要素数。
 
 ### <a name="return-value"></a>戻り値
@@ -946,7 +946,7 @@ int_type snextc();
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は [sbumpc](#sbumpc) を呼び出し、その関数が **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) を返す場合には、**traits_type::eof** を返します。 それ以外の場合は、[sgetc](#sgetc) を返します。
+メンバー関数は [sbumpc](#sbumpc) を呼び出し、その関数が **traits_type::** [eof](../standard-library/char-traits-struct.md#eof) を返す場合には、**traits_type::eof** を返します。 それ以外の場合は、[sgetc](#sgetc) を返します。
 
 ### <a name="example"></a>例
 
@@ -982,7 +982,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*<br/>
+*Ch \ (_s)*
 文字。
 
 ### <a name="return-value"></a>戻り値
@@ -991,7 +991,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>Remarks
 
-戻り位置が使用可能な場合と *_Ch*メンバー関数をデクリメントは、その位置に格納されている文字を返しますし、入力バッファーのネクスト ポインターにと同じ比較**traits_type::** [ 。to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 それ以外の場合は、[pbackfail](#pbackfail)( `_Ch`) を返します。
+戻り位置が使用可能であり、その位置に格納されている文字と等しいかどうか*を比較する*場合、メンバー関数は、入力バッファーの次のポインターをデクリメントし、 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`) を返します。 それ以外の場合は、[pbackfail](#pbackfail)( `_Ch`) を返します。
 
 ### <a name="example"></a>例
 
@@ -1030,7 +1030,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*<br/>
+*Ch \ (_s)*
 文字。
 
 ### <a name="return-value"></a>戻り値
@@ -1039,7 +1039,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>Remarks
 
-場合、`write position`が使用可能なのメンバー関数は *_Ch* 、書き込み位置で、出力バッファーのネクスト ポインターをインクリメントして返します**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). それ以外の場合は、[overflow](#overflow)( `_Ch`) を返します。
+@No__t_0 が使用可能な場合、メンバー関数は、書き込み位置に " *Ch* " を格納し、出力バッファーの次のポインターをインクリメントして、 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`) を返します。 それ以外の場合は、[overflow](#overflow)( `_Ch`) を返します。
 
 ### <a name="example"></a>例
 
@@ -1073,10 +1073,10 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr* \
 文字列。
 
-*count*<br/>
+*カウント*\
 文字数。
 
 ### <a name="return-value"></a>戻り値
@@ -1206,7 +1206,7 @@ void swap(basic_streambuf& right);
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数と交換*右*を制御するすべてのポインター、 `input buffer` 、`output buffer`します。 `right.`[getloc()](#getloc) も `locale` オブジェクトと交換します。
+プロテクトメンバー関数は、`input buffer` と `output buffer` を制御するすべてのポインターを*右*に交換します。 `right.`[getloc()](#getloc) も `locale` オブジェクトと交換します。
 
 ## <a name="sync"></a>  basic_streambuf::sync
 
@@ -1246,7 +1246,7 @@ virtual int_type uflow();
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は、現在の要素 **ch** を入力バッファーから抽出しようとし、現在のストリームの位置を進め、**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**) として要素を返します。 これはさまざまな方法で行うことができます。
+プロテクト仮想メンバー関数は、現在の要素 **ch** を入力バッファーから抽出しようとし、現在のストリームの位置を進め、**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**) として要素を返します。 これはさまざまな方法で行うことができます。
 
 - 読み取り位置が使用可能な場合は、読み取り位置に格納されている要素として **ch** を使用し、入力バッファーのネクスト ポインターを進めます。
 
@@ -1254,7 +1254,7 @@ virtual int_type uflow();
 
 - 一般的な入力ストリームと出力ストリームがあるストリーム バッファーの場合、出力バッファーの先頭とネクスト ポインターの間の一部またはすべての要素をいくつかの外部の宛先に書き出すことで、読み取り位置を使用可能にすることができます。 または、入力バッファーに新しい記憶域または追加の記憶域を割り当てることができます。 その後、関数はいくつかの外部ソースから 1 つまたは複数の要素を読み取ります。
 
-関数は失敗すると、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) を返すか、例外をスローします。 それ以外の場合、上記のように変換された入力ストリームの現在の要素 `ch` を返して、入力バッファーのネクスト ポインターを進めます。 既定の動作では、[underflow](#underflow) を呼び出し、その関数が **traits_type::eof** を返す場合は、**traits_type::eof** を返します。 それ以外の場合、関数は上記のように変換された入力ストリームの現在の要素 **ch** を返して、入力バッファーのネクスト ポインターを進めます。
+関数は失敗すると、**traits_type::** [eof](../standard-library/char-traits-struct.md#eof) を返すか、例外をスローします。 それ以外の場合、上記のように変換された入力ストリームの現在の要素 `ch` を返して、入力バッファーのネクスト ポインターを進めます。 既定の動作では、[underflow](#underflow) を呼び出し、その関数が **traits_type::eof** を返す場合は、**traits_type::eof** を返します。 それ以外の場合、関数は上記のように変換された入力ストリームの現在の要素 **ch** を返して、入力バッファーのネクスト ポインターを進めます。
 
 ## <a name="underflow"></a>  basic_streambuf::underflow
 
@@ -1300,10 +1300,10 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr* \
 抽出した文字を格納するバッファー。
 
-*count*<br/>
+*カウント*\
 抽出する要素数。
 
 ### <a name="return-value"></a>戻り値
@@ -1312,7 +1312,7 @@ virtual streamsize xsgetn(
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数を抽出して最大*数*入力ストリームから要素を繰り返し呼び出す場合と[sbumpc](#sbumpc)、開始位置として、配列に格納し、 *ptr*. 実際に抽出された要素の数を返します。
+プロテクト仮想メンバー関数は、 [sbumpc](#sbumpc)を繰り返し呼び出した場合と同じように、入力ストリームから最大*数*の要素を抽出し、それらを*ptr*で始まる配列に格納します。 実際に抽出された要素の数を返します。
 
 ## <a name="xsputn"></a>  basic_streambuf::xsputn
 
@@ -1324,10 +1324,10 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr* \
 挿入する要素へのポインター。
 
-*count*<br/>
+*カウント*\
 挿入する要素の数。
 
 ### <a name="return-value"></a>戻り値
@@ -1336,10 +1336,10 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は最大挿入*カウント*要素を出力ストリームを繰り返し呼び出す場合と[sputc](#sputc)、開始位置として、配列から*ptr*します。 出力ストリームに文字を挿入がすべて停止 1 回*数*文字が書き込まれた、または呼び出す場合`sputc( count)`を返します`traits::eof()`します。 実際に挿入された要素の数を返します。
+プロテクト仮想メンバー関数は、 *ptr*から始まる配列から、 [sputc](#sputc)を繰り返し呼び出した場合と同じように、最大*数*の要素を出力ストリームに挿入します。 すべての*カウント*文字が書き込まれるか、または `sputc( count)` を呼び出すと `traits::eof()` が返されると、出力ストリームへの文字の挿入は停止します。 実際に挿入された要素の数を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

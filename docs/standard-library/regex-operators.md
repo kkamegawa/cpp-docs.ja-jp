@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524470"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689075"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 演算子
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*右*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 さまざまなオブジェクトが他方より小さいかどうかの比較。
 
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*右*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-各テンプレート演算子は、その引数を文字列型に変換し、場合にのみ true を返しますの変換後の値*左*の変換後の値よりも小さい*右*します。
+各テンプレート演算子は引数を文字列型に変換し、 *left*の変換後の値が*right*の変換された値より小さい場合にのみ true を返します。
 
 ### <a name="example"></a>例
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>  演算子&lt;&lt;
+## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
 ストリームに sub_match を挿入します。
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem* \
 要素型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*os*<br/>
+*os* \
 出力ストリーム。
 
-*right*<br/>
+*右*\
 挿入するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a>  operator&lt;=
 
 さまざまなオブジェクトが他方以下かどうかの比較。
 
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*右*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*右*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -486,11 +486,11 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 テンプレート演算子は、その引数を文字列型に変換するとき、次の変換のうち最初に当てはまるものを使用します。
 
-- テンプレート クラス `match_results` または `sub_match` の特殊化である型の引数が、`str` メンバー関数の呼び出しにより変換される
+型がクラステンプレート `match_results` または `sub_match` の特殊化である引数は、`str` メンバー関数を呼び出すことによって変換されます。
 
-- テンプレート クラス `basic_string` の特殊化である型の引数が、変更されない
+クラステンプレート `basic_string` の特殊化である型の引数は変更されません。
 
-- その他のすべての引数の型が、テンプレート クラス `basic_string` の適切な特殊化のコンストラクターに引数の値を渡すことによって変換される
+その他のすべての引数の型は、クラステンプレート `basic_string` の適切な特殊化のために引数値をコンストラクターに渡すことによって変換されます。
 
 ### <a name="example"></a>例
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 さまざまなオブジェクトが他方より大きいかどうかの比較。
 
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*右*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a>  operator&gt;=
 
 さまざまなオブジェクトが他方以上かどうかの比較。
 
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 反復子の型。
 
-*IOtraits*<br/>
+*Iotraits* \
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*Alloc* \
 アロケーター クラス。
 
-*left*<br/>
+*左*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*右*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Regex_constants クラス](../standard-library/regex-constants-class.md)\
+[Regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[Regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[Regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

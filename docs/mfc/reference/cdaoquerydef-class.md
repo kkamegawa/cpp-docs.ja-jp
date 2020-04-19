@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399747"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef クラス
 
@@ -435,9 +435,9 @@ void GetFieldInfo(
 
 - AFX_DAO_PRIMARY_INFO (既定値) の名前、種類、サイズ、属性
 
-- プライマリ AFX_DAO_SECONDARY_INFO 情報に加えて: 必要な序数の位置、長さ 0 を許可する、ソース フィールド、外部名、ソース テーブル、照合順序
+- プラス AFX_DAO_SECONDARY_INFO プライマリ情報:必要に応じて、序数の位置 0 の長さ、ソース フィールド、外部名、ソース テーブル、照合順序を許可します。
 
-- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて: 既定値、入力テキスト、検証規則
+- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて:既定値、入力テキスト、検証規則
 
 *lpszName*<br/>
 名前で検索の目的のフィールドの名前を含む文字列。 使用することができます、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)します。

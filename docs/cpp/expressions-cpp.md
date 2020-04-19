@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: d0d509341cd63b9a5e2a13271a2e799c95f44df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184017"
 ---
 # <a name="expressions-c"></a>式 (C++)
 
@@ -48,7 +48,7 @@ C++ では、演算子はオーバーロード可能であり、意味をユー�
 
 - [オーバー ロードされた演算子](../cpp/operator-overloading.md)
 
-- [typeid](../windows/typeid-cpp-component-extensions.md)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C +/cli CLI)
 
     > [!NOTE]
     >  組み込み型の演算子はオーバーロードできません。動作は定義済みです。

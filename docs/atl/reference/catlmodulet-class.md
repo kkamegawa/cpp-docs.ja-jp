@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: 0d7673d634bad2d20dae63e4293f12e5530c4acd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd207038a92b944bf95575f0e0c820b8f09d615
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260150"
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT クラス
 

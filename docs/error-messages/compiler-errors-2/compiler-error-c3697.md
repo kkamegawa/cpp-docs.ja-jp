@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3697
 ms.assetid: 2d3f63c4-b7f8-421d-a7a5-2bf17fd054f9
-ms.openlocfilehash: 55eadd55af8d4e6f088a0d0eb732d820242cae66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e642c744bbce5db4bb341a32769b2d9f74654044
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540453"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758061"
 ---
 # <a name="compiler-error-c3697"></a>コンパイラ エラー C3697
 
-「修飾子」: この修飾子では使用できません ' ^'
+' qualifier ': この修飾子を ' ^ ' で使用することはできません
 
-追跡ハンドル (^) は、意図していない修飾子に適用されました。
+追跡ハンドル (^) が、設計されていない修飾子に適用されました。
 
 次の例では、C3697 が生成されます。
 
-```
+```cpp
 // C3697.cpp
 // compile with: /clr
 using namespace System;

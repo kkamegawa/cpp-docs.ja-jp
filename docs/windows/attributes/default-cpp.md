@@ -1,5 +1,5 @@
 ---
-title: 既定 (C++ COM 属性)
+title: default (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 1c9c8cd9a6bf0d6ea34db5d62d7767874b4dd4b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560616"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501682"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,17 +33,17 @@ ms.locfileid: "50560616"
 既定のインターフェイスが指定されていない場合は、最初に見つかったソース以外のインターフェイスが既定値として使用されます。
 
 *interface2*<br/>
-(省略可能)既定のソース インターフェイス。 このインターフェイスを指定する場合は、 [source](source-cpp.md) 属性も使用する必要があります。
+Optional既定のソースインターフェイス。 このインターフェイスを指定する場合は、 [source](source-cpp.md) 属性も使用する必要があります。
 
 既定のソース インターフェイスが指定されていない場合は、最初のソース インターフェイスが既定値として使用されます。
 
 ## <a name="remarks"></a>Remarks
 
-**default** C++ 属性には、 [default](/windows/desktop/Midl/default) MIDL 属性と同じ機能があります。 また、 **default** 属性は、 [case](case-cpp.md) 属性と共に使用されます。
+**default** C++ 属性には、 [default](/windows/win32/Midl/default) MIDL 属性と同じ機能があります。 また、 **default** 属性は、 [case](case-cpp.md) 属性と共に使用されます。
 
 ## <a name="example"></a>例
 
-次のコードはどのように**既定**をコクラスの定義で指定するため`ICustomDispatch`既定のプログラミング インターフェイスとして。
+次のコードは、既定のプログラミングインターフェイスとしてを指定`ICustomDispatch`するために、コクラスの定義で default を使用する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,9 +99,9 @@ int main() {
 
 |||
 |-|-|
-|**対象**|**クラス**、**構造体**、データ メンバー|
+|**対象**|**クラス**、**構造体**、データメンバー|
 |**反復可能**|いいえ|
-|**必要な属性**|**コクラス**(に適用すると**クラス**または**構造体**)|
+|**必要な属性**|**コクラス**(**クラス**または**構造体**に適用される場合)|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。

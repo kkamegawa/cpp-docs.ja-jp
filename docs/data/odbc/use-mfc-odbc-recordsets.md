@@ -5,12 +5,12 @@ helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-ms.openlocfilehash: 72e394ae8d8bef72acf62edd81b356b76b1b18c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d6a2b49f518fd9eaacf589e893bc240d1409a4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329778"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>MFC ODBC レコードセットの使用
 

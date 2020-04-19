@@ -1,11 +1,11 @@
 ---
 title: ctanh、ctanhf、ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941979"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -68,20 +71,20 @@ _Lcomplex ctanhl(
 
 ## <a name="return-value"></a>戻り値
 
-複素ハイパーボリック タンジェント*z*します。
+*Z*の複合ハイパーボリックタンジェント。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|none|_DOMAIN|
-|± ∞ (tan、tanf)|INVALID|_DOMAIN|
+|±∞ (tan, tanf)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ctanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ctanh**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**ctanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ctanh** **は常に値を**取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ctanh**、 **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573255"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513915"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-クライアントとサーバー アプリケーションは、次の操作、表現の型を転送の型に関連付けるようにコンパイラに指示します。
+クライアントおよびサーバーアプリケーションが操作する提示された型を送信された型で関連付けるように、コンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "50573255"
 ### <a name="parameters"></a>パラメーター
 
 *type*<br/>
-クライアントとサーバー間で送信されるデータ型を指定します。
+クライアントとサーバーの間で転送されるデータ型を指定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Transmit_as** C++ 属性と同じ機能を持つ、 [transmit_as](/windows/desktop/Midl/transmit-as) MIDL 属性。
+**Transmit_as** C++属性には、 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードの使い方を示しています、 **transmit_as**属性。
+次のコードは、 **transmit_as**属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp

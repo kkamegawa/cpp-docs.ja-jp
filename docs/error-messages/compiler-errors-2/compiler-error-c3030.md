@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3030
 ms.assetid: de92fd7e-29ba-46e8-b43b-f4b985cd74de
-ms.openlocfilehash: 31ae3f55cd0bf7a15dbea2cf941b00dc048d825d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f22c01eb60ead22027cad2f59d9d2e95e01521
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757320"
 ---
 # <a name="compiler-error-c3030"></a>コンパイラ エラー C3030
 
@@ -21,7 +21,7 @@ reduction 句などの特定の句には、値パラメーターのみを渡す�
 
 次の例では C3030 が生成されます。
 
-```
+```cpp
 // C3030.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

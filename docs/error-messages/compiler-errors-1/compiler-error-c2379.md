@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2379
 ms.assetid: 37dc3015-a4af-4341-bbf3-da6150df7e51
-ms.openlocfilehash: 1b3256efb6c0ff8236ba80a9ac681780f34fa8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f096791a6120023e079b93452a4b35c669db2139
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643847"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302108"
 ---
 # <a name="compiler-error-c2379"></a>コンパイラ エラー C2379
 
-仮パラメーターの数が昇格するときに別の種類
+昇格時に仮パラメーターの数値の型が異なります
 
-指定したパラメーターの型は、互換性のある、以前の宣言で型の既定のプロモーションが。 これは ANSI C でエラー ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) と Microsoft の拡張機能の警告 (**/Ze**)。
+指定されたパラメーターの型は、既定の昇格を通じて、前の宣言の型と互換性がありません。 これは、ANSI C ([/za](../../build/reference/za-ze-disable-language-extensions.md)) ではエラーであり、Microsoft 拡張機能 ( **/ze**) では警告が発生します。
 
 次の例では、C2379 が生成されます。
 
-```
+```c
 // C2379.c
 // compile with: /Za
 void func();

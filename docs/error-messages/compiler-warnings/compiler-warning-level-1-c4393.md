@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4393
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
-ms.openlocfilehash: 21ea45963c7e3d2afe74ebf4aa5207629ec9c8db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92cb9a063a2f6e4660c3f84516527c1417c55e46
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594250"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966147"
 ---
 # <a name="compiler-warning-level-1-c4393"></a>コンパイラの警告 (レベル 1) C4393
 
-'var': const リテラル データ メンバーに影響を与えません無視されます。
+' var ': const はリテラルデータメンバーに影響しません。無効
 
-A[リテラル](../../windows/literal-cpp-component-extensions.md)データ メンバーを定数としても指定されました。  リテラル データ メンバーには、const からわかるように、ためする必要はありませんを追加する宣言に定数。
+[リテラル](../../extensions/literal-cpp-component-extensions.md)データメンバーも const として指定されました。  リテラルデータメンバーは const を意味するため、宣言に const を追加する必要はありません。
 
 次の例では、C4393 が生成されます。
 
-```
+```cpp
 // C4393.cpp
 // compile with: /clr /W1 /c
 ref struct Y1 {

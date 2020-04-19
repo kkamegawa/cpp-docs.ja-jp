@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326967"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857347"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 
@@ -24,17 +24,17 @@ ms.locfileid: "51326967"
 [= & qualified-name :: member-name];
 ```
 
-1. 宣言指定子: 
+1. 宣言指定子:
 
    - ストレージ クラスの指定子 (省略可能)。
 
-   - 省略可能な**const**や**揮発性**指定子。
+   - 省略可能な**const**や**volatile**指定子。
 
    - 型指定子: 型の名前。  これは指されるメンバーのクラスではなく、種類です。
 
-1. 宣言子: 
+1. 宣言子:
 
-   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
+   - オプションの Microsoft 固有の修飾子。 詳細については、「 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)」を参照してください。
 
    - 指されるメンバーが含まれるクラスの修飾名。
 
@@ -42,7 +42,7 @@ ms.locfileid: "51326967"
 
    - __\*__ 演算子。
 
-   - 省略可能な**const**や**揮発性**指定子。
+   - 省略可能な**const**や**volatile**指定子。
 
    - メンバーへのポインターを指定する識別子。
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-前の例では、`pwCaption`クラスのメンバーへのポインターは、`Window`型を持つ`char*`します。 `pwCaption` の型は `char * Window::* ` です。 次のコードでは、メンバー関数 `SetCaption` および `GetCaption` へのポインターを宣言します。
+前の例では、`pwCaption` は型 `char*`を持つクラス `Window` のメンバーへのポインターです。 `pwCaption` の型は `char * Window::* ` です。 次のコードでは、メンバー関数 `SetCaption` および `GetCaption` へのポインターを宣言します。
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +104,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-間の差、 **.**<strong>\*</strong>と**->** <strong>\*</strong>演算子 (メンバーへのポインター演算子) は、 **.**<strong>\*</strong>演算子は、メンバーを選択しますオブジェクトまたはオブジェクトの参照を指定すると、while、 **->** <strong>\*</strong>演算子。ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。
+との差 **。** <strong>\*</strong>および **->** <strong>\*</strong>演算子 (メンバーへのポインター演算子) は、**です。** <strong>\*</strong>演算子は、オブジェクト参照またはオブジェクト参照を指定してメンバーを選択します。一方、 **->** <strong>\*</strong>演算子は、ポインターを介してメンバーを選択します。 (これらの演算子の詳細については、「[メンバーへのポインター演算子を使用した式](../cpp/pointer-to-member-operators-dot-star-and-star.md)」を参照してください)。
 
-メンバーへのポインター演算子の結果は、メンバーの型: この場合、`char *`します。
+メンバーへのポインター演算子の結果は、メンバーの型 (この場合は `char *`) になります。
 
 次のコードでは、メンバーへのポインターを使用して、メンバー関数 `GetCaption` および `SetCaption` を呼び出します。
 
@@ -127,13 +127,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>メンバーへのポインターに関する制約
 
-静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 静的メンバーの 1 つだけのインスタンスは、通常アドレスの特定のクラスのすべてのオブジェクトが存在するため (**&**) 逆参照し、(<strong>\*</strong>) 演算子を使用できます。
+静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 特定のクラスのすべてのオブジェクトに対して静的メンバーのインスタンスが1つだけ存在するので、通常のアドレスの ( **&** ) 演算子と逆参照演算子 (<strong>\*</strong>) を使用できます。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>メンバーと仮想関数へのポインター
 
 メンバー関数へのポインターによる仮想関数の呼び出しは、関数が直接呼び出されているように機能します。v-table から正しい関数が検索され、呼び出されます。
 
-この場合も、仮想関数が正しく機能するうえで重要なことは、基底クラスへのポインターを介して仮想関数を呼び出すことです。 (仮想関数の詳細については、次を参照してください[仮想関数](../cpp/virtual-functions.md)。)。
+この場合も、仮想関数が正しく機能するうえで重要なことは、基底クラスへのポインターを介して仮想関数を呼び出すことです。 (仮想関数の詳細については、「[仮想関数](../cpp/virtual-functions.md)」を参照してください)。
 
 次のコードは、メンバー関数へのポインターを介して仮想関数を呼び出す方法を示しています。
 

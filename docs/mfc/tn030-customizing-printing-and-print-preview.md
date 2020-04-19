@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 30: 印刷と印刷プレビューのカスタマイズ'
+title: TN030:印刷と印刷プレビューのカスタマイズ
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305685"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>テクニカル ノート 30: 印刷と印刷プレビューのカスタマイズ
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030:印刷と印刷プレビューのカスタマイズ
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -40,13 +40,13 @@ MFC アプリケーションが標準的なメソッドを使用してを印刷�
 
 次に、頻繁に呼び出す必要があります`QueryAbort`バンドの描画中にします。 それ以外の場合、中止プロシージャが呼び出されないと、ユーザーが印刷ジョブを取り消すことができません。
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Print Preview: 電子ペーパーでは、ユーザー インターフェイス
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Print Preview:電子ペーパーでは、ユーザー インターフェイス
 
 印刷プレビューでは、基本的に、しようとプリンターのエミュレーションを表示します。 既定では、メイン ウィンドウのクライアント領域はウィンドウ内に完全に 1 つまたは 2 つのページを表示するために使用します。 ユーザーはより詳細に表示するページの領域にズーム インできます。 追加のサポートとユーザーをプレビュー モードでドキュメントを編集する許可も可能性があります。
 
 ## <a name="customizing-print-preview"></a>印刷プレビューのカスタマイズ
 
-この注は印刷プレビューの変更の側面の 1 つにすぎません。 プレビュー モードに UI を追加します。 その他の変更が可能であればには、このような変更がこの説明のスコープ外に出るは。
+印刷プレビューの変更の 1 つの側面にのみ説明します。プレビュー モードにする UI を追加します。 その他の変更が可能であればには、このような変更がこの説明のスコープ外に出るは。
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>プレビュー モードに UI を追加するには
 

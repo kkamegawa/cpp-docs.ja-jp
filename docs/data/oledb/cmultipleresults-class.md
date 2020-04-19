@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-ms.openlocfilehash: 0fb25d4106c04622a6bf5fd782432fc75b92c236
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bc1bb9ab1e0b6f5f8b2914e4249361ff37cce08
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230828"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults クラス
 

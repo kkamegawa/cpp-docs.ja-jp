@@ -1,22 +1,23 @@
 ---
-title: ABI の境界での移植性 (Modern C++)
-ms.date: 11/04/2016
+title: ABI の境界での移植性
+description: バイナリC++インターフェイスの境界で、C の呼び出し規約にインターフェイスを平坦化します。
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 3f72bc32e436c2f7a2f76ed6bbb9553b5e5be6b8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: b3b2b217739ff5900c8ef0329ff3e8909a3fe036
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220310"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303317"
 ---
-# <a name="portability-at-abi-boundaries-modern-c"></a>ABI の境界での移植性 (Modern C++)
+# <a name="portability-at-abi-boundaries"></a>ABI の境界での移植性
 
-バイナリ インターフェイス境界で十分に移植可能な型と規則を使用します。 「移植可能な型」は、C の組み込み型または C の組み込み型のみを含む構造体です。 クラス型は、呼び出し元と呼び出し先、呼び出し規則などのレイアウト、同意。 場合にのみ使用できます。これは、両方のコンパイラ設定と同じコンパイラでコンパイル時にのみ可能です。
+バイナリインターフェイスの境界では、十分に移植可能な型と規約を使用します。 "移植可能な型" は、C の組み込み型、または C の組み込み型のみを含む構造体です。 クラス型は、呼び出し元と呼び出し先がレイアウト、呼び出し規約などに同意する場合にのみ使用できます。これは、両方が同じコンパイラとコンパイラの設定でコンパイルされている場合にのみ可能です。
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>C の移植性のためのクラスをフラット化する方法
+## <a name="how-to-flatten-a-class-for-c-portability"></a>C の移植性のためにクラスを平坦化する方法
 
-呼び出し元が別のコンパイラ/言語でコンパイルすることがあり、に「フラット化」、 **extern"C"** 特定の呼び出し規約を使用した API:
+呼び出し元が別のコンパイラ/言語でコンパイルされる場合は、特定の呼び出し規約で**extern "C"** API を "平坦化" します。
 
 ```cpp
 // class widget {
@@ -32,8 +33,8 @@ extern "C" {        // functions using explicit "this"
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

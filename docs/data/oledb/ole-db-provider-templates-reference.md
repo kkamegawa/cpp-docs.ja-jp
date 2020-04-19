@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-ms.openlocfilehash: b7a90081d342d29be391bdf73f43a82ef4c5fbb5
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62283862"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB プロバイダー テンプレート リファレンス
 
@@ -52,7 +52,7 @@ OLE DB プロバイダーを実装するを必要とする`HACCESSOR`、タグ�
 開き、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。 セッション オブジェクトの必須のインターフェイスです。
 
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-OLE DB 実装[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))インターフェイスで、行を削除して、新しい行を挿入する既存の行の列の値の更新が可能です。
+OLE DB 実装[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))インターフェイスで、行を削除して、新しい行を挿入する既存の行の列の値の更新が可能です。
 
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
 このクラスから継承[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)と上書き[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)します。 `IRowsetCreatorImpl` 同じ機能を実行します。`IObjectWithSite`もにより、OLE DB プロパティが`DBPROPCANSCROLLBACKWARDS`と`DBPROPCANFETCHBACKWARDS`します。
@@ -67,13 +67,13 @@ OLE DB 実装[IRowsetChange](https://docs.microsoft.com/previous-versions/window
 プロパティを使用して行セット プロパティの実装では、コマンド クラスで定義されているマップを設定します。 行セットの必須のインターフェイスです。
 
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-OLE DB 実装[IRowsetLocate](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイスで、行セットから任意の行がフェッチされます。 で行セットの OLE DB のブックマークをサポートするには、このクラスから継承する行セットを確認します。
+OLE DB 実装[IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイスで、行セットから任意の行がフェッチされます。 で行セットの OLE DB のブックマークをサポートするには、このクラスから継承する行セットを確認します。
 
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。 通知を処理するコンシューマーの実装[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))そのコネクション ポイントでそれを登録します。
+実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。 通知を処理するコンシューマーの実装[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))そのコネクション ポイントでそれを登録します。
 
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-OLE DB 実装[IRowsetUpdate](https://docs.microsoft.com/previous-versions/windows/desktop/ms714401(v=vs.85))インターフェイスに加えられた変更の送信を遅延するコンシューマー [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))をデータ ソースし、データ転送する前に変更を元に戻します。
+OLE DB 実装[IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))インターフェイスに加えられた変更の送信を遅延するコンシューマー [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))をデータ ソースし、データ転送する前に変更を元に戻します。
 
 ## <a name="command-classes"></a>コマンド クラス
 
@@ -109,7 +109,7 @@ OLE DB プロパティのインターフェイスのさまざまなプロパテ�
 
 [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)
 
-OLE DB 実装[IErrorRecords](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスにレコードを追加して、データ メンバーからレコードを取得します。
+OLE DB 実装[IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスにレコードを追加して、データ メンバーからレコードを取得します。
 
 ## <a name="see-also"></a>関連項目
 

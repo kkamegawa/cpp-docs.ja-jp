@@ -16,19 +16,19 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-ms.openlocfilehash: 785972af55cdf594bb45b0257e626aa5344af60a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52638c8a28652cc958ebb3d774319ab37a3c46d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447464"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495760"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl クラス
 
-このクラスは、インプレース コントロールとコンテナー間の通信を支援するメソッドを提供します。
+このクラスは、インプレースコントロールとそのコンテナーとの間の通信を支援するためのメソッドを提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ class IOleInPlaceActiveObjectImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IOleInPlaceActiveObjectImpl`します。
+から`IOleInPlaceActiveObjectImpl`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -48,19 +48,19 @@ class IOleInPlaceActiveObjectImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|状況依存のヘルプを有効にします。 ATL の実装では、E_NOTIMPL を返します。|
-|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|モードレス ダイアログ ボックスを有効にします。 ATL の実装では、S_OK を返します。|
-|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|ウィンドウ ハンドルを取得します。|
-|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|コントロールは、コンテナーのドキュメント ウィンドウをアクティブ化または非アクティブ化されたときに通知します。 ATL の実装では、S_OK を返します。|
-|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|コントロールは、コンテナーの最上位レベルのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに通知します。 ATL の実装を返します|
-|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|コントロールに境界線のサイズを変更する必要があることを通知します。 ATL の実装では、S_OK を返します。|
-|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|コンテナーからのメニュー アクセス キーのメッセージを処理します。 ATL の実装では、E_NOTIMPL を返します。|
+|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|状況依存のヘルプを有効にします。 ATL 実装は E_NOTIMPL を返します。|
+|[IOleInPlaceActiveObjectImpl:: EnableModeless](#enablemodeless)|モードレスダイアログボックスを有効にします。 ATL 実装は S_OK を返します。|
+|[IOleInPlaceActiveObjectImpl:: GetWindow](#getwindow)|ウィンドウハンドルを取得します。|
+|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|コンテナーのドキュメントウィンドウがアクティブ化または非アクティブ化されたときに、コントロールに通知します。 ATL 実装は S_OK を返します。|
+|[IOleInPlaceActiveObjectImpl:: OnFrameWindowActivate](#onframewindowactivate)|コンテナーの最上位レベルのフレームウィンドウがアクティブ化または非アクティブ化されたときに、コントロールに通知します。 ATL の実装はを返します。|
+|[IOleInPlaceActiveObjectImpl:: ResizeBorder](#resizeborder)|境界線のサイズを変更する必要があることをコントロールに通知します。 ATL 実装は S_OK を返します。|
+|[IOleInPlaceActiveObjectImpl:: TranslateAccelerator](#translateaccelerator)|コンテナーからのメニューアクセラレータキーメッセージを処理します。 ATL 実装は E_NOTIMPL を返します。|
 
 ## <a name="remarks"></a>Remarks
 
-[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)インターフェイスは、インプレース コントロールとコンテナー間の通信を支援; たとえば、コントロールとコンテナーのアクティブな状態を通信し、コントロールに通知する必要があるサイズを変更します。自体。 クラス`IOleInPlaceActiveObjectImpl`の既定の実装を提供します。`IOleInPlaceActiveObject`サポートと`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject)インターフェイスは、インプレースコントロールとそのコンテナーとの間の通信を支援します。たとえば、コントロールとコンテナーのアクティブな状態を通信し、そのコントロール自体のサイズを変更する必要があることをコントロールに通知します。 クラス`IOleInPlaceActiveObjectImpl`は、の既定の`IOleInPlaceActiveObject`実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってをサポートします。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -70,9 +70,9 @@ class IOleInPlaceActiveObjectImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
 
 状況依存のヘルプを有効にします。
 
@@ -86,11 +86,11 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Windows SDK にします。
+Windows SDK の「 [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) 」を参照してください。
 
-##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless
+##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl:: EnableModeless
 
-モードレス ダイアログ ボックスを有効にします。
+モードレスダイアログボックスを有効にします。
 
 ```
 HRESULT EnableModeless(BOOL fEnable);
@@ -102,11 +102,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceActiveObject:: EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) 」を参照してください。
 
-##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow
+##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl:: GetWindow
 
-コンテナーは、コントロールのウィンドウ ハンドルを取得するには、この関数を呼び出します。
+コンテナーは、この関数を呼び出して、コントロールのウィンドウハンドルを取得します。
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -114,13 +114,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Remarks
 
-一部のコンテナーは、現在のウィンドウがある場合でも、ウィンドウなしにされているコントロールでは機能しません。 ATL の実装の場合、`CComControl::m_bWasOnceWindowless`データ メンバーは TRUE、E_FAIL を返します。 の場合\* *phwnd*が NULL でない`GetWindow`割り当てます*phwnd*コントロール クラスのデータ メンバーに`m_hWnd`S_OK を返します。
+現在ウィンドウに表示されている場合でも、一部のコンテナーはウィンドウなしで動作しません。 ATL の実装では、 `CComControl::m_bWasOnceWindowless`データメンバーが TRUE の場合、関数は E_FAIL を返します。 それ以外の\*場合、 *phwnd*が NULL `GetWindow`でない場合、は*phwnd*をコントロールクラス`m_hWnd`のデータメンバーに割り当て、S_OK を返します。
 
-参照してください[IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) Windows SDK にします。
+Windows SDK の「 [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) 」を参照してください。
 
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate
 
-コントロールは、コンテナーのドキュメント ウィンドウをアクティブ化または非アクティブ化されたときに通知します。
+コンテナーのドキュメントウィンドウがアクティブ化または非アクティブ化されたときに、コントロールに通知します。
 
 ```
 HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -132,11 +132,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[::ondocwindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) 」を参照してください。
 
-##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl:: OnFrameWindowActivate
 
-コントロールは、コンテナーの最上位レベルのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに通知します。
+コンテナーの最上位レベルのフレームウィンドウがアクティブ化または非アクティブ化されたときに、コントロールに通知します。
 
 ```
 HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -148,11 +148,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ioleinplaceactiveobject::onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceActiveObject:: Onフレーム Windowactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 」を参照してください。
 
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder
 
-コントロールに境界線のサイズを変更する必要があることを通知します。
+境界線のサイズを変更する必要があることをコントロールに通知します。
 
 ```
 HRESULT ResizeBorder(
@@ -167,11 +167,11 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ioleinplaceactiveobject:](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) 」を参照してください。
 
-##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator
+##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl:: TranslateAccelerator
 
-コンテナーからのメニュー アクセス キーのメッセージを処理します。
+コンテナーからのメニューアクセラレータキーメッセージを処理します。
 
 ```
 HRESULT TranslateAccelerator(LPMSG lpmsg);
@@ -181,16 +181,16 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 
 このメソッドは、次の戻り値をサポートします。
 
-メッセージが正常に変換された場合は s_ok を返します。
+メッセージが正常に変換された場合は S_OK。
 
-メッセージに変換されていない場合は s_false を返します。
+メッセージが変換されなかった場合は S_FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ioleinplaceactiveobject::translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
-[ActiveX コントロールのインターフェイス](/windows/desktop/com/activex-controls-interfaces)<br/>
+[ActiveX コントロールインターフェイス](/windows/win32/com/activex-controls-interfaces)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

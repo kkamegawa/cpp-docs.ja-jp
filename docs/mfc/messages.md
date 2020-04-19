@@ -5,12 +5,12 @@ helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: 033edfd289ea075b89e9d44111da94b987177470
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e1bfd1baa8ffef76ba31912fc619c4217696683
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384128"
 ---
 # <a name="messages"></a>メッセージ
 
@@ -21,4 +21,3 @@ ms.locfileid: "50434542"
 ## <a name="see-also"></a>関連項目
 
 [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
-

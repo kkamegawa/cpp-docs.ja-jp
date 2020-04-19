@@ -10,12 +10,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 25a61fd7bd033accbbae11fafbd44a0282649e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656925"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740143"
 ---
 # <a name="low-level-io"></a>下位入出力
 
@@ -51,7 +51,7 @@ ms.locfileid: "50656925"
 
 **_dup** と **_dup2** は通常、事前定義済みのファイル記述子を別のファイルと関連付けるために使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

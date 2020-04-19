@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-ms.openlocfilehash: f26edc6c0ce4a19528a9a8754428411318e9b9d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ad85ca19235478e6a5aa1d917ebe75e62308be5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309773"
 ---
 # <a name="toolbar-control-styles"></a>ツール バー コントロールのスタイル
 
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)がボタンの動作と外観を決定するスタイル フラグのセット。 これらのフラグの組み合わせを設定するには呼び出すことによって[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)します。 このトピックでは、スタイル フラグの値とその意味を示します。
 
-## <a name="property-values"></a>プロパティの値
+## <a name="property-values"></a>プロパティ値
 
 次の値は、コントロールを表すボタンの種類を決定します。
 
@@ -57,4 +57,3 @@ ms.locfileid: "50648995"
 [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [ビジュアル マネージャー](../../mfc/visualization-manager.md)
-

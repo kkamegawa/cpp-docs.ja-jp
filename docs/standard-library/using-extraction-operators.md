@@ -6,12 +6,12 @@ helpviewer_keywords:
 - '&gt;&gt; operator [C++], extraction operators'
 - operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
-ms.openlocfilehash: 1fc6ffd2f033dfe3df60260f734d93b79d6824f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7950984973f8df236905128ce4b5336ecb874b7f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626227"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458038"
 ---
 # <a name="using-extraction-operators"></a>抽出演算子の使用
 
@@ -21,4 +21,4 @@ ms.locfileid: "50626227"
 
 ## <a name="see-also"></a>関連項目
 
-[入力ストリーム](../standard-library/input-streams.md)<br/>
+[入力ストリーム](../standard-library/input-streams.md)

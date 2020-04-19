@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231065"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 
@@ -68,7 +68,7 @@ class CManualAccessor : public CAccessorBase
 
 使用して`CManualAccessor`実行時の関数呼び出しによって出力列のバインドと、パラメーターを指定できます。
 
-## <a name="addbindentry"></a> Cmanualaccessor::addbindentry
+## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
 
 出力列にバインド エントリを追加します。
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列番号。
@@ -108,7 +108,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 この関数を使用するには、まず[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)します。 指定された列の数よりも多くのエントリを追加することはできません`CreateAccessor`します。
 
-## <a name="addparameterentry"></a> Cmanualaccessor::addparameterentry
+## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
 
 パラメーターのエントリの構造体には、パラメーターの入力を追加します。
 
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]パラメーターの数。
@@ -216,7 +216,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ## <a name="see-also"></a>関連項目
 
-[DBViewer](../../visual-cpp-samples.md)<br/>
+[DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>

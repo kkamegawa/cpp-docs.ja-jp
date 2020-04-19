@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: 04f8e9e19e5224c1a03ab1c7679d37b7bb8d1389
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503325"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492863"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Windows アプリケーションの最適化)
 
-スレッド ローカル ストレージ (TLS) の変数にアクセスするため、.exe ファイルをより効率的なコードの結果。
+によって、スレッドローカルストレージ (TLS) 変数にアクセスするための .exe ファイルのコードがより効率的になります。
 
 ## <a name="syntax"></a>構文
 
@@ -29,13 +29,13 @@ ms.locfileid: "50503325"
 
 ## <a name="remarks"></a>Remarks
 
-**/GA**で宣言されたデータへのアクセスを迅速化[_declspec](../../cpp/declspec.md) Windows ベースのプログラムにします。 このオプションが設定されている場合、 [__tls_index](/windows/desktop/ProcThread/thread-local-storage)マクロは 0 と見なされます。
+**/GA**は、Windows ベースのプログラムで[__declspec (thread)](../../cpp/declspec.md)を使用して宣言されたデータへのアクセスを高速化します。 このオプションを設定すると、 [__tls_index](/windows/win32/ProcThread/thread-local-storage)マクロは0と見なされます。
 
-使用して **/GA** DLL が不適切なコード生成になることができます。
+DLL に **/GA**を使用すると、コードの生成に問題が生じる可能性があります。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -49,5 +49,5 @@ ms.locfileid: "50503325"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

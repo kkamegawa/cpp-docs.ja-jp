@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206783"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty クラス
 
@@ -51,9 +51,9 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 インターネット アプリケーションで非同期モニカーと ActiveX コントロールを使用する方法の詳細については、次のトピックを参照してください。
 
-- [インターネット最初のステップ: ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
+- [インターネット最初のステップ:ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
 
-- [最初のステップ: インターネット非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [インターネット最初のステップ:非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

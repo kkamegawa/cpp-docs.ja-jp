@@ -1,10 +1,10 @@
 ---
 title: ftell、_ftelli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64
 - ftell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64
 - ftell
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660526"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956451"
 ---
-# <a name="ftell-ftelli64"></a>ftell、_ftelli64
+# <a name="ftell-_ftelli64"></a>ftell、_ftelli64
 
 ファイル ポインターの現在の位置を取得します。
 
@@ -51,24 +54,24 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
-ターゲット**ファイル**構造体。
+*一連*<br/>
+ターゲット**ファイル**の構造。
 
 ## <a name="return-value"></a>戻り値
 
-**ftell**と **_ftelli64**ファイルの現在の位置を返します。 によって返される値**ftell**と **_ftelli64**テキスト モード キャリッジ リターンとラインフィードの変換が発生するため、テキスト モードで開かれたストリームの物理バイト オフセットを反映しない可能性があります。 使用**ftell**で[fseek](fseek-fseeki64.md)または **_ftelli64**で[_fseeki64](fseek-fseeki64.md)正しくファイルの場所に戻ります。 エラーが発生した**ftell**と **_ftelli64** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、これらの関数の戻り値-1 L とセットを許可された場合**errno** ERRNO で定義された 2 つの定数のいずれかにします。H. **EBADF**定数、*ストリーム*引数は有効なファイル ポインターの値またはファイルを開くには含まれません。 **EINVAL** 、無効なことを意味*ストリーム*関数に引数が渡されました。 (ターミナルやプリンター) シーク非対応のデバイスでまたは*ストリーム*は含まれませんが開いているファイルを戻り値が定義されていません。
+**ftell**と **_ftelli64**は、現在のファイルの位置を返します。 テキストモードでは復帰と改行の変換が行われるため、 **ftell**と **_ftelli64**によって返される値には、テキストモードで開かれたストリームの物理バイトオフセットが反映されない場合があります。 **Ftell**または **_ftelli64**を[_fseeki64](fseek-fseeki64.md)と共に使用して、[ファイルの場所](fseek-fseeki64.md)に適切に戻ります。 エラーが発生した場合、 **ftell**と **_ftelli64**は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1L を返し、errno に指定されている2つの定数のいずれかに errno**を設定し**ます。始め. **EBADF**定数は、*ストリーム*引数が有効なファイルポインター値ではないか、開いているファイルを参照していないことを意味します。 **EINVAL**は、無効な*ストリーム*引数が関数に渡されたことを意味します。 (端末やプリンターなどの) シークが不可能なデバイス、または*ストリーム*が開いているファイルを参照していない場合、戻り値は未定義になります。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Ftell**と **_ftelli64**関数に関連付けられたファイル ポインター (存在する場合) の現在の位置を取得する*ストリーム*します。 位置は、ストリームの先頭を基準としたオフセットとして表されます。
+**Ftell**関数と **_ftelli64**関数は、*ストリーム*に関連付けられているファイルポインターの現在位置 (存在する場合) を取得します。 位置は、ストリームの先頭を基準としたオフセットとして表されます。
 
-データを追加するためにファイルを開く場合、現在のファイルの位置は、次の書き込みが発生する場所ではなく最後の I/O 操作によって決まります。 たとえば、追加のためにファイルが開かれ、最後の操作が読み取りだった場合、ファイルの位置は、次の書き込みが開始される位置ではなく、次の読み取り操作が開始される位置になります  (追加のためにファイルが開かれるときには、ファイルの位置は書き込み操作が開始される前にファイルの末尾に移動されます)。追加のために開かれたファイルで I/O 操作がまだ発生していない場合、ファイルの位置はファイルの先頭です。
+データを追加するためにファイルを開く場合、現在のファイルの位置は、次の書き込みが発生する場所ではなく最後の I/O 操作によって決まります。 たとえば、追加のためにファイルが開かれ、最後の操作が読み取りだった場合、ファイルの位置は、次の書き込みが開始される位置ではなく、次の読み取り操作が開始される位置になります (追加のためにファイルが開かれるときには、ファイルの位置は書き込み操作が開始される前にファイルの末尾に移動されます)。追加のために開かれたファイルで I/O 操作がまだ発生していない場合、ファイルの位置はファイルの先頭です。
 
-テキスト モードでは、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 ファイルを読み取り/書き込み、開いた**fopen**と関連するすべてのルーチンは、ファイルの末尾に CTRL + Z 確認し、可能であれば削除します。 これはの組み合わせを使用して、 **ftell**と[fseek](fseek-fseeki64.md)または **_ftelli64**と[_fseeki64](fseek-fseeki64.md)で終わるファイル内で移動するには、CTRL + Z が生じる**ftell**または **_ftelli64**ファイルの末尾近くが正しく動作しません。
+テキスト モードでは、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 読み取り/書き込み用に開かれたファイルでは、 **fopen**と関連するすべてのルーチンで、ファイルの末尾に CTRL + Z があるかどうかを確認し、可能であれば削除します。 この処理が行われる理由は、 **ftell**と[fseek](fseek-fseeki64.md)または **_ftelli64**と[_fseeki64](fseek-fseeki64.md)の組み合わせを使用して、CTRL + Z で終わるファイル内を移動すると、の末尾付近で**ftell**または **_ftelli64**が正しく動作しなくなる可能性があるためです。拡張子.
 
-この関数は実行中に呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、次を参照してください。 **_ftell_nolock**します。
+この関数は実行中に呼び出し元スレッドをロックするため、スレッド セーフです。 非ロックバージョンについては、「 **_ftell_nolock**」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

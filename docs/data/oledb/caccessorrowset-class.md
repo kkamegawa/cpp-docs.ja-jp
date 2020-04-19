@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62283832"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -71,13 +71,13 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|コンストラクターです。|
 |[閉じる](#close)|行セットとすべてのアクセサーを閉じます。|
 |[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内の列を解放します。|
-|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))します。|
+|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))します。|
 
 ## <a name="remarks"></a>Remarks
 
 クラス`TAccessor`アクセサーを管理します。 クラス*TRowset*行セットを管理します。
 
-## <a name="bind"></a> Caccessorrowset::bind
+## <a name="bind"></a> CAccessorRowset::Bind
 
 指定した場合は、バインドを作成します。`bBind`として**false**で[ccommand::open](../../data/oledb/ccommand-open.md)します。
 
@@ -91,7 +91,7 @@ HRESULT Bind();
 
 標準の HRESULT です。
 
-## <a name="caccessorrowset"></a> Caccessorrowset::caccessorrowset
+## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
 
 `CAccessorRowset` オブジェクトを初期化します。
 
@@ -101,7 +101,7 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="close"></a> Caccessorrowset::close
+## <a name="close"></a> CAccessorRowset::Close
 
 アクティブなアクセサーと行セットを解放します。
 
@@ -115,7 +115,7 @@ void Close();
 
 関連付けられているメモリを解放します。
 
-## <a name="freerecordmemory"></a> Caccessorrowset::freerecordmemory
+## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
 
 解放する必要がある現在のレコード内の列を解放します。
 
@@ -125,7 +125,7 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> Caccessorrowset::getcolumninfo
+## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
 
 開かれた行セットから列情報を取得します。
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -152,7 +152,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。
 
-詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

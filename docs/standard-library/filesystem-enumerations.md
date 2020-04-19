@@ -11,18 +11,18 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538932"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303497"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
 このトピックでは、filesystem ヘッダーの列挙体について説明します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<experimental/filesystem>
 
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>値
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`none`|既定の動作: ディレクトリへのシンボリック リンクを無視します。 アクセス許可の拒否はエラーです。|
 |`follow_directory_symlink`|ディレクトリへのシンボリック リンクを実際のディレクトリとして処理します。|
 
 ## <a name="file_type"></a>  file_type
 
-ファイルの種類の列挙型。 Regular、directory、not_found、および不明な値を指定できます。
+ファイルの種類の列挙型。 サポートされる値は、regular、directory、not_found、および unknown です。
 
 ### <a name="syntax"></a>構文
 
@@ -107,18 +107,26 @@ enum class file_type {
 
 ### <a name="values"></a>値
 
-|名前|[値]|説明|
+|Name|値|説明|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
-|`none`|0|type 属性を持たないファイルを表します  (サポートされていません)。|
+|`none`|0|type 属性を持たないファイルを表します (サポートされていません)。|
 |`regular`|1|従来のディスク ファイルを表します。|
 |`directory`|2|ディレクトリを表します。|
-|`symlink`|3|シンボリック リンクを表します  (サポートされていません)。|
-|`block`|4|UNIX ベースのシステム上のブロック型特殊ファイルを表します  (サポートされていません)。|
-|`character`|5|UNIX ベースのシステム上の文字型特殊ファイルを表します  (サポートされていません)。|
-|`fifo`|6|UNIX ベースのシステム上の FIFO ファイルを表します  (サポートされていません)。|
-|`socket`|7|UNIX ベースのシステム上のソケットを表します  (サポートされていません)。|
+|`symlink`|3|シンボリック リンクを表します (サポートされていません)。|
+|`block`|4|UNIX ベースのシステム上のブロック型特殊ファイルを表します (サポートされていません)。|
+|`character`|5|UNIX ベースのシステム上の文字型特殊ファイルを表します (サポートされていません)。|
+|`fifo`|6|UNIX ベースのシステム上の FIFO ファイルを表します (サポートされていません)。|
+|`socket`|7|UNIX ベースのシステム上のソケットを表します (サポートされていません)。|
 |`unknown`|8|状態が確認できないファイルを表します。|
+
+## <a name="perm_options"></a>perm_options
+
+`replace`、`add`、`remove`、および `nofollow`の値が含まれます。
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 
@@ -153,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

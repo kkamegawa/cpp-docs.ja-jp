@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: cc5ea515aa132bb390fa5e273cedc5f125bb3046
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0f008c70eeb43455408e5b0ad302df6b923608e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411644"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法
 
@@ -38,4 +38,3 @@ ms.locfileid: "50561253"
 
 [CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

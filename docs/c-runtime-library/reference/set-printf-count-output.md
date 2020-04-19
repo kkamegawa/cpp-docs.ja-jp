@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595612"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948417"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-有効または無効のサポート、 **%n**で書式設定[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-ファミリの関数。
+[Printf、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)の各関数で **% n**形式のサポートを有効または無効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -46,15 +49,15 @@ int _set_printf_count_output(
 ### <a name="parameters"></a>パラメーター
 
 *enable*<br/>
-0 以外の値が有効にする **%n**サポートを無効にするには 0 **%n**をサポートします。
+**% N**のサポートを有効にする0以外の値。 **% n**のサポートを無効にする場合は0。
 
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-状態 **%n**この関数を呼び出す前にサポート: 0 以外の場合 **%n**サポートが有効にすると、無効にされた場合は 0。
+この関数を呼び出す前の **% n**のサポートの状態: **% n**のサポートが有効になっている場合は0以外、無効になっている場合は0。
 
 ## <a name="remarks"></a>Remarks
 
-セキュリティ上の理由のためのサポート、 **%n**書式指定子が既定で無効になっている**printf**とそのすべてのバリアント。 場合 **%n**で発生した、 **printf** 」の説明に従って、無効なパラメーター ハンドラーを呼び出すための書式指定、既定の動作は[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 呼び出す **_set_printf_count_output** 0 以外の引数が**printf**-ファミリの関数を解釈する **%n** 」の説明に従って[形式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。
+セキュリティ上の理由から、 **printf**とそのすべてのバリエーションでは、 **% n**書式指定子のサポートは既定で無効になっています。 **Printf**形式の指定で **% n**が発生した場合、既定の動作では、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 0以外の引数を指定して **_set_printf_count_output**を呼び出すと、printf 関数[と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に記述されているように、 **printf**関数が **% n**を解釈します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544353"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448358"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible クラス
 
@@ -26,26 +26,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*は自明な移動コンス トラクターを持つ、それ以外の場合は false を保持するクラスです。
+型*Ty*が自明な移動コンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラスの移動コンス トラクター *Ty*は簡単では場合。
+クラス*Ty*の移動コンストラクターは、次のような場合に自明です。
 
 暗黙的に宣言されている
 
 そのパラメーターの型が暗黙的な宣言のものと同じである
 
-クラスは、 *Ty*仮想関数がありません
+クラス*Ty*に仮想関数がありません。
 
-クラスは、 *Ty*仮想基底クラスがありません
+クラス*Ty*に仮想基底がありません
 
 クラスに揮発性の非静的データ メンバーがない
 
-すべての直接の基底クラスの*Ty*自明な移動コンス トラクターがあります。
+*クラスの*すべての直接基底に自明な移動コンストラクターがある
 
 クラス型のすべての非静的データ メンバーのクラスに自明な移動コンストラクターがある
 
@@ -59,4 +59,4 @@ struct is_trivially_move_constructible;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

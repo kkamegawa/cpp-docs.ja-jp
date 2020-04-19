@@ -1,9 +1,9 @@
 ---
 title: rand
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - rand
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand
 helpviewer_keywords:
@@ -25,16 +29,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 67e128fc4adea345807a2d59078a00e3c4bd1f07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440730"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949553"
 ---
 # <a name="rand"></a>rand
 
-よく知られていると完全に再現可能なアルゴリズムを使用して擬似乱数を生成します。 この関数のプログラムでより安全なバージョンは使用できません。参照してください[rand_s](rand-s.md)します。 によって生成された番号**rand**暗号的に安全ではありません。 乱数の生成のより安全な暗号を使用して[rand_s](rand-s.md) 、関数では、C++ 標準ライブラリで宣言または[\<ランダム >](../../standard-library/random.md)します。
+よく知られている、完全に再現可能なアルゴリズムを使用して、擬似乱数を生成します。 プログラムによってセキュリティで保護されたこの関数のバージョンを利用できます。「 [rand_s](rand-s.md)」を参照してください。 **Rand**によって生成される数値は、暗号的には安全ではありません。 より暗号的に安全な乱数生成を行うには、 [rand_s](rand-s.md)またはC++標準ライブラリで宣言された関数を[ \<ランダム >](../../standard-library/random.md)で使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,13 +48,13 @@ int rand( void );
 
 ## <a name="return-value"></a>戻り値
 
-**rand**上記疑似乱数を返します。 エラーの戻り値はありません。
+前に説明したように、 **rand**は擬似乱数を返します。 エラーの戻り値はありません。
 
 ## <a name="remarks"></a>Remarks
 
-**Rand**関数では、擬似乱数の整数を返しますに 0 の範囲の**RAND_MAX** (32767)。 使用して、 [srand](srand.md)関数を呼び出す前に疑似乱数ジェネレーターのシード**rand**します。
+**Rand**関数は、0 ~ **RAND_MAX** (32767) の範囲で、擬似乱数の整数を返します。 [Srand](srand.md)関数を使用して、 **rand**を呼び出す前に擬似乱数ジェネレーターをシード処理します。
 
-**Rand**関数は、よく知られているシーケンスを生成し、暗号化関数として使用するために適切ではありません。 乱数の生成のより安全な暗号を使用して[rand_s](rand-s.md) 、関数では、C++ 標準ライブラリで宣言または[\<ランダム >](../../standard-library/random.md)します。 に関する問題について**rand**とどのように\<ランダム > このビデオ」を参照してください、これらの欠点を補い、 [rand 有害と見なされます](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)します。
+**Rand**関数は、既知のシーケンスを生成します。暗号関数としての使用には適していません。 より暗号的に安全な乱数生成を行うには、 [rand_s](rand-s.md)またはC++標準ライブラリで宣言された関数を[ \<ランダム >](../../standard-library/random.md)で使用します。 **Rand**の問題と、ランダム > によって\<これらの欠点に対処する方法の詳細については、「このビデオでは、互換性が[あると考えられる rand](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

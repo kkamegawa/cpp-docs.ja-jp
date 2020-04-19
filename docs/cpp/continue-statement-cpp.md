@@ -7,11 +7,11 @@ helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
 ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154634"
 ---
 # <a name="continue-statement-c"></a>continue ステートメント (C++)
 
@@ -27,11 +27,11 @@ continue;
 
 現在のイテレーションの残りのステートメントは実行されません。 ループの次のイテレーションは、次のように決定されます。
 
-- **は**または**中**、ループの制御式を再評価によって次の反復処理が開始されます、**は**または**中に**ステートメント。
+- **for**または**while**、ループの制御式を再評価によって次の反復処理が開始されます、**for**または**while**ステートメント。
 
-- **の**ループ (構文を使用して`for`(`init-expr`;`cond-expr`;`loop-expr`))、`loop-expr`句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
+- **for**ループ (構文を使用して`for`(`init-expr`;`cond-expr`;`loop-expr`))、`loop-expr`句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。
 
-次の例は、**続行**コードのセクションをバイパスし、ループの次のイテレーションを開始するステートメントを使用できます。
+次の例は、**continue**コードのセクションをバイパスし、ループの次のイテレーションを開始するステートメントを使用できます。
 
 ## <a name="example"></a>例
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2589
 ms.assetid: 1d7942c7-8a81-4bb4-b272-76a0019e8513
-ms.openlocfilehash: 18d8f7130c34f5e1e33bc7aa9b9463f50c243045
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76cc35e57c1577ed23c043740f37c602600da542
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587314"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748503"
 ---
 # <a name="compiler-error-c2589"></a>コンパイラ エラー C2589
 
-'identifier': 無効なトークンの右側にある ':: '
+' identifier ': ':: ' の右側に無効なトークンがあります
 
-クラス、構造体または共用体の名前が、スコープ解決演算子 (2 つのコロン) の左側に表示された場合、右側のトークンは、クラス、構造体または共用体のメンバーにある必要があります。 それ以外の場合、任意のグローバル識別子が右側に表示できます。
+クラス、構造体、または共用体の名前がスコープ解決演算子 (2 つのコロン) の左側に表示される場合、右側のトークンはクラス、構造体、または共用体のメンバーである必要があります。 それ以外の場合は、任意のグローバル識別子を右側に表示できます。
 
-スコープ解決演算子をオーバー ロードできません。
+スコープ解決演算子をオーバーロードすることはできません。
 
 次の例では、C2589 が生成されます。
 
-```
+```cpp
 // C2589.cpp
 void Test(){}
 class A {};

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-ms.openlocfilehash: 24a5fcaea272924e20c55b8c1f5d58111e4eba13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 563cdf51c8104035fe29cb2e11d6c2bc8155d97b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322476"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>[ドキュメント テンプレート文字列] (MFC アプリケーション ウィザード)
 
@@ -42,4 +42,3 @@ MFC アプリケーション ウィザードのこのページではドキュメ
 ## <a name="see-also"></a>関連項目
 
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
-

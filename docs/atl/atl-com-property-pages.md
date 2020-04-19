@@ -9,35 +9,35 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-ms.openlocfilehash: 5bc17bfc415576d50c84e880bef955e49d926c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6f549388e69e9549c64645de758d92822205fd5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595560"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491855"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM プロパティ ページ
 
-プロパティを設定するためのユーザー インターフェイスを提供する COM プロパティ ページ (またはメソッドの呼び出し) の 1 つまたは複数の COM オブジェクト。 プロパティ ページが、デザイン時に設定するコントロールのプロパティをできる機能豊富なユーザー インターフェイスを提供するための ActiveX コントロールで広範囲に使用されます。
+COM プロパティページには、1つまたは複数の COM オブジェクトのプロパティ (またはメソッドの呼び出し) を設定するためのユーザーインターフェイスが用意されています。 プロパティページは、ActiveX コントロールによって広く使用され、デザイン時にコントロールプロパティを設定するための豊富なユーザーインターフェイスを提供します。
 
-プロパティ ページは、COM オブジェクトを実装する、 [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)または[IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2)インターフェイス。 これらのインターフェイスに関連付けられているページをできるようにするメソッドを提供する、 `site` (ページのコンテナーを表す COM オブジェクト) の数と*オブジェクト*変更に応じてそのメソッドが呼び出されます (COM オブジェクトユーザーが行ったプロパティ ページの)。 プロパティ ページのコンテナーは、またはそのユーザー インターフェイスと、変更を適用する場合に非表示には、基になるオブジェクトをユーザーが行った場合に、ページに通知するプロパティ ページのインターフェイスのメソッドを呼び出して責任を負います。
+プロパティページは、 [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage)インターフェイスまたは[IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2)インターフェイスを実装する COM オブジェクトです。 これらのインターフェイスは、ページを`site` (ページのコンテナーを表す com オブジェクト) と関連付けられるようにするメソッドを提供します。また、次のユーザーによって行われた変更に対する応答としてメソッドが呼び出される com オブジェクト ([プロパティ] ページ)。 プロパティページコンテナーは、プロパティページインターフェイスのメソッドを呼び出して、ユーザーインターフェイスを表示または非表示にするタイミングと、ユーザーによって行われた変更を基になるオブジェクトに適用するタイミングを指定します。
 
-オブジェクトのプロパティを設定するとは無関係に、各プロパティ ページを完全に構築できます。 いるプロパティ ページが必要なを特定のインターフェイス (または一連のインターフェイス) を理解し、そのインターフェイスのメソッドを呼び出すためのユーザー インターフェイスを提供します。
+各プロパティページは、プロパティを設定できるオブジェクトとは関係なく、完全にビルドできます。 プロパティページで必要とされるのは、特定のインターフェイス (またはインターフェイスのセット) を理解し、そのインターフェイスでメソッドを呼び出すためのユーザーインターフェイスを提供することだけです。
 
-詳細については、次を参照してください。[プロパティ シートとプロパティ ページ](/windows/desktop/com/property-sheets-and-property-pages)Windows SDK に含まれています。
+詳細については、「Windows SDK の[プロパティシートとプロパティページ](/windows/win32/com/property-sheets-and-property-pages)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [プロパティ ページの指定](../atl/specifying-property-pages.md)<br/>
-コントロールのプロパティ ページを指定するための手順と、クラスの例を示します。
+コントロールのプロパティページを指定する手順を示し、クラスの例を示します。
 
 [プロパティ ページの実装](../atl/implementing-property-pages.md)<br/>
-オーバーライドするメソッドを含めて、プロパティ ページを実装するための手順を一覧表示します。 ATLPages サンプル プログラムに基づく完全な例を示します。
+オーバーライドするメソッドなど、プロパティページを実装する手順を示します。 ATLPages サンプルプログラムに基づく完全な例について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[例](../visual-cpp-samples.md)<br/>
-使用してプロパティ ページを実装する例のサンプルの要約`IPropertyPageImpl`します。
+[ATLPages の例](../overview/visual-cpp-samples.md)<br/>
+を使用して`IPropertyPageImpl`プロパティページを実装する atlpages サンプルの抽象サンプルです。
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
@@ -45,4 +45,3 @@ Active Template Library を使用してプログラミングする方法に関�
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374156"
 ---
 # <a name="automation"></a>オートメーション
 
@@ -49,23 +49,23 @@ Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケー�
 
 ##  <a name="_core_passing_parameters_in_automation"></a> オートメーションにおけるパラメーターの受け渡し
 
-オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **VARIANT** 型は、標準データ型の数、つまり 2 および 4 バイトの整数、4 および 8 バイトの浮動小数点数、文字列、およびブール値をサポートしています。 さらに、サポート、 **HRESULT** (OLE エラー コード)、**通貨**(固定小数点数値型)、および**日付**へのポインターと、(絶対日付と時刻)の型`IUnknown`と`IDispatch`インターフェイス。
+オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **バリアント**型は、多くの標準的なデータ型をサポートしています。2 と 4 バイトの整数、4 および 8 バイト浮動小数点数、文字列、およびブール値。 さらに、サポート、 **HRESULT** (OLE エラー コード)、**通貨**(固定小数点数値型)、および**日付**へのポインターと、(絶対日付と時刻)の型`IUnknown`と`IDispatch`インターフェイス。
 
 **VARIANT** 型は、 [COleVariant](../mfc/reference/colevariant-class.md) クラスにカプセル化されています。 サポートしている **CURRENCY** クラスと **DATE** クラスは、 [COleCurrency](../mfc/reference/colecurrency-class.md) クラスと [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) クラスにカプセル化されています。
 
 ## <a name="automation-samples"></a>オートメーションのサンプル
 
-- [AUTOCLIK](../visual-cpp-samples.md) オートメーションの手法とリモート オートメーションの基礎を学習します。
+- [AUTOCLIK](../overview/visual-cpp-samples.md) オートメーションの手法とリモート オートメーションの基礎を学習します。
 
-- [ACDUAL](../visual-cpp-samples.md) オートメーション サーバー アプリケーションにデュアル インターフェイスを追加します。
+- [ACDUAL](../overview/visual-cpp-samples.md) オートメーション サーバー アプリケーションにデュアル インターフェイスを追加します。
 
-- [CALCDRIV](../visual-cpp-samples.md) MFCCALC を起動するオートメーション クライアント アプリケーションです。
+- [CALCDRIV](../overview/visual-cpp-samples.md) MFCCALC を起動するオートメーション クライアント アプリケーションです。
 
-- [INPROC](../visual-cpp-samples.md) インプロセス オートメーション サーバー アプリケーションの例を示します。
+- [INPROC](../overview/visual-cpp-samples.md) インプロセス オートメーション サーバー アプリケーションの例を示します。
 
-- [IPDRIVE](../visual-cpp-samples.md) INPROC を起動するオートメーション クライアント アプリケーションです。
+- [IPDRIVE](../overview/visual-cpp-samples.md) INPROC を起動するオートメーション クライアント アプリケーションです。
 
-- [MFCCALC](../visual-cpp-samples.md) オートメーション クライアント アプリケーションの例を示します。
+- [MFCCALC](../overview/visual-cpp-samples.md) オートメーション クライアント アプリケーションの例を示します。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

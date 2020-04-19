@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 521fa0e0f786111e4e273685d2db6f6d011c72c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195330"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>AFX_EXT_CLASS を使ったエクスポート/インポート
 
-[MFC 拡張 Dll](../build/extension-dlls-overview.md)マクロを使用して**AFX_EXT_CLASS**クラスをエクスポートするには、MFC 拡張 DLL にリンクする実行可能ファイルは、クラスをインポートするマクロを使用します。 **AFX_EXT_CLASS**マクロ、同じヘッダー ファイル、DLL、DLL にリンクする実行可能ファイルで使用できる MFC の拡張機能を構築するために使用します。
+[MFC 拡張 Dll](extension-dlls-overview.md)マクロを使用して**AFX_EXT_CLASS**クラスをエクスポートするには、MFC 拡張 DLL にリンクする実行可能ファイルは、クラスをインポートするマクロを使用します。 **AFX_EXT_CLASS**マクロ、同じヘッダー ファイル、DLL、DLL にリンクする実行可能ファイルで使用できる MFC の拡張機能を構築するために使用します。
 
 DLL のヘッダー ファイルで追加、 **AFX_EXT_CLASS**キーワードを次のように、クラスの宣言に。
 
@@ -104,28 +104,28 @@ MFC は常に使用されるため、`AFX_DATA`このようなシナリオの場
 
 ### <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.Def ファイルを使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-def-files.md)
+- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)
+- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [装飾名](../build/reference/decorated-names.md)
+- [装飾名](reference/decorated-names.md)
 
-- [インポートとエクスポートのインライン関数](../build/importing-and-exporting-inline-functions.md)
+- [インライン関数のインポートとエクスポート](importing-and-exporting-inline-functions.md)
 
-- [相互インポート](../build/mutual-imports.md)
+- [相互インポート](mutual-imports.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL からのエクスポート](../build/exporting-from-a-dll.md)
+[DLL からのエクスポート](exporting-from-a-dll.md)

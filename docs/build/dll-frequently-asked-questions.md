@@ -1,17 +1,17 @@
 ---
 title: MFC DLL についてよく寄せられる質問
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 4d6490691583162fc95042601bd85566f693d049
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629139"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220938"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL に関してよく寄せられる質問
 
@@ -41,11 +41,7 @@ ms.locfileid: "50629139"
 
 ## <a name="mfc_multithreaded_2"></a> マルチ スレッド アプリケーションは別のスレッド内の MFC DLL にアクセスできますか。
 
-マルチ スレッド アプリケーションでは、MFC と動的にリンクされるレギュラー MFC Dll と MFC 拡張 Dll を別のスレッドからアクセスできます。 Visual c バージョン 4.2 では、アプリケーションは、アプリケーションで作成された複数のスレッドから MFC を静的にリンクされるレギュラー MFC Dll にアクセスします。
-
-前のバージョン 4.2 では、外部の 1 つだけのスレッドは、MFC と静的にリンクされるレギュラー MFC DLL を添付できます。
-
-USRDLL という用語は、Visual C のドキュメントでは使用されなくに注意してください。 MFC と静的にリンクされるレギュラー MFC DLL は、USRDLL と同じ特性を持ちます。
+マルチ スレッド アプリケーションでは、MFC と動的にリンクされるレギュラー MFC Dll と MFC 拡張 Dll を別のスレッドからアクセスできます。 アプリケーションは、アプリケーションで作成された複数のスレッドから MFC を静的にリンクされるレギュラー MFC Dll にアクセスします。
 
 ## <a name="mfc_prohibited_classes"></a> MFC クラスまたは MFC DLL では使用できません関数はありますか。
 
@@ -59,9 +55,9 @@ USRDLL という用語は、Visual C のドキュメントでは使用されな�
 
 DLL が MFC では、標準に変更することに静的にリンクされるレギュラー MFC DLL の場合、MFC と動的にリンクされている MFC DLL は、ファイル サイズを減らします。
 
-DLL のエクスポートされた関数の数が多い場合は、.def ファイルを使用して関数をエクスポートする (を使用してではなく**方式**) .def ファイルを使用して[NONAME 属性](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)各関数をエクスポートします。 NONAME 属性は、序数値のみと、ファイル サイズが縮小 DLL のエクスポート テーブルに格納される関数名ではなくです。
+DLL のエクスポートされた関数の数が多い場合は、.def ファイルを使用して関数をエクスポートする (を使用してではなく**方式**) .def ファイルを使用して[NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)各関数をエクスポートします。 NONAME 属性は、序数値のみと、ファイル サイズが縮小 DLL のエクスポート テーブルに格納される関数名ではなくです。
 
-アプリケーションの読み込み時に、アプリケーションに暗黙的にリンクされている Dll が読み込まれます。 読み込むときに、パフォーマンスを向上するには、DLL を異なる Dll に分割することをお試しください。 1 つの DLL の読み込み後すぐに呼び出し元アプリケーションに必要なすべての関数を配置し、呼び出し元のアプリケーションをその DLL を暗黙的にリンクします。 別の DLL を呼び出し元のアプリケーションが直ちに必要はなく、他の関数を追加しがアプリケーションに明示的にリンクする DLL です。 詳細については、次を参照してください。[リンクを使用する方法を決定](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。
+アプリケーションの読み込み時に、アプリケーションに暗黙的にリンクされている Dll が読み込まれます。 読み込むときに、パフォーマンスを向上するには、DLL を異なる Dll に分割することをお試しください。 1 つの DLL の読み込み後すぐに呼び出し元アプリケーションに必要なすべての関数を配置し、呼び出し元のアプリケーションをその DLL を暗黙的にリンクします。 別の DLL を呼び出し元のアプリケーションが直ちに必要はなく、他の関数を追加しがアプリケーションに明示的にリンクする DLL です。 詳細については、次を参照してください。 [DLL と実行可能ファイルをリンク](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。
 
 ## <a name="memory_leak"></a> ある&#39;s レギュラー MFC DLL が自分のコードでのメモリ リークが問題ないようです。 メモリ リークを検出する方法はありますか
 
@@ -69,4 +65,4 @@ DLL のエクスポートされた関数の数が多い場合は、.def ファ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

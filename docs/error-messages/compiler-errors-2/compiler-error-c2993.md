@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-ms.openlocfilehash: 5be4836332f67f2064f60a3b058db159a18ca1e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aa0d27b2d469f53ec521f587172398b7d4c2d1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605025"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761232"
 ---
 # <a name="compiler-error-c2993"></a>コンパイラ エラー C2993
 
-'identifier': 非型テンプレート パラメーター 'parameter' に対する無効な型
+' identifier ': 非型テンプレートパラメーター ' parameter ' の型が正しくありません。
 
-構造体または共用体の引数を持つテンプレートを宣言することはできません。 ポインターを使用して、テンプレート パラメーターとして構造体と共用体を渡します。
+構造体または共用体の引数を持つテンプレートを宣言することはできません。 ポインターを使用して、構造体と共用体をテンプレートパラメーターとして渡します。
 
 次の例では、C2993 が生成されます。
 
-```
+```cpp
 // C2993.cpp
 // compile with: /c
 // C2993 expected
@@ -36,11 +36,11 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};
 ```
 
-このエラーは Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成することも: 浮動小数点の非型テンプレート パラメーターが使用できなくします。 C++ 標準は許可されません浮動小数点の非型テンプレート パラメーター。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果としても生成されます。浮動小数点の非型テンプレートパラメーターは使用できなくなりました。 標準C++では、浮動小数点の非型テンプレートパラメーターは許可されません。
 
-関数テンプレートは、関数の引数を渡す、浮動小数点の使用は非型テンプレート パラメーターの (このコードが Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C で有効になります) をポイントします。 クラス テンプレートの場合は、簡単な回避策はありません。
+関数テンプレートの場合は、関数の引数を使用して、浮動小数点型以外のテンプレートパラメーターを渡します (このコードは、visual Studio .NET 2003 および visual Studio .NET バージョンのC++visual で有効になります)。 クラステンプレートの場合は、簡単な回避策はありません。
 
-```
+```cpp
 // C2993b.cpp
 // compile with: /c
 template<class T, float f> void func(T) {}   // C2993

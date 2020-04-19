@@ -2,12 +2,12 @@
 title: サンプル プログラム
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: 31e8f822462dad7b3935548c9c25e7334a82b377
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608615"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147127"
 ---
 # <a name="example-program"></a>サンプル プログラム
 
@@ -73,6 +73,6 @@ FILE1.C では、宣言の定義を使用して、グローバル変数の `a` �
 
 識別子の有効期間と可視性については、「[有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)」で説明します。 関数の詳細については、「[関数](../c-language/functions-c.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ソース ファイルとソース プログラム](../c-language/source-files-and-source-programs.md)

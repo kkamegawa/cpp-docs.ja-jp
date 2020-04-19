@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: MFC プロジェクトへのアニメーションの追加'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07b0c5f712cd645246ecfb4e8c93543377a340a3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522240"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558193"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへのアニメーションの追加
 
@@ -38,9 +38,9 @@ ms.locfileid: "50522240"
 
 ### <a name="to-create-an-mfc-application"></a>MFC アプリケーションを作成するには
 
-1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+1. 使用して、 **MFC アプリケーション ウィザード**MFC アプリケーションを作成します。 「[チュートリアル:新しい MFC シェル コントロールを使用して](walkthrough-using-the-new-mfc-shell-controls.md)Visual Studio のバージョンのウィザードを開く方法の詳細について。
 
-1. **新しいプロジェクト** ダイアログ ボックスで、下の左ペインで**インストールされたテンプレート**、展開**Visual C**選び**MFC**。 中央のペインで選択**MFC アプリケーション**します。 **名前**ボックスに「 *MFCAnimationWalkthrough*します。 **[OK]** をクリックします。
+1. **名前**ボックスに「 *MFCAnimationWalkthrough*します。 **[OK]** をクリックします。
 
 1. **MFC アプリケーション ウィザード** ダイアログ ボックスで、いることを確認**アプリケーションの種類**は**複数のドキュメント**、**プロジェクト スタイル**は、**Visual Studio**、および**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択します。 **[完了]** をクリックします。
 
@@ -74,7 +74,7 @@ ms.locfileid: "50522240"
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
+1. **MFC クラス ウィザード**  **クラス名**、 **CMFCAnimationWalkthroughView**。
 
 1. **コマンド** タブで、**オブジェクト Id**ボックスで、 **ID_ANIMATION_STARTFORWARD**、し、**メッセージ**ボックスで、の選択**コマンド**します。 クリックして**ハンドラーを追加**します。
 
@@ -270,7 +270,7 @@ ms.locfileid: "50522240"
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
+1. **MFC クラス ウィザード**  **クラス名**、 **CMFCAnimationWalkthroughView**。
 
 1. **メッセージ** タブで、**メッセージ**ボックスで、 **WM_ERASEBKGND**、 をクリックして**ハンドラーの追加**、 をクリックし、 **ok**.
 
@@ -321,7 +321,7 @@ ms.locfileid: "50522240"
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
+1. **MFC クラス ウィザード**  **クラス名**、 **CMFCAnimationWalkthroughView**。
 
 1. **メッセージ** タブで、**メッセージ**ボックスで、 **WM_SIZE**、 をクリックして**ハンドラーの追加**、 をクリックし、 **ok**.
 

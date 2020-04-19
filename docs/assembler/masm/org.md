@@ -1,26 +1,27 @@
 ---
 title: ORG
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ORG
 helpviewer_keywords:
 - ORG directive
 ms.assetid: ab654827-99dd-4018-b27e-f29a7bb392eb
-ms.openlocfilehash: 37fd96e3f4044025597dbf90374b7e59576be063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f2d84d8430c079173a407bc1f3e4ddabee41cda
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594924"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318736"
 ---
 # <a name="org"></a>ORG
 
-場所を設定するカウンターを*式*します。
+Location カウンターを*expression*に設定します。
 
 ## <a name="syntax"></a>構文
 
-> ORG*式*
+> **組織***式*
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,17 +1,15 @@
 ---
 title: コネクション マップ
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624810"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612278"
 ---
 # <a name="connection-maps"></a>コネクション マップ
 
@@ -181,7 +179,7 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ### <a name="remarks"></a>Remarks
 
-例えば:
+例:
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]
 

@@ -2,12 +2,12 @@
 title: 名前空間と型の参照範囲 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392129"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 
@@ -20,7 +20,7 @@ ms.locfileid: "51693895"
 Windows ランタイム型名前空間: 標準 C++ 型とは異なり、プライベートまたはパブリック アクセシビリティを持ちます。 既定では、アクセシビリティはプライベートです。 メタデータから参照できるのはパブリック型だけです。したがって、C++ 以外の言語で記述されている可能性もあるコンポーネントとアプリから利用できるのもパブリック型だけです。 一般に、参照可能な型の規則は、参照できない型の規則よりも制限的です。これは、.NET 言語および JavaScript でサポートされていない C++ 固有の概念を参照可能な型が公開できないためです。
 
 > [!NOTE]
-> .NET 言語および JavaScript がメタデータを利用できるのは、実行時のみです。 C ++ アプリまたはコンポーネントが、他の C ++ アプリまたはコンポーネント (これには、すべて C++ で記述された Windows コンポーネントも含まれます) と通信中のときは、メタデータの実行時利用は不要です。
+> .NET 言語および JavaScript がメタデータを利用できるのは、実行時のみです。 C++ アプリまたはコンポーネントが、他の C++ アプリまたはコンポーネント (これには、すべて C++ で記述された Windows コンポーネントも含まれます) と通信中のときは、メタデータの実行時利用は不要です。
 
 ## <a name="member-accessibility-and-visibility"></a>メンバーのアクセシビリティおよび可視性
 
@@ -33,8 +33,8 @@ Windows ランタイム型名前空間: 標準 C++ 型とは異なり、プラ�
 |修飾子|説明|メタデータに出力されるか。|
 |private|既定のアクセシビリティ。 標準 C++ の場合と同じ意味です。|いいえ|
 |protected|標準 C++ の場合と同じ意味であり、アプリまたはコンポーネント内およびメタデータ内では両方。|はい|
-|public|標準 C++ の場合と同じ意味です。|はい|
-|`public protected` または `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|はい|
+|public|標準 C++ の場合と同じ意味です。|[はい]|
+|`public protected` または `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|[はい]|
 |`protected private` または `private protected`|メタデータでは非可視。アプリまたはコンポーネント内では保護されたアクセシビリティ。||
 |`internal` または `private public`|メンバーは、アプリまたはコンポーネント内ではパブリックですが、メタデータでは非可視です。|いいえ|
 
@@ -48,7 +48,7 @@ C++/cli CX は、Windows ランタイムの型システムのプロジェクシ�
 
 |||
 |-|-|
-|**名前空間**|**説明**|
+|**Namespace**|**説明**|
 |default|組み込みの数値型と char16 型を格納します。 これらの型はすべての名前空間のスコープ内にあり、 `using` ステートメントは必要ではありません。|
 |プラットフォーム|などの Windows ランタイム型に対応する主にパブリックの型を含む`Array<T>`、 `String`、 `Guid`、および`Boolean`します。 また、 `Platform::Agile<T>` および `Platform::Box<T>`などの、特殊なヘルパー型も含まれます。|
 |Platform::Collections|Windows ランタイム コレクションのインターフェイスを実装する具象コレクション クラスを含む`IVector`、`IMap`など。 これらの型は、platform.winmd ではなく、ヘッダー ファイル、collection.h で定義されます。|

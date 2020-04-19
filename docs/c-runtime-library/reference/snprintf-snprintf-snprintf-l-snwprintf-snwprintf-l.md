@@ -1,13 +1,13 @@
 ---
 title: snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948003"
 ---
-# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
+# <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 
 文字列に書式付きデータを書き込みます。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)」をご覧ください。
 
@@ -147,32 +150,32 @@ int _snwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-ように**len**終端の null は含まない書式付きデータ文字列の長さにします。 両方**len**と*カウント*バイトにはで**snprintf**と **_snprintf**、ワイド文字 **_snwprintf**.
+**Len**には、書式設定されたデータ文字列の長さを指定します。終端の null は含まれません。 **Len**と*count*はどちらも、 **snprintf**と **_snprintf**の場合はバイト、 **_snwprintf**の場合はワイド文字です。
 
-すべての関数の場合は**len** < *カウント*、 **len**に文字が格納されている*バッファー*終端の null を追加すると、**len**が返されます。
+すべての関数について、 **len** < *count*の場合は**len**文字が*バッファー*に格納され、null 終端記号が追加され、 **len**が返されます。
 
-**Snprintf**関数には、出力が切り捨てられますとき**len**がより大きいまたは等しい*カウント*、null 終端文字を配置することで`buffer[count-1]`します。 返される値**len**は場合に出力された文字数*カウント*のサイズが十分です。 **Snprintf**エンコード エラーが発生した場合、関数は負の値を返します。
+**Snprintf**関数は、 **len**が*count*以上の場合に、null 終端記号をに`buffer[count-1]`配置することによって、出力を切り捨てます。 返される値は**len**で、 *count*が十分に大きい場合に出力された文字数です。 **Snprintf**関数は、エンコードエラーが発生した場合に負の値を返します。
 
-すべての関数以外の**snprintf**場合は、 **len** = *カウント*、 **len**に文字が格納されている*バッファー*、終端の null は追加されず、および**len**が返されます。 場合**len** > *カウント*、*カウント*に文字が格納されている*バッファー*終端の null は追加、および負の値はありません値が返されます。
+**Snprintf**以外のすべての関数について、 **len** = *count*の場合は len 文字が*バッファー*に格納され、null**終端文字は**追加されず、 **len**が返されます。 Len > *count*、 *count*文字が*buffer*に格納されている場合、null 終端記号は追加されず、負の値が返されます。
 
-場合*バッファー* null ポインターと*カウント*ゼロ、 **len**は終端の null は含まない出力を書式設定に必要な文字数として返されます。 同じ成功した呼び出しを行う*引数*と*ロケール*パラメーターは、少なくともを保持するバッファーを割り当てる**len** + 1 文字。
+*Buffer*が null ポインターで、 *count*が0の場合、出力の書式を設定するために必要な文字数として**len**が返されます。終端の null は含まれません。 同じ*引数*と*ロケール*のパラメーターを使用して呼び出しを成功させるには、少なくとも**len** + 1 文字を保持するバッファーを割り当てます。
 
-場合*バッファー* null ポインターと*カウント*0 以外の場合、または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
+*Buffer*が null ポインターで、 *count*が0以外の場合、または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Snprintf**関数と **_snprintf**関数形式およびストアのファミリ*カウント*以下の文字*バッファー*します。 **Snprintf**関数は、常に必要な場合、出力の切り捨て、終端の null 文字を格納します。 **_Snprintf**ファミリの関数は、書式設定された文字列の長さがある場合のみ、終端の null 文字を付加より小さい*カウント*文字。 各*引数*(ある場合) は変換され、出力に対応する書式指定に応じて*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Snprintf**関数と **_snprintf**関数ファミリでは、*バッファー*内の文字*数*を書式指定して格納します。 **Snprintf**関数は、常に終端の null 文字を格納し、必要に応じて出力を切り捨てます。 **_Snprintf**ファミリの関数は、書式設定された文字列の長さが厳密に*カウント*文字未満の場合にのみ、終端の null 文字を追加します。 各*引数*(存在する場合) は変換され、*形式*の対応する書式指定に従って出力されます。 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 **_Snprintf**関数は終端の null は保証されません-具体的には、戻り値が*カウント*-null 終端文字を追加するコードに従っていることを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 **_Snprintf**関数は null 終端処理を保証しないため (特に戻り値が*count*の場合)、null 終端文字を追加するコードが続いていることを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-Visual Studio 2015 と Windows 10 で UCRT と共に開始**snprintf**と同じですが不要になった **_snprintf**します。 **Snprintf**関数の動作は、C99 標準に準拠しているようになりました。
+Visual Studio 2015 と Windows 10 の UCRT 以降では、 **snprintf**は **_snprintf**と同じではなくなりました。 **Snprintf**関数の動作は、C99 標準に準拠するようになりました。
 
-**_snwprintf**のワイド文字バージョンは、 **_snprintf**; へのポインター引数 **_snwprintf**はワイド文字列です。 エンコーディング エラーの検出 **_snwprintf**で異なる場合があります **_snprintf**します。 **_snwprintf**と同じように、 **swprintf**、型の出力先ではなく文字列に出力を書き込む**ファイル**します。
+**_snwprintf**は、 **_snprintf**のワイド文字バージョンです。 **_snwprintf**へのポインター引数はワイド文字列です。 **_Snwprintf**でのエンコードエラーの検出は、 **_snprintf**の場合とは異なる場合があります。 **_snwprintf**は、 **swprintf**と同様に、出力を型**ファイル**の出力先ではなく文字列に書き込みます。
 
-これらの関数がのバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスが付いているこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、より安全な新しいバージョンを呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -180,15 +183,15 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_sntprintf**|**_snprintf**|**_snprintf**|**_snwprintf**|
-|**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
+|**sntprintf (_d)**|**_snprintf**|**_snprintf**|**_snwprintf**|
+|**sntprintf_l (_d)**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**snprintf**、 **_snprintf**、 **_snprintf_l**|\<stdio.h>|
-|**_snwprintf**、 **_snwprintf_l**|\<stdio.h> または \<wchar.h>|
+|**snprintf**、 **_snprintf**、および**snprintf_l**|\<stdio.h>|
+|**_snwprintf**、 **snwprintf_l**|\<stdio.h> または \<wchar.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

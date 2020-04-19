@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 401beed2a45be0492ba1a5cbd57cc92153dbaa91
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521128"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456166"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer クラス
 
@@ -27,12 +27,12 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*メンバー オブジェクトへのポインターまたは`cv-qualified`メンバー オブジェクト、それ以外の場合は false を保持するポインター。 なお`is_member_object_pointer`場合は false を保持*Ty*メンバー関数へのポインターです。
+型*Ty*がメンバーオブジェクトへのポインターまたは`cv-qualified`メンバーオブジェクトへのポインターである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 Ty が`is_member_object_pointer`メンバー関数へのポインターである場合、は false を保持することに注意してください。
 
 ## <a name="example"></a>例
 
@@ -85,5 +85,5 @@ is_member_object_pointer<int (functional::*)()> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer クラス](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer クラス](../standard-library/is-member-pointer-class.md)

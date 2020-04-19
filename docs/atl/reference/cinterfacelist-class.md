@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: 6187bd6ada44a0e967b02e0183aa34becf0750ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e740d891e279bb29eeef898de52698dc3f04fc67
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258638"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList クラス
 

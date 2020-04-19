@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 268a091d3e0bc825acae96dafc5d92ffa11c7bc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269987"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (インポート ライブラリ名の設定)
 
-> /IMPLIB:*ファイル名*
+> /IMPLIB:*filename*
 
 ## <a name="parameters"></a>パラメーター
 
@@ -32,15 +32,15 @@ ms.locfileid: "50589580"
 
 - [方式](../../cpp/dllexport-dllimport.md)ソース コード内のキーワード
 
-- [エクスポート](../../build/reference/exports.md).def ファイル内のステートメント
+- [エクスポート](exports.md).def ファイル内のステートメント
 
-- [/Export](../../build/reference/export-exports-a-function.md) LINK コマンド内の指定
+- [/Export](export-exports-a-function.md) LINK コマンド内の指定
 
-リンクは、インポート ライブラリが作成されていない場合、/IMPLIB を無視します。 エクスポートが指定されていない場合、リンクは、インポート ライブラリを作成できません。 エクスポート ファイルをビルドに使用する場合、リンクでは、インポート ライブラリが既に存在し、作成されていないこと前提としています。 インポート ライブラリとエクスポート ファイルには、次を参照してください。 [LIB リファレンス](../../build/reference/lib-reference.md)します。
+リンクは、インポート ライブラリが作成されていない場合、/IMPLIB を無視します。 エクスポートが指定されていない場合、リンクは、インポート ライブラリを作成できません。 エクスポート ファイルをビルドに使用する場合、リンクでは、インポート ライブラリが既に存在し、作成されていないこと前提としています。 インポート ライブラリとエクスポート ファイルには、次を参照してください。 [LIB リファレンス](lib-reference.md)します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -54,5 +54,5 @@ ms.locfileid: "50589580"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 6cabd2fb35a60f1b6b53d47d19e95fa65d92c620
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90a21b260185bb2202eed66b8e4144eb7183c157
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241281"
 ---
 # <a name="debugging-support-classes"></a>デバッグ サポート クラス
 
@@ -32,4 +32,3 @@ MFC には、動的メモリ割り当ての問題をデバッグする方法を�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

@@ -16,38 +16,36 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 418b18851aaf8da44ee0ed2df7ff9e60a0b5ef1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653681"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246289"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+> [!NOTE]
+> 演算子を使用して`Type&`下に含まれている`namespace rel_ops`します。
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトと等しくないかどうかを調べます。
 
 ```cpp
 template <class Type>
-constexpr bool operator!=(const Type& left, const Type& right);
+    constexpr bool operator!=(const Type& left, const Type& right);
 
 template <class T, class U>
-constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
+    constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `pair` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -105,7 +103,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトと等しいかどうかを調べます。
 
@@ -116,10 +114,10 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `pair` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -168,7 +166,7 @@ int main( )
 }
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより小さいかどうかを調べます。
 
@@ -179,10 +177,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 演算子の左辺にある `pair` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -242,7 +240,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクト以下かどうかを調べます。
 
@@ -256,10 +254,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 演算子の左辺にある `pair` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -327,7 +325,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより大きいかどうかを調べます。
 
@@ -341,10 +339,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 演算子の左辺にある `pair` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -414,24 +412,24 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクト以上かどうかを調べます。
 
 ```cpp
 template <class Type>
-constexpr bool operator>=(const Type& left, const Type& right);
+    constexpr bool operator>=(const Type& left, const Type& right);
 
 template <class T, class U>
-constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
+    constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 演算子の左辺にある `pair` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -498,7 +496,3 @@ The pair p1 is less than the pair p2.
 Pair p1 is greater than or equal to pair p3.
 Pair p1 is greater than or equal to pair p4.
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<utility>](../standard-library/utility.md)<br/>

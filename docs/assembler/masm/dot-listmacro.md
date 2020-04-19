@@ -1,30 +1,31 @@
 ---
 title: .LISTMACRO
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTMACRO
 helpviewer_keywords:
 - .LISTMACRO directive
 ms.assetid: f8dadf8c-ca6f-4bb9-a4f8-86a0e769a845
-ms.openlocfilehash: 282651b848759fb2a207ab9de5dbcfbc02106d68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3eef137ece7069977b133c217d31e81a8ea9010e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668116"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313445"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-コードまたはデータを生成するマクロ展開ステートメントの一覧表示を開始します。
+コードまたはデータを生成するマクロ拡張ステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
-> .LISTMACRO
+> **.LISTMACRO**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-既定値です。 同じ[します。XALL](../../assembler/masm/dot-xall.md)します。
+これは既定です。 と同じ[です。XALL](dot-xall.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

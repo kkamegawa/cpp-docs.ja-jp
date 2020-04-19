@@ -1,6 +1,6 @@
 ---
-title: マネージド、アンマネージド
-ms.date: 11/04/2016
+title: マネージド、アンマネージド プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -12,44 +12,43 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 0cc253ad7d0d4529340a13546f931075b0c7dfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473828"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218816"
 ---
-# <a name="managed-unmanaged"></a>マネージド、アンマネージド
-関数をマネージドまたはアンマネージドとしてコンパイルするために関数レベルの制御を有効にします。
+# <a name="managed-unmanaged-pragmas"></a>マネージド、アンマネージド プラグマ
+
+関数レベルの制御を有効にして、関数をマネージまたはアンマネージとしてコンパイルします。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma managed
-#pragma unmanaged
-#pragma managed([push,] on | off)
-#pragma managed(pop)
-```
+> **マネージド #pragma**\
+> **アンマネージ #pragma**\
+> **#pragma 管理 (** **[プッシュ,]** { **on** | **off** } **)** \
+> **#pragma マネージ (pop)**
 
 ## <a name="remarks"></a>Remarks
 
-[/Clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションは、関数をマネージまたはアンマネージとしてコンパイルのモジュール レベルの制御を提供します。
+[/Clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションは、関数をマネージまたはアンマネージとしてコンパイルするためのモジュールレベルのコントロールを提供します。
 
-アンマネージ関数は、ネイティブ プラットフォーム用にコンパイルされ、プログラムのその部分の実行は、共通言語ランタイムによってネイティブ プラットフォームに渡されます。
+アンマネージ関数は、ネイティブプラットフォーム用にコンパイルされます。 プログラムのその部分の実行は、共通言語ランタイムによってネイティブプラットフォームに渡されます。
 
 関数は、`/clr` が使用されると、既定でマネージとしてコンパイルされます。
 
 これらのプラグマを適用するときは次のようにします。
 
-- 関数の前にあり関数本体内にはないプラグマを追加します。
+- 関数の前にプラグマを追加しますが、関数本体内には追加しません。
 
-- `#include` ステートメントの後にプラグマを追加します。 `#include` ステートメントの前でこれらのプラグマを使用しないでください。
+- `#include` ステートメントの後にプラグマを追加します。 ステートメントの前に`#include`これらのプラグマを使用しないでください。
 
-コンパイラは無視、**マネージ**と**アンマネージ**プラグマ場合`/clr`コンパイルでは使用されません。
+コンパイルでが使用されていない`/clr`場合、コンパイラは**マネージ**プラグマおよび**アンマネージ**プラグマを無視します。
 
-テンプレート関数がインスタンス化されるとき、テンプレートの定義時のプラグマの状態により、マネージドかアンマネージドかが決まります。
+テンプレート関数がインスタンス化されると、テンプレートが定義されているときのプラグマの状態によって、マネージとアンマネージのどちらであるかが決まります。
 
-詳細については、次を参照してください。[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)します。
+詳細については、「[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -89,4 +88,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

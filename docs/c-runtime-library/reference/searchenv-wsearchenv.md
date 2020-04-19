@@ -1,10 +1,10 @@
 ---
 title: _searchenv、_wsearchenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _searchenv
 - _wsearchenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsearchenv
 - _tsearchenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628255"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948767"
 ---
-# <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
+# <a name="_searchenv-_wsearchenv"></a>_searchenv、_wsearchenv
 
 ファイルを検索するために環境パスを使用します。 これらの関数にはセキュリティが強化されたバージョンがあります。「[_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)」をご覧ください。
 
@@ -88,19 +91,19 @@ void _wsearchenv(
 
 ## <a name="remarks"></a>Remarks
 
-**_Searchenv**日常的な指定したドメインでターゲット ファイルを検索します。 *Varname*変数は、任意の環境またはユーザー定義変数を指定できます: たとえば、**パス**、 **LIB**、または**INCLUDE**-を指定する、ディレクトリ パスの一覧です。 **_Searchenv**と小文字は区別*varname*環境変数の大文字と小文字が一致する必要があります。
+**_Searchenv**ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname*変数には、ディレクトリパスの一覧を指定する任意の環境またはユーザー定義変数 ( **PATH**、 **LIB**、 **INCLUDE**など) を指定できます。 **_Searchenv**では大文字と小文字が区別されるため、 *varname*は環境変数の場合と一致している必要があります。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されているディレクトリを検索します。 新しく作成されたパスをコピーする場合は、対象のファイルは、これらのディレクトリのいずれかでは、 *pathname*します。 場合、 *filename*ファイルが見つからない*pathname* null で終わる空の文字列が含まれています。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されているディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが*pathname*にコピーされます。 *Filename*ファイルが見つからない場合、 *pathname*には null で終わる空の文字列が含まれます。
 
-*Pathname*バッファーは以上である必要があります **_MAX_PATH**作成されるパス名の長さを格納します。 それ以外の場合、 **_searchenv**オーバーランの可能性があります、 *pathname*バッファーし、予期しない動作が発生します。
+作成されたパス名の完全な長さを格納するには、*パス*名バッファーは、少なくとも **_max_path**文字である必要があります。 それ以外の場合、 **_searchenv**は*パス名*バッファーをオーバーランし、予期しない動作を引き起こす可能性があります。
 
-**_wsearchenv**のワイド文字バージョンは、 **_searchenv**と引数を **_wsearchenv**はワイド文字列です。 **_wsearchenv**と **_searchenv**動作は同じです。
+**_wsearchenv**は **_searchenv**のワイド文字バージョンであり、 **_wsearchenv**の引数はワイド文字列です。 それ以外では、 **_wsearchenv**と **_searchenv**は同じように動作します。
 
-場合*filename*空の文字列は、これらの関数が返す**ENOENT**します。
+*Filename*が空の文字列の場合、これらの関数は**ENOENT**を返します。
 
-場合*filename*または*パス名*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
+*Filename*または*pathname*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
-詳細については**errno** 、エラー コードを参照してくださいと[errno 定数](../../c-runtime-library/errno-constants.md)します。
+**Errno**とエラーコードの詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティを強化された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

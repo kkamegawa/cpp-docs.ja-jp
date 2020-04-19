@@ -1,25 +1,25 @@
 ---
 title: コンパイラの警告 (レベル 4) C4061
-ms.date: 11/30/2017
+ms.date: 04/05/2019
 f1_keywords:
 - C4061
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 073e3e9cb1cb5bb6b0f66157c986072227960212
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401424"
 ---
 # <a name="compiler-warning-level-4-c4061"></a>コンパイラの警告 (レベル 4) C4061
 
 > 列挙子 '*識別子*'列挙型のスイッチは' in*列挙*' case ラベルによって明示的に処理されません。
 
-列挙子関連付けられたハンドラーがない、`switch`ステートメント。
+指定された列挙子*識別子*で関連付けられたハンドラーを持たず、`switch`がステートメント、`default`ケース。 不足している場合は、不注意にあるか、問題ができない可能性があります。 かどうかに既定のケースで列挙子が処理されるかどうかに依存して可能性があります。 使用されていない列挙子に関連する警告の`switch`されていないステートメント`default`場合は、「」を参照[C4062](compiler-warning-level-4-c4062.md)します。
 
-既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
+既定では、この警告はオフに設定されています。 既定で無効になっている警告を有効にする方法の詳細については、次を参照してください。[コンパイラの警告を Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)します。
 
 ## <a name="example"></a>例
 
@@ -46,3 +46,7 @@ int main()
 {
 }
 ```
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの警告 (レベル 4) C4062](compiler-warning-level-4-c4062.md)

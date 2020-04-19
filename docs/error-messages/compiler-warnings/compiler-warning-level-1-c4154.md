@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 5d2d6316838e8f3ef4acdf60494a0450a5efbdbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f0d56f6ae4b4ca92bc330d72176266e3196ea6a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563546"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625024"
 ---
 # <a name="compiler-warning-level-1-c4154"></a>コンパイラの警告 (レベル 1) C4154
 
-配列式; の削除指定されたポインターへの変換
+配列式の削除ポインターへの変換が指定されました
 
-使用することはできません`delete`配列のため、コンパイラ配列に変換するのポインター。
+配列に対して `delete` を使用することはできないため、コンパイラは配列をポインターに変換します。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4154.cpp
 // compile with: /c /W1
 int main() {

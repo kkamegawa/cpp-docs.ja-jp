@@ -1,18 +1,18 @@
 ---
 title: is_function クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- type_traits/std::is
+- type_traits/std::is_function
 helpviewer_keywords:
 - is_function class
-- is
+- is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: 0d2559ca6d864a23c5949bcddee8790df4b2bb65
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6e436d205c7569aeac7b9dc65b122f3fe289f334
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523045"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456268"
 ---
 # <a name="isfunction-class"></a>is_function クラス
 
@@ -27,12 +27,12 @@ struct is_function;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*は関数型、それ以外の場合は false を保持します。
+型*Ty*が関数型の場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -79,5 +79,5 @@ is_function<float()> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_object クラス](../standard-library/is-object-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_object クラス](../standard-library/is-object-class.md)

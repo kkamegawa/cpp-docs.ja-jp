@@ -5,12 +5,12 @@ helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-ms.openlocfilehash: bf3819f96821b8794b6bd120d63798b902eb2b9e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7341e69852ed804122e0196b51d305f5af0c35b9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223520"
 ---
 # <a name="adding-connection-points-to-an-object"></a>オブジェクトへの接続ポイントの追加
 
@@ -36,7 +36,7 @@ ms.locfileid: "50473802"
 
    [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-   .Idl ファイルを参照して、[円](../visual-cpp-samples.md)例については、ATL のサンプルです。
+   .Idl ファイルを参照して、[円](../overview/visual-cpp-samples.md)例については、ATL のサンプルです。
 
 3. クラス ビューを使用して、イベント インターフェイスにメソッドとプロパティを追加します。 クラス ビュー内のクラスを右クリックし、**追加**をクリックし、ショートカット メニュー**接続ポイントの追加**します。
 
@@ -63,4 +63,3 @@ ms.locfileid: "50473802"
 ## <a name="see-also"></a>関連項目
 
 [接続ポイント](../atl/atl-connection-points.md)
-

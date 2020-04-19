@@ -1,9 +1,9 @@
 ---
 title: quick_exit1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - quick_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - quick_exit
 - process/quick_exit
@@ -23,14 +26,14 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429016"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949667"
 ---
-# <a name="quickexit"></a>quick_exit
+# <a name="quick_exit"></a>quick_exit
 
 通常のプログラムが終了するようにします。
 
@@ -49,15 +52,15 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>戻り値
 
-**Quick_exit**関数の呼び出し元に戻すことはできません。
+**Quick_exit**関数が呼び出し元に戻ることはできません。
 
 ## <a name="remarks"></a>Remarks
 
-**Quick_exit**関数は、通常のプログラムの終了。 によって登録された関数が呼び出すない**atexit**、 **_onexit**またはシグナル ハンドラーが登録されている、**信号**関数。 場合の動作は定義されません**quick_exit**に 1 回以上、または場合に呼び出されますが、**終了**関数ともいいます。
+**Quick_exit**関数は、通常のプログラムの終了を引き起こします。 これは、**シグナル**関数によって登録された**atexit**、 **_onexit** 、またはシグナルハンドラーによって登録された関数を呼び出しません。 **Quick_exit**が複数回呼び出される場合、または**exit**関数も呼び出される場合、動作は定義されません。
 
-**Quick_exit**関数呼び出しの最後で、先入れ先出し (LIFO) 順、によって登録された関数で**at_quick_exit**関数が登録されたときに既に呼び出されている関数を除き、します。  [longjmp](longjmp.md) 呼び出しが、関数の呼び出しを終了する登録済み関数を呼び出している間に呼び出される場合、動作は定義されません。
+**Quick_exit**関数は、 **at_quick_exit**によって登録された関数を、後入れ先出し (LIFO) の順序で呼び出します。ただし、関数の登録時に既に呼び出されている関数は除きます。  [longjmp](longjmp.md) 呼び出しが、関数の呼び出しを終了する登録済み関数を呼び出している間に呼び出される場合、動作は定義されません。
 
-登録済みの関数が呼び出された後**quick_exit**呼び出す **_Exit**を使用して、*状態*にコントロールをホスト環境に返される値。
+登録された関数が呼び出された後、 **quick_exit**は、 *status*値を使用して、ホスト環境に制御を返すために、 **_exit**を呼び出します。
 
 ## <a name="requirements"></a>必要条件
 

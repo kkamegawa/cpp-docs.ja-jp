@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RC1015
 ms.assetid: 23f187e1-5538-40b5-9042-edd2888f55c2
 ms.openlocfilehash: f20101c2edc4da132c89dcda451c71af2304a13d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297659"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>リソース コンパイラの致命的なエラー RC1015
 

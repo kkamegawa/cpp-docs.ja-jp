@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1310
 ms.assetid: ac48aa51-8023-42fe-b844-3f8bf228fbef
-ms.openlocfilehash: 1b0fca9a5e453fd354a4efc6960a54386795ccf6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8baeb3cfe1624eaf292b3a54fc15a46ea68e11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559059"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746982"
 ---
 # <a name="fatal-error-c1310"></a>致命的なエラー C1310
 
@@ -21,7 +21,7 @@ ms.locfileid: "50559059"
 
 次の例では C1310 が生成されます。
 
-```
+```cpp
 // C1310.cpp
 // compile with: /openmp /GL /link /LTCG:PGI
 // C1310 expected

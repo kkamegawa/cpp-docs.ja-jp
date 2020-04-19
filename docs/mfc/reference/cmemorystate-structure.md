@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 5aee7bc2f44e4c2e7851baea554d3069c928088c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163755"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 構造体
 
@@ -39,7 +39,7 @@ struct CMemoryState
 |----------|-----------------|
 |[Cmemorystate::checkpoint](#checkpoint)|現在のメモリ状態のスナップショット (チェックポイント) を取得します。|
 |[:Difference](#difference)|型の 2 つのオブジェクト間の差を計算`CMemoryState`します。|
-|[Cmemorystate::dumpallobjectssince](#dumpallobjectssince)|以前のチェックポイント以降には、現在割り当てられているすべてのオブジェクトの概要をダンプします。|
+|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|以前のチェックポイント以降には、現在割り当てられているすべてのオブジェクトの概要をダンプします。|
 |[Cmemorystate::dumpstatistics](#dumpstatistics)|メモリ割り当ての統計を出力する`CMemoryState`オブジェクト。|
 
 ## <a name="remarks"></a>Remarks
@@ -75,7 +75,7 @@ struct CMemoryState
 
 **ヘッダー:** afx.h
 
-##  <a name="checkpoint"></a>  Cmemorystate::checkpoint
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
 
 スナップショットのメモリの概要を取得し、これに格納`CMemoryState`オブジェクト。
 
@@ -103,7 +103,7 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  :Difference
+##  <a name="difference"></a>  CMemoryState::Difference
 
 2 つ`CMemoryState`オブジェクト、し、この違いを格納`CMemoryState`オブジェクト。
 
@@ -133,7 +133,7 @@ BOOL Difference(
 
   例をご覧ください、 [CMemoryState](#cmemorystate)コンス トラクター。
 
-##  <a name="dumpallobjectssince"></a>  Cmemorystate::dumpallobjectssince
+##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
 
 呼び出し、`Dump`クラスから派生した型のすべてのオブジェクトの関数`CObject`を割り当てられた (およびまだ割り当てられている)、前回[チェックポイント](#checkpoint)この呼び出す`CMemoryState`オブジェクト。
 
@@ -149,7 +149,7 @@ void DumpAllObjectsSince() const;
 
   例をご覧ください、 [CMemoryState](#cmemorystate)コンス トラクター。
 
-##  <a name="dumpstatistics"></a>  Cmemorystate::dumpstatistics
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
 
 簡潔なメモリの統計情報レポートを印刷、`CMemoryState`で塗りつぶされているオブジェクト、[違い](#difference)メンバー関数。
 
@@ -198,4 +198,3 @@ void DumpStatistics() const;
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

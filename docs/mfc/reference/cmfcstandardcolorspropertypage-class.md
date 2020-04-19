@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-ms.openlocfilehash: 7663f85b20ab88c999af7ba37b260237d0fd869e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cfa609c31e83c02cce8b2a474a9b66ec3ba56f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388632"
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage クラス
 
@@ -28,7 +28,7 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 |||
 |-|-|
 |名前|説明|
-|`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|既定のコンストラクター|
+|`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

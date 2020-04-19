@@ -1,9 +1,9 @@
 ---
 title: _except_handler3
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _except_handler3
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr90.dll
 - msvcr80.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _except_handler3
 - except_handler3
@@ -19,14 +22,14 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 144bf25495d803a4db42ab45fcb0b101b09fe7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e1dbab97e0f193d4ff59c19229d2c00e2cd7d6a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944479"
 ---
-# <a name="excepthandler3"></a>_except_handler3
+# <a name="_except_handler3"></a>_except_handler3
 
 内部 CRT 関数。 現在の例外を処理する適切な例外ハンドラーを見つけるためにフレームワークによって使用されます。
 
@@ -59,10 +62,10 @@ int _except_handler3(
 
 例外を破棄する必要がある場合は、`DISPOSITION_DISMISS` を返します。 カプセル化する例外ハンドラーにレベルを上げて例外を渡す必要がある場合は、`DISPOSITION_CONTINUE_SEARCH` を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 適切な例外ハンドラーが見つかった場合、このメソッドはそのハンドラーに例外を渡します。 この状況では、このメソッドはそれを呼び出したコードには戻らず、戻り値は無関係です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

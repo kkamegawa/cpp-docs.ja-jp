@@ -1,9 +1,9 @@
 ---
 title: _fpieee_flt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpieee_flt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8835a3184300f1c56f1123a09aa48cd34a387c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458618"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957027"
 ---
-# <a name="fpieeeflt"></a>_fpieee_flt
+# <a name="_fpieee_flt"></a>_fpieee_flt
 
 IEEE 浮動小数点例外用のユーザー定義トラップ ハンドラーを呼び出します。
 
@@ -54,27 +57,27 @@ int _fpieee_flt(
 *excInfo*<br/>
 Windows NT 例外情報構造体へのポインター。
 
-*ハンドラー*<br/>
+*ヘッダー*<br/>
 ユーザーの IEEE トラップ ハンドラー ルーチンへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-戻り値 **_fpieee_flt**によって返される値は、*ハンドラー*します。 そのため、構造化例外処理 (SEH) 機構の except 句で IEEE フィルター ルーチンが使用される場合があります。
+**_Fpieee_flt**の戻り値は、*ハンドラー*によって返される値です。 そのため、構造化例外処理 (SEH) 機構の except 句で IEEE フィルター ルーチンが使用される場合があります。
 
 ## <a name="remarks"></a>Remarks
 
-**_Fpieee_flt**関数は、IEEE 浮動小数点例外用のユーザー定義トラップ ハンドラーを呼び出し、すべての関連情報が提供されます。 このルーチンは SEH 機構の例外フィルターとして機能し、必要に応じて独自の IEEE 例外ハンドラーが呼び出されます。
+**_Fpieee_flt**関数は、IEEE 浮動小数点例外用のユーザー定義トラップハンドラーを呼び出し、関連するすべての情報を提供します。 このルーチンは SEH 機構の例外フィルターとして機能し、必要に応じて独自の IEEE 例外ハンドラーが呼び出されます。
 
-**_FPIEEE_RECORD** Fpieee.h で定義されている構造には、IEEE 浮動小数点例外に関する情報が含まれています。 この構造体は、ユーザー定義トラップ ハンドラーに渡される **_fpieee_flt**します。
+**_FPIEEE_RECORD**構造体には、IEEE 浮動小数点例外に関する情報が含まれています (Fpieee. h に定義されています)。 この構造体は、 **_fpieee_flt**によってユーザー定義トラップハンドラーに渡されます。
 
 |_FPIEEE_RECORD フィールド|説明|
 |----------------------------|-----------------|
-|**RoundingMode**<br/>**精度**|これら**符号なし** **int**例外が発生した時点での浮動小数点環境に関する情報を格納します。|
-|**操作**|これは、**符号なし** **int**フィールド、トラップを原因となった操作の種類を示します。 型が比較の場合 (**_FpCodeCompare**)、特殊なのいずれかを指定できます **_FPIEEE_COMPARE_RESULT**値 (fpieee.h 内で定義されている) で、 **Result.Value**フィールド。 変換の種類 (**_FpCodeConvert**) 浮動小数点の変換操作中に、トラップが発生したことを示します。 見ることができます、 **Operand1**と**結果**型を変換しようとしているの種類を確認します。|
-|**Operand1**<br/>**オペランド 2**<br/>**結果**|これら **_FPIEEE_VALUE**構造型と提案された結果とオペランドの値を指定します。 各構造体には、これらのフィールドが含まれています。<br /><br /> **OperandValid** - 応答の値が有効かどうかを示すフラグ。<br />**形式**-対応する値のデータ型。 対応する値が有効でなくても、形式の種類が返されることがあります。<br />**値**-結果またはオペランドのデータ値。|
-|**原因**<br/>**Enable**<br/>**状態**|**_Fpieee_exception_flags に**浮動小数点例外の種類ごとに 1 つのビット フィールドが含まれています。 これらのフィールドと、[_controlfp](control87-controlfp-control87-2.md) に指定される例外をマスクするために使用される引数との間には対応関係があります。 各ビットの正確な意味はコンテキストに依存します。<br /><br /> **原因**-特定の例外が発生したことを示します各ビットを設定します。<br />**有効にする**-ビットに設定されている各は、特定の例外が現在はマスクされていないことを示します。<br />**ステータス**-ビットに設定されている各は、特定の例外が現在保留中であることを示します。 これによってマスクされたために発生していない例外が含まれます **_controlfp**します。|
+|**RoundingMode**<br/>**Precision**|これらの**符号なし** **int**フィールドには、例外が発生した時点の浮動小数点環境に関する情報が含まれます。|
+|**操作**|この**符号なし** **int**フィールドは、トラップを発生させた操作の種類を示します。 型が比較 ( **_FpCodeCompare**) の場合**は、_FPIEEE_COMPARE_RESULT フィールドに**特殊な値 (fpieee. h で定義) のいずれかを指定できます。 変換の種類 ( **_FpCodeConvert**) は、浮動小数点変換操作中にトラップが発生したことを示します。 **Operand1**と**結果**の型を調べて、試行されている変換の種類を特定できます。|
+|**Operand1**<br/>**Operand2**<br/>**結果**|これらの **_FPIEEE_VALUE**構造体は、提案された結果とオペランドの型と値を示します。 各構造体には、次のフィールドが含まれます。<br /><br /> **オペレーティング andvalid** -応答する値が有効かどうかを示すフラグ。<br />**Format** -対応する値のデータ型。 対応する値が有効でなくても、形式の種類が返されることがあります。<br />**値**-結果またはオペランドのデータ値。|
+|**原因**<br/>**Enable**<br/>**ステータス**|**_FPIEEE_EXCEPTION_FLAGS**は、浮動小数点例外の種類ごとに1つのビットフィールドを格納します。 これらのフィールドと、[_controlfp](control87-controlfp-control87-2.md) に指定される例外をマスクするために使用される引数との間には対応関係があります。 各ビットの正確な意味はコンテキストに依存します。<br /><br /> **原因**-各ビットセットビットは、発生した特定の例外を示します。<br />**Enable** -各設定ビットは、特定の例外が現在マスク解除されていることを示します。<br />**Status** -各設定ビットは、特定の例外が現在保留中であることを示します。 これには、 **_controlfp**によってマスクされたために発生していない例外が含まれます。|
 
-無効になっている保留中の例外は、有効にされたときに発生します。 これにより、未定義の動作を使用する場合 **_fpieee_flt**を例外フィルターとして。 浮動小数点例外を有効にする前に、必ず [_clearfp](clear87-clearfp.md) を呼び出してください。
+無効になっている保留中の例外は、有効にされたときに発生します。 これにより、 **_fpieee_flt**を例外フィルターとして使用するときに未定義の動作が発生する可能性があります。 浮動小数点例外を有効にする前に、必ず [_clearfp](clear87-clearfp.md) を呼び出してください。
 
 ## <a name="requirements"></a>必要条件
 

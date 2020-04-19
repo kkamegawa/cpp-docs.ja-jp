@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2861
 ms.assetid: 012bb44d-6c9b-4def-b54e-b19f1f8ddd1b
-ms.openlocfilehash: bb61272b5a8d94a26096bd05260de331e853bf0c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d6cab186d4acf229a32620f33c9c86e807459dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521714"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751990"
 ---
 # <a name="compiler-error-c2861"></a>コンパイラ エラー C2861
 
-'関数の name': インターフェイスのメンバー関数を定義することはできません
+' function name ': インターフェイスメンバー関数を定義することはできません
 
-メンバーを検出し、コンパイラは、interface キーワードが発生しましたか、インターフェイスとして構造体を推測が関数の定義。  インターフェイスは、メンバー関数の定義を含めることはできません。
+コンパイラにより、インターフェイスキーワードが検出されたか、または構造体がインターフェイスとして推測されましたが、メンバー関数の定義が見つかりました。  インターフェイスにメンバー関数の定義を含めることはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2861 が生成されます。
 
-```
+```cpp
 // C2861.cpp
 // compile with: /c
 #include <objbase.h>   // required for IUnknown definition

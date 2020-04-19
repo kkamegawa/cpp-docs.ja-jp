@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3280
 ms.assetid: 86dc5bbc-8818-4786-a728-9334268d308b
-ms.openlocfilehash: b43ea73a626ba35f58054a94046915d4eba97181
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127ff9d56f48ad276a59fba984deba16f2f8c339
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566245"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757593"
 ---
 # <a name="compiler-error-c3280"></a>コンパイラ エラー C3280
 
@@ -21,7 +21,7 @@ ms.locfileid: "50566245"
 
 次の例では C3280 が生成されます。
 
-```
+```cpp
 // C3280_2.cpp
 // compile with: /clr
 ref struct A {

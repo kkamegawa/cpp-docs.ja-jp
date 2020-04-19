@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-ms.openlocfilehash: 0a9ceb332888e306b8cb3bcbe1832f773d02d63d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43570cd43ca6e9d4f892dc577f615e9fa980e561
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629815"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051576"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>コンパイラの警告 (レベル 3) C4414
 
-'function': 関数へのジャンプを短いが近くに変換
+' function ': near に変換された関数への short ジャンプ
 
-短いジャンプは、命令から制限の範囲内のアドレスに分岐するコンパクトな命令を生成します。 命令にジャンプし、ターゲット アドレスなど、関数定義の間の距離を表す短いオフセットが含まれています。 リンク中には、関数を短いオフセットから到達可能な範囲外に移動する移動または対象のリンク時の最適化が関数にあります。 コンパイラは、近いまたはまでのいずれかに、jmp 命令を必要とすると、ジャンプの特殊なレコードを生成する必要があります。 コンパイラでは、変換が行われます。
+短いジャンプは、命令から制限された範囲内のアドレスに分岐するコンパクト命令を生成します。 命令には、ジャンプとターゲットアドレス (関数定義) との距離を表す短いオフセットが含まれます。 リンク中に、関数が移動されるか、またはリンク時の最適化の対象になります。これにより、関数が短いオフセットから到達可能な範囲外に移動されます。 コンパイラは、ジャンプ用に特別なレコードを生成する必要があります。そのためには、jmp 命令を NEAR 以上にする必要があります。 コンパイラによって変換が行われました。
 
-たとえば、次のコードでは、C4414 が生成されます。
+たとえば、次のコードでは C4414 が生成されます。
 
-```
+```cpp
 // C4414.cpp
 // compile with: /W3 /c
 // processor: x86

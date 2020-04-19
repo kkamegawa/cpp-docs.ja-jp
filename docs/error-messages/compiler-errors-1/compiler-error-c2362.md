@@ -1,29 +1,29 @@
 ---
 title: コンパイラ エラー C2362
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 f1_keywords:
 - C2362
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: 17656b2a48a3680a9269d3ca300fd4188eda6b84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661111"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503213"
 ---
 # <a name="compiler-error-c2362"></a>コンパイラ エラー C2362
 
-'goto label' で 'identifier' の初期化がスキップされました
+> 初期化 '*識別子*' の初期化が ' goto*ラベル*'
 
-コンパイルするときに[/Za](../../build/reference/za-ze-disable-language-extensions.md)識別子が初期化されている防止ラベルにジャンプします。
+使用してコンパイルされるときに[/Za](../../build/reference/za-ze-disable-language-extensions.md)ラベルにジャンプ先から初期化される識別子をできないようにします。
 
-宣言が入力されていないブロックで囲まれている場合を除き、初期化子と共に宣言ジャンプすることはできませんまたは変数は既に初期化されています。
+宣言が入力されていないブロックで囲まれている場合、または変数は既に初期化されている場合、初期化子を含む宣言のみ移動できます。
 
-次の例では C2326 が生成されます。
+次の例では、C2362 が生成されます。
 
-```
+```cpp
 // C2362.cpp
 // compile with: /Za
 int main() {
@@ -35,7 +35,7 @@ label1:;
 
 考えられる解決方法:
 
-```
+```cpp
 // C2362b.cpp
 // compile with: /Za
 int main() {

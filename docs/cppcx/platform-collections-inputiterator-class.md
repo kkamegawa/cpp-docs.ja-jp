@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::InputIterator クラス
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161798"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator クラス
 
@@ -53,7 +53,7 @@ InputIterator テンプレート クラスの型名。
 |名前|説明|
 |----------|-----------------|
 |[InputIterator::operator!= 演算子](#operator-inequality)|現在の InputIterator が、指定された InputIterator と等しくないかどうかを示します。|
-|[InputIterator::operator* 演算子](#operator-decrement)|現在の InputIterator により指定された要素への参照を取得します。|
+|[InputIterator::operator* 演算子](#operator-dereference)|現在の InputIterator により指定された要素への参照を取得します。|
 |[InputIterator::operator++ 演算子](#operator-increment)|現在の InputIterator をインクリメントします。|
 |[InputIterator::operator== 演算子](#operator-equality)|現在の InputIterator が、指定された InputIterator と等しいかどうかを示します。|
 |[InputIterator::operator-> 演算子](#operator-arrow)|現在の InputIterator により参照される要素のアドレスを取得します。|
@@ -76,12 +76,12 @@ InputIterator クラスの新しいインスタンスを初期化します。
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Iter*<br/>
+*Iterator*<br/>
 反復子オブジェクト。
 
 ## <a name="operator-arrow"></a>  Inputiterator::operator-&gt;演算子

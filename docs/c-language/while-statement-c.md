@@ -7,12 +7,12 @@ helpviewer_keywords:
 - while keyword [C]
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
-ms.openlocfilehash: d774971910fe69ed707bc545e4c0e022282a1d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662346"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151898"
 ---
 # <a name="while-statement-c"></a>while ステートメント (C)
 
@@ -45,6 +45,6 @@ while ( i >= 0 )
 
 このコード例では、`string2` の文字を `string1` にコピーします。 `i` が 0 以上の場合、`string2[i]` が `string1[i]` に割り当てられ、`i` がデクリメントされます。 `i` が 0 に達するか、0 より小さくなると、`while` ステートメントの実行が終了します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [while ステートメント (C++)](../cpp/while-statement-cpp.md)

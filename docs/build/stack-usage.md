@@ -2,12 +2,12 @@
 title: x64 スタック使用量
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 3318a3512f83e242496454ffa2dc4aa8d26e1fc3
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314825"
 ---
 # <a name="x64-stack-usage"></a>x64 スタック使用量
 

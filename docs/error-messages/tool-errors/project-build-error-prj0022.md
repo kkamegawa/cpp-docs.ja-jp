@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0022
 ms.assetid: 691344a8-fc70-4aeb-9372-dde72f4588a4
-ms.openlocfilehash: 8568155524252f820134063df90f49b07a3d896f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35bb9b2c1f03fdcf28a06bf1e678d4e6600bc97f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359320"
 ---
 # <a name="project-build-error-prj0022"></a>プロジェクト ビルド エラー PRJ0022
 
@@ -21,4 +21,4 @@ ms.locfileid: "50583600"
 
 不明または無効なマクロを使用することがあります。
 
-参照してください[Visual C プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)については、プロジェクトのプロパティにアクセスする方法。
+参照してください[Visual C プロジェクトのプロパティの設定](../../build/working-with-project-properties.md)については、プロジェクトのプロパティにアクセスする方法。

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555631"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052600"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>コンパイラの警告 (レベル 1) C4621
 
-'operator--' の型 'type'、前置形式を使用していない後置形式
+型 ' type ' に対して後置形式でない ' operator--' が見つかりました。プレフィックス形式を使用します
 
-指定した型の定義後置デクリメント演算子がありませんでした。 コンパイラは、オーバーロードされた前置演算子を使用します。
+指定された型に後置デクリメント演算子が定義されていませんでした。 コンパイラは、オーバーロードされた前置演算子を使用します。
 
-この警告は、後置 `--` 演算子を定義することで回避できます。 引数が 2 つのバージョンを作成、`--`次に示す演算子。
+この警告は、後置 `--` 演算子を定義することで回避できます。 次に示すように、`--` 演算子の2つの引数を持つバージョンを作成します。
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

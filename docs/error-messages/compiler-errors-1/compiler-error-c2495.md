@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2495
 ms.assetid: bb7066fe-3549-4901-97e4-157f3c04dd57
-ms.openlocfilehash: 83a0359fce175b12dd18e2500d63d7a86bed9f0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e16404e8c23a902a2cdbfc436cecdff21e68b6a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757021"
 ---
 # <a name="compiler-error-c2495"></a>コンパイラ エラー C2495
 
-'identifier': 'nothrow' は関数宣言または定義にのみ適用できます
+' identifier ': ' nothrow ' は関数の宣言または定義にのみ適用できます
 
-[Nothrow](../../cpp/nothrow-cpp.md)拡張属性は関数宣言または定義のみに適用できます。
+[Nothrow](../../cpp/nothrow-cpp.md)拡張属性は、関数の宣言または定義にのみ適用できます。
 
 次の例では、C2495 が生成されます。
 
-```
+```cpp
 // C2495.cpp
 // compile with: /c
 __declspec(nothrow) class X {   // C2495

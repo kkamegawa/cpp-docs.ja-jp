@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport、_CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467796"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938833"
 ---
-# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
+# <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
 
 デバッグ メッセージのあるレポートを生成し、3 つの宛先 (デバッグ バージョンのみ) にレポートを送信します。
 
@@ -63,13 +66,13 @@ int _CrtDbgReportW(
 ### <a name="parameters"></a>パラメーター
 
 *reportType*<br/>
-レポートの種類:**前述**、 **_CRT_ERROR**、および **_CRT_ASSERT**します。
+レポートの種類: **_CRT_WARN**、 **_CRT_ERROR**、および **_CRT_ASSERT**。
 
 *ファイル名*<br/>
-アサート/レポートが発生したソース ファイルの名前へのポインターまたは**NULL**します。
+アサート/レポートが発生したソースファイル名へのポインターまたは**NULL**。
 
 *行番号*<br/>
-アサート/レポートが発生したソース ファイルの数の行または**NULL**します。
+アサート/レポートが発生したソースファイル内の行番号または**NULL**。
 
 *moduleName*<br/>
 アサートまたはレポートが発生したモジュール (.exe または .dll) 名へのポインター。
@@ -78,35 +81,35 @@ int _CrtDbgReportW(
 ユーザー メッセージの作成に使用される書式指定文字列へのポインター。
 
 *argument*<br/>
-使用される省略可能な代用引数*形式*します。
+*形式*で使用される省略可能な置換引数。
 
 ## <a name="return-value"></a>戻り値
 
-すべてのレポート送信先 **_CrtDbgReport**と **_CrtDbgReportW**エラーが発生しなかった場合、エラーが発生した場合は-1、0 を返します。 ただし、レポートの宛先がデバッグ メッセージ ウィンドウで、ユーザーが **[再試行]** をクリックすると、これらの関数は 1 を返します。 ユーザーがデバッグ メッセージ ウィンドウの **[中止]** をクリックすると、関数はすぐに中止され、値は返されません。
+すべてのレポートの出力先では、 **_CrtDbgReport**と **_CrtDbgReportW**は、エラーが発生した場合は-1 を返し、エラーが検出されなかった場合は0を返します。 ただし、レポートの宛先がデバッグ メッセージ ウィンドウで、ユーザーが **[再試行]** をクリックすると、これらの関数は 1 を返します。 ユーザーがデバッグ メッセージ ウィンドウの **[中止]** をクリックすると、関数はすぐに中止され、値は返されません。
 
-[_RPT、_RPTF](rpt-rptf-rptw-rptfw-macros.md)マクロ呼び出しをデバッグ **_CrtDbgReport**レポートをデバッグを生成します。 これらのマクロのワイド文字バージョンだけでなく[_ASSERT、_ASSERTE](assert-asserte-assert-expr-macros.md)、 [_RPTW](rpt-rptf-rptw-rptfw-macros.md)と[_RPTFW](rpt-rptf-rptw-rptfw-macros.md)を使用して、 **_CrtDbgReportW**にデバッグ レポートを生成します。 ときに **_CrtDbgReport**または **_CrtDbgReportW** 1 を返します - イン タイム (JIT) デバッグが有効なこれらのマクロはデバッガーを起動します。
+[_RPT、_RPTF](rpt-rptf-rptw-rptfw-macros.md) debug マクロは **_CrtDbgReport**を呼び出して、デバッグレポートを生成します。 これらのマクロのワイド文字バージョンと[_ASSERT、_ASSERTE](assert-asserte-assert-expr-macros.md)、 [_RPTW](rpt-rptf-rptw-rptfw-macros.md) 、および[_RPTFW](rpt-rptf-rptw-rptfw-macros.md)は、 **_CrtDbgReportW**を使用してデバッグレポートを生成します。 **_CrtDbgReport**または **_CrtDbgReportW**が1を返すと、just-in-time (JIT) デバッグが有効になっていれば、これらのマクロはデバッガーを開始します。
 
 ## <a name="remarks"></a>Remarks
 
-**_CrtDbgReport**と **_CrtDbgReportW** 3 種類の宛先へデバッグ レポートを送信できます。 デバッグ レポート ファイル、デバッグ モニター (Visual Studio デバッガー)、またはデバッグ メッセージ ウィンドウ。 2 つの構成関数 [_CrtSetReportMode](crtsetreportmode.md) および [_CrtSetReportFile](crtsetreportfile.md) は、各レポートの種類の出力先を指定するために使用されます。 これらの関数では、各レポートの種類に対するレポートの宛先を個別に管理できます。 たとえば、ことを指定することは、 *reportType*の**前述**にのみ、デバッグ モニターに送信中に、 *reportType*の **_CRT_ASSERT**デバッグ メッセージ ウィンドウとユーザー定義のレポート ファイルに送信されます。
+**_CrtDbgReport**と **_CrtDbgReportW**は、デバッグレポートファイル、デバッグモニター (Visual Studio デバッガー)、またはデバッグメッセージウィンドウの3つの異なる変換先にデバッグレポートを送信できます。 2 つの構成関数 [_CrtSetReportMode](crtsetreportmode.md) および [_CrtSetReportFile](crtsetreportfile.md) は、各レポートの種類の出力先を指定するために使用されます。 これらの関数では、各レポートの種類に対するレポートの宛先を個別に管理できます。 たとえば、 **_CRT_WARN**の*reportType*をデバッグモニターのみに送信し、 *reportType*の **_CRT_ASSERT**をデバッグメッセージウィンドウとユーザー定義のレポートファイルに送信するように指定することができます。
 
-**_CrtDbgReportW**のワイド文字バージョンは、 **_CrtDbgReport**します。 すべての出力および文字列のパラメーターは、ワイド文字列内にあり、それ以外の場合は 1 バイト文字バージョンと同じです。
+**_CrtDbgReportW**は、 **_CrtDbgReport**のワイド文字バージョンです。 すべての出力および文字列のパラメーターは、ワイド文字列内にあり、それ以外の場合は 1 バイト文字バージョンと同じです。
 
-**_CrtDbgReport**と **_CrtDbgReportW**に置き換えることによって、デバッグ レポートのユーザー メッセージを作成、*引数***[n]**、引数*形式*によって定義された同じルールを使用して、文字列、 **printf**または**wprintf**関数。 に対して定義されているファイルと、これらの関数はデバッグ レポートを生成し、現在のレポート モードに基づいて、宛先を決定*reportType*します。 レポートは、デバッグ メッセージ ウィンドウに送信されるときに、 *filename*、 **lineNumber**と*moduleName*ウィンドウに表示される情報に含まれます。
+**_CrtDbgReport**と **_CrtDbgReportW**は、*引数* **[n]** 引数を*書式指定*文字列に置き換えることで、デバッグレポートのユーザーメッセージを作成します。これは、 **printf**または**wprintf**関数。 次にこれらの関数は、 *reportType*に定義されている現在のレポートモードおよびファイルに基づいて、デバッグレポートを生成し、変換先を決定します。 レポートがデバッグメッセージウィンドウに送信されると、*ファイル名*、 **LineNumber**、および*moduleName*がウィンドウに表示されている情報に含まれます。
 
-次の表に、レポート モードまたはモードおよびファイルと結果の動作を使用できる選択肢 **_CrtDbgReport**と **_CrtDbgReportW**します。 これらのオプションは、\<crtdbg.h> でビット フラグとして定義されています。
+次の表に、レポートモード、モード、およびファイルに使用できる選択肢と、 **_CrtDbgReport**および **_CrtDbgReportW**の結果の動作を示します。 これらのオプションは、\<crtdbg.h> でビット フラグとして定義されています。
 
-|レポート モード|レポート ファイル|**_CrtDbgReport**、 **_CrtDbgReportW**動作|
+|レポート モード|レポート ファイル|**_CrtDbgReport**、 **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|利用不可|Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API にメッセージを書き込みます。|
-|**_CRTDBG_MODE_WNDW**|利用不可|Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) API を呼び出して、メッセージおよび **[中止]**、**[再試行]**、**[無視]** の各ボタンを表示するメッセージ ボックスを作成します。 クリックすると**中止**、 **_CrtDbgReport**または **_CrtDbgReport**すぐに中止されます。 ユーザーが **[再試行]** をクリックすると、1 を返します。 クリックすると**無視**、実行が継続と **_CrtDbgReport**と **_CrtDbgReportW** 0 が返されます。 エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがよくあります。|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|メッセージをユーザーが指定した書き込みます**処理**、Windows を使用して[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API とはファイル ハンドルの有効性を確認できませんアプリケーションは、レポート ファイルを開き、有効なファイルを渡す。処理します。|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|メッセージを書き込みます**stderr**します。|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|メッセージを書き込みます**stdout**します。|
+|**_CRTDBG_MODE_DEBUG**|適用なし|Windows [OutputDebugString](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw) API にメッセージを書き込みます。|
+|**_CRTDBG_MODE_WNDW**|適用なし|Windows [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) API を呼び出して、メッセージおよび **[中止]** 、 **[再試行]** 、 **[無視]** の各ボタンを表示するメッセージ ボックスを作成します。 ユーザーが **[中止]** をクリックすると、 **_CrtDbgReport**または **_CrtDbgReport**がすぐに中止します。 ユーザーが **[再試行]** をクリックすると、1 を返します。 ユーザーが **[無視]** をクリックすると、実行が続行され、 **_CrtDbgReport**と **_CrtDbgReportW**が0を返します。 エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがよくあります。|
+|**_CRTDBG_MODE_FILE**|**__ HFILE**|Windows [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) API を使用して、ユーザーが指定した**ハンドル**にメッセージを書き込みます。ファイルハンドルの有効性は検証されません。アプリケーションは、レポートファイルを開き、有効なファイルハンドルを渡す役割を担います。|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|**Stderr**にメッセージを書き込みます。|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|**Stdout**にメッセージを書き込みます。|
 
 レポートは 1 つ、2 つ、または 3 つの宛先に送信できます。またどの宛先にも送信しないこともできます。 レポート モードおよびレポート ファイルを指定する方法の詳細については、「[_CrtSetReportMode](crtsetreportmode.md)」および「[_CrtSetReportFile](crtsetreportfile.md)」関数を参照してください。 デバッグ マクロおよびレポート関数の使用方法の詳細については、「[レポート用マクロの使用](/visualstudio/debugger/macros-for-reporting)」を参照してください。
 
-アプリケーションによって提供されるよりさらに柔軟性が必要なかどうかは **_CrtDbgReport**と **_CrtDbgReportW**、独自のレポート関数を作成し、それを C ランタイム ライブラリのレポートにフックできますメカニズムを使用して、 [_CrtSetReportHook](crtsetreporthook.md)関数。
+アプリケーションが **_CrtDbgReport**と **_CrtDbgReportW**によって提供されるよりも高い柔軟性を必要とする場合は、独自のレポート関数を作成し、 [_CrtSetReportHook](crtsetreporthook.md)を使用してそれを C ランタイムライブラリのレポートメカニズムにフックすることができます。プロシージャ.
 
 ## <a name="requirements"></a>必要条件
 
@@ -115,7 +118,7 @@ int _CrtDbgReportW(
 |**_CrtDbgReport**|\<crtdbg.h>|
 |**_CrtDbgReportW**|\<crtdbg.h>|
 
-**_CrtDbgReport**と **_CrtDbgReportW**は Microsoft 拡張機能。 詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_CrtDbgReport**と **_CrtDbgReportW**は Microsoft の拡張機能です。 詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

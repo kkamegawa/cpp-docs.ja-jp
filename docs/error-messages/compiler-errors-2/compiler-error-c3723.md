@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
-ms.openlocfilehash: a61a59c89bacbdc1e4f6e6848b3bb616c6a91772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45eee5ead680f63b85dcdd94e4ca099dabfeefc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572069"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752991"
 ---
 # <a name="compiler-error-c3723"></a>コンパイラ エラー C3723
 
-'function': イベントを解決できませんでした
+' function ': イベントを解決できませんでした
 
-`function` 呼び出すには、どのイベントを解決できませんでした。
+`function` は、呼び出すイベントを解決できませんでした。
 
 次の例では、C3723 が生成されます。
 
-```
+```cpp
 // C3723.cpp
 struct A {
    // To resolve, comment void f(int); and uncomment the __event function
@@ -42,11 +42,11 @@ int main() {
 }
 ```
 
-`__hook` `__unhook` /clr プログラミングと互換性がありません。  代わりに + = および-= 演算子を使用します。
+`__hook` と `__unhook` は、/clr プログラミングと互換性がありません。  代わりに、+ = 演算子と-= 演算子を使用します。
 
 次の例では、C3723 が生成されます。
 
-```
+```cpp
 // C3723b.cpp
 // compile with: /clr
 using namespace System;

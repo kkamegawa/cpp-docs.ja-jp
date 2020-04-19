@@ -1,10 +1,10 @@
 ---
 title: _tempnam_dbg、_wtempnam_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam_dbg
 - _tempnam_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam_dbg
 - tempnam_dbg
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73642730995ac5c0b47519fac64b30400d47767c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596458"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946246"
 ---
-# <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg、_wtempnam_dbg
+# <a name="_tempnam_dbg-_wtempnam_dbg"></a>_tempnam_dbg、_wtempnam_dbg
 
-関数バージョン[_tempnam、_wtempnam、tmpnam、_wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)のデバッグ バージョンを使用する**malloc**、 **_malloc_dbg**します。
+デバッグバージョンの**malloc**, **_malloc_dbg**を使用する、 [_tempnam、_wtempnam、tmpnam、_wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)の関数バージョン。
 
 ## <a name="syntax"></a>構文
 
@@ -62,33 +65,33 @@ wchar_t *_wtempnam_dbg(
 
 ### <a name="parameters"></a>パラメーター
 
-*dir*<br/>
+*エイリアス*<br/>
 TMP 環境変数がない場合、または TMP が有効なディレクトリではない場合にファイル名で使用されるパス。
 
 *prefix*<br/>
-によって返された名前を付けたとなる文字列 **_tempnam**します。
+**_Tempnam**によって返される名前の前に付加される文字列。
 
 *blockType*<br/>
-要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
+割り当て操作を要求したソースファイル名へのポインターまたは**NULL**。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイルの数の行または**NULL**します。
+割り当て操作が要求されたソースファイル内の行番号または**NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、生成された名前にポインターを返しますまたは**NULL**障害が発生した場合。 TMP 環境変数および指定されている、無効なディレクトリ名がある場合、エラーが発生することが、 *dir*パラメーター。
+各関数は、生成された名前へのポインター、またはエラーが発生した場合は**NULL**を返します。 TMP 環境変数で指定されている無効なディレクトリ名と*dir*パラメーターに無効なディレクトリ名が指定されていると、エラーが発生する可能性があります。
 
 > [!NOTE]
-> **無料**(または**free_dbg**) によって割り当てられたポインターに対して呼び出される必要がありますは **_tempnam_dbg**と **_wtempnam_dbg**します。
+> **無料** **_tempnam_dbg**と **_wtempnam_dbg**によって割り当てられたポインターに対して、(または**free_dbg**) を呼び出す必要があります。
 
 ## <a name="remarks"></a>Remarks
 
-**_Tempnam_dbg**と **_wtempnam_dbg**関数と同じ **_tempnam**と **_wtempnam**する点を除いて、 **_DEBUG**が定義されている場合、これらの関数でのデバッグ バージョンを使用**malloc**と **_malloc_dbg**場合に、メモリを割り当て、 **NULL**は最初のパラメーターとして渡されます。 詳細については、「[_malloc_dbg](malloc-dbg.md)」をご覧ください。
+**_Tempnam_dbg**関数と **_wtempnam_dbg**関数は、 **_tempnam**および **_wtempnam**と同じですが、 **_debug**が定義されている場合、これらの関数は**malloc**および **_malloc_dbg**のデバッグバージョンを使用します。**NULL**が最初のパラメーターとして渡された場合は、メモリを割り当てます。 詳細については、「[_malloc_dbg](malloc-dbg.md)」をご覧ください。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 フラグを定義する代わりに、 **_CRTDBG_MAP_ALLOC**します。 ときに **_CRTDBG_MAP_ALLOC**が定義されている、呼び出し **_tempnam**と **_wtempnam**にマップし直され **_tempnam_dbg**と **_wtempnam_dbg**をそれぞれで、 *blockType*設定 **_NORMAL_BLOCK**します。 したがって、としてヒープ ブロックをマークする場合、これらの関数を明示的に呼び出す必要はない **_CLIENT_BLOCK**します。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、フラグ **_CRTDBG_MAP_ALLOC**を定義できます。 **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_tempnam**と **_wtempnam**の呼び出しはそれぞれ **_tempnam_dbg**と **_wtempnam_dbg**に再マップされ、 *blocktype*は **_NORMAL_BLOCK**に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK**としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

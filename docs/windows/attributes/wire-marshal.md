@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 47aa604f697c436ffb99b85f85368c343ac43634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529962"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514847"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-アプリケーションに固有のデータ型ではなく転送されるデータ型を指定します。
+アプリケーション固有のデータ型ではなく、転送に使用されるデータ型を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50529962"
 
 ## <a name="remarks"></a>Remarks
 
-**Wire_marshal** C++ 属性と同じ機能を持つ、 [wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL 属性。
+**Wire_marshal** C++属性には、 [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、の使い方を示しています**wire_marshal**:。
+次のコードは、 **wire_marshal**の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp

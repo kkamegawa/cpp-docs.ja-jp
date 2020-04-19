@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: d5bb61aaad767b1322c12f57ec16ae59cb75148c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f93f65e949c18ddb1ad5dba859ba8c4832abac8f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392831"
 ---
 # <a name="form-views-mfc"></a>フォーム ビュー (MFC)
 
@@ -32,7 +32,7 @@ ms.locfileid: "51331543"
 
    既存のダイアログ リソースを選択した場合は、ダイアログ ボックスのプロパティ ページを使用してこれらのスタイルを設定する必要があります。 ダイアログ ボックスのスタイルを含める必要があります。
 
-     **WS_CHILD**= On
+     **WS_CHILD**=On
 
      **WS_BORDER**= オフ
 

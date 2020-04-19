@@ -1,9 +1,9 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
-apiname:
+ms.date: 05/21/2019
+api_name:
 - _open_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2fa2d8190082967d14dd780aa9be7286996b1f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951219"
 ---
-# <a name="openosfhandle"></a>_open_osfhandle
+# <a name="_open_osfhandle"></a>_open_osfhandle
 
-C ランタイム ファイル記述子を既存のオペレーティング システムのファイル ハンドルに関連付けます。
+C ランタイムファイル記述子を既存のオペレーティングシステムのファイルハンドルに関連付けます。
 
 ## <a name="syntax"></a>構文
 
@@ -47,29 +50,29 @@ int _open_osfhandle (
 ### <a name="parameters"></a>パラメーター
 
 *osfhandle*<br/>
-オペレーティング システムのファイル ハンドル。
+オペレーティングシステムのファイルハンドル。
 
 *flags*<br/>
 許可される操作の種類。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_open_osfhandle** C ランタイム ファイル記述子を返します。 それ以外の場合、-1 を返します。
+正常に終了した場合、 **_open_osfhandle** は C ランタイム ファイル記述子を返します。 それ以外の場合は、-1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Open_osfhandle**関数が C ランタイム ファイル記述子を割り当てますで指定されたオペレーティング システム ファイル ハンドルに関連付けます*osfhandle*します。 コンパイラの警告を避けるためには、キャスト、 *osfhandle*から引数**処理**に**intptr_t**します。 *フラグ*引数が 1 つから形成される整数式または複数のマニフェスト定数で定義されている\<fcntl.h >。 フォームに 2 つ以上のマニフェスト定数を使用する場合、*フラグ*引数、定数はビットごとの OR 演算子で組み合わされます ( **&#124;** )。
+**_Open_osfhandle**関数は、C ランタイムのファイル記述子を割り当てます。 このファイル記述子を、 *osfhandle*によって指定されたオペレーティングシステムのファイルハンドルに関連付けます。 コンパイラの警告を避けるには、*osfhandle* 引数を **HANDLE** から **intptr_t** にキャストします。 *flags* 引数は、\<fcntl.h> で定義された 1 つ以上のマニフェスト定数で構成された整数式です。 ビットごとの OR 演算子 ( **&#124;** ) を使用すると、2つ以上のマニフェスト定数を結合して、 *flags*引数を形成できます。
 
-これらのマニフェスト定数が定義されている\<fcntl.h >:
+次のマニフェスト定数は \<fcntl.h> で定義されます。
 
 |||
 |-|-|
-| **\_O\_追加** | 書き込み操作の前に、毎回、ファイル ポインターをファイルの末尾に位置指定します。 |
+| **\_O\_APPEND** | 書き込み操作の前に、毎回、ファイル ポインターをファイルの末尾に位置指定します。 |
 | **\_O\_RDONLY** | 読み取り専用でファイルを開きます。 |
 | **\_O\_TEXT** | ファイルをテキスト (変換) モードで開きます。 |
 | **\_O\_WTEXT** | Unicode (UTF-16 に変換) モードでファイルを開きます。 |
 
-**_Open_osfhandle**呼び出しは、ファイル記述子に、Win32 ファイル ハンドルの所有権を転送します。 開かれたファイルを閉じる **_open_osfhandle**、呼び出す[\_閉じます](close.md)します。 呼び出しによって基になる OS ファイル ハンドルが閉じられたも **_close**Win32 関数を呼び出す必要はありませんので、 **CloseHandle**元のハンドル。 ファイル記述子が所有している場合、**ファイル&#42;** 呼び出してストリーム[fclose](fclose-fcloseall.md)を**ファイル&#42;** ストリームは、ファイル記述子も閉じられます、基になるハンドル。 この場合、呼び出さない **_close**ファイル記述子。
+**_open_osfhandle** 呼び出しは、ファイル記述子に、Win32 ファイル ハンドルの所有権を転送します。 **_open_osfhandle** を使用して開いたファイルを閉じるには、[\_close](close.md) を呼び出します。 基になる OS ファイル ハンドルも **_close** を呼び出すことで閉じます。 元のハンドルで Win32 関数 **CloseHandle** を呼び出さないでください。 **ファイル記述子がファイルストリームに&#42;** よって所有されている場合、 [fclose](fclose-fcloseall.md)を呼び出すと、ファイル記述子と基になるハンドルの両方が閉じられます。 この場合、 **_close** をファイル記述子で呼び出したり、元のハンドルで **CloseHandle** を呼び出したりしないでください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -82,3 +85,4 @@ int _open_osfhandle (
 ## <a name="see-also"></a>関連項目
 
 [ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[\_get_osfhandle](get-osfhandle.md)

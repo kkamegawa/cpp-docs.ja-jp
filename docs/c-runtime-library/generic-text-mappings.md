@@ -7,12 +7,12 @@ helpviewer_keywords:
 - generic-text mappings
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
-ms.openlocfilehash: 892f36c104a6754b4168860f3d72153ed03d8f1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4bf4fdc44cc8807bebacdad3700d2040c628b0d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658914"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742673"
 ---
 # <a name="generic-text-mappings"></a>汎用テキスト マップ
 
@@ -26,7 +26,7 @@ ms.locfileid: "50658914"
 
 詳細については、「[Using Generic-Text Mappings (汎用テキスト マッピングの使用)](../c-runtime-library/using-generic-text-mappings.md)」をご覧ください。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データ型のマップ](../c-runtime-library/data-type-mappings.md)<br/>
 [汎用テキストのプログラム例](../c-runtime-library/a-sample-generic-text-program.md)

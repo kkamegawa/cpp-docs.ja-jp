@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f7ded70431b80257433058cc9af89bcb137c4247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383848"
 ---
 # <a name="collections"></a>コレクション
 
@@ -55,7 +55,7 @@ Microsoft Foundation Class ライブラリは、オブジェクトのグルー�
 
 ##  <a name="_core_the_template_based_collection_classes"></a> テンプレート ベースのコレクション クラス
 
-任意の型のオブジェクトを格納するタイプ セーフなコレクションを実装する最も簡単な方法では、テンプレート ベースの MFC クラスのいずれかを使用します。 これらのクラスの例については、MFC のサンプルを参照してください。[収集](../visual-cpp-samples.md)します。
+任意の型のオブジェクトを格納するタイプ セーフなコレクションを実装する最も簡単な方法では、テンプレート ベースの MFC クラスのいずれかを使用します。 これらのクラスの例については、MFC のサンプルを参照してください。[収集](../overview/visual-cpp-samples.md)します。
 
 次の表では、MFC のテンプレート ベースのコレクション クラスを示します。
 
@@ -118,4 +118,3 @@ MFC コレクション クラスの特性がテーブルに[コレクション �
 
 [概念](../mfc/mfc-concepts.md)<br/>
 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
-

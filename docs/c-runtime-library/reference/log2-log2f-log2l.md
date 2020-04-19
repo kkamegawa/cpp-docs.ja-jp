@@ -1,11 +1,11 @@
 ---
 title: log2、log2f、log2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,14 +17,17 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520466"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953169"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -61,14 +64,14 @@ long double log2l(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、戻り値が返さ log2 *x*します。
+成功した場合、は return log2 *x*を返します。
 
 それ以外の場合は、次の値のいずれかを返します。
 
-|懸案事項|Return|
+|問題|Return|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* ±0 を =|-INFINITY|
+|*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITY|
 |NaN|NaN|
@@ -79,7 +82,7 @@ long double log2l(
 
 ## <a name="remarks"></a>Remarks
 
-この関数は基本的の最上位 1 ビットの 0 から始まるインデックスを返します x が整数である場合は、 *x*します。
+X が整数の場合、この関数は基本的に、 *x*の最上位1ビットの0から始まるインデックスを返します。
 
 ## <a name="requirements"></a>必要条件
 

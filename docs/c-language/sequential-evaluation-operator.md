@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 1da8c64ad12d794178ec2e24c3b6c2d587d029e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527189"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149129"
 ---
 # <a name="sequential-evaluation-operator"></a>順次評価演算子
 
@@ -46,6 +46,6 @@ func_two( (x--, y + 2), z );
 
 `func_one` への関数呼び出しでは、`x`、`y + 2`、`z` の 3 つの引数がコンマで区切られて渡されます。 `func_two` の関数呼び出しでは、かっこにより、コンパイラは順次評価演算子として最初のコンマを解釈します。 この関数呼び出しは、`func_two` に 2 つの引数を渡します。 最初の引数は、順次評価演算 `(x--, y + 2)` の結果です。この演算は、式 `y + 2` の値と型を持ち、第 2 の引数は `z` です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンマ演算子: ,](../cpp/comma-operator.md)

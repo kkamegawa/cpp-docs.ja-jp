@@ -1,10 +1,10 @@
 ---
 title: remove、_wremove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wremove
 - remove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remove
 - _wremove
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
-ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
+ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417604"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949430"
 ---
-# <a name="remove-wremove"></a>remove、_wremove
+# <a name="remove-_wremove"></a>remove、_wremove
 
 ファイルを削除します。
 
@@ -59,13 +62,13 @@ int _wremove(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 -1 を返しますそれ以外の場合、設定と**errno**いずれかに**EACCES**をパスが読み取り専用ファイルを指定することを示すために、ディレクトリを指定しますまたは、開いているファイルまたは**ENOENT** 。ファイル名またはパスが見つからなかったことを示します。
+ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 それ以外の場合は、-1 を返し、 **errno**を**EACCES**に設定して、パスが読み取り専用ファイルを指定しているか、ディレクトリを指定しているか、ファイルが開いていることを示します。または、ファイル名またはパスが見つからなかったことを示すために**ENOENT**を設定します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**のワイド文字バージョンです**削除 (_r)**、*パス*引数 **_wremove**はワイド文字列です。 **_wremove**と**削除 (_r)** 動作は同じです。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
+**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**のワイド文字**バージョンは、削除できませ**ん。 **_wremove**への*パス*引数は、ワイド文字列です。 それ以外**では**、 **_wremove**と削除は同じように動作します。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -103,7 +106,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtremovetxt"></a>入力: crt_remove.txt
+### <a name="input-crt_removetxt"></a>入力: crt_remove.txt
 
 ```Input
 This file will be deleted.

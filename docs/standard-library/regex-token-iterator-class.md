@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473516"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689058"
 ---
-# <a name="regextokeniterator-class"></a>regex_token_iterator クラス
+# <a name="regex_token_iterator-class"></a>regex_token_iterator クラス
 
 サブマッチ用の反復子クラス。
 
@@ -45,18 +45,18 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*Bidit* \
 サブマッチの反復子の型。
 
-*Elem*<br/>
+*Elem* \
 一致させる要素の型。
 
-*RXtraits*<br/>
+*RXtraits* \
 要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、定数前方反復子オブジェクトを表します。 概念的には、文字シーケンスで正規表現と一致するものを検索するために使用される `regex_iterator` オブジェクトを保持します。 また、正規表現の一致ごとに、格納されているベクター `sub_match<BidIt>` 内のインデックス値で識別されるサブマッチを表す `subs` 型のオブジェクトを抽出します。
+クラステンプレートは、定数前方反復子オブジェクトを表します。 概念的には、文字シーケンスで正規表現と一致するものを検索するために使用される `regex_iterator` オブジェクトを保持します。 また、正規表現の一致ごとに、格納されているベクター `sub_match<BidIt>` 内のインデックス値で識別されるサブマッチを表す `subs` 型のオブジェクトを抽出します。
 
 -1 のインデックス値は、前回の正規表現の一致の直後から始まる文字シーケンスまたは前回の正規表現の一致が存在しなかった場合の文字シーケンスの先頭から始まって現在の正規表現の一致の最初の文字の直前まで続く、または、現在の一致が存在しない場合の文字シーケンスの最後まで続く文字シーケンスを指定します。 その他のインデックス値 `idx` は、 `it.match[idx]`に保持されているキャプチャ グループの内容を指定します。
 
@@ -78,7 +78,7 @@ class regex_token_iterator
 
 |型名|説明|
 |-|-|
-|[difference_type](#difference_type)|反復子の差の型です。|
+|[difference_type](#difference_type)|反復子の型の相違点。|
 |[iterator_category](#iterator_category)|反復子カテゴリの型。|
 |[pointer](#pointer)|一致へのポインターの型です。|
 |[reference](#reference)|サブマッチへの参照の型です。|
@@ -95,7 +95,7 @@ class regex_token_iterator
 |[operator==](#op_eq_eq)|反復子が等しいかどうかを比較します。|
 |[operator->](#op_arrow)|指定されたサブマッチにアクセスします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<regex>
 
@@ -199,7 +199,7 @@ match == z
 
 ## <a name="difference_type"></a>  regex_token_iterator::difference_type
 
-反復子の差の型です。
+反復子の型の相違点。
 
 ```cpp
 typedef std::ptrdiff_t difference_type;
@@ -207,7 +207,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `std::ptrdiff_t` の同意語です。
+この型は `std::ptrdiff_t`の同意語です。
 
 ## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
 
@@ -219,7 +219,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `std::forward_iterator_tag` の同意語です。
+この型は `std::forward_iterator_tag`の同意語です。
 
 ## <a name="op_neq"></a>  regex_token_iterator::operator!=
 
@@ -231,12 +231,12 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*右*\
 比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`!(*this == right)` を返します。
+このメンバー関数は、 `!(*this == right)`を返します。
 
 ## <a name="op_star"></a>  regex_token_iterator::operator*
 
@@ -248,7 +248,7 @@ const sub_match<BidIt>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、インデックス値 `sub_match<BidIt>` で識別されるキャプチャ グループを表す `subs[pos]` オブジェクトを返します。
+このメンバー関数は、インデックス値 `sub_match<BidIt>` で識別されるキャプチャ グループを表す `subs[pos]`オブジェクトを返します。
 
 ## <a name="op_add_add"></a>  regex_token_iterator::operator++
 
@@ -276,12 +276,12 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*右*\
 比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`it == right.it && subs == right.subs && pos == right.pos` を返します。
+このメンバー関数は、 `it == right.it && subs == right.subs && pos == right.pos`を返します。
 
 ## <a name="op_arrow"></a>  regex_token_iterator::operator-&gt;
 
@@ -293,7 +293,7 @@ const sub_match<BidIt> * operator->();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、インデックス値 `sub_match<BidIt>` で識別されるキャプチャ グループを表す `subs[pos]` オブジェクトのポインタを返します。
+このメンバー関数は、インデックス値 `sub_match<BidIt>` で識別されるキャプチャ グループを表す `subs[pos]`オブジェクトのポインタを返します。
 
 ## <a name="pointer"></a>  regex_token_iterator::pointer
 
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*最初*の \
 一致させるシーケンスの先頭。
 
-*last*<br/>
+*最後*の \
 一致させるシーケンスの末尾。
 
-*re*<br/>
+*再*\
 照合する正規表現。
 
-*f*<br/>
+*f* \
 一致のフラグ。
 
 ### <a name="remarks"></a>Remarks
@@ -374,7 +374,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、`basic_regex<Elem, RXtraits>` の同意語です。
+typedef は、 `basic_regex<Elem, RXtraits>`のシノニムです。
 
 ## <a name="value_type"></a>  regex_token_iterator::value_type
 
@@ -390,11 +390,11 @@ typedef sub_match<BidIt> value_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 系演算子](../standard-library/regex-operators.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Regex_constants クラス](../standard-library/regex-constants-class.md)\
+[Regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[Regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex > 演算子](../standard-library/regex-operators.md)\
+[Regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

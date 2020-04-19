@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: de79945b468689095f33feeb2153aca7d799d8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262997"
 ---
 # <a name="html-basics"></a>HTML の基礎
 
@@ -107,9 +107,8 @@ Life is good.
 
 タグ、属性、および拡張機能の詳細については、ハイパー テキスト マークアップ言語 (HTML) 仕様を参照してください。
 
-[http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)
+[公開された最新バージョンの HTML](https://www.w3.org/TR/html/) W3C.org にします。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
-

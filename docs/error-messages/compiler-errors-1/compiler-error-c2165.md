@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2165
 ms.assetid: b108313b-b8cb-4dce-b2ec-f2b31c9cdc87
-ms.openlocfilehash: 1dadc56dafca056db9b4a14ab39127306b797f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3bfaa07fa4524e5883b2744d5686e90fc9683016
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570392"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755682"
 ---
 # <a name="compiler-error-c2165"></a>コンパイラ エラー C2165
 
@@ -21,7 +21,7 @@ ms.locfileid: "50570392"
 
 次の例では C2165 が生成されます。
 
-```
+```cpp
 // C2165.cpp
 // compile with: /c
 char __cdecl *p;   // C2165

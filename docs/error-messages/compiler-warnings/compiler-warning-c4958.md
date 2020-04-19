@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 7d4ac6f21cfcfe0f37eb17ff81eabd3e6341a7d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62208072"
 ---
 # <a name="compiler-warning-c4958"></a>コンパイラの警告 C4958
 
@@ -44,7 +44,7 @@ int main( ) {
 }
 ```
 
-コンパイラはポインター演算を使用して配列操作を実装します。 したがって、ネイティブ配列は検証不能になります。代わりに CLR 配列を使用してください。 詳細については、「 [配列](../../windows/arrays-cpp-component-extensions.md)」を参照してください。
+コンパイラはポインター演算を使用して配列操作を実装します。 したがって、ネイティブ配列は検証不能になります。代わりに CLR 配列を使用してください。 詳細については、「 [配列](../../extensions/arrays-cpp-component-extensions.md)」を参照してください。
 
 次の例では C4958 が生成されます。
 

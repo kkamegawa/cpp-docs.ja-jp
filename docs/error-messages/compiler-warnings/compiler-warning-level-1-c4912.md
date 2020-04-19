@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4912
 ms.assetid: ba1f1a66-8c20-4792-9ac8-43e49f729ae2
-ms.openlocfilehash: 7a6f7df79a98685a7eec1582ae248ea3f620c5fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e9e13cd909ec77397eac8b40ec4323b2b5847d9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474299"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050251"
 ---
 # <a name="compiler-warning-level-1-c4912"></a>コンパイラの警告 (レベル 1) C4912
 
@@ -21,7 +21,7 @@ ms.locfileid: "50474299"
 
 次のコードは、この警告がどのように生成されるかを示しています。
 
-```
+```cpp
 // C4912.cpp
 // compile with: /W1
 #include <windows.h>

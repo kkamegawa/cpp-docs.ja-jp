@@ -1,6 +1,6 @@
 ---
 title: クラス ライブラリの概要
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468622"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095954"
 ---
 # <a name="class-library-overview"></a>クラス ライブラリの概要
 
@@ -71,7 +71,7 @@ ms.locfileid: "50468622"
 
 - [ファイルおよびデータベース クラス](../mfc/file-and-database-classes.md)
 
-   - [ファイル I/O クラス](../mfc/file-i-o-classes.md)
+   - [ファイル i/o クラス](../mfc/file-i-o-classes.md)
 
    - [DAO クラス](../mfc/dao-classes.md)
 
@@ -109,15 +109,14 @@ ms.locfileid: "50468622"
 
    - [例外クラス](../mfc/exception-classes.md)
 
-セクション[一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)MFC ライブラリの設計方法について説明します。
+「[一般的なクラスのデザインの考え方](../mfc/general-class-design-philosophy.md)」では、MFC ライブラリの設計方法について説明します。
 
-フレームワークの概要については、次を参照してください。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)します。 上記のクラスの一部は、フレームワークの外部で使用できる汎用クラスであり、コレクション、例外、ファイル、文字列などの便利な抽象化を提供します。
+フレームワークの概要については、「 [Windows 用のアプリケーションを記述するためのクラスの使用](../mfc/using-the-classes-to-write-applications-for-windows.md)」を参照してください。 上記のクラスの一部は、フレームワークの外部で使用できる汎用クラスであり、コレクション、例外、ファイル、文字列などの便利な抽象化を提供します。
 
-クラスの継承を表示するには、使用、[クラス階層図](../mfc/hierarchy-chart.md)します。
+クラスの継承を表示するには、[クラス階層図](../mfc/hierarchy-chart.md)を使用します。
 
-この概要で示されているクラスに加えて、MFC ライブラリには多くのグローバル関数、グローバル変数、およびマクロが含まれています。 概要を説明し、トピックの詳細な一覧がある[MFC マクロとグローバル](../mfc/reference/mfc-macros-and-globals.md)、MFC クラスへの参照をアルファベット順に従います。
+この概要で示されているクラスに加えて、MFC ライブラリには多くのグローバル関数、グローバル変数、およびマクロが含まれています。 これらの概要と詳細な一覧については、「mfc[マクロとグローバル](../mfc/reference/mfc-macros-and-globals.md)」を参照してください。これは、mfc クラスのアルファベット順のリファレンスに従います。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)
-

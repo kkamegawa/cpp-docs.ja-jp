@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4177
 ms.assetid: 2b05a5b3-696e-4f21-818e-227b9335e748
-ms.openlocfilehash: 5c8f3dc37c76ad0d016108b792ee61c67cce63d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82aae8e5d0be15adef7891b39a6f7e482c729e60
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529222"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625059"
 ---
 # <a name="compiler-warning-level-1-c4177"></a>コンパイラの警告 (レベル 1) C4177
 
-\#プラグマのプラグマは、グローバル スコープでなければなりません。
+\#プラグマプラグマはグローバルスコープにある必要があります
 
 [pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) プラグマをローカル スコープ内で使用しないでください。 **pragma** は、現在のスコープの後にグローバル スコープが出現するまで無効になります。
 
 次の例では C4177 が生成されます。
 
-```
+```cpp
 // C4177.cpp
 // compile with: /W1
 // #pragma bss_seg("global")   // OK

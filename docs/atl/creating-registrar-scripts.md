@@ -1,6 +1,6 @@
 ---
-title: ATL レジストラーのスクリプトを作成します。
-ms.date: 11/04/2016
+title: ATL レジストラーのスクリプトの作成
+ms.date: 05/14/2014
 helpviewer_keywords:
 - scripting, registry scripting
 - ATL, registry
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-ms.openlocfilehash: bc76e41ab0d2cd2d26ef227e6368cb420a8a6401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f32606701ea08736985f0b0dd2ed82712040a049
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480239"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707055"
 ---
-# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+# <a name="creating-registrar-scripts"></a>レジストラー スクリプトの作成
 
-レジストラー スクリプトでは、システム レジストリへの API に基づくのではなく、データ ドリブンのアクセスを提供します。 レジストリにキーを追加するスクリプトで 1 つまたは 2 つの行がかかるので、データに基づくアクセスは通常は効率的です。
+レジストラー スクリプトにより、API ではなく、データに基づいてシステム レジストリにアクセスできます。 データに基づくアクセスは、レジストリにキーを追加するために、スクリプトに 1、2 行しか必要としないため、一般に効率的になります。
 
-[ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)COM サーバーのレジストラー スクリプトを自動的に生成されます。 このスクリプトは、オブジェクトに関連付けられた .rgs ファイルで見つかります。
+[ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)によって、COM サーバーのレジストラー スクリプトが自動的に生成されます。 このスクリプトは、オブジェクトに関連付けられた .rgs ファイルで見つかります。
 
-ATL レジストラーのスクリプト エンジンでは、実行時に、レジストラー スクリプトを処理します。 ATL は、サーバーのセットアップ中にスクリプト エンジンを自動的に呼び出します。
+ATL レジストラーのスクリプト エンジンによって、実行時にレジストラー スクリプトが処理されます。 ATL によって、サーバーのセットアップ時にスクリプト エンジンが自動的に呼び出されます。
 
-この記事では、次のレジストラー スクリプトに関連するトピックについて説明します。
+この記事では、レジストラー スクリプトに関する次のトピックについて説明します。
 
-- [バッカス ナウア記法 (BNF) 構文を理解する](../atl/understanding-backus-nauer-form-bnf-syntax.md)
+- [Backus-Naur form (BNF) 構文を理解する](../atl/understanding-backus-naur-form-bnf-syntax.md)
 
 - [パース ツリーを理解する](../atl/understanding-parse-trees.md)
 
@@ -38,4 +38,3 @@ ATL レジストラーのスクリプト エンジンでは、実行時に、レ
 ## <a name="see-also"></a>関連項目
 
 [レジストリ コンポーネント (レジストラー)](../atl/atl-registry-component-registrar.md)
-

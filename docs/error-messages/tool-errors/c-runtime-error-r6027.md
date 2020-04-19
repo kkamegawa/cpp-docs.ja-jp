@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6027
 ms.assetid: c06a62b3-08d9-4bf5-bcad-8340ec552f69
 ms.openlocfilehash: 2884f148091d9407d3229f0690a161639b5195e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395145"
 ---
 # <a name="c-runtime-error-r6027"></a>C ランタイム エラー R6027
 

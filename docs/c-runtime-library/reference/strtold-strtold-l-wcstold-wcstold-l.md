@@ -1,12 +1,12 @@
----
+﻿---
 title: strtold、_strtold_l、wcstold、_wcstold_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - wcstold
 - strtold
 - _strtold_l
 - _wcstold_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstold_l
 - _wcstold_l
@@ -27,14 +30,14 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1a8bc385072f110832788447bfa248bc12b3663
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521337"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957696"
 ---
-# <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
+# <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
 文字列を long double 精度浮動小数点値に変換します。
 
@@ -74,15 +77,15 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtold**と浮動小数点数の値を返します、**長い** **二重**、を除き、表現はオーバーフローが発生すると、+/-返しますその場合は、**HUGE_VALL**します。 符号**HUGE_VALL**表現できない値の符号と一致します。 **strtold**変換を実行できないか、アンダー フローが発生した場合は 0 を返します。
+**strtold**と浮動小数点数の値を返します、**long** **double**、を除き、表現はオーバーフローが発生すると、+/-返しますその場合は、**HUGE_VALL**します。 **HUGE_VALL**の符号は、表現できない値の符号と一致します。 変換を実行できない場合、またはアンダーフローが発生した場合は、 **0 を返し**ます。
 
-**wcstold**と同様に値を返します**strtold**します。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローまたはアンダー フローが発生し、」の説明に従って、無効なパラメーター ハンドラーが呼び出された場合[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+**wcstold** **は、** と同様に値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生して、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されると、 **errno**は**ERANGE**に設定されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-各関数は、入力文字列を変換*strSource*を**長い** **二重**します。 **Strtold**関数は、文字列の読み取りを中止*strSource*数値の一部として認識できない最初の文字。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 ワイド文字バージョン**strtold**は**wcstold**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
+各関数は、入力文字列を変換*strSource*を**long** **double**します。 **Strtold**関数は、数値の一部として認識できない最初の文字で文字列*strtold*の読み取りを停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 ここ**では、** ワイド文字のバージョンは**wcstold**です。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -91,21 +94,21 @@ NULL で終わる変換対象の文字列。
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-**LC_NUMERIC** 、現在のロケールのカテゴリの設定には、小数点文字の認識*strSource*します。 詳細については、「[setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 せず、関数、 **_l**サフィックスを使用して、現在のロケール **_strtold_l**と **_wcstold_l**と同じ **_strtold**と **_wcstold**ロケールを代わりに使用する点を除いての渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの**LC_NUMERIC** category 設定によって、 *strsource*の小数点文字が認識されます。 詳細については、「[setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。 **_strtold_l**と **_wcstold_l**は、渡されたロケールを代わりに使用する点を除いて、 **_strtold**および **_wcstold**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*ない**NULL**、場所を指しているスキャンを停止させた文字へのポインターが格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*によってポイントされている位置に格納されて*endptr*します。
+*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
 
-**strtold**が必要ですが*strSource*次の形式の文字列を指すようにします。
+**Strtold**は 、次の形式の文字列を指す必要があります。
 
-[*空白*] [*サインオン*] [*桁*] [.*数字*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*記号*]*桁*]
+[*空白*][*sign*][*数字*][.*数字*][{**d** &#124; **d** &#124; **e** &#124; **e**} [*sign*]*数字*]
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*サインオン*が plus (**+**) または負符号 (**-**); と*桁*は 1 つ以上の 10 進数字。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数の後には指数部を指定できます。指数部は、指数部の開始文字 (**d**、**D**、**e**、**E**) および必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
+*空白*は空白文字とタブ文字で構成される場合があり、これらは無視されます。*sign*は、正符号 **+** () または **-** 負符号 () です。*数字*は1桁以上の10進数です。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数の後には指数部を指定できます。指数部は、指数部の開始文字 (**d**、**D**、**e**、**E**) および必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**strtold**、 **_strtold_l**|\<stdlib.h>|
+|**_strtold_l** 、|\<stdlib.h>|
 |**wcstold**、 **_wcstold_l**|\<stdlib.h> または \<wchar.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。

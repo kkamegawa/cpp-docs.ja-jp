@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455472"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954802"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 使用されていないヒープ メモリをオペレーティング システムに対して解放します。
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_heapmin** 0 を返します。 この関数は-1 を返しますそれ以外の場合、設定と**errno**に**返る**。
+成功した場合、 **_heapmin**は0を返します。それ以外の場合、この関数は-1 を返し、 **errno**をに**設定します。**
 
 このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Heapmin**関数は、オペレーティング システムに使用されていないヒープ メモリを解放することによって、ヒープを最小限に抑えます。 オペレーティング システムがサポートされていない場合 **_heapmin**(たとえば、Windows 98) は、関数は-1 を返します。 設定および**errno**に**返る**します。
+**_Heapmin**関数は、使用されていないヒープメモリをオペレーティングシステムに解放することにより、ヒープを最小化します。 オペレーティングシステムが **_heapmin**(Windows 98 など) をサポートしていない場合、この関数は-1 を返し、 **errno**をに**設定します。**
 
 ## <a name="requirements"></a>必要条件
 

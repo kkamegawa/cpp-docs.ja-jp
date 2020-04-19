@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604478"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339528"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP クラス
 
@@ -53,7 +53,7 @@ class CSettingsStoreSP
 
 ## <a name="remarks"></a>Remarks
 
-使用することができます、 `CSettingsStoreSP` MFC レジストリのすべての操作を XML ファイルやデータベースなどの他の場所にリダイレクトするクラス。 その場合は、次の手順を実行します。
+使用することができます、 `CSettingsStoreSP` MFC レジストリのすべての操作を XML ファイルやデータベースなどの他の場所にリダイレクトするクラス。 この操作を行うには、次の手順に従います。
 
 1. クラスを作成 (など`CMyStore`) から派生させます`CSettingsStore`します。
 

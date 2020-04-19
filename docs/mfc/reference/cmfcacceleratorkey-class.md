@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 169530b213e9201dd59782aad05b71c73c62c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403959"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey クラス
 

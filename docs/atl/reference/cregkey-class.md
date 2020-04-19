@@ -42,19 +42,19 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694856"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496534"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 
-このクラスは、システム レジストリのエントリを操作するためのメソッドを提供します。
+このクラスには、システムレジストリのエントリを操作するためのメソッドが用意されています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -68,74 +68,74 @@ class CRegKey
 
 |名前|説明|
 |----------|-----------------|
-|[CRegKey::CRegKey](#cregkey)|コンストラクターです。|
+|[CRegKey:: CRegKey](#cregkey)|コンストラクターです。|
 |[CRegKey:: ~ CRegKey](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CRegKey::Attach](#attach)|HKEY をアタッチするには、このメソッドを呼び出す、`CRegKey`オブジェクトを設定して、 [m_hKey](#m_hkey)メンバーを識別するハンドル`hKey`します。|
-|[CRegKey::Close](#close)|解放するには、このメソッドを呼び出し、 [m_hKey](#m_hkey)メンバーが処理し、NULL に設定します。|
-|[CRegKey::Create](#create)|としてのサブキーが存在しない場合は、指定したキーを作成するには、このメソッドを呼び出す`hKeyParent`します。|
-|[CRegKey::DeleteSubKey](#deletesubkey)|指定したキーをレジストリから削除するには、このメソッドを呼び出します。|
-|[CRegKey::DeleteValue](#deletevalue)|値フィールドを削除するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。|
-|[CRegKey::Detach](#detach)|デタッチするには、このメソッドを呼び出す、 [m_hKey](#m_hkey)からメンバーのハンドル、`CRegKey`オブジェクトし、設定`m_hKey`を NULL にします。|
-|[して](#enumkey)|開いているレジストリ キーのサブキーの列挙には、このメソッドを呼び出します。|
-|[CRegKey::Flush](#flush)|すべての開いているレジストリ キーの属性をレジストリに書き込むには、このメソッドを呼び出します。|
-|[CRegKey::GetKeySecurity](#getkeysecurity)|開いているレジストリ キーを保護するセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。|
-|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|このメソッドでは、属性またはレジストリ キーの内容の変更について、呼び出し元に通知します。|
-|[Cregkey::open](#open)|指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。|
-|[CRegKey::QueryBinaryValue](#querybinaryvalue)|指定された値の名前のバイナリ データを取得するには、このメソッドを呼び出します。|
-|[CRegKey::QueryDWORDValue](#querydwordvalue)|DWORD データ値を指定した名前を取得するには、このメソッドを呼び出します。|
-|[CRegKey::QueryGUIDValue](#queryguidvalue)|GUID データ値を指定した名前を取得するには、このメソッドを呼び出します。|
-|[CRegKey::QueryMultiStringValue](#querymultistringvalue)|指定された値名の複数行文字列のデータを取得するには、このメソッドを呼び出します。|
-|[CRegKey::QueryQWORDValue](#queryqwordvalue)|QWORD データが指定された値の名前を取得するには、このメソッドを呼び出します。|
-|[CRegKey::QueryStringValue](#querystringvalue)|指定された値名の文字列データを取得するには、このメソッドを呼び出します。|
-|[CRegKey::QueryValue](#queryvalue)|指定した値のフィールドのデータを取得するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。|
-|[CRegKey::RecurseDeleteKey](#recursedeletekey)|指定したキーをレジストリから削除し、すべてのサブキーを明示的に削除するには、このメソッドを呼び出します。|
-|[CRegKey::SetBinaryValue](#setbinaryvalue)|レジストリ キーのバイナリ値を設定するには、このメソッドを呼び出します。|
-|[CRegKey::SetDWORDValue](#setdwordvalue)|レジストリ キーの DWORD 値を設定するには、このメソッドを呼び出します。|
-|[CRegKey::SetGUIDValue](#setguidvalue)|レジストリ キーの GUID 値を設定するには、このメソッドを呼び出します。|
-|[CRegKey::SetKeySecurity](#setkeysecurity)|レジストリ キーのセキュリティを設定するには、このメソッドを呼び出します。|
-|[CRegKey::SetKeyValue](#setkeyvalue)|指定したキーの指定した値のフィールドにデータを格納するには、このメソッドを呼び出します。|
-|[CRegKey::SetMultiStringValue](#setmultistringvalue)|レジストリ キーの複数行文字列の値を設定するには、このメソッドを呼び出します。|
-|[CRegKey::SetQWORDValue](#setqwordvalue)|レジストリ キーの QWORD 値を設定するには、このメソッドを呼び出します。|
-|[CRegKey::SetStringValue](#setstringvalue)|レジストリ キーの文字列値を設定します。|
-|[CRegKey::SetValue](#setvalue)|指定された値 フィールドのデータを格納するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。|
+|[CRegKey:: Attach](#attach)|このメソッドを呼び出して、 [m_hKey](#m_hkey)メンバーハンドル`CRegKey`をに`hKey`設定することにより、オブジェクトに HKEY をアタッチします。|
+|[CRegKey:: Close](#close)|このメソッドを呼び出して、 [m_hKey](#m_hkey)メンバーハンドルを解放し、NULL に設定します。|
+|[CRegKey:: Create](#create)|指定したキーがの`hKeyParent`サブキーとして存在しない場合は、このメソッドを呼び出して作成します。|
+|[CRegKey::D eleteSubKey](#deletesubkey)|指定したキーをレジストリから削除するには、このメソッドを呼び出します。|
+|[CRegKey::D eleteValue](#deletevalue)|[M_hKey](#m_hkey)から値フィールドを削除するには、このメソッドを呼び出します。|
+|[CRegKey::D etach](#detach)|このメソッドを呼び出して、 [m_hKey](#m_hkey)メンバーハンドルを`CRegKey`オブジェクトからデタッチし`m_hKey` 、を NULL に設定します。|
+|[CRegKey:: EnumKey](#enumkey)|このメソッドを呼び出して、開いているレジストリキーのサブキーを列挙します。|
+|[CRegKey:: Flush](#flush)|このメソッドを呼び出して、開いているレジストリキーのすべての属性をレジストリに書き込みます。|
+|[CRegKey:: GetKeySecurity](#getkeysecurity)|開いているレジストリキーを保護しているセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。|
+|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|このメソッドは、開いているレジストリキーの属性または内容への変更について、呼び出し元に通知します。|
+|[CRegKey:: Open](#open)|このメソッドを呼び出して、指定したキーを開き、 [m_hKey](#m_hkey)をこのキーのハンドルに設定します。|
+|[CRegKey::QueryBinaryValue](#querybinaryvalue)|指定した値の名前のバイナリデータを取得するには、このメソッドを呼び出します。|
+|[CRegKey::QueryDWORDValue](#querydwordvalue)|指定した値名の DWORD データを取得するには、このメソッドを呼び出します。|
+|[CRegKey::QueryGUIDValue](#queryguidvalue)|指定した値の名前の GUID データを取得するには、このメソッドを呼び出します。|
+|[CRegKey::QueryMultiStringValue](#querymultistringvalue)|指定した値名の文字列データを取得するには、このメソッドを呼び出します。|
+|[CRegKey::QueryQWORDValue](#queryqwordvalue)|指定した値名の QWORD データを取得するには、このメソッドを呼び出します。|
+|[CRegKey::QueryStringValue](#querystringvalue)|指定した値名の文字列データを取得するには、このメソッドを呼び出します。|
+|[CRegKey::QueryValue](#queryvalue)|[M_hKey](#m_hkey)の指定した値フィールドのデータを取得するには、このメソッドを呼び出します。 このメソッドの以前のバージョンはサポートされなくなり、ATL_DEPRECATED としてマークされます。|
+|[CRegKey::RecurseDeleteKey](#recursedeletekey)|指定したキーをレジストリから削除し、サブキーを明示的に削除するには、このメソッドを呼び出します。|
+|[CRegKey:: SetBinaryValue](#setbinaryvalue)|レジストリキーのバイナリ値を設定するには、このメソッドを呼び出します。|
+|[CRegKey:: SetDWORDValue](#setdwordvalue)|レジストリキーの DWORD 値を設定するには、このメソッドを呼び出します。|
+|[CRegKey:: SetGUIDValue](#setguidvalue)|レジストリキーの GUID 値を設定するには、このメソッドを呼び出します。|
+|[CRegKey:: SetKeySecurity](#setkeysecurity)|レジストリキーのセキュリティを設定するには、このメソッドを呼び出します。|
+|[CRegKey:: SetKeyValue](#setkeyvalue)|指定したキーの指定した値フィールドにデータを格納するには、このメソッドを呼び出します。|
+|[CRegKey:: SetMultiStringValue](#setmultistringvalue)|レジストリキーの文字列値を設定するには、このメソッドを呼び出します。|
+|[CRegKey:: SetQWORDValue](#setqwordvalue)|レジストリキーの QWORD 値を設定するには、このメソッドを呼び出します。|
+|[CRegKey:: SetStringValue](#setstringvalue)|レジストリ キーの文字列値を設定します。|
+|[CRegKey:: SetValue](#setvalue)|[M_hKey](#m_hkey)の指定した値フィールドにデータを格納するには、このメソッドを呼び出します。 このメソッドの以前のバージョンはサポートされなくなり、ATL_DEPRECATED としてマークされます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CRegKey::operator HKEY](#operator_hkey)|変換を`CRegKey`HKEY するオブジェクト。|
-|[CRegKey::operator =](#operator_eq)|代入演算子。|
+|[CRegKey:: operator HKEY](#operator_hkey)|オブジェクトを`CRegKey` HKEY に変換します。|
+|[CRegKey:: operator =](#operator_eq)|代入演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CRegKey::m_hKey](#m_hkey)|関連付けられているレジストリ キーのハンドルが含まれています、`CRegKey`オブジェクト。|
-|[CRegKey::m_pTM](#m_ptm)|ポインター`CAtlTransactionManager`オブジェクト|
+|[CRegKey::m_hKey](#m_hkey)|`CRegKey`オブジェクトに関連付けられたレジストリキーのハンドルを格納します。|
+|[CRegKey::m_pTM](#m_ptm)|オブジェクトへ`CAtlTransactionManager`のポインター|
 
 ## <a name="remarks"></a>Remarks
 
-`CRegKey` 作成すると、システム レジストリのキーと値を削除するメソッドを提供します。 レジストリには、インストールに固有の一連ソフトウェアのバージョン番号、インストールされているハードウェア、および COM オブジェクトの物理的な論理マッピングなど、システム コンポーネントの定義にはが含まれています。
+`CRegKey`システムレジストリのキーと値を作成および削除するためのメソッドを提供します。 レジストリには、ソフトウェアのバージョン番号、インストールされているハードウェアの論理対一のマッピング、COM オブジェクトなど、システムコンポーネントのインストール固有の定義セットが含まれています。
 
-`CRegKey` 特定のコンピューターのシステム レジストリに対してプログラミング インターフェイスを提供します。 たとえば、特定のレジストリ キーを開くには、呼び出す`CRegKey::Open`します。 取得したり、データ値を変更したりするには、呼び出す`CRegKey::QueryValue`または`CRegKey::SetValue`、それぞれします。 キーを閉じるには、呼び出す`CRegKey::Close`します。
+`CRegKey`特定のコンピューターのシステムレジストリに対するプログラミングインターフェイスを提供します。 たとえば、特定のレジストリキーを開くには、 `CRegKey::Open`を呼び出します。 データ値を取得または変更するに`CRegKey::QueryValue`は`CRegKey::SetValue`、それぞれまたはを呼び出します。 キーを閉じるには、 `CRegKey::Close`を呼び出します。
 
-キーを閉じると、そのレジストリ データが書き込まれます (フラッシュ) ハード _ ディスク。 このプロセスは数秒をかかります。 呼び出すことができる場合、アプリケーションは、ハード_ディスクにレジストリ データを明示的に記述する必要があります、 [RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32 関数。 ただし、`RegFlushKey`多くのシステム リソースを使用し、どうしても必要な場合にのみ呼び出す必要があります。
+キーを閉じると、そのレジストリデータがハードディスクに書き込まれます (フラッシュされます)。 このプロセスには数秒かかることがあります。 アプリケーションがレジストリデータをハードディスクに明示的に書き込む必要がある場合は、 [Regflushkey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32 関数を呼び出すことができます。 ただし、 `RegFlushKey`は多くのシステムリソースを使用するため、必要な場合にのみ呼び出す必要があります。
 
 > [!IMPORTANT]
->  レジストリの場所を指定する呼び出し元を許可するすべてのメソッドでは、信頼できないデータを読み取る可能性があります。 ようにするメソッドを使用して、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)この関数が NULL 終端である文字列を明示的に処理しないの考慮事項を考慮する必要があります。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  呼び出し元がレジストリの場所を指定できるようにするメソッドは、信頼できないデータを読み取る可能性があります。 [Regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)を使用するメソッドでは、この関数が NULL で終了する文字列を明示的に処理しないことを考慮する必要があります。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="attach"></a>  CRegKey::Attach
+##  <a name="attach"></a>CRegKey:: Attach
 
-HKEY をアタッチするには、このメソッドを呼び出す、`CRegKey`オブジェクトを設定して、 [m_hKey](#m_hkey)メンバーを識別するハンドル*hKey*します。
+[M_hKey](#m_hkey)メンバーハンドルを*hkey*に設定して`CRegKey` 、このメソッドを呼び出して、オブジェクトに hkey をアタッチします。
 
 ```
 void Attach(HKEY hKey) throw();
@@ -144,15 +144,15 @@ void Attach(HKEY hKey) throw();
 ### <a name="parameters"></a>パラメーター
 
 *hKey*<br/>
-レジストリ キーのハンドル。
+レジストリキーのハンドル。
 
 ### <a name="remarks"></a>Remarks
 
-`Attach` 場合はアサート`m_hKey`以外の場合します。
+`Attach`が NULL 以外`m_hKey`の場合は、をアサートします。
 
-##  <a name="close"></a>  CRegKey::Close
+##  <a name="close"></a>CRegKey:: Close
 
-解放するには、このメソッドを呼び出し、 [m_hKey](#m_hkey)メンバーが処理し、NULL に設定します。
+このメソッドを呼び出して、 [m_hKey](#m_hkey)メンバーハンドルを解放し、NULL に設定します。
 
 ```
 LONG Close() throw();
@@ -160,11 +160,11 @@ LONG Close() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、エラー値を返します。
+成功した場合は、ERROR_SUCCESS を返します。それ以外の場合は、エラー値を返します。
 
-##  <a name="create"></a>  CRegKey::Create
+##  <a name="create"></a>CRegKey:: Create
 
-としてのサブキーが存在しない場合は、指定したキーを作成するには、このメソッドを呼び出す*hKeyParent*します。
+このメソッドを呼び出して、指定したキーが*H鍵 Arent*のサブキーとして存在しない場合は作成します。
 
 ```
 LONG Create(
@@ -180,35 +180,35 @@ LONG Create(
 ### <a name="parameters"></a>パラメーター
 
 *hKeyParent*<br/>
-オープンするキーのハンドル。
+開いているキーのハンドル。
 
 *lpszKeyName*<br/>
-作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。
+作成または開くキーの名前を指定します。 この名前は、 *hsubkey Arent*のサブキーである必要があります。
 
 *lpszClass*<br/>
-作成または開くキーのクラスを指定します。 既定値は、REG_NONE します。
+作成または開くキーのクラスを指定します。 既定値は REG_NONE です。
 
 *dwOptions*<br/>
-キーのオプション。 既定値は、REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。
+キーのオプション。 既定値は REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧については、Windows SDK の「 [Regcreatekeyex](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) 」を参照してください。
 
 *samDesired*<br/>
-キーのセキュリティのアクセス。 既定値は KEY_READ &#124; KEY_WRITE します。 使用可能な値と説明の一覧は、次を参照してください。`RegCreateKeyEx`します。
+キーのセキュリティアクセス。 既定値は KEY_READ &#124; KEY_WRITE です。 使用可能な値と説明の一覧につい`RegCreateKeyEx`ては、「」を参照してください。
 
 *lpSecAttr*<br/>
-ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)キーのハンドルを子プロセスが継承できるかどうかを示す構造体。 既定では、このパラメーターが NULL (つまり、ハンドルを継承することはできませんです)。
+キーのハンドルを子プロセスが継承できるかどうかを示す[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体へのポインター。 既定では、このパラメーターは NULL です (つまり、ハンドルを継承することはできません)。
 
 *lpdwDisposition*<br/>
-[out]NULL 以外の場合は、REG_CREATED_NEW_KEY (キーが存在せず作成した場合) またはポインターを取得し、(キーが存在し、開かれた) 場合。
+入出力NULL 以外の場合は、REG_CREATED_NEW_KEY (キーが存在していて作成された場合) または REG_OPENED_EXISTING_KEY (キーが存在し、開かれた場合) を取得します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS を返し、キーを開きます。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。
+成功した場合、は ERROR_SUCCESS を返し、キーを開きます。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。
 
 ### <a name="remarks"></a>Remarks
 
-`Create` 設定、 [m_hKey](#m_hkey)メンバーをこのキーのハンドル。
+`Create`[m_hKey](#m_hkey)メンバーをこのキーのハンドルに設定します。
 
-##  <a name="cregkey"></a>  CRegKey::CRegKey
+##  <a name="cregkey"></a>CRegKey:: CRegKey
 
 コンストラクターです。
 
@@ -225,16 +225,16 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 `CRegKey` オブジェクトへの参照。
 
 *hKey*<br/>
-レジストリ キーへのハンドル。
+レジストリキーへのハンドル。
 
 *pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-新しい `CRegKey` オブジェクトを作成します。 既存のオブジェクトを作成できます`CRegKey`オブジェクト、またはレジストリ キーを識別するハンドル。
+新しい `CRegKey` オブジェクトを作成します。 オブジェクトは、既存`CRegKey`のオブジェクト、またはレジストリキーへのハンドルから作成できます。
 
-##  <a name="dtor"></a>  CRegKey:: ~ CRegKey
+##  <a name="dtor"></a>CRegKey:: ~ CRegKey
 
 デストラクターです。
 
@@ -244,7 +244,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-デストラクターのリリース`m_hKey`します。
+デストラクターが解放`m_hKey`されます。
 
 ##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey
 
@@ -257,7 +257,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpszSubKey*<br/>
-削除するキーの名前を指定します。 この名前のサブキーである必要があります[m_hKey](#m_hkey)します。
+削除するキーの名前を指定します。 この名前は、 [m_hKey](#m_hkey)のサブキーである必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -265,11 +265,11 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="remarks"></a>Remarks
 
-`DeleteSubKey` サブキーがキーの削除のみできません。 キーにサブキーがある場合は、呼び出す[ある](#recursedeletekey)代わりにします。
+`DeleteSubKey`は、サブキーを持たないキーのみを削除できます。 キーにサブキーがある場合は、代わりに[RecurseDeleteKey](#recursedeletekey)を呼び出します。
 
-##  <a name="deletevalue"></a>  CRegKey::DeleteValue
+##  <a name="deletevalue"></a>CRegKey::D eleteValue
 
-値フィールドを削除するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。
+[M_hKey](#m_hkey)から値フィールドを削除するには、このメソッドを呼び出します。
 
 ```
 LONG DeleteValue(LPCTSTR lpszValue) throw();
@@ -278,15 +278,15 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpszValue*<br/>
-削除する値のフィールドを指定します。
+削除する値フィールドを指定します。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は、ERROR_SUCCESS を返します。 失敗した場合は、WINERROR.H で定義されている 0 以外のエラー コードが返されます。
 
-##  <a name="detach"></a>  CRegKey::Detach
+##  <a name="detach"></a>CRegKey::D etach
 
-デタッチするには、このメソッドを呼び出す、 [m_hKey](#m_hkey)からメンバーのハンドル、`CRegKey`オブジェクトし、設定`m_hKey`を NULL にします。
+このメソッドを呼び出して、 [m_hKey](#m_hkey)メンバーハンドルを`CRegKey`オブジェクトからデタッチし`m_hKey` 、を NULL に設定します。
 
 ```
 HKEY Detach() throw();
@@ -294,11 +294,11 @@ HKEY Detach() throw();
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられている、HKEY、`CRegKey`オブジェクト。
+`CRegKey`オブジェクトに関連付けられている HKEY。
 
-##  <a name="enumkey"></a>  して
+##  <a name="enumkey"></a>CRegKey:: EnumKey
 
-開いているレジストリ キーのサブキーの列挙には、このメソッドを呼び出します。
+このメソッドを呼び出して、開いているレジストリキーのサブキーを列挙します。
 
 ```
 LONG EnumKey(
@@ -311,16 +311,16 @@ LONG EnumKey(
 ### <a name="parameters"></a>パラメーター
 
 *iIndex*<br/>
-サブキーのインデックス。 このパラメーターは、最初の呼び出しの 0 にする必要があります、後続の呼び出しだけインクリメントされます。
+サブキーのインデックス。 最初の呼び出しではこのパラメーターを0にし、その後の呼び出しに対して増分する必要があります。
 
 *pszName*<br/>
-終端の null 文字を含む、サブキーの名前を受け取るバッファーへのポインター。 バッファーに完全なキーの階層ではないサブキーの名前のみがコピーされます。
+サブキーの名前を受け取るバッファーへのポインター (終端の null 文字を含む)。 キーの完全階層ではなく、サブキーの名前のみがバッファーにコピーされます。
 
-*戻る*<br/>
-指定したバッファーの Tchar で、サイズを指定する変数へのポインター、 *pszName*パラメーター。 このサイズは、終端の null 文字を含める必要があります。 メソッドが返す場合は、変数が指す*戻る*バッファーに格納されている文字の数が含まれています。 返されるカウントでは、終端の null 文字は含まれません。
+*pnNameLength*<br/>
+*Pszname*パラメーターによって指定されたバッファーのサイズ (tchars 単位) を指定する変数へのポインター。 このサイズには、終端の null 文字を含める必要があります。 メソッドから制御が戻ったとき、 *pnNameLength*が指す変数には、バッファーに格納されている文字数が格納されます。 返されるカウントには、終端の null 文字は含まれません。
 
 *pftLastWriteTime*<br/>
-時間を受信する変数へのポインター、列挙するサブキーに最後に書き込んだ。
+列挙されたサブキーが最後に書き込まれた時刻を受け取る変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -328,11 +328,11 @@ LONG EnumKey(
 
 ### <a name="remarks"></a>Remarks
 
-サブキーを列挙するために呼び出す`CRegKey::EnumKey`インデックスはゼロにします。 インデックスの値をインクリメントし、メソッドが戻る ERROR_NO_MORE_ITEMS までを繰り返します。 詳細については、次を参照してください。 [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) Windows SDK に含まれています。
+サブキーを列挙するに`CRegKey::EnumKey`は、インデックス0を使用してを呼び出します。 インデックス値をインクリメントし、メソッドが ERROR_NO_MORE_ITEMS を返すまで繰り返します。 詳細については、Windows SDK の「 [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) 」を参照してください。
 
-##  <a name="flush"></a>  CRegKey::Flush
+##  <a name="flush"></a>CRegKey:: Flush
 
-すべての開いているレジストリ キーの属性をレジストリに書き込むには、このメソッドを呼び出します。
+このメソッドを呼び出して、開いているレジストリキーのすべての属性をレジストリに書き込みます。
 
 ```
 LONG Flush() throw();
@@ -344,11 +344,11 @@ LONG Flush() throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) Windows SDK に含まれています。
+詳細については、Windows SDK の「 [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) 」を参照してください。
 
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity
 
-開いているレジストリ キーを保護するセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。
+開いているレジストリキーを保護しているセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。
 
 ```
 LONG GetKeySecurity(
@@ -360,25 +360,25 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>パラメーター
 
 *si*<br/>
-[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)要求されたセキュリティ情報を示す値。
+要求されたセキュリティ情報を示す[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)値。
 
 *psd*<br/>
 要求されたセキュリティ記述子のコピーを受け取るバッファーへのポインター。
 
 *pnBytes*<br/>
-指し示されるバッファーのバイト単位のサイズを*psd*します。
+*Psd*によってポイントされるバッファーのサイズ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS を返します。 メソッドが失敗した場合、戻り値は 0 以外のエラー コードが WINERROR で定義されているは。H.
+成功した場合は、ERROR_SUCCESS を返します。 メソッドが失敗した場合、戻り値は、WINERROR.H で定義されている0以外のエラーコードです。始め.
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)します。
+詳細については、「 [Reggetkeysecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity)」を参照してください。
 
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey
 
-関連付けられているレジストリ キーのハンドルが含まれています、`CRegKey`オブジェクト。
+`CRegKey`オブジェクトに関連付けられたレジストリキーのハンドルを格納します。
 
 ```
 HKEY m_hKey;
@@ -386,7 +386,7 @@ HKEY m_hKey;
 
 ##  <a name="m_ptm"></a>  CRegKey::m_pTM
 
-ポインターを`CAtlTransactionManager`オブジェクト。
+オブジェクトへの`CAtlTransactionManager`ポインター。
 
 ```
 CAtlTransactionManager* m_pTM;
@@ -396,7 +396,7 @@ CAtlTransactionManager* m_pTM;
 
 ##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue
 
-このメソッドでは、属性またはレジストリ キーの内容の変更について、呼び出し元に通知します。
+このメソッドは、開いているレジストリキーの属性または内容への変更について、呼び出し元に通知します。
 
 ```
 LONG NotifyChangeKeyValue(
@@ -409,23 +409,23 @@ LONG NotifyChangeKeyValue(
 ### <a name="parameters"></a>パラメーター
 
 *bWatchSubtree*<br/>
-指定したキーとそのすべてのサブキーで、または指定したキーでのみ変更をレポートするかどうかを示すフラグを指定します。 このパラメーターが TRUE の場合、メソッドは、キーおよびそのサブキーに変更を報告します。 パラメーターが FALSE の場合、メソッドは、キーの変更のみを報告します。
+指定したキーとそのすべてのサブキーの変更を報告するか、または指定したキーのみをレポートするかを示すフラグを指定します。 このパラメーターが TRUE の場合、メソッドは、キーとそのサブキーの変更を報告します。 パラメーターが FALSE の場合、メソッドは、キーでのみ変更を報告します。
 
 *dwNotifyFilter*<br/>
-変更を制御するフラグのセットを報告するかを指定します。 このパラメーターは、次の値の組み合わせを指定できます。
+どのような変更を報告するかを制御するフラグのセットを指定します。 このパラメーターは、次の値の組み合わせにすることができます。
 
 |[値]|説明|
 |-----------|-------------|
-|REG_NOTIFY_CHANGE_NAME|サブキーが追加または削除された場合、呼び出し元に通知します。|
-|REG_NOTIFY_CHANGE_ATTRIBUTES|セキュリティ記述子の情報など、キーの属性の変更の呼び出し元に通知します。|
-|REG_NOTIFY_CHANGE_LAST_SET|キーの値への変更の呼び出し元に通知します。 これには、追加や、値を削除する既存の値の変更を含めることができます。|
-|REG_NOTIFY_CHANGE_SECURITY|キーのセキュリティ記述子への変更の呼び出し元に通知します。|
+|REG_NOTIFY_CHANGE_NAME|サブキーが追加または削除された場合は、呼び出し元に通知します。|
+|REG_NOTIFY_CHANGE_ATTRIBUTES|セキュリティ記述子の情報など、キーの属性の変更を呼び出し元に通知します。|
+|REG_NOTIFY_CHANGE_LAST_SET|キーの値に対する変更を呼び出し元に通知します。 これには、値を追加または削除したり、既存の値を変更したりすることができます。|
+|REG_NOTIFY_CHANGE_SECURITY|キーのセキュリティ記述子への変更を呼び出し元に通知します。|
 
 *hEvent*<br/>
-イベントに対するハンドル。 場合、 *bAsync*パラメーターが TRUE の場合、メソッドからすぐに、このイベントを通知することによって変更が報告されます。 場合*bAsync* false で、 *hEvent*は無視されます。
+イベントに対するハンドル。 *BAsync*パラメーターが TRUE の場合、メソッドはすぐに制御を戻し、変更はこのイベントを通知することによって報告されます。 *BAsync*が FALSE の場合、 *hevent*は無視されます。
 
 *bAsync*<br/>
-メソッドで変更を報告する方法を示すフラグを指定します。 このパラメーターが TRUE の場合、このメソッドは直ちに返され、レポートは、指定されたイベントを通知することによって変更。 このパラメーターが FALSE の場合、変更が発生するまで、メソッドは返しません。 場合*hEvent*有効なイベントで指定されていない、 *bAsync*パラメーターが TRUE にすることはできません。
+メソッドがどのように変更を報告するかを示すフラグを指定します。 このパラメーターが TRUE の場合、メソッドはすぐに制御を戻し、指定されたイベントを通知して変更を報告します。 このパラメーターが FALSE の場合、メソッドは変更が発生するまで戻りません。 *Hevent*に有効なイベントが指定されていない場合、 *BASYNC*パラメーターを TRUE にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -434,13 +434,13 @@ LONG NotifyChangeKeyValue(
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  このメソッドでは、指定したキーが削除された場合、呼び出し元は通知されません。
+>  このメソッドは、指定されたキーが削除された場合に、呼び出し元に通知しません。
 
-詳細およびサンプル プログラムでは、次を参照してください。 [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)します。
+詳細とサンプルプログラムについては、「 [Regnotifychangekeyvalue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue)」を参照してください。
 
-##  <a name="open"></a>  Cregkey::open
+##  <a name="open"></a>CRegKey:: Open
 
-指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。
+このメソッドを呼び出して、指定したキーを開き、 [m_hKey](#m_hkey)をこのキーのハンドルに設定します。
 
 ```
 LONG Open(
@@ -452,33 +452,33 @@ LONG Open(
 ### <a name="parameters"></a>パラメーター
 
 *hKeyParent*<br/>
-オープンするキーのハンドル。
+開いているキーのハンドル。
 
 *lpszKeyName*<br/>
-作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。
+作成または開くキーの名前を指定します。 この名前は、 *hsubkey Arent*のサブキーである必要があります。
 
 *samDesired*<br/>
-キーのセキュリティのアクセス。 既定値は、KEY_ALL_ACCESS です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。
+キーのセキュリティアクセス。 既定値は KEY_ALL_ACCESS です。 使用可能な値と説明の一覧については、Windows SDK の「 [Regcreatekeyex](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、0 以外のエラー値は、WINERROR で定義します。H.
+成功した場合は、ERROR_SUCCESS を返します。それ以外の場合は、WINERROR.H で定義されている0以外のエラー値。始め.
 
 ### <a name="remarks"></a>Remarks
 
-場合、 *lpszKeyName*パラメーターが NULL またはポイント空の文字列に`Open`によって識別されるキーの新しいハンドルを開いて*hKeyParent*がいずれかの前に開かれたハンドルは閉じません。
+*Lpszkeyname*パラメーターが NULL の場合、または空の文字列を`Open`指している場合、は hキーを使って識別されるキーの新しいハンドルを開きますが、以前に開いたハンドルは閉じません。
 
-異なり[CRegKey::Create](#create)、`Open`が存在しない場合、指定したキーは作成されません。
+[CRegKey:: Create](#create)とは`Open`異なり、指定されたキーが存在しない場合、では作成されません。
 
-##  <a name="operator_hkey"></a>  CRegKey::operator HKEY
+##  <a name="operator_hkey"></a>CRegKey:: operator HKEY
 
-変換を`CRegKey`HKEY するオブジェクト。
+オブジェクトを`CRegKey` HKEY に変換します。
 
 ```
 operator HKEY() const throw();
 ```
 
-##  <a name="operator_eq"></a>  CRegKey::operator =
+##  <a name="operator_eq"></a>CRegKey:: operator =
 
 代入演算子。
 
@@ -497,11 +497,11 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="remarks"></a>Remarks
 
-この演算子をデタッチします*キー*その現在のオブジェクトからに割り当てます、`CRegKey`オブジェクトの代わりにします。
+この演算子は、現在のオブジェクトから*キー*をデタッチし、 `CRegKey`代わりにそのオブジェクトに割り当てます。
 
 ##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue
 
-指定された値の名前のバイナリ データを取得するには、このメソッドを呼び出します。
+指定した値の名前のバイナリデータを取得するには、このメソッドを呼び出します。
 
 ```
 LONG QueryBinaryValue(
@@ -513,28 +513,28 @@ LONG QueryBinaryValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。
 
 *pValue*<br/>
 値のデータを受け取るバッファーへのポインター。
 
 *pnBytes*<br/>
-バッファーのバイト単位で、サイズを指定する変数へのポインターが指す、 *pValue*パラメーター。 メソッドが戻るときに、この変数には、バッファーにコピーされたデータのサイズが含まれています。
+*PValue*パラメーターによってポイントされるバッファーのサイズ (バイト単位) を指定する変数へのポインター。 メソッドから制御が戻ると、この変数にはバッファーにコピーされたデータのサイズが格納されます。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. 種類が REG_BINARY の参照されるデータがない場合は、定義が返されます。
+メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドが値の読み取りに失敗した場合は、WINERROR.H で定義されている0以外のエラーコードを返します。始め. 参照されているデータが REG_BINARY 型でない場合は、ERROR_INVALID_DATA が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue
 
-DWORD データ値を指定した名前を取得するには、このメソッドを呼び出します。
+指定した値名の DWORD データを取得するには、このメソッドを呼び出します。
 
 ```
 LONG QueryDWORDValue(
@@ -545,25 +545,25 @@ LONG QueryDWORDValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。
 
 *dwValue*<br/>
-Dword 値を受け取るバッファーへのポインター。
+DWORD を受け取るバッファーへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_DWORD 型の参照されるデータがない場合は、定義が返されます。
+メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドが値の読み取りに失敗した場合は、WINERROR.H で定義されている0以外のエラーコードを返します。始め. 参照されるデータが REG_DWORD 型でない場合は、ERROR_INVALID_DATA が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue
 
-GUID データ値を指定した名前を取得するには、このメソッドを呼び出します。
+指定した値の名前の GUID データを取得するには、このメソッドを呼び出します。
 
 ```
 LONG QueryGUIDValue(
@@ -574,25 +574,25 @@ LONG QueryGUIDValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。
 
 *guidValue*<br/>
 GUID を受け取る変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. 参照されるデータは、有効な GUID ではありません、定義が返されます。
+メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドが値の読み取りに失敗した場合は、WINERROR.H で定義されている0以外のエラーコードを返します。始め. 参照されているデータが有効な GUID でない場合は、ERROR_INVALID_DATA が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`CRegKey::QueryStringValue`GUID を使用して、文字列に変換および[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)します。
+このメソッドは`CRegKey::QueryStringValue` 、を使用して、 [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring)を使用して文字列を GUID に変換します。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。
 
 ##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue
 
-指定された値名の複数行文字列のデータを取得するには、このメソッドを呼び出します。
+指定した値名の文字列データを取得するには、このメソッドを呼び出します。
 
 ```
 LONG QueryMultiStringValue(
@@ -604,28 +604,28 @@ LONG QueryMultiStringValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。
 
-*終端*<br/>
-複数行文字列のデータを受信するバッファーへのポインター。 複数文字列は、2 つの null 文字で終端の null で終わる文字列の配列です。
+*pszValue*<br/>
+文字列データを受け取るバッファーへのポインター。 複数文字列は、null で終わる文字列の配列で、2つの null 文字で終了します。
 
-*が*<br/>
-サイズが指すバッファーの Tchar*終端*します。 メソッドが戻るときに*が*Tchar、終端の null 文字も含めて取得するには、複数のサイズが含まれています。
+*pnChars*<br/>
+*Pszvalue*が指すバッファーのサイズ (tchars 単位)。 メソッドから制御が戻ったとき、取得した文字列のサイズ (tchars) には、終端の null 文字が含まれます。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_MULTI_SZ 型の参照されるデータがない場合は、定義が返されます。
+メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドが値の読み取りに失敗した場合は、WINERROR.H で定義されている0以外のエラーコードを返します。始め. 参照されるデータの種類が REG_MULTI_SZ でない場合は、ERROR_INVALID_DATA が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue
 
-QWORD データが指定された値の名前を取得するには、このメソッドを呼び出します。
+指定した値名の QWORD データを取得するには、このメソッドを呼び出します。
 
 ```
 LONG QueryQWORDValue(
@@ -636,25 +636,25 @@ LONG QueryQWORDValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。
 
 *qwValue*<br/>
 QWORD を受け取るバッファーへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_QWORD 型の参照されるデータがない場合は、定義が返されます。
+メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドが値の読み取りに失敗した場合は、WINERROR.H で定義されている0以外のエラーコードを返します。始め. 参照されているデータが REG_QWORD 型でない場合は、ERROR_INVALID_DATA が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue
 
-指定された値名の文字列データを取得するには、このメソッドを呼び出します。
+指定した値名の文字列データを取得するには、このメソッドを呼び出します。
 
 ```
 LONG QueryStringValue(
@@ -666,28 +666,28 @@ LONG QueryStringValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。
 
-*終端*<br/>
-文字列データを受信するバッファーへのポインター。
+*pszValue*<br/>
+文字列データを受け取るバッファーへのポインター。
 
-*が*<br/>
-サイズが指すバッファーの Tchar*終端*します。 メソッドが戻るときに*が*Tchar、終端の null 文字も含めて取得するには、文字列のサイズが含まれています。
+*pnChars*<br/>
+*Pszvalue*が指すバッファーのサイズ (tchars 単位)。 メソッドから制御が戻ったとき、取得された文字列の TCHARs のサイズ (終端の null 文字を含む) が*Pnchars*に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドは、値の読み取りに失敗した場合、WINERROR で定義されている 0 以外のエラー コードを返します。H. REG_SZ 型の参照されるデータがない場合は、定義が返されます。 メソッドは、ERROR_MORE_DATA を返す場合*が*が 0、バイト単位で必要なバッファー サイズではなく。
+メソッドが成功した場合は、ERROR_SUCCESS が返されます。 メソッドが値の読み取りに失敗した場合は、WINERROR.H で定義されている0以外のエラーコードを返します。始め. 参照されるデータの種類が REG_SZ でない場合は、ERROR_INVALID_DATA が返されます。 メソッドが ERROR_MORE_DATA を返す場合、 *Pnchars*は0であり、必要なバッファーサイズ (バイト単位) ではありません。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`RegQueryValueEx`を正しい種類のデータが返されることを確認します。 参照してください[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)の詳細。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)このメソッドによって使用される関数が NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue
 
-指定した値のフィールドのデータを取得するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。
+[M_hKey](#m_hkey)の指定した値フィールドのデータを取得するには、このメソッドを呼び出します。 このメソッドの以前のバージョンはサポートされなくなり、ATL_DEPRECATED としてマークされます。
 
 ```
 LONG QueryValue(
@@ -709,45 +709,45 @@ ATL_DEPRECATED LONG QueryValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-クエリに値の名前を含む null で終わる文字列へのポインター。 場合*pszValueName*が NULL または空の文字列""、メソッド型を取得、およびキーのデータの名前のないまたは既定値が存在する場合。
+クエリ対象の値の名前を格納している null で終わる文字列へのポインター。 *Pszvaluename*が NULL または空の文字列 "" の場合、メソッドは、キーの名前なしの値または既定値 (存在する場合) の型とデータを取得します。
 
 *pdwType*<br/>
-指定した値に格納されたデータの種類を示すコードを受け取る変数へのポインター。 *PdwType*型コードが必要ない場合、パラメーターは NULL を指定できます。
+指定された値に格納されているデータの型を示すコードを受け取る変数へのポインター。 型コードが不要な場合は、 *pdwType*パラメーターを NULL にすることができます。
 
 *pData*<br/>
-値のデータを受け取るバッファーへのポインター。 このパラメーターは、データが必要ない場合、NULL にすることができます。
+値のデータを受け取るバッファーへのポインター。 データが不要な場合は、このパラメーターに NULL を指定できます。
 
 *pnBytes*<br/>
-バッファーのバイト単位で、サイズを指定する変数へのポインターが指す、 *pData*パラメーター。 この変数にコピーされたデータのサイズが含まれています、メソッドが戻るとき*pData します。*
+*PData*パラメーターによってポイントされるバッファーのサイズ (バイト単位) を指定する変数へのポインター。 メソッドから制御が戻るときに、この変数には、PData にコピーされるデータのサイズが含まれ*ます。*
 
 *dwValue*<br/>
 値フィールドの数値データ。
 
 *lpszValueName*<br/>
-クエリを実行する、値フィールドを指定します。
+照会する値フィールドを指定します。
 
 *szValue*<br/>
-値フィールドの文字列データです。
+値フィールドの文字列データ。
 
 *pdwCount*<br/>
-文字列データのサイズ。 サイズには、その値は設定された最初に、 *szValue*バッファー。
+文字列データのサイズ。 この値は、最初は*szvalue*バッファーのサイズに設定されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、0 以外のエラー コードは、WINERROR で定義されています。H.
+成功した場合は、ERROR_SUCCESS を返します。それ以外の場合は、WINERROR.H で定義されている0以外のエラーコード。始め.
 
 ### <a name="remarks"></a>Remarks
 
-2 つの元のバージョンの`QueryValue`はもはやサポートされておらず、されずとしてマークされます。 これらの形式が使用されている場合、コンパイラは警告を発行します。
+の元の2つ`QueryValue`のバージョンはサポートされなくなり、ATL_DEPRECATED としてマークされます。 これらの形式が使用されている場合、コンパイラは警告を発行します。
 
-残りのメソッドは、RegQueryValueEx を呼び出します。
+残りのメソッドは、Regqueryvalueex がを呼び出します。
 
 > [!IMPORTANT]
->  このメソッドは、呼び出し元が信頼できないデータを読み取る可能性がある、レジストリの場所を指定できます。 また、このメソッドによって使用される RegQueryValueEx 関数は NULL 終端である文字列を明示的に処理しません。 呼び出し元のコードの両方の条件をチェックする必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される Regqueryvalueex が関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey
 
-指定したキーをレジストリから削除し、すべてのサブキーを明示的に削除するには、このメソッドを呼び出します。
+指定したキーをレジストリから削除し、サブキーを明示的に削除するには、このメソッドを呼び出します。
 
 ```
 LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
@@ -756,19 +756,19 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpszKey*<br/>
-削除するキーの名前を指定します。 この名前のサブキーである必要があります[m_hKey](#m_hkey)します。
+削除するキーの名前を指定します。 この名前は、 [m_hKey](#m_hkey)のサブキーである必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、0 以外のエラー値は、WINERROR で定義します。H.
+成功した場合は、ERROR_SUCCESS を返します。それ以外の場合は、WINERROR.H で定義されている0以外のエラー値。始め.
 
 ### <a name="remarks"></a>Remarks
 
-キーにサブキーがある場合は、キーを削除するには、このメソッドを呼び出す必要があります。
+キーにサブキーがある場合は、このメソッドを呼び出してキーを削除する必要があります。
 
-##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue
+##  <a name="setbinaryvalue"></a>CRegKey:: SetBinaryValue
 
-レジストリ キーのバイナリ値を設定するには、このメソッドを呼び出します。
+レジストリキーのバイナリ値を設定するには、このメソッドを呼び出します。
 
 ```
 LONG SetBinaryValue(
@@ -783,10 +783,10 @@ LONG SetBinaryValue(
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
 *pValue*<br/>
-指定された値の名前で格納されるデータを格納するバッファーへのポインター。
+指定された値名で格納されるデータを格納しているバッファーへのポインター。
 
 *nBytes*<br/>
-によって示される情報のバイト単位でサイズを指定、 *pValue*パラメーター。
+*PValue*パラメーターによって示される情報のサイズ (バイト単位) を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -794,11 +794,11 @@ LONG SetBinaryValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
-##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue
+##  <a name="setdwordvalue"></a>CRegKey:: SetDWORDValue
 
-レジストリ キーの DWORD 値を設定するには、このメソッドを呼び出します。
+レジストリキーの DWORD 値を設定するには、このメソッドを呼び出します。
 
 ```
 LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
@@ -810,7 +810,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
 *dwValue*<br/>
-指定された値の名前を格納する DWORD データ。
+指定された値名で格納される DWORD データ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -818,11 +818,11 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
-##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue
+##  <a name="setguidvalue"></a>CRegKey:: SetGUIDValue
 
-レジストリ キーの GUID 値を設定するには、このメソッドを呼び出します。
+レジストリキーの GUID 値を設定するには、このメソッドを呼び出します。
 
 ```
 LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
@@ -834,7 +834,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
 *guidValue*<br/>
-指定された値の名前で格納される GUID への参照。
+指定された値名で格納される GUID への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -842,11 +842,11 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを利用`CRegKey::SetStringValue`GUID を使用して文字列に変換および[StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2)します。
+このメソッドは`CRegKey::SetStringValue` 、を使用し、 [StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2)を使用して GUID を文字列に変換します。
 
-##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue
+##  <a name="setkeyvalue"></a>CRegKey:: SetKeyValue
 
-指定したキーの指定した値のフィールドにデータを格納するには、このメソッドを呼び出します。
+指定したキーの指定した値フィールドにデータを格納するには、このメソッドを呼び出します。
 
 ```
 LONG SetKeyValue(
@@ -858,25 +858,25 @@ LONG SetKeyValue(
 ### <a name="parameters"></a>パラメーター
 
 *lpszKeyName*<br/>
-作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります[m_hKey](#m_hkey)します。
+作成または開くキーの名前を指定します。 この名前は、 [m_hKey](#m_hkey)のサブキーである必要があります。
 
 *lpszValue*<br/>
-データを格納するを指定します。 このパラメーターは、NULL 以外である必要があります。
+格納するデータを指定します。 このパラメーターには NULL 以外の値を指定する必要があります。
 
 *lpszValueName*<br/>
-設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。
+設定する値フィールドを指定します。 この名前の値フィールドがキーにまだ存在しない場合は、追加されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、0 以外のエラー コードは、WINERROR で定義されています。H.
+成功した場合は、ERROR_SUCCESS を返します。それ以外の場合は、WINERROR.H で定義されている0以外のエラーコード。始め.
 
 ### <a name="remarks"></a>Remarks
 
-作成または開くには、このメソッドを呼び出して、 *lpszKeyName*キーを格納、 *lpszValue*内のデータ、 *lpszValueName*値フィールド。
+このメソッドを呼び出して、 *Lpszkeyname*キーを作成または開き 、Lpszkeyname データを*lpszkeyname*値フィールドに格納します。
 
 ##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity
 
-レジストリ キーのセキュリティを設定するには、このメソッドを呼び出します。
+レジストリキーのセキュリティを設定するには、このメソッドを呼び出します。
 
 ```
 LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
@@ -885,17 +885,17 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="parameters"></a>パラメーター
 
 *si*<br/>
-設定するセキュリティ記述子のコンポーネントを指定します。 値は、次の値の組み合わせを指定できます。
+設定するセキュリティ記述子のコンポーネントを指定します。 値は、次の値の組み合わせにすることができます。
 
 |[値]|説明|
 |-----------|-------------|
-|DACL_SECURITY_INFORMATION|キーの随意アクセス制御リスト (DACL) を設定します。 キーに対する WRITE_DAC アクセス許可を持っているか、呼び出し元のプロセスは、オブジェクトの所有者である必要があります。|
-|GROUP_SECURITY_INFORMATION|キーのプライマリ グループ セキュリティ識別子 (SID) を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスは、オブジェクトの所有者である必要があります。|
-|OWNER_SECURITY_INFORMATION|キーの所有者の SID を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスがオブジェクトの所有者であるか、有効になっている SE_TAKE_OWNERSHIP_NAME 権限を持っている必要があります。|
-|SACL_SECURITY_INFORMATION|キーのシステム アクセス制御リスト (SACL) を設定します。 ACCESS_SYSTEM_SECURITY アクセス キーが必要です。 このアクセスを取得するための適切が SE_SECURITY_NAME を有効にするには[特権](/windows/desktop/secauthz/privileges)呼び出し元の現在のアクセス トークンで ACCESS_SYSTEM_SECURITY へのアクセスのためのハンドルを開くし、特権を無効にします。|
+|DACL_SECURITY_INFORMATION|キーの随意アクセス制御リスト (DACL) を設定します。 キーには WRITE_DAC アクセスが必要です。または、呼び出し元のプロセスがオブジェクトの所有者である必要があります。|
+|GROUP_SECURITY_INFORMATION|キーのプライマリグループセキュリティ識別子 (SID) を設定します。 キーには WRITE_OWNER アクセスが必要です。または、呼び出し元のプロセスがオブジェクトの所有者である必要があります。|
+|OWNER_SECURITY_INFORMATION|キーの所有者 SID を設定します。 キーには WRITE_OWNER アクセスが必要です。または、呼び出し元のプロセスがオブジェクトの所有者であるか、または SE_TAKE_OWNERSHIP_NAME 特権が有効になっている必要があります。|
+|SACL_SECURITY_INFORMATION|キーのシステムアクセス制御リスト (SACL: system access control list) を設定します。 キーには ACCESS_SYSTEM_SECURITY アクセスが必要です。 このアクセスを取得する適切な方法は、呼び出し元の現在のアクセストークンで SE_SECURITY_NAME[特権](/windows/win32/secauthz/privileges)を有効にし、ACCESS_SYSTEM_SECURITY アクセスのハンドルを開いて、特権を無効にすることです。|
 
 *psd*<br/>
-ポインターを[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)構造を指定したキーに設定するセキュリティ属性を指定します。
+指定されたキーに設定するセキュリティ属性を指定する[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -903,11 +903,11 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="remarks"></a>Remarks
 
-キーのセキュリティ属性を設定します。 参照してください[RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity)の詳細。
+キーのセキュリティ属性を設定します。 詳細については、「 [RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) 」を参照してください。
 
-##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue
+##  <a name="setmultistringvalue"></a>CRegKey:: SetMultiStringValue
 
-レジストリ キーの複数行文字列の値を設定するには、このメソッドを呼び出します。
+レジストリキーの文字列値を設定するには、このメソッドを呼び出します。
 
 ```
 LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
@@ -918,8 +918,8 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 *pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*終端*<br/>
-指定された値の名前で保存する複数行文字列のデータへのポインター。 複数文字列は、2 つの null 文字で終端の null で終わる文字列の配列です。
+*pszValue*<br/>
+指定された値名で格納される文字列データへのポインター。 複数文字列は、null で終わる文字列の配列で、2つの null 文字で終了します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -927,11 +927,11 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
-##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue
+##  <a name="setqwordvalue"></a>CRegKey:: SetQWORDValue
 
-レジストリ キーの QWORD 値を設定するには、このメソッドを呼び出します。
+レジストリキーの QWORD 値を設定するには、このメソッドを呼び出します。
 
 ```
 LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
@@ -951,9 +951,9 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
-##  <a name="setstringvalue"></a>  CRegKey::SetStringValue
+##  <a name="setstringvalue"></a>CRegKey:: SetStringValue
 
 レジストリ キーの文字列値を設定します。
 
@@ -969,7 +969,7 @@ LONG SetStringValue(
 *pszValueName*<br/>
 設定する値の名前を格納する文字列へのポインター。 この名前の値がまだ存在しない場合は、メソッドによりキーに追加されます。
 
-*終端*<br/>
+*pszValue*<br/>
 指定された値名で格納される文字列データへのポインター。
 
 *dwType*<br/>
@@ -981,11 +981,11 @@ LONG SetStringValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを使用して[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)値をレジストリに書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
-##  <a name="setvalue"></a>  CRegKey::SetValue
+##  <a name="setvalue"></a>CRegKey:: SetValue
 
-指定された値 フィールドのデータを格納するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。
+[M_hKey](#m_hkey)の指定した値フィールドにデータを格納するには、このメソッドを呼び出します。 このメソッドの以前のバージョンはサポートされなくなり、ATL_DEPRECATED としてマークされます。
 
 ```
 LONG SetValue(
@@ -1014,49 +1014,49 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="parameters"></a>パラメーター
 
 *pszValueName*<br/>
-設定する値の名前を格納する文字列へのポインター。 この名前の値がキーに存在しないメソッドにより、キーに追加します。 場合*pszValueName*が NULL または空の文字列""の種類を設定する方法、およびキーのデータの名前のないまたは既定値。
+設定する値の名前を格納する文字列へのポインター。 この名前の値がキーにまだ存在しない場合は、メソッドによってキーに追加されます。 *Pszvaluename*が NULL または空の文字列 "" の場合、メソッドは、キーの名前のない値または既定値の型とデータを設定します。
 
 *dwType*<br/>
-参照するデータの種類を示すコードを指定します、 *pValue*パラメーター。
+*PValue*パラメーターが指すデータの型を示すコードを指定します。
 
 *pValue*<br/>
-指定された値の名前で格納されるデータを格納するバッファーへのポインター。
+指定された値名で格納されるデータを格納しているバッファーへのポインター。
 
 *nBytes*<br/>
-によって示される情報のバイト単位でサイズを指定、 *pValue*パラメーター。 データの型が REG_SZ、REG_EXPAND_SZ、または、REG_MULTI_SZ の場合*nBytes*終端の null 文字のサイズを含める必要があります。
+*PValue*パラメーターによって示される情報のサイズ (バイト単位) を指定します。 データの種類が REG_SZ、REG_EXPAND_SZ、または REG_MULTI_SZ の場合、 *Nbytes*には終端の null 文字のサイズが含まれている必要があります。
 
 *hKeyParent*<br/>
-オープンするキーのハンドル。
+開いているキーのハンドル。
 
 *lpszKeyName*<br/>
-作成または開かれたキーの名前を指定します。 この名前のサブキーである必要があります*hKeyParent*します。
+作成または開くキーの名前を指定します。 この名前は、 *hsubkey Arent*のサブキーである必要があります。
 
 *lpszValue*<br/>
-データを格納するを指定します。 このパラメーターは、NULL 以外である必要があります。
+格納するデータを指定します。 このパラメーターには NULL 以外の値を指定する必要があります。
 
 *lpszValueName*<br/>
-設定する値のフィールドを指定します。 キーにもこの名前の値のフィールドがまだ存在しない場合は、追加されます。
+設定する値フィールドを指定します。 この名前の値フィールドがキーにまだ存在しない場合は、追加されます。
 
 *dwValue*<br/>
-データを格納するを指定します。
+格納するデータを指定します。
 
 *bMulti*<br/>
-False の場合は、REG_SZ 型の文字列を示します。 True の場合は、文字列は、REG_MULTI_SZ の種類の複数文字列を示します。
+False の場合は、文字列が REG_SZ 型であることを示します。 True の場合、文字列が REG_MULTI_SZ 型の文字数であることを示します。
 
 *nValueLen*<br/>
-場合*bMulti*が true の場合*nValueLen*の長さ、 *lpszValue*文字列の文字。 場合*bMulti*が false の場合、値-1 は、メソッドの計算で、長さが自動的に処理されますを示します。
+*Bmulti*が true の場合、 *Nvaluelen*は*lpszvalue*文字列の長さを文字数で示します。 *Bmulti*が false の場合、値-1 は、メソッドが長さを自動的に計算することを示します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、ERROR_SUCCESS; を返しますそれ以外の場合、0 以外のエラー コードは、WINERROR で定義されています。H.
+成功した場合は、ERROR_SUCCESS を返します。それ以外の場合は、WINERROR.H で定義されている0以外のエラーコード。始め.
 
 ### <a name="remarks"></a>Remarks
 
-2 つの元のバージョンの`SetValue`されずとしてマークされ、使用する必要があります。 これらの形式が使用されている場合、コンパイラは警告を発行します。
+の元の2つ`SetValue`のバージョンは ATL_DEPRECATED としてマークされているため、使用できなくなりました。 これらの形式が使用されている場合、コンパイラは警告を発行します。
 
-3 番目のメソッド呼び出し[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)します。
+3番目のメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[DCOM のサンプル](../../visual-cpp-samples.md)<br/>
+[DCOM のサンプル](../../overview/visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

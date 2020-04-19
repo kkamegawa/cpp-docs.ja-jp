@@ -1,14 +1,14 @@
 ---
 title: _strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnicoll_l
 - _mbsnicoll
 - _wcsnicoll_l
 - _strnicoll
 - _strnicoll_l
 - _wcsnicoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcshicoll_l
 - _ftcsncicoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1a26690f4913cb35486886f6548927fc09efc89
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606038"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947079"
 ---
-# <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
+# <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 
 ロケール固有の情報を使用して文字列を比較します。
 
 > [!IMPORTANT]
-> **_mbsnicoll**と **_mbsnicoll_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnicoll**と **_mbsnicoll_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -125,21 +128,21 @@ Null で終わる比較対象の文字列
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の部分文字列の関係を示す値を返します*string1*と*string2*、次のようにします。
+これらの各関数は、次のように、 *string1*と*string2*の部分文字列の関係を示す値を返します。
 
 |戻り値|string1 と string2 との関係|
 |------------------|----------------------------------------|
-|< 0|*string1*未満*string2*|
-|0|*string1*と同じ*string2*|
-|> 0|*string1*より大きい*string2*|
+|< 0|*string1*が*string2*未満|
+|0|*string1*と*string2*の同一|
+|> 0|*string1*が*string2*より大きい|
 
-これらの関数を返します。**すると**します。 使用する**すると**、いずれかの文字列が含まれます。H または MBSTRING します。H. **_wcsnicoll**場合に失敗できる*string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生したときに **_wcsnicoll**設定**errno**に**EINVAL**します。 呼び出しでエラーをチェックする **_wcsnicoll**設定**errno**を 0 にし、確認**errno**呼び出した後 **_wcsnicoll**します。
+これらの各関数は、 **_NLSCMPERROR**を返します。 **_NLSCMPERROR**を使用するには、いずれかの文字列を指定します。H または MBSTRING.H。始め. *string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **_wcsnicoll**は失敗する可能性があります。 エラーが発生すると、 **_wcsnicoll**は**errno**を**EINVAL**に設定することがあります。 **_Wcsnicoll**の呼び出しでエラーが発生していないかどうかを確認するには、 **errno**を0に設定し、 **_wcsnicoll**を呼び出した後に**errno**を確認します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数は最初の大文字と小文字を実行します*カウント*文字*string1*と*string2*コード ページに従ってします。 これらの関数は、コード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。 この関数のバージョン、 **_l**サフィックスは、現在のロケールとコード ページを使用します。 バージョンで、 **_l**代わりに渡されたロケールを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各関数は、コードページに従って、 *string1*と*string2*の最初の*カウント*文字の大文字と小文字を区別しない比較を実行します。 これらの関数は、コード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。 **_L**サフィックスが付いていないこれらの関数のバージョンでは、現在のロケールとコードページが使用されます。 **_L**サフィックスが付いているバージョンは、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2* null ポインターの場合は、カウントよりも大きい場合、または**INT_MAX**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**します。
+これらのすべての関数では、パラメーターの検証が行われます。 *String1*または*string2*が null ポインターの場合、または count が**INT_MAX**より大きい場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

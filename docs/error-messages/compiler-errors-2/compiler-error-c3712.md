@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-ms.openlocfilehash: 0b84f4562dcc0dd5dcc3ecb647316772efab6b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51772f22f83cff5c602bd2310d7913c0d317ba66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492673"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753368"
 ---
 # <a name="compiler-error-c3712"></a>コンパイラ エラー C3712
 
-'method': イベント ハンドラー メソッドが 'method' には、ソースと同じ型の返す必要があります
+' method ': イベントハンドラーメソッドは、ソース ' method ' と同じ型を返す必要があります
 
-ソース イベントのメソッドと同じ型を返さないイベント ハンドラー メソッドを定義しました。 このエラーを修正するのには、ソース イベントのメソッドの場合と同じ戻り値の型イベント ハンドラーのメソッドを指定します。
+イベントハンドラーメソッドを定義しましたが、これはソースイベントメソッドと同じ型を返しませんでした。 このエラーを解決するには、イベントハンドラーメソッドに、ソースイベントメソッドと同じ戻り値の型を指定します。
 
 次の例では、C3712 が生成されます。
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]

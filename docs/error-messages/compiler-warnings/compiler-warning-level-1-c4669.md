@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4669
 ms.assetid: 97730679-e3dc-44d4-b2a8-aa65badc17f2
-ms.openlocfilehash: f4d0b87c91649c5f2f6b5823fea82d2ce355d11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58f7150caeb3e06ba400a08c6e484f677a8deff9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518639"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051388"
 ---
 # <a name="compiler-warning-level-1-c4669"></a>コンパイラの警告 (レベル 1) C4669
 
@@ -21,7 +21,7 @@ ms.locfileid: "50518639"
 
 次の例では、C4669 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C4669.cpp
 // compile with: /clr /W1
 ref struct A {

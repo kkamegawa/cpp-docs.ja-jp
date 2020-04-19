@@ -6,27 +6,26 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5d2c5aa511844a3d7cbe64d9a15f8ffb46046b29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693309"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510910"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>ツリー コントロールのドラッグ アンド ドロップ操作
 
-ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))、ユーザーが項目のドラッグを開始すると、通知を送信します。 コントロールから送信、 [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag)通知メッセージ、ユーザーがマウスの左ボタンを持つ項目をドラッグし、 [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag)ユーザーがドラッグを開始するときに通知メッセージ右側のボタン。 ツリー コントロール ツリーのコントロールに TVS_DISABLEDRAGDROP スタイルを指定することによりこれらの通知を送信することを防止できます。
+ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) は、ユーザーが項目のドラッグを開始したときに通知を送信します。 ユーザーがマウスの左ボタンを使用して項目のドラッグを開始すると、コントロールは[TVN_BEGINDRAG](/windows/win32/Controls/tvn-begindrag)通知メッセージを送信します。ユーザーが右ボタンでドラッグを開始すると、 [TVN_BEGINRDRAG](/windows/win32/Controls/tvn-beginrdrag)通知メッセージが送信されます。 ツリーコントロールに TVS_DISABLEDRAGDROP スタイルを提供することで、ツリーコントロールがこれらの通知を送信しないようにすることができます。
 
-呼び出して、ドラッグ操作中に表示するイメージを取得する、 [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage)メンバー関数。 ツリー コントロールでは、ドラッグされている項目のラベルに基づくドラッグ ビットマップを作成します。 ツリー コントロールのイメージ リストを作成します、ビットマップを追加しへのポインターを返します、 [CImageList](../mfc/reference/cimagelist-class.md)オブジェクト。
+[Createdragimage](../mfc/reference/ctreectrl-class.md#createdragimage)メンバー関数を呼び出すと、ドラッグ操作中に表示するイメージを取得できます。 ツリーコントロールは、ドラッグされている項目のラベルに基づいて、ドラッグするビットマップを作成します。 次に、ツリーコントロールがイメージリストを作成し、ビットマップを追加して、 [CImageList](../mfc/reference/cimagelist-class.md)オブジェクトへのポインターを返します。
 
-実際には、項目をドラッグするコードを用意する必要があります。 通常、イメージ リストの関数のドラッグの機能を使用して、処理、 [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove)と[WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (または[WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup))ドラッグ操作が開始された後に送信されるメッセージ。 イメージ リストの関数の詳細については、次を参照してください。 [CImageList](../mfc/reference/cimagelist-class.md)で、 *MFC リファレンス*と[イメージ リスト](/windows/desktop/controls/image-lists)Windows SDK にします。 ツリー コントロールの項目をドラッグすることの詳細については、次を参照してください。[ツリー ビュー項目のドラッグ](/windows/desktop/Controls/tree-view-controls)、Windows SDK にもします。
+項目を実際にドラッグするコードを指定する必要があります。 これには通常、イメージリスト関数のドラッグ機能を使用し、ドラッグ操作の開始後に送信された[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)および[WM_LBUTTONUP](/windows/win32/inputdev/wm-lbuttonup) (または[WM_RBUTTONUP](/windows/win32/inputdev/wm-rbuttonup)) メッセージを処理する必要があります。 イメージリスト関数の詳細については、「Windows SDK」の「 [CImageList](../mfc/reference/cimagelist-class.md) In The *MFC Reference* and [image](/windows/win32/controls/image-lists) list」を参照してください。 ツリーコントロール項目のドラッグの詳細については、「Windows SDK での[ツリービュー項目のドラッグ](/windows/win32/Controls/tree-view-controls)」も参照してください。
 
-ツリー コントロール項目のドラッグ アンド ドロップ操作のターゲットにする場合は、ターゲット項目を上にマウス カーソルが時に知っておく必要があります。 呼び出すことによって調べることができます、 [HitTest](../mfc/reference/ctreectrl-class.md#hittest)メンバー関数。 いずれかをポイントし、整数、またはのアドレスを指定する、 [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo)マウス カーソルの現在の座標を含む構造体。 関数から制御が戻るとき、整数または構造体は、ツリーのコントロールに対する相対的なマウス カーソルの位置を示すフラグを格納します。 カーソルがツリー コントロールで項目の上にある場合は、構造体には、同様の項目のハンドルが含まれています。
+ツリーコントロール内の項目をドラッグアンドドロップ操作の対象にする場合は、マウスカーソルがターゲット項目上にあることを把握しておく必要があります。 [System.windows.media.visualtreehelper.hittest](../mfc/reference/ctreectrl-class.md#hittest)メンバー関数を呼び出すことによって確認できます。 ポイントと整数を指定するか、マウスカーソルの現在の座標を含む[TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo)構造体のアドレスを指定します。 関数から制御が戻ると、整数または構造体に、ツリーコントロールを基準とするマウスカーソルの位置を示すフラグが含まれます。 カーソルがツリーコントロールの項目の上にある場合は、その項目のハンドルも構造体に格納されます。
 
-ドラッグ アンド ドロップ操作の対象の項目は呼び出すことによってを指定することができます、 [SetItem](../mfc/reference/ctreectrl-class.md#setitem)メンバー関数は、状態を設定する、`TVIS_DROPHILITED`値。 この状態にある項目をドラッグ アンド ドロップ ターゲットを示すために使用するスタイルで描画します。
+項目がドラッグアンドドロップ操作の対象であることを示すには、 [SetItem](../mfc/reference/ctreectrl-class.md#setitem)メンバー関数を呼び出して状態を`TVIS_DROPHILITED`値に設定します。 この状態の項目は、ドラッグアンドドロップのターゲットを示すために使用されるスタイルで描画されます。
 
 ## <a name="see-also"></a>関連項目
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

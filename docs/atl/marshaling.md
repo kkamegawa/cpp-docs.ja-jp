@@ -1,27 +1,26 @@
 ---
-title: マーシャ リング
+title: マーシャリング
 ms.date: 11/04/2016
 helpviewer_keywords:
 - marshaling, COM interop
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: a6129ba96cf3ac11339a8ab953e0838127f8fb3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9963e261f26daa57cb58e30ffc404b431d781bfa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569794"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492037"
 ---
-# <a name="marshaling"></a>マーシャ リング
+# <a name="marshaling"></a>マーシャリング
 
-マーシャ リングの COM の手法は、別のプロセスで使用する 1 つのプロセス内のオブジェクトによって公開されるインターフェイスを使用できます。 マーシャ リングすると、COM コードを提供します (またはインターフェイスの実装者によって提供されるコードを使用) をプロセス間で (および、他のコンピューターで実行されているプロセスをネットワーク経由で) に移動できる形式にメソッドのパラメーターをパックして、これらのパラメーターをアンパックするのにはもう一方の end。 同様に、COM では、呼び出しから返された場合は、同様の手順を実行する必要があります。
+マーシャリングの COM 手法を使用すると、あるプロセスでオブジェクトによって公開されているインターフェイスを別のプロセスで使用できます。 マーシャリングでは、COM はコード (またはインターフェイス実装によって提供されるコード) の両方を使用して、メソッドのパラメーターを、プロセス間で移動できる形式 (またはネットワーク経由で他のコンピューター上で実行されているプロセス) にパックし、これらのパラメーターをアンパックします。もう一方の端に。 同様に、COM は呼び出しから返されたものと同じ手順を実行する必要があります。
 
 > [!NOTE]
->  マーシャ リングは通常必要ありませんオブジェクトによって提供されるインターフェイスは、オブジェクトと同じプロセスで使用されている場合です。 ただし、スレッド間マーシャ リングを必要に可能性があります。
+>  オブジェクトによって提供されるインターフェイスがオブジェクトと同じプロセスで使用されている場合、通常、マーシャリングは必要ありません。 ただし、スレッド間でマーシャリングが必要になる場合があります。
 
 ## <a name="see-also"></a>関連項目
 
 [COM の概要](../atl/introduction-to-com.md)<br/>
-[マーシャ リングの詳細](/windows/desktop/com/marshaling-details)
-
+[マーシャリングの詳細](/windows/win32/com/marshaling-details)

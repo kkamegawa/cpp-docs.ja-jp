@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3297
 ms.assetid: 2a718b4c-6cdb-4418-92c0-fc3a259431c4
-ms.openlocfilehash: 6df8fd3df023602f65c872dedd74da36bbbc6bd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fed01b0dcf50a657b6eb457ab8e546d0648beec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649918"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760096"
 ---
 # <a name="compiler-error-c3297"></a>コンパイラ エラー C3297
 
@@ -19,13 +19,13 @@ ms.locfileid: "50649918"
 
 値クラスがシールされています。 制約が値クラスの場合は、別の制約はそこから派生できません。
 
-詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
+詳細については、「[Constraints on Generic Type Parameters (C++/CLI) (ジェネリック型パラメーターの (C++/CLI))](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3297 が生成されます。
 
-```
+```cpp
 // C3297.cpp
 // compile with: /clr /c
 generic<class T, class U>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: a17dac622ce1527a11d02888d6c4ce7905fcf669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ade1b464d3851fb9294a1ba7180b48771f0468cc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411787"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>ダイアログ ボックスでのコモン コントロールの使い方
 
@@ -62,4 +62,3 @@ Windows コモン コントロールで使用できる[ ダイアログ ボッ�
 
 [コントロールの作成方法と使い方](../mfc/making-and-using-controls.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

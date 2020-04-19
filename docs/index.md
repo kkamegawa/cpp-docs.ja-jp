@@ -2,20 +2,19 @@
 layout: HubPage
 title: Visual C++ ドキュメント
 description: C++ を使って、プラットフォームやデバイス用のアプリケーション、サービス、ツールを開発する方法について説明します。
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: e8fe8dec14560579e255446c4de3ee5a17e302f6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.topic: hub-page
+ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703208"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793800"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/visualstudio/install/install-visual-studio">
+                <a href="/cpp/build/vscpp-step-0-installation">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -33,7 +32,7 @@ ms.locfileid: "55703208"
                 </a>
             </li>
             <li>
-                <a href="/visualstudio/ide/getting-started-with-cpp-in-visual-studio">
+                <a href="/cpp/get-started/tutorial-console-cpp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -51,7 +50,7 @@ ms.locfileid: "55703208"
                 </a>
             </li>
             <li>
-                <a href="/cpp/what-s-new-for-visual-cpp-in-visual-studio">
+                <a href="/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -61,7 +60,7 @@ ms.locfileid: "55703208"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Visual Studio 2017 の C++ 向け新機能</h3>
+                                    <h3>Visual Studio での C++ の新機能</h3>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +79,7 @@ ms.locfileid: "55703208"
                         <a href="#workloads1">ワークロード</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
-                                <a href="/cpp/windows/universal-windows-apps-cpp">
+                                <a href="/cpp/cppcx/universal-windows-apps-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -223,7 +222,7 @@ ms.locfileid: "55703208"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/ide/building-cpp-projects-in-visual-studio">
+                                <a href="/cpp/build/projects-and-build-systems-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -280,7 +279,7 @@ ms.locfileid: "55703208"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/ide/deploying-native-desktop-applications-visual-cpp">
+                                <a href="/cpp/windows/deploying-native-desktop-applications-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -366,7 +365,7 @@ ms.locfileid: "55703208"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/windows/component-extensions-for-runtime-platforms">
+                                <a href="/cpp/extensions/component-extensions-for-runtime-platforms">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -423,7 +422,7 @@ ms.locfileid: "55703208"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +432,8 @@ ms.locfileid: "55703208"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ネットワーク ライブラリ</h3>
-                                                    <p>Web プログラミング用の C++ REST SDK (コード名 Casablanca) オープン ソース ライブラリ。</p>
+                                                    <h3>クラウドとネットワーク ライブラリ</h3>
+                                                    <p>Microsoft Azure /C++ SDK を、IoT、ストレージ、その他、およびWeb プログラミング用の C++ REST SDK のオープン ソース ライブラリのために使用します。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -442,7 +441,7 @@ ms.locfileid: "55703208"
                                 </a>
                             </li>
                             <li>
-                                <a href="/cpp/windows/windows-runtime-cpp-template-library-wrl">
+                                <a href="/cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

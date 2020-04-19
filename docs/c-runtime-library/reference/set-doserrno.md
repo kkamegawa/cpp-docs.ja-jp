@@ -1,9 +1,9 @@
 ---
 title: _set_doserrno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_doserrno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_doserrno
 - set_doserrno
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: 98b43c908a7ee48a89158c987fe64420f6639a79
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e4060992477e5d30dfad0725948cbc719b4d0270
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948615"
 ---
-# <a name="setdoserrno"></a>_set_doserrno
+# <a name="_set_doserrno"></a>_set_doserrno
 
 [_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) グローバル変数の値を設定します。
 
@@ -45,7 +48,7 @@ errno_t _set_doserrno( int error_value );
 ### <a name="parameters"></a>パラメーター
 
 *error_value*<br/>
-新しい値 **_doserrno**します。
+**_Doserrno**の新しい値。
 
 ## <a name="return-value"></a>戻り値
 

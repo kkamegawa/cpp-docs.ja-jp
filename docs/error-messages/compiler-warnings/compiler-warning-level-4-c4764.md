@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4764
 ms.assetid: 7bd4296f-966b-484c-bf73-8dbc8e85b4a9
-ms.openlocfilehash: dd16b3f6e6591ec5b079f421fb199eb201c64483
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28672d2271e380f6a8240bff98326d5334a0f98f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676331"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989183"
 ---
 # <a name="compiler-warning-level-4-c4764"></a>コンパイラの警告 (レベル 4) C4764
 
@@ -19,11 +19,11 @@ ms.locfileid: "50676331"
 
 16 を超える配置を指定しましたが、一部のプラットフォームでは、関数が例外をスローした場合、スタックにより、16 を超えない配置が適用されます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C4764 が生成されます。
 
-```
+```cpp
 // C4764.cpp
 // compile with: /W4 /EHsc
 // processor: x64 IPF

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: ff48b1848e2d7631d789621a5ef845d04d8e8821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495941"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456531"
 ---
 # <a name="addvolatile-class"></a>add_volatile クラス
 
-により、**揮発性**指定した型からの型。
+指定した型から**volatile**型を作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-インスタンス`add_volatile<T>`メンバーがある**typedef** `type`つまり*T*場合*T*が参照、関数の場合、または volatile で修飾された型、それ以外の場合**揮発性** *T*します。エイリアス`add_volatile_t`メンバーにアクセスするショートカット**typedef** `type`します。
+のインスタンスに`add_volatile<T>`は、t が参照、関数、または volatile で修飾された型で*ある場合は* *t* 、それ以外の場合は**volatile** *t*であるメンバー **typedef** `type`があります。エイリアス`add_volatile_t`は、メンバー **typedef** `type`にアクセスするためのショートカットです。
 
 ## <a name="example"></a>例
 
@@ -67,5 +67,5 @@ add_volatile<int> == int
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_volatile クラス](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_volatile クラス](../standard-library/remove-volatile-class.md)

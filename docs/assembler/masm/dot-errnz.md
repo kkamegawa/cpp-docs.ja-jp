@@ -1,26 +1,27 @@
 ---
 title: .ERRNZ
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRNZ
 helpviewer_keywords:
 - .ERRNZ directive
 ms.assetid: 373a9222-140f-4505-8dec-ef370a069ebf
-ms.openlocfilehash: 8998f4609b2b8d8e15a31455ac342e7bd5c0a025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a53bf013e02c4a7d541b7574e5ab38cc7257591b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677202"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313887"
 ---
-# <a name="errnz"></a>.ERRNZ
+# <a name="errnz"></a>**.ERRNZ**
 
-エラーが発生*式*が true (0 以外の場合)。
+*Expression*が true (0 以外) の場合、エラーが生成されます。
 
 ## <a name="syntax"></a>構文
 
-> .ERRNZ 式 [] メッセージ]
+> **.Errnz** *式*⟦ __、__ *message*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

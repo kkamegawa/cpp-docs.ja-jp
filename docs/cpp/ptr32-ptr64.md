@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588475"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301328"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32、__ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32、__ptr64
 
 **Microsoft 固有の仕様**
 
-**_ _ptr32** 32 ビット システムでネイティブ ポインターを表すときに **_ _ptr64**の 64 ビット システムでネイティブ ポインターを表します。
+**__ptr32**は32ビットシステムのネイティブポインターを表し、 **__ptr64**は64ビットシステムのネイティブポインターを表します。
 
 次の例は、これらのポインター型のそれぞれを宣言する方法を示します。
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-32 ビット システムで宣言されたポインター **_ _ptr64**は 32 ビット ポインターに切り詰められます。 64 ビット システムで宣言されたポインター **_ _ptr32**は 64 ビット ポインターに変換します。
+32ビットシステムでは、 **__ptr64**で宣言されたポインターは、32ビットポインターに切り詰められます。 64ビットシステムでは、 **__ptr32**で宣言されたポインターは、64ビットポインターに強制変換されます。
 
 > [!NOTE]
-> 使用することはできません **_ _ptr32**または **_ _ptr64**でコンパイルするときに **/clr: 純粋な**します。 それ以外の場合、コンパイラ エラー C2472 が生成されます。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+> **/Clr: pure**を使用してコンパイルする場合、 **__ptr32**または **__ptr64**を使用することはできません。 それ以外の場合は、コンパイラエラー C2472 が生成されます。 **/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-以前のバージョンとの互換性のため **_ptr32**と **_ptr64**のシノニムで **_ _ptr32**と **_ _ptr64**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
+以前のバージョンとの互換性を維持するために、 **_ptr32**と **_ptr64**は **__ptr32**と **__ptr64**のシノニムであり、コンパイラオプション[/za \(言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)が指定されている場合を除きます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例を宣言のポインターの割り当てでは、 **_ _ptr32**と **_ _ptr64**キーワード。
+次の例は、 **__ptr32**と **__ptr64**キーワードを使用してポインターを宣言して割り当てる方法を示しています。
 
 ```cpp
 #include <cstdlib>
@@ -73,8 +73,8 @@ int main()
 64
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[基本的な型](../cpp/fundamental-types-cpp.md)
+[組み込みの型](../cpp/fundamental-types-cpp.md)

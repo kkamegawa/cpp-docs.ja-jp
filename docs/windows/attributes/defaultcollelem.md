@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: 1120415e8babdc5df422fffb292a1ec9246a2165
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487491"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501665"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Visual Basic コードの最適化に使用されます。
+Visual Basic コードの最適化に使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ Visual Basic コードの最適化に使用されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Defaultcollelem** C++ 属性と同じ機能を持つ、 [defaultcollelem](/windows/desktop/Midl/defaultcollelem) MIDL 属性。
+**Default/elem** C++属性には、 [default/elem](/windows/win32/Midl/defaultcollelem) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、インターフェイス メソッドを使用して、 **defaultcollelem**属性。
+次のコードは、 **default/elem**属性を使用したインターフェイスメソッドを示しています。
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 626da7b2fd52a93602afa08c416bbbb3a4abdbf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276667"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告に関するグローバル関数
 
@@ -225,4 +225,3 @@ ATL プロジェクトでシンボルが定義されていない場合、関数�
 
 [関数](../../atl/reference/atl-functions.md)<br/>
 [デバッグとエラー報告に関するマクロ](../../atl/reference/debugging-and-error-reporting-macros.md)
-

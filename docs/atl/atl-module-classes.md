@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-ms.openlocfilehash: 47ab7f69e5df98dbd9b09adaa2676c22fdf72bed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fe659b47893f821aab4cda31ab1a4e9a6788ec6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252071"
 ---
 # <a name="atl-module-classes"></a>ATL モジュール クラス
 
@@ -59,4 +59,3 @@ ms.locfileid: "50505269"
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [クラスの概要](../atl/atl-class-overview.md)
-

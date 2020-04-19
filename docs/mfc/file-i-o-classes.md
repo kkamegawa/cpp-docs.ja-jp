@@ -15,12 +15,12 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-ms.openlocfilehash: a6a47372e77ca8b6adee44125705dc3f4d6b267b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 914325ec56f0cae30c7293305496d65f358f2731
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405808"
 ---
 # <a name="file-io-classes"></a>ファイル I/O クラス
 
@@ -37,7 +37,7 @@ ms.locfileid: "50443109"
 [CMemFile](../mfc/reference/cmemfile-class.md)<br/>
 提供、`CFile`メモリ内のファイルへのインターフェイス。
 
-[多くの場合](../mfc/reference/csharedfile-class.md)<br/>
+[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
 提供、`CFile`共有メモリ内のファイルへのインターフェイス。
 
 [COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
@@ -66,4 +66,3 @@ COM を使用して`IStream`インターフェイスを提供する`CFile`複合
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

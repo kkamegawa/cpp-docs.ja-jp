@@ -1,19 +1,19 @@
 ---
-title: '方法: out パラメーターを指定する'
+title: '方法: 出力を指定するパラメーター'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 8c3499a2916eda7ab96f7958df190c803206741e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387221"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>方法: out パラメーターを指定する
+# <a name="how-to-specify-an-out-parameter"></a>方法: 出力を指定するパラメーター
 
 このサンプルでは、関数のパラメーターを out パラメーターに指定する方法と、c# プログラムからその関数を呼び出す方法を示します。
 

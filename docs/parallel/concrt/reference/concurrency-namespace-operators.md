@@ -1,18 +1,18 @@
 ---
-title: concurrency 名前空間演算子
+title: コンカレンシー名前空間演算子
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 5982ae0ec3baff38b43b0ce504a47d512559390d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521610"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883773"
 ---
-# <a name="concurrency-namespace-operators"></a>concurrency 名前空間演算子
+# <a name="concurrency-namespace-operators"></a>コンカレンシー名前空間演算子
 
 ||||
 |-|-|-|
@@ -20,11 +20,11 @@ ms.locfileid: "51521610"
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
-##  <a name="operator_lor"></a>  演算子&#124;&#124;演算子
+## <a name="operator_lor"></a>operator&#124; &#124;演算子
 
 引数として指定されたいずれかのタスクが正常に完了したときに正常に完了するタスクを作成します。
 
-```
+```cpp
 template<typename ReturnType>
 task<ReturnType> operator||(
     const task<ReturnType>& lhs,
@@ -58,17 +58,17 @@ inline task<void> operator||(
 
 ### <a name="return-value"></a>戻り値
 
-入力したタスクのいずれかが正常に完了したときに正常を完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>` になります。 入力したタスクの種類が `void` である場合、出力のタスクも `task<void>` になります。
+入力タスクのいずれかが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>` になります。 入力したタスクの種類が `void` である場合、出力のタスクも `task<void>` になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-両方のタスクが取り消されたまたは、例外をスローする、返されたタスクは取り消された状態で完了し、例外のいずれかが発生した場合スローされますを呼び出すと`get()`または`wait()`タスクにします。
+両方のタスクが取り消された場合、または例外がスローされた場合、返されたタスクは canceled 状態で完了し、例外が発生した場合は、そのタスクで `get()` または `wait()` を呼び出すとスローされます。
 
-##  <a name="operator_amp_amp"></a>  演算子&amp;&amp;演算子
+## <a name="operator_amp_amp"></a>演算子&amp;&amp; 演算子
 
 引数として指定された両方のタスクが正常に完了したときに正常に完了するタスクを作成します。
 
-```
+```cpp
 template<typename ReturnType>
 task<std::vector<ReturnType>>  operator&&(
     const task<ReturnType>& lhs,
@@ -109,15 +109,15 @@ inline task<void>  operator&&(
 
 入力した両方のタスクが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>>` になります。 入力したタスクの種類が `void` である場合、出力のタスクも `task<void>` になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-タスクのどちらか 1 つが取り消された場合、または例外をスローした場合、返されるタスクは早期に完了し、取り消された状態になります。また例外が発生したときは、そのタスクに対して `get()` または `wait()` を呼び出す場合に、その例外がスローされます。
+いずれかのタスクが取り消された場合、または例外がスローされた場合、返されたタスクは早期に完了し、取り消された状態になります。また、そのタスクで `get()` または `wait()` を呼び出すと、例外がスローされます。
 
-##  <a name="operator_eq_eq"></a>  operator = 演算子
+## <a name="operator_eq_eq"></a>operator = = 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しいかどうかを調べます。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,
@@ -130,32 +130,32 @@ inline bool operator== (
 同時実行ベクターに格納されている要素のデータ型。
 
 *A1*<br/>
-1 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+最初の `concurrent_vector` オブジェクトのアロケーター型。
 
 *A2*<br/>
-2 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+2番目の `concurrent_vector` オブジェクトのアロケーター型。
 
 *_A*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**演算子の左側にある同時実行ベクターが演算子の右側にある同時実行ベクターそれ以外の場合**false**します。
+演算子の左辺の同時実行ベクターが、演算子の右辺の同時実行ベクターと等しい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-同じ数の要素があるし、各要素が同じ値を持つ場合は、2 つの同時実行ベクターは等しくなります。 それ以外の場合は等しくありません。
+2つの同時実行ベクターは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-このメソッドは、同時実行ベクターのいずれかの変更を他のメソッドの同時実行セーフ`_A`または`_B`します。
+このメソッドは、同時実行ベクター `_A` または `_B`のいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません。
 
-##  <a name="operator_neq"></a>  演算子! = 演算子
+## <a name="operator_neq"></a>operator! = 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しくないかどうかを調べます。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,
@@ -168,32 +168,32 @@ inline bool operator!= (
 同時実行ベクターに格納されている要素のデータ型。
 
 *A1*<br/>
-1 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+最初の `concurrent_vector` オブジェクトのアロケーター型。
 
 *A2*<br/>
-2 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+2番目の `concurrent_vector` オブジェクトのアロケーター型。
 
 *_A*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**同時実行ベクターが等しくない場合**false**同時実行のベクトルが等しい場合。
+同時実行ベクターが等しくない場合は**true**を返します。同時実行ベクターが等しい場合は**false** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-同じ数の要素があるし、各要素が同じ値を持つ場合は、2 つの同時実行ベクターは等しくなります。 それ以外の場合は等しくありません。
+2つの同時実行ベクターは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-このメソッドは、同時実行ベクターのいずれかの変更を他のメソッドの同時実行セーフ`_A`または`_B`します。
+このメソッドは、同時実行ベクター `_A` または `_B`のいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません。
 
-##  <a name="operator_lt"></a>  演算子&lt;演算子
+## <a name="operator_lt"></a>operator&lt; 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより小さいかどうかを調べます。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,
@@ -206,32 +206,32 @@ inline bool operator<(
 同時実行ベクターに格納されている要素のデータ型。
 
 *A1*<br/>
-1 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+最初の `concurrent_vector` オブジェクトのアロケーター型。
 
 *A2*<br/>
-2 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+2番目の `concurrent_vector` オブジェクトのアロケーター型。
 
 *_A*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**演算子の左側にある同時実行ベクターが、同時実行ベクターは、演算子の右側にあるより小さい場合それ以外の場合**false**します。
+演算子の左辺の同時実行ベクターが演算子の右辺の同時実行ベクターより小さい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子の動作に相当する演算子のと同じです、`vector`クラス、`std`名前空間。
+この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
-このメソッドは、同時実行ベクターのいずれかの変更を他のメソッドの同時実行セーフ`_A`または`_B`します。
+このメソッドは、同時実行ベクター `_A` または `_B`のいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません。
 
-##  <a name="operator_lt_eq"></a>  演算子&lt;= 演算子
+## <a name="operator_lt_eq"></a>operator&lt;= 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の  `concurrent_vector` オブジェクト以下かどうかを調べます。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,
@@ -244,32 +244,32 @@ inline bool operator<= (
 同時実行ベクターに格納されている要素のデータ型。
 
 *A1*<br/>
-1 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+最初の `concurrent_vector` オブジェクトのアロケーター型。
 
 *A2*<br/>
-2 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+2番目の `concurrent_vector` オブジェクトのアロケーター型。
 
 *_A*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**演算子の左側にある同時実行ベクター、または、同時実行ベクター演算子の右辺と等しいそれ以外の場合**false**します。
+演算子の左辺の同時実行ベクターが、演算子の右辺の同時実行ベクター以下である場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子の動作に相当する演算子のと同じです、`vector`クラス、`std`名前空間。
+この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
-このメソッドは、同時実行ベクターのいずれかの変更を他のメソッドの同時実行セーフ`_A`または`_B`します。
+このメソッドは、同時実行ベクター `_A` または `_B`のいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません。
 
-##  <a name="operator_gt"></a>  演算子&gt;演算子
+## <a name="operator_gt"></a>operator&gt; 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより大きいかどうかを調べます。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,
@@ -282,32 +282,32 @@ inline bool operator>(
 同時実行ベクターに格納されている要素のデータ型。
 
 *A1*<br/>
-1 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+最初の `concurrent_vector` オブジェクトのアロケーター型。
 
 *A2*<br/>
-2 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+2番目の `concurrent_vector` オブジェクトのアロケーター型。
 
 *_A*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**演算子の左側にある同時実行ベクターがそれ以外の演算子の右側にある同時実行ベクターより大きい場合**false**します。
+演算子の左辺の同時実行ベクターが演算子の右辺の同時実行ベクターより大きい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子の動作に相当する演算子のと同じです、`vector`クラス、`std`名前空間。
+この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
-このメソッドは、同時実行ベクターのいずれかの変更を他のメソッドの同時実行セーフ`_A`または`_B`します。
+このメソッドは、同時実行ベクター `_A` または `_B`のいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません。
 
-##  <a name="operator_gt_eq"></a>  演算子&gt;= 演算子
+## <a name="operator_gt_eq"></a>operator&gt;= 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクト以上であるかどうかを調べます。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,
@@ -320,27 +320,27 @@ inline bool operator>= (
 同時実行ベクターに格納されている要素のデータ型。
 
 *A1*<br/>
-1 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+最初の `concurrent_vector` オブジェクトのアロケーター型。
 
 *A2*<br/>
-2 つ目のアロケーターの型`concurrent_vector`オブジェクト。
+2番目の `concurrent_vector` オブジェクトのアロケーター型。
 
 *_A*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型のオブジェクト。
+`concurrent_vector` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**演算子の左側にある同時実行ベクターがより大きいまたは演算子の右側にある同時実行ベクターと等しいそれ以外の場合**false**します。
+演算子の左辺の同時実行ベクターが演算子の右辺の同時実行ベクター以上の場合、 **true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子の動作に相当する演算子のと同じです、`vector`クラス、`std`名前空間。
+この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
-このメソッドは、同時実行ベクターのいずれかの変更を他のメソッドの同時実行セーフ`_A`または`_B`します。
+このメソッドは、同時実行ベクター `_A` または `_B`のいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

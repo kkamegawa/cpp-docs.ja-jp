@@ -1,13 +1,13 @@
 ---
 title: /MANIFESTINPUT (マニフェスト入力の指定)
-ms.date: 11/04/2016
+ms.date: 07/24/2019
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-ms.openlocfilehash: 30e0d4b71943dec8e0efe9112caf7cdf57f66809
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b7bd54f98003d9158276fcf75fd61ffb5348585
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442693"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606467"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (マニフェスト入力の指定)
 
@@ -26,11 +26,11 @@ ms.locfileid: "50442693"
 
 ## <a name="remarks"></a>Remarks
 
-**/MANIFESTINPUT**オプションを使用して実行可能イメージに埋め込みマニフェストを作成する入力ファイルのパスを指定します。 複数のマニフェスト入力ファイルがある場合は、スイッチを複数回使用します (入力ファイルごとに 1 回)。 マニフェスト入力ファイルは埋め込みマニフェストを作成するためにマージされます。 このオプションが必要です、 **/manifest: 埋め込む**オプション。
+**/Manifestinput**オプションは、実行可能イメージに埋め込まれたマニフェストを作成するために使用する入力ファイルのパスを指定します。 複数のマニフェスト入力ファイルがある場合は、スイッチを複数回使用します (入力ファイルごとに 1 回)。 マニフェスト入力ファイルは埋め込みマニフェストを作成するためにマージされます。 このオプションには、 **/MANIFEST: EMBED**オプションが必要です。
 
-このオプションは、Visual Studio で直接設定することはできません。 代わりに、使用、**追加のマニフェスト ファイル**に含める追加のマニフェスト ファイルを指定するプロジェクトのプロパティ。 詳細については、次を参照してください。[入力と出力、マニフェスト ツール、構成プロパティ、\<プロジェクト名 > プロパティ ページ ダイアログ ボックス](../../ide/input-and-output-manifest-tool.md)します。
+このオプションは、Visual Studio で直接設定することはできません。 代わりに、プロジェクトの "**追加のマニフェストファイル**" プロパティを使用して、追加のマニフェストファイルを含めるように指定します。 詳細については、「[マニフェストツールのプロパティページ](manifest-tool-property-pages.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

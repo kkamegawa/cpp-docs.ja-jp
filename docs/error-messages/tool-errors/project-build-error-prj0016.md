@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: ada89b074fd8e0c2bfc75ba833e9c5966a145312
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616867"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509885"
 ---
 # <a name="project-build-error-prj0016"></a>プロジェクト ビルド エラー PRJ0016
 
-ユーザーのセキュリティ設定は、プロセスが作成されないようにします。 これらの設定は、構築するために必要です。
+ユーザーのセキュリティ設定により、プロセスを作成できません。 これらの設定は、ビルドに必要です。
 
-プロセスを使用してプロセスを作成するアクセス許可を持っていないユーザーのユーザーとしてログインしています。 このユーザー アカウントのアクセス許可レベルを変更するか、アカウント管理者にお問い合わせください。
+プロセスを使用してプロセスを作成するアクセス許可を持たないユーザーとしてログインしています。 このユーザーアカウントのアクセス許可レベルを変更するか、アカウント管理者に連絡してください。
 
-このエラーは、次のレジストリ キーが設定されている場合にも発生します。
+このエラーは、次のレジストリキーが設定されている場合にも発生する可能性があります。
 
 \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
 
-このエラーを解決するには、RestrictRun のキーを削除します。 このレジストリ キーが必要な場合は、追加**vcspawn.exe**キーのエントリの一覧にします。
+このエラーを解決するには、RestrictRun キーを削除します。 このレジストリキーが必要な場合は 、キーのエントリの一覧に vcspawn 追加します。
 
-このエラーのもう 1 つの原因は、ポリシーの設定は含まれていません VCSpawn.exe HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun レジストリ キーの下でこのユーザー アカウントに許可されているウィンドウ プログラムとしてです。
+このエラーのもう1つの原因は、ポリシー設定では、このユーザーアカウントに許可されているウィンドウプログラムとして、レジストリキー HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun の下に VCSpawn が含まれていないことです。
 
-詳細については、次を参照してください。[システム ポリシーの設定に準拠する](https://msdn.microsoft.com/library/aa372139)、"許可された Windows アプリケーションだけを実行する"に関するセクションでします。
+詳細については、「許可された Windows アプリケーションのみを実行する」の「[システムポリシー設定への準拠](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings)」を参照してください。

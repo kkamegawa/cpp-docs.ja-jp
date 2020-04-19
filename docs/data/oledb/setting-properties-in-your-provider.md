@@ -5,16 +5,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 149e6f37de64a1133258f5bbc550896a4fb22a9f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404508"
 ---
 # <a name="setting-properties-in-your-provider"></a>プロバイダーでのプロパティの設定
 
-対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**します。
+対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**します。
 
 ウィザードによって生成される、プロバイダー コードでは、プロパティ グループに対応するプロパティ マップを紹介します。 プロパティ グループの名前は、通常は、オブジェクトの名前に対応します。 コマンドまたは行セットでコマンドや行セットのプロパティが見つかりませんデータ ソースと初期化プロパティは、データ ソース オブジェクトで確認できます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "51556661"
 
 - プロパティに対応するプロパティ ID。 プロパティ名の先頭から最初の 7 文字 (「dbprop _」) を削除します。 たとえば、追加する`DBPROP_MAXROWS`、渡す`MAXROWS`最初の要素として。 カスタム プロパティの場合は、完全な GUID の名前を渡す (たとえば、 `DBMYPROP_MYPROPERTY`)。
 
-- プロパティのバリアント型 (で[OLE DB プロパティ](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**)。 データ型に対応する vt _ を付けます (VT_BOOL VT_I2 など) の種類を入力します。
+- プロパティのバリアント型 (で[OLE DB プロパティ](/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**)。 データ型に対応する vt _ を付けます (VT_BOOL VT_I2 など) の種類を入力します。
 
 - プロパティが読み取り可能で、書き込み可能なのかどうかとが所属するグループを示すフラグ。 たとえば、次のコードでは、行セットのグループに属している、読み取り/書き込みプロパティを示します。
 

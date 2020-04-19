@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2683
+title: コンパイラエラー C2683
 ms.date: 11/04/2016
 f1_keywords:
 - C2683
 helpviewer_keywords:
 - C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-ms.openlocfilehash: 49e4897ad5db866aa1ca42589859bedff12718df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8526dc1fe3cacc872aa91ca058677d15318fd703
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625157"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760271"
 ---
-# <a name="compiler-error-c2683"></a>コンパイラ エラー C2683
+# <a name="compiler-error-c2683"></a>コンパイラエラー C2683
 
-'cast': 'type' はポリモーフィックな型ではありません
+' cast ': ' type ' はポリモーフィックな型ではありません
 
-使用することはできません[dynamic_cast](../../cpp/dynamic-cast-operator.md)から非ポリモーフィックなクラス (仮想関数がないクラス) に変換します。
+[Dynamic_cast](../../cpp/dynamic-cast-operator.md)を使用して、非ポリモーフィッククラス (仮想関数を持たないクラス) から変換することはできません。
 
-使用することができます[static_cast](../../cpp/static-cast-operator.md)非ポリモーフィックな型の変換を実行します。 ただし、`static_cast`ランタイム チェックは行われません。
+[Static_cast](../../cpp/static-cast-operator.md)を使用すると、非ポリモーフィック型の変換を実行できます。 ただし、`static_cast` では、実行時チェックは実行されません。
 
 次の例では、C2683 が生成されます。
 
-```
+```cpp
 // C2683.cpp
 // compile with: /c
 class B { };

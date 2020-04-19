@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553297"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690039"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-コンテナーのテンプレート クラスを定義します。**配列**といくつかのサポート用テンプレート。
+コンテナークラステンプレート**配列**といくつかのサポートテンプレートを定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>［要件］
 
-```cpp
-#include <array>
-```
+**Header:** \<array>
+
+**名前空間:** std
+
+> [!NOTE]
+> @No__t_0array > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
+
+## <a name="members"></a>メンバー
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|要素の固定長シーケンスを格納します。|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|配列要素の型をラップします。|
@@ -33,7 +38,7 @@ ms.locfileid: "50553297"
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|配列の比較 (等しい)|
 |[operator!=](../standard-library/array-operators.md#op_neq)|配列の比較 (等しくない)|
@@ -44,12 +49,12 @@ ms.locfileid: "50553297"
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|指定した配列要素を取得します。|
 |[swap](../standard-library/array-functions.md#swap)|1 つの配列の内容を別の配列の内容と交換します。|
 
 ## <a name="see-also"></a>関連項目
 
-[\<tuple>](../standard-library/tuple.md)<br/>
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<tuple>](../standard-library/tuple.md)\
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ODBC, record views
 - record views, ODBC
 ms.assetid: 6a2ce346-8104-4ccd-b06e-ca0859a132fe
-ms.openlocfilehash: 35d8072a33c135f8735280d741e954e5b9cf6fb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2267c732a2f879fc507f6793ac0a7bd9cda8128
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329804"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>ODBC でデータベース フォーム (レコード ビュー) を使うには
 

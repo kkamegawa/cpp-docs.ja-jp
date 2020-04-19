@@ -9,12 +9,12 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: e6f8161432cc951b5e224ec28142429efbdf0726
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 519dd51ab9b46adf862999104e97c6e478ccd86b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394950"
 ---
 # <a name="active-documents"></a>Active ドキュメント
 
@@ -101,4 +101,3 @@ interface IOleDocumentView : IUnknown
 ## <a name="see-also"></a>関連項目
 
 [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
-

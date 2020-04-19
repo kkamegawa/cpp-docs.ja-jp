@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496045"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749439"
 ---
 # <a name="compiler-error-c3894"></a>コンパイラ エラー C3894
 
-'var': initonly スタティック データ メンバーの左辺値の使用は、クラス 'class' のクラス コンス トラクターでのみ使用できます。
+' var ': initonly 静的データメンバーの左辺値の使用は、クラス ' class ' のクラスコンストラクターでのみ許可されています
 
-静的[initonly](../../dotnet/initonly-cpp-cli.md)データ メンバーは、または静的コンス トラクターの宣言の位置で左辺値としてのみ使用できます。
+静的な[initonly](../../dotnet/initonly-cpp-cli.md)データメンバーは、宣言の時点、または静的コンストラクターの左辺値としてのみ使用できます。
 
-インスタンス (静的ではない) initonly データ メンバーは、インスタンス (静的ではない) コンス トラクターまたは宣言の位置で左辺値としてのみ使用できます。
+インスタンス (静的でない) initonly データメンバーは、宣言の時点、またはインスタンス (非静的) コンストラクターで左辺値としてのみ使用できます。
 
 次の例では、C3894 が生成されます。
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

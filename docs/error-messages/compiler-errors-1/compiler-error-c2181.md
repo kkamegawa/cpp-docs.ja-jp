@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2181
 ms.assetid: d52b2fe4-566a-40a9-b8e2-8dce1f287668
-ms.openlocfilehash: a676794b5dedd17cfb973de36d3771ef1130a786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64aea11924d9a1624090c2dd6f640ee2f9a037a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527310"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737154"
 ---
 # <a name="compiler-error-c2181"></a>コンパイラ エラー C2181
 
@@ -21,7 +21,7 @@ else 文が if と一致しません。
 
 次の例では C2181 が生成されます。
 
-```
+```cpp
 // C2181.cpp
 int main() {
    int i = 0;
@@ -30,9 +30,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2181b.cpp
 int main() {
    int i = 0;

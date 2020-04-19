@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523020"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457320"
 ---
 # <a name="conditional-class"></a>conditional クラス
 
@@ -30,18 +30,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*B*<br/>
+*B*\
 選択される型を決定する値。
 
-*T1*<br/>
+*T1*\
 B が true の場合の型の結果。
 
-*T2*<br/>
+*T2*\
 B が false の場合の型の結果。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート メンバー typedef`conditional<B, T1, T2>::type`に評価される*T1*とき*B*に評価される**true**に評価されると*T2*とき*B*に評価される**false**します。
+*B*が**true**と`conditional<B, T1, T2>::type`評価されると、テンプレートメンバー typedef は*T1*に評価され、 *b*が**false**と評価されると*T2*に評価されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -51,4 +51,4 @@ B が false の場合の型の結果。
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

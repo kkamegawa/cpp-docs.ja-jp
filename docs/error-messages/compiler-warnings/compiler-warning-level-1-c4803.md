@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebf7b3baec3519a142c7a1835aa15a980974bb48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563216"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052349"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>コンパイラの警告 (レベル 1) C4803
 
-'method': raise メソッドが、イベントと異なるストレージ クラス 'event'
+' method ': raise メソッドは、イベント ' event ' とは異なるストレージクラスを持っています。
 
-イベントのメソッド、イベントの宣言と同じストレージ クラスが必要です。 コンパイラは、ストレージ クラスが同じになるように、イベントのメソッドを調整します。
+イベントメソッドは、イベント宣言と同じストレージクラスを持つ必要があります。 コンパイラは、ストレージクラスが同じになるように、イベントのメソッドを調整します。
 
-この警告は、インターフェイスからイベントを実装するクラスがある場合に発生することができます。 コンパイラが、インターフェイス内でのイベントに raise メソッドを暗黙的に生成しません。 クラスでそのインターフェイスを実装するコンパイラは暗黙的に raise メソッドを生成し、そのメソッドがそのため、仮想されませんが、警告します。 イベントの詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)します。
+この警告は、インターフェイスからイベントを実装するクラスがある場合に発生する可能性があります。 コンパイラは、インターフェイスでイベントの raise メソッドを暗黙的に生成しません。 クラスにそのインターフェイスを実装すると、コンパイラは、raise メソッドを暗黙的に生成します。そのため、このメソッドは仮想にならず、警告が発生します。 イベントの詳細については、「 [event](../../extensions/event-cpp-component-extensions.md)」を参照してください。
 
-参照してください[警告](../../preprocessor/warning.md)プラグマについては、警告をオフにする方法。
+警告をオフにする方法については、「 [warning](../../preprocessor/warning.md)プラグマ」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4803 が生成されます。
 
-```
+```cpp
 // C4803.cpp
 // compile with: /clr /W1
 using namespace System;

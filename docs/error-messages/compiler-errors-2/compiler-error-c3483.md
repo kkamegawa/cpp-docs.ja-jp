@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: c958eee234d25b008eb8cb03f40b45b8aaba81a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573460"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743095"
 ---
 # <a name="compiler-error-c3483"></a>コンパイラ エラー C3483
 
@@ -23,11 +23,11 @@ ms.locfileid: "50573460"
 
 - キャプチャ リストから変数のすべての追加インスタンスを削除します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、変数 `n` がラムダ式のキャプチャ リストに複数回出現するため、C3483 が生成されます。
 
-```
+```cpp
 // C3483.cpp
 
 int main()
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

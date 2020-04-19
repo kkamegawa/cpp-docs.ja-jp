@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5ae37acd3e0b0c2636e6a3e985490a2feab8fa34
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322814"
 ---
 # <a name="dhtml-event-maps"></a>DHTML イベント マップ
 
@@ -93,7 +93,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 DHTML イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)を含めると、 [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)マクロをそのクラス定義内で。
 
 ### <a name="remarks"></a>Remarks
@@ -118,7 +118,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 DHTML イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)を含めると、 [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)マクロをそのクラス定義内で。
 
 ### <a name="remarks"></a>Remarks
@@ -168,7 +168,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 *dispid*<br/>
 イベントを処理の DISPID。
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している、LPCWSTR またはドキュメント イベントを処理する場合は NULL です。
 
 *memberFxn*<br/>
@@ -222,7 +222,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 *dispid*<br/>
 処理するイベントのディスパッチ ID。
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の CSS クラスを保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -249,7 +249,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 *dispid*<br/>
 処理するイベントのディスパッチ ID。
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -277,7 +277,7 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -301,7 +301,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -325,7 +325,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -349,7 +349,7 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -373,7 +373,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -397,7 +397,7 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -421,7 +421,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -445,7 +445,7 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -469,7 +469,7 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -493,7 +493,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -517,7 +517,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -542,7 +542,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -567,7 +567,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -592,7 +592,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -617,7 +617,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -642,7 +642,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -667,7 +667,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -692,7 +692,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -717,7 +717,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -742,7 +742,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -767,7 +767,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -792,7 +792,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -817,7 +817,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -842,7 +842,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -867,7 +867,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -892,7 +892,7 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 
 ### <a name="parameters"></a>パラメーター
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
 
 *memberFxn*<br/>
@@ -919,7 +919,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 *dispid*<br/>
 処理するイベントのディスパッチ ID。
 
-*した*<br/>
+*elemName*<br/>
 イベント ソーシングの HTML 要素の HTML タグ。
 
 *memberFxn*<br/>
@@ -979,7 +979,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 埋め込みの DHTML イベント マップは内である必要があります、 [DHTML および URL イベント マップ](#begin_dhtml_url_event_map))。
 
 *mapName*<br/>
@@ -1011,7 +1011,7 @@ BEGIN_URL_ENTRIES(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 URL のイベント エントリのマップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 内部 URL イベント エントリのマップがある必要があります、 [DHTML および URL イベント マップ](#begin_dhtml_url_event_map))。
 
 ### <a name="remarks"></a>Remarks
@@ -1054,7 +1054,7 @@ END_DHTML_URL_EVENT_MAP(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 これに一致する必要があります*className* 、対応する[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)マクロ。
 
 ### <a name="example"></a>例
@@ -1107,10 +1107,10 @@ URL_EVENT_ENTRY(className, url,  mapName)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 URL のイベント エントリのマップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 内部 URL イベント エントリのマップがある必要があります、 [DHTML および URL イベント マップ](#begin_dhtml_url_event_map))。
 
-*Url*<br/>
+*url*<br/>
 ページの URL または HTML リソースです。
 
 *mapName*<br/>
@@ -1148,6 +1148,6 @@ END_DHTML_EVENT_MAP_INLINE( )
 
 **ヘッダー:** afxdhtml.h
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 [マクロとグローバル](mfc-macros-and-globals.md)

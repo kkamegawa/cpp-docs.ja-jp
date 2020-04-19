@@ -1,6 +1,6 @@
 ---
 title: CFolderPickerDialog クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CFolderPickerDialog
 - AFXDLGS/CFolderPickerDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ba189badaa9b1605e3467526e7b92a18a1bb5a73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396198"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog クラス
 
@@ -31,7 +31,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 |名前|説明|
 |----------|-----------------|
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|デストラクターです。|
+|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|デストラクターです。|
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|コンストラクターです。|
 
 ## <a name="remarks"></a>Remarks
@@ -79,12 +79,12 @@ explicit CFolderPickerDialog(
 *pParentWnd*<br/>
 ウィンドウ、ダイアログ ボックスのオブジェクトの親またはオーナー ウィンドウへのポインター。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 OPENFILENAME 構造体のサイズ。
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog
 
 デストラクターです。
 

@@ -1,6 +1,6 @@
 ---
-title: intrinsic
-ms.date: 04/11/2018
+title: intrinsic プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
@@ -8,30 +8,28 @@ helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb4403abf5e278ed3727af660579e22ab69592c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677462"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220944"
 ---
-# <a name="intrinsic"></a>intrinsic
+# <a name="intrinsic-pragma"></a>intrinsic プラグマ
 
 プラグマの引数リストで指定された関数の呼び出しが組み込みであることを指定します。
 
 ## <a name="syntax"></a>構文
 
-```cpp
-#pragma intrinsic( function1 [, function2, ...] )
-```
+> **#pragma 組み込み (** *function1* [ **,** _function2_ ...] **)**
 
 ## <a name="remarks"></a>Remarks
 
-**組み込み**プラグマは、関数の動作が既知ことをコンパイラに指示します。  コンパイラは、関数を呼び出し、より優れたパフォーマンスを得られる場合は、関数呼び出しをインライン命令に置き換えないことがあります。
+**組み込み**プラグマは、関数が既知の動作を持つことをコンパイラに指示します。 コンパイラは、関数を呼び出し、より優れたパフォーマンスを得られる場合は、関数呼び出しをインライン命令に置き換えないことがあります。
 
-組み込み形式のライブラリ関数を以下に示します。 1 回、**組み込み**プラグマは、組み込み関数を含む最初の関数定義で有効になります。 ソース ファイルの末尾に、またはの外観に影響が引き続き、`function`プラグマと同じ組み込み関数を指定します。 **組み込み**プラグマは関数定義の外側でのみ使用できます: グローバル レベル。
+組み込み形式のライブラリ関数を以下に示します。 **組み込み**のプラグマが検出されると、指定した組み込み関数を含む最初の関数定義で有効になります。 効果は、ソースファイルの末尾、または同じ組み込み関数を指定する`function`プラグマの外観まで継続されます。 **組み込み**プラグマは、関数定義の外部でグローバルレベルでのみ使用できます。
 
-次の関数は、組み込み形式を持つし、指定すると、組み込み形式は使用が[/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+次の関数には組み込みのフォームがあり、 [/Oi](../build/reference/oi-generate-intrinsic-functions.md)を指定するときに組み込みフォームが使用されます。
 
 |||||
 |-|-|-|-|
@@ -42,15 +40,15 @@ ms.locfileid: "50677462"
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|[memset](../c-runtime-library/reference/memset-wmemset.md)||
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)||
 
-組み込み関数を使うと、関数呼び出しのオーバーヘッドがなくなるためプログラムの実行速度は向上しますが、コードが追加されるためプログラムのサイズが大きくなる可能性があります。
+組み込み関数を使用するプログラムは、関数呼び出しのオーバーヘッドがないため、より高速になりますが、追加のコードが生成されるため、より大きい場合があります。
 
 **x86 固有**
 
-`_disable`と`_enable`組み込み割り込みを無効または有効にするカーネル モード命令を生成およびカーネル モード ドライバーに便利です。
+`_disable` と`_enable`の組み込みは、割り込みを無効または有効にするカーネルモード命令を生成します。カーネルモードドライバーで役立つ可能性があります。
 
 ### <a name="example"></a>例
 
-使用してコマンドラインから次のコードをコンパイル`cl -c -FAs sample.c`を x86 に有効にして入力を見て命令の CLI と STI:
+を使用`cl -c -FAs sample.c`してコマンドラインから次のコードをコンパイルし、sample .asm を調べて、x86 命令 CLI および STI になることを確認します。
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -67,16 +65,16 @@ int main() {
 }
 ```
 
-**End x86 固有の仕様**
+**終了 x86 固有**
 
-次に示す浮動小数点関数には本物の組み込み形式はありません。 代わりに、引数をプログラム スタックにプッシュするのではなく、浮動小数点演算コプロセッサに直接渡すバージョンがあります。
+次に示す浮動小数点関数には、真の組み込み形式はありません。 代わりに、引数をプログラム スタックにプッシュするのではなく、浮動小数点演算コプロセッサに直接渡すバージョンがあります。
 
 |||||
 |-|-|-|-|
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
-指定すると、下記の浮動小数点関数は本物の組み込み形式をある[/Oi](../build/reference/oi-generate-intrinsic-functions.md)、 [/Og](../build/reference/og-global-optimizations.md)、および[/fp:fast](../build/reference/fp-specify-floating-point-behavior.md) (または/Og を含む任意のオプション: [/Ox](../build/reference/ox-full-optimization.md)、 [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)、/o2)。
+次に示す浮動小数点関数には、 [/Oi](../build/reference/oi-generate-intrinsic-functions.md)、 [/og](../build/reference/og-global-optimizations.md)、および[/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (または、/og: [/ox](../build/reference/ox-full-optimization.md)、 [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)、および[/O2](../build/reference/o1-o2-minimize-size-maximize-speed.md)を含む任意のオプション) を指定するときに、実際の組み込みフォームがあります。
 
 |||||
 |-|-|-|-|
@@ -84,11 +82,11 @@ int main() {
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-使用することができます[/fp: 厳密な](../build/reference/fp-specify-floating-point-behavior.md)または[/Za](../build/reference/za-ze-disable-language-extensions.md)真の組み込みの浮動小数点の生成をオーバーライドします。 浮動小数点関数はライブラリ ルーチンとして生成されます。これらのライブラリ ルーチンでは、引数はプログラム スタックにプッシュされずに、数値演算コプロセッサに直接渡されます。
+[/Fp: strict](../build/reference/fp-specify-floating-point-behavior.md)または[/za](../build/reference/za-ze-disable-language-extensions.md)を使用すると、真の組み込み浮動小数点オプションの生成をオーバーライドできます。 浮動小数点関数はライブラリ ルーチンとして生成されます。これらのライブラリ ルーチンでは、引数はプログラム スタックにプッシュされずに、数値演算コプロセッサに直接渡されます。
 
-参照してください[#pragma function](../preprocessor/function-c-cpp.md)情報とソース テキストのブロック用の組み込み関数を有効または無効にする方法の例です。
+ソーステキストのブロックの組み込みを有効または無効にする方法の詳細と例については、「 [#pragma 関数](../preprocessor/function-c-cpp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

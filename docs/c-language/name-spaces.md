@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: ebf1961d83d14bf95633d4248c2f970c54923274
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325992"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148414"
 ---
 # <a name="name-spaces"></a>名前空間
 
@@ -48,6 +48,6 @@ struct student {
 
 `student` が **struct** キーワードの後にある場合、コンパイラはこれを構造体のタグとして認識します。 `student` がメンバー選択演算子 (**->** または **.**) の後にある場合、名前は構造体メンバーを示します。 他のコンテキストでは、`student` は構造体変数を参照します。 ただし、タグの名前空間をオーバーロードすることは、意味が不明になるため推奨されません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プログラムの構造](../c-language/program-structure.md)

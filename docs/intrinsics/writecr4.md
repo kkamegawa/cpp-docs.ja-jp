@@ -1,36 +1,36 @@
 ---
 title: __writecr4
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr4
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-ms.openlocfilehash: 37bdde20b6d0fe1079969677250ce59acedf51ec
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1afdadcdfdbf1060c87e3865dd5597b0b9a2ea6b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328644"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219270"
 ---
-# <a name="writecr4"></a>__writecr4
+# <a name="__writecr4"></a>__writecr4
 
 **Microsoft 固有の仕様**
 
-値を書き込みます`Data`CR4 登録します。
+値`Data`を CR4 register に書き込みます。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void writecr4(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*データ*<br/>
-[in]CR4 レジスタに書き込む値。
+*データ*\
+からCR4 register に書き込む値。
 
 ## <a name="requirements"></a>必要条件
 
@@ -38,7 +38,7 @@ void writecr4(
 |---------------|------------------|
 |`__writecr4`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

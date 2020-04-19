@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 0c990953f0cda81366ff2645d3cdf1065850abbd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694102"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455237"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution クラス
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型、既定値は**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*firstI*<br/>
+*firstI*\
 ターゲット範囲内の先頭の要素を示す入力反復子。
 
-*lastI*<br/>
+*lastI*\
 ターゲット範囲内の末尾の要素を示す入力反復子。
 
-*firstW*<br/>
+*firstW*\
 重み範囲内の先頭の要素を示す入力反復子。
 
-*intervals*<br/>
+*不定期*\
 分布の区間を含む [initializer_list](../cpp/initializers.md)。
 
-*count*<br/>
+*数*\
 分布範囲内にある要素の数。
 
-*xmin*<br/>
+*xmin*\
 分布範囲内の最小値。
 
-*xmax*<br/>
+*xmax*\
 分布範囲内の最大値。 *xmin* より大きくなければなりません。
 
-*weightfunc*<br/>
-分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
+*weightfunc*\
+分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方が**double**型に変換可能である必要があります。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -296,7 +296,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-初期化子リストからの間隔で分布オブジェクトを構築します*間隔*と、関数から生成された重み*weightfunc*します。
+初期化子リストの*間隔*、および関数*weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
 
 次のように定義されたコンストラクターは
 ```cpp
@@ -305,14 +305,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-配布オブジェクトを構築します*カウント*で一様に分布 [ `xmin,xmax`]、関数は、応じた重み間隔ごとの割り当て*weightfunc*と*weightfunc* 1 つのパラメーターをそのまま使用しに変換できるは、戻り値を持つ必要があります`double`します。 **前提条件:** `xmin < xmax`
+[`xmin,xmax`] で均等に分布した数の間隔を持つ分布オブジェクトを構築し、各間隔の重みを関数*weightfunc*に従って割り当てます。 *weightfunc*は、1つのパラメーターを受け取り、戻り値を持つ必要があります。値。どちらもに`double`変換可能です。 **前提条件:** `xmin < xmax`
 
 次のように定義されたコンストラクターは
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-使用して分布オブジェクトを構築します*parm*として格納されているパラメーター構造体。
+格納されているパラメーター構造として*parm*を使用して、配布オブジェクトを構築します。
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 
@@ -346,5 +346,5 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
-[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)<br/>
+[\<random>](../standard-library/random.md)\
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

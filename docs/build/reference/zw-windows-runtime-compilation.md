@@ -1,6 +1,6 @@
 ---
 title: /ZW (Windows ランタイムのコンパイル)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 297697d215a78cbf1aefef30df53f6956c4e16b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 0808f66c4d4c4e99b3038ea18a1f71f4ebaca89a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629763"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446179"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows ランタイムのコンパイル)
 
-ソース Visual C コンポーネント拡張 C + をサポートするためにコードをコンパイル/cli CX のユニバーサル Windows プラットフォーム (UWP) アプリを作成するためです。
+ソース Microsoft をサポートするためにコードをコンパイルC++コンポーネント拡張C++/CX ユニバーサル Windows プラットフォーム (UWP) アプリを作成します。
 
 使用すると **/ZW**をコンパイルするには、常に指定 **/EHsc**もします。
 
@@ -34,7 +34,7 @@ ms.locfileid: "50629763"
 ## <a name="arguments"></a>引数
 
 **nostdlib**<br/>
-Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メタデータ (.winmd) ファイルがコンパイルで自動に含まれていないことを示します。 代わりに、使用する必要があります、 [/FU (Name Forced #using ファイルの using)](../../build/reference/fu-name-forced-hash-using-file.md) Windows メタデータ ファイルを明示的に指定するコンパイラ オプション。
+Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メタデータ (.winmd) ファイルがコンパイルで自動に含まれていないことを示します。 代わりに、使用する必要があります、 [/FU (Name Forced #using ファイルの using)](fu-name-forced-hash-using-file.md) Windows メタデータ ファイルを明示的に指定するコンパイラ オプション。
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,7 +44,7 @@ Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メ
 
 - 自動で Windows ランタイム オブジェクトの参照カウントと自動参照カウントがゼロになったときに、オブジェクトの破棄します。
 
-Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 **/ZW**オプション、 [/Gm (簡易リビルドの有効)](../../build/reference/gm-enable-minimal-rebuild.md)オプションと互換性がない **/ZW**.
+Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 **/ZW**オプション、非推奨とされる[/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)オプションはと互換性がない **/ZW**します。
 
 詳細については、次を参照してください。 [Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)します。
 
@@ -52,5 +52,5 @@ Incremental linker を使用して、.obj ファイルに含まれる Windows �
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

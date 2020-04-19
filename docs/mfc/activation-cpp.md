@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392935"
 ---
 # <a name="activation-c"></a>アクティベーション (C++)
 
@@ -40,11 +40,10 @@ ms.locfileid: "50493510"
 
 MFC では、入れ子になったインプレース アクティブ化をサポートしていません。 コンテナー/サーバー アプリケーションをビルドするかどうか、そのコンテナー/サーバーが別のコンテナーおよびインプレース アクティブ化に埋め込まれていることはできません、インプレースには、その内部に埋め込まれたオブジェクトが有効にします。
 
-ユーザーをダブルクリックすると、その埋め込みアイテムを操作結果は、項目に対して定義されている動詞によって異なります。 詳しくは、次を参照してください。[アクティベーション: 動詞](../mfc/activation-verbs.md)します。
+ユーザーをダブルクリックすると、その埋め込みアイテムを操作結果は、項目に対して定義されている動詞によって異なります。 詳しくは、次を参照してください。[アクティブ化。動詞](../mfc/activation-verbs.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [コンテナー](../mfc/containers.md)<br/>
 [サーバー](../mfc/servers.md)
-

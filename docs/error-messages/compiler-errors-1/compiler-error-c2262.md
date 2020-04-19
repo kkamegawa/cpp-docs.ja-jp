@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2262
 ms.assetid: 727d1c6e-53e8-40e5-b7b8-6a7ac2011727
-ms.openlocfilehash: 12272c21adac0e326cb8b149b359584197577941
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8723c03d37c04a5b99dc4b30cd2604718369c49
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758763"
 ---
 # <a name="compiler-error-c2262"></a>コンパイラ エラー C2262
 
@@ -19,11 +19,11 @@ ms.locfileid: "50567064"
 
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性が正しく指定されていません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2262 が生成されます。
 
-```
+```cpp
 // C2262.cpp
 // compile with: /clr /c
 using namespace System::Runtime::CompilerServices;

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 68: Microsoft Access 7 ODBC ドライバーでのトランザクションの実行'
+title: TN068:Microsoft Access 7 ODBC ドライバーを使用したトランザクションを実行します。
 ms.date: 06/28/2018
 f1_keywords:
 - vc.data.odbc
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363792"
 ---
-# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>テクニカル ノート 68: Microsoft Access 7 ODBC ドライバーでのトランザクションの実行
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068:Microsoft Access 7 ODBC ドライバーを使用したトランザクションを実行します。
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。

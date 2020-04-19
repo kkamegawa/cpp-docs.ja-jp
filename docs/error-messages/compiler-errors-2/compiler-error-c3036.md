@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3036
 ms.assetid: 10c6993e-bc42-4a07-85c7-cdc34ac30906
-ms.openlocfilehash: c1dc060a5d198b78e652a1b6b239655439209f66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: daf3730f6ad294dcdb3d1d944c320862d5fb80da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613747"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755006"
 ---
 # <a name="compiler-error-c3036"></a>コンパイラ エラー C3036
 
@@ -21,7 +21,7 @@ ms.locfileid: "50613747"
 
 次の例では警告 C3036 が生成されます。
 
-```
+```cpp
 // C3036.cpp
 // compile with: /openmp
 static float a[1000], b[1000], c[1000];

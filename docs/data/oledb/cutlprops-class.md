@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176123"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 
@@ -73,11 +73,11 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 このクラスのほとんどは、実装の詳細です。
 
-`CUtlProps` 内部的にプロパティを設定するための 2 つのメンバーが含まれています: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)と[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)します。
+`CUtlProps` 内部的にプロパティを設定するため、2 つのメンバーが含まれています。[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)と[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)します。
 
 プロパティ セットのマップで使用されるマクロの詳細については、次を参照してください。 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)と[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)します。
 
-## <a name="getpropvalue"></a> Cutlprops::getpropvalue
+## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 
 プロパティのセットからプロパティを取得します。
 
@@ -94,7 +94,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 *pguidPropSet*<br/>
 [in]PropSet の GUID です。
 
-*\_li\_app\_specific\_data*<br/>
+*dwPropId*<br/>
 [in]プロパティのインデックス。
 
 *pvValue*<br/>
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` 障害と正常終了した場合。
 
-## <a name="isvalidvalue"></a> Cutlprops::isvalidvalue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 プロパティを設定する前に、値を検証するために使用します。
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 プロパティ セットの配列インデックス1 つのプロパティ セットがある場合は 0 します。
 
 *pDBProp*<br/>
-プロパティ ID と新しい値を[DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))構造体。
+プロパティ ID と新しい値を[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -131,7 +131,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 を使用して、プロパティを設定しようとしている値で実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、有効な値を決定するパスワード テーブルに対して DBPROP_AUTH_PASSWORD を検証する可能性があります。
 
-## <a name="oninterfacerequested"></a> Cutlprops::oninterfacerequested
+## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
 
 コンシューマーでメソッドを呼び出し、オブジェクトのいずれかのインターフェイスの作成時に、省略可能なインターフェイスの要求を処理します。
 
@@ -166,7 +166,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 その他のインターフェイスを処理する場合は、関数を処理するデータ ソース、セッション、コマンド、または行セット クラスでは、この関数をオーバーライドします。 オーバーライドは、プロパティを設定すると、連鎖プロパティも設定されることを確認する通常の設定/取得するプロパティのインターフェイスを通過する必要があります (を参照してください[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md))。
 
-## <a name="onpropertychanged"></a> Cutlprops::onpropertychanged
+## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
 
 チェーンされたプロパティを処理するためにプロパティを設定した後に呼び出されます。
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 プロパティ セットの配列インデックス1 つのプロパティ セットがある場合は 0 します。
 
 *pDBProp*<br/>
-プロパティ ID と新しい値を[DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))構造体。
+プロパティ ID と新しい値を[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -199,7 +199,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> Cutlprops::setpropvalue
+## <a name="setpropvalue"></a> CUtlProps::SetPropValue
 
 プロパティ セットのプロパティを設定します。
 
@@ -216,7 +216,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 *pguidPropSet*<br/>
 [in]PropSet の GUID です。
 
-*\_li\_app\_specific\_data*<br/>
+*dwPropId*<br/>
 [in]プロパティのインデックス。
 
 *pvValue*<br/>

@@ -4,14 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: a5a1e8f8e1d022fab9dc1bf4f67713302c11f758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61035ce0f211e6a474bb83fc7de7d95b4a29cf3d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272911"
 ---
 # <a name="bscmake-command-line"></a>BSCMAKE コマンド ライン
+
+> [!WARNING]
+> BSCMAKE は、現在も Visual Studio と共にインストールされていますが、IDE では使用されなくなりました。 Visual Studio 2008 以降、ブラウザーとシンボルの情報は、ソリューション フォルダー内の SQL Server の .sdf ファイルに自動的に格納されます。
 
 BSCMAKE を実行するには、次のコマンドライン構文を使用します。
 
@@ -33,8 +36,8 @@ BSCMAKE [options] sbrfiles
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-関連情報については、次を参照してください。 [BSCMAKE コマンド ファイル](../../build/reference/bscmake-command-file-response-file.md)と[BSCMAKE オプション](../../build/reference/bscmake-options.md)します。
+関連情報については、次を参照してください。 [BSCMAKE コマンド ファイル](bscmake-command-file-response-file.md)と[BSCMAKE オプション](bscmake-options.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)
+[BSCMAKE リファレンス](bscmake-reference.md)

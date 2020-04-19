@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577321"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455513"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream クラス
+# <a name="basic_ifstream-class"></a>basic_ifstream クラス
 
 `Elem` 型の要素を含む [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> クラスのストリーム バッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します。この型の特性は、`Tr` クラスによって決定されます。
 
@@ -36,10 +36,10 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 ファイル バッファーの基本要素。
 
-*Tr*<br/>
+*Tr*\
 ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>Remarks
@@ -71,13 +71,13 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>入力: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>入力: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -133,13 +133,13 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*<br/>
+*ファイル名 (_d)* \
 開くファイルの名前。
 
-*モード (_m)*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*<br/>
+*_Prot*\
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) の `shflag` パラメーターと同等の既定のファイル保護。
 
 ### <a name="remarks"></a>Remarks
@@ -185,7 +185,7 @@ void close();
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し[rdbuf](#rdbuf) **->** [閉じます](../standard-library/basic-filebuf-class.md#close)します。
+このメンバー関数は、 [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -205,7 +205,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数を返します[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)します。
+このメンバー関数は、 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)を返します。
 
 ### <a name="example"></a>例
 
@@ -237,22 +237,22 @@ void open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*<br/>
+*ファイル名 (_d)* \
 開くファイルの名前。
 
-*モード (_m)*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*<br/>
+*_Prot*\
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) の `shflag` パラメーターと同等の既定のファイル保護。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) を呼び出します。 オープン失敗したかどうか、関数呼び出し[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)、ios_base::failure 例外をスローする可能性があります。
+メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) を呼び出します。 Open が失敗した場合、関数は`failbit`[setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。これにより、ios_base:: failure 例外がスローされる可能性があります。
 
 ### <a name="example"></a>例
 
-参照してください[basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)を使用する例については`open`します。
+の使用`open`例については、「 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 」を参照してください。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -264,7 +264,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 `basic_ifstream` オブジェクトへの右辺値参照。
 
 ### <a name="return-value"></a>戻り値
@@ -273,7 +273,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー演算子の内容を使用して、オブジェクトの内容が置き換えられます*右*、右辺値参照として扱われます。 詳細については、「[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)」を参照してください。
+メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。 詳細については、「[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)」を参照してください。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 
@@ -301,15 +301,15 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 別のストリーム バッファーへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、このオブジェクトの内容についての内容を交換する*右*します。
+このメンバー関数は、このオブジェクトの内容を*右*の内容と交換します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

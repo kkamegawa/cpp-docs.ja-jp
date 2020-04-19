@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 9df4aa2b2418995f6e012c0baefb6dc8918eaee8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389568"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView クラス
 
@@ -99,14 +99,14 @@ virtual BOOL Create(
 *lpszClassName*<br/>
 Windows クラスの名前を示す文字の null で終わる文字列を指します。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数または`RegisterClass`Windows 関数。 NULL の場合は、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 ウィンドウの名前を表す null で終わる文字列へのポインター。
 
 *dwStyle*<br/>
 ウィンドウのスタイル属性を指定します。 既定では、WS_VISIBLE と WS_CHILD Windows スタイルが設定されます。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置とサイズを指定する構造体。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))ウィンドウの位置とサイズを指定する構造体。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウへのポインター。
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>パラメーター
 
 *ppDocument*<br/>
-[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)インターフェイス。
+[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))インターフェイス。
 
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
 
@@ -144,6 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>関連項目
 
-[HTMLEdit サンプル](../../visual-cpp-samples.md)<br/>
+[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

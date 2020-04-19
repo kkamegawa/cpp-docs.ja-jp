@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: 5061ed4f99ccee75b5496f7ff45185c737c6e688
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411657"
 ---
 # <a name="using-ctreectrl"></a>CTreeCtrl の使い方
 
@@ -51,4 +51,3 @@ ms.locfileid: "50597120"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

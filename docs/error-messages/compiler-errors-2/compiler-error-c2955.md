@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519998"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742874"
 ---
 # <a name="compiler-error-c2955"></a>コンパイラ エラー C2955
 
@@ -19,11 +19,11 @@ ms.locfileid: "51519998"
 
 クラス テンプレートまたはクラス ジェネリックは、テンプレートまたは汎用引数リストを付けずに識別子として使用することはできません。
 
-詳細については、次を参照してください。[クラス テンプレート](../../cpp/class-templates.md)します。
+詳細については、「[クラステンプレート](../../cpp/class-templates.md)」を参照してください。
 
 次の例では C2955 が生成され、その修正方法が示されています。
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 C2955 は、クラス テンプレートで宣言される関数を行外で定義しようとした場合にも発生することがあります。
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void CT<T>::CTFunc2() {}
 
 C2955 は、ジェネリックを使用しているときも発生します。
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -68,9 +68,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-**Visual Studio 2017 以降:** コンパイラは見つからないテンプレート引数リストを正しく診断 (たとえば、既定のテンプレート引数または非型テンプレート パラメーターの一部) として、テンプレート パラメーター リストが表示されたら、テンプレート。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
+**Visual Studio 2017 以降:** テンプレートがテンプレートパラメーターリストに存在する場合、コンパイラはテンプレート引数リストがないことを正しく診断します (たとえば、既定のテンプレート引数または非型テンプレートパラメーターの一部として)。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
 
 ```
 template <class T> class ListNode;

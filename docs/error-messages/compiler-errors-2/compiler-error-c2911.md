@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2911
 ms.assetid: 83c7c01a-ab6a-4179-9fb0-289a9ec8d44e
-ms.openlocfilehash: 56977f481a77c1f5865bec5d6ecc01c99d8224cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59061ab8126e3ba45c0b456bb4428652cab8a7e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657263"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761102"
 ---
 # <a name="compiler-error-c2911"></a>コンパイラ エラー C2911
 
@@ -21,7 +21,7 @@ ms.locfileid: "50657263"
 
 次の例では C2911 が生成されます。
 
-```
+```cpp
 // C2911.cpp
 struct A;
 

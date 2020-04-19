@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551113"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941270"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -43,16 +46,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>パラメーター
 
-*除く*<br/>
+*removed*<br/>
 クリアする例外状態フラグ。
 
 ## <a name="return-value"></a>戻り値
 
-場合は 0 を返します*除く*ゼロ、または指定したすべての例外が正常にクリアします。 それ以外の場合は、0 以外の値を返します。
+*Removed*が0の場合、または指定したすべての例外が正常にクリアされた場合は0を返します。 それ以外の場合は、0 以外の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Feclearexcept**浮動をオフにしようと関数のポイントで指定された例外状態フラグ*除く*します。 この関数は、fenv.h に定義されている次の例外処理マクロをサポートしています。
+**Feclearexcept**関数は、 *removed*によって指定された浮動小数点例外状態フラグのクリアを試みます。 この関数は、fenv.h に定義されている次の例外処理マクロをサポートしています。
 
 |例外処理マクロ|説明|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ int feclearexcept(
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
 |FE_ALL_EXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
-*除く*0、またはサポートされている例外マクロの 1 つ以上のビットごとの OR を引数として使用することがあります。 他の引数値の結果は未定義です。
+*Removed*引数には、0、またはサポートされている1つ以上の例外マクロのビットごとの or を指定できます。 他の引数値の結果は未定義です。
 
 ## <a name="requirements"></a>必要条件
 

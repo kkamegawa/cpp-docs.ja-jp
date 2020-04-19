@@ -5,12 +5,12 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 30503ffa7e5c3845af6c9f61f4e8fc2f64b74e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467133"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126982"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 名前空間関数
 
@@ -18,11 +18,11 @@ ms.locfileid: "50467133"
 |-|-|
 |[copy](#copy)|[copy_async](#copy_async)|
 
-##  <a name="copy"></a>  copy 関数 (concurrency::graphics Namespace)
+## <a name="copy"></a>copy 関数 (Concurrency:: graphics 名前空間)
 
 ソースのテクスチャをターゲットのバッファーにコピーするか、またはソースのバッファーをターゲットのバッファーにコピーします。 この関数の一般的な形式は `copy(src, dest)` です。
 
-```
+```cpp
 template <
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type>
@@ -134,7 +134,7 @@ void copy (
 コピー開始位置でのコピー先へのオフセット。
 
 *InputIterator*<br/>
-入力列挙子の型。
+入力反復子の型。
 
 *OutputIterator*<br/>
 出力反復子の型。
@@ -157,11 +157,11 @@ void copy (
 *last*<br/>
 ソース コンテナーへの終了の反復子。
 
-##  <a name="copy_async"></a>  copy_async 関数 (concurrency::graphics Namespace)
+## <a name="copy_async"></a>copy_async 関数 (Concurrency:: graphics 名前空間)
 
-コピー先のバッファーにソース テクスチャを非同期的にコピーまたは元のバッファーをコピー先のバッファーにコピーを返します、 [completion_future](completion-future-class.md)待機できるオブジェクト。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。
+ソーステクスチャをコピー先のバッファーに非同期にコピーするか、コピー元のバッファーをコピー先のバッファーにコピーして、待機可能な[completion_future](completion-future-class.md)オブジェクトを返します。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。
 
-```
+```cpp
 template<
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type
@@ -269,7 +269,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 コピー開始位置でのコピー先へのオフセット。
 
 *InputIterator*<br/>
-入力列挙子の型。
+入力反復子の型。
 
 *OutputIterator*<br/>
 出力反復子の型。
@@ -292,12 +292,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 *last*<br/>
 ソース コンテナーへの終了の反復子。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_graphics.h
+**ヘッダー:** amp_graphics
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

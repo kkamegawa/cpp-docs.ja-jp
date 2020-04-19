@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632818"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953313"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-ロックを**ファイル**オブジェクトにアクセスするスレッドの一貫性を確保する、**ファイル**オブジェクトを同時にします。
+**ファイルオブジェクト**に同時にアクセスするスレッドの一貫性を確保するために、**ファイル**オブジェクトをロックします。
 
 ## <a name="syntax"></a>構文
 
@@ -48,7 +51,7 @@ void _lock_file( FILE* file );
 
 ## <a name="remarks"></a>Remarks
 
-**_Lock_file**ロック機能、**ファイル**で指定されたオブジェクト*ファイル*します。 によって、基になるファイルがロックされていない **_lock_file**します。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 呼び出す **_lock_file**と **_unlock_file**スレッド内で一致する必要があります。
+*ファイル*によって指定された**ファイル**オブジェクトをロックする **(_f)** 関数。 基になるファイルがロックされていません **(_f)** 。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 スレッドでは、 **lock_unlock_file**との呼び出しを一致させる必要があります。
 
 ## <a name="requirements"></a>必要条件
 

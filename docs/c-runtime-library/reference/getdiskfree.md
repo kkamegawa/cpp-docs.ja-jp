@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602281"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955096"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-ディスク ドライブに関する情報を使用して、事前設定、 **_diskfree_t**構造体。
+ディスクドライブに関する情報を使用して、 **diskfree_t**構造体を設定します。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -51,19 +54,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドライブ*<br/>
+*駆動*<br/>
 情報を取得するディスク ドライブを指定します。
 
 *driveinfo*<br/>
-A **_diskfree_t**ドライブに関する情報が読み込まれる構造体。
+ドライブに関する情報が設定される**diskfree_t 構造体 (_d)**
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合の戻り値は 0 です。 関数が失敗した場合の戻り値はエラー コードです。 値**errno**オペレーティング システムによって返されるエラーに設定されています。 示されたエラー状態の詳細については**errno**を参照してください[errno 定数](../../c-runtime-library/errno-constants.md)します。
+関数が成功した場合の戻り値は 0 です。 関数が失敗した場合の戻り値はエラー コードです。 値**errno**は、オペレーティングシステムによって返されるエラーに対して設定されます。 **Errno**によって示されるエラー条件の詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Diskfree_t**構造体は Direct.h で定義されています。
+この**構造体**は、直接 .h に定義されています。
 
 ```C
 struct _diskfree_t {
@@ -74,7 +77,7 @@ struct _diskfree_t {
 };
 ```
 
-この関数は、パラメーターを検証します。 場合、 *driveinfo*ポインターが**NULL**または*ドライブ*が無効なドライブを指定します」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。 有効なドライブの範囲は、0 から 26 です。 A*ドライブ*0 の値を現在のドライブを指定します。 1 はドライブ A を示すことは、3 は、C ドライブを示しますの英語のアルファベットがこのような文字に数値がその後、マップします。
+この関数は、パラメーターを検証します。 *Driveinfo*ポインターが**NULL**の場合、または*ドライブ*に無効なドライブが指定されている場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。 有効なドライブの範囲は、0 から 26 です。 *ドライブ*値が0の場合は、現在のドライブを指定します。その後、番号は英語のアルファベットの文字にマップされます。1はドライブ A、3はドライブ C を示します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2942
 ms.assetid: 13abf744-8fa1-450d-886d-e5717c04956e
-ms.openlocfilehash: 8a594b9d1d8374caa972f6bfdafe5d691e634a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98bb0d9945068042e00c7c48c0304314e281fa8f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632571"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758360"
 ---
 # <a name="compiler-error-c2942"></a>コンパイラ エラー C2942
 
@@ -36,7 +36,7 @@ void f(TC2 i) {}
 
 C2942 は、ジェネリックを使用しているときも発生します。
 
-```
+```cpp
 // C2942b.cpp
 // compile with: /clr /c
 generic<class T>

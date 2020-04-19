@@ -1,33 +1,33 @@
 ---
-title: コンパイラ エラー C2662
+title: コンパイラエラー C2662
 ms.date: 11/04/2016
 f1_keywords:
 - C2662
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515246"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760453"
 ---
-# <a name="compiler-error-c2662"></a>コンパイラ エラー C2662
+# <a name="compiler-error-c2662"></a>コンパイラエラー C2662
 
-'function': 'type1' から 'type2' へのポインターは 'this' に変換できません
+' function ': ' type1 ' から ' type1 ' に ' this ' ポインターを変換することはできません
 
-コンパイラは変換できませんでした、`this`からポインター`type1`に`type2`します。
+コンパイラは、`this` ポインターを `type1` から `type2`に変換できませんでした。
 
-このエラーは、以外を呼び出すことによって発生することができます`const`でメンバー関数、`const`オブジェクト。  考えられる解決策:
+このエラーは、`const` オブジェクトで非`const` メンバー関数を呼び出すことによって発生することがあります。  考えられる解決策は次のとおりです。
 
-- 削除、`const`オブジェクトの宣言から。
+- オブジェクト宣言から `const` を削除します。
 
-- 追加`const`メンバー関数。
+- メンバー関数に `const` を追加します。
 
 次の例では、C2662 が生成されます。
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-コンパイルするときに **/clr**で関数を呼び出すことはできません、`const`または`volatile`マネージ型を修飾します。 Const の管理オブジェクト上でメソッドを呼び出すことはできませんので、マネージ クラスの const メンバー関数を宣言できません。
+**/Clr**を使用してコンパイルする場合、`const` または `volatile` 修飾マネージ型で関数を呼び出すことはできません。 マネージクラスの const メンバー関数を宣言することはできないため、const マネージオブジェクトのメソッドを呼び出すことはできません。
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -69,7 +69,7 @@ ref struct N {
 
 次の例では、C2662 が生成されます。
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

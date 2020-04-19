@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 28: 状況依存のヘルプのサポート'
+title: TN028:状況依存のヘルプのサポート
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305984"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>テクニカル ノート 28: 状況依存のヘルプのサポート
+# <a name="tn028-context-sensitive-help-support"></a>TN028:状況依存のヘルプのサポート
 
 ここでは、ヘルプ コンテキスト Id と MFC の他のヘルプの問題を割り当てるための規則について説明します。 状況依存のヘルプのサポートには、Visual C で使用できるヘルプ コンパイラが必要です。
 
 > [!NOTE]
->  WinHelp を使用して、状況依存のヘルプを実装するだけでなく、HTML ヘルプの使用を MFC もサポートします。 このサポートおよび HTML ヘルプを使用したプログラミングの詳細については、次を参照してください。 [HTML ヘルプ: プログラムの状況依存のヘルプ](../mfc/html-help-context-sensitive-help-for-your-programs.md)します。
+>  WinHelp を使用して、状況依存のヘルプを実装するだけでなく、HTML ヘルプの使用を MFC もサポートします。 このサポートおよび HTML ヘルプを使用したプログラミングの詳細については、次を参照してください。 [HTML ヘルプ。プログラムの状況依存のヘルプ](../mfc/html-help-context-sensitive-help-for-your-programs.md)します。
 
 ## <a name="types-of-help-supported"></a>サポートされているヘルプの種類
 
@@ -148,7 +148,7 @@ HID_MY_COMMAND    0x10096
 
 この形式はヘルプ コンパイラの機能は、トピック名 (左側にあるシンボル) のコンテキスト Id (右側にある数値) のマップとの互換性。
 
-MAKEHM のソース コードは、MFC のプログラミングのユーティリティのサンプルで使用できる[MAKEHM](../visual-cpp-samples.md)します。
+MAKEHM のソース コードは、MFC のプログラミングのユーティリティのサンプルで使用できる[MAKEHM](../overview/visual-cpp-samples.md)します。
 
 ## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>MFC アプリケーション ウィザードの実行後のヘルプのサポートを追加します。
 
@@ -180,4 +180,3 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

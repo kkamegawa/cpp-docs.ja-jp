@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
 ms.openlocfilehash: f8fe301e25d9ecb5cc67397f9537e0bbd86c0627
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165854"
 ---
 # <a name="fatal-error-c1067"></a>致命的なエラー C1067
 
-コンパイラの制限: 型のレコード サイズ 64 K の制限を超えました
+コンパイラの制限:型のレコード サイズ 64 K の制限を超えました
 
 シンボルは、247 文字を超える装飾の名前を持つ場合、このエラーが発生する可能性があります。  を解決するには、シンボル名を短きます。
 

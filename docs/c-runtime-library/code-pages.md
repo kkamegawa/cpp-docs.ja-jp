@@ -12,12 +12,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 707aec51b0a244fe305205b9b098f3f67a90de1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521063"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738569"
 ---
 # <a name="code-pages"></a>コード ページ
 
@@ -41,7 +41,7 @@ Microsoft ランタイム ライブラリでは、次の種類のコード ペ�
 
 - "C" ロケールは、従来、C プログラムが実行されていたロケールに対応するよう、ANSI により定義されます。 "C" ロケールのコード ページ ("C" コード ページ) は ASCII 文字セットに対応します。 たとえば、"C" ロケールでは、**islower** は値 0x61 - 0x7A にのみ true を返します。 別のロケールの場合、**islower** は、そのロケールによる定義に基づき、値 0x61 - 0x7A とその他の値に true を返すことがあります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

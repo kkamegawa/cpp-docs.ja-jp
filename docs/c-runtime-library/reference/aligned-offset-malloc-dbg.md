@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 4fbacb170fd1ae1ce92de4a11ea85ff42b3942a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977720"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939772"
 ---
-# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+# <a name="_aligned_offset_malloc_dbg"></a>_aligned_offset_malloc_dbg
 
 指定された配置境界にメモリを割り当てます (デバッグ バージョンのみ)。
 
@@ -57,26 +60,26 @@ void * _aligned_offset_malloc_dbg(
 アラインメントを強制するためのメモリ割り当てへのオフセット。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
+割り当て操作を要求したソースファイルの名前へのポインターまたは**NULL**。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の番号を行または**NULL**します。
+割り当て操作が要求されたソースファイル内の行番号または**NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリ ブロックへのポインターまたは**NULL**場合は、操作に失敗しました。
+割り当てられたメモリブロックへのポインター。操作が失敗した場合は**NULL** 。
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_offset_malloc_dbg**のデバッグ バージョンです、 [_aligned_offset_malloc](aligned-offset-malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_offset_malloc_dbg**への呼び出しに減少 **_aligned_offset_malloc**します。 両方 **_aligned_offset_malloc**と **_aligned_offset_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_aligned_offset_malloc_dbg**いくつか提供していますデバッグ機能: リークをテストする、ブロックのユーザー部分の両側のバッファーと*filename*/*linenumber*の起点を特定する情報割り当て要求。 ブロックの型パラメーターを持つ特定の割り当ての種類の追跡は、アラインされた割り当てのサポートされているデバッグ機能ではありません。 アラインされた割り当ては、_NORMAL_BLOCK ブロックの型として表示されます。
+**_aligned_offset_malloc_dbg**は、 [_aligned_offset_malloc](aligned-offset-malloc.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_offset_malloc_dbg**の各呼び出しは **_aligned_offset_malloc**の呼び出しに限定されます。 **_Aligned_offset_malloc**と **_aligned_offset_malloc_dbg**は、どちらもベースヒープにメモリのブロックを割り当てますが、 **_aligned_offset_malloc_dbg**はいくつかのデバッグ機能を提供します。これは、ブロックのユーザー部分の両側のバッファーです。割り当て要求の発生元を特定するために、リークおよび*filename*/*linenumber*情報をテストします。 ブロックの型パラメーターを使用して特定の割り当ての種類を追跡することは、固定された割り当てのデバッグ機能としてサポートされていません。 アラインされた割り当ては、_NORMAL_BLOCK ブロック型として表示されます。
 
-**_aligned_offset_malloc_dbg**メモリ ブロックを要求したよりも少し多い領域を割り当てます*サイズ*します。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
+**_aligned_offset_malloc_dbg**は、要求された*サイズ*よりも若干多くの領域でメモリブロックを割り当てます。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
 
-**_aligned_offset_malloc_dbg** ; 入れ子になった要素の配置が必要な場合に便利ですたとえば、入れ子になったクラスに対するアラインメントが必要です。
+**_aligned_offset_malloc_dbg**は、入れ子になった要素にアラインメントが必要な場合に役立ちます。たとえば、入れ子になったクラスでアラインメントが必要な場合です。
 
-**_aligned_offset_malloc_dbg**に基づいて**malloc**; 詳細についてを参照してください[malloc](malloc.md)します。
+**_aligned_offset_malloc_dbg**は**malloc**に基づいています。詳細については、「 [malloc](malloc.md)」を参照してください。
 
-この関数は、設定**errno**に**ENOMEM** 、メモリの割り当てに失敗した場合、または要求されたサイズより大きい場合 **_HEAP_MAXREQ**します。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。 また、 **_aligned_offset_malloc**パラメーターを検証します。 場合*配置*が 2 の累乗でない場合、または*オフセット*がより大きいまたは等しい*サイズ*0 以外の場合、この関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って、[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返します**NULL**設定と**errno**に**EINVAL**します。
+メモリ割り当てが失敗した場合、または要求されたサイズが **_HEAP_MAXREQ**より大きい場合、この関数は**errno**を**ENOMEM**に設定します。 **Errno**の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_offset_malloc**はそのパラメーターを検証します。 *Alignment*が2の累乗でない場合、または*offset*が*size*以上で0以外の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 

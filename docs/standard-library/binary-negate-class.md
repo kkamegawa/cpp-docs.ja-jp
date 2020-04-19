@@ -1,21 +1,21 @@
 ---
 title: binary_negate クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binary_negate
+- functional/std::binary_negate
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329775"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688401"
 ---
-# <a name="binarynegate-class"></a>binary_negate クラス
+# <a name="binary_negate-class"></a>binary_negate クラス
 
-指定した二項関数の戻り値を否定するメンバー関数を提供するテンプレート クラス。
+指定された二項関数の戻り値を否定するメンバー関数を提供するクラステンプレート。 [Not_fn](functional-functions.md#not_fn)を優先する c++ 17 では非推奨となりました。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,6 @@ class binary_negate
     : public binaryFunction <typename Operation::first_argument_type,
                               typename Operation::second_argument_type, bool>
 {
-public:
     explicit binary_negate(const Operation& Func);
     bool operator()(const typename Operation::first_argument_type& left,
                     const typename Operation::second_argument_type& right) const;
@@ -34,13 +33,13 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*<br/>
+*Func* \
 否定する二項関数。
 
-*left*<br/>
+*左*\
 否定する二項関数の左オペランド。
 
-*right*<br/>
+*右*\
 否定する二項関数の右オペランド。
 
 ## <a name="return-value"></a>戻り値
@@ -49,7 +48,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、二項関数オブジェクトのコピーを格納する*Func*します。 そのメンバー関数`operator()`返すよう`!Func(left, right)`します。
+クラステンプレートは、バイナリ関数オブジェクト*Func*のコピーを格納します。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
 
 `binary_negate` のコンストラクターが直接使用されることはほとんどありません。 **binary_negator** アダプター述語を宣言し、使用するとき、通常、ヘルパー関数 [not2](../standard-library/functional-functions.md#not2) が選択されます。
 
@@ -109,20 +108,10 @@ int main( )
       cout << *Iter1 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original vector v1 = ( 6262 6262 2233879413 2621500314 580942933 3715465425 3739828298 )
 Sorted vector v1 = ( 6262 6262 580942933 2233879413 2621500314 3715465425 3739828298 )
 Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 6262 6262 )
-*/
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<関数型>
-
-std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

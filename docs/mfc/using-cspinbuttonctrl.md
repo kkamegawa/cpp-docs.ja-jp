@@ -9,27 +9,27 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: d3fe77c4d6d6b7bbea6e2b5f28954df4eec454d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545874"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513467"
 ---
 # <a name="using-cspinbuttonctrl"></a>CSpinButtonCtrl の使い方
 
-*スピン ボタン*コントロール (とも呼ばれる、*アップダウン*コントロール)、値を調整するユーザーがクリックする矢印のペアを提供します。 この値と呼ばれる、*現在位置*します。 スピン ボタンの範囲内に位置が維持されます。 位置が最大に向かって移動ユーザーは、上向きの矢印をクリックすると、最小値に、ユーザーは、下矢印をクリックすると、位置が移動します。
+*スピンボタン*コントロール (*アップダウン*コントロールとも呼ばれます) は、ユーザーがクリックして値を調整できる矢印のペアを提供します。 この値は、現在の*位置*と呼ばれます。 位置は、スピンボタンの範囲内にとどまります。 ユーザーが上矢印をクリックすると、位置が最大値に移動します。また、ユーザーが下矢印をクリックすると、位置が最小値に移動します。
 
-スピン ボタン コントロールは、MFC では、 [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)クラス。
+スピンボタンコントロールは、MFC で[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)クラスによって表されます。
 
 > [!NOTE]
->  既定では、スピン ボタンの範囲が、ゼロ (0) に設定した最大値、最小値が 100 に設定します。 最大値は最小値より小さいため、上向きの矢印をクリックすると、位置が減少し、下矢印をクリックすると拡大します。 使用[上限値と下限](../mfc/reference/cspinbuttonctrl-class.md#setrange)をこれらの値を調整します。
+>  既定では、スピンボタンの範囲の最大値はゼロ (0)、最小値は100に設定されています。 最大値が最小値より小さいため、上矢印をクリックすると位置が減少し、下矢印をクリックすると位置が増加します。 これらの値を調整するには、 [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange)を使用します。
 
-通常、現在の位置は、コントロールに表示されます。 付属のコントロールと呼ばれる、*連動ウィンドウ*します。 スピン ボタン コントロールの図解は、次を参照してください。[アップ ダウン コントロールに関する](/windows/desktop/Controls/up-down-controls)Windows SDK に含まれています。
+通常、現在の位置は、コンパニオンコントロールに表示されます。 コンパニオンコントロールは、関連*ウィンドウ*と呼ばれます。 スピンボタンコントロールの図解は、「Windows SDK の[アップダウンコントロールについ](/windows/win32/Controls/up-down-controls)て」を参照してください。
 
-Visual Studio で、スピン コントロールとを編集コントロールの連動ウィンドウを作成するには、最初にダイアログ ボックスまたはウィンドウで、エディット コントロールをドラッグしをスピン コントロールをドラッグします。 スピン コントロールを選択し、設定、 **Auto Buddy**と**設定 Buddy Integer**プロパティを**True**します。 設定しても、**配置**プロパティです。**右揃え**が最も一般的です。 これらの設定で、編集コントロールは、タブ オーダー内で直接編集コントロールの前にあるため連動ウィンドウとして設定されます。 エディット コントロールは、整数を表示し、スピン コントロールが編集コントロールの右側に埋め込まれました。 必要に応じてを使用して、スピン コントロールの有効な範囲を設定することができます、[上限値と下限](../mfc/reference/cspinbuttonctrl-class.md#setrange)メソッド。 データを直接交換するため、スピン コントロールと連動ウィンドウ間の通信には、イベント ハンドラーは必要ありません。 別の目的をスピン コントロールを使用する場合など、一連のウィンドウまたはダイアログ ボックスでは、改ページする UDN_DELTAPOS メッセージのハンドラーを追加し、しアクションを実行、カスタムがあります。
+スピンコントロールと編集コントロールの関連ウィンドウを作成するには、Visual Studio で、まず、エディットコントロールをダイアログボックスまたはウィンドウにドラッグし、次にスピンコントロールをドラッグします。 スピンコントロールを選択し、 **[Auto buddy]** と **[set Buddy Integer]** プロパティを**True**に設定します。 また、 **Alignment**プロパティも設定します。最も一般的なのは、**右揃え**です。 これらの設定を使用すると、エディットコントロールは、タブオーダーの編集コントロールの直前にあるため、[関連] ウィンドウとして設定されます。 エディットコントロールに整数が表示され、エディットコントロールの右側にスピンコントロールが埋め込まれます。 必要に応じて、 [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange)メソッドを使用して、スピンコントロールの有効な範囲を設定できます。 スピンコントロールと関連ウィンドウ間の通信には、データが直接交換されるため、イベントハンドラーは必要ありません。 他の目的でスピンコントロールを使用する場合 (たとえば、ウィンドウやダイアログボックスのシーケンスをページ分割する場合など) は、UDN_DELTAPOS メッセージのハンドラーを追加し、そこでカスタムアクションを実行します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [スピン ボタンのスタイル](../mfc/spin-button-styles.md)
 
@@ -38,4 +38,3 @@ Visual Studio で、スピン コントロールとを編集コントロール�
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

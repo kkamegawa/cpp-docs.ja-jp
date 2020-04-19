@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 454db8578fd061147948538b8d993205181edcdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403889"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton クラス
 
@@ -147,7 +147,7 @@ virtual BOOL Create(
 *pAutoHideWnd*<br/>
 [in]ポインターを[CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。 この自動的に隠すボタンが非表示になり、ことを示しています`CDockablePane`します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]メイン フレーム ウィンドウのボタンの配置を指定する値。
 
 ### <a name="return-value"></a>戻り値
@@ -421,7 +421,7 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pNewBar*<br/>
+[in] *pNewBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

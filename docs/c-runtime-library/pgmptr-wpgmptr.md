@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: c59134afc3b4d0f6360984c67dede28c27010bae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597534"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300158"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr、_wpgmptr
 
 実行可能ファイルのパスです。 非推奨。[_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) と [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md) を使用してください。
 
@@ -48,17 +48,17 @@ C> hello
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|変数|必須ヘッダー|
+|[Variable]|必須ヘッダー|
 |--------------|---------------------|
-|`_pgmptr`、 `_wpgmptr`|\<stdlib.h>|
+|`_pgmptr`、`_wpgmptr`|\<stdlib.h>|
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のプログラムで、`_pgmptr` の使用方法を示します。
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.
@@ -75,6 +75,6 @@ int main( void )
 
 `%Fs` を `%S`に、`main` を `wmain` に変更することで、`_wpgmptr` を使用できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)

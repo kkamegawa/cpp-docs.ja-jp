@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 243ea2028b30d60a2c19b22238914682966d3b69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96061f704d9df6cd788e362652b6ed22a7ffa999
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503946"
 ---
 # <a name="coleexception-class"></a>COleException クラス
 
@@ -33,21 +33,21 @@ class COleException : public CException
 
 |名前|説明|
 |----------|-----------------|
-|[COleException::Process](#process)|OLE のリターン コードにキャッチされた例外に変換します。|
+|[COleException::P rocess](#process)|キャッチされた例外を OLE のリターンコードに変換します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleException::m_sc](#m_sc)|例外の原因を示すステータス コードが含まれています。|
+|[COleException:: m_sc](#m_sc)|例外の理由を示すステータスコードを格納します。|
 
 ## <a name="remarks"></a>Remarks
 
-`COleException`クラスには、例外の理由を示すステータス コードを保持するパブリック データ メンバーが含まれています。
+クラス`COleException`には、例外の原因を示す状態コードを保持するパブリックデータメンバーが含まれています。
 
-一般に、作成しないようにする、`COleException`オブジェクトは、直接呼び出す必要があります[AfxThrowOleException](exception-processing.md#afxthrowoleexception)します。
+一般に、オブジェクトを`COleException`直接作成することは避けてください。代わりに、 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)を呼び出す必要があります。
 
-例外の詳細については、記事をご覧ください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)と[例外: OLE 例外](../../mfc/exceptions-ole-exceptions.md)します。
+例外の詳細については、「[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)と[例外」を参照してください。OLE の](../../mfc/exceptions-ole-exceptions.md)例外。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -61,9 +61,9 @@ class COleException : public CException
 
 **ヘッダー :** afxdisp.h
 
-##  <a name="m_sc"></a>  COleException::m_sc
+##  <a name="m_sc"></a>COleException:: m_sc
 
-OLE の例外の理由を示すステータス コードを保持します。
+このデータメンバーは、例外の原因を示す OLE ステータスコードを保持します。
 
 ```
 SCODE m_sc;
@@ -71,9 +71,9 @@ SCODE m_sc;
 
 ### <a name="remarks"></a>Remarks
 
-この変数の値によって設定されます[AfxThrowOleException](exception-processing.md#afxthrowoleexception)します。
+この変数の値は、 [AfxThrowOleException](exception-processing.md#afxthrowoleexception)によって設定されます。
 
-SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK に含まれています。
+SCODE の詳細については、「Windows SDK の[COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -81,7 +81,7 @@ SCODE の詳細については、次を参照してください。 [COM エラ�
 
 ##  <a name="process"></a>  COleException::Process
 
-呼び出す、**プロセス**OLE のステータス コードにキャッチされた例外に変換します。
+キャッチされた例外を OLE ステータスコードに変換するには、**プロセス**メンバー関数を呼び出します。
 
 ```
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -94,14 +94,14 @@ static SCODE PASCAL Process(const CException* pAnyException);
 
 ### <a name="return-value"></a>戻り値
 
-OLE のステータス コード。
+OLE ステータスコード。
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  この関数は**静的**します。
+>  この関数は**静的**です。
 
-SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)Windows SDK に含まれています。
+SCODE の詳細については、「Windows SDK の[COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -109,7 +109,6 @@ SCODE の詳細については、次を参照してください。 [COM エラ�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CALCDRIV](../../visual-cpp-samples.md)<br/>
+[MFC のサンプル CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException クラス](../../mfc/reference/cexception-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

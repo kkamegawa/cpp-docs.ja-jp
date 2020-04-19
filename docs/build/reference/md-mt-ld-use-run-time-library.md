@@ -1,6 +1,6 @@
 ---
-title: /MD、-MT、-LD (ランタイム ライブラリの使用)
-ms.date: 11/04/2016
+title: /MD、-MT、-LD (ランタイムライブラリの使用)
+ms.date: 07/17/2019
 f1_keywords:
 - /ld
 - /mt
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 5c7f71e51e0741c534761b22a66ac77a6df8f870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e734233d94bf57d6838bd4d37c023d55f1d5f6b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661085"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299758"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (ランタイム ライブラリの使用)
 
@@ -58,30 +58,30 @@ ms.locfileid: "50661085"
 
 |オプション|説明|
 |------------|-----------------|
-|**/MD**|アプリケーションでランタイム ライブラリのマルチスレッド対応および DLL 対応バージョンが使用されます。 `_MT` および `_DLL` を定義し、コンパイラにライブラリ名 MSVCRT.lib を .obj ファイルに挿入させます。<br /><br /> このオプションを使用してコンパイルされたアプリケーションは、MSVCRT.lib に静的にリンクされます。 このライブラリには、リンカーが外部参照を解決できるようにするコード レイヤーが用意されています。 実際に動くコードは MSVCR に含まれている*versionnumber*します。DLL は、MSVCRT.lib にリンクされているアプリケーションを実行時に使用できる必要があります。|
+|**/MD**|アプリケーションでランタイム ライブラリのマルチスレッド対応および DLL 対応バージョンが使用されます。 `_MT` および `_DLL` を定義し、コンパイラにライブラリ名 MSVCRT.lib を .obj ファイルに挿入させます。<br /><br /> このオプションを使用してコンパイルされたアプリケーションは、MSVCRT.lib に静的にリンクされます。 このライブラリには、リンカーが外部参照を解決できるようにするコード レイヤーが用意されています。 実際の作業コードは、MSVCR*versionnumber*に含まれています。DLL。実行時に、MSVCRT.DLL にリンクされているアプリケーションに対して使用可能である必要があります。|
 |**/MDd**|`_DEBUG`、`_MT`、および `_DLL` を定義します。アプリケーションで、マルチスレッド対応バージョンおよび DLL 対応バージョンのランタイム ライブラリが使用されます。 また、コンパイラによって、ライブラリ名 MSVCRTD.lib が .obj ファイルに挿入されます。|
 |**/MT**|アプリケーションで、マルチスレッド バージョンの静的なランタイム ライブラリが使用されます。 `_MT` を定義します。また、コンパイラにライブラリ名 LIBCMT.lib を .obj ファイルに挿入させるため、リンカーは LIBCMT.lib を使って外部シンボルを解決します。|
 |**/MTd**|`_DEBUG` および `_MT` を定義します。 このオプションによって、リンカーが LIBCMTD.lib を使用して外部シンボルを解決できるように、コンパイラによりライブラリ名 LIBCMTD.lib が .obj ファイルに挿入されます。|
-|**/LD**|DLL を作成します。<br /><br /> パス、 **/DLL**リンカーにオプション。 リンカーは `DllMain` 関数の有無を確認します。 `DllMain` 関数が記述されていないと、TRUE を返す `DllMain` 関数がリンク時に自動的に挿入されます。<br /><br /> DLL の起動コードをリンクします。<br /><br /> コマンド ラインでエクスポート (.exp) ファイルが指定されていない場合は、インポート ライブラリ (.lib) を作成します。 このインポート ライブラリを、DLL を呼び出すアプリケーションにリンクしてください。<br /><br /> 解釈[/Fe (EXE ファイルの名前)](../../build/reference/fe-name-exe-file.md) .exe ファイルではなく、DLL の名前を付けるとします。 既定では、プログラム名になります*basename*の代わりに .dll *basename*.exe です。<br /><br /> 意味 **/MT**明示的に指定しない限り **/MD**します。|
+|**/LD**|DLL を作成します。<br /><br /> リンカーに **/dll**オプションを渡します。 リンカーは `DllMain` 関数の有無を確認します。 `DllMain` 関数が記述されていないと、TRUE を返す `DllMain` 関数がリンク時に自動的に挿入されます。<br /><br /> DLL の起動コードをリンクします。<br /><br /> コマンド ラインでエクスポート (.exp) ファイルが指定されていない場合は、インポート ライブラリ (.lib) を作成します。 このインポート ライブラリを、DLL を呼び出すアプリケーションにリンクしてください。<br /><br /> [/Fe (名前付き Exe ファイル)](fe-name-exe-file.md)を .exe ファイルではなく DLL に名前を付けて解釈します。 既定では、プログラム名は、*ベース*名ではなく、.dll*になります*。<br /><br /> **/Md**を明示的に指定しない限り、 **/mt**を意味します。|
 |**/LDd**|デバッグ DLL を作成します。 `_MT` および `_DEBUG` を定義します。|
 
-C ランタイム ライブラリと指定してコンパイルしたときに使用されるライブラリの詳細については[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を参照してください[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)します。
+C ランタイムライブラリと、 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)を使用してコンパイルするときに使用されるライブラリの詳細については、「 [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)」を参照してください。
 
-リンカーの特定の呼び出しに渡されるすべてのモジュールを同じランタイム ライブラリ コンパイラ オプションでコンパイルする必要があります (**/MD**、 **/MT**、 **/LD**)。
+リンカーの特定の呼び出しに渡されるすべてのモジュールは、同じランタイムライブラリコンパイラオプション ( **/md**、 **/mt**、 **/ld**) を使用してコンパイルされている必要があります。
 
-ランタイム ライブラリのデバッグ バージョンを使用する方法の詳細については、次を参照してください。 [C ランタイム ライブラリ リファレンス](../../c-runtime-library/c-run-time-library-reference.md)します。
+ランタイムライブラリのデバッグバージョンを使用する方法の詳細については、「 [C ランタイムライブラリリファレンス](../../c-runtime-library/c-run-time-library-reference.md)」を参照してください。
 
-詳細については、Dll は、次を参照してください。 [Visual c の Dll](../../build/dlls-in-visual-cpp.md)します。
+Dll の詳細については、「 [Visual Studio での C/C++ dll の作成](../dlls-in-visual-cpp.md)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 展開、 **C/C++** フォルダー。
+1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
-1. 選択、**コード生成**プロパティ ページ。
+1. **[コード生成]** プロパティページを選択します。
 
-1. 変更、**ランタイム ライブラリ**プロパティ。
+1. **ランタイムライブラリ**のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -89,5 +89,5 @@ C ランタイム ライブラリと指定してコンパイルしたときに�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

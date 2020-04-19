@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
-ms.openlocfilehash: d207c87c7b3f75ac939c155da127720562973160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2be5c0a4f85448f41f865bdde79d56998fbcf16a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569261"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752601"
 ---
 # <a name="compiler-error-c3741"></a>コンパイラ エラー C3741
 
-'class': コクラスに指定する必要がありますと event_receiver の 'layout_dependent' パラメーター true を =
+' class ': event_receiver = true の ' layout_dependent ' パラメーターが指定されている場合、コクラスでなければなりません
 
-ときに`layout_dependent=true`の[event_receiver](../../windows/event-receiver.md)クラス、そのクラスがあります、[コクラス](../../windows/coclass.md)属性。
+[Event_receiver](../../windows/event-receiver.md)クラスの `layout_dependent=true` する場合は、クラスに[コクラス](../../windows/coclass.md)属性も指定する必要があります。
 
-次のサンプルの生成 C3741
+次の例では、C3741 が生成されます。
 
-```
+```cpp
 // C3741.cpp
 // compile with: /c
 // C3741 expected

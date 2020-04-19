@@ -1,5 +1,5 @@
 ---
-title: 'Windows ソケット : ブロッキング'
+title: Windows ソケット:ブロック
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371965"
 ---
-# <a name="windows-sockets-blocking"></a>Windows ソケット : ブロッキング
+# <a name="windows-sockets-blocking"></a>Windows ソケット:ブロック
 
-この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、ブロックについて説明します。 その他の問題については、「: [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)と[Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)します。
+この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、ブロックについて説明します。 記事では、その他の問題がについて説明します。[Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)と[Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
 
 使用するか、またはクラスから派生させる場合[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、これらの問題を自分で管理する必要があります。 使用するか、またはクラスから派生させる場合[CSocket](../mfc/reference/csocket-class.md)MFC を管理します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "50610575"
 
 Windows では、下のブロッキング呼び出しが不適切な手法と見なされます。 既定では、 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)非同期呼び出しをサポートしていますとするコールバック通知を使用して自分でブロックを管理する必要があります。 クラス[CSocket](../mfc/reference/csocket-class.md)、一方では同期されます。 Windows メッセージをポンプし、管理するをブロックします。
 
-ブロッキングの詳細については、Windows ソケット仕様を参照してください。 "On"関数の詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../mfc/windows-sockets-socket-notifications.md)と[Windows ソケット: ソケット クラスから派生する](../mfc/windows-sockets-deriving-from-socket-classes.md)します。
+ブロッキングの詳細については、Windows ソケット仕様を参照してください。 "On"関数の詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../mfc/windows-sockets-socket-notifications.md)と[Windows ソケット。ソケット クラスから派生する](../mfc/windows-sockets-deriving-from-socket-classes.md)します。
 
 詳細については次を参照してください:
 
@@ -54,4 +54,3 @@ Windows では、下のブロッキング呼び出しが不適切な手法と見
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

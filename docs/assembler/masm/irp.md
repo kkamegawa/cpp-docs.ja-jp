@@ -1,28 +1,29 @@
 ---
 title: IRP
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IRP
 helpviewer_keywords:
 - IRP directive
 ms.assetid: 055f746d-f422-43d1-b73d-d38979c593cb
-ms.openlocfilehash: 7cf54c6a6b0d145a7d7f999202559704b586e502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31c2da73f4524bf1bbecb3f62daa0c87502687bf
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510059"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313016"
 ---
 # <a name="irp"></a>IRP
 
 ## <a name="syntax"></a>構文
 
-> IRP
+> **IRP**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[の](../../assembler/masm/for-masm.md)します。
+[については、を](for-masm.md)参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,18 +1,18 @@
 ---
-title: '方法: アセンブリから STL/CLR コンテナーを公開する'
+title: '方法: アセンブリから STL/CLR コンテナーを公開します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387332"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>方法: アセンブリから STL/CLR コンテナーを公開する
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>方法: アセンブリから STL/CLR コンテナーを公開します。
 
 などの STL/CLR コンテナー`list`と`map`テンプレート ref クラスとして実装されます。 C++ テンプレートは、コンパイル時にインスタンス化ため正確に同じシグネチャが異なるアセンブリにある 2 つのテンプレート クラスは実際にはさまざまな種類にします。 つまり、アセンブリ境界を越えてテンプレート クラスを使用することはできません。
 

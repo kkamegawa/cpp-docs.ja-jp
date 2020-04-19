@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C, statements
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
-ms.openlocfilehash: b9fafec9b37499551943b51f55172cf64c97636e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fb6a9c3742efd414581124e56d01356e4448614
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463727"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151924"
 ---
 # <a name="statements-c"></a>ステートメント (C)
 
@@ -27,6 +27,6 @@ C プログラムのステートメントは、プログラムの実行フロー
 |[for ステートメント](../c-language/for-statement-c.md)|[try-finally ステートメント](../c-language/try-finally-statement-c.md)|
 |[goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md)|[while ステートメント](../c-language/while-statement-c.md)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 言語リファレンス](../c-language/c-language-reference.md)

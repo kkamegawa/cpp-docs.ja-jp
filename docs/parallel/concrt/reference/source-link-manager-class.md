@@ -17,184 +17,184 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c7cc72520cdb0675abf9c15574a49e33741d0b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545991"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142694"
 ---
-# <a name="sourcelinkmanager-class"></a>source_link_manager クラス
+# <a name="source_link_manager-class"></a>source_link_manager クラス
 
 `source_link_manager` オブジェクトは、`ISource` ブロックへのメッセージング ブロック ネットワーク リンクを管理します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<class _LinkRegistry>
 class source_link_manager;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *_LinkRegistry*<br/>
-ネットワーク リンクのレジストリ。
+ネットワークリンクレジストリ。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`const_pointer`|ポインターを提供する型、`const`内の要素を`source_link_manager`オブジェクト。|
-|`const_reference`|参照を提供する型、`const`に要素が格納されている、`source_link_manager`の読み取りと const の操作を実行するオブジェクト。|
-|`iterator`|反復子を提供する型の読み取りまたはの任意の要素の変更ができる、`source_link_manager`オブジェクト。|
-|`type`|によって管理されているリンクのレジストリの種類、`source_link_manager`オブジェクト。|
+|`const_pointer`|`source_link_manager` オブジェクト内の `const` 要素へのポインターを提供する型。|
+|`const_reference`|読み取りと const 操作の実行のために `source_link_manager` オブジェクトに格納されている `const` 要素への参照を提供する型。|
+|`iterator`|`source_link_manager` オブジェクト内の任意の要素の読み取りまたは変更ができる反復子を提供する型。|
+|`type`|`source_link_manager` オブジェクトによって管理されているリンクレジストリの種類。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[source_link_manager](#ctor)|`source_link_manager` オブジェクトを構築します。|
 |[~ source_link_manager デストラクター](#dtor)|`source_link_manager` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[add](#add)|ソースへのリンクを追加、`source_link_manager`オブジェクト。|
-|[begin](#begin)|最初の要素に反復子を返します、`source_link_manager`オブジェクト。|
-|[contains](#contains)|検索、`network_link_registry`この`source_link_manager`の指定されたブロックのオブジェクト。|
-|[count](#count)|リンクされたブロックの数をカウント、`source_link_manager`オブジェクト。|
-|[reference](#reference)|参照を取得、`source_link_manager`オブジェクト。|
-|[register_target_block](#register_target_block)|これを保持するターゲット ブロックを登録します`source_link_manager`オブジェクト。|
-|[release](#release)|参照を解放、`source_link_manager`オブジェクト。|
-|[remove](#remove)|リンクを削除、`source_link_manager`オブジェクト。|
-|[set_bound](#set_bound)|これに追加できる送信元のリンクの最大数を設定`source_link_manager`オブジェクト。|
+|[add](#add)|`source_link_manager` オブジェクトにソースリンクを追加します。|
+|[begin](#begin)|`source_link_manager` オブジェクト内の最初の要素を指す反復子を返します。|
+|[contains](#contains)|この `source_link_manager` オブジェクト内の `network_link_registry` 内で、指定したブロックを検索します。|
+|[count](#count)|`source_link_manager` オブジェクト内のリンクされたブロックの数をカウントします。|
+|[reference](#reference)|`source_link_manager` オブジェクトの参照を取得します。|
+|[register_target_block](#register_target_block)|この `source_link_manager` オブジェクトを保持するターゲットブロックを登録します。|
+|[release](#release)|`source_link_manager` オブジェクトの参照を解放します。|
+|[remove](#remove)|`source_link_manager` オブジェクトからリンクを削除します。|
+|[set_bound](#set_bound)|この `source_link_manager` オブジェクトに追加できるソースリンクの最大数を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-現時点では、ソース ブロックは、カウントされた参照です。 これで、ラッパーを`network_link_registry`オブジェクトをリンクへの同時アクセスを許可し、コールバックをとおしてリンクを参照する機能を提供します。 メッセージ ブロック ( `target_block`s または`propagator_block`s)、送信元のリンクをこのクラスを使用する必要があります。
+現在、ソースブロックは参照カウントされています。 これは、リンクへの同時アクセスを可能にし、コールバックを介してリンクを参照する機能を提供する、`network_link_registry` オブジェクトのラッパーです。 メッセージブロック (`target_block`s または `propagator_block`s) では、ソースリンクにこのクラスを使用する必要があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `source_link_manager`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-##  <a name="add"></a> 追加します。
+## <a name="add"></a>アドイン
 
-ソースへのリンクを追加、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクトにソースリンクを追加します。
 
-```
+```cpp
 void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*リンク (_l)*<br/>
+*_Link*<br/>
 追加するブロックへのポインター。
 
-##  <a name="begin"></a> 開始
+## <a name="begin"></a>初め
 
-最初の要素に反復子を返します、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクト内の最初の要素を指す反復子を返します。
 
-```
+```cpp
 iterator begin();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-最初の要素を示す反復子、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクト内の最初の要素を指す反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって、反復子の最終の状態が示される、`NULL`リンク。
+反復子の終了状態は、`NULL` リンクによって示されます。
 
-##  <a name="contains"></a> 含まれています
+## <a name="contains"></a>は
 
-検索、`network_link_registry`この`source_link_manager`の指定されたブロックのオブジェクト。
+この `source_link_manager` オブジェクト内の `network_link_registry` 内で、指定したブロックを検索します。
 
-```
+```cpp
 bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*リンク (_l)*<br/>
-内で検索するのには、ブロックへのポインター、`source_link_manager`オブジェクト。
+*_Link*<br/>
+`source_link_manager` オブジェクト内で検索されるブロックへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-**true**指定されたブロックが見つかった場合**false**それ以外の場合。
+指定されたブロックが見つかった場合は**true** 、それ以外の場合は**false** 。
 
-##  <a name="count"></a> カウント
+## <a name="count"></a>数
 
-リンクされたブロックの数をカウント、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクト内のリンクされたブロックの数をカウントします。
 
-```
+```cpp
 size_t count();
 ```
 
 ### <a name="return-value"></a>戻り値
 
-リンクされたブロックの数、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクト内のリンクされたブロックの数。
 
-##  <a name="reference"></a> 参照
+## <a name="reference"></a>「
 
-参照を取得、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクトの参照を取得します。
 
-```
+```cpp
 void reference();
 ```
 
-##  <a name="register_target_block"></a> register_target_block
+## <a name="register_target_block"></a>register_target_block
 
-これを保持するターゲット ブロックを登録します`source_link_manager`オブジェクト。
+この `source_link_manager` オブジェクトを保持するターゲットブロックを登録します。
 
-```
+```cpp
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *_PTarget*<br/>
-これを保持しているターゲット ブロック`source_link_manager`オブジェクト。
+この `source_link_manager` オブジェクトを保持しているターゲットブロック。
 
-##  <a name="release"></a> リリース
+## <a name="release"></a>解除
 
-参照を解放、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクトの参照を解放します。
 
-```
+```cpp
 void release();
 ```
 
-##  <a name="remove"></a> 削除します。
+## <a name="remove"></a>から
 
-リンクを削除、`source_link_manager`オブジェクト。
+`source_link_manager` オブジェクトからリンクを削除します。
 
-```
+```cpp
 bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*リンク (_l)*<br/>
-削除する場合、ブロックへのポインターが見つかりました。
+*_Link*<br/>
+削除するブロックへのポインター (見つかった場合)。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、リンクが見つかり、削除、 **false**それ以外の場合。
+リンクが見つかり、削除された場合は**true** 、それ以外の場合は**false** 。
 
-##  <a name="set_bound"></a> set_bound
+## <a name="set_bound"></a>set_bound
 
-これに追加できる送信元のリンクの最大数を設定`source_link_manager`オブジェクト。
+この `source_link_manager` オブジェクトに追加できるソースリンクの最大数を設定します。
 
-```
+```cpp
 void set_bound(size_t _MaxLinks);
 ```
 
@@ -203,23 +203,23 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 リンクの最大数。
 
-##  <a name="ctor"></a> source_link_manager
+## <a name="ctor"></a>source_link_manager
 
 `source_link_manager` オブジェクトを構築します。
 
-```
+```cpp
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~source_link_manager
+## <a name="dtor"></a>~ source_link_manager
 
 `source_link_manager` オブジェクトを破棄します。
 
-```
+```cpp
 ~source_link_manager();
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [single_link_registry クラス](single-link-registry-class.md)<br/>

@@ -32,48 +32,47 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 105e438a9ed3e8f7de7edc813fec516c0e99700a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d5337e8d8b83a641458a15612803feeec3b6361c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694687"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508659"
 ---
 # <a name="device-contexts"></a>デバイス コンテキスト
 
-デバイス コンテキストは、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を含む Windows データ構造です。 すべての描画呼び出しは、線、図形、およびテキストを描画するための Windows Api をカプセル化されているデバイス コンテキスト オブジェクトを通じて行われます。 デバイス コンテキストでは、Windows でのデバイスに依存しない描画を使用できます。 デバイス コンテキストは、画面、プリンター、または、メタファイルに描画するために使用できます。
+デバイスコンテキストは、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を含む Windows データ構造です。 すべての描画呼び出しはデバイスコンテキストオブジェクトを使用して行われます。これにより、線、図形、テキストを描画するための Windows Api がカプセル化されます。 デバイスコンテキストでは、Windows でデバイスに依存しない描画を実行できます。 デバイスコンテキストは、画面、プリンター、またはメタファイルに描画するために使用できます。
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)オブジェクトが呼び出す、Windows の一般的な表現形式をカプセル化、`BeginPaint`関数は、デバイス コンテキストでの描画後の呼び出し、`EndPaint`関数。 `CPaintDC`コンス トラクター呼び出し`BeginPaint`、およびデストラクター呼び出し`EndPaint`します。 簡略化されたプロセスは、作成する、 [CDC](../mfc/reference/cdc-class.md)オブジェクト、描画、および破棄し、`CDC`オブジェクト。 Framework では、このプロセスでもの多くが自動化されます。 具体的には、`OnDraw`関数に渡されます、`CPaintDC`既に準備 (を使用して`OnPrepareDC`)、単にそこに描画するとします。 フレームワークによって破棄されへの呼び出しから戻ったとき、基になるデバイス コンテキストが Windows にリリースされた、`OnDraw`関数。
+[CPaintDC](../mfc/reference/cpaintdc-class.md)オブジェクトは、Windows の共通表現をカプセル化`BeginPaint`し、関数を呼び出した後、デバイスコンテキストで描画`EndPaint`した後、関数を呼び出します。 コンストラクター `CPaintDC`はを`BeginPaint`呼び出し、デストラクターはを呼び出し`EndPaint`ます。 簡略化されたプロセスは、 [CDC](../mfc/reference/cdc-class.md)オブジェクトを作成して描画し、 `CDC`オブジェクトを破棄することです。 フレームワークでは、このプロセスの多くが自動化されています。 特に、 `OnDraw`関数には既に`CPaintDC`準備された`OnPrepareDC`(経由で) が渡され、それに単に描画するだけです。 これはフレームワークによって破棄され、基になるデバイスコンテキストは、 `OnDraw`関数の呼び出しから戻った時点で Windows に解放されます。
 
-[CClientDC](../mfc/reference/cclientdc-class.md)オブジェクトは、ウィンドウのクライアント領域だけを表すデバイス コンテキストの操作をカプセル化します。 `CClientDC`コンス トラクターの呼び出し、`GetDC`関数、およびデストラクターの呼び出し、`ReleaseDC`関数。 [CWindowDC](../mfc/reference/cwindowdc-class.md)オブジェクトを含む、フレーム ウィンドウ全体を表すデバイス コンテキストをカプセル化します。
+[Cclientdc](../mfc/reference/cclientdc-class.md)オブジェクトは、ウィンドウのクライアント領域のみを表すデバイスコンテキストの操作をカプセル化します。 コンストラクター `CClientDC`は`GetDC`関数を呼び出し、デストラクターは`ReleaseDC`関数を呼び出します。 [CWindowDC](../mfc/reference/cwindowdc-class.md)オブジェクトは、フレームを含む、ウィンドウ全体を表すデバイスコンテキストをカプセル化します。
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)オブジェクトが Windows メタファイルに描画をカプセル化します。 異なり、`CPaintDC`に渡される`OnDraw`、ここで呼び出す必要がある[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)自分でします。
+[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)オブジェクトは、描画を Windows メタファイルにカプセル化します。 に`CPaintDC` 渡さ`OnDraw`れるとは対照的に、この場合は自分で[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)を呼び出す必要があります。
 
-## <a name="mouse-drawing"></a>マウスによる描画
+## <a name="mouse-drawing"></a>マウスの描画
 
-フレームワーク プログラムでのほとんどの描画- とほとんどのデバイス コンテキスト作業したがって-ビューのでは`OnDraw`メンバー関数。 ただし、他の目的で、デバイス コンテキスト オブジェクトを使用できます。 たとえば、ビューでマウスの動きの追跡のフィードバックを提供する必要がありますを待つことがなく、ビューに直接描画するために`OnDraw`呼び出されます。
+フレームワークプログラムにおけるほとんどの描画 (つまり、ほとんどのデバイスコンテキストの作業) は、ビューの`OnDraw`メンバー関数で実行されます。 ただし、他の目的でデバイスコンテキストオブジェクトを使用することもできます。 たとえば、ビューでのマウスの動きに関するフィードバックを追跡するには、が呼び出されるの`OnDraw`を待たずに、ビューに直接描画する必要があります。
 
-このような場合は、使用することができます、 [CClientDC](../mfc/reference/cclientdc-class.md)ビューに直接描画するためにデバイス コンテキスト オブジェクト。
+このような場合は、 [Cclientdc](../mfc/reference/cclientdc-class.md)デバイスコンテキストオブジェクトを使用して、ビューに直接描画できます。
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [デバイス コンテキスト (定義)](/windows/desktop/gdi/device-contexts)
+- [デバイスコンテキスト (定義)](/windows/win32/gdi/device-contexts)
 
 - [ビューの描画](../mfc/drawing-in-a-view.md)
 
 - [ビューを経由したユーザー入力の解釈](../mfc/interpreting-user-input-through-a-view.md)
 
-- [直線と曲線](/windows/desktop/gdi/lines-and-curves)
+- [線と曲線](/windows/win32/gdi/lines-and-curves)
 
-- [塗りつぶされた図形](/windows/desktop/gdi/filled-shapes)
+- [塗りつぶされた図形](/windows/win32/gdi/filled-shapes)
 
-- [フォントとテキスト](/windows/desktop/gdi/fonts-and-text)
+- [フォントとテキスト](/windows/win32/gdi/fonts-and-text)
 
-- [色](/windows/desktop/gdi/colors)
+- [色](/windows/win32/gdi/colors)
 
-- [座標空間と変換](/windows/desktop/gdi/coordinate-spaces-and-transformations)
+- [座標空間と変換](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>関連項目
 
 [Window オブジェクト](../mfc/window-objects.md)
-

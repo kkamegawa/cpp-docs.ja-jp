@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラーs C2300 Through C2399
-ms.date: 11/17/2017
+title: コンパイラ エラー(C2300 - C2399)
+ms.date: 04/21/2019
 f1_keywords:
 - C2303
 - C2304
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - C2398
 - C2399
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-ms.openlocfilehash: 6f95ec90a08b842259a383d7bfc6af2cba119e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ab73857b46fed29e2ba8d7bc051ffb81b54bb3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580636"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857364"
 ---
-# <a name="compiler-errors-c2300-through-c2399"></a>コンパイラ エラーs C2300 Through C2399
+# <a name="compiler-errors-c2300-through-c2399"></a>コンパイラ エラー(C2300 - C2399)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -103,7 +103,7 @@ ms.locfileid: "50580636"
 |[コンパイラ エラー C2327](compiler-error-c2327.md)|'*識別子*': 型名、スタティック、または列挙子でないです。|
 |コンパイラ エラー C2328|'*キーワード*': キーワードはまだサポートされていません|
 |コンパイラ エラー C2329|'*識別子*': _ _ptr64 は関数へのポインターは使用できません|
-|コンパイラ エラー C2330|'implementation_key ()' は、#pragma start_map_region/stop_map_region で区切られた範囲でのみ有効です。|
+|コンパイラ エラー C2330|'implementation_key( )' is only valid in a region bounded by #pragma start_map_region/stop_map_region|
 |コンパイラ エラー C2331|アクセスを '*識別子*'が定義されているようになりました'*accessibility1*'、以前に定義した*accessibility2*'|
 |[コンパイラ エラー C2332](compiler-error-c2332.md)|'*typedef*': タグ名がありません|
 |[コンパイラ エラー C2333](compiler-error-c2333.md)|'*関数*': 関数宣言のエラー関数の本体をスキップしています。|
@@ -167,9 +167,14 @@ ms.locfileid: "50580636"
 |[コンパイラ エラー C2391](compiler-error-c2391.md)|'*識別子*': 'friend' は型定義中に使用できません|
 |[コンパイラ エラー C2392](compiler-error-c2392.md)|'*member1*': 共変の型でサポートされていないマネージまたは WinRT 型では、それ以外の場合を返します'*member2*' はオーバーライドされます|
 |[コンパイラ エラー C2393](compiler-error-c2393.md)|'*シンボル*': appdomain ごとのシンボルをセグメントに割り当てることができない'*セグメント*'|
-|[コンパイラ エラー C2394](compiler-error-c2394.md)|'*型*:: 演算子*演算子*': CLR または WinRT 演算子が無効です。 次の種類の少なくとも 1 つのパラメーターがある必要があります: 'T ^'、' T ^ %'、' T ^ &'、T ='*型*'|
-|[コンパイラ エラー C2395](compiler-error-c2395.md)|'*型*:: 演算子*演算子*': CLR または WinRT 演算子が無効です。 次の種類の少なくとも 1 つのパラメーターがある必要があります: 'T '、' T %'、' T &'、' T ^'、' T ^ %'、' T ^ &' ここで、T ='*型*'|
-|[コンパイラ エラー C2396](compiler-error-c2396.md)|'*type1*:: 演算子*type2*': CLR または WinRT のユーザー定義の変換関数は無効です。 変換元または変換する必要があります: 'T ^'、' T ^ %'、' T ^ &'、T ='*type1*'|
+|[コンパイラ エラー C2394](compiler-error-c2394.md)|'*型*:: 演算子*演算子*'。CLR または WinRT 演算子が無効です。 次の種類の少なくとも 1 つのパラメーターがあります。'T^', 'T^%', 'T^&', where T = '*type*'|
+|[コンパイラ エラー C2395](compiler-error-c2395.md)|'*型*:: 演算子*演算子*'。CLR または WinRT 演算子が無効です。 次の種類の少なくとも 1 つのパラメーターがあります。'T', 'T%', 'T&', 'T^', 'T^%', 'T^&', where T = '*type*'|
+|[コンパイラ エラー C2396](compiler-error-c2396.md)|'*type1*::operator *type2*':CLR または WinRT のユーザー定義の変換関数は無効です。 必要がありますから変換または変換先。'T^', 'T^%', 'T^&', where T = '*type1*'|
 |[コンパイラ エラー C2397](compiler-error-c2397.md)|変換 '*type1*'to'*type2*' 縮小変換が必要です|
 |コンパイラ エラー C2398|要素 '*数*': から変換'*type1*'to'*type2*' 縮小変換が必要です|
 |コンパイラ エラー C2399|互換性のために残されています。|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

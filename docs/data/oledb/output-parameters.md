@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 575bc2c347275bfb96f64e60f35379629b4eac18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62283966"
 ---
 # <a name="output-parameters"></a>出力パラメーター
 
@@ -38,7 +38,7 @@ END_PARAM_MAP()
 
 アプリケーションでは、ストアド プロシージャから返された出力を処理する必要があります。 さまざまな OLE DB プロバイダーでは、出力パラメーターを返すし、結果の処理中にさまざまなタイミングで戻り値。 などの Microsoft OLE DB provider for SQL Server (SQLOLEDB) は、出力パラメーターを指定しないし、までコードを返す、コンシューマーが取得またはストアド プロシージャによって返される結果セットが取り消されました。 出力は、最後の TDS パケットで、サーバーから返されます。
 
-## <a name="row-count"></a>行の数
+## <a name="row-count"></a>行数
 
 出力パラメーターを持つストアド プロシージャを実行する OLE DB コンシューマー テンプレートを使用する場合、行の数は、行セットを終了するまでに設定されていません。
 

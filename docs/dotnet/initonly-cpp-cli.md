@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-ms.openlocfilehash: 85a127398997872a20a2360f1a852ebaaf17e33b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdfc278225ce4ab418dfaaf41fb413d088ad77df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188409"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 
@@ -38,4 +38,4 @@ ref struct Y1 {
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

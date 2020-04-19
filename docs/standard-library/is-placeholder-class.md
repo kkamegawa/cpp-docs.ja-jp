@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
-ms.openlocfilehash: 2c7848c88194a9b541867b26ffe27764ad862503
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fa7d4aaade6244fe26f89f3a667598d39471a47
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613734"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245148"
 ---
 # <a name="isplaceholder-class"></a>is_placeholder クラス
 
@@ -19,7 +19,7 @@ ms.locfileid: "50613734"
 
 ## <a name="syntax"></a>構文
 
-構造体 is_placeholder static const int {value}; です。
+struct is_placeholder { static const int value; };
 
 ## <a name="remarks"></a>Remarks
 
@@ -54,13 +54,3 @@ int main()
 0
 3
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[_1 オブジェクト](../standard-library/1-object.md)<br/>

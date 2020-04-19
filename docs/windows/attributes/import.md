@@ -1,21 +1,21 @@
 ---
-title: インポート (C++ COM 属性)
+title: import (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f9be9b86b6c6a6ceabbd354da1d7c1ceedc35227
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462203"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514622"
 ---
 # <a name="import"></a>import
 
-メイン IDL から参照する定義を含む .idl、.odl ファイル、またはヘッダーのもう 1 つのファイルを指定します。
+メイン IDL から参照する定義が含まれている別の .idl、odl、またはヘッダーファイルを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,13 +28,13 @@ ms.locfileid: "50462203"
 ### <a name="parameters"></a>パラメーター
 
 *idl_file*<br/>
-現在のプロジェクトのタイプ ライブラリにインポートする .idl ファイルの名前。
+現在のプロジェクトのタイプライブラリにインポートする .idl ファイルの名前です。
 
 ## <a name="remarks"></a>Remarks
 
-**インポート**C++ 属性によって、`#import`ステートメントの下に配置される、`import "docobj.idl"`生成された .idl ファイル内のステートメント。 **インポート**属性と同じ機能を持つ、[インポート](/windows/desktop/Midl/import)MIDL 属性。
+**Import** C++ `import "docobj.idl"`属性を指定すると、ステートメントが生成された.idlファイル内のステートメントの下に配置されます。`#import` **Import**属性には、 [import](/windows/win32/Midl/import) MIDL 属性と同じ機能があります。
 
-**インポート**属性は、プロジェクトによって生成される .idl ファイルに指定されたファイルを配置するだけ、**インポート**属性ではソース コードから指定したファイルの構造を呼び出すことはできませんプロジェクト。  プロジェクトのソース コードから、指定したファイルの構造を呼び出すには使用か[#import](../../preprocessor/hash-import-directive-cpp.md)と`embedded_idl`または属性の .h ファイルを含めることができます、 *idl_file*.h ファイルが存在する場合は、します。
+**Import**属性は、指定されたファイルを、プロジェクトによって生成される .idl ファイルにのみ配置します。**import**属性を使用しても、プロジェクト内のソースコードから指定されたファイル内の構造体を呼び出すことはできません。  プロジェクトのソースコードから指定されたファイルの構造体を呼び出すには、[#import](../../preprocessor/hash-import-directive-cpp.md) `embedded_idl`と属性を使用するか、.h ファイルが存在する場合は*idl_file*の .h ファイルを含めることができます。
 
 ## <a name="example"></a>例
 
@@ -47,7 +47,7 @@ ms.locfileid: "50462203"
 [import(import.idl)];
 ```
 
-生成された .idl ファイルに次のコードが生成されます。
+生成された .idl ファイル内に次のコードを生成します。
 
 ```
 import "docobj.idl";

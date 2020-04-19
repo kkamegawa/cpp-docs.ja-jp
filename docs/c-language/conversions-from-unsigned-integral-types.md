@@ -1,6 +1,6 @@
 ---
-title: Conversions from Unsigned Integral Types (符号なし整数型からの変換)
-ms.date: 01/29/2018
+title: 符号なし整数型からの変換
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,68 +8,84 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579688"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998789"
 ---
-# <a name="conversions-from-unsigned-integral-types"></a>Conversions from Unsigned Integral Types (符号なし整数型からの変換)
+# <a name="conversions-from-unsigned-integral-types"></a>符号なし整数型からの変換
 
-符号なし整数は、上位ビットを切り捨てることによって短い符号なしまたは符号付き整数に変換されます。または、ゼロ拡張によって長い符号なしまたは符号付き整数に変換されます (「[符号なし整数型からの変換](#_clang_table_4..3)」表をご覧ください)。
+符号なし整数を整数または浮動小数点型に変換すると、元の値が結果の型で表現可能な場合、値は変更されません。
 
-整数型の値がサイズの小さい符号付き整数に下位変換されるか、符号なし整数が対応する符号付き整数に変換される場合、新しい型で表すことができるときには、値は変更されません。 ただし、次の例のように、符号ビットが設定される場合は、表される値が変更されます。
+符号なし整数を大きなサイズの整数に変換する場合、値はゼロ拡張になります。 小さいサイズの整数に変換する場合、上位ビットは切り捨てられます。 結果は、次の例に示すように、結果の型を使用して解釈されます。
 
 ```C
-int j;
-unsigned short k = 65533;
+unsigned k = 65533;
+short j;
 
 j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-値を表すことができない場合、結果は実装定義になります。 Microsoft C コンパイラの整数の下位変換処理については、「[型キャスト変換](../c-language/type-cast-conversions.md)」をご覧ください。 整数変換や整数の型キャストによっても、同じ動作が発生します。
+符号なし整数を浮動小数点型に変換するとき、元の値を結果の型で正確に表すことができない場合、結果は次の上位または小さい表現可能な値になります。
 
-符号なしの値は、その値を保持したまま変換され、直接 C 言語で表現できません。唯一の例外は **unsigned long** から **float** への変換で、最大では下位ビットが失われます。 それ以外の場合は、符号付きでも符号なしでも、値は維持されます。 整数型の値を浮動小数点型に変換するときに、値が表せる範囲を超えている場合の結果は、未定義になります。 整数型と浮動小数点型の範囲については、「[基本型の格納](../c-language/storage-of-basic-types.md)」をご覧ください。
+整数型と浮動小数点型のサイズについては、「[基本型の格納](../c-language/storage-of-basic-types.md)」を参照してください。
+
+**Microsoft 固有の仕様**
+
+Microsoft コンパイラでは、**符号**なし (符号**なし int**) と**unsigned long**は区別されますが、同等の型です。 **unsigned int** 値の変換は、**unsigned long** の変換と同様に実行されます。
+
+**Microsoft 固有の仕様はここまで**
 
 次の表は、符号なし整数型からの変換をまとめたものです。
 
-## <a name="conversions-from-unsigned-integral-types"></a>符号なし整数型からの変換
+## <a name="table-of-conversions-from-unsigned-integral-types"></a>符号なし整数型からの変換のテーブル
 
-|From|終了|メソッド|
+|From|目的|メソッド|
 |----------|--------|------------|
 |**unsigned char**|**char**|ビット パターンを維持、上位ビットが符号ビットになる。|
 |**unsigned char**|**short**|ゼロ拡張。|
 |**unsigned char**|**long**|ゼロ拡張。|
+|**unsigned char**|**long long**|ゼロ拡張。|
 |**unsigned char**|**unsigned short**|ゼロ拡張。|
 |**unsigned char**|**unsigned long**|ゼロ拡張。|
+|**unsigned char**|**unsigned long long**|ゼロ拡張。|
 |**unsigned char**|**float**|**long** への変換、**long** から **float** への変換。|
 |**unsigned char**|**double**|**long** への変換、**long** から **double** への変換。|
 |**unsigned char**|**long double**|**long** への変換、**long** から **double** への変換。|
 |**unsigned short**|**char**|下位バイトを維持。|
 |**unsigned short**|**short**|ビット パターンを維持、上位ビットが符号ビットになる。|
 |**unsigned short**|**long**|ゼロ拡張。|
+|**unsigned short**|**long long**|ゼロ拡張。|
 |**unsigned short**|**unsigned char**|下位バイトを維持。|
 |**unsigned short**|**unsigned long**|ゼロ拡張。|
+|**unsigned short**|**unsigned long long**|ゼロ拡張。|
 |**unsigned short**|**float**|**long** への変換、**long** から **float** への変換。|
 |**unsigned short**|**double**|**long** への変換、**long** から **double** への変換。|
 |**unsigned short**|**long double**|**long** への変換、**long** から **double** への変換。|
 |**unsigned long**|**char**|下位バイトを維持。|
 |**unsigned long**|**short**|下位ワードを維持。|
 |**unsigned long**|**long**|ビット パターンを維持、上位ビットが符号ビットになる。|
+|**unsigned long**|**long long**|ゼロ拡張。|
 |**unsigned long**|**unsigned char**|下位バイトを維持。|
 |**unsigned long**|**unsigned short**|下位ワードを維持。|
+|**unsigned long**|**unsigned long long**|ゼロ拡張。|
 |**unsigned long**|**float**|**long** への変換、**long** から **float** への変換。|
 |**unsigned long**|**double**|**double** への直接変換。|
 |**unsigned long**|**long double**|**long** への変換、**long** から **double** への変換。|
-
-**Microsoft 固有の仕様**
-
-Microsoft C コンパイラの場合、**unsigned int** 型は **unsigned long** 型と同等です。 **unsigned int** 値の変換は、**unsigned long** の変換と同様に実行されます。 **unsigned long** 値から **float** への変換は、変換されている値が正の符号付き **long** の最大値より大きい場合は、正確ではありません。
-
-**Microsoft 固有の仕様はここまで**
+|**unsigned long long**|**char**|下位バイトを維持。|
+|**unsigned long long**|**short**|下位ワードを維持。|
+|**unsigned long long**|**long**|下位 dword の保持|
+|**unsigned long long**|**long long**|ビット パターンを維持、上位ビットが符号ビットになる。|
+|**unsigned long long**|**unsigned char**|下位バイトを維持。|
+|**unsigned long long**|**unsigned short**|下位ワードを維持。|
+|**unsigned long long**|**unsigned long**|下位 dword の保持|
+|**unsigned long long**|**float**|**long** への変換、**long** から **float** への変換。|
+|**unsigned long long**|**double**|**double** への直接変換。|
+|**unsigned long long**|**long double**|**long** への変換、**long** から **double** への変換。|
 
 ## <a name="see-also"></a>関連項目
 
-[代入の変換](../c-language/assignment-conversions.md)
+[割り当ての変換](../c-language/assignment-conversions.md)

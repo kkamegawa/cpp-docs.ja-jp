@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565844"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222050"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左 shift キーおよび右シフト演算子 (&gt; &gt;と&lt; &lt;)
 
@@ -26,8 +26,8 @@ ms.locfileid: "50565844"
 
 ## <a name="syntax"></a>構文
 
-> *シフト式* `<<` *加法式*
-> *シフト式* `>>` *加法式*
+> *shift-expression* `<<` *additive-expression*
+> *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>Remarks
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-符号付き数値をシフトして符号ビットが影響を受ける場合、結果は未定義です。 次の例では、符号ビットの位置まで 1 ビット左にシフトしたときに Visual C でどうなるかを示しています。
+符号付き数値をシフトして符号ビットが影響を受ける場合、結果は未定義です。 次の例では、1 ビットは符号ビットの位置を左にシフトしたときの動作を示します。
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 右シフト演算子でビット パターンの原因*シフト式*で指定された位置数だけ右側にシフトする*加法式*します。 符号なし数値の場合、シフト演算により空いたビット位置はゼロで埋められます。 符号付き数値の場合、その空いたビット位置は符号ビットで埋められます。 つまり、数値が正である場合は 0 を使用し、数値が負である場合は 1 を使用します。
 
 > [!IMPORTANT]
-> 符号付きの負の数値の右シフトの結果は実装に依存します。 Visual C++ では空いたビット位置は符号ビットで埋められますが、他の実装でも同様であるとは限りません。
+> 符号付きの負の数値の右シフトの結果は実装に依存します。 ただし、MicrosoftC++コンパイラでは、符号ビットを使用して、空いたビット位置を埋める、するその他の実装もように保証はありません。
 
 次の例では、符号なし数値を使用した左シフト演算を示しています。
 

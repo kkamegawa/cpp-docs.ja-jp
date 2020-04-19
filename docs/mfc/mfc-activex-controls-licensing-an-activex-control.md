@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : ActiveX コントロールのライセンス'
+title: MFC ActiveX コントロール:ActiveX コントロールのライセンス
 ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392759"
 ---
-# <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのライセンス
+# <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールのライセンス
 
 ライセンス サポート、ActiveX コントロールのオプション機能できますが、使用、またはコントロールを配布できるユーザーを制御します。 (ライセンスの問題の詳細については、ライセンスの問題を参照してください[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)。)。
 
@@ -126,4 +126,3 @@ ActiveX コントロール ウィザード、コントロール クラスの定�
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)
-

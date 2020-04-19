@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: 7a526c56c15d3e61f63b0def6d462d22b3560169
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352178"
 ---
 # <a name="making-and-using-controls"></a>コントロールの作成方法と使い方
 
@@ -44,4 +44,3 @@ Visual C でのダイアログ ボックスのほとんどのコントロール�
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

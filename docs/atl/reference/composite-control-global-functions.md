@@ -1,5 +1,5 @@
 ---
-title: 複合コントロールに関するグローバル関数
+title: 複合コントロールのグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -18,39 +18,39 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927769"
 ---
-# <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
+# <a name="composite-control-global-functions"></a>複合コントロールのグローバル関数
 
-これらの関数は、ダイアログ ボックスの作成と、作成、ホスト、および ActiveX コントロールのライセンスのサポートを提供します。
+これらの関数は、ダイアログボックスを作成し、ActiveX コントロールを作成、ホスト、およびライセンスするためのサポートを提供します。
 
 > [!IMPORTANT]
->  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。
+>  次の表に示す関数は、Windows ランタイムで実行するアプリケーションでは使用できません。
 
 |||
 |-|-|
-|[AtlAxDialogBox](#atlaxdialogbox)|ユーザーが用意するダイアログ テンプレートからモーダル ダイアログ ボックスを作成します。 表示されたダイアログ ボックスは、ActiveX コントロールを含めることができます。|
-|[AtlAxCreateDialog](#atlaxcreatedialog)|ユーザーが用意するダイアログ テンプレートからモードレス ダイアログ ボックスを作成します。 表示されたダイアログ ボックスは、ActiveX コントロールを含めることができます。|
+|[AtlAxDialogBox](#atlaxdialogbox)|ユーザーが用意するダイアログ テンプレートからモーダル ダイアログ ボックスを作成します。 表示されるダイアログボックスには、ActiveX コントロールを含めることができます。|
+|[AtlAxCreateDialog](#atlaxcreatedialog)|ユーザーが用意するダイアログ テンプレートからモードレス ダイアログ ボックスを作成します。 表示されるダイアログボックスには、ActiveX コントロールを含めることができます。|
 |[AtlAxCreateControl](#atlaxcreatecontrol)|ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。|
-|[AtlAxCreateControlEx](#atlaxcreatecontrolex)|ActiveX コントロールを作成、初期化し、指定したウィンドウでホストおよびコントロールからインターフェイス ポインターを (またはポインター) を取得します。|
+|[AtlAxCreateControlEx](#atlaxcreatecontrolex)|ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストし、インターフェイスポインター (またはポインター) をコントロールから取得します。|
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|ライセンスされた ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。|
-|[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|ライセンスされた ActiveX コントロールを作成します、初期化し、指定したウィンドウでホストおよびコントロールからインターフェイス ポインターを (またはポインター) を取得します。|
+|[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|ライセンスされた ActiveX コントロールを作成して初期化し、指定したウィンドウでホストし、インターフェイスポインター (またはポインター) をコントロールから取得します。|
 |[AtlAxAttachControl](#atlaxattachcontrol)|事前に作成されたコントロールを指定されたウィンドウにアタッチします。|
-|[AtlAxGetHost](#atlaxgethost)|(ある場合) は、指定したウィンドウのコンテナーへのダイレクト インターフェイス ポインターを取得するために使用のハンドルを指定します。|
-|[AtlAxGetControl](#atlaxgetcontrol)|(ある場合) は、指定したウィンドウ、内に含まれるコントロールへのダイレクト インターフェイス ポインターを取得するために使用のハンドルを指定します。|
-|[AtlSetChildSite](#atlsetchildsite)|初期化します、`IUnknown`子サイトの。|
-|[AtlAxWinInit](#atlaxwininit)|AxWin オブジェクトのホスティング コードを初期化します。|
-|[AtlAxWinTerm](#atlaxwinterm)|AxWin オブジェクトのホストのコードは初期化されません。|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソース インターフェイスに関する情報を返します。|
+|[AtlAxGetHost](#atlaxgethost)|ハンドルを指定して、指定したウィンドウ (存在する場合) のコンテナーへの直接インターフェイスポインターを取得するために使用します。|
+|[AtlAxGetControl](#atlaxgetcontrol)|ハンドルを指定して、指定したウィンドウ内に格納されているコントロールへの直接インターフェイスポインター (存在する場合) を取得するために使用します。|
+|[AtlSetChildSite](#atlsetchildsite)|子サイト`IUnknown`のを初期化します。|
+|[AtlAxWinInit](#atlaxwininit)|AxWin オブジェクトのホストコードを初期化します。|
+|[AtlAxWinTerm](#atlaxwinterm)|AxWin オブジェクトのホストコードを初期化前します。|
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソースインターフェイスに関する情報を返します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlhost.h
+**ヘッダー:** atlhost. h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -68,36 +68,36 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="parameters"></a>パラメーター
 
 *hInstance*<br/>
-[in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。
+からダイアログボックステンプレートを含む実行可能ファイルを持つモジュールのインスタンスを識別します。
 
 *lpTemplateName*<br/>
-[in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)マクロをこの値を作成します。
+からダイアログボックステンプレートを識別します。 このパラメーターは、ダイアログボックステンプレートの名前を指定する null で終わる文字列へのポインターか、ダイアログボックステンプレートのリソース識別子を指定する整数値です。 パラメーターがリソース識別子を指定する場合、その上位ワードはゼロにする必要があり、その下位ワードには識別子が含まれている必要があります。 [Makeintresource](/windows/win32/api/winuser/nf-winuser-makeintresourcew)マクロを使用して、この値を作成できます。
 
 *hWndParent*<br/>
-[in]ダイアログ ボックスを所有するウィンドウを識別します。
+からダイアログボックスを所有するウィンドウを識別します。
 
-*lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
+*Lpの Proc*<br/>
+からダイアログボックスのプロシージャを指します。 ダイアログボックスの手順の詳細については[、「プロパティ](/windows/win32/api/winuser/nc-winuser-dlgproc)」を参照してください。
 
 *dwInitParam*<br/>
-[in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
+からWM_INITDIALOG メッセージの*lParam*パラメーターのダイアログボックスに渡す値を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-使用する`AtlAxDialogBox`ActiveX コントロールを含むダイアログ テンプレートで指定として有効な CLSID、APPID、または URL 文字列、*テキスト*のフィールド、**コントロール**ダイアログ リソースの セクションと共に"AtlAxWin80"として、*クラス名*同じセクションの下のフィールド。 以下はどのような有効な**コントロール**セクションのようになります。
+ActiveX コントロール`AtlAxDialogBox`を含むダイアログテンプレートと共にを使用するには、ダイアログリソースの**コントロール**セクションの*テキスト*フィールドとして有効な CLSID、APPID、または URL 文字列を*クラス名*フィールドとして指定します。同じセクションにあります。 有効な**コントロール**セクションは次のようになります。
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-リソース スクリプトの編集の詳細については、次を参照してください。[方法。テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK の下。SDK Tools。
+リソーススクリプトの編集の詳細について[は、「方法:リソーススクリプトファイルをテキスト形式](../../windows/how-to-open-a-resource-script-file-in-text-format.md)で開きます。 コントロールのリソース定義ステートメントの詳細については、「Windows SDK の下の[コモンコントロールパラメーター](/windows/win32/menurc/common-control-parameters) 」を参照してください。SDK Tools。
 
-[全般] ダイアログ ボックスの詳細についてを参照してください[DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa)と[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK にします。
+一般的なダイアログボックスの詳細については、Windows SDK の「ダイアログボックスと[Createdialogparam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 」を[参照して](/windows/win32/api/winuser/nf-winuser-dialogboxw)ください。
 
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog
 
@@ -115,29 +115,29 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="parameters"></a>パラメーター
 
 *hInstance*<br/>
-[in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。
+からダイアログボックステンプレートを含む実行可能ファイルを持つモジュールのインスタンスを識別します。
 
 *lpTemplateName*<br/>
-[in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)マクロをこの値を作成します。
+からダイアログボックステンプレートを識別します。 このパラメーターは、ダイアログボックステンプレートの名前を指定する null で終わる文字列へのポインターか、ダイアログボックステンプレートのリソース識別子を指定する整数値です。 パラメーターがリソース識別子を指定する場合、その上位ワードはゼロにする必要があり、その下位ワードには識別子が含まれている必要があります。 [Makeintresource](/windows/win32/api/winuser/nf-winuser-makeintresourcew)マクロを使用して、この値を作成できます。
 
 *hWndParent*<br/>
-[in]ダイアログ ボックスを所有するウィンドウを識別します。
+からダイアログボックスを所有するウィンドウを識別します。
 
-*lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
+*Lpの Proc*<br/>
+からダイアログボックスのプロシージャを指します。 ダイアログボックスの手順の詳細については[、「プロパティ](/windows/win32/api/winuser/nc-winuser-dlgproc)」を参照してください。
 
 *dwInitParam*<br/>
-[in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
+からWM_INITDIALOG メッセージの*lParam*パラメーターのダイアログボックスに渡す値を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-表示されたダイアログ ボックスは、ActiveX コントロールを含めることができます。
+表示されるダイアログボックスには、ActiveX コントロールを含めることができます。
 
-参照してください[:createdialog](/windows/desktop/api/winuser/nf-winuser-createdialoga)と[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK にします。
+Windows SDK の「 [Createdialog](/windows/win32/api/winuser/nf-winuser-createdialogw) And [Createdialogparam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 」を参照してください。
 
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl
 
@@ -154,39 +154,39 @@ ATLAPI AtlAxCreateControl(
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
+コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL などを ProgID。Calendar.7"
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- などの URL"<http://www.microsoft.com>"
+- のような URL`"<https://www.microsoft.com>"`
 
-- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
-[in]コントロールが接続されているウィンドウへのハンドルします。
+からコントロールがアタッチされるウィンドウへのハンドル。
 
 *pStream*<br/>
-[in]コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
+からコントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL を指定できます。
 
 *ppUnkContainer*<br/>
-[out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
+入出力コンテナーのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-このグローバル関数は、呼び出すことと同じ結果を[行うに](#atlaxcreatecontrolex)(*lpszName*、 *hWnd*、 *pStream*、NULL、null の場合、NULL, NULL);。
+このグローバル関数は、 [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszname*、 *hWnd*、 *PSTREAM*、null、null、null、null) を呼び出した場合と同じ結果を得ます。
 
-ライセンスされた ActiveX コントロールを作成するを参照してください。[して](#atlaxcreatecontrollic)します。
+ライセンスされた ActiveX コントロールを作成するには、「 [AtlAxCreateControlLic](#atlaxcreatecontrollic)」を参照してください。
 
 ##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx
 
@@ -206,48 +206,48 @@ ATLAPI AtlAxCreateControlEx(
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
+コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL などを ProgID。Calendar.7"
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- などの URL"<http://www.microsoft.com>"
+- のような URL`"<https://www.microsoft.com>"`
 
-- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
-[in]コントロールが接続されているウィンドウへのハンドルします。
+からコントロールがアタッチされるウィンドウへのハンドル。
 
 *pStream*<br/>
-[in]コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
+からコントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL を指定できます。
 
 *ppUnkContainer*<br/>
-[out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
+入出力コンテナーのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
 
 *ppUnkControl*<br/>
-[out]受け取るポインターのアドレス、`IUnknown`のコントロールを作成します。 NULL にすることができます。
+入出力作成されたコントロールのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
 
-*れて*<br/>
-送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。
+*iidSink*<br/>
+含まれているオブジェクトの送信インターフェイスのインターフェイス識別子。
 
 *punkSink*<br/>
-ポインター、`IUnknown`で指定された接続ポイントに接続されているシンク オブジェクトのインターフェイス*れて*に含まれるオブジェクトに含まれるオブジェクトが正常に作成されます。
+含まれている`IUnknown`オブジェクトが正常に作成された後に、含まれているオブジェクトの*iidsink*によって指定されたコネクションポイントに接続されるシンクオブジェクトのインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-`AtlAxCreateControlEx` ような[して](#atlaxcreatecontrol)が新しく作成されたコントロールへのインターフェイス ポインターを受け取るし、コントロールによって発生したイベントを受信するために、イベント シンクをセットアップすることもできます。
+`AtlAxCreateControlEx`は[AtlAxCreateControl](#atlaxcreatecontrol)に似ていますが、新しく作成されたコントロールへのインターフェイスポインターを受け取り、コントロールによって発生するイベントを受け取るようにイベントシンクを設定することもできます。
 
-ライセンスされた ActiveX コントロールを作成するを参照してください。 [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)します。
+ライセンスされた ActiveX コントロールを作成するには、「 [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)」を参照してください。
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
@@ -265,40 +265,40 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
+コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL などを ProgID。Calendar.7"
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- などの URL"<http://www.microsoft.com>"
+- のような URL`"<https://www.microsoft.com>"`
 
-- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
-コントロールが接続されているウィンドウへのハンドルします。
+コントロールがアタッチされるウィンドウへのハンドル。
 
 *pStream*<br/>
-コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
+コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL を指定できます。
 
 *ppUnkContainer*<br/>
-受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
+コンテナーのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
 
 *bstrLic*<br/>
-コントロールのライセンスを含む BSTR。
+コントロールのライセンスを格納している BSTR。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="example"></a>例
 
-参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)を使用する方法の例については`AtlAxCreateControlLic`します。
+の使用`AtlAxCreateControlLic`例については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
 ##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx
 
@@ -319,53 +319,53 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-コントロールに渡される文字列へのポインター。 次の方法のいずれかで書式設定する必要があります。
+コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL などを ProgID。Calendar.7"
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- などの URL"<http://www.microsoft.com>"
+- のような URL`"<https://www.microsoft.com>"`
 
-- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:"、MSHTML ストリームとして指定されているように、HTML フラグメントを付ける必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
-コントロールが接続されているウィンドウへのハンドルします。
+コントロールがアタッチされるウィンドウへのハンドル。
 
 *pStream*<br/>
-コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
+コントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL を指定できます。
 
 *ppUnkContainer*<br/>
-受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
+コンテナーのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
 
 *ppUnkControl*<br/>
-[out]受け取るポインターのアドレス、`IUnknown`のコントロールを作成します。 NULL にすることができます。
+入出力作成されたコントロールのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
 
-*れて*<br/>
-送信のインターフェイスに含まれるオブジェクトのインターフェイスの識別子です。
+*iidSink*<br/>
+含まれているオブジェクトの送信インターフェイスのインターフェイス識別子。
 
 *punkSink*<br/>
-ポインター、`IUnknown`で指定された接続ポイントに接続されているシンク オブジェクトのインターフェイス*れて*に含まれるオブジェクトに含まれるオブジェクトが正常に作成されます。
+含まれている`IUnknown`オブジェクトが正常に作成された後に、含まれているオブジェクトの*iidsink*によって指定されたコネクションポイントに接続されるシンクオブジェクトのインターフェイスへのポインター。
 
 *bstrLic*<br/>
-コントロールのライセンスを含む BSTR。
+コントロールのライセンスを格納している BSTR。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-`AtlAxCreateControlLicEx` ような[して](#atlaxcreatecontrollic)が新しく作成されたコントロールへのインターフェイス ポインターを受け取るし、コントロールによって発生したイベントを受信するために、イベント シンクをセットアップすることもできます。
+`AtlAxCreateControlLicEx`は[AtlAxCreateControlLic](#atlaxcreatecontrollic)に似ていますが、新しく作成されたコントロールへのインターフェイスポインターを受け取り、コントロールによって発生するイベントを受け取るようにイベントシンクを設定することもできます。
 
 ### <a name="example"></a>例
 
-参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)を使用する方法の例については`AtlAxCreateControlLicEx`します。
+の使用`AtlAxCreateControlLicEx`例については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
 ##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl
 
@@ -381,24 +381,24 @@ ATLAPI AtlAxAttachControl(
 ### <a name="parameters"></a>パラメーター
 
 *pControl*<br/>
-[in]ポインター、`IUnknown`のコントロール。
+からコントロール`IUnknown`のへのポインター。
 
 *hWnd*<br/>
-[in]コントロールをホストするウィンドウへのハンドルします。
+からコントロールをホストするウィンドウへのハンドル。
 
 *ppUnkContainer*<br/>
-[out]ポインターへのポインター、`IUnknown`のコンテナー オブジェクト。
+入出力コンテナーオブジェクト`IUnknown`のへのポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>Remarks
 
-使用[行うに](#atlaxcreatecontrolex)と[して](#atlaxcreatecontrol)を同時に作成し、コントロールをアタッチします。
+コントロールを同時に作成してアタッチするには、 [AtlAxCreateControlEx](#atlaxcreatecontrolex)と[AtlAxCreateControl](#atlaxcreatecontrol)を使用します。
 
 > [!NOTE]
->  アタッチされるコントロール オブジェクトを呼び出す前に正しく初期化する必要があります`AtlAxAttachControl`します。
+>  を呼び出す`AtlAxAttachControl`前に、アタッチされるコントロールオブジェクトが正しく初期化されている必要があります。
 
 ##  <a name="atlaxgethost"></a>  AtlAxGetHost
 
@@ -411,14 +411,14 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="parameters"></a>パラメーター
 
 *h*<br/>
-[in]コントロールをホストしているウィンドウへのハンドル。
+からコントロールをホストしているウィンドウへのハンドル。
 
-*pp*<br/>
-[out]`IUnknown`のコントロールのコンテナー。
+*ページ*<br/>
+入出力コントロールのコンテナーの。 `IUnknown`
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl
 
@@ -431,18 +431,18 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="parameters"></a>パラメーター
 
 *h*<br/>
-[in]コントロールをホストしているウィンドウへのハンドル。
+からコントロールをホストしているウィンドウへのハンドル。
 
-*pp*<br/>
-[out]`IUnknown`のホストされているコントロール。
+*ページ*<br/>
+入出力ホストされているコントロールの。`IUnknown`
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ##  <a name="atlsetchildsite"></a>  AtlSetChildSite
 
-子オブジェクトのサイトを設定するには、この関数を呼び出す、`IUnknown`の親オブジェクト。
+この関数を呼び出して、子オブジェクトのサイトを親オブジェクト`IUnknown`のに設定します。
 
 ```
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
@@ -451,10 +451,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="parameters"></a>パラメーター
 
 *punkChild*<br/>
-[in]ポインター、`IUnknown`子のインターフェイス。
+から子の`IUnknown`インターフェイスへのポインター。
 
 *punkParent*<br/>
-[in]ポインター、`IUnknown`親のインターフェイス。
+から親の`IUnknown`インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -462,7 +462,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit
 
-この関数は、ホスティング コードを登録することにより、ATL のコントロールを初期化、 **"AtlAxWin80**と **"AtlAxWinLic80"** に加えてカスタム ウィンドウ メッセージのいくつかのウィンドウ クラスします。
+この関数は、 **"AtlAxWin80"** と **"AtlAxWinLic80"** の各ウィンドウクラスといくつかのカスタムウィンドウメッセージを登録することによって、ATL のコントロールホスティングコードを初期化します。
 
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
@@ -470,15 +470,15 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="return-value"></a>戻り値
 
-コードをホストしているコントロールの初期化が成功した場合、0 以外の場合それ以外の場合は FALSE です。
+コントロールをホストしているコードが正常に初期化された場合は0以外の場合は。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)または[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)」の説明に従って、Windows SDK。
+ATL コントロールをホストする API を使用する前に、この関数を呼び出す必要があります。 この関数を呼び出すと、「Windows SDK」で説明されているように、 **"AtlAxWin"** ウィンドウクラスを[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)または[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の呼び出しで使用できます。
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 
-この関数の登録を解除してコードをホストしている、ATL のコントロールの初期化を解除、 **"AtlAxWin80**と **"AtlAxWinLic80"** ウィンドウ クラス。
+この関数は、 **"AtlAxWin80"** および **"AtlAxWinLic80"** ウィンドウクラスの登録を解除することによって、ATL のコントロールホスティングコードを初期化前します。
 
 ```
 inline BOOL AtlAxWinTerm();
@@ -490,9 +490,9 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="remarks"></a>Remarks
 
-この関数を呼び出すだけです[UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) Windows SDK で説明されているとします。
+この関数は、Windows SDK で説明されているように、単に[UnregisterClass](/windows/win32/api/winuser/nf-winuser-unregisterclassw)を呼び出します。
 
-呼び出した場合に既存のすべてのホスト ウィンドウが破棄された後にクリーンアップするには、この関数を呼び出す[AtlAxWinInit](#atlaxwininit)不要になったホスト ウィンドウを作成する必要があります。 この関数を呼び出さない場合、ウィンドウ クラスは登録解除する自動的にプロセスが終了します。
+[AtlAxWinInit](#atlaxwininit)を呼び出した後、ホストウィンドウを作成する必要がなくなった場合に、既存のすべてのホストウィンドウが破棄された後に、この関数を呼び出してクリーンアップします。 この関数を呼び出さない場合、プロセスの終了時にウィンドウクラスが自動的に登録解除されます。
 
 ##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface
 
@@ -510,19 +510,19 @@ ATLAPI AtlGetObjectSourceInterface(
 ### <a name="parameters"></a>パラメーター
 
 *punkObj*<br/>
-[in]情報が返される対象のオブジェクトへのポインター。
+から情報が返されるオブジェクトへのポインター。
 
 *plibid*<br/>
-[out]ソース インターフェイスの定義を含むタイプ ライブラリの LIBID へのポインター。
+入出力ソースインターフェイスの定義を格納しているタイプライブラリの LIBID へのポインター。
 
 *piid*<br/>
-[out]オブジェクトの既定のソース インターフェイスのインターフェイス ID へのポインター。
+入出力オブジェクトの既定のソースインターフェイスのインターフェイス ID へのポインター。
 
 *pdwMajor*<br/>
-[out]ソース インターフェイスの定義を含むタイプ ライブラリのメジャー バージョン番号へのポインター。
+入出力ソースインターフェイスの定義を格納しているタイプライブラリのメジャーバージョン番号へのポインター。
 
 *pdwMinor*<br/>
-[out]ソース インターフェイスの定義を含むタイプ ライブラリのマイナー バージョン番号へのポインター。
+入出力ソースインターフェイスの定義を格納しているタイプライブラリのマイナーバージョン番号へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -530,14 +530,14 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="remarks"></a>Remarks
 
-`AtlGetObjectSourceInterface` LIBID と共にと主要な既定ソース インターフェイスのインターフェイス ID およびそのインターフェイスを記述するタイプ ライブラリのマイナー バージョン番号を指定できます。
+`AtlGetObjectSourceInterface`では、既定のソースインターフェイスのインターフェイス ID と共に、そのインターフェイスを記述するタイプライブラリの LIBID とメジャーバージョン番号とマイナーバージョン番号を提供できます。
 
 > [!NOTE]
->  要求された情報を正常に取得するには、この関数によって表されるオブジェクト*punkObj*実装する必要があります`IDispatch`(によって型情報を返すと`IDispatch::GetTypeInfo`) かを実装する必要がありますもplus`IProvideClassInfo2`または`IPersist`します。 ソース インターフェイスの型情報は、の型情報と同じタイプ ライブラリである必要があります`IDispatch`します。
+>  この関数が要求された情報を正常に取得するには、punkObj `IDispatch`によって表されるオブジェクト`IDispatch::GetTypeInfo`がを実装する必要があり`IProvideClassInfo2` 、さらにとの両方を実装する必要があります。`IPersist`. ソースインターフェイスの型情報は、の`IDispatch`型情報と同じタイプライブラリに存在する必要があります。
 
 ### <a name="example"></a>例
 
-次の例は、イベント シンクのクラスを定義する方法を示します`CEasySink`、テンプレート引数を渡すことのできる数を減らすことができます`IDispEventImpl`最低限にします。 `EasyAdvise` `EasyUnadvise`使用`AtlGetObjectSourceInterface`初期化するために、 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md)メンバーを呼び出す前に[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)または[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)します。
+次の例は、イベントシンククラス`CEasySink`を定義する方法を示しています。これにより、に`IDispEventImpl`渡すことができるテンプレート引数の数を最小限に抑えることができます。 `EasyAdvise`および`EasyUnadvise`を`AtlGetObjectSourceInterface`使用して、 [dispeventadvise](idispeventsimpleimpl-class.md#dispeventadvise)または[dispeventadvise](idispeventsimpleimpl-class.md#dispeventunadvise)を呼び出す前に、 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md)メンバーを初期化します。
 
 [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]
 

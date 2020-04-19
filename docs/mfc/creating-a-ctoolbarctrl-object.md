@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-ms.openlocfilehash: ad75f346e21262b894d01efd351e6bb0a3ede3a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0f41731e3a4db7b15d4f2a7ebaac94135d5350d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406133"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>CToolBarCtrl オブジェクトの作成
 
@@ -36,4 +36,3 @@ ms.locfileid: "50564672"
 
 [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -9,36 +9,36 @@ helpviewer_keywords:
 - performance, cle.exe compiler
 - cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-ms.openlocfilehash: f4e2bf8b848654f7b87c59e7a54994448ee62d51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffd3023120f1d930a24ccef6fa297594062322df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320423"
 ---
 # <a name="o-options-optimize-code"></a>/O オプション (コードの最適化)
 
 **/O**さまざまなオプションを制御する際に役立つ最適化が最高速度またはサイズの最小のコードを作成します。
 
-- [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)最小サイズのコードを生成するための最適化の組み合わせを設定します。
+- [/O1](o1-o2-minimize-size-maximize-speed.md)最小サイズのコードを生成するための最適化の組み合わせを設定します。
 
-- [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)最高速度でコードを最適化の最適化の組み合わせを設定します。
+- [/O2](o1-o2-minimize-size-maximize-speed.md)最高速度でコードを最適化の最適化の組み合わせを設定します。
 
-- [/Ob](../../build/reference/ob-inline-function-expansion.md)関数のインライン展開を制御します。
+- [/Ob](ob-inline-function-expansion.md)関数のインライン展開を制御します。
 
-- [/Od](../../build/reference/od-disable-debug.md)をコンパイルが高速化し、デバッグを簡略化の最適化を無効にします。
+- [/Od](od-disable-debug.md)をコンパイルが高速化し、デバッグを簡略化の最適化を無効にします。
 
-- [/Og](../../build/reference/og-global-optimizations.md)グローバルの最適化を有効します。
+- [/Og](og-global-optimizations.md)グローバルの最適化を有効します。
 
-- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md)適切な関数呼び出し用の組み込み関数が生成されます。
+- [/Oi](oi-generate-intrinsic-functions.md)適切な関数呼び出し用の組み込み関数が生成されます。
 
-- [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)サイズの最適化の優先順位の速度に関する最適化をコンパイラに指示します。
+- [/Os](os-ot-favor-small-code-favor-fast-code.md)サイズの最適化の優先順位の速度に関する最適化をコンパイラに指示します。
 
-- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (既定の設定) の速度の最適化の優先順位のサイズの最適化をコンパイラに指示します。
+- [/Ot](os-ot-favor-small-code-favor-fast-code.md) (既定の設定) の速度の最適化の優先順位のサイズの最適化をコンパイラに指示します。
 
-- [/Ox](../../build/reference/ox-full-optimization.md)速度を重視した最適化のいくつかを選択する組み合わせのオプションです。 厳密なサブセットが、 **/O2**最適化します。
+- [/Ox](ox-full-optimization.md)速度を重視した最適化のいくつかを選択する組み合わせのオプションです。 厳密なサブセットが、 **/O2**最適化します。
 
-- [/Oy](../../build/reference/oy-frame-pointer-omission.md)関数呼び出しが速くの呼び出し履歴にフレーム ポインターが作成されなくなります。
+- [/Oy](oy-frame-pointer-omission.md)関数呼び出しが速くの呼び出し履歴にフレーム ポインターが作成されなくなります。
 
 ## <a name="remarks"></a>Remarks
 
@@ -46,5 +46,5 @@ ms.locfileid: "50481329"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3374
 ms.assetid: 41431299-bd20-47d4-a0c8-1334dd79018b
-ms.openlocfilehash: c9ee9130d77e844ab435ecc34dcf53e12449abba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760eb1bafdaab9995d3238c8bc4e3114acd743eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474933"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755578"
 ---
 # <a name="compiler-error-c3374"></a>コンパイラ エラー C3374
 
@@ -21,7 +21,7 @@ delegate インスタンスを作成する以外のコンテキストで、関�
 
 次の例では警告 C3374 が生成されます。
 
-```
+```cpp
 // C3374.cpp
 // compile with: /clr
 public delegate void MyDel(int i);
@@ -42,6 +42,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [方法: デリゲートを定義および使用する (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)

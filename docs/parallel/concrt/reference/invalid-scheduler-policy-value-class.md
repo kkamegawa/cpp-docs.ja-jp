@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 53a4ee37c28cd7d45552cfe4dd7d25ce9fa37a70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439588"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142993"
 ---
-# <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value クラス
+# <a name="invalid_scheduler_policy_value-class"></a>invalid_scheduler_policy_value クラス
 
 このクラスは、`SchedulerPolicy` オブジェクトのポリシー キーがそのキーの無効な値に設定された場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class invalid_scheduler_policy_value : public std::exception;
 ```
 
@@ -27,9 +27,9 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|オーバーロードされます。 `invalid_scheduler_policy_value` オブジェクトを構築します。|
+|[invalid_scheduler_policy_value](無効-スケジューラ-ポリシー-スレッドの指定-クラス。 md # .ctor|オーバーロードされます。 `invalid_scheduler_policy_value` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -37,17 +37,17 @@ class invalid_scheduler_policy_value : public std::exception;
 
 `invalid_scheduler_policy_value`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> invalid_scheduler_policy_value
+## <a name="ctor"></a>invalid_scheduler_policy_value
 
 `invalid_scheduler_policy_value` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_value(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_value() throw();
@@ -55,10 +55,10 @@ invalid_scheduler_policy_value() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [SchedulerPolicy クラス](schedulerpolicy-class.md)

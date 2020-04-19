@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CComBSTR class, programming with
 - Unicode, using CComBSTR [ATL]
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
-ms.openlocfilehash: 44689b45d567c524d6db1446cd65201c21499c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 806d23730a0657fc1e0c154e20dc9abd62f7e8af
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261814"
 ---
 # <a name="programming-with-ccombstr-atl"></a>CComBSTR を使用したプログラミング (ATL)
 
@@ -82,4 +82,3 @@ ATL クラス[CComBSTR](../atl/reference/ccombstr-class.md) BSTR データ型ラ
 [CStringT クラス](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [wstring](../standard-library/basic-string-class.md)<br/>
 [文字列変換に関するマクロ](../atl/reference/string-conversion-macros.md)
-

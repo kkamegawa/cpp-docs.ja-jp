@@ -1,17 +1,17 @@
 ---
-title: '方法: C++/CLI でイベントを使用する'
+title: '方法: イベントを使用して、c++/cli CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: eb18922b998db6b959921c8d786e0d558a9c5ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387176"
 ---
-# <a name="how-to-use-events-in-ccli"></a>方法: C++/CLI でイベントを使用する
+# <a name="how-to-use-events-in-ccli"></a>方法: イベントを使用して、c++/cli CLI
 
 この記事では、イベントと、そのイベントを起動する関数を宣言するインターフェイスとインターフェイスを実装するクラスとイベント ハンドラーを使用する方法を示します。
 
@@ -649,4 +649,4 @@ hello
 
 ## <a name="see-also"></a>関連項目
 
-[event](../windows/event-cpp-component-extensions.md)
+[event](../extensions/event-cpp-component-extensions.md)

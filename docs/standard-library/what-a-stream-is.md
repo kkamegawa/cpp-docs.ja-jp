@@ -7,12 +7,12 @@ helpviewer_keywords:
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-ms.openlocfilehash: 9b8821861baed53880a00695204a4555994dccb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80f2d17d7de2ddca1ef1501cacdb44f41c06594b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637087"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450935"
 ---
 # <a name="what-a-stream-is"></a>ストリームとは何か
 
@@ -26,4 +26,4 @@ C と同じように、C++ には組み込み入出力機能がありません�
 
 ## <a name="see-also"></a>関連項目
 
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
+[iostream プログラミング](../standard-library/iostream-programming.md)

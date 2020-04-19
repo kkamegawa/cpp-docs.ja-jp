@@ -1,4 +1,4 @@
----
+﻿---
 title: Structured Exception Handling (C/C++)
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534564"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857269"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-構造化例外処理 (SEH) は、ハードウェアの障害などの特定のコードを例外的な状況を適切に処理するために C# の Microsoft 拡張機能です。 Windows および Visual C は SEH をサポートよりポータブルで柔軟なコードがあるために、ISO 標準 C++ の例外処理を使用することをお勧めします。 ただし、既存のコードを維持するために特定の種類のプログラムでは、まだ必要があります SEH を使用するか。
+構造化例外処理 (SEH) は、ハードウェア障害などの特定の例外コードの状況を適切に処理するための、C に対する Microsoft の拡張機能です。 Windows と Microsoft C++では SEH がサポートされていますが、 C++ ISO 標準の例外処理を使用することをお勧めします。これにより、コードの移植性と柔軟性が向上します。 ただし、既存のコードまたは特定の種類のプログラムを維持するために、SEH を使用する必要がある場合もあります。
 
 **Microsoft 固有:**
 
 ## <a name="grammar"></a>文法
 
-*try-ステートメントを除く*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _try** *複合ステートメント* **_ _except** **(** *式* **)** *複合ステートメント*
+*try-except ステートメント*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
-*try-最後に、ステートメント*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _try** *複合ステートメント* **_ _finally** *複合ステートメント*
+*try-finally ステートメント*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *複合ステートメント* **__finally** *複合ステートメント*
 
 ## <a name="remarks"></a>Remarks
 
-Seh を使うと、実行が予期せず終了した場合にメモリ ブロックやファイルなどのリソースが正しく解放されることを確認できます。 特定の問題を処理することもできます。-メモリの不足など — に依存しない簡潔の構造化されたコードを使用して**goto**ステートメントやリターン コードの複雑なテスト。
+SEH を使用すると、実行が予期せず終了した場合に、メモリブロックやファイルなどのリソースが正しく解放されるようにすることができます。 **Goto**ステートメントやリターンコードの詳細なテストに依存しない簡潔な構造化コードを使用して、メモリ不足などの特定の問題を処理することもできます。
 
-ここで説明する try-except および try-finally ステートメントは C 言語に対する Microsoft の拡張機能です。 これらは、イベント後にプログラムの制御をアプリケーションが取得するようにし、そうでない場合は実行を終了させることによって SEH をサポートします。 SEH は C++ ソース ファイルと連携しますが、C++ 向けに設計されていません。 使用してコンパイルする C++ プログラムで SEH を使用するかどうか、 [/EHa または/EHsc](../build/reference/eh-exception-handling-model.md)オプションの場合は、ローカル オブジェクトと呼ばれますが、その他の実行動作が期待どおりではないデストラクター。 例については、この記事の後半の例を参照してください。 ほとんどの場合、SEH の代わりに勧め ISO 標準を使用する[C++ 例外処理](../cpp/try-throw-and-catch-statements-cpp.md)、Visual C もサポートします。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。
+ここで説明する try-except および try-finally ステートメントは C 言語に対する Microsoft の拡張機能です。 これらは、イベント後にプログラムの制御をアプリケーションが取得するようにし、そうでない場合は実行を終了させることによって SEH をサポートします。 SEH は C++ ソース ファイルと連携しますが、C++ 向けに設計されていません。 [/Eha または/ehsc](../build/reference/eh-exception-handling-model.md)オプションをC++使用してコンパイルしたプログラムで SEH を使用する場合、ローカルオブジェクトのデストラクターが呼び出されますが、その他の実行動作は期待どおりではない可能性があります。 図については、この記事の後半の例を参照してください。 ほとんどの場合、SEH ではなく、ISO 標準C++ [ C++の例外処理](../cpp/try-throw-and-catch-statements-cpp.md)を使用することをお勧めします。これは、Microsoft コンパイラでもサポートされています。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。
 
-SEH を使用する C# コードを使っている場合は、C++ 例外処理を使用する C++ コードと混在させることができます。 詳しくは、次を参照してください。 [C++ で構造化例外処理](../cpp/exception-handling-differences.md)します。
+SEH を使用する C コードがある場合は、例外処理をC++使用C++するコードと組み合わせることができます。 詳細については、「 [」 C++の構造化例外の処理に](../cpp/exception-handling-differences.md)関する説明を参照してください。
 
 SEH メカニズムには次の 2 つがあります。
 
-- [例外ハンドラー](../cpp/writing-an-exception-handler.md)、または **_ _except**ブロックに応答したり、例外を無視することができます。
+- 例外[ハンドラー](../cpp/writing-an-exception-handler.md)、または例外に応答したり無視したりできる **__except**ブロック。
 
-- [終了ハンドラー](../cpp/writing-a-termination-handler.md)、または **_ _finally**は常に呼び出されると、かどうか、例外によって終了するかどうか、ブロックします。
+- [終了ハンドラー](../cpp/writing-a-termination-handler.md)、または、例外によって終了が発生したかどうかにかかわらず、常に呼び出される **__finally**ブロック。
 
-これら 2 種類のハンドラーは区別されますが、"スタックのアンワインド" というプロセスを通じて密接に関係しています。 構造化例外が発生したときに、Windows は、現在アクティブになっている最近インストールされた例外ハンドラーを検索します。 ハンドラーは、次の 3 つのうちの 1 つを行うことができます。
+これら 2 種類のハンドラーは区別されますが、"スタックのアンワインド" というプロセスを通じて密接に関係しています。 構造化例外が発生すると、Windows は現在アクティブな例外ハンドラーを検索します。 ハンドラーは、次の 3 つのうちの 1 つを行うことができます。
 
 - 例外の認識に失敗し、他のハンドラーに制御を渡す。
 
@@ -52,11 +52,11 @@ SEH メカニズムには次の 2 つがあります。
 
 - 例外を認識し、処理する。
 
-例外を認識する例外ハンドラーは、例外が発生したときに実行中だった関数内にない場合があります。 場合によっては、スタックのかなり上位の関数内にあります。 現在実行中の関数と、スタック フレーム上の他のすべての関数が終了します。 このプロセス中に、スタックが「アンワインド;」は、終了した関数のローカルの非静的変数がスタックから消去は。
+例外を認識する例外ハンドラーは、例外が発生したときに実行中だった関数内にない場合があります。 場合によっては、スタックのかなり上位の関数内にあります。 現在実行中の関数と、スタック フレーム上の他のすべての関数が終了します。 この処理中、スタックは "アンワインド" されます。つまり、終了した関数のローカルの非静的変数はスタックから消去されます。
 
-これがスタックをアンワインドするため、オペレーティング システムは、各関数に書き込んだ終了ハンドラーを呼び出します。 終了ハンドラーを使用して、異常終了のために開いたままになっているリソースをクリーンアップできます。 クリティカル セクションを入力した場合は、終了ハンドラーで終了できます。 プログラムがシャットダウンする場合、一時ファイルを閉じたり削除するなどの他のハウスキーピング タスクを実行できます。
+これがスタックをアンワインドするため、オペレーティング システムは、各関数に書き込んだ終了ハンドラーを呼び出します。 終了ハンドラーを使用して、異常終了のために開いたままになっているリソースをクリーンアップできます。 クリティカルセクションを入力した場合は、終了ハンドラーで終了できます。 プログラムがシャットダウンする場合、一時ファイルを閉じたり削除するなどの他のハウスキーピング タスクを実行できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 - [例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)
 
@@ -64,9 +64,9 @@ SEH メカニズムには次の 2 つがあります。
 
 - [C++ での構造化例外の処理](../cpp/exception-handling-differences.md)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-既に説明したとおり、デストラクターの場合は、C++ プログラムで SEH を使用してを使用してコンパイルし、ローカルのオブジェクトが呼び出されます、 **/EHa**または **/EHsc**オプション。 ただし、C++ 例外も使用している場合は、実行時の動作は予期したとおりにならない可能性があります。 この例では、これらの動作の違いを示します。
+前述のように、 C++プログラムで SEH を使用し、 **/Eha**または **/ehsc**オプションを使用してコンパイルすると、ローカルオブジェクトのデストラクターが呼び出されます。 ただし、C++ 例外も使用している場合は、実行時の動作は予期したとおりにならない可能性があります。 この例では、これらの動作の違いを示します。
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-使用する場合 **/EHsc**このコードがローカル テスト コントロール マクロをコンパイルする`CPPEX`が未定義の場合がありますの実行はされず、`TestClass`デストラクターと出力は次のように。
+**/Ehsc**を使用してこのコードをコンパイルするが、ローカルテストコントロールマクロ `CPPEX` が定義されていない場合、`TestClass` デストラクターは実行されず、出力は次のようになります。
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-使用する場合 **/EHsc**コードをコンパイルして`CPPEX`によって定義されている`/DCPPEX`(C++ 例外をスロー) するため、`TestClass`デストラクターが実行され、出力は次のようになります。
+**/Ehsc**を使用してコードをコンパイルし、`CPPEX` が `/DCPPEX` を使用して定義さC++れている場合 (例外がスローされる)、`TestClass` デストラクターが実行され、出力は次のようになります。
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-使用する場合 **/EHa** 、コードをコンパイルする、`TestClass`デストラクターの実行を使用して例外がスローされたかどうかに関係なく`std::throw`または SEH を使用して、例外をトリガーするかどうか`CPPEX`定義またはじゃない。 出力は次のようになります。
+**/Eha**を使用してコードをコンパイルすると、例外がスローされたかどうかに関係なく、`std::throw` を使用して例外がスローされたかどうかにかかわらず、`TestClass` デストラクターが実行されます。例外をトリガーするには、`CPPEX` 定義されているかどうかは問いません。 出力は次のようになります。
 
 ```Output
 Throwing C++ exception
@@ -140,12 +140,12 @@ Executing SEH __except block
 
 詳細については、「[/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)」を参照してください。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [例外処理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
 [エラーと例外処理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[構造化例外処理 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)
+[構造化例外処理 (Windows)](/windows/win32/debug/structured-exception-handling)

@@ -1,29 +1,23 @@
 ---
 title: Visual C++ の OpenMP
-ms.date: 11/04/2016
+ms.date: 03/20/2019
 helpviewer_keywords:
 - OpenMP in Visual C++
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: dc65b63c8bb1bd24b58e472a25779379925c7280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362648"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ の OpenMP
 
 OpenMP C および C++ アプリケーション プログラミング インターフェイスを使用して、複数のプロセッサを効果的に使用するアプリケーションを記述できます。 Visual C では、OpenMP 2.0 標準をサポートします。
 
 ## <a name="in-this-section"></a>このセクションの内容
-
-[ディレクティブ](../../parallel/openmp/reference/openmp-directives.md)<br/>
-OpenMP API で使用するディレクティブへのリンクを提供します。
-
-[句](../../parallel/openmp/reference/openmp-clauses.md)<br/>
-OpenMP API で使用される句へのリンクを提供します。
 
 [ライブラリ リファレンス](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
 OpenMP API で使用される構成要素へのリンクを提供します。

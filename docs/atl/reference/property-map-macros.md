@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197269"
 ---
 # <a name="property-map-macros"></a>プロパティ マップに関するマクロ
 
@@ -24,18 +24,18 @@ ms.locfileid: "50513819"
 
 |||
 |-|-|
-|[あり、その場合](#begin_prop_map)|ATL プロパティのマップの先頭をマークします。|
-|[するため](#prop_data_entry)|範囲、またはディメンションは、ActiveX コントロールのことを示します。|
-|[PROP_ENTRY_TYPE("](#prop_entry_type)|プロパティ マップには、プロパティの説明、プロパティの DISPID、およびプロパティ ページの CLSID を入力します。|
+|[BEGIN_PROP_MAP](#begin_prop_map)|ATL プロパティのマップの先頭をマークします。|
+|[PROP_DATA_ENTRY](#prop_data_entry)|範囲、またはディメンションは、ActiveX コントロールのことを示します。|
+|[PROP_ENTRY_TYPE](#prop_entry_type)|プロパティ マップには、プロパティの説明、プロパティの DISPID、およびプロパティ ページの CLSID を入力します。|
 |[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|プロパティの DISPID、プロパティ ページの CLSID、プロパティの説明を入力し、`IDispatch`プロパティ マップに IID。|
 |[PROP_PAGE](#prop_page)|プロパティ マップには、プロパティ ページの CLSID を入力します。|
-|[マクロと](#end_prop_map)|ATL プロパティのマップの最後をマークします。|
+|[END_PROP_MAP](#end_prop_map)|ATL プロパティのマップの最後をマークします。|
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
-##  <a name="begin_prop_map"></a>  あり、その場合
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP
 
 オブジェクトのプロパティのマップの先頭をマークします。
 
@@ -60,7 +60,7 @@ ATL プロジェクト ウィザードを使用してオブジェクトを作成
 
 [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]
 
-##  <a name="prop_data_entry"></a>  するため
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY
 
 範囲、またはディメンションは、ActiveX コントロールのことを示します。
 
@@ -93,7 +93,7 @@ ActiveX コントロールを作成するときに、このマクロはプロパ
 
 [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]
 
-##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE("
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE
 
 このマクロを使用すると、オブジェクトのプロパティのマップにプロパティの説明、プロパティの DISPID、およびプロパティ ページの CLSID を入力します。
 
@@ -188,7 +188,7 @@ PROP_PAGE と似ています[PROP_ENTRY_TYPE](#prop_entry_type)プロパティ�
 
 [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]
 
-##  <a name="end_prop_map"></a>  マクロと
+##  <a name="end_prop_map"></a>  END_PROP_MAP
 
 オブジェクトのプロパティのマップの最後をマークします。
 

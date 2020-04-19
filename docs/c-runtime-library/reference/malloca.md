@@ -1,9 +1,9 @@
----
+﻿---
 title: _malloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloca
 - _malloca
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563983"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952775"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
 スタックにメモリを割り当てます。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_alloca](alloca.md) です。
 
@@ -49,28 +52,28 @@ void *_malloca(
 
 ## <a name="return-value"></a>戻り値
 
-**_Malloca**ルーチンを返します、 **void**どの型のオブジェクトの記憶域の適切なアラインメントが保証されている、割り当てられた領域へのポインター。 場合*サイズ*は 0 です。 **_malloca**長さ 0 の項目を割り当てると、その項目の有効なポインターを返します。
+**_Malloca**ルーチンは、割り当てられた領域への**void**ポインターを返します。これは、どの型のオブジェクトの格納にも適切にアラインメントされていることが保証されています。 *Size*が0の場合、 **_malloca**は長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。
 
-領域の割り当てができない場合、スタック オーバーフロー例外が生成されます。 スタック オーバーフロー例外は C++ 例外ではなく、構造化例外です。 C++ 例外処理を使用する代わりに、[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md) (SEH) を使用する必要があります。
+*Size*が **_ALLOCA_S_THRESHOLD**より大きい場合、 **_malloca**はヒープに割り当てを試み、スペースを割り当てることができない場合は null ポインターを返します。 *Size*が **_ALLOCA_S_THRESHOLD**以下の場合、 **_malloca**はスタックに割り当てを試行し、領域を割り当てることができない場合はスタックオーバーフロー例外が生成されます。 スタックオーバーフロー例外は例外でC++はありません。構造化された例外です。 例外処理をC++使用する代わりに、[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) を使用してこの例外をキャッチする必要があります。
 
 ## <a name="remarks"></a>Remarks
 
-**_malloca**割り当てます*サイズ*プログラム スタックまたはヒープの場合は、要求で指定されたバイト数で特定のサイズを超えていますからバイト **_ALLOCA_S_THRESHOLD**します。 間の差 **_malloca**と **_alloca**される **_alloca**サイズに関係なく、スタックで常に割り当てます。 異なり **_alloca**、する必要がありますまたはへの呼び出しを許可しません**無料**、メモリを解放する **_malloca**の使用を要求[_freea](freea.md)メモリを解放します。 デバッグ モードで **_malloca**常に、ヒープからメモリを割り当てます。
+**_malloca**は、要求が **_ALLOCA_S_THRESHOLD**によって指定された特定のサイズ (バイト単位) を超えた場合に、プログラムスタックまたはヒープから*サイズ*バイトを割り当てます。 **_Malloca**と **_alloca**の違いは、 **_alloca**はサイズに関係なく常にスタックに割り当てられるという点です。 メモリを解放して割り当てられるように解放するために**無料**の呼び出しを必要としない、または許可しない **_alloca**とは異なり、 **_malloca**ではメモリを解放するために[_freea](freea.md)を使用する必要があります。 デバッグモードでは、 **_malloca**は常にヒープからメモリを割り当てます。
 
-明示的に呼び出すには制限 **_malloca**例外ハンドラー (EH)。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_malloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
+例外ハンドラー (EH) で **_malloca**を明示的に呼び出すには、制限があります。 X86 クラスのプロセッサで実行される EH ルーチンは、独自のメモリフレームで動作します。これらのタスクは、外側の関数のスタックポインターの現在の位置に基づいていないメモリ空間で実行されます。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 したがって、次のいずれかのシナリオで明示的に **_malloca**を呼び出すと、呼び出し元の EH ルーチンに戻るときにプログラムエラーが発生します。
 
-- Windows NT SEH 例外フィルター式: **_ _except** (`_malloca ()` )
+- Windows NT SEH 例外フィルター式: **__except** (`_malloca ()` )
 
-- Windows NT SEH 最終例外ハンドラー: **_ _finally** {`_malloca ()` }
+- Windows NT SEH 最終例外ハンドラー: **__finally** {`_malloca ()` }
 
 - C++ EH catch 句の式
 
-ただし、 **_malloca**できますから直接呼び出すを EH ルーチン内、または呼び出されるアプリケーションによって提供されるコールバックから以前にリストされた EH シナリオのいずれか。
+ただし、 **_malloca**は、eh ルーチン内から直接呼び出すことも、前述の eh シナリオのいずれかで呼び出されるアプリケーション提供のコールバックから呼び出すこともできます。
 
 > [!IMPORTANT]
-> Windows XP で場合 **_malloca**が呼び出されます、try/catch ブロック内で呼び出す必要がある[_resetstkoflw](resetstkoflw.md)の catch ブロックでします。
+> Windows XP では、 **_malloca**が try/catch ブロック内で呼び出される場合は、catch ブロックで[_resetstkoflw](resetstkoflw.md)を呼び出す必要があります。
 
-使用する場合、上記の制限だけでなく、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプション、 **_malloca**では使用できません **_ _except**ブロックします。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
+上記の制限に加え、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用する場合、 **_malloca**を **__except**ブロックで使用することはできません。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

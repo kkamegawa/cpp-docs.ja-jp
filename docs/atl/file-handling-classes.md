@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - file classes [C++]
 ms.assetid: 94355eb1-daa3-4825-b183-7392b3899561
-ms.openlocfilehash: 2b5f17a93fdfa885e717314ca5e62a8cfa8db293
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68b51bfc230930bd8f1e5466fd9826283bc912e7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234758"
 ---
 # <a name="file-handling-classes"></a>ファイル処理クラス
 
@@ -27,4 +27,3 @@ ms.locfileid: "50614215"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)
-

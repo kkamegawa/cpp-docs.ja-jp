@@ -1,30 +1,31 @@
 ---
 title: ECHO
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ECHO
 helpviewer_keywords:
 - ECHO directive
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
-ms.openlocfilehash: 46a7f77fae035b0fdc846c80f0415337d2bef07b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af21a083dcc947f685a698cb77583879d4993785
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450961"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317384"
 ---
 # <a name="echo"></a>ECHO
 
-表示*メッセージ*(既定では画面) の標準出力デバイスにします。
+標準出力デバイス (既定では画面) に*メッセージ*を表示します。
 
 ## <a name="syntax"></a>構文
 
-> エコー*メッセージ*
+> **エコー** *メッセージ*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-同じ[%out](../../assembler/masm/percent-out.md)します。
+[% OUT](percent-out.md)と同じです。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

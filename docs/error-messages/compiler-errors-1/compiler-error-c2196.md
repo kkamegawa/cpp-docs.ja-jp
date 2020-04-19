@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2196
 ms.assetid: fd2f6a58-48ce-4e58-96f8-e37720feb8e7
-ms.openlocfilehash: f21652161cb654fa41562ff97b2a5b4741f51855
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec677e14b856f4b8a572006d61668ef089e42834
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472970"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758516"
 ---
 # <a name="compiler-error-c2196"></a>コンパイラ エラー C2196
 
@@ -21,7 +21,7 @@ switch ステートメントで、同じ case 値を複数回使用します。
 
 次の例では C2196 が生成されます。
 
-```
+```cpp
 // C2196.cpp
 int main() {
    int i = 0;

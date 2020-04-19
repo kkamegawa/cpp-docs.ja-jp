@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3383
 ms.assetid: ceb7f725-f417-4dc3-8496-0f413bb76687
-ms.openlocfilehash: 38aea188eeac90cd23d9203a53b4e630be2f115b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceae17689cbcb9585fb3722580042187ff64a6ee
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428016"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755630"
 ---
 # <a name="compiler-error-c3383"></a>コンパイラ エラー C3383
 
@@ -25,11 +25,11 @@ ms.locfileid: "50428016"
 
 - [Visual C++ の 64 ビットへの移行に関する一般的な問題](../../build/common-visual-cpp-64-bit-migration-issues.md)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3383 が生成されます。
 
-```
+```cpp
 // C3383.cpp
 // compile with: /clr:safe
 int main() {

@@ -1,5 +1,5 @@
 ---
-title: 'データ オブジェクトとデータ ソース : 操作'
+title: データ オブジェクトとデータ ソース:操作
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241550"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>データ オブジェクトとデータ ソース : 操作
+# <a name="data-objects-and-data-sources-manipulation"></a>データ オブジェクトとデータ ソース:操作
 
 データ オブジェクトまたはデータ ソースが作成された後は、さまざまなデータの挿入とデータが、形式を列挙するデータの削除などの一般的な操作を実行できます。 この記事では、最も一般的な操作を完了するために必要な手法について説明します。 ここでは、次の内容について説明します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "50636151"
 
    - データ オブジェクトの`BeginEnumFormats`メンバー関数は、クリップボードで使用できる形式の列挙を開始します。 呼び出して`GetNextFormat`クリップボードを返すまで、形式、アプリケーションがサポートまたはないその他の形式があります。
 
-使用する場合**ON_UPDATE_COMMAND_UI**、貼り付け、および [編集] メニュー項目を貼り付けを有効にできます。 これを行うには、いずれかを呼び出す`CMenu::EnableMenuItem`または`CCmdUI::Enable`します。 どのようなコンテナーの詳細についてはアプリケーションする必要があります メニュー項目でし、を参照してください[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
+使用する場合**ON_UPDATE_COMMAND_UI**、貼り付け、および [編集] メニュー項目を貼り付けを有効にできます。 これを行うには、いずれかを呼び出す`CMenu::EnableMenuItem`または`CCmdUI::Enable`します。 どのようなコンテナーの詳細についてはアプリケーションする必要があります メニュー項目でし、を参照してください[メニューとリソース。コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> データ オブジェクトからのデータの取得
 

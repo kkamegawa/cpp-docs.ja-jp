@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2675
+title: コンパイラエラー C2675
 ms.date: 11/04/2016
 f1_keywords:
 - C2675
 helpviewer_keywords:
 - C2675
 ms.assetid: 4b92a12b-bff8-4dd5-a109-620065fc146c
-ms.openlocfilehash: aea79509d0e1ae5c31fcf0cf369c28af39a21154
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b7b81ce7314fbad02d6873403fc5cf1bdd54709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499831"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760375"
 ---
-# <a name="compiler-error-c2675"></a>コンパイラ エラー C2675
+# <a name="compiler-error-c2675"></a>コンパイラエラー C2675
 
-単項 'operator': 'type' に定義を行いませんこの演算子または適切な型への変換定義済の演算子
+単項演算子 ' operator ': ' type ' は、この演算子または定義済みの演算子に使用できる型への変換を定義していません
 
-C2675 は、単項演算子を使用する場合にも発生することができ、型に定義を行いません、演算子、または適切な型への変換定義済の演算子。 この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。
+単項演算子を使用するときに C2675 を使用することもできます。また、型によって演算子が定義されていないか、または定義済みの演算子で受け入れ可能な型への変換も行われません。 この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2675 が生成されます。
 
-```
+```cpp
 // C2675.cpp
 struct C {
    C(){}

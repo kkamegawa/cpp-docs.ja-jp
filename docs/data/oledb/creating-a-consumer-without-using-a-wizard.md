@@ -1,23 +1,23 @@
 ---
 title: ウィザードを使用しないコンシューマーの作成
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: a4b95674c2c9c6f0a5dae29e68cff44c759e0fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578608"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525114"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>ウィザードを使用しないコンシューマーの作成
 
-次の例では、既存の ATL プロジェクトに OLE DB コンシューマーのサポートを追加することを前提としています。 実行する必要があります、MFC アプリケーションに OLE DB コンシューマーのサポートを追加する場合、 **MFC アプリケーション ウィザード**がすべてのサポートを必要な作成され、アプリケーションを実行するために必要な MFC ルーチンを呼び出します。
+次の例は、既存の ATL プロジェクトに OLE DB コンシューマーのサポートを追加していることを前提としています。 MFC アプリケーションに OLE DB コンシューマーのサポートを追加する場合は、**MFC アプリケーション ウィザード**を実行する必要があります。このウィザードが必要なすべてのサポートを作成し、アプリケーションを実行するために必要な MFC ルーチンを呼び出します。
 
-使用せずに OLE DB コンシューマーのサポートを追加する、 **ATL OLE DB コンシューマー ウィザード**:
+**ATL OLE DB コンシューマー ウィザード**を使用せずに OLE DB コンシューマーのサポートを追加するには:
 
-- Pch.h ファイルで、次を追加`#include`ステートメント。
+- pch.h ファイルで、次の `#include` ステートメントを追加します。
 
     ```cpp
     #include <atlbase.h>
@@ -25,14 +25,14 @@ ms.locfileid: "50578608"
     #include <atldbsch.h> // if you are using schema templates
     ```
 
-プログラムでは、コンシューマーは、通常、次の一連の操作を実行します。
+プログラムでは、コンシューマーは通常、次の一連の操作を実行します。
 
-1. ローカル変数に列をバインドするユーザー レコード クラスを作成します。 この例で`CMyTableNameAccessor`ユーザー レコード クラスは、(を参照してください[ユーザー レコード](../../data/oledb/user-records.md))。 このクラスには、列のマップとパラメーターのマップが含まれています。 列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーを宣言します。これらのデータ メンバーのそれぞれについてもに、ステータスのデータ メンバーと長さのデータ メンバーを宣言します。 詳細については、次を参照してください。[ウィザードで生成されたアクセサーのフィールド ステータス データ メンバー](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)します。
+1. ローカル変数に列をバインドするユーザー レコード クラスを作成します。 この例では、`CMyTableNameAccessor` がユーザー レコード クラスです (「[ユーザー レコード](../../data/oledb/user-records.md)」を参照)。 このクラスには、列マップとパラメーター マップが含まれています。 列マップで指定するフィールドごとにユーザー レコード クラスのデータ メンバーを宣言します。また、これらのデータ メンバーのそれぞれについて、ステータスのデータ メンバーと長さのデータ メンバーを宣言します。 詳細については、「[ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)」を参照してください。
 
     > [!NOTE]
-    > 独自のコンシューマーを作成する場合、ステータスや長さ変数より前に、データ変数を引き起こすことがあります。
+    > 独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。
 
-- データ ソースとセッションをインスタンス化します。 使用して、使用して、行セットのインスタンスを作成し、アクセサーと行セットの型を判断する[CCommand](../../data/oledb/ccommand-class.md)または[CTable](../../data/oledb/ctable-class.md):
+- データ ソースとセッションをインスタンス化します。 使用するアクセサーと行セットの型を決めたら、[CCommand](../../data/oledb/ccommand-class.md) または [CTable](../../data/oledb/ctable-class.md) を使用して行セットをインスタンス化します。
 
     ```cpp
     CDataSource ds;
@@ -40,15 +40,15 @@ ms.locfileid: "50578608"
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- 呼び出す`CoInitialize`COM を初期化するには これは、メインのコードで呼び出されます。 例えば:
+- `CoInitialize` を呼び出して COM を初期化します。 これは、メインのコードで呼び出されます。 次に例を示します。
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- 呼び出す[cdatasource::open](../../data/oledb/cdatasource-open.md)またはそのバリエーションの 1 つ。
+- [CDataSource::Open](../../data/oledb/cdatasource-open.md) またはそのバリエーションの 1 つを呼び出します。
 
-- データ ソースへの接続を開き、セッションを開きとを開くと、行セットを初期化 (を場合、コマンドも実行します)。
+- データ ソースへの接続を開き、セッションを開き、行セットを開いて初期化します (さらに、コマンドの場合はそれを実行します)。
 
     ```cpp
     hr = ds.Open();
@@ -56,11 +56,11 @@ ms.locfileid: "50578608"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 必要に応じて、行セット プロパティの設定を使用して`CDBPropSet::AddProperty`へのパラメーターとして渡すと`rs.Open`します。 これを行う方法の例は、次を参照してください。`GetRowsetProperties`で[コンシューマー メソッド](../../data/oledb/consumer-wizard-generated-methods.md)します。
+- 必要に応じて、`CDBPropSet::AddProperty` を使用して行セットのプロパティを設定し、それらをパラメーターとして `rs.Open` に渡します。 これを行う方法の例については、「[コンシューマー ウィザードで生成されたメソッド](../../data/oledb/consumer-wizard-generated-methods.md)」の `GetRowsetProperties` を参照してください。
 
-- データの取得/操作に行セットを使えるようになりました。
+- これで、行セットを使用してデータを取得/操作できるようになりました。
 
-- アプリケーションが終了すると、接続、セッション、および行セットを閉じます。
+- アプリケーションが完了したら、接続、セッション、および行セットを閉じます。
 
     ```cpp
     rs.Close();
@@ -68,9 +68,9 @@ ms.locfileid: "50578608"
     ds.Close();
     ```
 
-   コマンドを使用している場合を呼び出すことがある`ReleaseCommand`後`Close`します。 コード例で[ccommand::close](../../data/oledb/ccommand-close.md)を呼び出す方法を示しています`Close`と`ReleaseCommand`します。
+   コマンドを使用している場合は、`Close` の後に `ReleaseCommand` を呼び出すことができます。 [CCommand::Close](../../data/oledb/ccommand-close.md) のコード例で、`Close` と `ReleaseCommand` を呼び出す方法を示しています。
 
-- 呼び出す`CoUnInitialize`COM. の初期化を解除するには これは、メインのコードで呼び出されます。
+- `CoUnInitialize` を呼び出して COM を初期化前の状態に戻します。 これは、メインのコードで呼び出されます。
 
     ```cpp
     CoUninitialize();

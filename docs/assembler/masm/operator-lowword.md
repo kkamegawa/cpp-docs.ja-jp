@@ -1,6 +1,6 @@
 ---
 title: LOWWORD 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator LOWWORD
 - LOWWORD
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - LOWWORD operator
 - operator LOWWORD
 ms.assetid: ceb45c78-474b-4099-b46e-35eb072294ff
-ms.openlocfilehash: b599dfa5c005998666cdcd16db21b8fe9f00fc1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45e9149032ded178e2a7edce771a9a43a9fcd741
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604405"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311118"
 ---
 # <a name="operator-lowword"></a>LOWWORD 演算子
 
-下位 16 ビットを返します*式*します。 MASM の式は、64 ビット値です。
+*式*の下位16ビットを返します。 MASM の式は、64ビットの値です。
 
 ## <a name="syntax"></a>構文
 
-> LOWWORD 式
+> **Lowword** *式*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

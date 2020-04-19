@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
-ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 834b9939a99c694c702bb268b928575b4beb8856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663190"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745396"
 ---
 # <a name="compiler-error-c2381"></a>コンパイラ エラー C2381
 
-'function': 再定義されています。__declspec(noreturn) とは異なる
+' function ': 再定義します。__declspec (noreturn) が異なる
 
-関数が宣言され、その定義が使用されますが、定義、 [noreturn](../../cpp/noreturn.md) `__declspec`修飾子。 使用`noreturn`構成関数の再定義; 宣言と定義の使用に同意する必要があります。`noreturn`します。
+関数が宣言されて定義されましたが、定義では[noreturn](../../cpp/noreturn.md) `__declspec` 修飾子が使用されています。 `noreturn` を使用すると、関数の再定義が構成されます。宣言と定義は、`noreturn`の使用に同意する必要があります。
 
 次の例では、C2381 が生成されます。
 
-```
+```cpp
 // C2381.cpp
 // compile with: /c
 void f1();

@@ -1,18 +1,16 @@
 ---
 title: プロパティ ページ (ATL) の指定
 ms.date: 11/04/2016
-f1_keywords:
-- ISpecifyPropertyPages
 helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-ms.openlocfilehash: c78a48d369f25f5432158ee6f09ee4cda499e7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47ee0c7d6d2ed464318ab80385ac71cff426a002
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196562"
 ---
 # <a name="specifying-property-pages"></a>プロパティ ページの指定
 
@@ -40,4 +38,4 @@ ActiveX コントロールを作成するときに、コントロールのプロ
 ## <a name="see-also"></a>関連項目
 
 [プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
-[例](../visual-cpp-samples.md)
+[例](../overview/visual-cpp-samples.md)

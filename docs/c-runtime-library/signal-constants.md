@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: 1046a12fa0f250b348e6ff171c8865e3eb5ff4b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482665"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738733"
 ---
 # <a name="signal-constants"></a>signal 定数
 
@@ -32,7 +32,7 @@ ms.locfileid: "50482665"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `sig` 引数は、SIGNAL.H に定義されている以下のマニフェスト定数のいずれかにする必要があります。
 
@@ -47,7 +47,7 @@ ms.locfileid: "50482665"
 |SIGTERM|プログラムに送信される終了要求。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  |
 |SIG_ERR|エラーが発生したことを示すシグナルからの戻り値の型。  |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
 [raise](../c-runtime-library/reference/raise.md)<br/>

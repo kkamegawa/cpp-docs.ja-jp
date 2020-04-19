@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: f3b3e022f869a3019f80ba5ee082ce5a959853a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394638"
 ---
 # <a name="destroying-frame-windows"></a>フレーム ウィンドウの破棄
 
@@ -37,4 +37,3 @@ MFC フレームワークは、フレームワークのドキュメントとビ�
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
-

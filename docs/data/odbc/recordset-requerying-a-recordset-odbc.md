@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: クエリの再実行 (ODBC)'
+title: レコード セット:クエリの再実行 (Odbc)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397706"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>レコードセット: クエリの再実行 (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>レコード セット:クエリの再実行 (Odbc)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "50482749"
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> 日付へのレコード セットの追加
 
-多くの場合、するレコード セット オブジェクトの状態を再クエリする最新の状態。 データベースのマルチ ユーザー環境で他のユーザーを変更できるデータ レコード セットの有効期間中にします。 詳細については、レコード セットが他のユーザーによって行われた変更を反映するときと、その他のユーザーのレコード セットが、変更を反映するときに、次を参照してください[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[ダイナセット](../../data/odbc/dynaset.md)。
+多くの場合、するレコード セット オブジェクトの状態を再クエリする最新の状態。 データベースのマルチ ユーザー環境で他のユーザーを変更できるデータ レコード セットの有効期間中にします。 レコード セットが他のユーザーによって行われた変更を反映するときと、他のユーザーのレコード セットが変更を反映する場合の詳細については、次を参照してください。[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[ダイナセット](../../data/odbc/dynaset.md)します。
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> 新しいパラメーターに基づくクエリを再実行
 
@@ -48,7 +48,7 @@ ms.locfileid: "50482749"
 
 また、終了して、元のレコード セットを再起動したことができます。 どちらの場合は、新しいレコード セットは、データ ソースの現在の状態を表します。
 
-例については、次を参照してください。[レコード ビュー: セカンド レコード セットからリスト ボックス](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)します。
+例については、次を参照してください。[レコード ビュー。2 つ目のレコード セットからリスト ボックス](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)します。
 
 > [!TIP]
 >  最適化するために`Requery`、パフォーマンス、レコード セットを変更しないように[フィルター](../../data/odbc/recordset-filtering-records-odbc.md)または[並べ替え](../../data/odbc/recordset-sorting-records-odbc.md)します。 呼び出しの前に、パラメーター値のみを変更する`Requery`します。
@@ -58,5 +58,5 @@ ms.locfileid: "50482749"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: データ列を動的に結びつける方法 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[レコードセット: レコードセットの生成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[レコードセット: データ列の動的なバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[レコードセット: レコードセットの作成成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

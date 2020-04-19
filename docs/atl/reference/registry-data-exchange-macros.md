@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197485"
 ---
 # <a name="registry-data-exchange-macros"></a>レジストリ データ エクス チェンジに関するマクロ
 
@@ -79,7 +79,7 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*<br/>
+*rootkey*<br/>
 レジストリ キーのルート。
 
 *サブキー*<br/>
@@ -113,7 +113,7 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*<br/>
+*rootkey*<br/>
 レジストリ キーのルート。
 
 *サブキー*<br/>
@@ -147,7 +147,7 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*<br/>
+*rootkey*<br/>
 レジストリ キーのルート。
 
 *サブキー*<br/>
@@ -181,7 +181,7 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rootkey*<br/>
+*rootkey*<br/>
 レジストリ キーのルート。
 
 *サブキー*<br/>
@@ -204,4 +204,3 @@ RDX_TEXT(
 
 [[マクロ]](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-

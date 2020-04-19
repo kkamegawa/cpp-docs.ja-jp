@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DHtmlUrlEventMapEntry structure [MFC]
 ms.assetid: 43117c1f-1a51-406c-aa2f-fea647080049
-ms.openlocfilehash: 0a1dc86080c094a7ac89940cd43a8edac973e10c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9b58067a9c8b6a71cd22b654a2f82ba0f8bfe36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322736"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry 構造体
 
@@ -42,4 +42,3 @@ URL に関連付けられているイベントのマップ。
 ## <a name="see-also"></a>関連項目
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

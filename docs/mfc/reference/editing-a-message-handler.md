@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-ms.openlocfilehash: c316b4cf138c21b697181bcf132fa3766128a7ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6679ed97af77775e431cf77c3b7bc659b6eb445
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632714"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741660"
 ---
 # <a name="editing-a-message-handler"></a>メッセージ ハンドラーの編集
 
@@ -31,4 +31,4 @@ ms.locfileid: "50632714"
 [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+[クラス各部へのジャンプ](../../ide/navigate-code-cpp.md)

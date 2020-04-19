@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: f8c5cec680072ffa34b1ee0bef9e09231de5f1ac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410630"
 ---
 # <a name="internationalization-strategies"></a>国際化のアプローチ
 

@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: c44789c958b3fc24441b95178acc85ce3ba337fb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524899"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688470"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
-\<Array > ヘッダーでは、以下**配列**非メンバー比較テンプレート関数。
+@No__t_0array > ヘッダーには、これらの**配列**非メンバー比較テンプレート関数が含まれています。
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 要素の型。
 
-*N*<br/>
+*N* \
 配列のサイズ。
 
-*left*<br/>
+*左*\
 比較する左のコンテナー。
 
-*right*<br/>
+*右*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 配列の比較 (より小さい)。
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 要素の型。
 
-*N*<br/>
+*N* \
 配列のサイズ。
 
-*left*<br/>
+*左*\
 比較する左のコンテナー。
 
-*right*<br/>
+*右*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、テンプレート クラス [array クラス](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較する `operator<` をオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
+このテンプレート関数は、`operator<` をオーバーロードして、クラステンプレート[配列クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較します。 `lexicographical_compare(left.begin(), left.end(), right.begin())`が返されます。
 
 ### <a name="example"></a>例
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a>  operator&lt;=
 
 配列の比較 (以下)。
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 要素の型。
 
-*N*<br/>
+*N* \
 配列のサイズ。
 
-*left*<br/>
+*左*\
 比較する左のコンテナー。
 
-*right*<br/>
+*右*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 要素の型。
 
-*N*<br/>
+*N* \
 配列のサイズ。
 
-*left*<br/>
+*左*\
 比較する左のコンテナー。
 
-*right*<br/>
+*右*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、テンプレート クラス [array クラス](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較する `operator==` をオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
+このテンプレート関数は、`operator==` をオーバーロードして、クラステンプレート[配列クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較します。 `equal(left.begin(), left.end(), right.begin())`が返されます。
 
 ### <a name="example"></a>例
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 配列の比較 (より大きい)。
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 要素の型。
 
-*N*<br/>
+*N* \
 配列のサイズ。
 
-*left*<br/>
+*左*\
 比較する左のコンテナー。
 
-*right*<br/>
+*右*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a>  operator&gt;=
 
 配列の比較 (以上)。
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty* \
 要素の型。
 
-*N*<br/>
+*N* \
 配列のサイズ。
 
-*left*<br/>
+*左*\
 比較する左のコンテナー。
 
-*right*<br/>
+*右*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>Remarks
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

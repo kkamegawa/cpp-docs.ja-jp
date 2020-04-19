@@ -8,45 +8,44 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-ms.openlocfilehash: a07808819e1cb049de7438c9e7964436e8c83802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a91c8b0c3bdef9256628b9226c5f3ff154ed7d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464767"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907524"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>月間予定表コントロールの日付状態の設定
 
-月間予定表コントロールの属性の 1 つは、月の日付ごとのコントロールの日付状態と呼ばれる情報を格納する機能です。 この情報は、現在表示されている月の特定の日付を強調するために使用されます。
+月間予定表コントロールの属性の1つは、その月の各日に、コントロールの日付状態と呼ばれる情報を格納する機能です。 この情報は、現在表示されている月の特定の日付を強調するために使用されます。
 
 > [!NOTE]
->  `CMonthCalCtrl`オブジェクトは、1 日の状態情報を表示する MCS_DAYSTATE スタイルをいる必要があります。
+>  日付`CMonthCalCtrl`状態情報を表示するには、オブジェクトに MCS_DAYSTATE スタイルが設定されている必要があります。
 
-1 日の状態情報は、32 ビットのデータ型で表されます**月数**します。 各ビットを**月数**ビット フィールド (1 ~ 31) は、1 か月 1 日の状態を表します。 対応する日が表示されます、ビットが上にある場合は、太字で。それ以外の場合、太字で表示されます。
+日状態情報は、32ビットのデータ型**MONTHDAYSTATE**として表現されます。 **MONTHDAYSTATE**ビットフィールドの各ビット (1 ~ 31) は、月の1日の状態を表します。 ビットがオンの場合は、対応する日が太字で表示されます。それ以外の場合は、何も強調表示されません。
 
-月間予定表コントロールの日付状態の設定の 2 つの方法があります: への呼び出しで明示的に[CMonthCalCtrl::SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate)または MCN_GETDAYSTATE 通知メッセージを処理します。
+月間予定表コントロールの日の状態を設定する方法には、 [CMonthCalCtrl:: SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate)を明示的に呼び出す方法と、MCN_GETDAYSTATE 通知メッセージを処理する方法の2つがあります。
 
-## <a name="handling-the-mcngetdaystate-notification-message"></a>MCN_GETDAYSTATE 通知メッセージの処理
+## <a name="handling-the-mcn_getdaystate-notification-message"></a>MCN_GETDAYSTATE 通知メッセージの処理
 
-MCN_GETDAYSTATE メッセージは、表示されるのか月以内の日の表示方法を決定するコントロールによって送信されます。
+MCN_GETDAYSTATE メッセージは、表示される月内の日数を表示する方法を決定するために、コントロールによって送信されます。
 
 > [!NOTE]
->  コントロールが前月と翌月の表示中の月に関してはキャッシュするため、新しい月が選択されるたびにこの通知を受け取ります。
+>  このコントロールは、表示されている月に対して前月と翌月をキャッシュするので、新しい月を選択するたびにこの通知を受け取ります。
 
-このメッセージを正しく処理するには、数か月に 1 日の状態情報が表示される数の要求の配列の初期化を確認する必要があります**月数**適切な値は、関連する構造体メンバーの初期化と構造体新しい情報。 詳細な手順では、次の手順では、あると想定する`CMonthCalCtrl`と呼ばれるオブジェクト*示します*と配列の**月数**オブジェクト、 *mdState*.
+このメッセージを適切に処理するには、要求されている月の状態情報の数を確認し、適切な値を使用して**MONTHDAYSTATE**構造体の配列を初期化し、新しいを使用して関連する構造体のメンバーを初期化します。参照. 次の手順では、必要な手順について説明し`CMonthCalCtrl`ます。ここでは、 *m_monthcal*という名前のオブジェクトと**MONTHDAYSTATE** objects の配列*mdstate*を使用していることを前提としています。
 
-#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>MCN_GETDAYSTATE 通知メッセージを処理するには
+#### <a name="to-handle-the-mcn_getdaystate-notification-message"></a>MCN_GETDAYSTATE 通知メッセージを処理するには
 
-1. MCN_GETDAYSTATE メッセージの通知ハンドラーを追加する [プロパティ] ウィンドウを使用して、*示します*オブジェクト (を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md))。
+1. [クラスウィザード](reference/mfc-class-wizard.md)を使用して、MCN_GETDAYSTATE メッセージの通知ハンドラーを*m_monthcal*オブジェクトに追加します (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
 
-1. ハンドラーの本文には、次のコードを追加します。
+1. ハンドラーの本体に次のコードを追加します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-   例では、変換、 *pNMHDR* 、適切な型へのポインターが要求されている情報の数か月を決定し (`pDayState->cDayState`)。 月ごとの現在のビット フィールド (`pDayState->prgDayState[i]`)、し、必要とゼロに初期化されます (この例では、毎月 15 日) では日付が設定されます。
+   この例では、 *Pnmhdr*ポインターを適切な型に変換し、情報が要求される月数 (`pDayState->cDayState`) を決定します。 月ごとに、現在のビットフィールド (`pDayState->prgDayState[i]`) が0に初期化され、必要な日付が設定されます (この場合は毎月15日)。
 
 ## <a name="see-also"></a>関連項目
 
 [CMonthCalCtrl の使い方](../mfc/using-cmonthcalctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3217
 ms.assetid: 99070417-c23a-4d82-bdd2-04be1a07adea
-ms.openlocfilehash: bcb63c7025f0addda546379947e2e1f5c3afc545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb837a42841b2695941d4cd6122d186665d2d7e2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600353"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754590"
 ---
 # <a name="compiler-error-c3217"></a>コンパイラ エラー C3217
 
@@ -21,7 +21,7 @@ ms.locfileid: "50600353"
 
 次の例では C3217 が生成されます。
 
-```
+```cpp
 // C3217.cpp
 // compile with: /clr
 interface struct A {};
@@ -36,7 +36,7 @@ ref class C {
 
 次の例では、考えられる解決策を示しています。
 
-```
+```cpp
 // C3217b.cpp
 // compile with: /clr /c
 interface struct A {};

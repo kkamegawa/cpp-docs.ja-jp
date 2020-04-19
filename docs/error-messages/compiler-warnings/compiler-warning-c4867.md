@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 9fa9b382b42a2fb8ba72fd9744c612af5dd598d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e093d262bc26cf0acfbb181d621fffc1aa391ee9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526805"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626589"
 ---
 # <a name="compiler-warning-c4867"></a>コンパイラの警告 C4867
 
-'function': 関数呼び出しの引数リストがありません。'call' を使用して、メンバーへのポインターを作成するには
+' function ': 関数呼び出しに引数リストがありません。メンバーへのポインターを作成するには、' call ' を使用します
 
-メンバー関数へのポインターが正しく初期化されていません。
+メンバー関数へのポインターが正しく初期化されませんでした。
 
-この警告は、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成できます。 準拠が強化されたメンバーへのポインター。  Visual C 2005 より前にコンパイルされたコードには、今すぐ C4867 が生成されます。
+この警告は、Visual Studio 2005 で行われたコンパイラ準拠作業の結果として生成されます。強化された pointer-to-member 準拠。  Visual Studio 2005 より前にコンパイルされたコードでは、C4867 が生成されるようになりました。
 
-この警告は、常にエラーとして表示されます。 この警告を無効にするには、 [warning](../../preprocessor/warning.md) プラグマを使用します。 C4867 と MFC と ATL の詳細については、次を参照してください。 [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)します。
+この警告は、常にエラーとして表示されます。 この警告を無効にするには、 [warning](../../preprocessor/warning.md) プラグマを使用します。 C4867 と MFC/ATL の詳細については、 [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4867 が生成されます。
 
-```
+```cpp
 // C4867.cpp
 // compile with: /c
 class A {

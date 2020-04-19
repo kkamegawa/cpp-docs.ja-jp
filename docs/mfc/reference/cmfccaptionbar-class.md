@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403842"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar クラス
 
@@ -148,7 +148,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>例
 
-`CMFCCaptionBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 キャプション バー コントロールを作成、キャプション バーの 3D 境界線を設定、キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離を設定、キャプション バーのボタンを設定する方法を示します、、ボタンのツールヒントを設定、キャプション バーのテキスト ラベルを設定、ビットマップ イメージのキャプション バーの設定、およびキャプション バーにイメージのツールヒントを設定します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCCaptionBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 キャプション バー コントロールを作成、キャプション バーの 3D 境界線を設定、キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離を設定、キャプション バーのボタンを設定する方法を示します、、ボタンのツールヒントを設定、キャプション バーのテキスト ラベルを設定、ビットマップ イメージのキャプション バーの設定、およびキャプション バーにイメージのツールヒントを設定します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -195,7 +195,7 @@ BOOL Create(
 *uID*<br/>
 キャプション バー コントロールの ID。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 キャプション バー コントロールのピクセル単位の高さ。 -1 の場合は、高さが、アイコン、テキスト、キャプション バー コントロールを表示するボタンの高さに基づいて計算されます。
 
 *bIsMessageBarMode*<br/>
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*elem*<br/>
 [in]キャプション バーには、配置を取得するための要素が表示されます。
 
 ### <a name="return-value"></a>戻り値

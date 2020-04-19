@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: b82599bd95abb473a361a962566669ed1ef7a35b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197498"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリに基づくコレクションを実装します。
 
 ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクションの C++ 標準ライブラリに基づくインターフェイスを実装することを有効にするインターフェイス。 このクラスの動作を理解するのには、オートメーション クライアントを目的とした、読み取り専用コレクションを実装するこのクラスを使用する簡単な例 (下記) を使用します。
 
-サンプルのコードは、 [ATLCollections サンプル](../visual-cpp-samples.md)します。
+サンプルのコードは、 [ATLCollections サンプル](../overview/visual-cpp-samples.md)します。
 
 この手順を完了するには、ことができます。
 
@@ -75,7 +75,7 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、次を参照してください。 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)します。
+この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、次を参照してください。 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)します。
 
 ##  <a name="vcconenumeration_and_collection"></a> 列挙とコレクションの Typedef を作成します。
 
@@ -102,5 +102,5 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 ## <a name="see-also"></a>関連項目
 
 [コレクションと列挙子](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections サンプル](../visual-cpp-samples.md)<br/>
+[ATLCollections サンプル](../overview/visual-cpp-samples.md)<br/>
 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 7cb516363df7267c2870d2188a14208f54f7ffe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8955669f4bc6fd7b3b373751e0e5134205dd1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628879"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689791"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-型のオブジェクトの順序付きペアを格納するオブジェクトについて説明します**二重**、最初の複素数の値と、2 つ目の実数部を表す虚数部を表します。
+順序付けされたオブジェクトのペア ( **double**型) を格納するオブジェクトについて説明します。最初のオブジェクトは複素数の実数部、2番目のオブジェクトは虚数部を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,20 +30,20 @@ public:
 constexpr complex(const complex<double>& complexNum);
 
 constexpr explicit complex(const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*RealVal*<br/>
+*Realval* \
 構築される複素数の実数部の **double** 型の値。
 
-*ImagVal*<br/>
+*Imagval* \
 構築される複素数の虚数部の **double** 型の値。
 
-*complexNum*<br/>
-型の複素数**float**または型の**long double**が実数部と虚数部の部分は、型の複素数の初期化に使用される**二重**構築されます。
+*Complexnum* \
+**Float**型または**long double**型の複素数。この実数部と虚数部は、構築される**double**型の複素数を初期化するために使用されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -51,9 +51,9 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラス complex の **double** 型の complex クラスに対する明示的な特殊化と、テンプレート クラスによって定義されるコンストラクター内でのみ使用するテンプレート クラスとは異なります。 変換**float**に**二重**は暗黙的に許可されてからの変換が、 **long double**に**二重**にする必要が**明示的な**します。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
+クラステンプレート complex を**double**型の複合クラスに明示的に特殊化することは、クラステンプレートが定義するコンストラクターでのみクラステンプレートとは異なります。 **Float**から**double**への変換は暗黙的に行うことができますが、 **long double**から**double**への変換は**明示的**にする必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
-テンプレート クラス `complex` の詳細については、「[complex クラス](../standard-library/complex-class.md)」を参照してください。 テンプレート クラス `complex` のメンバー一覧については、以下を参照してください。
+クラステンプレート `complex` の詳細については、「[複合クラス](../standard-library/complex-class.md)」を参照してください。 クラステンプレート `complex` のメンバーの一覧については、「」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -110,7 +110,7 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー**: \<complex>
 
@@ -118,5 +118,5 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="see-also"></a>関連項目
 
-[complex クラス](../standard-library/complex-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex クラス](../standard-library/complex-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

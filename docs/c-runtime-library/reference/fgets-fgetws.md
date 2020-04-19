@@ -1,10 +1,10 @@
 ---
 title: fgets、fgetws
 ms.date: 07/11/2018
-apiname:
+api_name:
 - fgets
 - fgetws
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetts
 - fgetws
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 16dfb7cb0401083960669a735a976fbcd4ad4081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f68bee181ebb20eb7a0a2eaca02a72c4dc03616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489569"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957400"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -63,22 +66,22 @@ wchar_t *fgetws(
 *numChars*<br/>
 読み取り対象の最大文字数。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数を返します。 *str*します。 **NULL**エラーまたはファイルの終端状態を示すが返されます。 使用**feof**または**ferror**にエラーが発生したかどうかを確認します。 場合*str*または*ストリーム*null ポインター、または*numChars*と同じかそれよりも少ない」の説明に従って、0 にこの関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。
+これらの関数はそれぞれ*str*を返します。 **NULL**は、エラーまたはファイルの終端状態を示すために返されます。 エラーが発生したかどうかを判断するには、 **feof**または**ferror**を使用します。 *Str*または*stream*が null ポインターであるか、 *numchars*が0以下の場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Fgets**関数は入力から文字列を読み取る*ストリーム*引数に格納*str*します。 **fgets**を現在のストリームの位置と、ストリームの末尾に、最初の改行文字を含むから文字を読み取りまたは読み取られた文字数までと等しい*numChars* - 1、早い方です。 格納されている結果*str*は null 文字が付加されます。 改行文字を読み取ると、文字列に含まれます。
+**Fgets**関数は、入力*ストリーム*引数から文字列を読み取り、 *str*に格納します。 **fgets**は、現在のストリームの位置から、最初の改行文字、ストリームの末尾、または読み取られた文字数が*numchars* -1 の範囲の文字を読み取ります。 *Str*に格納された結果に null 文字が追加されます。 改行文字を読み取ると、文字列に含まれます。
 
-**fgetws**のワイド文字バージョンは、 **fgets**します。
+**fgetws**は、 **fgets**のワイド文字バージョンです。
 
-**fgetws**のワイド文字引数を読み取り*str*マルチバイト文字の文字列またはワイド文字の文字列かどうかに従ってとして*ストリーム*テキスト モードまたはバイナリ モードで開かれるそれぞれします。 Unicode およびマルチバイトのストリーム入出力におけるテキスト モードおよびバイナリ モードの使い方の詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」および「[テキスト モードとバイナリ モードの Unicode ストリーム入出力](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」を参照してください。
+**fgetws**は、*ストリーム*がテキストモードとバイナリモードのどちらで開かれているかに応じて、ワイド文字の引数*str*をマルチバイト文字の文字列またはワイド文字列として読み取ります。 Unicode およびマルチバイトのストリーム入出力におけるテキスト モードおよびバイナリ モードの使い方の詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」および「[テキスト モードとバイナリ モードの Unicode ストリーム入出力](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,14 +123,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfgetstxt"></a>入力: crt_fgets.txt
+### <a name="input-crt_fgetstxt"></a>入力: crt_fgets.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Line one.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: b93e99aef4b7d8a1b20373fda1e4d9672b416b7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506146"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150624"
 ---
 # <a name="conditional-expression-operator"></a>条件式演算子
 
@@ -68,6 +68,6 @@ int y;
 
 この例では、2 つの関数 `f1` と `f2`、および 2 つの変数 `x` と `y` を宣言しています。 プログラムの後半では、これら 2 つの変数が同じ値の場合に `f1` 関数を呼び出します。 それ以外の場合は `f2` を呼び出します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [条件演算子: ? :](../cpp/conditional-operator-q.md)

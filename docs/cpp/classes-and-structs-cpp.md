@@ -1,19 +1,15 @@
 ---
 title: クラスと構造体 (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- Visual C++, classes
-- structures, C++ classes
-- user-defined types
-- classes [C++]
-- user-defined types, C++ classes
+- C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: 44736b9515363d1406b124858f72f12f8f7f552a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562748"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222512"
 ---
 # <a name="classes-and-structs-c"></a>クラスと構造体 (C++)
 
@@ -51,13 +47,13 @@ ms.locfileid: "50562748"
 
 3 つのクラス型は、構造体、クラス、および共用体です。 使用して宣言されている、[構造体](../cpp/struct-cpp.md)、[クラス](../cpp/class-cpp.md)、および[共用体](../cpp/unions.md)キーワード。 次の表は、3 つのクラス型の違いを示しています。
 
-共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)します。 マネージ クラスと構造体については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。
+共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)します。 クラスと c++ 構造体について/cli および C++/cli CX を参照してください[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)します。
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>構造体、クラス、および共用体のアクセス制御と制約
 
 |構造体|クラス|Unions|
 |----------------|-------------|------------|
-|クラス キーは**構造体**|クラス キーは**クラス**|クラス キーは**共用体**|
+|クラス キーは**struct**|クラス キーは**class**|クラス キーは**union**|
 |既定のアクセスは public|既定のアクセスは private|既定のアクセスは public|
 |使用制約なし|使用制約なし|同時に複数のメンバーを使用することはできない|
 

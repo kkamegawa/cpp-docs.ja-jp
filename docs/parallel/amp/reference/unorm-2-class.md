@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 9647cbb61bfc07ebe11d7d58b64e1fbe884a74bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658901"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126203"
 ---
-# <a name="unorm2-class"></a>unorm_2 クラス
+# <a name="unorm_2-class"></a>unorm_2 クラス
 
 2 個の符号なし正規数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class unorm_2;
 ```
 
@@ -49,19 +49,19 @@ class unorm_2;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[unorm_2 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[unorm_2 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |unorm_2::get_x||
 |unorm_2::get_xy||
@@ -78,50 +78,50 @@ class unorm_2;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |unorm_2::operator--||
 |unorm_2::operator*=||
 |unorm_2::operator/=||
-|unorm_2::operator +||
+|unorm_2:: operator + +||
 |unorm_2::operator+=||
 |unorm_2::operator=||
 |unorm_2::operator-=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |unorm_2::size 定数||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |unorm_2::g||
-|unorm_2::gr||
+|unorm_2:: gr||
 |unorm_2::r||
 |unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2:: x||
+|unorm_2:: xy||
+|unorm_2:: y||
+|unorm_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `unorm_2`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -171,23 +171,23 @@ explicit inline unorm_2(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-##  <a name="unorm_2__size"></a> サイズ
+## <a name="unorm_2__size"></a>幅
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

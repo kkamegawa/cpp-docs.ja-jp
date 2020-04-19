@@ -1,45 +1,43 @@
 ---
 title: raw_method_prefix
-ms.date: 10/18/2018
+ms.date: 08/29/2019
 f1_keywords:
 - raw_method_prefix
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: 4169b4e23049bf1cf2c61eaefba619169e0ce377
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bc536507716e5c117718ec825bf7fe76c84b61
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467767"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216148"
 ---
-# <a name="rawmethodprefix"></a>raw_method_prefix
+# <a name="raw_method_prefix"></a>raw_method_prefix
 
-**C++ 固有の仕様**
+**C++のみ**
 
 名前の衝突を避けるために異なるプレフィックスを指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-raw_method_prefix("Prefix")
-```
+> **#import***タイプライブラリ***raw_method_prefix (** "*prefix*" **)**
 
 ### <a name="parameters"></a>パラメーター
 
-*Prefix*<br/>
+*外線*\
 使用されるプレフィックス。
 
 ## <a name="remarks"></a>Remarks
 
-低レベルのプロパティとメソッドが既定のプレフィックスを持つという名前のメンバー関数によって公開されている**raw _** 高レベルのエラー処理メンバー関数の名前の競合を回避するためにします。
+低レベルのプロパティとメソッドは、 **raw_** の既定のプレフィックスを使用して、という名前のメンバー関数によって公開されます。これにより、上位レベルのエラー処理メンバー関数との名前の競合を回避できます。
 
 > [!NOTE]
-> 効果、 **raw_method_prefix**の存在によって属性は変更されません、 [raw_interfaces_only](#_predir_raw_interfaces_only)属性。 **Raw_method_prefix**より優先されます`raw_interfaces_only`でプレフィックスを指定します。 両方の属性が同じで使用されている場合`#import`ステートメントでは後で指定されたプレフィックス、 **raw_method_prefix**属性を使用します。
+> **Raw_method_prefix**属性の効果は、 [raw_interfaces_only](raw-interfaces-only.md)属性が存在することによって変更されていません。 プレフィックスを指定する場合、 `raw_interfaces_only` raw_method_prefix は常により優先されます。 両方の属性が同じ`#import`ステートメントで使用されている場合は、 **raw_method_prefix**属性で指定されたプレフィックスが使用されます。
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

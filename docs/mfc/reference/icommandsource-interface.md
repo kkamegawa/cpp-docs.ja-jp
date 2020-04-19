@@ -1,6 +1,6 @@
 ---
 title: ICommandSource インターフェイス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322083"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource インターフェイス
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 MFC ビューでユーザー コントロールをホストするときに[CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装することによって[ICommandTarget インターフェイス](../../mfc/reference/icommandtarget-interface.md)、ユーザー コントロールへの参照を提供する、`ICommandSource`オブジェクト。
 
-参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
+「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
@@ -82,7 +82,7 @@ void AddCommandHandler(
 ### <a name="remarks"></a>Remarks
 
 このメソッドは、コマンド ソース オブジェクトにコマンド ハンドラーの cmdHandler を追加し、cmdID ハンドラーにマップします。
-参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)AddCommandHandler を使用する方法の例についてはします。
+「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)AddCommandHandler を使用する方法の例についてはします。
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
@@ -179,7 +179,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 このメソッドは、コマンド ソース オブジェクトから cmdID に割り当てられたコマンド ハンドラーを削除します。
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 コマンド ソース オブジェクトから、コマンド ハンドラーのグループを削除します。
 ```
@@ -196,7 +196,7 @@ void RemoveCommandRangeUIHandler(
 コマンドの ID 範囲の終了インデックス。
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、コマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id に割り当て、メッセージ ハンドラーのグループを削除します。
+このメソッドは、メッセージ ハンドラーを cmdIDMin およびコマンド ソース オブジェクトからの cmdIDMax で指定したコマンド Id にマップのグループを削除します。
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ void RemoveCommandRangeUIHandler(
 コマンドの ID 範囲の終了インデックス。
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、コマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id に割り当て、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。
+このメソッドは、cmdIDMin およびコマンド ソース オブジェクトからの cmdIDMax で指定したコマンド Id にマップされている、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

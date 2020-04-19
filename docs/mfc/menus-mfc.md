@@ -7,12 +7,12 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-ms.openlocfilehash: b0eae559fd15b7b19867cef9f785f7c70f782c30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396380"
 ---
 # <a name="menus-mfc"></a>メニュー (MFC)
 

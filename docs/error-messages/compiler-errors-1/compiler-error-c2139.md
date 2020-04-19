@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-ms.openlocfilehash: f462b7d26e21b9313949bb3968b5b39e81bb30b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38e2fd090f3a2b2222658c5fd491c84dd70fd5ea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437129"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756423"
 ---
 # <a name="compiler-error-c2139"></a>コンパイラ エラー C2139
 
-'type': 未定義のクラスがコンパイラの組み込み型の特徴である 'trait' への引数として許可されていません
+' type ': 未定義のクラスは、コンパイラの組み込み型の特徴である ' 特徴 ' の引数として使用することはできません
 
 型の特徴に無効な引数が渡されました。
 
-詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
+詳細については、「[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、に対して C2139 が生成されます。
+次の例では、C2139 が生成されます。
 
-```
+```cpp
 // C2139.cpp
 // compile with: /EHsc
 #include <iostream>

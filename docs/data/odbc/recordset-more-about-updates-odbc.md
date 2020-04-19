@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: 更新処理の詳細 (ODBC)'
+title: レコード セット:詳細については、更新 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397771"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>レコードセット: 更新処理の詳細 (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>レコード セット:詳細については、更新 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "50665297"
 - [詳細については、Update および Delete のメンバー関数は](#_core_more_about_update_and_delete)します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、 `AddNew`、 `Edit`、`Delete`と`Update`メンバー関数。 ただし、トランザクションを実行することができます。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、 `AddNew`、 `Edit`、`Delete`と`Update`メンバー関数。 ただし、トランザクションを実行することができます。 バルク行フェッチの詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> 更新プログラムの他の操作の影響
 
@@ -53,7 +53,7 @@ ms.locfileid: "50665297"
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> 更新プログラムの影響のスクロール
 
-ときにする[レコード セット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 、レコード セット (前のレコードが最初に保存されませんが) 新しい現在のレコードをエディット バッファーを入力します。 削除されたレコードには、スキップをスクロールします。 後にスクロールする場合、`AddNew`または`Edit`呼び出さずに呼び出し`Update`、 `CommitTrans`、または`Rollback`最初に、変更は失われます (に警告がありません) に新しいレコードが編集のバッファーに読み込まれるとします。 エディット バッファーのスクロール レコードが挿入、レコードが解放されると、およびデータ ソースの変更は行われません。 両方に適用`AddNew`と`Edit`します。
+ときにする[レコード セット。スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 、レコード セット (前のレコードが最初に保存されませんが) 新しい現在のレコードをエディット バッファーを入力します。 削除されたレコードには、スキップをスクロールします。 後にスクロールする場合、`AddNew`または`Edit`呼び出さずに呼び出し`Update`、 `CommitTrans`、または`Rollback`最初に、変更は失われます (に警告がありません) に新しいレコードが編集のバッファーに読み込まれるとします。 エディット バッファーのスクロール レコードが挿入、レコードが解放されると、およびデータ ソースの変更は行われません。 両方に適用`AddNew`と`Edit`します。
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> 更新プログラムと他のユーザーの更新プログラム
 
@@ -105,7 +105,7 @@ ms.locfileid: "50665297"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[例外処理: データベースの例外](../../mfc/exceptions-database-exceptions.md)
+[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)

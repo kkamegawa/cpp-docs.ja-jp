@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-ms.openlocfilehash: e2309b93be65b049c35abf96572e144a0a518007
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0feda3bc4c3729d3101be356220aa0124ba85190
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614280"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756943"
 ---
 # <a name="fatal-error-c1017"></a>致命的なエラー C1017
 
 整数定数式が無効です。
 
-内の式、`#if`ディレクティブが存在していなかったか、定数に評価されなかった。
+`#if` ディレクティブ内の式が存在しないか、定数に評価されませんでした。
 
-使用して定義されている定数`#define`値で使用されている場合は、整数の定数に評価される必要があります、 `#if`、 `#elif`、または`#else`ディレクティブ。
+`#define` を使用して定義された定数は、`#if`、`#elif`、または `#else` ディレクティブで使用されている場合、整数定数に評価される値を持つ必要があります。
 
 次の例では、C1017 が生成されます。
 
-```
+```cpp
 // C1017.cpp
 #define CONSTANT_NAME "YES"
 #if CONSTANT_NAME   // C1017
 #endif
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C1017b.cpp
 // compile with: /c
 #define CONSTANT_NAME 1
@@ -40,11 +40,11 @@ ms.locfileid: "50614280"
 #endif
 ```
 
-`CONSTANT_NAME`文字列と、整数に評価、`#if`ディレクティブには、致命的なエラー C1017 が生成されます。
+`CONSTANT_NAME` は整数ではなく文字列に評価されるため、`#if` ディレクティブによって致命的なエラー C1017 が生成されます。
 
-それ以外の場合は、プリプロセッサは、0 として定数 undefined を評価します。 次の例に示すように、意図しない結果ができます。 `YES` 0 と評価のためには、定義されません。 式`#if``CONSTANT_NAME`が false になり、コードで使用される`YES`プリプロセッサによって削除されます。 `NO` 定義されていない (ゼロ) があるため`#elif` `CONSTANT_NAME==NO` true に評価されます (`0 == 0`) でコードを離れるプリプロセッサの原因、`#elif`ステートメントの部分: 目的の動作は正反対です。
+それ以外の場合、プリプロセッサは未定義の定数を0として評価します。 次の例に示すように、これによって意図しない結果が発生する可能性があります。 `YES` は未定義であるため、0に評価されます。 式 `#if` `CONSTANT_NAME` は false と評価され、`YES` で使用されるコードはプリプロセッサによって削除されます。 `NO` も未定義 (ゼロ) であるため、`#elif` `CONSTANT_NAME==NO` は true (`0 == 0`) と評価されるため、プリプロセッサはステートメントの `#elif` 部分にコードを残します。これにより、意図した動作とは逆になります。
 
-```
+```cpp
 // C1017c.cpp
 // compile with: /c
 #define CONSTANT_NAME YES
@@ -55,4 +55,4 @@ ms.locfileid: "50614280"
 #endif
 ```
 
-コンパイラがプリプロセッサ ディレクティブを処理する方法だけを表示する[/P](../../build/reference/p-preprocess-to-a-file.md)、 [/E](../../build/reference/e-preprocess-to-stdout.md)、または[/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)します。
+コンパイラがプリプロセッサディレクティブをどのように処理するかを正確に確認するには、 [/p](../../build/reference/p-preprocess-to-a-file.md)、 [/e](../../build/reference/e-preprocess-to-stdout.md)、または[/ep](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)を使用します。

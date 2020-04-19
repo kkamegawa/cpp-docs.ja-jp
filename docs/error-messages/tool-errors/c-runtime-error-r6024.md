@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6024
 ms.assetid: 0fb11c0f-9b81-4cab-81bd-4785742946a5
 ms.openlocfilehash: 89b99a93512603eaf2273a6ff3f434f1ad3b3bb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214136"
 ---
 # <a name="c-runtime-error-r6024"></a>C ランタイム エラー R6024
 
@@ -23,9 +23,9 @@ _onexit atexit/テーブルの領域が不足
 > このエラーを解決するには、次の手順を試してみます。
 >
 > - その他の実行中のアプリケーションを閉じるか、メモリを解放するため、コンピューターを再起動します。
-> - 使用して、**アプリおよび機能**または**プログラムと機能**ページで、**コントロール パネルの **を修復またはプログラムを再インストールします。
-> - 使用して、**アプリおよび機能**または**プログラムと機能**ページで、**コントロール パネルの **修復または Microsoft Visual C Redistributable のすべてのコピーを再インストールします。
-> - 確認**Windows Update**で、**コントロール パネルの **ソフトウェアの更新。
+> - 使用して、**アプリおよび機能**または**プログラムと機能**ページで、**コントロール パネルの** を修復またはプログラムを再インストールします。
+> - 使用して、**アプリおよび機能**または**プログラムと機能**ページで、**コントロール パネルの** 修復または Microsoft Visual C Redistributable のすべてのコピーを再インストールします。
+> - 確認**Windows Update**で、**コントロール パネルの** ソフトウェアの更新。
 > - アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリのベンダーにお問い合わせください。
 
 **プログラマのための情報**

@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorViewIterator クラス
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161408"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 
@@ -61,7 +61,7 @@ VectorViewIterator テンプレート クラスの型名。
 |[Vectorviewiterator::operator\[\]](#operator-at)|現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。|
 |[VectorViewIterator::operator+ 演算子](#operator-plus)|指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。|
 |[VectorViewIterator::operator++ 演算子](#operator-increment)|現在の VectorViewIterator をインクリメントします。|
-|[VectorViewIterator::operator+= 演算子](#operator-plus-assign)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|
+|[VectorViewIterator::operator+= 演算子](#operator-plus-equals)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|
 |[VectorViewIterator::operator< 演算子](#operator-less-than)|現在の VectorViewIterator が、指定された VectorViewIterator より小さいかどうかを示します。|
 |[Vectorviewiterator::operator\<= 演算子](#operator-less-than-or-equals)|現在の VectorViewIterator が、指定された VectorViewIterator 以下であるかどうかを示します。|
 |[VectorViewIterator::operator-= 演算子](#operator-minus-assign)|現在の VectorViewIterator を、指定されたディスプレイスメントだけデクリメントします。|
@@ -366,7 +366,7 @@ VectorViewIterator& operator-=(difference_type n);
 
 更新された VectorIterator。
 
-## <a name="operator-at"></a>  Vectorviewiterator::operator\[\]
+## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
 
 現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。
 

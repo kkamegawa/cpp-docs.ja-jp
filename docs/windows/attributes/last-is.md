@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545718"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514511"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
 転送する最後の配列要素のインデックスを指定します。
 
@@ -25,16 +25,16 @@ ms.locfileid: "50545718"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
-1 つ以上の C 言語の式。 空の引数スロットが許可されます。
+*式 (expression)*<br/>
+1つ以上の C 言語式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Last_is** C++ 属性と同じ機能を持つ、 [last_is](/windows/desktop/Midl/last-is) MIDL 属性。
+**Last_is** C++属性には、 [last_is](/windows/win32/Midl/last-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-参照してください[first_is](first-is.md)配列のセクションを指定する方法の例についてはします。
+配列のセクションを指定する方法の例については、「 [first_is](first-is.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "50545718"
 
 |||
 |-|-|
-|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**struct**または**union**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

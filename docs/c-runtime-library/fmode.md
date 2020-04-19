@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: c462b8f848a34993e01232039d608b627c05961f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430538"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741933"
 ---
 # <a name="fmode"></a>_fmode
 
@@ -26,7 +26,7 @@ ms.locfileid: "50430538"
 extern int _fmode;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_fmode` の既定の設定は、テキスト モード用の `_O_TEXT` です。 `_O_BINARY` はバイナリ モード用の設定です。
 
@@ -38,7 +38,7 @@ extern int _fmode;
 
 - `_fmode` をプログラム内に設定してその値を直接変更します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)<br/>
 [_get_fmode](../c-runtime-library/reference/get-fmode.md)<br/>

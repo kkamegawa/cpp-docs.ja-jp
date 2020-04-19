@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 1c23906c3d7bcad0e538cea8484e42ea8e89400e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649073"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126709"
 ---
-# <a name="double2-class"></a>double_2 クラス
+# <a name="double_2-class"></a>double_2 クラス
 
 2 個の倍精度浮動小数点数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class double_2;
 ```
 
@@ -49,19 +49,19 @@ class double_2;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[double_2 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[double_2 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |double_2::get_x||
 |double_2::get_xy||
@@ -78,7 +78,7 @@ class double_2;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |double_2::operator-||
 |double_2::operator--||
@@ -91,13 +91,13 @@ class double_2;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |double_2::size 定数||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |double_2::g||
 |double_2::gr||
@@ -112,17 +112,17 @@ class double_2;
 
 `double_2`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> double_2
+## <a name="ctor"></a>double_2
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-```
+```cpp
 double_2() restrict(amp,
     cpu);
 
@@ -163,23 +163,23 @@ explicit inline double_2(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-##  <a name="double_2__size"></a> サイズ
+## <a name="double_2__size"></a>幅
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-ms.openlocfilehash: 132831939c05f7e8f84c306f5d08bba9cd5e8ea4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5383c1053894d44e23baf51b19ac3df4e60158e5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410162"
 ---
 # <a name="overriding-the-standard-command-routing"></a>標準のコマンド ルーティングのオーバーライド
 
@@ -27,4 +27,3 @@ ms.locfileid: "50648444"
 ## <a name="see-also"></a>関連項目
 
 [フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
-

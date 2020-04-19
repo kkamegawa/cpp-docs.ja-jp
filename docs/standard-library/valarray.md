@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332635"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688763"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-テンプレート クラス valarray、および多数のサポート テンプレート クラスと関数を定義します。
+クラステンプレート valarray および多数のサポートクラステンプレートと関数を定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>［要件］
 
-```cpp
-#include <valarray>
-```
+**ヘッダー:** \<valarray>
+
+**名前空間:** std
+
+> [!NOTE]
+> @No__t_0valarray > ライブラリでは、' #include < initializer_list > ' ステートメントが使用されます。
 
 ## <a name="remarks"></a>Remarks
 
-これらのテンプレート クラスと関数には、パフォーマンス向上を目的として特別な許容度が認められています。 型を返す関数は具体的には、すべて`valarray<T1>`いくつかその他の T2 型のオブジェクトを返す可能性があります。 その場合は、型の 1 つまたは複数の引数を受け取る関数すべて`valarray<T2>`を任意の組み合わせの T2 型の引数にそれぞれ置き換えられます。 これらの引数を受け取るオーバー ロードがあります。
+これらのクラステンプレートと関数は、パフォーマンスの向上を目的として、通常とは異なる緯度を許可します。 具体的には、`valarray<T1>` 型を返す関数は、他の型 T2 のオブジェクトを返す場合があります。 この場合、`valarray<T2>` 型の1つ以上の引数を受け取る関数は、これらの引数の任意の組み合わせを受け入れるオーバーロードを持つ必要があります。これらの引数はそれぞれ、T2 型の引数で置き換えられます。
+
+## <a name="members"></a>メンバー
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|入力 valarray の要素を演算し、入力 valarray の要素の絶対値と等しい要素を持つ valarray を返します。|
 |[acos](../standard-library/valarray-functions.md#acos)|入力 valarray の要素を演算し、入力 valarray の要素のアークコサインと等しい要素を持つ valarray を返します。|
 |[asin](../standard-library/valarray-functions.md#asin)|入力 valarray の要素を演算し、入力 valarray の要素のアークサインと等しい要素を持つ valarray を返します。|
 |[atan](../standard-library/valarray-functions.md#atan)|入力 valarray の要素を演算し、入力 valarray の要素のアークタンジェントの主値と等しい要素を持つ valarray を返します。|
 |[atan2](../standard-library/valarray-functions.md#atan2)|valarray の定数と要素の組み合わせによって指定されたデカルト成分のアークタンジェントと等しい要素を持つ valarray を返します。|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|入力 valarray の要素を演算し、入力 valarray の要素のコサインと等しい要素を持つ valarray を返します。|
 |[cosh](../standard-library/valarray-functions.md#cosh)|入力 valarray の要素を演算し、入力 valarray の要素のハイパーボリック コサインと等しい要素を持つ valarray を返します。|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|入力 valarray の要素を演算し、入力 valarray の要素の自然指数と等しい要素を持つ valarray を返します。|
 |[log](../standard-library/valarray-functions.md#log)|入力 valarray の要素を演算し、入力 valarray の要素の自然対数と等しい要素を持つ valarray を返します。|
 |[log10](../standard-library/valarray-functions.md#log10)|入力 valarray の要素を演算し、入力 valarray の要素の常用対数 (底が 10 の対数) と等しい要素を持つ valarray を返します。|
@@ -51,7 +58,7 @@ ms.locfileid: "51332635"
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|サイズが等しい 2 つの valarray の対応する要素が等しくないか、あるいはある valarray のすべての要素が valarray の要素型の指定値と等しくないかをテストします。|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|サイズが等しい 2 つの valarray の対応する要素を除算した剰余か、valarray の要素型の指定値で valarray を除算した剰余、または valarray で指定値を除算した剰余を取得します。|
@@ -74,23 +81,23 @@ ms.locfileid: "51332635"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[gslice クラス](../standard-library/gslice-class.md)|valarray の多次元スライスを定義するのに使用する valarray のユーティリティ クラス。|
-|[gslice_array Class](../standard-library/gslice-array-class.md)|valarray の一般的なスライスで定義されるサブセット配列間の演算を実行して一般的なスライス オブジェクトをサポートする、内部の補助テンプレート クラス。|
-|[indirect_array Class](../standard-library/indirect-array-class.md)|親 valarray のインデックスのサブセットを指定することにより定義されるサブセット配列間の演算を実行して valarray のサブセットとして機能するオブジェクトをサポートする、内部の補助テンプレート クラス。|
-|[mask_array Class](../standard-library/mask-array-class.md)|サブセット配列間の演算を提供することにより、ブール式で指定された親 valarray のサブセットとして機能するオブジェクトをサポートする、内部の補助テンプレート クラス。|
-|[slice Class](../standard-library/slice-class.md)|valarray のベクター的 1 次元サブセットを定義するのに使用する valarray のユーティリティ クラス。|
-|[slice_array Class](../standard-library/slice-array-class.md)|valarray のスライスで定義されるサブセット配列間の演算を提供することによりスライス オブジェクトをサポートする、内部の補助テンプレート クラス。|
-|[valarray クラス](../standard-library/valarray-class.md)|このテンプレート クラスは、型の要素のシーケンスを制御するオブジェクトを表します`Type`を配列として格納され、計算パフォーマンス用に最適化された高速の数学的演算を実行するために設計されています。|
+|[gslice_array クラス](../standard-library/gslice-array-class.md)|Valarray の一般的なスライスによって定義されたサブセット配列間の演算を提供することによって一般的なスライスオブジェクトをサポートする、内部の補助クラステンプレート。|
+|[indirect_array クラス](../standard-library/indirect-array-class.md)|親 valarray のインデックスのサブセットを指定することによって定義されたサブセット配列間の演算を提供することによって、valarray のサブセットであるオブジェクトをサポートする、内部の補助クラステンプレート。|
+|[mask_array クラス](../standard-library/mask-array-class.md)|サブセット配列間の演算を提供することにより、ブール式で指定された親 valarrays のサブセットであるオブジェクトをサポートする、内部の補助クラステンプレート。|
+|[slice クラス](../standard-library/slice-class.md)|valarray のベクター的 1 次元サブセットを定義するのに使用する valarray のユーティリティ クラス。|
+|[slice_array クラス](../standard-library/slice-array-class.md)|Valarray のスライスによって定義されたサブセット配列間の演算を提供することによってスライスオブジェクトをサポートする、内部の補助クラステンプレート。|
+|[valarray クラス](../standard-library/valarray-class.md)|クラステンプレートは、配列として格納され、高速な数値演算を実行するために設計され、計算パフォーマンスに最適化された、`Type` 型の要素のシーケンスを制御するオブジェクトを記述します。|
 
 ### <a name="specializations"></a>特殊化
 
 |||
 |-|-|
-|[valarray\<bool> クラス](../standard-library/valarray-bool-class.md)|テンプレート クラス valarray に特化したバージョン\<**型**> 型の要素を**bool**します。|
+|[valarray\<bool> クラス](../standard-library/valarray-bool-class.md)|クラステンプレート valarray \<**型**の特殊化されたバージョンは、 **bool**型の要素に > ます。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

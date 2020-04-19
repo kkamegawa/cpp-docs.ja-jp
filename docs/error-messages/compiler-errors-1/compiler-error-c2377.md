@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2377
 ms.assetid: f7660965-bf4c-4cd9-8307-1bd7016678a1
-ms.openlocfilehash: b4789469fe27dafb2fb13bf3db085958db8d1478
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e8c50f7e5d822571daeefffc93d3e8c572c01b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528766"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745500"
 ---
 # <a name="compiler-error-c2377"></a>コンパイラ エラー C2377
 
@@ -21,7 +21,7 @@ ms.locfileid: "50528766"
 
 次の例では C2377 が生成されます。
 
-```
+```cpp
 // C2377.cpp
 // compile with: /c
 typedef int i;

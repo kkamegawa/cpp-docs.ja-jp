@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 49685d079e367449ee5973ab37f0bbc7ea44da14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164138"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator クラス
 
@@ -173,7 +173,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 出力します。 移行の最後に変数の最終的な値。
 
 ### <a name="return-value"></a>戻り値
@@ -210,7 +210,7 @@ virtual BOOL InterpolateValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 出力します。 補間値。
 
 ### <a name="return-value"></a>戻り値
@@ -313,7 +313,7 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>パラメーター
 
-*初期値*<br/>
+*initialValue*<br/>
 移行の開始時の変数の値。
 
 *initialVelocity*<br/>

@@ -1,9 +1,9 @@
 ---
 title: compl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - compl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::compl
 - std.compl
@@ -22,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - compl function
 ms.assetid: e03f6fb5-cb8b-4afa-99c0-905f4105fb34
-ms.openlocfilehash: 24db46eb0d9b0793e01bdf72a5531fba60de4987
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b44290df1a0127ac56bb6fb09e211230a63d0846
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326681"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939064"
 ---
 # <a name="compl"></a>compl
 

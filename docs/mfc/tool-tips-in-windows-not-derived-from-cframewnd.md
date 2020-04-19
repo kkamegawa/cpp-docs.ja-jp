@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 2545bda725428835c256ad81edc9070bd004d474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620299"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511026"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>CFrameWnd から派生していないウィンドウのツール ヒント
 
-ここから派生していないウィンドウに含まれるコントロールに対して有効にするツール ヒントをカバーする[CFrameWnd](../mfc/reference/cframewnd-class.md)します。 この記事[ツールバーのツール ヒント](../mfc/toolbar-tool-tips.md)でのコントロールのヒントに関する情報を提供、 `CFrameWnd`。
+この記事ファミリでは、 [CFrameWnd](../mfc/reference/cframewnd-class.md)から派生していないウィンドウに含まれるコントロールのツールヒントを有効にする方法について説明します。 記事ツール[バーのツールヒント](../mfc/toolbar-tool-tips.md)には、 `CFrameWnd`のコントロールのツールヒントに関する情報が記載されています。
 
-ここで説明したトピックは次のとおりです。
+この記事ファミリで取り上げるトピックは次のとおりです。
 
 - [有効化 (ツール ヒントを)](../mfc/enabling-tool-tips.md)
 
@@ -28,13 +28,12 @@ ms.locfileid: "50620299"
 
 - [TOOLTIPTEXT 構造体](../mfc/tooltiptext-structure.md)
 
-ツール ヒントがボタンに自動的に表示されから派生したその他のコントロールの親ウィンドウに含まれている`CFrameWnd`します。 これは、ため`CFrameWnd`の既定のハンドラーを持つ、 [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) 、通知を処理する**TTN_NEEDTEXT**ツールからの通知コントロールに関連付けられたコントロールのヒントします。
+ツールヒントは、から`CFrameWnd`派生した親ウィンドウに含まれるボタンおよびその他のコントロールに対して自動的に表示されます。 これは、 `CFrameWnd`には、コントロールに関連付けられているツールヒントコントロールからの**TTN_NEEDTEXT**通知を処理する[TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo)通知の既定のハンドラーがあるためです。
 
-ただし、この既定のハンドラーを呼び出さない場合に、 **TTN_NEEDTEXT**でないウィンドウのコントロールに関連付けられたツール ヒント コントロールから通知が送信された、 `CFrameWnd`、ダイアログ ボックスまたはフォーム ビューのコントロールなど。 したがってのハンドラー関数を提供する必要があります、 **TTN_NEEDTEXT**の子コントロールのツールヒントを表示するためにメッセージを通知します。
+ただし、ダイアログボックスまたはフォームビューのコントロールなど`CFrameWnd`、ではないウィンドウ内のコントロールに関連付けられているツールヒントコントロールから TTN_NEEDTEXT 通知が送信された場合、この既定のハンドラーは呼び出されません。 したがって、子コントロールのツールヒントを表示するには、 **TTN_NEEDTEXT**通知メッセージにハンドラー関数を指定する必要があります。
 
-Windows によって提供される既定のツール ヒント[CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)それらに関連付けられたテキストはありません。 表示するにはツール ヒントのテキストを取得する、 **TTN_NEEDTEXT**ツール ヒントのウィンドウが表示される直前に、ツール ヒント コントロールの親ウィンドウに通知が送信されます。 何らかの値を割り当てるには、このメッセージのハンドラーがないかどうか、 *pszText*のメンバー、 **TOOLTIPTEXT**構造体、ツール ヒントに表示されるテキストことはありません。
+[CWnd:: EnableToolTips ヒント](../mfc/reference/cwnd-class.md#enabletooltips)によってウィンドウに提供される既定のツールヒントには、テキストが関連付けられていません。 表示するツールヒントのテキストを取得するために、ツールヒントウィンドウが表示される直前に、 **TTN_NEEDTEXT**通知がツールヒントコントロールの親ウィンドウに送信されます。 このメッセージに対して、 **TOOLTIPTEXT**構造体の*psztext*メンバーになんらかの値を割り当てるためのハンドラーがない場合、ツールヒントのテキストは表示されません。
 
 ## <a name="see-also"></a>関連項目
 
 [ツール ヒント](../mfc/tool-tips.md)
-

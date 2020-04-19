@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - template libraries
 ms.assetid: 5e80ec6e-a61c-41ce-b34b-9a6252c46265
-ms.openlocfilehash: 48040088b0dca44f47b16c26893546117dbc6bf2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1a6b0befcfd7ecf0a150653b5c32239b7f9543
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195132"
 ---
 # <a name="using-a-template-library"></a>テンプレート ライブラリの使用
 
@@ -20,4 +20,3 @@ ATL などのテンプレートのライブラリは従来の C++ クラス ラ�
 ## <a name="see-also"></a>関連項目
 
 [ATL の概要](../atl/introduction-to-atl.md)
-

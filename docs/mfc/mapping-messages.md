@@ -11,12 +11,12 @@ helpviewer_keywords:
 - mappings [MFC], messages
 - messages [MFC], mapping
 ms.assetid: 996f0652-0698-4b8c-b893-cdaa836d9d0f
-ms.openlocfilehash: 1f31bc2e3c6af9c4b899167ba99c152a231a929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82c55c82d6b7a3faa65906345137885555a57d08
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279231"
 ---
 # <a name="mapping-messages"></a>メッセージ マップ
 
@@ -27,4 +27,3 @@ ms.locfileid: "50665843"
 ## <a name="see-also"></a>関連項目
 
 [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
-

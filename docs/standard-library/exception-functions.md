@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523664"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246058"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 関数
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 現在の例外へのスマート ポインターを取得します。
 
@@ -62,18 +55,18 @@ catch ブロックで `current_exception` 関数を呼び出します。 例外�
 
 `current_exception` 関数を連続して呼び出すと、現在の例外のさまざまなコピーを参照する `exception_ptr` オブジェクトが返されます。 その結果、オブジェクトは、異なるコピーを参照しているため、コピーが同じバイナリ値を持っている場合でも、比較においては等しくないと評価されます。
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 例外のコピーを保持する [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) オブジェクトを作成します。
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*除く*<br/>
+*除く*\
 コピーする例外を持つクラス。 通常は、[例外クラス](../standard-library/exception-class.md) オブジェクトを `make_exception_ptr` 関数への引数として指定しますが、任意のクラスのオブジェクトを引数に使用できます。
 
 ### <a name="return-value"></a>戻り値
@@ -86,7 +79,7 @@ exception_ptr make_exception_ptr(E Except);
 
 通常、アプリケーションは `make_exception_ptr` 関数を必要とせず、使用は推奨されていません。
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 パラメーターとして渡された例外をスローします。
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*P*\
 再スローするためにキャッチされる例外。 場合*P* null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)、関数はスロー [std::bad_exception](../standard-library/bad-exception-class.md)します。
 
 ### <a name="remarks"></a>Remarks
 
 キャッチした例外を `exception_ptr` オブジェクトに保存すると、プライマリ スレッドはオブジェクトを処理できます。 プライマリ スレッドで、引数として `rethrow_exception` オブジェクトを指定して `exception_ptr` 関数を呼び出します。 `rethrow_exception` 関数は `exception_ptr` オブジェクトから例外を抽出し、プライマリ スレッドのコンテキストで例外をスローします。
 
-## <a name="get_terminate"></a>  get_terminate
+## <a name="get_terminate"></a> get_terminate
 
 現在の `terminate_handler` 関数を取得します。
 
@@ -111,7 +104,7 @@ void rethrow_exception(exception_ptr P);
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 プログラムの終了時に呼び出される新しい `terminate_handler` を設定します。
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*fnew*<br/>
+*fnew*\
 終了時に呼び出される関数。
 
 ### <a name="return-value"></a>戻り値
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected
+## <a name="get_unexpected"></a> get_unexpected
 
 現在の `unexpected_handler` 関数を取得します。
 
@@ -168,7 +161,18 @@ int main()
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>Remarks
+
+ポリモーフィックなクラス型ではなくの場合、または場合`nested_exception`にアクセスできないか、あいまいな場合は、影響はありません。 それ以外の場合、動的なキャストを実行します。
+
+## <a name="set_unexpected"></a> set_unexpected
 
 予期しない例外が発生したときに新しい `unexpected_handler` が存在するように設定します。
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*fnew*<br/>
+*fnew*\
 予期しない例外が発生したときに呼び出される関数。
 
 ### <a name="return-value"></a>戻り値
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  terminate
+## <a name="terminate"></a> 終了
 
 終了ハンドラーを呼び出します。
 
@@ -234,7 +238,18 @@ void terminate();
 
 `terminate` の使用例については、「[set_unexpected](../standard-library/exception-functions.md#set_unexpected)」を参照してください。
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>Remarks
+
+入れ子になった例外と例外をスローします。
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 スローされた例外が現在処理されている場合にのみ **true** を返します。
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>  unexpected
+## <a name="unexpected"></a> 予期しません。
 
 予期しないハンドラーを呼び出します。
 
@@ -326,7 +341,3 @@ C++ 標準では、関数が throw のリストにない例外をスローした
 ### <a name="example"></a>例
 
 `unexpected` の使用例については、「[set_unexpected](../standard-library/exception-functions.md#set_unexpected)」を参照してください。
-
-## <a name="see-also"></a>関連項目
-
-[\<exception>](../standard-library/exception.md)<br/>

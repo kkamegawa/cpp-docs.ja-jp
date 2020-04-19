@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2124
 ms.assetid: 93392aaa-5582-4d68-8cc5-bd9c62a0ae7e
-ms.openlocfilehash: 82bc4447aaf27190c013edf48a20a56c57a646c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da04b100fdeaebb6b07d3f8c01e5ec8341ae1cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611667"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748243"
 ---
 # <a name="compiler-error-c2124"></a>コンパイラ エラー C2124
 
@@ -21,7 +21,7 @@ ms.locfileid: "50611667"
 
 次の例では C2124 が生成されます。
 
-```
+```cpp
 // C2124.cpp
 int main() {
   int i = 1 / 0;   // C2124  do not divide by zero

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 25: ドキュメント、ビュー、フレームの作成'
+title: TN025:ドキュメント、ビュー、およびフレームの作成
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305997"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>テクニカル ノート 25: ドキュメント、ビュー、フレームの作成
+# <a name="tn025-document-view-and-frame-creation"></a>TN025:ドキュメント、ビュー、およびフレームの作成
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -25,7 +25,7 @@ ms.locfileid: "50634760"
 
 1 つである`CWinApp`システム内のオブジェクト。
 
-静的に作成され初期化のフレームワークの内部実装によって`WinMain`します。 派生する必要があります`CWinApp`役に立つ何を (例外: MFC 拡張 Dll のない、`CWinApp`インスタンス-で初期化が行われる`DllMain`代わりに)。
+静的に作成され初期化のフレームワークの内部実装によって`WinMain`します。 派生する必要があります`CWinApp`役に立つ何を (例外。MFC 拡張 Dll のない、`CWinApp`インスタンス-で初期化が行われる`DllMain`代わりに)。
 
 1 つ`CWinApp`オブジェクトは、ドキュメント テンプレートの一覧を所有している (、 `CPtrList`)。 アプリケーションごとに 1 つまたは複数のドキュメント テンプレートがあります。 ウィンドウがリソース ファイル (つまり、文字列配列) に、通常は読み込まれて`CWinApp::InitInstance`します。
 
@@ -71,4 +71,3 @@ MDI フレーム ウィンドウのクライアント領域には、すべての
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

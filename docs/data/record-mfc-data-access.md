@@ -6,12 +6,12 @@ helpviewer_keywords:
 - records [C++]
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
-ms.openlocfilehash: 53da1766bdf717e7c8eae890dd646ef24d4a9f96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b308f98a597a080048377b345c27cb5862e5f12
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161170"
 ---
 # <a name="record-mfc-data-access"></a>レコード (MFC データ アクセス)
 

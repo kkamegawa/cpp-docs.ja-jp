@@ -1,5 +1,5 @@
 ---
-title: 'Windows ソケット: アーカイブ付きソケットの使用'
+title: Windows ソケット:アーカイブ付きソケットの使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], archives
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358288"
 ---
-# <a name="windows-sockets-using-sockets-with-archives"></a>Windows ソケット: アーカイブ付きソケットの使用
+# <a name="windows-sockets-using-sockets-with-archives"></a>Windows ソケット:アーカイブ付きソケットの使用
 
 この記事で説明します、 [CSocket プログラミング モデル](#_core_the_csocket_programming_model)します。 クラス[CSocket](../mfc/reference/csocket-class.md)クラスよりも高いレベルの抽象化のソケットのサポートを提供[CAsyncSocket](../mfc/reference/casyncsocket-class.md)します。 `CSocket` を通じて、MFC ソケット オブジェクトとの間のデータを渡すため、MFC のシリアル化プロトコルのバージョンを使用して[CArchive](../mfc/reference/carchive-class.md)オブジェクト。 `CSocket` (Windows メッセージのバック グラウンド処理の管理) 中にブロックを提供し、へのアクセスを提供`CArchive`、生 API またはクラスのいずれかを使用して自分で行う必要がありますの通信の多くの側面を管理`CAsyncSocket`します。
 
 > [!TIP]
 >  クラスを使用して`CSocket`自体より便利なバージョンのとして`CAsyncSocket`は、最もシンプルなプログラミング モデルを使用する`CSocket`で、`CArchive`オブジェクト。
 
-アーカイブ付きソケットの実装の動作方法の詳細については、次を参照してください。 [Windows ソケット: 作業のアーカイブ付きソケット](../mfc/windows-sockets-how-sockets-with-archives-work.md)します。 コード例を参照してください[Windows ソケット: 操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)と[Windows ソケット: 例のソケットを使用してアーカイブ](../mfc/windows-sockets-example-of-sockets-using-archives.md)します。 ソケット クラスから独自のクラスを派生することで利用できる一部の機能については、次を参照してください。 [Windows ソケット: ソケット クラスから派生する](../mfc/windows-sockets-deriving-from-socket-classes.md)します。
+アーカイブ付きソケットの実装の動作方法の詳細については、次を参照してください。 [Windows ソケット。ソケットのアーカイブ動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)します。 コード例は、「 [Windows ソケット。操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)と[Windows ソケット。アーカイブを使用するソケットの例](../mfc/windows-sockets-example-of-sockets-using-archives.md)します。 ソケット クラスから独自のクラスを派生することで利用できる一部の機能については、次を参照してください。 [Windows ソケット。ソケット クラスから派生する](../mfc/windows-sockets-deriving-from-socket-classes.md)します。
 
 > [!NOTE]
->  確立された (非 MFC) サーバーとの通信に MFC クライアント プログラムを記述する場合は、アーカイブから C++ オブジェクトを送信しません。 サーバーは、送信するオブジェクトの種類を認識する MFC アプリケーションでない限りが、受信し、オブジェクトを逆シリアル化することはできません。 非 MFC アプリケーションとの通信にあるサブジェクトに関連する素材の資料を参照も[Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)します。
+>  確立された (非 MFC) サーバーとの通信に MFC クライアント プログラムを記述する場合は、アーカイブから C++ オブジェクトを送信しません。 サーバーは、送信するオブジェクトの種類を認識する MFC アプリケーションでない限りが、受信し、オブジェクトを逆シリアル化することはできません。 非 MFC アプリケーションとの通信にあるサブジェクトに関連する素材の資料を参照も[Windows ソケット。バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)します。
 
 ##  <a name="_core_the_csocket_programming_model"></a> CSocket のプログラミング モデル
 
@@ -70,7 +70,7 @@ ms.locfileid: "50615388"
     > [!NOTE]
     >  クラス`CArchive`提供、`IsBufferEmpty`クラスを使用して専用のメンバー関数`CSocket`します。 バッファーにデータの複数のメッセージが含まれている場合は、それらのすべてが読み取られ、バッファーをクリアするまでループする必要があります。 それ以外の場合、次の通知を受信するデータが含まれる遅れる可能性があります無期限にします。 使用`IsBufferEmpty`すべてのデータを取得することを保証するためにします。
 
-記事[Windows ソケット: 操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)両方の側のコード例では、このプロセスを示しています。
+この記事[Windows ソケット。操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)両方の側のコード例では、このプロセスを示しています。
 
 詳細については次を参照してください:
 
@@ -82,4 +82,3 @@ ms.locfileid: "50615388"
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

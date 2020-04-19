@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-ms.openlocfilehash: cbc48008cd7b30f1630fc4ec2c30214e3c448c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b247e97f5aa6b5e85a6a6b6f57a64224a9e0f435
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252663"
 ---
 # <a name="string-data-management"></a>文字列データ管理
 
@@ -86,4 +86,3 @@ MFC バージョン 4.0 の時点でとき[CStringT クラス](../atl-mfc-shared
 ## <a name="see-also"></a>関連項目
 
 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
-

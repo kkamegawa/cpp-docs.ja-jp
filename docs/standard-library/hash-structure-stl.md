@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - thread/std::hash
 ms.assetid: 4a8bf5bc-4334-4070-936b-98585f8a073b
-ms.openlocfilehash: bb230d401d5061f4951f8007f93c3a28ce3dab03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6d0cea7bfc8cd745e7276f7fc29d493f178fc9b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579865"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451949"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash 構造体 (C++ 標準ライブラリ)
 
@@ -35,6 +35,6 @@ struct hash<thread::id> :
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<thread>](../standard-library/thread.md)<br/>
-[unary_function 構造体](../standard-library/unary-function-struct.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<スレッド>](../standard-library/thread.md)\
+[unary_function 構造体](../standard-library/unary-function-struct.md)

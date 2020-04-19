@@ -5,11 +5,11 @@ helpviewer_keywords:
 - relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
 ms.openlocfilehash: 1c47627baa270c3b5eb58127590aefc6d06c9df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403413"
 ---
 # <a name="relational-function-templates"></a>リレーショナル関数テンプレート
 

@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : プロパティ ページ'
+title: MFC ActiveX コントロール:プロパティ ページ
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239964"
 ---
-# <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX コントロール : プロパティ ページ
+# <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX コントロール:プロパティ ページ
 
 プロパティ ページを使用すると、ActiveX コントロールのユーザーを表示および ActiveX コントロールのプロパティを変更します。 これらのプロパティは、表示およびコントロールのプロパティを編集するため、カスタマイズされたグラフィカル インターフェイスを提供する 1 つまたは複数のプロパティ ページを含む、コントロールのプロパティのダイアログ ボックスを呼び出すことによってアクセスされます。
 
@@ -35,7 +35,7 @@ ms.locfileid: "52176459"
 ![Circ3 のプロパティ ダイアログ ボックス](../mfc/media/vc373i1.gif "Circ3 のプロパティ ダイアログ ボックス") <br/>
 プロパティ ダイアログ ボックス
 
-この記事では、ActiveX コントロールのプロパティ ページの使用に関連するトピックについて説明します。 次の設定があります。
+この記事では、ActiveX コントロールのプロパティ ページの使用に関連するトピックについて説明します。 不足している機能には次が含まれます。
 
 - [ActiveX コントロールの既定のプロパティ ページを実装します。](#_core_implementing_the_default_property_page)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52176459"
 
 ActiveX コントロールのプロパティ ページの使用に関する詳細については、次の記事を参照してください。
 
-- [MFC ActiveX コントロール: カスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX コントロール: 別のカスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [MFC ActiveX コントロール: ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
@@ -53,7 +53,7 @@ ActiveX コントロール以外の MFC アプリケーションでプロパテ�
 
 ##  <a name="_core_implementing_the_default_property_page"></a> 既定のプロパティ ページを実装します。
 
-派生したコントロールの ActiveX コントロール ウィザードが既定のプロパティ ページ クラスを提供コントロール プロジェクトの作成に ActiveX コントロール ウィザードを使用する場合[COlePropertyPage クラス](../mfc/reference/colepropertypage-class.md)します。 最初に、このプロパティ ページは空白になりますが、任意のダイアログ ボックス コントロールまたはコントロールのセットを追加することができます。 ActiveX コントロール ウィザードは、既定では、追加のプロパティ ページ クラスで 1 つのプロパティ ページ クラスを作成するため、(からも派生`COlePropertyPage`) クラス ビューを使用して作成する必要があります。 この手順の詳細については、次を参照してください。 [MFC ActiveX コントロール: カスタム プロパティの別のページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)します。
+派生したコントロールの ActiveX コントロール ウィザードが既定のプロパティ ページ クラスを提供コントロール プロジェクトの作成に ActiveX コントロール ウィザードを使用する場合[COlePropertyPage クラス](../mfc/reference/colepropertypage-class.md)します。 最初に、このプロパティ ページは空白になりますが、任意のダイアログ ボックス コントロールまたはコントロールのセットを追加することができます。 ActiveX コントロール ウィザードは、既定では、追加のプロパティ ページ クラスで 1 つのプロパティ ページ クラスを作成するため、(からも派生`COlePropertyPage`) クラス ビューを使用して作成する必要があります。 この手順の詳細については、次を参照してください。 [MFC ActiveX コントロール。別のカスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)します。
 
 プロパティを実装するページ (この例では、既定値) では、3 つの手順。
 

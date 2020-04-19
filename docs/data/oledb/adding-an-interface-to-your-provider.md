@@ -1,21 +1,24 @@
 ---
 title: プロバイダーへのインターフェイスの追加
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: 5659078641439744c1f68cbb399c19b9b58bd0bb
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: MT
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265140"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524804"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>プロバイダーへのインターフェイスの追加
 
-インターフェイスを追加するオブジェクトを決定する (データ ソース、行セット、コマンド、またはセッション オブジェクトの作成者は、通常、 **OLE DB プロバイダー ウィザード**)。 インターフェイスを追加する必要があるオブジェクトが、プロバイダーがサポートされていないものであることができます。 その場合は、実行、 **ATL OLE DB プロバイダー ウィザード**オブジェクトを作成します。 プロジェクトを右クリックして**クラス ビュー**、 をクリックして**追加** > **新しい項目の**メニューから、次のように選択します**インストール済み** > 。 **Visual C** > **ATL**、 をクリックし、 **ATL OLEDB プロバイダー**します。 インターフェイスのコードの別のディレクトリを配置し、プロバイダーのプロジェクトに、ファイルをコピーする場合があります。
+> [!NOTE]
+> ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降では使用できません。
 
-インターフェイスをサポートする新しいクラスを作成する場合は、そのクラスから継承するオブジェクトをください。 たとえば、クラスを追加する場合があります`IRowsetIndexImpl`行セット オブジェクトに。
+インターフェイスを追加するオブジェクトを決定します (通常は **OLE DB プロバイダー ウィザード**で作成されたデータ ソース、行セット、コマンド、またはセッション オブジェクトです)。 インターフェイスを追加する必要があるオブジェクトが、プロバイダーで現在サポートされていない可能性もあります。 その場合は、**ATL OLE DB プロバイダー ウィザード**を実行してオブジェクトを作成します。 **クラス ビュー**でプロジェクトを右クリックし、メニューの **[追加]**  >  **[新しい項目]** をクリックします。 **[インストール済み]**  >  **[Visual C++]**  >  **[ATL]** を選択したら、 **[ATL OLEDB プロバイダー]** をクリックします。 インターフェイスのコードを別のディレクトリに配置し、そのファイルをプロバイダー プロジェクトにコピーすることもできます。
+
+インターフェイスをサポートする新しいクラスを作成した場合は、オブジェクトがそのクラスから継承するようにします。 たとえば、次のようにクラス `IRowsetIndexImpl` を行セット オブジェクトに追加します。
 
 ```cpp
 template <class Creator>
@@ -24,7 +27,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-COM_INTERFACE_ENTRY マクロを使用してオブジェクトで COM_MAP にインターフェイスを追加します。 マップがない場合は、1 つを作成します。 例えば:
+COM_INTERFACE_ENTRY マクロを使用して、オブジェクトの COM_MAP にインターフェイスを追加します。 マップがない場合は作成します。 次に例を示します。
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
@@ -32,7 +35,7 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-行セット オブジェクトのチェーン、親のマップ オブジェクトのオブジェクトが親クラスに委任できるようにします。 この例では、マップに COM_INTERFACE_ENTRY_CHAIN マクロを追加します。
+行セット オブジェクトの場合、その親オブジェクトのマップを連結して、オブジェクトが親クラスに委任できるようにします。 この例では、COM_INTERFACE_ENTRY_CHAIN マクロをマップに追加します。
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)

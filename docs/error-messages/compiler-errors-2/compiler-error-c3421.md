@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3421
 ms.assetid: b52050c6-17a4-424a-8894-337b0cec7010
-ms.openlocfilehash: 399224a3d091a26066a03df0c77511997ae2403c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a57aa7b85b9f8a8aae0b93e2b346584edef8de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448907"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756241"
 ---
 # <a name="compiler-error-c3421"></a>コンパイラ エラー C3421
 
@@ -19,13 +19,13 @@ ms.locfileid: "50448907"
 
 ファイナライザーは暗黙的にプライベートであるため、それを囲む型の外部から呼び出すことはできません。
 
-詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+詳細については、「[方法: クラスと構造体を定義および使用する (C++/cli)」の「デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3421 が生成されます。
 
-```
+```cpp
 // C3421.cpp
 // compile with: /clr
 ref class A {};

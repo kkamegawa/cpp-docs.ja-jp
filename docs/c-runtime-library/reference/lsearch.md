@@ -1,9 +1,9 @@
 ---
 title: _lsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch
 - lsearch
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532812"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954076"
 ---
-# <a name="lsearch"></a>_lsearch
+# <a name="_lsearch"></a>_lsearch
 
 ある値に関して一方向に検索を実行し、見つからない場合はリストの末尾に追加します。 この関数のセキュリティが強化されたバージョンについては、「[_lsearch_s](lsearch-s.md)」をご覧ください。
 
@@ -59,7 +62,7 @@ void *_lsearch(
 *base*<br/>
 検索する配列のベースへのポインター。
 
-*数*<br/>
+*number*<br/>
 要素の数。
 
 *width*<br/>
@@ -70,15 +73,15 @@ void *_lsearch(
 
 ## <a name="return-value"></a>戻り値
 
-キーが見つかった場合 **_lsearch**配列の要素へのポインターを返します*基本*と一致する*キー*します。 キーが見つからない場合 **_lsearch**配列の末尾に新しく追加された項目へのポインターを返します。
+キーが見つかった場合、 **_lsearch**は、*キー*に一致する*ベース*の配列の要素へのポインターを返します。 キーが見つからない場合、 **_lsearch**は配列の末尾に新しく追加された項目へのポインターを返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Lsearch**関数は、値に関して線形探索を実行します。*キー*の配列の*数*の各要素は、*幅*バイト。 異なり**bsearch**、 **_lsearch**配列を並べ替えるには必要ありません。 場合*キー*が見つからない **_lsearch**インクリメント、配列の末尾に追加*数*します。
+**_Lsearch**関数は、*数値*要素の配列内の値*キー*の線形検索を実行します (各*幅*バイト)。 **Bsearch**とは異なり、 **_lsearch**では配列を並べ替える必要はありません。 *キー*が見つからない場合、 **_lsearch**はそれを配列の末尾に追加し、*数値*をインクリメントします。
 
-*比較*引数が 2 つの配列要素を比較し、それらの関係を示す値を返します、ユーザー指定のルーチンへのポインター。 **_lsearch**呼び出し、*比較*ルーチンを 1 つまたは複数回呼び出しごとに 2 つの配列要素へのポインターを渡す、検索中にします。 *比較*要素を比較し、いずれかを返す必要があります (つまり、要素が異なる) 0 以外の値または 0 (つまり、要素が同じ場合)。
+*Compare*引数は、2つの配列要素を比較し、それらの関係を指定する値を返すユーザー指定のルーチンへのポインターです。 **_lsearch**は、検索中に*比較*ルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。 *比較*では、要素を比較し、0以外 (要素が異なる場合) または 0 (要素が同じであることを意味します) のいずれかを返す必要があります。
 
-この関数は、パラメーターを検証します。 場合*比較*、*キー*または*数*は**NULL**、または*基本*は**NULL**と*数*0 以外の場合、または*幅*が小さい」の説明に従って、0 よりも、無効なパラメーター ハンドラーが呼び出さは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。
+この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で、 *number*が0以外の場合、または*width*が0未満の場合は、「パラメーター」に説明されているように、無効なパラメーターハンドラーが呼び出されます。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。
 
 ## <a name="requirements"></a>必要条件
 

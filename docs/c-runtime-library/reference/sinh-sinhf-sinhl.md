@@ -1,11 +1,11 @@
 ---
 title: sinh、sinhf、sinhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569807"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948106"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
-双曲線正弦を計算します。
+ハイパーボリックサインを計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -62,7 +65,7 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Sinh**関数のハイパーボリック サインを返します*x*します。 既定で、結果が大きすぎる、 **sinh**設定**errno**に**ERANGE** ± を返します**HUGE_VAL**します。
+**Sinh**関数は、 *x*のハイパーボリックサインを返します。 既定では、結果が大きすぎる場合、 **sinh**は**errno**を**ERANGE**に設定し、±**HUGE_VAL**を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -73,13 +76,13 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sinh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**sinh**は**二重**します。
+でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**sinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sinh**は常にを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> または \<math.h>|
+|**sinh**、 **sinhf**、 **sinhf**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 72b907abbbb52a881feb415e47a768e61a9819ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f94b26ca3bdc2778c2f9ed41103b456f5194fe3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271945"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN コマンド ライン
 
@@ -29,5 +29,5 @@ DUMPBIN が、/summary がありませんを表示するオプションを指定
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[DUMPBIN リファレンス](dumpbin-reference.md)

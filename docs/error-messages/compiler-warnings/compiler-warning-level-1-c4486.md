@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: b6e1fc7001908202efc2fb0ef3653153c007eac0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c92c23af4aeb6a18c812517cfef9fa00d15dfcb
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456031"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965395"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>コンパイラの警告 (レベル 1) C4486
 
-'function': ref クラスまたは値クラスのプライベート仮想メソッドは、'シールド' マークする必要があります
+' function ': ref クラスまたは値クラスのプライベート仮想メソッドは ' sealed ' に設定されなければなりません
 
-マークする必要がありますので、マネージ クラスまたは構造体のプライベート仮想メンバー関数はアクセスできないか、またはオーバーライドして、[シール](../../windows/sealed-cpp-component-extensions.md)します。
+マネージクラスまたは構造体のプライベート仮想メンバー関数にアクセスしたりオーバーライドしたりすることはできないため、 [sealed](../../extensions/sealed-cpp-component-extensions.md)とマークする必要があります。
 
 ## <a name="example"></a>例
 
 次の例では、C4486 が生成されます。
 
-```
+```cpp
 // C4486.cpp
 // compile with: /clr /c /W1
 ref class B {
@@ -35,9 +35,9 @@ private:
 
 ## <a name="example"></a>例
 
-次の例では、プライベートの封印された、仮想関数の 1 つの考えられる用途を示します。
+次のサンプルは、プライベートのシールドされた仮想関数の1つの使用方法を示しています。
 
-```
+```cpp
 // C4486_b.cpp
 // compile with: /clr /c
 ref class B {};

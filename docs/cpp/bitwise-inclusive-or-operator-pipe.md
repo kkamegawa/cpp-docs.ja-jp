@@ -11,11 +11,11 @@ helpviewer_keywords:
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
 ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184294"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>ビット処理包括的 OR 演算子: |
 

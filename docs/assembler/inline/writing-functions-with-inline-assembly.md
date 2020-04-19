@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
 ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166855"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>インライン アセンブリでの関数の記述
 
@@ -42,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-別のアセンブラーに書き込まれるため、関数には、別のソース ファイルおよびアセンブリとリンクの手順が必要です。 通常、C および C++ の関数の引数はスタックに渡されますので、このバージョンの`power2`関数の引数はスタック上の位置にアクセスします。 (なお、**モデル**ディレクティブ、MASM およびその他のいくつかのアセンブラーで使用可能では名前でのスタック引数とローカル スタック変数にアクセスすることもできます)。
+別のアセンブラーに書き込まれるため、関数には、別のソース ファイルおよびアセンブリとリンクの手順が必要です。 通常、C および C++ の関数の引数はスタックに渡されますので、このバージョンの`power2`関数の引数はスタック上の位置にアクセスします。 (なお、**MODEL**ディレクティブ、MASM およびその他のいくつかのアセンブラーで使用可能では名前でのスタック引数とローカル スタック変数にアクセスすることもできます)。
 
 ## <a name="example"></a>例
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: 23e5e9bc5406265f49fca2ed220c597cb32e2a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4768d78047112a7584ca49b0e4487fad55a970
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609704"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688842"
 ---
-# <a name="underlyingtype-class"></a>underlying_type クラス
+# <a name="underlying_type-class"></a>underlying_type クラス
 
 列挙型の基になる整数型を生成します。
 
@@ -26,14 +26,14 @@ struct underlying_type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*T* \
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-`type`テンプレート クラスのメンバー typedef 名の基になる整数型*T*、 *T*列挙型は、それ以外の場合はメンバー typedef `type`。
+クラステンプレートの `type` メンバー typedef は、 *t*が列挙型である場合*に、基*になる整数型の名前を指定します。それ以外の場合は、`type` メンバー typedef は存在しません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 
@@ -41,4 +41,4 @@ struct underlying_type;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

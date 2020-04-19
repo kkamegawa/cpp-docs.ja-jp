@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 511d66821bf23c149fafb0bfd397929077f020ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385337"
 ---
 # <a name="building-on-the-framework"></a>フレームワークを使ったアプリケーションの作成
 
@@ -33,4 +33,3 @@ MFC フレームワークとアプリケーションの構成でのロールは�
 ## <a name="see-also"></a>関連項目
 
 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
-

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: aee66ea9893325921c62bfaef9cd501ef40e817a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372167"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo クラス
 
@@ -53,7 +53,7 @@ class CRecentDockSiteInfo : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|`CRecentDockSiteInfo::CRecentDockSiteInfo`|既定のコンストラクター|
+|`CRecentDockSiteInfo::CRecentDockSiteInfo`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -236,7 +236,7 @@ void SaveListOfRecentPanes(CList<HWND,
 ### <a name="parameters"></a>パラメーター
 
 [in]*CList < HWND*<br/>
-[in]*lstOrg*<br/>
+[in] *lstOrg*<br/>
 [in]*bForSlider*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -266,8 +266,8 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRecentContainer*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pRecentContainer*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

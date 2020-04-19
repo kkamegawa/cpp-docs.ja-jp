@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175562"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743349"
 ---
 # <a name="stream-states"></a>ストリームの状態
 
@@ -41,6 +41,6 @@ ms.locfileid: "52175562"
 
 最後に、この状態の図は、位置操作が後に使用できる有効な関数呼び出しの数を減らすことはないことを示しています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ファイルとストリーム](../c-runtime-library/files-and-streams.md)

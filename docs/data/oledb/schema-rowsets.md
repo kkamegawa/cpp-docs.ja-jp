@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-ms.openlocfilehash: 9be586d4bd9c0b5591dbab3202b9fc44d0924a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0ec284b4bb366b72eae86f684346f70bfb44239
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404534"
 ---
 # <a name="schema-rowsets"></a>スキーマ行セット
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323571"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap クラス
 
@@ -144,7 +144,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 このインライン関数`BASE_CLASS` **:: 参照**します。
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 この演算子は、代入ステートメント (左辺値) の左側でのみ使用できます。
 
@@ -216,7 +216,7 @@ NewValue のキーの値を指定します。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CMapPtrToPtr クラス](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord クラス](../../mfc/reference/cmapptrtoword-class.md)<br/>

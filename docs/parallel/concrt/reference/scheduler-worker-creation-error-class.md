@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 565f4b409f19d7ab70d536e977c13d628c30e882
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442199"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142763"
 ---
-# <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error クラス
+# <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error クラス
 
-このクラスは、同時実行ランタイムでワーカー実行コンテキストを作成できないためにスローされる例外を表します。
+このクラスは、コンカレンシー ランタイムでワーカー実行コンテキストを作成できないためにスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
@@ -29,13 +29,13 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[scheduler_worker_creation_error](#ctor)|オーバーロードされます。 `scheduler_worker_creation_error` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-同時実行ランタイムの内部から実行コンテキストを作成するには、オペレーティング システムに呼び出しが失敗したときに、この例外はスロー通常。 実行コンテキストは、同時実行ランタイムでタスクを実行するスレッドです。 Win32 メソッドの呼び出しから返されるエラー コード`GetLastError`型の値に変換されます`HRESULT`と基本クラスのメソッドを使用して取得できる`get_error_code`します。
+この例外は、通常、同時実行ランタイム内から実行コンテキストを作成するためにオペレーティングシステムへの呼び出しが失敗した場合にスローされます。 実行コンテキストは、同時実行ランタイムでタスクを実行するスレッドです。 通常、Win32 メソッド `GetLastError` の呼び出しから返されるエラーコードは `HRESULT` 型の値に変換され、基本クラスのメソッド `get_error_code`を使用して取得できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -45,17 +45,17 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 `scheduler_worker_creation_error`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
 `scheduler_worker_creation_error` オブジェクトを構築します。
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -66,12 +66,12 @@ explicit _CRTIMP scheduler_worker_creation_error(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
 *_Hresult*<br/>
-`HRESULT`例外の原因となったエラーの値。
+例外の原因となったエラーの `HRESULT` 値。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

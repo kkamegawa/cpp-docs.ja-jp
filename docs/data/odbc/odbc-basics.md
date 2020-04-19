@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395795"
 ---
 # <a name="odbc-basics"></a>ODBC の基礎
 
@@ -25,7 +25,7 @@ ms.locfileid: "50591725"
 
 - [どのような ODBC コンポーネントをアプリケーションで再配布する必要があります。](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-関連トピックを参照することも[ODBC: ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)します。
+関連トピックを参照することも[ODBC:ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)します。
 
 > [!NOTE]
 > ODBC データ ソースには、ここで説明するように、MFC ODBC クラス経由でアクセスできます。また、MFC DAO (Data Access Object) クラス経由でもアクセスできます。

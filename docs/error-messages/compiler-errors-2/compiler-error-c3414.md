@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3414
 ms.assetid: 715f5432-b509-4f8f-84f5-e1463bac490f
-ms.openlocfilehash: 86ed40f31ae17724700e9d2c68950027d0eefb69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee1e6913d108d0e5519eac6399ed83ac057da9e2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742939"
 ---
 # <a name="compiler-error-c3414"></a>コンパイラ エラー C3414
 
-'member': インポートされたメンバー関数を定義することはできません
+' member ': インポートされたメンバー関数は定義できません
 
-メンバーは、参照アセンブリで定義されているコードで定義されました。
+メンバーは、参照されたアセンブリでも定義されているコードで定義されています。
 
 次の例では、C3414 が生成されます。
 
-```
+```cpp
 // C3414a2.cpp
 // compile with: /clr /LD
 public ref class MyClass {
@@ -32,7 +32,7 @@ public:
 
 この場合、次のようになります。
 
-```
+```cpp
 // C3414b2.cpp
 // compile with: /clr
 #using <C3414a2.dll>

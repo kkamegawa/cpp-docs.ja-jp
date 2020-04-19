@@ -1,12 +1,12 @@
 ---
 title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclower
 - _ismbclower_l
 - _ismbcupper_l
 - _ismbcupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcupper
 - _ismbclower
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a64a0d9be83733fa5482eee84ce6576dd32c221
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953791"
 ---
-# <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
+# <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
 マルチバイト文字が小文字または大文字であるかどうかをチェックします。
 
@@ -75,20 +78,20 @@ int _ismbcupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c*< = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**)、結果は、戻り値に対応する **_ismbb 系**ルーチン。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C*< = 255 で、対応する **_ismbb**ルーチンが存在する場合 (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応している場合)、結果は対応する **_ismbb**ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>Remarks
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
+|ルーチン|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< = 0x7A します。|
-|**_ismbclower_l**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< = 0x7A します。|
-|**_ismbcupper**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A します。|
-|**_ismbcupper_l**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A します。|
+|**_ismbclower**|小文字の英字|*C*が ASCII 小文字の英文字の1バイト表現である場合に限り、0以外の値を返します。0x61 < =*c*< = 0x7a.|
+|**_ismbclower_l**|小文字の英字|*C*が ASCII 小文字の英文字の1バイト表現である場合に限り、0以外の値を返します。0x61 < =*c*< = 0x7a.|
+|**_ismbcupper**|大文字の英字|*C*が ASCII 大文字の英文字の1バイト表現である場合にのみ、0以外の値を返します。0x41 < =*c*< = 0x5a。|
+|**_ismbcupper_l**|大文字の英字|*C*が ASCII 大文字の英文字の1バイト表現である場合にのみ、0以外の値を返します。0x41 < =*c*< = 0x5a。|
 
 ## <a name="requirements"></a>必要条件
 

@@ -1,6 +1,7 @@
 ---
 title: /errorReport (内部コンパイラ エラーの報告)
-ms.date: 11/04/2016
+description: Microsoft C/C++コンパイラ/errorreport コマンドラインオプションのリファレンスです。
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -8,60 +9,42 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 8529e8c3cfc0914797c81207889a9505f1d57382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660162"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257651"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (内部コンパイラ エラーの報告)
 
-内部コンパイル エラー (ICE) 情報を Microsoft に直接報告できます。
+> [!NOTE]
+> **/Errorreport**オプションは非推奨とされます。 Windows Vista 以降では、エラー報告は[Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。
 
 ## <a name="syntax"></a>構文
 
-```
-/errorReport:[ none | prompt | queue | send ]
-```
+> **/errorreport:** \[**none** \| **prompt** \| **queue** \| **send** ]
 
-## <a name="arguments"></a>引数
+## <a name="remarks"></a>コメント
 
-**none**<br/>
-内部コンパイラ エラーに関するレポートは、収集されず、マイクロソフトに送信されません。
+内部コンパイラエラー (ICE) は、コンパイラがソースコードファイルを処理できない場合に発生します。 ICE が発生した場合、コンパイラは出力ファイルを生成しないか、コードの修正に使用できる有用な診断を生成しません。
 
-**prompt**<br/>
-内部コンパイラ エラーを受信したときにレポートを送信するかどうか確認するメッセージを表示します。 **プロンプト**開発環境でアプリケーションのコンパイル時に既定値です。
+**/Errorreport**引数は、Windows エラー報告サービスの設定によってオーバーライドされます。 レポートが Windows エラー報告によって有効になっている場合、コンパイラは内部エラーのレポートを Microsoft に自動的に送信します。 Windows エラー報告で無効になっている場合、レポートは送信されません。
 
-**queue**<br/>
-エラー レポートを待ち行列に入れます。 管理者特権を使用してログインすると、前回のログに記録されたエラーを報告できるように、ウィンドウが表示されます。 (ことが求められない 3 日間に 2 回以上のエラー レポートを送信する)。 **キュー**コマンド プロンプトで、アプリケーションのコンパイル時に既定値です。
 
-**send**<br/>
-自動的にシステムの Windows エラー報告設定によってレポートが有効になっている場合は、内部コンパイラ エラーのレポートを Microsoft に送信します。
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-## <a name="remarks"></a>Remarks
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-コンパイラがソース コード ファイルを処理できないと、内部コンパイラ エラー (ICE: Internal Compiler Error) が発生します。 ICE が発生した場合、コードの修正に利用できる出力ファイルや診断は生成されません。
+1. **[構成プロパティ]**  > [ **CC++ /**  > **詳細設定**] プロパティページを開きます。
 
-以前のリリースでは、ICE が発生する場合は、問題を報告するマイクロソフト製品サポート サービスを呼び出すことをお勧めしていました。 **/ErrorReport**、ICE 情報を Microsoft に直接提供できます。 エラー レポートは、今後リリースされるコンパイラの機能向上に役立ちます。
-
-コンピューターまたはユーザー ポリシーによるアクセス許可によっては、レポートを送信できない場合があります。
-
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
-
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
-
-1. **[C/C++]** フォルダーをクリックします。
-
-1. をクリックして、**詳細**プロパティ ページ。
-
-1. 変更、**エラー報告**プロパティ。
+1. **エラー報告**のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>
+- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>) をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラオプション](compiler-options.md)\
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

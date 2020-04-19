@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: e7d542d253d0d4aa8d661effb7dd7147ea3c121b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296658"
 ---
 # <a name="clistview-class"></a>CListView クラス
 
@@ -110,7 +110,7 @@ void RemoveImageList(int nImageList);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル rowlist で](../../visual-cpp-samples.md)<br/>
+[MFC サンプル rowlist で](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)

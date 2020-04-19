@@ -1,18 +1,15 @@
 ---
 title: 置き換え可能パラメーター (ATL レジストラー) を使用します。
 ms.date: 11/04/2016
-f1_keywords:
-- AddReplacement
-- ClearReplacements
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-ms.openlocfilehash: c820307ecb0e7fbfe5cce7cd579ff46eb1f3a0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c772c0493b351d8452400a4fb1e3949ab6f28f2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274145"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>置き換え可能パラメーターを使用して (レジストラー&#39;s プリプロセッサ)
 
@@ -50,4 +47,3 @@ ms.locfileid: "50588189"
 ## <a name="see-also"></a>関連項目
 
 [レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)
-

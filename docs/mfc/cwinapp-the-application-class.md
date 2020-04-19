@@ -1,5 +1,5 @@
 ---
-title: 'CWinApp : アプリケーション クラス'
+title: CWinApp:Application クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CWinApp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: a19d510dc4c8835497ff9e1bb7d5ca6242206fe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241563"
 ---
-# <a name="cwinapp-the-application-class"></a>CWinApp : アプリケーション クラス
+# <a name="cwinapp-the-application-class"></a>CWinApp:Application クラス
 
 Mfc アプリケーションのメイン クラスには、初期化、実行、および Windows オペレーティング システム用のアプリケーションの終了がカプセル化します。 フレームワークで構築されたアプリケーションには、いずれかが必要し、から派生したクラスのオブジェクトを 1 つだけ[CWinApp](../mfc/reference/cwinapp-class.md)します。 Windows が作成される前に、このオブジェクトが構築されます。
 
@@ -43,4 +43,3 @@ Windows オペレーティング システムの任意のプログラムと同�
 [CWinApp および MFC アプリケーション ウィザード](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>
 [オーバーライド可能な CWinApp のメンバー関数](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [CWinApp のその他のサービス](../mfc/special-cwinapp-services.md)
-

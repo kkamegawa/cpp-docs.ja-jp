@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2105
 ms.assetid: 19b7f7bc-a9da-4d23-8193-005b6d09274f
-ms.openlocfilehash: d47ee2815a3ba5609fcdc6b7312ac8c6187ec861
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd09dda2b81bb34d395df6d8cdccb48b28c3025
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631765"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752211"
 ---
 # <a name="compiler-error-c2105"></a>コンパイラ エラー C2105
 
-'operator' に左辺値が必要があります。
+' operator ' には左辺値が必要です
 
-演算子のオペランドとして左辺値が必要です。
+演算子には、オペランドとして左辺値が必要です。
 
 次の例では、C2105 が生成されます。
 
-```
+```cpp
 // C2105.cpp
 int main() {
    unsigned char * p1 = 0;
@@ -38,7 +38,7 @@ int main() {
 
 次の例では、C2105 が生成されます。
 
-```
+```cpp
 // C2105b.cpp
 int main() {
    int a[10] = {0};

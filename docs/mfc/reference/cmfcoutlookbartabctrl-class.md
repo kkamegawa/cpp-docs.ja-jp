@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374039"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -67,7 +67,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|既定のコンストラクター|
+|`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|既定のコンストラクターです。|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -109,7 +109,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>例
 
-次の例では、初期化する方法、`CMFCOutlookBarTabCtrl`オブジェクトをさまざまなメソッドを使用して、`CMFCOutlookBarTabCtrl`クラス。 例では、Outlook バーのタブ ページのボタンのテキスト ラベルのインプレース編集を有効にする、アニメーションを有効にする、ユーザーが Outlook バー ペイン上のボタンをスクロールして、Outlook タブの続きの境界線のサイズの設定を有効にするスクロール ハンドルを有効にする方法を示しています。ロール、および Outlook バーのタブ ボタンのテキスト ラベルの配置を設定します。 このコード スニペットの一部、 [Outlook デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、初期化する方法、`CMFCOutlookBarTabCtrl`オブジェクトをさまざまなメソッドを使用して、`CMFCOutlookBarTabCtrl`クラス。 例では、Outlook バーのタブ ページのボタンのテキスト ラベルのインプレース編集を有効にする、アニメーションを有効にする、ユーザーが Outlook バー ペイン上のボタンをスクロールして、Outlook タブの続きの境界線のサイズの設定を有効にするスクロール ハンドルを有効にする方法を示しています。ロール、および Outlook バーのタブ ボタンのテキスト ラベルの配置を設定します。 このコード スニペットの一部、 [Outlook デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Outlook バーの新しいページにコントロールを追加するのにに
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`AddControl`メソッドで、`CMFCOutlookBarTabCtrl`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`AddControl`メソッドで、`CMFCOutlookBarTabCtrl`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -401,7 +401,7 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="parameters"></a>パラメーター
 
 *iTab*<br/>
-[in]開く タブの 0 から始まるインデックス。
+[in]開くタブの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -500,7 +500,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nVisiblePageButtons*<br/>
+[in] *nVisiblePageButtons*<br/>
 
 ### <a name="remarks"></a>Remarks
 

@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 496b728b67c4539a63d5bf3c783f8c9145c1de42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537489"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240287"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクトと等しくないかどうかをテストします。
 
@@ -40,10 +35,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `queue` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `queue` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -97,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクトより小さいかどうかをテストします。
 
@@ -107,10 +102,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `queue` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `queue` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -160,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクト以下かどうかをテストします。
 
@@ -170,10 +165,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `queue` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `queue` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -225,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左側の queue オブジェクトが右側の queue オブジェクトと等しいかどうかをテストします。
 
@@ -235,10 +230,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `queue` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `queue` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクトより大きいかどうかをテストします。
 
@@ -301,10 +296,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `queue` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `queue` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -357,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 演算子の左側のキュー オブジェクトが右側のキュー オブジェクト以上かどうかをテストします。
 
@@ -367,10 +362,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `queue` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `queue` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -421,7 +416,3 @@ int main( )
 The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<queue>](../standard-library/queue.md)<br/>

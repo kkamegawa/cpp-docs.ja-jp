@@ -1,6 +1,6 @@
 ---
 title: _bittestandreset、_bittestandreset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandreset64_cpp
 - _bittestandreset
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: d8c4675e7efe9e1de8ce6f133d1c361481f1b544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557666"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216924"
 ---
-# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset、_bittestandreset64
+# <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset、_bittestandreset64
 
 **Microsoft 固有の仕様**
 
-アドレス `b` のビット `a` を検査する命令を生成し、そのビットの現在値を返してビットを 0 にリセットします。
+`b` アドレス`a`のビットを確認する命令を生成し、その現在の値を返し、ビットを0にリセットします。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char _bittestandreset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandreset64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 [入力、出力]検査するメモリへのポインター。
 
-*b*<br/>
-[in]テストするビット位置。
+*b*\
+からテストするビット位置。
 
 ## <a name="return-value"></a>戻り値
 
@@ -53,10 +53,10 @@ unsigned char _bittestandreset64(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_bittestandreset`|x86、ARM、x64|
-|`_bittestandreset64`|X64|
+|`_bittestandreset`|x86、ARM、x64、ARM64|
+|`_bittestandreset64`|x64、ARM64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,7 +64,7 @@ unsigned char _bittestandreset64(
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // bittestandreset.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>

@@ -1,26 +1,24 @@
 ---
 title: DCOMCNFG
 ms.date: 11/04/2016
-f1_keywords:
-- DCOMCNFG
 helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a389a46cd02b40cef46d687743fd3416cc4f3154
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250785"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-Dcomcnfg」とは、レジストリでさまざまな DCOM に固有の設定を構成することを許可する Windows NT 4.0 ユーティリティです。 DCOMCNFG ウィンドウには 3 つのページ: 既定のセキュリティ、既定のプロパティ、およびアプリケーション。 Windows 2000 では、4 番目のページであり、既定のプロトコル は存在します。
+Dcomcnfg」とは、レジストリでさまざまな DCOM に固有の設定を構成することを許可する Windows NT 4.0 ユーティリティです。 DCOMCNFG ウィンドウには、3 つのページがあります。既定のセキュリティ、既定のプロパティ、およびアプリケーション。 Windows 2000 では、4 番目のページであり、既定のプロトコル は存在します。
 
 ## <a name="default-security-page"></a>既定のセキュリティ ページ
 
-既定のセキュリティ ページを使用すると、システムのオブジェクトの既定のアクセス許可を指定します。 既定のセキュリティ ページが 3 つのセクション: アクセス、起動、および構成します。 セクションの既定値を変更するには、対応するをクリックします。**既定値の編集**ボタンをクリックします。 これらの既定のセキュリティ設定が下のレジストリに格納されている`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`します。
+既定のセキュリティ ページを使用すると、システムのオブジェクトの既定のアクセス許可を指定します。 既定のセキュリティ ページには、3 つのセクションがあります。アクセス、起動、および構成します。 セクションの既定値を変更するには、対応するをクリックします。**既定値の編集**ボタンをクリックします。 これらの既定のセキュリティ設定が下のレジストリに格納されている`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`します。
 
 ## <a name="default-protocols-page"></a>既定のプロトコル ページ
 
@@ -47,4 +45,3 @@ Dcomcnfg」とは、レジストリでさまざまな DCOM に固有の設定を
 ## <a name="see-also"></a>関連項目
 
 [Services](../atl/atl-services.md)
-

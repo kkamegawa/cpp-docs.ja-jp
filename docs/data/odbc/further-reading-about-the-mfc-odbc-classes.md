@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 42f8a066728b1800ce245435584dd5e61f786440
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395899"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>MFC ODBC クラスに関する詳細情報
 
@@ -23,7 +23,7 @@ ms.locfileid: "50440340"
 
 - [ダイナセット](../../data/odbc/dynaset.md)
 
-- [例外処理: データベースの例外](../../mfc/exceptions-database-exceptions.md)
+- [例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)
 
 - [MFC: ドキュメントとビューを用いたデータベース クラスの使用](../../data/mfc-using-database-classes-with-documents-and-views.md)
 

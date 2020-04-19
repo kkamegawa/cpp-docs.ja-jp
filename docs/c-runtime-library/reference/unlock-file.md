@@ -1,9 +1,9 @@
 ---
 title: _unlock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _unlock_file
 - unlock_file
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: e3d11cbd59ef5846b33908ae6b6c40d7ea6125e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957476"
 ---
-# <a name="unlockfile"></a>_unlock_file
+# <a name="_unlock_file"></a>_unlock_file
 
 他のプロセスがアクセスできるようにファイルのロックを解除します。
 
@@ -51,7 +54,7 @@ void _unlock_file(
 
 ## <a name="remarks"></a>Remarks
 
-**_Unlock_file**関数で指定されたファイルのロックを解除*ファイル*します。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 しない限り、この関数を呼び出さないで **_lock_file**が呼び出されていた、*ファイル*ポインター。 呼び出す **_unlock_file**でロックされていないファイルもデッドロックにつながる可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
+**_Unlock_file**関数は、 *file*によって指定されたファイルのロックを解除します。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 以前に*ファイル*ポインターで**呼び出されていない限り、** この関数を呼び出すことはできません。 ロックされていないファイルで **_unlock_file**を呼び出すと、デッドロックが発生する可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 

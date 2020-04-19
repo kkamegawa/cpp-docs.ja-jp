@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-ms.openlocfilehash: 7fd4644ab39e350c0c0badb527875b427a2c6987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc1efad7f18310727e2fdb756e49b95294357c4d
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531063"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965404"
 ---
 # <a name="compiler-warning-level-1-c4470"></a>コンパイラの警告 (レベル 1) C4470
 
-浮動小数点の制御 pragmas は/clr で無視されます。
+浮動小数点制御プラグマは/clr で無視されます
 
-: 浮動小数点の制御のプラグマ
+Float コントロールプラグマ:
 
 - [fenv_access](../../preprocessor/fenv-access.md)
 
@@ -25,11 +25,11 @@ ms.locfileid: "50531063"
 
 - [fp_contract](../../preprocessor/fp-contract.md)
 
-影響を与えるありません[/clr](../../build/reference/clr-common-language-runtime-compilation.md)します。
+[/clr](../../build/reference/clr-common-language-runtime-compilation.md)の下には影響しません。
 
 次の例では、C4470 が生成されます。
 
-```
+```cpp
 // C4470.cpp
 // compile with: /clr /W1 /LD
 #pragma float_control(except, on)   // C4470

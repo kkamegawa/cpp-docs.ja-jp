@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: 47bdbb0de4f21d93f890638f6d439dc962dda07b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518691"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299118"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto ステートメントとラベル付きステートメント (C)
 
@@ -26,10 +26,10 @@ ms.locfileid: "50518691"
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto***識別子* **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*識別子* **:** *ステートメント*
 
 ステートメント ラベルは `goto` ステートメントに対してのみ意味を持ちます。他のコンテキストでは、ラベル付きステートメントはラベルに関係なく実行されます。
 
@@ -39,7 +39,7 @@ ms.locfileid: "50518691"
 
 `goto` ステートメントの例を次に示します。
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
@@ -67,6 +67,6 @@ int main()
 
 この例で `goto` ステートメントは、`i` が 5 に等しい場合に、`stop` というラベルの位置に制御を移します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ステートメント](../c-language/statements-c.md)

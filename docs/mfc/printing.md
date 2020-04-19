@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: 88b89ee54ec6270b01859d0f0baeea0efebd9ad6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0cd2d6d85cb9820b23495a003068994b13f9c85
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589393"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339578"
 ---
 # <a name="printing"></a>印刷
 
@@ -59,4 +59,3 @@ Microsoft Windows では、デバイスに依存しない表示を実装しま�
 ## <a name="see-also"></a>関連項目
 
 [[印刷と印刷プレビュー]](../mfc/printing-and-print-preview.md)
-

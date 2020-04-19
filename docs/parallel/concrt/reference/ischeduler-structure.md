@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603217"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854177"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 構造体
 
@@ -27,7 +27,7 @@ ms.locfileid: "50603217"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IScheduler;
 ```
 
@@ -35,19 +35,19 @@ struct IScheduler;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|使用するための一連の仮想プロセッサ ルートのスケジューラを提供します。 各`IVirtualProcessorRoot`インターフェイスは、スケジューラのための作業を実行できる 1 つのスレッドを実行する権限を表します。|
-|[IScheduler::GetId](#getid)|スケジューラの一意識別子を返します。|
-|[IScheduler::GetPolicy](#getpolicy)|スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。|
-|[Ischeduler::notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されているようになりました。|
-|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されていません。|
-|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|このスケジューラに以前割り当てられた仮想プロセッサ ルートの削除を開始します。|
-|[IScheduler::Statistics](#statistics)|タスクの到着から完了率、およびスケジューラのキューの長さの変更に関連する情報を提供します。|
+|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|スケジューラに、使用するための一連の仮想プロセッサルートを提供します。 各 `IVirtualProcessorRoot` インターフェイスは、スケジューラに代わって処理を実行できる1つのスレッドを実行する権限を表します。|
+|[IScheduler:: GetId](#getid)|スケジューラの一意の識別子を返します。|
+|[IScheduler:: GetPolicy](#getpolicy)|スケジューラのポリシーのコピーを返します。 Scheduler ポリシーの詳細については、「スケジューラ[ポリシー](schedulerpolicy-class.md)」を参照してください。|
+|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|配列 `ppVirtualProcessorRoots` の仮想プロセッサルートのセットによって表されるハードウェアスレッドが、現在、他のスケジューラによって使用されていることを、このスケジューラに通知します。|
+|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|配列 `ppVirtualProcessorRoots` の仮想プロセッサルートのセットによって表されるハードウェアスレッドが、他のスケジューラによって使用されていないことを、このスケジューラに通知します。|
+|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|以前にこのスケジューラに割り当てられた仮想プロセッサルートの削除を開始します。|
+|[IScheduler:: Statistics](#statistics)|タスクの到着と完了率に関する情報を提供し、スケジューラのキューの長さを変更します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Resource Manager での通信を行うカスタム スケジューラを実装する場合は、実装を提供する必要があります、`IScheduler`インターフェイス。 このインターフェイスは、スケジューラとリソース マネージャー間の通信の双方向チャネルの片端となります。 もう一方の end がによって表される、`IResourceManager`と`ISchedulerProxy`リソース マネージャーでは実装されているインターフェイス。
+リソースマネージャーと通信するカスタムスケジューラを実装する場合は、`IScheduler` インターフェイスの実装を提供する必要があります。 このインターフェイスは、スケジューラとリソースマネージャーの間の通信の双方向チャネルの1つの端です。 もう一方の端は、リソースマネージャーによって実装される `IResourceManager` および `ISchedulerProxy` インターフェイスによって表されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -55,15 +55,15 @@ Resource Manager での通信を行うカスタム スケジューラを実装�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** concrtrm.h
+**ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-##  <a name="addvirtualprocessors"></a>  Ischeduler::addvirtualprocessors メソッド
+## <a name="addvirtualprocessors"></a>IScheduler:: AddVirtualProcessors メソッド
 
-使用するための一連の仮想プロセッサ ルートのスケジューラを提供します。 各`IVirtualProcessorRoot`インターフェイスは、スケジューラのための作業を実行できる 1 つのスレッドを実行する権限を表します。
+スケジューラに、使用するための一連の仮想プロセッサルートを提供します。 各 `IVirtualProcessorRoot` インターフェイスは、スケジューラに代わって処理を実行できる1つのスレッドを実行する権限を表します。
 
-```
+```cpp
 virtual void AddVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -72,20 +72,20 @@ virtual void AddVirtualProcessors(
 ### <a name="parameters"></a>パラメーター
 
 *ppVirtualProcessorRoots*<br/>
-配列の`IVirtualProcessorRoot`スケジューラに追加されている仮想プロセッサを表すインターフェイスのルートします。
+スケジューラに追加されている仮想プロセッサルートを表す `IVirtualProcessorRoot` インターフェイスの配列。
 
 *count*<br/>
-数`IVirtualProcessorRoot`配列内のインターフェイス。
+配列内の `IVirtualProcessorRoot` インターフェイスの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Resource Manager を呼び出す、`AddVirtualProcessor`スケジューラへの仮想プロセッサ ルートの初期セットを許可するメソッド。 スケジューラ間でリソースのバランスを再調整するときに、仮想プロセッサ ルートをスケジューラに追加するメソッドは呼び出すこともできます。
+リソースマネージャーは、`AddVirtualProcessor` メソッドを呼び出して、最初の仮想プロセッサルートのセットをスケジューラに付与します。 また、スケジューラ間でリソースをバランスするときに、メソッドを呼び出して、仮想プロセッサルートをスケジューラに追加することもできます。
 
-##  <a name="getid"></a>  Ischeduler::getid メソッド
+## <a name="getid"></a>IScheduler:: GetId メソッド
 
-スケジューラの一意識別子を返します。
+スケジューラの一意の識別子を返します。
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
@@ -93,17 +93,17 @@ virtual unsigned int GetId() const = 0;
 
 一意の整数識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用する必要があります、 [GetSchedulerId](concurrency-namespace-functions.md)を実装するオブジェクトの一意の識別子を取得する関数、`IScheduler`インターフェイス、メソッドのパラメーターとしてインターフェイスを使用する前に、リソース マネージャーでを指定します。 同じ識別子を返す予想されるときに、`GetId`関数が呼び出されます。
+インターフェイスをリソースマネージャーによって提供されるメソッドのパラメーターとして使用する前に、 [GetSchedulerId](concurrency-namespace-functions.md)関数を使用して、`IScheduler` インターフェイスを実装するオブジェクトの一意の識別子を取得する必要があります。 `GetId` 関数が呼び出されたときに、同じ識別子を返すことが想定されています。
 
-別のソースから取得した識別子は、未定義の動作になる可能性があります。
+別のソースから取得した識別子は、未定義の動作を引き起こす可能性があります。
 
-##  <a name="getpolicy"></a>  Ischeduler::getpolicy メソッド
+## <a name="getpolicy"></a>IScheduler:: GetPolicy メソッド
 
-スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。
+スケジューラのポリシーのコピーを返します。 Scheduler ポリシーの詳細については、「スケジューラ[ポリシー](schedulerpolicy-class.md)」を参照してください。
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
@@ -111,11 +111,11 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 スケジューラのポリシーのコピー。
 
-##  <a name="notifyresourcesexternallybusy"></a>  Ischeduler::notifyresourcesexternallybusy メソッド
+## <a name="notifyresourcesexternallybusy"></a>IScheduler:: NotifyResourcesExternallyBusy メソッド
 
-この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されているようになりました。
+配列 `ppVirtualProcessorRoots` の仮想プロセッサルートのセットによって表されるハードウェアスレッドが、現在、他のスケジューラによって使用されていることを、このスケジューラに通知します。
 
-```
+```cpp
 virtual void NotifyResourcesExternallyBusy(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -124,26 +124,26 @@ virtual void NotifyResourcesExternallyBusy(
 ### <a name="parameters"></a>パラメーター
 
 *ppVirtualProcessorRoots*<br/>
-配列の`IVirtualProcessorRoot`を他のスケジューラはビジー状態にあるハードウェア スレッドに関連付けられているインターフェイス。
+他のスケジューラがビジー状態になったハードウェアスレッドに関連付けられている `IVirtualProcessorRoot` インターフェイスの配列。
 
 *count*<br/>
-数`IVirtualProcessorRoot`配列内のインターフェイス。
+配列内の `IVirtualProcessorRoot` インターフェイスの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-特定のハードウェア スレッドと同時に複数のスケジューラに割り当てられることができます。 この理由の 1 つがないことほど十分なハードウェア スレッド リソースを共有することがなく、他のすべてのスケジューラの最小の同時実行を満たすためにシステムの可能性があります。 別の方法としては、リソースが所有しているスケジューラを使用しない場合、そのハードウェア スレッドを非アクティブ化のすべての仮想プロセッサ ルートを使用して他のスケジューラに割り当てられる一時的です。
+特定のハードウェアスレッドを同時に複数のスケジューラに割り当てることができます。 その理由の1つは、リソースを共有せずに、すべてのスケジューラの最小同時実行数を満たすために、システム上に十分なハードウェアスレッドがないことです。 もう1つの可能性として、所有しているスケジューラが非アクティブ化されているハードウェアスレッド上のすべての仮想プロセッサルートから、リソースが一時的に他のスケジューラに割り当てられていない可能性もあります。
 
-ハードウェア スレッドのサブスクリプション レベルでは、サブスクライブしているスレッドの数で表され、そのハードウェア スレッドに関連付けられた仮想プロセッサ ルートをアクティブ化します。 特定のスケジューラの観点からは、ハードウェア スレッドの外部のサブスクリプション レベルは、その他のスケジューラが関与するサブスクリプションの部分です。 ハードウェア スレッドの外部のサブスクリプション レベルが正の値にゼロから離れるときに、スケジューラにリソースが外部でビジー状態である通知が送信されます。
+ハードウェアスレッドのサブスクリプションレベルは、そのハードウェアスレッドに関連付けられている、サブスクライブしているスレッドとアクティブ化された仮想プロセッサのルートの数によって示されます。 特定のスケジューラの観点から見ると、ハードウェアスレッドの外部サブスクリプションレベルは、他のスケジューラが貢献するサブスクリプションの部分です。 リソースが外部でビジー状態であることを示す通知は、ハードウェアスレッドの外部サブスクリプションレベルがゼロから正の区域に移動したときにスケジューラに送信されます。
 
-ポリシーを持つスケジューラにこのメソッドを使用して通知を送信のみ場所の値、`MinConcurrency`ポリシー キーがの値と等しい、`MaxConcurrency`ポリシー キー。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。
+このメソッドによる通知は、`MinConcurrency` ポリシーキーの値が `MaxConcurrency` ポリシーキーの値と同じポリシーを持つスケジューラにのみ送信されます。 Scheduler ポリシーの詳細については、「スケジューラ[ポリシー](schedulerpolicy-class.md)」を参照してください。
 
-通知を修飾するスケジューラのセットを取得初期通知が作成されるときにだけに割り当てられているリソースがビジー状態かアイドル状態が外部でかどうかを示すことです。
+通知を受け取るスケジューラは、作成時に初期通知のセットを取得し、それが割り当てられたリソースが外部でビジー状態かアイドル状態かを通知します。
 
-##  <a name="notifyresourcesexternallyidle"></a>  Ischeduler::notifyresourcesexternallyidle メソッド
+## <a name="notifyresourcesexternallyidle"></a>IScheduler:: NotifyResourcesExternallyIdle メソッド
 
-この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されていません。
+配列 `ppVirtualProcessorRoots` の仮想プロセッサルートのセットによって表されるハードウェアスレッドが、他のスケジューラによって使用されていないことを、このスケジューラに通知します。
 
-```
+```cpp
 virtual void NotifyResourcesExternallyIdle(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -152,26 +152,26 @@ virtual void NotifyResourcesExternallyIdle(
 ### <a name="parameters"></a>パラメーター
 
 *ppVirtualProcessorRoots*<br/>
-配列の`IVirtualProcessorRoot`を他のスケジューラがアイドル状態になるハードウェア スレッドに関連付けられているインターフェイス。
+他のスケジューラがアイドル状態になったハードウェアスレッドに関連付けられている `IVirtualProcessorRoot` インターフェイスの配列。
 
 *count*<br/>
-数`IVirtualProcessorRoot`配列内のインターフェイス。
+配列内の `IVirtualProcessorRoot` インターフェイスの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-特定のハードウェア スレッドと同時に複数のスケジューラに割り当てられることができます。 この理由の 1 つがないことほど十分なハードウェア スレッド リソースを共有することがなく、他のすべてのスケジューラの最小の同時実行を満たすためにシステムの可能性があります。 別の方法としては、リソースが所有しているスケジューラを使用しない場合、そのハードウェア スレッドを非アクティブ化のすべての仮想プロセッサ ルートを使用して他のスケジューラに割り当てられる一時的です。
+特定のハードウェアスレッドを同時に複数のスケジューラに割り当てることができます。 その理由の1つは、リソースを共有せずに、すべてのスケジューラの最小同時実行数を満たすために、システム上に十分なハードウェアスレッドがないことです。 もう1つの可能性として、所有しているスケジューラが非アクティブ化されているハードウェアスレッド上のすべての仮想プロセッサルートから、リソースが一時的に他のスケジューラに割り当てられていない可能性もあります。
 
-ハードウェア スレッドのサブスクリプション レベルでは、サブスクライブしているスレッドの数で表され、そのハードウェア スレッドに関連付けられた仮想プロセッサ ルートをアクティブ化します。 特定のスケジューラの観点からは、ハードウェア スレッドの外部のサブスクリプション レベルは、その他のスケジューラが関与するサブスクリプションの部分です。 ハードウェア スレッドの外部のサブスクリプション レベルに前の正の値からゼロになった場合に、スケジューラにリソースが外部でビジー状態である通知が送信されます。
+ハードウェアスレッドのサブスクリプションレベルは、そのハードウェアスレッドに関連付けられている、サブスクライブしているスレッドとアクティブ化された仮想プロセッサのルートの数によって示されます。 特定のスケジューラの観点から見ると、ハードウェアスレッドの外部サブスクリプションレベルは、他のスケジューラが貢献するサブスクリプションの部分です。 リソースが外部でビジー状態になっていることを示す通知は、ハードウェアスレッドの外部サブスクリプションレベルが前の正の値からゼロになるとスケジューラに送信されます。
 
-ポリシーを持つスケジューラにこのメソッドを使用して通知を送信のみ場所の値、`MinConcurrency`ポリシー キーがの値と等しい、`MaxConcurrency`ポリシー キー。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。
+このメソッドによる通知は、`MinConcurrency` ポリシーキーの値が `MaxConcurrency` ポリシーキーの値と同じポリシーを持つスケジューラにのみ送信されます。 Scheduler ポリシーの詳細については、「スケジューラ[ポリシー](schedulerpolicy-class.md)」を参照してください。
 
-通知を修飾するスケジューラのセットを取得初期通知が作成されるときにだけに割り当てられているリソースがビジー状態かアイドル状態が外部でかどうかを示すことです。
+通知を受け取るスケジューラは、作成時に初期通知のセットを取得し、それが割り当てられたリソースが外部でビジー状態かアイドル状態かを通知します。
 
-##  <a name="removevirtualprocessors"></a>  Ischeduler::removevirtualprocessors メソッド
+## <a name="removevirtualprocessors"></a>IScheduler:: RemoveVirtualProcessors メソッド
 
-このスケジューラに以前割り当てられた仮想プロセッサ ルートの削除を開始します。
+以前にこのスケジューラに割り当てられた仮想プロセッサルートの削除を開始します。
 
-```
+```cpp
 virtual void RemoveVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -180,22 +180,22 @@ virtual void RemoveVirtualProcessors(
 ### <a name="parameters"></a>パラメーター
 
 *ppVirtualProcessorRoots*<br/>
-配列の`IVirtualProcessorRoot`を削除する仮想プロセッサ ルートを表すインターフェイス。
+削除する仮想プロセッサルートを表す `IVirtualProcessorRoot` インターフェイスの配列。
 
 *count*<br/>
-数`IVirtualProcessorRoot`配列内のインターフェイス。
+配列内の `IVirtualProcessorRoot` インターフェイスの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Resource Manager を呼び出す、`RemoveVirtualProcessors`スケジューラからの一連の仮想プロセッサ ルートを実行するメソッド。 呼び出す、スケジューラが期待どおり、[削除](iexecutionresource-structure.md#remove)仮想プロセッサ ルートでは、その場合は、各インターフェイスのメソッド。 使用しないでください、`IVirtualProcessorRoot`インターフェイスの起動した後、`Remove`メソッド。
+リソースマネージャーは、`RemoveVirtualProcessors` メソッドを呼び出して、スケジューラから一連の仮想プロセッサルートを取得します。 スケジューラは、仮想プロセッサルートで実行されたときに、各インターフェイスで[Remove](iexecutionresource-structure.md#remove)メソッドを呼び出すことが想定されています。 `Remove` メソッドを呼び出した後は、`IVirtualProcessorRoot` インターフェイスを使用しないでください。
 
-パラメーター`ppVirtualProcessorRoots`インターフェイスの配列を指します。 削除する仮想プロセッサ ルートのセット間で、ルートがアクティブ化されていないを使用してすぐに返される、`Remove`メソッド。 アクティブにしておくと、いずれかの処理を実行中または非アクティブ化されているし、処理の到着を待機しているルートは、非同期に返される必要があります。 スケジューラは、可能な限り早く仮想プロセッサ ルートを削除しようとするとすべてを行う必要があります。 仮想プロセッサ ルートの削除が遅れると、スケジューラ内でオーバー サブスクリプションを意図的でない可能性があります。
+パラメーター `ppVirtualProcessorRoots` は、インターフェイスの配列を指します。 削除する一連の仮想プロセッサルートの中で、`Remove` メソッドを使用して、ルートがアクティブになったことがない状態ですぐに返すことができます。 アクティブ化され、作業を実行している、または非アクティブ化され、作業が到着するのを待機しているルートは、非同期的に返される必要があります。 スケジューラは、仮想プロセッサルートをできるだけ早く削除しようとする必要があります。 仮想プロセッサルートの削除を遅らせていると、スケジューラ内で、意図しないオーバーサブスクリプションが発生する可能性があります。
 
-##  <a name="statistics"></a>  Ischeduler::statistics メソッド
+## <a name="statistics"></a>IScheduler:: Statistics メソッド
 
-タスクの到着から完了率、およびスケジューラのキューの長さの変更に関連する情報を提供します。
+タスクの到着と完了率に関する情報を提供し、スケジューラのキューの長さを変更します。
 
-```
+```cpp
 virtual void Statistics(
     _Out_ unsigned int* pTaskCompletionRate,
     _Out_ unsigned int* pTaskArrivalRate,
@@ -204,24 +204,24 @@ virtual void Statistics(
 
 ### <a name="parameters"></a>パラメーター
 
-*pTaskCompletionRate*<br/>
-このメソッドに最後の呼び出し以降に、スケジューラによって完了したタスクの数。
+*Ptask"レート"*<br/>
+このメソッドの最後の呼び出し以降にスケジューラによって完了されたタスクの数。
 
 *pTaskArrivalRate*<br/>
-このメソッドの最後の呼び出しが着信スケジューラのタスクの数。
+このメソッドの最後の呼び出し以降にスケジューラに到着したタスクの数。
 
-*pNumberOfTasksEnqueued*<br/>
-すべてのスケジューラ キュー内のタスクの合計数。
+*キューに登録された pnumberoftasksen*<br/>
+すべてのスケジューラキュー内のタスクの合計数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドには、スケジューラの統計情報を収集するために、リソース マネージャーでは呼び出されます。 ここで収集された統計情報は、スケジューラにその他のリソースを割り当てるには適切な場合と、リソースをすぐに実行するタイミングを判断する動的なフィードバック アルゴリズムに使用されます。 スケジューラによって提供される値は、オプティミスティックを指定でき、現在の数を正確に反映する必ずしも必要はありません。
+このメソッドは、スケジューラの統計情報を収集するためにリソースマネージャーによって呼び出されます。 ここで収集された統計情報は、動的なフィードバックアルゴリズムを使用して、スケジューラにより多くのリソースを割り当て、リソースをどこに配置するかを判断するために使用されます。 スケジューラによって提供される値はオプティミスティックにすることができ、現在のカウントを正確に反映する必要があるとは限りません。
 
-タスクの到着としてなどに関するフィードバックを使用して、スケジューラとリソース マネージャーに登録された他のスケジューラ間でリソースのバランスをとる方法を決定する Resource Manager の場合は、このメソッドを実装する必要があります。 統計情報を収集しないように選択する場合は、ポリシーのキーを設定できます`DynamicProgressFeedback`値`DynamicProgressFeedbackDisabled`マネージャーが、スケジューラでは、このメソッドを呼び出しませんスケジューラのポリシー、およびリソースにします。
+リソースマネージャーが、スケジューラとリソースマネージャーに登録されている他のスケジューラとの間でリソースのバランスを取る方法を決定するために、タスクの到着といったフィードバックを使用する場合は、このメソッドを実装する必要があります。 統計情報を収集しない場合は、ポリシーキー `DynamicProgressFeedback` を scheduler のポリシーの `DynamicProgressFeedbackDisabled` 値に設定できます。このメソッドは、リソースマネージャーによってスケジューラで呼び出されません。
 
-統計情報がない場合は、Resource Manager は、リソース割り当てと移行に関する意思決定に、ハードウェア スレッドのサブスクリプション レベルを使用します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+統計情報がない場合、Resource Manager はハードウェアスレッドサブスクリプションレベルを使用して、リソースの割り当てと移行に関する決定を行います。 サブスクリプションレベルの詳細については、「 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-ms.openlocfilehash: fad8960424cd73240d547ef894b2ae5cdf358601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298741"
 ---
 # <a name="linker-tools-error-lnk2039"></a>リンカ ツール エラー LNK2039
 

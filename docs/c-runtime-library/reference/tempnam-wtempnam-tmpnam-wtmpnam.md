@@ -1,12 +1,12 @@
 ---
 title: _tempnam、_wtempnam、tmpnam、_wtmpnam
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam
 - _wtmpnam
 - tmpnam
 - _tempnam
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam
 - _wtmpnam
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506796"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957517"
 ---
-# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
+# <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
 
 一時ファイルの作成に使用できる名前を生成します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[tmpnam_s、_wtmpnam_s](tmpnam-s-wtmpnam-s.md)」を参照してください。
 
@@ -73,9 +76,9 @@ wchar_t *_wtmpnam(
 ### <a name="parameters"></a>パラメーター
 
 *prefix*<br/>
-によって返された名前を付けたとなる文字列 **_tempnam**します。
+**_Tempnam**によって返される名前の前に付加される文字列。
 
-*dir*<br/>
+*エイリアス*<br/>
 TMP 環境変数がない場合、または TMP が有効なディレクトリではない場合にファイル名で使用されるパス。
 
 *str*<br/>
@@ -83,36 +86,36 @@ TMP 環境変数がない場合、または TMP が有効なディレクトリ�
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数の生成された名前にポインターを返しますまたは**NULL**障害が発生した場合。 しようとすると、エラーが発生する可能性が複数の**TMP_MAX** (STDIO を参照してください。H) 呼び出し**tmpnam**を使用する場合または **_tempnam** TMP 環境変数および指定されている、無効なディレクトリ名があると、 *dir*パラメーター。
+これらの各関数は、生成された名前へのポインター、またはエラーが発生した場合は**NULL**を返します。 **TMP_MAX**を超える場合、エラーが発生することがあります (「STDIO」を参照してください)。H) **tmpnam**を使用してを呼び出します。また、 **_tempnam**を使用し、TMP 環境変数と*dir*パラメーターに無効なディレクトリ名が指定されている場合は、を呼び出します。
 
 > [!NOTE]
-> によって返されるポインター **tmpnam**と **_wtmpnam**内部の静的バッファーをポイントします。 これらのポインターの割り当てを解除するために [free](free.md) を呼び出さないでください。 **無料**によって割り当てられたポインターに対して呼び出される必要がある **_tempnam**と **_wtempnam**します。
+> **Tmpnam**と **_wtmpnam**は、内部の静的バッファーを指すポインターを返します。 これらのポインターの割り当てを解除するために [free](free.md) を呼び出さないでください。 **_tempnam**および **_wtempnam**によって割り当てられたポインターに対しては、 **free**を呼び出す必要があります。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam**によって返される指定された Windows 一時ディレクトリ内で一意の名前を返します[GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw)します。 **\_tempnam**以外は、指定された 1 つのディレクトリの一意の名前を生成します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
+これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam**は、 [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)によって返される指定された Windows 一時ディレクトリ内で一意の名前を返します。 tempnam は、指定されたディレクトリ以外のディレクトリに一意の名前を生成します。  **\_** ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
 
-**Tmpnam**では、この生成されたファイル名を格納する*str*します。 場合*str*は**NULL**、し**tmpnam**内部の静的バッファーに結果を残します。 したがって後続の呼び出しは、この値を破棄します。 によって生成された名前**tmpnam**プログラムで生成されたファイル名と最初の呼び出し後**tmpnam**、base 32 で連番のファイル拡張子 (場合に、.1-.vvu **TMP_MAX** STDIO でします。H は 32,767 文字です)。
+**Tmpnam**では、この生成されたファイル名を*str*に格納できます。 *Str*が**NULL**の場合、 **tmpnam**は、結果を内部の静的バッファーに残します。 したがって後続の呼び出しは、この値を破棄します。 **Tmpnam**によって生成される名前は、プログラムによって生成されるファイル名で構成され、 **tmpnam**の最初の呼び出しの後に、ベース 32 (1-) の連続する番号のファイル拡張子 (STDIO の**TMP_MAX**時) で構成されます。H は 32767)。
 
-**_tempnam**次の規則によって選択されたディレクトリの一意のファイル名が生成されます。
+**_tempnam**は、次の規則で選択されたディレクトリに対して一意のファイル名を生成します。
 
 - TMP 環境変数が定義され、有効なディレクトリ名に設定された場合は、TMP で指定したディレクトリに対して一意のファイル名が生成されます。
 
-- TMP 環境変数が定義されていない場合、または存在しないディレクトリの名前に設定されている場合 **_tempnam**を使用して、 *dir*パラメーターとして一意の名前を生成するパス。
+- TMP 環境変数が定義されていない場合、または存在しないディレクトリの名前に設定されている場合、 **_tempnam**は一意の名前を生成するパスとして*dir*パラメーターを使用します。
 
-- TMP 環境変数が定義されていない場合、または存在しないディレクトリの名前に設定されている場合で、 *dir*か**NULL**が存在しないディレクトリの名前を設定または **_tempnam**現在の作業ディレクトリを使用して一意の名前を生成します。 現時点では場合、両方 TMP と*dir*が存在しないディレクトリの名前を指定、 **_tempnam**関数呼び出しは失敗します。
+- TMP 環境変数が定義されていない場合、または存在しないディレクトリの名前に設定されている場合、および*dir*が**NULL**であるか、または存在しないディレクトリの名前に設定されている場合、 **_tempnam**は現在の作業ディレクトリを使用して gene します。一意の名前を評価します。 現在、TMP と*dir*の両方で、存在しないディレクトリの名前が指定されている場合、 **_tempnam**関数の呼び出しは失敗します。
 
-によって返される名前 **_tempnam**を連結したものになります*プレフィックス*とシーケンシャル番号が含まれ、指定したディレクトリの一意のファイル名を作成する結合されます。 **_tempnam**拡張機能を持たないファイル名が生成されます。 **_tempnam**使用[malloc](malloc.md) %filename; に領域を割り当てる、プログラムが不要になったときに、この領域を解放する責任を負います。
+**_Tempnam**によって返される名前は、*プレフィックス*と連続番号を連結したものになります。これは、指定されたディレクトリに対して一意のファイル名を作成するために使用されます。 **_tempnam**では、拡張子のないファイル名が生成されます。 **_tempnam**は[malloc](malloc.md)を使用して、ファイル名にスペースを割り当てます。プログラムは、不要になったときにこの領域を解放する役割を担います。
 
-**_tempnam**と**tmpnam** OEM コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてハンドル マルチバイト文字の文字列の引数が、オペレーティング システムから自動的に取得します。 **_wtempnam**のワイド文字バージョンは、 **_tempnam**; 引数と戻り値の **_wtempnam**はワイド文字列です。 **_wtempnam**と **_tempnam**動作は同じことを除いて **_wtempnam**マルチバイト文字の文字列を処理しません。 **_wtmpnam**のワイド文字バージョンは、 **tmpnam**; の引数と戻り値 **_wtmpnam**はワイド文字列です。 **_wtmpnam**と**tmpnam**動作は同じことを除いて **_wtmpnam**マルチバイト文字の文字列を処理しません。
+**_tempnam**と**tmpnam**は、オペレーティングシステムから取得した OEM コードページに従ってマルチバイト文字のシーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wtempnam**は、 **_tempnam**のワイド文字バージョンです。 **_wtempnam**の引数と戻り値はワイド文字列です。 **_wtempnam**と **_tempnam**は、 **_wtempnam**がマルチバイト文字列を処理しない点を除いて同じように動作します。 **_wtmpnam**は、 **tmpnam**のワイド文字バージョンです。 **_wtmpnam**の引数と戻り値はワイド文字列です。 **_wtmpnam**と**tmpnam**は、 **_wtmpnam**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
 
-場合 **_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている、 **_tempnam**と **_wtempnam**呼び出しに置き換え[_tempnam_dbg と _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)します。
+**_Debug**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_tempnam**と **_wtempnam**は[_tempnam_dbg と _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)の呼び出しに置き換えられます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ttmpnam**|**tempnam**|**tempnam**|**_wtmpnam**|
+|**_ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
 |**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
 
 ## <a name="requirements"></a>必要条件
@@ -121,7 +124,7 @@ TMP 環境変数がない場合、または TMP が有効なディレクトリ�
 |-------------|---------------------|
 |**_tempnam**|\<stdio.h>|
 |**_wtempnam**、 **_wtmpnam**|\<stdio.h> または \<wchar.h>|
-|**tempnam**|\<stdio.h>|
+|**tmpnam**|\<stdio.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

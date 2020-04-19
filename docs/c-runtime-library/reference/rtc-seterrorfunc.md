@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFunc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514739"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949012"
 ---
-# <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
+# <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
-実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。 この関数が非推奨とされます。使用して、 **_RTC_SetErrorFuncW**代わりにします。
+実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。 この関数は非推奨とされます。代わりに **_RTC_SetErrorFuncW**を使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -48,11 +51,11 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="return-value"></a>戻り値
 
-以前に定義されたエラーの関数。 以前に定義された関数がない場合は、返す**NULL**します。
+以前に定義されたエラーの関数。 以前に定義された関数がない場合、は**NULL**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-この関数を使用しないでください。代わりに、 **_RTC_SetErrorFuncW**します。 これは下位互換性のためだけに残されています。
+この関数は使用しないでください。代わりに、 **_RTC_SetErrorFuncW**を使用してください。 これは下位互換性のためだけに残されています。
 
 ## <a name="requirements"></a>必要条件
 

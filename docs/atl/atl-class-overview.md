@@ -1,18 +1,16 @@
 ---
 title: ATL クラスの概要
 ms.date: 11/04/2016
-f1_keywords:
-- vc.atl.classes
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbb9e2454aadd33db61c722704e17ce95f3df4c4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223379"
 ---
 # <a name="atl-class-overview"></a>ATL クラスの概要
 
@@ -48,4 +46,3 @@ ATL プロジェクトで使用できる追加のクラスでは、次を参照�
 [グローバル変数](../atl/reference/atl-global-variables.md)<br/>
 [[マクロ]](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
-

@@ -1,21 +1,21 @@
 ---
-title: スレッド (C++ COM 属性)
+title: スレッド処理C++ (COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 0feb258941993ff9776bb9f94f61a556d7d4caec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449843"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513934"
 ---
 # <a name="threading-c"></a>threading (C++)
 
-COM オブジェクトのスレッド モデルを指定します。
+COM オブジェクトのスレッド処理モデルを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,31 +26,31 @@ COM オブジェクトのスレッド モデルを指定します。
 ### <a name="parameters"></a>パラメーター
 
 *model*<br/>
-(省略可能)次のスレッド モデルのいずれか:
+Optional次のいずれかのスレッドモデル:
 
-- `apartment` (アパートメント スレッド)
+- `apartment`(アパートメントスレッド)
 
-- `neutral` (ユーザー インターフェイスを持たないコンポーネントを .NET framework)
+- `neutral`(ユーザーインターフェイスのないコンポーネント .NET Framework)
 
-- `single` (簡易スレッド)
+- `single`(単純なスレッド処理)
 
-- `free` (フリー スレッド)
+- `free`(フリースレッド)
 
-- `both` (アパートメントとフリー スレッド)
+- `both`(アパートメントおよびフリースレッド)
 
 既定値は `apartment` です。
 
 ## <a name="remarks"></a>Remarks
 
-**スレッド**C++ 属性が生成された .idl ファイルに表示されないが、COM オブジェクトの実装で使用されます。
+**スレッド** C++属性は、生成された .idl ファイルには表示されませんが、COM オブジェクトの実装で使用されます。
 
-、ATL プロジェクトの場合、[コクラス](coclass.md)属性が存在することもによって指定されたスレッド処理モデル*モデル*をテンプレート パラメーターとして渡される、 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)クラス、によって挿入された、`coclass`属性。
+ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合、*モデル*で指定されたスレッドモデルは、 `coclass`属性によって挿入される[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)クラスにテンプレートパラメーターとして渡されます。
 
-**スレッド**属性もへのアクセスを保護する[event_source](event-source.md)します。
+**スレッド**属性は、 [event_source](event-source.md)へのアクセスも保護します。
 
 ## <a name="example"></a>例
 
-参照してください、[ライセンス](licensed.md)の使用サンプルの例を**スレッド**します。
+**スレッド処理**の使用例については、[ライセンス](licensed.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -71,4 +71,4 @@ COM オブジェクトのスレッド モデルを指定します。
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[ニュートラル アパートメント](/windows/desktop/cossdk/neutral-apartments)
+[ニュートラルアパートメント](/windows/win32/cossdk/neutral-apartments)

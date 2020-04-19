@@ -1,5 +1,5 @@
 ---
-title: 'OLE 概要 : リンクと埋め込み'
+title: OLE の背景知識:リンクと埋め込み
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186803"
 ---
-# <a name="ole-background-linking-and-embedding"></a>OLE 概要 : リンクと埋め込み
+# <a name="ole-background-linking-and-embedding"></a>OLE の背景知識:リンクと埋め込み
 
 コンテナー アプリケーションに貼り付けコマンドを使用して、埋め込まれたコンポーネント、または埋め込みアイテムを作成できます。 埋め込みアイテムのソース データが含まれている OLE ドキュメントの一部として格納されます。 この方法では、ワード プロセッサのドキュメントのドキュメント ファイルは、テキストを含めることができ、ビットマップ、グラフ、式、またはその他のあらゆる種類のデータも含めることができます。
 
@@ -30,7 +30,6 @@ ms.locfileid: "50465482"
 ## <a name="see-also"></a>関連項目
 
 [OLE の背景知識](../mfc/ole-background.md)<br/>
-[OLE 概要: コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)<br/>
+[OLE の背景知識: コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)<br/>
 [コンテナー: クライアント アイテム](../mfc/containers-client-items.md)<br/>
 [サーバー: サーバー アイテム](../mfc/servers-server-items.md)
-

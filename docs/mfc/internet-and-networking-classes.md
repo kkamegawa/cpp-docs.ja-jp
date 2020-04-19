@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet classes [MFC]
 - networking classes [MFC]
 ms.assetid: 1acf793d-ebf2-4fac-97be-703d62e3897e
-ms.openlocfilehash: ba094bec4302bdcd92840e481392fa9d8b21410f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf153c5b4602a0f9b151f225669efbb63f3583a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153048"
 ---
 # <a name="internet-and-networking-classes"></a>インターネットおよびネットワーク クラス
 
@@ -27,4 +27,3 @@ ms.locfileid: "50440483"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

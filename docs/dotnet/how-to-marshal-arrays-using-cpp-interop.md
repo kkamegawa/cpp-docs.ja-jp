@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ Interop を使用して配列をマーシャリングする'
+title: '方法: 配列をマーシャ リングを使用して C++ 相互運用'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 10cf89d0f14a072318e6b1ef743f386e6ba914cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324923"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>方法: C++ Interop を使用して配列をマーシャリングする
+# <a name="how-to-marshal-arrays-using-c-interop"></a>方法: 配列をマーシャ リングを使用して C++ 相互運用
 
 このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
 
@@ -24,7 +24,7 @@ ms.locfileid: "50441666"
 
 ## <a name="example"></a>例
 
-次の例では、マネージ配列をアンマネージ関数に渡す方法を示します。 管理対象の関数を使用して[pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)アンマネージ関数を呼び出す前に、配列のガベージ コレクションを非表示にします。 GC ヒープにピン留めされたポインターを使用して、アンマネージ関数を提供する、配列のコピーを作成するオーバーヘッドを回避できます。 アンマネージ関数は GC ヒープ メモリへのアクセス、配列の内容を変更および変更ことを示すために、マネージ関数でコントロールを再開するときに反映されます。
+次の例では、マネージ配列をアンマネージ関数に渡す方法を示します。 管理対象の関数を使用して[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)アンマネージ関数を呼び出す前に、配列のガベージ コレクションを非表示にします。 GC ヒープにピン留めされたポインターを使用して、アンマネージ関数を提供する、配列のコピーを作成するオーバーヘッドを回避できます。 アンマネージ関数は GC ヒープ メモリへのアクセス、配列の内容を変更および変更ことを示すために、マネージ関数でコントロールを再開するときに反映されます。
 
 ```
 // PassArray1.cpp

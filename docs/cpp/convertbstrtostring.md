@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
 ms.openlocfilehash: df123dc218aa770a67536bf1bad7d8bafcf4c318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392324"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
@@ -64,9 +64,9 @@ char * text: Test
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<comutil.h >
+**Header:** \<comutil.h >
 
-**Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)
+**Lib:** comsuppw.lib または comsuppwd.lib (詳細は「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください)
 
 ## <a name="see-also"></a>関連項目
 

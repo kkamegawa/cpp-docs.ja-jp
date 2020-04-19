@@ -4,12 +4,12 @@ ms.date: 12/30/2016
 f1_keywords:
 - VCCORLIB/Platform::Object::Equals
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: 39c238d682352ec4c4b332ab82dea4135537c9f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef34e50e6561481eafd7de635bdbcc1b6cd4c8b4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389386"
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals メソッド
 
@@ -34,9 +34,9 @@ bool Equals(
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
 **名前空間:** 既定
 

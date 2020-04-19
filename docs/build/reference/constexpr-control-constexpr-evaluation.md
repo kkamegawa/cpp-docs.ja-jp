@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: ea55a2686c2cdd7f4e0a6b558d3cd456fe87cb9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294253"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (constexpr の評価の制御)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50544249"
 
 > **/constexpr:depth**<em>N</em>
 >  **/constexpr:backtrace**<em>N</em>
->  **/constexpr:steps** <em>N</em>
+>  **/constexpr:steps**<em>N</em>
 
 ## <a name="arguments"></a>引数
 
@@ -40,7 +40,7 @@ ms.locfileid: "50544249"
 
 **/Constexpr**オプションは、Visual Studio 2015 以降を使用できます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの開く**プロパティ ページ** ダイアログ ボックス。
 
@@ -54,5 +54,5 @@ ms.locfileid: "50544249"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

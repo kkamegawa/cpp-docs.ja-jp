@@ -1,25 +1,22 @@
 ---
 title: COM インターフェイスを作成する
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.com.creating.interfaces
-- vc.codewiz.com.editing.interfaces
+ms.date: 05/14/2019
 helpviewer_keywords:
 - COM interfaces, creating
 - methods [C++], adding to COM interfaces
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693702"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182612"
 ---
 # <a name="create-a-com-interface"></a>COM インターフェイスを作成する
 
-Visual C++ には、COM オブジェクトとオートメーション クラスのインターフェイスとディスパッチ インターフェイスを定義する COM を使用するプロジェクトを作成するためのウィザードとテンプレートが用意されています。
+Visual Studio には、COM オブジェクトとオートメーション クラスに向けたインターフェイスとディスパッチ インターフェイスを定義する COM を使用するプロジェクトを作成するためのウィザードとテンプレートが用意されています。
 
 これらのウィザードを使用して、次の 3 つの一般的なタスクを実行できます。
 
@@ -35,7 +32,7 @@ Visual C++ には、COM オブジェクトとオートメーション クラス�
 
   [ATL プロジェクト ウィザード](../atl/reference/atl-project-wizard.md)と [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)の組み合わせを使用して、ATL ActiveX コントロールを作成します。
 
-  前述のとおり、ATL サポートを追加した MFC プロジェクトに ATL コントロールを追加することもできます。 さらに、**[クラスの追加]** ダイアログ ボックスで、**ATL コントロール**を選択し、ATL サポートを MFC プロジェクトに追加していない場合、Visual Studio で ATL サポートを MFC プロジェクトに追加することを確認するダイアログ ボックスが表示されます。
+  前述のとおり、ATL サポートを追加した MFC プロジェクトに ATL コントロールを追加することもできます。 さらに、 **[クラスの追加]** ダイアログ ボックスで、**ATL コントロール**を選択し、ATL サポートを MFC プロジェクトに追加していない場合、Visual Studio で ATL サポートを MFC プロジェクトに追加することを確認するダイアログ ボックスが表示されます。
 
   このウィザードは、プロジェクト クラスに IDL ソースと COM マップを生成します。
 
@@ -74,7 +71,7 @@ ATL ベースの COM オブジェクト クラスの場合、クラス ビュー
 
 ## <a name="edit-a-com-interface"></a>COM インターフェイスを編集する
 
-クラス ビューのショートカット メニューからコマンドを使用することで、Visual C++ プロジェクトで COM インターフェイスの新しいメソッドとプロパティを定義できます。 ツールボックスから、ActiveX コントロールのイベントを定義することもできます。
+クラス ビューのショートカット メニューからコマンドを使用することで、Visual Studio C++ プロジェクトで COM インターフェイスの新しいメソッドとプロパティを定義できます。 ツールボックスから、ActiveX コントロールのイベントを定義することもできます。
 
 ATL ベースと MFC ベースの COM オブジェクト クラスでは、インターフェイスの編集と同時にクラス実装を編集することができます。
 

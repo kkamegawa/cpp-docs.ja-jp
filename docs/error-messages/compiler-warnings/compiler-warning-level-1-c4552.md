@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4552
 ms.assetid: ebbbb5ee-1c19-45bd-b386-41a19630fc76
-ms.openlocfilehash: 1fb2dc7fd4bc685e457898b47c513c21009146ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9f7fcd5a1949082aad75407f230db2e32dddd67
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585550"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966357"
 ---
 # <a name="compiler-warning-level-1-c4552"></a>コンパイラの警告 (レベル 1) C4552
 
-'operator': 演算子も何も起こりません。予想される演算子の副作用
+' operator ': 演算子は無効です。副作用のある演算子が必要です
 
-式ステートメントは、式の先頭として副作用を持たない演算子を持つ場合、は、おそらく間違いです。
+式ステートメントに、式の先頭として副作用のない演算子が含まれている場合は、間違いであると思います。
 
-この警告を無効にするには、かっこで囲まれた式を配置します。
+この警告をオーバーライドするには、式をかっこで囲みます。
 
 次の例では、C4552 が生成されます。
 
-```
+```cpp
 // C4552.cpp
 // compile with: /W1
 int main() {

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-ms.openlocfilehash: a2480407ddb9f937b0691f3e07103eb159fea8b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310397"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule クラス
 
@@ -50,6 +50,5 @@ class COleControlModule : public CWinApp
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC サンプル TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

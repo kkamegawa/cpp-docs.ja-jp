@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2277
 ms.assetid: 15a83b07-8731-4524-810b-267f65a7844f
-ms.openlocfilehash: 5b20594df8a250a54a0fd5902e0453f7438cbbfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1c39203d8733b3992ed73172bb58fd7431e110a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448088"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759192"
 ---
 # <a name="compiler-error-c2277"></a>コンパイラ エラー C2277
 
-'identifier': このメンバー関数のアドレスを取得することはできません
+' identifier ': このメンバー関数のアドレスを取得できません
 
 メンバー関数のアドレスを取得することはできません。
 
 次の例では、C2277 が生成されます。
 
-```
+```cpp
 // C2277.cpp
 class A {
 public:

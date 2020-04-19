@@ -1,7 +1,7 @@
 ---
-title: _itoa_s、_itow_s 関数
+title: _itoa_s, _t 関数
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _itoa_s
 - _ltoa_s
 - _ultoa_s
@@ -12,7 +12,7 @@ apiname:
 - _ultow_s
 - _i64tow_s
 - _ui64tow_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _itoa_s
 - _ltoa_s
@@ -75,16 +79,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441706"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625076"
 ---
-# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、_itow_s、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
 
-整数を文字列に変換します。 これらはのバージョン、 [_itoa、_itow 関数](itoa-itow.md)」の説明に従ってセキュリティが強化された[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)します。
+整数を文字列に変換します。 これらは、「 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されたバージョンの[機能](itoa-itow.md)です。
 
 ## <a name="syntax"></a>構文
 
@@ -131,17 +135,17 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 変換される数値。
 
 *バッファー*<br/>
 変換の結果を保持する出力バッファー。
 
 *size*<br/>
-サイズ*バッファー*文字またはワイド文字。
+*バッファー*のサイズ (文字またはワイド文字単位)。
 
 *radix*<br/>
-基数またはを使用して変換する数値の基数*値*2 ~ 36 の範囲で指定する必要があります。
+*値*の変換に使用する基数または数値の基数。2-36 の範囲内である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
@@ -158,40 +162,40 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="security-issues"></a>セキュリティの問題
 
-場合、これらの関数は、アクセス違反を生成できる*バッファー*が有効なメモリを指していないとが**NULL**、またはバッファーの長さがない場合、結果の文字列を保持するのに十分です。
+*バッファー*が有効なメモリを指しておらず、 **NULL**でない場合、またはバッファーの長さが結果の文字列を保持するのに十分ではない場合、これらの関数はアクセス違反を生成することがあります。
 
 ## <a name="remarks"></a>Remarks
 
-パラメーターと戻り値を除く、 **_itoa_s**と **_itow_s**関数ファミリは、対応する安全性が低いと同じ動作をある **_itoa**と **_itow**バージョン。
+パラメーターと戻り値を除いて、_itoa_s**関数と**関数ファミリの動作は、対応する低セキュリティのバージョン (_t **)** **と同じ**です。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ ライブラリのバージョンは、最初にバッファーを 0 xfd を入力します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-CRT には、null 終端文字を含む、各整数型の最も長い可能な値に変換するために必要なバッファーのサイズを定義して、いくつかの一般的なベースの文字の署名に便利なマクロが含まれています。 詳しくは、次を参照してください。[最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)します。
+CRT には、いくつかの一般的な基本クラスについて、null 終端記号と符号文字を含む、各整数型の最大有効値を変換するために必要なバッファーのサイズを定義するための便利なマクロが含まれています。 詳細については、「[最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**場所 (_s)**|**_itoa_s**|**_itoa_s**|**_itow_s**|
 |**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
-|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**(_s)**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
 |**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
-|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
+|**ui64_s (_s)**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
-|**_itow_s**、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、 **_ui64tow_s**|\<stdlib.h> または \<wchar.h>|
+|_ui64tow_s、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、|\<stdlib.h> または \<wchar.h>|
 
-これらの関数は、Microsoft 固有です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数は、Microsoft 固有の関数です。 互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-このサンプルでは、いくつかの整数の変換関数の使用を示します。 なお、 [_countof](countof-macro.md)マクロは、配列の宣言が表示されるは、コンパイラ、およびポインターに放射性がパラメーターではなく、バッファー サイズを決定するのみ機能します。
+このサンプルでは、いくつかの整数変換関数の使用方法を示します。 マクロ[の数](countof-macro.md)は、配列宣言がコンパイラに表示される場合にのみバッファーサイズを決定することに注意してください。ポインターに decayed を持つパラメーターには使用できません。
 
 ```C
 // crt_itoa_s.c
@@ -262,4 +266,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa、_itow 関数](itoa-itow.md)<br/>
+[itoa 関数 (_d)](itoa-itow.md)<br/>

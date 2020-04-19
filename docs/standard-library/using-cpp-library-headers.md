@@ -10,12 +10,12 @@ helpviewer_keywords:
 - library headers
 - C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
-ms.openlocfilehash: b9841d1045a6d2d1126414f1ce4cfc93f9667eef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cc0bb51b159f6668adad05ebd2d386364ae2f81
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603958"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450071"
 ---
 # <a name="using-c-library-headers"></a>C++ ライブラリ ヘッダーの使用
 
@@ -31,11 +31,11 @@ C++ ライブラリ ヘッダーには、それが必要とする型の定義に
 
 ライブラリ内のすべての関数は、標準ヘッダーで宣言されます。 標準 C とは異なり、標準ヘッダーには、関数の宣言をマスクして同じ効果を得るために、関数と同じ名前のマスキング マクロを指定することはありません。 マスキング マクロの詳細については、「[C++ ライブラリの規則](../standard-library/cpp-library-conventions.md)」を参照してください。
 
-以外のすべての名前**delete 演算子**と**演算子 new**で C++ ライブラリのヘッダーが定義されている、`std`名前空間、または名前空間内で入れ子になった、`std`名前空間。 たとえば、名前 `cin` を `std::cin` として参照します。 ただし、マクロ名は名前空間修飾子ではないため、`__STD_COMPLEX` は常に名前空間修飾子なしで記述します。
+C++ ライブラリ`std`ヘッダーの**operator delete**および**operator new**以外のすべての名前は、名前空間、または`std`名前空間内で入れ子になった名前空間で定義されます。 たとえば、名前 `cin` を `std::cin` として参照します。 ただし、マクロ名は名前空間修飾子ではないため、`__STD_COMPLEX` は常に名前空間修飾子なしで記述します。
 
-翻訳環境によっては、C++ ライブラリのヘッダーを含む可能性がありますみえますで宣言された外部名、`std`同様に、グローバル名前空間の名前空間の個人と**を使用して**それぞれの名前を宣言します。 それ以外の場合、ヘッダーでは、現在の名前空間にライブラリ名を含めることは*ありません*。
+一部の翻訳環境では、 C++ライブラリヘッダーをインクルードすると、 `std`名前空間で宣言された外部名もグローバル名前空間に表示されることがあります。また、各名前の宣言を個別に**使用し**ます。 それ以外の場合、ヘッダーでは、現在の名前空間にライブラリ名を含めることは*ありません*。
 
-C++ 標準では、C 標準ヘッダーが名前空間内のすべての外部名を宣言する必要があります`std`、個人とグローバル名前空間にそれらを付けて**を使用して**それぞれの名前を宣言します。 ただし、翻訳環境によっては、C 標準ヘッダーに名前空間宣言が含まれず、グローバル名前空間で直接すべての名前を宣言する場合があります。 このため、次の 2 つの規則に従うことが、名前空間を処理する最もポータブルな方法となります。
+標準C++では、C 標準ヘッダーによって名前空間`std`のすべての外部名が宣言され、各名前の宣言**を使用し**て、グローバル名前空間にホイストされる必要があります。 ただし、翻訳環境によっては、C 標準ヘッダーに名前空間宣言が含まれず、グローバル名前空間で直接すべての名前を宣言する場合があります。 このため、次の 2 つの規則に従うことが、名前空間を処理する最もポータブルな方法となります。
 
 - 従来 \<stdlib.h> で宣言されていた外部名を、名前空間 `std` で確実に宣言するために、たとえば \<cstdlib> を含めます。 この名前が、グローバル名前空間でも宣言されている可能性があることを認識してください。
 
@@ -55,5 +55,5 @@ using namespace std;
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

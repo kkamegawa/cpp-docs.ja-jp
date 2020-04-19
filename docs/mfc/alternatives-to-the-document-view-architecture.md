@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394716"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの代替手段
 
@@ -62,9 +62,8 @@ MFC アプリケーションは通常、情報、ファイル形式、および�
 
 - MFC フレームワークのドキュメントとまったく作成されないようにビューを作成する部分を上書きします。 呼び出しで、ドキュメントの作成プロセスが始まる`CWinApp::AddDocTemplate`します。 アプリケーション クラスには、その呼び出しを排除`InitInstance`メンバー関数を内のフレーム ウィンドウを作成する代わりに、`InitInstance`自分でします。 フレーム ウィンドウ クラスには、データ管理コードを配置します。 ドキュメント/ビューの作成プロセスを示した[ドキュメント/ビューの作成](../mfc/document-view-creation.md)です。 これはより多くの作業であり、フレームワークのより深い理解が必要ですが、すべてのドキュメント/ビューのオーバーヘッドがなくなり。
 
-この記事[MFC: 用いないデータベース クラスとビュー](../data/mfc-using-database-classes-without-documents-and-views.md)データベース アプリケーションのコンテキストでのドキュメント/ビューの代替手段のより具体的な例を示します。
+この記事[MFC:データベース クラスのないドキュメントとビューを使用して](../data/mfc-using-database-classes-without-documents-and-views.md)データベース アプリケーションのコンテキストでのドキュメント/ビューの代替手段より具体的な例を示しています。
 
 ## <a name="see-also"></a>関連項目
 
 [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
-

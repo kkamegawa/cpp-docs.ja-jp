@@ -15,19 +15,19 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-ms.openlocfilehash: 472b01e169788ce3cf10f8ed9f2198c44cdeb88a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a350a4349cb825795a18dd860a2482952b04dcb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645667"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496150"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl クラス
 
-このクラスは実装`IUnknown`の既定の実装を提供し、 [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイス。
+このクラスは`IUnknown`を実装し、 [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスの既定の実装を提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IPersistStreamInitImpl`します。
+から`IPersistStreamInitImpl`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -48,18 +48,18 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IPersistStreamInitImpl::GetClassID](#getclassid)|オブジェクトの CLSID を取得します。|
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|オブジェクトのデータを保存するために必要なストリームのサイズを取得します。 ATL の実装では、E_NOTIMPL を返します。|
-|[IPersistStreamInitImpl::InitNew](#initnew)|新しく作成されたオブジェクトを初期化します。|
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|最後に保存してから、オブジェクトのデータが変更されたかどうかを確認します。|
+|[IPersistStreamInitImpl:: GetClassID](#getclassid)|オブジェクトの CLSID を取得します。|
+|[IPersistStreamInitImpl:: GetSizeMax](#getsizemax)|オブジェクトのデータを保存するために必要なストリームのサイズを取得します。 ATL 実装は E_NOTIMPL を返します。|
+|[IPersistStreamInitImpl:: InitNew](#initnew)|新しく作成されたオブジェクトを初期化します。|
+|[IPersistStreamInitImpl:: IsDirty](#isdirty)|オブジェクトのデータが最後に保存されてから変更されたかどうかを確認します。|
 |[IPersistStreamInitImpl::Load](#load)|指定したストリームからオブジェクトのプロパティを読み込みます。|
-|[IPersistStreamInitImpl::Save](#save)|オブジェクトのプロパティを指定したストリームに保存します。|
+|[IPersistStreamInitImpl:: Save](#save)|オブジェクトのプロパティを指定したストリームに保存します。|
 
 ## <a name="remarks"></a>Remarks
 
-[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスにより、クライアントは、オブジェクトは読み込みし、その永続的なデータを 1 つのストリームに保存を要求します。 クラス`IPersistStreamInitImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)インターフェイスを使用すると、クライアントは、オブジェクトがその永続データを読み込んで1つのストリームに保存するように要求できます。 クラス`IPersistStreamInitImpl`は、このインターフェイスの既定の実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,9 +69,9 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID
+##  <a name="getclassid"></a>IPersistStreamInitImpl:: GetClassID
 
 オブジェクトの CLSID を取得します。
 
@@ -81,9 +81,9 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK にします。
+Windows SDK の「 [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 」を参照してください。
 
-##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax
+##  <a name="getsizemax"></a>IPersistStreamInitImpl:: GetSizeMax
 
 オブジェクトのデータを保存するために必要なストリームのサイズを取得します。
 
@@ -97,7 +97,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) Windows SDK にします。
+Windows SDK の「 [IPersistStreamInit:: GetSizeMax](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) 」を参照してください。
 
 ##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew
 
@@ -109,11 +109,11 @@ STDMETHOD(InitNew)();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) Windows SDK にします。
+Windows SDK の「 [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) 」を参照してください。
 
 ##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty
 
-最後に保存してから、オブジェクトのデータが変更されたかどうかを確認します。
+オブジェクトのデータが最後に保存されてから変更されたかどうかを確認します。
 
 ```
 STDMETHOD(IsDirty)();
@@ -121,7 +121,7 @@ STDMETHOD(IsDirty)();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) Windows SDK にします。
+Windows SDK の「 [IPersistStreamInit:: IsDirty](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) 」を参照してください。
 
 ##  <a name="load"></a>  IPersistStreamInitImpl::Load
 
@@ -133,11 +133,11 @@ STDMETHOD(Load)(LPSTREAM pStm);
 
 ### <a name="remarks"></a>Remarks
 
-ATL では、オブジェクトのプロパティのマップを使用して、この情報を取得します。
+ATL では、オブジェクトのプロパティマップを使用してこの情報を取得します。
 
-参照してください[IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) Windows SDK にします。
+Windows SDK の「 [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) 」を参照してください。
 
-##  <a name="save"></a>  IPersistStreamInitImpl::Save
+##  <a name="save"></a>IPersistStreamInitImpl:: Save
 
 オブジェクトのプロパティを指定したストリームに保存します。
 
@@ -147,11 +147,11 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 
 ### <a name="remarks"></a>Remarks
 
-ATL では、オブジェクトのプロパティ マップを使用して、この情報を格納します。
+ATL では、オブジェクトのプロパティマップを使用してこの情報を格納します。
 
-参照してください[IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) Windows SDK にします。
+Windows SDK の「 [IPersistStreamInit:: Save](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[記憶域とストリーム](/windows/desktop/Stg/storages-and-streams)<br/>
+[ストレージとストリーム](/windows/win32/Stg/storages-and-streams)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

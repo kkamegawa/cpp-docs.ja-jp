@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
-ms.openlocfilehash: 61a6d3090355c9bda8aa11c041b302e4ec77ec8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f04bd30c4d390cecfa7e4e636f1a3771f26cfff
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557285"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990851"
 ---
 # <a name="compiler-warning-level-4-c4400"></a>コンパイラの警告 (レベル 4) C4400
 
-'type': この型での const/volatile 修飾子はサポートされていません
+' type ': この型の const/volatile 修飾子はサポートされていません
 
-[Const](../../cpp/const-cpp.md)と[揮発性](../../cpp/volatile-cpp.md)修飾子は、共通言語ランタイム型の変数では動作しません。
+[Const](../../cpp/const-cpp.md)修飾子と[volatile](../../cpp/volatile-cpp.md)修飾子は、共通言語ランタイム型の変数では使用できません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4400 が生成されます。
 
-```
+```cpp
 // C4400.cpp
 // compile with: /clr /W4
 // C4401 expected

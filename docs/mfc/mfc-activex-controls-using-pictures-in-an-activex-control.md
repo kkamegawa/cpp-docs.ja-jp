@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用'
+title: MFC ActiveX コントロール:ActiveX コントロールにおけるピクチャの使用
 ms.date: 11/04/2016
 f1_keywords:
 - LPPICTUREDISP
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239293"
 ---
-# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールにおけるピクチャの使用
 
 この記事では、ActiveX コントロールに共通する Picture 型と、その実装方法を説明します。 ここでは、次の内容について説明します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "50462102"
 
 Picture 型は、いくつかの ActiveX コントロールに共通な型のグループの 1 つです。 Picture 型は、メタファイル、ビットマップ、またはアイコンを処理して、ユーザーが ActiveX コントロールに表示される画像を指定できるようにします。 カスタム Picture プロパティは、画像オブジェクトと Get/Set 関数を使用して実装されます。これらの関数により、コントロール ユーザーは Picture プロパティにアクセスできます。 コントロール ユーザーは、ストック Picture プロパティ ページを使用してカスタム Picture プロパティにアクセスします。
 
-標準の Picture 型のほかに、Font 型と Color 型も使用できます。 ActiveX コントロールで標準の Font 型を使用する方法について詳しくは、「 [MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)」をご覧ください。
+標準の Picture 型のほかに、Font 型と Color 型も使用できます。 ActiveX コントロールで標準の Font 型の使用に関する詳細については、記事を参照してください。 [MFC ActiveX コントロール。フォントを使用して](../mfc/mfc-activex-controls-using-fonts.md)します。
 
 ActiveX コントロール クラスには、コントロール内に Picture プロパティを実装するために使用できるコンポーネントがいくつか用意されています。 次のものがこれらのコンポーネントには含まれています。
 
@@ -41,11 +41,11 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
 - Get/Set 関数を使用して実装される **LPPICTUREDISP**型のプロパティのサポート。
 
-   クラス ビューを使うと、Picture 型をサポートするカスタム プロパティを簡単に追加できます。 クラス ビューを使用して ActiveX コントロールのプロパティを追加する方法について詳しくは、「 [MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)」をご覧ください。
+   クラス ビューを使うと、Picture 型をサポートするカスタム プロパティを簡単に追加できます。 クラス ビューでは ActiveX コントロールのプロパティを追加する方法の詳細については、この記事を参照してください。 [MFC ActiveX コントロール。プロパティ](../mfc/mfc-activex-controls-properties.md)します。
 
 - コントロールの Picture プロパティを操作するプロパティ ページ。
 
-   このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページについて詳しくは、「 [MFC ActiveX コントロール: ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)」をご覧ください。
+   このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページの詳細については、記事を参照してください。 [MFC ActiveX コントロール。ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> ActiveX コントロールでのカスタム Picture プロパティの実装
 
@@ -152,4 +152,3 @@ BEGIN_PROPPAGEIDS マクロのカウント パラメーターは、いずれか�
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)<br/>
 [MFC ActiveX コントロール: プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)
-

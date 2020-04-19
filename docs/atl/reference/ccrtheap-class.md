@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-ms.openlocfilehash: b761fc3d9d9874e676fad8c74a82f1f08d714d61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5030b9cfbfd636a783d27bcc8f9469f8348acb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246063"
 ---
 # <a name="ccrtheap-class"></a>CCRTHeap クラス
 
@@ -34,10 +34,10 @@ class CCRTHeap : public IAtlMemMgr
 
 |名前|説明|
 |----------|-----------------|
-|[Ccrtheap::allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
+|[CCRTHeap::Allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
 |[Ccrtheap::free](#free)|このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。|
 |[CCRTHeap::GetSize](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|
-|[Ccrtheap::reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
+|[CCRTHeap::Reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -57,7 +57,7 @@ class CCRTHeap : public IAtlMemMgr
 
 **ヘッダー:** atlmem.h
 
-##  <a name="allocate"></a>  Ccrtheap::allocate
+##  <a name="allocate"></a>  CCRTHeap::Allocate
 
 メモリ ブロックを割り当てるには、このメソッドを呼び出します。
 
@@ -80,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 使用して実装[malloc](../../c-runtime-library/reference/malloc.md)します。
 
-##  <a name="free"></a>  Ccrtheap::free
+##  <a name="free"></a>  CCRTHeap::Free
 
 このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。
 
@@ -118,7 +118,7 @@ virtual size_t GetSize(void* p) throw();
 
 使用して実装[_msize](../../c-runtime-library/reference/msize.md)します。
 
-##  <a name="reallocate"></a>  Ccrtheap::reallocate
+##  <a name="reallocate"></a>  CCRTHeap::Reallocate
 
 このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。
 

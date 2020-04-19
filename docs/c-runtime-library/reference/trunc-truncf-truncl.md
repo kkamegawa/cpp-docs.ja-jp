@@ -1,11 +1,11 @@
 ---
 title: trunc、truncf、truncl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - trunc
 - truncf
 - truncl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trunc
 - truncf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946006"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -61,21 +64,21 @@ float trunc( float x ); //C++ only
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合の整数値を返します*x*0 方向に丸められた、します。
+正常に終了した場合は、0の方向に丸められた*x*の整数値を返します。
 
 それ以外の場合は、次のいずれかを返します。
 
-|懸案事項|Return|
+|問題|Return|
 |-----------|------------|
-|*x* ±INFINITY を =|x|
-|*x* ±0 を =|x|
+|*x* = ±無限大|x|
+|*x* = ±0|x|
 |*x* = NaN|NaN|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **trunc**を受け取って返す**float**と**長い****二重**型。 C プログラムで**trunc**は、**二重**します。
+でC++はオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**trunc**のオーバーロードを呼び出すことができます。 C プログラムでは、 **trunc**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 浮動小数点の最大値はちょうど整数であるため、この関数は単独ではオーバーフローしません。 ただし、整数型に値を返すことによって、関数のオーバーフローが発生する場合があります。
 

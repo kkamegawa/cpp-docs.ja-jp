@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492652"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690054"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; マクロ
 
@@ -30,7 +30,7 @@ ms.locfileid: "50492652"
 
 ## <a name="allocator_decl"></a>  ALLOCATOR_DECL
 
-アロケーター テンプレート クラスを生成します。
+アロケータークラステンプレートを生成します。
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "50492652"
 
 ### <a name="remarks"></a>Remarks
 
-マクロはテンプレート定義 `template <class Type> class name {.....}` と特殊化 `template <> class name<void> {.....}` を生成します。これらは両方で同期フィルター `sync` と型 `cache` のキャッシュを使用するアロケーター テンプレート クラスを定義します。
+マクロを使用すると、テンプレート定義 `template <class Type> class name {.....}` および特殊化 `template <> class name<void> {.....}` が生成されます。これにより、同期フィルター `sync` と、`cache` 型のキャッシュを使用するアロケータークラステンプレートが定義されます。
 
 再バインドをコンパイルできるコンパイラの場合、作成されるテンプレート定義は次のようになります。
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

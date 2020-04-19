@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-ms.openlocfilehash: ac36330bbbec2cea5b7fcf2c3e13ff8cb3dca85a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75376129ce0033c717a4da3074cee9de132d357d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395067"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>リンカー ツールの警告 LNK4210
 
@@ -41,4 +41,4 @@ ms.locfileid: "50555785"
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
+- [リンカー オプションの設定](../../build/reference/linking.md)

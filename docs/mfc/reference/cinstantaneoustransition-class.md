@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-ms.openlocfilehash: 5195677f741f69517a7f33b8f53ae4efd22919b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3861bbbc0fc138dcb0f2a8b969ed9bde41335bd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486051"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505934"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition クラス
 
@@ -35,23 +35,23 @@ class CInstantaneousTransition : public CBaseTransition;
 
 |名前|説明|
 |----------|-----------------|
-|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|遷移オブジェクトを構築し、最終的な値を初期化します。|
+|[CInstantaneousTransition:: CInstantaneousTransition](#cinstantaneoustransition)|遷移オブジェクトを構築し、その最終的な値を初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CInstantaneousTransition::Create](#create)|カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。 (上書き[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create))。|
+|[CInstantaneousTransition::Create](#create)|遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。 ( [Cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create)をオーバーライドします)。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|移行の最後にアニメーション変数の値。|
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時のアニメーション変数の値。|
 
 ## <a name="remarks"></a>Remarks
 
-即時遷移では中、は、アニメーション変数の値は現在の値から指定の最終的な値をすぐに変更します。 この遷移の期間は、常に 0 です。 すべての遷移が自動的にクリアされますが、お勧めするそれらに割り当てられている新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、null を指定し、まで、CAnimationController::AnimateGroup によって作成されます。 影響を与えませんこの COM オブジェクトの作成後は、メンバー変数を変更します。
+瞬時の遷移中に、アニメーション変数の値が現在の値から指定した最終的な値に瞬時に変化します。 この遷移の期間は常に0です。 すべての遷移は自動的にクリアされるため、operator new を使用して割り当てることをお勧めします。 カプセル化された IuiAnimateGroup 遷移 COM オブジェクトは、次に NULL になるまで、CAnimationController:: によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても効果はありません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,9 +65,9 @@ class CInstantaneousTransition : public CBaseTransition;
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition:: CInstantaneousTransition
 
-遷移オブジェクトを構築し、最終的な値を初期化します。
+遷移オブジェクトを構築し、その最終的な値を初期化します。
 
 ```
 CInstantaneousTransition(DOUBLE dblFinalValue);
@@ -76,11 +76,11 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ### <a name="parameters"></a>パラメーター
 
 *dblFinalValue*<br/>
-移行の最後にアニメーション変数の値。
+遷移の終了時のアニメーション変数の値。
 
 ##  <a name="create"></a>  CInstantaneousTransition::Create
 
-カプセル化された移行 COM オブジェクトを作成する遷移ライブラリを呼び出します。
+遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。
 
 ```
 virtual BOOL Create(
@@ -91,15 +91,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pLibrary*<br/>
-ポインター、 [IUIAnimationTransitionLibrary インターフェイス](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)、標準的な遷移のライブラリを定義します。
+標準遷移のライブラリを定義する、 [Iuiの遷移 Tionlibrary インターフェイス](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-移行が正常に作成された場合は TRUE。それ以外の場合は FALSE です。
+移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
 
-移行の最後にアニメーション変数の値。
+遷移の終了時のアニメーション変数の値。
 
 ```
 DOUBLE m_dblFinalValue;

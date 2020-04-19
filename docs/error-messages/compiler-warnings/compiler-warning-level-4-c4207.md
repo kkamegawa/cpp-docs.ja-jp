@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4207
 ms.assetid: f4e09e3e-ac87-4489-8e3f-c8f76b82e721
-ms.openlocfilehash: 44f49705bf197d7a42b80e50983e47a4c0ce7bed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd18964f8969bc75967de435e2ca3099b12213e0
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541125"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541881"
 ---
 # <a name="compiler-warning-level-4-c4207"></a>コンパイラの警告 (レベル 4) C4207
 
-使用される標準の拡張機能: 初期化子フォームを拡張
+非標準の拡張機能が使用されています: 拡張初期化子フォーム
 
-可変長配列を初期化するには、Microsoft 拡張機能 (/Ze)、`char`中かっこ内の文字列を使用します。
+Microsoft 拡張機能 (/Ze) では、中かっこ内の文字列を使用して `char` の可変長配列を初期化できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // C4207.c
 // compile with: /W4
 char c[] = { 'a', 'b', "cdefg" }; // C4207
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-このような初期化が有効で ANSI 互換でない ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+このような初期化は、ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) では無効です。

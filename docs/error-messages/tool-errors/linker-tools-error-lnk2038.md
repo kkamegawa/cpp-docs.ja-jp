@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594312"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446954"
 ---
 # <a name="linker-tools-error-lnk2038"></a>リンカ ツール エラー LNK2038
 
@@ -24,15 +24,15 @@ ms.locfileid: "50594312"
 
 Visual Studio は、実行時エラーまたはその他の予測できない動作を発生させる可能性のある互換性のないコードのリンクを防ぐために、次のシンボルを定義します。
 
-- `_MSC_VER` アプリまたはライブラリをビルドするために使用する Visual C コンパイラのメジャーおよびマイナー バージョン番号を示します。 Visual C++ コンパイラの 1 種類のバージョンを使用してコンパイルされたコードは、さまざまなメジャー バージョン番号とマイナー バージョン番号のあるバージョンを使用してコンパイルされたコードと互換性がありません。 詳細については、次を参照してください。`_MSC_VER`で[定義済みマクロ](../../preprocessor/predefined-macros.md)します。
+- `_MSC_VER` Microsoft のメジャーおよびマイナー バージョン番号を示すC++コンパイラ (MSVC) アプリまたはライブラリを構築するために使用します。 MSVC の 1 つのバージョンを使用してコンパイルされたコードは、別のメジャーおよびマイナー バージョン番号のあるバージョンを使用してコンパイルされたコードと互換性がありません。 詳細については、次を参照してください。`_MSC_VER`で[定義済みマクロ](../../preprocessor/predefined-macros.md)します。
 
-   を使用していると、取得またはライブラリの互換性のあるバージョンをビルドすることはできませんが、Visual C コンパイラのバージョンと互換性がないライブラリをリンクする場合は、プロジェクトをビルドする以前のバージョンのコンパイラを使用できます。 変更、 **プラットフォーム ツールセット**以前のツールセットにプロジェクトのプロパティ。 詳細については、次を参照してください。[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)します。
+   を使用していると、取得またはライブラリの互換性のあるバージョンをビルドすることはできませんが、MSVC のバージョンと互換性がないライブラリをリンクする場合は、プロジェクトをビルドする以前のバージョンのコンパイラを使用できます。 変更、 **プラットフォーム ツールセット**以前のツールセットにプロジェクトのプロパティ。 詳細については、「[方法 :ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - `_ITERATOR_DEBUG_LEVEL` セキュリティ機能とデバッグ、C++ 標準ライブラリで有効になっている機能のレベルを示します。 これらの機能は、特定の C++ 標準ライブラリのオブジェクトの表示を変更できるため、こうしたオブジェクトは、異なるセキュリティ機能とデバッグ機能を使用するオブジェクトと互換性がなくなります。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)」を参照してください。
 
 - `RuntimeLibrary` アプリまたはライブラリで使用される C++ 標準ライブラリと C ランタイムのバージョンを示します。 C++ 標準ライブラリまたは C ランタイムの 1 種類のバージョンを使用するコードは、異なるバージョンを使用するコードと互換性がありません。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)」を参照してください。
 
-- `_PPLTASKS_WITH_WINRT` そのコードを使用することを示します、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)のさまざまな設定を使用してコンパイルされたオブジェクトにリンクされて、 [/ZW](../../build/reference/zw-windows-runtime-compilation.md)コンパイラ オプション。 (**/ZW**サポート C + + CX)。同じを使用して使用したり、PPL に依存するコードをコンパイルする必要があります **/ZW**アプリの残りの部分で使用される設定。
+- `_PPLTASKS_WITH_WINRT` そのコードを使用することを示します、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)のさまざまな設定を使用してコンパイルされたオブジェクトにリンクされて、 [/ZW](../../build/reference/zw-windows-runtime-compilation.md)コンパイラ オプション。 (**/ZW**サポートC++/CX)。同じを使用して使用したり、PPL に依存するコードをコンパイルする必要があります **/ZW**アプリの残りの部分で使用される設定。
 
 これらのシンボルの値が、Visual Studio ソリューションのプロジェクト全体で一貫していることと、使用中のアプリがリンクしているコードとライブラリに一致していることを確認してください。
 

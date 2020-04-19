@@ -4,12 +4,12 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 9bf6a9ab1b4849b562637c11fffb578aec11ac34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390660"
 ---
 # <a name="issuing-a-parameterized-query"></a>パラメーター クエリの実行
 

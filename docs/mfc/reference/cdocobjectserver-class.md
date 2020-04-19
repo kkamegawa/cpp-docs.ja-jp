@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-ms.openlocfilehash: 704d3290df89c327bcf10b9afe7acb8621165863
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4b1a352a9fa62dfcb46d1c1cb0784661e66e5b4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391137"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer クラス
 

@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2787
+title: コンパイラエラー C2787
 ms.date: 11/04/2016
 f1_keywords:
 - C2787
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587786"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739598"
 ---
-# <a name="compiler-error-c2787"></a>コンパイラ エラー C2787
+# <a name="compiler-error-c2787"></a>コンパイラエラー C2787
 
-'identifier': このオブジェクトに関連付けられた GUID はありません。
+' identifier ': このオブジェクトに関連付けられた GUID はありません
 
-[_ _Uuidof](../../cpp/uuidof-operator.md)操作はユーザー定義型、またはユーザー定義型のオブジェクトにアタッチされている GUID を使用します。 このエラーは、引数が GUID を持つユーザー定義型である場合に発生しません。
+[__Uuidof](../../cpp/uuidof-operator.md)演算子は、GUID が割り当てられたユーザー定義型、またはそのようなユーザー定義型のオブジェクトを受け取ります。 このエラーは、引数が GUID のないユーザー定義型である場合に発生します。
 
 次の例では、C2787 が生成されます。
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

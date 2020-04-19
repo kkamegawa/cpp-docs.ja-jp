@@ -5,12 +5,12 @@ helpviewer_keywords:
 - child windows [MFC], working with
 - window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
-ms.openlocfilehash: 66656fceec2005f7e789bf1cd68ffe52651aacc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c696d880ffa69b0a0399c5282621546c5783ebe4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399487"
 ---
 # <a name="working-with-window-objects"></a>ウィンドウ オブジェクトの操作
 
@@ -39,4 +39,3 @@ Windows の呼び出しの 2 種類のアクティビティの使用。
 ## <a name="see-also"></a>関連項目
 
 [Window オブジェクト](../mfc/window-objects.md)
-

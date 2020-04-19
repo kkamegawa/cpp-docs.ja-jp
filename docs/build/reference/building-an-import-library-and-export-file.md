@@ -25,18 +25,18 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294791"
 ---
 # <a name="building-an-import-library-and-export-file"></a>インポート ライブラリとエクスポート ファイルのビルド
 
 ファイルのエクスポートをインポート ライブラリをビルドし、するには、次の構文を使用します。
 
-> **LIB/DEF**[**:**<em>deffile</em>] [*オプション*] [*objfiles*] [*ライブラリ*]
+> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*libraries*]
 
 /DEF を指定すると、LIB は LIB コマンドに渡されるエクスポート定義からの出力ファイルを作成します。 使用の推奨される順序で、エクスポートを指定するための 3 つの方法はあります。
 
@@ -50,11 +50,11 @@ ms.locfileid: "50556677"
 
 次のオプションは、インポート ライブラリをビルドに適用され、ファイルのエクスポートします。
 
-> **/入力出力:** *インポート*
+> **/OUT:** *import*
 
 既定の出力ファイル名をオーバーライド、*インポート*ライブラリを作成します。 既定の名前は、最初のオブジェクト ファイルまたは LIB コマンドと、拡張機能ライブラリのベース名で/OUT が指定されていない場合。 lib します。 エクスポート ファイルがインポート ライブラリと拡張機能として同じ基本名を指定します。 exp します。
 
-> **/Export:** *entryname* \[ **=** *internalname*]\[、**\@**<em>序数</em>\[、 **NONAME**]\[、**データ**]
+> **/EXPORT:** *entryname*\[**=** *internalname*]\[,**\@**<em>ordinal</em>\[, **NONAME**]]\[, **DATA**]
 
 関数を呼び出すには、他のプログラムを許可するプログラムから関数をエクスポートします。 データをエクスポートすることもできます (を使用して、**データ**キーワード)。 エクスポートは、通常は DLL で定義されます。
 
@@ -68,4 +68,4 @@ ms.locfileid: "50556677"
 
 ## <a name="see-also"></a>関連項目
 
-[インポート ライブラリとエクスポート ファイル](../../build/reference/working-with-import-libraries-and-export-files.md)
+[インポート ライブラリとエクスポート ファイル](working-with-import-libraries-and-export-files.md)

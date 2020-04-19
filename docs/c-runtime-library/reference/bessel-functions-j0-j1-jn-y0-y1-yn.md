@@ -1,14 +1,14 @@
 ---
 title: 'Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939459"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
 
 0、1、または n の順序の、最初または 2 番目の種類の Bessel 関数を計算します。 Bessel 系関数は電磁波理論の数学でよく使用されます。
 
@@ -84,29 +87,29 @@ Bessel 系関数の整数順序。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンの Bessel 関数を返します*x*します。 場合*x*負の値には、 **_y0**、 **_y1**、または **_yn**関数、日常的なセット**errno** に**EDOM**、印刷、 **(_d)** エラー メッセージを**stderr**、し、返します **_HUGE_VAL**します。 エラーを使用して処理を変更する **_matherr**します。
+これらの各ルーチンは、値が*x*のベッセル関数を返します。 *X*が**負の値**に設定さ**れている**場合、このルーチン**は** **errno**を**EDOM**に設定し、 **_DOMAIN**エラーメッセージを**stderr**に出力して、 **_HUGE_VAL**を返します。 **_Matherr**を使用して、エラー処理を変更できます。
 
 ## <a name="remarks"></a>Remarks
 
-**_J0**、 **_j1**、および **_jn**ルーチンは bessel 系関数の最初の種類を返します。 順序は 0、1、および n、それぞれします。
+**J0**、 **j1**、および **_** の各ルーチンは、最初の種類のベッセル関数を返します: orders 0、1、および n。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**(_D)**|
+|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
 
-**_Y0**、 **_y1**、および **_yn**ルーチンは bessel 系関数の 2 つ目の種類を返します。 順序は 0、1、および n、それぞれします。
+**1 番** **目のルーチンでは、** 2 番目の種類のベッセル関数 (orders 0、1、 **n) が**返されます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**(_D)**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**無効です**|**(_D)**|
+|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
+|± 0|**ゼロ除算**|**通知 (_R)**|
+|&#124;x&#124; < 0.0|**無効です**|**_DOMAIN**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**j0**、 **j1** **、_、&** **y0**、_ **y1** **、(** _d)|\<cmath> (C++), \<math.h> (C, C++)|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

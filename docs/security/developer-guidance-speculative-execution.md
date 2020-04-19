@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631034"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448611"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>予測実行のサイド チャネルの C++ の開発者ガイド
 
@@ -21,7 +21,7 @@ ms.locfileid: "50631034"
 
 この記事のガイダンスは、上の脆弱性によって表されるクラスに関連します。
 
-1. CVE-2017-5753 に対する、Spectre variant 1 とも呼ばれます。 このハードウェアの脆弱性のクラスに関連する側のチャネルの条件分岐 misprediction 結果として発生する予測の実行によって発生することができます。 (バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターンのコンパイル時の軽減策を提供するスイッチに関連する CVE 2017-5753 に対する。 `/Qspectre`を通じて Visual Studio 2015 Update 3 で使用可能なスイッチも[KB 4338871](https://support.microsoft.com/help/4338871)します。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。
+1. CVE-2017-5753 に対する、Spectre variant 1 とも呼ばれます。 このハードウェアの脆弱性のクラスに関連する側のチャネルの条件分岐 misprediction 結果として発生する予測の実行によって発生することができます。 Microsoft C++ (バージョン 15.5.5 以降)、Visual Studio 2017 でのコンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターンのコンパイル時の軽減策を提供するスイッチに関連する CVE 2017-5753 に対する。 `/Qspectre`を通じて Visual Studio 2015 Update 3 で使用可能なスイッチも[KB 4338871](https://support.microsoft.com/help/4338871)します。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。
 
 2. CVE-2018-3639 とも呼ばれます[投機的なストア バイパス (SSB)](https://aka.ms/sescsrdssb)します。 このハードウェアの脆弱性のクラスに関連する側のチャネルの結果としてメモリ アクセスの misprediction 依存ストアより負荷の予測の実行によって発生することができます。
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-これらの例の両方に間接的なブランチのスタックに割り当てられたポインターを投機的な変更が含まれることに注意する必要があります。 グローバル変数、ヒープに割り当てられたメモリ、およびいくつかの Cpu での読み取り専用メモリが偶数の可能性もあります投機的な変更することができます。 メモリのスタック割り当ての Visual C コンパイラ既には投機的などのバッファーとしてセキュリティ クッキーの横にある配置されるように、ローカル変数を並べ替えることで、間接的なブランチのスタック割り当てのターゲットを変更することがより困難にする手順一部、 [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)コンパイラ セキュリティの機能です。
+これらの例の両方に間接的なブランチのスタックに割り当てられたポインターを投機的な変更が含まれることに注意する必要があります。 グローバル変数、ヒープに割り当てられたメモリ、およびいくつかの Cpu での読み取り専用メモリが偶数の可能性もあります投機的な変更することができます。 スタックに割り当てられたメモリを Microsoft のC++コンパイラは投機的などバッファー セキュリティに隣接して配置されるように、ローカル変数を並べ替えることで、間接的なブランチのスタック割り当てのターゲットを変更することがより困難にする手順を既に取得cookie の一部として、 [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)コンパイラ セキュリティの機能です。
 
 ## <a name="speculative-type-confusion"></a>混乱の予測の種類
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>コンパイラにインストルメンテーションを使用して、推論バリア
 
-(バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターン推論バリアを自動的に挿入するスイッチに関連する CVE 2017-5753 に対する。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 このフラグが可能性のある脆弱性のあるコーディング パターンのすべてに対応することはできませんとよう開発者に依存しないでください、このクラスの脆弱性を包括的な緩和するために重要です。
+Microsoft C++ (バージョン 15.5.5 以降)、Visual Studio 2017 でのコンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターン推論バリアを自動的に挿入するスイッチに関連するにはCVE-2017-5753 します。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 このフラグが可能性のある脆弱性のあるコーディング パターンのすべてに対応することはできませんとよう開発者に依存しないでください、このクラスの脆弱性を包括的な緩和するために重要です。
 
 ### <a name="masking-array-indices"></a>配列のインデックスのマスク
 

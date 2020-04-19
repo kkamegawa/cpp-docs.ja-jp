@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371912"
 ---
 # <a name="asynchronous-agents-library"></a>非同期エージェント ライブラリ
 
@@ -88,5 +88,4 @@ agent1: received '42'.
 アプリケーションで各種の並列パターン (並列アルゴリズムなど) を使用する方法について説明します。
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
-並列プログラミングを容易にするコンカレンシー ランタイムについて説明します。また、関連トピックへのリンクを示します。
-
+並列プログラミングを容易にする同時実行ランタイムについて説明します。また、関連トピックへのリンクを示します。

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310457"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty クラス
 
@@ -235,7 +235,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|現在のプロパティの親を展開するかどうかを示します。|
 |[CMFCPropertyGridProperty::IsSelected](#isselected)|現在のプロパティが選択されているかどうかを示します。|
 |[CMFCPropertyGridProperty::IsVisible](#isvisible)|現在のプロパティが表示されているかどうかを示します。|
-|[Cmfcpropertygridproperty::onclickbutton](#onclickbutton)|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます |
+|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::OnClickName](#onclickname)|ユーザーがプロパティの名前 フィールドをクリックしたときに、親のプロパティ リスト コントロールによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|ユーザーがプロパティの値フィールドをクリックしたときに、親のプロパティ リスト コントロールによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|プロパティに含まれているコンボ ボックスが閉じられたときに、フレームワークによって呼び出されます。|
@@ -244,7 +244,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|プロパティの説明を表示するためにフレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|サブプロパティを含むプロパティの近くの展開ボックス コントロールを描画するためにフレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|プロパティ名を表示するためにフレームワークによって呼び出されます。|
-|[Cmfcpropertygridproperty::ondrawvalue](#ondrawvalue)|プロパティ値を表示するためにフレームワークによって呼び出されます |
+|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|プロパティ値を表示するためにフレームワークによって呼び出されます |
 |[Cmfcpropertygridproperty::onedit](#onedit)|ユーザーがプロパティ値を変更しようとすると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|ユーザーが終了すると、フレームワークによって呼び出さプロパティ値を変更します。|
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||
@@ -254,12 +254,12 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|ユーザーが編集可能なコンボ ボックスから項目を選択したときに、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|プロパティ項目にマウス ポインターが移動したときに、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||
-|[Cmfcpropertygridproperty::onupdatevalue](#onupdatevalue)|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます |
+|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::PushChar](#pushchar)|プロパティが選択されているし、ユーザーが新しい文字を入力したときに、プロパティ リスト コントロールから呼び出されます。|
 |[CMFCPropertyGridProperty::Redraw](#redraw)|プロパティを再描画します。|
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|プロパティからすべてのオプション (アイテム) を削除します。|
 |[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|指定したサブ項目を削除します。|
-|[Cmfcpropertygridproperty::resetoriginalvalue](#resetoriginalvalue)|編集済みのプロパティの元の値を復元します。|
+|[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)|編集済みのプロパティの元の値を復元します。|
 |[CMFCPropertyGridProperty::SetData](#setdata)|DWORD 値をプロパティに関連付けます。|
 |[CMFCPropertyGridProperty::SetDescription](#setdescription)|現在のプロパティを説明するテキストを指定します。|
 |[CMFCPropertyGridProperty::SetName](#setname)|プロパティの名前を設定します。|
@@ -297,7 +297,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ## <a name="example"></a>例
 
-次の例は、構築する方法を示します、`CMFCPropertyGridProperty`オブジェクト。 例では、さまざまなメソッドを使用する方法も示しています、`CMFCPropertyGridProperty`クラスにオプションを追加、サブ項目を追加、プロパティを有効にするプロパティを表示します。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、構築する方法を示します、`CMFCPropertyGridProperty`オブジェクト。 例では、さまざまなメソッドを使用する方法も示しています、`CMFCPropertyGridProperty`クラスにオプションを追加、サブ項目を追加、プロパティを有効にするプロパティを表示します。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -436,7 +436,7 @@ CMFCPropertyGridProperty(
 *strGroupName*<br/>
 [in]グループの名前。 A*グループ*プロパティ グリッド コントロールに関連するプロパティのコレクションです。 コントロールが、階層的に表示されている場合、*グループ名*がグループ上にある行のカテゴリのタイトルとして表示されます。
 
-*指定*<br/>
+*dwData*<br/>
 [in]整数プロパティに関連付けられているその他のデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。
 
 *strName*<br/>
@@ -593,7 +593,7 @@ void Expand(BOOL bExpand=TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="formatproperty"></a>  Cmfcpropertygridproperty::formatproperty
+##  <a name="formatproperty"></a>  CMFCPropertyGridProperty::FormatProperty
 
 プロパティ値のテキスト表現の書式を設定します 
 
@@ -1119,7 +1119,7 @@ static CString m_strFormatShort;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onclickbutton"></a>  Cmfcpropertygridproperty::onclickbutton
+##  <a name="onclickbutton"></a>  CMFCPropertyGridProperty::OnClickButton
 
 プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます 
 
@@ -1205,8 +1205,8 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*ため*<br/>
-[in](このパラメーターは使用されません)
+*nCtlColor*<br/>
+[in] (このパラメーターは使用されません)
 
 ### <a name="return-value"></a>戻り値
 
@@ -1329,7 +1329,7 @@ virtual void OnDrawName(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawvalue"></a>  Cmfcpropertygridproperty::ondrawvalue
+##  <a name="ondrawvalue"></a>  CMFCPropertyGridProperty::OnDrawValue
 
 プロパティ値を表示するためにフレームワークによって呼び出されます 
 
@@ -1349,7 +1349,7 @@ virtual void OnDrawValue(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onedit"></a>  Cmfcpropertygridproperty::onedit
+##  <a name="onedit"></a>  CMFCPropertyGridProperty::OnEdit
 
 ユーザーがプロパティ値を変更しようとすると、フレームワークによって呼び出されます 
 
@@ -1360,7 +1360,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ### <a name="parameters"></a>パラメーター
 
 *lptClick*<br/>
-[in](このパラメーターは使用されません)クライアント座標の点へのポインター。
+[in] (このパラメーターは使用されません)クライアント座標の点へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1398,7 +1398,7 @@ virtual BOOL OnKillFocus(CWnd*);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*CWnd*|[in](使用されていません。)ウィンドウへのポインター。|
+|*CWnd*|[in] (使用されていません。)ウィンドウへのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1501,7 +1501,7 @@ TRUE の場合、現在のプロパティは、バリアントの型または値
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、次のバリアント型をサポートしています: VT_INT、VT_I2、VT_I4、VT_UINT、VT_UI1、VT_UI2、VT_UI4、VT_R4、VT_R8、および VT_BSTR します。
+このメソッドは、次のバリアント型をサポートします。VT_INT、VT_I2、VT_I4、VT_UINT、VT_UI1、VT_UI2、VT_UI4、VT_R4、VT_R8、および VT_BSTR します。
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
@@ -1517,7 +1517,7 @@ virtual void OnSetSelection CMFCPropertyGridProperty*);
 
 既定では、このメソッドは何もしません。
 
-##  <a name="onupdatevalue"></a>  Cmfcpropertygridproperty::onupdatevalue
+##  <a name="onupdatevalue"></a>  CMFCPropertyGridProperty::OnUpdateValue
 
 編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます 
 
@@ -1550,7 +1550,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、いずれかの値の一覧または次のバリアント型のいずれかであるプロパティをサポートしています: VT_INT、VT_I2、VT_I4、VT_UINT、VT_UI1、VT_UI2、VT_UI4、VT_R4、VT_R8、および VT_BSTR します。
+このメソッドは、値のリストまたは次のバリアント型のいずれかのいずれかであるプロパティをサポートします。VT_INT、VT_I2、VT_I4、VT_UINT、VT_UI1、VT_UI2、VT_UI4、VT_R4、VT_R8、および VT_BSTR します。
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1598,7 +1598,7 @@ BOOL RemoveSubItem(
 
 FALSE に指定、 *bDelete*パラメーターを指定したサブ項目を移動; は、サブ項目を削除し、それを別の場所に追加する場合。
 
-##  <a name="resetoriginalvalue"></a>  Cmfcpropertygridproperty::resetoriginalvalue
+##  <a name="resetoriginalvalue"></a>  CMFCPropertyGridProperty::ResetOriginalValue
 
 編集済みのプロパティの元の値を復元します。
 
@@ -1618,7 +1618,7 @@ void SetData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]アプリケーション固有 32 ビット値を整数などの他のデータへのポインター。
 
 ### <a name="remarks"></a>Remarks

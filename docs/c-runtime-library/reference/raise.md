@@ -1,9 +1,9 @@
 ---
 title: raise
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - raise
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - Raise
 helpviewer_keywords:
@@ -23,19 +26,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 68d1cc653b955e607648e4d30562d2b77e3520e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed377bb46abac252381344f0b1cf4339815a16e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638114"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949674"
 ---
 # <a name="raise"></a>raise
 
 実行中のプログラムにシグナルを送信します。
 
 > [!NOTE]
-> テストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
+> テストシナリオまたはデバッグシナリオを除き、このメソッドを使用して Microsoft Store アプリをシャットダウンしないでください。 プログラムまたは UI がストアアプリを閉じる方法は、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)によっては許可されていません。 詳細については、「 [UWP アプリのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -67,7 +70,7 @@ int raise(
 |**SIGSEGV**|ストレージへの無効なアクセス|呼び出し元のプログラムを終了します。|
 |**SIGTERM**|プログラムに送信される終了要求|シグナルを無視する|
 
-上で指定したように、引数が有効なシグナルでない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 関数は、設定が処理されない場合**errno**に**EINVAL**を 0 以外の値を返します。
+上で指定したように、引数が有効なシグナルでない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 処理されない場合、関数は**errno**を**EINVAL**に設定し、0以外の値を返します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-ms.openlocfilehash: c2ec6c89ab6f54dbcd7433a0f7fedcebd7962b6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261580"
 ---
 # <a name="multiple-dual-interfaces"></a>複数のデュアル インターフェイス
 
@@ -40,4 +40,3 @@ ATL はの単一の実装に複数のデュアル インターフェイスを結
 ## <a name="see-also"></a>関連項目
 
 [デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)
-

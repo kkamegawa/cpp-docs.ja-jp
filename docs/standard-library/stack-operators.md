@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: f6ec0855179e41c78f32fe45429ec0bea1ae2e59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493471"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243647"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しくないかどうかを調べます。
 
@@ -40,10 +35,10 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `stack` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `stack` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -105,10 +100,10 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `stack` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `stack` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -179,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以下かどうかを調べます。
 
@@ -189,10 +184,10 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `stack` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `stack` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -246,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しいかどうかを調べます。
 
@@ -256,10 +251,10 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `stack` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `stack` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -311,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより大きいかどうかを調べます。
 
@@ -321,10 +316,10 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `stack` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `stack` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -380,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以上かどうかを調べます。
 
@@ -390,10 +385,10 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `stack` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `stack` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -447,7 +442,3 @@ int main( )
 The stack s1 is less than the stack s2.
 The stack s1 is greater than or equal to the stack s3.
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<stack>](../standard-library/stack.md)<br/>

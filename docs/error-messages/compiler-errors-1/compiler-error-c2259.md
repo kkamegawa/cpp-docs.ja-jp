@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440405"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758789"
 ---
 # <a name="compiler-error-c2259"></a>コンパイラ エラー C2259
 
@@ -21,11 +21,11 @@ ms.locfileid: "50440405"
 
 1 つ以上の純粋仮想関数を持つクラスまたは構造体をインスタンス化することはできません。 派生クラスのオブジェクトをインスタンス化するには、派生クラスが各純粋仮想関数をオーバーライドする必要があります。
 
-詳細については、次を参照してください。[暗黙的な抽象クラス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)します。
+詳細については、「[暗黙的な抽象クラス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)」を参照してください。
 
 次の例では、C2259 が生成されます。
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -50,11 +50,11 @@ B b;  // OK, B defines func()
 
 - 派生クラスに実装されるインターフェイス メソッドに対してスコープ解決演算子を使用して、実装されるメソッド名をインターフェイスの名前で修飾します。
 
-C2259 は Visual C 2005 で行った準拠作業の結果として発生する可能性がも **/Zc:wchar_t**既定でになります。 このような状況で C2599 を使用してコンパイルする解決できる **/Zc:wchar_t-** を以前のバージョンから可能であれば、互換性があるため、型を更新するか、動作を取得します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+C2259 は、Visual Studio 2005 で実行された準拠作業の結果としても発生する可能性があります。 **/zc: wchar_t**は既定でオンになっています。 このような場合は、 **/zc: wchar_t**を指定してコンパイルすることによって解決できます。以前のバージョンの動作を取得するには、型を更新して互換性があるかどうかを確認します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
 次の例では、C2259 が生成されます。
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -92,7 +92,7 @@ MyClass4 y;
 
 次の例では、C2259 が生成されます。
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

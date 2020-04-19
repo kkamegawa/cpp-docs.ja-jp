@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: fd9dbc58c4887a1ad62d5690ec38ed96cf77feac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407953"
 ---
 # <a name="how-the-framework-calls-your-code"></a>フレームワークと記述したコードとの関係
 
@@ -29,9 +29,8 @@ ms.locfileid: "50444539"
 
 関連のトピックでは、どのようなフレームワークは、として初期化しアプリケーションを実行しクリーンアップ、アプリケーションが終了するとを読み取ります。 作成したコードが内に収まるも理解できます。
 
-詳細については、次を参照してください。[クラス CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)と[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)します。
+詳細については、次を参照してください[クラス CWinApp:。アプリケーション クラス](../mfc/cwinapp-the-application-class.md)と[ドキュメント テンプレートとドキュメント/ビューの作成プロセス](../mfc/document-templates-and-the-document-view-creation-process.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)
-

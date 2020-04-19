@@ -1,11 +1,11 @@
 ---
 title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casinh
 - casinhl
 - casinhf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casinh
 - casinhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943370"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
-範囲外の分岐線法を複素数の逆双曲線正弦を取得します。 [-i, + は] 虚軸。
+虚数軸に沿って区間 [-i, + i] の外側に分岐を使用して、複素数の逆双曲線サインを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -68,17 +71,17 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>戻り値
 
-逆双曲線正弦*z*、(ラジアン単位)。 結果は、実軸に沿ってとの間隔でバインドされている [-π/2, + π/2] 虚軸。
+*Z*の逆双曲線正弦 (ラジアン)。 結果は、実数軸に沿ってバインド解除され、虚数軸に沿って [-iπ/2, + iπ/2] の間隔でバインドが解除されます。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **casinh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**casinh**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**casinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **casinh** **は常に値を**取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**casinh**、 **casinhf**、 **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**、 **casinhf**、 **casinhf**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

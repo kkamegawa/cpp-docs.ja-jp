@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
-ms.openlocfilehash: 17b863d24d43f0dc7afb0fc4776953dcb41929e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a3768cb23c65eb3e2d818f81ff7c6a561c8d7ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750651"
 ---
 # <a name="compiler-error-c2819"></a>コンパイラ エラー C2819
 
-型 'type' には、オーバー ロードされたメンバー 'operator ->' はありません。
+型 ' type ' にオーバーロードされたメンバー ' operator-> ' がありません
 
-定義する必要がある`operator->()`このポインター操作を使用します。
+このポインター操作を使用するには、`operator->()` を定義する必要があります。
 
 次の例では、C2819 が生成されます。
 
-```
+```cpp
 // C2819.cpp
 // compile with: /c
 class A {
@@ -49,9 +49,9 @@ void F(D j) {
 }
 ```
 
-C2819 を使用する場合にも発生することが[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。 次の例では、C2819 が生成されます。
+C2819 は[ C++ 、参照型にスタックセマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)を使用する場合にも発生する可能性があります。 次の例では、C2819 が生成されます。
 
-```
+```cpp
 // C2819_b.cpp
 // compile with: /clr
 ref struct R {

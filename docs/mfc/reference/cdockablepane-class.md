@@ -1,6 +1,6 @@
 ---
 title: CDockablePane Class
-ms.date: 10/18/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CDockablePane
 - AFXDOCKABLEPANE/CDockablePane
@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ba5cfa2fc30c19cabc3f9f45a10f2c23e7d4269
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623016"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552319"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -171,7 +171,7 @@ class CDockablePane : public CPane
 |[CDockablePane::CopyState](#copystate)|ドッキング可能ペインの状態をコピーします。|
 |[CDockablePane::Create](#create)|Windows コントロールを作成しにアタッチします、`CDockablePane`オブジェクト。|
 |[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|フレーム ウィンドウにドッキングされているウィンドウの既定の区分線を作成します。|
-|[Cdockablepane::createex](#createex)|Windows コントロールを作成しにアタッチします、`CDockablePane`オブジェクト。|
+|[CDockablePane::CreateEx](#createex)|Windows コントロールを作成しにアタッチします、`CDockablePane`オブジェクト。|
 |[CDockablePane::CreateTabbedPane](#createtabbedpane)|現在のウィンドウからタブ付きペインを作成します。|
 |[CDockablePane::DockPaneContainer](#dockpanecontainer)|ウィンドウに、コンテナーにドッキングします。|
 |[CDockablePane::DockPaneStandard](#dockpanestandard)|アウトライン (標準) のドッキングを使用して、ウィンドウをドッキングします。|
@@ -204,12 +204,12 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|タブが上部またはウィンドウの下部にあるかどうかを指定します。|
 |[CDockablePane::IsTracked](#istracked)|ユーザーがペインにドラッグしているかどうかを指定します。|
 |[CDockablePane::IsVisible](#isvisible)|現在のウィンドウが表示されるかどうかを判断します。|
-|[Cdockablepane::loadstate](#loadstate)|内部的に使用します。|
+|[CDockablePane::LoadState](#loadstate)|内部的に使用します。|
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|ウィンドウの親が変更されたときに、フレームワークによって呼び出されます。 (上書き[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent))。|
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|フレーム ウィンドウのフローティング、ドッキング バーをドッキングすると、フレームワークによって呼び出されます。|
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|ウィンドウの親を変更するときに、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent))。|
 |[CDockablePane::OnBeforeFloat](#onbeforefloat)|ペインが float 型に、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat))。|
-|[Cdockablepane::removefromdefaultpanedivider](#removefromdefaultpanedividier)|フレームワークは、ペインはドッキング解除されているときに、このメソッドを呼び出します。|
+|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|フレームワークは、ペインはドッキング解除されているときに、このメソッドを呼び出します。|
 |[CDockablePane::ReplacePane](#replacepane)|指定したウィンドウのウィンドウで置き換えます。|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|フレームワークは、ウィンドウがウィンドウの既定の区分線を復元する逆シリアル化と、このメソッドを呼び出します。|
 |`CDockablePane::SaveState`|内部的に使用します。|
@@ -220,7 +220,7 @@ class CDockablePane : public CPane
 |[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|ウィンドウをそのコンテナー内で占有する領域の割合を設定します。|
 |`CDockablePane::SetResizeMode`|内部的に使用します。|
 |[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|復元された既定の分割線を設定します。|
-|[:Settabbedpanertc](#settabbedpanertc)|2 つのペインがドッキング時に作成されるタブ付きウィンドウのランタイム クラス情報を設定します。|
+|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|2 つのペインがドッキング時に作成されるタブ付きウィンドウのランタイム クラス情報を設定します。|
 |[CDockablePane::ShowPane](#showpane)|ペインの表示と非表示を切り替えます。|
 |[CDockablePane::Slide](#slide)|表示と、ウィンドウが自動的に隠すモードの場合にのみを表示するスライド アニメーションが表示されるウィンドウを非表示します。|
 |[CDockablePane::ToggleAutoHide](#toggleautohide)|自動的に隠すモードの表示を切り替えます。 (上書き[CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) )。|
@@ -290,7 +290,7 @@ class CDockablePane : public CPane
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CDockablePane`オブジェクトでさまざまなメソッドを使用して、`CDockablePane`クラス。 例では、自動的に隠すのドッキング可能ペインのすべての機能を有効にする、キャプションまたはグリッパーを有効にする、自動非表示モードを有効にする、ウィンドウを表示および自動非表示モードになっているウィンドウをアニメーション化する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CDockablePane`オブジェクトでさまざまなメソッドを使用して、`CDockablePane`クラス。 例では、自動的に隠すのドッキング可能ペインのすべての機能を有効にする、キャプションまたはグリッパーを有効にする、自動非表示モードを有効にする、ウィンドウを表示および自動非表示モードになっているウィンドウをアニメーション化する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -616,7 +616,7 @@ virtual BOOL Create(
 *pContext*<br/>
 [入力、出力]ウィンドウの作成のコンテキストを指定します。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 [in]ウィンドウの名前を指定します。
 
 *sizeDefault*<br/>
@@ -647,7 +647,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]ペインをドッキングするメイン フレームの側を指定します。 場合*場合*、CBRS_ALIGN_LEFT または CBRS_ALIGN_RIGHT フラグが含まれています。 このメソッドは、垂直線を作成します (`CPaneDivider::SS_VERT`) 区分線それ以外の場合、このメソッドは、水平方向を作成します。 (`CPaneDivider::SS_HORZ`) 区分線。
 
 *pParent*<br/>
@@ -671,7 +671,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 |CBRS_ALIGN_LEFT|ウィンドウ フレーム ウィンドウのクライアント領域の左側にドッキングします。|
 |CBRS_ALIGN_RIGHT|ウィンドウ フレーム ウィンドウのクライアント領域の右側にドッキングします。|
 
-##  <a name="createex"></a>  Cdockablepane::createex
+##  <a name="createex"></a>  CDockablePane::CreateEx
 
 Windows コントロールを作成しにアタッチします、 [CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。
 
@@ -769,7 +769,7 @@ virtual BOOL DockPaneContainer(
 *barContainerManager*<br/>
 [in]ドッキング コンテナーのコンテナー マネージャーへの参照。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]コンテナーのドッキング ウィンドウの側を指定する DWORD です。
 
 *dockMethod*<br/>
@@ -805,7 +805,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="return-value"></a>戻り値
 
-タブ付きウィンドウに、ウィンドウがドッキングされた場合、またはタブ付きウィンドウがドッキングの結果として作成された場合は、このメソッドは、タブ付きウィンドウへのポインターを返します。 このメソッドが戻るかどうかは、ウィンドウにはそれを正常にドッキング、**この**ポインター。 ドッキングに失敗した場合、このメソッドは NULL を返します。
+タブ付きウィンドウに、ウィンドウがドッキングされた場合、またはタブ付きウィンドウがドッキングの結果として作成された場合は、このメソッドは、タブ付きウィンドウへのポインターを返します。 このメソッドが戻るかどうかは、ウィンドウにはそれを正常にドッキング、**this**ポインター。 ドッキングに失敗した場合、このメソッドは NULL を返します。
 
 ##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos
 
@@ -839,7 +839,7 @@ virtual BOOL DockToWindow(
 *pTargetWindow*<br/>
 [入力、出力]このペインをドッキング、ドッキング可能なウィンドウを指定します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]ウィンドウのドッキング位置を指定します。 CBRS_ALIGN_LEFT、CBRS_ALIGN_TOP、CBRS_ALIGN_RIGHT、CBRS_ALIGN_BOTTOM または CBRS_ALIGN_ANY のいずれかを指定することがあります。 (Afxres.h 内で定義)。
 
 *lpRect*<br/>
@@ -1276,7 +1276,7 @@ virtual BOOL IsVisible() const;
 
 可視性の状態の判断基準自動非表示モードでのドッキング可能なウィンドウがない場合、 [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)メソッド。
 
-## ##  <a name="loadstate"></a>  Cdockablepane::loadstate
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState
 
 内部使用のみ。 詳細については、Visual Studio のインストールの VC\atlmfc\src\mfc フォルダーにあるソース コードを参照してください。
 
@@ -1334,7 +1334,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndOldParent*<br/>
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1434,7 +1434,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 カスタムの自動非表示の効果を実装する派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="removefromdefaultpanedividier"></a>  Cdockablepane::removefromdefaultpanedivider
+##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier
 
 フレームワークは、ペインはドッキング解除されているときに、このメソッドを呼び出します。
 
@@ -1501,7 +1501,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *bMode*<br/>
 [in]自動非表示モードを有効にする場合は TRUE通常のドッキング モードを有効にする場合は FALSE。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]作成する、自動的に隠すウィンドウの配置を指定します。
 
 *pCurrAutoHideBar*<br/>
@@ -1572,7 +1572,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 ペインを逆シリアル化、復元された既定のウィンドウの区分線が取得されます。 詳細については、次を参照してください。 [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)します。
 
-##  <a name="settabbedpanertc"></a>  :Settabbedpanertc
+##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
 
 2 つのペインがドッキング時に作成されるタブ付きウィンドウのランタイム クラス情報を設定します。
 

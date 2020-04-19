@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e83bac9028980bdf3ef7449fbef065a8c9316d2d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484891"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991337"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>コンパイラの警告 (レベル 4) C4336
 
-クロスレファレンスしたタイプ ライブラリ 'type_lib1' を 'type_lib2' をインポートする前にインポートします。
+' type_lib2 ' をインポートする前に、クロス参照タイプライブラリ ' type_lib1 ' をインポートします
 
-タイプ ライブラリが参照された、 [#import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブ。 ただし、タイプ ライブラリがで参照されていませんでしたが、別のタイプ ライブラリへの参照に含まれる`#import`します。 この他の .tlb ファイルは、コンパイラによって検出されました。
+[#Import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブを使用して、タイプライブラリが参照されました。 ただし、タイプライブラリには、`#import`で参照されていない別のタイプライブラリへの参照が含まれていました。 この他の .tlb ファイルは、コンパイラによって検出されました。
 
-(Midl.exe でコンパイルされた) 次の 2 つのファイルから作成したディスクの特定の 2 つのタイプ ライブラリ:
+次の2つのファイルから作成されたディスク上の2つのタイプライブラリを指定します (midl でコンパイル)。
 
 ```
 // c4336a.idl
@@ -34,7 +34,7 @@ library c4336aLib
 };
 ```
 
-2 つ目のタイプ ライブラリ:
+2番目のタイプライブラリ:
 
 ```
 // c4336b.idl
@@ -52,7 +52,7 @@ library C4336bLib
 
 次の例では、C4336 が生成されます。
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

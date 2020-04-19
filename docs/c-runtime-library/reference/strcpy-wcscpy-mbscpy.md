@@ -1,11 +1,11 @@
 ---
 title: strcpy、wcscpy、_mbscpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strcpy
 - wcscpy
 - _mbscpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscpy
 - _ftcscpy
@@ -37,19 +41,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640064"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958260"
 ---
-# <a name="strcpy-wcscpy-mbscpy"></a>strcpy、wcscpy、_mbscpy
+# <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
 文字列をコピーします。 これらの関数にはセキュリティが強化されたバージョンがあります。「[strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **_mbscpy** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscpy**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -97,12 +101,12 @@ NULL で終わる元の文字列。
 
 ## <a name="remarks"></a>Remarks
 
-**Strcpy**関数コピー *strSource*で指定された場所に、終端の null 文字を含む*strDestination*します。 動作**strcpy**元とコピー先文字列が重なり合う場合は定義されません。
+**Strcpy**関数は、 *strsource*(終端の null 文字を含む) を*strsource*によって指定された場所にコピーします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy**の動作は未定義です。
 
 > [!IMPORTANT]
-> **Strcpy**に十分な領域をチェックしません*strDestination*にコピーする前に*strSource*、バッファー オーバーランの潜在的な原因になります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
+> **Strcpy**は、 *strdestination*をコピーする前に、 *strdestination*に十分な領域があるかどうかをチェックしないため、バッファーオーバーランの可能性があります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
 
-**wcscpy**と **_mbscpy**は、それぞれ、ワイド文字とマルチバイト文字のバージョンの**strcpy**します。 引数と戻り値の**wcscpy**はワイド文字列 **_mbscpy**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**wcscpy**と **_mbscpy**は、それぞれワイド文字バージョンとマルチバイト文字バージョンの**strcpy**です。 **Wcscpy**の引数と戻り値はワイド文字列です。これらの **_mbscpy**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

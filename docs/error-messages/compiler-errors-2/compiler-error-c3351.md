@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-ms.openlocfilehash: 3935acc645403efcd579a80340ebb9794bc1052a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d93d6b08268aa8d6a7a7ad2e2086f4799417bbb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737466"
 ---
 # <a name="compiler-error-c3351"></a>コンパイラ エラー C3351
 
@@ -21,7 +21,7 @@ ms.locfileid: "50511684"
 
 次の例では C3351 が生成されます。
 
-```
+```cpp
 // C3351a.cpp
 // compile with: /clr
 delegate int D(int, int);

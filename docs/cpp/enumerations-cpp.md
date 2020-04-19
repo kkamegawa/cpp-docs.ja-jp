@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398941"
 ---
 # <a name="enumerations-c"></a>列挙型 [C++]
 
 列挙体は、列挙子と呼ばれる一連の名前付き整数定数で構成されるユーザー定義型です。
 
 > [!NOTE]
->  この記事にでは、ISO 標準 C++ 言語**enum**型と、スコープを持つ (または厳密に型指定された)**列挙型クラス**c++ 11 で導入された型。 については、**パブリック列挙型クラス**または**プライベート列挙型クラス**型 c++/cli および C++/cli CX を参照してください[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)。
+>  この記事にでは、ISO 標準 C++ 言語**enum**型と、スコープを持つ (または厳密に型指定された)**列挙型クラス**c++ 11 で導入された型。 については、**パブリック列挙型クラス**または**プライベート列挙型クラス**型 c++/cli および C++/cli CX を参照してください[列挙型クラス](../extensions/enum-class-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>構文
 
@@ -52,11 +52,11 @@ enum class C : short;  // ... may have any integral underlying type
 *type*<br/>
 列挙子の基になる型であり、すべての列挙子は同じ型を基にしています。 任意の整数型を指定できます。
 
-*列挙型リスト*<br/>
+*enum-list*<br/>
 列挙体に含まれる列挙子のコンマ区切りのリスト。 スコープ内のすべての列挙子または変数名は一意である必要があります。 ただし、値は複製できます。 スコープを持たない列挙型、スコープは前後のスコープスコープは、スコープを持つ列挙型で、*列挙型リスト*自体。  スコープを持つ列挙型で、一覧可能性がありますを空にする新しい整数型を定義する有効な。
 
 *class*<br/>
-このキーワードを使用すると、宣言で、指定した列挙型のスコープは、および*識別子*提供する必要があります。 使用することも、**構造体**キーワードの代わりに**クラス**など、このコンテキストで意味的に等しい。
+このキーワードを使用すると、宣言で、指定した列挙型のスコープは、および*識別子*提供する必要があります。 使用することも、**struct**キーワードの代わりに**class**など、このコンテキストで意味的に等しい。
 
 ## <a name="enumerator-scope"></a>列挙子のスコープ
 
@@ -95,7 +95,7 @@ enum Suit { Diamonds = 1, Hearts, Clubs, Spades };
 
 `Diamonds` 列挙子に値 `1` を割り当てます。 明示的な値を指定しない場合、後続の列挙子は前の列挙子の値に 1 を加えた数値が指定されます。 前の例では、`Hearts` の値が 2、`Clubs` の値が 3 などのようになります。
 
-すべての列挙子は定数として扱われ、スコープ内で一意の名前を指定する必要があります、**列挙型**(スコープを持たない列挙型) に対して定義されて内、または、 **enum**自体 (のスコープを持つ列挙型)。 列挙子の名前に対応する値は一意である必要はありません。 たとえば、スコープを持たない列挙型 `Suit` が次のように宣言されているとします。
+すべての列挙子は定数として扱われ、スコープ内で一意の名前を指定する必要があります、**enum**(スコープを持たない列挙型) に対して定義されて内、または、 **enum**自体 (のスコープを持つ列挙型)。 列挙子の名前に対応する値は一意である必要はありません。 たとえば、スコープを持たない列挙型 `Suit` が次のように宣言されているとします。
 
 ```cpp
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
@@ -145,7 +145,7 @@ namespace ScopedEnumConversions
 
 ## <a name="no_enumerators"></a> なしの列挙子の列挙型
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 列挙型 (標準またはスコープ) を定義すると、明示的な基になる型となしの列挙子を導入するには有効で新しい整数を入力します。他の型に暗黙的な変換がありません。 この型を使用して、その組み込みの基になる型ではなく、暗黙的な変換を不注意による微妙なエラーが発生する可能性を排除できます。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。(正規表現またはスコープを持つ) 列挙型を定義すると、明示的な基になる型となしの列挙子を有効なを他の型に暗黙的な変換を持たない新しい整数型を導入できます。 この型を使用して、その組み込みの基になる型ではなく、暗黙的な変換を不注意による微妙なエラーが発生する可能性を排除できます。
 
 ```cpp
 enum class byte : unsigned char { };

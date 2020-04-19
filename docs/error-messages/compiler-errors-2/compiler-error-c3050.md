@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3050
 ms.assetid: ee090a0b-29cc-4215-a2f9-d82af79b8e82
-ms.openlocfilehash: 255647a2e603b5a71855374dba3248ffef1e025e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8ab53974ac59de235a36e56991d2ef89f06be59
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440431"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761274"
 ---
 # <a name="compiler-error-c3050"></a>コンパイラ エラー C3050
 
@@ -21,7 +21,7 @@ ms.locfileid: "50440431"
 
 次の例では C3050 が生成されます。
 
-```
+```cpp
 // C3050.cpp
 // compile with: /clr /LD
 ref struct X : System::ValueType {};   // C3050

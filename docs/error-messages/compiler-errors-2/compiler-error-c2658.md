@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2658
+title: コンパイラエラー C2658
 ms.date: 11/04/2016
 f1_keywords:
 - C2658
 helpviewer_keywords:
 - C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
-ms.openlocfilehash: 792fd497ad7cdb98ae72f3e6451780dad487624d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77a9122d20561ceee4f211394b3b81900d5580ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490282"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756085"
 ---
-# <a name="compiler-error-c2658"></a>コンパイラ エラー C2658
+# <a name="compiler-error-c2658"></a>コンパイラエラー C2658
 
-'member': 匿名構造体/共用体で再定義されています。
+' member ': 無名構造体または共用体で再定義される
 
-2 つの匿名構造体または共用体には、同じ識別子ではなく、さまざまな種類のメンバー宣言が含まれています。 [/Za](../../build/reference/za-ze-disable-language-extensions.md)、同じ識別子と型を持つメンバーに対してもこのエラーが表示されます。
+2つの匿名構造体または共用体に、同じ識別子を持ち、型が異なるメンバー宣言が含まれています。 [/Za](../../build/reference/za-ze-disable-language-extensions.md)では、同じ識別子と型のメンバーに対してもこのエラーが発生します。
 
 次の例では、C2658 が生成されます。
 
-```
+```cpp
 // C2658.cpp
 // compile with: /c
 struct X {

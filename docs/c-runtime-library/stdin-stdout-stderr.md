@@ -13,12 +13,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: f9ed1f842bd174c2b926572856152cd69ade5a56
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328020"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741951"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 
@@ -31,7 +31,7 @@ FILE *stderr;
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらは、入力、出力、エラー出力の標準ストリームです。
 
@@ -49,7 +49,7 @@ FILE *stderr;
 
 これらのポインターは定数であり、新しい値を割り当てることはできません。 ディスク ファイルやその他のデバイスにストリームをリダイレクトするには、[freopen](../c-runtime-library/reference/freopen-wfreopen.md) 関数を使用できます。 オペレーティング システムでは、プログラムの標準入力と出力をコマンド レベルでリダイレクトすることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../c-runtime-library/stream-i-o.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

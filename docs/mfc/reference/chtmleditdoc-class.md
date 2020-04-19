@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: 1398f71abaa01569c8361bf3ee72f6dc13e9d711
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516195"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346184"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc クラス
 
@@ -108,6 +108,5 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 
 ## <a name="see-also"></a>関連項目
 
-[HTMLEdit サンプル](../../visual-cpp-samples.md)<br/>
+[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

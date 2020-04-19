@@ -1,4 +1,4 @@
----
+﻿---
 title: class (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331078"
 ---
 # <a name="class-c"></a>class (C++)
 
-**クラス**キーワードはクラス型を宣言またはクラス型のオブジェクトを定義します。
+**class**キーワードはクラス型を宣言またはクラス型のオブジェクトを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,26 +31,26 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>パラメーター
 
-*テンプレートの仕様*<br/>
+*template-spec*<br/>
 テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレート](templates-cpp.md)します。
 
 *class*<br/>
-**クラス**キーワード。
+**class**キーワード。
 
-*ms 宣言の仕様*<br/>
+*ms-decl-spec*<br/>
 ストレージ クラスの指定 (省略可能)。 詳細についてを参照してください、 [_ _declspec](../cpp/declspec.md)キーワード。
 
 *タグ*<br/>
 クラスに渡す型名。 タグは、クラスのスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名クラスが定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。
 
-*基本リスト*<br/>
-このクラスがメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラスの](../cpp/base-classes.md)詳細についてはします。 各基本クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワード。 メンバー アクセス テーブルを参照してください。[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。
+*base-list*<br/>
+この構造体がメンバーを継承するクラスまたは構造体のオプション リスト。 詳細は [基本クラス](../cpp/base-classes.md)を参照してください。 アクセス指定子 ([public](../cpp/public-cpp.md)、[private](../cpp/private-cpp.md)、[protected](../cpp/protected-cpp.md))および [virtual](../cpp/virtual-cpp.md)キーワードが、各基本クラス名または構造体名の前に付きます。 詳細については、[メンバー アクセス コントロール](member-access-control-cpp.md)のメンバー アクセス テーブルを参照してください。
 
-*メンバー リスト*<br/>
+*member-list*<br/>
 クラス メンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。
 
-*宣言子*<br/>
-クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 クラスのすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**パブリック**します。 これは、そのデータ メンバーは、構造の一般的な**パブリック**よりも、既定でクラス。 参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。
+*declarators*<br/>
+クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 クラスのすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**public**します。 これは、そのデータ メンバーは、構造の一般的な**public**よりも、既定でクラス。 参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。
 
 ## <a name="remarks"></a>Remarks
 
@@ -62,11 +62,11 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 - [_ _multiple_inheritance](../cpp/inheritance-keywords.md)
 
-- [_ _single_inheritance](../cpp/inheritance-keywords.md)
+- [__single_inheritance](../cpp/inheritance-keywords.md)
 
-- [_ _virtual_inheritance](../cpp/inheritance-keywords.md)
+- [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-マネージ クラスと構造体については、次を参照してください[クラスと構造体。](../windows/classes-and-structs-cpp-component-extensions.md)
+マネージ クラスと c++ 構造体について/cli および C++/cli CX を参照してください[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>例
 

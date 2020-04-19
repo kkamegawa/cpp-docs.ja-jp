@@ -21,12 +21,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-ms.openlocfilehash: 1f0764dd7231492a2addef6359318aa436869a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d300bccb6387c510dc16d55eda17de20b4b134
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199025"
 ---
 # <a name="strings-atlmfc"></a>文字列 (ATL と MFC)
 
@@ -51,4 +51,3 @@ CString、CStringT の既定の実装を使用したプログラミングにつ�
 ## <a name="see-also"></a>関連項目
 
 [ATL/MFC 共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)
-

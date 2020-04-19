@@ -1,32 +1,32 @@
 ---
 title: Visual C++ 2003 ～ 2015 の変更履歴
-ms.date: 08/30/2017
+ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
-ms.translationtype: HT
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525523"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415694"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
 この記事では、Visual Studio 2003 から Visual Studio 2015 の互換性に影響する変更についてすべて説明します。この記事の「新しい動作」や「現在」という語は、Visual Studio 2015 以降を指します。 「従来の動作」や「以前」という語は、Visual Studio 2013 以前のリリースを指します。
 
-Visual Studio 2017 の詳細については、「[What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)」(Visual Studio 2017 の Visual C++ の新機能)、「[Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md)」(Visual Studio 2017 の C++ 準拠の強化) を参照してください。
+最新版の Visual Studio については、「[What's new for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」 (Visual Studio における Visual C++ の新機能) と「[Conformance Improvements in Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md)」 (Visual Studio における Visual C++ の準拠の強化) を参照してください。
 
 > [!NOTE]
 > Visual Studio 2015 と Visual Studio 2017 では、バイナリに関して重大な変更はありません。
 
 Visual Studio の新しいバージョンにアップグレードすると、以前にコンパイルと動作が正常に行えたコードでコンパイルやランタイム エラーが発生する場合があります。 新しいバージョンでこのような問題を引き起こす変更は *互換性に影響する変更*と呼ばれ、通常は C++ 言語の基準、関数シグネチャ、またはメモリ オブジェクトのレイアウトの変更によって必要となります。
 
-検出や診断が難しいランタイム エラーを回避するには、異なるバージョンのコンパイラを使用してコンパイルされたバイナリには静的にリンクしないことをお勧めします。 また、EXE または DLL プロジェクトをアップグレードする場合、リンクするライブラリもアップグレードします。 CRT (C Runtime) または C++ 標準ライブラリ (C++ Standard Library) 型を使用している場合は、異なるバージョンのコンパイラを使用してコンパイルされたバイナリ間 (DLL を含む) で渡さないでください。 詳細については、「[DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
+検出や診断が難しいランタイム エラーを回避するには、異なるバージョンのコンパイラを使用してコンパイルされたバイナリには静的にリンクしないことをお勧めします。 また、EXE または DLL プロジェクトをアップグレードする場合、リンクするライブラリもアップグレードします。 異なるバージョンのコンパイラを使用してコンパイルされたバイナリ間 (DLL を含む) で CRT (C Runtime) または C++ 標準ライブラリ (C++ Standard Library) 型を渡さないようにしてください。 詳細については、「 [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
 
-さらに、COM インターフェイスまたは POD オブジェクトではないオブジェクトで、特定のレイアウトに依存するコードを記述しないことをお勧めします。 このようなコードを記述している場合、アップグレード後に動作することを確認する必要があります。 詳細については、「[ABI の境界での移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)」を参照してください。
+COM インターフェイスまたは POD オブジェクトではないオブジェクトで、特定のレイアウトに依存するコードを記述しないでください。 このようなコードを記述している場合、アップグレード後に動作することを確認する必要があります。 詳細については、「[ABI の境界での移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)」を参照してください。
 
-また、コンパイラの準拠に関する継続的な強化によって、コンパイラが既存のソース コードを認識する方法が変わる可能性があります。 このような場合、以前にビルドして問題なく実行できていたコードでも、ビルド時に新しいエラーや異なるエラーが発生したり、動作が変わったりする可能性があります。 このドキュメントで説明しているような互換性に影響する変更ではありませんが、問題を解決するためにソース コードの変更が必要な場合があります。
+また、コンパイラの準拠に関する継続的な強化によって、コンパイラが既存のソース コードを認識する方法が変わる可能性があります。 たとえば、以前にビルドして問題なく実行できていたコードでも、ビルド時に新しいエラーや異なるエラーが発生したり、動作が変わったりする可能性があります。 これらの機能強化は、このドキュメントで説明しているような破壊的変更ではありませんが、問題を解決するためにソース コードの変更が必要な場合があります。
 
 - [C ランタイム (CRT) ライブラリの互換性に影響する変更点](#BK_CRT)
 
@@ -36,7 +36,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - [コンカレンシー ランタイムの互換性に影響する変更点](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual C++ 2015 の準拠に関する変更
+## <a name="VC_2015"></a> Visual Studio 2015 の準拠に関する変更
 
 ###  <a name="BK_CRT"></a> C ランタイム ライブラリ (CRT)
 
@@ -44,43 +44,41 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **リファクタリング バイナリ**
 
-   CRT ライブラリは 2 つの異なるバイナリにリファクタリングされています。その 1 つはユニバーサル CRT (ucrtbase) で、標準機能のほとんどが含まれています。もう 1 つは VC ランタイム ライブラリ (vcruntime) で、例外処理や組み込み関数などのコンパイラ関連の機能が含まれています。 既定のプロジェクト設定を使用している場合は、この変更によって影響を受けません。リンカーは、新しい既定のライブラリを自動的に使用するからです。 プロジェクトの **[リンカー]** プロパティの **[すべての既定のライブラリの無視]** を **[はい]** に設定するか、コマンドラインで `/NODEFAULTLIB` リンカー オプションを使用する場合、(**[追加の依存ファイル]** プロパティの) ライブラリのリストを更新して、新しいリファクタリング ライブラリを組み込む必要があります。 古い CRT ライブラリ (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) をリファクタリングした同等のライブラリで置き換えます。 2 つのリファクタリング ライブラリのそれぞれについて、静的 (.lib) バージョンと動的 (.dll) バージョンがあり、リリース (サフィックスなし) バージョンとデバッグ (サフィックス "d" を持つ) バージョンがあります。 動的バージョンには、リンク先インポート ライブラリがあります。 2 つのリファクタリング ライブラリとは、ユニバーサル CRT (具体的には ucrtbase.dll または .lib、ucrtbased.dll または .lib)、と VC ランタイム ライブラリ (libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib、vcruntimed*version*.dll) です。 Visual Studio 2015 と Visual Studio 2017 における*バージョン*は 140 です。 「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
+   CRT ライブラリは 2 つの異なるバイナリにリファクタリングされています。その 1 つはユニバーサル CRT (ucrtbase) で、標準機能のほとんどが含まれています。もう 1 つは VC ランタイム ライブラリ (vcruntime) です。 vcruntime ライブラリには、例外処理や組み込み関数などのコンパイラ関連の機能が含まれています。 既定のプロジェクト設定を使用している場合は、この変更による影響は受けません。リンカーは、新しい既定のライブラリを自動的に使用するためです。 プロジェクトの **[リンカー]** プロパティの **[すべての既定のライブラリの無視]** を **[はい]** に設定するか、コマンドラインで `/NODEFAULTLIB` リンカー オプションを使用する場合、( **[追加の依存ファイル]** プロパティの) ライブラリのリストを更新して、新しいリファクタリング ライブラリを組み込む必要があります。 古い CRT ライブラリ (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) をリファクタリングした同等のライブラリで置き換えます。 2 つのリファクタリング ライブラリのそれぞれについて、静的 (.lib) バージョンと動的 (.dll) バージョンがあり、リリース (サフィックスなし) バージョンとデバッグ (サフィックス "d" を持つ) バージョンがあります。 動的バージョンには、リンク先インポート ライブラリがあります。 2 つのリファクタリング ライブラリとは、ユニバーサル CRT (具体的には ucrtbase.dll または ucrtbase.lib、ucrtbased.dll または ucrtbased.lib)、と VC ランタイム ライブラリ (libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib、vcruntimed*version*.dll) です。 Visual Studio 2015 と Visual Studio 2017 における*バージョン*は 140 です。 「 [CRT Library Features](../c-runtime-library/crt-library-features.md)」を参照してください。
 
 #### <a name="localeh"></a>\<locale.h>
 
 - **localeconv**
 
-   現在、locale.h で宣言される [localeconv](../c-runtime-library/reference/localeconv.md) 関数は、[スレッドごとのロケール](../parallel/multithreading-and-locales.md)が有効なときに正常に機能します。 以前のバージョンのライブラリでは、この関数はスレッドのロケールではなくグローバル ロケールの lconv データを返していました。
+   現在、locale.h で宣言される [localeconv](../c-runtime-library/reference/localeconv.md) 関数は、[スレッドごとのロケール](../parallel/multithreading-and-locales.md)が有効なときに正常に機能します。 以前のバージョンのライブラリでは、この関数はスレッドのロケールではなくグローバル ロケールの `lconv` データを返していました。
 
-   スレッドごとのロケールを使用する場合、localeconv の使用を確認し、返される lconv データがグローバル ロケール用であることがコードで想定されているかどうかを確認し、必要に応じて変更する必要があります。
+   スレッドごとのロケールを使用する場合は、`localeconv` の使用を確認する必要があります。 コードで、返される `lconv` データがグローバル ロケール用であることを前提とする場合は、それを修正する必要があります。
 
 #### <a name="mathh"></a>\<math.h>
 
 - **数値演算ライブラリ関数の C++ のオーバーロード**
 
-   以前のバージョンでは、\<math.h> は、数値演算ライブラリ関数の C++ オーバーロードのいくつか (すべてではない) を定義していました。 \<cmath> はそれ以外のオーバーロードを定義するため、すべてのオーバーロードを取得するには、\<cmath> ヘッダーを組み込む必要がありました。 そのため、\<math.h> だけしか組み込まれていないコードでは、関数のオーバーロードの解決方法に問題が生じていました。 現在は、すべての C++ オーバーロードが \<math.h> から削除されており、\<cmath> にのみ存在しています。
+   以前のバージョンでは、\<math.h> は、数値演算ライブラリ関数の C++ オーバーロードのいくつか (すべてではない) を定義していました。 残りのオーバーロードは、\<cmath > ヘッダーにありました。 \<math.h> だけしか組み込まれていないコードでは、関数のオーバーロードの解決方法に問題が生じていました。 現在は、C++ オーバーロードが \<math.h> から削除されており、\<cmath> にのみ存在しています。
 
-   エラーを解決するには、\<math.h> から削除された関数の宣言を取得する \<cmath> を組み込んでください。 移動された関数を次の表に示します。
+   エラーを解決するには、\<math.h> から削除された関数の宣言を取得する \<cmath> を組み込んでください。 次の関数は移動されました。
 
-   移動された関数:
+  - `double abs(double)` および `float abs(float)`
 
-  - double abs(double) および float abs(float)
+  - `double pow(double, int)`、`float pow(float, float)`、`float pow(float, int)`、`long double pow(long double, long double)`、`long double pow(long double, int)`
 
-  - double pow(double, int)、float pow(float, float)、float pow(float, int)、long double pow(long double, long double)、long double pow(long double, int)
+  - `float` および `long double` バージョンの浮動小数点関数 `acos`、`acosh`、`asin`、`asinh`、`atan`、`atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma`、および `trunc`
 
-  - 次の浮動小数点関数の float バージョンおよび long double バージョン: acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
-
-  math.h ヘッダーだけが組み込まれている浮動小数点型の abs を使用するコードがある場合、浮動小数点バージョンは使用できなくなります。そのため、浮動小数点引数を持つ場合でも、現バージョンでは、abs(int) の呼び出しで解決します。 これによって、次のエラーが生成されます。
+  `abs`math.h> ヘッダーだけが組み込まれている浮動小数点型の \< を使用するコードがある場合、浮動小数点バージョンは使用できなくなります。 エラーを生成する浮動小数点引数を持つ場合でも、現在は `abs(int)` の呼び出しで解決します。
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-  この警告の修正方法は、`abs` の呼び出しを、`abs` の浮動小数点バージョン (double 引数の場合は `fabs`、float 引数の場合は `fabsf`) で置き換えるか、cmath ヘッダーを組み込んで `abs` を引き続き使用するかのどちらかです。
+  この警告の修正方法は、`abs` の呼び出しを、`abs` の浮動小数点バージョン (double 引数の場合は `fabs`、float 引数の場合は `fabsf`) で置き換えるか、\<cmath> ヘッダーを組み込んで `abs` を引き続き使用するかのどちらかです。
 
 - **浮動小数点の準拠**
 
-   NaNs 値や無限大値などの特殊なケースの入力に関する IEEE-754 仕様および C11 Annex F 仕様に対する準拠を改善するために、多くの変更が数値演算ライブラリに対して加えられています。 たとえば、簡易な NaN 入力 (以前のバージョンのライブラリでは、多くの場合、エラーとして扱われていた) はエラーとして扱われなくなりました。 [IEEE 754 標準](http://grouper.ieee.org/groups/754) と [C11 標準](http://www.iso-9899.info/wiki/The_Standard)の付録 F をご覧ください。
+   NaNs 値や無限大値などの特殊なケースの入力に関する IEEE-754 仕様および C11 Annex F 仕様に対する準拠を改善するために、多くの変更が数値演算ライブラリに対して加えられています。 たとえば、簡易な NaN 入力 (以前のバージョンのライブラリでは、多くの場合、エラーとして扱われていた) はエラーとして扱われなくなりました。 [IEEE 754 標準](https://standards.ieee.org/standard/754-2008.html) と [C11 標準](http://www.iso-9899.info/wiki/The_Standard)の付録 F をご覧ください。
 
    これらの変更によってコンパイル時エラーが発生することはありませんが、プログラムの動作が変わる可能性はあり、標準に従ってより正確に動作するようになる可能性があります。
 
@@ -94,29 +92,29 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    以前のバージョンのライブラリでは、実装定義演算子の new 関数と delete 関数は、ランタイム ライブラリ DLL (たとえば、msvcr120.dll) からエクスポートされていました。 現在、これらの演算子関数は常に (ランタイム ライブラリ DLL を使用する場合でも) 静的にバイナリにリンクされています。
 
-   これはネイティブ コードまたは混合コード (`/clr`) の互換性に影響する変更点ではありませんが、[/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) としてコンパイルされるコードでは、これによってコードのコンパイルが失敗する可能性があります。 コードを `/clr:pure` としてコンパイルする場合、`#include <new>` または `#include <new.h>` を追加してこの変更によるビルド エラーを回避する必要があります。 Visual Studio 2015 では `/clr:pure` は非推奨とされており、Visual Studio 2017 ではサポートされていません。 "ピュア" でなければならないコードは C# に移植する必要があります。
+   これはネイティブ コードまたは混合コード (`/clr`) の破壊的変更ではありませんが、[/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) としてコンパイルされるコードでは、この変更によってコードのコンパイルが失敗する可能性があります。 コードを `/clr:pure` としてコンパイルする場合、`#include <new>` または `#include <new.h>` を追加してこの変更によるビルド エラーを回避する必要があります。 Visual Studio 2015 では `/clr:pure` オプションは非推奨とされており、Visual Studio 2017 ではサポートされていません。 "ピュア" でなければならないコードは C# に移植する必要があります。
 
 #### <a name="processh"></a>\<process.h>
 
 - **_beginthread および _beginthreadex**
 
-   現在、[_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 関数と [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 関数には、モジュールへの参照が含まれています。そのモジュールで、スレッドの期間に関するスレッド プロシージャが定義されています。 これは、スレッドの実行が完了するまでモジュールがアンロードされないようにする上で役立ちます。
+   現在、[_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 関数と [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 関数には、モジュールへの参照が含まれています。そのモジュールで、スレッドの期間に関するスレッド プロシージャが定義されています。 これは、スレッドの実行が完了するまでモジュールが確実にアンロードされないようにするのに役立ちます。
 
 #### <a name="stdargh"></a>\<stdarg.h>
 
 - **va_start と参照型**
 
-   現在、[va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) は C++ コードをコンパイルするときに、渡される引数が参照型でないことをコンパイル時に検証します。 参照型の引数は、C++ 標準では禁止されています。
+   C++ コードをコンパイルするときに、渡される引数が参照型でないことが、現在 [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) によりコンパイル時に検証されるようになりました。 参照型の引数は、C++ 標準では禁止されています。
 
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> と \<conio.h>
+#### <a name="stdio_and_conio"></a>\<stdio > と \<conio .h >
 
 - **現在、関数の printf ファミリと scanf ファミリは、インラインで定義されています。**
 
-   printf 関数と scanf 関数すべての定義は、\<stdio.h>、\<conio.h>、およびその他の CRT ヘッダーにインラインで移動されました。 これは、プログラムで適切な CRT ヘッダーを組み込まずにこれらの関数をローカルで宣言した場合にリンカー エラー (LNK2019、外部シンボルは未解決です) につながる互換性に影響する変更点です。 可能な場合、CRT ヘッダーが組み込まれるよう (つまり、`#include <stdio.h>` を追加するよう) またインライン関数が組み込まれるようコードを更新してください。これらのヘッダー ファイルが組み込まれるようコードを変更しない場合、別の方法として、付加的なライブラリをリンカー入力 legacy_stdio_definitions.lib に追加することもできます。
+   `printf` 関数と `scanf` 関数すべての定義は、\<stdio.h>、\<conio.h>、およびその他の CRT ヘッダーにインラインで移動されました。 この破壊的変更は、プログラムで適切な CRT ヘッダーが組み込まれずにこれらの関数をローカルで宣言した場合にリンカー エラー (LNK2019、外部シンボルは未解決です) につながります。 可能な場合、CRT ヘッダーが組み込まれるよう (つまり、`#include <stdio.h>` を追加するよう) またインライン関数が組み込まれるようコードを更新してください。これらのヘッダー ファイルが組み込まれるようコードを変更しない場合、別の方法として、付加的なライブラリをリンカー入力 legacy_stdio_definitions.lib に追加することもできます。
 
-   このライブラリを IDE のリンカー入力に追加するには、プロジェクト ノードのコンテキスト メニューを開き、**[プロパティ]** を選択し、**[プロジェクトのプロパティ]** ダイアログ ボックスで **[リンカー]** を選択し、**[リンカー入力]** を編集して `legacy_stdio_definitions.lib` をセミコロン区切りリストに追加します。
+   このライブラリを IDE のリンカー入力に追加するには、プロジェクト ノードのコンテキスト メニューを開き、 **[プロパティ]** を選択し、 **[プロジェクトのプロパティ]** ダイアログ ボックスで **[リンカー]** を選択し、 **[リンカー入力]** を編集して `legacy_stdio_definitions.lib` をセミコロン区切りリストに追加します。
 
-   プロジェクトが、2015 より前のリリースの Visual Studio でコンパイルされた静的ライブラリとリンクする場合、リンカーによって、未解決の外部シンボルが報告される可能性があります。 これらのエラーは、`_iob`、`_iob_func`、または _imp_\* 形式の特定の stdio 関数の関連インポートの内部 stdio 定義を参照する可能性があります。 Microsoft は、プロジェクトをアップグレードするときに、最新バージョンの C++ コンパイラおよびライブラリですべての静的ライブラリを再コンパイルすることを推奨しています。 ライブラリが、ソースを使用できないサード パーティ ライブラリである場合、更新されたバイナリをサード パーティから要求するか、そのライブラリの使用を、古いバージョンのコンパイラおよびライブラリでコンパイルする別個の DLL にカプセル化する必要があります。
+   プロジェクトが、2015 より前のリリースの Visual Studio でコンパイルされた静的ライブラリとリンクする場合、リンカーによって、未解決の外部シンボルが報告される可能性があります。 これらのエラーは、`_iob`、`_iob_func`、または \<imp 形式の特定の \*stdio.h> 関数の関連インポートの内部定義を参照する可能性があります。 Microsoft は、プロジェクトをアップグレードするときに、最新バージョンの C++ コンパイラおよびライブラリですべての静的ライブラリを再コンパイルすることを推奨しています。 ライブラリが、ソースを使用できないサード パーティ ライブラリである場合、更新されたバイナリをサード パーティから要求するか、そのライブラリの使用を、古いバージョンのコンパイラおよびライブラリでコンパイルする別個の DLL にカプセル化する必要があります。
 
     > [!WARNING]
     > Windows SDK 8.1 以前とリンクする場合、これらの未解決外部シンボル エラーが発生する可能性があります。 その場合、前述のように、legacy_stdio_definitions.lib をリンカー入力に追加することにより、エラーを解決する必要があります。
@@ -147,7 +145,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
   - 無限大 NaN: 1.#IND
 
-  これらにはすべて、プレフィックスとして符号が付けられていた可能性があります。また、書式設定はフィールドの幅と精度に応じて若干異なる可能性があります (まれな例として、`printf("%.2f\n", INFINITY)` は 1.#J と出力されます。これは、#INF が 2 桁の精度に "丸められる" ためです)。 C99 で、無限大と NaNs の書式設定の方法に関して新たな要件が導入されました。 現在、MSVC の実装は、これらの要件に準拠しています。 新しい文字列は、次のとおりです。
+  これらの書式設定にはすべて、プレフィックスとして符号が付けられていた可能性があります。また、書式設定はフィールドの幅と精度に応じて若干異なる可能性があります (まれな例として、`printf("%.2f\n", INFINITY)` は 1.#J と出力されます。これは、#INF が 2 桁の精度に "丸められた" ためです)。 C99 で、無限大と NaNs の書式設定の方法に関して新たな要件が導入されました。 現在、MSVC の実装は、これらの要件に準拠しています。 新しい文字列は、次のとおりです。
 
   - 無限台: inf
 
@@ -155,17 +153,17 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
   - シグナリング NaN: nan(snan)
 
-  - 無限大 NaN:nan(ind)
+  - 不定値 NaN: nan(ind)
 
-  これらにはすべて、プレフィックスとして符号が付けられます。 大文字の書式指定子が使用される場合 (%f ではなく %F)、文字列は大文字で出力されます (inf ではなく INF)。これは必須です。
+  これらにはすべて、プレフィックスとして符号が付けられます。 大文字の書式指定子が使用される場合 (%f ではなく %F)、文字列は大文字で出力されます (`INF` ではなく `inf`)。これは必須です。
 
-  [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 関数はこれらの新しい文字列を解析するよう変更され、これらの文字列は、printf および scanf によってラウンド トリップされます。
+  [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 関数はこれらの新しい文字列を解析するよう変更され、これらの文字列は、`printf` および `scanf` によってラウンド トリップされます。
 
 - **浮動小数点の書式設定と解析**
 
    新しい浮動小数点の書式設定と解析のアルゴリズムが導入され、正確性が向上しました。 この変更は、関数ファミリ [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) や [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)、[strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) などの関数に影響を与えます。
 
-   従来の書式設定アルゴリズムでは、限られた桁数のみを生成し、残りの小数点以下表示桁数はゼロで埋められていました。 通常は、元の浮動小数点の値にラウンドトリップする文字列を生成するのにこれで十分ですが、正確な値 (またはそれに最も近い 10 進表現) が必要な場合は十分ではありません。 新しい書式設定アルゴリズムでは、値を表す (または指定された有効桁数を埋める) ために必要な桁数が生成されます。 改善の一例として、大きな 2 の冪の出力結果をご覧ください。
+   従来の書式設定アルゴリズムでは、限られた桁数のみを生成し、残りの小数点以下表示桁数はゼロで埋められていました。 通常は、元の浮動小数点の値にラウンドトリップする文字列を生成できましたが、正確な値 (またはそれに最も近い 10 進表現) が必要な場合は十分ではありませんでした。 新しい書式設定アルゴリズムでは、値を表す (または指定された有効桁数を埋める) ために必要な桁数が生成されます。 改善の一例として、大きな 2 の冪の出力結果をご覧ください。
 
     ```cpp
     printf("%.0f\n", pow(2.0, 80))
@@ -183,7 +181,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
     1208925819614629174706176
     ```
 
-   従来の解析アルゴリズムでは、入力文字列の最大 17 桁の有効桁数のみが考慮され、残りの桁は破棄されていました。 文字列によって表される値に非常に近い概算値を生成するにはこれで十分であり、結果は通常、正しく丸められた結果に非常に近い値になっていました。 新しい実装では、存在するすべての桁数を考慮に入れ、すべての入力を正しく丸めた結果が生成されます (最大長 768 桁)。 加えて、現在、これらの関数は丸めモードを採用しています (fesetround によって制御可能)。  これらの関数は異なる結果を出力する可能性があるため、これは互換性に影響する潜在的な動作の変更点になります。 新しい結果は常に、古い結果より正しくなります。
+   従来の解析アルゴリズムでは、入力文字列の最大 17 桁の有効桁数のみが考慮され、残りの桁は破棄されていました。 文字列によって表される値に近い概算値を生成するにはこれで十分であり、結果は通常、正しく丸められた結果に非常に近い値になっていました。 新しい実装では、存在するすべての桁数を考慮に入れ、すべての入力を正しく丸めた結果が生成されます (最大長 768 桁)。 加えて、現在、これらの関数は丸めモードを採用しています (fesetround によって制御可能)。  これらの関数は異なる結果を出力する可能性があるため、これは動作の破壊的変更になります。 新しい結果は常に、古い結果より正しくなります。
 
 - **16 進数および無限大/NaN 浮動小数点の解析**
 
@@ -191,7 +189,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **%A および %a のゼロ パディング**
 
-   %a および %A 書式指定子は、浮動小数点の数値を、16 進数の仮数部およびバイナリの指数として書式設定します。 以前のバージョンでは、`printf` 関数は文字列をゼロで埋め込んでいましたが、それは正しくありませんでした。 たとえば、`printf("%07.0a\n", 1.0)` は 00x1p+0 と出力されますが、本来、print 0x01p+0 と出力されるべきです。 これは修正されました。
+   %a および %A 書式指定子は、浮動小数点の数値を、16 進数の仮数部およびバイナリの指数として書式設定します。 以前のバージョンでは、`printf` 関数は文字列をゼロで埋め込んでいましたが、それは正しくありませんでした。 たとえば、`printf("%07.0a\n", 1.0)` は 00x1p+0 と出力されますが、本来、print 0x01p+0 と出力されるべきです。 この問題は修正されました。
 
 - **%A と %a の有効桁数**
 
@@ -207,17 +205,17 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **指数の書式設定**
 
-   %e および %E 書式指定子は、浮動小数点の数値を、10 進数の仮数部および指数として書式設定します。 場合によっては、%g および %G 書式指定子もこの形式で数値を書式設定します。 以前のバージョンでは、CRT は 3 桁の指数部を持つ文字列を常に生成していました。 たとえば、`printf("%e\n", 1.0)` は 1.000000e+000 を出力していました。 これは正しくありませんでした。C では、指数部を 1 桁または 2 桁のみを使って表すことができる場合、2 桁のみを出力する必要があります。
+   %e および %E 書式指定子は、浮動小数点の数値を、10 進数の仮数部および指数として書式設定します。 場合によっては、%g および %G 書式指定子もこの形式で数値を書式設定します。 以前のバージョンでは、CRT は 3 桁の指数部を持つ文字列を常に生成していました。 たとえば、`printf("%e\n", 1.0)` により 1.000000e+000 が出力されていましたが、これは正しくありませんでした。 C では、指数部を 1 桁または 2 桁のみを使って表すことができる場合、2 桁のみを出力する必要があります。
 
    Visual Studio 2005 では、グローバル準拠スイッチ [_set_output_format](../c-runtime-library/set-output-format.md) が追加されました。 プログラムは、この関数を引数 _TWO_DIGIT_EXPONENT を使って呼び出し、指数部出力の準拠を有効にすることができました。 既定の動作が変更され、標準に準拠する指数印刷モードに変更なりました。
 
 - **書式文字列の検証**
 
-   以前のバージョンでは、printf 関数と scanf 関数が、多くの無効な書式文字列を自動的に受け入れていました。ただし、ときどき普通でない影響が生じていました。 たとえば、%hlhlhld は %d として扱われていました。 現在、無効な書式文字列はすべて、無効なパラメーターとして扱われます。
+   以前のバージョンでは、`printf` 関数と `scanf` 関数により、多くの無効な書式文字列が自動的に受け入れられていました。ただし、ときどき普通でない影響が生じていました。 たとえば、%hlhlhld は %d として扱われていました。 現在、無効な書式文字列はすべて、無効なパラメーターとして扱われます。
 
 - **fopen モードの文字列の検証**
 
-   以前のバージョンでは、fopen 関数ファミリは、正しくない一部のモード文字列を自動的に受け入れていました (たとえば、r+b+)。 現在、無効なモード文字列は検出され、無効なパラメーターとして扱われます。
+   以前のバージョンでは、`fopen` 関数ファミリにより、一部の無効なモード文字列が自動的に受け入れられていました (`r+b+`など)。 現在、無効なモード文字列は検出され、無効なパラメーターとして扱われます。
 
 - **_O_U8TEXT モード**
 
@@ -227,7 +225,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **snprintf および vsnprintf**
 
-   現在、[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 関数と [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 関数が実装されています。 古いコードは CRT ライブラリによって実装されていなかったため、これらの関数の定義マクロ バージョンを提供していました。しかし、新しいバージョンではこれらが不要になりました。 \<stdio.h> を組み込む前に [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) または [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) がマクロとして定義されている場合、現在コンパイルは、マクロが定義された場所を示すエラーとともに失敗します。
+   現在、[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 関数と [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 関数が実装されています。 古いコードは CRT ライブラリによって実装されていなかったため、これらの関数の定義マクロ バージョンを提供していました。しかし、新しいバージョンではこれらが不要になりました。 [stdio.h> を組み込む前に ](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)snprintf[ または ](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)vsnprintf\< がマクロとして定義されている場合、現在コンパイルは、マクロが定義された場所を示すエラーとともに失敗します。
 
    通常、この問題は、ユーザー コードの `snprintf` または `vsnprintf` の宣言を削除することによって修正されます。
 
@@ -237,7 +235,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **FILE カプセル化**
 
-   以前のバージョンでは、FILE 型が\<stdio.h> で完全に定義されていたため、ユーザー コードが FILE に達して、その内部構造を変更することができました。 stdio ライブラリが変更され、実装に関する詳細が隠されるようになりました。 この一環として、現在、\<stdio.h> で定義される FILE は不透明な型であり、そのメンバーは、CRT 自体の外部からアクセスできません。
+   以前のバージョンでは、完全なファイルの種類は \<stdio > でパブリックに定義されているので、ユーザーコードはファイルに接続してその内部を変更することができました。 ライブラリが変更され、実装に関する詳細が隠されるようになりました。 この変更の一環として、現在、\<stdio.h> で定義される FILE は不透明な型であり、そのメンバーは、CRT 自体の外部からアクセスできません。
 
 - **_outp および _inp**
 
@@ -247,11 +245,11 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **strtof および wcstof**
 
-   値を float として表せない場合に、`strtof` 関数および `wcstof` 関数で errno を ERANGE に設定できませんでした。 これは修正されました。 (このエラーはこれら 2 つの関数に固有のものでした。`strtod` 関数、`wcstod` 関数、`strtold` 関数、および `wcstold` 関数は影響を受けませんでした。)これはランタイムについて互換性に影響する変更点です。
+   値を float として表せない場合に、`strtof` 関数および `wcstof` 関数で `errno` を ERANGE に設定できませんでした。 このエラーはこれら 2 つの関数に固有のものでした。`strtod` 関数、`wcstod` 関数、`strtold` 関数、および `wcstold` 関数は影響を受けませんでした。 この問題は修正されており、ランタイムの破壊的変更です。
 
 - **整列された割り当て関数**
 
-   以前のバージョンでは、整列された割り当て関数 (`_aligned_malloc`、`_aligned_offset_malloc` など) は、整列が 0 のブロックに関する要求を自動的に受け入れていました。 要求された配置は 2 のべき乗でなければならず、ゼロは不可でした。 これは修正されており、配置 0 の要求は現在、無効なパラメーターとして扱われます。 これはランタイムについて互換性に影響する変更点です。
+   以前のバージョンでは、整列された割り当て関数 (`_aligned_malloc`、`_aligned_offset_malloc` など) は、整列が 0 のブロックに関する要求を自動的に受け入れていました。 要求された整列は 2 のべき乗でなければならず、ゼロは不可でした。 整列が 0 の要求は現在、無効なパラメーターとして扱われます。 この問題は修正されており、ランタイムの破壊的変更です。
 
 - **ヒープ関数**
 
@@ -259,7 +257,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **smallheap**
 
-   `smalheap` リンク オプションは削除されました。 「[リンク オプション](../c-runtime-library/link-options.md)」を参照してください。
+   `smallheap` リンク オプションは削除されました。 「 [Link Options](../c-runtime-library/link-options.md)」を参照してください。
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -273,58 +271,59 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    `strtok` と同様、これはスレッドごとの内部コンテキストを使用して、呼び出しの状態を追跡していました。 現在、この関数のシグネチャは `wchar_t* wcstok(wchar_t*, wchar_t const*, wchar_t**)` になり、呼び出し元は関数に対する 3 番目の引数としてコンテキストを渡すことが必須になりました。
 
-   古いシグネチャとともに新しい `_wcstok` 関数が追加され、移植が簡単になりました。 C++ コードをコンパイルする際にも、古いシグネチャを持つ `wcstok` のインライン オーバーロードが存在します。 このオーバーロードは、非推奨として宣言されます。 C コードでは、_CRT_NON_CONFORMING_WCSTOK を定義し、`wcstok` の代わりに `_wcstok` が使用されるようにすることもできます。
+   古いシグネチャとともに新しい `_wcstok` 関数が追加され、移植が簡単になりました。 C++ コードをコンパイルする際にも、古いシグネチャを持つ `wcstok` のインライン オーバーロードが存在します。 このオーバーロードは、非推奨として宣言されます。 C コードでは、_CRT_NON_CONFORMING_WCSTOK を定義し、`_wcstok` の代わりに `wcstok` が使用されるようにすることもできます。
 
 #### <a name="timeh"></a>\<time.h>
 
 - **clock**
 
-   以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) によって clock 関数が再実装されたため、単調になっています。
+   以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](../c-runtime-library/reference/clock.md) を使用して [clock](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) によって clock 関数が再実装されたため、単調になっています。
 
 - **fstat および _utime**
 
    以前のバージョンでは、[_stat](../c-runtime-library/reference/stat-functions.md) 関数、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)関数、および [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 関数での夏時間の処理が正しくありませんでした。 Visual Studio 2013 より前では、これらの関数はすべて、標準時刻をあたかも夏時間にあるかのようにに調整していましたが、これは正しい処理ではありませんでした。
 
-   Visual Studio 2013 では、**_stat** 関数ファミリでは問題が解決されましたが、**fstat** 関数ファミリと **_utime** 関数ファミリでは修正されていませんでした。 これは、関数間の不整合による問題につながっていました。 **fstat** および **_utime** の関数ファミリは現在修正され、これらすべての関数が、正確かつ一貫して夏時間を処理できるようになりました。
+   Visual Studio 2013 では、 **_stat** 関数ファミリでは問題が解決されましたが、**fstat** 関数ファミリと **_utime** 関数ファミリでは修正されていませんでした。 この部分的な修正は、関数間の不整合による問題につながっていました。 **fstat** および **_utime** の関数ファミリは現在修正され、これらすべての関数が、正確かつ一貫して夏時間を処理できるようになりました。
 
 - **asctime**
 
-   以前のバージョンでは、[asctime](../c-runtime-library/reference/asctime-wasctime.md) 関数は、1 桁の日の先頭をゼロで埋めていました (たとえば、Fri Jun 06 08:00:00 2014)。 この仕様では、そのような日の先頭を空白で埋める必要があります (たとえば、Fri Jun  6 08:00:00 2014)。 これは修正されました。
+   以前のバージョンでは、[asctime](../c-runtime-library/reference/asctime-wasctime.md) 関数は、1 桁の日の先頭をゼロで埋めていました (たとえば、`Fri Jun 06 08:00:00 2014`)。 この仕様では、そのような日の先頭を空白で埋める必要があります (たとえば、`Fri Jun  6 08:00:00 2014`)。 この問題は修正されています。
 
 - **strftime および wcsftime**
 
    `strftime` 関数と `wcsftime` 関数は、書式指定子として %C、%D、%e、%F、%g、%G、%h、%n、%r、%R、%t、%T、%u、および %V をサポートしています。 さらに、E 修飾子と O 修飾子は、解析はされますが、無視されます。
 
-   %c 書式指定子は、現行ロケールの "適切な日時の表記" を生成するものとして指定されます。 C ロケールでは、%a %b %e %T %Y と同じになるよう、この表記が必要です。 これは asctime によって生成される書式と同じです。 以前のバージョンでは、%c 書式指定子は MM/DD/YY HH:MM:SS 表記を使用して時刻を書式設定していましたが、これは正しくありませんでした。 これは修正されました。
+   %c 書式指定子は、現行ロケールの "適切な日時の表記" を生成するものとして指定されます。 C ロケールでは、`%a %b %e %T %Y` で生成されるのと同じ書式である `asctime` と同じになるよう、この表記が必要です。 以前のバージョンでは、%c 書式指定子は `MM/DD/YY HH:MM:SS` 表記を使用して時刻を書式設定していましたが、これは正しくありませんでした。 この問題は修正されています。
 
 - **timespec および TIME_UTC**
 
-   \<time.h> ヘッダーは、C11 標準の `timespec` 型と `timespec_get` 関数を定義します。 さらに、現在、`timespec_get` 関数で使用する TIME_UTC マクロが定義されています。 これは、そのいずれかの定義が競合しているコードに関して、互換性に影響する変更点です。
+   \<time.h> ヘッダーは、C11 標準の `timespec` 型と `timespec_get` 関数を定義します。 さらに、現在、`timespec_get` 関数で使用する TIME_UTC マクロが定義されています。 この更新は、その識別子のいずれかの定義が競合しているコードに関して、破壊的変更です。
 
 - **CLOCKS_PER_SEC**
 
    現在、CLOCKS_PER_SEC マクロは `clock_t` 型の整数に拡張されており、これは C 言語で必要です。
 
 ####  <a name="BK_STL"></a> C++ 標準ライブラリ
-新しい最適化とデバッグのチェックを有効にするために、C++ 標準ライブラリの Visual Studio の実装では、バイナリの互換性がバージョンごとに意図的に保たれていません。 そのため、C++ 標準ライブラリを使用すると、異なるバージョンを使用してコンパイルされたオブジェクト ファイルとスタティック ライブラリは 1 つのバイナリ (EXE または DLL) に混在させることができず、C++ 標準ライブラリ オブジェクトは異なるバージョンを使用してコンパイルされたバイナリ間で渡すことができません。 混在があると、_MSC_VER の不一致に関するリンカー エラーが発生します  (_MSC_VER はコンパイラのメジャー バージョンを含むマクロです。たとえば Visual Studio 2013 では 1800 です)。このチェックでは、DLL の混在を検出できず、Visual Studio 2008 以前のバージョンが関係する混在も検出できません。
+
+新しい最適化とデバッグのチェックを有効にするために、C++ 標準ライブラリの Visual Studio の実装では、バイナリの互換性がバージョンごとに意図的に保たれていません。 そのため、C++ 標準ライブラリを使用すると、異なるバージョンを使用してコンパイルされたオブジェクト ファイルとスタティック ライブラリは 1 つのバイナリ (EXE または DLL) に混在させることができず、C++ 標準ライブラリ オブジェクトは異なるバージョンを使用してコンパイルされたバイナリ間で渡すことができません。 混在があると、_MSC_VER の不一致に関するリンカー エラーが発生します (_MSC_VER は、コンパイラのメジャーバージョンを含むマクロです。たとえば、Visual Studio 2013 の場合は1800です)。このチェックでは、DLL の混在を検出できず、Visual Studio 2008 以前のバージョンを含む混在を検出することはできません。
 
 - **C++ 標準ライブラリ インクルード ファイル**
 
-   C++ 標準ライブラリのヘッダーのインクルード構造に対していくつかの変更が加えられました。 C++ 標準ライブラリ ヘッダーは、指定されていない方法での相互インクルードを許可されています。 一般に、C++ 標準に応じて必要なすべてのヘッダーを注意深くインクルードし、どの C++ 標準ライブラリ ヘッダーにどの C++ 標準ライブラリ ヘッダーが含まれるかは関係ないようにするようコードを記述する必要があります。 これにより、バージョン間およびプラットフォーム間でのコードの移植が可能になります。 少なくとも Visual Studio 2015 でのヘッダーに関する 2 つの変更がユーザー コードに影響を与えます。 1 つ目として、\<string> に \<iterator> が含まれなくなりました。 2 つ目として、現在、\<tuple> は、すべての \<array> は含まない `std::array` を宣言します。これは、次のコード構成体の組み合わせによってコードに障害を起こす可能性があります。コードに "array" という名前の変数があり、using-directive "using namespace std;" があります。\<tuple> を含む C++ 標準ライブラリ ヘッダー (\<functional> など) を組み込みますが、これは現在、`std::array` を宣言します。
+   C++ 標準ライブラリのヘッダーのインクルード構造に対していくつかの変更が加えられました。 C++ 標準ライブラリ ヘッダーは、指定されていない方法での相互インクルードを許可されています。 一般に、C++ 標準に応じて必要なすべてのヘッダーを注意深くインクルードし、どの C++ 標準ライブラリ ヘッダーにどの C++ 標準ライブラリ ヘッダーが含まれるかは関係ないようにするようコードを記述する必要があります。 これにより、バージョン間およびプラットフォーム間でのコードの移植が可能になります。 少なくとも Visual Studio 2015 でのヘッダーに関する 2 つの変更がユーザー コードに影響を与えます。 1 つ目として、\<string> に \<iterator> が含まれなくなりました。 2 つ目として、現在、\<tuple> は、すべての `std::array`array> は含まない \< を宣言します。これは、次のコード構成体の組み合わせによってコードに障害を起こす可能性があります。コードに "array" という名前の変数があり、using-directive "using namespace std;" があります。\<tuple> を含む C++ 標準ライブラリ ヘッダー (\<functional> など) を組み込みますが、これは現在、`std::array` を宣言します。
 
 - **steady_clock**
 
-   [steady_clock](../standard-library/steady-clock-struct.md) の \<chrono> 実装が変更され、安定性と単調性のための C++ 標準の要件を満たすようになりました。 現在、`steady_clock` は [QueryPerformanceCounter()](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual Studio では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
+   \<steady_clock[ の ](../standard-library/steady-clock-struct.md)chrono> 実装が変更され、安定性と単調性のための C++ 標準の要件を満たすようになりました。 現在、`steady_clock` は [QueryPerformanceCounter()](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual Studio では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
 
 - **アロケーターおよび const**
 
-   現在、両サイドで const 引数を受け入れるには、アロケーターの等価/非等価の比較が必要です。  アロケーターがこれらの演算子を次のように定義するとします。
+   現在、両サイドで const 引数を受け入れるには、アロケーターの等価/非等価の比較が必要です。 アロケーターがこれらの演算子をこのように定義する場合、
 
     ```cpp
     bool operator==(const MyAlloc& other)
     ```
 
-   それを const メンバーとして宣言するために、これを更新する必要があります。
+   それを更新して、const メンバーとして宣言する必要があります。
 
     ```cpp
     bool operator==(const MyAlloc& other) const
@@ -336,11 +335,11 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **std::allocator::deallocate**
 
-   Visual Studio 2013 以前では、`std::allocator::deallocate(p, n)` は、*n* に対して渡されていた引数を無視していました。  C++ 標準では常に、*p* を返した割り当ての呼び出しに最初の引数として渡される値と *n* が同等である必要がありました。 しかし、現在のバージョンでは、*n* の値は検査されます。 標準で必要なものとは異なる引数を *n* に渡すコードは、ランタイムにクラッシュする可能性があります。
+   Visual Studio 2013 以前では、`std::allocator::deallocate(p, n)` は、*n* に対して渡されていた引数を無視していました。  C++ 標準では常に、*p* を返した `allocate` の呼び出しに最初の引数として渡される値と *n* が同等である必要がありました。 しかし、現在のバージョンでは、*n* の値は検査されます。 標準で必要なものとは異なる引数を *n* に渡すコードは、ランタイムにクラッシュする可能性があります。
 
 - **hash_map および hash_set**
 
-   非標準ヘッダー ファイルの hash_map と hash_set は Visual Studio 2015 では非推奨とされており、将来のリリースでは削除されます。 代わりに unordered_map と unordered_set を使用してください。
+   非標準ヘッダー ファイルの \<hash_map> と \<hash_set> は Visual Studio 2015 では非推奨とされており、将来のリリースでは削除されます。 代わりに \<unordered_map> と \<unordered_set> を使用してください。
 
 - **比較子および operator()**
 
@@ -360,7 +359,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    以前のバージョンの C++ ドラフト標準の型の特徴の古い名前が削除されました。 これらは C++11 で変更されており、Visual Studio 2015 では C++11 値に更新されました。 古い名前と新しい名前を次の表に示します。
 
-   |古い名前|新しい名前|
+   |以前の名前|新しい名前|
    |--------------|--------------|
    |add_reference|add_lvalue_reference|
    |has_default_constructor|is_default_constructible|
@@ -384,13 +383,13 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **launch::any ポリシーと launch::sync ポリシー**
 
-   非標準の `launch::any` と `launch::sync` のポリシーが削除されました。 代わりに、`launch::any` に対して、`launch:async | launch:deferred` を使用します。 `launch::sync` では、`launch::deferred` を使用します。 「[launch 列挙型](../standard-library/future-enums.md#launch)」を参照してください。
+   非標準の `launch::any` と `launch::sync` のポリシーが削除されました。 代わりに、`launch::any` に対して、`launch:async | launch:deferred` を使用します。 `launch::sync` では `launch::deferred` を使用します。 「[launch 列挙型](../standard-library/future-enums.md#launch)」を参照してください。
 
 ####  <a name="BK_MFC"></a> MFC と ATL
 
 - **Microsoft Foundation Classes (MFC)**
 
-   はサイズが大きすぎるため、Visual Studio の "標準" インストールから除外されました。 MFC をインストールするには、Visual Studio 2015 セットアップで**カスタム** インストール オプションを選択します。 Visual Studio 2015 が既にインストールされている場合、MFC をインストールできます。そのためには、**Visual Studio** セットアップを再実行し、**カスタム** インストール オプションを選択し、**Microsoft Foundation Classes** を選択します。 **Visual Studio** セットアップの再実行は、**コントロール パネル**、**プログラムと機能**か、インストール メディアからすることができます。
+   はサイズが大きすぎるため、Visual Studio の "標準" インストールから除外されました。 MFC をインストールするには、Visual Studio 2015 セットアップで**カスタム** インストール オプションを選択します。 既に Visual Studio 2015 がインストールされている場合は、**Visual Studio** セットアップを再度実行して MFC をインストールできます。 **カスタム** インストール オプションを選択してから、**Microsoft Foundation Classes** を選択します。 **Visual Studio** セットアップの実行は、**コントロール パネル**のコントロールである**プログラムと機能**か、インストール メディアからすることができます。
 
    Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。
 
@@ -408,11 +407,11 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 以前のバージョンからコードをアップグレードすると、Visual Studio 2015 の準拠に関する強化によるコンパイラ エラーが生じる可能性があります。 これらの強化は、旧バージョンの Visual Studio からのバイナリの互換性に影響する変更ではありませんが、以前にはないコンパイラ エラーが発生する可能性があります。 詳細については、「[Visual C++ 2003 ～ 2015 の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
 
-Visual Studio 2015 では、コンパイラの準拠に関する継続的な強化によって、コンパイラが既存のソース コードを認識する方法が変わる可能性があります。 このような場合、以前にビルドして問題なく実行できていたコードでも、ビルド時に新しいエラーや異なるエラーが発生したり、動作が変わったりする可能性があります。
+Visual Studio 2015 では、コンパイラの準拠に関する継続的な強化によって、コンパイラが既存のソース コードを認識する方法が変わる可能性があります。 その結果、以前にビルドして問題なく実行できていたコードでも、ビルド時に新しいエラーや異なるエラーが発生したり、動作が変わったりする可能性があります。
 
-幸いなことに、これらの変更はほとんどのソース コードにほとんど、またはまったく影響がありません。また、変更に対応するためにソース コードやその他の変更が必要な場合でも、通常は軽微で簡単な変更で済みます。 以前は問題がなかったソース コードで、変更が必要な *(修正前の)* コード例と、正しい *(修正後の)* コード例を多数紹介します。
+さいわい、これらの相違点は、ほとんどのソース コードにおいて、ほとんどまたは全く影響を与えません。 これらの相違点に対処するためにソース コードまたはその他の変更が必要な場合、修正は小さく簡単なものになる傾向があります。 以前は問題がなかったソース コードで、変更が必要な *(修正前の)* コード例と、正しい *(修正後の)* コード例を多数紹介します。
 
-これらの変更点はソース コードや他のビルド成果物に影響はあっても、Visual Studio の異なるバージョン間のバイナリの互換性には影響がありません。 より重大な変更で、*互換性に影響する変更*の場合、バイナリの互換性に影響が及ぶ可能性がありますが、このようなバイナリの互換性に影響する変更は、Visual Studio のメジャーバージョンが異なる場合にのみ発生します。 たとえば、Visual Studio 2013 と Visual Studio 2015 の間などです。 Visual Studio 2013 と Visual Studio 2015 の間の互換性に影響する変更点については、「[Visual Studio 2015 の準拠に関する変更](#VC_2015)」を参照してください。
+これらの変更点はソース コードや他のビルド成果物に影響はあっても、Visual Studio の異なるバージョン間のバイナリの互換性には影響がありません。 *破壊的変更*はより重大で、バイナリの互換性に影響が及ぶ可能性がありますが、このようなバイナリの互換性に影響する変更は、Visual Studio 2013 と Visual Studio 2015 など、Visual Studio のメジャー バージョンが異なる場合にのみ発生します。 Visual Studio 2013 と Visual Studio 2015 の間の互換性に影響する変更点については、「[Visual Studio 2015 の準拠に関する変更](#VC_2015)」を参照してください。
 
 - [Visual Studio 2015 の準拠の強化](#VS_RTM)
 
@@ -432,7 +431,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   このオプションは通常、標準ではスコープから外れるポイントの後のループ変数を使用する、非標準のコードを許可するために使用されていました。 これは `/Za` オプションを使ってコンパイルするときにのみ必要でした。`/Za` がない場合は、ループの後でも常に for ループ変数が使用できるからです。 標準への準拠を考慮しない場合 (たとえば、コードを他のコンパイラに移植しない場合)、`/Za` オプションをオフにする (または、**[言語拡張機能の無効化]** プロパティを **[いいえ]** に設定する) こともできます。 移植可能で標準に準拠したコードの記述を考慮する場合、標準に準拠するようコードを再記述する必要があります。そのためには、変数の宣言をループの外側に移動します。
+   このオプションは通常、標準ではスコープから外れるポイントの後のループ変数を使用する、非標準のコードを許可するために使用されていました。 これは `/Za` オプションを使ってコンパイルするときにのみ必要でした。`/Za` がない場合は、ループの後でも常に for ループ変数が使用できるからです。 標準への準拠を考慮しない場合 (たとえば、コードを他のコンパイラに移植しない場合)、`/Za` オプションをオフにする (または、 **[言語拡張機能の無効化]** プロパティを **[いいえ]** に設定する) こともできます。 移植可能で標準に準拠したコードの記述を考慮する場合、標準に準拠するようコードを再記述する必要があります。そのためには、変数の宣言をループの外側に移動します。
 
     ```cpp
     // C2065 expected
@@ -448,7 +447,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    `/Zg` コンパイラ オプション (関数プロトタイプの生成) は使用できなくなりました。 前バージョンで、このコンパイラ オプションは非推奨とされました。
 
-- mstest.exe のコマンド ラインから C++/CLI で単体テストを実行できなくなりました。 代わりに、vstest.console.exe を使用します。 「[VSTest.Console.exe のコマンド ライン オプション](/devops-test-docs/test/vstest-console-exe-command-line-options)」を参照してください。
+- mstest.exe のコマンド ラインから C++/CLI で単体テストを実行できなくなりました。 代わりに、vstest.console.exe を使用します。 「[VSTest.Console.exe のコマンド ライン オプション](/visualstudio/test/vstest-console-options)」を参照してください。
 
 - **mutable キーワード**
 
@@ -469,7 +468,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     error C2071: 'S::r': illegal storage class
     ```
 
-   エラーを修正するには、冗長な **mutable** キーワードを削除するだけです。
+   エラーを修正するには、冗長な **mutable** キーワードを削除します。
 
 - **char_16_t と char32_t**
 
@@ -525,7 +524,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **__declspec(align)**
 
-   コンパイラは関数で `__declspec(align)` を受け入れなくなりました。 これは常に無視されていましたが、コンパイラ エラーを生成するようになりました。
+   コンパイラは関数で `__declspec(align)` を受け入れなくなりました。 このコンストラクトは常に無視されていましたが、コンパイラ エラーを生成するようになりました。
 
     ```cpp
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations
@@ -617,7 +616,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   コンパイラはこれを、マクロに続く "hello" というリテラル文字列として解釈していました。これは "there" に拡張され、2 つの文字列リテラルが 1 つに連結されていました。 Visual Studio 2015 では、コンパイラはこれをユーザー定義リテラルと解釈しますが、一致するユーザー定義リテラル _x が定義されていないため、エラーになります。
+   コンパイラはこのコードを、マクロに続く "hello" というリテラル文字列として解釈していました。これは "there" に拡張され、2 つの文字列リテラルが 1 つに連結されていました。 Visual Studio 2015 では、コンパイラはこのシーケンスをユーザー定義リテラルと解釈しますが、一致するユーザー定義リテラル `_x` が定義されていないため、エラーになります。
 
     ```Output
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found
@@ -634,7 +633,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     char * str = "abc""def";
     ```
 
-   単に 2 つの文字列間に空白を追加します。
+   この問題を修正するには、2 つの文字列間に空白を追加します。
 
     ```cpp
     char * str = "abc" "def";
@@ -642,9 +641,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **placement new と delete**
 
-   C++14 標準に準拠させるために **delete** 演算子に対して変更が加えられました。 標準の変更について詳しくは、「 [C++ サイズの割り当て解除](http://isocpp.org/files/papers/n3778.html)」をご覧ください。 変更により、size パラメーターを取るグローバルな **delete** 演算子のフォームが追加されます。 互換性に影響する変更は、(**placement new** 演算子と一致させるために) 以前同じシグネチャで **delete** 演算子を使用していた場合、コンパイラ エラーを受け取ります (これは C2956 というエラーで、placement new が使用されるポイントで発生します。それは、一致する適切な **delete** 演算子の識別をコンパイラが試行するコードの場所だからです)。
+   C++14 標準に準拠させるために **delete** 演算子に対して変更が加えられました。 標準の変更について詳しくは、「 [C++ サイズの割り当て解除](https://isocpp.org/files/papers/n3778.html)」をご覧ください。 変更により、size パラメーターを取るグローバルな **delete** 演算子のフォームが追加されます。 互換性に影響する変更は、(**placement new** 演算子と一致させるために) 以前同じシグネチャで **delete** 演算子を使用していた場合、コンパイラ エラーを受け取ります (これは C2956 というエラーで、placement new が使用されるポイントで発生します。それは、一致する適切な **delete** 演算子の識別をコンパイラが試行するコードの場所だからです)。
 
-   関数 `void operator delete(void *, size_t)` は、C++11 の **placement new** 関数 `void * operator new(size_t, size_t)` に対応する **placement delete** 演算子でした。 現在、C++14 サイズの割り当て解除では、この delete 関数は "*通常の解放関数*" (グローバルな **delete** 演算子) です。 標準では、placement new の使用で対応する delete 関数を検索し、通常の解放関数を見つけた場合、プログラムの形式が不適切である必要があります。
+   関数 `void operator delete(void *, size_t)` は、C++11 の **placement new** 関数 **に対応する**placement delete`void * operator new(size_t, size_t)` 演算子でした。 現在、C++14 サイズの割り当て解除では、この delete 関数は "*通常の解放関数*" (グローバルな **delete** 演算子) です。 標準では、placement new の使用で対応する delete 関数を検索し、通常の解放関数を見つけた場合、プログラムの形式が不適切である必要があります。
 
    たとえば、コードで **placement new** と **placement delete** の両方を定義するとします。
 
@@ -653,7 +652,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   この問題は、定義した **placement delete** 演算子と新しいグローバル サイズの **delete** 演算子の間の関数シグネチャの一致により発生します。 **placement new** 演算子および **delete** 演算子で `size_t` とは異なる型を使用できるかどうかを検討してください。  `size_t` **typedef** の型はコンパイラによって異なります。これは MSVC の **unsigned int** の **typedef** です。 適切なソリューションでは、次のように列挙型を使用します。
+   この問題は、定義した **placement delete** 演算子と新しいグローバル サイズの **delete** 演算子の間の関数シグネチャの一致により発生します。 `size_t`placement new**演算子および**delete**演算子で** とは異なる型を使用できるかどうかを検討してください。 `size_t` **typedef**の型はコンパイラに依存します。MSVC の**符号なし整数**の**typedef**です。 適切なソリューションでは、次のように列挙型を使用します。
 
     ```cpp
     enum class my_type : size_t {};
@@ -693,7 +692,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    この問題に対処するには、参照型をポインターか値に変更します。 ポインターに型を変更する場合、共用体フィールドを使用するコードでの変更が必要です。 コードを値に変更すると、共用体に格納されているデータが変更されます。これは、他のフィールドに影響を与えます。共用体型のフィールドは同じメモリを共有するからです。 値のサイズによっては、共用体のサイズも変更される場合があります。
 
-- 匿名共用体の標準への適合が改善されました。 以前のバージョンのコンパイラでは、匿名共用体に対して明示的なコンストラクターとデストラクターが生成されていました。 これらは Visual Studio 2015 で削除されています。
+- 匿名共用体の標準への適合が改善されました。 以前のバージョンのコンパイラでは、匿名共用体に対して明示的なコンストラクターとデストラクターが生成されていました。 これらのコンパイラで生成される関数は、Visual Studio 2015 で削除されます。
 
     ```cpp
     struct S
@@ -737,7 +736,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **匿名構造体を持つ共用体**
 
-   標準と準拠させるために、共用体の匿名構造体メンバーのランタイムの動作が変更されました。 共用体の匿名構造体のメンバーのコンストラクターは、そのような共用体の作成時に暗黙的に呼び出されなくなりました。 また、共用体の匿名構造体のメンバーのデストラクターも、共用体がスコープから外れたときに暗黙的に呼び出されなくなりました。 次のコードを検討します。共用体 U に匿名構造体が含まれています。この匿名構造体には、名前付き構造体 S のメンバーが含まれており、その構造体にはデストラクターが含まれています。
+   標準と準拠させるために、共用体の匿名構造体メンバーのランタイムの動作が変更されました。 共用体の匿名構造体のメンバーのコンストラクターは、そのような共用体の作成時に暗黙的に呼び出されなくなりました。 また、共用体の匿名構造体のメンバーのデストラクターも、共用体がスコープから外れたときに暗黙的に呼び出されなくなりました。 次のコードを検討します。共用体 U に匿名構造体が含まれています。この匿名構造体には、名前付きメンバー構造体 S が含まれており、その構造体にはデストラクターが含まれています。
 
     ```cpp
     #include <stdio.h>
@@ -1005,7 +1004,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     //other partial specializations here
     ```
 
-- **事前宣言に適用される規則(C にのみ適用)**
+- **事前宣言に適用される規則。(C にのみ適用されます)。**
 
    次のコードに対しては、C2065 が発生するようになりました。
 
@@ -1107,7 +1106,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **文字列リテラルは定数配列である**
 
-   次のコードに対しては、"C2664: 'void f(void *)': 引数 1 を 'const char (*)[2]' から 'void *' へ変換できません" が発生します。
+   次のコードに対しては、"C2664: 'void f(void *)': 引数 1 を 'const char (* )[2]' から 'void *' へ変換できません" が発生します。
 
     ```cpp
     void f(void *);
@@ -1119,7 +1118,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   このエラーを解決するには、関数パラメーターの型を `const void*` に変更するか、または `h` の本体を次のように変更します。
+   このエラーを解決するには、関数パラメーターの型を `const void*` に変更するか、または `h` の本体を次の例のように変更します。
 
     ```cpp
     void h(void)
@@ -1148,13 +1147,13 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   このエラーを解決するには、コードを次のように変更します。
+   このエラーを解決するには、スペースを追加するようにコードを変更します。
 
     ```cpp
     #define MACRO
 
     // Remove ##. Strings are automatically
-    // concatenated so they are not needed
+    // concatenated so they aren't needed
     #define STRCAT(x, y) x y
 
     int main(){
@@ -1166,7 +1165,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   上記の例で、`MACRO` は 2 つのトークン (文字列に続くマクロ) として解析されなくなります。  今度は、1 つのトークン UDL として解析されます。  同じことが L""L"" にも当てはまり、以前は L"" および L"" として解析されていたものが、L""L および "" として解析されるようになります。
+   上記の例で、`MACRO` は 2 つのトークン (文字列に続くマクロ) として解析されなくなります。 今度は、1 つのトークン UDL として解析されます。 同じことが L""L"" にも当てはまり、以前は L"" および L"" として解析されていたものが、L""L および "" として解析されるようになります。
 
    文字列連結の規則も標準への準拠に取り込まれました。つまり、L"a" "b" は L"ab" と同じです。 以前のエディションの Visual Studio では、文字幅の異なる文字列の連結は受け入れられませんでした。
 
@@ -1180,7 +1179,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   このエラーを解決するには、コードを次のように変更します。
+   このエラーを解決するには、null を明示するようにコードを変更します。
 
     ```cpp
     bool check(wchar_t c){
@@ -1218,7 +1217,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **alignof がキーワードになった**
 
-   次のコードに対しては、エラー C2332: "'class': タグ名がありません" が発生するようになりました。 コードを修正するには、クラスの名前を変更するか、または、クラスが alignof と同じ処理を実行している場合は、単にクラスを新しいキーワードに置き換えます。
+   次のコードに対しては、エラー C2332: "'class': タグ名がありません" が発生するようになりました。 コードを修正するには、クラスの名前を変更するか、または、クラスが **alignof** と同じ処理を実行している場合は、単にクラスを新しいキーワードに置き換えます。
 
     ```cpp
     class alignof{}
@@ -1372,7 +1371,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   このエラーを解決するには、`S` に `S2` のフレンド宣言を追加します。
+   このエラーを解決するには、`S2` に `S` のフレンド宣言を追加します。
 
     ```cpp
     class S {
@@ -1583,11 +1582,11 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   このエラーを解決するには、`j` からかっこを削除します。 明確にするためにかっこが必要な場合は、**typedef** を使います。
+   このエラーを解決するには、`j` を囲むかっこを削除します。 明確にするためにかっこが必要な場合は、**typedef** を使います。
 
 - **コンパイラで生成されるコンストラクターと __declspec(novtable)**
 
-   Visual Studio 2015 では、仮想基底クラスを使う抽象クラスのインライン コンパイラによって生成されるコンストラクターで、`__declspec(dllimport)` と組み合わせて使うと `__declspec(novtable)` の不適切な使用が公開される可能性が高くなっています。
+   Visual Studio 2015 では、仮想基底クラスを使う抽象クラスのコンパイラによって生成されるインライン コンストラクターで、`__declspec(novtable)` と組み合わせて使うと `__declspec(dllimport)` の不適切な使用が公開される可能性が高くなっています。
 
 - **auto では初期化子リストの直接適用に含まれる式が 1 つでなければならない**
 
@@ -1628,15 +1627,15 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     static_assert(std::is_convertible<D, B2>::value, "fail");
     ```
 
-   このエラーを解決するには、`D` および `B2` へのポインターを比較するように `static_assert` を変更します。
+   このエラーを解決するには、`static_assert` および `D` へのポインターを比較するように `B2` を変更します。
 
     ```cpp
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
     ```
 
-- **declspec(novtable) 宣言が一貫している必要がある**
+- **__declspec(novtable) 宣言が一貫している必要がある**
 
-   **declspec** 宣言は、すべてのライブラリで一貫している必要があります。 次のコードに対しては、単一定義規則 (ODR) 違反が発生するようになりました。
+   `__declspec` 宣言は、すべてのライブラリで一貫している必要があります。 次のコードに対しては、単一定義規則 (ODR) 違反が発生するようになりました。
 
     ```cpp
     //a.cpp
@@ -1702,7 +1701,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **プライベートの仮想基底クラスと間接継承**
 
-   以前のバージョンのコンパイラでは、派生クラスは*間接的に派生した*`private virtual`基底クラスのメンバー関数を呼び出すことができました。 この従来の動作は正しい動作ではなく、C++ 標準に準拠していません。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。その結果、コンパイラ エラー C2280 を発行します。
+   以前のバージョンのコンパイラでは、派生クラスは間接的に派生した`private virtual`基底クラスのメンバー関数を呼び出すことができました。 この従来の動作は正しい動作ではなく、C++ 標準に準拠していません。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。その結果、コンパイラ エラー C2280 を発行します。
 
     ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -1740,7 +1739,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   \- または
+   \- - または -
 
     ```cpp
     class base;  // as above
@@ -1808,7 +1807,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **詳細な型指定子の冗長な typename**
 
-   以前のバージョンのコンパイラでは、詳細な型指定子内で **typename** を指定できました。この方法で記述されたコードは意味的に正しくありません。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。代わりにコンパイラ エラー C3406 を発行します。
+   以前のバージョンのコンパイラでは、詳細な型指定子内で **typename** を指定できましたが、この方法で記述されたコードは意味的に正しくありません。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。代わりにコンパイラ エラー C3406 を発行します。
 
     ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -1916,7 +1915,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **switch ステートメントの警告の復元**
 
-   前のバージョンのコンパイラで、**switch** ステートメント関連の、以前から存在していた警告が削除されました。今ではこれらの警告は復元されています。 コンパイラは復元された警告を発行するようになり、特定の case (既定の case を含む) に関連する警告が、switch ステートメントの最後の行ではなく、問題のある case を含む行で発行されるようになりました。 この結果、以前とは異なる行でそれらの警告が発行されるようになり、以前は `#pragma warning(disable:####)` を使用して抑制できていた警告も、意図どおりに抑制できなくなる可能性があります。 意図どおりにこれらの警告を抑制するには、問題がある可能性のある最初の case の上の行まで `#pragma warning(disable:####)` ディレクティブを移動しなければならない場合があります。 復元された警告を次に示します。
+   前のバージョンのコンパイラで、**switch** ステートメント関連のいくつかの警告が削除されました。今ではこれらの警告は復元されています。 コンパイラは復元された警告を発行するようになり、特定の case (既定の case を含む) に関連する警告が、switch ステートメントの最後の行ではなく、問題のある case を含む行で発行されるようになりました。 この結果、以前とは異なる行でそれらの警告が発行されるようになり、以前は `#pragma warning(disable:####)` を使用して抑制できていた警告も、意図どおりに抑制できなくなる可能性があります。 意図どおりにこれらの警告を抑制するには、問題がある最初の case の上の行まで `#pragma warning(disable:####)` ディレクティブを移動しなければならない場合があります。 復元された警告を次に示します。
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -2010,9 +2009,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    その他の復元の警告の例については、それらのドキュメントをご覧ください。
 
-- **#include: パス名で親ディレクトリの指定子 '..' を使用する** (`/Wall` `/WX` にのみ影響)
+- **#include: パス名に親ディレクトリの指定子 '.. ' を使用します**(`/Wall` `/WX`のみに影響します)
 
-   以前のバージョンのコンパイラでは、親ディレクトリの指定子の使用が検出されませんでした '… ' パス名で  `#include` ディレクティブです。 この方法で記述されたコードは通常、プロジェクトの相対パスが正しく使用されていないためにプロジェクトの外部に存在するヘッダーをインクルードすることを目的としています。 この従来の動作のせいで、プログラマが意図したものとは異なるソース ファイルをインクルードしてプログラムがコンパイルされる危険性や、これらの相対パスを他のビルド環境に移植できない危険性が生じました。 コンパイラは、この方法で書かれたコードを検出してプログラマに通知し、有効な場合にはオプションのコンパイラ警告 C4464 を発行するようになりました。
+   以前のバージョンのコンパイラでは、親ディレクトリの指定子の使用が検出されませんでした '… ' パス名で `#include` ディレクティブです。 この方法で記述されたコードは通常、プロジェクトの相対パスが正しく使用されていないためにプロジェクトの外部に存在するヘッダーをインクルードすることを目的としています。 この従来の動作のせいで、プログラマが意図したものとは異なるソース ファイルをインクルードしてプログラムがコンパイルされる危険性や、これらの相対パスを他のビルド環境に移植できない危険性が生じました。 コンパイラは、この方法で書かれたコードを検出してプログラマに通知し、有効な場合にはオプションのコンパイラ警告 C4464 を発行するようになりました。
 
     ```Output
     warning C4464: relative include path contains '..'
@@ -2030,9 +2029,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories
     ```
 
-   さらに、コンパイラは特定の診断を示しませんが、プロジェクトのインクルード ディレクトリを指定する場合、親ディレクトリの指定子".." を使用することもお勧めします。
+   さらに、コンパイラは特定の診断を示しませんが、プロジェクトのインクルード ディレクトリを指定する場合、親ディレクトリの指定子 ".." を使用することもお勧めします。
 
-- **#pragma optimize() がヘッダー ファイルの終わりを超える** (`/Wall` `/WX` にのみ影響)
+- **#pragma optimize () は、ヘッダーファイルの終わりを**超えています (`/Wall` `/WX`にのみ影響します)
 
    以前のバージョンのコンパイラでは、翻訳単位内に含まれるヘッダー ファイルをエスケープする最適化フラグの設定の変更は検出されませんでした。 コンパイラは、この方法で書かれたコードを検出してプログラマに通知し、有効な場合には、問題のある `#include`の位置でオプションのコンパイラ警告 C4426 を発行するようになりました。 この警告が発行されるのは、この変更が、コンパイラに対するコマンドライン引数によって設定された最適化フラグと競合する場合のみです。
 
@@ -2065,7 +2064,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     #include "C4426.h"
     ```
 
-- **#pragma warning(push)** と **#pragma warning(pop) の不一致** (`/Wall` `/WX` にのみ影響)
+- **#Pragma 警告 (プッシュ)** と **#pragma 警告 (Pop)** が一致しません (`/Wall` `/WX`にのみ影響します)
 
    以前のバージョンのコンパイラでは、`#pragma warning(push)` の状態の変更が、異なるソース ファイルの `#pragma warning(pop)` 状態の変更とペアになっていても (故意であることはまれですが)、それを検出しませんでした。 この従来の動作のせいで、プログラマの意図と異なる一連の警告が有効な状態でプログラムがコンパイルされる危険性が生じ、結果として、問題のあるランタイム動作が警告なしに発生する原因となっていました。 コンパイラは、この方法で書かれたコードを検出してプログラマに通知し、有効な場合には、一致する `#pragma warning(pop)` の位置でオプションのコンパイラの警告 C5031 を発行するようになりました。 この警告には、対応する #pragma warning(push) の場所を参照するメモが含まれます。
 
@@ -2121,7 +2120,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    一般的ではありませんが、意図的にこの方法でコードを記述する場合があります。 この方法で記述されたコードは `#include` の順序の変更の影響を受けます。可能な場合は、自己完結型の方法を使用してソース コード ファイルで警告状態を管理することをお勧めします。
 
-- **一致していない #pragma warning(push)** (`/Wall` `/WX` にのみ影響)
+- **一致しない #pragma 警告 (プッシュ)** (`/Wall` `/WX`にのみ影響)
 
    以前のバージョンのコンパイラでは、翻訳単位の末尾で一致していない `#pragma warning(push)` の状態の変更は検出されませんでした。 コンパイラは、この方法で書かれたコードを検出してプログラマに通知し、有効な場合には、一致していない `#pragma warning(push)` の位置でオプションのコンパイラ警告 C5032 を発行するようになりました。 この警告が発行されるのは、翻訳単位にコンパイル エラーがない場合のみです。
 
@@ -2162,7 +2161,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **#pragma 警告状態の追跡が強化された結果、追加の警告が発行される場合があります。**
 
-   以前のバージョンのコンパイラでは、#pragma 警告状態の変化の追跡が不十分なため、すべての意図された警告を発行できませんでした。 この動作により、プログラマの意図したものとは異なる状況で、事実上、特定の警告が抑制される危険性がありました。 コンパイラにより `#pragma warning` 状態がより確実に追跡されるようになりました (特にテンプレート内部での `#pragma warning` 状態の変化に関連するもの)。また `#pragma warning(push)` と `#pragma warning(pop)`の意図しない使用をプログラマが特定する助けになるように、新しい警告 C5031 と C5032 を必要に応じて発行されるようになりました。
+   以前のバージョンのコンパイラでは、#pragma 警告状態の変化の追跡が不十分なため、すべての意図された警告を発行できませんでした。 この動作により、プログラマの意図したものとは異なる状況で、事実上、特定の警告が抑制される危険性がありました。 コンパイラにより `#pragma warning` 状態がより確実に追跡されるようになりました (特にテンプレート内部での `#pragma warning` 状態の変化に関連するもの)。また `#pragma warning(push)` と `#pragma warning(pop)` の意図しない使用をプログラマが特定する助けになるように、新しい警告 C5031 と C5032 を必要に応じて発行されるようになりました。
 
    `#pragma warning` 状態の変更の追跡が強化された結果、以前は誤って抑制されていた警告、または以前は誤って診断されていた問題に関連する警告が発行されるようになる場合があります。
 
@@ -2293,9 +2292,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-- `volatile` **メンバー変数が、暗黙的に定義されたコンストラクターと代入演算子を防止する**
+- `volatile`**メンバー変数は、暗黙的に定義されたコンストラクターと代入演算子を禁止し**ます
 
-   以前のバージョンのコンパイラは、**volatile** メンバー変数を持つクラスが、自動的に生成された既定のコピー/移動コンストラクターと既定のコピー/移動代入演算子を持つことを許可していました。 この従来の動作は正しい動作ではなく、C++ 標準に準拠していません。 コンパイラは、**volatile** メンバー変数を持つクラスが、非単純コンストラクションと代入演算子を持つと見なすようになりました。それにより、これらの演算子の既定の実装が自動的に生成されることを防止します。 そのようなクラスが共用体 (またはクラス内の無名共用体) のメンバーである場合は、共用体のコピー/移動コンストラクターとコピー/移動代入演算子 (または無名共用体を含むクラス) は、暗黙的に削除済みとして定義されます。 明示的に定義することなく、共用体 (または無名共用体を含むクラス) を構築またはコピーしようとするとエラーとなり、結果として、コンパイラはコンパイラ エラー C2280 を発行します。
+   以前のバージョンのコンパイラは、**volatile** メンバー変数を持つクラスが、自動的に生成された既定のコピー/移動コンストラクターと既定のコピー/移動代入演算子を持つことを許可していました。 この従来の動作は正しい動作ではなく、C++ 標準に準拠していません。 コンパイラは、**volatile** メンバー変数を持つクラスが、非単純コンストラクションと代入演算子を持つと見なすようになりました。それにより、これらの演算子の既定の実装が自動的に生成されることを防止します。 そのようなクラスが共用体 (またはクラス内の匿名共用体) のメンバーである場合は、共用体のコピー/移動コンストラクターとコピー/移動代入演算子 (または匿名共用体を含むクラス) は、暗黙的に削除済みとして定義されます。 明示的に定義することなく、共用体 (または無名共用体を含むクラス) を構築またはコピーしようとするとエラーとなり、結果として、コンパイラはコンパイラ エラー C2280 を発行します。
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2381,7 +2380,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **列挙型の事前宣言は、WinRT コードでは許可されていません** (`/ZW` にのみ影響)
 
-   マネージド C++ コードが `/clr` コンパイラ スイッチを使用して .Net Framework 用にコンパイルされる場合と同様に、Windows ランタイム (WinRT) 用にコンパイルされたコードは、**enum** 型が事前に宣言されることを許可しません。 この動作により、列挙型のサイズが常にわかり、WinRT 型システムに正しくプロジェクションを実行することができます。 コンパイラは、この方法で記述されたコードを拒否し、コンパイラ エラー C3197 と共にコンパイラ エラー C2599 を発行します。
+   マネージド C++ コードが  **コンパイラ スイッチを使用して .Net Framework 用にコンパイルされる場合と同様に、Windows ランタイム (WinRT) 用にコンパイルされたコードは、** enum`/clr` 型が事前に宣言されることを許可しません。 この動作により、確実に列挙型のサイズがわかり、WinRT 型システムに正しくプロジェクションを実行することができます。 コンパイラは、この方法で記述されたコードを拒否し、コンパイラ エラー C3197 と共にコンパイラ エラー C2599 を発行します。
 
     ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -2542,7 +2541,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **属性が指定された ATL コードのサポートの非推奨化** (デフォルトでレベル 1 (`/W1`))
 
-   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](https://msdn.microsoft.com/library/bb384632)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
+   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -2637,9 +2636,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-- **プリコンパイル済みヘッダー (PCH) ファイルと一致しない #include ディレクティブ** (`/Wall` `/WX` にのみ影響)
+- **プリコンパイル済みヘッダー (PCH) ファイルと一致しない #include ディレクティブ**(`/Wall` `/WX`にのみ影響)
 
-   以前のバージョンのコンパイラは、プリコンパイル済みヘッダー (PCH) ファイルの使用時に、`-Yc` と `-Yu` のコンパイル間のソース ファイルの `#include` ディレクティブ一致しない場合でも、受け入れていました。 この方法で記述されたコードは、コンパイラで処理できなくなります。   コンパイラは、PCH ファイルの使用時に `#include` ディレクティブの不一致を特定できるようにコンパイラの警告 CC4598 を発行するようになりました。
+   以前のバージョンのコンパイラは、プリコンパイル済みヘッダー (PCH) ファイルの使用時に、`#include` と `-Yc` のコンパイル間のソース ファイルの `-Yu` ディレクティブ一致しない場合でも、受け入れていました。 この方法で記述されたコードは、コンパイラで処理できなくなります。   コンパイラは、PCH ファイルの使用時に `#include` ディレクティブの不一致を特定できるようにコンパイラの警告 CC4598 を発行するようになりました。
 
     ```Output
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position
@@ -2681,9 +2680,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     #include "c.h"
     ```
 
-- **プリコンパイル済みヘッダー (PCH) ファイルと一致しない #include ディレクトリ** (`/Wall` `/WX` にのみ影響)
+- **プリコンパイル済みヘッダー (PCH) ファイルと一致しないインクルードディレクトリ**(`/Wall` `/WX`のみに影響します)
 
-   プリコンパイル済みヘッダー (PCH) ファイルの使用時に、以前のバージョンのコンパイラは、コンパイラ `-Yc` と `-Yu` のコンパイルで一致しない include ディレクトリ (`-I`) コマンド ライン引数を受け入れていました。 この方法で記述されたコードは、コンパイラで処理できなくなります。   コンパイラは、PCH ファイルの使用時に include ディレクトリ (`-I`) コマンド ライン引数を特定できるコンパイラの警告 CC4599 を発行するようになりました。
+   プリコンパイル済みヘッダー (PCH) ファイルの使用時に、以前のバージョンのコンパイラは、コンパイラ `-I` と `-Yc` のコンパイルで一致しない include ディレクトリ (`-Yu`) コマンド ライン引数を受け入れていました。 この方法で記述されたコードは、コンパイラで処理できなくなります。 コンパイラは、PCH ファイルの使用時に include ディレクトリ (`-I`) コマンド ライン引数を特定できるコンパイラの警告 CC4599 を発行するようになりました。
 
     ```Output
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position
@@ -2726,7 +2725,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    呼び出しが**仮想**呼び出しであったことが原因で、以前のバージョンではエラーは発生しませんでした。とはいえ、このプログラムは実行時にクラッシュする結果になりました。 現在は、クラスが final であると認識されるため、リンカー エラーが発生します。 この例でエラーを解決するには、`S2::f` の定義を含む obj に対してリンクを行うことになります。
 
-- コンパイラは現在 ISO C++ 標準に準拠しているため、名前空間の中でフレンド関数を使用する場合は、そのフレンド関数を参照する前に再宣言する必要があります。そうしない場合は、エラーが発生します。 たとえば、次はコンパイルされなくなります。
+- コンパイラは現在 ISO C++ 標準に準拠しているため、名前空間の中でフレンド関数を使用する場合は、そのフレンド関数を参照する前に再宣言する必要があります。そうしない場合は、エラーが発生します。 たとえば、次の例はコンパイルされなくなります。
 
     ```cpp
     namespace NS {
@@ -2757,7 +2756,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
         }
     ```
 
-- C++ 標準では、クラス内で明示的な特殊化は許可されません。 Microsoft Visual C++ コンパイラでは、特定の状況でこの作業を実行できますが、次の例のような状況では、現在はエラーが生成されます。コンパイラが、2 番目の関数が最初の関数の特殊化であることを認識しないのが原因です。
+- C++ 標準では、クラス内で明示的な特殊化は許可されません。 Microsoft C++ コンパイラでは、特定の状況でこの作業を実行できますが、次の例のような状況では、現在はエラーが生成されます。コンパイラが、2 番目の関数が最初の関数の特殊化であることを認識しないことが原因です。
 
     ```cpp
     template < int N>
@@ -2805,14 +2804,14 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     int y = x;
     ```
 
-   現在は、このコードは `x` を `std::initializer_list<int>` 型に解決し、`x` を **int** 型に代入しようとする次の行でエラーが発生します (既定では変換は行われません)。このコードを修正するには、**int** を使って **auto** を置換します。
+   このコードでは、`x` を `std::initializer_list<int>` の型に解決し、 **int**型に `x` を割り当てようとする次の行でエラーが発生するようになりました。(既定では変換は行われません)。このコードを修正するには、 **int**を使用して**auto**を置き換えます。
 
     ```cpp
     int x = {0};
     int y = x;
     ```
 
-- 初期化の際に右辺値の型が左辺値の型と一致しない場合、集約の初期化は許可されなくなり、ISO C++11 基準では縮小変換を使用しない場合は均一な初期化が必要なためエラーが発行されます。 以前は、縮小変換が使用できる場合、エラーの代わりに[コンパイラの警告 (レベル 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) 警告が発行されていました。
+- 初期化の際に右辺値の型が左辺値の型と一致しない場合、集約の初期化は許可されなくなり、ISO C++11 標準では縮小変換を使用しない場合は均一な初期化が必要なためエラーが発行されます。 以前は、縮小変換が使用できる場合、エラーの代わりに[コンパイラの警告 (レベル 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) 警告が発行されていました。
 
     ```cpp
     int i = 0;
@@ -2853,9 +2852,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   Visual Studio 2012 では、式 `E1::b` に含まれる `E1` は、グローバル スコープ内の `::E1` に解決されていました。 Visual Studio 2013 では、式 `E1::b` に含まれる `E1` は `main()` 内で `typedef E2` 定義に解決され、型は `::E2` になります。
+   Visual Studio 2012 では、式 `E1` に含まれる `E1::b` は、グローバル スコープ内の `::E1` に解決されていました。 Visual Studio 2013 では、式 `E1` に含まれる `E1::b` は `typedef E2` 内で `main()` 定義に解決され、型は `::E2` になります。
 
-- オブジェクトのレイアウトが変更されました。 x64 では、クラスのオブジェクト レイアウトが以前のリリースから変更される場合があります。 **virtual** 関数が存在するものの **virtual** 関数を持つ基底クラスがない場合は、コンパイラのオブジェクト モデルは、データ メンバーのレイアウトの後で **virtual** 関数テーブルにポインターを挿入します。 これは、レイアウトがすべての場合に最適となるわけではないことを意味します。 以前のリリースでは、x64 の最適化によってレイアウトが調整されましたが、複雑なコードでは正常に機能しなかったため、Visual Studio 2013 では削除されました。 たとえば、次のコードについて考えます。
+- オブジェクトのレイアウトが変更されました。 x64 では、クラスのオブジェクト レイアウトが以前のリリースから変更される場合があります。 **virtual** 関数が存在するものの **virtual** 関数を持つ基底クラスがない場合は、コンパイラのオブジェクト モデルは、データ メンバーのレイアウトの後で **virtual** 関数テーブルにポインターを挿入します。 これは、レイアウトがすべての場合に最適となるわけではないことを意味します。 以前のリリースでは、x64 の最適化によってレイアウトが調整されましたが、複雑なコードでは正常に機能しなかったため、Visual Studio 2013 では削除されました。 たとえば、次のコードを検討してみましょう。
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2884,7 +2883,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   以前のリリースでは最適化の対象となったコードの場所を探すには、該当するリリースのコンパイラと `/W3` のコンパイラ オプションを併用し、警告 4370 をオンにします。 例:
+   以前のリリースで最適化しようとしたコード内の場所を検索するには、そのリリースのコンパイラを `/W3` コンパイラオプションと共に使用し、警告 C4370 を有効にします。 次に例を示します。
 
     ```cpp
     #pragma warning(default:4370)
@@ -2911,7 +2910,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   `sizeof(S)` の結果は 24 です。 しかし、これは先ほど説明した x64 の代替手段を使用すると 16 に減らせます。
+   `sizeof(S)` の結果は 24 です。 しかし、これは、説明した x64 の代替手段を使用すると 16 に減らせます。
 
     ```cpp
     struct dummy {
@@ -2927,7 +2926,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 ### <a name="standard-library"></a>標準ライブラリ
 
-Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装された _ITERATOR_DEBUG_LEVEL の不一致を検出し、RuntimeLibrary の不一致も検出します。 これらは、コンパイラ オプション `/MT` (静的なリリース)、`/MTd` (静的なデバッグ)、`/MD` (動的なリリース)、および `/MDd` (動的なデバッグ) が混在する場合に発生します。
+Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装された _ITERATOR_DEBUG_LEVEL の不一致を検出し、RuntimeLibrary の不一致も検出します。 これらの不一致は、コンパイラ オプション `/MT` (静的なリリース)、`/MTd` (静的なデバッグ)、`/MD` (動的なリリース)、および `/MDd` (動的なデバッグ) が混在する場合に発生します。
 
 - コードが、以前のリリースのシミュレートされたエイリアスのテンプレートを検出した場合、変更する必要があります。 たとえば、`allocator_traits<A>::rebind_alloc<U>::other` の代わりに、`allocator_traits<A>::rebind_alloc<U>` と指定する必要があります。 `ratio_add<R1, R2>::type` は必要でなくなり、`ratio_add<R1, R2>` を使うことが勧められていますが、前者でもコンパイルは可能です。これは、`ratio<N, D>` を使用して圧縮するには、typedef "型" が必要であるためです (既に圧縮されている場合も同じ型を使用します)。
 
@@ -2939,21 +2938,21 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 現在は、実際の可変個引数テンプレートが実装されているため、_VARIADIC_MAX と関連マクロは何の影響も及ぼしません。 依然として _VARIADIC_MAX を定義している場合は、無視されます。 シミュレートされた可変個引数テンプレートを他の方法でサポートすることを意図して Microsoft のマクロ メカニズムを活用していた場合は、コードを変更する必要があります。
 
-- 通常のキーワードに加えて、C++ 標準ライブラリ ヘッダーは状況依存のキーワード **override** と **final** のマクロ化を禁止するようになりました。
+- 通常のキーワードに加えて、C++ 標準ライブラリ ヘッダーは状況依存のキーワード **override** と **final** のマクロ置換を禁止するようになりました。
 
-- reference_wrapper/ref()/cref() では、一時オブジェクトへのバインディングが禁止されるようになりました。
+- `reference_wrapper`、`ref()`、および `cref()` は、一時オブジェクトへのバインディングを禁止するようになります。
 
 - \<random> は、コンパイル時の事前条件を厳密に実装するようになりました。
 
-- さまざまな C++ 標準ライブラリ型の特徴は、"T は完全な型であるものとする" という事前条件を持つことです。 コンパイラは、このことをより厳密に実装するようになりましたが、あらゆる状況でこのことを強制するとは限りません  (C++ 標準ライブラリ事前条件に違反すると、未定義の動作がトリガーされるため、標準では、強制を保証していません)。
+- さまざまな C++ 標準ライブラリ型の特徴は、"T は完全な型であるものとする" という事前条件を持つことです。 コンパイラは、この事前条件をより厳密に実装するようになりましたが、あらゆる状況でこのことを強制するとは限りません。 (C++ 標準ライブラリ事前条件に違反すると、未定義の動作がトリガーされるため、標準では、強制を保証していません)。
 
 - C++ 標準ライブラリは `/clr:oldSyntax` をサポートしていません。
 
 - C++11 仕様の common_type では、予期しない結果が生じることがありました。特に、common_type\<int, int>::type が int&& を返すことは問題でした。 そこで、コンパイラでは「Proposed Resolution for Library Working Group issue 2141 (ライブラリ ワークグループの懸案事項 2141 に対して推奨される解決)」が実装され、common_type\<int, int="">::type が int を返すようになりました。
 
-   この変更の副作用として、ID の場合に機能しなくなりました (common_type\<T が常に型 T になるとは限らないからです)。 これは、上記の「推奨される解決」に準拠していますが、コードの互換性に影響があります。
+   この変更の副作用として、ID の場合に機能しなくなりました (common_type\<T> が常に型 T になるとは限らないからです)。 この動作は、上記の「推奨される解決」に準拠していますが、コードの互換性に影響があります。
 
-   ID 型の特徴が必要な場合、\<type_traits> で定義された非標準の `std::identity` は \<void> で機能しないので使用しないでください。 代わりに、要件に応じた独自の ID 対応の動作を実装します。 次に例を示します。
+   ID 型の特徴が必要な場合、`std::identity`type_traits> で定義された非標準の \< は \<void> で機能しないので使用しないでください。 代わりに、要件に応じた独自の ID 対応の動作を実装します。 次に例を示します。
 
     ```cpp
     template < typename T> struct Identity {
@@ -2963,7 +2962,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc-and-atl"></a>MFC と ATL
 
-- **Visual Studio 2013 のみ**: Unicode が非常に一般的になり、MBCS の使用が大幅に減少しているため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC の MBCS ライブラリを引き続き使用する必要がある場合は、MSDN ダウンロード センター ([Visual Studio 2013 のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)) からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (注: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
+- **Visual Studio 2013 のみ**: Unicode が広く使用されていて、MBCS の使用が大幅に拒否されたため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC の MBCS ライブラリを引き続き使用する必要がある場合は、MSDN ダウンロード センター ([Visual Studio 2013 のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)) からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (注: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
 
 - MFC リボンのアクセシビリティが変更されました。  1 レベルのアーキテクチャではなく、階層的なアーキテクチャが用意されました。 `CRibbonBar::EnableSingleLevelAccessibilityMode()` を呼び出して、引き続き古い動作を使用することもできます。
 
@@ -2987,7 +2986,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
    - `CMFCMaskedEdit::OnPaste` は (WPARAM, LPARAM) からパラメーターなしに変更され、メッセージ マップで新しい ON_WM_PASTE マクロを使用できるようになりました。
 
-- \#ifdefs は MFC ヘッダー ファイル内から削除されました。 MFC ヘッダー ファイル内に存在していた、サポートされていないバージョンの Windows (WINVER &lt; 0x0501) に関連する多数の #ifdef () が削除されました。
+- `#ifdef` ディレクティブは MFC ヘッダー ファイル内から削除されました。 MFC ヘッダー ファイル内に存在していた、サポートされていないバージョンの Windows (WINVER `#ifdef` 0x0501) に関連する多数の &lt; ディレクティブが削除されました。
 
 - ATL DLL (atl120.dll) が削除されました。 ATL は、ヘッダーおよび 1 つのスタティック ライブラリ (atls.lib) として提供されるようになりました。
 
@@ -2995,7 +2994,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - ATL DLL と共に ATL/MFC Trace Tool が削除され、トレース機構が簡略化されました。 `CTraceCategory` コンストラクターは 1 つのパラメーター (カテゴリ名) を受け取り、TRACE マクロは CRT のデバッグ レポート関数を呼び出します。
 
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 の互換性に影響する変更
+## <a name="visual-studio-2012-breaking-changes"></a>Visual Studio 2012 の重要な変更点
 
 ### <a name="compiler"></a>コンパイラ
 
@@ -3027,7 +3026,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - コンパイラから、以前は発行されなかった[コンパイラの警告 (レベル 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) と C4701 が発行される可能性があります。 コンパイラでは、ポインター型の初期化されていないローカル変数の使用がより厳格にチェックされるようになりました。
 
-- 新しいリンカー フラグ `/HIGHENTROPYVA` を指定すると、通常 Windows 8 では、メモリの割り当てが実行され、64 ビット アドレスが返されます  (Windows 8 より前のバージョンでは、多くの場合、このような割り当てによって 2 GB 未満のアドレスが返されていました)。その結果、既存のコードのポインター切り捨てのバグが明らかになる可能性があります。 既定では、このスイッチはオンです。 この動作を無効にするには、`/HIGHENTROPYVA:NO` を指定します。
+- 新しいリンカー フラグ `/HIGHENTROPYVA` を指定すると、通常 Windows 8 では、メモリの割り当てが実行され、64 ビット アドレスが返されます (Windows 8 より前の場合、このような割り当てでは、2 GB 未満のアドレスが返されることが多くなります)。この変更により、既存のコードでポインターの切り捨てのバグが発生する可能性があります。 既定では、このスイッチはオンです。 この動作を無効にするには、`/HIGHENTROPYVA:NO` を指定します。
 
 - マネージド コンパイラ (Visual Basic/C#) は、マネージド ビルドの場合に `/HIGHENTROPYVA` もサポートしています。  ただし、この場合、`/HIGHENTROPYVAswitch` は既定でオフです。
 
@@ -3037,25 +3036,25 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>並列パターン ライブラリとコンカレンシー ランタイム ライブラリ
 
-`UmsThreadDefault` の `SchedulerType` 列挙体は非推奨です。 `UmsThreadDefault` を指定すると、非推奨の警告が生成され、内部的に `ThreadScheduler` にマップされます。
+`SchedulerType` の `UmsThreadDefault` 列挙体は非推奨です。 `UmsThreadDefault` を指定すると、非推奨の警告が生成され、内部的に `ThreadScheduler` にマップされます。
 
 ### <a name="standard-library"></a>標準ライブラリ
 
-- C++98/03 標準と C++11 標準間の互換性に影響する変更に伴い、明示的なテンプレート引数を使用して (`make_pair<int, int>(x, y)` のように) `make_pair()` を呼び出しても、一般的に Visual Studio 2012 の Visual C++ ではコンパイルされなくなりました。 この問題を解決するには、`make_pair(x, y)` のように明示的なテンプレート引数を指定せずに常に `make_pair() ` を呼び出す必要があります。 明示的なテンプレート引数を指定すると、この関数の目的を達成できません。 結果の型を正確に制御する必要がある場合は、`pair<short, short>(int1, int2)` のように `make_pair` ではなく `pair` を使用します。
+- C++98/03 標準と C++11 標準間の破壊的変更に伴い、明示的なテンプレート引数を使用して (`make_pair()` のように) `make_pair<int, int>(x, y)` を呼び出しても、一般的に Visual Studio 2012 の Visual C++ ではコンパイルされなくなりました。 この問題を解決するには、`make_pair() ` のように明示的なテンプレート引数を指定せずに常に `make_pair(x, y)` を呼び出す必要があります。 明示的なテンプレート引数を指定すると、この関数の目的を達成できません。 結果の型を正確に制御する必要がある場合は、`pair` のように `make_pair` ではなく `pair<short, short>(int1, int2)` を使用します。
 
-- C++98/03 標準と C++11 標準間には、互換性に影響する変更がもう 1 つあります。A が暗黙的に B に変換可能で、B が暗黙的に C に変換可能でも、A が暗黙的に C に変換可能ではない場合、C++98/03 と Visual C++ 2010 は `pair<A, X>` を (暗黙的または明示的に) `pair<C, X>` に変換できます  (その他の型である X はここで取り上げませんが、ペアの最初の型に固有ではありません)。Visual Studio 2012 の C++11 と C++ コンパイラは、A が暗黙的に C に変換可能であると検出するため、オーバーロードの解決法からペアの変換が削除されます。 これは、多くのシナリオでは、よい結果になる変更です。 たとえば、この変更で、`func(const pair<int, int>&)` と `func(const pair<string, string>&)` のオーバーロードと、`pair<const char *, const char *>` を指定した `func()` の呼び出しはコンパイルされるようになります。 ただし、積極的なペアの変換に依存するコードの場合、これは互換性に影響する変更です。 通常、このようなコードを修正するには、変換の一部を明示的に実行します。たとえば、`make_pair(static_cast<B>(a), x)` を `pair<C, X>` を受け取る関数に渡します。
+- C++ 98/03 と C++ 11 標準の間のもう1つの重大な変更: が暗黙的に B に変換可能であり、B が暗黙的に C に変換可能ではありませんが、が C に暗黙的に変換可能ではありません。 C++ 98/03 および Visual Studio 2010 は、暗黙的または明示 `pair<C, X>`的に変換でき `pair<A, X>`。 (もう1つの型である X は、ここでは重要ではなく、ペアの最初の型に固有ではありません)。Visual C++ Studio 2012 のコンパイラは、が暗黙的に C に変換できないことを検出し、オーバーロードの解決からペアの変換を削除します。 この変更は、多くのシナリオでは、よい結果になります。 たとえば、この変更で、`func(const pair<int, int>&)` と `func(const pair<string, string>&)` のオーバーロードと、`func()` を指定した `pair<const char *, const char *>` の呼び出しはコンパイルされるようになります。 ただし、積極的なペアの変換に依存するコードの場合、これは互換性に影響する変更です。 通常、このようなコードを修正するには、変換の一部を明示的に実行します。たとえば、`make_pair(static_cast<B>(a), x)` を `pair<C, X>` を受け取る関数に渡します。
 
-- Visual C++ 2010 は、プロセッサのメカニズムでオーバーロードと特殊化を排除することで、引数の上限が 10 個の可変個引数テンプレート (たとえば、`make_shared<T>(arg1, arg2, argN)`) をシミュレートしていました。 Visual Studio 2012 では、引数の上限は 5 個まで減ったので、多くのユーザーは、コンパイル時間とコンパイラのメモリ使用量が改善されました。 ただし、プロジェクト全体で _VARIADIC_MAX を 10 と明示的に定義することで、以前の上限を設定できます。
+- Visual Studio 2010 では、プリプロセッサのメカニズムでオーバーロードと特殊化を排除することで、引数の上限が 10 個の可変個引数テンプレート (たとえば、`make_shared<T>(arg1, arg2, argN)`) のシミュレーションが行われていました。 Visual Studio 2012 では、引数の上限は 5 個まで減ったので、多くのユーザーは、コンパイル時間とコンパイラのメモリ使用量が改善されました。 ただし、プロジェクト全体で _VARIADIC_MAX を 10 と明示的に定義することで、以前の上限を設定できます。
 
-- C++ 標準ライブラリのヘッダーを含める場合、C++11 17.6.4.3.1 [macro.names]/2 では、キーワードのマクロ化が禁止されるようになりました。 マクロ化されたキーワードが検出されると、ヘッダーからコンパイラ エラーが発行されます (_ALLOW_KEYWORD_MACROS を定義すると、このようなコードをコンパイルできますが、使用しないことが強く推奨されます)。例外として、マクロ化された new は既定で許可されています。これは、ヘッダーが #pragma push_macro("new")/#undef new/#pragma pop_macro("new") を使用して自身を包括的に防御しているためです。 _ENFORCE_BAN_OF_MACRO_NEW を定義すると、その名前が示すとおりの処理が実行されます。
+- C++ 標準ライブラリのヘッダーを含める場合、C++11 17.6.4.3.1 [macro.names]/2 では、キーワードのマクロ置換が禁止されるようになりました。 マクロ置換されたキーワードが検出されると、ヘッダーからコンパイラ エラーが発行されます (_ALLOW_KEYWORD_MACROS を定義すると、そのようなコードをコンパイルできますが、その使用は強くお勧めしません)。例外として、マクロ形式の `new` は既定で許可されています。これは、ヘッダーが `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`を使用して包括的に保護するためです。 _ENFORCE_BAN_OF_MACRO_NEW を定義すると、その名前が示すとおりの処理が実行されます。
 
-- 多様な最適化とデバッグのチェックを実装するために、C++ 標準ライブラリの実装では、バイナリの互換性が Visual Studio のバージョン (2005、2008、2010、2012) ごとに意図的に保たれていません。 C++ 標準ライブラリを使用すると、異なるバージョンを使用してコンパイルされたオブジェクト ファイルとスタティック ライブラリは 1 つのバイナリ (EXE または DLL) に混在させることができず、C++ 標準ライブラリ オブジェクトは異なるバージョンを使用してコンパイルされたバイナリ間で渡すことができません。 Visual C++ 2010 を使用してコンパイルした (C++ 標準ライブラリを使用する) オブジェクト ファイルとスタティック ライブラリと、Visual Studio 2012 の C++ コンパイラを使用してコンパイルしたオブジェクト ファイルとスタティック ライブラリが混在すると、_MSC_VER の不一致に関するリンカー エラーが発生します (この _MSC_VER は、コンパイラのメジャー バージョン (Visual Studio 2012 の Visual C++ の場合は 1700) を含むマクロです)。 このチェックでは、DLL の混在を検出できず、Visual C++ 2008 以前のバージョンが関係する混在も検出できません。
+- 多様な最適化とデバッグのチェックを実装するために、C++ 標準ライブラリの実装では、バイナリの互換性が Visual Studio のバージョン (2005、2008、2010、2012) ごとに意図的に保たれていません。 C++ 標準ライブラリを使用すると、異なるバージョンを使用してコンパイルされたオブジェクト ファイルとスタティック ライブラリは 1 つのバイナリ (EXE または DLL) に混在させることができず、C++ 標準ライブラリ オブジェクトは異なるバージョンを使用してコンパイルされたバイナリ間で渡すことができません。 Visual Studio 2010 を使用してコンパイルした (C++ 標準ライブラリを使用する) オブジェクト ファイルとスタティック ライブラリと、Visual Studio 2012 の C++ コンパイラを使用してコンパイルしたものが混在すると、_MSC_VER の不一致に関するリンカー エラーが発生します。この _MSC_VER は、コンパイラのメジャー バージョン (Visual Studio 2012 の Visual C++ の場合は 1700) を含むマクロです。 このチェックでは、DLL の混在を検出できず、Visual Studio 2008 以前のバージョンが関係する混在も検出できません。
 
-- Visual Studio 2012 の C++ コンパイラでは、Visual C++ 2010 で実装された _ITERATOR_DEBUG_LEVEL の不一致の検出に加え、ランタイム ライブラリの不一致も検出します。 これらは、コンパイラ オプション `/MT` (静的なリリース)、`/MTd` (静的なデバッグ)、`/MD` (動的なリリース)、および `/MDd` (動的なデバッグ) が混在する場合に発生します。
+- Visual Studio 2012 の C++ コンパイラでは、Visual Studio 2010 で実装された _ITERATOR_DEBUG_LEVEL の不一致の検出に加え、ランタイム ライブラリの不一致も検出します。 これらの不一致は、コンパイラ オプション `/MT` (静的なリリース)、`/MTd` (静的なデバッグ)、`/MD` (動的なリリース)、および `/MDd` (動的なデバッグ) が混在する場合に発生します。
 
-- `operator<()`、`operator>()`、`operator<=()`、および `operator>=()` は、以前はコンテナーの `std::unordered_map` および `stdext::hash_map` ファミリに使用できましたが、実際には実装しても役に立っていませんでした。 これらの標準ではない演算子は、Visual Studio 2012 の Visual C++ から削除されました。 また、`std::unordered_map` ファミリの `operator==()` および `operator!=()` の実装は、`stdext::hash_map` ファミリも対象にするように拡張されました  (新しいコードでは、`stdext::hash_map` ファミリを使用しないことをお勧めします)。
+- `operator<()`、`operator>()`、`operator<=()`、および `operator>=()` は、以前はコンテナーの `std::unordered_map` および `stdext::hash_map` ファミリに使用できましたが、実装しても役に立っていませんでした。 これらの標準ではない演算子は、Visual Studio 2012 の Visual C++ から削除されました。 また、`operator==()` ファミリの `operator!=()` および `std::unordered_map` の実装は、`stdext::hash_map` ファミリも対象にするように拡張されました (新しいコードでは、`stdext::hash_map` ファミリを使用しないことをお勧めします)。
 
-- C++11 22.4.1.4 [locale.codecvt] により、変更可能な `stateT&`パラメーターが `codecvt::length()` と `codecvt::do_length()` により取得されるように指定されていますが、Visual C++ 2010 により `const stateT&` が取得されます。 Visual Studio 2012 の C++ コンパイラは、標準で必須のパラメーターとして `stateT&` を受け取ります。 この違いは、仮想関数 `do_length()` をオーバーライドする場合に重要になります。
+- C++11 22.4.1.4 [locale.codecvt] では、変更可能な `codecvt::length()`パラメーターが `codecvt::do_length()` と `stateT&` によって取得されるように指定されていましたが、Visual Studio 2010 によって `const stateT&` が取得されました。 Visual Studio 2012 の C++ コンパイラは、標準で必須のパラメーターとして `stateT&` を受け取ります。 この違いは、仮想関数 `do_length()` をオーバーライドする場合に重要になります。
 
 ### <a name="crt"></a>CRT
 
@@ -3069,7 +3068,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc-and-atl"></a>MFC と ATL
 
-- Fusion のサポート (afxcomctl32.h) が削除されました。そのため、afxcomctl32.h に定義されているすべてのメソッドは削除されました。 ヘッダー ファイル afxcomctl32.h と afxcomctl32.inl は削除されました。
+- Fusion のサポート (afxcomctl32.h) が削除されました。そのため、\<afxcomctl32.h> に定義されているすべてのメソッドは削除されました。 ヘッダー ファイル \<afxcomctl32.h> と \<afxcomctl32.inl> は削除されました。
 
 - `CDockablePane::RemoveFromDefaultPaneDividier` の名前は `CDockablePane::RemoveFromDefaultPaneDivider` に変更されました。
 
@@ -3077,19 +3076,19 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 互換性のために残されていた ATL トレース カテゴリは削除されました。
 
-- `const CRect` を受け取るように `CBasePane::MoveWindow` のシグネチャは変更されました。
+- `CBasePane::MoveWindow` を受け取るように `const CRect` のシグネチャは変更されました。
 
 - `CMFCEditBrowseCtrl::EnableBrowseButton` のシグネチャは変更されました。
 
-- `m_fntTabs` と `m_fntTabsBold` は `CMFCBaseTabCtrl` から削除されました。
+- `m_fntTabs` から `m_fntTabsBold` および `CMFCBaseTabCtrl` を削除しました。
 
-- `CMFCRibbonStatusBarPane` コンストラクターにパラメーターが追加されました  (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
+- `CMFCRibbonStatusBarPane` コンストラクターにパラメーターが追加されました (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
 
-- `CMFCRibbonCommandsListBox` コンストラクターにパラメーターが追加されました  (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
+- `CMFCRibbonCommandsListBox` コンストラクターにパラメーターが追加されました (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
 
 - `AFXTrackMouse` API (と関連する timer proc) が削除されました。 代わりに、Win32 API `TrackMouseEvent`を使用します。
 
-- `CFolderPickerDialog` コンストラクターにパラメーターが追加されました  (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
+- `CFolderPickerDialog` コンストラクターにパラメーターが追加されました (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
 
 - `CFileStatus` 構造体のサイズは変更されました。`m_attribute` のメンバーは、(`GetFileAttributes` から返される値に合わせて) BYTE から DWORD に変更されました。
 
@@ -3187,7 +3186,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `CKeyboardManager::ShowAllAccelerators` のシグネチャが変更されました。また、アクセラレータの区切り文字パラメーターが削除されました。
 
-- `CPropertyPage::GetParentSheet` が追加されました。`CPropertyPage` クラスで `GetParent` の代わりに呼び出して、正しい親シート ウィンドウを取得してください。これは `CPropertyPage` の親ウィンドウまたは親の親ウィンドウの場合があります。 必要に応じて、`GetParent` ではなく `GetParentSheet` を呼び出すようにコードを変更します。
+- `CPropertyPage::GetParentSheet` が追加されました。`CPropertyPage` クラスで `GetParent` の代わりに呼び出して、正しい親シート ウィンドウを取得してください。これは `CPropertyPage` の親ウィンドウまたは親の親ウィンドウの場合があります。 必要に応じて、`GetParentSheet` ではなく `GetParent` を呼び出すようにコードを変更します。
 
 - バランスが取れておらず、誤って無効になる警告を引き起こす ATLBASE.H の #pragma warning(push) が修正されました。 ATLBASE.H が解析された後、警告は適切に有効になるようになりました。
 
@@ -3211,7 +3210,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 互換性のために残されていた ATL*.CPP ファイルが \atlmfc\include\ フォルダーから削除されました。
 
-- `DLLMain` の要件を満たすために、`afxGlobalData` の初期化は CRT の初期化時ではなくオンデマンドに移動されました。
+- `afxGlobalData` の要件を満たすために、`DLLMain` の初期化は CRT の初期化時ではなくオンデマンドに移動されました。
 
 - `RemoveButtonByIndex` メソッドが `CMFCOutlookBarPane` クラスに追加されました。
 
@@ -3219,17 +3218,17 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `RestoreOriginalstate` のいくつかのインスタンスは `RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane)` に修正されました。
 
-- 使用されていないメソッド (`SetCaptionStyle`、`IsDrawCaption`、`IsHideDisabledButtons`、`GetRecentSiblingPaneInfo`、`CanAdjustLayout`) が `CDockablePane` から削除されました。
+- 使用されていないメソッド (`CDockablePane`、`SetCaptionStyle`、`IsDrawCaption`、`IsHideDisabledButtons`、`GetRecentSiblingPaneInfo`) が `CanAdjustLayout` から削除されました。
 
 - `CDockablePane` の静的メンバー変数 `m_bCaptionText` と `m_bHideDisabledButtons` が削除されました。
 
 - オーバーライド `DeleteString` メソッドが `CMFCFontComboBox` に追加されました。
 
-- 使用されていないメソッド (`GetMinLength` および `IsLastPaneOnLastRow`) が `CPane` から削除されました。
+- 使用されていないメソッド (`CPane` および `GetMinLength`) が `IsLastPaneOnLastRow` から削除されました。
 
 - 名前が `CPane::GetDockSiteRow(CDockingPanesRow *)` から `CPane::SetDockSiteRow` に変更されました。
 
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 の互換性に影響する変更
+## <a name="visual-studio-2010-breaking-changes"></a>Visual Studio 2010 の重要な変更点
 
 ### <a name="compiler"></a>コンパイラ
 
@@ -3239,47 +3238,47 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 新しいラムダ表記をサポートすると、IDL uuid 属性の引用符なしの GUID のコーディングはサポートされなくなります。
 
-- .NET Framework 4 では、破損状態例外という概念を導入しました。これは、プロセスが回復不能な破損状態のままになる例外です。 既定では、他のすべての例外をキャッチする /EHa コンパイラ オプションを使用しても、破損状態例外をキャッチできません。                 破損状態例外を明示的にキャッチするには、__try-\__except ステートメントを使用します。 または、[HandledProcessCorruptedStateExceptions] 属性を適用して、破損状態例外をキャッチする関数を有効にします。  この変更は、主に、破損状態例外をキャッチする必要があるシステム プログラマに影響があります。 8 つの例外として、STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE があります。                 これらの例外の詳細については、[GetExceptionCode](/windows/desktop/Debug/getexceptioncode) マクロを参照してください。
+- .NET Framework 4 では、破損状態例外という概念を導入しました。これは、プロセスが回復不能な破損状態のままになる例外です。 既定では、他のすべての例外をキャッチする /EHa コンパイラ オプションを使用しても、破損状態例外をキャッチできません。                 破損状態例外を明示的にキャッチするには、__try-\__except ステートメントを使用します。 または、[HandledProcessCorruptedStateExceptions] 属性を適用して、破損状態例外をキャッチする関数を有効にします。  この変更は、主に、破損状態例外をキャッチする必要があるシステム プログラマに影響があります。 8 つの例外として、STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE があります。                 これらの例外の詳細については、[GetExceptionCode](/windows/win32/Debug/getexceptioncode) マクロを参照してください。
 
-- `/GS` コンパイラ オプションは改善され、以前のバージョンよりも包括的にバッファー オーバーランを防ぐことができるようになりました。 このバージョンでは、スタックに追加のセキュリティ チェックが挿入され、パフォーマンスが低下する可能性があります。 特定の関数についてセキュリティ チェックを挿入しないようにコンパイラに指示するには、新しい **__declspec(safebuffers)** キーワードを使用します。
+- `/GS` コンパイラ オプションは改善され、以前のバージョンよりも包括的にバッファー オーバーランを防ぐことができるようになりました。 このバージョンでは、スタックに追加のセキュリティ チェックが挿入され、パフォーマンスが低下する可能性があります。 特定の関数についてセキュリティ チェックを挿入しないようにコンパイラに指示するには、新しい `__declspec(safebuffers)` キーワードを使用します。
 
 - `/GL` (プログラム全体の最適化) と `/clr` (共通言語ランタイムのコンパイル) という 2 つのコンパイラ オプションを指定してコンパイルすると、`/GL` オプションは無視されます。 この組み合わせのコンパイラ オプションではほとんどメリットがないため、この変更が加えられました。 この変更の結果、ビルドのパフォーマンスは改善されました。
 
-- Visual C++ 2010 の既定では、トライグラフのサポートは無効です。 トライグラフのサポートを有効にするには、`/Zc:trigraphs` コンパイラ オプションを使用します。 トライグラフは、2 つの連続する疑問符 ("??") と、一意の 3 番目の文字で構成されます。 コンパイラはトライグラフを対応する区切り文字に置き換えます。 たとえば、"??=" というトライグラフは '#' という文字に置き換えられます。 トライグラフは、一部の区切り文字に対応する適切なグラフィック表示がない文字セットを含む C ソース ファイルで使用できます。
+- 既定では、Visual Studio 2010 でのトライグラフのサポートは無効です。 トライグラフのサポートを有効にするには、`/Zc:trigraphs` コンパイラ オプションを使用します。 トライグラフは、2 つの連続する疑問符 ("??") と、一意の 3 番目の文字で構成されます。 コンパイラはトライグラフを対応する区切り文字に置き換えます。 たとえば、`??=` というトライグラフは '#' という文字に置き換えられます。 トライグラフは、一部の区切り文字に対応する適切なグラフィック表示がない文字セットを含む C ソース ファイルで使用できます。
 
 - リンカーは Windows 98 の最適化をサポートしなくなりました。 `/OPT` (最適化) オプションで `/OPT:WIN98` または `/OPT:NOWIN98` を指定すると、コンパイル時エラーが発生します。
 
 - RuntimeLibrary および DebugInformationFormat ビルド システム プロパティで指定されている既定のコンパイラ オプションは変更されました。 これらのプロパティは、既定で、Visual C++ リリース 7.0 ～ 10.0 で作成されたプロジェクトで指定されます。 Visual C++ 6.0 で作成したプロジェクトを移行する場合は、これらのプロパティの値を指定するかどうかを検討してください。
 
-- Visual C++ 2010 では、RuntimeLibrary = MultiThreaded (`/MD`)、DebugInformationFormat = ProgramDatabase (`/Zi`) です。 Visual C++ 9.0 では、RuntimeLibrary = MultiThreaded (`/MT`)、DebugInformationFormat = Disabled です。
+- Visual Studio 2010 では、RuntimeLibrary = MultiThreaded (`/MD`)、DebugInformationFormat = ProgramDatabase (`/Zi`) です。 Visual C++ 9.0 では、RuntimeLibrary = MultiThreaded (`/MT`)、DebugInformationFormat = Disabled です。
 
 ### <a name="clr"></a>CLR
 
 - Microsoft C# と Visual Basic のコンパイラから、非プライマリ相互運用機能アセンブリ (非 PIA) を生成できるようになりました。 非 PIA アセンブリは、関連するプライマリ相互運用機能アセンブリ (PIA) を展開しなくても COM 型を使用できます。 Visual C# または Visual Basic で生成された非 PIA アセンブリを使用する場合は、コンパイル コマンドで PIA アセンブリを参照してから、ライブラリを使用する非 PIA アセンブリを参照する必要があります。
 
-### <a name="visual-c-projects-and-msbuild"></a>Visual C++ プロジェクトと MSBuild
+### <a name="visual-studio-c-projects-and-msbuild"></a>Visual Studio C++ プロジェクトと MSBuild
 
-- Visual C++ プロジェクトは MSBuild ツールに基づくようになりました。 その結果、プロジェクト ファイルでは、新しい XML ファイル形式と .vcxproj ファイルのサフィックスを使用します。 Visual C++ 2010 は、プロジェクト ファイルを以前のバージョンの Visual Studio から新しいファイル形式に自動的に変換します。 以前のビルド ツールの VCBUILD.exe、またはプロジェクト ファイルのサフィックス .vcproj に依存している場合、既存のプロジェクトは影響を受けます。
+- Visual Studio C++ プロジェクトは MSBuild ツールに基づくようになりました。 その結果、プロジェクト ファイルでは、新しい XML ファイル形式と .vcxproj ファイルのサフィックスを使用します。 Visual Studio 2010 は、プロジェクト ファイルを以前のバージョンの Visual Studio から新しいファイル形式に自動的に変換します。 以前のビルド ツールの VCBUILD.exe、またはプロジェクト ファイルのサフィックス .vcproj に依存している場合、既存のプロジェクトは影響を受けます。
 
-- 以前のリリースの Visual C++ では、プロパティ シートの遅延評価をサポートしていました。 たとえば、親プロパティ シートが子プロパティ シートをインポートし、子に定義されている変数を親が使用して他の変数を定義することができます。 遅延評価によって、子プロパティ シートがインポートされる前であっても、親が子の変数を使用できるようになります。 MSBuild は早期評価のみをサポートしているため、Visual C++ 2010 では、プロジェクト シート変数は定義前に使用できません。
+- 以前のリリースの Visual C++ では、プロパティ シートの遅延評価をサポートしていました。 たとえば、親プロパティ シートが子プロパティ シートをインポートし、子に定義されている変数を親が使用して他の変数を定義することができます。 遅延評価によって、子プロパティ シートがインポートされる前であっても、親が子の変数を使用できるようになります。 MSBuild では早期評価のみがサポートされるため、Visual Studio 2010 では、プロジェクト シート変数は定義前に使用できません。
 
 ### <a name="ide"></a>IDE
 
-- アプリケーションの終了ダイアログ ボックスで、アプリケーションは終了しなくなります。 以前のリリースでは、`abort()` または `terminate()` 関数でアプリケーションの製品版ビルドを閉じると、C ランタイム ライブラリのコンソール ウィンドウまたはダイアログ ボックスにアプリケーションの終了メッセージが表示されていました。 メッセージの一部を引用すると、"このアプリケーションは、通常と異なる方法でランタイムにアプリケーションを中止するように要求しました。 詳細については、アプリケーションのサポート チームに問い合わせてください" と表示されていました。 Windows では、現在の終了ハンドラー (通常は Windows エラー レポート (ワトソン博士) ダイアログ ボックスや Visual Studio デバッガー) が続けて表示されるので、アプリケーションの終了メッセージは重複しています。 Visual Studio 2010 以降、C ランタイム ライブラリではこのメッセージが表示されなくなりました。 また、ランタイムでは、デバッガーの起動前にアプリケーションが終了しなくなりました。 アプリケーションの終了メッセージの以前の動作に依存している場合にのみ、これは互換性に影響する変更です。
+- アプリケーションの終了ダイアログ ボックスで、アプリケーションは終了しなくなります。 以前のリリースでは、`abort()` または `terminate()` 関数でアプリケーションの製品版ビルドを閉じると、C ランタイム ライブラリのコンソール ウィンドウまたはダイアログ ボックスにアプリケーションの終了メッセージが表示されていました。 メッセージの一部を引用すると、"このアプリケーションは、通常と異なる方法でランタイムにアプリケーションを中止するように要求しました。 詳細については、アプリケーションのサポート チームに問い合わせてください" と表示されていました。 Windows によって現在の終了ハンドラー (通常は Windows エラー報告 (ワトソン博士) ダイアログボックスまたは Visual Studio デバッガー) が表示されたため、アプリケーション終了メッセージは冗長でした。 Visual Studio 2010 以降、C ランタイム ライブラリではこのメッセージが表示されなくなりました。 また、ランタイムでは、デバッガーの起動前にアプリケーションが終了しなくなりました。 アプリケーションの終了メッセージの以前の動作に依存している場合にのみ、これは互換性に影響する変更です。
 
-- 特に Visual Studio 2010 では、IntelliSense は C++/CLI コードまたは属性に使用できません。**[すべての参照の検索]** はローカル変数には使用できません。また、コード モデルでは、インポートしたアセンブリから型名を取得したり、型を完全修飾名に解決したりすることはできません。
+- 特に Visual Studio 2010 では、IntelliSense は C++/CLI コードまたは属性に使用できません。 **[すべての参照の検索]** はローカル変数には使用できません。また、コード モデルでは、インポートしたアセンブリから型名を取得したり、型を完全修飾名に解決したりすることはできません。
 
 ### <a name="libraries"></a>ライブラリ
 
-- SafeInt クラスは Visual C++ に含まれていません。また、別のダウンロードにも含まれなくなりました。 "SafeInt" というクラスを開発した場合にのみ、これは互換性に影響する変更です。
+- SafeInt クラスは Visual C++ に含まれていません。また、別のダウンロードにも含まれなくなりました。 "SafeInt" という名前のクラスを開発した場合にのみ、これは破壊的変更です。
 
 - ライブラリ展開モデルは、特定バージョンのダイナミック リンク ライブラリを検索するためにマニフェストを使用しなくなりました。 各ダイナミック リンク ライブラリの名前にはバージョン番号が含まれているので、その名前を使用してライブラリを特定してください。
 
-- 以前のバージョンの Visual Studio では、ランタイム ライブラリを再ビルドできます。 Visual C++ 2010 は、C ランタイム ライブラリ ファイルの独自のコピーのビルドをサポートしなくなりました。
+- 以前のバージョンの Visual Studio では、ランタイム ライブラリを再ビルドできます。 Visual Studio 2010 では、C ランタイム ライブラリ ファイルの独自のコピーのビルドがサポートされなくなりました。
 
 ### <a name="standard-library"></a>標準ライブラリ
 
-- \<iterator> ヘッダーは、他の多くのヘッダー ファイルに自動的に含まれなくなりました。 定義されているスタンドアロンの反復子をサポートする必要がある場合は、そのヘッダーを明示的に含めます。以前のビルド ツールの VCBUILD.exe、またはプロジェクト ファイルのサフィックス .vcproj.interator> ヘッダーに依存している場合、既存のプロジェクトは影響を受けます。
+- \<iterator> ヘッダーは、他の多くのヘッダー ファイルに自動的に含まれなくなりました。 代わりに、ヘッダーで定義されているスタンドアロンの反復子のサポートが必要な場合は、そのヘッダーを明示的に含めます。 以前のビルド ツールの VCBUILD.exe、またはプロジェクト ファイルのサフィックス .vcproj.iterator に依存している場合、既存のプロジェクトは影響を受けます。
 
 - \<algorithm> ヘッダーの checked_* 関数と unchecked_\* 関数は削除されました。 また、\<iterator>> ヘッダーの `checked_iterator` が削除され、`unchecked_array_iterator` クラスが追加されました。
 
@@ -3291,7 +3290,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="crt-mfc-and-atl-libraries"></a>CRT、MFC、ATL ライブラリ
 
-- CRT、MFC、および ATL ライブラリをビルドするために、ユーザー サポートは削除されました。 たとえば、適切な nmake ファイルが指定されていないとします。 一方、ユーザーは、これらのライブラリのソース コードに対してアクセス権を持っています。 また、Microsoft がこれらのライブラリのビルドに使用する MSBuild オプションについて説明したドキュメントが、Visual C++ チーム ブログに投稿される可能性があります。
+- CRT、MFC、および ATL ライブラリをビルドするために、ユーザー サポートは削除されました。 たとえば、適切な NMAKE ファイルが指定されていないとします。 一方、ユーザーは、これらのライブラリのソース コードに対してアクセス権を持っています。 また、Microsoft がこれらのライブラリのビルドに使用する MSBuild オプションについて説明したドキュメントが、Visual C++ チーム ブログに投稿される可能性があります。
 
 - IA64 の MFC のサポートは削除されました。 ただし、IA64 の CRT と ATL のサポートはまだ提供されています。
 
@@ -3305,9 +3304,9 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler リファレンス
 
-- Microsoft Macro Assembler リファレンス コンパイラからいくつかのディレクティブが削除されました。 削除されたディレクティブは、.186、.286、.286P、.287、.8086、.8087、および .NO87 です。
+- Microsoft Macro Assembler リファレンス コンパイラからいくつかのディレクティブが削除されました。 削除されたディレクティブは、`.186`、`.286`、`.286P`、`.287`、`.8086`、`.8087`、および `.NO87` です。
 
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 の互換性に影響する変更
+## <a name="visual-studio-2008-breaking-changes"></a>Visual Studio 2008 の重要な変更点
 
 ### <a name="compiler"></a>コンパイラ
 
@@ -3331,7 +3330,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
    - tag_name
 
-### <a name="visual-c-projects"></a>Visual C++ プロジェクト
+### <a name="visual-studio-c-projects"></a>Visual Studio C++ のプロジェクト
 
 - 以前のバージョンの Visual Studio からプロジェクトをアップグレードする場合、必要に応じて 0x0500 以上になるように WINVER マクロと _WIN32_WINNT マクロを変更します。
 
@@ -3383,11 +3382,11 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - スタック クラスのメンバー変数 c は保護済みと宣言されるようになりました。 以前は、このメンバー変数はパブリックと宣言されていました。
 
-- `money_get::do_get` の動作が変更されました。 以前は、`frac_digits` で呼び出されたよりも多くの小数点以下桁数で金額を解析すると、`do_get` はすべてを使用していました。 現在は、最高でも `frac_digits` 文字まで使用すると、`do_get` は解析を停止します。
+- `money_get::do_get` の動作が変更されました。 以前は、`frac_digits` で呼び出されたよりも多くの小数点以下桁数で金額を解析すると、`do_get` はすべてを使用していました。 現在は、最高でも `do_get` 文字まで使用すると、`frac_digits` は解析を停止します。
 
 ### <a name="atl"></a>ATL
 
-- CRT に依存することなく ATL をビルドすることはできません。 以前のバージョンの Visual Studio では、#define ATL_MIN_CRT を使用して、ATL プロジェクトの CRT への依存を最小限にすることができます。 Visual C++ 2008 では、ATL_MIN_CRT を定義しているかどうかにかかわらず、すべての ATL プロジェクトの CRT への依存は最小限です。
+- CRT に依存することなく ATL をビルドすることはできません。 以前のバージョンの Visual Studio では、#define ATL_MIN_CRT を使用して、ATL プロジェクトの CRT への依存を最小限にすることができます。 Visual Studio 2008 では、ATL_MIN_CRT が定義されているかどうかにかかわらず、すべての ATL プロジェクトの CRT への依存は最小限です。
 
 - ATL サーバーのコードベースは、CodePlex の共有ソース プロジェクトとしてリリースされており、Visual Studio の一部としてはインストールされません。 atlenc.h のクラスのデータ エンコードとデコード、および atlutil.h と atlpath のユーティリティ関数とクラスは残され、ATL ライブラリの一部になりました。 ATL サーバーに関連する一部のファイルは、Visual Studio に含まれなくなりました。
 
@@ -3397,7 +3396,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="atlmfc-shared-classes"></a>ATL/MFC 共有クラス
 
-- CRT に依存することなく ATL をビルドすることはできません。 以前のバージョンの Visual Studio では、`#define ATL_MIN_CRT` を使用して、ATL プロジェクトの CRT への依存を最小限にすることができます。 Visual C++ 2008 では、ATL_MIN_CRT を定義しているかどうかにかかわらず、すべての ATL プロジェクトの CRT への依存は最小限です。
+- CRT に依存することなく ATL をビルドすることはできません。 以前のバージョンの Visual Studio では、`#define ATL_MIN_CRT` を使用して、ATL プロジェクトの CRT への依存を最小限にすることができます。 Visual Studio 2008 では、ATL_MIN_CRT が定義されているかどうかにかかわらず、すべての ATL プロジェクトの CRT への依存は最小限です。
 
 - ATL サーバーのコードベースは、CodePlex の共有ソース プロジェクトとしてリリースされており、Visual Studio の一部としてはインストールされません。 atlenc.h のクラスのデータ エンコードとデコード、および atlutil.h と atlpath のユーティリティ関数とクラスは残され、ATL ライブラリの一部になりました。 ATL サーバーに関連する一部のファイルは、Visual Studio に含まれなくなりました。
 
@@ -3405,13 +3404,13 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` クラス: `CTime` クラスは西暦 1900 年 1 月 1 日以降の日付を使用できるようになりました  (以前は西暦 1970 年 1 月 1 日以降でした)。
+- `CTime` クラス: `CTime` クラスは西暦 1900 年 1 月 1 日以降の日付を使用できるようになりました (以前は西暦 1970 年 1 月 1 日以降でした)。
 
 - MFC ダイアログのコントロールのタブ オーダー: タブ オーダーに MFC ActiveX コントロールが挿入されている場合、MFC ダイアログに含まれる複数のコントロールは正しいタブ オーダーになりません。 今回の変更で、この問題は解決します。
 
-   たとえば、ActiveX コントロールといくつかの編集コントロールがある MFC ダイアログ アプリケーションを作成します。 ActiveX コントロールを編集コントロールのタブ オーダーの中間に配置します。 アプリケーションを起動し、タブ オーダーが ActiveX コントロールの後である編集コントロールをクリックし、Tab キーを押します。今回の変更前は、フォーカスはタブ オーダーの次の編集コントロールではなく、ActiveX コントロールの次の編集コントロールに移動していました。
+   たとえば、ActiveX コントロールといくつかの編集コントロールがある MFC ダイアログ アプリケーションを作成します。 ActiveX コントロールを編集コントロールのタブ オーダーの中間に配置します。 アプリケーションを起動して、タブオーダーが ActiveX コントロールの後にある編集コントロールをクリックし、次に tab キーを押します。この変更を行う前に、タブオーダーの次の編集コントロールではなく、ActiveX コントロールの次の編集コントロールにフォーカスを移動します。
 
-- `CFileDialog` クラス: `CFileDialog` クラスのカスタム テンプレートは Windows Vista に自動的に移植できません。 使用することはできますが、Windows Vista スタイルのダイアログの機能や外観を追加することはできません。
+- `CFileDialog` クラス: `CFileDialog` クラスのカスタムテンプレートを Windows Vista に自動的に移植することはできません。 使用することはできますが、Windows Vista スタイルのダイアログの機能や外観を追加することはできません。
 
 - `CWnd` クラスと `CFrameWnd` クラス: `CWnd::GetMenuBarInfo` メソッドは削除されました。
 
@@ -3421,35 +3420,35 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 非推奨になった ANSI API: ANSI バージョンの一部の MFC メソッドは非推奨になりました。 今後のアプリケーションでは、これらのメソッドの Unicode バージョンを使用してください。 詳細については、「**Windows Vista コモン コントロールの作成要件**」を参照してください。
 
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 の互換性に影響する変更
+## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 の重要な変更点
 
 ### <a name="crt"></a>CRT
 
 - 多くの関数は非推奨になりました。 「**Deprecated CRT Functions**」(非推奨の CRT 関数) を参照してください。
 
-- 多くの関数はパラメーターを検証し、パラメーターが無効な場合は実行を停止するようになりました。 無効なパラメーターを渡しているコードで、無効なパラメーターを無視するか単にエラー コードを返すだけの関数に依存しているコードの場合、これは互換性に影響する変更です。 「**Parameter Validation**」(パラメーターの検証) を参照してください。
+- 多くの関数はパラメーターを検証し、パラメーターが無効な場合は実行を停止するようになりました。 無効なパラメーターを渡しているコードで、無効なパラメーターを無視するか単にエラー コードを返すだけの関数に依存しているコードの場合、この検証によってコードに障害を起こす可能性があります。 「**Parameter Validation**」(パラメーターの検証) を参照してください。
 
-- ファイル記述子の値 -2 は、出力に stdout と stderr を使用できないことを示すために使用されるようになりました。たとえば、コンソール ウィンドウがない Windows アプリケーションで使用されます。 以前に使用されていた値は -1 でした。 詳細については、「[_fileno](../c-runtime-library/reference/fileno.md)」を参照してください
+- ファイル記述子の値 -2 は、出力に `stdout` と `stderr` を使用できないことを示すために使用されるようになりました。たとえば、コンソール ウィンドウがない Windows アプリケーションで使用されます。 以前に使用されていた値は -1 でした。 詳細については、「[_fileno](../c-runtime-library/reference/fileno.md)」を参照してください
 
 - シングルスレッドの CRT ライブラリ libc.lib と libcd.lib は削除されました。 マルチスレッドの CRT ライブラリを使用してください。 `/ML` コンパイラ フラグはサポートされなくなりました。 マルチスレッドのコードとシングルスレッドのコード間のパフォーマンスの違いが重要な問題になる場合に、一部の関数のロックなしバージョンが追加されました。
 
 - pow のオーバーロードである double pow(int, int) は、標準への準拠を改善するために削除されました。
 
-- %n 書式指定子は、安全性に欠ける性質があるので、どの printf ファミリの関数でも既定でサポートされなくなりました。 %n が指定された場合の既定の動作は、無効なパラメーター ハンドラーを呼び出すことです。 %n のサポートを有効にするには、_set_printf_count_output (および see_get_printf_count_output) を使用します。
+- %n 書式指定子は、安全性に欠ける性質があるので、どの printf ファミリの関数でも既定でサポートされなくなりました。 %n が指定された場合、既定の動作は無効なパラメーター ハンドラーを呼び出すことです。 %n のサポートを有効にするには、`_set_printf_count_output` を使用します (`_get_printf_count_output` も参照してください)。
 
 - `sprintf` は、符号付きゼロの負の符号を出力するようになりました。
 
 - 標準への準拠のために `swprintf` は変更され、size パラメーターが必須になりました。 size パラメーターを指定しない `swprintf` の形式は非推奨になりました。
 
-- `_set_security_error_handler` が削除されました。 その関数の呼び出しは削除してください。既定のハンドラーの方がはるかに安全にセキュリティ エラーを処理できます。
+- `_set_security_error_handler` は削除されました。 その関数の呼び出しは削除してください。既定のハンドラーの方がはるかに安全にセキュリティ エラーを処理できます。
 
 - `time_t` は 64 ビット値です (_USE_32BIT_TIME_T が定義されていない場合)。
 
-- `_spawn` 関数、`_wspawn` 関数は、C 標準の規定に従い、成功時には errno が変更されません。
+- `_spawn` 関数、`_wspawn` 関数は、C 標準の規定に従い、成功時には `errno` が変更されません。
 
 - RTC は既定でワイド文字を使用するようになりました。
 
-- 浮動小数点制御ワードのサポート関数は、/CLR または /CLR:PURE を指定してコンパイルしたアプリケーションの場合に非推奨になりました。 影響を受ける関数は `_clear87`、`_clearfp`、`_control87`、`_controlfp`、`_fpreset`、`_status87`、`_statusfp` です。 _CRT_MANAGED_FP_NO_DEPRECATE を定義して、非推奨の警告を無効にすることができます。ただし、マネージド コードでこれらの関数を使用することは予測不能でサポートされません。
+- 浮動小数点制御ワードのサポート関数は、`/CLR` または `/CLR:PURE` を指定してコンパイルしたアプリケーションの場合に非推奨になりました。 影響を受ける関数は `_clear87`、`_clearfp`、`_control87`、`_controlfp`、`_fpreset`、`_status87`、`_statusfp` です。 _CRT_MANAGED_FP_NO_DEPRECATE を定義して、非推奨の警告を無効にすることができます。ただし、マネージド コードでこれらの関数を使用することは予測不能でサポートされません。
 
 - 一部の関数は定数ポインターを返すようになりました。 古い定数ではない動作は、_CONST_RETURN を定義して復元することができます。 影響を受ける関数は次のとおりです。
 
@@ -3525,4 +3524,4 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ## <a name="see-also"></a>参照
 
-[Visual Studio における Visual C++ の新機能](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Visual Studio における Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Active technology [C++]
 - MFC DLLs [C++], Active Technology
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
-ms.openlocfilehash: 270c64df9af792a73acf1ad408aca02e7fadc30f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: f67fb9548601ac705ceda08d20d3049f0bf1e0a5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535812"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221005"
 ---
 # <a name="active-technology-and-dlls"></a>Active テクノロジと DLL
 
@@ -27,4 +27,4 @@ Active テクノロジは、オブジェクトのサーバーを DLL 内部に�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

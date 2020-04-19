@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518581"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341718"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView クラス
 
@@ -51,7 +51,7 @@ class COleDBRecordView : public CFormView
 DDX 関数を使用する`COleDbRecordView`をデータベースのレコード セットから直接データを取得し、ダイアログ コントロールに表示します。 使用する必要があります、`DDX_*`メソッド (など`DDX_Text`) ではなく、`DDX_Field*`関数 (など`DDX_FieldText`) と`COleDbRecordView`します。 `DDX_FieldText` は動作しません`COleDbRecordView`ため`DDX_FieldText`型の追加の引数を取る`CRecordset*`(の`CRecordView`) または`CDaoRecordset*`(の`CDaoRecordView`)。
 
 > [!NOTE]
->  OLE DB コンシューマー テンプレート クラスではなく、データ アクセス オブジェクト (DAO) クラスで作業している場合は、クラスを使用して[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)代わりにします。 詳細については、この記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
+>  OLE DB コンシューマー テンプレート クラスではなく、データ アクセス オブジェクト (DAO) クラスで作業している場合は、クラスを使用して[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)代わりにします。 詳細については、この記事を参照してください。[概要。データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
 
 `COleDBRecordView` レコード ビューは、ユーザー インターフェイスを更新できるようにはの行セット内のユーザーの位置を追跡します。 ユーザーは、行セットの先頭または末尾に移動、レコード ビュー、ユーザー インターフェイス オブジェクトを無効にします: メニュー項目またはツール バー ボタンなど — を移動する同じ方向にさらにします。
 
@@ -124,7 +124,7 @@ virtual CRowset<>* OnGetRowset() = 0;
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-詳細と例については、この記事を参照してください。[レコード ビュー: レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
+詳細と例については、この記事を参照してください。[レコード ビュー。レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

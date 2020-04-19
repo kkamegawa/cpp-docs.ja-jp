@@ -6,30 +6,30 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: f76e9b2ef25c8a6c046cb6c47f0f5761854453c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0321d98d8b92af0b80259bc49e84e69b987577a4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508241"
 ---
 # <a name="message-handling-and-mapping"></a>メッセージの処理とマップ
 
-ここでは、MFC フレームワークがメッセージとコマンドの処理方法と、ハンドラー関数への接続方法について説明します。
+この記事ファミリでは、メッセージとコマンドが MFC フレームワークによってどのように処理されるか、およびそれらをハンドラー関数に接続する方法について説明します。
 
-Windows の従来のプログラムでは、Windows メッセージは、ウィンドウ プロシージャでの大規模な switch ステートメントで処理されます。 代わりに MFC を使用して[メッセージ マップ](../mfc/message-categories.md)ダイレクト メッセージを個別のクラス メンバー関数にマップします。 メッセージ マップは、このため、仮想関数よりも効率的と最適な C++ オブジェクトによって処理されるメッセージを許可するが、アプリケーション、ドキュメント、ビュー、およびなど。 1 つのメッセージまたはメッセージ、コマンドの Id の範囲をマップしたり、コントロール Id。
+Windows 用の従来のプログラムでは、Windows メッセージはウィンドウプロシージャ内の大きな switch ステートメントで処理されます。 代わりに MFC では、[メッセージマップ](../mfc/message-categories.md)を使用して、個別のクラスメンバー関数に直接メッセージをマップします。 メッセージマップは、この目的のための仮想関数よりも効率的であり、アプリケーション、ドキュメント、ビューなどC++の最も適切なオブジェクトによってメッセージを処理できます。 1つのメッセージ、またはメッセージの範囲、コマンド Id、またはコントロール Id をマップできます。
 
-WM_COMMAND メッセージ-通常、メニューのツールバーのボタン、またはアクセラレータによって生成、メッセージ マップ機構を使用しても。 MFC 標準を定義する[ルーティング](../mfc/command-routing.md)アプリケーション間では、コマンドのメッセージのフレーム ウィンドウ、ビュー、およびプログラムでのアクティブなドキュメントです。 必要がある場合、このルーティングをオーバーライドすることができます。
+WM_COMMAND メッセージ (通常はメニュー、ツールバーボタン、またはアクセラレータによって生成される) では、メッセージマップ機構も使用されます。 MFC では、プログラム内のアプリケーション、フレームウィンドウ、ビュー、およびアクティブドキュメント間でのコマンドメッセージの標準的な[ルーティング](../mfc/command-routing.md)を定義します。 必要に応じて、このルーティングをオーバーライドできます。
 
-メッセージ マップは (メニューやツールバーのボタン)、ユーザー インターフェイス オブジェクトを更新する方法を指定することも有効化または無効にすることに合わせて、現在のコンテキスト。
+また、メッセージマップは、ユーザーインターフェイスオブジェクト (メニューやツールバーボタンなど) を更新し、現在のコンテキストに合わせてそれらを有効または無効にする方法も提供します。
 
-メッセージと Windows でのメッセージ キューの詳細については、次を参照してください。[メッセージとメッセージ キュー](/windows/desktop/winmsg/messages-and-message-queues) Windows SDK に含まれています。
+Windows のメッセージとメッセージキューに関する一般的な情報については、「Windows SDK のメッセージ[とメッセージキュー](/windows/win32/winmsg/messages-and-message-queues) 」を参照してください。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
 
-- [フレームワークがメッセージ ハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
+- [フレームワークがメッセージハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
 
 - [フレームワークのメッセージ マップ検索方法](../mfc/how-the-framework-searches-message-maps.md)
 
@@ -37,9 +37,9 @@ WM_COMMAND メッセージ-通常、メニューのツールバーのボタン�
 
 - [マップ (関数にメッセージを)](../mfc/reference/mapping-messages-to-functions.md)
 
-- [ステータス バーにコマンド情報を表示する方法](../mfc/how-to-display-command-information-in-the-status-bar.md)
+- [ステータスバーにコマンド情報を表示する方法](../mfc/how-to-display-command-information-in-the-status-bar.md)
 
-- [ユーザー インターフェイス オブジェクトの動的更新](../mfc/how-to-update-user-interface-objects.md)
+- [ユーザーインターフェイスオブジェクトの動的な更新](../mfc/how-to-update-user-interface-objects.md)
 
 - [方法: テンプレート クラスのメッセージ マップを作成する](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 

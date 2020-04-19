@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2317
 ms.assetid: e44d129b-8d3e-4ce9-9d79-6791ee77f25e
-ms.openlocfilehash: 637433ee22ee77a7106e3692a39eec9973d979c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aef89f850ff0a280255e3ec9c4c28ea422038091
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608134"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748113"
 ---
 # <a name="compiler-error-c2317"></a>コンパイラ エラー C2317
 
@@ -21,7 +21,7 @@ ms.locfileid: "50608134"
 
 次の例では C2317 が生成されます。
 
-```
+```cpp
 // C2317.cpp
 // compile with: /EHsc
 #include <eh.h>
@@ -33,9 +33,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2317b.cpp
 // compile with: /EHsc
 #include <eh.h>

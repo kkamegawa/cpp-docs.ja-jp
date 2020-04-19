@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338689"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue クラス
 
@@ -66,7 +66,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |----------|-----------------|
 |[CAnimationValue::operator 倍](#operator_double)|CAnimationValue と double 型の間の変換を提供します。|
 |[CAnimationValue::operator INT32](#operator_int32)|CAnimationValue と INT32 との間の変換を提供します。|
-|[CAnimationValue::operator =](#operator_eq)|オーバーロードされます。 CAnimationValue に INT32 値を割り当てます。|
+|[CAnimationValue::operator=](#operator_eq)|オーバーロードされます。 CAnimationValue に INT32 値を割り当てます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 出力します。 関数が返されるときにアニメーション変数の現在の値が含まれています。
 
-*値*<br/>
+*nValue*<br/>
 出力します。 関数が返されるときにアニメーション変数の現在の値が含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -203,7 +203,7 @@ CAnimationVariable& GetVariable();
 CAnimationVariable m_value;
 ```
 
-##  <a name="operator_double"></a>  CAnimationValue::operator 倍
+##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE
 
 CAnimationValue と double 型の間の変換を提供します。
 
@@ -235,7 +235,7 @@ operator INT32();
 
 CAnimationValue と INT32 との間の変換を提供します。 内部的には、このメソッドは、GetValue の呼び出しし、エラーをチェックしません。 GetValue が失敗した場合、返される値は、コンス トラクター、または SetDefaultValue で以前に設定された既定値が含まれます。
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+##  <a name="operator_eq"></a>  CAnimationValue::operator=
 
 CAnimationValue を double 型の値を割り当てます。
 

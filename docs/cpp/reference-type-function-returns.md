@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
 ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403439"
 ---
 # <a name="reference-type-function-returns"></a>Reference-Type Function Returns (参照型関数の戻り値)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50461322"
 
 ラージ オブジェクトを渡す方が効率的であることができますよう*に*参照によって関数を指定することも大きなオブジェクトを返すより効率的な*から*参照によって関数。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。
 
-参照戻し型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバー ロードされた演算子は、「[オーバー ロードされた演算子](../cpp/operator-overloading.md)します。
+参照戻り値の型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバー ロードされた演算子は、「[オーバー ロードされた演算子](../cpp/operator-overloading.md)します。
 
 ## <a name="example"></a>例
 

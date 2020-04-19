@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: 391804d05800e3979add7bee6342308de4253602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164099"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext クラス
 
@@ -50,7 +50,7 @@ class CDumpContext
 |[CDumpContext::DumpAsHex](#dumpashex)|16 進形式で指定したアイテムをダンプします。|
 |[CDumpContext::Flush](#flush)|ダンプ コンテキスト バッファー内のデータをフラッシュします。|
 |[CDumpContext::GetDepth](#getdepth)|ダンプの深さに対応する整数値を取得します。|
-|[に](#hexdump)|16 進数形式で、配列内に含まれるバイトをダンプします。|
+|[CDumpContext::HexDump](#hexdump)|16 進数形式で、配列内に含まれるバイトをダンプします。|
 |[CDumpContext::SetDepth](#setdepth)|ダンプの深さを設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
@@ -81,7 +81,7 @@ class CDumpContext
 
 詳細については`CDumpContext`を参照してください[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
 
-**#define _DEBUG define**
+**#define _DEBUG**
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -169,7 +169,7 @@ int GetDepth() const;
 
   例をご覧ください[SetDepth](#setdepth)します。
 
-##  <a name="hexdump"></a>  に
+##  <a name="hexdump"></a>  CDumpContext::HexDump
 
 16 進数として書式設定されたバイトの配列をダンプします。
 

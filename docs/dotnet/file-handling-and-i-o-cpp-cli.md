@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 8f60ece05443393456693aba3bc674f52822432a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325001"
 ---
 # <a name="file-handling-and-io-ccli"></a>ファイル処理と I/O (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 次のコード例では、<xref:System.IO?displayProperty=fullName> の名前空間の 2 つのクラス <xref:System.IO.FileStream> と <xref:System.IO.BinaryReader> を使用して、ファイルからバイナリ データを読み取る方法を示します。 <xref:System.IO.FileStream> は実際のファイルを表し、 <xref:System.IO.BinaryReader> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。
 
-このコード例は、data.bin という名前のファイルを読み取り、整数をバイナリ形式で含めます。 この種類のファイルについては、次を参照してください。[方法: バイナリ ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)します。
+このコード例は、data.bin という名前のファイルを読み取り、整数をバイナリ形式で含めます。 この種類のファイルについては、次を参照してください。[方法。バイナリ ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)します。
 
 ### <a name="example"></a>例
 
@@ -177,7 +177,7 @@ int main()
 
 <xref:System.IO.StreamReader> クラスを使用して、テキスト ファイルを一度に 1 行ずつ開いて読み取る方法を次の例に示します。このクラスは、<xref:System.IO?displayProperty=fullName> 名前空間で定義されています。 このクラスのインスタンスを使用してテキスト ファイルを開いてから、<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> メソッドを使用して各行を取得します。
 
-このコード例では、テキストが含まれる textfile.txt というファイルを読み取ります。 この種類のファイルについては、次を参照してください。[方法: テキスト ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)します。
+このコード例では、テキストが含まれる textfile.txt というファイルを読み取ります。 この種類のファイルについては、次を参照してください。[方法。テキスト ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)します。
 
 ### <a name="example"></a>例
 
@@ -261,7 +261,7 @@ int main()
 
 バイナリ データをファイルに書き込む方法を次のコード例に示します。 <xref:System.IO> 名前空間の 2 つのクラス、<xref:System.IO.FileStream> と <xref:System.IO.BinaryWriter> が使用されます。 <xref:System.IO.FileStream> は実際のファイルを表し、<xref:System.IO.BinaryWriter> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。
 
-バイナリ形式の整数を含むファイルを書き込む方法を次のコード例に示します。 内のコードでこのファイルを読み取れる[方法: バイナリ ファイルの読み取り (C +/cli CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)します。
+バイナリ形式の整数を含むファイルを書き込む方法を次のコード例に示します。 内のコードでこのファイルを読み取れる[方法。バイナリ ファイルの読み取り (C +/cli CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)します。
 
 ### <a name="example"></a>例
 
@@ -334,8 +334,6 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
-[ファイルおよびストリーム入出力](/dotnet/standard/io/index)
-
-[System.IO 名前空間](https://msdn.microsoft.com/library/system.io.aspx)
+[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[ファイルおよびストリーム入出力](/dotnet/standard/io/index)<br/>
+[System.IO 名前空間](/dotnet/api/system.io)

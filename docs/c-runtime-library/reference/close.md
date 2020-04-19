@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528025"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942928"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 ファイルを閉じます。
 
@@ -49,15 +52,15 @@ int _close(
 
 ## <a name="return-value"></a>戻り値
 
-**閉じる (_c)** ファイルが正常に閉じられた場合は 0 を返します。 戻り値-1 はエラーを示します。
+ファイルが正常に閉じられた場合、 **_close**は0を返します。 戻り値-1 はエラーを示します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Close**関数が関連付けられているファイルを閉じます*fd*します。
+**_Close**関数は、 *fd*に関連付けられているファイルを閉じます。
 
-ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがってを呼び出す必要はありません**CloseHandle**ファイルがもともと Win32 関数を使用して開かれた場合**CreateFile**を使用してファイル記述子に変換および **_open_osfhandle**.
+ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがって、ファイルが最初に Win32 関数**CreateFile**を使用して開かれ、 **_open_osfhandle**を使用してファイル記述子に変換された場合、 **CloseHandle**を呼び出す必要はありません。
 
-この関数は、パラメーターを検証します。 場合*fd*が正しくないファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**します。
+この関数は、パラメーターを検証します。 *Fd*が無効なファイル記述子である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**は**EBADF**に設定されます。
 
 ## <a name="requirements"></a>必要条件
 

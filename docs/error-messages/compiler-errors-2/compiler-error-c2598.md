@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2598
 ms.assetid: 40777c62-39ba-441e-b081-f49f94b43547
-ms.openlocfilehash: 521a67bdf1e1f64853a3f87933b3fa714c8e33f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1ad34d454c5dc80feaac1df1383854391100ab0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578231"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759322"
 ---
 # <a name="compiler-error-c2598"></a>コンパイラ エラー C2598
 
-リンケージ指定は、グローバル スコープである必要があります。
+リンケージ指定はグローバルスコープである必要があります
 
-リンケージ指定子は、ローカル スコープで宣言されます。
+リンケージ指定子がローカルスコープで宣言されています。
 
 次の例では、C2598 が生成されます。
 
-```
+```cpp
 // C2598.cpp
 // compile with: /c
 void func() {

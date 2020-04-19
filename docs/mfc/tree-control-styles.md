@@ -19,29 +19,28 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-ms.openlocfilehash: 59cbed32d9be8fac84284b621bd4d1e17d5d92cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5f28025d0349e9bcd95aba50d4110d304fed376
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453470"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510937"
 ---
 # <a name="tree-control-styles"></a>ツリー コントロールのスタイル
 
-ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) のスタイルは、ツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得しを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)と[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数を指定する**GWL_STYLE**の*nIndex*パラメーター。 スタイルの完全な一覧を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK に含まれています。
+ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) スタイルは、ツリーコントロールの外観を制御します。 初期スタイルは、ツリーコントロールを作成するときに設定します。 **GWL_STYLE**を指定して、ツリーコントロールを作成した後にスタイルを取得および変更することができます、 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) [Windows の関数](/windows/win32/api/winuser/nf-winuser-getwindowlongw)を指定して、 *nIndex*を指定するパラメーター。 スタイルの完全な一覧については、「Windows SDK の[ツリービューコントロールウィンドウスタイル](/windows/win32/Controls/tree-view-control-window-styles)」を参照してください。
 
-**線でつなぐ**スタイルは、対応する親項目に子項目をリンクしている線を描画でツリー コントロールの階層のグラフィック表現を強化します。 このスタイルは、階層のルートにある項目をリンクしていません。 これを行うには、結合する必要があります、**線でつなぐ**と**ルート項目**スタイル。
+**TVS_HASLINES**スタイルは、子項目を対応する親項目にリンクする線を描画することによって、ツリーコントロールの階層のグラフィック表示を拡張します。 このスタイルでは、階層のルートにある項目がリンクされません。 これを行うには、 **TVS_HASLINES**スタイルと**TVS_LINESATROOT**スタイルを組み合わせる必要があります。
 
-ユーザーは、展開したり、親アイテムをダブルクリックして子項目の親項目の一覧を折りたたんだりできます。 ツリー コントロールを持つ、 **TVS_SINGLEEXPAND**スタイルと展開に、選択された項目と、縮小します。 シングル クリックで選択した項目にマウスを使用し、その項目が閉じられた場合は展開されます。 選択した項目が開いているときに、クリックした場合は折りたたまされます。
+ユーザーは、親アイテムをダブルクリックすることで、親アイテムの子アイテムのリストを展開または折りたたむことができます。 **TVS_SINGLEEXPAND**スタイルを持つツリーコントロールでは、項目が展開され、選択されていない項目が折りたたまれます。 マウスを使用して選択した項目をシングルクリックすると、その項目が閉じられます。 選択した項目が開いたときにシングルクリックされた場合は、折りたたまれます。
 
-ツリー コントロールを持つ、**切り替え**スタイルは、各親項目の左側にボタンを追加します。 ユーザーを展開または親項目をダブルクリックする代わりに子項目を折りたたむボタンをクリックできます。 **切り替え**ボタンは、階層のルートにある項目を追加しません。 これを行うには、結合する必要があります**線でつなぐ**、**ルート項目**、および**切り替え**します。
+**TVS_HASBUTTONS**スタイルを持つツリーコントロールは、各親項目の左側にボタンを追加します。 このボタンをクリックすると、親項目をダブルクリックする代わりに、子項目を展開したり折りたたんだりすることができます。 **TVS_HASBUTTONS**は、階層のルートにある項目にボタンを追加しません。 これを行うには、 **TVS_HASLINES**、 **TVS_LINESATROOT**、および**TVS_HASBUTTONS**を組み合わせる必要があります。
 
-**TVS_EDITLABELS**スタイルでは、ユーザーは、ツリー コントロール項目のラベルを編集します。 ラベルの編集に関する詳細については、次を参照してください。[ツリー コントロールのラベルの編集](../mfc/tree-control-label-editing.md)このトピックで後述します。
+**TVS_EDITLABELS**スタイルを使用すると、ユーザーがツリーコントロール項目のラベルを編集できるようになります。 ラベルの編集の詳細については、このトピックで後述する「[ツリーコントロールラベルの編集](../mfc/tree-control-label-editing.md)」を参照してください。
 
-**TVS_NOTOOLTIPS**スタイルは、ツリー ビュー コントロールの自動ツール ヒント機能を無効にします。 この機能は、全体のタイトルに現在表示されていない場合は、マウスのカーソルの下の項目のタイトルを含む、ツール ヒントを自動的に表示されます。
+**TVS_NOTOOLTIPS**スタイルは、ツリービューコントロールの自動ツールヒント機能を無効にします。 この機能により、タイトル全体が現在表示されていない場合、マウスカーソルの下にある項目のタイトルを含むツールヒントが自動的に表示されます。
 
 ## <a name="see-also"></a>関連項目
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

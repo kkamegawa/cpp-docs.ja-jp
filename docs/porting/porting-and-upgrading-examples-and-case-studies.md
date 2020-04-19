@@ -1,15 +1,15 @@
 ---
-title: '移植およびアップグレード: 例とケース スタディ'
+title: 移植とアップグレード:例とケース スタディ
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568213"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747191"
 ---
-# <a name="porting-and-upgrading-examples-and-case-studies"></a>移植およびアップグレード: 例とケース スタディ
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>移植とアップグレード:例とケース スタディ
 
 移行に成功したストーリーを確認することにより、以前のバージョンの Visual C++ から現在のバージョンへの移行の期間に発生する可能性がある問題の種類を理解できます。
 
@@ -23,6 +23,6 @@ ms.locfileid: "50568213"
 
 - [Spy++](../porting/porting-guide-spy-increment.md) は、実行中のアプリケーションに含まれている UI 要素に関する情報を調査して提示するアプリケーションです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)

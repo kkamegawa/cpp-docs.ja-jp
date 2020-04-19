@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296749"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>タイプ ライブラリからの MFC クラスの追加
 
@@ -20,7 +20,7 @@ ms.locfileid: "50548019"
 > [!NOTE]
 >  タイプ ライブラリからクラスを追加する有効な Automation の MFC プロジェクトを作成する必要はありません。
 
-タイプ ライブラリには、パラメーターと戻り値の型とメソッドを定義する、コンポーネントによって公開されるインターフェイスのバイナリ記述が含まれています。 表示するため、タイプ ライブラリを登録する必要があります、**使用可能なタイプ ライブラリ**Typelib ウィザードからのクラスの追加のリスト。 「内で分散 COM:: 型ライブラリと言語の統合」の詳細については、MSDN ライブラリを参照してください。
+タイプ ライブラリには、パラメーターと戻り値の型とメソッドを定義する、コンポーネントによって公開されるインターフェイスのバイナリ記述が含まれています。 表示するため、タイプ ライブラリを登録する必要があります、**使用可能なタイプ ライブラリ**Typelib ウィザードからのクラスの追加のリスト。 参照してください"内で分散 COM:タイプ ライブラリと言語統合"の詳細については、MSDN ライブラリ。
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>タイプ ライブラリからの MFC クラスを追加するには
 
@@ -38,4 +38,3 @@ ms.locfileid: "50548019"
 
 [オートメーション クライアント](../../mfc/automation-clients.md)<br/>
 [オートメーション クライアント: タイプ ライブラリの使用](../../mfc/automation-clients-using-type-libraries.md)
-

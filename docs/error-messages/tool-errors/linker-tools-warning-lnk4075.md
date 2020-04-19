@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186906"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>リンカー ツールの警告 LNK4075
 
@@ -21,7 +21,7 @@ ms.locfileid: "50548253"
 
 相互に排他的なリンカー オプションが指定されます。  リンカーのオプションを確認します。  リンカー オプションが指定されているプロジェクトをビルドしている方法によって異なります。
 
-- 開発環境を構築している場合は、プロジェクトの [リンカー] プロパティ ページで参照し、両方のリンカー オプションが指定されています。  参照してください[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)詳細についてはします。
+- 開発環境を構築している場合は、プロジェクトの [リンカー] プロパティ ページで参照し、両方のリンカー オプションが指定されています。  参照してください[コンパイラを設定し、ビルド プロパティ](../../build/working-with-project-properties.md)詳細についてはします。
 
 - コマンドラインでビルドする場合があります指定されたリンカー オプションを調べます。
 

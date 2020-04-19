@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321450"
 ---
 # <a name="managing-a-library"></a>ライブラリの管理
 
@@ -64,25 +64,25 @@ LIB 既定では、最初のオブジェクトまたはライブラリ ファイ
 次のオプションは、ビルドとライブラリの変更に適用されます。
 
 **/LIBPATH:** *dir*<br/>
-環境ライブラリ パスをオーバーライドします。 詳細については、リンクの説明を参照してください。 [/LIBPATH](../../build/reference/libpath-additional-libpath.md)オプション。
+環境ライブラリ パスをオーバーライドします。 詳細については、リンクの説明を参照してください。 [/LIBPATH](libpath-additional-libpath.md)オプション。
 
-**/一覧表示**<br/>
+**/LIST**<br/>
 標準出力に出力ライブラリに関する情報を表示します。 出力は、ファイルにリダイレクトできます。 /LIST を使用すると、変更せず既存のライブラリの内容を判断します。
 
-**/名前:** *ファイル名*<br/>
+**/NAME:** *filename*<br/>
 インポート ライブラリを構築する場合は、インポート ライブラリが構築されている DLL の名前を指定します。
 
 **/NODEFAULTLIB**<br/>
-外部参照を解決するときに検索するライブラリの一覧から 1 つまたは複数の既定のライブラリを削除します。 参照してください[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)詳細についてはします。
+外部参照を解決するときに検索するライブラリの一覧から 1 つまたは複数の既定のライブラリを削除します。 参照してください[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)詳細についてはします。
 
-**/入力出力:** *ファイル名*<br/>
+**/OUT:** *filename*<br/>
 既定の出力ファイル名をオーバーライドします。 既定では、出力ライブラリは、コマンドラインと拡張機能では、最初のライブラリまたはオブジェクトの次のファイルの基本名を持つ、現在のディレクトリに作成します。 lib します。
 
-**[削除]:** *オブジェクト*<br/>
+**/REMOVE:** *object*<br/>
 指定した*オブジェクト*出力ライブラリから。 LIB は、(オブジェクト ファイルまたはライブラリでか)、すべてのオブジェクトを組み合わせ、/REMOVE で指定されたオブジェクトを削除し、出力ライブラリを作成します。
 
 **/SUBSYSTEM:**{**コンソール** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM**&AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **ネイティブ** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [、#[. ##]<br/>
-出力ライブラリにリンクすることによって作成されたプログラムを実行する方法をオペレーティング システムに指示します。 詳細については、リンクの説明を参照してください。 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)オプション。
+出力ライブラリにリンクすることによって作成されたプログラムを実行する方法をオペレーティング システムに指示します。 詳細については、リンクの説明を参照してください。 [/SUBSYSTEM](subsystem-specify-subsystem.md)オプション。
 
 コマンドラインで指定された LIB オプション小文字は区別されません。
 
@@ -101,4 +101,4 @@ LIB を使用して、次のライブラリ管理タスクを実行できます�
 
 ## <a name="see-also"></a>関連項目
 
-[LIB リファレンス](../../build/reference/lib-reference.md)
+[LIB リファレンス](lib-reference.md)

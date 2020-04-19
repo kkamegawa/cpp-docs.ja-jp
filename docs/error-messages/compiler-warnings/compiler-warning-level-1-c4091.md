@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 87432a74dfe7c09a52f436d4e91b3f70eb66856b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce6dd980ef70f129a0dbae474b8f717f7573f861
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491742"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626749"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>コンパイラの警告 (レベル 1) C4091
 
-'keyword': 'type' の左側で変数が宣言されていない場合は無視されます
+' keyword ': 変数が宣言されていない場合、' type ' の左側では無視されます
 
-ユーザーには、変数を宣言するには、おそらく対象としていますが、コンパイラによって、変数を宣言されませんでした、状況が検出されました。
+コンパイラは、ユーザーが宣言される変数を想定していたのに、コンパイラが変数を宣言できなかった状況を検出しました。
 
 ## <a name="example"></a>例
 
-A`__declspec`属性、ユーザー定義型の宣言の先頭にその型の変数に適用されます。 C4091 では、変数が宣言されていないことを示します。 次の例では、C4091 が生成されます。
+ユーザー定義型の宣言の先頭にある `__declspec` 属性は、その型の変数に適用されます。 C4091 は、変数が宣言されていないことを示します。 次の例では、C4091 が生成されます。
 
-```
+```cpp
 // C4091.cpp
 // compile with: /W1 /c
 __declspec(dllimport) class X {}; // C4091
@@ -38,9 +38,9 @@ class __declspec(dllimport) X3 {};
 
 ## <a name="example"></a>例
 
-識別子が、typedef である場合は、その変数名こともできません。 次の例では、C4091 が生成されます。
+識別子が typedef の場合は、変数名にすることもできません。 次の例では、C4091 が生成されます。
 
-```
+```cpp
 // C4091_b.cpp
 // compile with: /c /W1 /WX
 #define LIST 4

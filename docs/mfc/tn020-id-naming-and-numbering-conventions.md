@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 20: ID 名および番号に関する規約'
+title: TN020:ID の名前付けおよび番号に関する規約
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306065"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>テクニカル ノート 20: ID 名および番号に関する規約
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020:ID の名前付けおよび番号に関する規約
 
 ここでは、MFC 2.0 で使うリソース、コマンド、文字列、コントロール、子ウィンドウに対する ID 名と ID 番号の規約について説明します。
 
@@ -35,7 +35,7 @@ MFC の ID 名や ID 番号に関する規約は、以下の条件を満たす�
 
 MFC では、多重リソースの種類のリソース ID に対してプレフィックス "IDR_" を使います。 たとえば、あるフレーム ウィンドウに対して、メニュー、アクセラレータ、文字列、アイコン リソースをまとめて表すために同一の "IDR_" プレフィックスが使用されます。 各種のプレフィックスとそれぞれの使い方を以下の表にまとめます。
 
-|プレフィックス|使用|
+|プレフィックス|用途|
 |------------|---------|
 |IDR_|多重リソースの種類 (主にメニュー、アクセラレータ キー、およびリボン)|
 |IDD_|ダイアログ テンプレート リソース (IDD_DIALOG1 など)|
@@ -46,7 +46,7 @@ MFC では、多重リソースの種類のリソース ID に対してプレフ
 
 ダイアログ リソースに対しては次の規約が適用されます。
 
-|プレフィックスまたはラベル|使用|
+|プレフィックスまたはラベル|用途|
 |---------------------|---------|
 |IDOK、IDCANCEL|標準プッシュ ボタン ID|
 |IDC_|その他のダイアログ コントロール|
@@ -55,7 +55,7 @@ MFC では、多重リソースの種類のリソース ID に対してプレフ
 
 メニュー リソースに対しては次の規約が適用されます。
 
-|プレフィックス|使用|
+|プレフィックス|用途|
 |------------|---------|
 |IDM_|MFC コマンド アーキテクチャを使用しないメニュー コマンド|
 |ID_|MFC コマンド アーキテクチャを使用するメニュー コマンド|
@@ -107,4 +107,3 @@ MFC コマンド アーキテクチャを次のコマンドを ON_COMMAND コマ
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

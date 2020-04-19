@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: e7dc73334cedda27b82f79b1d2b7a8fc38a8098d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581312"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757255"
 ---
 # <a name="compiler-error-c3763"></a>コンパイラ エラー C3763
 
-'type': 'retval' および 'out' はデータ ポインター型でのみ記述できます
+' type ': ' retval ' および ' out ' はデータポインター型でのみ使用できます
 
-[アウト](../../windows/out-cpp.md)または[retval](../../windows/retval.md)属性は、ポインター型のパラメーターにだけ表示できます。 属性を削除するか、ポインター型のパラメーターに変更します。
+[Out](../../windows/out-cpp.md)または[retval](../../windows/retval.md)属性は、pointer 型のパラメーターでのみ使用できます。 属性を削除するか、または pointer 型のパラメーターを作成してください。
 
 次の例では、C3763 が生成されます。
 
-```
+```cpp
 // C3763.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

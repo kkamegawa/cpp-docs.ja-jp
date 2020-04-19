@@ -1,12 +1,12 @@
 ---
 title: _strdec、_wcsdec、_mbsdec、_mbsdec_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdec
 - mbsdec_l
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958212"
 ---
-# <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
+# <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
 文字列ポインターを 1 文字前へ移動します。
 
 > [!IMPORTANT]
-> **mbsdec**と**mbsdec_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **mbsdec**と**mbsdec_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -79,28 +82,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>パラメーター
 
 *start*<br/>
-任意の文字へのポインター (または **_mbsdec**と **_mbsdec_l**、最初のバイトのマルチバイト文字の) 元の文字列。*開始*前に指定する必要があります*現在*元の文字列。
+ソース文字列内の任意の文字 ( **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。ソース*文字列の先頭の前に* *開始*する必要があります。
 
 *current*<br/>
-任意の文字へのポインター (または **_mbsdec**と **_mbsdec_l**、最初のバイトのマルチバイト文字の) 元の文字列。*現在*従う必要があります*開始*元の文字列。
+ソース文字列内の任意の文字 ( **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。*現在*の位置は、ソース文字列の*先頭*に続く必要があります。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsdec**、 **_mbsdec_l**、 **_strdec**、および **_wcsdec**の直前にある文字へのポインターを返す各*現在*;**_mbsdec**返します**NULL**場合の値*開始*の以上*現在*します。 **_tcsdec**これらの関数と戻り値のいずれかにマップされますが、マッピングに依存します。
+**_mbsdec**、 **_mbsdec_l**、 **_strdec**、および **_wcsdec**はそれぞれ、*現在の*直前の文字へのポインターを返します。*start*の値が*現在*のの値以上の場合、 **_mbsdec**は**NULL**を返します。 **_tcsdec**は、これらの関数のいずれかにマップされ、戻り値はマッピングによって異なります。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbsdec**と **_mbsdec_l**関数に先行するマルチバイト文字の最初のバイトへのポインターを返す*現在*を含む文字列で*開始*します。
+**_Mbsdec**関数と **_mbsdec_l**関数は、 *start*を含む文字列の*現在*の直前にあるマルチバイト文字の最初のバイトへのポインターを返します。
 
-出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。  **_mbsdec**現在使用されているロケールに従ってマルチバイト文字シーケンスを認識中 **_mbsdec_l**で渡されるロケール パラメーターを代わりに使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。  **_mbsdec**は、現在使用されているロケールに従ってマルチバイト文字のシーケンスを認識しますが、 **_mbsdec_l**は、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*開始*または*現在*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返します**EINVAL**設定と**errno**に**EINVAL**します。
+*Start*または*current*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**einval**を返し、 **errno**を**einval**に設定します。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -108,7 +111,7 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec**と **_wcsdec**の 1 バイト文字とワイド文字バージョン **_mbsdec**と **_mbsdec_l**します。 **_strdec**と **_wcsdec**このマッピングにのみ提供され、それ以外の場合は使用できません。
+**_strdec**と **_wcsdec**は、 **_mbsdec**と **_mbsdec_l**の1バイト文字バージョンとワイド文字バージョンです。 **_strdec**と **_wcsdec**はこのマッピングに対してのみ提供され、それ以外の場合は使用できません。
 
 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
@@ -125,7 +128,7 @@ unsigned char *_mbsdec_l(
 
 ## <a name="example"></a>例
 
-次の例を使用して **_tcsdec**します。
+次の例は、 **_tcsdec**の使用方法を示しています。
 
 ```cpp
 // crt_tcsdec.cpp
@@ -151,7 +154,7 @@ int main()
 }
 ```
 
-次の例を使用して **_mbsdec**します。
+次の例は、 **_mbsdec**の使用方法を示しています。
 
 ```cpp
 // crt_mbsdec.cpp

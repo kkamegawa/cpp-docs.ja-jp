@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 61297ecea1137c2247077e3d3ac2f3c4718b13a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608717"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513905"
 ---
 # <a name="uidefault"></a>uidefault
 
-型情報メンバーは、ユーザー インターフェイスに表示する既定のメンバーであることを示します。
+型情報メンバーがユーザーインターフェイスに表示される既定のメンバーであることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50608717"
 
 ## <a name="remarks"></a>Remarks
 
-**Uidefault** C++ 属性と同じ機能を持つ、 [uidefault](/windows/desktop/Midl/uidefault) MIDL 属性。
+**Uidefault** C++属性には、 [uidefault](/windows/win32/Midl/uidefault) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、サンプルの**uidefault**:
+次のコードは、 **uidefault**のサンプルを示しています。
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp

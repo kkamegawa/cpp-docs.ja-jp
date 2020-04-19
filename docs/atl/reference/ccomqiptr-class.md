@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: c231d4d83a3030ea63e781e6f3d185270a483ccc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258911"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr クラス
 

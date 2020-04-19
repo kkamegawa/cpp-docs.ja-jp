@@ -1,6 +1,6 @@
 ---
 title: __cpuid、__cpuidex
-ms.date: 03/22/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __cpuid_cpp
 - __cpuid
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab814527c8019dd7d6b1e1eb620af0273f270e06
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494549"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216834"
 ---
-# <a name="cpuid-cpuidex"></a>__cpuid、__cpuidex
+# <a name="__cpuid-__cpuidex"></a>__cpuid、__cpuidex
 
 **Microsoft 固有の仕様**
 
-生成、 `cpuid` x86 および x64 で利用可能な命令。 この命令は、サポートされる機能と CPU の種類に関する情報についてプロセッサに照会します。
+X86 および x64 で使用できる命令を生成します。`cpuid` この命令は、サポートされる機能と CPU の種類に関する情報についてプロセッサに照会します。
 
 ## <a name="syntax"></a>構文
 
-```cpp
+```C
 void __cpuid(
    int cpuInfo[4],
    int function_id
@@ -39,14 +39,14 @@ void __cpuidex(
 
 ### <a name="parameters"></a>パラメーター
 
-[out]*cpuInfo*<br/>
-CPU のサポートされる機能に関して EAX、EBX、ECX、および EDX に返された情報を含む 4 つの整数の配列。
+*Cpu 情報*\
+入出力CPU のサポートされている機能について、EAX、EBX、ECX、および EDX で返される情報を格納する4つの整数の配列。
 
-[in]*function_id*<br/>
-取得する情報を指定するコード。EAX で渡されます。
+*function_id*\
+から取得する情報を指定するコード。 EAX で渡されます。
 
-[in]*subfunction_id*<br/>
-取得する情報を指定する追加コード。ECX で渡されます。
+*subfunction_id*\
+から取得する情報を指定する追加のコード。 ECX で渡されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -55,23 +55,23 @@ CPU のサポートされる機能に関して EAX、EBX、ECX、および EDX �
 |`__cpuid`|x86、x64|
 |`__cpuidex`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この組み込みによって返される CPU 情報、サポートされている機能を格納、`cpuid`で命令*cpuInfo*、(内を配列の 4 つの 32 ビット整数が格納される EAX、EBX、ECX、および EDX の値を登録します順序)。 返される情報が渡された値に応じて異なる意味、 *function_id*パラメーター。 さまざまな値で返される情報*function_id*プロセッサに依存します。
+この組み込みは、 `cpuid`命令によって返された、サポートされている機能と CPU 情報をプロセッサ*情報*に格納します。これは、EAX、ebx、ECX、および EDX レジスタの値が格納された 4 32 ビット整数の配列です (この順序で)。 返される情報は、 *function_id*パラメーターとして渡される値によって異なる意味を持ちます。 *Function_id*のさまざまな値で返される情報は、プロセッサに依存します。
 
-`__cpuid` の組み込みは、`cpuid` 命令を呼び出す前に ECX レジスタをクリアします。 `__cpuidex`組み込みに ECX レジスタの値を設定する*subfunction_id*を生成する前に、`cpuid`命令。 これにより、プロセッサに関する追加情報を収集できます。
+`__cpuid` の組み込みは、`cpuid` 命令を呼び出す前に ECX レジスタをクリアします。 組み込み`__cpuidex`は、 `cpuid`命令を生成する前に、ECX レジスタの値を*subfunction_id*に設定します。 これにより、プロセッサに関する追加情報を収集できます。
 
-および Intel プロセッサでこれらの組み込みによって返される値を使用する特定のパラメーターの詳細については、ドキュメントを参照してください、`cpuid`で命令[Intel 64 および ia-32 アーキテクチャ ソフトウェア開発者のマニュアルボリューム 2: 命令セット参照](http://go.microsoft.com/fwlink/p/?LinkID=510021)と[Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](http://go.microsoft.com/fwlink/p/?LinkID=506627)します。 Intel のドキュメントの用語「リーフ」および"subleaf"を使用して、 *function_id*と*subfunction_id* EAX および ECX で渡されるパラメーター。
+使用する特定のパラメーターと、これらの組み込みの intel プロセッサによって返される値の詳細については`cpuid` 、「 [intel 64 および IA-32 アーキテクチャのソフトウェア開発者マニュアル」に記載されている手順のドキュメントを参照してください。ボリューム 2:命令セットリファレンス](https://go.microsoft.com/fwlink/p/?LinkID=510021)と[Intel アーキテクチャ命令セット拡張機能のプログラミングリファレンス](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel のドキュメントでは、EAX および ECX で渡される*function_id*パラメーターと*subfunction_id*パラメーターに "リーフ" と "subleaf" という用語を使用しています。
 
-および AMD プロセッサでこれらの組み込みによって返される値を使用する特定のパラメーターの詳細については、ドキュメントを参照してください、 `cpuid` AMD64 アーキテクチャ プログラマーズ手動ボリューム 3 命令: 汎用とシステム手順については、および特定のプロセッサ ファミリのリビジョン ガイドで説明します。 これらのドキュメントおよびその他の情報へのリンクを参照してください、AMD[開発者ガイド、マニュアル、およびドキュメントの ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023)ページ。 AMD のマニュアルの"function number"および"subfunction number"を使用して、 *function_id*と*subfunction_id* EAX および ECX で渡されるパラメーター。
+使用する特定のパラメーターと、AMD プロセッサでこれらの組み込みによって返される値の詳細については`cpuid` 、「AMD64 アーキテクチャプログラマの手動ボリューム 3:汎用およびシステムの手順、および特定のプロセッサファミリのリビジョンガイドを参照してください。 これらのドキュメントおよびその他の情報へのリンクについては、AMD[開発者ガイド、マニュアル &AMP; ISA documents](https://go.microsoft.com/fwlink/p/?LinkId=510023) 」を参照してください。 AMD のドキュメントでは、EAX および ECX で渡される*function_id*および*subfunction_id*パラメーターに "関数番号" と "subfunction number" という用語を使用しています。
 
-ときに、 *function_id*引数が 0 の場合、 *cpuInfo*最高の値を返します [0] 使用可能な拡張されていない*function_id*プロセッサでサポートされる値。 プロセッサの製造元がでエンコードされた*cpuInfo*[1]、 *cpuInfo*[2]、および*cpuInfo*[3]。
+*Function_id*引数が0の場合、cpu によってサポートされている拡張可能な非拡張*function_id*の最大値を返します。 プロセッサの製造元は、 *Cpu 情報*[1]、 *cpu 情報*[2]、および*cpu 情報*[3] でエンコードされています。
 
-サポートは特定の命令セット拡張機能と CPU 機能でエンコードされて、 *cpuInfo*以降に対して返された結果*function_id*値。 詳細については、上記リンクのマニュアルおよび次のコード例を参照してください。
+特定の命令セット拡張機能および CPU 機能のサポートは、上位の*function_id*値に対して返される cpu*情報*の結果にエンコードされます。 詳細については、上記リンクのマニュアルおよび次のコード例を参照してください。
 
-一部のプロセッサでは、拡張機能 CPUID 情報がサポートされます。 これはサポートされている場合*function_id* 0x80000000 からの値を使用して情報を返す可能性があります。 許容される最大の意味のある値を決定するには、次のように設定します。 *function_id*を 0x80000000 にします。 最大値*function_id*に書き込まれる拡張機能のサポートされている*cpuInfo*[0]。
+一部のプロセッサでは、拡張機能 CPUID 情報がサポートされます。 サポートされている場合は、0x80000000 からの*function_id*値を使用して情報を返すことができます。 許容される最大値を決定するには、 *function_id*を0x80000000 に設定します。 拡張関数でサポートされる*function_id*の最大値は、 *cpu 情報*[0] に書き込まれます。
 
 ## <a name="example"></a>例
 

@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: c416155ed103f1345c42e6680c2329ab98d35926
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496121"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo クラス
 
-このクラスは、ウィンドウ クラスの情報を登録するためのメソッドを提供します。
+このクラスには、ウィンドウクラスの情報を登録するためのメソッドが用意されています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -41,47 +41,47 @@ class CWndClassInfo
 
 |||
 |-|-|
-|[登録](#register)|ウィンドウ クラスを登録します。|
+|[登録](#register)|ウィンドウクラスを登録します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |||
 |-|-|
-|[m_atom](#m_atom)|登録されているウィンドウ クラスを一意に識別します。|
-|[m_bSystemCursor](#m_bsystemcursor)|カーソル リソースがシステム カーソルにまたはモジュールのリソースに格納されているカーソルを参照するかどうかを指定します。|
-|[m_lpszCursorID](#m_lpszcursorid)|カーソル リソースの名前を指定します。|
-|[m_lpszOrigName](#m_lpszorigname)|既存のウィンドウ クラスの名前が含まれています。|
-|[m_szAutoName](#m_szautoname)|ウィンドウ クラスの ATL によって生成された名前を保持します。|
-|[m_wc](#m_wc)|ウィンドウ クラスの情報を保持する`WNDCLASSEX`構造体。|
-|[pWndProc](#pwndproc)|既存のウィンドウ クラスのウィンドウ プロシージャを指します。|
+|[m_atom](#m_atom)|登録されたウィンドウクラスを一意に識別します。|
+|[m_bSystemCursor](#m_bsystemcursor)|カーソルリソースがシステムカーソルを参照するのか、またはモジュールリソースに含まれるカーソルを参照するのかを指定します。|
+|[m_lpszCursorID](#m_lpszcursorid)|カーソルリソースの名前を指定します。|
+|[m_lpszOrigName](#m_lpszorigname)|既存のウィンドウクラスの名前を格納します。|
+|[m_szAutoName](#m_szautoname)|ウィンドウクラスの ATL によって生成された名前を保持します。|
+|[m_wc](#m_wc)|ウィンドウクラス情報を`WNDCLASSEX`構造体に保持します。|
+|[pWndProc](#pwndproc)|既存のウィンドウクラスのウィンドウプロシージャを指します。|
 
 ## <a name="remarks"></a>Remarks
 
-`CWndClassInfo` ウィンドウ クラスの情報を管理します。 通常使用する`CWndClassInfo`マクロ、DECLARE_WND_CLASS、場合は、または DECLARE_WND_SUPERCLASS の次の表に示す 3 つのいずれかで。
+`CWndClassInfo`ウィンドウクラスの情報を管理します。 通常、次`CWndClassInfo`の表に示すように、DECLARE_WND_CLASS、DECLARE_WND_CLASS_EX、または DECLARE_WND_SUPERCLASS の3つのマクロのいずれかを使用してを使用します。
 
 |マクロ|説明|
 |-----------|-----------------|
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` 新しいウィンドウ クラスの情報を登録します。|
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` クラスのパラメーターを含む、新しいウィンドウ クラスの情報を登録します。|
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` 既存のクラスに基づきますが、別のウィンドウ プロシージャを使用して、ウィンドウ クラスの情報を登録します。 この手法をスーパークラス化と呼びます。|
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo`新しいウィンドウクラスの情報を登録します。|
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo`クラスパラメーターを含む新しいウィンドウクラスの情報を登録します。|
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo`既存のクラスに基づいていて、別のウィンドウプロシージャを使用するウィンドウクラスの情報を登録します。 この手法は superclassing と呼ばれます。|
 
-既定では、 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)が含まれています、`DECLARE_WND_CLASS`ウィンドウを作成するマクロが新しいウィンドウ クラスに基づいています。 DECLARE_WND_CLASS は、既定のスタイル、コントロールの背景色を提供します。 スタイルを指定して、背景色を自分でする場合からクラスを派生`CWindowImpl`され、クラス定義に場合はマクロが含まれます。
+既定では、 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)に`DECLARE_WND_CLASS`は、新しいウィンドウクラスに基づいてウィンドウを作成するマクロが含まれています。 DECLARE_WND_CLASS には、コントロールの既定のスタイルと背景色が用意されています。 スタイルと背景色を自分で指定する場合は、から`CWindowImpl`クラスを派生させ、DECLARE_WND_CLASS_EX マクロをクラス定義に含めます。
 
-既存のウィンドウ クラスに基づくウィンドウを作成する場合からクラスを派生`CWindowImpl`され、クラス定義に DECLARE_WND_SUPERCLASS マクロが含まれます。 例:
+既存のウィンドウクラスに基づいてウィンドウを作成する場合は、から`CWindowImpl`クラスを派生させ、DECLARE_WND_SUPERCLASS マクロをクラス定義に含めます。 例えば:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-ウィンドウ クラスの詳細については、次を参照してください。[ウィンドウ クラス](/windows/desktop/winmsg/window-classes)Windows SDK に含まれています。
+ウィンドウクラスの詳細については、「Windows SDK の[ウィンドウクラス](/windows/win32/winmsg/window-classes)」を参照してください。
 
-ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
+ATL で windows を使用する方法の詳細については、「 [Atl ウィンドウクラス](../../atl/atl-window-classes.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="m_atom"></a>  CWndClassInfo::m_atom
+##  <a name="m_atom"></a>CWndClassInfo:: m_atom
 
-登録されているウィンドウ クラスの一意の識別子が含まれています。
+登録されているウィンドウクラスの一意の識別子を格納します。
 
 ```
 ATOM m_atom;
@@ -89,7 +89,7 @@ ATOM m_atom;
 
 ##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor
 
-TRUE の場合、ウィンドウ クラスを登録すると、システムのカーソル リソースが読み込まれます。
+TRUE の場合、ウィンドウクラスが登録されるときにシステムカーソルリソースが読み込まれます。
 
 ```
 BOOL m_bSystemCursor;
@@ -97,13 +97,13 @@ BOOL m_bSystemCursor;
 
 ### <a name="remarks"></a>Remarks
 
-それ以外の場合、モジュールに含まれているカーソル リソースが読み込まれます。
+それ以外の場合は、モジュールに含まれるカーソルリソースが読み込まれます。
 
-`CWndClassInfo` 使用して`m_bSystemCursor`場合にのみ、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (既定で[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) または[場合は](window-class-macros.md#declare_wnd_class_ex)マクロを指定します。 この場合、`m_bSystemCursor`を TRUE に初期化されます。 詳細については、次を参照してください。、 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要。
+`CWndClassInfo` で `m_bSystemCursor` が使用されるのは、[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) ([CWindowImpl](../../atl/reference/cwindowimpl-class.md) の規定値) または [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) マクロが指定されている場合のみです。 この場合、 `m_bSystemCursor`は TRUE に初期化されます。 詳細については、「 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要」を参照してください。
 
-##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID
+##  <a name="m_lpszcursorid"></a>CWndClassInfo:: m_lpszCursorID
 
-下位ワードと上位ワードにゼロでは、カーソル リソースの名前またはリソース識別子のいずれかを指定します。
+カーソルリソースの名前、または下位ワードのリソース識別子を指定します。上位ワードの場合は、0を指定します。
 
 ```
 LPCTSTR m_lpszCursorID;
@@ -111,13 +111,13 @@ LPCTSTR m_lpszCursorID;
 
 ### <a name="remarks"></a>Remarks
 
-ウィンドウ クラスの登録時で識別されるカーソルを識別するハンドル`m_lpszCursorID`が取得され格納されている[m_wc](#m_wc)します。
+ウィンドウクラスが登録されると、によっ`m_lpszCursorID`て識別されるカーソルへのハンドルが取得され、 [m_wc](#m_wc)によって格納されます。
 
-`CWndClassInfo` 使用して`m_lpszCursorID`場合にのみ、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (既定で[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) または[場合は](window-class-macros.md#declare_wnd_class_ex)マクロを指定します。 この場合、 `m_lpszCursorID` IDC_ARROW に初期化されます。 詳細については、次を参照してください。、 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要。
+`CWndClassInfo` で `m_lpszCursorID` が使用されるのは、[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) ([CWindowImpl](../../atl/reference/cwindowimpl-class.md) の規定値) または [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) マクロが指定されている場合のみです。 この場合、 `m_lpszCursorID`は IDC_ARROW に初期化されます。 詳細については、「 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要」を参照してください。
 
-##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName
+##  <a name="m_lpszorigname"></a>CWndClassInfo:: m_lpszOrigName
 
-既存のウィンドウ クラスの名前が含まれています。
+既存のウィンドウクラスの名前を格納します。
 
 ```
 LPCTSTR m_lpszOrigName;
@@ -125,11 +125,11 @@ LPCTSTR m_lpszOrigName;
 
 ### <a name="remarks"></a>Remarks
 
-`CWndClassInfo` 使用して`m_lpszOrigName`のみ含める、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)クラスの定義でマクロ。 この場合、`CWndClassInfo`によってという名前のクラスに基づいて、ウィンドウ クラスのレジスタ`m_lpszOrigName`します。 詳細については、次を参照してください。、 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要。
+`CWndClassInfo`クラス`m_lpszOrigName`定義に[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを含める場合にのみ、を使用します。 この場合、は`CWndClassInfo` 、によって指定されたクラスに`m_lpszOrigName`基づいてウィンドウクラスを登録します。 詳細については、「 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要」を参照してください。
 
-##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName
+##  <a name="m_szautoname"></a>CWndClassInfo:: m_szAutoName
 
-ウィンドウ クラスの名前を保持します。
+ウィンドウクラスの名前を保持します。
 
 ```
 TCHAR m_szAutoName[13];
@@ -137,11 +137,11 @@ TCHAR m_szAutoName[13];
 
 ### <a name="remarks"></a>Remarks
 
-`CWndClassInfo` 使用して`m_szAutoName`NULL が渡される場合にのみ、`WndClassName`パラメーターを[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)、[場合は](window-class-macros.md#declare_wnd_class_ex)または[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ウィンドウ クラスが登録されているときに、ATL は名前を作成します。
+`CWndClassInfo`パラメーター`WndClassName`の[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)、 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 、または[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)に NULL が渡された場合にのみ、を使用`m_szAutoName`します。 ウィンドウクラスが登録されると、ATL によって名前が作成されます。
 
-##  <a name="m_wc"></a>  CWndClassInfo::m_wc
+##  <a name="m_wc"></a>CWndClassInfo:: m_wc
 
-ウィンドウ クラスの情報の保持、 [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)構造体。
+ウィンドウクラスの情報を[WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw)構造体に保持します。
 
 ```
 WNDCLASSEX m_wc;
@@ -149,13 +149,13 @@ WNDCLASSEX m_wc;
 
 ### <a name="remarks"></a>Remarks
 
-指定した場合、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (既定で[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) または[場合は](window-class-macros.md#declare_wnd_class_ex)マクロ、`m_wc`に関する情報を含む、新しいウィンドウ クラスです。
+[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (既定値は[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) または[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)マクロを指定した場合、 `m_wc`には新しいウィンドウクラスに関する情報が含まれています。
 
-指定した場合、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ、`m_wc`スーパークラスに関する情報が含まれています: ウィンドウ クラスを既存のクラスに基づきますが、別のウィンドウ プロシージャを使用します。 [スーパークラス](#m_lpszorigname)と[は](#pwndproc)それぞれ、既存のウィンドウ クラスの名前とウィンドウ プロシージャを保存します。
+[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを指定した場合、 `m_wc`には、スーパークラスに関する情報が含まれています。これは、既存のクラスに基づいていて、別のウィンドウプロシージャを使用するウィンドウクラスです。 [m_lpszOrigName](#m_lpszorigname)と[pwndproc](#pwndproc)既存のウィンドウクラスの名前とウィンドウプロシージャをそれぞれ保存します。
 
-##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc
+##  <a name="pwndproc"></a>CWndClassInfo::p WndProc
 
-既存のウィンドウ クラスのウィンドウ プロシージャを指します。
+既存のウィンドウクラスのウィンドウプロシージャを指します。
 
 ```
 WNDPROC pWndProc;
@@ -163,11 +163,11 @@ WNDPROC pWndProc;
 
 ### <a name="remarks"></a>Remarks
 
-`CWndClassInfo` 使用して`pWndProc`のみ含める、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)クラスの定義でマクロ。 この場合、`CWndClassInfo`は既存のクラスに基づいていますが、別のウィンドウ プロシージャを使用しているウィンドウ クラスを登録します。 既存のウィンドウ クラスのウィンドウ プロシージャ`pWndProc`します。 詳細については、次を参照してください。、 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要。
+`CWndClassInfo`クラス`pWndProc`定義に[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを含める場合にのみ、を使用します。 この場合、は`CWndClassInfo`既存のクラスに基づくウィンドウクラスを登録しますが、別のウィンドウプロシージャを使用します。 既存のウィンドウクラスのウィンドウプロシージャは、に`pWndProc`保存されます。 詳細については、「 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の概要」を参照してください。
 
 ##  <a name="register"></a>  CWndClassInfo::Register
 
-によって呼び出される[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)をまだ登録されていない場合、ウィンドウ クラスを登録します。
+まだ登録されていない場合にウィンドウクラスを登録するために、 [CWindowImpl:: Create](../../atl/reference/cwindowimpl-class.md#create)によって呼び出されます。
 
 ```
 ATOM Register(WNDPROC* pProc);
@@ -176,17 +176,17 @@ ATOM Register(WNDPROC* pProc);
 ### <a name="parameters"></a>パラメーター
 
 *pProc*<br/>
-[out]既存のウィンドウ クラスの元のウィンドウ プロシージャを指定します。
+入出力既存のウィンドウクラスの元のウィンドウプロシージャを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、atom を一意に識別、ウィンドウ クラスが登録されています。 それ以外の場合、0 を返します。
+成功した場合は、登録されているウィンドウクラスを一意に識別する atom。 それ以外の場合は、0 に設定されます。
 
 ### <a name="remarks"></a>Remarks
 
-指定した場合、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (既定で[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) または[場合は](window-class-macros.md#declare_wnd_class_ex)マクロ、`Register`新しいウィンドウ クラスを登録します。 ここで、 *pProc*パラメーターは使用されません。
+[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (既定値は[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) または[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)マクロを指定した場合は`Register` 、によって新しいウィンドウクラスが登録されます。 この場合、 *Pproc*パラメーターは使用されません。
 
-指定した場合、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ、`Register`スーパークラスを登録します: ウィンドウ クラスを既存のクラスに基づきますが、別のウィンドウ プロシージャを使用します。 既存のウィンドウ クラスのウィンドウ プロシージャが返される*pProc*します。
+[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを指定した場合、 `Register`は、既存のクラスに基づいているが別のウィンドウプロシージャを使用するウィンドウクラスである、スーパークラスを登録します。 既存のウィンドウクラスのウィンドウプロシージャが*Pproc*に返されます。
 
 ## <a name="see-also"></a>関連項目
 

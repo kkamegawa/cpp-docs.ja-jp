@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657130"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139969"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 構造体
 
@@ -25,7 +25,7 @@ ms.locfileid: "50657130"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
@@ -33,13 +33,13 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|重要な領域を入力するために呼び出されます。 クリティカル領域内で、スケジューラは、リージョンの中に発生する非同期のブロック操作を確認しません。 これは、スケジューラがページ フォールトやスレッドの中断、カーネルの非同期プロシージャ コール (Apc) など、UMS スレッドの再入力しないはことを意味します。|
-|[Iumsthreadproxy::enterhypercriticalregion](#enterhypercriticalregion)|ハイパー クリティカル領域を入力するために呼び出されます。 Hyper クリティカル領域内で、スケジューラは、リージョンの中に発生するブロッキング操作を確認しません。 これは、スケジューラが関数呼び出し、ブロック、ページ フォールト、スレッドの中断、カーネルの非同期プロシージャ コール (Apc) となど、UMS スレッドのロック獲得の試行をブロックするため再入力するはないことを意味します。|
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|重要な領域を終了するために呼び出されます。|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|ハイパー クリティカル領域を終了するために呼び出されます。|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|内のスレッド プロキシは、クリティカル領域の種類を返します。 クリティカル領域とし、ハイパー クリティカル領域では、コードを入力した場合、ハイパー クリティカル領域はクリティカル領域は、のスーパー セットであるため`InsideHyperCriticalRegion`が返されます。|
+|[IUMSThreadProxy:: EnterCriticalRegion](#entercriticalregion)|クリティカルな領域を入力するために呼び出されます。 クリティカルなリージョン内では、スケジューラは、リージョン内で発生する非同期ブロック操作を監視しません。 これは、UMS スレッドに対して、ページフォールト、スレッド保留、カーネルの非同期プロシージャ呼び出し (Apc) などのために、スケジューラに再表示されないことを意味します。|
+|[IUMSThreadProxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|ハイパークリティカル領域を開始するために呼び出されます。 ハイパークリティカルなリージョン内では、スケジューラは、リージョン内で発生するブロッキング操作を監視しません。 つまり、スケジューラは、関数呼び出しをブロックしたり、ブロック、ページフォールト、スレッド保留、カーネル非同期プロシージャ呼び出し (Apc) などの UMS スレッドに対して再実行されたりすることはありません。|
+|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|クリティカルな領域を終了するために呼び出されます。|
+|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|ハイパークリティカルな領域を終了するために呼び出されます。|
+|[IUMSThreadProxy:: GetCriticalRegionType](#getcriticalregiontype)|スレッドプロキシが含まれているクリティカルな領域の種類を返します。 ハイパークリティカルなリージョンはクリティカルなリージョンのスーパーセットであるため、コードがクリティカルなリージョンに入ってからハイパークリティカルなリージョンに入った場合、`InsideHyperCriticalRegion` が返されます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -47,77 +47,77 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 `IUMSThreadProxy`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrtrm.h
+**ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-##  <a name="entercriticalregion"></a>  Iumsthreadproxy::entercriticalregion メソッド
+## <a name="entercriticalregion"></a>IUMSThreadProxy:: EnterCriticalRegion メソッド
 
-重要な領域を入力するために呼び出されます。 クリティカル領域内で、スケジューラは、リージョンの中に発生する非同期のブロック操作を確認しません。 これは、スケジューラがページ フォールトやスレッドの中断、カーネルの非同期プロシージャ コール (Apc) など、UMS スレッドの再入力しないはことを意味します。
+クリティカルな領域を入力するために呼び出されます。 クリティカルなリージョン内では、スケジューラは、リージョン内で発生する非同期ブロック操作を監視しません。 これは、UMS スレッドに対して、ページフォールト、スレッド保留、カーネルの非同期プロシージャ呼び出し (Apc) などのために、スケジューラに再表示されないことを意味します。
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-クリティカル領域の新しい深度。 クリティカル領域は再入可能です。
+クリティカル領域の新しい深さ。 重要なリージョンは再入可能です。
 
-##  <a name="enterhypercriticalregion"></a>  IUMSThreadProxy::EnterHyperCriticalRegion Method
+## <a name="enterhypercriticalregion"></a>IUMSThreadProxy:: EnterHyperCriticalRegion メソッド
 
-ハイパー クリティカル領域を入力するために呼び出されます。 Hyper クリティカル領域内で、スケジューラは、リージョンの中に発生するブロッキング操作を確認しません。 これは、スケジューラが関数呼び出し、ブロック、ページ フォールト、スレッドの中断、カーネルの非同期プロシージャ コール (Apc) となど、UMS スレッドのロック獲得の試行をブロックするため再入力するはないことを意味します。
+ハイパークリティカル領域を開始するために呼び出されます。 ハイパークリティカルなリージョン内では、スケジューラは、リージョン内で発生するブロッキング操作を監視しません。 つまり、スケジューラは、関数呼び出しをブロックしたり、ブロック、ページフォールト、スレッド保留、カーネル非同期プロシージャ呼び出し (Apc) などの UMS スレッドに対して再実行されたりすることはありません。
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-ハイパー クリティカル領域の新しい深度。 ハイパースレッディング クリティカル領域は再入可能です。
+ハイパークリティカルなリージョンの新しい深さ。 ハイパークリティカルなリージョンは再入可能です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スケジューラは、このようなリージョンで呼び出すメソッドとロックが獲得する何について十分に注意である必要があります。 このようなリージョン内のコードをスケジューラをスケジュールするためのものに保持されているロックでブロックする場合は、デッドロックが発生したりします。
+スケジューラは、呼び出すメソッドと、そのような地域でどのようなロックが取得されるかについて、細心の注意を払っている必要があります。 このような領域内のコードが、スケジューラによって保持されているロックによってブロックされると、デッドロックが発生する可能性があります。
 
-##  <a name="exitcriticalregion"></a>  Iumsthreadproxy::exitcriticalregion メソッド
+## <a name="exitcriticalregion"></a>IUMSThreadProxy:: ExitCriticalRegion メソッド
 
-重要な領域を終了するために呼び出されます。
+クリティカルな領域を終了するために呼び出されます。
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-クリティカル領域の新しい深度。 クリティカル領域は再入可能です。
+クリティカル領域の新しい深さ。 重要なリージョンは再入可能です。
 
-##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy::exithypercriticalregion メソッド
+## <a name="exithypercriticalregion"></a>IUMSThreadProxy:: ExitHyperCriticalRegion メソッド
 
-ハイパー クリティカル領域を終了するために呼び出されます。
+ハイパークリティカルな領域を終了するために呼び出されます。
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-ハイパー クリティカル領域の新しい深度。 ハイパースレッディング クリティカル領域は再入可能です。
+ハイパークリティカルなリージョンの新しい深さ。 ハイパークリティカルなリージョンは再入可能です。
 
-##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy::getcriticalregiontype メソッド
+## <a name="getcriticalregiontype"></a>IUMSThreadProxy:: GetCriticalRegionType メソッド
 
-内のスレッド プロキシは、クリティカル領域の種類を返します。 クリティカル領域とし、ハイパー クリティカル領域では、コードを入力した場合、ハイパー クリティカル領域はクリティカル領域は、のスーパー セットであるため`InsideHyperCriticalRegion`が返されます。
+スレッドプロキシが含まれているクリティカルな領域の種類を返します。 ハイパークリティカルなリージョンはクリティカルなリージョンのスーパーセットであるため、コードがクリティカルなリージョンに入ってからハイパークリティカルなリージョンに入った場合、`InsideHyperCriticalRegion` が返されます。
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-内のスレッド プロキシは、クリティカル領域の種類。
+スレッドプロキシが含まれているクリティカルな領域の種類。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [IUMSScheduler 構造体](iumsscheduler-structure.md)

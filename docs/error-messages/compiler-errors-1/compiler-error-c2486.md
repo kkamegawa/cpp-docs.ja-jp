@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
-ms.openlocfilehash: 8d745c03530f331da83b45c765a2cb4bb7d76d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75705bd8ecc850839e22fccbed1abf08687b3823
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555654"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743511"
 ---
 # <a name="compiler-error-c2486"></a>コンパイラ エラー C2486
 
-'_ _Local_size' は 'naked' 属性を持つ関数でのみ使用できます。
+' __LOCAL_SIZE ' は、' 生 ' 属性を持つ関数でのみ許可されています
 
-インライン アセンブリの関数では名前で`__LOCAL_SIZE`で宣言されている関数に予約されていますが、 [naked](../../cpp/naked-cpp.md)属性。
+インラインアセンブリ関数では、`__LOCAL_SIZE` 名前は、[生](../../cpp/naked-cpp.md)の属性を使用して宣言された関数用に予約されています。
 
 次の例では、C2486 が生成されます。
 
-```
+```cpp
 // C2486.cpp
 // processor: x86
 void __declspec(naked) f1() {

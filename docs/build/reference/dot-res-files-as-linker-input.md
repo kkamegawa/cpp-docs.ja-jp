@@ -7,12 +7,12 @@ helpviewer_keywords:
 - linking [C++], resource files
 - resource files, linking
 ms.assetid: 9c37ab00-97df-4d9a-91cd-6bf132970683
-ms.openlocfilehash: 3cbddba1273d579454560f176df00b09b03c89bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68bb9da55faa7e41d743e1f3a45ca4b79f7f2242
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293148"
 ---
 # <a name="res-files-as-linker-input"></a>リンカー入力としての .res ファイル
 
@@ -20,5 +20,5 @@ ms.locfileid: "50575094"
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[LINK の入力ファイル](link-input-files.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

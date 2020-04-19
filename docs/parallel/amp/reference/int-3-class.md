@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c3588ccfc1e775ebecc245c055f600da4d2652ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440535"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127817"
 ---
-# <a name="int3-class"></a>int_3 クラス
+# <a name="int_3-class"></a>int_3 クラス
 
 3 個の整数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class int_3;
 ```
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[int_3 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[int_3 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -146,7 +146,7 @@ class int_3;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |int_3::operator-||
 |int_3::operator--||
@@ -159,20 +159,20 @@ class int_3;
 |int_3::operator~||
 |int_3::operator++||
 |int_3::operator+=||
-|int_3::operator<\<=||
+|int_3:: operator <\<=||
 |int_3::operator=||
 |int_3::operator-=||
 |int_3::operator>>=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#size)||
+|[サイズ定数](#size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||
@@ -209,19 +209,19 @@ class int_3;
 
 `int_3`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-## <a name="syntax"></a>構文
+### <a name="syntax"></a>構文
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,28 +254,28 @@ explicit inline int_3(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-## <a name="size"></a> サイズ
+## <a name="size"></a>幅
 
-## <a name="syntax"></a>構文
+### <a name="syntax"></a>構文
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

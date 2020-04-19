@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: dae30ca5e44d00f5480431d5de2ea856047e0590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531981"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744155"
 ---
 # <a name="math-constants"></a>数値演算定数
 
@@ -41,7 +41,7 @@ ms.locfileid: "50531981"
 #include <math.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 指定された式の値として、次のシンボルが定義されています。
 
@@ -65,6 +65,6 @@ ms.locfileid: "50531981"
 
 リリース モードでプロジェクトをビルドする場合は、ファイル ATLComTime.h に math.h が含まれます。 ATLComTime.h をインクルードしているプロジェクトで 1 つまたは複数の数値演算定数を使用する場合は、ATLComTime.h をインクルードする前に `_USE_MATH_DEFINES` を定義する必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル定数](../c-runtime-library/global-constants.md)

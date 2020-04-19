@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443663"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456533"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference クラス
 
@@ -29,14 +29,14 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-`add_rvalue_reference`クラスという名前のメンバーには`type`、右辺値参照をテンプレート パラメーターの型のエイリアスである*T*します。非オブジェクトおよび関数ではない型の参照縮小のセマンティクスを意味する、 *T*、`T&&`は、 *T*します。たとえば、 *T*が左辺値参照型では、`add_rvalue_reference<T>::type`が左辺値参照型で、右辺値参照ではありません。
+クラスには、という`type`名前のメンバーがあります。これは、テンプレートパラメーター T への右辺値参照の型のエイリアスです。  `add_rvalue_reference`参照の縮小のセマンティクスは、非オブジェクト型と非関数型*t* `T&&`の場合、 *t*です。たとえば、 *T*が左辺値参照型`add_rvalue_reference<T>::type`の場合、は右辺値参照ではなく左辺値参照型です。
 
-便宜上、 \<type_traits > ヘルパー テンプレートを定義します`add_rvalue_reference_t`、そのエイリアス、`type`のメンバー`add_rvalue_reference`します。
+便宜上、 \<type_traits > は、の`add_rvalue_reference`メンバーの`type`エイリアス`add_rvalue_reference_t`であるヘルパーテンプレートを定義します。
 
 ## <a name="example"></a>例
 
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 ヘッダー: \<type_traits >
 
-Namespace: std
+名前空間: std
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference クラス](../standard-library/add-lvalue-reference-class.md)<br/>
-[is_rvalue_reference クラス](../standard-library/is-rvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_lvalue_reference クラス](../standard-library/add-lvalue-reference-class.md)\
+[is_rvalue_reference クラス](../standard-library/is-rvalue-reference-class.md)

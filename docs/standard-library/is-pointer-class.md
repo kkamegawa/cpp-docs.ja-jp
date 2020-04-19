@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 7e46d692f76f80302dcd181aa1cee2efd1b189d8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520297"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455729"
 ---
 # <a name="ispointer-class"></a>is_pointer クラス
 
@@ -27,12 +27,12 @@ struct is_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*へのポインターは、 **void**、オブジェクトへのポインターまたは関数へのポインターまたは`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。 なお`is_pointer`場合は false を保持*Ty*メンバーへのポインターまたはメンバー関数へのポインター。
+型の述語のインスタンスは、型*Ty*が**void**へのポインター、オブジェクトへのポインター、関数へのポインター、または`cv-qualified`そのいずれかの形式である場合は true を保持します。それ以外の場合は、false を保持します。 Ty が`is_pointer`メンバーへのポインターまたはメンバー関数へのポインターである場合、は false を保持することに注意してください。
 
 ## <a name="example"></a>例
 
@@ -80,6 +80,6 @@ is_pointer<int *> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer クラス](../standard-library/is-member-pointer-class.md)<br/>
-[is_reference クラス](../standard-library/is-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer クラス](../standard-library/is-member-pointer-class.md)\
+[is_reference クラス](../standard-library/is-reference-class.md)

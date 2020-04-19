@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2213
 ms.assetid: ff012278-7f3b-4d49-aaed-2349756f6225
-ms.openlocfilehash: 125529aa23d43d9acd63652f73f636fee567f90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a5f85adca30474ff8e60dc57694eba099b39387
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433444"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741340"
 ---
 # <a name="compiler-error-c2213"></a>コンパイラ エラー C2213
 
-'modifier': _ _based の引数が無効です
+' modifier ': __based の引数が無効です
 
-引数の変更`__based`が無効です。
+`__based` を変更する引数が無効です。
 
 次の例では、C2213 が生成されます。
 
-```
+```cpp
 // C2213.cpp
 // compile with: /c
 int i;

@@ -4,14 +4,14 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628983"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127202"
 ---
-# <a name="filesystemerror-class"></a>filesystem_error クラス
+# <a name="filesystem_error-class"></a>filesystem_error クラス
 
 低レベル システム オーバーフローをレポートするためにスローされるすべての例外のための基底クラス。
 
@@ -21,33 +21,35 @@ ms.locfileid: "50628983"
 class filesystem_error    : public system_error;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このクラスは、\<filesystem> 関数のエラーを報告するためにスローされる例外すべてに対する基底クラスとして機能します。 型のオブジェクトを格納します`string`という`mymesg`説明の目的でここをクリックします。 型の 2 つのオブジェクトも格納`path`という`mypval1`と`mypval2`します。
+このクラスは、\<filesystem> 関数のエラーを報告するためにスローされる例外すべてに対する基底クラスとして機能します。 このメソッドは、型`string`のオブジェクトを格納します。これは、exposition の目的でここで呼び出され`mymesg`ます。 また、とと`path` `mypval2`呼ばれる`mypval1`型の2つのオブジェクトも格納します。
+
+## <a name="members"></a>メンバー
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
-|[filesystem_error](#filesystem_error)|構築、`filesystem_error`メッセージ。|
+|[filesystem_error](#filesystem_error)|メッセージを`filesystem_error`構築します。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[path1](#path1)|`mypval1` を返します。|
 |[path2](#path2)|`mypval2` を返します。|
-|[どのような](#what)|`NTBS` へのポインターを返します。|
+|[結果](#what)|`NTBS` へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<filesystem >
+**ヘッダー:** \<ファイルシステム >
 
 **名前空間:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error::filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-最初のコンス トラクターからメッセージを構築する*what_arg*と*ec*します。 2 番目のコンス トラクターもからメッセージを構築*pval1*に格納している`mypval1`します。 3 番目のコンス トラクターもからメッセージを構築*pval1*に格納している`mypval1`との間*pval2*に格納している`mypval2`します。
+最初のコンストラクターは、 *what_arg*と*ec*からメッセージを構築します。 2番目のコンストラクターは、 *pval1*からメッセージを構築します`mypval1`。このメッセージはに格納されます。 また、3番目のコンストラクターは、 *pval1*からメッセージを構築`mypval1`します`mypval2`。このメッセージは、に格納され、 *pval2*から格納されます。
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -65,19 +67,19 @@ filesystem_error(const string& what_arg,
 
 ### <a name="parameters"></a>パラメーター
 
-*what_arg*<br/>
-指定したメッセージ。
+*what_arg*\
+指定されたメッセージ。
 
-*ec*<br/>
-エラー コードを指定します。
+*c*\
+指定されたエラーコードです。
 
-*mypval1*<br/>
-さらに指定したメッセージのパラメーター。
+*mypval1*\
+さらに指定されたメッセージパラメーター。
 
-*mypval2*<br/>
-さらに指定したメッセージのパラメーター。
+*mypval2*\
+さらに指定されたメッセージパラメーター。
 
-## <a name="path1"></a> filesystem_error::path1
+## <a name="path1"></a>path1
 
 このメンバー関数は、`mypval1` を返します。
 
@@ -85,7 +87,7 @@ filesystem_error(const string& what_arg,
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> filesystem_error::path2
+## <a name="path2"></a>path2
 
 このメンバー関数は、`mypval2` を返します。
 
@@ -93,17 +95,10 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::what
+## <a name="what"></a>結果
 
-このメンバー関数へのポインターを返します、`NTBS`から構成可能であれば、 `runtime_error::what()`、 `system_error::what()`、 `mymesg`、 `mypval1.native_string()`、および`mypval2.native_string()`します。
+このメンバー関数は、( `NTBS` `system_error::what()` `mypval2.native_string()` `runtime_error::what()` `mymesg`可能であれば、、、、 、およびから構成される)へのポインターを返します。`mypval1.native_string()`
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-## <a name="see-also"></a>関連項目
-
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[system_error クラス](../standard-library/system-error-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[\<exception>](../standard-library/exception.md)<br/>

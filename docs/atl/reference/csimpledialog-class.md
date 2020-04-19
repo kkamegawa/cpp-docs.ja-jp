@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: 8662a1bc17f84c8a2513a1126b28d676d0939b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278060"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog クラス
 

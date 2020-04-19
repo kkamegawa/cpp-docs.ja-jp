@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-ms.openlocfilehash: d20eb0523ffebe9229d05b6316772259661f6020
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce72f476aa85434acd5277d0307ffc61e0a0214
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614150"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990991"
 ---
 # <a name="linker-tools-warning-lnk4078"></a>リンカー ツールの警告 LNK4078
 
-複数の 'section name' セクションが見つかりました。 別の属性
+異なる属性を持つ複数の ' section name ' セクションが見つかりました
 
-リンクが 2 つ見つかりましたまたは複数のセクションでは同じであるが異なる属性の名前します。
+リンクが、同じ名前で属性が異なる2つ以上のセクションが見つかりました。
 
-この警告は、以前のバージョンのリンクまたは LIB によって作成されたインポート ライブラリまたはエクスポート ファイルによることができます。
+この警告は、以前のバージョンのリンクまたは LIB によって作成されたインポートライブラリまたはエクスポートファイルが原因で発生する場合があります。
 
-ファイルと再リンクを再作成します。
+ファイルを再作成して再リンクします。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-LNK4078 は重大な変更によっても発生: されるセクション[init_seg](../../preprocessor/init-seg.md) x86 が読み取り/書き込み、読み取り専用ようになりました。
+LNK4078 は、互換性に影響する変更によって発生することもあります。 x86 上の[init_seg](../../preprocessor/init-seg.md)によって名前が付けられたセクションは読み取り/書き込みであり、現在は読み取り専用です。
 
 次の例では、LNK4078 が生成されます。
 
-```
+```cpp
 // LNK4078.cpp
 // compile with: /W1
 // LNK4078 expected

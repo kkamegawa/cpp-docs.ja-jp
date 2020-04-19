@@ -1,11 +1,11 @@
 ---
 title: acos、acosf、acosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636593"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939990"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -58,13 +61,13 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>パラメーター
 
 *x*<br/>
--1 から 1 のアーク コサイン (逆余弦) を計算するまでの値します。
+アークコサイン (逆余弦) を計算する-1 ~ 1 の範囲の値。
 
 ## <a name="return-value"></a>戻り値
 
-**Acos**関数のアーク コサインを返します*x* 0 ~ π ラジアンの範囲内です。
+**Acos**関数は、0 ~ πラジアンの範囲の*x*のアークコサインを返します。
 
-既定では場合、 *x*が-1、1 より大きいか小さい**acos**は不定値を返します。
+既定では、 *x*が-1 より小さいか、または1より大きい場合、 **acos**は不定を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -74,7 +77,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **acos**を受け取って返す**float**と**長い****二重**型。 C プログラムで**acos**は、**二重**します。
+でC++はオーバーロードが可能であるため、**浮動小数点**型および**long** **double**型を受け取って返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acos**は常に**倍精度浮動小数点数**を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -1,6 +1,6 @@
 ---
 title: CAnimationBaseObject クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationBaseObject
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152632"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject クラス
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|オーバーロードされます。 アニメーション オブジェクトを構築します。|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。|
+|[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -91,7 +91,7 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|現在のグループ ID を返します。|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|現在のオブジェクト ID を返します。|
 |[CAnimationBaseObject::GetUserData](#getuserdata)|ユーザー定義データを返します。|
-|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|切り替え効果を自動的に破棄する順序を示すフラグを設定します。|
+|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|切り替え効果を自動的に破棄するためのフラグを設定します。|
 |[CAnimationBaseObject::SetID](#setid)|新しい Id を設定します。|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|ユーザー定義データを設定します。|
 
@@ -114,7 +114,7 @@ class CAnimationBaseObject : public CObject;
 
 ## <a name="remarks"></a>Remarks
 
-このクラスは、すべてのアニメーション オブジェクトの基本のメソッドを実装します。 アニメーション オブジェクトでは、値、ポイント、サイズ、四角形を表すしたり、色のカスタム エンティティと同様に、アプリケーションにすることができます。 アニメーション オブジェクトは、アニメーションのグループ (CAnimationGroup を参照してください) に格納されます。 各グループは、個別にアニメーション化して、ストーリー ボードの類似性として扱うことができます。 アニメーション オブジェクトでは、1 つまたは複数のアニメーション変数 (CAnimationVariable を参照してください)、論理表現によってカプセル化します。 たとえば、CAnimationRect には、4 つのアニメーション変数四角形の各辺に 1 つの変数にはが含まれています。 各アニメーション オブジェクトのクラスは、遷移をカプセル化されたアニメーション変数に適用するために使用する必要があります、オーバー ロードされた AddTransition メソッドを公開します。 アニメーション オブジェクトを (必要に応じて) オブジェクト ID で識別できます、グループ id。 グループ ID が正しいグループに、アニメーション オブジェクトを配置するために必要なには、オブジェクトが ID が 0 の既定のグループ内に配置グループ ID が指定されていない場合。 さまざまな GroupID で SetID を呼び出した場合、アニメーション オブジェクトは (新しいグループは、必要な場合に作成されます)、別のグループに移動されます。
+このクラスは、すべてのアニメーション オブジェクトの基本のメソッドを実装します。 アニメーション オブジェクトでは、値、ポイント、サイズ、四角形を表すしたり、色のカスタム エンティティと同様に、アプリケーションにすることができます。 アニメーション オブジェクトは、アニメーションのグループ (CAnimationGroup を参照してください) に格納されます。 各グループは、個別にアニメーション化して、ストーリー ボードのアナログとして扱うことができます。 アニメーション オブジェクトでは、1 つまたは複数のアニメーション変数 (CAnimationVariable を参照してください)、論理表現によってカプセル化します。 たとえば、CAnimationRect には、4 つのアニメーション変数四角形の各辺に 1 つの変数にはが含まれています。 各アニメーション オブジェクトのクラスは、遷移をカプセル化されたアニメーション変数に適用するために使用する必要があります、オーバー ロードされた AddTransition メソッドを公開します。 アニメーション オブジェクトを (必要に応じて) オブジェクト ID で識別できます、グループ id。 グループ ID が正しいグループに、アニメーション オブジェクトを配置するために必要なには、オブジェクトが ID が 0 の既定のグループ内に配置グループ ID が指定されていない場合。 さまざまな GroupID で SetID を呼び出した場合、アニメーション オブジェクトは (新しいグループは、必要な場合に作成されます)、別のグループに移動されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -126,7 +126,7 @@ class CAnimationBaseObject : public CObject;
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject:: ~ CAnimationBaseObject
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
 
 デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。
 
@@ -150,7 +150,7 @@ virtual BOOL ApplyTransitions(
 ストーリー ボードへのポインター。
 
 *bDependOnKeyframes*<br/>
-FALSE では、このメソッドは、キーフレームに依存しないこれらの遷移だけを追加します。
+False の場合、このメソッドは、キーフレームに依存しないこれらの遷移だけを追加します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -305,17 +305,17 @@ virtual void EnableValueChangedEvent(
 ```
 virtual void GetAnimationVariableList(
     CList<CAnimationVariable*,
-    CAnimationVariable*>& lst) = 0;
+    CAnimationVariable*>& list) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lst*<br/>
+*リスト*<br/>
 アニメーション オブジェクトに含まれるアニメーション変数を代入するリスト。
 
 ### <a name="remarks"></a>Remarks
 
-これは純粋仮想メソッドを派生クラスでオーバーライドする必要があります。 その種類に応じて、アニメーション オブジェクトには、1 つまたは複数のアニメーション変数が含まれています。 CAnimationPoint では、X および Y 座標をそれぞれの 2 つの変数を含まれています。 基本クラス CAnimationBaseObject、アニメーション変数の一覧で操作を実行するいくつかのジェネリック メソッドの実装: ApplyTransitions、ClearTransitions、EnableValueChangedEvent、EnableIntegerValueChangedEvent します。 これらのメソッドは呼び出す GetAnimationVariableList で、特定のアニメーション オブジェクトに含まれる実際のアニメーション変数が派生クラスに入力されます、リストをループし、必要なアクションを実行します。 カスタム アニメーション オブジェクトを作成する場合は、そのオブジェクトに含まれるすべてのアニメーション変数を lst を追加する必要があります。
+この純粋仮想メソッドは、派生クラスでオーバーライドする必要があります。 その種類に応じて、アニメーション オブジェクトには、1 つまたは複数のアニメーション変数が含まれています。 CAnimationPoint では、X および Y 座標をそれぞれの 2 つの変数を含まれています。 CAnimationBaseObject の基本クラスは、アニメーション変数の一覧で操作を実行するいくつかのジェネリック メソッドを実装します。ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. これらのメソッドは呼び出す GetAnimationVariableList で、特定のアニメーション オブジェクトに含まれる実際のアニメーション変数が派生クラスに入力されます、リストをループし、必要なアクションを実行します。 カスタム アニメーション オブジェクトを作成する場合に追加する必要があります*一覧*そのオブジェクトに含まれるすべてのアニメーション変数。
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -423,7 +423,7 @@ CAnimationController* m_pParentController;
 
 ##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions
 
-切り替え効果を自動的に破棄する順序を示すフラグを設定します。
+切り替え効果を自動的に破棄するためのフラグを設定します。
 
 ```
 void SetAutodestroyTransitions(BOOL bValue);
@@ -458,7 +458,7 @@ void SetID(
 
 ### <a name="remarks"></a>Remarks
 
-オブジェクト ID とグループ ID を変更するのには、します。 現在の ID、新しいグループの ID と異なる場合は、アニメーション オブジェクトがもう 1 つ (新しいグループを作成するグループ、必要な場合) に移動されます。
+オブジェクト ID とグループ ID を変更することができます。 現在の ID、新しいグループの ID と異なる場合は、アニメーション オブジェクトがもう 1 つ (新しいグループを作成するグループ、必要な場合) に移動されます。
 
 ##  <a name="setparentanimationobjects"></a>  CAnimationBaseObject::SetParentAnimationObjects
 
@@ -470,7 +470,7 @@ virtual void SetParentAnimationObjects();
 
 ### <a name="remarks"></a>Remarks
 
-これは、アニメーション変数をアニメーション オブジェクトとそのコンテナーに含まれている間の関係を確立するために使用できるヘルパーです。 アニメーション変数をループし、各アニメーション変数を親アニメーション オブジェクトへのバック ポインターを設定します。 CAnimationBaseObject::ApplyTransitions で実際の関係が確立された現在の実装のためバック ポインターが設定されていない CAnimationGroup::Animate を呼び出すまでです。 CAnimationVariable (CAnimationVariable::GetParentAnimationObject を使用) からオブジェクトのイベントと親のアニメーションを取得する必要性を処理するときに、関係を知ることが役立つ可能性がありますに。
+このヘルパーは、アニメーション オブジェクトとそのコンテナーに含まれるアニメーション変数間の関係を確立するために使用できます。 アニメーション変数をループし、各アニメーション変数を親アニメーション オブジェクトへのバック ポインターを設定します。 現在の実装で CAnimationBaseObject::ApplyTransitions で実際の関係が確立されている、したがって戻りポインターが設定されていない CAnimationGroup::Animate を呼び出すまでです。 CAnimationVariable からオブジェクトのイベントと親のアニメーションを取得する必要性を処理するときに、関係を知ることが役立つ可能性がありますに。 CAnimationVariable::GetParentAnimationObject を使用します。
 
 ##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData
 

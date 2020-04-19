@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: 8161d724dbd21297bb3beef2cf9406ddd2484ff1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522435"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299092"
 ---
 # <a name="parsing-c-command-line-arguments"></a>C コマンド ライン引数の解析
 
@@ -23,15 +23,15 @@ Microsoft C スタートアップ コードは、オペレーティング シス
 
 - 引数は、空白 (スペースまたはタブ) で区切ります。
 
-- 二重引用符で囲まれた文字列は、空白を含む場合でも、単一の引数と見なされます。 二重引用符で囲んだ文字列を引数に埋め込むこともできます。 キャレット (**^**) は、エスケープ文字や区切り記号としては認識されません。
+- 二重引用符で囲まれた文字列は、空白を含む場合でも、単一の引数と見なされます。 二重引用符で囲んだ文字列を引数に埋め込むこともできます。 キャレット ( **^** ) は、エスケープ文字や区切り記号としては認識されません。
 
-- 円記号を前に付けた二重引用符 (**\\"**) は、リテラル二重引用符文字 (**"**) として解釈されます。
+- 円記号を前に付けた二重引用符 ( **\\"** ) は、リテラル二重引用符文字 ( **"** ) として解釈されます。
 
 - 二重引用符の直前にある円記号以外は、円記号 (\) として解釈されます。
 
-- 二重引用符の直前に円記号が偶数個あると、円記号のペア (**\\\\**) ごとに 1 個の円記号 (**\\**) が `argv` 配列に配置されます。この場合、二重引用符 (**"**) は文字列の区切り記号として解釈されます。
+- 二重引用符の直前に円記号が偶数個あると、円記号のペア ( **\\\\** ) ごとに 1 個の円記号 ( **\\** ) が `argv` 配列に配置されます。この場合、二重引用符 ( **"** ) は文字列の区切り記号として解釈されます。
 
-- 二重引用符の直前に円記号が奇数個 (3 個以上) あると、円記号のペア (**\\\\**) ごとに 1 個の円記号 (**\\**) が `argv` 配列に格納されます。この場合、二重引用符は残った円記号によりエスケープ シーケンスと見なされます。これにより、リテラル二重引用符 (**"**) が `argv` に追加されます。
+- 二重引用符の直前に円記号が奇数個 (3 個以上) あると、円記号のペア ( **\\\\** ) ごとに 1 個の円記号 ( **\\** ) が `argv` 配列に格納されます。この場合、二重引用符は残った円記号によりエスケープ シーケンスと見なされます。これにより、リテラル二重引用符 ( **"** ) が `argv` に追加されます。
 
 この一覧では、コマンド ライン引数のいくつかの例で `argv` に渡される解釈された結果を示して、上記の規則について説明しています。 2 番目、3 番目、および 4 番目の列に表示される出力は、一覧に続く ARGS.C のプログラムからのものです。
 
@@ -43,11 +43,11 @@ Microsoft C スタートアップ コードは、オペレーティング シス
 |`a\\\"b c d`|`a\"b`|`c`|`d`|
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ### <a name="code"></a>コード
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -95,8 +95,8 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [main 関数とプログラム実行](../c-language/main-function-and-program-execution.md)

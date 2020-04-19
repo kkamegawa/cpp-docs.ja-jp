@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 097019b2299ad4d2563b5e0df1b943d190b16197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442641"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746254"
 ---
 # <a name="stream-io"></a>ストリーム入出力
 
@@ -93,9 +93,9 @@ ms.locfileid: "50442641"
 
 プログラムが明示的にストリームを閉じない場合、ストリームはプログラムが終了するときに自動的に閉じます。 ただし、一度に開くことのできるストリームの数は限られているため、プログラムがストリームの作業を終了したら、そのストリームを閉じる必要があります。 この制限については、 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) を参照してください。
 
-出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek****fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
+出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek** **fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

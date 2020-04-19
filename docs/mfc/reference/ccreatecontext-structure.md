@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: dd5659e7f91e3a2a1d653b61f12323ed1ae5a9b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347143"
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 構造体
 
@@ -56,7 +56,7 @@ A`CCreateContext`構造体には、ドキュメント、フレーム ウィン�
 
 一般に、フレームワークの既定値を使用する場合は無視できます`CCreateContext`します。 高度な変更、Microsoft Foundation Class ライブラリのソース コードまたは VIEWEX など、サンプル プログラムを試行する場合は、するでは説明します。 必要なパラメーターを忘れると、フレームワークのアサーションされ、何を忘れた場合が示されます。
 
-詳細については`CCreateContext`、MFC のサンプルを参照して[VIEWEX](../../visual-cpp-samples.md)します。
+詳細については`CCreateContext`、MFC のサンプルを参照して[VIEWEX](../../overview/visual-cpp-samples.md)します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -71,4 +71,3 @@ A`CCreateContext`構造体には、ドキュメント、フレーム ウィン�
 [CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)<br/>
 [CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)<br/>
 [CWnd::Create](../../mfc/reference/cwnd-class.md#create)
-

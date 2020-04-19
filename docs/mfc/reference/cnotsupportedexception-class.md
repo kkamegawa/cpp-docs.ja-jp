@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: 0eb3bf0de51345ed4316d2a1c5c29b8ecb3e8bba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407927"
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException クラス
 
@@ -69,4 +69,3 @@ CNotSupportedException();
 
 [CException クラス](cexception-class.md)<br/>
 [階層図](../hierarchy-chart.md)
-

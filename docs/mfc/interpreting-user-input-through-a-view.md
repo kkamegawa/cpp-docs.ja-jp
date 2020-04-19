@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: fe64f7c499b4a7c93f628fa0dff0855c379cbd58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ef23ad74e1ff53d947453faa5682c5ecc1f4e43
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310917"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>ビューを経由したユーザー入力の解釈
 
@@ -42,4 +42,3 @@ Windows メッセージ ビューで処理は、アプリケーションのニ�
 ## <a name="see-also"></a>関連項目
 
 [ビューの使い方](../mfc/using-views.md)
-

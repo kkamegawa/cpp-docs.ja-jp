@@ -1,30 +1,31 @@
 ---
 title: .LIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LIST
 helpviewer_keywords:
 - .LIST directive
 ms.assetid: f7e134de-6039-4343-b921-f70aea5e1c96
-ms.openlocfilehash: c4a43ad0edec6bf85b55e09e799d64cc8d4308fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cf695a1ecf0c2e43322c9d10d832a261185695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537749"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317696"
 ---
 # <a name="list"></a>.LIST
 
-ステートメントの一覧表示を開始します。
+ステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
-> .LIST
+> **.LIST**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-既定値です。
+これは既定です。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

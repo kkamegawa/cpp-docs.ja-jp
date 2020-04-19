@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
-ms.openlocfilehash: 2c8164cad25d68ee61ff9fed7170482d5dfc9505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0816fcb4d9e2a3e6588dfcf937383fed7ab11395
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474790"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737128"
 ---
 # <a name="compiler-error-c2530"></a>コンパイラ エラー C2530
 
-'identifier': 参照を初期化する必要があります
+' identifier ': 参照を初期化する必要があります
 
-既に宣言されていない限り、宣言されているときに、参照を初期化する必要があります。
+宣言されている場合を除き、参照を初期化する必要があります。
 
-- キーワードを使用して[extern](../../cpp/using-extern-to-specify-linkage.md)します。
+- キーワード[extern](../../cpp/using-extern-to-specify-linkage.md)を使用します。
 
-- クラス、構造体、共用体のメンバーとして (およびコンス トラクターで初期化されます)。
+- クラス、構造体、または共用体のメンバーとして (およびコンストラクターで初期化されます)。
 
-- 関数宣言または定義でパラメーター。
+- 関数の宣言または定義のパラメーターとして。
 
-- 関数の戻り値の型。
+- 関数の戻り値の型として。
 
 次の例では、C2530 が生成されます。
 
-```
+```cpp
 // C2530.cpp
 int main() {
    int i = 0;

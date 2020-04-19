@@ -1,9 +1,9 @@
 ---
 title: mbsrtowcs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsrtowcs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsrtowcs
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: 2bc0c8c9e2d871b6d1748c42dc02c627244dbf69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de7b25ea8a520dfe2c9cb26ec8989624b670dcb9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597146"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952047"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -59,34 +62,34 @@ size_t mbsrtowcs(
 変換するマルチバイト文字列の場所への間接ポインター。
 
 *count*<br/>
-変換および格納する文字 (バイトではなく) の最大数*wcstr*します。
+*Wcstr*に変換して格納する最大文字数 (バイト数ではない)。
 
-*呼び出すため*<br/>
-ポインター、 **mbstate_t**変換状態オブジェクト。 この値が null ポインターの場合、静的な内部変換状態オブジェクトが使用されます。 内部**mbstate_t**オブジェクトはスレッド セーフではありませんを常に渡す独自ことをお勧めします。*呼び出すため*パラメーター。
+*mbstate*<br/>
+**Mbstate_t**の変換状態オブジェクトへのポインター。 この値が null ポインターの場合、静的な内部変換状態オブジェクトが使用されます。 内部**mbstate_t**オブジェクトはスレッドセーフではないため、常に独自の*mbstate*パラメーターを渡すことをお勧めします。
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換された文字数を返します (終端の null 文字があっても含まれません)。 返します (size_t)(-1) 場合は、エラーが発生し、設定**errno** EILSEQ にします。
+正常に変換された文字数を返します (終端の null 文字があっても含まれません)。 エラーが発生した場合は (size_t) (-1) を返し、 **errno**を EILSEQ に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Mbsrtowcs**関数が直接に指すマルチバイト文字の文字列に変換します*mbstr*が指すバッファーに格納されているワイド文字に*wcstr*により、含まれる変換状態を使用して*呼び出すため*します。 変換は引き続き文字ごとに、終端 null マルチバイト文字が検出された、まで、現在のロケールで有効な文字に対応しないマルチバイト シーケンスが発生しましたまで、または*カウント*文字が変換されています。 場合**mbsrtowcs**前に、かにマルチバイト null 文字 ('\0') が発生した*カウント*発生すると、16 ビット終端の null 文字を停止に変換します。
+**Mbsrtowcs**関数は、 *mbstr*によって間接的に指されたマルチバイト文字の文字列を、 *mbstate*に含まれる変換状態を使用して、 *wcstr*が指すバッファーに格納されているワイド文字に変換します。 終端の null マルチバイト文字が検出されるまで、または現在のロケールの有効な文字に対応しないマルチバイトシーケンスが検出されるまで、または*カウント*文字が使用されるまで、文字ごとに変換が続行されます。後. **Mbsrtowcs**が*count*の発生前または発生時にマルチバイト null 文字 (' \ 0 ') を検出すると、それを16ビットの終端 null 文字に変換して停止します。
 
-つまり、ワイド文字の文字列*wcstr*が null で終わる場合にのみ**mbsrtowcs**変換中にマルチバイト null 文字を検出するとします。 によって、シーケンスを指している場合*mbstr*と*wcstr*の動作が重なる**mbsrtowcs**が定義されていません。 **mbsrtowcs**は現在のロケールの LC_TYPE カテゴリを受けます。
+このため、 *wcstr*のワイド文字の文字列は、 **mbsrtowcs**が変換中にマルチバイトの null 文字を検出した場合にのみ、null で終了します。 *Mbstr*と*wcstr*が指すシーケンスが重なり合う場合、 **mbsrtowcs**の動作は未定義になります。 **mbsrtowcs**は、現在のロケールの LC_TYPE カテゴリの影響を受けます。
 
-**Mbsrtowcs**関数とは異なります[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)によってその再起動します。 変換の状態が格納されている*呼び出すため*同じか、またはその他の再開可能な関数を呼び出すのためです。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、アプリケーションで使用する**mbsrlen**の代わりに**mbslen**後続の呼び出しの場合は、 **mbsrtowcs**の代わりに使用が**mbstowcs**.
+**Mbsrtowcs**関数は、 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)の再起動によって異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **mbsrtowcs**の後続の呼び出しが**mbstowcs**の代わりに使用される場合、アプリケーションでは**mbslen**ではなく**mbsrlen**を使用する必要があります。
 
-場合*wcstr*が null ポインターを指すポインター オブジェクト*mbstr*終端の null 文字に達したために、変換が停止している場合に null ポインターが割り当てられます。 それ以外の場合、変換された最後のマルチバイト文字がある場合は、その後ろのアドレスが割り当てられます。 これにより、後続の関数呼び出しで、この呼び出しが停止した場所から変換を再開できます。
+*Wcstr*が null ポインターでない場合は、終端の null 文字に到達したために変換が停止した場合、 *mbstr*が指すポインターオブジェクトに null ポインターが割り当てられます。 それ以外の場合、変換された最後のマルチバイト文字がある場合は、その後ろのアドレスが割り当てられます。 これにより、後続の関数呼び出しで、この呼び出しが停止した場所から変換を再開できます。
 
-場合、 *wcstr*引数が null ポインターの場合、*カウント*引数は無視されますと**mbsrtowcs**コピー先の文字列のワイド文字で、必要なサイズを返します。 場合*呼び出すため*null ポインターの場合は、関数が使用する内部の非スレッド セーフな静的**mbstate_t**変換状態オブジェクト。 場合の文字シーケンス*mbstr*が対応するマルチバイト文字の表現、-1 が返されます、 **errno**に設定されている**EILSEQ**します。
+*Wcstr*引数が null ポインターの場合、count 引数は無視され、 **mbsrtowcs**はコピー先の文字列に必要なサイズをワイド文字*数*で返します。 *Mbstate*が null ポインターの場合、関数はスレッドセーフではない静的な内部**mbstate_t**変換状態オブジェクトを使用します。 文字シーケンス*mbstr*に対応するマルチバイト文字表現がない場合は、-1 が返され、 **errno**が**EILSEQ**に設定されます。
 
-場合*mbstr* 」の説明に従って、isa の null ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL** -1 を返します。
+*Mbstr* isa null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 C++ では、この関数にテンプレートのオーバーロードがあります。このオーバーロードは、この関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="exceptions"></a>例外
 
-**Mbsrtowcs**関数は、現在のスレッドで関数が呼び出すない限り、マルチ スレッド セーフ**setlocale**この関数を実行している限り、*呼び出すため*引数が null ポインターではありません。
+**Mbsrtowcs**関数は、この関数が実行されていて、 *mbstate*引数が null ポインターでない限り、現在のスレッドの関数が**setlocale**を呼び出すことができない限り、マルチスレッドセーフです。
 
 ## <a name="requirements"></a>必要条件
 

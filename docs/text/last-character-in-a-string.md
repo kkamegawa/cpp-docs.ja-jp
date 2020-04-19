@@ -5,12 +5,12 @@ helpviewer_keywords:
 - last character in string
 - MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-ms.openlocfilehash: 535c2e58edab49e0e2a9dbc3fce9821d5909f1c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c99628cd12738fabb877a94cfd04a4033ee45aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410675"
 ---
 # <a name="last-character-in-a-string"></a>文字列の最後の文字
 

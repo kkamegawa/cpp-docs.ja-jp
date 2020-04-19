@@ -2,16 +2,16 @@
 title: '移植のガイド: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441788"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451173"
 ---
 # <a name="porting-guide-com-spy"></a>移植のガイド: COM Spy
 
-このトピックは、旧バージョンの Visual C++ プロジェクトを Visual Studio の最新バージョンにアップグレードするプロセスについて説明する一連の記事の 2 番目です。 このトピックのコード例は、前回 Visual Studio 2005 でコンパイルされています。
+このトピックは、以前のバージョンの Visual Studio C++ プロジェクトを Visual Studio の最新バージョンにアップグレードするプロセスについて示す一連の記事の 2 番目です。 このトピックのコード例は、前回 Visual Studio 2005 でコンパイルされています。
 
 ## <a name="comspy"></a>COMSpy
 
@@ -24,7 +24,7 @@ COMSpy は、コンピューター上のサービス コンポーネントのア
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-プロジェクトのアップグレードのよくある問題の 1 つとして、[プロジェクトのプロパティ] ダイアログ ボックスの**リンカーの OutputFile** の設定をレビューしなければならないことがあります。 Visual Studio 2010 より前のプロジェクトでは、OutputFile が標準以外の値に設定されている場合、自動変換ウィザードで問題が発生することがあります。 このケースでは、出力ファイルのパスが非標準のフォルダー XP32_DEBUG に設定されていました。 このエラーの詳細について調べるため、Visual C++ 2010 プロジェクトのアップグレードに関連する[ブログの投稿](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)を確認しました。このアップグレードでは、比較的大きな変更として vcbuild が msbuild に変わっていました。 この情報によると、新しいプロジェクトを作成するときの**出力ファイル**の設定の既定値は `$(OutDir)$(TargetName)$(TargetExt)` ですが、これは変換されたプロジェクトでうまくいくことが確認できないため、変換時に設定されていません。 ただし、OutputFile でその設定にして、機能するか確認してみましょう。  機能すれば、続行できます。 非標準の出力フォルダーを使用する特段の理由がなければ、標準の場所を使用することをお勧めします。 このケースでは、移植とアップグレード プロセス中に、出力の場所を非標準のままにすることを選択しました。`$(OutDir)` は、**デバッグ**構成で XP32_DEBUG フォルダーに解決され、**リリース**構成では ReleaseU フォルダーに解決されます。
+プロジェクトのアップグレードのよくある問題の 1 つとして、[プロジェクトのプロパティ] ダイアログ ボックスの**リンカーの OutputFile** の設定をレビューしなければならないことがあります。 Visual Studio 2010 より前のプロジェクトでは、OutputFile が標準以外の値に設定されている場合、自動変換ウィザードで問題が発生することがあります。 このケースでは、出力ファイルのパスが非標準のフォルダー XP32_DEBUG に設定されていました。 このエラーの詳細について調べるため、Visual Studio 2010 プロジェクトのアップグレードに関連する[ブログの投稿](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)を参照しました。これは、比較的大きな変更である vcbuild から msbuild への変更に関連するアップグレードです。 この情報によると、新しいプロジェクトを作成するときの**出力ファイル**の設定の既定値は `$(OutDir)$(TargetName)$(TargetExt)` ですが、これは変換されたプロジェクトでうまくいくことが確認できないため、変換時に設定されていません。 ただし、OutputFile でその設定にして、機能するか確認してみましょう。  機能すれば、続行できます。 非標準の出力フォルダーを使用する特段の理由がなければ、標準の場所を使用することをお勧めします。 このケースでは、移植とアップグレード プロセス中に、出力の場所を非標準のままにすることを選択しました。`$(OutDir)` は、**デバッグ**構成で XP32_DEBUG フォルダーに解決され、**リリース**構成では ReleaseU フォルダーに解決されます。
 
 ### <a name="step-2-getting-it-to-build"></a>手順 2. ビルドできる状態にする
 移植されたプロジェクトをビルドすると、多数のエラーと警告が発生します。
@@ -73,7 +73,7 @@ error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\Co
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/SAFESEH` コンパイラ オプションはデバッグ モード (`/EDITANDCONTINUE` が有効なとき) では役に立たないので、ここでは、**デバッグ**の構成でのみ、`/SAFESEH` を無効にします。 [プロパティ] ダイアログでこれを行うには、このエラーを生成するプロジェクトの [プロパティ] ダイアログを開き、まず **[構成]** を **[デバッグ]** に設定して (実際は **Unicode のデバッグ**)、**[リンカー高度クラス]** セクションで、**[安全な例外ハンドラーを含むイメージ]** プロパティを **[いいえ]** に設定 (`/SAFESEH:NO`) します。
+`/SAFESEH` コンパイラ オプションはデバッグ モード (`/EDITANDCONTINUE` が有効なとき) では役に立たないので、ここでは、**デバッグ**の構成でのみ、`/SAFESEH` を無効にします。 [プロパティ] ダイアログでこれを行うには、このエラーを生成するプロジェクトの [プロパティ] ダイアログを開き、まず **[構成]** を **[デバッグ]** に設定して (実際は **Unicode のデバッグ**)、 **[リンカー高度クラス]** セクションで、 **[安全な例外ハンドラーを含むイメージ]** プロパティを **[いいえ]** に設定 (`/SAFESEH:NO`) します。
 
 コンパイラからはほかにも、`PROP_ENTRY_EX` が非推奨とされていることが警告されています。 これは安全でなく、推奨される代替手段は `PROP_ENTRY_TYPE_EX` です。
 
@@ -164,8 +164,8 @@ private void button1_Click(object sender, EventArgs e)
 
 これは問題なく実行できました。COM Spy が起動して実行され、`Dog` コンポーネントを監視するよう構成されると、アクティビティを示す大量のデータが表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[移植とアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [次の例: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [前の例: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

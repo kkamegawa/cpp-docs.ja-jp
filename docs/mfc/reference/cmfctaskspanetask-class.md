@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 7d7f5a87dc005ee67f9ce65f4ad686cb27d007c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218709"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask クラス
 

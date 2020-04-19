@@ -6,11 +6,11 @@ helpviewer_keywords:
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
 ms.openlocfilehash: 19fd21da09149e730aac9bd0fb2cde066043e030
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266804"
 ---
 # <a name="temporary-objects"></a>一時オブジェクト
 
@@ -43,5 +43,5 @@ ms.locfileid: "50626011"
 
 |一時オブジェクトが作成された理由|破棄ポイント|
 |------------------------------|-----------------------|
-|式評価の結果|式の評価結果として作成されたすべての一時要素は、式ステートメントの最後に破棄されます (つまり、セミコロンの位置)、またはの制御式の末尾に**の**、**場合**、**中**、**は**、および**切り替える**ステートメント。|
+|式評価の結果|式の評価結果として作成されたすべての一時要素は、式ステートメントの最後に破棄されます (つまり、セミコロンの位置)、またはの制御式の末尾に**for**、**if**、**while**、**do**、および**switch**ステートメント。|
 |初期化**const**参照|初期化子が初期化されている参照と同じ型の左辺値でない場合、基になるオブジェクト型の一時オブジェクトが作成され、初期化式で初期化されます。 この一時オブジェクトは、バインド先の参照オブジェクトが破棄された直後に破棄されます。|

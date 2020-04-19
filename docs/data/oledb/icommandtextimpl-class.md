@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408980"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
-実装を提供、 [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85))インターフェイス。
+実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 コマンドの必須インターフェイス。
 
-## <a name="getcommandtext"></a> Icommandtextimpl::getcommandtext
+## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
 
 テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。
 
@@ -82,9 +82,9 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。
+参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。
 
-## <a name="setcommandtext"></a> Icommandtextimpl::setcommandtext
+## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
 既存のコマンド テキストを置き換えて、コマンド テキストを設定します。
 
@@ -97,9 +97,9 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandtext::setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="strcommandtext"></a> Icommandtextimpl::m_strcommandtext
+## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 
 コマンド テキストの文字列を格納します。
 

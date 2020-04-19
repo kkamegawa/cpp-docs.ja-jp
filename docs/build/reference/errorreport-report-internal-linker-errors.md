@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (内部リンカー エラーの報告)
-ms.date: 12/28/2017
+description: Microsoft NMAKE のコマンドラインオプションのリファレンスガイドです。
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -9,51 +10,38 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447246"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257690"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (内部リンカー エラーの報告)
 
-> **/errorreport:**[ **none** | **プロンプト** | **キュー** | **送信**]
+**/Errorreport**オプションは非推奨とされます。 Windows Vista 以降では、エラー報告は[Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。
 
-## <a name="arguments"></a>引数
+## <a name="syntax"></a>構文
 
-**none**<br/>
-内部コンパイラ エラーに関するレポートは、収集されず、マイクロソフトに送信されません。
+> **/Errorreport:** \[ **none** \| **prompt** \| **queue** \| **send** ]
 
-**prompt**<br/>
-内部コンパイラ エラーを受信したときにレポートを送信するかどうか確認するメッセージを表示します。 **プロンプト**開発環境でアプリケーションのコンパイル時に既定値です。
+## <a name="remarks"></a>コメント
 
-**queue**<br/>
-エラー レポートを待ち行列に入れます。 管理者特権を使用してログインすると、前回のログに記録されたエラーを報告できるように、ウィンドウが表示されます。 (ことが求められない 3 日間に 2 回以上のエラー レポートを送信する)。 **キュー**コマンド プロンプトで、アプリケーションのコンパイル時に既定値です。
-
-**send**<br/>
-自動的に Windows エラー報告サービスの設定でレポートが有効になっている場合は、内部コンパイラ エラーのレポートを Microsoft に送信します。
-
-## <a name="remarks"></a>Remarks
-
-**/ERRORREPORT**オプションを使用して、内部コンパイラ エラー (ICE) 情報を Microsoft に直接提供できます。
-
-オプション **/errorreport:send** Windows エラー報告サービスの設定を有効になっている場合は、Microsoft にエラー情報を自動的に送信します。
+**/Errorreport**引数は、Windows エラー報告サービスの設定によってオーバーライドされます。 レポートが Windows エラー報告によって有効になっている場合、リンカーは内部エラーのレポートを Microsoft に自動的に送信します。 Windows エラー報告で無効になっている場合、レポートは送信されません。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. 開く、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
+1. **[構成プロパティ]**  > [**リンカー** > **詳細設定**] プロパティページを開きます。
 
-1. 変更、**エラー報告**プロパティ。
+1. **エラー報告**のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>
+- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>) をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[/errorReport (内部コンパイラ エラーの報告)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーリファレンス](linking.md)\
+[MSVC リンカーオプション](linker-options.md)

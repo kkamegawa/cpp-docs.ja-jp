@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: d3c721490e0af32d91fcc51412e3c02b6a2d7f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08087b9cec0a48f0e439d6a2ff9fbe5f4e58d709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753095"
 ---
 # <a name="compiler-error-c3722"></a>コンパイラ エラー C3722
 
-汎用イベントは許可されていません
+汎用イベントは使用できません
 
-コンパイラは、ジェネリック クラス、構造体、および関数にのみ使用できます。  詳細については、「[ジェネリック](../../windows/generics-cpp-component-extensions.md)」を参照してください。
+コンパイラは、ジェネリッククラス、構造体、および関数のみを許可します。  詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3722 が生成されます。
 
-```
+```cpp
 // C3722.cpp
 // compile with: /clr
 generic <typename T>

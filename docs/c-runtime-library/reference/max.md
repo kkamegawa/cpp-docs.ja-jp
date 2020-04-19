@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613760"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952751"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-プリプロセッサ マクロには、2 つの値のうち、大きい方を返します。
+2つの値のうち、大きい方を返すプリプロセッサマクロ。
 
 ## <a name="syntax"></a>構文
 
@@ -47,13 +50,13 @@ ms.locfileid: "50613760"
 
 ## <a name="return-value"></a>戻り値
 
-**_ _max**引数のうち、大きい方を返します。
+**__ max**は、その引数の大部分を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Max**マクロは、2 つの値を比較しより大きな 1 つの値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
+**__ Max**マクロは、2つの値を比較し、大きい方の値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
 
-返される引数は、マクロで 2 回評価されます。 これにより、予期しない結果がそれを評価するときなど、その値を変更する式の引数の場合`*p++`します。
+返される引数はマクロによって2回評価されます。 このため、引数が評価時に値を変更する式 (など`*p++`) の場合、予期しない結果になる可能性があります。
 
 ## <a name="requirements"></a>必要条件
 

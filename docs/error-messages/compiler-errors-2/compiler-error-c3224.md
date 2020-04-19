@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3224
 ms.assetid: 129be22f-8f3e-4fc6-9ccd-d27d8ef91251
-ms.openlocfilehash: dc64ca1aeef66eeb554be1316bf9433145b50cc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23a83a90c5583a427ffae9a7e69e531981ddd7cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473171"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757632"
 ---
 # <a name="compiler-error-c3224"></a>コンパイラ エラー C3224
 
@@ -30,7 +30,7 @@ public class C<T,U> {}
 
 この場合、次のようになります。
 
-```
+```cpp
 // C3224b.cpp
 // compile with: /clr
 #using "C3224.dll"

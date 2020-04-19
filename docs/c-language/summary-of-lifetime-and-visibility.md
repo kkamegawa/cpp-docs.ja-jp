@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474803"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299079"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
@@ -18,17 +18,17 @@ ms.locfileid: "50474803"
 
 ### <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
-|属性: <br /><br /> レベル|アイテム|ストレージ クラス<br /><br /> 指定子|結果: <br /><br /> 有効期間|可視性|
+|属性:<br /><br /> レベル|項目|ストレージ クラス<br /><br /> 指定子|結果 :<br /><br /> 有効期間|可視性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |ファイル スコープ|変数定義|**static**|Global|発生元のソース ファイルの剰余残りの部分|
 ||変数宣言|**extern**|Global|発生元のソース ファイルの剰余残りの部分|
 ||関数プロトタイプまたは定義|**static**|Global|単一のソース ファイル|
 ||関数プロトタイプ|**extern**|Global|ソース ファイルの残りの部分|
-|ブロック スコープ|変数宣言|**extern**|Global|ブロック|
-||変数定義|**static**|Global|ブロック|
-||変数定義|**auto** か **register**|ローカル|ブロック|
+|ブロック スコープ|変数宣言|**extern**|Global|[ブロック]|
+||変数定義|**static**|Global|[ブロック]|
+||変数定義|**auto** か **register**|Local|[ブロック]|
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ### <a name="description"></a>説明
 
@@ -36,7 +36,7 @@ ms.locfileid: "50474803"
 
 ### <a name="code"></a>コード
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 この例では、4 つの表示レベルとして、外部レベルと 3 つのブロック レベルがあります。 値は、各ステートメントに続くコメントに示すとおりに画面に出力されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)

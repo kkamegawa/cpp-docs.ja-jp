@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tool tips [MFC], activating
 - CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
-ms.openlocfilehash: 99ad8b30599b4399e4574dea611991b4c8e1a8e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cc72401da95e63520b544865ea509a8ad219bda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307615"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>ツール ヒント コントロールの設定値
 
@@ -24,4 +24,3 @@ ms.locfileid: "50532671"
 
 [CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

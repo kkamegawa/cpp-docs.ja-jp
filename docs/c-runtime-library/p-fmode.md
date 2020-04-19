@@ -1,9 +1,9 @@
 ---
 title: __p__fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __p__fmode
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -11,20 +11,24 @@ apilocation:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
-apitype: DLLExport
+- api-ms-win-crt-stdio-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __p__fmode
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 59687cca87d283682c4b7231b5f8c1a55ff512db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579716"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939982"
 ---
-# <a name="pfmode"></a>__p__fmode
+# <a name="__p__fmode"></a>__p__fmode
 
 ファイルの入出力操作に対して既定の*ファイル変換モード*を指定する `_fmode` グローバル変数を指し示します。
 
@@ -39,7 +43,7 @@ int* __p__fmode(
 
 `_fmode` グローバル変数へのポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `__p__fmode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。
 

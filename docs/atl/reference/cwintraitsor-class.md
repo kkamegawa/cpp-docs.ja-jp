@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-ms.openlocfilehash: 153ff21a9122839c7d306e33d57afab69c3c155e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec628fcde40d3cc4601d6b6ddf49fa5599ac5a86
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276732"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR クラス
 
@@ -100,4 +100,3 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [ウィンドウの特徴を理解する](../../atl/understanding-window-traits.md)
-

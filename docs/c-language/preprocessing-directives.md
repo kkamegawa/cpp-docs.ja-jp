@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessing directives, C
 - preprocessing directives
 ms.assetid: b27d7444-8f84-4c31-b2fa-03335412d5e6
-ms.openlocfilehash: 4f03f07f323ad4289b333f23e6729f4fd30b74e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10231e27f44fc6a3dc2546c711c185056dea3df5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640402"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146587"
 ---
 # <a name="preprocessing-directives"></a>プリプロセス ディレクティブ
 
@@ -26,6 +26,6 @@ ms.locfileid: "50640402"
 
 - [既定の日付と時刻](../c-language/default-date-and-time.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [実装で定義された動作](../c-language/implementation-defined-behavior.md)

@@ -1,10 +1,10 @@
 ---
 title: fegetround、fesetround
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetround
 - fesetround
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetround
 - fesetround
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666805"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941208"
 ---
 # <a name="fegetround-fesetround"></a>fegetround、fesetround
 
@@ -54,9 +57,9 @@ int fesetround(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **fegetround**は浮動小数点丸めマクロ値の 1 つとして、丸めモードを返します。 現在の丸めモードを決定できない場合は、負の値を返します。
+成功した場合、 **fegetround**は、浮動小数点丸めマクロ値の1つとして丸めモードを返します。 現在の丸めモードを決定できない場合は、負の値を返します。
 
-成功した場合、 **fesetround** 0 を返します。 それ以外の場合、0 以外の値が返されます。
+成功した場合、 **fesetround**は0を返します。 それ以外の場合、0 以外の値が返されます。
 
 ## <a name="remarks"></a>Remarks
 
@@ -77,7 +80,7 @@ FE_TONEAREST の既定の動作は、表現値の中間で偶数の (0) 最下�
 
 - 定数式の外部での浮動小数点算術演算子の結果。
 
-- 丸め関数など、ライブラリ**rint**と**nearbyint**します。
+- **Rint**や**nearbyint**などのライブラリ丸め関数。
 
 - 標準ライブラリの数学関数から値を返します。
 

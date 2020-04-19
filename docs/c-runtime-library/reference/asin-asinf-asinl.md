@@ -1,11 +1,11 @@
 ---
 title: asin、asinf、asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476050"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943646"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -60,25 +63,25 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Asin**のアークサイン (逆サ イン関数) を返します*x* π/2 ラジアンの範囲 - π/2 でします。
+**アーク**サイン関数は、-π/2 ~ π/2 ラジアンの範囲の*x*のアークサイン (逆正弦関数) を返します。
 
-既定では場合、 *x*が-1、1 より大きいか小さい**asin**は不定値を返します。
+既定では、 *x*が-1 より小さいか、または1より大きい場合、**アークサイン**は不定を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± ∞|**無効です**|**(_D)**|
-|± **QNAN**、 **IND**|none|**(_D)**|
-|&#124;x&#124;>1|**無効です**|**(_D)**|
+|± ∞|**無効です**|**_DOMAIN**|
+|± **QNAN**、 **IND**|none|**_DOMAIN**|
+|&#124;x&#124;>1|**無効です**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **asin**で**float**と**長い****二重**値。 C プログラムで**asin**は、**二重**します。
+でC++はオーバーロードが可能であるため、 **float**と**long** **double**値を使用して**アークサイン**のオーバーロードを呼び出すことができます。 C プログラムでは、**アークサイン**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
-|**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> または \<math.h>|
+|**アークサイン**、 **asinf**、 **asinl**|\<math.h>|\<cmath> または \<math.h>|
 
 ## <a name="example"></a>例
 

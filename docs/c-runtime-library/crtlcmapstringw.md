@@ -1,9 +1,9 @@
 ---
 title: __crtLCMapStringW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __crtLCMapStringW
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __crtLCMapStringW
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d9458529e5772f31e3ae5463d3a6ff5a7b726e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940446"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 1 つの文字列を別の文字列にマップして、指定したロケールに依存する変換を実行します。 この関数を使用して入力文字列の並べ替えキーを生成することもできます。
 
@@ -70,9 +73,9 @@ int __crtLCMapStringW(
 
 0 は失敗を示します。 拡張されたエラー情報を取得するには、 `GetLastError` 関数を呼び出します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`cchSrc` が 0 より大きく、 `lpSrcStr` が null で終わる文字列の場合、 `__crtLCMapStringW` は `cchSrc` を文字列の長さに設定します。 次に、 `__crtLCMapStringW` は、 `LCMapString` のワイド文字列 (Unicode) バージョンを指定されたパラメーターで呼び出します。 この関数のパラメーターと戻り値の詳細については、[LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)に関するページを参照してください。
+`cchSrc` が 0 より大きく、 `lpSrcStr` が null で終わる文字列の場合、 `__crtLCMapStringW` は `cchSrc` を文字列の長さに設定します。 次に、 `__crtLCMapStringW` は、 `LCMapString` のワイド文字列 (Unicode) バージョンを指定されたパラメーターで呼び出します。 この関数のパラメーターと戻り値の詳細については、[LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw)に関するページを参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -6,12 +6,12 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_SUPERCLASS
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-ms.openlocfilehash: 75a6a769770c9de8b26c08fae852197cdb99248e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197175"
 ---
 # <a name="window-class-macros"></a>ウィンドウ クラスに関するマクロ
 
@@ -22,7 +22,7 @@ ms.locfileid: "50503156"
 |[DECLARE_WND_CLASS](#declare_wnd_class)|新しいウィンドウ クラスの名前を指定することができます。|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)新しいウィンドウ クラスと外側のクラスの新しいクラスが使用するウィンドウ プロシージャの名前を指定することができます。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|新しいウィンドウ クラスの基になる既存のウィンドウ クラスの名前を指定することができます。|
-|[場合は](#declare_wnd_class_ex)|クラスのパラメーターを指定することができます。|
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|クラスのパラメーターを指定することができます。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -114,7 +114,7 @@ DECLARE_WND_CLASS と DECLARE_WND_SUPERCLASS マクロだけでなく、オー�
 
 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
 
-##  <a name="declare_wnd_class_ex"></a>  場合は
+##  <a name="declare_wnd_class_ex"></a>  DECLARE_WND_CLASS_EX
 
 新しいウィンドウ クラスの基になる既存のウィンドウ クラスの名前を指定することができます。 ATL の ActiveX コントロールのコントロール クラスには、このマクロを配置します。
 
@@ -130,7 +130,7 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 *style*<br/>
 [in]ウィンドウのスタイル。
 
-*背景*<br/>
+*bkgnd*<br/>
 [in]ウィンドウの背景色。
 
 ### <a name="remarks"></a>Remarks
@@ -144,4 +144,3 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 ## <a name="see-also"></a>関連項目
 
 [[マクロ]](atl-macros.md)
-

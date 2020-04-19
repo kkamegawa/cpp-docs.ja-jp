@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: e1c00a001c807b0cc6a5946b61ca4e9d5dc0167a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604153"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747242"
 ---
 # <a name="fatal-error-c1197"></a>致命的なエラー C1197
 
-プログラムが既に 'mscorlib.dll_2' を参照 'mscorlib.dll_1' を参照することはできません。
+プログラムが既に ' mscorlib. dll_2 ' を参照しているため、' mscorlib. dll_1 ' を参照できません
 
-コンパイラは、共通言語ランタイムのバージョンに一致します。  ただし、しようとしましたが、以前のバージョンから共通言語ランタイム ファイルのバージョンを参照します。
+コンパイラは、共通言語ランタイムのバージョンと一致します。  ただし、以前のバージョンから共通言語ランタイムファイルのバージョンを参照しようとしました。
 
-このエラーを解決するのには、Visual C のバージョンに同梱されている共通言語ランタイムのバージョンからのみ参照ファイルは、コンパイルしています。
+このエラーを解決するには、コンパイルしているビジュアルC++のバージョンに付属している共通言語ランタイムのバージョンからのファイルのみを参照します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C1197 が生成されます。
 
-```
+```cpp
 // C1197.cpp
 // compile with: /clr /c
 // processor: x86

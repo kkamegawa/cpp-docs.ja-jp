@@ -1,6 +1,6 @@
 ---
 title: CD2DResource クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: a4846fb8ea34a3d6a83ae892eabee74f4a48cd6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396302"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource クラス
 
-D2D リソースなど、ブラシ、レイヤー、およびテキスト作成および管理のインターフェイスを提供する抽象クラス。
+D2D リソースなど、ブラシ、レイヤー、およびテキスト作成および管理するインターフェイスを提供する抽象クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|CD2DResource オブジェクトを構築します。|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|デストラクターです。 D2D リソース オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|デストラクターです。 D2D リソース オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -67,7 +67,7 @@ class CD2DResource : public CObject;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|リソースは、所有者 (CRenderTarget) によって destoyed になります|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|所有者 (CRenderTarget) によってリソースが破棄されます。|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|CRenderTarget 親へのポインター)|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -157,7 +157,7 @@ virtual BOOL IsValid() const = 0;
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-リソースは、所有者 (CRenderTarget) によって destoyed になります
+所有者 (CRenderTarget) によってリソースが破棄されます。
 
 ```
 BOOL m_bIsAutoDestroy;

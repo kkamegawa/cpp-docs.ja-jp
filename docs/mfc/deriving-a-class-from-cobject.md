@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152061"
 ---
 # <a name="deriving-a-class-from-cobject"></a>CObject からのクラスの派生
 
@@ -28,7 +28,7 @@ ms.locfileid: "50566232"
 
 クラスを派生する場合に、機能の 4 つのレベルから選択できます`CObject`:
 
-- 基本的な機能: ランタイム クラス情報またはシリアル化のサポートが含まれていません診断メモリ管理にはします。
+- 基本的な機能:ランタイム クラス情報またはシリアル化のサポートが含まれていません診断メモリ管理には。
 
 - 基本的な機能に加えて、ランタイム クラス情報をサポートします。
 
@@ -49,7 +49,7 @@ ms.locfileid: "50566232"
 |基本的な`CObject`機能|いいえ|×|×|
 |`DECLARE_DYNAMIC`|はい|×|×|
 |`DECLARE_DYNCREATE`|[はい]|[はい]|×|
-|`DECLARE_SERIAL`|[はい]|[はい]|はい|
+|`DECLARE_SERIAL`|[はい]|はい|はい|
 
 #### <a name="to-use-basic-cobject-functionality"></a>CObject の基本的な機能を使用するには
 
@@ -59,11 +59,10 @@ ms.locfileid: "50566232"
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-通常、ただし、場合の一部をオーバーライドする`CObject`の新しいクラスの詳細を処理するメンバー関数。 オーバーライドする可能性があります通常など、`Dump`関数の`CObject`クラスの内容をデバッグ出力を提供します。 オーバーライドする方法の詳細について`Dump`、記事をご覧ください[診断: オブジェクトの内容をダンプ](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)します。 オーバーライドすることも、`AssertValid`関数の`CObject`クラス オブジェクトのデータ メンバーの一貫性を検証するカスタマイズされたテストを提供します。 オーバーライドする方法の説明の`AssertValid`を参照してください[MFC ASSERT_VALID と cobject::assertvalid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa)します。
+通常、ただし、場合の一部をオーバーライドする`CObject`の新しいクラスの詳細を処理するメンバー関数。 オーバーライドする可能性があります通常など、`Dump`関数の`CObject`クラスの内容をデバッグ出力を提供します。 オーバーライドする方法の詳細について`Dump`、記事をご覧ください[オブジェクト ダンプのカスタマイズ](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))します。 オーバーライドすることも、`AssertValid`関数の`CObject`クラス オブジェクトのデータ メンバーの一貫性を検証するカスタマイズされたテストを提供します。 オーバーライドする方法の説明の`AssertValid`を参照してください[MFC ASSERT_VALID と cobject::assertvalid](reference/diagnostic-services.md#assert_valid)します。
 
 この記事[機能のレベルを指定する](../mfc/specifying-levels-of-functionality.md)ランタイム クラス情報、動的オブジェクトの作成、およびシリアル化など、機能の他のレベルを指定する方法について説明します。
 
 ## <a name="see-also"></a>関連項目
 
 [CObject の使い方](../mfc/using-cobject.md)
-

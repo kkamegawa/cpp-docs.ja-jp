@@ -1,10 +1,10 @@
 ---
 title: _cgets_s、_cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588540"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624777"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s、_cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
 コンソールから文字列を取得します。 これらのバージョンの [_cgets および _cgetws](../../c-runtime-library/cgets-cgetws.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンです。
 
@@ -77,7 +80,7 @@ errno_t _cgetws_s(
 *numberOfElements*<br/>
 バッファーのサイズです。単位はバイト数またワイド文字数です。これは、読み取る最大の文字数でもあります。
 
-*読み取ら*<br/>
+*pSizeRead*<br/>
 実際に読み取った文字数。
 
 ## <a name="return-value"></a>戻り値
@@ -86,19 +89,21 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*読み取ら*|Return|内容*バッファー*|
+|*バッファー*|*numberOfElements*|*pSizeRead*|Return|*バッファー*の内容|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|任意|任意|**EINVAL**|N/A|
-|いない**NULL**|ゼロ|任意|**EINVAL**|変更されない|
-|いない**NULL**|任意|**NULL**|**EINVAL**|長さゼロの文字列|
+|**NULL**以外|ゼロ|任意|**EINVAL**|変更されない|
+|**NULL**以外|任意|**NULL**|**EINVAL**|長さゼロの文字列|
 
 ## <a name="remarks"></a>Remarks
 
-**_cgets_s**と **_cgetws_s**コンソールから文字列を読み取るし、(null 終端文字の場合)、文字列をコピー*バッファー*します。 **_cgetws_s**はこの関数のワイド文字バージョンは、以外の文字のサイズ、これら 2 つの関数の動作は同じです。 読み取る文字列の最大サイズとして渡される、 *numberOfElements*パラメーター。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 読み取られた文字数が実際に配置されます*読み取ら*します。
+**_cgets_s**と **_cgetws_s**は、コンソールから文字列を読み取り、(null 終端文字を含む) 文字列を*バッファー*にコピーします。 **_cgetws_s**は、関数のワイド文字バージョンです。文字のサイズ以外は、これらの2つの関数の動作は同じです。 読み取る文字列の最大サイズは、 *Numberofelements*パラメーターとして渡されます。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 実際に読み取られた文字数は*pSizeRead*に配置されます。
 
-操作中に、またはパラメーターを検証する際にエラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**EINVAL**が返されます。
+操作中に、またはパラメーターを検証する際にエラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、 **einval**が返されます。
 
-C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -106,14 +111,14 @@ C++ では、テンプレートのオーバーロードを利用すると、こ�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cgetts_s**|**_cgets_s**|**_cgets_s**|**_cgetws_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

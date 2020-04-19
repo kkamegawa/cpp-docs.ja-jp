@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 7b1efb3bd574edde59f6d8845d73a51dfabea433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab11ea5e5347c9c8684e8710e9742fdbcad8a46b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626617"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497161"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL クラス
 
-このクラスは、C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。
+このクラスは、 C++標準ライブラリコレクションに基づいて COM 列挙子オブジェクトを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,44 +32,44 @@ CollType>,
 
 #### <a name="parameters"></a>パラメーター
 
-*ベース*<br/>
-COM の列挙子。 参照してください[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)例についてはします。
+*常用*<br/>
+COM 列挙子。 例については、「 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 」を参照してください。
 
 *piid*<br/>
 列挙子インターフェイスのインターフェイス ID へのポインター。
 
 *T*<br/>
-列挙子インターフェイスによって公開される項目の種類。
+列挙子インターフェイスによって公開される項目の型。
 
 *コピー*<br/>
-A[コピー ポリシー](../../atl/atl-copy-policy-classes.md)クラス。
+[コピーポリシー](../../atl/atl-copy-policy-classes.md)クラス。
 
-*CollType*<br/>
-C++ 標準ライブラリ コンテナー クラス。
+*文字の種類*<br/>
+C++標準ライブラリコンテナークラス。
 
 ## <a name="remarks"></a>Remarks
 
-`CComEnumOnSTL` C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、単独または組み合わせて使用できます[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
+`CComEnumOnSTL`C++標準ライブラリコレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、独自のまたは[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)と組み合わせて使用できます。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
-## <a name="to-use-this-class-with-icollectiononstlimpl"></a>単独でこのクラスを使用します。
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>ICollectionOnSTLImpl でこのクラスを使用するには、次のようにします。
 
-- **typedef**このクラスの特殊化します。
+- このクラスの特殊化を**typedef**します。
 
-- 使用して、 **typedef**の特殊化で最終的なテンプレート引数として`ICollectionOnSTLImpl`します。
+- の`ICollectionOnSTLImpl`特殊化では、最終的なテンプレート引数として**typedef**を使用します。
 
-参照してください[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)例についてはします。
+例については、「 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
-## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>ICollectionOnSTLImpl とは無関係に、このクラスを使用します。
+## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>このクラスを ICollectionOnSTLImpl とは無関係に使用するには、次のようにします。
 
-- **typedef**このクラスの特殊化します。
+- このクラスの特殊化を**typedef**します。
 
-- 使用して、 **typedef**の特殊化のテンプレート引数として`CComObject`します。
+- の`CComObject`特殊化では、テンプレート引数として**typedef**を使用します。
 
-- インスタンスを作成、`CComObject`特殊化します。
+- `CComObject`特殊化のインスタンスを作成します。
 
-- 列挙子オブジェクトを呼び出すことによって初期化[保ちます](../../atl/reference/ienumonstlimpl-class.md#init)します。
+- [IEnumOnSTLImpl:: Init](../../atl/reference/ienumonstlimpl-class.md#init)を呼び出して、列挙子オブジェクトを初期化します。
 
-- 列挙子インターフェイスをクライアントに返します。
+- クライアントに列挙子インターフェイスを返します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,24 +85,24 @@ C++ 標準ライブラリ コンテナー クラス。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
 ## <a name="example"></a>例
 
-次に示すコードでは、作成、列挙子オブジェクトの初期化を処理するジェネリック関数を提供します。
+次に示すコードは、列挙子オブジェクトの作成と初期化を処理する汎用関数を提供します。
 
 [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]
 
-このテンプレート関数を実装するために使用できます、`_NewEnum`次に示すように、コレクション インターフェイスのプロパティ。
+このテンプレート関数を使用すると、次`_NewEnum`に示すように、コレクションインターフェイスのプロパティを実装できます。
 
 [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]
 
-このコードを作成、 **typedef**の`CComEnumOnSTL`のベクターを公開する`CComVariant`の s、`IEnumVariant`インターフェイス。 `CVariantCollection`クラスは単に専門`CreateSTLEnumerator`この型の列挙子オブジェクトを操作します。
+このコードは、 `CComEnumOnSTL` `CComVariant`インターフェイスを使用してのベクターを公開するのtypedefを作成し`IEnumVariant`ます。 クラス`CVariantCollection`は、この`CreateSTLEnumerator`型の列挙子オブジェクトを操作することを単に専門としています。
 
 ## <a name="see-also"></a>関連項目
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[ATLCollections サンプル: ICollectionOnSTLImpl、CComEnumOnSTL、およびカスタム コピー ポリシー クラス](../../visual-cpp-samples.md)<br/>
+[ATLCollections のサンプル:ICollectionOnSTLImpl、CComEnumOnSTL、およびカスタムコピーポリシークラスの例を示します。](../../overview/visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

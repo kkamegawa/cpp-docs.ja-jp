@@ -1,6 +1,6 @@
 ---
-title: region、endregion
-ms.date: 10/18/2018
+title: region プラグマ、endregion プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: efc5f9c09449ff2fefff41261fe8b0eb0be80278
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512795"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222384"
 ---
-# <a name="region-endregion"></a>region、endregion
+# <a name="region-endregion-pragmas"></a>region プラグマ、endregion プラグマ
 
-`#pragma region` 展開したり折りたたむを使用する場合のコードのブロックを指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。
+`#pragma region`Visual Studio Code エディターの[アウトライン機能](/visualstudio/ide/outlining)を使用して展開または折りたたむことができるコードブロックを指定できます。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **#pragma リージョン** *名前*\
+> **#pragma endregion** *コメント*
 
 ### <a name="parameters"></a>パラメーター
 
-*comment*<br/>
-(省略可能)コード エディターに表示されるコメントです。
+*関する*\
+Optionalコードエディターに表示するコメント。
 
-*name*<br/>
-(省略可能)領域の名前。  この名前はコード エディターに表示されます。
+*指定*\
+Optional領域の名前。 この名前はコードエディターに表示されます。
 
 ## <a name="remarks"></a>Remarks
 
-`#pragma endregion` 末尾を`#pragma region`ブロックします。
+`#pragma endregion``#pragma region`ブロックの終了をマークします。
 
-A`#region`でブロックを終了する必要があります`#pragma endregion`します。
+ブロック`#region`は、 `#pragma endregion`ディレクティブで終了する必要があります。
 
 ## <a name="example"></a>例
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

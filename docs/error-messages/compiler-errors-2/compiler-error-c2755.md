@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2755
+title: コンパイラエラー C2755
 ms.date: 11/04/2016
 f1_keywords:
 - C2755
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570691"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759556"
 ---
-# <a name="compiler-error-c2755"></a>コンパイラ エラー C2755
+# <a name="compiler-error-c2755"></a>コンパイラエラー C2755
 
-'param': 部分的特殊化の非型パラメーターは単純な識別子である必要があります
+' param ': 部分的特殊化の非型パラメーターは、単純な識別子でなければなりません
 
-非型パラメーターは、単純な識別子、コンパイラがコンパイル時に、単一の識別子または定数値を解決できるものである必要があります。
+非型パラメーターは、単純な識別子である必要があります。これは、コンパイル時にコンパイラが単一の識別子または定数値に解決できるものです。
 
 次の例では、C2755 が生成されます。
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

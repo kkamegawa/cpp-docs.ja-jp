@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3902
 ms.assetid: feb3bb29-f836-4d77-ba71-3876f7f4f216
-ms.openlocfilehash: 22536f380187c6dceac3e355224d9d118cd1a2df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dd98bc46e28fe54362de442a433736787cd0d07
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564529"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749062"
 ---
 # <a name="compiler-error-c3902"></a>コンパイラ エラー C3902
 
-'accessor': 最後のパラメーターの型は 'type' でなければなりません
+' accessor ': 最後のパラメーターの型は ' type ' でなければなりません
 
-少なくとも 1 つの set メソッドの最後のパラメーターの型は、プロパティの型と一致する必要があります。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+少なくとも1つの set メソッドの最後のパラメーターの型は、プロパティの型と一致している必要があります。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3902 が生成されます。
 
-```
+```cpp
 // C3902.cpp
 // compile with: /clr /c
 using namespace System;

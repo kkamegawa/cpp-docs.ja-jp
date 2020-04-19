@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468654"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689297"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
-このテンプレート クラスは、型のシーケンスを表すためにロケール ファセットとして使用できるオブジェクトを表します*CharType*通貨入力フィールドまたは通貨出力フィールドを表すために使用します。 場合、テンプレート パラメーター *Intl*は*true*、国際対応の規則が確認されます。
+クラステンプレートは、通貨入力フィールドまたは通貨出力フィールドを表すために使用される*chartype*型のシーケンスを表すロケールファセットとして使用できるオブジェクトを表します。 テンプレートパラメーターの [international] が*true*の場合、*国際的な規則*が確認されます。
 
 ## <a name="syntax"></a>構文
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*<br/>
+*Chartype* \
 文字をエンコードするためにプログラム内で使用される型。
 
-*Intl*<br/>
+*国際*\
 国際的な規則を確認するかどうかを指定するフラグ。
 
 ## <a name="remarks"></a>Remarks
@@ -114,7 +114,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 |[positive_sign](#positive_sign)|正の記号として使用する要素のロケール固有のシーケンスを返します。|
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用する要素のロケール固有のシーケンスを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -245,7 +245,7 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="example"></a>例
 
-[decimal_point](#decimal_point) の例 (仮想メンバー関数が `decimal_point` で呼び出される) を参照してください。
+[decimal_point](#decimal_point) の例 (仮想メンバー関数が `decimal_point` で呼び出される) をご覧ください。
 
 ## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
 
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>例
 
-例をご覧ください[グループ化](#grouping)で仮想メンバー関数が呼び出される、`grouping`します。
+[グループ化](#grouping)の例を参照してください。この例では、仮想メンバー関数が `grouping` によって呼び出されています。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>戻り値
 
-このプロテクト仮想メンバー関数は、負の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 4 つの要素の各`pattern::field`値を持つことができます。
+このプロテクト仮想メンバー関数は、負の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 @No__t_0 の4つの要素はそれぞれ、次の値を持つことができます。
 
-- `none` 一致する 0 個以上の空白文字か何も生成しません。
+- 0個以上の空白に一致する `none`、または何も生成しません。
 
-- `sign` 一致するか、正または負の記号を生成します。
+- 正または負の符号を一致または生成する `sign` ます。
 
-- `space` 0 個以上の空白文字と一致するか、空白を生成します。
+- 0個以上の空白に一致する `space`、またはスペースを生成します。
 
-- `symbol` 一致するか、通貨記号を生成します。
+- 通貨記号を一致または生成する `symbol` ます。
 
-- `value` 一致するか、通貨値を生成します。
+- 通貨値の一致または生成を `value` します。
 
-通貨出力フィールドのコンポーネントが生成され、通貨入力フィールドのコンポーネントがこれらの要素に表示される順序で一致する`pattern::field`します。 各値`sign`、 `symbol`、 `value`、いずれかと`none`または`space`1 回のみ出現する必要があります。 値`none`最初いない必要があります。 値 space を最初または最後に出現させることは**できません**。 場合`Intl`が true の場合、順序は`symbol`、 `sign`、 `none`、し`value`します。
+通貨出力フィールドのコンポーネントが生成され、通貨入力フィールドのコンポーネントが、これらの要素が `pattern::field` に出現する順序で照合されます。 各値 `sign`、`symbol`、`value`、`none` または `space` は、1回だけ指定する必要があります。 @No__t_0 値を最初に指定することはできません。 値 space を最初または最後に出現させることは**できません**。 @No__t_0 が true の場合、順序は `symbol`、`sign`、`none`、`value` になります。
 
 `moneypunct` のテンプレート バージョン \< **CharType**, **Intl**> は、`{`**money_base::symbol**、**money_base::sign**、**money_base::value**、**money_base::none**`}` を返します。
 
@@ -335,7 +335,7 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>戻り値
 
-このプロテクト仮想メンバー関数は、正の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 (通貨入力フィールドのコンポーネントに一致する方法も決定します。)エンコーディングは [do_neg_format](#do_neg_format) の場合と同じです。
+このプロテクト仮想メンバー関数は、正の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 (また、通貨入力フィールドのコンポーネントを照合する方法も決定します)。エンコーディングは、 [do_neg_format](#do_neg_format)の場合と同じです。
 
 moneypunct のテンプレート バージョン \< **CharType**, **Inputlterator**> は、`{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}` を返します。
 
@@ -373,7 +373,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="example"></a>例
 
-[thousands_sep](#thousands_sep) の例 (仮想メンバー関数が `thousands_sep` で呼び出される) を参照してください。
+[thousands_sep](#thousands_sep) の例 (仮想メンバー関数が `thousands_sep` で呼び出される) をご覧ください。
 
 ## <a name="frac_digits"></a>  moneypunct::frac_digits
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*<br/>
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値を *_Refs*パラメーターとその重要性は。
+*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
 - 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、オブジェクトに区切り記号シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
+この型は、区切り記号のコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

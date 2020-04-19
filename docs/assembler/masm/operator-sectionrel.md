@@ -1,6 +1,6 @@
 ---
 title: SECTIONREL 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator SECTIONREL
 - SECTIONREL
@@ -8,25 +8,26 @@ helpviewer_keywords:
 - SECTIONREL operator
 - operator SECTIONREL
 ms.assetid: db033a9d-b029-48dd-a010-d19e3a9d1af2
-ms.openlocfilehash: 6908d8a0d21e601217b0dea34ae1f2f7f01dd1ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 761452e44d1e860a67601122a886ecdc68dcfe58
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473450"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318996"
 ---
 # <a name="operator-sectionrel"></a>SECTIONREL 演算子
 
-最終的な実行可能ファイルでターゲットを格納しているセクションの基準とした式のセクションの相対オフセットを返します。
+最終的な実行可能ファイルのターゲットを含むセクションを基準とした、式の相対オフセットセクションを返します。
 
 ## <a name="syntax"></a>構文
 
-> SECTIONREL 式
+> **Sectionrel** *式*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-SECTIONREL が COFF オブジェクトの出力でのみ使用できます。
+**Sectionrel**は、COFF オブジェクトの出力でのみ使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

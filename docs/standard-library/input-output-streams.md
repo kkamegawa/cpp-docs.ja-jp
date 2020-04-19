@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d5344ede3a62375c4c8102d1fc39445518eb0c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580228"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455272"
 ---
 # <a name="inputoutput-streams"></a>入出力ストリーム
 
@@ -22,7 +22,7 @@ ms.locfileid: "50580228"
 
 `basic_iostream` からはクラス テンプレート `basic_fstream` が派生され、これ、ファイルとの間で文字データをストリーミングするのに使用されます。
 
-`basic_fstream` の文字に固有の特殊化を提供する typedef もあります。 `fstream`に基づいているファイル I/O ストリームである**char**と`wfstream`、これは、ファイル I/O ストリームに基づいている**wchar_t**します。 詳細については、「[basic_fstream クラス](../standard-library/basic-fstream-class.md)」、「[fstream](../standard-library/basic-fstream-class.md)」、および「[wfstream](../standard-library/basic-fstream-class.md)」を参照してください。 これらの typedef を使用するには、ヘッダー ファイル \<fstream> を含める必要があります。
+`basic_fstream` の文字に固有の特殊化を提供する typedef もあります。 これらは `wfstream`、char に基づくファイル i/o ストリームであり、wchar_t に基づくファイル i/o ストリームであるという形式になっています。  `fstream` 詳細については、「[basic_fstream クラス](../standard-library/basic-fstream-class.md)」、「[fstream](../standard-library/basic-fstream-class.md)」、および「[wfstream](../standard-library/basic-fstream-class.md)」を参照してください。 これらの typedef を使用するには、ヘッダー ファイル \<fstream> を含める必要があります。
 
 > [!NOTE]
 > `basic_fstream` オブジェクトを使用してファイル I/O を実行する場合、基になるバッファーに、個別に指定された読み取りと書き込みの位置が含まれていても、現在の入力位置と現在の出力位置が一緒に関連付けられるため、一部のデータを読み取ると、出力位置が移動します。
@@ -31,8 +31,8 @@ ms.locfileid: "50580228"
 
 ## <a name="see-also"></a>関連項目
 
-[stringstream](../standard-library/basic-stringstream-class.md)<br/>
-[basic_stringstream クラス](../standard-library/basic-stringstream-class.md)<br/>
-[\<sstream>](../standard-library/sstream.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[stringstream](../standard-library/basic-stringstream-class.md)\
+[basic_stringstream クラス](../standard-library/basic-stringstream-class.md)\
+[\<sstream>](../standard-library/sstream.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

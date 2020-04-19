@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用'
+title: ActiveX コントロール コンテナー:ダイアログではないコンテナーでコントロールの使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394872"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX コントロール コンテナー:ダイアログではないコンテナーでコントロールの使用
 
 一部 SDI などのアプリケーションまたは MDI アプリケーションでは、アプリケーションのウィンドウにコントロールを埋め込むにはします。 **作成**、Visual C によって挿入された、ラッパー クラスのメンバー関数は、ダイアログ ボックスを必要としない、コントロールのインスタンスを動的に作成できます。
 
 **作成**メンバー関数は、次のパラメーター。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 (ある場合)、コントロールのテキストまたはキャプション プロパティに表示されるテキストへのポインター。
 
 *dwStyle*<br/>
@@ -55,7 +55,7 @@ Windows のスタイル。 完全な一覧についてを参照してくださ�
 
 1. 追加、`WM_CREATE`メッセージ ハンドラー クラスを`CMyView`します。
 
-1. ハンドラー関数で`CMyView::OnCreate`、コントロールの呼び出しを行う`Create`関数を使用して、**この**親ウィンドウとしてのポインター。
+1. ハンドラー関数で`CMyView::OnCreate`、コントロールの呼び出しを行う`Create`関数を使用して、**this**親ウィンドウとしてのポインター。
 
    [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
@@ -64,4 +64,3 @@ Windows のスタイル。 完全な一覧についてを参照してくださ�
 ## <a name="see-also"></a>関連項目
 
 [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
-

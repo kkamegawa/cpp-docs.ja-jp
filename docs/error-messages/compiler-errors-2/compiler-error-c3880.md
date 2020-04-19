@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3880
 ms.assetid: b0e05d1e-32d0-4034-9246-f37d23573ea9
-ms.openlocfilehash: 60b96a9e704215ec1cbbab63eb77ca5d43ccb627
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54fd65fb4fe23a5c493a4e9ac83a5e44b0596362
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626942"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736673"
 ---
 # <a name="compiler-error-c3880"></a>コンパイラ エラー C3880
 
-'var': リテラル データ メンバーにすることはできません
+' var ': リテラルデータメンバーにすることはできません。
 
-種類、[リテラル](../../windows/literal-cpp-component-extensions.md)属性がある必要があります、または、次の種類のいずれかに、コンパイル時に変換できます。
+[リテラル](../../extensions/literal-cpp-component-extensions.md)属性の型は、次のいずれかの型であるか、コンパイル時に変換可能である必要があります。
 
 - 整数型
 
 - string
 
-- 整数または基になる型を持つ列挙型
+- 整数型または基になる型を持つ列挙型
 
 次の例では、C3880 が生成されます。
 
-```
+```cpp
 // C3880.cpp
 // compile with: /clr /c
 ref struct Y1 {

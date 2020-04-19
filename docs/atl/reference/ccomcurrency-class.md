@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6eb67e04ebb2b9084874a586eafc744df2d3f40
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451156"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739770"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency クラス
 
@@ -38,66 +38,66 @@ class CComCurrency
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::CComCurrency](#ccomcurrency)|`CComCurrency` オブジェクトのコンストラクター。|
+|[CComCurrency:: CComCurrency](#ccomcurrency)|`CComCurrency` オブジェクトのコンストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|`m_currency` データ メンバーのアドレスを返します。|
-|[Ccomcurrency::getfraction](#getfraction)|`CComCurrency` オブジェクトの小数部を返すには、このメソッドを呼び出します。|
+|[CComCurrency:: GetFraction](#getfraction)|`CComCurrency` オブジェクトの小数部を返すには、このメソッドを呼び出します。|
 |[CComCurrency::GetInteger](#getinteger)|`CComCurrency` オブジェクトの整数部を返すには、このメソッドを呼び出します。|
 |[CComCurrency::Round](#round)|`CComCurrency` オブジェクトを最も近い整数値に四捨五入するには、このメソッドを呼び出します。|
-|[CComCurrency::SetFraction](#setfraction)|`CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。|
+|[CComCurrency:: SetFraction](#setfraction)|`CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。|
 |[CComCurrency::SetInteger](#setinteger)|`CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::operator-](#operator_-)|この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。|
-|[CComCurrency::operator! =](#operator_neq)|2 つの `CComCurrency` オブジェクトが等しくないかどうかを比較します。|
-|[CComCurrency::operator *](#operator_star)|この演算子は、`CComCurrency` オブジェクトで乗算を実行するために使用します。|
-|[CComCurrency::operator * =](#operator_star_eq)|この演算子は、`CComCurrency` オブジェクトで乗算を実行し、オブジェクトに結果を代入するために使用します。|
-|[CComCurrency::operator/](#operator_div)|この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。|
-|[CComCurrency::operator/=](#operator_div_eq)|この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。|
-|[CComCurrency::operator +](#operator_add)|この演算子は、`CComCurrency` オブジェクトで加算を実行するために使用します。|
-|[CComCurrency::operator + =](#operator_add_eq)|この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。|
+|[CComCurrency::operator -](#operator_-)|この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。|
+|[CComCurrency:: operator! =](#operator_neq)|2 つの `CComCurrency` オブジェクトが等しくないかどうかを比較します。|
+|[CComCurrency:: operator *](#operator_star)|この演算子は、`CComCurrency` オブジェクトで乗算を実行するために使用します。|
+|[CComCurrency:: operator * =](#operator_star_eq)|この演算子は、`CComCurrency` オブジェクトで乗算を実行し、オブジェクトに結果を代入するために使用します。|
+|[CComCurrency::operator /](#operator_div)|この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。|
+|[CComCurrency::operator /=](#operator_div_eq)|この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。|
+|[CComCurrency:: operator +](#operator_add)|この演算子は、`CComCurrency` オブジェクトで加算を実行するために使用します。|
+|[CComCurrency:: operator + =](#operator_add_eq)|この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。|
 |[CComCurrency::operator <](#operator_lt)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、小さい方を決定します。|
-|[CComCurrency::operator < =](#operator_lt_eq)|この演算子では、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または小さい方を決定します。|
-|[CComCurrency::operator =](#operator_eq)|この演算子は、`CComCurrency` オブジェクトに新しい値を割り当てます。|
-|[CComCurrency::operator =](#operator_-_eq)|この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。|
-|[CComCurrency::operator = =](#operator_eq_eq)|この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。|
+|[CComCurrency:: operator < =](#operator_lt_eq)|この演算子では、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または小さい方を決定します。|
+|[CComCurrency:: operator =](#operator_eq)|この演算子は、`CComCurrency` オブジェクトに新しい値を割り当てます。|
+|[CComCurrency:: operator-=](#operator_-_eq)|この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。|
+|[CComCurrency::operator ==](#operator_eq_eq)|この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。|
 |[CComCurrency::operator >](#operator_gt)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、大きい方を決定します。|
-|[CComCurrency::operator > =](#operator_gt_eq)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または大きい方を決定します。|
-|[CComCurrency::operator 通貨](#operator_currency)|通貨オブジェクトにキャストします。|
+|[CComCurrency::operator >=](#operator_gt_eq)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または大きい方を決定します。|
+|[CComCurrency:: operator CURRENCY](#operator_currency)|CURRENCY オブジェクトをキャストします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::m_currency](#m_currency)|クラスのインスタンスによって作成された通貨変数です。|
+|[CComCurrency:: m_currency](#m_currency)|クラスインスタンスによって作成される通貨変数。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComCurrency` 通貨データ型のラッパーです。 通貨は、10,000 を掛け 2 の補数の 8 バイト整数値として実装されます。 これは、15 桁の整数部と 4 桁の小数部を持つ固定小数点数として表現されます。 通貨データ型は、精度が重要な関連する計算、または固定小数点計算は非常に便利です。
+`CComCurrency`CURRENCY データ型のラッパーです。 通貨は、1万でスケーリングされた8バイト2の補数整数値として実装されます。 これは、15 桁の整数部と 4 桁の小数部を持つ固定小数点数として表現されます。 通貨データ型は、金額を含む計算や、精度が重要な固定小数点数の計算に非常に便利です。
 
-`CComCurrency`ラッパーは、この固定小数点型の算術演算子、代入、および比較の操作を実装します。 固定小数点数の計算中に発生する可能性のある丸め誤差を制御するために、サポートするアプリケーションが選択されています。
+ラッパー `CComCurrency`は、この固定小数点型の算術演算、代入演算、および比較演算を実装します。 固定小数点数の計算中に発生する可能性のある丸め誤差を制御するために、サポートするアプリケーションが選択されています。
 
-`CComCurrency` オブジェクトは、小数点の左側に値を格納する整数部と小数点の右側に値を格納する小数部という 2 つの構成要素を使用した形で、小数点の左側と右側の数値にアクセスできます。 小数部は、-9999 (CY_MIN_FRACTION) から +9999 (CY_MAX_FRACTION) を整数値として内部的に格納されます。 メソッド[ccomcurrency::getfraction](#getfraction)係数 10,000 (CY_SCALE) で拡大された値を返します。
+`CComCurrency` オブジェクトは、小数点の左側に値を格納する整数部と小数点の右側に値を格納する小数部という 2 つの構成要素を使用した形で、小数点の左側と右側の数値にアクセスできます。 小数部分は、-9999 (CY_MIN_FRACTION) ~ + 9999 (CY_MAX_FRACTION) の間の整数値として内部的に格納されます。 [CComCurrency:: GetFraction](#getfraction)メソッドは、係数 1万 (CY_SCALE) でスケーリングされた値を返します。
 
-整数部と小数部を指定するときに、`CComCurrency`オブジェクト、小数部が 0 ~ 9999 の範囲の数に注意してください。 これは、小数点の後の有効桁数に 2 桁のみを使用して金額を表す米ドルなどの通貨を扱う場合に重要です。 最後の 2 桁が表示されていない場合でも考慮する必要があります。
+`CComCurrency`オブジェクトの整数部分と小数部を指定する場合は、小数部分が 0 ~ 9999 の範囲の数値であることに注意してください。 これは、小数点の後の有効桁数に 2 桁のみを使用して金額を表す米ドルなどの通貨を扱う場合に重要です。 最後の 2 桁が表示されていない場合でも考慮する必要があります。
 
 |[値]|考えられる CComCurrency の割り当て|
 |-----------|---------------------------------------|
-|$10.50|CComCurrency(10,5000)*または*CComCurrency(10.50)|
-|$10.05|Ccomcurrency (10,500)*または*CComCurrency(10.05)|
+|$10.50|CComCurrency (10, 5000)*または*CComCurrency (10.50)|
+|$10.05|CComCurrency (10500)*または*CComCurrency (10.05)|
 
-CY_MIN_FRACTION、CY_MAX_FRACTION、CY_SCALE の値は、atlcur.h で定義されます。
+CY_MIN_FRACTION、CY_MAX_FRACTION、および CY_SCALE の値は、atlcur に定義されています。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcur.h
+**ヘッダー:** atlcur .h です。
 
 ##  <a name="ccomcurrency"></a>  CComCurrency::CComCurrency
 
@@ -129,33 +129,33 @@ explicit CComCurrency(LPCSTR szSrc);
 既存の `CComCurrency` オブジェクト。
 
 *cySrc*<br/>
-通貨型の変数を指定します。
+CURRENCY 型の変数。
 
-*bSrc*、*並*、 *fSrc*、 *lSrc*、 *sSrc*、 *ulSrc、usSrc*<br/>
-メンバー変数に指定された初期値`m_currency`します。
+*Bsrc*、 *dsrc*、 *fsrc*、 *Lsrc*、 *sSrc*、 *ulsrc、ussrc*<br/>
+メンバー変数`m_currency`に与えられた初期値。
 
 *cSrc*<br/>
-メンバー変数に指定された初期値を含む文字`m_currency`します。
+メンバー変数`m_currency`に与えられた初期値を格納している文字。
 
-*nInteger*、 *nFraction*<br/>
-整数および通貨の初期値の小数部のコンポーネント。 参照してください、 [CComCurrency](../../atl/reference/ccomcurrency-class.md)の概要。
+*Ninteger*、 *ninteger*<br/>
+初期通貨値の整数部と小数部の要素。 詳細については、「 [CComCurrency](../../atl/reference/ccomcurrency-class.md)の概要」を参照してください。
 
 *pDispSrc*<br/>
 `IDispatch`ポインター。
 
 *varSrc*<br/>
-バリアント型の変数を指定します。 現在のスレッドのロケールを使用して、変換を実行します。
+VARIANT 型の変数。 変換を実行するために、現在のスレッドのロケールが使用されます。
 
 *szSrc*<br/>
-初期値を含む Unicode または ANSI 文字列。 現在のスレッドのロケールを使用して、変換を実行します。
+初期値を格納している Unicode または ANSI 文字列。 変換を実行するために、現在のスレッドのロケールが使用されます。
 
 ### <a name="remarks"></a>Remarks
 
-コンス トラクターの初期値を設定する[CComCurrency::m_currency](#m_currency)、広範囲のデータ型、整数、文字列、浮動小数点数、通貨型の変数、およびその他を含むを受け入れると`CComCurrency`オブジェクト。 値が指定されていない場合`m_currency`は 0 に設定します。
+コンストラクターは[CComCurrency:: m_currency](#m_currency)の初期値を設定し、整数、文字列、浮動小数点数、通貨変数、その他の`CComCurrency`オブジェクトなど、さまざまなデータ型を受け入れます。 値が指定されて`m_currency`いない場合、は0に設定されます。
 
-オーバーフロー、空の例外の仕様のないコンス トラクターなど、エラーが発生した場合 (**throw()**) 呼び出す`AtlThrow`HRESULT エラーを説明するとします。
+オーバーフローなどのエラーが発生した場合、コンストラクターには、エラーを説明する HRESULT を使用して、空`AtlThrow`の例外指定 (**throw ()** ) 呼び出しが不足しています。
 
-値を代入する値または浮動小数点の double 値を使用している場合ことに注意`CComCurrency(10.50)`と等価`CComCurrency(10,5000)`なく`CComCurrency(10,50)`します。
+浮動小数点値または double 値を使用して値を代入`CComCurrency(10.50)`する場合、 `CComCurrency(10,5000)`はと`CComCurrency(10,50)`等価であり、ではないことに注意してください。
 
 ##  <a name="getcurrencyptr"></a>  CComCurrency::GetCurrencyPtr
 
@@ -167,11 +167,11 @@ CURRENCY* GetCurrencyPtr() throw();
 
 ### <a name="return-value"></a>戻り値
 
-アドレスを返して、`m_currency`データ メンバー
+`m_currency`データメンバーのアドレスを返します。
 
-##  <a name="getfraction"></a>  Ccomcurrency::getfraction
+##  <a name="getfraction"></a>  CComCurrency::GetFraction
 
-小数部を返すには、このメソッドを呼び出して、`CComCurrency`オブジェクト。
+`CComCurrency`オブジェクトの小数部分を返すには、このメソッドを呼び出します。
 
 ```
 SHORT GetFraction() const;
@@ -179,11 +179,11 @@ SHORT GetFraction() const;
 
 ### <a name="return-value"></a>戻り値
 
-小数部を返します、`m_currency`データ メンバー。
+`m_currency`データメンバーの小数部分を返します。
 
 ### <a name="remarks"></a>Remarks
 
-小数部は、-9999 (CY_MIN_FRACTION) と符号の 4 桁の整数値です。 `GetFraction` この値が 10000 (CY_SCALE) を返します。 CY_MIN_FRACTION、CY_MAX_FRACTION、CY_SCALE の値は、atlcur.h で定義されます。
+小数部分は、-9999 (CY_MIN_FRACTION) から + 9999 (CY_MAX_FRACTION) までの4桁の整数値です。 `GetFraction`1万 (CY_SCALE) によってスケーリングされたこの値を返します。 CY_MIN_FRACTION、CY_MAX_FRACTION、および CY_SCALE の値は、atlcur .h で定義されています。
 
 ### <a name="example"></a>例
 
@@ -191,7 +191,7 @@ SHORT GetFraction() const;
 
 ##  <a name="getinteger"></a>  CComCurrency::GetInteger
 
-整数部を取得するには、このメソッドを呼び出し、`CComCurrency`オブジェクト。
+`CComCurrency`オブジェクトの整数部分を取得するには、このメソッドを呼び出します。
 
 ```
 LONGLONG GetInteger() const;
@@ -199,7 +199,7 @@ LONGLONG GetInteger() const;
 
 ### <a name="return-value"></a>戻り値
 
-整数部分を返します、`m_currency`データ メンバー。
+`m_currency`データメンバーの整数部分を返します。
 
 ### <a name="example"></a>例
 
@@ -207,7 +207,7 @@ LONGLONG GetInteger() const;
 
 ##  <a name="m_currency"></a>  CComCurrency::m_currency
 
-通貨データ メンバー。
+通貨データメンバー。
 
 ```
 CURRENCY m_currency;
@@ -215,9 +215,9 @@ CURRENCY m_currency;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバーは、このクラスのメソッドがアクセスおよび操作の通貨を保持します。
+このメンバーは、このクラスのメソッドによってアクセスおよび操作される通貨を保持します。
 
-##  <a name="operator_-"></a>  CComCurrency::operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。
 
@@ -233,15 +233,15 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="return-value"></a>戻り値
 
-返します、`CComCurrency`減算の結果を表すオブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+減算の結果を表すオブジェクトを返します。`CComCurrency` オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]
 
-##  <a name="operator_neq"></a>  CComCurrency::operator! =
+##  <a name="operator_neq"></a>CComCurrency:: operator! =
 
-この演算子は、2 つの非等値オブジェクトを比較します。
+この演算子は、2つのオブジェクトが等しくないかどうかを比較します。
 
 ```
 bool operator!= (const CComCurrency& cur) const;
@@ -254,13 +254,13 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="return-value"></a>戻り値
 
-比較対象となる項目が等しくない場合は TRUE を返します、`CComCurrency`オブジェクト。 それ以外の場合、FALSE。
+比較対象の項目が`CComCurrency`オブジェクトと等しくない場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#56](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]
 
-##  <a name="operator_star"></a>  CComCurrency::operator *
+##  <a name="operator_star"></a>CComCurrency:: operator *
 
 この演算子は、`CComCurrency` オブジェクトで乗算を実行するために使用します。
 
@@ -275,11 +275,11 @@ CComCurrency operator*(const CComCurrency& cur) const;
 乗数。
 
 *cur*<br/>
-`CComCurrency`乗数として使用されるオブジェクト。
+乗数として使用されるオブジェクト。`CComCurrency`
 
 ### <a name="return-value"></a>戻り値
 
-返します、`CComCurrency`乗算の結果を表すオブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+乗算の結果を表すオブジェクトを返します。`CComCurrency` オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
@@ -300,17 +300,17 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 乗数。
 
 *cur*<br/>
-`CComCurrency`乗数として使用されるオブジェクト。
+乗数として使用されるオブジェクト。`CComCurrency`
 
 ### <a name="return-value"></a>戻り値
 
-更新された返します`CComCurrency`オブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+更新さ`CComCurrency`れたオブジェクトを返します。 オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]
 
-##  <a name="operator_div"></a>  CComCurrency::operator/
+##  <a name="operator_div"></a>  CComCurrency::operator /
 
 この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。
 
@@ -325,13 +325,13 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="return-value"></a>戻り値
 
-返します、`CComCurrency`除算の結果を表すオブジェクト。 除数が 0 の場合は、アサーション エラーが発生します。
+除算の結果を表すオブジェクトを返します。`CComCurrency` 除数が0の場合、アサートエラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  CComCurrency::operator/=
+##  <a name="operator_div_eq"></a>CComCurrency:: operator/=
 
 この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -346,7 +346,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="return-value"></a>戻り値
 
-更新された返します`CComCurrency`オブジェクト。 除数が 0 の場合は、アサーション エラーが発生します。
+更新さ`CComCurrency`れたオブジェクトを返します。 除数が0の場合、アサートエラーが発生します。
 
 ### <a name="example"></a>例
 
@@ -363,17 +363,17 @@ CComCurrency operator+(const CComCurrency& cur) const;
 ### <a name="parameters"></a>パラメーター
 
 *cur*<br/>
-`CComCurrency`元のオブジェクトに追加するオブジェクト。
+元のオブジェクトに追加するオブジェクト。`CComCurrency`
 
 ### <a name="return-value"></a>戻り値
 
-返します、`CComCurrency`加算の結果を表すオブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+加算の結果を表すオブジェクトを返します。`CComCurrency` オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]
 
-##  <a name="operator_add_eq"></a>  CComCurrency::operator + =
+##  <a name="operator_add_eq"></a>CComCurrency:: operator + =
 
 この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。
 
@@ -388,7 +388,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="return-value"></a>戻り値
 
-更新された返します`CComCurrency`オブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+更新さ`CComCurrency`れたオブジェクトを返します。 オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
@@ -409,7 +409,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初のオブジェクトが小さい場合は TRUE を返します 2 つ目の FALSE よりそれ以外の場合。
+最初のオブジェクトが2番目のオブジェクトより小さい場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
@@ -430,7 +430,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初のオブジェクトが小さい場合、2 番目以下 FALSE それ以外の場合は、TRUE を返します。
+最初のオブジェクトが2番目のオブジェクト以下の場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
@@ -460,20 +460,20 @@ const CComCurrency& operator= (DECIMAL dSrc);
 `CComCurrency` オブジェクト。
 
 *cySrc*<br/>
-通貨型の変数を指定します。
+CURRENCY 型の変数。
 
-*sSrc*、 *fSrc*、 *lSrc*、 *bSrc*、 *usSrc*、*並*、 *cSrc*、 *ulSrc*、*並*<br/>
-代入する数値の値、`CComCurrency`オブジェクト。
+*sSrc*、 *fsrc*、 *lsrc*、 *bsrc*、 *ussrc*、 *dsrc*、 *csrc*、 *ulsrc*、 *dsrc*<br/>
+`CComCurrency`オブジェクトに代入する数値。
 
 ### <a name="return-value"></a>戻り値
 
-更新された返します`CComCurrency`オブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+更新さ`CComCurrency`れたオブジェクトを返します。 オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  CComCurrency::operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -488,13 +488,13 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="return-value"></a>戻り値
 
-更新された返します`CComCurrency`オブジェクト。 この演算子を呼び出して、オーバーフローなど、エラーが発生した場合`AtlThrow`HRESULT エラーを説明するとします。
+更新さ`CComCurrency`れたオブジェクトを返します。 オーバーフローなどのエラーが発生した場合、この演算子は、エラー `AtlThrow`を説明する HRESULT を使用してを呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CComCurrency::operator = =
+##  <a name="operator_eq_eq"></a>  CComCurrency::operator ==
 
 この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。
 
@@ -505,11 +505,11 @@ bool operator== (const CComCurrency& cur) const;
 ### <a name="parameters"></a>パラメーター
 
 *cur*<br/>
-`CComCurrency`と比較するオブジェクト。
+比較`CComCurrency`するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが等しい場合は TRUE を返します (つまり、`m_currency`データ メンバー、両方の整数と小数部から、両方のオブジェクトが同じ値を持つ)、FALSE それ以外の場合。
+オブジェクトが等しい場合 ( `m_currency`両方のオブジェクトの整数と小数の両方に同じ値が設定されている場合) は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
@@ -530,7 +530,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初のオブジェクトがそれ以外の場合、2 番目の FALSE より大きい場合に TRUE を返します。
+最初のオブジェクトが2番目のオブジェクトより大きい場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
@@ -551,15 +551,15 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初のオブジェクトより大きいまたは 2 番目の FALSE をそれ以外の場合は TRUE を返します。
+最初のオブジェクトが2番目のオブジェクト以上の場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]
 
-##  <a name="operator_currency"></a>  CComCurrency::operator 通貨
+##  <a name="operator_currency"></a>CComCurrency:: operator CURRENCY
 
-これらの演算子を使用して、キャスト、`CComCurrency`を通貨データ型のオブジェクト。
+これらの演算子は、オブジェクトを`CComCurrency` CURRENCY データ型にキャストするために使用されます。
 
 ```
 operator CURRENCY&() throw();
@@ -568,7 +568,7 @@ operator const CURRENCY&() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-通貨オブジェクトへの参照を返します。
+CURRENCY オブジェクトへの参照を返します。
 
 ### <a name="example"></a>例
 
@@ -576,7 +576,7 @@ operator const CURRENCY&() const throw();
 
 ##  <a name="round"></a>  CComCurrency::Round
 
-通貨の指定された数の小数点以下桁数に丸めるには、このメソッドを呼び出します。
+このメソッドを呼び出して、指定した小数点以下の桁数に通貨を丸めます。
 
 ```
 HRESULT Roundint nDecimals);
@@ -585,17 +585,17 @@ HRESULT Roundint nDecimals);
 ### <a name="parameters"></a>パラメーター
 
 *nDecimals*<br/>
-桁数を`m_currency`0 ~ 4 の範囲で、丸められます。
+`m_currency`が丸められる桁数。 0 ~ 4 の範囲で丸められます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#52](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]
 
-##  <a name="setfraction"></a>  CComCurrency::SetFraction
+##  <a name="setfraction"></a>CComCurrency:: SetFraction
 
 `CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。
 
@@ -606,11 +606,11 @@ HRESULT SetFraction(SHORT nFraction);
 ### <a name="parameters"></a>パラメーター
 
 *nFraction*<br/>
-小数部に割り当てられる値、`m_currency`データ メンバー。 小数部の署名をする必要があります、整数コンポーネントと同じで、値は、符号を-9999 (CY_MIN_FRACTION) の範囲内で指定する必要があります。
+`m_currency`データメンバーの小数部分に代入される値。 小数部分の符号は整数部分と同じである必要があり、値は 9999 (CY_MIN_FRACTION) ~ + 9999 (CY_MAX_FRACTION) の範囲内である必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="example"></a>例
 
@@ -626,14 +626,14 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>パラメーター
 
-*nInteger*<br/>
-整数部に割り当てられる値、`m_currency`データ メンバー。 整数部の符号は、既存の小数部の署名と一致する必要があります。
+*n 整数*<br/>
+`m_currency`データメンバーの整数部分に代入される値。 整数部分の符号は、既存の小数部分の符号と一致している必要があります。
 
-*nInteger* CY_MAX_INTEGER 包括的に CY_MIN_INTEGER の範囲で指定する必要があります。 これらの値は、atlcur.h で定義されます。
+*Ninteger*は CY_MIN_INTEGER CY_MAX_INTEGER を含む範囲内である必要があります。 これらの値は、atlcur. h で定義されています。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
+成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="example"></a>例
 
@@ -642,5 +642,5 @@ HRESULT SetInteger(LONGLONG nInteger);
 ## <a name="see-also"></a>関連項目
 
 [COleCurrency クラス](../../mfc/reference/colecurrency-class.md)<br/>
-[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
+[貨](/windows/win32/api/wtypes/ns-wtypes-cy~r1)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

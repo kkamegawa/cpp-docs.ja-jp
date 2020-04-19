@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85dec6b003330a3560ae1dcc5c41b5e6d49f765e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495928"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142804"
 ---
 # <a name="synchronization-data-structures"></a>同期データ構造
 
-同時実行ランタイムでは、複数のスレッドから共有データへのアクセスを同期できるいくつかのデータ構造を提供します。 これらのデータ構造は、変更頻度の低いデータを共有している場合に便利です。 同期オブジェクトをクリティカル セクションなどは、他のスレッドが共有リソースが利用されるまで待機します。 そのため、頻繁に使用されるデータへのアクセスを同期するようなオブジェクトを使用する場合、アプリケーションでスケーラビリティを失うことができます。 [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスは、複数のスレッドや同期を必要としないタスクでリソースを共有することができます。 詳細については、`combinable`クラスを参照してください[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)します。
+同時実行ランタイムには、複数のスレッドからの共有データへのアクセスを同期できるデータ構造がいくつか用意されています。 これらのデータ構造は、変更する共有データがあまり使用されない場合に役立ちます。 同期オブジェクト (たとえば、クリティカルセクション) は、共有リソースが使用可能になるまで他のスレッドを待機させます。 このため、このようなオブジェクトを使用して頻繁に使用されるデータへのアクセスを同期する場合、アプリケーションのスケーラビリティが失われる可能性があります。 [並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)は、 [concurrency:: 組み合わせ](../../parallel/concrt/reference/combinable-class.md)可能クラスを提供します。これにより、同期を必要とすることなく、複数のスレッドまたはタスク間でリソースを共有できます。 `combinable` クラスの詳細については、「[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
-##  <a name="top"></a> セクション
+## <a name="top"></a> セクション
 
-このトピックでは、詳細で次の非同期メッセージ ブロックの型について説明します。
+このトピックでは、次の非同期メッセージブロックの種類について詳しく説明します。
 
 - [critical_section](#critical_section)
 
@@ -27,92 +27,91 @@ ms.locfileid: "50495928"
 
 - [event](#event)
 
-##  <a name="critical_section"></a> critical_section
+## <a name="critical_section"></a>critical_section
 
-[Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)クラスにプリエンプトではなく、その他のタスクを生成する協調相互排他オブジェクトを表します。 クリティカル セクションは、複数のスレッドは、排他的読み取りと共有データへの書き込みアクセスが必要な場合に便利です。
+[Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)クラスは、他のタスクを実行するのではなく、その他のタスクを生成する協調相互排他オブジェクトを表します。 重要なセクションは、複数のスレッドが共有データに対する排他的読み取りと書き込みアクセスを必要とする場合に役立ちます。
 
-`critical_section`クラスは、再入不可能な。 [Concurrency::critical_section::lock](reference/critical-section-class.md#lock)メソッド型の例外をスロー [concurrency::improper_lock](../../parallel/concrt/reference/improper-lock-class.md)既にロックを所有するスレッドによって呼び出された場合。
+`critical_section` クラスは再入可能ではありません。 [Concurrency:: critical_section:: lock](reference/critical-section-class.md#lock)メソッドは、既にロックを所有しているスレッドによって呼び出された場合に、 [concurrency:: improper_lock](../../parallel/concrt/reference/improper-lock-class.md)型の例外をスローします。
 
 ### <a name="methods-and-features"></a>メソッドと機能
 
-次の表に、重要なメソッドで定義されている、`critical_section`クラス。
+次の表は、`critical_section` クラスによって定義される重要なメソッドを示しています。
 
-|メソッド|説明|
+|方法|説明|
 |------------|-----------------|
-|[lock](reference/critical-section-class.md#lock)|クリティカル セクションを取得します。 呼び出し元のコンテキスト、ロックを取得するまでをブロックします。|
-|[try_lock](reference/critical-section-class.md#try_lock)|クリティカル セクションの取得を試みますが、ブロックしません。|
-|[unlock](reference/critical-section-class.md#unlock)|クリティカル セクションを解放します。|
+|[lock](reference/critical-section-class.md#lock)|クリティカルセクションを取得します。 呼び出しコンテキストは、ロックが取得されるまでブロックされます。|
+|[try_lock](reference/critical-section-class.md#try_lock)|クリティカルセクションを取得しようとしますが、ブロックしません。|
+|[unlock](reference/critical-section-class.md#unlock)|クリティカルセクションを解放します。|
 
 [[トップ](#top)]
 
-##  <a name="reader_writer_lock"></a> reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-[:Reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)クラスには、共有データへのスレッド セーフの読み取り/書き込み操作が用意されています。 読み取り/書き込みロックを使用して、複数のスレッドが共有リソースへの同時実行の読み取りアクセスが必要ですが、その共有リソースに書き込むことはほとんどありません。 このクラスは、いつでもオブジェクトを 1 つのスレッドの書き込みアクセスを示します。
+[Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)クラスは、共有データに対してスレッドセーフな読み取り/書き込み操作を提供します。 複数のスレッドが共有リソースへの同時読み取りアクセスを必要とするが、その共有リソースへの書き込みはほとんど行わない場合は、リーダー/ライターロックを使用します。 このクラスは、オブジェクトに対して常に1つのスレッド書き込みアクセスを提供します。
 
-`reader_writer_lock`クラスが実行できるよりも優れています、`critical_section`クラスのため、`critical_section`オブジェクトは、同時実行の読み取りアクセスを禁止の共有リソースへの排他アクセスを取得します。
+`reader_writer_lock` クラスは、`critical_section` クラスよりもパフォーマンスが向上します。これは、`critical_section` オブジェクトが共有リソースへの排他アクセスを取得し、同時読み取りアクセスができないためです。
 
-ように、`critical_section`クラス、`reader_writer_lock`クラスにプリエンプトではなく、その他のタスクを生成する協調相互排他オブジェクトを表します。
+`critical_section` クラスと同様に、`reader_writer_lock` クラスは協調相互排他オブジェクトを表します。このオブジェクトは、その他のタスクを優先するのではなく、その他のタスクに対して生成します。
 
-共有リソースを記述する必要のあるスレッドでは、リーダー/ライター ロックを取得するときに、ライター ロックを解放するまでに、リソースにアクセスする必要がありますも他のスレッドがブロックされます。 `reader_writer_lock`クラスの例に示します、*書き込み優先*ロックで、ロックで待機しているリーダーのブロックを解除する前に待機しているライターのブロックを解除します。
+共有リソースへの書き込みを必要とするスレッドがリーダー/ライターロックを取得すると、そのリソースにもアクセスする必要がある他のスレッドは、ライターがロックを解放するまでブロックされます。 `reader_writer_lock` クラスは*書き込み設定*ロックの例です。これは、待機中のリーダーのブロックを解除する前に、待機中のライターのブロックを解除するロックです。
 
-ように、`critical_section`クラス、`reader_writer_lock`クラスは、再入不可能な。 [Concurrency::reader_writer_lock::lock](reference/reader-writer-lock-class.md#lock)と[concurrency::reader_writer_lock::lock_read](reference/reader-writer-lock-class.md#lock_read)メソッド型の例外をスローする`improper_lock`既に所有しているスレッドによって呼び出されると、ロックします。
+`critical_section` クラスと同様に、`reader_writer_lock` クラスは再入不可です。 [Concurrency:: reader_writer_lock:: lock](reference/reader-writer-lock-class.md#lock)メソッドと[concurrency:: reader_writer_lock:: lock_read](reference/reader-writer-lock-class.md#lock_read)メソッドは、既にロックを所有しているスレッドによって呼び出された場合に、型 `improper_lock` の例外をスローします。
 
 > [!NOTE]
->  `reader_writer_lock`クラスは、再入不可能な場合、リーダー/ライター ロックに読み取り専用ロックをアップグレードまたは読み取り専用ロックへの読み取り/書き込みロックをダウン グレードすることはできません。 これらの操作のいずれかを実行するには、未定義の動作が生成されます。
+> `reader_writer_lock` クラスは再入可能でないため、読み取り専用ロックをリーダー/ライターロックにアップグレードしたり、リーダー/ライターロックを読み取り専用ロックにダウングレードしたりすることはできません。 これらの操作のいずれかを実行すると、未定義の動作が発生します。
 
 ### <a name="methods-and-features"></a>メソッドと機能
 
-次の表に、重要なメソッドで定義されている、`reader_writer_lock`クラス。
+次の表は、`reader_writer_lock` クラスによって定義される重要なメソッドを示しています。
 
-|メソッド|説明|
+|方法|説明|
 |------------|-----------------|
-|[lock](reference/reader-writer-lock-class.md#lock)|ロックへの読み取り/書き込みアクセスを取得します。|
-|[try_lock](reference/reader-writer-lock-class.md#try_lock)|ロックへの読み取り/書き込みアクセスの取得を試みますが、ブロックされません。|
+|[lock](reference/reader-writer-lock-class.md#lock)|ロックへの読み取り/書き込みアクセス権を取得します。|
+|[try_lock](reference/reader-writer-lock-class.md#try_lock)|ロックへの読み取り/書き込みアクセスを取得しようとしますが、ブロックしません。|
 |[lock_read](reference/reader-writer-lock-class.md#lock_read)|ロックへの読み取り専用アクセスを取得します。|
-|[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|ロックへの読み取り専用アクセスの取得を試みますが、ブロックされません。|
+|[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|ロックへの読み取り専用アクセスを取得しようとしますが、ブロックしません。|
 |[unlock](reference/reader-writer-lock-class.md#unlock)|ロックを解放します。|
 
 [[トップ](#top)]
 
-##  <a name="scoped_lock"></a> scoped_lock と scoped_lock_read
+## <a name="scoped_lock"></a>scoped_lock と scoped_lock_read
 
-`critical_section`と`reader_writer_lock`クラスは、相互排他オブジェクトを操作する方法を簡略化する入れ子になったヘルパー クラスを提供します。 これらのヘルパー クラスと呼ばれます*スコープ ロック*します。
+`critical_section` クラスと `reader_writer_lock` クラスには、相互排他オブジェクトの操作方法を簡略化する、入れ子になったヘルパークラスが用意されています。 これらのヘルパークラスは、*スコープロック*と呼ばれます。
 
-`critical_section`クラスが含まれています、 [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class)クラス。 コンス トラクターは、提供されたアクセスを取得`critical_section`オブジェクト。 そのオブジェクトへのアクセス権をデストラクター解放します。 `reader_writer_lock`クラスが含まれています、 [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)クラスに似た`critical_section::scoped_lock`、提供された書き込みのアクセスを管理する点を除いて、`reader_writer_lock`オブジェクト。 `reader_writer_lock`クラスも含まれています、 [concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class)クラス。 このクラスは、指定されたへの読み取りアクセスを管理`reader_writer_lock`オブジェクト。
+`critical_section` クラスには、 [concurrency:: critical_section:: scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class)クラスが含まれています。 コンストラクターは、指定された `critical_section` オブジェクトへのアクセスを取得します。デストラクターは、そのオブジェクトへのアクセスを解放します。 `reader_writer_lock` クラスには、指定された `reader_writer_lock` オブジェクトへの書き込みアクセスを管理することを除けば、`critical_section::scoped_lock`に似た[concurrency:: reader_writer_lock:: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)クラスが含まれています。 `reader_writer_lock` クラスには、 [concurrency:: reader_writer_lock:: scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class)クラスも含まれています。 このクラスは、指定された `reader_writer_lock` オブジェクトへの読み取りアクセスを管理します。
 
-スコープのロックが使用しているときに、いくつかの利点を提供`critical_section`と`reader_writer_lock`オブジェクトを手動でします。 通常、スタック上のスコープのロックを割り当てます。 スコープのロックを解放相互排除して、そのオブジェクトへのアクセスに自動的に破棄されるときにそのため、操作を行いますない手動でロックを解除する基になるオブジェクト。 これは、関数が複数含まれている場合に役立ちます`return`ステートメント。 スコープのロックは例外セーフ コードを記述できます。 ときに、`throw`ステートメントによってスタック アンワインドが、アクティブなスコープ ロックのデストラクターが呼び出されると、および相互排他オブジェクトが常に正しくにリリースされるためです。
+スコープが指定されたロックは、`critical_section` と `reader_writer_lock` オブジェクトを手動で操作する場合に、いくつかの利点があります。 通常は、スコープが指定されたロックをスタックに割り当てます。 スコープが指定されたロックは、その相互排他オブジェクトが破棄されると自動的に解放されます。そのため、基になるオブジェクトのロックを手動で解除する必要はありません。 これは、関数に複数の `return` ステートメントが含まれている場合に便利です。 スコープが指定したロックは、例外セーフなコードを記述するのにも役立ちます。 `throw` ステートメントによってスタックがアンワインドされると、アクティブなスコープを持つロックのデストラクターが呼び出されます。そのため、相互排他オブジェクトは常に正しく解放されます。
 
 > [!NOTE]
->  使用すると、 `critical_section::scoped_lock`、 `reader_writer_lock::scoped_lock`、および`reader_writer_lock::scoped_lock_read`クラスが基になる相互排他オブジェクトへのアクセスを手動で解放しません。 無効な状態でこのランタイムを配置できます。
+> `critical_section::scoped_lock`、`reader_writer_lock::scoped_lock`、および `reader_writer_lock::scoped_lock_read` クラスを使用する場合は、基になる相互排他オブジェクトへのアクセスを手動で解放しないでください。 これにより、ランタイムを無効な状態にすることができます。
 
-##  <a name="event"></a> イベント
+## <a name="event"></a>場合
 
-[Concurrency::event](../../parallel/concrt/reference/event-class.md)クラス状態をシグナル状態になるか、非シグナルは、同期オブジェクトを表します。 重要なセクションでは、共有データへのアクセスを保護するが目的であるなどの同期オブジェクトとは異なりは、イベントは、実行の流れを同期します。
+[Concurrency:: event](../../parallel/concrt/reference/event-class.md)クラスは、状態がシグナルまたは非シグナルである同期オブジェクトを表します。 重要なセクションなど、共有データへのアクセスを保護することが目的である同期オブジェクトとは異なり、イベントは実行のフローを同期します。
 
-`event`クラスは、1 つのタスクが別のタスクの作業を完了したときに便利です。 たとえば、1 つのタスク可能性があります通知別のタスクのネットワーク接続またはファイルにデータを読み取られています。
+`event` クラスは、あるタスクが別のタスクに対して作業を完了したときに便利です。 たとえば、あるタスクが、ネットワーク接続またはファイルからデータを読み取ることを別のタスクに通知する場合があります。
 
 ### <a name="methods-and-features"></a>メソッドと機能
 
-次の表にはいくつかの重要なメソッドで定義されている、`event`クラス。
+次の表は、`event` クラスによって定義されるいくつかの重要なメソッドを示しています。
 
-|メソッド|説明|
+|方法|説明|
 |------------|-----------------|
-|[wait](reference/event-class.md#wait)|イベントがシグナル状態になるのを待機します。|
+|[待機](reference/event-class.md#wait)|イベントがシグナル状態になるのを待機します。|
 |[set](reference/event-class.md#set)|イベントをシグナル状態に設定します。|
-|[reset](reference/event-class.md#reset)|イベントを非シグナル状態に設定します。|
+|[reset](reference/event-class.md#reset)|イベントをシグナル状態以外の状態に設定します。|
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|複数のイベントがシグナル状態になるのを待機します。|
 
 ### <a name="example"></a>例
 
-使用する方法を示す例については、`event`クラスを参照してください[Windows API への同期データ構造の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)します。
+`event` クラスの使用方法を示す例については、「[同期データ構造と WINDOWS API の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)」を参照してください。
 
 [[トップ](#top)]
 
-## <a name="related-sections"></a>関連項目
+## <a name="related-sections"></a>関連セクション
 
 [同期データ構造と Windows API の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
-Windows API が提供する同期データ構造の動作を比較します。
+同期データ構造の動作を、Windows API によって提供されるものと比較します。
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
 並列プログラミングを容易にするコンカレンシー ランタイムについて説明します。また、関連トピックへのリンクを示します。
-

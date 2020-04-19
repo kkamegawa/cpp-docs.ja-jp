@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WinMain method [MFC]
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
-ms.openlocfilehash: c1fc6628b2b5e8e6fa657f4cf99be2256377a5b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c459b909a60fff2b7aeded9ea8d79a39ced24e4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309084"
 ---
 # <a name="registering-window-classes"></a>ウィンドウ クラスの登録
 
@@ -38,4 +38,3 @@ MFC では、なし、Windows の従来のプログラムでの「ウィンド�
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウの作成](../mfc/creating-windows.md)
-

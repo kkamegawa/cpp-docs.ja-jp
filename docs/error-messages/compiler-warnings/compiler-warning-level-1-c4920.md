@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4920
 ms.assetid: 1e501f2e-93c1-4d27-a4fa-54fc86271ae7
-ms.openlocfilehash: cd501cf0e3b434523623276027056c93c77fc278
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7cbb29c8dae24a87fcd5a32b4cf46d7a8ac4c790
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580690"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050243"
 ---
 # <a name="compiler-warning-level-1-c4920"></a>コンパイラの警告 (レベル 1) C4920
 
@@ -36,7 +36,7 @@ library MyLib
 
 次の例では C4920 が生成されます。
 
-```
+```cpp
 // C4920.cpp
 // compile with: /W1
 #import "t4920.tlb"   // C4920

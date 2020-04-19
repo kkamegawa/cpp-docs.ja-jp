@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552582"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754161"
 ---
 # <a name="compiler-error-c3265"></a>コンパイラ エラー C3265
 
-マネージ '管理対象の構造' で、アンマネージ 'アンマネージ コンストラクト' を宣言することはできません。
+マネージド ' マネージドコンストラクト ' はアンマネージドコンストラクト ' で宣言できません
 
-非管理対象のコンテキストでは、マネージ オブジェクトを含めることはできません。
+マネージオブジェクトをアンマネージコンテキストに含めることはできません。
 
-次の例では、C3265 再現されます。
+次のサンプルでは、C3265 を再現します。
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

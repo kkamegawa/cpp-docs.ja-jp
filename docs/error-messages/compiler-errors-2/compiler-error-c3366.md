@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3366
 ms.assetid: efc55bcf-c16d-43c1-a36f-87a6165fa2a8
-ms.openlocfilehash: 4d1cd510cda9957ced1d9dd5fd8fea267f39220d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5173b1c0df7de6a4e8d9993e680b961a82bb10a7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507771"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738467"
 ---
 # <a name="compiler-error-c3366"></a>コンパイラ エラー C3366
 
-'variable': 静的データ メンバーの管理または WinRTtypes をクラス定義内で定義する必要があります
+' variable ': マネージ型または WinRTtypes の静的データメンバーは、クラス定義内で定義されなければなりません
 
 WinRT または .NET のクラスまたはインターフェイスの静的メンバーをそのクラスまたはインターフェイスの定義外で参照しようとしました。
 
@@ -23,7 +23,7 @@ WinRT または .NET のクラスまたはインターフェイスの静的メ�
 
 たとえば、次の例では、C3366 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C3366.cpp
 // compile with: /clr /c
 ref class X {

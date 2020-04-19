@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
 ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359957"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>コンパイラの警告 (レベル 2 および 4) C4200
 
@@ -19,7 +19,7 @@ ms.locfileid: "50519809"
 
 構造体または共用体がサイズが 0 の配列が含まれていることを示します。
 
-サイズが 0 の配列の宣言は、Microsoft 拡張機能です。 これにより、C ファイルをコンパイルした場合はレベル 2 の警告、C++ ファイルをコンパイルした場合はレベル 4 の警告が発生します。 C++ のコンパイルでも、"UDT にサイズが 0 の配列が含まれているときに、copy-ctor または copy-assignment オペレーターを生成することはできません。" という警告が発生します。 次の例では警告 C4200 が生成されます。
+サイズが 0 の配列の宣言は、Microsoft 拡張機能です。 これにより、C ファイルをコンパイルした場合はレベル 2 の警告、C++ ファイルをコンパイルした場合はレベル 4 の警告が発生します。 C++コンパイルでは、この警告も提供します。「演算子を生成できません、copy-ctor または copy-assignment UDT にサイズが 0 の配列が含まれている場合。」 次の例では警告 C4200 が生成されます。
 
 ```cpp
 // C4200.cpp

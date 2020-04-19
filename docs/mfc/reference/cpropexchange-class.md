@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9ad7c363f2580200af20baeb0acd7a93c1f603b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560374"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871772"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange クラス
 
@@ -43,32 +43,32 @@ class AFX_NOVTABLE CPropExchange
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|バイナリ ラージ オブジェクト (BLOB) のプロパティを交換します。|
-|[CPropExchange::ExchangeFontProp](#exchangefontprop)|フォントのプロパティを交換します。|
-|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|コントロールとファイルのプロパティを交換します。|
-|[CPropExchange::ExchangeProp](#exchangeprop)|任意の組み込み型のプロパティを交換します。|
-|[CPropExchange::ExchangeVersion](#exchangeversion)|OLE コントロールのバージョン番号を交換します。|
-|[CPropExchange::GetVersion](#getversion)|OLE コントロールのバージョン番号を取得します。|
-|[CPropExchange::IsAsynchronous](#isasynchronous)|プロパティの交換を非同期的に行うかどうかを決定します。|
-|[CPropExchange::IsLoading](#isloading)|プロパティがされているかどうかを示す、コントロールに読み込まれるまたはから保存します。|
+|[CPropExchange:: ExchangeBlobProp](#exchangeblobprop)|バイナリラージオブジェクト (BLOB) プロパティを交換します。|
+|[CPropExchange::ExchangeFontProp](#exchangefontprop)|フォントプロパティを交換します。|
+|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|コントロールとファイルの間でプロパティを交換します。|
+|[CPropExchange:: ExchangeProp](#exchangeprop)|任意の組み込み型のプロパティを交換します。|
+|[CPropExchange:: ExchangeVersion](#exchangeversion)|OLE コントロールのバージョン番号を交換します。|
+|[CPropExchange:: GetVersion](#getversion)|OLE コントロールのバージョン番号を取得します。|
+|[CPropExchange:: IsAsynchronous](#isasynchronous)|プロパティ交換を非同期的に実行するかどうかを決定します。|
+|[CPropExchange:: IsLoading](#isloading)|プロパティがコントロールに読み込まれるか、またはプロパティから保存されるかを示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CPropExchange` 基本クラスはありません。
+`CPropExchange` には基底クラスがありません。
 
-コンテキストとプロパティの exchange の方向を確立します。
+プロパティ交換のコンテキストと方向を確立します。
 
-永続化とは、通常、コントロール自体と、メディアの間、そのプロパティによって表される、コントロールの状態情報の交換です。
+永続化とは、コントロール自体とメディアの間で、コントロールの状態情報を交換することです。通常は、プロパティによって表されます。
 
-フレームワークから派生したオブジェクトを構築します`CPropExchange`から読み込まれる OLE コントロールのプロパティができたことを通知には、または永続的に保存されたストレージ。
+このフレームワークは、OLE コントロールのプロパティが永続ストレージから読み込まれるか、永続ストレージに格納されることが通知されるときに、`CPropExchange` から派生したオブジェクトを構築します。
 
-フレームワークは、このポインターを渡します`CPropExchange`オブジェクトをコントロールの`DoPropExchange`関数。 コントロールのコントロールのスターター ファイルを作成するウィザードを使用した場合`DoPropExchange`関数呼び出し`COleControl::DoPropExchange`します。 基本クラスのバージョン コントロールのストック プロパティを交換します。コントロールに追加した exchange のプロパティを派生クラスのバージョンを変更します。
+フレームワークは、この `CPropExchange` オブジェクトへのポインターをコントロールの `DoPropExchange` 関数に渡します。 ウィザードを使用してコントロールのスターターファイルを作成した場合、コントロールの `DoPropExchange` 関数は `COleControl::DoPropExchange`を呼び出します。 基本クラスのバージョンは、コントロールのストックプロパティを交換します。派生クラスのバージョンを変更して、コントロールに追加したプロパティを交換します。
 
-`CPropExchange` コントロールのプロパティをシリアル化または負荷またはコントロールの作成時にコントロールのプロパティを初期化するために使用します。 `ExchangeProp`と`ExchangeFontProp`のメンバー関数`CPropExchange`にプロパティを格納し、さまざまなメディアから読み込むにすることができます。
+`CPropExchange` を使用すると、コントロールのプロパティをシリアル化したり、コントロールの読み込み時または作成時にコントロールのプロパティを初期化したりすることができます。 `CPropExchange` の `ExchangeProp` および `ExchangeFontProp` メンバー関数は、さまざまなメディアにプロパティを格納して読み込むことができます。
 
-使用しての詳細については`CPropExchange`、記事をご覧ください[MFC ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
+`CPropExchange`の使用方法の詳細については、「 [MFC ActiveX コントロール: プロパティページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -78,9 +78,9 @@ class AFX_NOVTABLE CPropExchange
 
 **ヘッダー:** afxctl.h
 
-##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp
+##  <a name="exchangeblobprop"></a>CPropExchange:: ExchangeBlobProp
 
-バイナリ ラージ オブジェクト (BLOB) データを格納するプロパティをシリアル化します。
+バイナリラージオブジェクト (BLOB) データを格納するプロパティをシリアル化します。
 
 ```
 virtual BOOL ExchangeBlobProp(
@@ -95,24 +95,24 @@ virtual BOOL ExchangeBlobProp(
 交換されるプロパティの名前。
 
 *phBlob*<br/>
-プロパティの格納場所を指す変数へのポインター (変数は、クラスのメンバーでは通常)。
+プロパティが格納されている場所を指す変数へのポインター (変数は、通常、クラスのメンバーです)。
 
 *hBlobDefault*<br/>
 プロパティの既定値。
 
 ### <a name="return-value"></a>戻り値
 
-交換が成功した場合、0 以外の場合失敗した場合は 0。
+交換が成功した場合は0以外の。失敗した場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティの値が読み取りまたはに、によって参照される変数の適切な書き込み*phBlob*します。 場合*hBlobDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化が失敗したときに使用されます。
+プロパティの値は、 *Phblob*によって参照される変数と同じように読み取りまたは書き込みを行います。 *Hblobdefault*が指定されている場合は、プロパティの既定値として使用されます。 この値は、何らかの理由でコントロールのシリアル化が失敗した場合に使用されます。
 
-関数は、 `CArchivePropExchange::ExchangeBlobProp`、 `CResetPropExchange::ExchangeBlobProp`、および`CPropsetPropExchange::ExchangeBlobProp`純粋仮想関数をオーバーライドします。
+関数 `CArchivePropExchange::ExchangeBlobProp`、`CResetPropExchange::ExchangeBlobProp`、および `CPropsetPropExchange::ExchangeBlobProp` は、この純粋仮想関数をオーバーライドします。
 
-##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp
+##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp
 
-ストレージ メディアとコントロール間でのフォント プロパティを交換します。
+ストレージメディアとコントロールの間でフォントプロパティを交換します。
 
 ```
 virtual BOOL ExchangeFontProp(
@@ -127,28 +127,28 @@ virtual BOOL ExchangeFontProp(
 *pszPropName*<br/>
 交換されるプロパティの名前。
 
-*フォント*<br/>
-参照を[CFontHolder](../../mfc/reference/cfontholder-class.md)フォント プロパティを含むオブジェクト。
+*font*<br/>
+Font プロパティを含む[CFontHolder](../../mfc/reference/cfontholder-class.md)オブジェクトへの参照です。
 
 *pFontDesc*<br/>
-ポインターを[FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)フォント プロパティの既定の状態を初期化するための値を含む構造体と*pFontDispAmbient*は NULL です。
+*Pfontdispambient*が NULL の場合にフォントプロパティの既定の状態を初期化するための値を格納している、 [fontdesc](/windows/win32/api/olectl/ns-olectl-fontdesc)構造体へのポインター。
 
 *pFontDispAmbient*<br/>
-ポインター、`IFontDisp`フォント プロパティの既定の状態を初期化するために使用するフォントのインターフェイス。
+フォントプロパティの既定の状態を初期化するために使用されるフォントの `IFontDisp` インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-交換が成功した場合、0 以外の場合失敗した場合は 0。
+交換が成功した場合は0以外の。失敗した場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フォントのプロパティは、コントロールに、メディアから読み込まれるが、フォントの特性は、メディアから取得されます、`CFontHolder`によって参照されるオブジェクト*フォント*で初期化されます。 フォントのプロパティが格納される場合、フォント オブジェクトの特性は、メディアに書き込まれます。
+フォントプロパティをメディアからコントロールに読み込んでいる場合は、フォントの特性がメディアから取得され、*フォント*によって参照される `CFontHolder` オブジェクトが初期化されます。 フォントプロパティが格納されている場合は、フォントオブジェクトの特性がメディアに書き込まれます。
 
-関数は、 `CArchivePropExchange::ExchangeFontProp`、 `CResetPropExchange::ExchangeFontProp`、および`CPropsetPropExchange::ExchangeFontProp`純粋仮想関数をオーバーライドします。
+関数 `CArchivePropExchange::ExchangeFontProp`、`CResetPropExchange::ExchangeFontProp`、および `CPropsetPropExchange::ExchangeFontProp` は、この純粋仮想関数をオーバーライドします。
 
-##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp
+##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp
 
-コントロールとファイルのプロパティを交換します。
+コントロールとファイルの間でプロパティを交換します。
 
 ```
 virtual BOOL ExchangePersistentProp(
@@ -164,27 +164,27 @@ virtual BOOL ExchangePersistentProp(
 交換されるプロパティの名前。
 
 *ppUnk*<br/>
-プロパティへのポインターを格納している変数へのポインター`IUnknown`インターフェイス (この変数は、クラスのメンバーでは通常)。
+プロパティの `IUnknown` インターフェイスへのポインターを格納している変数へのポインター (この変数は、通常はクラスのメンバー)。
 
 *iid*<br/>
-コントロールが使用するプロパティのインターフェイスのインターフェイス ID です。
+コントロールが使用するプロパティのインターフェイスのインターフェイス ID。
 
 *pUnkDefault*<br/>
 プロパティの既定値。
 
 ### <a name="return-value"></a>戻り値
 
-交換が成功した場合、0 以外の場合失敗した場合は 0。
+交換が成功した場合は0以外の。失敗した場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティは、コントロールに、ファイルから読み込まれるが場合、プロパティが作成され、ファイルから初期化します。 プロパティが格納されている場合、その値は、ファイルに書き込まれます。
+プロパティがファイルからコントロールに読み込まれている場合、プロパティが作成され、ファイルから初期化されます。 プロパティが格納されている場合、その値はファイルに書き込まれます。
 
-関数は、 `CArchivePropExchange::ExchangePersistentProp`、 `CResetPropExchange::ExchangePersistentProp`、および`CPropsetPropExchange::ExchangePersistentProp`純粋仮想関数をオーバーライドします。
+関数 `CArchivePropExchange::ExchangePersistentProp`、`CResetPropExchange::ExchangePersistentProp`、および `CPropsetPropExchange::ExchangePersistentProp` は、この純粋仮想関数をオーバーライドします。
 
-##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp
+##  <a name="exchangeprop"></a>CPropExchange:: ExchangeProp
 
-ストレージ メディアとコントロールの間のプロパティを交換します。
+ストレージメディアとコントロールの間でプロパティを交換します。
 
 ```
 virtual BOOL ExchangeProp(
@@ -200,15 +200,15 @@ virtual BOOL ExchangeProp(
 交換されるプロパティの名前。
 
 *vtProp*<br/>
-交換されるプロパティの種類を指定する記号です。 指定できる値は次のとおりです。
+交換されるプロパティの型を指定するシンボル。 次のいずれかの値になります。
 
-|シンボル|プロパティの型|
+|Symbol|プロパティの型|
 |------------|-------------------|
 |VT_I2|**short**|
 |VT_I4|**long**|
 |VT_BOOL|**BOOL**|
 |VT_BSTR|`CString`|
-|VT_CY|**CY**|
+|VT_CY|**暦年**|
 |VT_R4|**float**|
 |VT_R8|**double**|
 
@@ -220,15 +220,15 @@ virtual BOOL ExchangeProp(
 
 ### <a name="return-value"></a>戻り値
 
-交換が成功した場合、0 以外の場合失敗した場合は 0。
+交換が成功した場合は0以外の。失敗した場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティの値が、メディアから取得されが指すオブジェクトに格納されている場合は、プロパティは、コントロールに、メディアから読み込まれるが、 *pvProp*します。 プロパティは、メディアに格納される場合、オブジェクトの値が指す*pvProp*はメディアに書き込まれます。
+プロパティをメディアからコントロールに読み込んでいる場合は、プロパティの値が中から取得され、 *Pvprop*が指すオブジェクトに格納されます。 プロパティがメディアに格納されている場合は、 *Pvprop*が指すオブジェクトの値がメディアに書き込まれます。
 
-関数は、 `CArchivePropExchange::ExchangeProp`、 `CResetPropExchange::ExchangeProp`、および`CPropsetPropExchange::ExchangeProp`純粋仮想関数をオーバーライドします。
+関数 `CArchivePropExchange::ExchangeProp`、`CResetPropExchange::ExchangeProp`、および `CPropsetPropExchange::ExchangeProp` は、この純粋仮想関数をオーバーライドします。
 
-##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion
+##  <a name="exchangeversion"></a>CPropExchange:: ExchangeVersion
 
 バージョン番号の永続化を処理するためにフレームワークによって呼び出されます。
 
@@ -242,19 +242,19 @@ virtual BOOL ExchangeVersion(
 ### <a name="parameters"></a>パラメーター
 
 *dwVersionLoaded*<br/>
-読み込まれている永続的なデータのバージョン番号が格納される変数への参照。
+読み込まれる永続データのバージョン番号が格納される変数への参照。
 
 *dwVersionDefault*<br/>
 コントロールの現在のバージョン番号。
 
 *bConvert*<br/>
-現在のバージョンに永続的なデータを変換するか、読み込まれているのと同じバージョンのまま保持するかどうかを示します。
+永続データを現在のバージョンに変換するか、または読み込まれたのと同じバージョンに保持するかを示します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、0 以外の場合それ以外の場合は 0 です。
+関数が成功した場合は0以外の場合は。それ以外の場合は0。
 
-##  <a name="getversion"></a>  CPropExchange::GetVersion
+##  <a name="getversion"></a>CPropExchange:: GetVersion
 
 コントロールのバージョン番号を取得するには、この関数を呼び出します。
 
@@ -266,9 +266,9 @@ DWORD GetVersion();
 
 コントロールのバージョン番号。
 
-##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous
+##  <a name="isasynchronous"></a>CPropExchange:: IsAsynchronous
 
-プロパティの交換を非同期的に行うかどうかを決定します。
+プロパティ交換を非同期的に実行するかどうかを決定します。
 
 ```
 BOOL IsAsynchronous();
@@ -276,11 +276,11 @@ BOOL IsAsynchronous();
 
 ### <a name="return-value"></a>戻り値
 
-プロパティがある場合は TRUE を返しますが場合は FALSE では、非同期的に交換されます。
+プロパティが非同期に交換される場合は TRUE、それ以外の場合は FALSE を返します。
 
-##  <a name="isloading"></a>  CPropExchange::IsLoading
+##  <a name="isloading"></a>CPropExchange:: IsLoading
 
-プロパティがされているかどうかを判断するには、この関数を呼び出すコントロールに読み込まれるまたはから保存します。
+この関数を呼び出して、プロパティがコントロールに読み込まれているか、またはプロパティから保存されているかどうかを確認します。
 
 ```
 BOOL IsLoading();
@@ -288,10 +288,9 @@ BOOL IsLoading();
 
 ### <a name="return-value"></a>戻り値
 
-プロパティが読み込まれている場合は 0 以外それ以外の場合 0 を返します。
+プロパティが読み込まれている場合は0以外。それ以外の場合は0です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-
+[COleControl::D oPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 47ef6591a69196ea93048e2ce3a77603b12ab4c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182268"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog クラス
 

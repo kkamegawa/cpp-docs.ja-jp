@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-ms.openlocfilehash: 152efe6b1c5e8be67a3c37cc7e56b12c88c1b4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c89647afc8a9a8c6564d25afe20d48818a643f2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385379"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection クラス
 
@@ -50,7 +50,7 @@ class CCriticalSection : public CSyncObject
 
 |名前|説明|
 |----------|-----------------|
-|[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|内部の CRITICAL_SECTION オブジェクトへのポインターを取得します。|
+|[CCriticalSection::operator CRITICAL_SECTION*](#operator_critical_section_star)|内部の CRITICAL_SECTION オブジェクトへのポインターを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -75,7 +75,7 @@ class CCriticalSection : public CSyncObject
 
 - メソッドを追加することで、複数のスレッドでクラスを共有することもできますを埋め込み、 `CCriticalSection`-クラスと必要なときに、データ メンバーをロックする型のデータ メンバー。
 
-使用しての詳細については`CCriticalSection`オブジェクトは、記事をご覧ください。[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+使用しての詳細については`CCriticalSection`オブジェクトは、記事をご覧ください。[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -147,7 +147,7 @@ BOOL Lock(DWORD dwTimeout);
 CRITICAL_SECTION m_sect;
 ```
 
-##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION*
 
 したがって、CRITICAL_SECTION オブジェクトを取得します。
 

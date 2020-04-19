@@ -1,23 +1,23 @@
 ---
-title: コンパイラ エラー C2664
+title: コンパイラエラー C2664
 ms.date: 11/04/2016
 f1_keywords:
 - C2664
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501362"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756007"
 ---
-# <a name="compiler-error-c2664"></a>コンパイラ エラー C2664
+# <a name="compiler-error-c2664"></a>コンパイラエラー C2664
 
 'function': 引数 n を 'type1' から 'type2' へ変換できません。
 
-このパラメーター変換問題は、クラスのインスタンスが作成され、`explicit` キーワードでマークされたコンストラクターで暗黙的な変換が試みられた場合に生じる可能性があります。 明示的な変換の詳細については、次を参照してください。[ユーザー定義型の変換](../../cpp/user-defined-type-conversions-cpp.md)します。
+このパラメーター変換問題は、クラスのインスタンスが作成され、`explicit` キーワードでマークされたコンストラクターで暗黙的な変換が試みられた場合に生じる可能性があります。 明示的な変換の詳細については、「[ユーザー定義型変換](../../cpp/user-defined-type-conversions-cpp.md)」を参照してください。
 
 パラメーターとしてオブジェクトへの参照を指定する関数に一時オブジェクトが渡される場合、その参照は `const` 参照である必要があります。
 
@@ -31,13 +31,13 @@ C2664 を解決するには、
 
 クラスがそのベース クラスのいずれかにメンバーを隠ぺいした場合も、C2664 が生成されます。
 
-詳細については、次を参照してください。[方法: system::string を wchar_t * または char に変換\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)します。
+詳細については、「[方法: System:: String を wchar_t * または char\*に変換する](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2664 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2664.cpp
 // C2664
 struct A {
@@ -57,11 +57,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 この例も、C2664 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2664b.cpp
 // C2664 expected
 struct A {
@@ -76,11 +76,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、`Test` を呼び出すリテラル文字列を使用して生成される C2664 と、その修正方法を示しています。 パラメーターは `szString` 参照であるため、適切なコンストラクターでオブジェクトが作成される必要があります。 結果は、参照の初期化に使用できない一時オブジェクトになります。
 
-```
+```cpp
 // C2664c.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -117,11 +117,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 `const` を適用するために C++ の標準要件が強制的に適用されます。 次の例では C2664 エラーが生成されます。
 
-```
+```cpp
 // C2664d.cpp
 // C2664 expected
 #include <windows.h>
@@ -142,11 +142,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 C2664 が生成されるより複雑な状況と、その修正方法を示します。
 
-```
+```cpp
 // C2664e.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -187,11 +187,11 @@ int main( ) {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-関数呼び出しが満たされるように、列挙型変数はその基になる型に変換されません。 詳細については、次を参照してください。[列挙型クラス](../../windows/enum-class-cpp-component-extensions.md)します。 次の例では、C2664 を生成し、その修正方法を示しています。
+関数呼び出しが満たされるように、列挙型変数はその基になる型に変換されません。 詳細については、「 [enum クラス](../../extensions/enum-class-cpp-component-extensions.md)」を参照してください。 次の例では、C2664 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2664f.cpp
 // compile with: /clr
 using namespace System;
@@ -209,7 +209,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 MIDL コンパイラのバグにより、wchar_t type は unsigned short として型ライブラリに出力されます。 このエラーを解決するには、型を C++ ソース コードにキャストするか、型を文字列として idl ファイルに定義します。
 
@@ -232,13 +232,13 @@ library myproj1 {
 }
 ```
 
-コードを Visual C++ 6.0 から新しいバージョンに移植するときに、`wchar_t` を使用しても C2664 が発生します。 Visual C++ 6.0 以前では、`wchar_t` は `typedef` の `unsigned short` であるため、その型に暗黙的に変換されます。 Visual C++ 6.0 より新しいバージョンでは、C++ 標準で指定されているように、`wchar_t` は独自の組み込み型で、`unsigned short` に暗黙的に変換されません。 参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)します。
+コードを Visual C++ 6.0 から新しいバージョンに移植するときに、`wchar_t` を使用しても C2664 が発生します。 Visual C++ 6.0 以前では、`wchar_t` は `typedef` の `unsigned short` であるため、その型に暗黙的に変換されます。 Visual C++ 6.0 より新しいバージョンでは、C++ 標準で指定されているように、`wchar_t` は独自の組み込み型で、`unsigned short` に暗黙的に変換されません。 「 [/Zc: wchar_t (Wchar_t はネイティブ型)」を](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2664 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2664h.cpp
 #import "C2664g.tlb"
 using namespace myproj1;
@@ -256,11 +256,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 C2664 は、コンパイラがテンプレートの引数を推定できない場合にも発生します。
 
-```
+```cpp
 // C2664i.cpp
 #include <stdio.h>
 template <class T, int iType=0>

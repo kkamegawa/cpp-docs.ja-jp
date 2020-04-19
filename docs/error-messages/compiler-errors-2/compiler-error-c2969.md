@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2969
 ms.assetid: e4ea3d66-b937-4b2c-b42a-96e03fb11579
-ms.openlocfilehash: 1330babe92266a6bc410084b4a46ef75f83f0b7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045ba4930e985d90f755ac44d482a55f04a3e6a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455524"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759439"
 ---
 # <a name="compiler-error-c2969"></a>コンパイラ エラー C2969
 
@@ -21,7 +21,7 @@ ms.locfileid: "50455524"
 
 次の例では C2969 が生成されます。
 
-```
+```cpp
 // C2969.cpp
 // compile with: /c
 class A {

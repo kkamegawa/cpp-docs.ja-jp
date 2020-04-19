@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c9301d270ef516a1acc59f6ab06f0e61a1c9c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635839"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687938"
 ---
-# <a name="independentbitsengine-class"></a>independent_bits_engine クラス
+# <a name="independent_bits_engine-class"></a>independent_bits_engine クラス
 
 ベースのエンジンから返された値のビットを再パックすることで、指定したビット数で数値のランダム シーケンスを生成します。
 
@@ -26,14 +26,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*エンジン*<br/>
+*エンジン*の \
 ベースのエンジンの型。
 
-*W*<br/>
+*W* \
 **ワード サイズ**。 生成される各数値のサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
-結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Uinttype* \
+結果を表す符号なし整数型。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -46,9 +46,9 @@ class independent_bits_engine;
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスについて説明します、*エンジン アダプター*結果として、ベースのエンジンによって返される値のビットを再パックすることで値を生成する*W*-ビット値。
+このクラステンプレートは、ベースエンジンによって返される値からビットを再パックして値を生成する*エンジンアダプター*を記述し、その結果、 *W*ビット値になります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -56,4 +56,4 @@ class independent_bits_engine;
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

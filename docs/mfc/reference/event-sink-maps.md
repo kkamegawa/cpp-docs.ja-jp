@@ -1,17 +1,15 @@
 ---
 title: イベント シンク マップ
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aeec0acad4531e1ef0933388bbee728193853611
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518932"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612218"
 ---
 # <a name="event-sink-maps"></a>イベント シンク マップ
 
@@ -114,7 +112,7 @@ OLE コントロールのコントロール ID。
 
 ### <a name="remarks"></a>Remarks
 
-*VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:
+*VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例:
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -243,7 +241,7 @@ OLE コントロールのコントロール ID。
 
 ### <a name="remarks"></a>Remarks
 
-*VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:
+*VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例:
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 

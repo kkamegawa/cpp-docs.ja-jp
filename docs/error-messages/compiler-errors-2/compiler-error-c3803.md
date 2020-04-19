@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3803
 ms.assetid: bad5fb9a-ed9a-4c15-96e7-cf06e200a50d
-ms.openlocfilehash: f6c255ec18d6dcf94f3ec022f09b173c2c66a1dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 771530c2d05d378b86732938aa7a2b7881608446
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565088"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755305"
 ---
 # <a name="compiler-error-c3803"></a>コンパイラ エラー C3803
 
-'property': プロパティのアクセサー 'accessor' のいずれかの互換性のない型には
+' property ': プロパティに、アクセサー ' accessor ' のいずれかと互換性のない型が含まれています。
 
-定義されているプロパティの型[プロパティ](../../cpp/property-cpp.md)のアクセサー関数の 1 つの戻り値の型と一致しません。
+[プロパティ](../../cpp/property-cpp.md)で定義されたプロパティの型が、アクセサー関数の1つの戻り値の型と一致しません。
 
 次の例では、C3803 が生成されます。
 
-```
+```cpp
 // C3803.cpp
 struct A
 {

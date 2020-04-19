@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
-ms.openlocfilehash: b9194149c532044f6c8a1eab84729f7896f1352b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef63b8f5d1ee4b3f094bed3549eec8157a950e91
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568546"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748880"
 ---
 # <a name="compiler-error-c3910"></a>コンパイラ エラー C3910
 
-'event': メンバー 'method' を定義する必要があります
+' event ': メンバー ' method ' を定義しなければなりません
 
-イベントが定義されましたが、アクセサーを指定すると、必要なメソッドが含まれていませんでした。
+イベントが定義されましたが、指定された必須のアクセサーメソッドが含まれていませんでした。
 
-詳細については、次を参照してください。[イベント](../../windows/event-cpp-component-extensions.md)します。
+詳細については、「 [event](../../extensions/event-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3910 が生成されます。
 
-```
+```cpp
 // C3910.cpp
 // compile with: /clr /c
 delegate void H();

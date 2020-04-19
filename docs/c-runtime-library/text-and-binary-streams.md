@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-ms.openlocfilehash: a47c0b79b10f685c1f43ae4bfbfc6e1b9ea2b508
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3754a62fa02bc532eb71eba6b0a8837791b179ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664907"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747710"
 ---
 # <a name="text-and-binary-streams"></a>テキスト ストリームとバイナリ ストリーム
 
@@ -36,6 +36,6 @@ ms.locfileid: "50664907"
 
 バイト ストリームはバイトのシーケンスとしてファイルを扱います。 プログラム内では、ストリームは、前述の差異がある可能性を除き、同一のバイトのシーケンスのように見えます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ファイルとストリーム](../c-runtime-library/files-and-streams.md)

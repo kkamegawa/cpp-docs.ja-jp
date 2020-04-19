@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756059"
 ---
 # <a name="compiler-error-c2660"></a>コンパイラ エラー C2660
 
@@ -25,11 +25,11 @@ MFC メンバー関数ではなく同じ名前の Windows API 関数を誤って
 
 - スコープ解決演算子 (`::`) を使用して、グローバルな名前空間で関数名を検索するようにコンパイラに通知します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2660 が生成されます。
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。 次の例では、C2660 が生成されます。
+C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、「[デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。 次の例では、C2660 が生成されます。
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -61,11 +61,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 派生クラスによって関数が隠ぺいされると、C2660 が発生します。
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -92,11 +92,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 インデックス付きプロパティの呼び出しを正しく行わないと、C2660 が発生します。
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -117,11 +117,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 インデックス付きプロパティの呼び出しを正しく行わないと、C2660 が発生します。
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -140,11 +140,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 テンプレート クラスに定義した新しい演算子が、囲い型以外の型を持つオブジェクトを作成すると、C2660 が発生します。
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

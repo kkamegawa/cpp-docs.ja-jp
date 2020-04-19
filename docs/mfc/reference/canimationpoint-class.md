@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218539"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint クラス
 
@@ -73,7 +73,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|CPoint、CAnimationPoint に変換します。|
-|[CAnimationPoint::operator =](#operator_eq)|CAnimationPoint ptSrc に割り当てます。|
+|[CAnimationPoint::operator=](#operator_eq)|CAnimationPoint ptSrc に割り当てます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 

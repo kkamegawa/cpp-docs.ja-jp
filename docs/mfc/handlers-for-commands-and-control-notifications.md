@@ -10,30 +10,30 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: 28bed2937409cd1df5ee8d295e466609232e0e91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43b6a517b680a5f6ff092337fbf3d90dd0115dd7
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622054"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907981"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>コマンドとコントロール通知のハンドラー
 
-コマンドまたはコントロールの通知メッセージの既定のハンドラーはありません。 そのためは、これらの種類のメッセージのハンドラーの名前付け規則によってのみバインドされます。 コマンドまたはコントロールの通知をハンドラーにマップするときに、[プロパティ] ウィンドウは、コマンドの ID またはコントロール通知のコードに基づく名前を提案します。 指定された名前をそのまま使用、変更するか、または置き換えることができます。
+コマンドまたはコントロール通知メッセージの既定のハンドラーはありません。 したがって、これらのメッセージカテゴリのハンドラーに名前を付けるには、規則によってのみバインドされます。 コマンドまたはコントロールの通知をハンドラーにマップすると、[クラスウィザード](reference/mfc-class-wizard.md)によって、コマンド ID またはコントロール通知コードに基づいて名前が提示されます。 提案された名前をそのまま使用するか、変更するか、置き換えることができます。
 
-規則は、両方のカテゴリ ハンドラーを表すユーザー インターフェイス オブジェクトの名前をお勧めします。 [編集] メニューの切り取りコマンドのハンドラーの名前をそのため
+規則は、それらが表すユーザーインターフェイスオブジェクトの両方のカテゴリにハンドラー名を指定することを示しています。 したがって、[編集] メニューの [切り取り] コマンドのハンドラーは、という名前になります。
 
 [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
 
-として Cut コマンドのコマンド ID は、フレームワークが組み込まれて Cut コマンドは、アプリケーションによくため実装されたため、 **ID_EDIT_CUT**します。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、次を参照してください。[標準コマンド](../mfc/standard-commands.md)します。
+Cut コマンドはアプリケーションで一般的に実装されているため、フレームワークは、Cut コマンドのコマンド ID を**ID_EDIT_CUT**として事前します。 定義済みのすべてのコマンド Id の一覧については、ファイル AFXRES.H を参照してください。始め. 詳細については、「[標準コマンド](../mfc/standard-commands.md)」を参照してください。
 
-さらに、規則がのハンドラーを提案、 **BN_CLICKED**名前に「マイ ボタン」というラベルのボタンからの通知メッセージ
+また、規則では、"My Button" というラベルが付いたボタンからの**BN_CLICKED**通知メッセージのハンドラーを提案します。
 
 [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
 
-このコマンドの ID を割り当てることができます**として**のため、これは、アプリケーション固有のユーザー インターフェイス オブジェクトに相当します。
+このコマンドは、アプリケーション固有のユーザーインターフェイスオブジェクトと同等であるため、 **IDC_MY_BUTTON**の ID に割り当てることができます。
 
-メッセージの両方のカテゴリは、引数を受け取らず、値が返されない。
+どちらのカテゴリのメッセージも引数を取らず、値を返しません。
 
 ## <a name="see-also"></a>関連項目
 

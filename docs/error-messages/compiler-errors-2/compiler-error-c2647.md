@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2647
+title: コンパイラエラー C2647
 ms.date: 11/04/2016
 f1_keywords:
 - C2647
 helpviewer_keywords:
 - C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
-ms.openlocfilehash: ac69dbb4de23be05d375126947fe003ef75fb85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9553c85efeedb4d3eee4bd40f9e3b86707fd7eb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591868"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758386"
 ---
-# <a name="compiler-error-c2647"></a>コンパイラ エラー C2647
+# <a name="compiler-error-c2647"></a>コンパイラエラー C2647
 
-'operator': 'type1' を 'type2' の逆参照することはできません
+' operator ': ' type1 ' の ' type1 ' を逆参照することはできません
 
-メンバーへのポインター演算子の左側のオペランド (`->*`または`.*`) 右辺オペランドの型に暗黙的に変換できません。
+メンバーへのポインター演算子 (`->*` または `.*`) の左オペランドを、右の演算子に関連する型に暗黙的に変換することはできません。
 
 次の例では、C2647 が生成されます。
 
-```
+```cpp
 // C2647.cpp
 class C {};
 class D {};

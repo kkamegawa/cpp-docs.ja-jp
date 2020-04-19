@@ -99,11 +99,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
 ms.openlocfilehash: 2e3cd31ada54d1569cb7e5344ab471108b625558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222963"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -2013,7 +2013,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 使用するキー値。
 
-*マップ*<br/>
+*mapped*<br/>
 検索する値をマップします。
 
 ### <a name="remarks"></a>Remarks

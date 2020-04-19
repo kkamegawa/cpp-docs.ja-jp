@@ -1,4 +1,4 @@
----
+﻿---
 title: CObList クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 66cc4d28e20ced498e4a434efbe41c3f5db59370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388242"
 ---
 # <a name="coblist-class"></a>CObList クラス
 
@@ -73,7 +73,7 @@ class CObList : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[使われて](#coblist)|空のリストを構築します`CObject`ポインター。|
+|[CObList::CObList](#coblist)|空のリストを構築します`CObject`ポインター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -157,8 +157,8 @@ void AddHead(CObList* pNewList);
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddHead (void** <strong>\*</strong> `newElement` **)。**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddHead (const CString &** `newElement` **)。**<br /><br /> **位置 AddHead (LPCTSTR** `newElement` **)。**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead (const CString &** `newElement` **)。**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Remarks
 
@@ -166,7 +166,7 @@ void AddHead(CObList* pNewList);
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#89](../../mfc/codesnippet/cpp/coblist-class_1.cpp)]
 
@@ -207,12 +207,12 @@ void AddTail(CObList* pNewList);
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddTail (void** <strong>\*</strong> `newElement` **)。**<br /><br /> **AddTail を無効にする (CPtrList** <strong>\*</strong> `pNewList` **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddTail (const CString &** `newElement` **)。**<br /><br /> **位置 AddTail (LPCTSTR** `newElement` **)。**<br /><br /> **AddTail を無効にする (CStringList** <strong>\*</strong> `pNewList` **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddTail( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddTail( const CString&** `newElement` **);**<br /><br /> **POSITION AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#90](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]
 
@@ -224,7 +224,7 @@ a CAge at $444A 21
 a CAge at $4526 40
 ```
 
-##  <a name="coblist"></a>  使われて
+##  <a name="coblist"></a>  CObList::CObList
 
 空の構築`CObject`ポインターのリスト。
 
@@ -245,8 +245,8 @@ CObList(INT_PTR nBlockSize = 10);
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>例
 
@@ -288,12 +288,12 @@ POSITION Find(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置検索 (void** <strong>\*</strong> `searchValue` **、位置** `startAfter` **= NULL) const です。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置検索 (LPCTSTR** `searchValue` **、位置** `startAfter` **= NULL) const です。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION Find (void** <strong>\*</strong> `searchValue` , **POSITION** `startAfter` **= NULL) const**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION Find( LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]
 
@@ -322,12 +322,12 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 FindIndex (INT_PTR** `nIndex` **) const です。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 FindIndex (INT_PTR** `nIndex` **) const です。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]
 
@@ -342,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetHeadPosition`または`Find`メンバー関数の呼び出し。
 
 ### <a name="return-value"></a>戻り値
@@ -359,8 +359,8 @@ const CObject*& GetAt(POSITION position) const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (位置***位置* **) const です。**<br /><br /> **void\*& GetAt (位置***位置* **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString の const & GetAt (位置***位置* **) const です。**<br /><br /> **CString & GetAt (位置***位置* **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt( POSITION** *position* **) const;**<br /><br /> **void\*& GetAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetAt( POSITION** *position* **) const;**<br /><br /> **CString& GetAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>例
 
@@ -382,12 +382,12 @@ INT_PTR GetCount() const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; INT_PTR GetCount)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; INT_PTR GetCount)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount( ) const;**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]
 
@@ -414,12 +414,12 @@ const CObject*& GetHead() const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& gethead 関数に関するページ () const; void\*& gethead 関数 ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & gethead 関数に関するページ (); constCString & gethead 関数 ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead( ) const; void\*& GetHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 使用例を次に示します`GetHead`代入ステートメントの左側にあります。
 
@@ -441,12 +441,12 @@ POSITION GetHeadPosition() const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 位置順)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 位置順)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetHeadPosition( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetHeadPosition( ) const;**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]
 
@@ -490,7 +490,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#98](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]
 
@@ -539,7 +539,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#99](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]
 
@@ -570,12 +570,12 @@ INT_PTR GetSize() const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; INT_PTR GetSize)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; INT_PTR GetSize)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize( ) const;**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]
 
@@ -600,12 +600,12 @@ const CObject*& GetTail() const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail () const; void\*& GetTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail (); constCString & GetTail ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail( ) const; void\*& GetTail( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetTail( ) const; CString& GetTail( );**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]
 
@@ -625,12 +625,12 @@ POSITION GetTailPosition() const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const; 位置 GetTailPosition)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; 位置 GetTailPosition)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetTailPosition( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetTailPosition( ) const;**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]
 
@@ -646,7 +646,7 @@ POSITION InsertAfter(
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。
 
 *newElement*<br/>
@@ -656,16 +656,16 @@ POSITION InsertAfter(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertAfter (位置***位置* **, void** <strong>\*</strong> `newElement` **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置***位置* **、const の CString &** `newElement` **)。**<br /><br /> **位置 InsertAfter (位置***位置* **、LPCTSTR** `newElement` **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertAfter (POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>戻り値
 
-これは、同じ位置の値として、*位置*パラメーター。
+これは、*position* パラメーターと同じ POSITION 値です。
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#103](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]
 
@@ -690,7 +690,7 @@ POSITION InsertBefore(
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。
 
 *newElement*<br/>
@@ -704,12 +704,12 @@ POSITION InsertBefore(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 InsertBefore (位置***位置* **, void** <strong>\*</strong> `newElement` **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置***位置* **、const の CString &** `newElement` **)。**<br /><br /> **位置 InsertBefore (位置***位置* **、LPCTSTR** `newElement` **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore (POSITION** *POSITION* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#104](../../mfc/codesnippet/cpp/coblist-class_16.cpp)]
 
@@ -768,7 +768,7 @@ void RemoveAll();
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]
 
@@ -782,7 +782,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 一覧から削除する要素の位置。
 
 ### <a name="remarks"></a>Remarks
@@ -795,14 +795,14 @@ void RemoveAt(POSITION position);
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (位置***位置* **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (位置***位置* **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt( POSITION** *position* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt( POSITION** *position* **);**|
 
 ### <a name="example"></a>例
 
-  リストの反復処理中に要素を削除するときに注意します。 次の例は、有効なことを保証する削除手法**位置**値[GetNext](#getnext)します。
+  リストの反復処理中に要素を削除するときは注意してください。 次の例は、[GetNext](#getnext) の有効な **POSITION** 値を保証する削除手法です。
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#106](../../mfc/codesnippet/cpp/coblist-class_18.cpp)]
 
@@ -834,12 +834,12 @@ CObject* RemoveHead();
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]
 
@@ -863,12 +863,12 @@ CObject* RemoveTail();
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail ();**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail( );**|
 
 ### <a name="example"></a>例
 
-参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]
 
@@ -900,12 +900,12 @@ void SetAt(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**setat メソッドを void (位置** `pos` **、const の CString &** `newElement` **)。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**setat メソッドを void (位置** `pos` **、LPCTSTR** `newElement` **)。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt( POSITION** `pos` **, const CString&** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt( POSITION** `pos` **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>例
 
-  参照してください[使われて](#coblist)の一覧については、`CAge`クラス。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#109](../../mfc/codesnippet/cpp/coblist-class_21.cpp)]
 

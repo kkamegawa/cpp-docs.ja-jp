@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
-ms.openlocfilehash: b1c1b5a79cdf5ee2a4a17d969d23ce0d0d85ab54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44fc9755cd69050ea82145636f01614258943794
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504495"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500589"
 ---
-# <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
+# <a name="_com_errorerrormessage"></a>_com_error::ErrorMessage
 
 **Microsoft 固有の仕様**
 
@@ -27,11 +27,11 @@ const TCHAR * ErrorMessage( ) const throw( );
 
 ## <a name="return-value"></a>戻り値
 
-内に記録された HRESULT の文字列メッセージを返します、`_com_error`オブジェクト。 HRESULT がマップされた 16 ビット[wCode](../cpp/com-error-wcode.md)、汎用メッセージでは、"`IDispatch error #<wCode>`"が返されます。 メッセージがない場合、一般的なメッセージ "`Unknown error #<hresult>`" が返されます。 返される文字列とは、Unicode または _UNICODE マクロの状態に応じて、マルチバイト文字列です。
+`_com_error`オブジェクト内に記録された HRESULT の文字列メッセージを返します。 HRESULT が、マップされた16ビット[wcode](../cpp/com-error-wcode.md)の場合は、一般的な`IDispatch error #<wCode>`メッセージ "" が返されます。 メッセージがない場合、一般的なメッセージ "`Unknown error #<hresult>`" が返されます。 返される文字列は、_UNICODE マクロの状態に応じて、Unicode またはマルチバイト文字列です。
 
 ## <a name="remarks"></a>Remarks
 
-内に記録された HRESULT の適切なシステム メッセージのテキストを取得、`_com_error`オブジェクト。 システム メッセージのテキストは、Win32 を呼び出すことによって取得[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)関数。 返される文字列は `FormatMessage` API によって割り当てられ、`_com_error` オブジェクトが破棄されるときに解放されます。
+`_com_error`オブジェクト内に記録された HRESULT の適切なシステムメッセージテキストを取得します。 システムメッセージテキストは、Win32 [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage)関数を呼び出すことによって取得されます。 返される文字列は `FormatMessage` API によって割り当てられ、`_com_error` オブジェクトが破棄されるときに解放されます。
 
 **Microsoft 固有の仕様はここまで**
 

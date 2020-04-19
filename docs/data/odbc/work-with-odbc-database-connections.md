@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], connecting to
 - ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-ms.openlocfilehash: 780a6a1feff33e23b4373fbd9f341a5fda240119
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dc6706f945a5a7b0aa21c9ced8017d0a9905fb1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329765"
 ---
 # <a name="work-with-odbc-database-connections"></a>ODBC データベース接続の使用
 

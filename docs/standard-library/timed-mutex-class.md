@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524873"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459920"
 ---
 # <a name="timedmutex-class"></a>timed_mutex クラス
 
@@ -56,7 +56,7 @@ class timed_mutex;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<mutex >
+**ヘッダー:** \<ミューテックス >
 
 **名前空間:** std
 
@@ -102,7 +102,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -119,12 +119,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*<br/>
+*Rel_time*\
 メソッドが `mutex` の所有権の取得を試行する時間について、その最大値を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -143,12 +143,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*<br/>
+*Abs_time*\
 メソッドが `mutex` の所有権の取得を止めるしきい値を指定する時点。
 
 ### <a name="return-value"></a>戻り値
 
-**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
+メソッドがの所有権`mutex`を正常に取得した場合は true。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -168,5 +168,5 @@ void unlock();
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

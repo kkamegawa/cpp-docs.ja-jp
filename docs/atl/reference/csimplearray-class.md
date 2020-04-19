@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 6395e324d5efdba208a7f77d86ca466fb7cdbb5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278008"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray クラス
 
@@ -217,7 +217,7 @@ CSimpleArray<T, TEqual>
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-コピー先の配列。
+コピーする配列。
 
 ### <a name="return-value"></a>戻り値
 

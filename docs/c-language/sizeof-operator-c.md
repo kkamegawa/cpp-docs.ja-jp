@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-ms.openlocfilehash: 0b5d25e0316c710ce758479ad9417c92201d929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577633"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149558"
 ---
 # <a name="sizeof-operator-c"></a>sizeof 演算子 (C)
 
@@ -24,7 +24,7 @@ sizeof unary-expression
 sizeof ( type-name )
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 オペランドは、*unary-expression* の識別子、または型のキャスト式 (つまり、かっこで囲まれた型指定子) のいずれかです。 *unary-expression* は、ビット フィールド オブジェクト、不完全な型、または関数指定子を表すことはできません。 結果は、符号なしの整数定数です。 標準ヘッダー STDDEF.H は、この型を **size_t** として定義します。
 
@@ -51,7 +51,7 @@ const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 
 この例では、`strings` は  `char` へのポインターの配列です。 ポインターの数は、配列の要素の数ですが、指定されていません。 配列の要素数を計算するために `sizeof` 演算子を使用して、ポインターの数を決定する方が簡単です。 **const** の整数値 `string_no` は、この数に初期化されます。 これは **const** 値であるため、`string_no` は変更できません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 演算子](c-operators.md)<br/>
 [C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

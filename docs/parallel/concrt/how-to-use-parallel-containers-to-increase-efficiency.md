@@ -6,12 +6,12 @@ helpviewer_keywords:
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd120d1fbe0f73ed0974efda5a1aa643a1afde9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439183"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143006"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>方法: 並列コンテナーを使用して効率を向上させる
 
@@ -27,9 +27,9 @@ ms.locfileid: "50439183"
 
 ## <a name="example"></a>例
 
-次の例では、`is_prime` 関数と `is_carmichael` 関数を使用して、素数とカーマイケル数のセットを計算します。 この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)と[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)それぞれ計算するアルゴリズムを並列で設定します。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+次の例では、`is_prime` 関数と `is_carmichael` 関数を使用して、素数とカーマイケル数のセットを計算します。 この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)と[concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムを使用して、各セットを並列に計算します。 並列アルゴリズムの詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
 
-この例では、 [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)は作業キューとしてに後でそのオブジェクトを使用してそのため、カーマイケルのセットを保持するオブジェクトの数値します。 使用して、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)この素因数を検出するセットを反復処理には後であるために、素数のセットを保持するオブジェクト。
+この例では、 [concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)オブジェクトを使用して、カーマイケル数のセットを保持します。これは、後でそのオブジェクトを作業キューとして使用するためです。 この例では、 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)オブジェクトを使用して素数のセットを保持しています。これは、後でこのセットを反復処理して素数を検出するためです。
 
 [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]
 
@@ -37,13 +37,13 @@ ms.locfileid: "50439183"
 
 次の例は、`prime_factors_of` 関数を示しています。この関数は試行除算を使用して、指定された値のすべての素因数を検出します。
 
-この関数を使用して、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)素数のコレクションを反復処理するアルゴリズム。 `concurrent_vector` オブジェクトを使用すると、並行ループで素因数を結果に同時に加算できます。
+この関数は、 [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムを使用して、素数のコレクションを反復処理します。 `concurrent_vector` オブジェクトを使用すると、並行ループで素因数を結果に同時に加算できます。
 
 [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]
 
 ## <a name="example"></a>例
 
-この例では、カーマイケル数のキュー内の各要素を、`prime_factors_of` 関数を呼び出してその素因数を計算することで処理します。 この作業を並列実行するために、タスク グループを使用します。 タスク グループの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+この例では、カーマイケル数のキュー内の各要素を、`prime_factors_of` 関数を呼び出してその素因数を計算することで処理します。 この作業を並列実行するために、タスク グループを使用します。 タスクグループの詳細については、「[タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
 この例では、カーマイケル数に 5 つ以上の素因数がある場合、カーマイケル数ごとに素因数を出力します。
 
@@ -65,11 +65,11 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`carmichael-primes.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`carmichael-primes.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc carmichael-primes.cpp**
+> **cl.exe/EHsc carmichael-primes**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

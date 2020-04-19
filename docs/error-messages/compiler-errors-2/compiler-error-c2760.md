@@ -1,27 +1,31 @@
 ---
-title: コンパイラ エラー C2760
+title: コンパイラエラー C2760
 ms.date: 11/04/2016
 f1_keywords:
 - C2760
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550567"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273667"
 ---
-# <a name="compiler-error-c2760"></a>コンパイラ エラー C2760
+# <a name="compiler-error-c2760"></a>コンパイラエラー C2760
 
-構文エラー: 'name1' が必要です 'name2'
+> 構文エラー: '*name2*' ではなく '*name1*' が必要です
 
-キャスト演算子は、無効な演算子で使用されます。
+## <a name="remarks"></a>Remarks
 
-次の例では、C2760 が生成されます。
+このエラーを発生させるには、いくつかの方法があります。 通常、これは、コンパイラが意味を持たないトークンシーケンスによって発生します。
 
-```
+## <a name="example"></a>例
+
+このサンプルでは、キャスト演算子が無効な演算子で使用されています。
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};

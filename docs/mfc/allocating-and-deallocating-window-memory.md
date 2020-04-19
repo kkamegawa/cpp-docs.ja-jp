@@ -9,12 +9,12 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: a9bbf92a586a910dfa4e81774ce4817c9cf458e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394703"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>ウィンドウ メモリの割り当てと解放
 
@@ -31,4 +31,3 @@ C++ を使用しないでください**削除**フレーム ウィンドウま�
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ オブジェクトの破棄](../mfc/destroying-window-objects.md)
-

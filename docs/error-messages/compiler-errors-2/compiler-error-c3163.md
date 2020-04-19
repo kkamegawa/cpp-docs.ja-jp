@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: b5c689842f59a9cf999de08f10926efce0ade5ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490208"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761778"
 ---
 # <a name="compiler-error-c3163"></a>コンパイラ エラー C3163
 
-'construct': 前の宣言と一貫性のない属性
+' construct ': 属性が前の宣言と矛盾しています。
 
-定義に適用される属性は、宣言に適用される属性と競合します。
+定義に適用されている属性が、宣言に適用されている属性と競合しています。
 
-C3163 を解決するのには 1 つの方法では、事前宣言で属性を除外します。 事前宣言で属性が定義の属性よりも小さくする以上で、多くて、それらに。
+C3163 を解決する方法の1つは、事前宣言の属性を除外することです。 事前宣言の属性は、定義の属性よりも小さい値であるか、またはそれと同じである必要があります。
 
-C3163 エラーの考えられる原因には、Microsoft ソース コード注釈言語 (SAL) が含まれます。 使用してプロジェクトをコンパイルするまで、SAL マクロは展開されません、 **/analyze**フラグ。 /Analyze せず、正常にコンパイルされるプログラムを再コンパイルしようとした場合、C3163 がスロー、/analyze オプション。 SAL については、次を参照してください。 [SAL 注釈](../../c-runtime-library/sal-annotations.md)します。
+C3163 エラーの原因として、Microsoft ソースコード注釈言語 (SAL) が考えられます。 プロジェクトをコンパイルするときに、 **/analyze**フラグを使用しないと、SAL マクロは展開されません。 /Analyze オプションを使用して再コンパイルしようとすると、/analyze なしでクリーンにコンパイルされたプログラムは、C3163 をスローする可能性があります。 SAL の詳細については、「 [Sal 注釈](../../c-runtime-library/sal-annotations.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3163 が生成されます。
 
-```
+```cpp
 // C3163.cpp
 // compile with: /clr /c
 using namespace System;
@@ -38,6 +38,6 @@ using namespace System;
 // [CLSCompliant(true)] void f() {}
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [SAL 注釈](../../c-runtime-library/sal-annotations.md)

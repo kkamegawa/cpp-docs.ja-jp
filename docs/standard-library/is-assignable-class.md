@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605960"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456668"
 ---
 # <a name="isassignable-class"></a>is_assignable クラス
 
@@ -26,15 +26,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*目的*<br/>
+*宛先*\
 代入を受け取るオブジェクトの型。
 
-*From*<br/>
+*差出人*\
 値を渡すオブジェクトの型。
 
 ## <a name="remarks"></a>Remarks
 
-評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 両方`From`と`To`完全な型は、必要があります**void**、または不明なバインドの配列。
+評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 と`From` の`To`両方が、完全な型、 **void**、または不明なバインドの配列である必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,4 +44,4 @@ struct is_assignable;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

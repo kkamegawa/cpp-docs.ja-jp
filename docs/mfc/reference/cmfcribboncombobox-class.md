@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 5c9e6c43c4e87508dc9ab66976309f80cdf09adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237336"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox クラス
 
@@ -127,7 +127,7 @@ virtual INT_PTR AddItem(
 *lpszItem*<br/>
 [in]追加する項目の文字列。
 
-*指定*<br/>
+*dwData*<br/>
 [in]追加する項目に関連付けられたデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -165,7 +165,7 @@ CMFCRibbonComboBox();
 *lpszLabel*<br/>
 [in]コンボ ボックスのラベルを表示します。
 
-*あり*<br/>
+*nImage*<br/>
 [in]コンボ ボックスの小さいイメージのインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -188,7 +188,7 @@ BOOL DeleteItem(LPCTSTR lpszText);
 *iIndex*<br/>
 [in]削除する項目の 0 から始まるインデックス。
 
-*指定*<br/>
+*dwData*<br/>
 [in]削除する項目に関連付けられたデータ。
 
 *lpszText*<br/>
@@ -406,7 +406,7 @@ BOOL SelectItem(LPCTSTR lpszText);
 *iIndex*<br/>
 [in]リスト ボックス内の項目の 0 から始まるインデックス。
 
-*指定*<br/>
+*dwData*<br/>
 [in]リスト ボックス内の項目に関連付けられたデータ。
 
 *lpszText*<br/>
@@ -428,7 +428,7 @@ void SetDropDownHeight(int nHeight);
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]リスト ボックスのピクセル単位の高さ。
 
 ### <a name="remarks"></a>Remarks

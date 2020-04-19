@@ -7,12 +7,12 @@ helpviewer_keywords:
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-ms.openlocfilehash: 3c68c095587c937aa1af81193839b71b0213023d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21bca441a29e6e152cb912139db1b9f56b988edd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414023"
 ---
 # <a name="concurrency-runtime-best-practices"></a>コンカレンシー ランタイムに関するベスト プラクティス
 
@@ -45,4 +45,3 @@ C++ のコンカレンシー フレームワークである、コンカレンシ
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 タスク スケジューラを使用してアプリケーションのパフォーマンスを調整する方法について説明します。
-

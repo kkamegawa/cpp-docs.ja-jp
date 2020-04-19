@@ -7,37 +7,36 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: 6fb1b941e4c813d13a14f4c8870d9013d3987f74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd18a639bc94686bb3023d64c09074ca4d808546
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578543"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685855"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>コード ウィザードによるダイアログ クラスの作成
 
-次の表は、ダイアログに関連するタスクを管理するためのコード ウィザードを示します。
+次の表に、コードウィザードによって管理できるダイアログに関連したタスクを示します。
 
-### <a name="dialog-related-tasks"></a>ダイアログに関連するタスク
+### <a name="dialog-related-tasks"></a>ダイアログ関連のタスク
 
-|タスク|適用されます。 . .|
+|タスク|に適用します。 . .|
 |----------|--------------------|
-|[新しい CDialog から派生したクラスを作成](../mfc/creating-your-dialog-class.md)ダイアログ ボックスを管理します。|各ダイアログ ボックス。|
-|[Windows メッセージをマップ](../mfc/handling-windows-messages-in-your-dialog-box.md)ダイアログ クラスにします。|各メッセージを処理します。|
-|クラスのメンバーをダイアログ ボックス内のコントロールを表す変数を宣言します。|プログラムからアクセスする各コントロールのテキストまたは数値の値を生成します。|
-|指定[データが交換される方法](../mfc/dialog-data-exchange-and-validation.md)コントロールとメンバー変数の間。|各コントロールにプログラムからアクセスします。|
-|指定[検証規則](../mfc/dialog-data-exchange-and-validation.md)メンバー変数にします。|必要な場合は、テキストまたは数値の値を生成する各コントロール。|
+|[新しい CDialog 派生クラスを作成](../mfc/creating-your-dialog-class.md)して、ダイアログボックスを管理します。|各ダイアログボックス。|
+|[Windows メッセージ](../mfc/handling-windows-messages-in-your-dialog-box.md)をダイアログクラスにマップします。|処理する各メッセージ。|
+|ダイアログボックス内のコントロールを表すクラスメンバー変数を宣言します。|プログラムからアクセスするテキスト値または数値を生成するコントロール。|
+|コントロールとメンバー変数の間で[データを交換する方法](../mfc/dialog-data-exchange-and-validation.md)を指定します。|プログラムからアクセスする各コントロール。|
+|メンバー変数の[検証規則](../mfc/dialog-data-exchange-and-validation.md)を指定します。|必要に応じて、テキスト値または数値を生成する各コントロール。|
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ダイアログ クラスの作成](../mfc/creating-your-dialog-class.md)
+- [ダイアログクラスの作成](../mfc/creating-your-dialog-class.md)
 
-- [ダイアログ ボックスでの Windows メッセージの処理](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [ダイアログボックスでの Windows メッセージの処理](../mfc/handling-windows-messages-in-your-dialog-box.md)
 
-- [ダイアログ データ エクス チェンジと検証](../mfc/dialog-data-exchange-and-validation.md)
+- [ダイアログデータエクスチェンジと検証](../mfc/dialog-data-exchange-and-validation.md)
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

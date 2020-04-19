@@ -1,6 +1,6 @@
 ---
 title: 文字列化演算子 (#)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#'
 helpviewer_keywords:
@@ -12,39 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 4fcf94c7501156d84e80d4cc4ff0d5ea8659b45e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a1b43198e59bc1e69cdf1b56db56be75719fe46
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532042"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216553"
 ---
 # <a name="stringizing-operator-"></a>文字列化演算子 (#)
 
-シャープ記号つまり「文字列化」演算子 (**#**) マクロのパラメーターをリテラル文字列をパラメーターの定義を展開せずに変換します。 これは、引数を受け取るマクロでのみ使用されます。 マクロ定義の仮パラメーターの前に指定すると、マクロの呼び出し時に渡される実際の引数は一重引用符で囲まれ、文字列リテラルとして扱われます。 文字列リテラルは、マクロ定義内の文字列化演算子と仮パラメーターの組み合わせをすべて置き換えます。
+シャープ記号または "文字列化" 演算子 ( **#** ) は、パラメーター定義を展開せずにマクロパラメーターを文字列リテラルに変換します。 引数を受け取るマクロでのみ使用されます。 マクロ定義の仮パラメーターの前に指定すると、マクロの呼び出し時に渡される実際の引数は一重引用符で囲まれ、文字列リテラルとして扱われます。 文字列リテラルは、マクロ定義内の文字列化演算子と仮パラメーターの組み合わせをすべて置き換えます。
 
 > [!NOTE]
-> Microsoft C (Version 6.0 以前) では、ANSI C 規格を拡張して、文字列リテラルと文字定数の内部に現れるマクロ仮引数を展開していましたが、この拡張機能はサポートされなくなりました。 この拡張機能に依存するコードは、文字列化演算子を使用して書き直す必要があります (**#**) 演算子。
+> Microsoft C (Version 6.0 以前) では、ANSI C 規格を拡張して、文字列リテラルと文字定数の内部に現れるマクロ仮引数を展開していましたが、この拡張機能はサポートされなくなりました。 この拡張機能に依存するコードは、文字列化 ( **#** ) 演算子を使用して書き直す必要があります。
 
-実引数の最初のトークンに先行する空白と、実引数の最後のトークンに後続する空白は無視されます。 実引数のトークンの間にある空白は、結果の文字列リテラルでは 1 個の空白にまとめられます。 したがって、実引数で 2 つのトークンの間にコメントがある場合、コメントは 1 個の空白に置き換えられます。 結果の文字列リテラルは、隣接する任意の文字列リテラルと、空白のみで区切られて自動的に連結されます。
+最初のトークンの前にあり、実際の引数の最後のトークンの後にある空白は無視されます。 実引数のトークンの間にある空白は、結果の文字列リテラルでは 1 個の空白にまとめられます。 したがって、実際の引数の2つのトークンの間にコメントがある場合、1つの空白に縮小されます。 結果の文字列リテラルは、空白のみで区切られた隣接する文字列リテラルと自動的に連結されます。
 
-さらに、通常は、引数に含まれる文字が文字列リテラルで使用する場合は、エスケープ シーケンスが必要な場合 (引用符など (**"**) または円記号 (**\\**) 文字)、必要なエスケープ バック スラッシュが文字の前に自動的に挿入されます。
+さらに、引数に含まれる文字が文字列リテラルで使用される場合、通常はエスケープシーケンスが必要である場合 (引用符`"`() や円`\`記号 () など)、必要なエスケープ円記号が自動的に付けられます。文字の前に挿入されます。
 
-エスケープ シーケンスを含む文字列をと共に使用するときに、Visual C の文字列化演算子は正しく動作しません。 このような状況では、コンパイラが生成されます[コンパイラ エラー C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)します。
+Microsoft C++文字列化演算子は、エスケープシーケンスを含む文字列と共に使用されても正しく動作しません。 このような場合は、コンパイラによって[コンパイラエラー C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)が生成されます。
 
 ## <a name="examples"></a>使用例
 
-次の例は、文字列化演算子を含むマクロ定義と、そのマクロを呼び出すメイン関数を示しています。
-
-このような呼び出しはプリプロセッサによって展開され、次のコードが生成されます。
-
-```cpp
-int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
-   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
-}
-```
+次の例は、文字列化演算子を含むマクロ定義と、マクロを呼び出す main 関数を示しています。
 
 ```cpp
 // stringizer.cpp
@@ -54,6 +44,16 @@ int main() {
    stringer( In quotes in the printf function call );
    stringer( "In quotes when printed to the screen" );
    stringer( "This: \"  prints an escaped double quote" );
+}
+```
+
+前処理中にマクロが拡張され、次のコードが生成されます。`stringer`
+
+```cpp
+int main() {
+   printf_s( "In quotes in the printf function call" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"" "\n" );
+   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
 

@@ -5,20 +5,16 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d5c8f49c4a38862d62b7fe8212d98c87949fecfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653372"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246212"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&lt;](#op_lt)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しいかどうかを調べます。
 
@@ -28,14 +24,18 @@ bool operator==(const error_code& left,
 
 bool operator==(const error_condition& left,
     const error_code& right);
+
+bool operator==(const error_condition& left,
+    const error_condition& right);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|等しいかどうかをテストするオブジェクト。|
-|*right*|等しいかどうかをテストするオブジェクト。|
+*左*\
+等しいかどうかをテストするオブジェクト。
+
+*そうです*\
+等しいかどうかをテストするオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -45,24 +45,24 @@ bool operator==(const error_condition& left,
 
 この関数は `left.category() == right.category() && left.value() == right.value()` を返します。
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しくないかどうかを調べます。
 
 ```cpp
-bool operator!=(const error_code& left,
-    const error_condition& right);
-
-bool operator!=(const error_condition& left,
-    const error_code& right);
+bool operator!=(const error_code& left, const error_condition& right);
+bool operator!=(const error_condition& left, const error_code& right);
+bool operator!=(const error_code& left, const error_code& right);
+bool operator!=(const error_condition& left, const error_condition& right);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|不等性をテストするオブジェクト。|
-|*right*|不等性をテストするオブジェクト。|
+*左*\
+不等性をテストするオブジェクト。
+
+*そうです*\
+不等性をテストするオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -72,7 +72,7 @@ bool operator!=(const error_condition& left,
 
 この関数は `!(left == right)` を返します。
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 オブジェクトが比較のために渡されるオブジェクトより小さいかどうかをテストします。
 
@@ -102,10 +102,11 @@ inline bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|比較されるオブジェクト。|
-|*right*|比較されるオブジェクト。|
+*左*\
+比較されるオブジェクト。
+
+*そうです*\
+比較されるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -115,6 +116,9 @@ inline bool operator<(
 
 この関数はエラー順序をテストします。
 
-## <a name="see-also"></a>関連項目
+## <a name="op_ostream"></a> 演算子&lt;&lt;
 
-[<system_error>](../standard-library/system-error.md)<br/>
+```cpp
+template <class charT, class traits> 
+    basic_ostream<charT, traits>& operator<<(basic_ostream<charT, traits>& os, const error_code& ec);
+```

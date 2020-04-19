@@ -1,0 +1,50 @@
+- name: Linux での Visual Studio C++ のドキュメント
+  href: index.md
+- name: Linux Development ワークロードのダウンロード、インストール、設定
+  href: download-install-and-setup-the-linux-development-workload.md
+- name: リモートの Linux コンピューターに接続する
+  expanded: true
+  items:
+    - name: リモートの Linux コンピューターに接続する
+      href: connect-to-your-remote-linux-computer.md
+    - name: FIPS 準拠の安全なリモート Linux 開発のセットアップ
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: ConnectionManager リファレンス
+      href: connectionmanager-reference.md
+- name: 新しい Linux プロジェクトを作成する
+  href: create-a-new-linux-project.md
+- name: Linux プロジェクトを構成する
+  href: configure-a-linux-project.md
+- name: Linux CMake プロジェクトの作成と構成
+  href: cmake-linux-project.md
+- name: Linux プロジェクトを構成してアドレス サニタイザーを使用する
+  href: linux-asan-configuration.md
+- name: Linux プロジェクトのデプロイ、実行、デバッグ
+  href: deploy-run-and-debug-your-linux-project.md
+- name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
+  href: ../build/get-started-linux-cmake.md
+- name: Linux プロジェクト プロパティ ページの参照
+  expanded: false
+  items:
+    - name: Linux プロジェクト プロパティ ページの参照
+      href: prop-pages-linux.md
+    - name: 全般プロパティ (Linux)
+      href: prop-pages/general-linux.md
+    - name: デバッグ プロパティ (Linux)
+      href: prop-pages/debugging-linux.md
+    - name: VC++ ディレクトリ プロパティ (Linux)
+      href: prop-pages/directories-linux.md
+    - name: ソースのプロパティのコピー (Linux)
+      href: prop-pages/copy-sources-project.md
+    - name: C/C++ のプロパティ (Linux)
+      href: prop-pages/c-cpp-linux.md
+    - name: リンカー プロパティ (Linux)
+      href: prop-pages/linker-linux.md
+    - name: ビルド イベント プロパティ (Linux)
+      href: prop-pages/build-events-linux.md
+    - name: カスタム ビルド ステップのプロパティ (Linux)
+      href: prop-pages/custom-build-step-linux.md
+    - name: メイクファイル プロジェクトのプロパティ (Linux)
+      href: prop-pages/makefile-linux.md
+    - name: リモート アーカイブ プロパティ (Linux)
+      href: prop-pages/remote-ar-linux.md

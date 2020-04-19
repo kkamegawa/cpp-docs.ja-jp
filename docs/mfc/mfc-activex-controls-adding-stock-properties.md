@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : ストック プロパティの追加'
+title: MFC ActiveX コントロール:ストック プロパティの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BackColor property [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225344"
 ---
-# <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール : ストック プロパティの追加
+# <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール:ストック プロパティの追加
 
 ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`します。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 いくつかの一般的なプロパティには、コントロールのキャプションと前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティが常に付きます DISP_STOCKPROP のディスパッチ マップ エントリ。
 
@@ -75,15 +75,15 @@ ms.locfileid: "50607832"
 
 |プロパティ|ディスパッチ マップ エントリ|値にアクセスする方法|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE)|値としてアクセスできるように`m_sAppearance`します。|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR)|呼び出すことによってアクセス可能な値`GetBackColor`します。|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE)|値としてアクセスできるように`m_sBorderStyle`します。|
-|`Caption`|DISP_STOCKPROP_CAPTION)|呼び出すことによってアクセス可能な値`InternalGetText`します。|
-|`Enabled`|DISP_STOCKPROP_ENABLED)|値としてアクセスできるように`m_bEnabled`します。|
-|`Font`|DISP_STOCKPROP_FONT)|記事をご覧ください[MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)の使用量。|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR)|呼び出すことによってアクセス可能な値`GetForeColor`します。|
-|`hWnd`|DISP_STOCKPROP_HWND)|値としてアクセスできるように`m_hWnd`します。|
-|`Text`|DISP_STOCKPROP_TEXT)|呼び出すことによってアクセス可能な値`InternalGetText`します。 このプロパティは、同じ`Caption`プロパティ名を除く。|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|値としてアクセスできるように`m_sAppearance`します。|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|呼び出すことによってアクセス可能な値`GetBackColor`します。|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|値としてアクセスできるように`m_sBorderStyle`します。|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|呼び出すことによってアクセス可能な値`InternalGetText`します。|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|値としてアクセスできるように`m_bEnabled`します。|
+|`Font`|DISP_STOCKPROP_FONT( )|記事をご覧ください[MFC ActiveX コントロール。フォントを使用して](../mfc/mfc-activex-controls-using-fonts.md)の使用量。|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|呼び出すことによってアクセス可能な値`GetForeColor`します。|
+|`hWnd`|DISP_STOCKPROP_HWND( )|値としてアクセスできるように`m_hWnd`します。|
+|`Text`|DISP_STOCKPROP_TEXT( )|呼び出すことによってアクセス可能な値`InternalGetText`します。 このプロパティは、同じ`Caption`プロパティ名を除く。|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|値としてアクセスできるように`m_lReadyState`または `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> ストック プロパティと通知

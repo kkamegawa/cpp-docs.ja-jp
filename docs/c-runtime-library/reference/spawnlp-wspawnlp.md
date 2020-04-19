@@ -1,10 +1,10 @@
 ---
 title: _spawnlp、_wspawnlp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnlp
 - _spawnlp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wspawnlp
 - wspawnlp
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 98d5609d17f5932a81be916b878eb25333869591
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328735"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947742"
 ---
-# <a name="spawnlp-wspawnlp"></a>_spawnlp、_wspawnlp
+# <a name="_spawnlp-_wspawnlp"></a>_spawnlp、_wspawnlp
 
 新しいプロセスを作成して実行します。
 
@@ -73,12 +76,12 @@ intptr_t _wspawnlp(
 *cmdname*<br/>
 実行されるファイルのパス。
 
-*arg0*、 *arg1*、.*argn*<br/>
-引数へのポインターのリスト。 *Arg0*引数がへのポインターでは、通常*cmdname*します。 引数*arg1*を通じて*argn*新しい引数リストを形成する文字列へのポインターです。 次の*argn*、必要があります、 **NULL**引数リストの末尾へのポインター。
+*arg0*、 *arg1*、...*argn*<br/>
+引数へのポインターのリスト。 *Arg0*引数は通常、 *cmdname*へのポインターです。 引数*arg1* ~ *argn*は、新しい引数リストを形成する文字列へのポインターです。 *Argn*の後に、引数リストの末尾を示す**NULL**ポインターが必要です。
 
 ## <a name="return-value"></a>戻り値
 
-同期からの戻り値 **_spawnlp**または **_wspawnlp** (**_P_WAIT**向けに指定された*モード*) は、新しいプロセスの終了ステータス. 非同期の戻り値 **_spawnlp**または **_wspawnlp** (**_P_NOWAIT**または **_P_NOWAITO**向けに指定された*モード*) は、プロセスのハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に呼び出す場合、0 以外の値を終了ステータスを設定できます、**終了**ルーチン 0 以外の引数。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 は、(新しいプロセスは開始されません) エラーを示します。 この場合、 **errno**値は次のいずれかに設定されます。
+同期 **_spawnlp**または **_wspawnlp** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期の **_spawnlp**または **_wspawnlp** (*モード*用に指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値は、プロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で**終了**ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno**は次のいずれかの値に設定されます。
 
 |||
 |-|-|
@@ -92,9 +95,9 @@ intptr_t _wspawnlp(
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数を作成し、個別のパラメーターとして各コマンドライン引数を渡すを使用して、新しいプロセスの実行、**パス**環境変数を実行するファイルを検索します。
+これらの各関数は新しいプロセスを作成して実行し、各コマンドライン引数を個別のパラメーターとして渡し、 **PATH**環境変数を使用して実行するファイルを検索します。
 
-これらの関数では、パラメーターの検証が行われます。 いずれか*cmdname*または*arg0*が空の文字列または null ポインター」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*arg0*のいずれかが空の文字列または null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター例外を生成します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
 
 ## <a name="requirements"></a>必要条件
 

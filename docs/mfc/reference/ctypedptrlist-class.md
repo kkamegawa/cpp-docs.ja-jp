@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324507"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList クラス
 
@@ -179,7 +179,7 @@ TYPE GetAt(POSITION position) const;
 *TYPE*<br/>
 リストに格納されている要素の種類を指定するテンプレート パラメーター。
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetHeadPosition`または`Find`メンバー関数の呼び出し。
 
 ### <a name="return-value"></a>戻り値
@@ -379,7 +379,7 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CPtrList クラス](../../mfc/reference/cptrlist-class.md)<br/>
 [CObList クラス](../../mfc/reference/coblist-class.md)

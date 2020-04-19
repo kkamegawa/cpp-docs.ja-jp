@@ -1,18 +1,16 @@
 ---
 title: CComObjectRootEx の実装
 ms.date: 11/04/2016
-f1_keywords:
-- CComObjectRootEx
 helpviewer_keywords:
 - CComObjectRoot class, implementing
 - CComObjectRootEx class
 ms.assetid: 79630c44-f2df-4e9e-b730-400a0ebfbd2b
-ms.openlocfilehash: c56777034445e89dd86db935fc725755ad43a617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80ce9936546b936770d8dedd0ba55f8c05617d37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197472"
 ---
 # <a name="implementing-ccomobjectrootex"></a>CComObjectRootEx の実装
 
@@ -28,4 +26,3 @@ ms.locfileid: "50499789"
 
 [ATL COM オブジェクトの基礎](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [COM マップに関するマクロ](../atl/reference/com-map-macros.md)
-

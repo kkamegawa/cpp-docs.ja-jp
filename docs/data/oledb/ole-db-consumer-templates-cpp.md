@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: 6bda050efd7d2d4ac6df196e42ffe6be43ab1a65
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284047"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB コンシューマー テンプレート (C++)
 
@@ -24,7 +24,7 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
 
 - OLE DB プログラミング用のネイティブの C/C++ データ型。
 
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](https://docs.microsoft.com/previous-versions/windows/desktop/ms718124(v=vs.85))します。
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)します。
 
 OLE DB テンプレートは、新しいオブジェクト モデルを追加するのではなく、既存の OLE DB オブジェクト モデルをサポートします。 OLE DB コンシューマー テンプレートの最上位クラスは、OLE DB 仕様で定義されたコンポーネントと同等のものです。 OLE DB コンシューマー テンプレートのデザインには、1 つの行セットに対する複数のアクセサーなどの高度な機能が含まれます。 テンプレートと多重継承を使用することで、ライブラリを小型で柔軟なものにすることができます。
 
@@ -60,5 +60,5 @@ OLE DB コンシューマーは、データベース テーブル内の列をロ
 
 [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)<br/>
 [データ アクセス](../data-access-in-cpp.md)<br/>
-[OLE DB SDK のドキュメント](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[OLE DB SDK のドキュメント](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

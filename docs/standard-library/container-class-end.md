@@ -4,29 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-ms.openlocfilehash: 458f22e76f03322c1a67a9ec93b953ad82d71a35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c947ecb0dd81aa805cefd0b5861c80e5bc1cf90b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475430"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258186"
 ---
 # <a name="container-classend"></a>コンテナー クラス::end
 
 > [!NOTE]
-> このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
 
 シーケンスの末尾の次の位置を指す反復子を返します。
 
 ## <a name="syntax"></a>構文
 
-```
-
-    const_iterator end() const;
+```cpp
+const_iterator end() const;
 
 iterator end();
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)<br/>
+[サンプル コンテナー クラス](../standard-library/sample-container-class.md)

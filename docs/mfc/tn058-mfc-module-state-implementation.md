@@ -1,8 +1,6 @@
 ---
-title: 'テクニカル ノート 58: MFC のモジュール状態の実装'
+title: TN058:MFC モジュール状態の実装
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.implementation
 helpviewer_keywords:
 - thread state [MFC]
 - module states [MFC], managing state data
@@ -12,14 +10,14 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d803dba36b7790173b21dacb6cb34241f27dfb96
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626047"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65610957"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>テクニカル ノート 58: MFC のモジュール状態の実装
+# <a name="tn058-mfc-module-state-implementation"></a>TN058:MFC モジュール状態の実装
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -30,7 +28,7 @@ ms.locfileid: "50626047"
 
 ## <a name="overview"></a>概要
 
-MFC の状態情報の 3 種類があります: モジュールの状態、プロセス、およびスレッドの状態。 場合によってこれらの状態の種類を結合できます。 たとえば、MFC のハンドルのマップは、ローカル モジュールとスレッド ローカルの両方です。 これにより、各スレッドで異なる複数のマップに 2 つの異なるモジュールです。
+MFC の状態情報の 3 つの種類があります。モジュールの状態、プロセスの状態、およびスレッドの状態。 場合によってこれらの状態の種類を結合できます。 たとえば、MFC のハンドルのマップは、ローカル モジュールとスレッド ローカルの両方です。 これにより、各スレッドで異なる複数のマップに 2 つの異なるモジュールです。
 
 プロセスの状態およびスレッドの状態は似ています。 これらのデータ項目は、グローバル変数がありましたが、特定のプロセスに固有のもの、またはスレッドの適切な Win32s をサポートする、または適切なマルチ スレッドのサポートのする必要があることです。 カテゴリ内に収まる範囲指定されたデータ項目は、その項目とその目的のセマンティクスに関するプロセスとスレッドの境界によって異なります。
 

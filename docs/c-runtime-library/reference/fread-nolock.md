@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock
 - fread_nolock
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597289"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956872"
 ---
-# <a name="freadnolock"></a>_fread_nolock
+# <a name="_fread_nolock"></a>_fread_nolock
 
 他のスレッドをロックしないで、ストリームからデータを読み取ります。
 
@@ -59,7 +62,7 @@ size_t _fread_nolock(
 *count*<br/>
 読み取る項目の最大数。
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -68,7 +71,7 @@ size_t _fread_nolock(
 
 ## <a name="remarks"></a>Remarks
 
-この関数は、ロックしないバージョンの**fread**します。 これは**fread**いない他のスレッドによる干渉から保護には、する点を除いて。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、 **fread**のロックされていないバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fread**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
 
 ## <a name="requirements"></a>必要条件
 

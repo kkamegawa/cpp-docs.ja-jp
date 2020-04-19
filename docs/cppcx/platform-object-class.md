@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183210"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **ヘッダー:** vccorlib.h
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 ## <a name="equals"></a> Object::equals メソッド
 
@@ -116,19 +116,13 @@ A [platform::type](../cppcx/platform-type-class.md)オブジェクトのラン�
 
 静的な[type::gettypecode](../cppcx/platform-type-class.md#gettypecode)を取得するために使用できる、 [platform::typecode 列挙](../cppcx/platform-typecode-enumeration.md)現在の型を表す値です。 これは主に、組み込み型に使用できます。 以外の ref クラスの型コード[platform::string](../cppcx/platform-string-class.md)オブジェクト (1) です。
 
-[::Interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。
+[::Interop::typename](/uwp/api/windows.ui.xaml.interop.typename)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。
 
-使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。
+使用して、 [typeid](../extensions/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
-
-## <a name="see-also"></a>関連項目
-
-[Platform::Type クラス](../cppcx/platform-type-class.md)<br/>
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
-[システムの種類](../cppcx/type-system-c-cx.md
 
 ## <a name="ctor"></a>  Object::object コンス トラクター
 
@@ -162,7 +156,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 **true**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **false**します。
 
-## <a name="tostring"></a>  Object::tostring メソッド (C + + CX)
+## <a name="tostring"></a>  Object::tostring メソッド (C++/CX)
 
 現在のオブジェクトを表す文字列を返します。
 
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Type クラス](platform-type-class.md)<br/>
+[型システム](type-system-c-cx.md)

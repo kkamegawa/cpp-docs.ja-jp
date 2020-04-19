@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327305"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459076"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf クラス
 
-要素に格納されている要素のシーケンスとの間の転送を制御するストリーム バッファーについて説明します、 **char**配列オブジェクト。
+**Char**配列オブジェクトに格納されている要素のシーケンスとの間での要素の転送を制御するストリームバッファーを記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -93,12 +93,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Freezeit*<br/>
-A **bool**ストリームを停止するかどうかを示します。
+*_Freezeit*\
+ストリームを固定するかどうかを示す**ブール**値。
 
 ### <a name="remarks"></a>Remarks
 
-場合 *_Freezeit*が true の場合、この関数は、格納されている変更`strstreambuf`モードが固定されている被制御シーケンスを変更します。 それ以外の場合、被制御シーケンスは固定されません。
+*_Freezeit*が true の場合、関数は、被`strstreambuf`制御シーケンスが固定されるように、格納されているモードを変更します。 それ以外の場合、被制御シーケンスは固定されません。
 
 [str](#str) は `freeze` を意味します。
 
@@ -181,12 +181,12 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*<br/>
+*メタ (_c)* \
 バッファーに挿入する文字または `EOF`。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功しない場合は、`EOF` が返されます。 の場合 *\_メタ*  == `EOF`、他にもいくつかの値を返します`EOF`します。 返しますそれ以外の場合、 *\_メタ*します。
+関数が成功しない場合は、`EOF` が返されます。 の場合 *\_メタ*  == `EOF`、他にもいくつかの値を返します`EOF`します。 それ以外の場合は、  *\_Meta*を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -206,22 +206,22 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*<br/>
+*メタ (_c)* \
 バッファーに挿入する文字または `EOF`。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功しない場合は、`EOF` が返されます。 の場合 *\_メタ*  == `EOF`、他にもいくつかの値を返します`EOF`します。 返しますそれ以外の場合、 *\_メタ*します。
+関数が成功しない場合は、`EOF` が返されます。 の場合 *\_メタ*  == `EOF`、他にもいくつかの値を返します`EOF`します。 それ以外の場合は、  *\_Meta*を返します。
 
 ### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数が要素を入力バッファーに戻そうと試み、その要素を現在の要素に (次のポインターによって指されるように) します。
 
-場合 *\_メタ* == `EOF`、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます`ch = (char)_Meta`します。 この関数は、さまざまな方法で要素を戻すことができます。
+場合 *\_メタ* == `EOF`、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素`ch = (char)_Meta`はに置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
-- 戻り位置が使用してに格納されている要素が等しい場合`ch`、入力バッファーのネクスト ポインターをデクリメントできます。
+- 戻り位置が使用可能であり、格納されている要素がと`ch`等しい場合、入力バッファーの次のポインターをデクリメントできます。
 
-- 戻り位置が使用可能なと関数に格納できる場合は、strstreambuf モードによると、被制御シーケンスは変更可能な場合`ch`戻り位置に、入力バッファーのネクスト ポインターをデクリメントします。
+- 戻り位置が使用可能であり、strstreambuf モードによって被制御シーケンスが変更可能であることが示さ`ch`れている場合、関数は、戻り位置にを格納し、入力バッファーの次のポインターをデクリメントできます。
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -237,7 +237,7 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>Remarks
 
-具体的には、[pptr](../standard-library/basic-streambuf-class.md#pptr) が Null ポインターの場合、この関数はゼロを返します。 返しますそれ以外の場合、 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)します。
+具体的には、[pptr](../standard-library/basic-streambuf-class.md#pptr) が Null ポインターの場合、この関数はゼロを返します。 それ以外の場合`pptr`は、 [pbase](../standard-library/basic-streambuf-class.md#pbase)を返し - ます。
 
 ### <a name="example"></a>例
 
@@ -270,13 +270,13 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
-に対して相対的にシークする位置 *_Way*します。
+*オフ (_r)* \
+に対して相対的にシークする*位置。*
 
-*_Way*<br/>
+*方法 (_c)* \
 オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*_Which*<br/>
+*どのようなものですか?* \
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -289,15 +289,15 @@ virtual streampos seekoff(streamoff _Off,
 
 新しい位置は、次のように決定されます。
 
-- 場合`_Way == ios_base::beg`、新しい位置はプラス ストリームの先頭 *_Off*します。
+- の`_Way == ios_base::beg`場合、新しい位置はストリームの先頭と*オフ*になります。
 
-- 場合`_Way == ios_base::cur`、新しい位置は、現在のストリームの位置と *_Off*します。
+- の`_Way == ios_base::cur`場合、新しい位置は現在のストリームの位置と*オフ*になります。
 
-- 場合`_Way == ios_base::end`、プラス ストリームの末尾が新しい位置 *_Off*します。
+- の`_Way == ios_base::end`場合、新しい位置はストリームの末尾にと*Off*を加えたものになります。
 
-場合`_Which & ios_base::in`0 以外の場合は、この関数は、次に、入力バッファーに読み取る位置を変更、入力バッファーが存在します。 場合`_Which & ios_base::out`が 0 以外の場合、また`_Way != ios_base::cur`、出力バッファーが存在して、この関数は、次に読み取る位置に一致するように記述する次の位置を設定します。
+が`_Which & ios_base::in` 0 以外で、入力バッファーが存在する場合、関数は次の位置を変更して入力バッファーに読み込みます。 に`_Which & ios_base::out`も0以外の`_Way != ios_base::cur`値を設定し、出力バッファーが存在する場合は、次の位置を読み取りの次の位置に一致するように書き込むように設定します。
 
-の場合`_Which & ios_base::out`0 以外の場合は、出力バッファーが存在して、、、この関数は、次に、出力バッファーに書き込む位置を変更します。 それ以外の場合、配置操作が失敗します。 配置操作を正常に完了するためには、結果のストリームの位置が被制御シーケンス内になければなりません。
+それ以外の`_Which & ios_base::out`場合、が0以外で、出力バッファーが存在する場合、関数は次の位置を変更して出力バッファーに書き込みます。 それ以外の場合、配置操作が失敗します。 配置操作を正常に完了するためには、結果のストリームの位置が被制御シーケンス内になければなりません。
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -309,10 +309,10 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*<br/>
+*Sp (_s)* \
 シークする位置。
 
-*_Which*<br/>
+*どのようなものですか?* \
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -321,7 +321,7 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数が、制御対象ストリームの現在の位置を変更しようと試みます。 クラス strstreambuf のオブジェクトの場合、ストリームの位置がストリーム オフセットのみで構成されます。 オフセット ゼロは、被制御シーケンスの最初の要素を指定します。 新しい位置によって決まり *_Sp*します。
+プロテクト仮想メンバー関数が、制御対象ストリームの現在の位置を変更しようと試みます。 クラス strstreambuf のオブジェクトの場合、ストリームの位置がストリーム オフセットのみで構成されます。 オフセット ゼロは、被制御シーケンスの最初の要素を指定します。 新しい位置は、 *Sp*によって決定されます。
 
 `_Which` & **ios_base::in** が 0 以外であり、入力バッファーが存在する場合、この関数は次の位置を変更して入力バッファーに読み取ります。 `_Which` & `ios_base::out` が 0 以外であり、出力バッファーが存在する場合、この関数は、次の位置を設定して読み取る次の位置に一致するように書き込みます。 それ以外の場合、`_Which` & `ios_base::out` が 0 以外であり、出力バッファーが存在する場合、この関数は次の位置を変更して出力バッファーに書き込みます。 それ以外の場合、配置操作が失敗します。 配置操作を正常に完了するためには、結果のストリームの位置が被制御シーケンス内になければなりません。
 
@@ -379,26 +379,26 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Allocfunc*<br/>
+*Allocfunc (_d)* \
 バッファー メモリの割り当てに使用される関数。
 
-*count*<br/>
-指し示されるバッファーの長さを決定 *_Getptr*します。 場合 *_Getptr*引数ではない (最初のコンス トラクター フォーム)、割り当ての提案がバッファーのサイズします。
+*数*\
+*_Getptr*が指すバッファーの長さを決定します。 *_Getptr*が引数 (最初のコンストラクターの形式) でない場合は、バッファーの割り当てサイズを推奨します。
 
-*_Freefunc*<br/>
+*Freefunc (_d)* \
 バッファー メモリを解放するために使用する関数。
 
-*_Getptr*<br/>
+*_Getptr*\
 入力に使用するバッファー。
 
-*_Putptr*<br/>
+*_Putptr*\
 出力に使用するバッファー。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、入力バッファー、出力バッファー、および strstreambuf 割り当てを制御するすべてのポインターに Null ポインターを格納します。 被制御シーケンスを変更および拡張できるように、ストアド strstreambuf モードに設定します。 受け入れます。*カウント*提案される初期割り当てサイズとして。
+最初のコンストラクターは、入力バッファー、出力バッファー、および strstreambuf 割り当てを制御するすべてのポインターに Null ポインターを格納します。 被制御シーケンスを変更および拡張できるように、ストアド strstreambuf モードに設定します。 また、推奨される初期割り当てサイズとして*count*も受け入れます。
 
-格納する点を除いて、最初のように 2 つ目のコンス トラクターは、動作 *\_Allocfunc*記憶域の割り当てするために呼び出す関数へのポインターとしてと *\_Freefunc*ポインターとしてストレージを解放するために呼び出す関数。
+2番目のコンストラクターは、最初のコンストラクターと同じ *\_* ように動作します。ただし、ストレージを *\_* 割り当てるために呼び出す関数へのポインターとして allocfunc を格納し、そのストレージを解放するために呼び出す関数へのポインターとして freefunc を格納する点が異なります。
 
 3 つのコンストラクター:
 
@@ -418,11 +418,11 @@ strstreambuf(unsigned char *_Getptr,
 
 これらは、`_Getptr` が被制御シーケンスを保持するために使用する配列オブジェクトを指定する点を除いて、最初のコンストラクターのように動作します。 (したがって、Null ポインターにすることはできません。)配列内の要素の数 *N* は、次のように決定されます。
 
-- 場合 (`count` > 0)、し*N*は`count`します。
+- (`count` > 0) の場合、 *N*は`count`です。
 
-- 場合 (`count` 0 を = =)、し*N*は`strlen`(( **const** `char` *) `_Getptr` )。
+- (`count` = = 0) の場合、 *N*は`strlen`(( **const** `char` *) `_Getptr` ) です。
 
-- 場合 (`count` < 0)、し*N*は**INT_MAX**します。
+- (`count` < 0) の場合、 *N*は**INT_MAX**になります。
 
 `_Putptr` が Null ポインターの場合、関数は次を実行することによって入力バッファーだけを確立します。
 
@@ -480,11 +480,11 @@ virtual int underflow();
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は、現在の要素を抽出しようと`ch`は入力バッファーから現在のストリームの位置を進める、およびとして要素を返します (`int`) (`unsigned char`) **ch**します。 1 つの方法で行うことができます。 かかる読み取り位置が使用可能な場合は、`ch`要素は、読み取り位置に格納されていると、入力バッファーのネクスト ポインターを進めます。
+プロテクト仮想メンバー関数は`ch` 、現在の要素を入力バッファーから抽出し、現在のストリームの位置を進め、要素を (`int`) (`unsigned char`) **ch**として返します。 これは、1つの方法でのみ行うことができます。読み取り位置が`ch`使用可能な場合は、読み取り位置に格納されている要素として取得し、入力バッファーの次のポインターを進めます。
 
 ## <a name="see-also"></a>関連項目
 
-[streambuf](../standard-library/streambuf-typedefs.md#streambuf)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

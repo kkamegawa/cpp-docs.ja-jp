@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2436
 ms.assetid: ca4cc813-bc1d-4c0a-9a2c-3a5fe673d084
-ms.openlocfilehash: 335d4a304e16814243894c9524a9e4a2a7356110
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fd910f18e8d863c6894a7fe99449d5ba213bf61
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627358"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744382"
 ---
 # <a name="compiler-error-c2436"></a>コンパイラ エラー C2436
 
-'identifier': メンバー関数またはコンス トラクター初期化子リストで入れ子になったクラス
+' identifier ': コンストラクター初期化子リストのメンバー関数または入れ子になったクラス
 
-メンバー関数またはコンス トラクターの初期化子リストでローカルのクラスを初期化できません。
+コンストラクター初期化子リストのメンバー関数またはローカルクラスは初期化できません。
 
 次の例では、C2436 が生成されます。
 
-```
+```cpp
 // C2436.cpp
 struct S{
    int f();

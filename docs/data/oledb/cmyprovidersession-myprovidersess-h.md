@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 75d0c8d871ca736be5e2c33829296b2760092e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230582"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CCustomSession :
 
 ウィザードでは、次の 3 つのセッション クラスも生成されます: `CCustomSessionColSchema`、 `CCustomSessionPTSchema`、および`CCustomSessionTRSchema`します。 スキーマ行セットでは、これらのセッションが使用されます。 スキーマ行セットには、プロバイダーがコンシューマーのデータのクエリまたはフェッチを実行することがなく、コンシューマーにメタデータを返すことができるようにします。 メタデータをフェッチしていますが、プロバイダーの機能の検索よりも高速に実行できます。
 
-OLE DB 仕様では、する必要がありますを実装するプロバイダー、`IDBSchemaRowset`インターフェイス サポートの 3 つのスキーマ行セットの種類: DBSCHEMA_COLUMNS、DBSCHEMA_PROVIDER_TYPES、および DBSCHEMA_TABLES します。 ウィザードでは、各スキーマ行セットの実装を生成します。 ウィザードによって生成される各クラスが含まれています、`Execute`メソッド。 この`Execute`メソッドをサポートするどのテーブル、列、およびデータ型について、プロバイダーにデータを返すことができます。 このデータは、コンパイル時に呼ばれます。
+OLE DB 仕様では、する必要がありますを実装するプロバイダー、`IDBSchemaRowset`インターフェイス スキーマ行セットの型を 3 つのサポート。DBSCHEMA_COLUMNS、DBSCHEMA_PROVIDER_TYPES、および DBSCHEMA_TABLES です。 ウィザードでは、各スキーマ行セットの実装を生成します。 ウィザードによって生成される各クラスが含まれています、`Execute`メソッド。 この`Execute`メソッドをサポートするどのテーブル、列、およびデータ型について、プロバイダーにデータを返すことができます。 このデータは、コンパイル時に呼ばれます。
 
 ## <a name="see-also"></a>関連項目
 

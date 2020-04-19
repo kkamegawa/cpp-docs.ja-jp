@@ -1,10 +1,10 @@
 ---
 title: memcmp、wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -24,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610468"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951933"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -59,21 +63,21 @@ int wmemcmp(
 2 番目のバッファー。
 
 *count*<br/>
-比較する文字数 (のバイトを比較**memcmp**、ワイド文字**wmemcmp**)。
+比較する文字数 ( **Memcmp**のバイト数、 **wmemcmp**の場合はワイド文字を比較します)。
 
 ## <a name="return-value"></a>戻り値
 
 戻り値は、バッファー間の関係を示しています。
 
-|戻り値|最初の*カウント*buf1 と buf2 の文字|
+|戻り値|Buf1 と buf2 の最初の*カウント*文字の関係|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1*未満*buffer2*|
-|0|*buffer1*と同じ*buffer2*|
-|> 0|*buffer1*より大きい*buffer2*|
+|0|*buffer1*は*buffer2*と同じです。|
+|> 0|*buffer1* *buffer2*より大きい|
 
 ## <a name="remarks"></a>Remarks
 
-最初の比較*カウント*の文字*buffer1*と*buffer2*の関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値として解釈されます**符号なし** **char**の**memcmp**、として**wchar_t**の**wmemcmp**します。
+*Buffer1*と*buffer2*の最初の*カウント*文字を比較し、それらの関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値は、 **memcmp**では**unsigned** **char** 、 **wmemcmp**では**wchar_t**として解釈されます。
 
 ## <a name="requirements"></a>必要条件
 

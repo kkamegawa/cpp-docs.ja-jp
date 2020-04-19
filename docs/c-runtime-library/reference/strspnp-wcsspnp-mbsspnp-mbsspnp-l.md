@@ -1,12 +1,12 @@
 ---
 title: _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsspnp
 - _mbsspnp
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521233"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946679"
 ---
-# <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
+# <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 
 指定した一方の文字列の文字のうち、もう一方の文字列にはない最初の文字へのポインターを返します。
 
 > [!IMPORTANT]
-> **_mbsspnp**と **_mbsspnp_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsspnp**と **_mbsspnp_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -83,7 +86,7 @@ unsigned char *_mbsspnp_l(
 *str*<br/>
 NULL で終わる検索対象の文字列。
 
-*文字セット*<br/>
+*集合*<br/>
 NULL で終わる文字セット。
 
 *locale*<br/>
@@ -91,13 +94,13 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-**_strspnp**、 **_wcsspnp**、および **_mbsspnp**で最初の文字へのポインターを返す*str* 内の文字のセットに含まれない*charset*します。 これらの関数を返します。 **NULL**場合*str*全体の文字から*charset*します。 これらのルーチンでは、エラーを示す戻り値は予約されていません。
+**_strspnp**、 **_wcsspnp**、および **_mbsspnp**は、 *charset* *内の*文字セットに属さない最初の文字へのポインターを返します。 これらの各関数は、 *str*が*charset*からのすべての文字で構成されている場合、 **NULL**を返します。 これらのルーチンでは、エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbsspnp**関数の最初の文字をマルチバイト文字のポインターを返します*str*内の文字のセットに含まれない*charset*します。 **_mbsspnp**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用されています。 検索には、終端の NULL 文字は含まれません。
+**_Mbsspnp**関数は、 *charset*の文字セットに属さない、 *str*の最初の文字であるマルチバイト文字へのポインターを返します。 **_mbsspnp**は、現在使用中の[マルチバイトコードページ](../../c-runtime-library/code-pages.md)に従ってマルチバイト文字のシーケンスを認識します。 検索には、終端の NULL 文字は含まれません。
 
-いずれか*str*または*charset* null ポインターの場合は、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**NULL**設定と**errno**に**EINVAL**します。
+*Str*または*charset*が null ポインターの場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -105,9 +108,9 @@ NULL で終わる文字セット。
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp**と **_wcsspnp**は 1 バイト文字とワイド文字バージョンの **_mbsspnp**します。 **_strspnp**と **_wcsspnp**と同様に動作 **_mbsspnp** 。 それ以外の場合、このマッピングに対してのみ提供され、他の何らかの理由では使用しない必要があります。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+**_strspnp**と **_wcsspnp**は、 **_mbsspnp**の1バイト文字とワイド文字バージョンです。 **_strspnp**と **_wcsspnp**は、それ以外の場合は **_mbsspnp**と同じように動作します。これらは、このマッピングに対してのみ提供され、その他の理由では使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
-**_mbsspnp_l**代わりに渡されたロケール パラメーターを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbsspnp_l**は、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -135,7 +138,7 @@ int main( void ) {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 abbage

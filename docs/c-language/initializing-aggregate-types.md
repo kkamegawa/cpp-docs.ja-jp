@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: ebc7f6185c8115df6e6b77a034307f8998b1c2ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530303"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326080"
 ---
 # <a name="initializing-aggregate-types"></a>集約型の初期化
 
@@ -22,8 +22,8 @@ ms.locfileid: "50530303"
 ## <a name="syntax"></a>構文
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* 集計初期化用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 集計初期化用 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ ms.locfileid: "50530303"
 
 *初期化子リスト*の値の数が集約型より少ない場合、集約型の残りのメンバーまたは要素は 0 に初期化されます。 明示的に初期化されない自動識別子の初期値は定義されません。 *初期化子リスト*に集約型よりも多くの値がある場合、エラーが発生します。 これらの規則は、埋め込まれた各初期化子リストと、集約全体に適用されます。
 
-構造体の初期化子は、同じ型の式、または中かっこ (**{ }**) で囲まれているメンバーの初期化子のリストです。 名前のないビット フィールド メンバーは初期化されません。
+構造体の初期化子は、同じ型の式、または中かっこ ( **{ }** ) で囲まれているメンバーの初期化子のリストです。 名前のないビット フィールド メンバーは初期化されません。
 
 共用体が初期化される場合、*初期化子リスト*は単一の定数式である必要があります。 定数式の値は共用体の最初のメンバーに割り当てられます。
 
@@ -150,6 +150,6 @@ union
 
 共用体変数 `y` は、この例では初期化されます。 共用体の最初の要素は配列であるため、初期化子は初期化子の集約です。 初期化子リスト `{'1'}` は配列の最初の行に値を割り当てます。 リストには 1 種類の値のみが表示されるため、最初の列の要素は、文字 `1` に初期化され、行の残りの 2 つの要素は、既定で値 0 に初期化されます。 同様に、`x` の 2 番目の行の最初の要素は、文字 `4` に初期化され、行の残りの 2 つの要素は値 0 に初期化されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [初期化](../c-language/initialization.md)

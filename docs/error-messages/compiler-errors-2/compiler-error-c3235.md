@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3235
 ms.assetid: 0554d6c7-e1dc-4c99-8934-cbcf491c8203
-ms.openlocfilehash: 1e74d479e75aee98dada16107b7e33d5cfe0c0cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e284cf0d7742e60ceb5d381777ac68e9d0ea89be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520312"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759400"
 ---
 # <a name="compiler-error-c3235"></a>コンパイラ エラー C3235
 
@@ -19,11 +19,11 @@ ms.locfileid: "50520312"
 
 ジェネリック クラスは、明示的または部分的な特殊化には使用できません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3235 が生成されます。
 
-```
+```cpp
 // C3235.cpp
 // compile with: /clr
 generic<class T>

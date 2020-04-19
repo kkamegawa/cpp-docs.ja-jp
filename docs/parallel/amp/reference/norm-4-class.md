@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: ec71019e64046d693aaf96adb81762bfd536ac2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677228"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126475"
 ---
-# <a name="norm4-class"></a>norm_4 クラス
+# <a name="norm_4-class"></a>norm_4 クラス
 
 4 個の正規数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class norm_4;
 ```
 
@@ -289,19 +289,19 @@ class norm_4;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[norm_4 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[norm_4 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -318,7 +318,7 @@ class norm_4;
 |norm_4::get_wzx||
 |norm_4::get_wzxy||
 |norm_4::get_wzy||
-|norm_4::get_wzyx||
+|norm_4:: get_wzyx||
 |norm_4::get_x||
 |norm_4::get_xw||
 |norm_4::get_xwy||
@@ -390,7 +390,7 @@ class norm_4;
 |norm_4::set_wzx||
 |norm_4::set_wzxy||
 |norm_4::set_wzy||
-|norm_4::set_wzyx||
+|norm_4:: set_wzyx||
 |norm_4::set_x||
 |norm_4::set_xw||
 |norm_4::set_xwy||
@@ -442,7 +442,7 @@ class norm_4;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |norm_4::operator-||
 |norm_4::operator--||
@@ -455,13 +455,13 @@ class norm_4;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#norm_4__size)||
+|[サイズ定数](#norm_4__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |norm_4::a||
 |norm_4::ab||
@@ -494,7 +494,7 @@ class norm_4;
 |norm_4::bra||
 |norm_4::brag||
 |norm_4::brg||
-|norm_4::brga||
+|norm_4:: brga||
 |norm_4::g||
 |norm_4::ga||
 |norm_4::gab||
@@ -539,10 +539,10 @@ class norm_4;
 |norm_4::wyz||
 |norm_4::wyzx||
 |norm_4::wz||
-|norm_4::wzx||
-|norm_4::wzxy||
-|norm_4::wzy||
-|norm_4::wzyx||
+|norm_4:: wzx||
+|norm_4:: wzxy||
+|norm_4:: wzy||
+|norm_4:: wzyx||
 |norm_4::x||
 |norm_4::xw||
 |norm_4::xwy||
@@ -565,15 +565,15 @@ class norm_4;
 |norm_4::ywxz||
 |norm_4::ywz||
 |norm_4::ywzx||
-|norm_4::yx||
-|norm_4::yxw||
-|norm_4::yxwz||
+|norm_4:: yx||
+|norm_4:: yxw||
+|norm_4:: yxwz||
 |norm_4::yxz||
 |norm_4::yxzw||
 |norm_4::yz||
-|norm_4::yzw||
+|norm_4:: yzw||
 |norm_4::yzwx||
-|norm_4::yzx||
+|norm_4:: yzx||
 |norm_4::yzxw||
 |norm_4::z||
 |norm_4::zw||
@@ -581,10 +581,10 @@ class norm_4;
 |norm_4::zwxy||
 |norm_4::zwy||
 |norm_4::zwyx||
-|norm_4::zx||
-|norm_4::zxw||
-|norm_4::zxwy||
-|norm_4::zxy||
+|norm_4:: zx||
+|norm_4:: zxw||
+|norm_4:: zxwy||
+|norm_4:: zxy||
 |norm_4::zxyw||
 |norm_4::zy||
 |norm_4::zyw||
@@ -596,17 +596,17 @@ class norm_4;
 
 `norm_4`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -667,29 +667,29 @@ explicit inline norm_4(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
 *_V3*<br/>
-3 要素を初期化する値。
+要素3を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-##  <a name="norm_4__size"></a> サイズ
+## <a name="norm_4__size"></a>幅
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

@@ -1,21 +1,19 @@
 ---
-title: 'ATL コントロール: 一般的サポート クラス'
+title: ATL コントロール:一般的サポート クラス
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.controls
 helpviewer_keywords:
 - controls [ATL]
 - general support classes
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
-ms.openlocfilehash: 49b7ff751db33ce2647ea7d4865ebea93949813b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f00348ab0c9f25bdd4f6b7a2b05cd4b82ea48e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262815"
 ---
-# <a name="controls-general-support-classes"></a>コントロール: 一般的サポート クラス
+# <a name="controls-general-support-classes"></a>コントロール:一般的サポート クラス
 
 次のクラスは、ATL コントロールの一般的なサポートを提供します。
 
@@ -31,7 +29,7 @@ ms.locfileid: "50551438"
 
 ## <a name="sample-program"></a>サンプル プログラム
 
-[ATLFire](../visual-cpp-samples.md)
+[ATLFire](../overview/visual-cpp-samples.md)
 
 ## <a name="related-articles"></a>関連トピック
 
@@ -40,4 +38,3 @@ ms.locfileid: "50551438"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)
-

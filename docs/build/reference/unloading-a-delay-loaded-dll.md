@@ -5,12 +5,12 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: ac23a82282215e70a6895e021d25437bc8890c6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 284a9cb9268c8c794379c6a5468b0f2b9092b7d0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317459"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL のアンロード
 

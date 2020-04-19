@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3056
 ms.assetid: 9500173d-870b-49b3-8e88-0ee93586d19a
-ms.openlocfilehash: d33aa6679c6dc68b7f1a62e75aff6fadc65dc7bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97a403420e5923f23f804eeaff33af1698ff6a53
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447412"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761157"
 ---
 # <a name="compiler-error-c3056"></a>コンパイラ エラー C3056
 
@@ -21,7 +21,7 @@ ms.locfileid: "50447412"
 
 次の例では C3056 が生成されます。
 
-```
+```cpp
 // C3056.cpp
 // compile with: /openmp
 int x, y;
@@ -34,9 +34,9 @@ void test() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3056b.cpp
 // compile with: /openmp /LD
 int x, y;

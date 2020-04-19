@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-ms.openlocfilehash: 35215546268c4c48f913e7aef763768fffc76d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277436"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI クラス
 

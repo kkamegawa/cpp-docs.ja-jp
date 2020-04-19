@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404456"
 ---
 # <a name="for-each-in"></a>for each、in
 
@@ -25,7 +25,7 @@ ms.locfileid: "50532750"
 
 ### <a name="syntax"></a>構文
 
-> **各 (** *型**識別子***で***式* **) {**<br/>
+> **各 (** *型* *識別子* **で** *式* **) {**<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
 > **}**
 
@@ -35,9 +35,9 @@ ms.locfileid: "50532750"
 `identifier` の型。
 
 *identifier*<br/>
-コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。
+コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。
 
-*式*<br/>
+*式 (expression)*<br/>
 配列式またはコレクション。 コレクション要素は、コンパイラが `identifier` 型に変換できるようにする必要があります。
 
 *ステートメント*<br/>
@@ -49,17 +49,17 @@ ms.locfileid: "50532750"
 
 *ステートメント*配列またはコレクションの各要素に対して実行されます。 コレクション内の全要素に対する繰り返しが完了すると、制御は、`for each` ブロックに続くステートメントに移動します。
 
-`for each` `in`は[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。
+`for each` `in`は[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)します。
 
 詳細情報
 
 - [for each を使用した C++ 標準ライブラリ コレクションの反復処理](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [方法: for each を使用して配列を反復処理する](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [方法: 各配列を反復処理します。](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [方法: for each を使用してジェネリック コレクションを反復処理する](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [方法: For each を使用してジェネリック コレクションを反復します。](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [方法: for each を使用してユーサー定義のコレクションを反復処理する](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [方法: それぞれのユーザー定義のコレクションを反復処理します。](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -111,7 +111,7 @@ Testing
 
 CLR の構文は同じ、**すべてのランタイム**構文では、次の手順を除きます。
 
-*式*<br/>
+*式 (expression)*<br/>
 マネージド配列式またはコレクション。 コンパイラはからに変換できるように、コレクションの要素がある必要があります<xref:System.Object>を*識別子*型。
 
 *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または型を定義する、`GetEnumerator`実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)

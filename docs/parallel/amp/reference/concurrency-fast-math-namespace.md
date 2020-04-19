@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 5ca81d056ddf431b502f868f8a76959381b26260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e2134a2254dc4bc34d515e65e2ec629efeff33
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455979"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139505"
 ---
-# <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 名前空間
+# <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math 名前空間
 
 `fast_math` 名前空間の関数は精度が低く、単精度 (`float`) のみをサポートし、DirectX の組み込み関数を呼び出します。 各関数には、2 種類のバージョン (たとえば、`cos` と `cosf`) があります。 どちらのバージョンも `float` を受け取り、返しますが、それぞれの DirectX の同じ組み込み関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 namespace fast_math;
 ```
 
@@ -25,7 +25,7 @@ namespace fast_math;
 
 ### <a name="functions"></a>関数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[cos](concurrency-fast-math-namespace-functions.md#cos)|引数の逆余弦を計算します。|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|引数の逆余弦を計算します。|
@@ -93,12 +93,12 @@ namespace fast_math;
 |[trunc](concurrency-fast-math-namespace-functions.md#trunc)|引数を整数コンポーネントに切り捨てます。|
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|引数を整数コンポーネントに切り捨てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_math.h
+**ヘッダー:** amp_math
 
-**Namespace:** concurrency::fast_math
+**名前空間:** Concurrency:: fast_math
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

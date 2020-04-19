@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378181"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect クラス
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|CAnimationRect を可変噴出口に変換します。|
-|[CAnimationRect::operator =](#operator_eq)|CAnimationRect rect に割り当てます。|
+|[CAnimationRect::operator=](#operator_eq)|CAnimationRect rect に割り当てます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -401,7 +401,7 @@ operator RECT();
 
 この関数は、GetValue を内部的に呼び出します。 GetValue 何らかの理由で失敗した場合、返された四角形は四角形の座標のすべての既定値が格納されます。
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 CAnimationRect rect に割り当てます。
 

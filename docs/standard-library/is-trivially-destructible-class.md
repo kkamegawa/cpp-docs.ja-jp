@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-ms.openlocfilehash: 61d626c308338595a64031a45908ab299ae1a957
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a978b7cc32e6de3d4b1d811b9aa6f52cf0370d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656067"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459631"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible クラス
 
@@ -26,12 +26,12 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*T*破棄可能な型であり、デストラクターが自明でない演算を使用しないようにコンパイラに判明します。 それ以外の場合、false を保持します。
+型*T*が破棄可能な型である場合、型の述語のインスタンスは true を保持し、デストラクターは非重要な操作を使用しないようにコンパイラに認識されます。 それ以外の場合、false を保持します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -41,4 +41,4 @@ struct is_trivially_destructible;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

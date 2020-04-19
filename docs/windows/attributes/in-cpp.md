@@ -1,21 +1,21 @@
 ---
-title: (C++ COM 属性)
+title: in (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: bf23b1c776eccc284e5329b62bd45b0bd678823f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449700"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514592"
 ---
 # <a name="in-c"></a>in (C++)
 
-呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。
+呼び出し元プロシージャから呼び出されたプロシージャにパラメーターが渡されることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50449700"
 
 ## <a name="remarks"></a>Remarks
 
-**で**C++ 属性と同じ機能を持つ、[で](/windows/desktop/Midl/in)MIDL 属性。
+**In** C++属性には[、MIDL 属性のと](/windows/win32/Midl/in)同じ機能があります。
 
 ## <a name="example"></a>例
 
-参照してください[バインド可能な](bindable.md)を使用する方法の例については**で**します。
+**で**を使用する方法の例については、「[バインド](bindable.md)可能」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -37,7 +37,7 @@ ms.locfileid: "50449700"
 
 |||
 |-|-|
-|**対象**|インターフェイスのパラメーター、インターフェイス メソッド|
+|**対象**|インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|**retval**|

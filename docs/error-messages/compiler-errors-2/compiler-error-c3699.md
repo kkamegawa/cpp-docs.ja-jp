@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525845"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758035"
 ---
 # <a name="compiler-error-c3699"></a>コンパイラ エラー C3699
 
-'operator': 型 'type' でこの間接参照を使用することはできません
+' operator ': この間接参照を型 ' type ' で使用することはできません
 
-許可されていない間接指定を使用しようとした`type`します。
+`type`で許可されていない間接参照を使用しようとしました。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3699 が生成されます。
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -34,11 +34,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-Trivial プロパティには、参照型を含めることはできません。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。 次の例では、C3699 が生成されます。
+Trivial プロパティに参照型を含めることはできません。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。 次の例では、C3699 が生成されます。
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -47,11 +47,11 @@ ref struct C {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-同等の「ポインターへのポインター」構文は、追跡参照を識別するハンドルです。 次の例では、C3699 が生成されます。
+"ポインターへのポインター" 構文に相当するものは、追跡参照へのハンドルです。 次の例では、C3699 が生成されます。
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

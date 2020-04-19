@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : Windows コントロールのサブクラス化'
+title: MFC ActiveX コントロール:Windows コントロールをサブクラス化
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239507"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール : Windows コントロールのサブクラス化
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール:Windows コントロールをサブクラス化
 
-この記事では、ActiveX コントロールを作成する一般的な Windows コントロールをサブクラス化するプロセスについて説明します。 既存の Windows をサブクラス化コントロールは ActiveX コントロールを開発する簡単な方法を示します。 新しいコントロールは、Windows のサブクラス化されたコントロールの描画、マウスのクリックに応答してなどの機能があります。 MFC ActiveX コントロールをサンプル[ボタン](../visual-cpp-samples.md)Windows コントロールをサブクラス化の例を示します。
+この記事では、ActiveX コントロールを作成する一般的な Windows コントロールをサブクラス化するプロセスについて説明します。 既存の Windows をサブクラス化コントロールは ActiveX コントロールを開発する簡単な方法を示します。 新しいコントロールは、Windows のサブクラス化されたコントロールの描画、マウスのクリックに応答してなどの機能があります。 MFC ActiveX コントロールをサンプル[ボタン](../overview/visual-cpp-samples.md)Windows コントロールをサブクラス化の例を示します。
 
 >[!IMPORTANT]
 > ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
@@ -82,20 +82,19 @@ Windows コントロールをサブクラス化する特定のウィンドウ �
 
 追加するには、返送されたウィンドウ メッセージのメッセージ ハンドラーを手動で次の操作。
 
-- コントロール クラス。H のファイル ハンドラー関数を宣言します。 関数の戻り値の型があります**LRESULT**と 2 つのパラメーター、型**WPARAM**と**LPARAM**、それぞれします。 例えば:
+- コントロール クラス。H のファイル ハンドラー関数を宣言します。 関数の戻り値の型があります**LRESULT**と 2 つのパラメーター、型**WPARAM**と**LPARAM**、それぞれします。 例:
 
    [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
-- コントロール クラス。CPP ファイルをメッセージ マップに ON_MESSAGE エントリを追加します。 このエントリのパラメーターには、メッセージ識別子とハンドラー関数の名前があります。 例えば:
+- コントロール クラス。CPP ファイルをメッセージ マップに ON_MESSAGE エントリを追加します。 このエントリのパラメーターには、メッセージ識別子とハンドラー関数の名前があります。 例:
 
    [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - また、します。CPP ファイルの場合は、実装、`OnOcmCommand`反映されたメッセージを処理するメンバー関数。 *WParam*と*lParam*パラメーターは、元のウィンドウ メッセージのものと同じです。
 
-方法の例では、メッセージの処理を反映、MFC ActiveX コントロールのサンプルを参照してください。[ボタン](../visual-cpp-samples.md)します。 これを示します、 `OnOcmCommand` BN_CLICKED 通知コードを検出し、(送信) を起動して応答するハンドラーを`Click`イベント。
+方法の例では、メッセージの処理を反映、MFC ActiveX コントロールのサンプルを参照してください。[ボタン](../overview/visual-cpp-samples.md)します。 これを示します、 `OnOcmCommand` BN_CLICKED 通知コードを検出し、(送信) を起動して応答するハンドラーを`Click`イベント。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

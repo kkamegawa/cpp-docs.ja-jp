@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4461
 ms.assetid: 104ffecc-3dd4-4cb1-89a8-81154fbe46d9
-ms.openlocfilehash: 5cc9b08f0f25e9c92b4185f060ab123684c5d9e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 195e5532b6555210077e43ad3086ee3106f3e757
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591023"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966008"
 ---
 # <a name="compiler-warning-level-1-c4461"></a>コンパイラの警告 (レベル 1) C4461
 
@@ -21,13 +21,13 @@ ms.locfileid: "50591023"
 
 型にデストラクターを定義し、そのデストラクターからファイナライザーを明示的に呼び出す場合は、ファイナライザーを実行するタイミングを決定できます。
 
-詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+詳細については、「[デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4461 が生成されます。
 
-```
+```cpp
 // C4461.cpp
 // compile with: /W1 /clr /c
 ref class A {

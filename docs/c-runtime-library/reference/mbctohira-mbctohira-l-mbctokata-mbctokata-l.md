@@ -1,12 +1,12 @@
 ---
 title: _mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctokata
 - mbctohira
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637802"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952559"
 ---
-# <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
+# <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 
 ひらがなとカタカナの文字変換をします。
 
@@ -81,20 +84,20 @@ unsigned int _mbctokata_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の変換された文字を返します*c*、可能な場合。 文字を返しますそれ以外の場合*c*変更されません。
+これらの関数は、可能であれば、変換された文字*c*を返します。 それ以外の場合は、文字*c*を変更せずに返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbctohira**と **_mbctokata**関数の文字をテストする*c*し、可能であれば、次の変換のいずれかを適用します。
+**_Mbctohira**関数と **_mbctokata**関数は*c*文字をテストし、可能であれば、次の変換のいずれか1つを適用します。
 
 |ルーチン|変換|
 |--------------|--------------|
 |**_mbctohira**、 **_mbctohira_l**|マルチバイトのカタカナをマルチバイトのひらがなに変換します。|
 |**_mbctokata**、 **_mbctokata_l**|マルチバイトのひらがなをマルチバイトのカタカナに変換します。|
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 いないことを除いて、これらの関数バージョンが同じである、 **_l**サフィックスでは、現在のロケールを使用して、このロケールに依存する動作が付いている、 **_l**代わりにサフィックス渡されるロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンでは、このロケールに依存する動作に現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンで **_mbctohira**という名前が**jtohira**と **_mbctokata**という名前が**jtokata**します。 新しいコードには、新しい名前を使用してください。
+以前のバージョンでは、 **_mbctohira**の名前は**jtohira**で、 **_mbctokata**の名前は**jtokata**でした。 新しいコードには、新しい名前を使用してください。
 
 ## <a name="requirements"></a>必要条件
 

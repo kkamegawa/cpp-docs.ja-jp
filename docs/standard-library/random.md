@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511853"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689104"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 乱数生成の機能を定義し、一様に分布した乱数を作成できるようにします。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>［要件］
 
-```cpp
-#include <random>
-```
+**ヘッダー**: \<random >
+
+**名前空間:** std
+
+> [!NOTE]
+> @No__t_0random > ライブラリでは、' #include < initializer_list > ' ステートメントが使用されます。
 
 ## <a name="summary"></a>まとめ
 
-*乱数ジェネレーター*は、一連の疑似乱数値を生成するオブジェクトです。 *Uniform Random Number Generator* (URNG) は、指定した範囲内で一様に分布した値を生成するジェネレーターです。 URNG として機能するように設計されたテンプレート クラスは、特定の共通する特徴 (この記事の後の方で説明) がある場合、*エンジン*と呼ばれます。 URNG を*分布*の `operator()` に対する引数として渡して URNG と分布を組み合わせることで、その分布によって定義された方法で分布値を生成することができます (これが通常の使用方法です)。
+*乱数ジェネレーター*は、一連の疑似乱数値を生成するオブジェクトです。 *Uniform Random Number Generator* (URNG) は、指定した範囲内で一様に分布した値を生成するジェネレーターです。 URNG として機能するように設計されたクラステンプレートは、このクラスに特定の共通の特徴がある場合は、*エンジン*と呼ばれます。これについては、この記事の後半で説明します。 URNG を*分布*の `operator()` に対する引数として渡して URNG と分布を組み合わせることで、その分布によって定義された方法で分布値を生成することができます (これが通常の使用方法です)。
 
 次のリンクを使用すると、この記事の主なセクションに移動します。
 
@@ -39,7 +42,7 @@ ms.locfileid: "50511853"
 
 ### <a name="quick-tips"></a>簡単なヒント
 
-いくつかのヒントを使用する場合に留意する\<ランダム >:
+@No__t_0random > を使用する場合に留意すべきヒントを次に示します。
 
 - ほとんどの場合、URNG は分布で成形される必要がある生のビットを生成します (主な例外は、[std::shuffle()](../standard-library/algorithm-functions.md#shuffle) で、理由は URNG を直接使用するからです)。
 
@@ -49,7 +52,7 @@ ms.locfileid: "50511853"
 
 - 大部分のアプリケーションに対して最も役立つ組み合わせは、`mt19937` エンジンと `uniform_int_distribution` の組み合わせです (この記事の後の方にある[コード例](#code)に示されています)。
 
-多くのオプションがある、 \<random > ヘッダー、およびこれらのいずれかが期限切れの C ランタイム関数のことをお勧め`rand()`します。 スクリプトに問題がについて`rand()`とどのように\<ランダム > これらの欠点を補いを参照してください[このビデオ](http://go.microsoft.com/fwlink/p/?linkid=397615)。
+@No__t_0random > ヘッダーから選択できるオプションは多数あります。これらのオプションのいずれかは、古い C ランタイム関数 `rand()` よりも適しています。 @No__t_0 にどのような問題があるか、また \<random > でこれらの欠点を解決する方法の詳細については、こちらの[ビデオ](https://go.microsoft.com/fwlink/p/?linkid=397615)を参照してください。
 
 ## <a name="code"></a> 例
 
@@ -208,7 +211,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="listing"></a> 分類別一覧
 
-###  <a name="urngs"></a> Uniform Random Number Generator
+###  <a name="urngs"></a>Uniform Random Number ジェネレーター
 
 URNG は、次の特性においてよく説明されます。
 
@@ -218,7 +221,7 @@ URNG は、次の特性においてよく説明されます。
 
 3. **品質**: 生成されたシーケンスがどれほど真の乱数に近いか。 これは通常 "*ランダム性*" と呼ばれます。
 
-次のセクションでは、一覧の uniform random number generator (Urng) で提供される、 \<random > ヘッダー。
+次のセクションでは、\<random > ヘッダーに用意されている uniform random number generator (Urng) について説明します。
 
 ####  <a name="rd"></a> 非確定的なジェネレーター
 
@@ -326,7 +329,7 @@ URNG は、次の特性においてよく説明されます。
 
 ###  <a name="distributions"></a> 乱数分布
 
-次のセクションでは、一覧で提供されている分布、 \<random > ヘッダー。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
+次のセクションでは、\<random > ヘッダーで提供されているディストリビューションについて説明します。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
 #### <a name="uniform-distributions"></a>一様分布
 
@@ -342,7 +345,7 @@ URNG は、次の特性においてよく説明されます。
 
 |||
 |-|-|
-|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|ベルヌイ分布を作成**bool**値。|
+|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|**Bool**値のベルヌーイ分布を生成します。|
 |[binomial_distribution クラス](../standard-library/binomial-distribution-class.md)|整数値の二項分布を作成します。|
 |[geometric_distribution クラス](../standard-library/geometric-distribution-class.md)|整数値の幾何分布を作成します。|
 |[negative_binomial_distribution クラス](../standard-library/negative-binomial-distribution-class.md)|整数値の負の二項分布を作成します。|
@@ -355,7 +358,7 @@ URNG は、次の特性においてよく説明されます。
 |-|-|
 |[cauchy_distribution クラス](../standard-library/cauchy-distribution-class.md)|実数 (浮動小数点) 値のコーシー分布を作成します。|
 |[chi_squared_distribution クラス](../standard-library/chi-squared-distribution-class.md)|実数 (浮動小数点) 値のカイ 2 乗分布を作成します。|
-|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|フィッシャー分布 (スネデカーのフィッシャー分布またはフィッシャー-スネデカー分布とも呼ばれます) の実数 (浮動小数点) 値を生成します。|
+|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|実数 (浮動小数点) 値の F 分布 (スネデカー分布の F 分布またはスネデカー分布分布とも呼ばれます) を生成します。|
 |[lognormal_distribution クラス](../standard-library/lognormal-distribution-class.md)|実数 (浮動小数点) 値の対数正規分布を作成します。|
 |[normal_distribution クラス](../standard-library/normal-distribution-class.md)|実数 (浮動小数点) 値の正規 (ガウス) 分布を作成します。|
 |[student_t_distribution クラス](../standard-library/student-t-distribution-class.md)|実数 (浮動小数点) 値のスチューデントの *t* 分布を作成します。|
@@ -386,7 +389,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="utility-functions"></a>ユーティリティ関数
 
-このセクションで提供される一般的なユーティリティ関数を一覧表示、 \<random > ヘッダー。
+このセクションでは、\<random > ヘッダーで提供される一般的なユーティリティ関数の一覧を示します。
 
 |||
 |-|-|
@@ -394,7 +397,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="operators"></a>演算子
 
-このセクションで提供される演算子の一覧を\<random > ヘッダー。
+このセクションでは、\<random > ヘッダーで提供される演算子の一覧を示します。
 
 |||
 |-|-|
@@ -405,19 +408,19 @@ URNG は、次の特性においてよく説明されます。
 
 ## <a name="engdist"></a> エンジンと分布
 
-定義されているこれらのテンプレート クラス カテゴリのそれぞれについては、次のセクションを参照してください\<ランダム >。 これらのテンプレート クラス カテゴリではいずれも引数として型を受け取り、共有のテンプレート パラメーター名を使って、実引数の型として許可されている、次の型のプロパティを表します。
+@No__t_0random > で定義されているこれらのクラステンプレートカテゴリの詳細については、次のセクションを参照してください。 これらのクラステンプレートカテゴリはいずれも引数として型を受け取り、共有テンプレートパラメーター名を使用して、実際の引数の型として許可されている型のプロパティを次のように記述します。
 
-- `IntType` 示す、**短い**、 **int**、**長い**、 **long**、 **unsigned short**、 **符号なし int**、 **unsigned long**、または**unsigned long long 型**します。
+- `IntType` は、 **short**、 **int**、 **long**、 **long long**、 **unsigned short**、 **unsigned int**、 **unsigned long**、または**unsigned long long**を示します。
 
-- `UIntType` 示します**unsigned short**、**符号なし int**、 **unsigned long**、または**unsigned long long 型**します。
+- `UIntType` は、 **unsigned short**、 **unsigned int**、 **unsigned long**、または**unsigned long long**を示します。
 
-- `RealType` 示す、 **float**、**二重**、または**long double**します。
+- `RealType` は、 **float**、 **double**、または**long double**を示します。
 
 ### <a name="engines"></a>エンジン
 
 [エンジン テンプレート](#eng)と[エンジン アダプター テンプレート](#engadapt)は、作成されるジェネレーターをそのパラメーターでカスタマイズするテンプレートです。
 
-*エンジン*の実体はクラスまたはテンプレート クラスであり、そのインスタンス (ジェネレーター) は、最小値と最大値の範囲内で一様に分布した乱数のソースとして機能します。 *エンジン アダプター*は、他の乱数エンジンが作成した値を受け取って、何らかのアルゴリズムをこれらの値に適用することで、さまざまなランダム性プロパティを持つ値のシーケンスを提供します。
+*エンジン*は、最小値と最大値の間に一様に分布した乱数のソースとして機能するインスタンス (ジェネレーター) を持つクラスまたはクラステンプレートです。 *エンジン アダプター*は、他の乱数エンジンが作成した値を受け取って、何らかのアルゴリズムをこれらの値に適用することで、さまざまなランダム性プロパティを持つ値のシーケンスを提供します。
 
 すべてのエンジンとエンジン アダプターには、次のメンバーが存在します。
 
@@ -455,7 +458,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="distributions"></a>分布
 
-[乱数分布](#distributions)の実体は、クラスまたはテンプレート クラスであり、そのインスタンスは、エンジンから取得された一様分布の乱数ストリームを、特定の分布を持った乱数ストリームに変換します。 すべての分布には、次のメンバーが存在します。
+[乱数分布](#distributions)は、エンジンから取得された一様分布の乱数ストリームを、特定の分布を持つ乱数ストリームに変換するインスタンスを持つクラステンプレートまたはクラステンプレートです。 すべての分布には、次のメンバーが存在します。
 
 - `typedef` `numeric-type` `result_type`: 分布の `operator()` から返される型です。 `numeric-type`は、インスタンス化時にテンプレート パラメーターとして渡されます。
 
@@ -495,15 +498,15 @@ URNG は、次の特性においてよく説明されます。
 
 |URNG|Fast|暗号的に安全|シード設定可能|Deterministic|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|はい|×|はい|はい<sup>*</sup>|
-|`random_device`|いいえ|はい|×|いいえ|
+|`mt19937`|[はい]|Ｘ|[はい]|はい<sup>*</sup>|
+|`random_device`|Ｘ|[はい]|Ｘ|Ｘ|
 
 <sup>* 既知のシードが提供される場合。</sup>
 
-ISO C++ 標準では `random_device` が暗号的に安全であることは要求されていませんが、Visual Studio では暗号的に安全であるように実装されています ("暗号的に安全" という用語は保証を示すものではありません。特定のランダム化アルゴリズムが提供する最小限のレベルのエントロピ (それによる予測可能性レベル) を意味しています。 詳細については、Wikipedia の記事「[Cryptographically secure pseudorandom number generator](http://go.microsoft.com/fwlink/p/?linkid=398017) (暗号論的擬似乱数生成器)」を参照してください)。ISO C++ 標準ではこのことを要求していないため、他のプラットフォームでは (暗号的に安全でない) 簡単な疑似乱数ジェネレーターとして `random_device` が実装され、別のジェネレーターのシード ソースとしてのみ適する場合もあります。 クロスプラットフォーム コードで `random_device` を使用する場合は、これらのプラットフォームのドキュメントを参照してください。
+ISO C++ 標準では `random_device` が暗号的に安全であることは要求されていませんが、Visual Studio では暗号的に安全であるように実装されています ("暗号的に安全" という用語は保証を示すものではありません。特定のランダム化アルゴリズムが提供する最小限のレベルのエントロピ (それによる予測可能性レベル) を意味しています。 詳細については、Wikipedia の記事「[暗号安全な擬似乱数ジェネレーター](https://go.microsoft.com/fwlink/p/?linkid=398017)」を参照してください。)ISO C++標準ではこれは必要ないため、他のプラットフォームでは、(暗号的に安全ではなく) 単純な擬似乱数ジェネレーターとして `random_device` を実装し、別のジェネレーターのシードソースとしてのみ適している可能性があります。 クロスプラットフォーム コードで `random_device` を使用する場合は、これらのプラットフォームのドキュメントを参照してください。
 
 定義上、`random_device` の結果は再現可能でなく、また、副作用として、他の URNG よりも実行がかなり遅い場合があります。 暗号的に安全であることが要求されない大部分のアプリケーションでは `mt19937` または類似のエンジンを使用しますが、[コード例](#code)に示すように、`random_device` の呼び出しでシードを設定することもできます。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

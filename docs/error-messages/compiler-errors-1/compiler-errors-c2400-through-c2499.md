@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2400 C2499 から
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2400 - C2499)
+ms.date: 04/21/2019
 f1_keywords:
 - C2416
 - C2442
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - C2481
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-ms.openlocfilehash: 2ba9a55610c6f2e5e38733125414c6076e2c2f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476194"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857624"
 ---
-# <a name="compiler-errors-c2400-through-c2499"></a>コンパイラ エラー C2400 C2499 から
+# <a name="compiler-errors-c2400-through-c2499"></a>コンパイラ エラー (C2400 - C2499)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -119,7 +119,7 @@ ms.locfileid: "50476194"
 |コンパイラ エラー C2475|'*識別子*': 再定義されています。'constexpr' 指定子が一致しません|
 |[コンパイラ エラー C2477](compiler-error-c2477.md)|'*メンバー*': 静的データ メンバーは派生クラスを使って初期化できません|
 |コンパイラ エラー C2478|宣言と互換性がない '*インスタンス*'|
-|[コンパイラ エラー C2479](compiler-error-c2479.md)|'*識別子*': 'allocate ()' は有効な静的データ項目に対してのみ|
+|[コンパイラ エラー C2479](compiler-error-c2479.md)|'*identifier*': 'allocate( )' is only valid for data items of static extent|
 |[コンパイラ エラー C2480](compiler-error-c2480.md)|'*識別子*': 'thread' は有効な静的データ項目に対してのみ|
 |コンパイラ エラー C2481|'*識別子*': thread_local は静的メンバーおよび名前空間またはブロック スコープ変数では無効です|
 |[コンパイラ エラー C2482](compiler-error-c2482.md)|'*識別子*': スレッド ローカル データ管理/WINRT コードでは使用できませんの動的な初期化|
@@ -139,3 +139,8 @@ ms.locfileid: "50476194"
 |コンパイラ エラー C2497|'*識別子*': 'implementation_key' は、関数の宣言にのみ適用できます|
 |[コンパイラ エラー C2498](compiler-error-c2498.md)|'*関数*': 'novtable' は、クラス宣言または定義にのみ適用できます|
 |[コンパイラ エラー C2499](compiler-error-c2499.md)|'*クラス*': クラスは、独自の基本クラスを指定することはできません|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

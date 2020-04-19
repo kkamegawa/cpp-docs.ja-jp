@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410077"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane クラス
 
@@ -151,7 +151,7 @@ CMFCRibbonStatusBarPane(
 [in]アニメーションで使用するイメージ リストを識別するハンドルを指定します。
 
 *cxAnimation*<br/>
-[in](ピクセル単位)、アニメーションで使用するイメージ リストのアイコンの幅を指定します。
+[in]\(ピクセル単位)、アニメーションで使用するイメージ リストのアイコンの幅を指定します。
 
 *clrTrnsp*<br/>
 [in]アニメーションに使用されるイメージの一覧で、イメージの透明色を指定します。

@@ -1,39 +1,39 @@
 ---
 title: ML の致命的でないエラー A2034
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2034
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: cbc4dc59da36df682815b0bf2c644892b2db1e70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c27c7d1b62afca760454c39552bfd1fd36857e08
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525829"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317059"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>ML の致命的でないエラー A2034
 
-**セグメントのブロックである必要があります。**
+**セグメントブロック内にある必要があります**
 
-セグメントのブロックの外側で、次のいずれかが見つかりました。
+次のいずれかがセグメントブロックの外部で見つかりました:
 
 - 命令
 
-- ラベルの定義
+- ラベル定義
 
-- A[この](../../assembler/masm/operator-this.md)演算子
+- [この](operator-this.md)演算子
 
-- A [ $ ](../../assembler/masm/dollar.md)演算子
+- [$](dollar.md)演算子
 
 - プロシージャの定義
 
-- [ALIGN](../../assembler/masm/align-masm.md)ディレクティブ
+- [ALIGN](align-masm.md)ディレクティブ
 
-- [ORG](../../assembler/masm/org.md)ディレクティブ
+- [ORG](org.md)ディレクティブ
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

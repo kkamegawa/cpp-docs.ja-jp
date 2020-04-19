@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 391b78077ea526ebbaf99552b3220f85928a9096
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508811"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753407"
 ---
 # <a name="compiler-error-c3711"></a>コンパイラ エラー C3711
 
-'method': 非管理対象のイベント ソース メソッドは void または整数型を返す必要があります
+' method ': マネージドでないイベントソースメソッドは、void または整数型を返さなければなりません
 
-Void が返されませんでしたが、イベント ソースまたは整数型でメソッドを定義します。 このエラーを修正するように、イベントとイベント ハンドラーの戻り値の型`void`または整数型など、`int`または`long`します。
+Void または整数型を返さないイベントソースのメソッドを定義しました。 このエラーを修正するには、イベントおよびイベントハンドラーの戻り値の型が `void` であるか、`int` や `long`などの整数型であることを確認します。
 
 次の例では、C3711 が生成されます。
 
-```
+```cpp
 // C3711.cpp
 #include <atlbase.h>
 #include <atlcom.h>

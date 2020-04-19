@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: ab25cad77ee0f11167661bb27b408dd5e92b51f9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fd7b6787b372e220a32770e19d54d149f5ba6934
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178695"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502414"
 ---
 # <a name="cstatic-class"></a>CStatic クラス
 
@@ -57,26 +57,26 @@ class CStatic : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CStatic::Create](#create)|Windows の静的コントロールを作成し、それにアタッチします、`CStatic`オブジェクト。|
-|[CStatic::DrawItem](#drawitem)|オーナー描画スタティック コントロールを描画するためにオーバーライドします。|
-|[CStatic::GetBitmap](#getbitmap)|以前のビットマップのハンドルを取得[SetBitmap](#setbitmap)します。|
-|[CStatic::GetCursor](#getcursor)|カーソルのイメージのハンドルが以前に設定と取得[以前](#setcursor)します。|
-|[CStatic::GetEnhMetaFile](#getenhmetafile)|以前拡張メタファイルのハンドルを取得[SetEnhMetaFile](#setenhmetafile)します。|
-|[CStatic::GetIcon](#geticon)|以前の設定アイコンのハンドルを取得[SetIcon](#seticon)します。|
-|[CStatic::SetBitmap](#setbitmap)|スタティック コントロールに表示されるビットマップを指定します。|
-|[CStatic::SetCursor](#setcursor)|スタティック コントロールに表示されるカーソルのイメージを指定します。|
-|[CStatic::SetEnhMetaFile](#setenhmetafile)|スタティック コントロールに表示される拡張メタファイルを指定します。|
-|[CStatic::SetIcon](#seticon)|スタティック コントロールに表示されるアイコンを指定します。|
+|[CStatic:: Create](#create)|Windows スタティックコントロールを作成し、 `CStatic`オブジェクトにアタッチします。|
+|[CStatic::D rawItem](#drawitem)|オーナー描画の静的コントロールを描画するには、をオーバーライドします。|
+|[CStatic:: GetBitmap](#getbitmap)|以前に[SetBitmap](#setbitmap)で設定されたビットマップのハンドルを取得します。|
+|[CStatic:: GetCursor](#getcursor)|以前に[SetCursor](#setcursor)で設定したカーソルイメージのハンドルを取得します。|
+|[CStatic::GetEnhMetaFile](#getenhmetafile)|以前に[SetEnhMetaFile](#setenhmetafile)で設定された拡張メタファイルのハンドルを取得します。|
+|[CStatic:: GetIcon](#geticon)|以前に[SetIcon](#seticon)で設定したアイコンのハンドルを取得します。|
+|[CStatic::SetBitmap](#setbitmap)|スタティックコントロールに表示されるビットマップを指定します。|
+|[CStatic::SetCursor](#setcursor)|静的コントロールに表示されるカーソルイメージを指定します。|
+|[CStatic::SetEnhMetaFile](#setenhmetafile)|静的コントロールに表示される拡張メタファイルを指定します。|
+|[CStatic::SetIcon](#seticon)|静的コントロールに表示するアイコンを指定します。|
 
 ## <a name="remarks"></a>Remarks
 
-静的コントロールでは、テキスト文字列、ボックス、四角形、アイコン、カーソル、ビットマップ、または拡張メタファイルが表示されます。 これは、ラベル付け、ボックス、またはその他のコントロールを個別に使用できます。 スタティック コントロールは通常の入力を受け取らないし、用意されていません。ただし、マウス クリックの親に通知 SS_NOTIFY スタイルで作成されて場合ことができます。
+静的コントロールは、テキスト文字列、ボックス、四角形、アイコン、カーソル、ビットマップ、または拡張メタファイルを表示します。 これは、他のコントロールのラベル付け、ボックス、または分離に使用できます。 静的コントロールは通常、入力を行わず、出力も行いません。ただし、SS_NOTIFY スタイルを使用して作成されている場合、マウスクリックの親に通知することができます。
 
-2 つの手順では、スタティック コントロールを作成します。 最初に、構築するコンス トラクターを呼び出し、`CStatic`オブジェクトを呼び出して、[作成](#create)メンバー関数は、静的コントロールを作成し、アタッチ先、`CStatic`オブジェクト。
+静的コントロールを作成するには、次の2つの手順を実行します。 まず、コンストラクターを呼び出して`CStatic`オブジェクトを構築してから、 [create](#create) member 関数を呼び出して静的コントロールを作成し、それ`CStatic`をオブジェクトにアタッチします。
 
-作成する場合、 `CStatic` (ダイアログ リソースの場合) を使ってダイアログ ボックス内のオブジェクト、 `CStatic`  ダイアログ ボックスを閉じると、オブジェクトが自動的に破棄されます。
+ダイアログボックス内で`CStatic` (ダイアログリソースを使用して) `CStatic`オブジェクトを作成すると、ユーザーがダイアログボックスを閉じたときにオブジェクトが自動的に破棄されます。
 
-作成する場合、`CStatic`を破棄する必要がありますも、ウィンドウ内でオブジェクトします。 A`CStatic`ウィンドウ内のスタック上に作成されたオブジェクトが自動的に破棄されます。 作成する場合、`CStatic`を使用して、ヒープ上のオブジェクト、**新しい**関数を呼び出す必要があります**削除**を終了するときに破棄するオブジェクト。
+ウィンドウ内に`CStatic`オブジェクトを作成する場合は、そのオブジェクトを破棄することも必要になることがあります。 ウィンドウ`CStatic`内のスタック上に作成されたオブジェクトは、自動的に破棄されます。 新しい関数を使用`CStatic`してヒープ上にオブジェクトを作成した場合は、オブジェクトに対して**delete**を呼び出して、そのオブジェクトが終了したときに破棄する必要があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -94,7 +94,7 @@ class CStatic : public CWnd
 
 ##  <a name="create"></a>  CStatic::Create
 
-Windows の静的コントロールを作成し、それにアタッチします、`CStatic`オブジェクト。
+Windows スタティックコントロールを作成し、 `CStatic`オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -108,19 +108,19 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-コントロール内に配置するテキストを指定します。 NULL の場合、テキストは表示されません。
+コントロールに配置するテキストを指定します。 NULL の場合、テキストは表示されません。
 
 *dwStyle*<br/>
-静的コントロールのウィンドウ スタイルを指定します。 任意の組み合わせを適用[静的コントロール スタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles)コントロールにします。
+静的コントロールのウィンドウスタイルを指定します。 コントロールに[静的コントロールスタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles)の任意の組み合わせを適用します。
 
 *rect*<br/>
-スタティック コントロールのサイズと位置を指定します。 いずれかのことができます、`RECT`構造または`CRect`オブジェクト。
+静的コントロールの位置とサイズを指定します。 構造体`RECT` `CRect`またはオブジェクトのいずれかを指定できます。
 
 *pParentWnd*<br/>
-指定します、`CStatic`通常親ウィンドウを`CDialog`オブジェクト。 NULL は指定できません。
+親ウィンドウを指定します。 `CDialog`通常はオブジェクトです。 `CStatic` NULL にすることはできません。
 
 *nID*<br/>
-静的コントロールのコントロール ID を指定します
+スタティックコントロールのコントロール ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -128,33 +128,33 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>Remarks
 
-構築、 `CStatic` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出す`CStatic`を呼び出して`Create`、Windows の静的コントロールを作成しにアタッチする`CStatic`オブジェクト。
+2つ`CStatic`の手順でオブジェクトを構築します。 まず、コンストラクター `CStatic`を呼び出し、次にを`Create`呼び出します。これにより、Windows の静的コントロールが`CStatic`作成され、オブジェクトにアタッチされます。
 
-次の適用[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)静的コントロールに。
+次の[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を静的コントロールに適用します。
 
-- WS_CHILD 常に
+- 常に WS_CHILD
 
 - WS_VISIBLE 通常
 
-- WS_DISABLED ことはほとんどありません。
+- WS_DISABLED はまれ
 
-静的コントロールで、ビットマップ、カーソル、アイコン、またはメタファイルを表示しようとしている場合は、次のいずれかを適用する必要があります[静的コントロール スタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles):
+静的コントロールにビットマップ、カーソル、アイコン、またはメタファイルを表示する場合は、次の[静的スタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles)のいずれかを適用する必要があります。
 
-- SS_BITMAP は、ビットマップにこのスタイルを使用します。
+- SS_BITMAP ビットマップにこのスタイルを使用します。
 
-- SS_ICON は、カーソル、アイコン、このスタイルを使用します。
+- SS_ICON カーソルとアイコンには、このスタイルを使用します。
 
-- SS_ENHMETAFILE は、拡張メタファイルにこのスタイルを使用します。
+- SS_ENHMETAFILE 拡張メタファイル用にこのスタイルを使用します。
 
-カーソル、ビットマップ、またはアイコンは、次のスタイルを使用することがありますも。
+カーソル、ビットマップ、またはアイコンの場合は、次のスタイルを使用することもできます。
 
-- 静的コントロールでイメージの中央に SS_CENTERIMAGE を使用します。
+- SS_CENTERIMAGE を使用して、イメージを静的コントロールに中央揃えで配置します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]
 
-##  <a name="cstatic"></a>  CStatic::CStatic
+##  <a name="cstatic"></a>CStatic::CStatic
 
 `CStatic` オブジェクトを構築します。
 
@@ -166,9 +166,9 @@ CStatic();
 
 [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]
 
-##  <a name="drawitem"></a>  CStatic::DrawItem
+##  <a name="drawitem"></a>CStatic::D rawItem
 
-オーナー描画スタティック コントロールを描画するためにフレームワークによって呼び出されます。
+オーナー描画の静的コントロールを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -177,15 +177,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-ポインターを[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)構造体。 構造体には、描画される項目および必要な図面の種類に関する情報が含まれています。
+[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)構造体へのポインター。 構造体には、描画する項目と必要な描画の種類に関する情報が含まれます。
 
 ### <a name="remarks"></a>Remarks
 
-オーナー描画の描画を実装するには、この関数をオーバーライド`CStatic`(コントロールにスタイル SS_OWNERDRAW) オブジェクト。
+オーナー描画`CStatic`オブジェクトの描画を実装するには、この関数をオーバーライドします (コントロールのスタイルは SS_OWNERDRAW です)。
 
 ##  <a name="getbitmap"></a>  CStatic::GetBitmap
 
-以前、ビットマップのハンドルを取得[SetBitmap](#setbitmap)、つまりに関連付けられている`CStatic`します。
+に`CStatic`関連付けられているビットマップのハンドルを取得します。これは、以前に[SetBitmap](#setbitmap)で設定したものです。
 
 ```
 HBITMAP GetBitmap() const;
@@ -193,7 +193,7 @@ HBITMAP GetBitmap() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のビットマップまたはビットマップが設定されていない場合は NULL へのハンドル。
+現在のビットマップを処理するハンドル。ビットマップが設定されていない場合は NULL。
 
 ### <a name="example"></a>例
 
@@ -201,7 +201,7 @@ HBITMAP GetBitmap() const;
 
 ##  <a name="getcursor"></a>  CStatic::GetCursor
 
-以前、カーソルのハンドルを取得[以前](#setcursor)、つまりに関連付けられている`CStatic`します。
+に`CStatic`関連付けられているカーソルのハンドルを取得します。これは、以前に[SetCursor](#setcursor)が設定されています。
 
 ```
 HCURSOR GetCursor();
@@ -209,7 +209,7 @@ HCURSOR GetCursor();
 
 ### <a name="return-value"></a>戻り値
 
-現在のカーソルまたはカーソルが設定されていない場合は NULL へのハンドル。
+現在のカーソルを処理するハンドル。カーソルが設定されていない場合は NULL。
 
 ### <a name="example"></a>例
 
@@ -217,7 +217,7 @@ HCURSOR GetCursor();
 
 ##  <a name="getenhmetafile"></a>  CStatic::GetEnhMetaFile
 
-以前は、拡張メタファイルのハンドルを取得[SetEnhMetafile](#setenhmetafile)、つまりに関連付けられている`CStatic`します。
+に`CStatic`関連付けられている拡張メタファイルのハンドルを取得します。これは、以前に[SetEnhMetafile](#setenhmetafile)で設定したものです。
 
 ```
 HENHMETAFILE GetEnhMetaFile() const;
@@ -225,7 +225,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在、拡張メタファイルまたは拡張メタファイルが設定されていない場合は NULL へのハンドル。
+現在の拡張メタファイルへのハンドル。拡張メタファイルが設定されていない場合は NULL。
 
 ### <a name="example"></a>例
 
@@ -233,7 +233,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 
 ##  <a name="geticon"></a>  CStatic::GetIcon
 
-以前、アイコンのハンドルを取得[SetIcon](#seticon)、つまりに関連付けられている`CStatic`します。
+に`CStatic`関連付けられている、以前に[SetIcon](#seticon)で設定されたアイコンのハンドルを取得します。
 
 ```
 HICON GetIcon() const;
@@ -241,7 +241,7 @@ HICON GetIcon() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のアイコン、またはアイコンが設定されていない場合は NULL へのハンドル。
+現在のアイコンを示すハンドル。アイコンが設定されていない場合は NULL。
 
 ### <a name="example"></a>例
 
@@ -249,7 +249,7 @@ HICON GetIcon() const;
 
 ##  <a name="setbitmap"></a>  CStatic::SetBitmap
 
-新しいビットマップをスタティック コントロールに関連付けます。
+新しいビットマップを静的コントロールに関連付けます。
 
 ```
 HBITMAP SetBitmap(HBITMAP hBitmap);
@@ -258,32 +258,32 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ### <a name="parameters"></a>パラメーター
 
 *hBitmap*<br/>
-静的コントロールで描画されるビットマップのハンドル。
+静的コントロールに描画されるビットマップのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-静的コントロールに関連付けられたビットマップがない場合に、静的コントロール、または NULL に以前関連付けられていたビットマップ ハンドル。
+以前に静的コントロールに関連付けられていたビットマップのハンドル。静的コントロールに関連付けられているビットマップがない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-ビットマップは、静的コントロールで自動的に描画されます。 既定が左上隅に描画され、スタティック コントロールは、ビットマップのサイズにサイズ変更されます。
+ビットマップは、自動的に静的コントロールに描画されます。 既定では、この値は左上隅に描画され、スタティックコントロールはビットマップのサイズにサイズ変更されます。
 
-さまざまなウィンドウや静的コントロール スタイル、次のようを使用することができます。
+次のようなさまざまなウィンドウと静的コントロールスタイルを使用できます。
 
-- SS_BITMAP は、ビットマップを常にこのスタイルを使用します。
+- SS_BITMAP このスタイルは、常にビットマップに使用します。
 
-- 静的コントロールでイメージの中央に SS_CENTERIMAGE を使用します。 イメージが静的コントロールよりも大きい場合は、クリップされます。 静的コントロールよりも小さい場合、ビットマップの左上隅にあるピクセルの色によってイメージの周囲の空白部分が入力します。
+- SS_CENTERIMAGE を使用して、イメージを静的コントロールに中央揃えで配置します。 イメージが静的コントロールより大きい場合は、クリップされます。 静的コントロールよりも小さい場合は、イメージの周囲の空白が、ビットマップの左上隅にあるピクセルの色によって塗りつぶされます。
 
-- MFC クラスを提供します。 `CBitmap`、はより呼び出すだけで、Win32 のビットマップ イメージで機能する必要があるときに使用できる`LoadBitmap`します。 `CBitmap`、連携でよく使用されて、GDI オブジェクトの 1 つの種類が含まれています`CStatic`、これは、`CWnd`グラフィック オブジェクトを静的なコントロールとして表示するために使用されるクラスです。
+- MFC にはクラス`CBitmap`が用意されています。このクラスは、Win32 関数`LoadBitmap`を呼び出すだけではなく、ビットマップイメージに対してさらに多くの操作を行う必要がある場合に使用できます。 `CBitmap`には、1種類の GDI オブジェクトが含まれています。 `CStatic`これは、と`CWnd`の連携でよく使用されます。これは、グラフィックオブジェクトを静的コントロールとして表示するために使用されるクラスです。
 
-`CImage` ATL と MFC クラス デバイス独立ビットマップ (DIB) を簡単に操作することができます。 詳細については、次を参照してください。 [CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)します。
+`CImage`は、デバイスに依存しないビットマップ (DIB) をより簡単に操作できる ATL/MFC クラスです。 詳細については、「 [CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)」を参照してください。
 
-- 一般的な使用方法は、提示する`CStatic::SetBitmap`の HBITMAP 演算子によって返される GDI オブジェクトを`CBitmap`または`CImage`オブジェクト。 これを行うコードでは、次の行に似ています。
+- 一般的な使用方法と`CStatic::SetBitmap`して、オブジェクト`CBitmap`または`CImage`オブジェクトの HBITMAP 演算子によって返される GDI オブジェクトを指定します。 これを行うコードは、次の行のようになります。
 
 ```
 MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ```
-次の例では、2 つ作成されます`CStatic`ヒープのオブジェクト。 使用してシステムのビットマップを次に、`CBitmap::LoadOEMBitmap`およびその他を使用してファイルから`CImage::Load`します。
+次の例では`CStatic` 、ヒープ上に2つのオブジェクトを作成します。 次に、を使用`CBitmap::LoadOEMBitmap` `CImage::Load`してシステムビットマップを読み込み、もう1つを使用してファイルから読み込みます。
 
 ### <a name="example"></a>例
 
@@ -291,7 +291,7 @@ MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 
 ##  <a name="setcursor"></a>  CStatic::SetCursor
 
-新しいカーソル イメージをスタティック コントロールに関連付けます。
+新しいカーソルイメージを静的コントロールに関連付けます。
 
 ```
 HCURSOR SetCursor(HCURSOR hCursor);
@@ -300,21 +300,21 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="parameters"></a>パラメーター
 
 *hCursor*<br/>
-静的コントロールを描画するカーソルのハンドル。
+静的コントロールに描画されるカーソルのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-静的コントロールに関連付けられたカーソルがない場合の静的コントロール、または NULL に以前関連付けられているカーソルのハンドル。
+以前に静的コントロールに関連付けられたカーソルのハンドル。静的コントロールに関連付けられているカーソルがない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-カーソルは静的コントロールで自動的に描画されます。 既定が左上隅に描画され、スタティック コントロールは、カーソルのサイズに変更されます。
+カーソルは、自動的に静的コントロールに描画されます。 既定では、この値は左上隅に描画され、静的コントロールはカーソルのサイズに合わせてサイズが変更されます。
 
-さまざまなウィンドウと、次の静的コントロール スタイルを使用することができます。
+次のようなさまざまなウィンドウと静的コントロールスタイルを使用できます。
 
-- SS_ICON はカーソル、アイコン、常にこのスタイルを使用します。
+- SS_ICON カーソルとアイコンには常にこのスタイルを使用します。
 
-- スタティック コントロールの中央に SS_CENTERIMAGE を使用します。 イメージが静的コントロールよりも大きい場合は、クリップされます。 静的コントロールよりも小さい場合、イメージの周囲の空の領域は静的コントロールの背景色で入力します。
+- SS_CENTERIMAGE を使用して、スタティックコントロールの中央に配置します。 イメージが静的コントロールより大きい場合は、クリップされます。 静的コントロールより小さい場合は、イメージの周囲の空白が、静的コントロールの背景色で塗りつぶされます。
 
 ### <a name="example"></a>例
 
@@ -322,7 +322,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 
 ##  <a name="setenhmetafile"></a>  CStatic::SetEnhMetaFile
 
-静的コントロールで新しい拡張メタファイル イメージに関連付けます。
+新しい拡張メタファイルイメージを静的コントロールに関連付けます。
 
 ```
 HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
@@ -331,27 +331,27 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ### <a name="parameters"></a>パラメーター
 
 *hMetaFile*<br/>
-静的コントロールを描画するメタファイルのハンドル。
+静的コントロールに描画される拡張メタファイルのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられていた静的コントロール、または NULL 拡張メタファイルが静的なコントロールに関連付けられていない場合、拡張メタファイルのハンドル。
+以前に静的コントロールに関連付けられていた拡張メタファイルのハンドル。または、拡張メタファイルが静的コントロールに関連付けられていない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-拡張メタファイルは、静的コントロールで自動的に描画されます。 拡張メタファイルは、静的コントロールのサイズに合わせてスケーリングされます。
+拡張メタファイルは、静的コントロールに自動的に描画されます。 拡張メタファイルは、静的コントロールのサイズに合わせてスケーリングされます。
 
-さまざまなウィンドウと、次の静的コントロール スタイルを使用することができます。
+次のようなさまざまなウィンドウと静的コントロールスタイルを使用できます。
 
-- SS_ENHMETAFILE 使用常にこのスタイルの拡張メタファイルをします。
+- SS_ENHMETAFILE 拡張メタファイルには、このスタイルを常に使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-##  <a name="seticon"></a>  CStatic::SetIcon
+##  <a name="seticon"></a>CStatic::SetIcon
 
-静的コントロールで新しいアイコンのイメージを関連付けます。
+新しいアイコンイメージを静的コントロールに関連付けます。
 
 ```
 HICON SetIcon(HICON hIcon);
@@ -360,21 +360,21 @@ HICON SetIcon(HICON hIcon);
 ### <a name="parameters"></a>パラメーター
 
 *hIcon*<br/>
-静的コントロールを描画するアイコンのハンドル。
+静的コントロールに描画されるアイコンのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-静的コントロールに関連付けられたアイコンがない場合の静的コントロール、または NULL に以前関連付けられているアイコンのハンドル。
+以前に静的コントロールに関連付けられていたアイコンのハンドル。静的コントロールに関連付けられているアイコンがない場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-静的コントロールにアイコンが自動的に描画されます。 既定が左上隅に描画され、スタティック コントロールは、アイコンのサイズにサイズ変更されます。
+アイコンは、静的コントロールに自動的に描画されます。 既定では、これは左上隅に描画され、静的コントロールはアイコンのサイズに合わせてサイズ変更されます。
 
-さまざまなウィンドウと、次の静的コントロール スタイルを使用することができます。
+次のようなさまざまなウィンドウと静的コントロールスタイルを使用できます。
 
-- SS_ICON はカーソル、アイコン、常にこのスタイルを使用します。
+- SS_ICON カーソルとアイコンには常にこのスタイルを使用します。
 
-- スタティック コントロールの中央に SS_CENTERIMAGE を使用します。 イメージが静的コントロールよりも大きい場合は、クリップされます。 静的コントロールよりも小さい場合、イメージの周囲の空の領域は静的コントロールの背景色で入力します。
+- SS_CENTERIMAGE を使用して、スタティックコントロールの中央に配置します。 イメージが静的コントロールより大きい場合は、クリップされます。 静的コントロールより小さい場合は、イメージの周囲の空白が、静的コントロールの背景色で塗りつぶされます。
 
 ### <a name="example"></a>例
 

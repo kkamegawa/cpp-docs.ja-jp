@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 7504c12584d931b0f39062f393765ad8124fc0dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561554"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449545"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (同一文字列の削除)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) 、エディット コンティニュを使用するオプションが自動的に設定、 **/GF**オプション。
+>  [/ZI](z7-zi-zi-debug-information-format.md) 、エディット コンティニュを使用するオプションが自動的に設定、 **/GF**オプション。
 
 > [!NOTE]
->  **/GF**コンパイラ オプションはそれぞれ一意の文字列のアドレス指定可能なセクションを作成します。 既定では、オブジェクト ファイルには最大で 65,536 個のアドレス指定可能なセクションも含めることができます。 使用して、プログラムが 65,536 を超える文字列が含まれる場合、 [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)コンパイラ オプションを複数のセクションを作成します。
+>  **/GF**コンパイラ オプションはそれぞれ一意の文字列のアドレス指定可能なセクションを作成します。 既定では、オブジェクト ファイルには最大で 65,536 個のアドレス指定可能なセクションも含めることができます。 使用して、プログラムが 65,536 を超える文字列が含まれる場合、 [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)コンパイラ オプションを複数のセクションを作成します。
 
-**/GF**ときは、 [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または **/O2**使用されます。
+**/GF**ときは、 [/O1](o1-o2-minimize-size-maximize-speed.md)または[/O2](o1-o2-minimize-size-maximize-speed.md)使用されます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -68,5 +68,5 @@ char *t = "This is a character buffer";
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

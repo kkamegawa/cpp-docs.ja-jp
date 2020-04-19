@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591647"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690090"
 ---
-# <a name="allocatorbase-class"></a>allocator_base クラス
+# <a name="allocator_base-class"></a>allocator_base クラス
 
 同期フィルターからユーザー定義のアロケーターを作成するために必要な、基底クラスと共通の関数を定義します。
 
@@ -61,7 +61,7 @@ class allocator_base
 |パラメーター|説明|
 |---------------|-----------------|
 |*Type*|アロケーターによって割り当てられた要素の型。|
-|*同期*|アロケーターの同期ポリシー。[sync_none クラス](../standard-library/sync-none-class.md)、[sync_per_container クラス](../standard-library/sync-per-container-class.md)、[sync_per_thread クラス](../standard-library/sync-per-thread-class.md)、[sync_shared クラス](../standard-library/sync-shared-class.md)のいずれかです。|
+|*頻度*|アロケーターの同期ポリシー。[sync_none クラス](../standard-library/sync-none-class.md)、[sync_per_container クラス](../standard-library/sync-per-container-class.md)、[sync_per_thread クラス](../standard-library/sync-per-thread-class.md)、[sync_shared クラス](../standard-library/sync-shared-class.md)のいずれかです。|
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -78,15 +78,15 @@ class allocator_base
 |[difference_type](#difference_type)|アロケーターによって管理されるオブジェクトの型に対するポインターの値の差を表すことができる符号付き整数型。|
 |[pointer](#pointer)|アロケーターによって管理されるオブジェクトの型に対するポインターを提供する型。|
 |[reference](#reference)|アロケーターによって管理されるオブジェクトの型に対する参照を提供する型。|
-|[size_type](#size_type)|テンプレート クラス `allocator_base` のオブジェクトが割り当てることができる、シーケンスの長さを表すことのできる符号なし整数型。|
+|[size_type](#size_type)|@No__t_0 型のオブジェクトが割り当てることができる任意のシーケンスの長さを表すことができる符号なし整数型。|
 |[value_type](#value_type)|アロケーターによって管理される型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[_Charalloc](#charalloc)|ストレージ型の配列を割り当てます**char**します。|
-|[_Chardealloc](#chardealloc)|ストレージの種類の要素を含む配列を解放**char**します。|
+|[_Charalloc](#charalloc)|**Char**型の配列のストレージを割り当てます。|
+|[_Chardealloc](#chardealloc)|**Char**型の要素を含む配列のストレージを解放します。|
 |[address](#address)|値が指定されたオブジェクトのアドレスを検索します。|
 |[allocate](#allocate)|指定された要素数だけは格納できるメモリのブロックを割り当てます。|
 |[construct](#construct)|指定された値で初期化され、指定されたアドレスに配置される、指定された型のオブジェクトを構築します。|
@@ -94,7 +94,7 @@ class allocator_base
 |[destroy](#destroy)|オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。|
 |[max_size](#max_size)|空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、*Type* 型の要素の数を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-ストレージ型の配列を割り当てます**char**します。
+**Char**型の配列のストレージを割り当てます。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-ストレージの種類の要素を含む配列を解放**char**します。
+**Char**型の要素を含む配列のストレージを解放します。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val* \
 アドレスが検索対象となっているオブジェクトの const 値または nonconst 値。
 
 ### <a name="return-value"></a>戻り値
@@ -179,7 +179,7 @@ pointer allocate(size_type _Nx);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Nx*|割り当てられる配列内の要素の数。|
+|*Nx (_s)*|割り当てられる配列内の要素の数。|
 |*_Hint*|このパラメーターは無視されます。|
 
 ### <a name="return-value"></a>戻り値
@@ -259,7 +259,7 @@ void deallocate(pointer ptr, size_type _Nx);
 |パラメーター|説明|
 |---------------|-----------------|
 |*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*_Nx*|記憶域から割り当てを解除されるオブジェクトの数。|
+|*Nx (_s)*|記憶域から割り当てを解除されるオブジェクトの数。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-テンプレート クラス `allocator_base` のオブジェクトが割り当てることができる、シーケンスの長さを表すことのできる符号なし整数型。
+@No__t_0 型のオブジェクトが割り当てることができる任意のシーケンスの長さを表すことができる符号なし整数型。
 
 ```cpp
 typedef std::size_t size_type;
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -29,16 +29,16 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd45c2ff9b43148e0fe27ebd410a2390a4d12ce2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475648"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497554"
 ---
 # <a name="ccombstr-class"></a>CComBSTR クラス
 
-このクラスのラッパーは、 [BSTR](/previous-versions/windows/desktop/automat/bstr)秒。
+このクラスは、 [BSTR](/previous-versions/windows/desktop/automat/bstr)のラッパーです。
 
 ## <a name="syntax"></a>構文
 
@@ -52,73 +52,73 @@ class CComBSTR
 
 |名前|説明|
 |----------|-----------------|
-|[CComBSTR::CComBSTR](#ccombstr)|コンストラクターです。|
-|[CComBSTR:: ~ CComBSTR](#dtor)|デストラクターです。|
+|[CComBSTR:: CComBSTR](#ccombstr)|コンストラクターです。|
+|[CComBSTR::~CComBSTR](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComBSTR::Append](#append)|文字列を付加`m_str`します。|
-|[CComBSTR::AppendBSTR](#appendbstr)|追加するための BSTR`m_str`します。|
-|[CComBSTR::AppendBytes](#appendbytes)|指定したバイト数を追加します。`m_str`します。|
-|[CComBSTR::ArrayToBSTR](#arraytobstr)|Safearray 内の各要素の最初の文字から BSTR を作成しにアタッチします、`CComBSTR`オブジェクト。|
-|[CComBSTR::AssignBSTR](#assignbstr)|BSTR を割り当てます`m_str`します。|
-|[CComBSTR::Attach](#attach)|アタッチするための BSTR、`CComBSTR`オブジェクト。|
-|[CComBSTR::BSTRToArray](#bstrtoarray)|配列の各要素が含まれる文字を 0 から始まる 1 次元の safearray を作成し、`CComBSTR`オブジェクト。|
-|[CComBSTR::ByteLength](#bytelength)|長さを返します`m_str`(バイト単位)。|
-|[CComBSTR::Copy](#copy)|コピーを返します`m_str`します。|
-|[CComBSTR::CopyTo](#copyto)|コピーを返します`m_str`を使用して、 **[out]** パラメーター|
-|[CComBSTR::Detach](#detach)|デタッチ`m_str`から、`CComBSTR`オブジェクト。|
-|[CComBSTR::Empty](#empty)|解放`m_str`します。|
-|[CComBSTR::Length](#length)|長さを返します`m_str`します。|
+|[CComBSTR:: Append](#append)|に`m_str`文字列を追加します。|
+|[CComBSTR::AppendBSTR](#appendbstr)|BSTR をに`m_str`追加します。|
+|[CComBSTR:: AppendBytes](#appendbytes)|に`m_str`指定されたバイト数を追加します。|
+|[CComBSTR::ArrayToBSTR](#arraytobstr)|Safearray 内の各要素の最初の文字から BSTR を作成し、それを`CComBSTR`オブジェクトにアタッチします。|
+|[CComBSTR::AssignBSTR](#assignbstr)|BSTR をに`m_str`割り当てます。|
+|[CComBSTR:: Attach](#attach)|BSTR を`CComBSTR`オブジェクトにアタッチします。|
+|[CComBSTR:: BSTRToArray](#bstrtoarray)|0から始まる1次元の safearray を作成します。配列の各要素は、 `CComBSTR`オブジェクトの文字です。|
+|[CComBSTR::ByteLength](#bytelength)|の`m_str`長さをバイト単位で返します。|
+|[CComBSTR:: Copy](#copy)|の`m_str`コピーを返します。|
+|[CComBSTR::CopyTo](#copyto)|**[Out]** パラメーター `m_str`を使用してのコピーを返します。|
+|[CComBSTR::D します。](#detach)|オブジェクトからデタッチ`m_str`します。 `CComBSTR`|
+|[CComBSTR:: Empty](#empty)|解放`m_str`します。|
+|[CComBSTR::Length](#length)|の`m_str`長さを返します。|
 |[CComBSTR::LoadString](#loadstring)|文字列リソースを読み込みます。|
 |[CComBSTR::ReadFromStream](#readfromstream)|ストリームから BSTR オブジェクトを読み込みます。|
-|[CComBSTR::ToLower](#tolower)|文字列を小文字に変換します。|
-|[CComBSTR::ToUpper](#toupper)|文字列を大文字に変換します。|
-|[CComBSTR::WriteToStream](#writetostream)|保存`m_str`をストリームにします。|
+|[CComBSTR:: ToLower](#tolower)|文字列を小文字に変換します。|
+|[CComBSTR:: ToUpper](#toupper)|文字列を大文字に変換します。|
+|[CComBSTR:: WriteToStream](#writetostream)|ストリーム`m_str`に保存します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CComBSTR::operator BSTR](#operator_bstr)|キャストを`CComBSTR`bstr オブジェクト。|
-|[CComBSTR::operator!](#operator_not)|TRUE かどうかに応じて、FALSE を返します`m_str`は NULL です。|
-|[CComBSTR::operator! =](#operator_neq)|比較、`CComBSTR`文字列を使用します。|
-|[CComBSTR::operator (& a)](#operator_amp)|アドレスを返して`m_str`します。|
-|[CComBSTR::operator + =](#operator_add_eq)|追加、`CComBSTR`オブジェクトにします。|
-|[CComBSTR::operator <](#operator_lt)|比較、`CComBSTR`文字列を使用します。|
-|[CComBSTR::operator =](#operator_eq)|値を代入`m_str`します。|
-|[CComBSTR::operator = =](#operator_eq_eq)|比較、`CComBSTR`文字列を使用します。|
-|[CComBSTR::operator >](#operator_gt)|比較、`CComBSTR`文字列を使用します。|
+|[CComBSTR:: operator BSTR](#operator_bstr)|オブジェクトを`CComBSTR` BSTR にキャストします。|
+|[CComBSTR:: operator!](#operator_not)|が NULL かどうか`m_str`に応じて、TRUE または FALSE を返します。|
+|[CComBSTR:: operator! =](#operator_neq)|と`CComBSTR`文字列を比較します。|
+|[CComBSTR:: operator &](#operator_amp)|の`m_str`アドレスを返します。|
+|[CComBSTR:: operator + =](#operator_add_eq)|オブジェクトに`CComBSTR`を追加します。|
+|[CComBSTR:: operator <](#operator_lt)|と`CComBSTR`文字列を比較します。|
+|[CComBSTR:: operator =](#operator_eq)|に`m_str`値を割り当てます。|
+|[CComBSTR:: operator = =](#operator_eq_eq)|と`CComBSTR`文字列を比較します。|
+|[CComBSTR:: operator >](#operator_gt)|と`CComBSTR`文字列を比較します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComBSTR::m_str](#m_str)|関連付けられている BSTR が含まれています、`CComBSTR`オブジェクト。|
+|[CComBSTR:: m_str](#m_str)|`CComBSTR`オブジェクトに関連付けられている BSTR を格納します。|
 
 ## <a name="remarks"></a>Remarks
 
-`CComBSTR`クラスは、固定長の文字列である Bstr 用のラッパーです。 長さは、文字列の前に、データのメモリ位置に整数として格納されます。
+`CComBSTR`クラスは bstr のラッパーであり、これはプレフィックスが付けられた文字列です。 長さは、文字列のデータの前のメモリ位置に整数として格納されます。
 
-A [BSTR](/previous-versions/windows/desktop/automat/bstr)が null で終了した後、最後の文字をカウントされますが、文字列に埋め込まれた null 文字を含めることもできます。 文字列の長さは、最初の null 文字しない、文字数によって決まります。
-
-> [!NOTE]
->  `CComBSTR`クラスには、いくつかの引数として文字列を ANSI または Unicode のいずれかを実行するメンバー (コンス トラクター、代入演算子、および比較演算子) が用意されています。 これらの関数の ANSI バージョンは、一時的な Unicode 文字列が内部的に多くの場合、作成されるため、Unicode 対応するより非効率です。 効率性のためには、可能であれば Unicode バージョンを使用します。
+[BSTR](/previous-versions/windows/desktop/automat/bstr)は、最後にカウントされた文字の後に null で終了しますが、文字列内に埋め込まれた null 文字を含めることもできます。 文字列の長さは、最初の null 文字ではなく、文字数によって決まります。
 
 > [!NOTE]
->  Visual Studio .NET で実装される改善されたルックアップ動作のためのコードなど`bstr = L"String2" + bstr;`、以前のリリースでコンパイルする代わりに実装するとして`bstr = CStringW(L"String2") + bstr`します。
+>  クラス`CComBSTR`には、引数として ANSI 文字列または Unicode 文字列を受け取る多数のメンバー (コンストラクター、代入演算子、および比較演算子) が用意されています。 一時的な Unicode 文字列は多くの場合、内部的に作成されるため、これらの関数の ANSI バージョンは、Unicode 対応の関数よりも効率が悪くなります。 効率を上げるには、可能な限り Unicode バージョンを使用します。
 
-使用する場合の注意事項の一覧については`CComBSTR`を参照してください[CComBSTR を使用したプログラミング](../../atl/programming-with-ccombstr-atl.md)します。
+> [!NOTE]
+>  Visual Studio .net で実装される検索動作が向上したため、 `bstr = L"String2" + bstr;`以前のリリースでコンパイルされたなどのコードは、と`bstr = CStringW(L"String2") + bstr`して実装する必要があります。
+
+を使用`CComBSTR`する場合の注意事項の一覧については、「 [CComBSTR を使用](../../atl/programming-with-ccombstr-atl.md)したプログラミング」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
 ##  <a name="append"></a>  CComBSTR::Append
 
-いずれかの追加*lpsz*またはの BSTR メンバー *bstrSrc*に[m_str](#m_str)します。
+*Lpsz*または*BSTRSRC*の BSTR メンバーを[m_str](#m_str)に追加します。
 
 ```
 HRESULT Append(const CComBSTR& bstrSrc) throw();
@@ -132,24 +132,24 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 ### <a name="parameters"></a>パラメーター
 
 *bstrSrc*<br/>
-[in]A`CComBSTR`オブジェクトを追加します。
+から追加`CComBSTR`するオブジェクト。
 
 *ch*<br/>
-[in]追加する文字。
+から追加する文字。
 
 *lpsz*<br/>
-[in]追加する文字の 0 で終わる文字列。 LPCOLESTR オーバー ロードまたは LPCSTR バージョンを使用して ANSI 文字列を使用して Unicode 文字列を渡すことができます。
+から追加する0で終わる文字列。 LPCOLESTR オーバーロードまたは LPCSTR バージョンを使用して ANSI 文字列を使用して、Unicode 文字列を渡すことができます。
 
 *nLen*<br/>
-[in]文字数*lpsz*を追加します。
+から*Lpsz*から追加する文字数。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または任意の標準的な HRESULT エラー値に s_ok を返します。
+成功した場合は S_OK、または標準の HRESULT エラー値。
 
 ### <a name="remarks"></a>Remarks
 
-追加する前に、ANSI 文字列を Unicode に変換されます。
+ANSI 文字列は、追加される前に Unicode に変換されます。
 
 ### <a name="example"></a>例
 
@@ -157,7 +157,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ##  <a name="appendbstr"></a>  CComBSTR::AppendBSTR
 
-指定された BSTR を追加します。 [m_str](#m_str)します。
+指定した BSTR を[m_str](#m_str)に追加します。
 
 ```
 HRESULT AppendBSTR(BSTR p) throw();
@@ -166,23 +166,23 @@ HRESULT AppendBSTR(BSTR p) throw();
 ### <a name="parameters"></a>パラメーター
 
 *p*<br/>
-[in]追加する BSTR。
+から追加する BSTR。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または任意の標準的な HRESULT エラー値に s_ok を返します。
+成功した場合は S_OK、または標準の HRESULT エラー値。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドに通常のワイド文字の文字列を渡さないでください。 コンパイラはエラーをキャッチし、実行時エラーが発生することはできません。
+通常のワイド文字列をこのメソッドに渡さないでください。 コンパイラはエラーをキャッチできず、実行時エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]
 
-##  <a name="appendbytes"></a>  CComBSTR::AppendBytes
+##  <a name="appendbytes"></a>CComBSTR:: AppendBytes
 
-指定したバイト数を追加します。 [m_str](#m_str)変換なし。
+変換せずに、指定したバイト数を[m_str](#m_str)に追加します。
 
 ```
 HRESULT AppendBytes(const char* lpsz, int nLen) throw();
@@ -191,14 +191,14 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpsz*<br/>
-[in]追加するバイトの配列へのポインター。
+から追加するバイト配列へのポインター。
 
 *p*<br/>
-[in]追加するバイト数。
+から追加するバイト数。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または任意の標準的な HRESULT エラー値に s_ok を返します。
+成功した場合は S_OK、または標準の HRESULT エラー値。
 
 ### <a name="example"></a>例
 
@@ -206,7 +206,7 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ##  <a name="arraytobstr"></a>  CComBSTR::ArrayToBSTR
 
-保持されている既存の文字列を解放、`CComBSTR`オブジェクト、safearray 内の各要素の最初の文字から BSTR を作成しにアタッチします、`CComBSTR`オブジェクト。
+`CComBSTR`オブジェクトに保持されている既存の文字列を解放し、safearray 内の各要素の最初の文字から BSTR を作成し`CComBSTR` 、オブジェクトにアタッチします。
 
 ```
 HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
@@ -214,16 +214,16 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pSrc*<br/>
-[in]文字列を作成するために使用する要素を含むの safearray。
+*.Psrc*<br/>
+から文字列の作成に使用される要素を格納している safearray。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または任意の標準的な HRESULT エラー値に s_ok を返します。
+成功した場合は S_OK、または標準の HRESULT エラー値。
 
 ##  <a name="assignbstr"></a>  CComBSTR::AssignBSTR
 
-BSTR を割り当てます[m_str](#m_str)します。
+は、BSTR を[m_str](#m_str)に割り当てます。
 
 ```
 HRESULT AssignBSTR(const BSTR bstrSrc) throw();
@@ -232,15 +232,15 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 ### <a name="parameters"></a>パラメーター
 
 *bstrSrc*<br/>
-[in]現在に割り当てる BSTR`CComBSTR`オブジェクト。
+から現在`CComBSTR`のオブジェクトに代入する BSTR。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または任意の標準的な HRESULT エラー値に s_ok を返します。
+成功した場合は S_OK、または標準の HRESULT エラー値。
 
-##  <a name="attach"></a>  CComBSTR::Attach
+##  <a name="attach"></a>CComBSTR:: Attach
 
-アタッチするための BSTR、`CComBSTR`オブジェクトを設定して、 [m_str](#m_str)メンバーを*src*。
+[M_str](#m_str)メンバーを*src*に`CComBSTR`設定することによって、BSTR をオブジェクトにアタッチします。
 
 ```
 void Attach(BSTR src) throw();
@@ -249,22 +249,22 @@ void Attach(BSTR src) throw();
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-[in]オブジェクトにアタッチする BSTR。
+からオブジェクトにアタッチする BSTR。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドに通常のワイド文字の文字列を渡さないでください。 コンパイラはエラーをキャッチし、実行時エラーが発生することはできません。
+通常のワイド文字列をこのメソッドに渡さないでください。 コンパイラはエラーをキャッチできず、実行時エラーが発生します。
 
 > [!NOTE]
->  場合、このメソッドはアサート`m_str`以外の場合します。
+>  が NULL 以外の場合`m_str` 、このメソッドはをアサートします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="bstrtoarray"></a>  CComBSTR::BSTRToArray
+##  <a name="bstrtoarray"></a>CComBSTR:: BSTRToArray
 
-配列の各要素が含まれる文字を 0 から始まる 1 次元の safearray を作成し、`CComBSTR`オブジェクト。
+0から始まる1次元の safearray を作成します。配列の各要素は、 `CComBSTR`オブジェクトの文字です。
 
 ```
 HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
@@ -273,15 +273,15 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 ### <a name="parameters"></a>パラメーター
 
 *ppArray*<br/>
-[out]関数の結果を保持するために使用する safearray へのポインター。
+入出力関数の結果を保持するために使用される safearray へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、または任意の標準的な HRESULT エラー値に s_ok を返します。
+成功した場合は S_OK、または標準の HRESULT エラー値。
 
 ##  <a name="bytelength"></a>  CComBSTR::ByteLength
 
-内のバイト数を返します`m_str`、終端の null 文字は除きます。
+の`m_str`バイト数を返します (終端の null 文字は除く)。
 
 ```
 unsigned int ByteLength() const throw();
@@ -289,19 +289,19 @@ unsigned int ByteLength() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-長さ、 [m_str](#m_str)メンバー (バイト単位)。
+[M_str](#m_str)メンバーの長さ (バイト単位)。
 
 ### <a name="remarks"></a>Remarks
 
-0 を返します`m_str`は NULL です。
+が NULL の`m_str`場合は0を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]
 
-##  <a name="ccombstr"></a>  CComBSTR::CComBSTR
+##  <a name="ccombstr"></a>CComBSTR:: CComBSTR
 
-コンストラクターです。 既定のコンス トラクターは、設定、 [m_str](#m_str)メンバーを NULL にします。
+コンストラクターです。 既定のコンストラクターは、 [m_str](#m_str)メンバーを NULL に設定します。
 
 ```
 CComBSTR() throw();
@@ -318,25 +318,25 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ### <a name="parameters"></a>パラメーター
 
 *nSize*<br/>
-[in]コピーする文字数*sz*または文字数の初期サイズ、`CComBSTR`します。
+から*Sz*からコピーする文字数、またはの文字`CComBSTR`数の初期サイズ。
 
 *sz*<br/>
-[入力] コピーする文字列。 Unicode バージョンを LPCOLESTR; を指定しますANSI バージョンには、LPCSTR を指定します。
+[入力] コピーする文字列。 Unicode バージョンでは、LPCOLESTR が指定されています。ANSI バージョンでは、LPCSTR が指定されています。
 
-*pSrc*<br/>
-[入力] コピーする文字列。 Unicode バージョンを LPCOLESTR; を指定しますANSI バージョンには、LPCSTR を指定します。
+*.Psrc*<br/>
+[入力] コピーする文字列。 Unicode バージョンでは、LPCOLESTR が指定されています。ANSI バージョンでは、LPCSTR が指定されています。
 
 *src*<br/>
 [入力] `CComBSTR` オブジェクト。
 
 *guid*<br/>
-[in]参照を`GUID`構造体。
+から`GUID`構造体への参照。
 
 ### <a name="remarks"></a>Remarks
 
-コピー コンス トラクターのセット`m_str`の BSTR メンバーのコピーに*src*します。`REFGUID`コンス トラクターに GUID を使用して文字列に変換します`StringFromGUID2`し結果を格納します。
+コピーコンストラクターは、 `m_str` *src*の BSTR メンバーのコピーにを設定します。コンストラクター `REFGUID`はを使用して`StringFromGUID2` GUID を文字列に変換し、その結果を格納します。
 
-その他のコンストラクターは、`m_str` を指定された文字列のコピーに設定します。 値を渡す場合*nSize*、のみ*nSize*終端の null 文字に続く文字がコピーされます。
+その他のコンストラクターは、`m_str` を指定された文字列のコピーに設定します。 *NSize*の値を渡すと、 *nSize*文字だけがコピーされ、その後に終端の null 文字が続きます。
 
 `CComBSTR` は移動セマンティクスをサポートします。 移動コンストラクター (右辺値参照 `&&` を取るコンストラクター) を使用して、オブジェクト コピーのオーバーヘッドなしに、引数として渡した古いオブジェクトと同一の基になるデータを使用する新しいオブジェクトを作成することができます。
 
@@ -346,7 +346,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>CComBSTR:: ~ CComBSTR
 
 デストラクターです。
 
@@ -360,7 +360,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 ##  <a name="copy"></a>  CComBSTR::Copy
 
-割り当てるしのコピーを返します`m_str`します。
+の`m_str`コピーを割り当てて返します。
 
 ```
 BSTR Copy() const throw();
@@ -368,7 +368,7 @@ BSTR Copy() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-コピー、 [m_str](#m_str)メンバー。 場合`m_str`が NULL では NULL を返します。
+[M_str](#m_str)メンバーのコピー。 が`m_str` null の場合、は null を返します。
 
 ### <a name="example"></a>例
 
@@ -376,7 +376,7 @@ BSTR Copy() const throw();
 
 ##  <a name="copyto"></a>  CComBSTR::CopyTo
 
-割り当てるしのコピーを返します[m_str](#m_str)パラメーターを使用しています。
+パラメーターを使用して、 [m_str](#m_str)のコピーを割り当てて返します。
 
 ```
 HRESULT CopyTo(BSTR* pbstr) throw();
@@ -387,18 +387,18 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 ### <a name="parameters"></a>パラメーター
 
 *pbstr*<br/>
-[out]このメソッドによって割り当てられた文字列が返される BSTR のアドレス。
+入出力このメソッドによって割り当てられた文字列を返す BSTR のアドレス。
 
-*呼び出した*<br/>
-[out]このメソッドによって割り当てられた文字列が返されるバリアントのアドレス。
+*pvarDest*<br/>
+入出力このメソッドによって割り当てられた文字列を返すバリアントのアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合またはコピーの失敗を示す標準の HRESULT 値。
+コピーの成功または失敗を示す標準の HRESULT 値。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出した後、バリアントが指す*呼び出した*型 VT_BSTR になります。
+このメソッドを呼び出した後、 *pvarDest*が指すバリアントは VT_BSTR 型になります。
 
 ### <a name="example"></a>例
 
@@ -406,7 +406,7 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ##  <a name="detach"></a>  CComBSTR::Detach
 
-デタッチ[m_str](#m_str)から、`CComBSTR`オブジェクトとセット`m_str`を NULL にします。
+`CComBSTR`オブジェクトから[m_str](#m_str)をデタッチし、 `m_str`を NULL に設定します。
 
 ```
 BSTR Detach() throw();
@@ -414,15 +414,15 @@ BSTR Detach() throw();
 
 ### <a name="return-value"></a>戻り値
 
-BSTR に関連付けられている、`CComBSTR`オブジェクト。
+`CComBSTR`オブジェクトに関連付けられている BSTR。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]
 
-##  <a name="empty"></a>  CComBSTR::Empty
+##  <a name="empty"></a>CComBSTR:: Empty
 
-解放、 [m_str](#m_str)メンバー。
+[M_str](#m_str)メンバーを解放します。
 
 ```
 void Empty() throw();
@@ -434,7 +434,7 @@ void Empty() throw();
 
 ##  <a name="length"></a>  CComBSTR::Length
 
-内の文字の数を返します`m_str`、終端の null 文字は除きます。
+の文字`m_str`数を返します (終端の null 文字は除く)。
 
 ```
 unsigned int Length() const throw();
@@ -442,7 +442,7 @@ unsigned int Length() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-長さ、 [m_str](#m_str)メンバー。
+[M_str](#m_str)メンバーの長さ。
 
 ### <a name="example"></a>例
 
@@ -450,7 +450,7 @@ unsigned int Length() const throw();
 
 ##  <a name="loadstring"></a>  CComBSTR::LoadString
 
-指定された文字列リソースを読み込む*nID*し、このオブジェクトに格納します。
+*NID*によって指定された文字列リソースを読み込み、このオブジェクトに格納します。
 
 ```
 bool LoadString(HINSTANCE hInst, UINT nID) throw();
@@ -459,23 +459,23 @@ bool LoadString(UINT nID) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-参照してください[LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) Windows SDK にします。
+Windows SDK の「 [Loadstring](/windows/win32/api/winuser/nf-winuser-loadstringw) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、文字列が正常に読み込まれる; TRUE を返しますそれ以外の場合、FALSE を返します。
+文字列が正常に読み込まれた場合は TRUE を返します。それ以外の場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-最初の関数がを介してによって識別されるモジュールから、リソースを読み込み、 *hInst*パラメーター。 2 番目の関数に関連付けられているリソース モジュールからのリソースの読み込み、 [CComModule](../../atl/reference/ccommodule-class.md)-このプロジェクトで使用されるオブジェクトを派生します。
+最初の関数は、 *hInst*パラメーターを使用して、ユーザーが指定したモジュールからリソースを読み込みます。 2番目の関数は、このプロジェクトで使用されている[CComModule](../../atl/reference/ccommodule-class.md)派生オブジェクトに関連付けられているリソースモジュールからリソースを読み込みます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]
 
-##  <a name="m_str"></a>  CComBSTR::m_str
+##  <a name="m_str"></a>CComBSTR:: m_str
 
-関連付けられている BSTR が含まれています、`CComBSTR`オブジェクト。
+`CComBSTR`オブジェクトに関連付けられている BSTR を格納します。
 
 ```
 BSTR m_str;
@@ -485,9 +485,9 @@ BSTR m_str;
 
 [!code-cpp[NVC_ATL_Utilities#49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]
 
-##  <a name="operator_bstr"></a>  CComBSTR::operator BSTR
+##  <a name="operator_bstr"></a>CComBSTR:: operator BSTR
 
-キャストを`CComBSTR`bstr オブジェクト。
+オブジェクトを`CComBSTR` BSTR にキャストします。
 
 ```
 operator BSTR() const throw();
@@ -495,15 +495,15 @@ operator BSTR() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-渡すことができる`CComBSTR`を持つ関数オブジェクト **[in] BSTR**パラメーター。
+では、 `CComBSTR` **[in] BSTR**パラメーターを持つ関数にオブジェクトを渡すことができます。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CComBSTR::m_str](#m_str)します。
+[CComBSTR:: m_str](#m_str)の例を参照してください。
 
-##  <a name="operator_not"></a>  CComBSTR::operator!
+##  <a name="operator_not"></a>CComBSTR:: operator!
 
-BSTR 文字列が NULL であるかどうかを確認します。
+BSTR 文字列が NULL かどうかを確認します。
 
 ```
 bool operator!() const throw();
@@ -511,19 +511,19 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-True の場合、 [m_str](#m_str)メンバーは NULL。 それ以外の場合、FALSE。
+[M_str](#m_str)メンバーが NULL の場合に TRUE を返します。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-のみ、この演算子は空の文字列ではなく、NULL 値を確認します。
+この演算子は、空の文字列ではなく、NULL 値のみをチェックします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="operator_neq"></a>  CComBSTR::operator! =
+##  <a name="operator_neq"></a>CComBSTR:: operator! =
 
-返すのと論理的に反対[演算子 = =](#operator_eq_eq)します。
+[演算子 = =](#operator_eq_eq)と逆の論理和を返します。
 
 ```
 bool operator!= (const CComBSTR& bstrSrc) const throw();
@@ -538,22 +538,22 @@ bool operator!= (int nNull) const throw();
 [入力] `CComBSTR` オブジェクト。
 
 *pszSrc*<br/>
-[in]0 で終わる文字列。
+から0で終わる文字列。
 
 *nNull*<br/>
-[in]NULL にする必要があります。
+からNULL にする必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-比較対象となる項目が等しくない場合は TRUE を返します、`CComBSTR`オブジェクト。 それ以外の場合は FALSE を返します。
+比較対象の項目が`CComBSTR`オブジェクトと等しくない場合は TRUE を返します。それ以外の場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-`CComBSTR`s は、ユーザーの既定のロケールのコンテキストでは、テキストと比較されます。 最後の比較演算子は、NULL に対して含まれる文字列だけを比較します。
+`CComBSTR`は、ユーザーの既定のロケールのコンテキストでテキストと比較されます。 最後の比較演算子は、含まれている文字列を NULL と比較するだけです。
 
-##  <a name="operator_amp"></a>  CComBSTR::operator &amp;
+##  <a name="operator_amp"></a>CComBSTR:: operator&amp;
 
-格納されている BSTR のアドレスを返して、 [m_str](#m_str)メンバー。
+[M_str](#m_str)メンバーに格納されている BSTR のアドレスを返します。
 
 ```
 BSTR* operator&() throw();
@@ -561,9 +561,9 @@ BSTR* operator&() throw();
 
 ### <a name="remarks"></a>Remarks
 
-`CComBstr operator &` 特殊なアサーションに関連付けられていることと、メモリ リークを特定します。 プログラムでは、ときにアサート、`m_str`メンバーを初期化します。 このアサーションは、プログラマが使用して状況を識別するために作成された、`& operator`に新しい値を代入する`m_str`メンバーの最初の割り当てを解放せず`m_str`します。 場合`m_str`NULL と等しい、プログラムでは、その m_str がまだ割り当てられていませんでした。 この場合、プログラムはアサートされません。
+`CComBstr operator &`には、メモリリークを識別できるように、関連付けられた特別なアサーションがあります。 `m_str`メンバーが初期化されると、プログラムはアサートします。 このアサーションは、プログラマがを使用して、 `& operator`の最初の`m_str`割り当てを解放せ`m_str`ずに新しい値をメンバーに割り当てる状況を識別するために作成されました。 が`m_str` NULL の場合、プログラムは、m_str がまだ割り当てられていないと想定します。 この場合、プログラムはアサートしません。
 
-このアサーションは、既定では無効です。 このアサーションが有効にする ATL_CCOMBSTR_ADDRESS_OF_ASSERT を定義します。
+このアサーションは、既定では有効になっていません。 このアサーションを有効にするには、ATL_CCOMBSTR_ADDRESS_OF_ASSERT を定義します。
 
 ### <a name="example"></a>例
 
@@ -571,9 +571,9 @@ BSTR* operator&() throw();
 
 [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]
 
-##  <a name="operator_add_eq"></a>  CComBSTR::operator + =
+##  <a name="operator_add_eq"></a>CComBSTR:: operator + =
 
-文字列を追加、`CComBSTR`オブジェクト。
+`CComBSTR`オブジェクトに文字列を追加します。
 
 ```
 CComBSTR& operator+= (const CComBSTR& bstrSrc);
@@ -583,22 +583,22 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ### <a name="parameters"></a>パラメーター
 
 *bstrSrc*<br/>
-[in]A`CComBSTR`オブジェクトを追加します。
+から追加`CComBSTR`するオブジェクト。
 
 *pszSrc*<br/>
-[in]追加する、0 で終わる文字列。
+から追加する0で終わる文字列。
 
 ### <a name="remarks"></a>Remarks
 
-`CComBSTR`s は、ユーザーの既定のロケールのコンテキストでは、テキストと比較されます。 LPCOLESTR 比較が行われますを使用して`memcmp`各文字列の生データにします。 LPCSTR 比較は実行と同じ方法での一時的な Unicode がコピーされたら*pszSrc*が作成されました。 最後の比較演算子は、NULL に対して含まれる文字列だけを比較します。
+`CComBSTR`は、ユーザーの既定のロケールのコンテキストでテキストと比較されます。 LPCOLESTR の比較は、各`memcmp`文字列の生データに対してを使用して行われます。 LPCSTR の比較は、 *Pszsrc*の一時的な Unicode コピーが作成されたときと同じ方法で実行されます。 最後の比較演算子は、含まれている文字列を NULL と比較するだけです。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]
 
-##  <a name="operator_lt"></a>  CComBSTR::operator &lt;
+##  <a name="operator_lt"></a>CComBSTR:: operator&lt;
 
-比較、`CComBSTR`文字列を使用します。
+と`CComBSTR`文字列を比較します。
 
 ```
 bool operator<(const CComBSTR& bstrSrc) const throw();
@@ -608,15 +608,15 @@ bool operator<(LPCSTR pszSrc) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-比較対象となる項目がある場合は TRUE を返しますより小さい`CComBSTR`オブジェクト。 それ以外の場合は FALSE を返します。
+比較対象の項目が`CComBSTR`オブジェクトより小さい場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
 比較は、ユーザーの既定のロケールを使用して実行されます。
 
-##  <a name="operator_eq"></a>  CComBSTR::operator =
+##  <a name="operator_eq"></a>CComBSTR:: operator =
 
-セット、 [m_str](#m_str)メンバーのコピーを*pSrc*またはのメンバーは、BSTR のコピーに*src*します。移動代入演算子を移動`src`コピーせずします。
+[M_str](#m_str)メンバーを、 *psrc*のコピー、または*src*の BSTR メンバーのコピーに設定します。移動代入演算子は、 `src`コピーせずに移動します。
 
 ```
 CComBSTR& operator= (const CComBSTR& src);
@@ -627,15 +627,15 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 ### <a name="remarks"></a>Remarks
 
-*PSrc*パラメーターは Unicode バージョンの LPCOLESTR または LPCSTR の ANSI バージョンのいずれかを指定します。
+*Psrc*パラメーターは、Unicode バージョンの場合は LPCOLESTR、ANSI バージョンの場合は LPCSTR を指定します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CComBSTR::Copy](#copy)します。
+[CComBSTR:: Copy](#copy)の例を参照してください。
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator = =
+##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
 
-比較、`CComBSTR`文字列を使用します。 `CComBSTR`s は、ユーザーの既定のロケールのコンテキストでは、テキストと比較されます。
+と`CComBSTR`文字列を比較します。 `CComBSTR`は、ユーザーの既定のロケールのコンテキストでテキストと比較されます。
 
 ```
 bool operator== (const CComBSTR& bstrSrc) const throw();
@@ -650,22 +650,22 @@ bool operator== (int nNull) const throw();
 [入力] `CComBSTR` オブジェクト。
 
 *pszSrc*<br/>
-[in]0 で終わる文字列。
+から0で終わる文字列。
 
 *nNull*<br/>
-[in]NULL にする必要があります。
+からNULL にする必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-比較対象のアイテムと等しい場合は TRUE を返します、`CComBSTR`オブジェクト。 それ以外の場合は FALSE を返します。
+比較対象の項目が`CComBSTR`オブジェクトと等しい場合は TRUE を返します。それ以外の場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-最後の比較演算子は、NULL に対して含まれる文字列だけを比較します。
+最後の比較演算子は、含まれている文字列を NULL と比較するだけです。
 
-##  <a name="operator_gt"></a>  CComBSTR::operator &gt;
+##  <a name="operator_gt"></a>CComBSTR:: operator&gt;
 
-比較、`CComBSTR`文字列を使用します。
+と`CComBSTR`文字列を比較します。
 
 ```
 bool operator>(const CComBSTR& bstrSrc) const throw();
@@ -673,7 +673,7 @@ bool operator>(const CComBSTR& bstrSrc) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-比較対象のアイテムがより大きい場合は TRUE を返します、`CComBSTR`オブジェクト。 それ以外の場合は FALSE を返します。
+比較対象の項目が`CComBSTR`オブジェクトより大きい場合は TRUE を返します。それ以外の場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -681,7 +681,7 @@ bool operator>(const CComBSTR& bstrSrc) const throw();
 
 ##  <a name="readfromstream"></a>  CComBSTR::ReadFromStream
 
-セット、 [m_str](#m_str) BSTR の指定したストリームに含まれるメンバー。
+[M_str](#m_str)メンバーを、指定したストリームに格納されている BSTR に設定します。
 
 ```
 HRESULT ReadFromStream(IStream* pStream) throw();
@@ -690,7 +690,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 ### <a name="parameters"></a>パラメーター
 
 *pStream*<br/>
-[in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インターフェイスで、データを含むストリーム。
+からデータを格納しているストリームの[IStream](/windows/win32/api/objidl/nn-objidl-istream)インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -698,7 +698,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="remarks"></a>Remarks
 
-`ReadToStream` 現在の位置への呼び出しによって書き出さデータ形式と互換性があるストリームの内容を必要と[WriteToStream](#writetostream)します。
+`ReadToStream`[Writetostream](#writetostream)への呼び出しによって書き込まれたデータ形式との互換性を確保するために、ストリームの内容を現在の位置に配置する必要があります。
 
 ### <a name="example"></a>例
 
@@ -706,7 +706,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ##  <a name="tolower"></a>  CComBSTR::ToLower
 
-格納されている文字列を小文字に変換します。
+含まれている文字列を小文字に変換します。
 
 ```
 HRESULT ToLower() throw();
@@ -718,11 +718,11 @@ HRESULT ToLower() throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください`CharLowerBuff`変換を実行する方法の詳細についてはします。
+変換`CharLowerBuff`の実行方法の詳細については、「」を参照してください。
 
-##  <a name="toupper"></a>  CComBSTR::ToUpper
+##  <a name="toupper"></a>CComBSTR:: ToUpper
 
-格納されている文字列を大文字に変換します。
+含まれている文字列を大文字に変換します。
 
 ```
 HRESULT ToUpper() throw();
@@ -734,11 +734,11 @@ HRESULT ToUpper() throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください`CharUpperBuff`変換を実行する方法の詳細についてはします。
+変換`CharUpperBuff`の実行方法の詳細については、「」を参照してください。
 
-##  <a name="writetostream"></a>  CComBSTR::WriteToStream
+##  <a name="writetostream"></a>CComBSTR:: WriteToStream
 
-保存、 [m_str](#m_str)ストリームのメンバー。
+[M_str](#m_str)メンバーをストリームに保存します。
 
 ```
 HRESULT WriteToStream(IStream* pStream) throw();
@@ -747,7 +747,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 ### <a name="parameters"></a>パラメーター
 
 *pStream*<br/>
-[in]ポインター、 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)ストリーム上のインターフェイス。
+からストリームの[IStream](/windows/win32/api/objidl/nn-objidl-istream)インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -755,7 +755,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="remarks"></a>Remarks
 
-使用して、ストリームの内容から BSTR を再作成することができます、 [ReadFromStream](#readfromstream)関数。
+[Readfromstream](#readfromstream)関数を使用して、ストリームのコンテンツから BSTR を再作成することができます。
 
 ### <a name="example"></a>例
 
@@ -764,4 +764,4 @@ HRESULT WriteToStream(IStream* pStream) throw();
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)
+[ATL および MFC 文字列変換マクロ](string-conversion-macros.md)

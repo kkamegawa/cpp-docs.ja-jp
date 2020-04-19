@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3382
 ms.assetid: a7603abd-ac4e-4ae6-a02b-3bdc6d1908a6
-ms.openlocfilehash: c262ea963ae739fbb76211aae2622e98d5a9b6f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 419577ddd5b5d7d2d21a91f500070cb190c72117
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462752"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760466"
 ---
 # <a name="compiler-error-c3382"></a>コンパイラ エラー C3382
 
@@ -27,11 +27,11 @@ ms.locfileid: "50462752"
 
 - [Visual C++ の 64 ビットへの移行に関する一般的な問題](../../build/common-visual-cpp-64-bit-migration-issues.md)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3382 が生成されます。
 
-```
+```cpp
 // C3382.cpp
 // compile with: /clr:safe
 int main() {

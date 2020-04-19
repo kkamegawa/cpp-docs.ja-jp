@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3f45880571e5c06f76d5f063ff993e2f6b2be9b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628827"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988092"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>リンカー ツールの警告 LNK4253
 
-セクション '「section1」' 'セクション 2'; にマージされていないセクション '3' に既にマージ
+セクション ' section1 ' は ' section2 ' にマージされていません。' section3 ' に既にマージされています
 
-リンカーが複数検出された競合のマージを要求します。 リンカーは、要求の 1 つでは無視します。
+リンカーが複数の競合するマージ要求を検出しました。 リンカーは、要求の1つを無視します。
 
-A **/merge**オプションまたはディレクティブが検出された、`from`セクションは既に別のセクションにより、以前にマージされました **/merge**オプションまたはディレクティブ (またはからの暗黙的なマージのためリンカー)。
+前**の** **/merge**オプションまたはディレクティブ (またはリンカーからの暗黙的なマージにより) が発生したため、`from` セクションが既に別のセクションにマージされています。
 
-LNK4253 を解決するには、マージ要求の 1 つを削除します。
+LNK4253 を解決するには、いずれかのマージ要求を削除します。
 
-X86 を対象とするときにマシンと Windows CE ターゲット (ARM、MIPS、SH4、およびつまみ) Visual c にします。CRT セクションはこれで読み取り専用です。 コードは、以前の動作に依存している場合 (します。CRT のセクションでは、読み取り/書き込み)、予期しない現象が発生する可能性があります。
+X86 マシンと Windows CE ターゲット (ARM、MIPS、SH4、Thumb) を対象とする場合C++は、「」を使用します。CRT セクションが読み取り専用になりました。 コードが以前の動作 () に依存している場合は。CRT セクションは読み取り/書き込み)、予期しない動作が発生する可能性があります。
 
 詳細については、次のトピックを参照してください。
 
@@ -31,11 +31,11 @@ X86 を対象とするときにマシンと Windows CE ターゲット (ARM、MI
 
 - [コメント (C/C++)](../../preprocessor/comment-c-cpp.md)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、リンカーはマージするように指示、`.rdata`セクション 2 回ではなくさまざまなセクションです。 次の例では、LNK4253 が生成されます。
+次の例では、リンカーに `.rdata` セクションを2回マージするように指示されていますが、異なるセクションがあります。 次の例では、LNK4253 が生成されます。
 
-```
+```cpp
 // LNK4253.cpp
 // compile with: /W1 /link /merge:.rdata=text2
 // LNK4253 expected

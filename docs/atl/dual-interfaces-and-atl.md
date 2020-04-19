@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL, dual interfaces
 - dual interfaces, about dual interfaces
 ms.assetid: 5a390e89-d2c4-41f0-8538-cab2c5e5d4c8
-ms.openlocfilehash: ebf0da8b86463d2d56d071d1f5d91a170ca743e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efa523099aaca77fba06efdaeabd1c7562a372a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234840"
 ---
 # <a name="dual-interfaces-and-atl"></a>デュアル インターフェイスと ATL
 
@@ -39,4 +39,3 @@ Active Template Library を使用してプログラミングする方法に関�
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

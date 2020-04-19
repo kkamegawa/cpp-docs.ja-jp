@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a602238ca5a2f2a64eaa601cc6733a897b9fdb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640051"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738688"
 ---
 # <a name="compiler-error-c3206"></a>コンパイラ エラー C3206
 
@@ -21,7 +21,7 @@ ms.locfileid: "50640051"
 
 次の例では C3206 が生成されます。
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -36,9 +36,9 @@ void f1() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void f1() {
 
 C3206 は、ジェネリックを使用しているときも発生します。
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -68,9 +68,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -84,9 +84,9 @@ int main() {
 }
 ```
 
-クラス テンプレートは、テンプレート型引数として許可されません。 次の例では C3206 が生成します。
+クラス テンプレートは、テンプレート型引数として許可されません。 次の例では、C3206 が発生します。
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -101,9 +101,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -118,9 +118,9 @@ int main() {
 }
 ```
 
-テンプレート template パラメーターが必要な場合は、テンプレート template パラメーターを受け取るテンプレート クラスに関数をラップする必要があります。
+テンプレートテンプレートパラメーターが必要な場合は、テンプレートテンプレートパラメーターを受け取るテンプレートクラスに関数をラップする必要があります。
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

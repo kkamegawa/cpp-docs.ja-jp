@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2464
 ms.assetid: ace953d6-b414-49ee-bfef-90578a8da00c
-ms.openlocfilehash: a00ac997f73175eeab08a0132128e48e8fc58feb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4952f4702d871ecf1c818b1fc7394e54a1a295f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498190"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743888"
 ---
 # <a name="compiler-error-c2464"></a>コンパイラ エラー C2464
 
-'identifier': 'new' の参照の割り当てに使用できません
+' identifier ': 参照を割り当てるために ' new ' を使用することはできません
 
-参照識別子で割り当てられた、`new`演算子。 参照がそのため、メモリ オブジェクトされてない`new`それらへのポインターを返すことはできません。 標準の変数宣言の構文を使用して、参照を宣言します。
+`new` 演算子で参照識別子が割り当てられました。 参照はメモリオブジェクトではないため、`new` はそれらへのポインターを返すことができません。 参照を宣言するには、標準変数宣言の構文を使用します。
 
 次の例では、C2464 が生成されます。
 
-```
+```cpp
 // C2464.cpp
 int main() {
    new ( int& ir );   // C2464

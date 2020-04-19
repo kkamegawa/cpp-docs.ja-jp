@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rich edit controls [MFC]
 ms.assetid: ad589b9f-a3fd-4820-bf1f-6b1965997e68
-ms.openlocfilehash: 7f307674645ad68455123b801fef8e4ae24b5b41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c45cb638ec860bb803c7de32065606dc3cc176b2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160173"
 ---
 # <a name="overview-of-the-rich-edit-control"></a>リッチ エディット コントロールの概要
 
@@ -28,4 +28,3 @@ ms.locfileid: "50548279"
 
 [CRichEditCtrl の使い方](../mfc/using-cricheditctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

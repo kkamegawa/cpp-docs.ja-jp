@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements, expression
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
-ms.openlocfilehash: b825e88703e1913d9b6d916360174060854c632a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667468"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148791"
 ---
 # <a name="expression-statement-c"></a>式ステートメント (C)
 
@@ -35,6 +35,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 最後のステートメントは関数呼び出し式で、関数によって返される任意の値を含む式の値が 3 増加し、変数 `y` と `z` の両方に割り当てられます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ステートメント](../c-language/statements-c.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 64e8918b052b05088ff48aefb0f0f9ab8c6df586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432874"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687603"
 ---
-# <a name="numpunctbyname-class"></a>numpunct_byname クラス
+# <a name="numpunct_byname-class"></a>numpunct_byname クラス
 
-特定のロケールの `numpunct` ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。数値とブール式の書式設定および区切りを有効にします。
+派生クラステンプレートは、特定のロケールの `numpunct` ファセットとして使用できるオブジェクトを表します。このオブジェクトは、数値式およびブール式の書式設定と区切り記号を有効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +41,7 @@ protected:
 
 その動作は [名前付きの](../standard-library/locale-class.md#name)ロケール `_Locname` で決まります。 コンストラクターは、[numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -49,4 +49,4 @@ protected:
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

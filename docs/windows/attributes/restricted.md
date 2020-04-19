@@ -1,21 +1,21 @@
 ---
-title: 制限付きの (C++ COM 属性)
+title: restricted (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 1aa18255f7d7a0740494050a149d436fb167fe8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521039"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514063"
 ---
 # <a name="restricted"></a>restricted
 
-モジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを任意に呼び出すことはできませんを指定します。
+モジュール、インターフェイス、またはディスパッチインターフェイスのメンバーを任意に呼び出すことができないことを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,15 +28,15 @@ ms.locfileid: "50521039"
 ### <a name="parameters"></a>パラメーター
 
 *interfaces*<br/>
-COM オブジェクトに任意に呼ぶことが 1 つまたは複数のインターフェイス。 このパラメーターはクラスに適用される場合に有効です。
+COM オブジェクトで任意に呼び出すことができない1つ以上のインターフェイス。 このパラメーターは、クラスに適用された場合にのみ有効です。
 
 ## <a name="remarks"></a>Remarks
 
-**制限**C++ 属性と同じ機能を持つ、[制限](/windows/desktop/Midl/restricted)MIDL 属性。
+**Restricted** C++属性には、[制限付き](/windows/win32/Midl/restricted)MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法を示しています、**制限**属性。
+次のコードは、**制限**された属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -67,9 +67,9 @@ class c : public a, public b
 
 |||
 |-|-|
-|**対象**|インターフェイスのメソッド、**インターフェイス**、**クラス**、**構造体**|
+|**対象**|インターフェイスメソッド、**インターフェイス**、**クラス**、**構造体**|
 |**反復可能**|いいえ|
-|**必要な属性**|**コクラス**(に適用すると**クラス**または**構造体**)|
+|**必要な属性**|**コクラス**(**クラス**または**構造体**に適用される場合)|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。

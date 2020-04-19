@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 13d73b09fc9fb88736242e7d0c04c33baa795914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391115"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar クラス
 
@@ -71,7 +71,7 @@ A`CMFCRibbonProgressBar`は 2 つのモードで動作します。 正規表現�
 
 ## <a name="example"></a>例
 
-`CMFCRibbonProgressBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例は、進行状況バーの最小値と最大値を設定し、進行状況バーの現在の位置を設定 (操作の完了時間はない既知) 無限のモードで動作する進行状況バーを設定する方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCRibbonProgressBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例は、進行状況バーの最小値と最大値を設定し、進行状況バーの現在の位置を設定 (操作の完了時間はない既知) 無限のモードで動作する進行状況バーを設定する方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -108,7 +108,7 @@ CMFCRibbonProgressBar(
 *nWidth*<br/>
 [in]リボンの進行状況バーのピクセル単位の幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]リボンの進行状況バーのピクセル、高さを指定します。
 
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos

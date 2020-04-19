@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296580"
 ---
 # <a name="cmap-class"></a>CMap クラス
 
@@ -97,7 +97,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 |[CMap::Lookup](#lookup)|指定されたキーにマップされている値を検索します。|
 |[CMap::PGetFirstAssoc](#pgetfirstassoc)|最初の要素へのポインターを返します。|
 |[CMap::PGetNextAssoc](#pgetnextassoc)|次の要素に反復処理するためのポインターを取得します。|
-|[例](#plookup)|値が指定した値と一致するキーへのポインターを返します。|
+|[CMap::PLookup](#plookup)|値が指定した値と一致するキーへのポインターを返します。|
 |[CMap::RemoveAll](#removeall)|このマップからすべての要素を削除します。|
 |[CMap::RemoveKey](#removekey)|キーで指定された要素を削除します。|
 |[CMap::SetAt](#setat)|マップに要素を挿入します。一致するキーが見つかった場合は、既存の要素を置き換えます。|
@@ -359,7 +359,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 
 [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]
 
-##  <a name="operator_at"></a>  CMap::operator
+##  <a name="operator_at"></a>  CMap::operator [ ]
 
 便利な代替、`SetAt`メンバー関数。
 
@@ -436,7 +436,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 
 例をご覧ください[CMap::PGetFirstAssoc](#pgetfirstassoc)します。
 
-##  <a name="plookup"></a>  例
+##  <a name="plookup"></a>  CMap::PLookup
 
 指定されたキーにマップされている値を検索します。
 
@@ -538,6 +538,6 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

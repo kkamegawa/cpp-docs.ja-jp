@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: e431736fcd38b3c08936e65ecf05594142ced4e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655319"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514542"
 ---
 # <a name="lcid"></a>lcid
 
-ロケール識別子を関数に渡すことができます。
+関数にロケール識別子を渡すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ ms.locfileid: "50655319"
 
 ## <a name="remarks"></a>Remarks
 
-**Lcid**の機能を実装する C++ 属性、 [lcid](/windows/desktop/Midl/lcid) MIDL 属性。 ライブラリ ブロックのロケールを実装する場合は、使用、 **lcid =** `lcid`パラメーターを[モジュール](module-cpp.md)属性。
+**Lcid** C++属性は、 [lcid](/windows/win32/Midl/lcid) MIDL 属性の機能を実装します。 ライブラリブロックにロケールを実装する場合は、 [module](module-cpp.md)属性に**lcid =** `lcid`パラメーターを使用します。
 
 ## <a name="example"></a>例
 

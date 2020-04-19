@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 880ef783316f710943fde323bc89a49d19b0a1fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79a71a4660cd49f85726d730c9fad0b2f10f83bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338169"
 ---
 # <a name="control-classes"></a>コントロール クラス
 
@@ -148,4 +148,3 @@ Windows のツリー コントロールを含むビュー。
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

@@ -1,14 +1,17 @@
 ---
 title: strcoll 系関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcoll
 helpviewer_keywords:
@@ -17,12 +20,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: c6b4b45184ea4cc3320f3de069884ac084c7cfcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c63a130cee6913006fff2ed5568c41cc4fdeac3c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450233"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944900"
 ---
 # <a name="strcoll-functions"></a>strcoll 系関数
 
@@ -37,7 +40,7 @@ ms.locfileid: "50450233"
 |[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|2 つの文字列の先頭の `count` 文字を照合する|
 |[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|2 つの文字列の先頭の `count` 文字を照合する (大文字と小文字を区別しない)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの関数の 1 バイト文字 (SBCS) バージョン (`strcoll`、`stricoll`、`_strncoll`、`_strnicoll`) は、現在のロケールの `LC_COLLATE` カテゴリ設定に基づいて `string1` と `string2` を比較します。 これらの関数は、対応する `strcmp` 関数 (その中の `strcoll` 関数が照合順序を提供するロケール コード ページ情報を使用する) とは異なります。 文字セット順序と辞書式文字順序が異なるロケールでの文字列比較では、対応する `strcmp` 関数ではなく `strcoll` 関数を使用する必要があります。 `LC_COLLATE` の詳細については、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) に関する記事をご覧ください。
 
@@ -47,7 +50,7 @@ ms.locfileid: "50450233"
 
 `coll` 関数が単に文字列の等価性をテストするのに対して、`cmp` 関数は比較のために文字列を辞書式に照合するため、`coll` 関数は `cmp` の対応するバージョンよりもかなり低速です。 したがって、`coll` 関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ロケール](../c-runtime-library/locale.md)<br/>
 [文字列操作](../c-runtime-library/string-manipulation-crt.md)<br/>

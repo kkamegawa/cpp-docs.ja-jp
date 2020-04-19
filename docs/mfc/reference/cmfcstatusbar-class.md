@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388371"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar クラス
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Remarks
 
-次の図は、図から、ステータス バーの[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)アプリケーション。
+次の図は、図から、ステータス バーの[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)アプリケーション。
 
 ![CMFCStatusBar の例](../../mfc/reference/media/cmfcstatusbar.png "CMFCStatusBar の例")
 
 ## <a name="example"></a>例
 
-次の例では、アプリケーションがさまざまなメソッドを呼び出すに使用するローカル変数、`CMFCStatusBar`クラス。 これらの変数は、StatusBarDemoView.h で宣言されます。 MainFrm.h でメイン フレームが宣言されているドキュメントが StatusBarDemoDoc.h で宣言されている、StatusBarDemoView.h でビューが宣言されています。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、アプリケーションがさまざまなメソッドを呼び出すに使用するローカル変数、`CMFCStatusBar`クラス。 これらの変数は、StatusBarDemoView.h で宣言されます。 MainFrm.h でメイン フレームが宣言されているドキュメントが StatusBarDemoDoc.h で宣言されている、StatusBarDemoView.h でビューが宣言されています。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>例
 
-次の例への参照を取得する方法を示します`CMFCStatusBar`オブジェクトを導入することで、 `GetStatusBar` MainFrm.h しからこのメソッドを呼び出すメソッド、 `GetStatusBar` StatusBarDemoView.h メソッド。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例への参照を取得する方法を示します`CMFCStatusBar`オブジェクトを導入することで、 `GetStatusBar` MainFrm.h しからこのメソッドを呼び出すメソッド、 `GetStatusBar` StatusBarDemoView.h メソッド。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>例
 
-次の例でさまざまなメソッドを呼び出す方法、 `CMFCStatusBar` StatusBarDemoView.cpp 内のクラス。 定数は、MainFrm.h で宣言されます。 例では、アイコンの設定、ステータス バー ペインのツールヒントのテキストを設定する、指定したウィンドウに進行状況バーを表示、アニメーションを指定したウィンドウに割り当て、テキストと、ステータス バー ペインの幅を設定し、処理中の現在の進行状況インジケーターを設定する方法を示しています。ステータス バー ペインの ess バー。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例でさまざまなメソッドを呼び出す方法、 `CMFCStatusBar` StatusBarDemoView.cpp 内のクラス。 定数は、MainFrm.h で宣言されます。 例では、アイコンの設定、ステータス バー ペインのツールヒントのテキストを設定する、指定したウィンドウに進行状況バーを表示、アニメーションを指定したウィンドウに割り当て、テキストと、ステータス バー ペインの幅を設定し、処理中の現在の進行状況インジケーターを設定する方法を示しています。ステータス バー ペインの ess バー。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]
@@ -195,7 +195,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>パラメーター
 
 [in]*bStretch*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -226,8 +226,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentWnd*<br/>
-[in]*dwStyle*<br/>
+[in] *pParentWnd*<br/>
+[in] *dwStyle*<br/>
 [in]*nID*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -246,9 +246,9 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentWnd*<br/>
+[in] *pParentWnd*<br/>
 [in]*ツール バー*<br/>
-[in]*dwStyle*<br/>
+[in] *dwStyle*<br/>
 [in]*nID*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -368,7 +368,7 @@ UINT GetItemID(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -384,7 +384,7 @@ void GetItemRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 [in]*lpRect*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -401,10 +401,10 @@ void GetPaneInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 [in]*nID*<br/>
 [in]*nStyle*<br/>
-[in]*cxWidth*<br/>
+[in] *cxWidth*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -416,7 +416,7 @@ long GetPaneProgress(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -430,7 +430,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -448,7 +448,7 @@ CString GetPaneText(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 [in]*s*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -566,7 +566,7 @@ BOOL SetIndicators(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpIDArray*<br/>
+[in] *lpIDArray*<br/>
 [in]*nIDCount*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -596,7 +596,7 @@ void SetPaneAnimation(
 *nFrameRate*<br/>
 [in]アニメーションのミリ秒単位で、フレーム レートを指定します。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 [in]TRUE の場合、直ちにウィンドウの内容を更新します。 それ以外の場合が無効になったときに、ウィンドウのコンテンツが更新されます。
 
 ### <a name="remarks"></a>Remarks
@@ -622,7 +622,7 @@ void SetPaneBackgroundColor(
 *clrBackground*<br/>
 [in]新しい背景色を指定します。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 [in]TRUE の場合、直ちにウィンドウの内容を更新します。 それ以外の場合は更新されません ウィンドウの内容まで、ウィンドウが別の方法で無効になります。
 
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon
@@ -650,7 +650,7 @@ void SetPaneIcon(
 *hIcon*<br/>
 [in]ウィンドウの画像として設定するアイコンを識別するハンドルを指定します。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 [in]ウィンドウのコンテンツをすぐに更新するかどうかを指定します。
 
 *hBmp*<br/>
@@ -677,10 +677,10 @@ void SetPaneInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 [in]*nID*<br/>
 [in]*nStyle*<br/>
-[in]*cxWidth*<br/>
+[in] *cxWidth*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -703,7 +703,7 @@ void SetPaneProgress(
 *nCurr*<br/>
 [in]進行状況インジケーターの現在の値を指定します。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 [in]ウィンドウがすぐに更新する必要があるかどうかを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -722,7 +722,7 @@ void SetPaneStyle(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
+[in] *nIndex*<br/>
 [in]*nStyle*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -738,8 +738,8 @@ virtual BOOL SetPaneText(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nIndex*<br/>
-[in]*されています。*<br/>
+[in] *nIndex*<br/>
+[in] *lpszNewText*<br/>
 [in]*b 更新*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -765,7 +765,7 @@ void SetPaneTextColor(
 *clrText*<br/>
 [in]テキストの色を指定します。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 [in]TRUE の場合、直ちにウィンドウの内容を更新します。 それ以外の場合は更新されません ウィンドウの内容まで、ウィンドウが別の方法で無効になります。
 
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth

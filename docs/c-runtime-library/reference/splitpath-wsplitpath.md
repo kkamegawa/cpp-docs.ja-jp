@@ -1,10 +1,10 @@
 ---
 title: _splitpath、_wsplitpath
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath
 - _splitpath
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wsplitpath
 - _splitpath
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a502977faf91d744868c4aef79b3a40ca240a90f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465183"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958041"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath、_wsplitpath
 
 パス名をコンポーネントに分割します。 これらの関数のセキュリティを強化したバージョンについては、「[_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)」をご覧ください。
 
@@ -68,23 +71,23 @@ void _wsplitpath(
 *path*<br/>
 完全なパス。
 
-*ドライブ*<br/>
-ドライブ文字、コロン (**:**)。 渡すことができます**NULL**ドライブ文字を必要としない場合は、このパラメーターにします。
+*駆動*<br/>
+ドライブ文字、コロン ( **:** ) の順に並べます。 ドライブ文字が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
-*dir*<br/>
-末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、または両方を使用できます。 渡すことができます**NULL**ディレクトリ パスを必要としない場合は、このパラメーターにします。
+*エイリアス*<br/>
+末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、またはその両方を使用できます。 ディレクトリパスが不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *fname*<br/>
-基本ファイル名 (拡張子なし)。 渡すことができます**NULL**ファイル名を必要としない場合は、このパラメーターにします。
+基本ファイル名 (拡張子なし)。 ファイル名が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *ext*<br/>
-先頭のピリオドを含むファイル名の拡張子 (**.**)。 渡すことができます**NULL**ファイル名拡張子が必要ない場合は、このパラメーターにします。
+先頭のピリオド ( **.** ) を含むファイル名の拡張子。 ファイル名の拡張子が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Splitpath**関数は、4 つのコンポーネントにパスを解除します。 **_splitpath**自動的に現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてマルチバイト文字の文字列引数を処理します。 **_wsplitpath**のワイド文字バージョンは、 **_splitpath**; 引数 **_wsplitpath**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Splitpath**関数は、パスを4つのコンポーネントに分割します。 **_splitpath**は、現在使用中のマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wsplitpath**は、 **_splitpath**のワイド文字バージョンです。 **_wsplitpath**の引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
-**セキュリティに関するメモ**これらの関数は、バッファー オーバーランの問題によって潜在的な脅威を引き起こすことがあります。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。 これらの関数のセキュリティを強化したバージョンについては、「[_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)」をご覧ください。
+**セキュリティに関するメモ**これらの関数は、バッファー オーバーランの問題によって潜在的な脅威を引き起こすことがあります。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。 これらの関数のセキュリティを強化したバージョンについては、「[_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -92,24 +95,24 @@ void _wsplitpath(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-完全なパスの各コンポーネントが別々 のバッファーに格納されています。マニフェスト定数 **_MAX_DRIVE**、 **_MAX_DIR**、 **_MAX_FNAME**、および **_MAX_EXT** (STDLIB で定義されています。H) ファイルの各コンポーネントの最大サイズを指定します。 対応するマニフェスト定数よりも大きいファイル コンポーネントでは、ヒープ破損が発生します。
+完全パスの各コンポーネントは、個別のバッファーに格納されます。マニフェスト**定数 (** **_MAX_DIR**、 **_MAX_FNAME**、および stdlib.h> で定義されて**いる)。** H) 各ファイルコンポーネントの最大サイズを指定します。 対応するマニフェスト定数よりも大きいファイル コンポーネントでは、ヒープ破損が発生します。
 
 各バッファーは、バッファー オーバーランの発生を回避するために、対応するマニフェスト定数と同じ大きさである必要があります。
 
 マニフェスト定数の値を次の表に示します。
 
-|名前|[値]|
+|名前|値|
 |----------|-----------|
-|**_MAX_DRIVE**|3|
+|**ドライブ (_S)**|3|
 |**_MAX_DIR**|256|
 |**_MAX_FNAME**|256|
-|**_MAX_EXT**|256|
+|**拡張 (_S)**|256|
 
-完全なパスにコンポーネント (たとえば、filename) が含まれていない場合 **_splitpath**対応するバッファーに文字列を空に割り当てます。
+完全なパスにコンポーネント (たとえばファイル名) が含まれていない場合、 **_splitpath**は対応するバッファーに空の文字列を割り当てます。
 
-渡すことができます**NULL**に **_splitpath**以外の任意のパラメーターの*パス*する必要はありません。
+不要な*パス*以外のパラメーターについては、 **NULL**を **_splitpath**に渡すことができます。
 
-場合*パス*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EINVAL**します。
+*Path*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、関数は**einval**を返します。
 
 ## <a name="requirements"></a>必要条件
 

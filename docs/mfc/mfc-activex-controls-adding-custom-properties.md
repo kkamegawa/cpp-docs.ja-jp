@@ -1,18 +1,18 @@
 ---
-title: 'MFC ActiveX コントロール : カスタム プロパティの追加'
+title: MFC ActiveX コントロール:カスタム プロパティの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392779"
 ---
-# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX コントロール : カスタム プロパティの追加
+# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX コントロール:カスタム プロパティの追加
 
 カスタム プロパティが既に実装されていないことに、ストック プロパティのカスタム プロパティとは異なる、`COleControl`クラス。 カスタム プロパティを使用して、特定の状態やコントロールを使用するプログラマに ActiveX コントロールの外観を公開できます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50496422"
 
 - [カスタム プロパティのプロパティ ウィザードによる変更を追加します。](#_core_classwizard_changes_for_custom_properties)
 
-カスタム プロパティには 4 種類の実装: メンバー変数、メンバー変数の通知、Get と Set メソッドでは、パラメーター化されたとします。
+カスタム プロパティは実装の 4 種類があります。メンバー変数、通知、Get と Set メソッドでは、メンバー変数とパラメーター化されました。
 
 - メンバー変数の実装
 
@@ -38,7 +38,7 @@ ms.locfileid: "50496422"
 
 - パラメーター化の実装
 
-   パラメーター化された実装は、プロパティの追加ウィザードでサポートされています。 パラメーター化されたプロパティ (プロパティの配列とも呼ばれます) は、コントロールの 1 つのプロパティを一連の値へのアクセスに使用できます。 この実装のディスパッチ マップ エントリ マクロは、DISP_PROPERTY_PARAM です。 この型の実装の詳細については、次を参照してください。[パラメーター化されたプロパティを実装する](../mfc/mfc-activex-controls-advanced-topics.md)で ActiveX コントロール: 高度なトピックです。
+   パラメーター化された実装は、プロパティの追加ウィザードでサポートされています。 パラメーター化されたプロパティ (プロパティの配列とも呼ばれます) は、コントロールの 1 つのプロパティを一連の値へのアクセスに使用できます。 この実装のディスパッチ マップ エントリ マクロは、DISP_PROPERTY_PARAM です。 この型の実装の詳細については、次を参照してください。[パラメーター化されたプロパティを実装する](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX コントロールの記事。高度なトピックです。
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用して、プロパティの追加ウィザードのカスタム プロパティを追加するには
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496422"
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
-1. **プロパティ型**ボックスで、**短い**します。
+1. **プロパティ型**ボックスで、**short**します。
 
 1. Get と Set 関数の一意の名前を入力するか、既定の名前をそのまま使用します。
 

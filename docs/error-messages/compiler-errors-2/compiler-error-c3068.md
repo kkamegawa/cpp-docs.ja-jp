@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e20333a4fc18219f7f2514f3aefe73b81f284a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575475"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759491"
 ---
 # <a name="compiler-error-c3068"></a>コンパイラ エラー C3068
 
-'function': 'naked' 関数が C++ 例外が発生した場合に、アンワインディングを必要とするオブジェクトを含めることはできません
+' function ': ' 生 ' 関数に、 C++例外が発生した場合にアンワインドを必要とするオブジェクトを含めることはできません
 
-コンパイラでのスタックがアンワインドを実行できなかった、 [naked](../../cpp/naked-cpp.md)は一時オブジェクトが作成された関数と C++ 例外処理では、例外をスローした関数 ([/EHsc](../../build/reference/eh-exception-handling-model.md)) が指定されました。
+関数で一時オブジェクトが作成され、 C++例外処理 ([/ehsc](../../build/reference/eh-exception-handling-model.md)) が指定されているため、コンパイラは例外をスローした[生](../../cpp/naked-cpp.md)の関数でスタックアンワインドを実行できませんでした。
 
-このエラーを解決するには、次の少なくとも 1 つの操作を行います。
+このエラーを解決するには、次のうち少なくとも1つを実行します。
 
-- /EHsc でコンパイルされません。
+- /EHsc. でコンパイルしない
 
-- 関数としてマークを付けないでください`naked`します。
+- 関数を `naked`としてマークしないでください。
 
-- 関数では、一時オブジェクトを作成できません。
+- 関数に一時オブジェクトを作成しないでください。
 
-関数は、例外をスローし、C++ 例外処理が有効になっている場合、関数はスタックで、一時オブジェクトを作成する場合、コンパイラは、例外がスローされた場合、スタックをクリーンアップはします。
+関数がスタックに一時オブジェクトを作成する場合、関数が例外をスローし、 C++例外処理が有効になっていると、例外がスローされた場合、コンパイラはスタックをクリーンアップします。
 
-関数の場合は、例外がスローされ、コンパイラで生成されたプロローグと呼ばれる、コードとエピローグは、naked 関数に存在しないが実行されます。
+例外がスローされると、コンパイラによって生成されたコードがプロローグおよびエピローグと呼ばれ、生の関数に存在しない場合は、関数に対してが実行されます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3068 が生成されます。
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

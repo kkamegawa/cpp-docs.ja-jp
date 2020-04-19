@@ -1,9 +1,9 @@
 ---
 title: _RTC_NumErrors
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_NumErrors
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _RTC_NumErrors
 - RTC_NumErrors
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-ms.openlocfilehash: c5e79f388164670e0fa48438d68a9b35d29f812d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 72056208ca6d714f788ae325b90786f5be4ab443
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524964"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949031"
 ---
-# <a name="rtcnumerrors"></a>_RTC_NumErrors
+# <a name="_rtc_numerrors"></a>_RTC_NumErrors
 
 実行時エラー チェック (RTC) で検出できるエラーの合計数を返します。 この数値は **for** ループを制御するために使用し、ループ内では各値を [_RTC_GetErrDesc](rtc-geterrdesc.md) に渡すことができます。
 

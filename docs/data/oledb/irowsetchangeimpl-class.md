@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390764"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl クラス
 
-OLE DB テンプレートの実装、 [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 仕様のインターフェイス。
+OLE DB テンプレートの実装、 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 仕様のインターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -90,7 +90,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 |||
 |-|-|
-|[FlushData](#flushdata)|プロバイダーによって、そのストアにデータをコミットする上書きします。|
+|[FlushData](#flushdata)|データをそのストアにコミットするためのプロバイダーでオーバーライドします。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -109,7 +109,7 @@ OLE DB テンプレートの実装には、すべての基本メソッドがサ�
 
 - 参照してください、`RUpdateRowset`クラスが使用されて、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプル。
 
-## <a name="deleterows"></a> Irowsetchangeimpl::deleterows
+## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
 
 行セットから行を削除します。
 
@@ -124,9 +124,9 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::deleterows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="insertrow"></a> Irowsetchangeimpl::insertrow
+## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
 作成し、行セット内の新しい行を初期化します。
 
@@ -141,9 +141,9 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::insertrow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::insertrow](/previous-versions/windows/desktop/ms716921(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="setdata"></a> Irowsetchangeimpl::setdata
+## <a name="setdata"></a> IRowsetChangeImpl::SetData
 
 1 つまたは複数の列のデータ値を設定します。
 
@@ -157,11 +157,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::setdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::setdata](/previous-versions/windows/desktop/ms721232(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="flushdata"></a> Irowsetchangeimpl::flushdata
+## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
-プロバイダーによって、そのストアにデータをコミットする上書きします。
+データをそのストアにコミットするためのプロバイダーでオーバーライドします。
 
 ### <a name="syntax"></a>構文
 

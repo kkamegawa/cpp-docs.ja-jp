@@ -1,26 +1,27 @@
 ---
 title: '@SizeStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@SizeStr'
 helpviewer_keywords:
 - '@SizeStr symbol'
 ms.assetid: 91fa439a-7df1-4dd9-a0c7-82bae2eb68c9
-ms.openlocfilehash: f2aab8c43dbb326d380a36faa3ad6558ef7feb30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4be923dad969746b518b9d81d78f5fc1a219c00
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640779"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315447"
 ---
-# <a name="sizestr"></a>@SizeStr
+# <a name="sizestr"></a>\@SizeStr
 
-指定された文字列の長さを返すマクロ関数です。 整数を返します。
+指定された文字列の長さを返すマクロ関数。 整数を返します。
 
 ## <a name="syntax"></a>構文
 
-> @SizeStr(string)
+> **\@SizeStr (** *文字列* **)**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

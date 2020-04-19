@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2971
 ms.assetid: fdb5467b-9a41-41ef-ac20-2e9428d5a4fc
-ms.openlocfilehash: 09f3578bff5806fc32a3b5599dcfa8caa3696974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9912224c5c871f9bae2c6d22f0d38f5f88c983a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437298"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743290"
 ---
 # <a name="compiler-error-c2971"></a>コンパイラ エラー C2971
 
-'class': テンプレート パラメーター 'param': 'arg': 非型引数としてローカル変数を使用することはできません
+' class ': テンプレートパラメーター ' param ': ' arg ': ローカル変数を非型引数として使用することはできません
 
-テンプレート引数として名前またはローカル変数のアドレスを使用することはできません。
+ローカル変数の名前またはアドレスをテンプレート引数として使用することはできません。
 
 次の例では、C2971 が生成されます。
 
-```
+```cpp
 // C2971.cpp
 template <int *pi>
 class Y {};

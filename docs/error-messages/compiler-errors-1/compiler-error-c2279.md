@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2279
 ms.assetid: 1b5c88ef-2336-49b8-9ddb-d61f97c73e14
-ms.openlocfilehash: f35e384a5b242eb28427e1ff62ac55a3e9b206c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b37788d6e4727761ab993f0502746edace18e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666223"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759179"
 ---
 # <a name="compiler-error-c2279"></a>コンパイラ エラー C2279
 
-例外の指定は、typedef 宣言に記述できません。
+例外指定は typedef 宣言には記述できません
 
-**/Za**、[例外仕様](../../cpp/exception-specifications-throw-cpp.md)typedef 宣言では許可されません。
+**/Za**では、typedef 宣言では[例外指定](../../cpp/exception-specifications-throw-cpp.md)は許可されません。
 
 次の例では、C2279 が生成されます。
 
-```
+```cpp
 // C2279.cpp
 // compile with: /Za /c
 typedef int (*xy)() throw(...);   // C2279

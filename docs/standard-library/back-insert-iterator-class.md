@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557445"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459538"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator クラス
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-*コンテナー*<br/>
+*コンテナー*\
 要素が `back_insert_iterator` によって後方に挿入されるコンテナーの型。
 
 ## <a name="remarks"></a>Remarks
@@ -54,9 +54,9 @@ class back_insert_iterator;
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  =  `x`後方挿入の。|
+|[operator*](#op_star)|後方挿入のための出力反復子式\* `i`  =  `x`を実装するために使用される逆参照演算子。|
 |[operator++](#op_add_add)|値を格納できる次の位置に `back_insert_iterator` をインクリメントします。|
-|[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`後方挿入の。|
+|[operator=](#op_eq)|後方挿入のための出力反復子式\* `i`  =  `x`を実装するために使用される代入演算子。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -74,7 +74,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Cont*<br/>
+*続き*\
 `back_insert_iterator` が要素を挿入するためのコンテナー。
 
 ### <a name="return-value"></a>戻り値
@@ -197,7 +197,7 @@ back_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-出力反復子式 **\*Iter** = **value** を実装するために使用されます。 **Iter** がシーケンス内の要素をアドレス指定する反復子である場合、**\*Iter** = **value** はその要素を値に置き換え、シーケンス内の要素の合計数は変えません。
+出力反復子式 **\*Iter** = **value** を実装するために使用されます。 **Iter** がシーケンス内の要素をアドレス指定する反復子である場合、 **\*Iter** = **value** はその要素を値に置き換え、シーケンス内の要素の合計数は変えません。
 
 ### <a name="example"></a>例
 
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 コンテナーに挿入される値。
 
 ### <a name="return-value"></a>戻り値
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

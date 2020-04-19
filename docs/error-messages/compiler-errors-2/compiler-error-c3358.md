@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3358
 ms.assetid: 180b93df-e78f-441a-91fb-1594c681f7f0
-ms.openlocfilehash: 8d57bf7447ba0c05585d3c18cfaaf960ddc0f968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64b966ff674b10fd7df99e5a04a9b16d21d89b96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514726"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759764"
 ---
 # <a name="compiler-error-c3358"></a>コンパイラ エラー C3358
 
@@ -21,7 +21,7 @@ ms.locfileid: "50514726"
 
 次の例では C3358 が生成されます。
 
-```
+```cpp
 // C3358.cpp
 #define __ATLEVENT_H__ 1   // remove this line to resolve the error
 #define _ATL_ATTRIBUTES 1

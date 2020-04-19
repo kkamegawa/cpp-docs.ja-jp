@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application design [C++], database applications
 ms.assetid: 0eb106b3-91b7-4c42-8c93-a8224aa9fe12
-ms.openlocfilehash: 4384280d36b7a2bcebb28e35fe34135a17bd1944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dcf2e4c90bd0a9a32a2cf2403ef4b4b0bf11a7b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395964"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>ODBC データベース アプリケーションのデザインと作成
 

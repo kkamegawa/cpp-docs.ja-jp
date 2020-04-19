@@ -7,12 +7,12 @@ helpviewer_keywords:
 - prolog code
 - epilog code
 ms.assetid: 23b1209b-93ba-46ad-a60f-2327c1933eaf
-ms.openlocfilehash: c79502d1793df2a3340eed26c67cca5d2a8b0d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 519d7bceb700e9862f0d0025b755cf28fb0fbc0c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537242"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149779"
 ---
 # <a name="naked-c"></a>naked (C)
 
@@ -24,6 +24,6 @@ naked 属性の使用に関する具体的情報については、「[naked 関�
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)

@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_ss
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 089f8d5501c18b679a3d5878bb30762d2dcc1e04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438910"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217351"
 ---
-# <a name="mmstreamss"></a>_mm_stream_ss
+# <a name="_mm_stream_ss"></a>_mm_stream_ss
 
 **Microsoft 固有の仕様**
 
-メモリ位置に、キャッシュを汚染することがなく 32 ビットのデータを書き込みます。
+キャッシュを汚染せずに、32ビットのデータをメモリ位置に書き込みます。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void _mm_stream_ss(
-   float * Dest,
+   float * Destination,
    __m128 Source
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]ソース データが書き込まれる場所へのポインター。
+*インストール*\
+入出力ソースデータが書き込まれる場所へのポインター。
 
-*ソース*<br/>
-[in]128 ビットの数値を含む、`float`値を 32 ビットの下で記述する.
+*Source*\
+から下位32ビットに書き込まれる`float`値を含む128ビットの数値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -47,13 +47,13 @@ void _mm_stream_ss(
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この組み込み関数は`movntss`命令を生成します。 この命令のハードウェアのサポートを確認するのには、呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 6 をチェックおよび`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1 と 0 です。
+組み込みによって`movntss`命令が生成されます。 この命令のハードウェアサポートを確認するには`__cpuid` 、で`InfoType=0x80000001`組み込みのを呼び出し、 `CPUInfo[2] (ECX)`のビット6を確認します。 命令がサポートされている場合はこのビットが1になり、それ以外の場合は0になります。
 
-使用するコードを実行する場合、`_mm_stream_ss`がサポートされていないハードウェアに組み込み、`movntss`命令の場合、結果は予測できません。
+命令`movntss`をサポートし`_mm_stream_ss`ていないハードウェアに組み込みを使用するコードを実行する場合、結果は予測できません。
 
 ## <a name="example"></a>例
 
@@ -89,12 +89,12 @@ f[2] = -3, f[3] = 3
 
 **Microsoft 固有の仕様はここまで**
 
-高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
+高度なマイクロデバイス (Inc.) による部分の著作権2007All rights reserved. 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
 
 ## <a name="see-also"></a>関連項目
 
-[_mm_stream_sd](../intrinsics/mm-stream-sd.md)<br/>
-[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
-[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
-[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
+[_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
+[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
+[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

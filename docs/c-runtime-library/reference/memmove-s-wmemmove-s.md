@@ -1,10 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -24,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561188"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951791"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
 バッファーを別のバッファーに移動します。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [memmove、wmemmove](memmove-wmemmove.md) です。
 
@@ -64,7 +68,7 @@ errno_t wmemmove_s(
 コピー元のオブジェクト。
 
 *count*<br/>
-バイト数 (**memmove_s**) または文字 (**wmemmove_s**) にコピーします。
+コピーするバイト数 (**memmove_s**) または文字 (**wmemmove_s**)。
 
 ## <a name="return-value"></a>戻り値
 
@@ -72,17 +76,17 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*numberOfElements*|*src*|戻り値|内容*dest*|
+|*dest*|*numberOfElements*|*src*|戻り値|*Dest*の内容|
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|任意|任意|**EINVAL**|変更されない|
 |任意|任意|**NULL**|**EINVAL**|変更されない|
-|任意|< *カウント*|任意|**ERANGE**|変更されない|
+|任意|< *数*|任意|**ERANGE**|変更されない|
 
 ## <a name="remarks"></a>Remarks
 
-コピー*カウント*バイトの文字から*src*に*dest*します。 コピー元とコピー先の一部の領域が重なっている場合**memmove_s**により上書きされる前に、重複領域に元のコピー元のバイトがコピーされるようになります。
+*Src*から*dest*に文字*のバイト数*をコピーします。 コピー元とコピー先の領域の一部が重複する場合、 **memmove_s**は、重複する領域の元のソースバイトが上書きされる前にコピーされることを保証します。
 
-場合*dest*場合*src* null ポインター、または」の説明に従って、これらの関数が、無効なパラメーター ハンドラーを呼び出しますコピー先文字列が小さすぎる場合[パラメーターの検証](../../c-runtime-library/parameter-validation.md) . これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。
+*Dest*または*src*が null ポインターの場合、またはコピー先の文字列が小さすぎる場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -122,7 +126,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Before: 0123456789

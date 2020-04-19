@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523371"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689255"
 ---
-# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution クラス
+# <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution クラス
 
 負の二項分布を生成します。
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*<br/>
-整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Inttype* \
+整数の結果型、既定値は**int**です。使用できる型については、「 [\<random >](../standard-library/random.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**int**がない場合は、負の二項分布の離散確率関数に従って分散されます。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、負の二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**int**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-プロパティ メンバー`k()`と`p()`格納されている分布パラメーター値を返す*k*と*p*それぞれします。
+プロパティメンバー `k()` と `p()` は、現在格納されている分布パラメーターの値*k*と*p*をそれぞれ返します。
 
-プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -93,9 +93,9 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
 
-負の二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事を参照してください。[負の二項分布](http://go.microsoft.com/fwlink/p/?linkid=400516)します。
+負の二項分布の離散確率関数の詳細については、「Wolfram MathWorld」の「[負の二項分布](https://go.microsoft.com/fwlink/p/?linkid=400516)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -215,7 +215,7 @@ Histogram for 100 samples:
     69 ::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -232,40 +232,40 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*k*<br/>
+*k* \
 `k` 分布パラメーター。
 
-*p*<br/>
+*p* \
 `p` 分布パラメーター。
 
-*parm*<br/>
+*parm* \
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
 
-**前提条件:** `0.0 < k` かつ `0.0 < p ≤ 1.0`
+**前提条件:** `0.0 < k` および `0.0 < p ≤ 1.0`
 
 1 つ目のコンストラクターは、格納値 `p` と `k` にそれぞれ *p* と *t* の値を保持するオブジェクトを作成します。
 
-2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
 ## <a name="param_type"></a>  negative_binomial_distribution::param_type
 
 分布のパラメーターを格納します。
 
-構造体 param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1、p を 2 倍 = 0.5); result_type 報告 const; const; 原点を結んだをダブルクリック
+struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1、double p = 0.5); result_type k () const; double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>パラメーター
 
-*k*<br/>
+*k* \
 `k` 分布パラメーター。
 
-*p*<br/>
+*p* \
 `p` 分布パラメーター。
 
-*right*<br/>
+*右*\
 比較に使用される `param_type` 構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -276,4 +276,4 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

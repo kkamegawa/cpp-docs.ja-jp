@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: a4b066bf1620f8aaca1b0fc581348c73d5255591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678521"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687648"
 ---
 # <a name="multimap-class"></a>multimap クラス
 
@@ -109,18 +109,18 @@ class multimap;
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*<br/>
+*キー* \
 multimap に格納されるキーのデータ型。
 
-*Type*<br/>
+*型*\
 multimap に格納される要素のデータ型。
 
-*Traits*<br/>
+*特徴*\
 2 つの要素の値を並べ替えキーとして比較して、multimap 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 二項述語 `less<Key>` が既定値です。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)」をご覧ください。
 
-*アロケーター*<br/>
+*アロケーター* \
 メモリの map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type> >` です。
 
 ## <a name="remarks"></a>Remarks
@@ -137,7 +137,7 @@ C++ 標準ライブラリ multimap クラスには下記の特徴があります
 
 - ペアを保持する連想コンテナーです。これは、要素のデータ値とキー値が分かれているためです。
 
-- テンプレート クラスとして機能します。これは、このクラスに用意されている機能が汎用的な機能であり、要素またはキーとして保持されているデータの特定の型に依存しないためです。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
+- クラステンプレート。提供される機能はジェネリックであり、要素またはキーとして含まれる特定のデータ型には依存しません。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
 
 map クラスに用意されている反復子は双方向反復子ですが、クラス メンバー関数 [insert](#insert) と [multimap](#multimap) には、弱い入力反復子をテンプレート パラメーターとして取得するバージョンがあります。この反復子の機能に関する要件は、双方向反復子のクラスで保証されている要件よりも低くなっています。 これらの反復子の機能に差異があるのは、反復子の概念が異なっているためです。 反復子の各概念には、反復子独自の一連の要件が含まれています。また、それらの要件を使用するアルゴリズムでは、反復子の種類ごとに指定されている要件に対して、前提を絞り込む必要があります。 たとえば、一部のオブジェクトを参照するために入力反復子が逆参照される可能性があることを前提とする場合があります。さらに、シーケンス内にある次の反復子に対して逆参照が増加する可能性があることを前提とする場合もあります。 このことは、最小限実施することですが、クラスのメンバー関数のコンテキストに含まれる反復子の範囲 `[First, Last)` について明確にすることも重要です。
 
@@ -162,19 +162,19 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `multimap` クラスを表す型。|
-|[const_iterator](#const_iterator)|読み取ることができる双方向反復子を提供する型、 **const**内の要素、`multimap`します。|
-|[const_pointer](#const_pointer)|ポインターを提供する型、 **const**内の要素を`multimap`します。|
-|[const_reference](#const_reference)|参照を提供する型、 **const**に要素が格納されている、`multimap`読み取りと実行の**const**操作。|
-|[const_reverse_iterator](#const_reverse_iterator)|いずれかを読み取ることができる双方向反復子を提供する型**const**内の要素、`multimap`します。|
+|[const_iterator](#const_iterator)|@No__t_1 内の**const**要素を読み取ることができる双方向反復子を提供する型。|
+|[const_pointer](#const_pointer)|@No__t_1 内の**const**要素へのポインターを提供する型。|
+|[const_reference](#const_reference)|読み取りと**const**操作の実行のために `multimap` に格納されている**const**要素への参照を提供する型。|
+|[const_reverse_iterator](#const_reverse_iterator)|@No__t_1 内の任意の**const**要素を読み取ることができる双方向反復子を提供する型。|
 |[difference_type](#difference_type)|`multimap` の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
 |[Iterator](#iterator)|同じ `multimap` 内の要素を参照する 2 つの反復子の違いを提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`multimap` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[key_type](#key_type)|`multimap` の各要素の一部である並べ替えキー オブジェクトを表す型。|
 |[mapped_type](#mapped_type)|`multimap` に格納されているデータ型を表す型。|
-|[pointer](#pointer)|ポインターを提供する型、 **const**内の要素を`multimap`します。|
+|[pointer](#pointer)|@No__t_1 内の**const**要素へのポインターを提供する型。|
 |[reference](#reference)|`multimap` に格納されている要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|反転された `multimap` 内の 1 つの要素を読み取り、または変更できる双方向反復子を提供する型。|
-|[size_type](#size_type)|ポインターを提供する符号なし整数型、 **const**内の要素を`multimap`します。|
+|[size_type](#size_type)|@No__t_1 内の**const**要素へのポインターを提供する符号なし整数型。|
 |[value_type](#value_type)|2 つの要素を並べ替えキーとして比較して、`multimap` 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
 
 ### <a name="member-functions"></a>メンバー関数
@@ -213,7 +213,7 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |-|-|
 |[operator=](#op_eq)|別の `multimap` のコピーで `multimap` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<map>
 
@@ -290,7 +290,7 @@ First element of m1 is now 1
 
 ## <a name="cbegin"></a>  multimap::cbegin
 
-返します、 **const**範囲の最初の要素を指す反復子。
+範囲内の最初の要素を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cbegin() const;
@@ -298,13 +298,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指す双方向アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
+範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は `cbegin() == cend()`) を指す、 **const**双方向アクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`begin()` と `cbegin()` をサポートする任意の種類の変更可能な (非**定数**) コンテナーとして `Container` を検討してください。
 
 ```cpp
 auto i1 = Container.begin();
@@ -316,7 +316,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multimap::cend
 
-返します、 **const**範囲の最後の要素の次の位置を指す反復子。
+範囲内の最後の要素の次の位置を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cend() const;
@@ -324,13 +324,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>戻り値
 
-A **const**範囲の終了位置を指す双方向アクセス反復子。
+範囲の末尾の次の位置を指し示す**const**双方向アクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`end()` と `cend()` をサポートする任意の種類の変更可能な (非**定数**) コンテナーとして `Container` を検討してください。
 
 ```cpp
 auto i1 = Container.end();
@@ -398,11 +398,11 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` 型で要素の値を変更することはできません。
 
-`const_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+Multimap によって定義された `const_iterator` は、`pair<const Key, Type>` 型の[value_type](#value_type)のオブジェクトを指します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `const_iterator` *cIter* multimap 内の要素を指す、 **->** 演算子。
+Multimap 内の要素を指す `const_iterator` *cIter*を逆参照するには、 **->** 演算子を使用します。
 
-要素のキーの値にアクセスするには、使用`cIter->first`と同等`(*cIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`cIter->second`と同等`(*cIter).second`します。
+要素のキーの値にアクセスするには、`cIter->first` を使用します。これは `(*cIter).first` と同じです。 要素のマップされた datum の値にアクセスするには、`cIter->second` を使用します。これは `(*cIter).second` と同じです。
 
 ### <a name="example"></a>例
 
@@ -484,11 +484,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序で multimap を反復処理するために使用します。
 
-`const_reverse_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+Multimap によって定義された `const_reverse_iterator` は、`pair<const Key, Type>` 型の[value_type](#value_type)のオブジェクトを指します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `const_reverse_iterator` *crIter* multimap 内の要素を指す、 **->** 演算子。
+Multimap 内の要素を指す `const_reverse_iterator` *crIter*を逆参照するには、 **->** 演算子を使用します。
 
-要素のキーの値にアクセスするには、使用`crIter->first`と同等`(*crIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`crIter->second`と同等`(*crIter).first`します。
+要素のキーの値にアクセスするには、`crIter->first` を使用します。これは `(*crIter).first` と同じです。 要素のマップされた datum の値にアクセスするには、`crIter->second` を使用します。これは `(*crIter).first` と同じです。
 
 ### <a name="example"></a>例
 
@@ -504,7 +504,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー* \
 照合される multimap の要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -517,7 +517,7 @@ size_type count(const Key& key) const;
 
 \[ lower_bound (*キー*)、upper_bound (*キー*))
 
-キーの値がある*キー*します。
+キー値*キー*を持つ。
 
 ### <a name="example"></a>例
 
@@ -676,7 +676,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Remarks
 
-`difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 `difference_type`範囲内の要素の数を表すために通常使用 [*最初*、*最後*)、反復子間`first`と`last`を指す要素が含まれていますによって`first`までが含まれていない要素の範囲を要素にによって示されると`last`します。
+`difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 @No__t_0 は、通常、反復子 `first` と `last` 間の [*first*, *last*) の範囲内の要素の数を表すために使用されます。には、`first` が指す要素との要素の範囲が含まれます。`last` によってポイントされる要素。
 
 `difference_type` は、入力反復子の要件を満たすすべての反復子 (set などの反転可能なコンテナーによってサポートされる双方向反復子のクラスを含む) に対して使用できますが、反復子間の減算は、vector などのランダム アクセス コンテナーによって提供される、ランダム アクセス反復子によってのみサポートされます。
 
@@ -737,7 +737,7 @@ iterator emplace(Args&&... args);
 
 |パラメーター|説明|
 |-|-|
-|*引数*|multimap に挿入される要素を構築するために転送される引数。|
+|*value*|multimap に挿入される要素を構築するために転送される引数。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -807,8 +807,8 @@ iterator emplace_hint(
 
 |パラメーター|説明|
 |-|-|
-|*引数*|multimap に挿入される要素を構築するために転送される引数。|
-|*where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
+|*value*|multimap に挿入される要素を構築するために転送される引数。|
+|*where*|正しい挿入ポイントの検索を開始する場所 (その位置がの直前にある*場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -903,14 +903,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー* \
 検索対象の multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
 1 番目がそのキーの [lower_bound](#lower_bound)、2 番目がそのキーの [upper_bound](#upper_bound) である、反復子のペア。
 
-ペアの最初の反復子にアクセスする`pr`を使用して、メンバー関数によって返される、`pr`します。 **最初**下限の反復子を逆参照するには使用と\*(`pr`します。 **まず**)。 ペアの 2 つ目の反復子にアクセスする`pr`を使用して、メンバー関数によって返される、`pr`します。 **2 番目**と使用すると、上限の反復子を逆参照\*(`pr`します。 **2 つ目**)。
+メンバー関数によって返されるペア `pr` 最初の反復子にアクセスするには、`pr` を使用します。 **最初**に、下限の反復子を逆参照するには、\* (`pr` を使用します。 **最初**)。 メンバー関数によって返さ `pr` ペアの2番目の反復子にアクセスするには、`pr` を使用します。 **次**に、上限の反復子を逆参照するには、\* (`pr` を使用します。 **2 番目**)。
 
 ### <a name="example"></a>例
 
@@ -990,16 +990,16 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*<br/>
+*@No__t_1*
 削除される要素の位置。
 
-*まずは*<br/>
+*最初*の \
 削除される最初の要素の位置。
 
-*前の*<br/>
+*最後*の \
 削除される最後の要素の次の位置。
 
-*Key*<br/>
+*キー* \
 削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -1024,7 +1024,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー* \
 検索対象の multimap 内の要素の並べ替えキーによって照合されるキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1035,7 +1035,7 @@ const_iterator find(const Key& key) const;
 
 このメンバー関数は、小なり比較関係に基づいて順序を推論する二項述語に即して、並べ替えキーが引数キーと等価である multimap 内の要素を参照する反復子を返します。
 
-`find` の戻り値が `const_iterator` に割り当てられている場合、multimap オブジェクトは変更できません。 場合の戻り値`find`に割り当てられている、 `iterator`、multimap オブジェクトを変更できます。
+`find` の戻り値が `const_iterator` に割り当てられている場合、multimap オブジェクトは変更できません。 @No__t_0 の戻り値が `iterator` に割り当てられている場合は、multimap オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -1213,9 +1213,9 @@ IList);
 
 |パラメーター|説明|
 |-|-|
-|*val*|multimap に挿入される要素の値。|
-|*Where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
-|*ValTy*|マップの要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
+|*Val*|multimap に挿入される要素の値。|
+|*Where*|正しい挿入ポイントの検索を開始する場所 (その位置がの直前にある*場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。|
+|*ValTy*|Map が[value_type](../standard-library/map-class.md#value_type)の要素を構築するために使用できる引数の型を指定し、引数として*Val*を完全に転送するテンプレートパラメーター。|
 |*まずは*|コピーされる最初の要素の位置。|
 |*前の*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
@@ -1235,7 +1235,7 @@ IList);
 
 コンテナーの [value_type](../standard-library/map-class.md#value_type) はそのコンテナーに属する typedef であり、map の場合、`multimap<K, V>::value_type` は `pair<const K, V>` になります。 要素の値は順序付けされたペアになり、このペアの最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになります。
 
-範囲のメンバー関数 (5) は、範囲の反復子が指す各要素に対応する multimap に要素値のシーケンスを挿入`[First, Last)`。 したがって、*最後*は挿入されません。 コンテナーのメンバー関数 `end()` は、コンテナー内にある最後の要素の直後の位置を参照します。たとえば、ステートメント `m.insert(v.begin(), v.end());` は、`v` のすべての要素を `m` に挿入します。
+範囲のメンバー関数 (5) は、multimap に要素値のシーケンスを挿入します。このシーケンスは、`[First, Last)` の範囲の反復子によってアドレス指定された各要素に対応します。したがって、 *Last*は挿入されません。 コンテナーのメンバー関数 `end()` は、コンテナー内にある最後の要素の直後の位置を参照します。たとえば、ステートメント `m.insert(v.begin(), v.end());` は、`v` のすべての要素を `m` に挿入します。
 
 初期化子リストのメンバー関数 (6) は、[initializer_list](../standard-library/initializer-list.md) を使用して map に要素をコピーします。
 
@@ -1341,13 +1341,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Remarks
 
-`iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+Multimap によって定義された `iterator` は、`pair<const Key, Type>` 型の[value_type](#value_type)のオブジェクトを指します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `iterator` *Iter* multimap 内の要素を指す、 **->** 演算子。
+Multimap 内の要素を指す `iterator` *Iter*を逆参照するには、 **->** 演算子を使用します。
 
-要素のキーの値にアクセスするには、使用`Iter->first`と同等`(*Iter).first`します。 要素のマップされたデータの値にアクセスするには、使用`Iter->second`と同等`(*Iter).second`します。
+要素のキーの値にアクセスするには、`Iter->first` を使用します。これは `(*Iter).first` と同じです。 要素のマップされた datum の値にアクセスするには、`Iter->second` を使用します。これは `(*Iter).second` と同じです。
 
-型`iterator`要素の値を変更するために使用できます。
+@No__t_0 型を使用して、要素の値を変更できます。
 
 ### <a name="example"></a>例
 
@@ -1472,7 +1472,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー* \
 検索対象の multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
@@ -1653,8 +1653,8 @@ multimap(
 
 |パラメーター|説明|
 |-|-|
-|*Al*|この multimap オブジェクトに使用するストレージ アロケーター クラス。既定では、Allocator です。|
-|*コンポジション*|マップ内の要素の並べ替えに使用される、型 `constTraits` の比較関数。既定では `Traits` です。|
+|*ウムアルクラ*|この multimap オブジェクトに使用するストレージ アロケーター クラス。既定では、Allocator です。|
+|*コンペティション*|マップ内の要素の並べ替えに使用される、型 `constTraits` の比較関数。既定では `Traits` です。|
 |*右*|構築される map のコピー元となる map。|
 |*まずは*|コピーする要素範囲内の最初の要素の位置。|
 |*前の*|コピーする要素範囲を超える最初の要素の位置。|
@@ -1668,11 +1668,11 @@ multimap(
 
 すべてのコンストラクターは、`Traits` 型の関数オブジェクトを格納します。このオブジェクトは multimap のキーの順序を確立するために使用され、後で [key_comp](#key_comp) を呼び出して取得することができます。
 
-最初の 3 つのコンス トラクターを指定する空の初期 multimap、2 つ目の比較関数の種類を指定する (*Comp*) 明示的に要素と 3 番目の順序を確立する際に使用するアロケーターを指定する入力(*Al*) を使用します。 キーワード**明示的な**特定の種類の自動型変換を抑制します。
+最初の3つのコンストラクターは、空の初期 multimap を指定します。2番目のコンストラクターは、要素の順序を確立するために使用する比較関数の型 (*Comp*) を指定し、3番目のコンストラクターはアロケーターの型 (*Al*) を明示的に指定します。用い. キーワード**explicit**では、特定の種類の自動型変換が抑制されます。
 
-4 番目のコンス トラクターが multimap のコピーを指定します*右*します。
+4番目のコンストラクターは、multimap*権限*のコピーを指定します。
 
-5 番目のコンス トラクターは、移動することによって、multimap のコピーを指定します*右*します。
+5番目のコンストラクターは、*右*に移動して multimap のコピーを指定します。
 
 6 番目、7 番目、8 番目のコンストラクターは、initializer_list のメンバーをコピーします。
 
@@ -1804,7 +1804,7 @@ multimap& operator=(multimap&& right);
 
 ### <a name="remarks"></a>Remarks
 
-既存の要素を消去した後、 `multimap`、`operator=`コピーまたは移動の内容*右*に、`multimap`します。
+@No__t_0 内の既存の要素を消去した後、 *`operator=` の内容*を `multimap` にコピーまたは移動します。
 
 ### <a name="example"></a>例
 
@@ -1853,7 +1853,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Remarks
 
-型`pointer`要素の値を変更するために使用できます。
+@No__t_0 型を使用して、要素の値を変更できます。
 
 ほとんどの場合、multimap オブジェクト内の要素にアクセスするには[反復子](#iterator)を使用する必要があります。
 
@@ -2090,15 +2090,15 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` 型は、逆の順序で multimap を反復処理するために使用します。
 
-`reverse_iterator`のオブジェクトを指しますが multimap によって定義された[value_type](#value_type)、これは`pair<const Key, Type>`します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+Multimap によって定義された `reverse_iterator` は、`pair<const Key, Type>` 型の[value_type](#value_type)のオブジェクトを指します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-逆参照する、 `reverse_iterator` *rIter* multimap 内の要素を指す、 **->** 演算子。
+Multimap 内の要素を指す `reverse_iterator` *rIter*を逆参照するには、 **->** 演算子を使用します。
 
-要素のキーの値にアクセスするには、使用`rIter->first`と同等`(*rIter).first`します。 要素のマップされたデータの値にアクセスするには、使用`rIter->second`と同等`(*rIter).second`します。
+要素のキーの値にアクセスするには、`rIter->first` を使用します。これは `(*rIter).first` と同じです。 要素のマップされた datum の値にアクセスするには、`rIter->second` を使用します。これは `(*rIter).second` と同じです。
 
 ### <a name="example"></a>例
 
-`reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
+`reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例を参照してください。
 
 ## <a name="size"></a>  multimap::size
 
@@ -2167,7 +2167,7 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*右*\
 交換する要素を提供する multimap (multimap `left` と要素を交換する multimap)。
 
 ### <a name="remarks"></a>Remarks
@@ -2237,14 +2237,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー* \
 検索対象の multimap 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
 引数キーより大きいキーを持つ multimap 内の要素の位置を指す、または、キーの一致が検出されない場合は multimap 内の最後の要素の次の位置を指す、反復子または `const_iterator`。
 
-戻り値が `const_iterator` に割り当てられている場合、multimap オブジェクトは変更できません。 戻り値が割り当てられている場合、 `iterator`、multimap オブジェクトを変更できます。
+戻り値が `const_iterator` に割り当てられている場合、multimap オブジェクトは変更できません。 戻り値が `iterator` に割り当てられている場合は、multimap オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -2318,7 +2318,7 @@ multimap が要素の並べ替えに使用する比較関数オブジェクト�
 
 ### <a name="remarks"></a>Remarks
 
-Multimap の*m*場合は、2 つの要素*e1*(*k1*、 *d1*) と*e2*(*k2*、 *d2*) 型のオブジェクトは`value_type`ここで、 *k1*と*k2*型のキーがその`key_type`と*d1*と*d2*は、データ型の`mapped_type`、し`m.value_comp(e1, e2)`と等価`m.key_comp(k1, k2)`します。
+Multimap *m*の場合、2つの*要素 e1*(*k1*、 *d1*) と*e2*(*k2*、 *d2*) は `value_type` 型のオブジェクトです。ここで、 *k1*と*k2*は 0 型のキーであり、 *d1*および*d2*です。3 型のデータであり、4 は 5 に相当します。
 
 ### <a name="example"></a>例
 
@@ -2438,6 +2438,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>関連項目
 
-[コンテナー](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[コンテナー](../cpp/containers-modern-cpp.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

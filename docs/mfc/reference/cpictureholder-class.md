@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372882"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder クラス
 
@@ -64,7 +64,7 @@ class CPictureHolder
 |[CPictureHolder::GetDisplayString](#getdisplaystring)|コントロール コンテナーのプロパティ ブラウザーに表示される文字列を取得します。|
 |[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|返します、`CPictureHolder`オブジェクトの`IDispatch`インターフェイス。|
 |[CPictureHolder::GetType](#gettype)|通知するかどうか、`CPictureHolder`オブジェクトは、ビットマップ、メタファイル、またはアイコン。|
-|[Cpictureholder:](#render)|画像を表示します。|
+|[CPictureHolder::Render](#render)|画像を表示します。|
 |[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|セット、`CPictureHolder`オブジェクトの`IDispatch`インターフェイス。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
@@ -79,7 +79,7 @@ class CPictureHolder
 
 ストックの画像プロパティで、開発者は、ビットマップ、アイコン、または表示のメタファイルを指定できます。
 
-カスタム picture プロパティの作成方法の詳細については、この記事を参照してください。 [MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)します。
+カスタム picture プロパティの作成方法の詳細については、この記事を参照してください。 [MFC ActiveX コントロール。ActiveX コントロールにおけるピクチャの使用](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -283,7 +283,7 @@ short GetType();
 LPPICTURE m_pPict;
 ```
 
-##  <a name="render"></a>  Cpictureholder:
+##  <a name="render"></a>  CPictureHolder::Render
 
 によって参照される四角形に画像をレンダリング*rcRender*します。
 

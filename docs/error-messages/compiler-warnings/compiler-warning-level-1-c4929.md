@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651712"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052273"
 ---
 # <a name="compiler-warning-level-1-c4929"></a>コンパイラの警告 (レベル 1) C4929
 
-'file': タイプ ライブラリには、共用体が含まれています。'embedded_idl' 修飾子は無視されます。
+' file ': タイプライブラリ含みに共用体が含まれています。' embedded_idl ' 修飾子を無視します
 
-Embedded_idl 属性[#import](../../preprocessor/hash-import-directive-cpp.md)共用体は、タイプ ライブラリに存在するため、タイプ ライブラリに適用されませんでした。 この警告を解決するには、embedded_idl を使用しないでください。
+タイプライブラリに共用体が存在するため、 [#import](../../preprocessor/hash-import-directive-cpp.md)の embedded_idl 属性をタイプライブラリに適用できませんでした。 この警告を解決するには、embedded_idl を使用しないでください。
 
 ## <a name="example"></a>例
 
 次の例では、コンポーネントを定義します。
 
-```
+```cpp
 // C4929a.cpp
 // compile with: /LD /link /TLBOUT:C4929a.tlb
 #include <objbase.h>
@@ -57,7 +57,7 @@ struct C : I {
 
 次の例では、C4929 が生成されます。
 
-```
+```cpp
 // C4929b.cpp
 // compile with: /c /W1
 #import "C4929a.tlb" embedded_idl   // C4929

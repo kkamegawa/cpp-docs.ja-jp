@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4189
 ms.assetid: 7ad9242c-228e-4054-8244-5e914b618ef3
-ms.openlocfilehash: 6463379529897598d560d6bcc22bd3a278a66477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d403373fe200f10cb2f2c210b8cd8f58b7429198
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447254"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991510"
 ---
 # <a name="compiler-warning-level-4-c4189"></a>コンパイラの警告 (レベル 4) C4189
 
@@ -21,7 +21,7 @@ ms.locfileid: "50447254"
 
 次の例では C4189 が生成されます。
 
-```
+```cpp
 // C4189.cpp
 // compile with: /W4
 int main() {

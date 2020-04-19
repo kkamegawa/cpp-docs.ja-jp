@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600799"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757203"
 ---
 # <a name="compiler-error-c3767"></a>コンパイラ エラー C3767
 
@@ -19,13 +19,13 @@ ms.locfileid: "50600799"
 
 クラスで定義されたフレンド関数は、グローバル名前空間スコープで定義および宣言された関数として扱われることを想定していません。 ただし、引数依存の検索で検出することはできます。
 
-C3767 は、重大な変更によって発生もあります。 ネイティブ型は既定でプライベートようになりました、 **/clr**コンパイル; を参照してください[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)詳細についてはします。
+C3767 は、互換性に影響する変更によって発生することもあります。ネイティブ型は、 **/clr**コンパイルでは既定でプライベートになりました。詳細については、「[型の可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3767 が生成されます。
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -56,7 +56,7 @@ int main() {
 
 次の例では、C3767 が生成されます。
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

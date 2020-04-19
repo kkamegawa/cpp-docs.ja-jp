@@ -1,28 +1,29 @@
 ---
 title: .REPEAT
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .REPEAT
 helpviewer_keywords:
 - .REPEAT directive
 ms.assetid: cb8ad8c6-587b-42f9-a0ad-b5316a24918c
-ms.openlocfilehash: ac136bba4c349c84f81248bed12570c02e91577b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f21f3f3cc4cb86b1ca2503d515dcd7fbcdffe622
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448745"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318281"
 ---
-# <a name="repeat"></a>.REPEAT
+# <a name="repeat-32-bit-masm"></a>.繰り返し (32 ビット MASM)
 
-コードのブロックの実行が繰り返される生成*ステートメント*まで`condition`が true になった。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)の代用 CX が 0 の場合は true。 なります[します。まで](../../assembler/masm/dot-until.md)します。 `condition`は省略可能で**します。UNTILCXZ**します。
+*条件*が true になるまで*ステートメント*ブロックの実行を繰り返すコードを生成します。 [.](dot-untilcxz.md)CX がゼロの場合は、CXZ を使用して、に置き換えることができ[ます。まで](dot-until.md)。 *条件*は、では省略可能です **。CXZ**。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .REPEAT<br/>
-> ステートメント<br/>
-> .UNTIL 条件
+> **.繰り返し**\
+> *ステートメント*の\
+> **.UNTIL** *条件*
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

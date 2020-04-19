@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: addf3fbc5f6261800ceebf6e8bb1abe1a64f245e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478209"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447249"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop (C++) のパフォーマンスに関する考慮事項
 
@@ -21,7 +21,7 @@ ms.locfileid: "50478209"
 
 Visual C は、Visual Basic および c# (P/invoke) などの他の .NET 言語と相互運用性のと同じメカニズムをサポートしていますが、Visual C (C++ 相互運用機能) に固有の相互運用機能のサポートも提供します。 パフォーマンスが重要なアプリケーションの場合、それぞれの相互運用機能の手法のパフォーマンスに影響を理解しておく必要があります。
 
-使用する相互運用機能手法に関係なく、サンクと呼ばれる特殊な遷移のシーケンスが必要です、マネージ関数は、非管理対象の関数、またはその逆を呼び出すたびに。 これらサンクは、Visual C コンパイラによって自動的に挿入されますが、累積的に、これらの遷移できるパフォーマンスの観点からコストに留意することが重要です。
+使用する相互運用機能手法に関係なく、サンクと呼ばれる特殊な遷移のシーケンスが必要です、マネージ関数は、非管理対象の関数、またはその逆を呼び出すたびに。 このサンクは、Microsoft によって自動的に挿入C++、コンパイラは累積的に、これらの遷移できるパフォーマンスの観点からコストを念頭に重要です。
 
 ## <a name="reducing-transitions"></a>遷移の削減
 

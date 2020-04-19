@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4032
 ms.assetid: 70dd0c85-0239-43f9-bb06-507f6a57d206
-ms.openlocfilehash: fa1602d63ed9822725fea8e1b842929f221d3926
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52e80340a5157e9350b6d4bbf3bcabea0487e089
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657302"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541259"
 ---
 # <a name="compiler-warning-level-4-c4032"></a>コンパイラの警告 (レベル 4) C4032
 
-仮パラメーター 'number' が昇格するときに別の種類
+昇格時に仮引数 ' number ' の型が異なります
 
-パラメーターの型が互換性のある、既定の昇格の場合、前の宣言で型を使用できません。
+パラメーターの型は、既定の昇格を通じて、前の宣言の型と互換性がありません。
 
-これは ANSI C でエラー ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) は Microsoft 拡張機能 (/Ze) 警告します。
+これは、ANSI C ([/za](../../build/reference/za-ze-disable-language-extensions.md)) ではエラーであり、Microsoft 拡張機能 (/ze) では警告が発生します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // C4032.c
 // compile with: /W4
 void func();

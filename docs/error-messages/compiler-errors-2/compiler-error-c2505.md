@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: bf5ffb9b6bad3db1d264941a6aefa391be521c98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94a6f180c93839646d771509145b2f65a00780fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610211"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746865"
 ---
 # <a name="compiler-error-c2505"></a>コンパイラ エラー C2505
 
-'symbol': '__declspec(modifer)' は宣言またはグローバル オブジェクトまたは静的データ メンバーの定義にのみ適用できます
+' symbol ': ' __declspec (修飾子) ' は、グローバルオブジェクトまたは静的データメンバーの宣言または定義にのみ適用できます
 
-A`__declspec`グローバル スコープでのみ使用するように設計された修飾子は関数で使用されました。
+グローバルスコープでのみ使用するように設計された `__declspec` 修飾子が関数で使用されました。
 
 詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「 [process](../../cpp/process.md)」を参照してください。
 
 次の例では、C2505 が生成されます。
 
-```
+```cpp
 // C2505.cpp
 // compile with: /clr
 

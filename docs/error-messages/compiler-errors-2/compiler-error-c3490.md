@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 55580533d6a1a6b80f79b017ba78a08fb44df744
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940eae39222548ec74bda8ccb38e669748ffa74f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478157"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738402"
 ---
 # <a name="compiler-error-c3490"></a>コンパイラ エラー C3490
 
@@ -23,11 +23,11 @@ ms.locfileid: "50478157"
 
 - メソッド宣言から `const` 修飾子を削除します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、 `_i` メソッドでメンバー変数 `const` を変更するため、C3490 が生成されます。
 
-```
+```cpp
 // C3490a.cpp
 // compile with: /c
 
@@ -42,11 +42,11 @@ class C
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、メソッド宣言から `const` 修飾子を削除して C3490 を解決します。
 
-```
+```cpp
 // C3490b.cpp
 // compile with: /c
 
@@ -61,6 +61,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

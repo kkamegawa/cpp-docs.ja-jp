@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 0f6094daddf40b0899dc7f341f50a31daf7a999b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435452"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750092"
 ---
 # <a name="compiler-error-c3531"></a>コンパイラ エラー C3531
 
-'symbol': 'auto' を含む型のシンボルは初期化子が必要
+' symbol ': 型に ' auto ' を含むシンボルには初期化子を指定しなければなりません
 
-指定された変数の初期化子式ではありません。
+指定された変数に初期化子式がありません。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. 変数を宣言するときに、等号 (=) の構文を使用する単純な代入など、初期化子式を指定します。
+1. 変数を宣言するときに、等号構文を使用する単純な代入などの初期化子式を指定します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では C3531 のため変数`x1`、 `y1, y2, y3`、および`z2`が初期化されていません。
+次の例では、変数 `x1`、`y1, y2, y3`、および `z2` が初期化されていないため、C3531 が生成されます。
 
-```
+```cpp
 // C3531.cpp
 // Compile with /Zc:auto
 int main()
@@ -39,6 +39,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto キーワード](../../cpp/auto-keyword.md)

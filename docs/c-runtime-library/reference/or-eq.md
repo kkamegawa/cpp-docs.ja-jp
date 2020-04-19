@@ -1,7 +1,7 @@
 ---
 title: or_eq
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::or_eq
 - or_eq
@@ -20,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - or_eq function
 ms.assetid: 1eb92464-ed58-40d8-a30e-f0a6aa2f4318
-ms.openlocfilehash: 7800bb65969c13d65b8feabebc86ea4c406bade1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d286fbfaf7c388a41b5c421915b921e3b091045d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951145"
 ---
-# <a name="oreq"></a>or_eq
+# <a name="or_eq"></a>or_eq
 
 &#124;= 演算子の代替手段。
 

@@ -1,23 +1,23 @@
 ---
-title: '方法: C++/CLI で列挙型を定義および使用する'
+title: '方法: 定義および c++ の列挙型を使用する/cli CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 6dc70da0e3888ffee11a6378da5ea82efe58112b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387384"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>方法: C++/CLI で列挙型を定義および使用する
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>方法: 定義および c++ の列挙型を使用する/cli CLI
 
 このトピックでは、c++ の列挙型を説明/cli CLI。
 
 ## <a name="specifying-the-underlying-type-of-an-enum"></a>Enum の基になる型を指定します。
 
-列挙体の基になる型は、既定では、`int`します。  ただし、ある符号付きまたは符号なしの形式の種類を指定できます`int`、 `short`、 `long`、 `__int32`、または`__int64`します。  使用することも`char`します。
+列挙体の基になる型は、既定では、`int`します。  ただし、ある符号付きまたは符号なしの形式の種類を指定できます`int`、 `short`、 `long`、 `__int32`、または`__int64`します。  `char` を使用することもできます。
 
 ```
 // mcppv2_enum_3.cpp
@@ -92,7 +92,7 @@ a and day2 are the same
 列挙操作の結果のチェックを静的または動的なコンパイラがしません操作は、列挙型の有効な列挙子の範囲にない値があります。
 
 > [!NOTE]
->  C++ 11 に c++ のマネージ列挙型クラスよりも大幅に異なるアンマネージ コードで列挙型のクラス型が導入されています/cli CLI。 具体的には、c++ 11 enum クラス型はサポートしていませんマネージ列挙型クラスの型として同じ演算子 c++/cli CLI、および C++/cli CLI のソース コードする必要がありますマネージ列挙型では、アクセシビリティ指定子クラスを宣言するアンマネージ (C++ と区別できるようにするには11) 列挙型クラスの宣言。 C++ enum クラスの詳細については/cli CLI、C +/cli/CX、および c++ 11 を参照してください。[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)します。
+>  C++ 11 に c++ のマネージ列挙型クラスよりも大幅に異なるアンマネージ コードで列挙型のクラス型が導入されています/cli CLI。 具体的には、c++ 11 enum クラス型はサポートしていませんマネージ列挙型クラスの型として同じ演算子 c++/cli CLI、および C++/cli CLI のソース コードする必要がありますマネージ列挙型では、アクセシビリティ指定子クラスを宣言するアンマネージ (C++ と区別できるようにするには11) 列挙型クラスの宣言。 C++ enum クラスの詳細については/cli CLI、C +/cli/CX、および c++ 11 を参照してください。[列挙型クラス](../extensions/enum-class-cpp-component-extensions.md)します。
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>関連項目
 
-[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)
+[enum クラス](../extensions/enum-class-cpp-component-extensions.md)

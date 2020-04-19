@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4002
 ms.assetid: 6bda1dfe-e2e4-4771-9794-5a404c466dd5
-ms.openlocfilehash: f2d2166a1370c02cfbc2346a63a424239ccb2b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aac8285e3935bb0fb910b52a7dd813d0a708732
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463059"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627401"
 ---
 # <a name="compiler-warning-level-1-c4002"></a>コンパイラの警告 (レベル 1) C4002
 
@@ -23,7 +23,7 @@ C4002 は、 [Variadic Macros](../../preprocessor/variadic-macros.md)が正し�
 
 次の例では C4002 が生成されます。
 
-```
+```cpp
 // C4002.cpp
 // compile with: /W1
 #define test(a) (a)
@@ -41,7 +41,7 @@ int main() {
 
 コンパイラでは、マクロ内の余分なコンマが使用できなくなります。 Visual Studio .NET 2003 と Visual Studio .NET の両方のバージョンの Visual C++ でコードを有効にするには、余分なコンマを削除します。
 
-```
+```cpp
 // C4002b.cpp
 // compile with: /W1
 #define F(x,y)

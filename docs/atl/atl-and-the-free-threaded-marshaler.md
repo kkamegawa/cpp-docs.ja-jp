@@ -8,28 +8,27 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: b9baff9af10cd785554e849854556a9aa3bd7ca4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94e4961c69e9441d160d72d9b72afcee3677e25f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621846"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491912"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL とフリー スレッド マーシャラー
 
-ATL シンプル オブジェクト ウィザードの [属性] ページでは、フリー スレッド マーシャラー (FTM) を集計するのには、クラスを許可するオプションを提供します。
+ATL シンプルオブジェクトウィザードの [属性] ページには、クラスがフリースレッドマーシャラー (FTM) を集計できるようにするオプションが用意されています。
 
-ウィザードでのフリー スレッド マーシャラーのインスタンスを作成するコードを生成`FinalConstruct`でそのインスタンスを解放し、`FinalRelease`します。 定義マクロは自動的にいることを確認する COM マップに追加`QueryInterface`要求[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)フリー スレッド マーシャラーによって処理されます。
+このウィザードでは、の`FinalConstruct`フリースレッドマーシャラーのインスタンスを作成し、そのインスタンスをで`FinalRelease`解放するコードが生成されます。 COM_INTERFACE_ENTRY_AGGREGATE マクロは、 [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal)の要求がフリースレッドマーシャラーによっ`QueryInterface`て処理されるように、COM マップに自動的に追加されます。
 
-フリー スレッド マーシャラーに直接アクセスできるオブジェクトのインターフェイス、同じプロセスで任意のスレッドからアパートメント間呼び出しの高速化します。 このオプションは、両方スレッド処理モデルを使用するクラスを対象としています。
+フリースレッドマーシャラーを使用すると、同じプロセス内の任意のスレッドからオブジェクトのインターフェイスに直接アクセスできるため、アパートメント間の呼び出しを高速化できます。 このオプションは、両方のスレッドモデルを使用するクラスを対象としています。
 
-このオプションを使用する場合、クラスは、データのスレッド セーフの責任を負う必要があります。 さらに、フリー スレッド マーシャラーを集約し、その他のオブジェクトから取得したインターフェイス ポインターを使用する必要があるオブジェクトは、インターフェイスが正しくマーシャ リングすることを確認する追加の手順を実行する必要があります。 通常これは、グローバル インターフェイス テーブル (GIT) のインターフェイス ポインターを格納して、使用されるたびに、GIT からポインターを取得する必要があります。 ATL クラスを提供します。 [CComGITPtr](../atl/reference/ccomgitptr-class.md) 、GIT に格納されているインターフェイス ポインターを使用できるようにします。
+このオプションを使用する場合、クラスは、データのスレッドセーフを処理する必要があります。 さらに、フリースレッドマーシャラーを集約し、他のオブジェクトから取得したインターフェイスポインターを使用する必要があるオブジェクトは、インターフェイスが正しくマーシャリングされるようにするために追加の手順を実行する必要があります。 通常、これには、グローバルインターフェイステーブル (GIT) にインターフェイスポインターを格納し、使用するたびに GIT からポインターを取得する必要があります。 ATL には、GIT に格納されているインターフェイスポインターを使用するのに役立つクラス[CComGITPtr](../atl/reference/ccomgitptr-class.md)が用意されています。
 
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
-[グローバル インターフェイス テーブルを使用する場合](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
-[プロセス サーバーのスレッド処理の問題](/windows/desktop/com/in-process-server-threading-issues)
-
+[CoCreateFreeThreadedMarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[グローバルインターフェイステーブルを使用する場合](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
+[インプロセスサーバーのスレッド処理の問題](/windows/win32/com/in-process-server-threading-issues)

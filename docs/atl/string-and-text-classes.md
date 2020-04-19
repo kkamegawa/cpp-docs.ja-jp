@@ -6,12 +6,12 @@ helpviewer_keywords:
 - string conversion, ATL
 - string classes [ATL]
 ms.assetid: aa0cdc41-c953-4b17-82b6-59b908545571
-ms.openlocfilehash: 5fc4203c3d1c9ee975618b3df799a5dc6bde1c82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f694cbf9dc806cbb6ef3e5e649e91c9ad5bfa75
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197446"
 ---
 # <a name="string-and-text-classes"></a>文字列とテキスト クラス
 
@@ -37,4 +37,3 @@ ms.locfileid: "50657783"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [ATL と MFC 文字列変換マクロ](reference/string-conversion-macros.md)
-

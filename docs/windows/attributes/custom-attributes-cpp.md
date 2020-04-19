@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: c16337e15fedca25bbba31503026358e39a66026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148212"
 ---
 # <a name="custom-attributes-c"></a>カスタム属性 (C++)
 
@@ -18,7 +18,7 @@ ms.locfileid: "50567181"
 
 カスタム属性の定義についてを参照してください。
 
-- [ユーザー定義の属性](../user-defined-attributes-cpp-component-extensions.md)
+- [ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)
 
 - [属性](attribute.md)(非推奨の構文を参照)。
 

@@ -1,6 +1,6 @@
 ---
 title: /analyze (コード分析)
-ms.date: 04/26/2018
+ms.date: 10/15/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnablePREfast
 - /analyze
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: a43cce2633fc2f54374bee6b5ef7196dbb87ad55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cebe1cbd160bdec257a960f90039c1af3bfee2
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663776"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416046"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (コード分析)
 
@@ -24,31 +24,37 @@ ms.locfileid: "50663776"
 
 ## <a name="syntax"></a>構文
 
-```cmd
-/analyze[-][:WX-][:log filename][:quiet][:stacksize number][:max_paths number][:only][:ruleset]
-```
+> **/analyze**-] **[: WX-]** [ **: log** *filename*] : **[quiet]** [ **: stacksize** *number*] [:**max_paths** *number*] **[: only]** [ **: ルール**セット*ルール*] [ **:p lugin** *plugin-dll*]
 
 ## <a name="arguments"></a>引数
 
-/analyze に既定のモードで分析します。 分析の出力に送ら、**出力**他のエラー メッセージのようなウィンドウ。 使用 **/analyze -** 分析を明示的にオフにします。
+**/analyze**\
+既定のモードで分析をオンにします。 分析出力は、他のエラーメッセージと同様に**出力**ウィンドウに移動します。 分析を明示的にオフにするには **、/analyze e-** を使用します。
 
-/analyze: WX 指定 **/analyze: WX -** を使用してコンパイルするときにコード分析の警告がエラーとして扱われなく **/WX**します。 詳細については、「[/w、/W0、/W1、/W2、/W3、/W4, /w1, /w2, /w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)](../../build/reference/compiler-option-warning-level.md)」を参照してください。
+**/analyze: WX-** \
+**/Wx**を使用してコンパイルする場合、コード分析の警告はエラーとして扱われません。 詳細については、「 [/wx (警告レベル)](compiler-option-warning-level.md)」を参照してください。
 
-/analyze: ログ`filename`詳細なアナライザーの結果で指定されているファイルに XML として書き込まれます`filename`します。
+**/analyze: ログ***ファイル名*\
+詳細なアナライザーの結果は、 *filename*によって指定されたファイルに XML として書き込まれます。
 
-/analyze: アナライザーの出力をオフになりますを quiet、**出力**ウィンドウ。
+**/analyze: quiet**\
+アナライザーの出力が**出力**ウィンドウに表示されないようにします。
 
-/analyze:/analyze:stacksize `number` 、`number`このオプションで使用されるパラメーターは、警告のスタック フレームのバイト単位でサイズを指定[C6262](/visualstudio/code-quality/c6262)が生成されます。 このパラメーターが指定されていない場合は、既定の 16 KB がスタック フレーム サイズとして使用されます。
+**/analyze: stacksize** *number*\
+このオプションと共に使用する*number*パラメーターでは、警告[C6262](/cpp/code-quality/c6262)が生成されるスタックフレームのサイズ (バイト単位) を指定します。 *数値*の前のスペースは省略可能です。 このパラメーターが指定されていない場合、スタックフレームサイズは既定で 16 KB になります。
 
-/analyze:/analyze:max_paths `number` 、`number`このオプションで使用されるパラメーターを分析するコード パスの最大数を指定します。 このパラメーターが指定されていない場合は、既定の 256 が最大数として使用されます。 値を大きくすると、より細かなチェックが実行されますが、分析に時間がかかることがあります。
+**/analyze: max_paths** *数*\
+このオプションで使用される*number*パラメーターでは、分析するコードパスの最大数を指定します。 このパラメーターが指定されていない場合、既定では、数値は256です。 値を大きくすると、より詳細なチェックが行われますが、分析に時間がかかることがあります。
 
-/analyze: 通常、コンパイラはコードを生成し、構文チェック、アナライザーを実行した後をさらには専用です。 **/Analyze: のみ**オプションは、このコード生成パスによってオフします。 分析を高速化により、これがコンパイル エラーとコンパイラのコード生成パスによって検出された警告が出力されません。 プログラムにコード生成のエラーがある場合は、分析結果が信頼できないものになる可能性があるため、このオプションを使用するのは、コードが既にコード生成構文チェックをエラーなしで渡している場合だけにすることをお勧めします。
+**/analyze:\ のみ**
+通常、コンパイラは、アナライザーを実行した後にコードを生成し、構文チェックをさらに実行します。 **/Analyze: only**オプションは、このコード生成パスをオフにします。 これにより、分析が高速になりますが、コンパイラのコード生成パスが生成されない可能性があるエラーと警告がコンパイルされます。 プログラムにコード生成エラーがない場合は、分析結果が信頼できない可能性があります。 このオプションを使用することをお勧めするのは、コードがエラーなしでコード生成構文チェックに合格した場合のみです。
 
-/analyze: ruleset`<file_path>.ruleset`などのカスタム規則セットを自分で作成できることを分析するルールのセットを指定することができます。 このスイッチが設定されている場合、指定した規則を実行する前にセットのメンバー以外を除外するため、ルール エンジンが効率的です。 スイッチが設定されていない場合、エンジンはすべてのルールを確認します。
+**/analyze: ルールセット** *file_path*\
+自分で作成できるカスタム規則セットなど、分析する規則セットを指定できます。 このスイッチを設定すると、ルールエンジンは、実行前に指定された規則セットの非メンバーを除外するため、より効率的になります。 それ以外の場合、エンジンはすべてのルールを確認します。
 
-Visual Studio に付属する ruleset にあるは **%VSINSTALLDIR%\Team \static 分析 Tools\Rule セット。**
+Visual Studio に付属しているルールセットは、%VSINSTALLDIR%\Team ツールの *静的な分析ツール \ ルールセットの設定*に含まれています。
 
-次のサンプルのカスタム規則セットでは、ルール エンジン C6001 と C26494 を確認するように指示します。 このファイルを配置するには、任意の場所にある限り、`.ruleset`と拡張機能は、引数の完全なパスを指定します。
+次のサンプルカスタムルールセットは、C6001 と C26494 をチェックするようにルールエンジンに指示します。 このファイルは、`.ruleset` 拡張子がある限り、任意の場所に配置できます。引数に完全なパスを指定します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,40 +66,55 @@ Visual Studio に付属する ruleset にあるは **%VSINSTALLDIR%\Team \static
 </RuleSet>
 ```
 
-/analyze: プラグインがコード分析の一部を実行すると、指定された PREfast プラグインをできます。
-LocalEspC.dll は、範囲の C261XX 警告で同時実行関連のコード分析を実装するプラグインを確認します。 たとえば、 [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167)します。
+**/analyze: プラグイン***プラグイン-dll*\
+コード分析の実行の一部として、指定された PREfast プラグインを有効にします。
 
-LocalEspC.dll を実行するには、このコンパイラ オプションを使用: **/analyze: プラグイン LocalEspC.dll**
+::: moniker range="<=vs-2017"
 
-CppCoreCheck.dll を実行するには、最初の開発者コマンド プロンプトからこのコマンドを実行します。
+LocalC261XX は、同時実行に関連するコード分析チェックを実装するプラグインです。 たとえば、 [C26100](/cpp/code-quality/c26100)、 [C26101](/cpp/code-quality/c26101)、 [C26167](/cpp/code-quality/c26167)のようになります。
+
+Local、c .dll を実行するには、次のコンパイラオプションを使用します。 **/analyze: Plugin Localて c .dll**
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+ConcurrencyCheck は、C261XX 警告の範囲内で同時実行に関連するコード分析チェックを実装します。 たとえば、 [C26100](/cpp/code-quality/c26100)、 [C26101](/cpp/code-quality/c26101)、 [C26167](/cpp/code-quality/c26167)のようになります。
+
+ConcurrencyCheck を実行するには、まず開発者コマンドプロンプトから次のコマンドを実行します。
+
+```cmd
+set Esp.Extensions=ConcurrencyCheck.dll
+```
+
+その後、次のコンパイラオプションを使用します。 **/analyze: プラグイン**では、dll を使用します。
+
+::: moniker-end
+
+CppCoreCheck を実行するには、まず開発者コマンドプロンプトから次のコマンドを実行します。
 
 ```cmd
 set Esp.Extensions=CppCoreCheck.dll
 ```
 
-このコンパイラ オプションを使用して: **/analyze: プラグイン EspXEngine.dll**します。
+その後、次のコンパイラオプションを使用します。 **/analyze: プラグイン**では、dll を使用します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)と[c/c++ の警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)します。
+詳細については、「 [c/C++ ](/cpp/code-quality/code-analysis-for-c-cpp-overview) c + + のコード分析」と「 [c/C++警告のコード分析](/cpp/code-quality/code-analysis-for-c-cpp-warnings)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
 
-1. **[構成プロパティ]** ノードを展開します。
+1. **[コード分析]**  >  **[全般**] プロパティページ > **構成プロパティ**を選択します。
 
-1. 展開、**コード分析**ノード。
-
-1. **[全般]** プロパティ ページをクリックします。
-
-1. 1 つ以上の変更、**コード分析**プロパティ。
+1. 1つ以上の**コード分析**プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-1. 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>
+1. [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>) をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [コンパイラ オプション](../../build/reference/compiler-options.md)
-- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラオプション](compiler-options.md)\
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

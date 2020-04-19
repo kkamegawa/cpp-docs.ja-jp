@@ -2,17 +2,17 @@
 title: less_equal 構造体
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::less_equal
+- functional/std::less_equal
 helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: 942b5da850f03eef026533e7168fa8d3d1ea9002
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595586"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245384"
 ---
 # <a name="lessequal-struct"></a>less_equal 構造体
 
@@ -39,12 +39,13 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*をサポートする任意の型、`operator<=`指定または推論された型のオペランドを受け取る。
+*型*、 *T*、 *U*\
+指定または推論された型のオペランドを受け取る `operator<=` をサポートする任意の型。
 
-*左*<br/>
+*左*\
 以下演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*<br/>
+*そうです*\
 以下演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
@@ -53,7 +54,7 @@ struct less_equal<void>
 
 ## <a name="remarks"></a>Remarks
 
-二項述語`less_equal` <  `Type`> 厳密弱順序を一連の型の要素の値を提供します*型*等しいかどうかのクラスにこの型は数学的な標準を満たす場合にのみ。そのために順序付けられる要件です。 任意のポインター型に対する特殊化によって、要素の完全な順序付けが生成されます。この場合、一意の値を持つすべての要素が、相互の値に基づいて並べ替えられます。
+二項述語`less_equal` < `Type`> 厳密弱順序を一連の型の要素の値を提供します*型*等しいかどうかのクラスにこの型は数学的な標準を満たす場合にのみ。そのために順序付けられる要件です。 任意のポインター型に対する特殊化によって、要素の完全な順序付けが生成されます。この場合、一意の値を持つすべての要素が、相互の値に基づいて並べ替えられます。
 
 ## <a name="example"></a>例
 
@@ -109,19 +110,7 @@ int main( )
 }
 ```
 
-## <a name="sample-output"></a>出力例
-
 ```Output
 Original vector v1 = (31247 37154 48755 15251 6205 2836 2836 2836)
 Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

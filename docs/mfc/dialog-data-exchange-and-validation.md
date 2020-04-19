@@ -15,25 +15,24 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a68f3bf3af3d7c782e0d3414ffa90871ef5bd3a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437181"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685759"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>ダイアログ データ エクスチェンジとダイアログ データ検証
 
-ダイアログ データ エクス (チェンジ DDX) は、ダイアログ ボックスでコントロールを初期化して、ユーザーがデータ入力を収集する簡単な方法です。 ダイアログ データ検証 (DDV) は、ダイアログ ボックスでのデータ入力を検証する簡単な方法です。 活用するために DDX ルーチンおよび DDV ダイアログ ボックスで、使用、[追加メンバー変数のウィザード](../ide/add-member-variable-wizard.md)データ メンバーを作成し、データ型を設定する検証規則を指定します。
+ダイアログデータエクスチェンジ (DDX) は、ダイアログボックス内のコントロールを初期化し、ユーザーが入力したデータを収集するための簡単な方法です。 ダイアログデータ検証 (DDV) は、ダイアログボックスでデータ入力を検証する簡単な方法です。 ダイアログボックスで DDX および DDV を利用するには、[メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)を使用してデータメンバーを作成し、データ型を設定して、検証規則を指定します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)
+- [ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)
 
-- [ダイアログ データ検証](../mfc/dialog-data-validation.md)
+- [ダイアログデータの検証](../mfc/dialog-data-validation.md)
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

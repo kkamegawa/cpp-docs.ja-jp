@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3252
 ms.assetid: aa9ad096-e9ac-41c7-8ad9-b966751c7c75
-ms.openlocfilehash: ee9245fb8eb89b9234e76dc10304b1d05bc1fdcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbfe3ffaca66cad4922b5771ee8c9003acba7571
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600383"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754330"
 ---
 # <a name="compiler-error-c3252"></a>コンパイラ エラー C3252
 
@@ -23,7 +23,7 @@ ms.locfileid: "50600383"
 
 次の例では、C3252 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C3252.cpp
 // compile with: /clr /c
 ref class A {

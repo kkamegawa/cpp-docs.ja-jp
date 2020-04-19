@@ -1,11 +1,11 @@
 ---
 title: ccosh、ccoshf、ccoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ccosh
 - ccoshf
 - ccoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ccosh
 - ccoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978db0141ecd6799c3a8d19a3b4621ae1a2e8b43
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676838"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943286"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh、ccoshf、ccoshl
 
@@ -68,17 +71,17 @@ _Lcomplex ccoshl(
 
 ## <a name="return-value"></a>戻り値
 
-ハイパーボリック コサイン*z*、(ラジアン単位)。
+*Z*のハイパーボリックコサイン (ラジアン)。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ccosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ccosh**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**ccosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ccosh** **は常に値を**取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**ccosh**、 **ccoshf**、 **ccoshl**|\<complex.h>|\<ccomplex>|
+|**ccosh**、 **ccoshf**、 **ccoshf**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

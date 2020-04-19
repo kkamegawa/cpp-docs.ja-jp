@@ -7,12 +7,12 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6e4defaf347f0d539ef023ee9c0e1e85dd2390db
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395033"
 ---
 # <a name="active-document-containers"></a>Active ドキュメント コンテナー
 
@@ -86,4 +86,3 @@ Active ドキュメント コンテナーは、追加することで、フレー
 ## <a name="see-also"></a>関連項目
 
 [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
-

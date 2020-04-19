@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311320"
 ---
 # <a name="compiler-warning-c4693"></a>コンパイラの警告 C4693
 
 > 'class': シールされた抽象クラスにインスタンス メンバー 'Test' を含めることはできません
 
-型がマークされている場合[シール](../../windows/sealed-cpp-component-extensions.md)と[抽象](../../windows/abstract-cpp-component-extensions.md)、静的メンバーをのみがあることができます。
+型がマークされている場合[シール](../../extensions/sealed-cpp-component-extensions.md)と[抽象](../../extensions/abstract-cpp-component-extensions.md)、静的メンバーをのみがあることができます。
 
 この警告は、自動的にエラーになります。 この動作を変更する場合を使用して、 [#pragma warning](../../preprocessor/warning.md)します。
 

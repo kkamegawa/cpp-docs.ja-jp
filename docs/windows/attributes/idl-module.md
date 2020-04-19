@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608691"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514676"
 ---
-# <a name="idlmodule"></a>idl_module
+# <a name="idl_module"></a>idl_module
 
-.Dll ファイルにエントリ ポイントを指定します。
+.Dll ファイル内のエントリポイントを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -27,45 +27,45 @@ function declaration
 ### <a name="parameters"></a>パラメーター
 
 *name*<br/>
-.Idl ファイルに表示されるコード ブロックのユーザー定義の名前。
+.Idl ファイルに表示されるコードブロックのユーザー定義名。
 
 *dllname*<br/>
-(省略可能)エクスポートを含む .dll ファイルです。
+Optionalエクスポートを格納している .dll ファイル。
 
 *uuid*<br/>
-(省略可能)一意の id。
+Optional一意の ID。
 
 *helpstring*<br/>
-(省略可能)タイプ ライブラリを記述するために使用する文字の文字列。
+Optionalタイプライブラリの説明に使用する文字列。
 
 *helpstringcontext*<br/>
-(省略可能).Hlp や .chm ファイル内のヘルプ トピックの ID。
+Optional.Hlp または .chm ファイル内のヘルプトピックの ID。
 
 *helpcontext*<br/>
-(省略可能)このタイプ ライブラリのヘルプ ID です。
+Optionalこのタイプライブラリのヘルプ ID です。
 
 *hidden*<br/>
-(省略可能)ライブラリが表示されないようにするパラメーター。 詳細については、「 [hidden](/windows/desktop/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
+Optionalライブラリが表示されないようにするパラメーター。 詳細については、「 [hidden](/windows/win32/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
 
 *restricted*<br/>
-(省略可能)ライブラリのメンバーは任意に呼び出すことができません。 詳細については、「 [restricted](/windows/desktop/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
+Optionalライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *関数の宣言*<br/>
-この関数を定義します。
+定義する関数。
 
 ## <a name="remarks"></a>Remarks
 
-**Idl_module** C++ 属性を使用して、.dll ファイルからインポートすることができる .dll ファイルにエントリ ポイントを指定できます。
+**Idl_module** C++属性を使用すると、.dll ファイルのエントリポイントを指定できます。これにより、.dll ファイルからインポートできます。
 
-**Idl_module**属性と同様の機能を持つ、[モジュール](/windows/desktop/Midl/module)MIDL 属性。
+**Idl_module**属性には、 [module](/windows/win32/Midl/module) MIDL 属性と同様の機能があります。
 
-.Idl ファイルのライブラリ ブロックに DLL のエントリ ポイントを配置することで、.dll ファイルからエクスポートできる COM オブジェクトから何もエクスポートできます。
+.Dll ファイルからエクスポートできる COM オブジェクトから任意のものをエクスポートするには、.idl ファイルのライブラリブロックに DLL エントリポイントを配置します。
 
-使用する必要があります**idl_module**で 2 つの手順。 最初に、名前または DLL のペアを定義する必要があります。 次に、使用**idl_module**エントリ ポイントを指定する名前と追加の属性を指定します。
+では、2つの手順で**idl_module**を使用する必要があります。 まず、名前と DLL のペアを定義する必要があります。 次に、 **idl_module**を使用してエントリポイントを指定するときに、名前と追加の属性を指定します。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法を示しています、 **idl_module**属性。
+次のコードは、 **idl_module**属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp

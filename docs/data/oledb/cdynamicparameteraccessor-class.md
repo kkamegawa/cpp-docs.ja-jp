@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a655d95cf165ab2c5cba3a391b81d6f420f8322f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230867"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor クラス
 
@@ -139,7 +139,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 このクラスを使用して、SQL Server のストアド プロシージャを実行し、出力パラメーターの値を取得する方法を示す例では、次を参照してください、 [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプル コード、 [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) 。GitHub のリポジトリ。
 
-## <a name="cdynamicparameteraccessor"></a> Cdynamicparameteraccessor::cdynamicparameteraccessor
+## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor::CDynamicParameterAccessor
 
 コンストラクターです。
 
@@ -165,7 +165,7 @@ BLOB の最大サイズ (バイト単位)この値を列データは、BLOB と�
 
 参照してください、 [cdynamicaccessor::cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) BLOB 処理の詳細については、コンス トラクター。
 
-## <a name="getparam"></a> Cdynamicparameteraccessor::getparam
+## <a name="getparam"></a> CDynamicParameterAccessor::GetParam
 
 パラメーターのバッファーから指定したパラメーターの文字列以外のデータを取得します。
 
@@ -203,7 +203,7 @@ Template 宣言されていないバージョンでは、バッファーから�
 
 使用`GetParam`バッファーから文字列パラメーターのデータを取得します。 使用[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)バッファーから文字列パラメーターのデータを取得します。
 
-## <a name="getparamcount"></a> Cdynamicparameteraccessor::getparamcount
+## <a name="getparamcount"></a> CDynamicParameterAccessor::GetParamCount
 
 バッファーに格納されているパラメーターの数を取得します。
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 パラメーターの数。
 
-## <a name="getparamio"></a> Cdynamicparameteraccessor::getparamio
+## <a name="getparamio"></a> CDynamicParameterAccessor::GetParamIO
 
 指定されたパラメーターが入力または出力パラメーターであるかどうかを判断します。
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 返します**true**成功した場合または**false**失敗します。
 
-## <a name="getparamlength"></a> Cdynamicparameteraccessor::getparamlength
+## <a name="getparamlength"></a> CDynamicParameterAccessor::GetParamLength
 
 バッファーに格納され、指定されたパラメーターの長さを取得します。
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 最初のオーバーライド**true**成功した場合または**false**失敗します。 2 番目のオーバーライド パラメーターの長さを格納しているメモリへのポインター。
 
-## <a name="getparamname"></a> Cdynamicparameteraccessor::getparamname
+## <a name="getparamname"></a> CDynamicParameterAccessor::GetParamName
 
 指定されたパラメーターの名前を取得します。
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 指定されたパラメーターの名前。
 
-## <a name="getparamstatus"></a> Cdynamicparameteraccessor::getparamstatus
+## <a name="getparamstatus"></a> CDynamicParameterAccessor::GetParamStatus
 
 バッファーに格納され、指定されたパラメーターのステータスを取得します。
 
@@ -313,13 +313,13 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。
 
 *pStatus*<br/>
-[out]指定したパラメーターの DBSTATUS 状態を格納する変数へのポインター。 DBSTATUS 値については、次を参照してください。[状態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[out]指定したパラメーターの DBSTATUS 状態を格納する変数へのポインター。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
 
 ### <a name="remarks"></a>Remarks
 
 最初のオーバーライド**true**成功した場合または**false**失敗します。 2 つ目は、指定されたパラメーターの状態を表すメモリへのポインターをオーバーライドします。
 
-## <a name="getparamstring"></a> Cdynamicparameteraccessor::getparamstring
+## <a name="getparamstring"></a> CDynamicParameterAccessor::GetParamString
 
 バッファーに格納され、指定されたパラメーターの文字列データを取得します。
 
@@ -346,7 +346,7 @@ bool GetParamString(DBORDINAL nParam,
 *nParam*<br/>
 [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。
 
-*キャンセルします。*<br/>
+*strOutput*<br/>
 [out]ANSI (`CSimpleStringA`) または Unicode (`CSimpleStringW`)、指定されたパラメーターのデータの文字列します。 型のパラメーターを渡す必要があります`CString`など。
 
 [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
@@ -367,7 +367,7 @@ bool GetParamString(DBORDINAL nParam,
 
 使用`GetParamString`バッファーから文字列パラメーターのデータを取得します。 使用[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)バッファーから文字列パラメーターのデータを取得します。
 
-## <a name="getparamtype"></a> Cdynamicparameteraccessor:getparamtype
+## <a name="getparamtype"></a> CDynamicParameterAccessor::GetParamType
 
 指定されたパラメーターのデータ型を取得します。
 
@@ -383,14 +383,14 @@ bool GetParamType(DBORDINAL nParam,
 *nParam*<br/>
 [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。
 
-*p 入力してください。*<br/>
+*pType*<br/>
 [out]指定したパラメーターのデータ型を格納する変数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 返します**true**成功した場合または**false**失敗します。
 
-## <a name="setparam"></a> Cdynamicparameteraccessor:setparam
+## <a name="setparam"></a> CDynamicParameterAccessor::SetParam
 
 指定された (文字列以外の) データを使用してパラメーターのバッファーを設定します。
 
@@ -414,7 +414,7 @@ bool SetParam(TCHAR* pParamName,
 データ型であるテンプレート パラメーター。
 
 *nParam*<br/>
-[in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 例えば:
+[in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 例:
 
 [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]
 
@@ -425,7 +425,7 @@ bool SetParam(TCHAR* pParamName,
 [in]バッファーに書き込まれるデータを含むメモリへのポインター。
 
 *status*<br/>
-[in]DBSTATUS 列の状態。 DBSTATUS 値については、次を参照してください。[状態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[in]DBSTATUS 列の状態。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -433,7 +433,7 @@ bool SetParam(TCHAR* pParamName,
 
 使用`SetParam`バッファーに文字列パラメーターのデータを設定します。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)をバッファーに文字列パラメーターのデータを設定します。
 
-## <a name="setparamlength"></a> Cdynamicparameteraccessor::setparamlength
+## <a name="setparamlength"></a> CDynamicParameterAccessor::SetParamLength
 
 バッファーに格納され、指定されたパラメーターの長さを設定します。
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 返します**true**成功した場合または**false**失敗します。
 
-## <a name="setparamstatus"></a> Cdynamicparameteraccessor::setparamstatus
+## <a name="setparamstatus"></a> CDynamicParameterAccessor::SetParamStatus
 
 バッファーに格納され、指定されたパラメーターのステータスを設定します。
 
@@ -473,13 +473,13 @@ bool SetParamStatus(DBORDINAL nParam,
 [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。
 
 *status*<br/>
-[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
 
 ### <a name="remarks"></a>Remarks
 
 返します**true**成功した場合または**false**失敗します。
 
-## <a name="setparamstring"></a> Cdynamicparameteraccessor::setparamstring
+## <a name="setparamstring"></a> CDynamicParameterAccessor::SetParamString
 
 バッファーに格納され、指定されたパラメーターの文字列データを設定します。
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in]ANSI へのポインター (**CHAR**) または Unicode (**WCHAR**)、指定されたパラメーターのデータの文字列します。 Oledb.h DBSTATUS を参照してください。
 
 *status*<br/>
-[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
 
 ### <a name="remarks"></a>Remarks
 

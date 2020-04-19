@@ -11,12 +11,12 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: 7bfc80e636a3018e52dec411f17bdf25073cf4c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e86f4000e2da588749ca48887d34c3effdfc3a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297191"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>ドキュメントとビューの初期化と後処理
 
@@ -52,4 +52,3 @@ SDI アプリケーションでは、手順 1 は、ドキュメントが最初�
 ## <a name="see-also"></a>関連項目
 
 [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
-

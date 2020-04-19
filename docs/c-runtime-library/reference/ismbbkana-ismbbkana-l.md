@@ -1,10 +1,10 @@
 ---
 title: _ismbbkana、_ismbbkana_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ac05940f6ae9d0c0bd3cb2f6ea73fe301557be4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440980"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954155"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana、_ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana、_ismbbkana_l
 
 カタカナ シンボルのテスト。コード ページ 932 固有のテストです。
 
@@ -61,7 +64,7 @@ int _ismbbkana_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbkana**場合は、0 以外の値を返します、整数*c*でない場合は 0 またはカタカナ シンボルのです。 **_ismbbkana**ロケールに依存する文字については、現在のロケールを使用します。 **_ismbbkana_l**で渡されたロケール オブジェクトを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbkana**は、整数*c*がカタカナ記号の場合は0以外の値を返し、そうでない場合は0を返します。 **_ismbbkana**は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkana_l**は、渡されたロケールオブジェクトを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

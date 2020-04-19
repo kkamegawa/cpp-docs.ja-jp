@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3370
 ms.assetid: ee6d4c85-78fc-42b2-836e-5cc491a3b2ba
-ms.openlocfilehash: 0dbc95fcb26354b0f963d1844ddd6a43783c532a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c1a9e4e099fc33dd585e5cdbffa2bbb8ea36987
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466171"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755591"
 ---
 # <a name="compiler-error-c3370"></a>コンパイラ エラー C3370
 
@@ -21,7 +21,7 @@ ms.locfileid: "50466171"
 
 次の例では C3370 が生成されます。
 
-```
+```cpp
 // C3370.cpp
 [module(name=MyLibrary)];
 // uncomment the following line to resolve the error

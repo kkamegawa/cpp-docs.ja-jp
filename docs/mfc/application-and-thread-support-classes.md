@@ -11,12 +11,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 5f69ea6a87d0e1ae16a6079a414d623af6dd88fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394677"
 ---
 # <a name="application-and-thread-support-classes"></a>アプリケーションおよびスレッド サポート クラス
 
@@ -74,4 +74,3 @@ Microsoft Foundation Class (MFC) ライブラリでは、複数のアプリケ�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

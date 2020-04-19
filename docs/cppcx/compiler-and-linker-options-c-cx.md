@@ -2,16 +2,16 @@
 title: コンパイラとリンカーのオプション (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383361"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>コンパイラとリンカーのオプション (C++/CX)
 
-環境変数 C + + CX のコンパイラ オプション、およびリンカー オプションは、Windows ランタイム用アプリの構築をサポートします。
+環境変数、 C++/CX コンパイラ オプションとリンカー オプションが、Windows ランタイム アプリの構築をサポートします。
 
 ## <a name="library-path"></a>ライブラリのパス
 
@@ -43,4 +43,4 @@ ms.locfileid: "50577289"
 
 ## <a name="see-also"></a>関連項目
 
-[アプリの構築とライブラリ](../cppcx/building-apps-and-libraries-c-cx.md)
+[アプリとライブラリのビルド](../cppcx/building-apps-and-libraries-c-cx.md)

@@ -1,22 +1,20 @@
 ---
-title: 'テクニカル ノート 24: MFC で定義されているメッセージおよびリソース'
+title: TN024:MFC で定義されているメッセージおよびリソース
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.messages
 helpviewer_keywords:
 - resources [MFC]
 - Windows messages [MFC], MFC-defined
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 300819878bd7422dc8f3970493e303aa52346a58
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639635"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611425"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>テクニカル ノート 24: MFC で定義されているメッセージおよびリソース
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024:MFC で定義されているメッセージおよびリソース
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -162,7 +160,7 @@ MFC のプライベートなリソースの種類は範囲 0xF0 ですでは、0
 
 ## <a name="mfc-private-resource-formats"></a>MFC のプライベート リソースの形式
 
-現時点では、MFC が 2 つのプライベート リソース形式を定義します。 RT_TOOLBAR とリソース形します。
+現時点では、MFC では、2 つのプライベート リソース形式を定義します。RT_TOOLBAR リソース形.
 
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR リソースの形式
 
@@ -172,7 +170,7 @@ AppWizard によって提供される既定のツールバーは、MFC 4.0 で�
 
 MFC のプライベートなリソースの 1 つの形式を使用して、追加のダイアログの初期化情報を格納します。 これには、コンボ ボックスに格納されている最初の文字列が含まれています。 このリソースの形式は、手動で編集するものはありませんが、Visual C によって処理されます。
 
-Visual C とこのリソース形リソースは、リソースの情報を使用する代わりに API があるので、MFC の関連機能を使用する必要はありません。 Visual C を使用すると、記述、保守、および長期的にアプリケーションを変換するはるかに簡単になります。
+VisualC++とこのリソース形リソースがリソースの情報を使用する代わりに API があるので、MFC の関連機能を使用する必要はありません。 Visual C を使用すると、記述、保守、および長期的にアプリケーションを変換するはるかに簡単になります。
 
 リソース形リソースの基本的な構造は次のとおりです。
 
@@ -197,10 +195,9 @@ Visual C とこのリソース形リソースは、リソースの情報を使�
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-これは、任意の Windows メッセージおよびデータ コンテンツを許可する、非常に一般的な形式です。 Windows メッセージの限定されたサブセットのみをサポート、Visual C リソース エディターと MFC: CB_ADDSTRING (データはテキスト文字列) コンボ ボックスの一覧の初期選択します。
+これは、任意の Windows メッセージおよびデータ コンテンツを許可する、非常に一般的な形式です。 Visual C リソース エディターと MFC は、Windows メッセージの限定されたサブセットしかサポートします。(データはテキスト文字列) コンボ ボックスの一覧の初期選択 CB_ADDSTRING します。
 
 ## <a name="see-also"></a>関連項目
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

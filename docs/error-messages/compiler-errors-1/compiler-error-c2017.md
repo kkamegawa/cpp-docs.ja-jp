@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2017
+title: コンパイラエラー C2017
 ms.date: 11/04/2016
 f1_keywords:
 - C2017
 helpviewer_keywords:
 - C2017
 ms.assetid: 1083eed9-9906-4a97-883c-54e52d7e82cd
-ms.openlocfilehash: f4a17557e5e4ca1eb3f69561c964c9bbe24bb70d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3911ef9af2eb0fab7d0f9296ddce8a0f9b32ae0d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440366"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751054"
 ---
-# <a name="compiler-error-c2017"></a>コンパイラ エラー C2017
+# <a name="compiler-error-c2017"></a>コンパイラエラー C2017
 
-無効なエスケープ シーケンス
+無効なエスケープシーケンスです。
 
-文字または文字列の外部で、\t など、エスケープ シーケンスが表示される定数。
+\T などのエスケープシーケンスは、文字または文字列定数の外側に出現します。
 
 次の例では、C2017 が生成されます。
 
-```
+```cpp
 // C2017.cpp
 int main() {
    char test1='a'\n;   // C2017
@@ -29,11 +29,11 @@ int main() {
 }
 ```
 
-C2017 は、エスケープ シーケンスを含む文字列を含む文字列化演算子を使用する場合に発生することができます。
+C2017 は、エスケープシーケンスを含む文字列で stringize 演算子が使用されている場合に発生する可能性があります。
 
 次の例では、C2017 が生成されます。
 
-```
+```cpp
 // C2017b.cpp
 #define TestDfn(x) AfxMessageBox(#x)
 TestDfn(CString("\\") + CString(".h\"\n\n"));   // C2017

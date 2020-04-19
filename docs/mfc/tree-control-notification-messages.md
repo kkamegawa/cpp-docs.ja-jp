@@ -8,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-ms.openlocfilehash: e187e08f894eeac37c8ad27aea45a1c8568c8a9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90e2e112d7862dfed7d8af31cfb72ff45633a2c1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181642"
 ---
 # <a name="tree-control-notification-messages"></a>ツリー コントロールの通知メッセージ
 
@@ -38,4 +38,3 @@ ms.locfileid: "50508178"
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2079
+title: コンパイラエラー C2079
 ms.date: 11/04/2016
 f1_keywords:
 - C2079
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621664"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757723"
 ---
-# <a name="compiler-error-c2079"></a>コンパイラ エラー C2079
+# <a name="compiler-error-c2079"></a>コンパイラエラー C2079
 
-'identifier' が定義されていないクラス、構造体、共用 'name' を使用します。
+' identifier ' は未定義のクラス/構造体/共用体 ' name ' を使用します
 
-指定された識別子が、未定義のクラス、構造体または共用体です。
+指定された識別子は、未定義のクラス、構造体、または共用体です。
 
-このエラーは、無名共用体を初期化することによって発生することができます。
+このエラーは、匿名共用体を初期化することによって発生することがあります。
 
 次の例では、C2079 が生成されます。
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -32,9 +32,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-C2079 は、前方宣言がスコープ内でのみが型のスタックにオブジェクトを宣言しようとした場合にも発生します。
+C2079 は、前方宣言がスコープ内にのみ存在する型のスタック上でオブジェクトを宣言しようとした場合にも発生する可能性があります。
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -56,9 +56,9 @@ class B {
 class A {};
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

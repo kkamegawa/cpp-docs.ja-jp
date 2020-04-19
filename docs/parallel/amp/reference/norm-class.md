@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 2d37dcb430be9941444a90ac0a4ba34f3ee30515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630764"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126514"
 ---
 # <a name="norm-class"></a>norm クラス
 
-Norm 数を表します。 各要素は、浮動小数点の数値の範囲内で [-1.0 f、1.0 f]。
+標準数値を表します。 各要素は、[-1.0 f, 1.0 f] の範囲の浮動小数点数です。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class norm;
 ```
 
@@ -27,20 +27,20 @@ class norm;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[norm コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター 0.0f を初期化します。|
+|[標準コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクターです。 を 0.0 f に初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|norm::operator-||
+|基準:: operator-||
 |norm::operator--||
-|norm::operator float|変換演算子。 Norm 数値に変換、浮動小数点値。|
+|基準:: operator float|変換演算子。 標準数を浮動小数点値に変換します。|
 |norm::operator*=||
 |norm::operator/=||
-|norm::operator +||
+|基準:: operator + +||
 |norm::operator+=||
 |norm::operator=||
 |norm::operator-=||
@@ -49,17 +49,17 @@ class norm;
 
 `norm`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> norm
+## <a name="ctor"></a>満た
 
-既定のコンストラクター 0.0f を初期化します。
+既定のコンストラクターです。 を 0.0 f に初期化します。
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -91,12 +91,12 @@ norm(
 
 ### <a name="parameters"></a>パラメーター
 
-*(_V).*<br/>
-初期化するために使用される値。
+*_V*<br/>
+の初期化に使用される値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

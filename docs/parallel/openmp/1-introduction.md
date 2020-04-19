@@ -3,11 +3,11 @@ title: 1. はじめに
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
 ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236451"
 ---
 # <a name="1-introduction"></a>1.はじめに
 
@@ -131,7 +131,7 @@ OpenMP API 仕様は、C を参照している場合は、基本実装でサポ�
 
 ## <a name="16-organization"></a>1.6 階層
 
-- [ランタイム ライブラリ関数](3-run-time-library-functions.md)
+- [ランタイム ライブラリの関数](3-run-time-library-functions.md)
 - [環境変数](4-environment-variables.md)
-- [OpenMP C/C の実装で定義された動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+- [OpenMP C/C++ の実装で定義されている動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 - [OpenMP C と C++ のバージョン 2.0 の新機能](f-new-features-and-clarifications-in-version-2-0.md)

@@ -1,21 +1,21 @@
 ---
 title: binary_function 構造体
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acbcb7496b7e6b37af61c5eb7a113c77855e6928
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466769"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243396"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 構造体
 
-二項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底構造体。
+二項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底構造体。 C++ 11、c++ 17 では削除では、非推奨とされます。
 
 ## <a name="syntax"></a>構文
 
@@ -24,14 +24,14 @@ struct binary_function {
    typedef Arg1 first_argument_type;
    typedef Arg2 second_argument_type;
    typedef Result result_type;
-   };
+};
 ```
 
 ## <a name="remarks"></a>Remarks
 
 このテンプレート構造体は、フォームのメンバー関数を定義するクラスの基本として機能します。
 
-> *result_type* * * operator() (const * * <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**(& a)) 定数**
+> *result_type* * * operator() (const * * <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **(& a)) 定数**
 
 このような二項関数はすべて、最初の引数の型として *first_argument_type* を参照し、2 つ目の引数の型として *second_argument_type* を参照し、戻り値の型として *result_type* を参照できます。
 
@@ -88,20 +88,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )
 The vector v2 = ( -0 -2 -4 -6 -8 -10 )
 The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
-*/
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

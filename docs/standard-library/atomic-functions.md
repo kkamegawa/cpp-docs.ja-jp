@@ -62,12 +62,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533758"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459610"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 関数
 
@@ -104,18 +104,18 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
-ポインター、*アトミック*型の値を格納するオブジェクト`Ty`します。
+*Atom*\
+型`Ty`の値を格納する*atomic*オブジェクトへのポインター。
 
-*Exp*<br/>
+*期限*\
 `Ty` 型の値へのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
-**true**値が等しい場合**false**します。
+値が等しい場合は**true** 、それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -145,28 +145,28 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*Exp*<br/>
+*期限*\
 `Ty` 型の値へのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
-*Order1*<br/>
+*Order1*\
 最初の [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数。
 
-*Order2*<br/>
-2 番目の `memory_order` 引数。 値*Order2*することはできません`memory_order_release`または`memory_order_acq_rel`の値よりも強力にすることはできません*Order1*します。
+*Order2*\
+2 番目の `memory_order` 引数。 *Order2*の値をまたは`memory_order_release` `memory_order_acq_rel`にすることはできません。 *Order1*の値よりも強くすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
-**true**値が等しい場合**false**します。
+値が等しい場合は**true** 、それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-*アトミック比較および交換操作*が指すオブジェクトに格納されている値と比較します*Atom*が指す値に対して*Exp*します。場合は、値が等しい、値が指すオブジェクトに格納されている*atom*は置き換え*値*を使用して、`read-modify-write`操作しているメモリ順序制約を適用します。指定された*Order1*します。 操作が指す値を置換値が等しくない場合は、 *Exp*が指すオブジェクトに格納されている値を持つ*Atom*はメモリ順序制約を適用指定された*Order2*します。
+*アトミックの比較および交換操作*では、 *Atom*が指すオブジェクトに格納されている値を、 *Exp*が指す値と比較します。値が等しい場合、 *atom*によってポイントされるオブジェクトに格納されている値は、 `read-modify-write`操作を使用し、 *Order1*によって指定されたメモリ順序制約を適用することによって*値*に置き換えられます。 値が等しくない場合、操作は*Exp*が指す値を、 *Atom*が指すオブジェクトに格納されている値に置き換え、 *Order2*で指定されたメモリ順序制約を適用します。
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 
@@ -188,18 +188,18 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*Exp*<br/>
+*期限*\
 `Ty` 型の値へのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
-**true**値が等しい場合**false**します。
+値が等しい場合は**true** 、それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -229,32 +229,32 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*Exp*<br/>
+*期限*\
 `Ty` 型の値へのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
-*Order1*<br/>
+*Order1*\
 最初の [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数。
 
-*Order2*<br/>
-2 番目の `memory_order` 引数。 値*Order2*することはできません`memory_order_release`または`memory_order_acq_rel`の値よりも強くすることも*Order1*します。
+*Order2*\
+2 番目の `memory_order` 引数。 *Order2*の値をまたは`memory_order_release`に`memory_order_acq_rel`することはできません。また、 *Order1*の値よりも強力にすることもできません。
 
 ### <a name="return-value"></a>戻り値
 
-**true**値が等しい場合**false**します。
+値が等しい場合は**true** 、それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-強力と脆弱の両方の種類、*アトミック比較および交換操作*保証を保存しない新しい値、予想されると、現在の値が等しくない場合。 予想されると、現在の値が等しい場合に、新しい値を格納、強力なフレーバーが保証されます。 弱いフレーバーが返される場合があります**false**現在と予期される値が等しい場合でも、新しい値が格納されません。 つまり、関数は**false**が予期される値の後で調べることがあります、変更はありませんし、等価比較が必要があります。
+*アトミックの比較および交換操作*の強いフレーバーと弱いフレーバーは、予期される値と現在の値が等しくない場合に、新しい値が格納されないことを保証します。 強いフレーバーは、予期される値と現在の値が等しい場合に、新しい値を格納することを保証します。 弱いフレーバーは、現在の値と予期される値が等しい場合でも、 **false**を返し、新しい値を格納しないことがあります。 つまり、関数は**false**を返しますが、予期された値を後で調べることによって、変更されていないことがわかる場合があるため、等しいと比較する必要があります。
 
 ## <a name="atomic_exchange"></a>  atomic_exchange
 
-使用して*値*の格納されている値を置換する*Atom*します。
+*値*を使用して、格納されている*Atom*の値を置き換えます。
 
 ```cpp
 template <class T>
@@ -266,23 +266,23 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
-格納されている値*Atom*交換する前にします。
+Exchange より前の*Atom*の格納された値。
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_exchange`関数の実行、`read-modify-write`に格納されている値を交換する操作*Atom*で*値*を使用して、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+関数`atomic_exchange`は、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)を使用し`memory_order_seq_cst`て、 *Atom*に格納されている値を*値*と交換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit
 
-ストアドの値の置換*Atom*で*値*します。
+*Atom*の格納されている値を*値*に置き換えます。
 
 ```cpp
 template <class Ty>
@@ -300,22 +300,22 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
-格納されている値*Atom*交換する前にします。
+Exchange より前の*Atom*の格納された値。
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_exchange_explicit`関数の実行、`read-modify-write`に格納されている値を交換する操作*Atom*で*値*で指定されているメモリ制約内で*順序*します。
+関数`atomic_exchange_explicit`は、Order `read-modify-write`によって指定されたメモリ制約内で、 *Atom*に格納されている値を*値*と交換する操作を実行します。
 
 ## <a name="atomic_fetch_add"></a>  atomic_fetch_add
 
@@ -330,10 +330,10 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -342,9 +342,9 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_add`関数を実行、`read-modify-write`操作をアトミックに加算する*値*で格納されている値に*Atom*を使用して、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約。
+関数`atomic_fetch_add`は、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約を使用して`memory_order_seq_cst`、 *Atom*で格納されている値に*値*をアトミックに追加する操作を`read-modify-write`実行します。
 
-場合、atomic 型は`atomic_address`、*値*型を持つ`ptrdiff_t`操作は、格納されたポインターとして処理し、`char *`します。
+アトミック型が`atomic_address`の場合、 *Value*には`ptrdiff_t`型があり、 `char *`操作はとして格納されているポインターを処理します。
 
 この操作は、整数型に対してもオーバーロードします。
 
@@ -374,10 +374,10 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -386,7 +386,7 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_add_explicit`関数の実行、`read-modify-write`操作をアトミックに加算する*値*で格納されている値に*Atom*内で、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約指定されている`Order`します。
+関数`atomic_fetch_add_explicit`は、に`read-modify-write`よって 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、Atomの格納されている値に値をアトミックに追加する`Order`操作を実行します。
 
 アトミック型が `atomic_address` の場合、`Value` に `ptrdiff_t` 型があり、操作は `char *` として格納されているポインターを処理します。
 
@@ -417,10 +417,10 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `T` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -429,7 +429,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_and`関数を実行、`read-modify-write`の格納されている値を置き換える操作*Atom*をビットごと`and`の*値*に格納されている現在の値と*Atom*を使用して、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約。
+関数`atomic_fetch_and`は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 制約を使用して、 *atom*の格納された`and`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit
 
@@ -451,13 +451,13 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `T` 型の値。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
@@ -466,7 +466,7 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_and_explicit`関数を実行、`read-modify-write`の格納されている値を置き換える操作*Atom*をビットごと`and`の*値*に格納されている現在の値と*Atom*で指定されているメモリ制約内で*順序*します。
+関数`atomic_fetch_and_explicit`は、指定`read-modify-write`されたメモリ制約内で、 *atom*の格納`and`されている値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を実行します。*順*に並べ替えます。
 
 ## <a name="atomic_fetch_or"></a>  atomic_fetch_or
 
@@ -481,10 +481,10 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `T` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -493,7 +493,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_or`関数を実行、`read-modify-write`の格納されている値を置き換える操作*Atom*をビットごと`or`の*値*に格納されている現在の値と*Atom*を使用して、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+関数`atomic_fetch_or`は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) を使用して、 *atom*の格納された`or`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit
 
@@ -515,13 +515,13 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `T` 型の値。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
@@ -530,7 +530,7 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_or_explicit`関数を実行、`read-modify-write`の格納されている値を置き換える操作*Atom*をビットごと`or`の*値*に格納されている現在の値と*Atom*内で、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)で指定された制約*順序*します。
+関数`atomic_fetch_or_explicit`は、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、 *atom*の格納されている`or`値を、値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。*順序*によって指定されます。
 
 ## <a name="atomic_fetch_sub"></a>  atomic_fetch_sub
 
@@ -550,10 +550,10 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -562,9 +562,9 @@ T* atomic_fetch_sub(
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_sub`関数の実行、`read-modify-write`操作がアトミックに減算する*値*で格納されている値から*Atom*を使用して、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約。
+関数`atomic_fetch_sub`は、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約を使用して`memory_order_seq_cst`、 *Atom*の格納されている値から*値*をアトミックに減算する操作を`read-modify-write`実行します。
 
-場合、atomic 型は`atomic_address`、*値*型を持つ`ptrdiff_t`操作は、格納されたポインターとして処理し、`char *`します。
+アトミック型が`atomic_address`の場合、 *Value*には`ptrdiff_t`型があり、 `char *`操作はとして格納されているポインターを処理します。
 
 この操作は、整数型に対してもオーバーロードします。
 
@@ -592,10 +592,10 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型のポインターが格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `ptrdiff_t` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -604,9 +604,9 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_sub_explicit`関数の実行、`read-modify-write`操作がアトミックに減算する*値*で格納されている値から*Atom*内で、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)指定されている制約`Order`します。
+関数`atomic_fetch_sub_explicit`は、に`read-modify-write`よって 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、Atomの格納されている値から値をアトミックに減算するために、`Order`操作を実行します。
 
-場合、atomic 型は`atomic_address`、*値*型を持つ`ptrdiff_t`操作は、格納されたポインターとして処理し、`char *`します。
+アトミック型が`atomic_address`の場合、 *Value*には`ptrdiff_t`型があり、 `char *`操作はとして格納されているポインターを処理します。
 
 この操作は、整数型に対してもオーバーロードします。
 
@@ -636,10 +636,10 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `T` 型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -648,7 +648,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_xor`関数を実行、`read-modify-write`の格納されている値を置き換える操作*Atom*をビットごと`exclusive or`の*値*に格納されている現在の値と*Atom*を使用して、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+関数`atomic_fetch_xor`は、[memory_order](../standard-library/atomic-enums.md#memory_order_enum) を使用し`memory_order_seq_cst`て、 *atom*の格納された`exclusive or`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit
 
@@ -670,13 +670,13 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `T` 型の値。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
@@ -685,11 +685,11 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_fetch_xor_explicit`関数を実行、`read-modify-write`の格納されている値を置き換える操作*Atom*をビットごと`exclusive or`の*値*に格納されている現在の値と*Atom*内で、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)で指定されている制約*順序*します。
+関数`atomic_fetch_xor_explicit`は、 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、 *atom*の格納されている`exclusive or`値を、値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。*順序*によって指定されます。
 
 ## <a name="atomic_flag_clear"></a>  atomic_flag_clear
 
-セット、 **bool**フラグ、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトを**false**内で、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+`memory_order_seq_cst` [Memory_order](../standard-library/atomic-enums.md#memory_order_enum)内で、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトの**bool**フラグを**false**に設定します。
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -698,12 +698,12 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*<br/>
+*誤り*\
 `atomic_flag` オブジェクトへのポインター。
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
-セット、 **bool**フラグ、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトを**false**、指定した[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約。
+指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトの**bool**フラグを**false**に設定します。
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -712,15 +712,15 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*<br/>
+*誤り*\
 `atomic_flag` オブジェクトへのポインター。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
-セット、 **bool**フラグ、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトを**true**の制約内で、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)します。
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum)の制約`memory_order_seq_cst`内で、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトの**bool**フラグを**true**に設定します。
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -729,16 +729,16 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*<br/>
+*誤り*\
 `atomic_flag` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-初期値*フラグ*します。
+*フラグ*の初期値。
 
 ## <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit
 
-セット、 **bool**フラグ、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトを**true**、指定した[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約。
+指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、 [atomic_flag](../standard-library/atomic-flag-structure.md)オブジェクトの**bool**フラグを**true**に設定します。
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -747,15 +747,15 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>パラメーター
 
-*フラグ*<br/>
+*誤り*\
 `atomic_flag` オブジェクトへのポインター。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>戻り値
 
-初期値*フラグ*します。
+*フラグ*の初期値。
 
 ## <a name="atomic_init"></a>  atomic_init
 
@@ -770,10 +770,10 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
 ### <a name="remarks"></a>Remarks
@@ -793,12 +793,12 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `T` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合に対するアトミック操作*Atom*ロックしない場合は**false**します。
+*Atom*に対するアトミック操作がロックフリーである場合は**true** 。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -817,12 +817,12 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-取得した値に格納されている*Atom*します。
+*Atom*に格納されている取得値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -841,15 +841,15 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 `memory_order_release` または `memory_order_acq_rel` を使用しないでください。
 
 ### <a name="return-value"></a>戻り値
 
-取得した値に格納されている*Atom*します。
+*Atom*に格納されている取得値。
 
 ## <a name="atomic_signal_fence"></a>  atomic_signal_fence
 
@@ -861,12 +861,12 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*順序*<br/>
+*順序*\
 フェンスの種類を決定するメモリ オーダリングの制約。
 
 ### <a name="remarks"></a>Remarks
 
-*順序*引数は、フェンスの種類を決定します。
+*順序*引数はフェンスの種類を決定します。
 
 |||
 |-|-|
@@ -890,15 +890,15 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `Ty` 型の値が格納されたアトミック オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_store` 格納*値*が指すオブジェクトに*Atom*内で、 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約。
+`atomic_store`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内`memory_order_seq_cst`で、 *Atom*によってポイントされているオブジェクトに*値*を格納します。
 
 ## <a name="atomic_store_explicit"></a>  atomic_store_explicit
 
@@ -920,18 +920,18 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>パラメーター
 
-*Atom*<br/>
+*Atom*\
 `atomic` 型の値が格納された `Ty` オブジェクトへのポインター。
 
-*[値]*<br/>
+*数値*\
 `Ty` 型の値。
 
-*順序*<br/>
+*順序*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 `memory_order_consume`、`memory_order_acquire`、または `memory_order_acq_rel` を使用しないでください。
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_store` 格納*値*が指すオブジェクトに*Atom*内で、`memory_order`で指定された*順序*します。
+`atomic_store`*順序*によって指定された内`memory_order`で、 *Atom*によってポイントされるオブジェクトに*値*を格納します。
 
 ## <a name="atomic_thread_fence"></a>  atomic_thread_fence
 
@@ -943,12 +943,12 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*順序*<br/>
+*順序*\
 フェンスの種類を決定するメモリ オーダリングの制約。
 
 ### <a name="remarks"></a>Remarks
 
-*順序*引数は、フェンスの種類を決定します。
+*順序*引数はフェンスの種類を決定します。
 
 |||
 |-|-|
@@ -970,13 +970,13 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*arg*<br/>
+*Arg*\
 `Ty` 型の値。
 
 ### <a name="return-value"></a>戻り値
 
-戻り値は*Arg*します。 評価*Arg*関数呼び出しに依存関係を伝達しません。 可能な依存関係チェーンを分割することで、関数はより効率的なコードを生成することをコンパイラに許可できます。
+戻り値は*Arg*です。 *Arg*の評価は関数呼び出しに依存しません。 可能な依存関係チェーンを分割することで、関数はより効率的なコードを生成することをコンパイラに許可できます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

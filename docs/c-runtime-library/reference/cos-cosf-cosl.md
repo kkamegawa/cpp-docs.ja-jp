@@ -1,11 +1,11 @@
 ---
 title: cos、cosf、cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519897"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942832"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -62,20 +65,20 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-コサイン*x*します。 場合*x*が 263 以上で、または少ないよりまたは-263 等しくは、結果の有効桁数の損失が発生します。
+*X*のコサイン。 *X*が263以上、または-263 以下の場合は、結果の有意性が失われます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|**(_D)**|
-|± INF|**無効です**|**(_D)**|
+|± QNAN、IND|none|**_DOMAIN**|
+|± INF|**無効です**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cos**を受け取って返す**float**または**長い****二重**値。 C プログラムで**cos**は、**二重**します。
+でC++はオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**cos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cos**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -83,7 +86,7 @@ long double cos( long double x );  // C++ only
 
 ## <a name="example"></a>例
 
-例を参照してください。 [sin、sinf、sinl](sin-sinf-sinl.md)します。
+[Sin、sinf、sinf](sin-sinf-sinl.md)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

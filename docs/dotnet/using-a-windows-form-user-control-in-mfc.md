@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384492"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>MFC での Windows フォーム ユーザー コントロールの使用
 
@@ -34,7 +34,7 @@ MFC Windows フォームのサポート クラスを使用してホストでき�
 > [!NOTE]
 > MFC Windows フォーム インターフェイス (mfcmifc80.dll へ) を DLL の場合は、プライベート (変更) コピーを使用してアプリケーションをビルドするときに、ベンダー独自キーを使用して Microsoft キーを交換しない限り、GAC にインストールするには失敗します。 アセンブリの署名の詳細については、次を参照してください。[アセンブリを使ったプログラミング](/dotnet/framework/app-domains/programming-with-assemblies)と[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)します。
 
-MFC アプリケーションでは、Windows フォームを使用する場合は、アプリケーションと共に mfcmifc80.dll への再配布する必要があります。 詳細については、次を参照してください。 [MFC ライブラリの再頒布](../ide/redistributing-the-mfc-library.md)します。
+MFC アプリケーションでは、Windows フォームを使用する場合は、アプリケーションと共に mfcmifc80.dll への再配布する必要があります。 詳細については、次を参照してください。 [MFC ライブラリの再頒布](../windows/redistributing-the-mfc-library.md)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

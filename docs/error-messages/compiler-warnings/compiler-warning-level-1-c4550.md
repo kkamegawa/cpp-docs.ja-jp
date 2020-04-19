@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-ms.openlocfilehash: eff3548ef43075a86f52086caf9b79158ad70cb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c310855ee3925374de8b736cde9013d48df6482
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640766"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966381"
 ---
 # <a name="compiler-warning-level-1-c4550"></a>コンパイラの警告 (レベル 1) C4550
 
-式には、引数リストのない関数
+式は引数リストのない関数に評価されます
 
-関数への逆参照されたポインターには、引数リストがありません。
+関数への逆参照ポインターに引数リストがありません。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4550.cpp
 // compile with: /W1
 bool f()

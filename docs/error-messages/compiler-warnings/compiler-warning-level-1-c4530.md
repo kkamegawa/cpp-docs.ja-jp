@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-ms.openlocfilehash: a542f9b6bb73e561592e1e779aa6ee493612e6ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3139d321bca64b9938badebdabccd3ca1eb96d11
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554097"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966259"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>コンパイラの警告 (レベル 1) C4530
 
-C++ 例外処理を使って、アンワインド セマンティクスは有効になりません。 /EHsc を指定します。
+C++例外ハンドラーが使用されていますが、アンワインドセマンティクスが有効になっていません。 /EHsc を指定する
 
-C++ 例外処理が使用されましたが、 [/EHsc](../../build/reference/eh-exception-handling-model.md)が選択されていません。
+C++例外処理が使用されましたが、 [/ehsc](../../build/reference/eh-exception-handling-model.md)は選択されていませんでした。
 
-/EHsc オプションが有効になっていない場合、関数のスローを行うと、関数のスローをキャッチの間、フレームに自動ストレージを持つオブジェクトは破棄されません。 ただし、自動ストレージを持つオブジェクトで作成、**お試しください**または**キャッチ**ブロックは破棄されます。
+/EHsc オプションが有効になっていない場合、フレーム内の自動ストレージを持つオブジェクトは、スローを行う関数とスローをキャッチする関数の間に破棄されません。 ただし、 **try**ブロックまたは**catch**ブロックで作成された自動ストレージを持つオブジェクトは破棄されます。
 
 次の例では、C4530 が生成されます。
 
-```
+```cpp
 // C4530.cpp
 // compile with: /W1
 int main() {
@@ -31,4 +31,4 @@ int main() {
 }
 ```
 
-/EHsc、警告を解決するのには、サンプルをコンパイルします。
+この警告を解決するには、/EHsc を使用してサンプルをコンパイルします。

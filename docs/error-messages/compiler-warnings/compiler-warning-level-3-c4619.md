@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4619
 ms.assetid: 701fea21-01aa-4bea-93d4-1cb8824170b0
-ms.openlocfilehash: 00647e7dafe18ffad2a059b960ebed0a0f4a5d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 658e52a2349f070def1efb80ca8a1cd93abca0cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580262"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991957"
 ---
 # <a name="compiler-warning-level-3-c4619"></a>コンパイラの警告 (レベル 3) C4619
 
-\#pragma 警告: 警告番号 'number' がありません
+\#pragma warning: 警告番号 ' number ' がありません
 
 存在しない警告を無効にしようとしました。
 
@@ -23,7 +23,7 @@ ms.locfileid: "50580262"
 
 次の例では、C4619 が生成されます。
 
-```
+```cpp
 // C4619.cpp
 // compile with: /W3 /c
 #pragma warning(default : 4619)

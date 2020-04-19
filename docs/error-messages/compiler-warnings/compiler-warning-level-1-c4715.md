@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: f165ea3b54b78e2f8fae995815e309d55101244e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 268a26f5de1bb7f757a8e7cba6d3f5e6ddff882e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501232"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052479"
 ---
 # <a name="compiler-warning-level-1-c4715"></a>コンパイラの警告 (レベル 1) C4715
 
-'function': 値を返さないコントロール パスのすべて
+' function ': すべてのコントロールパスが値を返すわけではありません
 
-指定された関数は、値を返すない可能性のあることができます。
+指定された関数は、値を返さない可能性があります。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4715a.cpp
 // compile with: /W1 /LD
 int func1( int i )
@@ -31,9 +31,9 @@ int func1( int i )
 }
 ```
 
-この警告を防ぐためには、すべてのパスは、関数に戻り値を割り当てるようにコードを変更します。
+この警告を回避するには、すべてのパスが関数に戻り値を割り当てるようにコードを変更します。
 
-```
+```cpp
 // C4715b.cpp
 // compile with: /LD
 int func1( int i )
@@ -43,9 +43,9 @@ int func1( int i )
 }
 ```
 
-コードが、次の例のようにを返すことはありません関数の呼び出しを含めることができますことができます。
+次の例のように、コードにが返されることがない関数の呼び出しが含まれている可能性があります。
 
-```
+```cpp
 // C4715c.cpp
 // compile with: /W1 /LD
 void fatal()
@@ -62,4 +62,4 @@ int glue()
 }
 ```
 
-このコードは、コンパイラが知らないのでするも、警告を生成`fatal`返すことはありません。 このコードは、エラー メッセージが生成されないように、宣言`fatal`を使用して[__declspec(noreturn)](../../cpp/noreturn.md)します。
+また、このコードでは、`fatal` が返されないことをコンパイラが認識しないため、警告が生成されます。 このコードによってエラーメッセージが生成されないようにするには、 [__declspec (noreturn)](../../cpp/noreturn.md)を使用して `fatal` を宣言します。

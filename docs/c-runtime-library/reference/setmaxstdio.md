@@ -1,9 +1,9 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
-apiname:
+ms.date: 05/21/2019
+api_name:
 - _setmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
@@ -25,45 +28,45 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445085"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948218"
 ---
-# <a name="setmaxstdio"></a>_setmaxstdio
+# <a name="_setmaxstdio"></a>_setmaxstdio
 
-同時に開かれるファイルの数の最大値の設定、 **stdio**レベル。
+ストリーム入出力のレベルで同時に開かれるファイルの数の最大値を設定します。
 
 ## <a name="syntax"></a>構文
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*newmax*<br/>
-同時に開かれるファイルの数の新しい最大値、 **stdio**レベル。
+*new_max*<br/>
+ストリーム入出力のレベルで同時に開かれるファイルの数の最大値。
 
 ## <a name="return-value"></a>戻り値
 
-返します*newmax*成功した場合はそれ以外の場合は-1。
+正常に終了した場合は *new_max* を返し、それ以外の場合は –1 を返します。
 
-場合*newmax*がより小さい **_IOB_ENTRIES** 」の説明に従って、オペレーティング システム、無効なパラメーター ハンドラーで使用できるハンドルの最大数が呼び出されるより大きいまたは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、この関数は-1 を返し、セットを許可された場合**errno**に**EINVAL**します。
+*new_max* が **_IOB_ENTRIES** より小さいか、オペレーティング システムで使用できるハンドルの最大数より大きい場合には、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Setmaxstdio**関数で同時に開かれるファイルの数の最大値を変更する、 **stdio**レベル。
+**_setmaxstdio** 関数は、ストリーム入出力のレベルで同時に開かれるファイル数の最大値を変更します。
 
-C ランタイム I/O では、Win32 プラットフォームで、以前のバージョンよりも多くの開いているファイルをサポートするようになりました。 最大で 2,048 ファイルで同時に開くことができます、 [lowio レベル](../../c-runtime-library/low-level-i-o.md)(つまり、開かれ、してアクセス、**開く (_o)**、 **_read**、 **_write**の I/O 関数ファミリなど)。 最大で 512 ファイルで同時に開くことができます、 [stdio レベル](../../c-runtime-library/stream-i-o.md)(つまり、開かれのアクセス、 **fopen**、 **fgetc**、 **fputc**、関数のファミリなど)。 512 の開いているファイルでの制限、 **stdio**で 2,048 の最大レベルを上げることができます、 **_setmaxstdio**関数。
+C ランタイム入出力では現在、[低入出力レベル](../../c-runtime-library/low-level-i-o.md)で最大 8,192 のファイルを同時に開くことができます。 このレベルには、入出力の **_open**、 **_read**、 **_write** の関数ファミリを使用して開いたり、アクセスしたりできるファイルが含まれます。 既定では、この[ストリーム入出力レベル](../../c-runtime-library/stream-i-o.md)では最大 512 のファイルを同時に開くことができます。 このレベルには、**fopen**、**fgetc**、**fputc** の関数ファミリを使用して開いたり、アクセスしたりできるファイルが含まれます。 このストリーム入出力レベルで開くことができる最大ファイル数 512 は、 **_setmaxstdio** 関数を使うことで、8,192 の最大値へ引き上げることができます。
 
-**Stdio**-レベルなどの関数**fopen**の上に構築された、 **lowio**関数、2,048 の最大値は、数の上限に同時にC ランタイム ライブラリによってアクセスされるファイルを開きます。
+**fopen** などのストリーム入出力レベルの関数は低入出力レベルの関数の上に構築されているため、8,192 という最大値は、C ランタイム ライブラリによってアクセスされる同時に開いているファイルの数の固定された上限です。
 
 > [!NOTE]
 > この上限は、特定の Win32 プラットフォームと構成でサポートされる上限を超える可能性があります。
@@ -78,7 +81,7 @@ C ランタイム I/O では、Win32 プラットフォームで、以前のバ�
 
 ## <a name="example"></a>例
 
-参照してください[_getmaxstdio](getmaxstdio.md)の使用例については **_setmaxstdio**します。
+**_setmaxstdio** の使用例については、「[_getmaxstdio](getmaxstdio.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4138
 ms.assetid: 65ebf929-bba0-4237-923b-c1b66adfe17d
-ms.openlocfilehash: 96f8915b9bec166496ca4305d796ce8ef514ca15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6e368f27371b744efa4006630938f68f51a2ca0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481680"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627093"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>コンパイラの警告 (レベル 1) C4138
 
@@ -21,7 +21,7 @@ ms.locfileid: "50481680"
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4138a.cpp
 // compile with: /W1
 int */*comment*/ptr;   // C4138 Ambiguous first delimiter causes warning
@@ -34,7 +34,7 @@ int main()
 
 この警告は、コメントを含むコードのセクションをコメント アウトして、 **#if/#endif** ブロックでコードを囲み、制御式を 0 に設定すると、解決する場合があります。
 
-```
+```cpp
 // C4138b.cpp
 // compile with: /W1
 #if 0

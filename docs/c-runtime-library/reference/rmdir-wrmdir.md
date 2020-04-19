@@ -1,10 +1,10 @@
 ---
 title: _rmdir、_wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328002"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949214"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir、_wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir、_wrmdir
 
 ディレクトリを削除します。
 
@@ -62,7 +65,7 @@ int _wrmdir(
 
 ## <a name="return-value"></a>戻り値
 
-ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示しますと**errno**値は次のいずれかに設定されます。
+ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
@@ -74,9 +77,9 @@ int _wrmdir(
 
 ## <a name="remarks"></a>Remarks
 
-**_Rmdir**関数で指定されたディレクトリを削除します。 *dirname*します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
+Dirname**関数は、** *dirname*によって指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
 
-**_wrmdir**のワイド文字バージョンです **_rmdir**、 *dirname*引数 **_wrmdir**はワイド文字列です。 **_wrmdir**と **_rmdir**動作は同じです。
+**_wrmdir**のワイド文字バージョン**です。** **_wrmdir**への*dirname*引数は、ワイド文字列です。 **_wrmdir**と**rmdir**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

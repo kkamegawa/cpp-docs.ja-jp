@@ -1,12 +1,12 @@
 ---
 title: strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,11 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcat_s
 - wcscat_s
@@ -34,19 +38,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 92829421cc0adac0ff9bbd2354fe4438a7b22871
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702922"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625791"
 ---
-# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
+# <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
 文字列を追加します。 これらのバージョンの [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されました。
 
 > [!IMPORTANT]
-> **_mbscat_s**と **_mbscat_s_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscat_s**と **_mbscat_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -115,15 +119,15 @@ null で終わる元の文字列バッファー。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*strDestination*|*numberOfElements*|*strSource*|戻り値|内容*strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|戻り値|*Strdestination*の内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**または終端文字なし|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*strDestination*[0] が 0 に設定|
-|任意|0 または小さすぎる|任意|**ERANGE**|*strDestination*[0] が 0 に設定|
+|**NULL**または未終了|任意|任意|**EINVAL**|変更されない|
+|任意|任意|**NULL**|**EINVAL**|*Strdestination*[0] を0に設定します。|
+|任意|0 または小さすぎる|任意|**ERANGE**|*Strdestination*[0] を0に設定します。|
 
 ## <a name="remarks"></a>Remarks
 
-**Strcat_s**関数は、追加*strSource*に*strDestination*し、結果の文字列を null 文字で終了します。 最初の文字の*strSource*の終端の null 文字を上書き*strDestination*します。 動作**strcat_s**元とコピー先文字列が重なり合う場合は定義されません。
+**Strcat_s**関数は、 *Strsource*を*strsource*に追加し、結果の文字列を null 文字で終了します。 *Strsource*の最初の文字は、 *strsource*の終端の null 文字を上書きします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcat_s**の動作は未定義です。
 
 2 つ目のパラメーターは、バッファーの残りのサイズではなく、合計サイズであることに注意してください。
 
@@ -134,15 +138,15 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s**と **_mbscat_s**のワイド文字とマルチバイト文字バージョン**strcat_s**します。 引数と戻り値の**wcscat_s**はワイド文字列 **_mbscat_s**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
+**wcscat_s**と **_mbscat_s**は、 **strcat_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscat_s**の引数と戻り値はワイド文字列です。これらの **_mbscat_s**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-場合*strDestination* null ポインター、または null で終わらない場合、または*strSource*は、 **NULL**ポインター、またはコピー先文字列が小さすぎる場合、無効なパラメーターハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。
+*Strdestination*が null ポインターであるか null で終わらない場合、または*strdestination*が**null ポインターの**場合、または変換先の文字列が小さすぎる場合は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
 
-持つ関数のバージョン、 **_l**サフィックスがあるが、現在のロケールの代わりに渡されるロケール パラメーターを使用して、同じように動作します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つ関数のバージョンは同じ動作ですが、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -150,7 +154,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -158,7 +162,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**wcscat_s**|\<string.h> または \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-ms.openlocfilehash: 8b84209833fee42ec8ebdd1fdea7a9229decad9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129defe39a79fd38211a539a4a85d79d9a3c0998
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405912"
 ---
 # <a name="exported-dll-function-entry-points"></a>DLL のエクスポート関数のエントリ ポイント
 
@@ -34,4 +34,3 @@ Dll 内のリソースの問題が発生する場合、`AFX_MANAGE_STATE`マク�
 ## <a name="see-also"></a>関連項目
 
 [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
-

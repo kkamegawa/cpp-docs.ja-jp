@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261963"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>DHTML コントロール プロジェクトの要素の識別
 
@@ -22,7 +22,7 @@ DHTML コントロールは、ATL コントロールに似ていますを除く�
 
 - UI コントロールの HTML リソースを作成します。
 
-- メンバー変数を使用して、DHTML オブジェクト モデルへのアクセスを許可`m_spBrowser`、型のスマート ポインターである[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)します。 DHTML オブジェクト モデルの一部にアクセスするのにには、このポインターを使用します。
+- メンバー変数を使用して、DHTML オブジェクト モデルへのアクセスを許可`m_spBrowser`、型のスマート ポインターである[IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\))します。 DHTML オブジェクト モデルの一部にアクセスするのにには、このポインターを使用します。
 
 次の図は、DLL、DHTML コントロール、Web ブラウザー、および HTML リソース間のリレーションシップを示しています。
 
@@ -54,4 +54,3 @@ ATL コントロール ウィザードでは、HTML リソースおよび .cpp �
 ## <a name="see-also"></a>関連項目
 
 [DHTML コントロールのサポート](../atl/atl-support-for-dhtml-controls.md)
-

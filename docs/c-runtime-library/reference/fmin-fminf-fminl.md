@@ -1,11 +1,11 @@
----
+﻿---
 title: fmin、fminf、fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464364"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957087"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -80,19 +83,19 @@ long double fminl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合を返しますのうち、小さい方*x*または*y*します。
+成功した場合、 *x*または*y*の小さい方を返します。
 
 |入力|結果|
 |-----------|------------|
-|*x* nan|*y*|
-|*y* nan|*x*|
-|*x*と*y* nan|NaN|
+|*x*は NaN|*y*|
+|*y*は NaN|*x*|
+|*x*と*y*は NaN|NaN|
 
-関数は発生しません[_matherr](matherr.md)呼び出される浮動小数点の例外が発生するかの値を変更**errno**します。
+関数は、 [_matherr](matherr.md)が呼び出されず、浮動小数点例外が発生することも、 **errno**の値を変更することもありません。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fmin**を受け取って返す**float**と**長い****二重**型。 C プログラムで**fmin**は、**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fmin**を受け取って返す**float**と**long** **double**型。 C プログラムでは、 **fmin**は常に**double**を取得し、double を返します。
 
 ## <a name="requirements"></a>必要条件
 

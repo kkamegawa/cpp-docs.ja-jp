@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-ms.openlocfilehash: ad7200ca53aa99104270209ca253b93d2393d8a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325118"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize クラス
 
@@ -73,7 +73,7 @@ class CAnimationSize : public CAnimationBaseObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationSize::operator CSize](#operator_csize)|CSize、CAnimationSize に変換します。|
-|[CAnimationSize::operator =](#operator_eq)|CAnimationSize szSrc に割り当てます。|
+|[CAnimationSize::operator=](#operator_eq)|CAnimationSize szSrc に割り当てます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -268,7 +268,7 @@ CSize とサイズをアニメーションの現在の値。
 
 この関数は、GetValue を内部的に呼び出します。 GetValue 何らかの理由で失敗した場合、返されるサイズは幅と高さの既定値が格納されます。
 
-##  <a name="operator_eq"></a>  CAnimationSize::operator =
+##  <a name="operator_eq"></a>  CAnimationSize::operator=
 
 CAnimationSize szSrc に割り当てます。
 

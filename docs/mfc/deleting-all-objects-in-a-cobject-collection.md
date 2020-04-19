@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 3e56c08f6165f6662c30e3ecbd6eda45c6696788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153504"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject コレクションの全オブジェクトの削除
 
@@ -81,4 +81,3 @@ ms.locfileid: "50542585"
 ## <a name="see-also"></a>関連項目
 
 [コレクションの全メンバーへのアクセス](../mfc/accessing-all-members-of-a-collection.md)
-

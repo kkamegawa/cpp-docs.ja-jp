@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 04a7b2b1d33ab7efa77563406ab3c12831cf80fc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518308"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447832"
 ---
 # <a name="compiler-error-c2797"></a>コンパイラ エラー C2797
 
 (廃止)メンバー初期化子リストまたは非静的データ メンバー初期化子の内部リストの初期化は実装されていません。
 
-この警告は、Visual Studio 2015 で廃止されています。 Visual Studio 2013 および以前のバージョンでは、Visual C コンパイラはメンバーの初期化子リストまたは非静的データ メンバー初期化子のいずれかの内部リストの初期化を実装していません。 Visual Studio 2013 Update 3 より前は、これはサイレントに関数呼び出しに変換され、これにより、不適切なコードが生成される可能性がありました。 Visual Studio 2013 Update 3 ではこのことがエラーとして報告されます。
+この警告は、Visual Studio 2015 で廃止されています。 Visual Studio 2013 および以前のバージョンでは、Microsoft でC++コンパイラはメンバーの初期化子リストまたは非静的データ メンバー初期化子のいずれかの内部リストの初期化を実装していません。 Visual Studio 2013 Update 3 より前は、これはサイレントに関数呼び出しに変換され、これにより、不適切なコードが生成される可能性がありました。 Visual Studio 2013 Update 3 ではこのことがエラーとして報告されます。
 
 この例では、C2797 が生成されます。
 
@@ -45,7 +45,7 @@ struct S2 {
 };
 ```
 
-この問題を解決するには、内部リストの明示的な構築を使用できます。 次に例を示します。
+この問題を解決するには、内部リストの明示的な構築を使用できます。 例:
 
 ```
 #include <vector>

@@ -1,9 +1,9 @@
 ---
 title: __p__commode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __p__commode
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr120.dll
@@ -12,20 +12,23 @@ apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __p__commode
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: 3a565a179077635438c03539cefa83823603bb00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 930eb45e8069bdd71b5a7986e229b229318d0be8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482703"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944115"
 ---
-# <a name="pcommode"></a>__p__commode
+# <a name="__p__commode"></a>__p__commode
 
 ファイルの入出力操作に対して既定の*ファイル コミット モード*を指定する `_commode` グローバル変数を指し示します。
 
@@ -40,7 +43,7 @@ int * __p__commode(
 
 `_commode` グローバル変数へのポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `__p__commode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。
 

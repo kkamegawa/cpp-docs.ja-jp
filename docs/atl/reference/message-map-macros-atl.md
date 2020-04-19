@@ -1,5 +1,5 @@
 ---
-title: メッセージ マップ マクロ (ATL)
+title: メッセージマップマクロ (ATL)
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -37,61 +37,61 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694375"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862972"
 ---
-# <a name="message-map-macros-atl"></a>メッセージ マップ マクロ (ATL)
+# <a name="message-map-macros-atl"></a>メッセージマップマクロ (ATL)
 
-これらのマクロは、メッセージ マップとエントリを定義します。
+これらのマクロは、メッセージマップとエントリを定義します。
 
 |||
 |-|-|
-|[ALT_MSG_MAP](#alt_msg_map)|代替メッセージ マップの先頭をマークします。|
-|[送るに](#begin_msg_map)|既定のメッセージ マップの先頭をマークします。|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|基底クラスのマップに代替メッセージをチェインします。|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|クラスのデータ メンバーのマップに代替メッセージをチェインします。|
-|[CHAIN_MSG_MAP](#chain_msg_map)|基本クラスの既定のメッセージ マップにチェーンします。|
-|[場合](#chain_msg_map_dynamic)|実行時に別のクラスのメッセージ マップにチェーンします。|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|クラスのデータ メンバーの既定のメッセージ マップにチェーンします。|
-|[COMMAND_CODE_HANDLER](#command_code_handler)|WM_COMMAND メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[COMMAND_HANDLER](#command_handler)|WM_COMMAND メッセージは、通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[COMMAND_ID_HANDLER](#command_id_handler)|WM_COMMAND メッセージは、メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|WM_COMMAND メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|WM_COMMAND メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
-|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|空のメッセージ マップを実装します。|
-|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|それ以外の場合は処理されないリフレクション メッセージ用の既定のハンドラーを提供します。|
-|[も](#end_msg_map)|メッセージ マップの最後をマークします。|
-|[FORWARD_NOTIFICATIONS](#forward_notifications)|親ウィンドウへの通知メッセージを転送します。|
+|[ALT_MSG_MAP](#alt_msg_map)|代替メッセージマップの開始をマークします。|
+|[BEGIN_MSG_MAP](#begin_msg_map)|既定のメッセージマップの開始をマークします。|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|基底クラスの代替メッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|クラスのデータメンバー内の代替メッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP](#chain_msg_map)|基本クラスの既定のメッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|実行時に別のクラスのメッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|クラスのデータメンバーの既定のメッセージマップにチェーンします。|
+|[COMMAND_CODE_HANDLER](#command_code_handler)|通知コードに基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_HANDLER](#command_handler)|通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_ID_HANDLER](#command_id_handler)|メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|通知コードと、コントロール識別子の連続する範囲に基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|コントロール識別子の連続した範囲に基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|空のメッセージマップを実装します。|
+|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|それ以外の処理を行わない、リフレクションされたメッセージの既定のハンドラーを提供します。|
+|[END_MSG_MAP](#end_msg_map)|メッセージマップの終了をマークします。|
+|[FORWARD_NOTIFICATIONS](#forward_notifications)|通知メッセージを親ウィンドウに転送します。|
 |[MESSAGE_HANDLER](#message_handler)|Windows メッセージをハンドラー関数にマップします。|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|連続した範囲の Windows メッセージをハンドラー関数にマップします。|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|WM_NOTIFY メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_HANDLER](#notify_handler)|WM_NOTIFY メッセージは、通知コードとコントロールの識別子に基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|WM_NOTIFY メッセージは、コントロールの識別子に基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|WM_NOTIFY メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|WM_NOTIFY メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
-|[REFLECT_NOTIFICATIONS](#reflect_notifications)|通知メッセージを送信元ウィンドウに反映されます。|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|リフレクション WM_COMMAND メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|リフレクション WM_COMMAND メッセージは、通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|リフレクション WM_COMMAND メッセージは、メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|リフレクション WM_COMMAND メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|リフレクション WM_COMMAND メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|リフレクション WM_NOTIFY メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|リフレクション WM_NOTIFY メッセージは、通知コードとコントロールの識別子に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|コントロールの識別子に基づいて、ハンドラー関数には、リフレクション WM_NOTIFY メッセージをマップします。|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|リフレクション WM_NOTIFY メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|リフレクション WM_NOTIFY メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Windows メッセージの連続する範囲をハンドラー関数にマップします。|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|通知コードに基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_HANDLER](#notify_handler)|通知コードとコントロール識別子に基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|コントロール識別子に基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|通知コードと、コントロール識別子の連続する範囲に基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|コントロール識別子の連続した範囲に基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECT_NOTIFICATIONS](#reflect_notifications)|は、通知メッセージを送信したウィンドウに返信します。|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|通知コードに基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|通知コードと、コントロール識別子の連続する範囲に基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|制御識別子の連続した範囲に基づいて、リフレクションされた WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|通知コードに基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|通知コードとコントロール識別子に基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|制御識別子に基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|通知コードと、コントロール識別子の連続する範囲に基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|制御識別子の連続した範囲に基づいて、リフレクションされた WM_NOTIFY メッセージをハンドラー関数にマップします。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
+##  <a name="alt_msg_map"></a>ALT_MSG_MAP
 
-代替メッセージ マップの先頭をマークします。
+代替メッセージマップの開始をマークします。
 
 ```
 ALT_MSG_MAP(msgMapID)
@@ -100,37 +100,37 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="parameters"></a>パラメーター
 
 *msgMapID*<br/>
-[in]メッセージ マップの識別子。
+からメッセージマップの識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ATL では、各メッセージ マップの数を識別します。 (送るにマクロで宣言された) 既定のメッセージ マップは、0 によって識別されます。 代替メッセージ マップがで識別される*msgMapID*します。
+ATL では、各メッセージマップを数値で識別します。 既定のメッセージマップ (BEGIN_MSG_MAP マクロで宣言) は0で識別されます。 代替メッセージマップは、 *Msgmapid*によって識別されます。
 
-メッセージ マップは、ウィンドウに送信されるメッセージの処理に使用されます。 たとえば、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)コンテナー オブジェクトでメッセージ マップの識別子を指定することができます。 [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc)このメッセージ マップを使用して、適切なハンドラー関数に、または別のメッセージ マップに含まれているウィンドウのメッセージを送信します。 ハンドラー関数を宣言するマクロの一覧は、次を参照してください。[送るに](#begin_msg_map)します。
+メッセージマップは、ウィンドウに送信されたメッセージを処理するために使用されます。 たとえば、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)を使用すると、親オブジェクト内のメッセージマップの識別子を指定できます。 [CContainedWindow:: WindowProc](ccontainedwindowt-class.md#windowproc)は、このメッセージマップを使用して、含まれているウィンドウのメッセージを適切なハンドラー関数または別のメッセージマップに送信します。 ハンドラー関数を宣言するマクロの一覧については、「 [BEGIN_MSG_MAP](#begin_msg_map)」を参照してください。
 
-常に、メッセージ マップを開始します。 代替の後続のメッセージ マップを宣言することができます。
+常に BEGIN_MSG_MAP でメッセージマップを開始します。 その後、後続の代替メッセージマップを宣言できます。
 
-[も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 1 つのインスタンスは常に注意してください。
+[END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 BEGIN_MSG_MAP と END_MSG_MAP のインスタンスは常に1つだけ存在することに注意してください。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-次の例では、既定のメッセージ マップと、それぞれ 1 つのハンドラー関数を含む 1 つの代替メッセージ マップを示します。
+次の例は、既定のメッセージマップと1つの代替メッセージマップを示しています。それぞれに1つのハンドラー関数が含まれています。
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-次の例では、2 つの代替メッセージ マップが表示されます。 既定のメッセージ マップが空です。
+次の例では、2つの代替メッセージマップを示します。 既定のメッセージマップが空です。
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="begin_msg_map"></a>  送るに
+##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP
 
-既定のメッセージ マップの先頭をマークします。
+既定のメッセージマップの開始をマークします。
 
 ```
 BEGIN_MSG_MAP(theClass)
@@ -139,77 +139,77 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
-[in]メッセージ マップを含むクラスの名前。
+からメッセージマップを格納しているクラスの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)既定のメッセージ マップを使用して、ウィンドウに送信されるメッセージを処理します。 メッセージ マップでは、適切なハンドラー関数または別のメッセージ マップのいずれかのメッセージを送信します。
+[CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc)は、既定のメッセージマップを使用して、ウィンドウに送信されたメッセージを処理します。 メッセージマップは、適切なハンドラー関数または別のメッセージマップにメッセージを送信します。
 
-次のマクロは、メッセージをハンドラー関数にマップします。 この関数を定義する必要があります*クラス*します。
+次のマクロは、メッセージをハンドラー関数にマップします。 この関数は、*クラス*で定義されている必要があります。
 
-|マクロ|説明|
+|マクロ|Description|
 |-----------|-----------------|
 |[MESSAGE_HANDLER](#message_handler)|Windows メッセージをハンドラー関数にマップします。|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|連続した範囲の Windows メッセージをハンドラー関数にマップします。|
-|[COMMAND_HANDLER](#command_handler)|WM_COMMAND メッセージは、通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[COMMAND_ID_HANDLER](#command_id_handler)|WM_COMMAND メッセージは、メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[COMMAND_CODE_HANDLER](#command_handler)|WM_COMMAND メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|連続した範囲の WM_COMMAND メッセージ ハンドラー関数の場合、メニュー項目、コントロール、またはアクセラレータの識別子に基づくにマップします。|
-|[NOTIFY_HANDLER](#notify_handler)|WM_NOTIFY メッセージは、通知コードとコントロールの識別子に基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|WM_NOTIFY メッセージは、コントロールの識別子に基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|WM_NOTIFY メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|コントロールの識別子に基づいて、ハンドラー関数に連続する範囲の WM_NOTIFY メッセージにマップします。|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Windows メッセージの連続する範囲をハンドラー関数にマップします。|
+|[COMMAND_HANDLER](#command_handler)|通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_ID_HANDLER](#command_id_handler)|メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_CODE_HANDLER](#command_handler)|通知コードに基づいて、WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、WM_COMMAND メッセージの連続する範囲をハンドラー関数にマップします。|
+|[NOTIFY_HANDLER](#notify_handler)|通知コードとコントロール識別子に基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|コントロール識別子に基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|通知コードに基づいて、WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|コントロール識別子に基づいて、WM_NOTIFY メッセージの連続する範囲をハンドラー関数にマップします。|
 
-次のマクロは、別のメッセージ マップにメッセージを送ります。 このプロセスは「チェーン」と呼ばれる
+次のマクロは、メッセージを別のメッセージマップに転送します。 このプロセスは "チェーン" と呼ばれます。
 
-|マクロ|説明|
+|マクロ|Description|
 |-----------|-----------------|
-|[CHAIN_MSG_MAP](#chain_msg_map)|基本クラスの既定のメッセージ マップにチェーンします。|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|クラスのデータ メンバーの既定のメッセージ マップにチェーンします。|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|基底クラスのマップに代替メッセージをチェインします。|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|クラスのデータ メンバーのマップに代替メッセージをチェインします。|
-|[場合](#chain_msg_map_dynamic)|実行時に別のクラスの既定のメッセージ マップにチェーンします。|
+|[CHAIN_MSG_MAP](#chain_msg_map)|基本クラスの既定のメッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|クラスのデータメンバーの既定のメッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|基底クラスの代替メッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|クラスのデータメンバー内の代替メッセージマップにチェーンします。|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|実行時に別のクラスの既定のメッセージマップにチェーンします。|
 
-次のマクロでは、親ウィンドウから「反映」のメッセージを送信します。 たとえば、コントロールを通常通知メッセージを送信用の親ウィンドウに、処理しますが、親ウィンドウは、コントロールにメッセージを反映できます。
+次のマクロは、親ウィンドウから "リフレクション" メッセージをダイレクトします。 たとえば、コントロールは通常、通知メッセージを処理のために親ウィンドウに送信しますが、親ウィンドウはそのメッセージをコントロールに反映させることができます。
 
-|マクロ|説明|
+|マクロ|Description|
 |-----------|-----------------|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|リフレクション WM_COMMAND メッセージは、通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|リフレクション WM_COMMAND メッセージは、メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|リフレクション WM_COMMAND メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|リフレクション WM_COMMAND メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|リフレクション WM_COMMAND メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|リフレクション WM_NOTIFY メッセージは、通知コードとコントロールの識別子に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|コントロールの識別子に基づいて、ハンドラー関数には、リフレクション WM_NOTIFY メッセージをマップします。|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|リフレクション WM_NOTIFY メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|リフレクション WM_NOTIFY メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|リフレクション WM_NOTIFY メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|メニュー項目、コントロール、またはアクセラレータの識別子に基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|通知コードに基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|制御識別子の連続した範囲に基づいて、リフレクションされた WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|通知コードと、コントロール識別子の連続する範囲に基づいて、反映された WM_COMMAND メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|通知コードとコントロール識別子に基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|制御識別子に基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|通知コードに基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|制御識別子の連続した範囲に基づいて、リフレクションされた WM_NOTIFY メッセージをハンドラー関数にマップします。|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|通知コードと、コントロール識別子の連続する範囲に基づいて、反映された WM_NOTIFY メッセージをハンドラー関数にマップします。|
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]
 
-ときに、`CMyExtWindow`オブジェクトが WM_PAINT メッセージを受信、メッセージの送信先に`CMyExtWindow::OnPaint`実際の処理。 場合`OnPaint`さらに処理、メッセージは、メッセージが必要とすることを示しますで既定のメッセージ マップに送られる`CMyBaseWindow`します。
+`CMyExtWindow` オブジェクトが WM_PAINT メッセージを受信すると、メッセージは実際の処理のために `CMyExtWindow::OnPaint` に送られます。 メッセージにさらに処理が必要であることを示す `OnPaint` 場合は、メッセージが `CMyBaseWindow`の既定のメッセージマップに送られます。
 
-代替メッセージ マップを定義するだけでなく、既定のメッセージ マップ[ALT_MSG_MAP](#alt_msg_map)します。 常に、メッセージ マップを開始します。 代替の後続のメッセージ マップを宣言することができます。 次の例では、既定のメッセージ マップと、それぞれ 1 つのハンドラー関数を含む 1 つの代替メッセージ マップを示します。
+既定のメッセージマップに加えて、 [ALT_MSG_MAP](#alt_msg_map)で代替メッセージマップを定義することもできます。 常に BEGIN_MSG_MAP でメッセージマップを開始します。 その後、後続の代替メッセージマップを宣言できます。 次の例は、既定のメッセージマップと1つの代替メッセージマップを示しています。それぞれに1つのハンドラー関数が含まれています。
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-次の例では、2 つの代替メッセージ マップが表示されます。 既定のメッセージ マップが空です。
+次の例では、2つの代替メッセージマップを示します。 既定のメッセージマップが空です。
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-[も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 1 つのインスタンスは常に注意してください。
+[END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 BEGIN_MSG_MAP と END_MSG_MAP のインスタンスは常に1つだけ存在することに注意してください。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT
+##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
@@ -217,28 +217,28 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainClass*<br/>
-[in]メッセージ マップを含む基本クラスの名前。
+*Th"クラス"*<br/>
+からメッセージマップを格納している基本クラスの名前。
 
 *msgMapID*<br/>
-[in]メッセージ マップの識別子。
+からメッセージマップの識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CHAIN_MSG_MAP_ALT では、基底クラスの代替メッセージ マップへのメッセージを送信します。 この代替メッセージ マップが宣言されている必要があります[ALT_MSG_MAP(msgMapID)](#alt_msg_map)します。 基本クラスの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))、CHAIN_MSG_MAP を使用します。 例については、次を参照してください。 [CHAIN_MSG_MAP](#chain_msg_map)します。
+CHAIN_MSG_MAP_ALT は、メッセージを基底クラスの代替メッセージマップに送信します。 この代替メッセージマップを[ALT_MSG_MAP (msgMapID)](#alt_msg_map)と宣言しておく必要があります。 基底クラスの既定のメッセージマップ ( [BEGIN_MSG_MAP](#begin_msg_map)で宣言) にメッセージを転送するには、CHAIN_MSG_MAP を使用します。 例については、「 [CHAIN_MSG_MAP](#chain_msg_map)」を参照してください。
 
 > [!NOTE]
->  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に BEGIN_MSG_MAP でメッセージマップを開始します。 その後、ALT_MSG_MAP で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER
+##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
@@ -246,28 +246,28 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainMember*<br/>
-[in]メッセージ マップを含むデータ メンバーの名前。
+*Thのメンバー*<br/>
+からメッセージマップを格納しているデータメンバーの名前。
 
 *msgMapID*<br/>
-[in]メッセージ マップの識別子。
+からメッセージマップの識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CHAIN_MSG_MAP_ALT_MEMBER は、データ メンバー、別のメッセージ マップにメッセージを送信します。 この代替メッセージ マップが宣言されている必要があります[ALT_MSG_MAP(msgMapID)](#alt_msg_map)します。 データ メンバーの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))、CHAIN_MSG_MAP_MEMBER を使用します。 例については、次を参照してください。 [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)します。
+CHAIN_MSG_MAP_ALT_MEMBER は、メッセージをデータメンバー内の代替メッセージマップに送信します。 この代替メッセージマップを[ALT_MSG_MAP (msgMapID)](#alt_msg_map)と宣言しておく必要があります。 [BEGIN_MSG_MAP](#begin_msg_map)で宣言されたデータメンバーの既定のメッセージマップにメッセージを転送するには、CHAIN_MSG_MAP_MEMBER を使用します。 例については、「 [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)」を参照してください。
 
 > [!NOTE]
->  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に BEGIN_MSG_MAP でメッセージマップを開始します。 その後、ALT_MSG_MAP で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP
+##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 CHAIN_MSG_MAP(theChainClass)
@@ -275,37 +275,37 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainClass*<br/>
-[in]メッセージ マップを含む基本クラスの名前。
+*Th"クラス"*<br/>
+からメッセージマップを格納している基本クラスの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CHAIN_MSG_MAP が基本クラスの既定のメッセージ マップにメッセージを送信 (を使用して宣言[送るに](#begin_msg_map))。 基本クラスの別のメッセージ マップにメッセージを送信する (で宣言された[ALT_MSG_MAP](#alt_msg_map)) を使用して、 [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)します。
+CHAIN_MSG_MAP は、メッセージを基底クラスの既定のメッセージマップ ( [BEGIN_MSG_MAP](#begin_msg_map)で宣言) に送信します。 メッセージを基底クラスの代替メッセージマップ ( [ALT_MSG_MAP](#alt_msg_map)で宣言) に転送するには、 [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)を使用します。
 
 > [!NOTE]
->  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に BEGIN_MSG_MAP でメッセージマップを開始します。 その後、ALT_MSG_MAP で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#107](../../atl/codesnippet/cpp/message-map-macros-atl_4.h)]
 
-この例を次に示します。
+次に例を示します。
 
-- ウィンドウ プロシージャを使用している場合`CMyClass`の既定のメッセージ マップおよび`OnPaint`メッセージ、メッセージ送信先ハンドル以外は`CMyBaseClass`の処理のための既定のメッセージ マップです。
+- ウィンドウプロシージャが `CMyClass`の既定のメッセージマップを使用していて、`OnPaint` がメッセージを処理しない場合、メッセージは `CMyBaseClass`の既定のメッセージマップに送られ、処理されます。
 
-- ウィンドウ プロシージャの最初の代替メッセージ マップが使用されている`CMyClass`、宛てのすべてのメッセージ`CMyBaseClass`の既定のメッセージ マップです。
+- ウィンドウプロシージャが `CMyClass`の最初の代替メッセージマップを使用している場合は、すべてのメッセージが `CMyBaseClass`の既定のメッセージマップに送られます。
 
-- ウィンドウ プロシージャを使用している場合`CMyClass`の 2 つ目の代替メッセージ マップおよび`OnChar`メッセージ、メッセージは指定した代替のメッセージ マップに送られますハンドルしないの`CMyBaseClass`します。 `CMyBaseClass` 必要があります、ALT_MSG_MAP(1) では、このメッセージ マップが宣言されています。
+- ウィンドウプロシージャが `CMyClass`の2番目の代替メッセージマップを使用していて、`OnChar` がメッセージを処理しない場合、メッセージは `CMyBaseClass`で指定された代替メッセージマップに送られます。 `CMyBaseClass` は、このメッセージマップを ALT_MSG_MAP (1) と宣言している必要があります。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="chain_msg_map_dynamic"></a>  場合
+##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
@@ -314,24 +314,24 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="parameters"></a>パラメーター
 
 *dynaChainID*<br/>
-[in]オブジェクトのメッセージ マップの一意の識別子。
+からオブジェクトのメッセージマップの一意の識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合は、別のオブジェクトの既定のメッセージ マップに、実行時に、メッセージを送信します。 オブジェクトとそのメッセージ マップに関連付けられている*dynaChainID*を使用して定義する[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)します。 クラスを派生する必要があります`CDynamicChain`場合を使用するためにします。 例については、次を参照してください。、 [CDynamicChain](../../atl/reference/cdynamicchain-class.md)の概要。
+CHAIN_MSG_MAP_DYNAMIC は、メッセージを実行時に別のオブジェクトの既定のメッセージマップに送信します。 オブジェクトとそのメッセージマップは、 [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry)を使用して定義する*dynaChainID*に関連付けられています。 CHAIN_MSG_MAP_DYNAMIC を使用するには、`CDynamicChain` からクラスを派生させる必要があります。 例については、「 [CDynamicChain](../../atl/reference/cdynamicchain-class.md)の概要」を参照してください。
 
 > [!NOTE]
->  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に[BEGIN_MSG_MAP](#begin_msg_map)でメッセージマップを開始します。 その後、ALT_MSG_MAP で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER
+##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 CHAIN_MSG_MAP_MEMBER(theChainMember)
@@ -339,37 +339,37 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>パラメーター
 
-*theChainMember*<br/>
-[in]メッセージ マップを含むデータ メンバーの名前。
+*Thのメンバー*<br/>
+からメッセージマップを格納しているデータメンバーの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-CHAIN_MSG_MAP_MEMBER データ メンバーの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))。 データ メンバーの別のメッセージ マップにメッセージを送信する (で宣言された[ALT_MSG_MAP](#alt_msg_map)) を使用して、 [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)します。
+CHAIN_MSG_MAP_MEMBER は、メッセージをデータメンバーの既定のメッセージマップ ( [BEGIN_MSG_MAP](#begin_msg_map)で宣言) に送信します。 [ALT_MSG_MAP](#alt_msg_map)で宣言されたデータメンバーの代替メッセージマップにメッセージを送信するには、 [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)を使用します。
 
 > [!NOTE]
->  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に BEGIN_MSG_MAP でメッセージマップを開始します。 その後、ALT_MSG_MAP で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#108](../../atl/codesnippet/cpp/message-map-macros-atl_5.h)]
 
-この例を次に示します。
+次に例を示します。
 
-- ウィンドウ プロシージャを使用している場合`CMyClass`の既定のメッセージ マップおよび`OnPaint`メッセージ、メッセージ送信先ハンドル以外は`m_obj`の処理のための既定のメッセージ マップです。
+- ウィンドウプロシージャが `CMyClass`の既定のメッセージマップを使用していて、`OnPaint` がメッセージを処理しない場合、メッセージは `m_obj`の既定のメッセージマップに送られ、処理されます。
 
-- ウィンドウ プロシージャの最初の代替メッセージ マップが使用されている`CMyClass`、宛てのすべてのメッセージ`m_obj`の既定のメッセージ マップです。
+- ウィンドウプロシージャが `CMyClass`の最初の代替メッセージマップを使用している場合は、すべてのメッセージが `m_obj`の既定のメッセージマップに送られます。
 
-- ウィンドウ プロシージャを使用している場合`CMyClass`の 2 つ目の代替メッセージ マップおよび`OnChar`の指定した代替のメッセージ マップに、メッセージが送られますハンドル以外は`m_obj`します。 クラス`CMyContainedClass`ALT_MSG_MAP(1) では、このメッセージ マップが宣言されている必要があります。
+- ウィンドウプロシージャが `CMyClass`の2番目の代替メッセージマップを使用しており、`OnChar` がメッセージを処理しない場合、メッセージは `m_obj`の指定された代替メッセージマップに送られます。 クラス `CMyContainedClass` は、このメッセージマップを ALT_MSG_MAP (1) として宣言しなければなりません。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER
+##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER
 
-ような[COMMAND_HANDLER](#command_handler)、マップしますが、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ ベースの通知のコードに対してのみです。
+[COMMAND_HANDLER](#command_handler)と似ていますが、通知コードにのみ基づいて[WM_COMMAND](/windows/win32/menurc/wm-command)メッセージをマップします。
 
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -378,18 +378,18 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="parameters"></a>パラメーター
 
 *code*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="command_handler"></a>  COMMAND_HANDLER
+##  <a name="command_handler"></a>COMMAND_HANDLER
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 COMMAND_HANDLER(id, code, func)
@@ -397,41 +397,41 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メニュー項目、コントロール、またはアクセラレータの識別子。
+*id*<br/>
+からメニュー項目、コントロール、またはアクセラレータの識別子。
 
 *code*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-COMMAND_HANDLER マップ、 [WM_COMMAND](/windows/desktop/menurc/wm-command)通知コードとコントロールの識別子に基づいて、指定されたハンドラー関数にメッセージ。 例えば:
+COMMAND_HANDLER は、通知コードおよびコントロール識別子に基づいて、 [WM_COMMAND](/windows/win32/menurc/wm-command)メッセージを指定されたハンドラー関数にマップします。 次に例を示します。
 
 [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]
 
-COMMAND_HANDLER マクロで指定された任意の関数は、次のように定義する必要があります。
+COMMAND_HANDLER マクロで指定する関数は、次のように定義する必要があります。
 
 `LRESULT CommandHandler(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);`
 
-メッセージ マップ セット`bHandled`する前に TRUE を`CommandHandler`が呼び出されます。 場合`CommandHandler`、メッセージを完全に処理しない設定があります`bHandled`パラメーターに、メッセージは、さらに処理を必要があります。
+メッセージマップは、`CommandHandler` が呼び出される前に `bHandled` を TRUE に設定します。 `CommandHandler` がメッセージを完全に処理しない場合は、メッセージがさらに処理する必要があることを示すために、`bHandled` を FALSE に設定する必要があります。
 
 > [!NOTE]
->  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 代替の後続のメッセージ マップを宣言することができます[ALT_MSG_MAP](#alt_msg_map)します。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に[BEGIN_MSG_MAP](#begin_msg_map)でメッセージマップを開始します。 その後、 [ALT_MSG_MAP](#alt_msg_map)で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-使用することができます、COMMAND_HANDLER に加えて[MESSAGE_HANDLER](#message_handler)識別子またはコードに関係なく WM_COMMAND メッセージにマップします。 この場合、`MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)`すべて WM_COMMAND メッセージには直接`OnHandlerFunction`します。
+COMMAND_HANDLER に加えて、 [MESSAGE_HANDLER](#message_handler)を使用して、識別子やコードに関係なく WM_COMMAND メッセージをマップすることもできます。 この場合、`MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` はすべての WM_COMMAND メッセージを `OnHandlerFunction`に転送します。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER
+##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER
 
-ような[COMMAND_HANDLER](#command_handler)、マップしますが、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージがメニュー項目、コントロール、またはアクセラレータの識別子にのみ基づいています。
+[COMMAND_HANDLER](#command_handler)に似ていますが、メニュー項目、コントロール、またはアクセラレータの識別子にのみ基づいて[WM_COMMAND](/windows/win32/menurc/wm-command)メッセージをマップします。
 
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -439,19 +439,19 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子。
+*id*<br/>
+からメッセージを送信するメニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER
+##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER
 
-ような[COMMAND_RANGE_HANDLER](#command_range_handler)、マップしますが、 [WM_COMMAND](/windows/desktop/menurc/wm-command)コントロールの範囲から 1 つのハンドラー関数の特定の通知コードを持つメッセージ。
+[COMMAND_RANGE_HANDLER](#command_range_handler)に似ていますが、特定の通知コードを持つ[WM_COMMAND](/windows/win32/menurc/wm-command)メッセージを、特定のコントロールの範囲から1つのハンドラー関数にマップします。
 
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -460,28 +460,28 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *code*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この範囲は、メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子に基づきます。
+この範囲は、メッセージを送信するメニュー項目、コントロール、またはアクセラレータの識別子に基づいています。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER
+##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER
 
-ような[COMMAND_HANDLER](#command_handler)、マップしますが、 [WM_COMMAND](/windows/desktop/menurc/wm-command)コントロールの範囲から 1 つのハンドラー関数へのメッセージ。
+[COMMAND_HANDLER](#command_handler)と似ていますが、コントロールの範囲からの[WM_COMMAND](/windows/win32/menurc/wm-command)メッセージを1つのハンドラー関数にマップします。
 
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -490,39 +490,39 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この範囲は、メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子に基づきます。
+この範囲は、メッセージを送信するメニュー項目、コントロール、またはアクセラレータの識別子に基づいています。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP
+##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP
 
-空のメッセージ マップを宣言します。
+空のメッセージマップを宣言します。
 
 ```
 DECLARE_EMPTY_MSG_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DECLARE_EMPTY_MSG_MAP はマクロを呼び出す便利なマクロ[送るに](#begin_msg_map)と[も](#end_msg_map)空のメッセージ マップを作成します。
+DECLARE_EMPTY_MSG_MAP は、マクロ[BEGIN_MSG_MAP](#begin_msg_map)を呼び出し、空のメッセージマップを作成するために[END_MSG_MAP](#end_msg_map)する便利なマクロです。
 
 [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]
 
-##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER
+##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER
 
-戻されたメッセージを受信する子ウィンドウ (コントロール) の既定のハンドラーを提供します。ハンドラーで適切に未処理のメッセージを渡す`DefWindowProc`します。
+リフレクションされたメッセージを受信する子ウィンドウ (コントロール) の既定のハンドラーを提供します。ハンドラーは、未処理のメッセージを `DefWindowProc`に適切に渡します。
 
 ```
 DEFAULT_REFLECTION_HANDLER()
@@ -530,57 +530,57 @@ DEFAULT_REFLECTION_HANDLER()
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="end_msg_map"></a>  も
+##  <a name="end_msg_map"></a>END_MSG_MAP
 
-メッセージ マップの最後をマークします。
+メッセージマップの終了をマークします。
 
 ```
 END_MSG_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-常に使用して、[送るに](#begin_msg_map)マクロをメッセージ マップの先頭をマークします。 使用[ALT_MSG_MAP](#alt_msg_map)代替メッセージ マップを宣言します。
+メッセージマップの先頭をマークするには、常に[BEGIN_MSG_MAP](#begin_msg_map)マクロを使用します。 後続の代替メッセージマップを宣言するには、 [ALT_MSG_MAP](#alt_msg_map)を使用します。
 
-1 つのインスタンスは常に注意してください。
+BEGIN_MSG_MAP と END_MSG_MAP のインスタンスは常に1つだけ存在することに注意してください。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-次の例では、既定のメッセージ マップと、それぞれ 1 つのハンドラー関数を含む 1 つの代替メッセージ マップを示します。
+次の例は、既定のメッセージマップと1つの代替メッセージマップを示しています。それぞれに1つのハンドラー関数が含まれています。
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-次の例では、2 つの代替メッセージ マップが表示されます。 既定のメッセージ マップが空です。
+次の例では、2つの代替メッセージマップを示します。 既定のメッセージマップが空です。
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS
+##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS
 
-親ウィンドウへの通知メッセージを転送します。
+通知メッセージを親ウィンドウに転送します。
 
 ```
 FORWARD_NOTIFICATIONS()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このマクロをメッセージ マップの一部として指定します。
+このマクロをメッセージマップの一部として指定します。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="message_handler"></a>  MESSAGE_HANDLER
+##  <a name="message_handler"></a>MESSAGE_HANDLER
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 MESSAGE_HANDLER( msg, func )
@@ -588,28 +588,28 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
-[in]Windows メッセージ。
+*msg*<br/>
+からWindows メッセージ。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MESSAGE_HANDLER は、Windows メッセージを指定されたハンドラー関数にマップします。
 
-MESSAGE_HANDLER マクロで指定された任意の関数は、次のように定義する必要があります。
+MESSAGE_HANDLER マクロで指定する関数は、次のように定義する必要があります。
 
 `LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);`
 
-メッセージ マップ セット`bHandled`する前に TRUE を`MessageHandler`が呼び出されます。 場合`MessageHandler`、メッセージを完全に処理しない設定があります`bHandled`パラメーターに、メッセージは、さらに処理を必要があります。
+メッセージマップは、`MessageHandler` が呼び出される前に `bHandled` を TRUE に設定します。 `MessageHandler` がメッセージを完全に処理しない場合は、メッセージがさらに処理する必要があることを示すために、`bHandled` を FALSE に設定する必要があります。
 
 > [!NOTE]
->  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 代替の後続のメッセージ マップを宣言することができます[ALT_MSG_MAP](#alt_msg_map)します。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に[BEGIN_MSG_MAP](#begin_msg_map)でメッセージマップを開始します。 その後、 [ALT_MSG_MAP](#alt_msg_map)で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-MESSAGE_HANDLER、に加えて使用できます[COMMAND_HANDLER](#command_handler)と[NOTIFY_HANDLER](#notify_handler)にマップする[WM_COMMAND](/windows/desktop/menurc/wm-command)と[WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ、それぞれします。
+MESSAGE_HANDLER に加えて、 [COMMAND_HANDLER](#command_handler)と[NOTIFY_HANDLER](#notify_handler)を使用して、それぞれ[WM_COMMAND](/windows/win32/menurc/wm-command)メッセージと[WM_NOTIFY](/windows/win32/controls/wm-notify)メッセージをマップできます。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -617,11 +617,11 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER
+##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER
 
-ような[MESSAGE_HANDLER](#message_handler)が、範囲の Windows メッセージを 1 つのハンドラー関数にマップします。
+[MESSAGE_HANDLER](#message_handler)と似ていますが、Windows メッセージの範囲を1つのハンドラー関数にマップします。
 
 ```
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
@@ -630,21 +630,21 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="parameters"></a>パラメーター
 
 *msgFirst*<br/>
-[in]メッセージの連続する範囲の先頭をマークします。
+から連続したメッセージの範囲の先頭をマークします。
 
 *msgLast*<br/>
-[in]メッセージの連続する範囲の末尾をマークします。
+からメッセージの連続する範囲の末尾をマークします。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
+##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ ベースの通知のコードに対してのみです。
+[NOTIFY_HANDLER](#notify_handler)と似ていますが、通知コードにのみ基づいて[WM_NOTIFY](/windows/win32/controls/wm-notify)メッセージをマップします。
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -653,18 +653,18 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="parameters"></a>パラメーター
 
 *cd*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="notify_handler"></a>  NOTIFY_HANDLER
+##  <a name="notify_handler"></a>NOTIFY_HANDLER
 
-メッセージ マップ エントリを定義します。
+メッセージマップのエントリを定義します。
 
 ```
 NOTIFY_HANDLER( id, cd, func )
@@ -672,31 +672,31 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メッセージを送信するコントロールの識別子です。
+*id*<br/>
+からメッセージを送信するコントロールの識別子。
 
 *cd*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-NOTIFY_HANDLER マップ、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)通知コードとコントロールの識別子に基づいて、指定されたハンドラー関数にメッセージ。
+NOTIFY_HANDLER は、通知コードおよびコントロール識別子に基づいて、 [WM_NOTIFY](/windows/win32/controls/wm-notify)メッセージを指定されたハンドラー関数にマップします。
 
-NOTIFY_HANDLER マクロで指定された任意の関数は、次のように定義する必要があります。
+NOTIFY_HANDLER マクロで指定する関数は、次のように定義する必要があります。
 
 `LRESULT NotifyHandler(int idCtrl, LPNMHDR pnmh, BOOL& bHandled);`
 
-メッセージ マップ セット`bHandled`する前に TRUE を`NotifyHandler`が呼び出されます。 場合`NotifyHandler`、メッセージを完全に処理しない設定があります`bHandled`パラメーターに、メッセージは、さらに処理を必要があります。
+メッセージマップは、`NotifyHandler` が呼び出される前に `bHandled` を TRUE に設定します。 `NotifyHandler` がメッセージを完全に処理しない場合は、メッセージがさらに処理する必要があることを示すために、`bHandled` を FALSE に設定する必要があります。
 
 > [!NOTE]
->  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 代替の後続のメッセージ マップを宣言することができます[ALT_MSG_MAP](#alt_msg_map)します。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
+>  常に[BEGIN_MSG_MAP](#begin_msg_map)でメッセージマップを開始します。 その後、 [ALT_MSG_MAP](#alt_msg_map)で後続の代替メッセージマップを宣言できます。 [END_MSG_MAP](#end_msg_map)マクロは、メッセージマップの末尾を示します。 すべてのメッセージマップには、BEGIN_MSG_MAP と END_MSG_MAP のインスタンスを1つだけ指定する必要があります。
 
-使用することができます、NOTIFY_HANDLER に加えて[MESSAGE_HANDLER](#message_handler)識別子またはコードに関係なく WM_NOTIFY メッセージにマップします。 この場合、`MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)`すべて WM_NOTIFY メッセージには直接`OnHandlerFunction`します。
+NOTIFY_HANDLER に加えて、 [MESSAGE_HANDLER](#message_handler)を使用して、識別子やコードに関係なく WM_NOTIFY メッセージをマップすることもできます。 この場合、`MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` はすべての WM_NOTIFY メッセージを `OnHandlerFunction`に転送します。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でのメッセージマップの使用の詳細については、「[メッセージマップ](../../atl/message-maps-atl.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -704,11 +704,11 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
+##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ ベースのコントロール識別子でのみです。
+[NOTIFY_HANDLER](#notify_handler)に似ていますが、コントロール識別子にのみ基づいて[WM_NOTIFY](/windows/win32/controls/wm-notify)メッセージをマップします。
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -716,19 +716,19 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メッセージを送信するコントロールの識別子です。
+*id*<br/>
+からメッセージを送信するコントロールの識別子。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
+##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER
 
-ような[NOTIFY_RANGE_HANDLER](#notify_range_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)コントロールの範囲から 1 つのハンドラー関数の特定の通知コードを持つメッセージ。
+[NOTIFY_RANGE_HANDLER](#notify_range_handler)に似ていますが、特定の通知コードを持つ[WM_NOTIFY](/windows/win32/controls/wm-notify)メッセージを、特定のコントロールの範囲から1つのハンドラー関数にマップします。
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -737,28 +737,28 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *cd*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この範囲は、メッセージを送信するコントロールの識別子に基づきます。
+この範囲は、メッセージを送信するコントロールの識別子に基づいています。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
+##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)コントロールの範囲から 1 つのハンドラー関数へのメッセージ。
+[NOTIFY_HANDLER](#notify_handler)と似ていますが、コントロールの範囲からの[WM_NOTIFY](/windows/win32/controls/wm-notify)メッセージを1つのハンドラー関数にマップします。
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -767,41 +767,41 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この範囲は、メッセージを送信するコントロールの識別子に基づきます。
+この範囲は、メッセージを送信するコントロールの識別子に基づいています。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS
+##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS
 
-通知メッセージを送信する子ウィンドウ (コントロール) に反映されます。
+通知メッセージを送信した子ウィンドウ (コントロール) に返信メッセージを反映します。
 
 ```
 REFLECT_NOTIFICATIONS()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このマクロは、親ウィンドウのメッセージ マップの一部として指定します。
+親ウィンドウのメッセージマップの一部として、このマクロを指定します。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER
+##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER
 
-ような[COMMAND_CODE_HANDLER](#command_code_handler)を親ウィンドウから反映されたコマンドにマッピングします。
+[COMMAND_CODE_HANDLER](#command_code_handler)に似ていますが、親ウィンドウから反映されたコマンドをマップします。
 
 ```
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
@@ -810,18 +810,18 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="parameters"></a>パラメーター
 
 *code*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER
+##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER
 
-ような[COMMAND_HANDLER](#command_handler)を親ウィンドウから反映されたコマンドにマッピングします。
+[COMMAND_HANDLER](#command_handler)に似ていますが、親ウィンドウから反映されたコマンドをマップします。
 
 ```
 REFLECTED_COMMAND_HANDLER( id, code, func )
@@ -829,22 +829,22 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メニュー項目、コントロール、またはアクセラレータの識別子。
+*id*<br/>
+からメニュー項目、コントロール、またはアクセラレータの識別子。
 
 *code*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
+##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER
 
-ような[COMMAND_ID_HANDLER](#command_id_handler)を親ウィンドウから反映されたコマンドにマッピングします。
+[COMMAND_ID_HANDLER](#command_id_handler)に似ていますが、親ウィンドウから反映されたコマンドをマップします。
 
 ```
 REFLECTED_COMMAND_ID_HANDLER( id, func )
@@ -852,19 +852,19 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メニュー項目、コントロール、またはアクセラレータの識別子。
+*id*<br/>
+からメニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
+##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
-ような[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)を親ウィンドウから反映されたコマンドにマッピングします。
+[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)に似ていますが、親ウィンドウから反映されたコマンドをマップします。
 
 ```
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
@@ -873,24 +873,24 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *code*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
+##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER
 
-ような[COMMAND_RANGE_HANDLER](#command_range_handler)を親ウィンドウから反映されたコマンドにマッピングします。
+[COMMAND_RANGE_HANDLER](#command_range_handler)に似ていますが、親ウィンドウから反映されたコマンドをマップします。
 
 ```
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
@@ -899,21 +899,21 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
+##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER
 
-ような[NOTIFY_CODE_HANDLER](#notify_code_handler)が、親ウィンドウから反映された通知をマップします。
+[NOTIFY_CODE_HANDLER](#notify_code_handler)に似ていますが、親ウィンドウから反映された通知をマップします。
 
 ```
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
@@ -922,18 +922,18 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="parameters"></a>パラメーター
 
 *cd*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
+##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)が、親ウィンドウから反映された通知をマップします。
+[NOTIFY_HANDLER](#notify_handler)に似ていますが、親ウィンドウから反映された通知をマップします。
 
 ```
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
@@ -941,22 +941,22 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メニュー項目、コントロール、またはアクセラレータの識別子。
+*id*<br/>
+からメニュー項目、コントロール、またはアクセラレータの識別子。
 
 *cd*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
+##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER
 
-ような[NOTIFY_ID_HANDLER](#notify_id_handler)が、親ウィンドウから反映された通知をマップします。
+[NOTIFY_ID_HANDLER](#notify_id_handler)に似ていますが、親ウィンドウから反映された通知をマップします。
 
 ```
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
@@ -964,19 +964,19 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]メニュー項目、コントロール、またはアクセラレータの識別子。
+*id*<br/>
+からメニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
+##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
-ような[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)が、親ウィンドウから反映された通知をマップします。
+[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)に似ていますが、親ウィンドウから反映された通知をマップします。
 
 ```
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -985,24 +985,24 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *cd*<br/>
-[in]通知コード。
+から通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER
+##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER
 
-ような[NOTIFY_RANGE_HANDLER](#notify_range_handler)が、親ウィンドウから反映された通知をマップします。
+[NOTIFY_RANGE_HANDLER](#notify_range_handler)に似ていますが、親ウィンドウから反映された通知をマップします。
 
 ```
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -1011,14 +1011,14 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>パラメーター
 
 *idFirst*<br/>
-[in]コントロールの識別子の連続する範囲の先頭をマークします。
+からコントロール id の連続する範囲の開始をマークします。
 
 *idLast*<br/>
-[in]コントロールの識別子の連続する範囲の末尾をマークします。
+からコントロール id の連続する範囲の末尾をマークします。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。
+からメッセージハンドラー関数の名前。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
-ms.openlocfilehash: b4d3356522faacfc343c33908b64597387fbe51c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52285f391af0a8028307cbbc320af33f9cb1fca5
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521074"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965954"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>コンパイラの警告 (レベル 1) C4572
 
-[ParamArray] 属性は/clr で非推奨、'…' を使用して、代わりに
+[ParamArray] 属性は/clr で非推奨とされます。 '... ' を使用してください。その代わりに
 
-可変個引数リストを指定するため、古いスタイルが使用されました。 CLR をコンパイルする際の代わりに省略記号構文を使用して、<xref:System.ParamArrayAttribute>します。 詳細については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+可変個引数リストを指定するための古いスタイルが使用されました。 CLR に対してコンパイルする場合は、<xref:System.ParamArrayAttribute>の代わりに省略記号構文を使用します。 詳細については、「[可変個引数リスト (..C++.) (/cli)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4572 が生成されます。
 
-```
+```cpp
 // C4572.cpp
 // compile with: /clr /W1
 void Func([System::ParamArray] array<int> ^);   // C4572

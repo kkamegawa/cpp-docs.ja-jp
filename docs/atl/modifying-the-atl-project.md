@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Dialog editor, working with composite controls
 - composite controls, adding controls
 ms.assetid: 59984518-748f-4b8b-875f-3e97d22d0b0f
-ms.openlocfilehash: 1c7725af6baf6007f3d434a6445133a20a98edcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8f20f8618f77c8da3637e94c75adc772319cc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250289"
 ---
 # <a name="modifying-the-atl-project"></a>ATL プロジェクトを変更します。
 
@@ -25,4 +25,3 @@ ActiveX コントロールからのイベントを処理するために、次を
 
 [複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)<br/>
 [方法: リソース スクリプト ファイルを作成する](../windows/how-to-create-a-resource-script-file.md)
-

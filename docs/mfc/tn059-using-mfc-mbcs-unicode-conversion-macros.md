@@ -1,8 +1,6 @@
 ---
-title: 'TN059: MFC の MBCS、Unicode 変換マクロの使用'
+title: TN059:MFC の MBCS、Unicode 変換マクロの使用
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.mbcs
 helpviewer_keywords:
 - MFCANS32.DLL
 - Unicode [MFC], conversion macros
@@ -13,14 +11,14 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: e806cea54fcb1559b7d70b2e7672973501fc0adf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c182ff584404fb91de8ff5e8020ec2e6ef9f950
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476441"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611859"
 ---
-# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>テクニカル ノート 59: MFC の MBCS/Unicode 変換マクロの使用
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059:MFC の MBCS または Unicode 変換マクロの使用
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -140,7 +138,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 }
 ```
 
-文字列が定数でない場合は、関数のメソッド呼び出しをカプセル化します。 これは、毎回解放する変換バッファーで許可されます。 例えば:
+文字列が定数でない場合は、関数のメソッド呼び出しをカプセル化します。 これは、毎回解放する変換バッファーで許可されます。 例:
 
 ```
 void CallSomeMethod(int ii, LPCTSTR lpsz)
@@ -198,4 +196,3 @@ return lpszT; // CString makes copy
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

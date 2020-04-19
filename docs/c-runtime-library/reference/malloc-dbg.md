@@ -1,9 +1,9 @@
 ---
 title: _malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloc_dbg
 - _malloc_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - memory allocation
 - _malloc_dbg function
 ms.assetid: c97eca51-140b-4461-8bd2-28965b49ecdb
-ms.openlocfilehash: 64fb40028d9130278077f3d05dd1e25914dba212
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfaaaec17dc8546c937045f93027e9609981bd93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952878"
 ---
-# <a name="mallocdbg"></a>_malloc_dbg
+# <a name="_malloc_dbg"></a>_malloc_dbg
 
 デバッグ ヘッダーと上書きバッファー用の追加の領域を持つメモリ ブロックをヒープに割り当てます (デバッグ バージョンのみ)。
 
@@ -51,27 +54,27 @@ void *_malloc_dbg(
 要求するメモリ ブロックのサイズ (バイト単位)。
 
 *blockType*<br/>
-要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
+割り当て操作を要求したソースファイルの名前へのポインターまたは**NULL**。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の番号を行または**NULL**します。
+割り当て操作が要求されたソースファイル内の行番号または**NULL**。
 
-*Filename*と*linenumber*ときにパラメーターが使用可能なだけ **_malloc_dbg**が明示的に呼び出された、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されています。
+*Filename*パラメーターと*linenumber*パラメーターは、 **_malloc_dbg**が明示的に呼び出された場合、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されている場合にのみ使用できます。
 
 ## <a name="return-value"></a>戻り値
 
-正常に完了この関数は割り当てられたメモリ ブロックのユーザー部分へのポインターを返します、新しいハンドラー関数を呼び出し、または返します**NULL**します。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[malloc](malloc.md) 関数を参照してください。
+正常に完了した場合、この関数は、割り当てられたメモリブロックのユーザー部分へのポインターを返すか、新しいハンドラー関数を呼び出すか、 **NULL**を返します。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[malloc](malloc.md) 関数を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_malloc_dbg**のデバッグ バージョンです、 [malloc](malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_malloc_dbg**への呼び出しに減少**malloc**します。 両方**malloc**と **_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_malloc_dbg**いくつかのデバッグ機能を提供しています: ユーザーのいずれかの側バッファー特定の割り当ての種類を追跡するためのブロック型パラメーターのリークをテストするブロックの部分と*filename*/*linenumber*の起点を特定する情報割り当て要求。
+**_malloc_dbg**は、 [malloc](malloc.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_malloc_dbg**の各呼び出しは**malloc**への呼び出しに限定されます。 **Malloc**と **_malloc_dbg**はどちらもベースヒープ内にメモリブロックを割り当てますが、 **_malloc_dbg**はいくつかのデバッグ機能を提供します。リークをテストするために、ブロックのユーザー部分の両側のバッファーを指定します。割り当て要求の発生元を特定するための、特定の割り当ての種類と*filename*/*linenumber*情報。
 
-**_malloc_dbg**メモリ ブロックを要求したよりも少し多い領域を割り当てます*サイズ*します。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
+**_malloc_dbg**は、要求された*サイズ*よりも若干多くの領域でメモリブロックを割り当てます。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
 
-**_malloc_dbg**設定**errno**に**ENOMEM**メモリ割り当てが失敗した場合、または (以前に説明したオーバーヘッドを含む) に必要なメモリの量を超えた場合 **_HEAP_MAXREQ**します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+**_malloc_dbg**は、メモリ割り当てが失敗した場合、または必要なメモリの量 (前に説明したオーバーヘッドを含む) が **_HEAP_MAXREQ**を超えた場合に**errno**を**ENOMEM**に設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
 
@@ -89,11 +92,10 @@ void *_malloc_dbg(
 
 ## <a name="example"></a>例
 
-使用する方法の例については **_malloc_dbg**を参照してください[crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)します。
+**_Malloc_dbg**の使用例については、 [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
 [malloc](malloc.md)<br/>
-[_calloc_dbg](calloc-dbg.md)<br/>
 [_calloc_dbg](calloc-dbg.md)<br/>

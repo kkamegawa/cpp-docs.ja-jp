@@ -1,9 +1,9 @@
 ---
 title: _CrtSetReportHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetReportHook
 - CrtSetReportHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-ms.openlocfilehash: 7dcb916ea920751618ffa6a4afbcde8df5e35cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77c1e499c66a76027e872783e256754ef72e465d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478339"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938511"
 ---
-# <a name="crtsetreporthook"></a>_CrtSetReportHook
+# <a name="_crtsetreporthook"></a>_CrtSetReportHook
 
 C ランタイム デバッグ レポート プロセスにフックして、クライアント定義レポート関数をインストールします (デバッグ バージョンのみ)。
 
@@ -52,24 +55,24 @@ C ランタイム デバッグ レポート プロセスにフックする新し
 
 ## <a name="remarks"></a>Remarks
 
-**_CrtSetReportHook**により、C ランタイム デバッグ ライブラリのレポート プロセスに独自のレポートの関数を使用するアプリケーション。 その結果、デバッグ レポートを生成するために [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) が呼び出されるたびに、アプリケーションのレポート関数が先に呼び出されます。 この機能により、特定の割り当ての種類に注目したりを使用して、対応できない宛先にレポートを送信できるように、デバッグ レポートをフィルター処理などの操作を実行するアプリケーション **_CrtDbgReport**します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtSetReportHook**プリプロセス時に削除されます。
+**_CrtSetReportHook**を使用すると、アプリケーションは、C ランタイムデバッグライブラリのレポートプロセスで独自のレポート関数を使用できます。 その結果、デバッグ レポートを生成するために [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) が呼び出されるたびに、アプリケーションのレポート関数が先に呼び出されます。 この機能により、アプリケーションはデバッグレポートのフィルター処理などの操作を実行し、特定の割り当ての種類に焦点を当てたり、 **_CrtDbgReport**を使用して使用できない宛先にレポートを送信したりすることができます。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtSetReportHook**の呼び出しはプリプロセス中に削除されます。
 
-堅牢なバージョンの **_CrtSetReportHook**を参照してください[_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md)します。
+**_CrtSetReportHook**のより堅牢なバージョンについては、 [_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md)を参照してください。
 
-**_CrtSetReportHook**関数クライアント定義レポート関数で指定された新しいインストール*reportHook*し、以前のクライアント定義フック関数を返します。 次の例は、クライアント定義レポート フックをどのようにプロトタイプ宣言するかを示しています。
+**_CrtSetReportHook**関数は、 *reporthook*に指定された新しいクライアント定義レポート関数をインストールし、以前のクライアント定義フックを返します。 次の例は、クライアント定義レポート フックをどのようにプロトタイプ宣言するかを示しています。
 
 ```C
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-場所*reportType*はデバッグ レポートの種類 (**前述**、 **_CRT_ERROR**、または **_CRT_ASSERT**)、 *メッセージ*は、レポートに含まれるよう、完全に組み立てられたデバッグ ユーザー メッセージと**returnValue**クライアント定義によって指定された値がによって返される関数を報告 **_CrtDbgReport**します。 使用できるレポートの種類の詳細については、[_CrtSetReportMode](crtsetreportmode.md) 関数を参照してください。
+ここで、 *reportType*はデバッグレポートの種類 ( **_CRT_WARN**、 **_CRT_ERROR**、または **_CRT_ASSERT**) で、*メッセージ*はレポートに含まれる完全にアセンブルされたデバッグユーザーメッセージであり、**戻り**値はです。 **_CrtDbgReport**によって返される、クライアント定義レポート関数によって指定されます。 使用できるレポートの種類の詳細については、[_CrtSetReportMode](crtsetreportmode.md) 関数を参照してください。
 
-クライアント定義レポート関数は、それ以上のレポートの必要はありませんように完全にデバッグ メッセージを処理する場合、関数が返す**TRUE**します。 関数が返す場合**FALSE**、 **_CrtDbgReport**が呼び出され、レポートの種類、モード、およびファイルの現在の設定を使用してデバッグ レポートを生成します。 指定することでさらに、 **_CrtDbgReport**で値を返す**returnValue**アプリケーションは、デバッグ ブレークが発生したかどうかも制御できます。 デバッグ レポートを構成および生成する方法の詳細については、次を参照してください。 **_CrtSetReportMode**、 [_CrtSetReportFile](crtsetreportfile.md)、および **_CrtDbgReport**します。
+クライアント定義レポート関数でデバッグメッセージが完全に処理され、それ以上のレポートが必要ない場合、関数は**TRUE**を返す必要があります。 関数が**FALSE**を返すと、 **_CrtDbgReport**が呼び出され、レポートの種類、モード、およびファイルの現在の設定を使用してデバッグレポートが生成されます。 また、戻り値として **_CrtDbgReport**を指定することによっ**て、アプリケーション**はデバッグの中断を発生させるかどうかを制御することもできます。 デバッグレポートの構成方法と生成方法の詳細については、「 **_CrtSetReportMode**、 [_CrtSetReportFile](crtsetreportfile.md)、および **_CrtDbgReport**」を参照してください。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 
 > [!NOTE]
-> アプリケーションをコンパイルした場合 **/clr**およびレポート関数を呼び出すと、アプリケーションの終了後にメイン、レポートの関数が CRT 関数を呼び出す場合に、CLR が例外をスローします。
+> アプリケーションが **/clr**でコンパイルされ、アプリケーションが main を終了した後でレポート関数が呼び出された場合、レポート関数が CRT 関数を呼び出すと clr は例外をスローします。
 
 ## <a name="requirements"></a>必要条件
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: ee1a9a6829dbef13b034300d696c43ddba48d9d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453530"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 演算子
 
@@ -80,22 +80,22 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*<br/>
+*Ch (_p)* \
 単一の文字。
 
-*_Elem*<br/>
+*Elem (_t)* \
 要素型。
 
-*_Ostr*<br/>
+*_Ostr*\
 `basic_ostream` オブジェクト。
 
-*str*<br/>
+*引数*\
 文字列。
 
-*_Tr*<br/>
+*Tr (_m)* \
 文字の特徴 (traits)。
 
-*val*<br/>
+*val*\
 型
 
 ### <a name="return-value"></a>戻り値
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-長さ N を決定します = `traits_type::`[長さ](../standard-library/char-traits-struct.md#length)(`str`) で始まるシーケンスの*str*、およびシーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 場合、繰り返しはシーケンスに先行 (`_Ostr`します。 [フラグ](../standard-library/ios-base-class.md#flags) &  `adjustfield` ! =[左](../standard-library/ios-functions.md#left)します。 それ以外の場合、繰り返しはシーケンスに後続します。 関数を返します *_Ostr*します。
+str で始まるシーケンスの`traits_type::`長さ N`str`=[長さ](../standard-library/char-traits-struct.md#length)() を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 (`_Ostr`の場合、繰り返しはシーケンスの前に置かれます。 [flags](../standard-library/ios-base-class.md#flags) & != [left](../standard-library/ios-functions.md#left)。`adjustfield` それ以外の場合、繰り返しはシーケンスに後続します。 関数は、 *_Ostr*を返します。
 
 下記のテンプレート関数は
 
@@ -126,7 +126,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-要素 `_Ch`を挿入しています。 1 < `_Ostr.width` である場合、この関数はまた `_Ostr.width` - 1 充填文字の繰り返しを挿入します。 `_Ostr.flags & adjustfield != left` である場合、繰り返しはシーケンスに先行します。 それ以外の場合、繰り返しはシーケンスに後続します。 返します *_Ostr*します。
+要素 `_Ch`を挿入しています。 1 < `_Ostr.width` である場合、この関数はまた `_Ostr.width` - 1 充填文字の繰り返しを挿入します。 `_Ostr.flags & adjustfield != left` である場合、繰り返しはシーケンスに先行します。 それ以外の場合、繰り返しはシーケンスに後続します。 *_Ostr*が返されます。
 
 下記のテンプレート関数は
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-各要素 *_Ch*で始まるシーケンスの*str*型のオブジェクトに変換されます`Elem`を呼び出して`_Ostr.`[配置](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [widen](../standard-library/basic-ios-class.md#widen)(`_Ch`))。
+ただし、 *str*で始まるシーケンスの*各要素は*、 [put](../standard-library/basic-ostream-class.md#put)`_Ostr.`[(拡張 (](../standard-library/basic-ios-class.md#widen)`_Ch`)) を呼び`Elem`出す`_Ostr.`ことによって、型のオブジェクトに変換されます。
 
 下記のテンプレート関数は
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-点を除いて *_Ch*型のオブジェクトに変換されます`Elem`呼び出して`_Ostr.put`( `_Ostr.widen`( `_Ch`))。
+ただし、 ( `Elem` `_Ostr.put` (`_Ch`)) を呼び出すことによって、Ch が型のオブジェクトに変換される点が異なります。 `_Ostr.widen`
 
 下記のテンプレート関数は
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(拡大変換することはありません *_Ch*挿入する前にします)。
+(これを挿入する前に、 *Ch*を広げる必要はありません)。
 
 下記のテンプレート関数は
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-返します`_Ostr`<< (`const char *`)`str`します。
+< `_Ostr` < (`const char *` )`str`を返します。
 
 下記のテンプレート関数は
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-返します`_Ostr`<< (`char`)`_Ch`します。
+< `_Ostr` < (`char` )`_Ch`を返します。
 
 下記のテンプレート関数は
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-返します`_Ostr`<< (`const char *`)`str`します。
+< `_Ostr` < (`const char *` )`str`を返します。
 
 下記のテンプレート関数は
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-返します`_Ostr`<< (`char`)`_Ch`します。
+< `_Ostr` < (`char` )`_Ch`を返します。
 
 下記のテンプレート関数は
 
@@ -269,4 +269,4 @@ basic_ostream<_Elem, _Tr>& operator<<(
 
 ## <a name="see-also"></a>関連項目
 
-[\<ostream>](../standard-library/ostream.md)<br/>
+[\<ostream>](../standard-library/ostream.md)

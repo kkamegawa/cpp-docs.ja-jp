@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 6be34e801f7314efe76a4bea61caf13693eee31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661098"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221831"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 
@@ -56,8 +56,6 @@ Platform::array からすべてのメソッドを継承する[platform::writeonl
 Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
 Platform::array を使用するタイミングと方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
-
-Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
 このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、方法は、platform.winmd で定義されているパブリック型ではないため、IntelliSense が含まれないオブジェクト ブラウザーに表示されます。
 
@@ -108,7 +106,8 @@ T& get(unsigned int index)  const;
 
 ### <a name="return-value"></a>戻り値
 
-`index` パラメーターで指定された配列要素。
+
+  `index` パラメーターで指定された配列要素。
 
 ## <a name="value"></a>  Array::value プロパティ
 
@@ -126,5 +125,5 @@ property Array^ Value;
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

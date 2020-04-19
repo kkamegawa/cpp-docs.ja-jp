@@ -1,6 +1,6 @@
 ---
 title: __assume
-ms.date: 10/09/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __assume
 - _assume
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: a1e5d096b996ef7b8a29c978be8070e3c682387d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662125"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216966"
 ---
-# <a name="assume"></a>__assume
+# <a name="__assume"></a>__assume
 
 **Microsoft 固有の仕様**
 
@@ -23,15 +23,15 @@ ms.locfileid: "50662125"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 __assume(
    expression
 )
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*式*<br/>
+*条件*\
 評価が true になると想定される式。
 
 ## <a name="remarks"></a>Remarks
@@ -45,21 +45,21 @@ __assume(
 
 `__assume` は正規の組み込みではありません。 これは関数として宣言する必要がなく、また `#pragma intrinsic` ディレクティブ内では使用できません。 コードは生成されませんが、オプティマイザーが生成するコードには影響を与えます。
 
-使用`__assume`で、 [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)アサートがいない場合のみ回復可能な。 コンパイラがエラー処理コードを最適化する場合があるため、後続のエラー回復コードを含むアサートに `__assume` を使用しないでください。
+アサート`__assume`が復旧できない場合にのみ、[アサート](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)でを使用します。 コンパイラがエラー処理コードを最適化する場合があるため、後続のエラー回復コードを含むアサートに `__assume` を使用しないでください。
 
 `__assume(0)` このステートメントは特殊なケースです。 到達できないコード パスを示すために `__assume(0)` を使用します。 次の例では、switch ステートメントの default ケースに到達できないことを示すために `__assume(0)` を使用します。 これは、`__assume(0)` の最も一般的な使用方法です。
 
-以前のバージョンとの互換性のため **_assume**のシノニムです **_assume**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
+以前のバージョンとの互換性を維持するために、 [ \(コンパイラオプションである [言語拡張機能を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合は、__assume のシノニムであると仮定します。
 
 ## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`__assume`|x86、ARM、x64|
+|`__assume`|x86、ARM、x64、ARM64|
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // compiler_intrinsics__assume.cpp
 #ifdef DEBUG
 # define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__) )
@@ -97,13 +97,13 @@ int main(int p)
 
 コンパイラでは `__assume` を基にしてコードを生成するため、`__assume` ステートメント内の式が実行時に false となる場合、そのコードは正しく動作しない可能性があります。 実行時に式が常に true となることが確認できない場合は、`assert` 関数を使用するとコードを保護することができます。
 
-```
+```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
 ```
 
 ただし、このように `assert` を使用すると、このドキュメントで既に説明した default ケースの最適化がコンパイラで実行されなくなります。 代わりに、次のような別のマクロを使用することができます。
 
-```
+```C
 #ifdef DEBUG
 # define NODEFAULT   ASSERT(0)
 #else
@@ -118,5 +118,5 @@ int main(int p)
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [キーワード](../cpp/keywords-cpp.md)

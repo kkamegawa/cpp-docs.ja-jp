@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318551"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (ランタイム エラー チェック)
 
@@ -53,7 +53,7 @@ ms.locfileid: "50655002"
 **c**<br/>
 レポートの値は、小さいデータ型とデータが失われる結果に割り当てられます。 たとえば、値型の場合`short 0x101`型の変数に割り当てられている`char`します。
 
-このオプションを切り捨てを予定して、たとえば、最初の 8 ビットの場合の状況を報告する、`int`として返されます、`char`します。 **/RTC** `c` 、実行時エラーが発生の結果として、実行時エラーを回避するために必要な情報をマスクすることができます、情報が代入の結果として失われた場合は、 **/RTC** `c`. 例えば:
+このオプションを切り捨てを予定して、たとえば、最初の 8 ビットの場合の状況を報告する、`int`として返されます、`char`します。 **/RTC** `c` 、実行時エラーが発生の結果として、実行時エラーを回避するために必要な情報をマスクすることができます、情報が代入の結果として失われた場合は、 **/RTC** `c`. 例:
 
 ```
 #include <crtdbg.h>
@@ -75,7 +75,7 @@ int main() {
 
 - ローカル変数を 0 以外の値を初期化します。 これにより、デバッグ モードで実行されているときに表示されないバグを特定できます。 スタックの変数では、リリース ビルドで変数をスタックのコンパイラの最適化のため、リリース ビルドと比べると、デバッグ ビルドでの 0 になりますが、大きい可能性はあります。 プログラムが使用されると、スタックの領域、ことはありません 0 にリセットして、コンパイラによって、されます。 そのため、同じスタック領域を使用して処理を行う、以降の初期化されていないスタック変数では、スタック メモリで以前使用から残された値を返すことができます。
 
-- オーバーランや配列などのローカル変数のアンダーランを検出します。 **/RTC** `s`コンパイラ埋め込み構造体からの結果をメモリにアクセスするときにオーバーランが検出されません。 使用して埋め込みが発生する可能性が[align](../../cpp/align-cpp.md)、 [/Zp (構造体メンバーの配置)](../../build/reference/zp-struct-member-alignment.md)、または[パック](../../preprocessor/pack.md)余白を追加するコンパイラが必要な方法で構造体の要素を注文する場合またはします。
+- オーバーランや配列などのローカル変数のアンダーランを検出します。 **/RTC** `s`コンパイラ埋め込み構造体からの結果をメモリにアクセスするときにオーバーランが検出されません。 使用して埋め込みが発生する可能性が[align](../../cpp/align-cpp.md)、 [/Zp (構造体メンバーの配置)](zp-struct-member-alignment.md)、または[パック](../../preprocessor/pack.md)余白を追加するコンパイラが必要な方法で構造体の要素を注文する場合またはします。
 
 - スタック ポインターの検証は、スタック ポインターの破損を検出します。 スタック ポインターの破損は、呼び出し規約の不一致によることができます。 エクスポートされた DLL で関数を呼び出す関数ポインターを使用して、たとえば、 [_ _stdcall](../../cpp/stdcall.md)として関数へのポインターを宣言するが、 [_ _cdecl](../../cpp/cdecl.md)します。
 
@@ -95,23 +95,23 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="remarks"></a>Remarks
 
-実行時エラー チェックは、実行中のコードで問題を検出する方法です。詳細については、次を参照してください。[方法: ネイティブのランタイム チェックを使用して](/visualstudio/debugger/how-to-use-native-run-time-checks)します。
+実行時エラー チェックは、実行中のコードで問題を検出する方法です。詳細については、次を参照してください。[方法。ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)」を参照してください。
 
 いずれかを使用してコマンドラインでプログラムをコンパイルする場合、 **/RTC**コンパイラ オプション、すべてのプラグマ[最適化](../../preprocessor/optimize.md)手順については、コードでは失敗します。 実行時エラー チェックが有効で (最適化) リリース ビルドではないためにです。
 
-使用する必要があります **/RTC**開発ビルドで **/RTC**製品版をビルドしない使用する必要があります。 **/RTC**コンパイラの最適化では使用できません ([/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md))。 ビルドされたプログラム イメージ **/RTC**若干大きくなりでビルドされたイメージよりもわずかに遅くなります **/Od** (最大 5% よりも低速、 **/Od**ビルド)。
+使用する必要があります **/RTC**開発ビルドで **/RTC**製品版をビルドしない使用する必要があります。 **/RTC**コンパイラの最適化では使用できません ([/O オプション (コードの最適化)](o-options-optimize-code.md))。 ビルドされたプログラム イメージ **/RTC**若干大きくなりでビルドされたイメージよりもわずかに遅くなります **/Od** (最大 5% よりも低速、 **/Od**ビルド)。
 
-いずれかを使用すると、_ _msvc_runtime_checks プリプロセッサ ディレクティブが定義される **/RTC**オプションまたは[/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md)します。
+いずれかを使用すると、_ _msvc_runtime_checks プリプロセッサ ディレクティブが定義される **/RTC**オプションまたは[/GZ](gz-enable-stack-frame-run-time-error-checking.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. をクリックして、**コード生成**プロパティ ページ。
 
-1. 次のプロパティの一方または両方の変更:**基本ランタイム チェック**または**小さい型チェック**します。
+1. 次のプロパティの一方または両方を変更します。**基本ランタイム チェック**または**チェックを小さい型**します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -119,6 +119,6 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[方法 : ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[方法: ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)

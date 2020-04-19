@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 89c554bda1c82fbedda5b027dbb70b12c2c7cec4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518049"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455853"
 ---
 # <a name="isobject-class"></a>is_object クラス
 
@@ -27,12 +27,12 @@ struct is_object;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは false を保持する型*Ty*が参照型、関数の型または void、または`cv-qualified`のうち、1 つのフォームそれ以外の場合は true を保持します。
+型*Ty*が参照型、関数型、または void で`cv-qualified`ある場合、またはそのいずれかの形式である場合、型述語のインスタンスは false を保持します。それ以外の場合は、true を保持します。
 
 ## <a name="example"></a>例
 
@@ -85,5 +85,5 @@ is_object<void> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_function クラス](../standard-library/is-function-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_function クラス](../standard-library/is-function-class.md)

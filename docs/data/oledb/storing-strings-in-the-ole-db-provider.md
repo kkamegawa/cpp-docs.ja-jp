@@ -1,19 +1,23 @@
 ---
 title: OLE DB プロバイダーへの文字列の格納
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: MT
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264620"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525351"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の格納
 
-*カスタム*RS.h、 **ATL OLE DB プロバイダー ウィザード**と呼ばれる既定のユーザー レコードを作成します。`CWindowsFile`します。 2 つの文字列を処理するために次のように変更します。`CWindowsFile`次のコードに示すようにします。
+> [!NOTE] 
+> ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降では使用できません。
+
+
+*Custom*RS.h では、**ATL OLE DB プロバイダー ウィザード**により、`CWindowsFile` という名前のデフォルト ユーザー レコードが作成されます。 2 つの文字列を処理するには、次のコードに示すように `CWindowsFile` を変更します。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,9 +52,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-データ メンバー`szCommand`と`szText`で 2 つの文字列を表す`szCommand2`と`szText2`必要な場合、追加の列とします。 データ メンバー`dwBookmark`この単純な読み取り専用プロバイダーは必要ありませんが、後で追加に使用されます、`IRowsetLocate`インターフェイスは、参照してください[、単純な読み取り専用プロバイダーの強化](../../data/oledb/enhancing-the-simple-read-only-provider.md)します。 `==`演算子とインスタンスを比較します (この演算子の実装は省略可能)。
+データ メンバーの `szCommand` と `szText` は、2 つの文字列を表します。必要な場合は、`szCommand2` と `szText2` を使用して、追加の列を表します。 データ メンバー `dwBookmark` は、このシンプルな読み取り専用プロバイダーでは不要ですが、後で `IRowsetLocate` インターフェイスを追加するために使用されます。「[Enhancing the Simple Read Only Provider (シンプルな読み取り専用プロバイダーの拡張)](../../data/oledb/enhancing-the-simple-read-only-provider.md)」をご覧ください。 `==` 演算子では、インスタンスが比較されます (この演算子の実装は省略可能です)。
 
-機能を追加するにはこれが完了したら、 [OLE DB プロバイダーへの文字列の読み取り](../../data/oledb/reading-strings-into-the-ole-db-provider.md)します。
+これを行うと、[文字列の読み取り機能を OLE DB プロバイダーに追加](../../data/oledb/reading-strings-into-the-ole-db-provider.md)できます。
 
 ## <a name="see-also"></a>関連項目
 

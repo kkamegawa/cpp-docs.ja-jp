@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166257"
 ---
 # <a name="typename"></a>typename
 
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**Typename**の代わりにキーワードを使用することも**クラス**テンプレート パラメーターの一覧表示されます。 たとえば、次のステートメントと同じ意味です。
+**typename**の代わりにキーワードを使用することも**class**テンプレート パラメーターの一覧表示されます。 たとえば、次のステートメントと同じ意味です。
 
 ```cpp
 template<class T1, class T2>...

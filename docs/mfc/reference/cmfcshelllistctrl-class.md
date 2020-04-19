@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 02d4883c6b5445515d891c5e76ccf10b6bb35bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694206"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504922"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
 
-`CMFCShellListCtrl`クラスは、Windows リスト コントロールの機能を提供し、シェル項目の一覧を表示する機能を含めることによってを展開します。
+クラス`CMFCShellListCtrl`は、Windows リストコントロールの機能を提供し、シェル項目の一覧を表示する機能を追加することによって拡張します。
 
 ## <a name="syntax"></a>構文
 
@@ -65,34 +65,34 @@ class CMFCShellListCtrl : public CMFCListCtrl
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|指定されたフォルダー内に含まれる項目の一覧を表示します。|
-|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|現在表示されているフォルダーの親であるフォルダー内に含まれる項目の一覧を表示します。|
-|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|有効または、ショートカット メニューを無効にします。|
-|[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|現在のフォルダーのパスを取得します。|
-|[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|現在のフォルダーの名前を取得します。|
-|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|現在のリスト コントロール項目の PIDL を返します。|
-|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|現在のシェル フォルダーへのポインターを返します。|
-|[CMFCShellListCtrl::GetItemPath](#getitempath)|項目のテキストのパスを返します。|
-|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|リスト コントロールによって表示されるシェル項目の種類を返します。|
-|[CMFCShellListCtrl::IsDesktop](#isdesktop)|現在選択されているフォルダーのデスクトップのフォルダーを確認します。|
-|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|フレームワークは、2 つの項目を比較する際に、このメソッドを呼び出します。 (上書き[CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems))。|
-|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|フレームワーク リスト コントロールによって表示されるファイルの日付を取得するときに呼び出されます。|
-|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|フレームワークは、リスト コントロールのファイル サイズを変換するときに呼び出されます。|
-|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|フレームワーク リスト コントロール項目のアイコンを取得するときに呼び出されます。|
-|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|フレームワークは、リスト コントロール項目のテキストを変換するときに呼び出されます。|
+|[CMFCShellListCtrl::D isplayFolder](#displayfolder)|指定されたフォルダーに格納されている項目の一覧を表示します。|
+|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|現在表示されているフォルダーの親であるフォルダーに格納されている項目の一覧を表示します。|
+|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|ショートカットメニューを有効または無効にします。|
+|[CMFCShellListCtrl:: GetCurrentFolder](#getcurrentfolder)|現在のフォルダーのパスを取得します。|
+|[CMFCShellListCtrl:: GetCurrentFolderName](#getcurrentfoldername)|現在のフォルダーの名前を取得します。|
+|[CMFCShellListCtrl:: Getの一覧](#getcurrentitemidlist)|現在のリストコントロール項目の PIDL を返します。|
+|[CMFCShellListCtrl:: GetCurrentShellFolder](#getcurrentshellfolder)|現在のシェルフォルダーへのポインターを返します。|
+|[CMFCShellListCtrl:: GetItemPath](#getitempath)|項目のテキストパスを返します。|
+|[CMFCShellListCtrl:: GetItemTypes](#getitemtypes)|リストコントロールによって表示されるシェル項目の種類を返します。|
+|[CMFCShellListCtrl:: IsDesktop](#isdesktop)|現在選択されているフォルダーがデスクトップフォルダーであるかどうかを確認します。|
+|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|フレームワークは、2つの項目を比較するときにこのメソッドを呼び出します。 ( [CMFCListCtrl:: OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems)をオーバーライドします)。|
+|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|リストコントロールによって表示されるファイルの日付をフレームワークが取得するときに呼び出されます。|
+|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|フレームワークがリストコントロールのファイルサイズを変換するときに呼び出されます。|
+|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|フレームワークがリストコントロール項目のアイコンを取得するときに呼び出されます。|
+|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|フレームワークがリストコントロール項目のテキストを変換するときに呼び出されます。|
 |[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|列の名前を設定するときに、フレームワークによって呼び出されます。|
-|[CMFCShellListCtrl::Refresh](#refresh)|更新して、リスト コントロールを再描画します。|
-|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|リスト コントロールによって表示される項目の種類を設定します。|
+|[CMFCShellListCtrl::Refresh](#refresh)|リストコントロールを更新し、再描画します。|
+|[CMFCShellListCtrl:: SetItemTypes](#setitemtypes)|リストコントロールによって表示される項目の種類を設定します。|
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCShellListCtrl`クラスの機能を拡張する、 [CMFCListCtrl クラス](../../mfc/reference/cmfclistctrl-class.md)Windows シェル項目の一覧にプログラムを有効にするとします。 使用される表示形式は、エクスプ ローラー ウィンドウのリスト ビューのと同様です。
+クラス`CMFCShellListCtrl`は、プログラムで Windows シェル項目を一覧表示できるようにすることで、 [CMFCListCtrl クラス](../../mfc/reference/cmfclistctrl-class.md)の機能を拡張します。 使用される表示形式は、エクスプローラーウィンドウのリストビューの形式に似ています。
 
-A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクトが関連付けられる、`CMFCShellListCtrl`完了エクスプ ローラー ウィンドウを作成するオブジェクト。 内の項目を選択し、`CMFCShellTreeCtrl`により、`CMFCShellListCtrl`選択した項目の内容を一覧表示するオブジェクト。
+[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクトは、エクスプローラーウィンドウ全体を`CMFCShellListCtrl`作成するために、オブジェクトに関連付けることができます。 次に、で`CMFCShellTreeCtrl`項目を選択すると、選択した項目の内容が一覧表示され`CMFCShellListCtrl`ます。
 
 ## <a name="example"></a>例
 
-次の例のオブジェクトを作成する方法、`CMFCShellListCtrl`クラスと、現在表示されているフォルダーの親フォルダーを表示する方法。 このコード スニペットの一部、 [Explorer サンプル](../../visual-cpp-samples.md)します。
+次の例は、 `CMFCShellListCtrl`クラスのオブジェクトを作成する方法と、現在表示されているフォルダーの親フォルダーを表示する方法を示しています。 このコードスニペットは、エクスプローラーの[サンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]
@@ -114,11 +114,11 @@ A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)オブジ�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxshelllistCtrl.h
+**ヘッダー:** afxshelllistCtrl
 
 ##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder
 
-指定されたフォルダー内に含まれる項目の一覧を表示します。
+指定されたフォルダーに格納されている項目の一覧を表示します。
 
 ```
 virtual HRESULT DisplayFolder(LPCTSTR lpszPath);
@@ -128,18 +128,18 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ### <a name="parameters"></a>パラメーター
 
 *lpszPath*<br/>
-[in]フォルダーのパスを含む文字列。
+からフォルダーのパスを含む文字列。
 
 *lpItemInfo*<br/>
-[in]ポインター、`LPAFX_SHELLITEMINFO`構造を表示するフォルダーについて説明します。
+から表示するフォルダーを`LPAFX_SHELLITEMINFO`記述する構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。E_FAIL をそれ以外の場合。
+成功した場合は S_OK。それ以外の場合は E_FAIL です。
 
 ##  <a name="displayparentfolder"></a>  CMFCShellListCtrl::DisplayParentFolder
 
-更新プログラム、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)現在表示されているフォルダーの親フォルダーを表示するオブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトを更新して、現在表示されているフォルダーの親フォルダーを表示します。
 
 ```
 virtual HRESULT DisplayParentFolder();
@@ -147,11 +147,11 @@ virtual HRESULT DisplayParentFolder();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。E_FAIL をそれ以外の場合。
+成功した場合は S_OK。それ以外の場合は E_FAIL です。
 
 ##  <a name="enableshellcontextmenu"></a>  CMFCShellListCtrl::EnableShellContextMenu
 
-ショートカット メニューを有効にします。
+ショートカットメニューを有効にします。
 
 ```
 void EnableShellContextMenu(BOOL bEnable = TRUE);
@@ -160,11 +160,11 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bEnable*<br/>
-[in]ショートカット メニューをフレームワークが有効かどうかを指定するブール値。
+からフレームワークでショートカットメニューを有効にするかどうかを指定するブール値。
 
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder
 
-現在選択されているフォルダーのパスを取得、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトで現在選択されているフォルダーのパスを取得します。
 
 ```
 BOOL GetCurrentFolder(CString& strPath) const;
@@ -173,19 +173,19 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ### <a name="parameters"></a>パラメーター
 
 *strPath*<br/>
-[out]メソッドを書き込むパス文字列のパラメーターへの参照。
+入出力メソッドがパスを書き込む文字列パラメーターへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、0 以外の場合それ以外の場合は 0 です。
+成功した場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは失敗で選択したフォルダーが存在しない場合、`CMFCShellListCtrl`します。
+でフォルダーが選択されていない場合、 `CMFCShellListCtrl`このメソッドは失敗します。
 
 ##  <a name="getcurrentfoldername"></a>  CMFCShellListCtrl::GetCurrentFolderName
 
-現在選択されているフォルダーの名前を取得、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトで現在選択されているフォルダーの名前を取得します。
 
 ```
 BOOL GetCurrentFolderName(CString& strName) const;
@@ -194,15 +194,15 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ### <a name="parameters"></a>パラメーター
 
 *strName*<br/>
-[out]メソッド名の書き込み先の文字列パラメーターへの参照。
+入出力メソッドが名前を書き込む文字列パラメーターへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、0 以外の場合それ以外の場合は 0 です。
+成功した場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは失敗で選択したフォルダーが存在しない場合、`CMFCShellListCtrl`します。
+でフォルダーが選択されていない場合、 `CMFCShellListCtrl`このメソッドは失敗します。
 
 ##  <a name="getcurrentitemidlist"></a>  CMFCShellListCtrl::GetCurrentItemIdList
 
@@ -214,11 +214,11 @@ LPITEMIDLIST GetCurrentItemIdList() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の項目の PIDL します。
+現在の項目の PIDL。
 
-##  <a name="getcurrentshellfolder"></a>  CMFCShellListCtrl::GetCurrentShellFolder
+##  <a name="getcurrentshellfolder"></a>CMFCShellListCtrl:: GetCurrentShellFolder
 
-現在選択されている項目にポインターを取得、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトで現在選択されている項目へのポインターを取得します。
 
 ```
 const IShellFolder* GetCurrentShellFolder() const;
@@ -226,13 +226,13 @@ const IShellFolder* GetCurrentShellFolder() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポインター、 [IShellFolder インターフェイス](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder)選択したオブジェクト。
+選択されたオブジェクトの[Ishellfolder インターフェイス](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder)へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
 オブジェクトが現在選択されていない場合、このメソッドは NULL を返します。
 
-##  <a name="getitempath"></a>  CMFCShellListCtrl::GetItemPath
+##  <a name="getitempath"></a>CMFCShellListCtrl:: GetItemPath
 
 項目のパスを取得します。
 
@@ -245,22 +245,22 @@ BOOL GetItemPath(
 ### <a name="parameters"></a>パラメーター
 
 *strPath*<br/>
-[out]パスを受け取る文字列への参照。
+入出力パスを受け取る文字列への参照。
 
 *iItem*<br/>
-[in]リスト項目のインデックス。
+からリスト項目のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE。FALSE それ以外の場合。
+成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-によって指定されたインデックス*iItem*によって現在表示されている項目に基づいて、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+*IItem*によって指定されたインデックスは、 [Cmfcshelllistctrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトによって現在表示されている項目に基づいています。
 
-##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes
+##  <a name="getitemtypes"></a>CMFCShellListCtrl:: GetItemTypes
 
-によって表示される項目の型を返します、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトによって表示される項目の型を返します。
 
 ```
 SHCONTF GetItemTypes() const;
@@ -268,15 +268,15 @@ SHCONTF GetItemTypes() const;
 
 ### <a name="return-value"></a>戻り値
 
-A [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)に表示される項目の種類を含む値、`CMFCShellListCtrl`します。
+に`CMFCShellListCtrl`一覧表示されている項目の型を格納している[shf](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf)値。
 
 ### <a name="remarks"></a>Remarks
 
-表示される項目の種類を設定する、 `CMFCShellListCtrl`、呼び出す[CMFCShellListCtrl::SetItemTypes](#setitemtypes)します。
+に`CMFCShellListCtrl`一覧表示されている項目の種類を設定するには、 [cmfcshelllistctrl:: SetItemTypes](#setitemtypes)を呼び出します。
 
-##  <a name="isdesktop"></a>  CMFCShellListCtrl::IsDesktop
+##  <a name="isdesktop"></a>CMFCShellListCtrl:: IsDesktop
 
-かどうかをフォルダーを表示、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトは、デスクトップのフォルダー。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトに表示されるフォルダーがデスクトップフォルダーであるかどうかを決定します。
 
 ```
 BOOL IsDesktop() const;
@@ -284,11 +284,11 @@ BOOL IsDesktop() const;
 
 ### <a name="return-value"></a>戻り値
 
-表示されるフォルダーはデスクトップ フォルダーは、TRUE を返します。FALSE それ以外の場合。
+表示されているフォルダーがデスクトップフォルダーである場合は TRUE。それ以外の場合は FALSE。
 
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 ```
 virtual int OnCompareItems(
@@ -299,9 +299,9 @@ virtual int OnCompareItems(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lParam1*<br/>
-[in]*lParam2*<br/>
-[in]*iColumn*<br/>
+から*lParam1*<br/>
+[in] *lParam2*<br/>
+から*iColumn*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -309,7 +309,7 @@ virtual int OnCompareItems(
 
 ##  <a name="onformatfiledate"></a>  CMFCShellListCtrl::OnFormatFileDate
 
-フレームワークは、文字列オブジェクトに関連付けられている日付を変換する必要がありますと、このメソッドを呼び出します。
+フレームワークは、オブジェクトに関連付けられた日付を文字列に変換する必要がある場合に、このメソッドを呼び出します。
 
 ```
 virtual void OnFormatFileDate(
@@ -320,14 +320,14 @@ virtual void OnFormatFileDate(
 ### <a name="parameters"></a>パラメーター
 
 *tmFile*<br/>
-[in]ファイルに関連付けられている日付。
+からファイルに関連付けられた日付。
 
 *str*<br/>
-[out]書式設定されたファイルの日付を含む文字列。
+入出力書式設定されたファイルの日付を含む文字列。
 
 ### <a name="remarks"></a>Remarks
 
-ときに、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトは、ファイルに関連付けられている日付を表示します。、、その日付を文字列形式に変換する必要があります。 `CMFCShellListCtrl`このメソッドを使用して、その変換を行います。 既定では、このメソッドは、現在のロケールを使用して日付の書式設定文字列にします。
+[Cmfcshelllistctrl Class](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトがファイルに関連付けられた日付を表示する場合、その日付を文字列形式に変換する必要があります。 は`CMFCShellListCtrl` 、このメソッドを使用して変換を行います。 既定では、このメソッドは現在のロケールを使用して、日付を文字列に書式設定します。
 
 ##  <a name="onformatfilesize"></a>  CMFCShellListCtrl::OnFormatFileSize
 
@@ -341,19 +341,19 @@ virtual void OnFormatFileSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*lFileSize*<br/>
-[in]フレームワークは、表示されるファイルのサイズ。
+*lFileSize サイズ*<br/>
+からフレームワークによって表示されるファイルのサイズ。
 
 *str*<br/>
-[out]書式設定されたファイルのサイズを含む文字列。
+入出力書式設定されたファイルサイズを格納している文字列。
 
 ### <a name="remarks"></a>Remarks
 
-ときに、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトは、ファイルのサイズを表示する必要がある、ファイルのサイズを文字列形式に変換する必要があります。 `CMFCShellListCtrl`このメソッドを使用して、その変換を行います。 既定では、このメソッドは、バイトから、ファイルのサイズをキロバイト単位に変換し、サイズの書式設定文字列に現在のロケールを使用します。
+[Cmfcshelllistctrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトがファイルのサイズを表示する必要がある場合、ファイルサイズを文字列形式に変換する必要があります。 は`CMFCShellListCtrl` 、このメソッドを使用して変換を行います。 既定では、このメソッドはファイルサイズをバイトからキロバイトに変換し、現在のロケールを使用して、サイズを文字列に書式設定します。
 
 ##  <a name="ongetitemicon"></a>  CMFCShellListCtrl::OnGetItemIcon
 
-フレームワークは、シェル リスト項目に関連付けられているアイコンを取得するには、このメソッドを呼び出します。
+フレームワークは、このメソッドを呼び出して、シェルリスト項目に関連付けられているアイコンを取得します。
 
 ```
 virtual int OnGetItemIcon(
@@ -364,24 +364,24 @@ virtual int OnGetItemIcon(
 ### <a name="parameters"></a>パラメーター
 
 *iItem*<br/>
-[in]項目のインデックス。
+から項目のインデックス。
 
 *pItem*<br/>
-[in]項目を説明する LPAFX_SHELLITEMINFO パラメーター。
+から項目を説明する LPAFX_SHELLITEMINFO パラメーター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、アイコン イメージのインデックス関数が失敗した場合は-1。
+成功した場合はアイコンイメージのインデックス。関数が失敗した場合は-1。
 
 ### <a name="remarks"></a>Remarks
 
-アイコン イメージのインデックスは、システムのイメージ リストに基づきます。
+アイコンイメージのインデックスは、システムイメージの一覧に基づいています。
 
-この方法では、既定で、 *pItem*パラメーター。 値*iItem*既定の実装では使用されません。 使用することができます*iItem*カスタム動作を実装します。
+既定では、このメソッドは*pItem*パラメーターに依存します。 *IItem*の値は、既定の実装では使用されません。 *IItem*を使用して、カスタム動作を実装できます。
 
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText
 
-フレームワークは、シェル項目のテキストを取得する必要がありますと、このメソッドを呼び出します。
+フレームワークは、シェル項目のテキストを取得する必要がある場合に、このメソッドを呼び出します。
 
 ```
 virtual CString OnGetItemText(
@@ -393,27 +393,27 @@ virtual CString OnGetItemText(
 ### <a name="parameters"></a>パラメーター
 
 *iItem*<br/>
-[in]項目のインデックス。
+から項目のインデックス。
 
 *iColumn*<br/>
-[in]関心のある列です。
+から対象の列。
 
 *pItem*<br/>
-[in]項目を説明する LPAFX_SHELLITEMINFO パラメーター。
+から項目を説明する LPAFX_SHELLITEMINFO パラメーター。
 
 ### <a name="return-value"></a>戻り値
 
-A`CString`アイテムに関連付けられているテキストを格納しています。
+項目に関連付けられているテキストを格納している。`CString`
 
 ### <a name="remarks"></a>Remarks
 
-内の各項目、`CMFCShellListCtrl`オブジェクトでは、1 つまたは複数の列にテキストがあります。 フレームワークは、このメソッドを呼び出すときに、対象の列を指定します。 この関数を手動で呼び出す場合に関心がある列を指定する必要もあります。
+オブジェクトの各項目`CMFCShellListCtrl`には、1つまたは複数の列にテキストを含めることができます。 フレームワークがこのメソッドを呼び出すと、目的の列が指定されます。 この関数を手動で呼び出す場合は、関心のある列も指定する必要があります。
 
-この方法では、既定で、 *pItem*プロセスに項目を決定するパラメーター。 値*iItem*既定の実装では使用されません。
+既定では、このメソッドは、処理する項目を決定するために*pItem*パラメーターに依存します。 *IItem*の値は、既定の実装では使用されません。
 
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns
 
-フレームワークは、列の名前を設定するときに、このメソッドを呼び出します。
+フレームワークは、列の名前を設定するときにこのメソッドを呼び出します。
 
 ```
 virtual void OnSetColumns();
@@ -421,11 +421,11 @@ virtual void OnSetColumns();
 
 ### <a name="remarks"></a>Remarks
 
-既定では、フレームワークが 4 つの列を作成、`CMFCShellListCtrl`オブジェクト。 これらの列の名前は**名前**、**サイズ**、**型**、および**Modified**します。 列およびその名前の数をカスタマイズするには、このメソッドをオーバーライドすることができます。
+既定では、フレームワークによって`CMFCShellListCtrl`オブジェクトに4つの列が作成されます。 これらの列の名前は、**名前**、**サイズ**、**種類**、および**変更**されます。 このメソッドをオーバーライドして、列の数と列の名前をカスタマイズできます。
 
 ##  <a name="refresh"></a>  CMFCShellListCtrl::Refresh
 
-更新して再描画、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトを更新し、再描画します。
 
 ```
 virtual HRESULT Refresh();
@@ -433,15 +433,15 @@ virtual HRESULT Refresh();
 
 ### <a name="return-value"></a>戻り値
 
-`S_OK` 成功した場合それ以外の場合、エラー値。
+`S_OK`成功した場合は。それ以外の場合は、エラー値。
 
 ### <a name="remarks"></a>Remarks
 
-によって表示される項目の一覧を更新するには、このメソッドを呼び出して、`CMFCShellListCtrl`オブジェクト。
+`CMFCShellListCtrl`オブジェクトによって表示される項目の一覧を更新するには、このメソッドを呼び出します。
 
-##  <a name="setitemtypes"></a>  CMFCShellListCtrl::SetItemTypes
+##  <a name="setitemtypes"></a>CMFCShellListCtrl:: SetItemTypes
 
-記載されている項目の種類を設定、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクト。
+[Cmfcshelllistctrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトに一覧表示される項目の種類を設定します。
 
 ```
 void SetItemTypes(SHCONTF nTypes);
@@ -450,11 +450,11 @@ void SetItemTypes(SHCONTF nTypes);
 ### <a name="parameters"></a>パラメーター
 
 *nTypes*<br/>
-[in]リスト項目の種類、`CMFCShellListCtrl`サポートしています。
+からオブジェクトが`CMFCShellListCtrl`サポートする項目の種類の一覧。
 
 ### <a name="remarks"></a>Remarks
 
-項目の種類の一覧については、次を参照してください。 [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)します。
+項目の種類の一覧の詳細については、「 [Shsee f](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

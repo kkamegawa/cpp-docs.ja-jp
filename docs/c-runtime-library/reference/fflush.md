@@ -1,9 +1,9 @@
 ---
 title: fflush
-ms.date: 11/04/2016
-apiname:
+ms.date: 09/11/2019
+api_name:
 - fflush
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fflush
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: d03d20ee5024915d0ca4c5a21db4159e8c4f876a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329112"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940946"
 ---
 # <a name="fflush"></a>fflush
 
@@ -44,27 +47,27 @@ int fflush(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**fflush**バッファーが正常にフラッシュされた場合は 0 を返します。 指定したストリームにバッファーがないか、読み取り専用で開かれる場合にも、値 0 が返されます。 戻り値**EOF**はエラーを示します。
+**fflush**は、バッファーが正常にフラッシュされた場合に0を返します。 指定したストリームにバッファーがないか、読み取り専用で開かれる場合にも、値 0 が返されます。 **EOF**の戻り値はエラーを示します。
 
 > [!NOTE]
-> 場合**fflush**返します**EOF**データが、書き込みの失敗により失われた可能性があります。 重大なエラー ハンドラーを設定する場合は、バッファリングを無効にで最も安全な**setvbuf**関数または下位入出力ルーチンを使用する**開く (_o)**、 **_close**と **_write**ストリーム I/O 関数ではなく。
+> **Fflush**が**EOF**を返す場合、書き込みエラーによってデータが失われている可能性があります。 重大なエラーハンドラーを設定するときは、 **setvbuf**関数を使用してバッファリングをオフにするか、ストリーム i/o 関数の代わりに、 **_open**、 **_close**、 **_write**などの低レベルの i/o ルーチンを使用することをお勧めします。
 
 ## <a name="remarks"></a>Remarks
 
-**Fflush**関数は、ストリームをフラッシュ*ストリーム*します。 書き込みモードでストリームを開いた場合、または更新モードで開き、最後の操作が書き込みだった場合、基になるファイルまたはデバイスにストリーム バッファーの内容が書き込まれ、バッファーは破棄されます。 ストリームが読み取りモードで開かれた場合、またはストリームがバッファーへの呼び出しを持たない場合**fflush**影響を与えませんし、バッファーが保持されます。 呼び出し**fflush**への以前の呼び出しの効果が無視されます**ungetc**ストリーム。 呼び出し後もストリームは開いたままになります。
+**Fflush**関数は、ストリーム*ストリーム*をフラッシュします。 書き込みモードでストリームを開いた場合、または更新モードで開き、最後の操作が書き込みだった場合、基になるファイルまたはデバイスにストリーム バッファーの内容が書き込まれ、バッファーは破棄されます。 ストリームが読み取りモードで開かれた場合、またはストリームにバッファーがない場合、 **fflush**を呼び出すと無効になり、すべてのバッファーが保持されます。 **Fflush**を呼び出すと、ストリームの**ungetc**に対する以前の呼び出しの効果が否定されます。 呼び出し後もストリームは開いたままになります。
 
-場合*ストリーム*は**NULL**、動作はへの呼び出しと同じ**fflush**で開いている各ストリーム。 書き込みモードで開いたすべてのストリームと、更新モードで開いて最後の操作が書き込みだったすべてのストリームは、フラッシュされます。 この呼び出しは、他のストリームに影響がありません。
+*ストリーム*が**NULL**の場合、動作は、開いている各ストリームでの**fflush**の呼び出しと同じです。 書き込みモードで開いたすべてのストリームと、更新モードで開いて最後の操作が書き込みだったすべてのストリームは、フラッシュされます。 この呼び出しは、他のストリームに影響がありません。
 
-バッファーは通常はオペレーティング システムによって保持され、データをディスクに自動的に書き込むための最適なタイミングが決定されます。タイミングとしては、バッファーがいっぱいになったとき、ストリームが閉じられるとき、プログラムがストリームを閉じずに正常に終了したときがあります。 ランタイム ライブラリのディスクへのコミットの機能を使用すると、重要なデータをオペレーティング システムのバッファーではなく、ディスクに直接書き込むことができます。 プログラムのオブジェクト ファイルを COMMODE.OBJ にリンクすると、既存のプログラムを書き直さずに、この機能を有効にできます。 呼び出し、結果として得られる実行可能ファイルで **_flushall**をディスクにすべてのバッファーの内容を記述します。 のみ **_flushall**と**fflush** COMMODE.OBJ の影響を受けます。
+バッファーは通常はオペレーティング システムによって保持され、データをディスクに自動的に書き込むための最適なタイミングが決定されます。タイミングとしては、バッファーがいっぱいになったとき、ストリームが閉じられるとき、プログラムがストリームを閉じずに正常に終了したときがあります。 ランタイム ライブラリのディスクへのコミットの機能を使用すると、重要なデータをオペレーティング システムのバッファーではなく、ディスクに直接書き込むことができます。 プログラムのオブジェクト ファイルを COMMODE.OBJ にリンクすると、既存のプログラムを書き直さずに、この機能を有効にできます。 生成された実行可能ファイルでは、 **_flushall**を呼び出して、すべてのバッファーの内容をディスクに書き込みます。 **_Flushall**と**fflush**のみが、commode .obj によって影響を受けます。
 
 ディスクへのコミットの機能の制御については、「[ストリーム入出力](../../c-runtime-library/stream-i-o.md)」、「[fopen](fopen-wfopen.md)」、および「[_fdopen](fdopen-wfdopen.md)」を参照してください。
 
-この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、次を参照してください。 **_fflush_nolock**します。
+この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしていないバージョンについては、「(_s **)** 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -78,44 +81,50 @@ int fflush(
 
 ```C
 // crt_fflush.c
+// Compile with: cl /W4 crt_fflush.c
+// This sample gets a number from the user, then writes it to a file.
+// It ensures the write isn't lost on crash by calling fflush.
 #include <stdio.h>
-#include <conio.h>
 
-int main( void )
+int * crash_the_program = 0;
+
+int main(void)
 {
-   int integer;
-   char string[81];
+    FILE * my_file;
+    errno_t err = fopen_s(&my_file, "myfile.txt", "w");
+    if (my_file && !err)
+    {
+        printf("Write a number: ");
 
-   // Read each word as a string.
-   printf( "Enter a sentence of four words with scanf: " );
-   for( integer = 0; integer < 4; integer++ )
-   {
-      scanf_s( "%s", string, sizeof(string) );
-      printf( "%s\n", string );
-   }
+        int my_number = 0;
+        scanf_s("%d", &my_number);
 
-   // You must flush the input buffer before using gets.
-   // fflush on input stream is an extension to the C standard
-   fflush( stdin );
-   printf( "Enter the same sentence with gets: " );
-   gets_s( string, sizeof(string) );
-   printf( "%s\n", string );
+        fprintf(my_file, "User selected %d\n", my_number);
+
+        // Write data to a file immediately instead of buffering.
+        fflush(my_file);
+    
+        if (my_number == 5)
+        {
+            // Without using fflush, no data was written to the file 
+            // prior to the crash, so the data is lost.
+            *crash_the_program = 5;
+        }
+
+        // Normally, fflush is not needed as closing the file will write the buffer.
+        // Note that files are automatically closed and flushed during normal termination.
+        fclose(my_file);
+    }
+    return 0;
 }
 ```
 
 ```Input
-This is a test
-This is a test
+5
 ```
 
-```Output
-Enter a sentence of four words with scanf: This is a test
-This
-is
-a
-test
-Enter the same sentence with gets: This is a test
-This is a test
+```myfile.txt
+User selected 5
 ```
 
 ## <a name="see-also"></a>関連項目

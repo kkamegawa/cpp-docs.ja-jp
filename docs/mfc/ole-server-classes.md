@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 610a69204e5cb66f2129351ab2a04bb0915a1b4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385324"
 ---
 # <a name="ole-server-classes"></a>OLE サーバー クラス
 
@@ -48,4 +48,3 @@ OLE の処理中のエラーによる例外。 このクラスは、コンテナ
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

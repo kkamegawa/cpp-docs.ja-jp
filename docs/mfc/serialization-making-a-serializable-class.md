@@ -1,5 +1,5 @@
 ---
-title: 'シリアル化 : シリアル化可能なクラスの作成'
+title: シリアル化:シリアル化可能なクラスの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
 - serializable class [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308102"
 ---
-# <a name="serialization-making-a-serializable-class"></a>シリアル化 : シリアル化可能なクラスの作成
+# <a name="serialization-making-a-serializable-class"></a>シリアル化:シリアル化可能なクラスの作成
 
 シリアル化可能なクラスを作成するには、5 つの主な手順が必要です。 以下に示すされ次のセクションで説明します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50486971"
 
 ##  <a name="_core_overriding_the_serialize_member_function"></a> オーバーライド、メンバー関数をシリアル化
 
-`Serialize`で定義されているメンバー関数、`CObject`クラス、オブジェクトの現在の状態をキャプチャするために必要なデータを実際にシリアル化します。 `Serialize`関数には、`CArchive`オブジェクト データを読み書きするために使用する引数。 [CArchive](../mfc/reference/carchive-class.md)オブジェクトがメンバー関数の場合、`IsStoring`を示すかどうか`Serialize`が (データの書き込み) を格納するか、読み込み (データの読み取り)。 結果を使用して`IsStoring`をガイドでは、いずれかのデータを挿入するオブジェクトので、`CArchive`挿入演算子を持つオブジェクト (**<\<**) または抽出演算子 (でデータを抽出**>>**).
+`Serialize`で定義されているメンバー関数、`CObject`クラス、オブジェクトの現在の状態をキャプチャするために必要なデータを実際にシリアル化します。 `Serialize`関数には、`CArchive`オブジェクト データを読み書きするために使用する引数。 [CArchive](../mfc/reference/carchive-class.md)オブジェクトがメンバー関数の場合、`IsStoring`を示すかどうか`Serialize`が (データの書き込み) を格納するか、読み込み (データの読み取り)。 結果を使用して`IsStoring`をガイドでは、いずれかのデータを挿入するオブジェクトので、`CArchive`挿入演算子を持つオブジェクト ( **<\<** ) または抽出演算子 (でデータを抽出 **>>** ).
 
 派生したクラスを検討してください。`CObject`を型の、新しい 2 つのメンバー変数を`CString`と**WORD**します。 変数と宣言には、オーバーライドされた、次のクラス宣言のフラグメントは、新しいメンバーを示しています`Serialize`メンバー関数。
 
@@ -92,9 +92,8 @@ MFC のシリアル化コードは、メモリにオブジェクトを読み取�
 
 [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]
 
-シリアル化可能なクラスを作成したら、この記事で説明したように、クラスのオブジェクトがシリアル化できる[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)します。
+シリアル化可能なクラスを作成したら、この記事で説明したように、クラスのオブジェクトがシリアル化できる[シリアル化します。オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [シリアル化](../mfc/serialization-in-mfc.md)
-

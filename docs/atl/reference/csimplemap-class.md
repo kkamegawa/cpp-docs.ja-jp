@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: 1c1aa34d54f5754feee238fdf12fd6e55b8c32c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afd9f017bb0fb9a95a0ed4fd135dcbd5ea4ddba2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277943"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap クラス
 
@@ -66,7 +66,7 @@ class CSimpleMap
 |名前|説明|
 |----------|-----------------|
 |[CSimpleMap::CSimpleMap](#csimplemap)|コンストラクターです。|
-|[CSimpleMap:: ~ CSimpleMap](#dtor)|デストラクターです。|
+|[CSimpleMap::~CSimpleMap](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -74,7 +74,7 @@ class CSimpleMap
 |----------|-----------------|
 |[CSimpleMap::Add](#add)|マップの配列には、キーと関連付けられている値を追加します。|
 |[CSimpleMap::FindKey](#findkey)|特定のキーを検索します。|
-|[:Findval](#findval)|特定の値を検索します。|
+|[CSimpleMap::FindVal](#findval)|特定の値を検索します。|
 |[CSimpleMap::GetKeyAt](#getkeyat)|指定したキーを取得します。|
 |[CSimpleMap::GetSize](#getsize)|マッピングの配列内のエントリの数を返します。|
 |[CSimpleMap::GetValueAt](#getvalueat)|指定した値を取得します。|
@@ -156,7 +156,7 @@ CSimpleMap();
 
 データ メンバーを初期化します。
 
-##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap
+##  <a name="dtor"></a>  CSimpleMap::~CSimpleMap
 
 デストラクターです。
 
@@ -185,7 +185,7 @@ int FindKey(const TKey& key) const;
 
 存在する場合は、キーのインデックスを返しますそれ以外の場合は-1 を返します。
 
-##  <a name="findval"></a>  :Findval
+##  <a name="findval"></a>  CSimpleMap::FindVal
 
 特定の値を検索します。
 

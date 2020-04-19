@@ -1,17 +1,17 @@
 ---
-title: '方法 : 登録を必要としない COM をビルドする'
+title: '方法: Registration-free COM コンポーネントを構築します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 4f4ebf121b761c37969fa3f9788bda52d913f340
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 783677c97835acc98751fc4a19f9405af752b71a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188939"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>方法 : 登録を必要としない COM をビルドする
+# <a name="how-to-build-registration-free-com-components"></a>方法: Registration-free COM コンポーネントを構築します。
 
 登録を必要としない COM コンポーネントは、Dll に組み込まれているマニフェストのある COM コンポーネントです。
 
@@ -29,6 +29,4 @@ ms.locfileid: "50463532"
 
 ## <a name="see-also"></a>関連項目
 
-[分離アプリケーション](/windows/desktop/SbsCs/isolated-applications)<br/>
-[サイド バイ サイド アセンブリの概要](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
-[方法 : COM コンポーネントを使用する分離アプリケーションをビルドする](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[方法: COM コンポーネントを使用する分離アプリケーションをビルドする](how-to-build-isolated-applications-to-consume-com-components.md)

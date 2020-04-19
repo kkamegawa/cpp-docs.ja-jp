@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 8ff2993cbd5f289ca9208d8c532d7fa8329af086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b15d867bbaf66f511cbda200d692f5db4371ab3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400163"
 ---
 # <a name="compiler-error-c3771"></a>コンパイラ エラー C3771
 

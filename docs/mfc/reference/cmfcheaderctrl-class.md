@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218386"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -123,7 +123,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bAscending`|true|
 |`m_nHighlightedItem`|-1|
 |`m_bTracked`|false|
-|`m_bIsDlgControl`|FALSE|
+|`m_bIsDlgControl`|false|
 |`m_hFont`|NULL|
 
 ##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort

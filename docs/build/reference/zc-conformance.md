@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e24dd53f9c805f57ce974a81a4963434f1868095
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316211"
 ---
 # <a name="zc-conformance"></a>/Zc (準拠)
 
@@ -34,7 +34,7 @@ Visual Studio には、C または C++ 標準と互換性がない拡張機能�
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|C++ 17 オーバーア ラインされている動的割り当てを有効にする (既定での c++ 17)。|
 |[自動\[-\]](zc-auto-deduce-variable-type.md)|新しい標準 C++ の解釈を強制`auto`(で既定)。|
-|[_ _cplusplus\[-\]](zc-cplusplus.md)|有効にする、 **_ _cplusplus**マクロ、サポートされている標準のレポートを (既定ではオフ)。|
+|[__cplusplus\[-\]](zc-cplusplus.md)|有効にする、 **_ _cplusplus**マクロ、サポートされている標準のレポートを (既定ではオフ)。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|外部リンケージを有効にする`constexpr`変数 (既定ではオフ)。|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|C++ の標準を適用する`for`スコープ規則 (で既定)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|有効にする暗黙的な`noexcept`で必要な関数 (で既定で)。|
@@ -55,5 +55,5 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](compiler-options.md)<br/>
-[コンパイラ オプションの設定](setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

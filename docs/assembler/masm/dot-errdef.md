@@ -1,26 +1,27 @@
 ---
 title: .ERRDEF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRDEF
 helpviewer_keywords:
 - .ERRDEF directive
 ms.assetid: 07e39826-56f7-4734-a9de-5ff72879af10
-ms.openlocfilehash: 61d78bc026d53cf8fafd99de8e6e29566938631e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7835918734471ae55b0e3ca5d893c5d954da195
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520017"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313718"
 ---
 # <a name="errdef"></a>.ERRDEF
 
-エラーが発生*名前*が以前に定義されたラベル、変数、またはシンボル。
+*名前*が以前に定義されたラベル、変数、またはシンボルの場合、エラーを生成します。
 
 ## <a name="syntax"></a>構文
 
-> .ERRDEF 名 [] メッセージ]
+> **.Errdef** *name* ⟦ __,__ *message*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

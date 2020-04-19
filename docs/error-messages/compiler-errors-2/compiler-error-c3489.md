@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: a3ea5fa30a54603d15da8e515dab672c0e058e60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738415"
 ---
 # <a name="compiler-error-c3489"></a>コンパイラ エラー C3489
 
@@ -29,11 +29,11 @@ ms.locfileid: "50660734"
 
 - capture 句に参照によって変数を渡します。 (これにより、ラムダ式の動作が変更される可能性があります。)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、既定のモードが値渡しであるラムダ式の capture 句に、変数 `n` が値渡しで出現し、C3489 が生成されます。
 
-```
+```cpp
 // C3489a.cpp
 
 int main()
@@ -43,11 +43,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3489 について考えられる 4 つの解決策を示します。
 
-```
+```cpp
 // C3489b.cpp
 
 int main()
@@ -72,6 +72,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

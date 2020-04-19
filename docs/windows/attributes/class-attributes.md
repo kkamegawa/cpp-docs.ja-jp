@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148420"
 ---
 # <a name="class-attributes"></a>クラス属性
 
@@ -44,7 +44,7 @@ ms.locfileid: "50448868"
 |[noncreatable](noncreatable.md)|単独でインスタンス化できないオブジェクトを定義します。|
 |[progid](progid.md)|コントロールの ProgID を定義します。|
 |[registration_script](registration-script.md)|指定した登録スクリプトを実行します。|
-|[requestedit](requestedit.md)|プロパティをサポートしていることを示します、`OnRequestEdit`通知します。|
+|[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
 |[source](source-cpp.md)|コネクション ポイントのソース インターフェイスのコントロールのクラスを指定します。 プロパティまたはメソッドで、`source`属性は、メンバーがオブジェクトを返すことを示しますまたは`VARIANT`イベントのソースは。|
 |[support_error_info](support-error-info.md)|ターゲット オブジェクトのエラー報告をサポートしています。|
 |[threading](threading-cpp.md)|コントロールのスレッド モデルを指定します。|

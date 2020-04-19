@@ -1,6 +1,6 @@
 ---
 title: PTR 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - PTR
 - operator PTR
@@ -8,23 +8,24 @@ helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-ms.openlocfilehash: 87aa8ff044318d778f823827c451c0ad3332e279
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 32e7673445e1c9007ec980da901330261213f554
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331998"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319009"
 ---
 # <a name="operator-ptr"></a>PTR 演算子
 
-最初の演算子の力、*式*、指定したを持つものとして扱う*型*します。 2 番目の演算子へのポインターを指定する*型*します。
+最初の演算子は、指定された*型*を持つ*式*を強制的に処理します。 2番目の演算子は、*型*へのポインターを指定します。
 
 ## <a name="syntax"></a>構文
 
-> *型*PTR*式*
+> **PTR** *式*の入力
 >
-> \[*距離*] PTR*型*
+> \[*distance*] **PTR** *型*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

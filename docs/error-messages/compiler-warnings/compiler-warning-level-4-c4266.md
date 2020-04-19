@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-ms.openlocfilehash: c0bfe2c03b1c1e310a341e97013ae1516457f300
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eeca693e03751245d9b031d6f64751f0372bbb69
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549878"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991347"
 ---
 # <a name="compiler-warning-level-4-c4266"></a>コンパイラの警告 (レベル 4) C4266
 
-'function': 基本 'type' から仮想メンバー関数用のオーバーライドはありません関数が非表示します。
+' function ': ベース ' type ' から仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です
 
-派生クラスでは、仮想関数のすべてのオーバー ロードをオーバーライドしませんでした。
+派生クラスは、仮想関数のすべてのオーバーロードをオーバーライドしませんでした。
 
 既定では、この警告はオフに設定されています。  詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
 次の例では、C4266 が生成されます。
 
-```
+```cpp
 // C4266.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)
@@ -38,9 +38,9 @@ class LocalBinding : private Engine {
 };   // C4266
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C4266b.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)

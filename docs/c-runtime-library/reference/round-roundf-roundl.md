@@ -1,11 +1,11 @@
 ---
 title: round、roundf、roundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - round
 - roundl
 - roundf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - roundf
 - roundl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591773"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949104"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -65,21 +68,21 @@ long double roundl(
 
 ## <a name="return-value"></a>戻り値
 
-**ラウンド**関数に最も近い整数を表す浮動小数点値を返す*x*します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**Round**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|none|**(_D)**|
+|± **QNAN**、 **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、**ラウンド**を受け取って返す**float**と**長い****二重**値。 C プログラムで**ラウンド**は、**二重**します。
+でC++はオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**ラウンド**のオーバーロードを呼び出すことができます。 C プログラムでは、 **round**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**丸める**、 **roundf**、 **roundl**|\<math.h>|
+|**round**、 **roundf**、 **roundl**|\<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

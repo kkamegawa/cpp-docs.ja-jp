@@ -1,22 +1,20 @@
 ---
-title: 'TN040: MFC/OLE 埋め込み先サイズ変更とズーム'
+title: TN040:MFC OLE インプレースでサイズ変更とズーム
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - resizing in-place
 - TN040
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: 072ebe0180bb44145cef694e2283e91a0cacf602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5c87e6d5daff34a479ba61c0c275b48a8bba4d
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477208"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611115"
 ---
-# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>テクニカル ノート 40: MFC/OLE 埋め込み先サイズ変更とズーム
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 埋め込み先サイズ変更とズーム
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -40,7 +38,7 @@ ms.locfileid: "50477208"
 
 現在のズームの倍率を呼び出すことによって決まりますできます`COleServerDoc::GetZoomFactor`します。 ドキュメントがアクティブでないときにこの関数を呼び出すが常に 100% ズーム要素 (または 1 対 1 の比率) で発生します。 呼び出すと、インプレース アクティブは、100% 以外のものを返す可能性があります。
 
-ズームを正しくの例については、MFC OLE サンプルを参照してください。 [HIERSVR](../visual-cpp-samples.md)します。 ズーム イン HIERSVR では、テキストを表示し、テキスト、一般はスケールインされません (ヒント、表記規則、設計の幅および高さのすべての問題を複雑になります)、直線的で複雑になります。 それでも、HIERSVR はズームを正しく実装するための適切な参照と MFC のチュートリアルは[SCRIBBLE](../visual-cpp-samples.md) (手順 7)。
+ズームを正しくの例については、MFC OLE サンプルを参照してください。 [HIERSVR](../overview/visual-cpp-samples.md)します。 ズーム イン HIERSVR では、テキストを表示し、テキスト、一般はスケールインされません (ヒント、表記規則、設計の幅および高さのすべての問題を複雑になります)、直線的で複雑になります。 それでも、HIERSVR はズームを正しく実装するための適切な参照と MFC のチュートリアルは[SCRIBBLE](../overview/visual-cpp-samples.md) (手順 7)。
 
 `COleServerDoc::GetZoomFactor` さまざまなコンテナーから、またはの実装から別のメトリックに基づく倍率を決定、`COleServerItem`と`COleServerDoc`クラス。 つまり、現在のズームの倍率は次の式によって決定されます。
 
@@ -88,4 +86,3 @@ MFC は、OLE 2 の仕様」の説明に従って完全インプレースでサ�
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

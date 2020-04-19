@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522396"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941986"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 ファイルの終わり (EOF) かどうかをテストします。
 
@@ -52,11 +55,11 @@ int _eof(
 
 ## <a name="return-value"></a>戻り値
 
-**_eof**でない場合、現在の位置がファイルの最後または 0 の場合は 1 を返します。 戻り値-1 はエラーを示します無効なパラメーター ハンドラーが呼び出されるこの場合、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EBADF**、無効なファイル記述子を示します。
+**eof**は、現在の位置がファイルの末尾である場合は1を返し、そうでない場合は0を返します。 戻り値-1 はエラーを示します。この場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は、無効なファイル記述子を示す**EBADF**に設定されます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Eof**関数は、ファイルの末尾に関連付けられているかどうかを決定します。 *fd*に達しています。
+**Eof**関数は、 *fd*に関連付けられたファイルの末尾に到達したかどうかを判断します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -106,13 +109,13 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>入力: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>入力: crt_eof.txt
 
 ```Input
 This file contains some text.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Number of bytes read = 29

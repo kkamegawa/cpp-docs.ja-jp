@@ -1,9 +1,9 @@
 ---
-title: frexp、frexpf、frexpl
+title: frexp、frexpf、frexpf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - frexp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - frexp
 - _frexpl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563840"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956634"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpf
 
 浮動小数点数の仮数と指数を取得します。
 
@@ -68,24 +71,24 @@ long double frexp(
 *x*<br/>
 浮動小数点値。
 
-*expptr*<br/>
+*すべての ptr*<br/>
 格納された整数の指数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**frexp**仮数部を返します。 場合*x*が 0 の場合、仮数と指数部の両方に 0 を返します。 場合*expptr*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+**frexp**は仮数を返します。 *X*が0の場合、関数は仮数と指数の両方に対して0を返します。 **値が NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明され*ているよう*に、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Frexp**関数は浮動小数点値を分割 (*x*) を仮数部 (*m*) と指数部 (*n*) ような絶対値*m*が 0.5 以上 1.0 未満、および*x* = *m* * 2<sup>*n*</sup>. 整数の指数*n*が指す位置に格納されて*expptr*します。
+**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 より小さく、 *x*  = であることを示します。*m* * 2<sup>*n*</sup> 整数の指数*n*は、によって示される位置に格納*されます*。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**frexp**します。 C プログラムで**frexp**は常に、**二重**と**int**ポインターを返します、**二重**します。
+C++ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **frexp**は常に**double**と**int**ポインターを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
-|**frexp**、 **frexpf**、 **frexpl**|\<math.h>|
+|**frexp**、 **frexpf**、 **frexpf**|\<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

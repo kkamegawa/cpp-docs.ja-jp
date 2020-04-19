@@ -6,12 +6,12 @@ f1_keywords:
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-ms.openlocfilehash: 1e487128d4af5c6f9b3f29f5c71e52f616e1807a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5bcebd80b296a0b8416580aa03acc59ce3750cd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655326"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448218"
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt; 列挙型
 
@@ -57,4 +57,4 @@ class launch{
 
 ## <a name="see-also"></a>関連項目
 
-[\<future>](../standard-library/future.md)<br/>
+[\<future>](../standard-library/future.md)

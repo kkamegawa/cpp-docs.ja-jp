@@ -1,10 +1,10 @@
 ---
 title: _ismbbalpha、_ismbbalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalpha
 - _ismbbalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbalpha
 - ismbbalpha_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588670"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954256"
 ---
-# <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha、_ismbbalpha_l
+# <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha、_ismbbalpha_l
 
 指定されたマルチバイト文字が英字かどうかを判定します。
 
@@ -60,11 +63,11 @@ int _ismbbalpha_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbalpha**場合 0 以外の値を返す式。
+次の式の場合、 **_ismbbalpha**は0以外の値を返します。
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-0 以外の場合は、 *c*、または 0 でない場合。 **_ismbbalpha**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbalpha_l**に渡されたロケールを使用すると同じです。
+*c*の場合は0以外の。それ以外の場合は0。 **_ismbbalpha**は、ロケールに依存する任意の文字設定に現在のロケールを使用します。 **_ismbbalpha_l**は、渡されたロケールを使用する点を除いて同じです。
 
 ## <a name="requirements"></a>必要条件
 

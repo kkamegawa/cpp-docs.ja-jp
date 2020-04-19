@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 042eab1c125f2b98fd36257dfd8971262015ab92
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526231"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990680"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>コンパイラの警告 (レベル 4) C4564
 
-メソッド 'method' のクラス 'class' はサポートされていない既定のパラメーター 'parameter' を定義します。
+クラス ' class ' のメソッド ' method ' で、サポートされていない既定のパラメーター ' parameter ' が定義されています
 
-既定値を持つ 1 つまたは複数のパラメーターを持つメソッドが検出されました。 メソッドが呼び出される; パラメーターの既定値は無視されます。これらのパラメーターの値を明示的に指定します。 これらのパラメーターの値を明示的に指定しないと、C++ コンパイラでエラーが生成されます。
+コンパイラは、既定値を持つ1つ以上のパラメーターを持つメソッドを検出しました。 パラメーターの既定値は、メソッドが呼び出されるときに無視されます。これらのパラメーターの値を明示的に指定します。 これらのパラメーターの値を明示的に指定しなかっC++た場合は、コンパイラによってエラーが生成されます。
 
-特定の Visual Basic で作成された次の .dll は、メソッドの引数に対して既定のパラメーターを許可します。
+次の .dll を Visual Basic で作成した場合、メソッドの引数に既定のパラメーターを使用できます。
 
-```
+```vb
 ' C4564.vb
 ' compile with: vbc /t:library C4564.vb
 Public class TestClass
@@ -31,9 +31,9 @@ Public class TestClass
 End class
 ```
 
-Visual Basic で作成された .dll を使用して次の C++ のサンプル
+次C++の例では、Visual Basic で作成された .dll を使用しています。
 
-```
+```cpp
 // C4564.cpp
 // compile with: /clr /W4 /WX
 #using <C4564.dll>

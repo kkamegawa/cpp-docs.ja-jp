@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3239
 ms.assetid: 22a518b7-020f-4f3c-9963-a094667fd1ac
-ms.openlocfilehash: ec5a1e3a968c9342ba6d386ef1e2be133e45b62c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3143714ff0080ff6890f4afb72521d212e31a4e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499932"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756398"
 ---
 # <a name="compiler-error-c3239"></a>コンパイラ エラー C3239
 
@@ -21,7 +21,7 @@ ms.locfileid: "50499932"
 
 次の例では C3229 が生成されます。
 
-```
+```cpp
 // C3239.cpp
 // compile with: /clr
 int main() {

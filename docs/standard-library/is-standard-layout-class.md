@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 75691c1b09b71580474cc22cdc8382bff55a5e29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500283"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457408"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout クラス
 
@@ -33,7 +33,7 @@ struct is_standard_layout;
 
 ## <a name="remarks"></a>Remarks
 
-場合はこの型述語のインスタンスは true を保持型*Ty*はメンバー オブジェクトの標準的なレイアウトが、メモリ、それ以外の場合は false を保持するクラスです。
+型*Ty*がメモリ内にメンバーオブジェクトの標準レイアウトを持つクラスである場合、この型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,4 +43,4 @@ struct is_standard_layout;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

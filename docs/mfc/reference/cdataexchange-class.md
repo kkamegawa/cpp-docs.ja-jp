@@ -1,4 +1,4 @@
----
+﻿---
 title: CDataExchange クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 7d0a804294fa5da619bdab4184adf3e28c420506
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253570"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange クラス
 
@@ -50,9 +50,9 @@ class CDataExchange
 |名前|説明|
 |----------|-----------------|
 |[CDataExchange::Fail](#fail)|検証が失敗したときに呼び出されます。 前のコントロールにフォーカスをリセットし、例外をスローします。|
-|[CDataExchange::PrepareCtrl](#preparectrl)|データ交換または検証用には、指定したコントロールを準備します。 エディット コントロールに使用します。|
-|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|データ交換または検証用の指定した編集コントロールを準備します。|
-|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|データ交換または検証用には、指定した OLE コントロールを準備します。 エディット コントロールに使用します。|
+|[CDataExchange::PrepareCtrl](#preparectrl)|データ交換または検証用に、指定したコントロールを準備します。非エディット コントロールに使用してください。|
+|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|データ交換または検証用に、指定したエディット コントロールを準備します。|
+|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|データ交換または検証用に、指定した OLE コントロールを準備します。非エディット コントロールに使用してください。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -159,7 +159,7 @@ HWND PrepareCtrl(int nIDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*各*<br/>
+*nIDC*<br/>
 DDX DDV 用に準備するコントロールの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -186,7 +186,7 @@ HWND PrepareEditCtrl(int nIDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*各*<br/>
+*nIDC*<br/>
 DDX または DDV を準備するエディット コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -213,7 +213,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*各*<br/>
+*nIDC*<br/>
 DDX または DDV を準備する OLE コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -230,8 +230,7 @@ DDX ルーチンおよび DDV ルーチンを記述の詳細については、�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC サンプル VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)
-

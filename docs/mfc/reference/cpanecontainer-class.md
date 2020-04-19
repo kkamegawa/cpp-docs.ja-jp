@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: bd0e238dd936dfff0677e41831c72229171cb656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373116"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer クラス
 
@@ -145,7 +145,7 @@ class CPaneContainer : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneContainer::CPaneContainer](#cpanecontainer)|既定のコンストラクター|
+|[CPaneContainer::CPaneContainer](#cpanecontainer)|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -214,7 +214,7 @@ class CPaneContainer : public CObject
 
 ## <a name="example"></a>例
 
-次の例では、インスタンスを構築する方法、`CPaneContainer`クラス。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)します。
+次の例では、インスタンスを構築する方法、`CPaneContainer`クラス。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
@@ -283,7 +283,7 @@ virtual int CalcAvailablePaneSpace(
 [in]*nRequiredOffset*<br/>
 [in]*pBar*<br/>
 [in]*pContainer*<br/>
-[in]*bLeftBar*<br/>
+[in] *bLeftBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -299,8 +299,8 @@ virtual CSize CalcAvailableSpace(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*sizeStretch*<br/>
-[in]*bLeftBar*<br/>
+[in] *sizeStretch*<br/>
+[in] *bLeftBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -330,7 +330,7 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentContainer*<br/>
+[in] *pParentContainer*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -349,7 +349,7 @@ CPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pManager*<br/>
-[in]*pLeftBar*<br/>
+[in] *pLeftBar*<br/>
 [in]*pRightBar*<br/>
 [in]*pSlider*<br/>
 
@@ -366,7 +366,7 @@ virtual void DeletePane(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pBar*<br/>
-[in]*barType*<br/>
+[in] *barType*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -381,7 +381,7 @@ CPaneContainer* FindSubPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pObject*<br/>
-[in]*findCriteria*<br/>
+[in] *findCriteria*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -686,7 +686,7 @@ virtual void Move(CPoint ptNewLeftTop);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ptNewLeftTop*<br/>
+[in] *ptNewLeftTop*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -716,7 +716,7 @@ virtual int OnMoveInternalPaneDivider(
 ### <a name="parameters"></a>パラメーター
 
 [in]*nOffset*<br/>
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -787,7 +787,7 @@ virtual void Resize(
 ### <a name="parameters"></a>パラメーター
 
 [in]*rect*<br/>
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 [in]*bRedraw*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -809,9 +809,9 @@ virtual void ResizePane(
 [in]*nOffset*<br/>
 [in]*pBar*<br/>
 [in]*pContainer*<br/>
-[in]*bHorz*<br/>
-[in]*bLeftBar*<br/>
-[in]*hdwp*<br/>
+[in] *bHorz*<br/>
+[in] *bLeftBar*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -827,8 +827,8 @@ virtual void ResizePartOfPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*nOffset*<br/>
-[in]*bLeftPart*<br/>
-[in]*hdwp*<br/>
+[in] *bLeftPart*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -855,7 +855,7 @@ void SetPane(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pBar*<br/>
-[in]*bLeft*<br/>
+[in] *bLeft*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -870,7 +870,7 @@ void SetPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pContainer*<br/>
-[in]*bLeft*<br/>
+[in] *bLeft*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -953,14 +953,14 @@ virtual int StretchPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*nOffset*<br/>
-[in]*bStretchHorz*<br/>
-[in]*bLeftBar*<br/>
-[in]*bMoveSlider*<br/>
-[in]*hdwp*<br/>
+[in] *bStretchHorz*<br/>
+[in] *bLeftBar*<br/>
+[in] *bMoveSlider*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

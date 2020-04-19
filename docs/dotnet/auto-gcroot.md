@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_gcroot
 ms.assetid: 1084ff0f-3094-4d19-8646-1314c0733355
-ms.openlocfilehash: f81749852d5498c6673aeca079ed3da9ec7ddad4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24640f6c98b54f2df8deec6bf8bcf2a352d8b461
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223002"
 ---
 # <a name="autogcroot"></a>auto_gcroot
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456479"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage クラス
 
@@ -30,15 +30,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*len*<br/>
+*Len*\
 オブジェクトのサイズ。
 
-*配置*<br/>
+*位置*\
 オブジェクトのアライメント。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート メンバー typedef `type` POD 型の配置のシノニムです*Align*とサイズ*Len*します。 *Align*に等しくなければ`alignment_of<T>::value`何らかの種類の`T`、または既定の配置。
+テンプレートメンバー typedef `type`は、アラインメントの*Align*と size *Len*を持つ POD 型のシノニムです。 *Align*は、何らか`alignment_of<T>::value`の型`T`、または既定のアラインメントと同じである必要があります。
 
 ## <a name="example"></a>例
 
@@ -72,5 +72,5 @@ aligned to double == 8
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of クラス](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[alignment_of クラス](../standard-library/alignment-of-class.md)

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224450"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage クラス
 
@@ -89,7 +89,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 各コントロールをカスタムまたはストック プロパティ ダイアログ コントロール、コントロールのユーザーが現在のプロパティ値を表示し、必要な場合は、その値を変更できるようにすることができます。
 
-使用しての詳細については`COlePropertyPage`、記事をご覧ください[ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
+使用しての詳細については`COlePropertyPage`、記事をご覧ください[ActiveX コントロール。プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -385,8 +385,8 @@ void SetPageName(LPCTSTR lpszPageName);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプル CIRC3](../../visual-cpp-samples.md)<br/>
-[MFC サンプル TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC のサンプル CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [CDialog クラス](../../mfc/reference/cdialog-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CDialog クラス](../../mfc/reference/cdialog-class.md)

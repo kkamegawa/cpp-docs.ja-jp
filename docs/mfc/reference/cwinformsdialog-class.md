@@ -1,6 +1,6 @@
 ---
 title: CWinFormsDialog クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CWinFormsDialog
 - AFXWINFORMS/CWinFormsDialog
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1542f852a8fe3f05d81ae59efb8a522caae671fd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323412"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog クラス
 
@@ -58,8 +58,8 @@ MFC アプリケーションに表示される .NET Framework ユーザー コ�
 
 |名前||
 |----------|-|
-|[CWinFormsDialog::operator-&gt;](#operator_-_gt)|置換[CWinFormsDialog::GetControl](#getcontrol)式で。|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows フォーム ユーザー コントロールへの参照として型をキャストします。|
+|[CWinFormsDialog::operator -&gt;](#operator_-_gt)|置換[CWinFormsDialog::GetControl](#getcontrol)式で。|
+|[CWinFormsDialog::operator TManagedControl ^](#operator-tmanagedcontrol-hat)|Windows フォーム ユーザー コントロールへの参照として型をキャストします。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -126,7 +126,7 @@ MFC ダイアログ ボックスが作成されたとき (を使用して、[作
 
 ダイアログ ボックスの初期化時に、特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 このメソッドの使用に関する詳細については、次を参照してください。 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)します。
 
-##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator -&gt;
 
 置換[CWinFormsDialog::GetControl](#getcontrol)式で。
 
@@ -140,7 +140,7 @@ inline TManagedControl^  operator->() const throw();
 
 Windows フォームを使用する方法の詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^
+##  <a name="operator-tmanagedcontrol-hat"></a>  CWinFormsDialog::operator TManagedControl^
 
 Windows フォーム ユーザー コントロールへの参照として型をキャストします。
 

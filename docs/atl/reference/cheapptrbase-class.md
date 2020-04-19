@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245609"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase クラス
 
@@ -122,7 +122,7 @@ void Attach(T* pData) throw();
 
 場合、デバッグ ビルドで、アサーション エラーが発生、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数は、現在は既存の値を指します。 つまり、NULL と等しくはありません。
 
-##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase
+##  <a name="dtor"></a>  CHeapPtrBase::~CHeapPtrBase
 
 デストラクターです。
 
@@ -186,7 +186,7 @@ T** operator&() throw();
 
 指すオブジェクトのアドレスを返して、`CHeapPtrBase`オブジェクト。
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator -&gt;
 
 メンバーへのポインター演算子。
 

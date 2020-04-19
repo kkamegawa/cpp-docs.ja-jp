@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-ms.openlocfilehash: 5c623024ef64f49e3379ef02154cda72d445a197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d9a4a0c655fa46c15d8c4d9b2b4e90cd34c2937
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411540"
 ---
 # <a name="using-image-lists-with-header-controls"></a>ヘッダー コントロールでのイメージ リストの使い方
 
@@ -45,4 +45,3 @@ ms.locfileid: "50545250"
 ## <a name="see-also"></a>関連項目
 
 [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)
-

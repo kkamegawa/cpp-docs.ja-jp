@@ -1,10 +1,10 @@
 ---
 title: memcpy_s、wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -24,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607156"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952800"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
 バッファー間でバイトをコピーします。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [memcpy、wmemcpy](memcpy-wmemcpy.md) です。
 
@@ -72,18 +76,18 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*destSize*|*src*|*count*|戻り値|内容*dest*|
+|*dest*|*destSize*|*src*|*count*|戻り値|*Dest*の内容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |任意|任意|任意|0|0|変更されない|
 |**NULL**|任意|任意|0 以外|**EINVAL**|変更されない|
-|任意|任意|**NULL**|0 以外|**EINVAL**|*dest*は 0 に設定|
-|任意|< *カウント*|任意|0 以外|**ERANGE**|*dest*は 0 に設定|
+|任意|任意|**NULL**|0 以外|**EINVAL**|*dest*はゼロになります|
+|任意|< *数*|任意|0 以外|**ERANGE**|*dest*はゼロになります|
 
 ## <a name="remarks"></a>Remarks
 
-**memcpy_s**コピー*カウント*からバイト*src*に*dest*;**wmemcpy_s**コピー*カウント*ワイド文字 (2 バイト)。 ソースと変換先が重なり合うかどうかの動作**memcpy_s**が定義されていません。 使用**memmove_s**重なり合っている領域を処理します。
+**memcpy_s**は、 *src*から*dest*に*カウント*バイトをコピーします。**wmemcpy_s**は、*数*のワイド文字 (2 バイト) をコピーします。 コピー元とコピー先が重複する場合、 **memcpy_s**の動作は未定義です。 重複する領域を処理するには、 **memmove_s**を使用します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*カウント*0 以外の場合と*dest*または*src* null ポインター、または*destSize*よりも小さい*カウント*、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**または**ERANGE**設定と**errno**戻り値にします。
+これらの関数では、パラメーターの検証が行われます。 *Count*が0以外で、 *dest*または*src*が null ポインターであるか、または*destsize*が*count*より小さい場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EINVAL**または**ERANGE**を返し、 **errno**を戻り値に設定します。
 
 ## <a name="requirements"></a>必要条件
 

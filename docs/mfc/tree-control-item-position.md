@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tree controls [MFC], item position
 - position, CTreeCtrl items
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
-ms.openlocfilehash: d39e48cf940f3e5e903fc8a1c82952d5c2550c05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 238cb40319d28a53592a594a72947f400720f935
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392480"
 ---
 # <a name="tree-control-item-position"></a>ツリー コントロールの項目位置
 
@@ -28,4 +28,3 @@ ms.locfileid: "50501206"
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

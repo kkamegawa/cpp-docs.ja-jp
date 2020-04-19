@@ -1,10 +1,10 @@
 ---
 title: _execv、_wexecv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexecv
 - _execv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execv
 - _wexecv
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523952"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941853"
 ---
-# <a name="execv-wexecv"></a>_execv、_wexecv
+# <a name="_execv-_wexecv"></a>_execv、_wexecv
 
 新しい子プロセスを読み込んで実行します。
 
@@ -64,7 +67,7 @@ intptr_t _wexecv(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -82,7 +85,7 @@ intptr_t _wexecv(
 
 これらの各関数は新しいプロセスを読み込んで実行し、コマンド ライン引数へのポインターの配列を渡します。
 
-**_Execv**関数は、パラメーターを検証します。 場合*cmdname*が null ポインターの場合、または*argv*が null ポインターの場合、空の配列へのポインター、配列には、最初の引数として空の文字列が含まれている場合、または、 **_execv**関数で説明されている無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
+これら**の関数は**、パラメーターを検証します。 *Cmdname*が null ポインターである場合、または*argv*が null ポインター、空の配列へのポインター、または配列に最初の引数として空の文字列が含まれている場合は、「パラメーター」で説明されているように、無効なパラメーターハンドラーが呼び出さ**れます。** [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
 
 ## <a name="requirements"></a>必要条件
 

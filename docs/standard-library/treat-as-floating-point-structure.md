@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::chrono::treat_as_floating_point
 ms.assetid: d0a2161c-bbb2-4924-8961-7568d5ad5434
-ms.openlocfilehash: 1b7b58983032ee74ed3d88feb7325cd537e1cc2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: add69179b23a953a937458cbfa55254b21c5ea37
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493861"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685110"
 ---
-# <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point 構造体
+# <a name="treat_as_floating_point-structure"></a>treat_as_floating_point 構造体
 
 `Rep` を浮動小数点型として扱うことができるかどうかを指定します。
 
@@ -24,9 +24,9 @@ struct treat_as_floating_point : is_floating_point<Rep>;
 
 ## <a name="remarks"></a>Remarks
 
-`Rep` は、特殊化 `treat_as_floating_point<Rep>` が [true_type](../standard-library/type-traits-typedefs.md#true_type) から派生したときにのみ浮動小数点型として処理できます。 このテンプレート クラスは、ユーザー定義型に特殊化することができます。
+`Rep` は、特殊化 `treat_as_floating_point<Rep>` が [true_type](../standard-library/type-traits-typedefs.md#true_type) から派生したときにのみ浮動小数点型として処理できます。 クラステンプレートは、ユーザー定義型に特化したものにすることができます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<chrono >
 
@@ -34,5 +34,5 @@ struct treat_as_floating_point : is_floating_point<Rep>;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

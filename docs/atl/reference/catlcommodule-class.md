@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 270e6ca4dcb5c7701281cc2ac6c04e1d60093db3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247192"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule クラス
 
@@ -36,7 +36,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |名前|説明|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|コンストラクターです。|
-|[CAtlComModule:: ~ CAtlComModule](#dtor)|デストラクターです。|
+|[CAtlComModule::~CAtlComModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -75,7 +75,7 @@ CAtlComModule() throw();
 
 モジュールを初期化します。
 
-##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule
+##  <a name="dtor"></a>  CAtlComModule::~CAtlComModule
 
 デストラクターです。
 

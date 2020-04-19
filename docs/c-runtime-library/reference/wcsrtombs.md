@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945047"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -63,8 +66,8 @@ size_t wcsrtombs(
 *count*<br/>
 変換される文字数。
 
-*呼び出すため*<br/>
-ポインター、 **mbstate_t**変換状態オブジェクト。
+*mbstate*<br/>
+**Mbstate_t**の変換状態オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
@@ -72,19 +75,19 @@ size_t wcsrtombs(
 
 ## <a name="remarks"></a>Remarks
 
-**Wcsrtombs**関数に含まれる指定された変換の状態で始まるワイド文字の文字列を変換する*呼び出すため*で指す間接の値から*wcstr*のアドレスに*mbstr*します。 まで、各文字の変換が継続されます。 対応しない文字が検出されたときに、null で終了するワイド文字が検出された後、または次の文字はに含まれている上限を超える場合*カウント*します。 場合**wcsrtombs**前に、かワイド文字の null 文字 (L '\0') が発生した*カウント*発生するに変換する 8 ビット 0 して停止します。
+**Wcsrtombs**関数は、 *mbstate*に含まれる指定された変換の状態で始まるワイド文字の文字列を、 *wcstr*の間接的な値から*mbstr*のアドレスに変換します。 変換は、null 終端ワイド文字が検出された後、対応していない文字が検出されたとき、または次の文字が*カウント*に含まれる制限を超えたときまで、各文字に対して続行されます。 **Wcsrtombs**が、 *count*の前または後に、ワイド文字の null 文字 (L ' \ 0 ') を検出すると、それを8ビットの0に変換して停止します。
 
-したがって、マルチバイト文字の文字列*mbstr*が null で終わる場合にのみ**wcsrtombs**変換中にワイド文字の null 文字を検出するとします。 によって、シーケンスを指している場合*wcstr*と*mbstr*の動作が重なる**wcsrtombs**が定義されていません。 **wcsrtombs**は現在のロケールの LC_TYPE カテゴリを受けます。
+このため、 *mbstr*のマルチバイト文字列は、 **wcsrtombs**が変換中にワイド文字の null 文字を検出した場合にのみ、null で終了します。 *Wcstr*と*mbstr*が指すシーケンスが重なり合う場合、 **wcsrtombs**の動作は未定義になります。 **wcsrtombs**は、現在のロケールの LC_TYPE カテゴリの影響を受けます。
 
-**Wcsrtombs**関数とは異なります[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)によってその再起動します。 変換の状態が格納されている*呼び出すため*同じか、またはその他の再開可能な関数を呼び出すのためです。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、アプリケーションは使用**後**なく**wcsnlen**後続の呼び出しの場合は、 **wcsrtombs**の代わりに使用された**wcstombs**.
+**Wcsrtombs**関数は、 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)の再起動によって異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**の代わりに**wcsrtombs**の後続の呼び出しが使用された場合、アプリケーションは**wcsrlen**ではなく**wcsrlen**を使用します。
 
-場合、 *mbstr*引数が**NULL**、 **wcsrtombs**対象文字列のバイト単位で必要なサイズを返します。 場合*呼び出すため*が null の場合、内部**mbstate_t**変換状態を使用します。 場合の文字シーケンス*wchar*が対応するマルチバイト文字の表現、-1 が返されます、 **errno**に設定されている**EILSEQ**します。
+*Mbstr*引数が**NULL**の場合、 **wcsrtombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。 *Mbstate*が null の場合、内部**mbstate_t**の変換状態が使用されます。 文字シーケンス*wchar*に対応するマルチバイト文字表現がない場合は、-1 が返され、 **errno**は**EILSEQ**に設定されます。
 
 C++ では、この関数にテンプレートのオーバーロードがあります。このオーバーロードは、この関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="exceptions"></a>例外
 
-**Wcsrtombs**関数は、現在のスレッドで関数が呼び出すない限り、マルチ スレッド セーフ**setlocale**この関数の実行中に、*呼び出すため*が null でないです。
+**Wcsrtombs**関数は、この関数の実行中に現在のスレッドの関数が**setlocale**を呼び出しておらず、 *mbstate*が null でない限り、マルチスレッドセーフです。
 
 ## <a name="example"></a>例
 

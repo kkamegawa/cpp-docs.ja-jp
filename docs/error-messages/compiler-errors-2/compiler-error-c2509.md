@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2509
 ms.assetid: 339c1fcd-ec4a-456c-9f18-a9b24d9921af
-ms.openlocfilehash: 21ca3bdcb156aaa654ae3d5d0c1c467a97129dcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0322c1d6f80f26b81ac0e93b944a2f3277026ce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746813"
 ---
 # <a name="compiler-error-c2509"></a>コンパイラ エラー C2509
 
-'identifier': メンバー関数は 'class' で宣言されていません
+' identifier ': メンバー関数が ' class ' で宣言されていません
 
-関数は、指定したクラスで宣言されていません。
+指定されたクラスで関数が宣言されていません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2509 が生成されます。
 
-```
+```cpp
 // C2509.cpp
 // compile with: /c
 struct A {

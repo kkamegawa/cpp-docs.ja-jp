@@ -7,27 +7,28 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: d90e49190ef2f22ce7ba2dfe30c2c68c6275f5b0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520271"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689925"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-ビットの固定サイズ シーケンスを表して処理するための、テンプレート クラス ビットセットと 2 つのサポート テンプレート関数を定義します。
+クラステンプレートのビットセットと、固定サイズのビットシーケンスを表現および操作するための2つのサポートテンプレート関数を定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>［要件］
 
-```
+**ヘッダー:** \<bitset>
 
-#include <bitset>
-```
+**名前空間:** std
+
+## <a name="members"></a>メンバー
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator&](../standard-library/bitset-operators.md#op_amp)|次の 2 つのビットセット間でビットごとの AND を実行します。|
 |[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|ビット シーケンスのテキスト表現を標準出力ストリームに挿入します。|
@@ -37,11 +38,11 @@ ms.locfileid: "51520271"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
-|[bitset クラス](../standard-library/bitset-class.md)|このテンプレート クラスは、固定数のビットで構成されるシーケンスを格納するオブジェクト型を記述します。これらのビットによって、一連の項目または条件のフラグを保持するためのコンパクトな方法が提供されます。|
+|[bitset](../standard-library/bitset-class.md)|クラステンプレートは、固定数のビットで構成されるシーケンスを格納するオブジェクトの型を記述します。これにより、一連の項目または条件のフラグを保持するコンパクトな方法が提供されます。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

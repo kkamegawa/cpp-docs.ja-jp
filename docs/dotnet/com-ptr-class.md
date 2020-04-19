@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209231"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 
@@ -43,7 +43,7 @@ COM インターフェイスです。
 
 A `com::ptr` COM のさまざまなタスクを簡略化および有効期間管理を自動化するもローカル関数の変数としては使用できます。
 
-A`com::ptr`関数のパラメーターとして直接使用することはできません。 使用して、[追跡参照演算子](../windows/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクト演算子 (^) へのハンドル](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)代わりにします。
+A`com::ptr`関数のパラメーターとして直接使用することはできません。 使用して、[追跡参照演算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)代わりにします。
 
 A`com::ptr`関数から直接返されることはできません。 代わりに、ハンドルを使用します。
 

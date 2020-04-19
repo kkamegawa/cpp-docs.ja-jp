@@ -1,6 +1,6 @@
 ---
 title: uninitialized_object クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 5dc03964e8ddef0cd1aab785316eabd98c39e59e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544535"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127700"
 ---
-# <a name="uninitializedobject-class"></a>uninitialized_object クラス
+# <a name="uninitialized_object-class"></a>uninitialized_object クラス
 
 初期化されていないオブジェクトが使用される場合にスローされる例外です。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class uninitialized_object : public runtime_exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[uninitialized_object コンス トラクター](#ctor)|`uninitialized_object` クラスの新しいインスタンスを初期化します。|
+|[uninitialized_object コンストラクター](#uninitialized_object)|`uninitialized_object` クラスの新しいインスタンスを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,33 +41,34 @@ class uninitialized_object : public runtime_exception;
 
 `uninitialized_object`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amprt.h
+**ヘッダー:** amprt. h
 
 **名前空間:** Concurrency
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-unsupported_feature 例外の新しいインスタンスを構築します。
+## <a name="uninitialized_object"></a>uninitialized_object
+
+`uninitialized_object` 例外の新しいインスタンスを構築します。
 
 ### <a name="syntax"></a>構文
 
-```
-explicit unsupported_feature(
+```cpp
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明。
 
 ### <a name="return-value"></a>戻り値
 
-`unsupported_feature` オブジェクト。
+`uninitialized_object` exception オブジェクトです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

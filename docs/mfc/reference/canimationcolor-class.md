@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151176"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor クラス
 
@@ -78,7 +78,7 @@ class CAnimationColor : public CAnimationBaseObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator =](#operator_eq)|CAnimationColor に色を割り当てます。|
+|[CAnimationColor::operator=](#operator_eq)|CAnimationColor に色を割り当てます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -292,7 +292,7 @@ operator COLORREF();
 
 ### <a name="return-value"></a>戻り値
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator =
+##  <a name="operator_eq"></a>  CAnimationColor::operator=
 
 CAnimationColor に色を割り当てます。
 

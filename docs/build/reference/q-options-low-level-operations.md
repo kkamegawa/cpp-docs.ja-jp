@@ -1,40 +1,46 @@
 ---
 title: /Q オプション (低水準の操作)
-ms.date: 1/23/2018
+ms.date: 01/08/2020
 f1_keywords:
 - /q
 helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: a6dcbd256fa3510955884d3adba4855b23cdbfab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514254"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034520"
 ---
 # <a name="q-options-low-level-operations"></a>/Q オプション (低水準の操作)
 
-使用することができます、 **/Q**低水準のコンパイラの次の操作を実行するコンパイラ オプション。
+**/Q**コンパイラオプションを使用すると、次のような低レベルのコンパイラ操作を実行できます。
 
-- [/Qfast_transcendentals (超越関数高速)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): 高速超越関数を生成します。
+- [/Qfast_transcendentals (Force Fast 超越関数)](qfast-transcendentals-force-fast-transcendentals.md): Fast 超越関数を生成します。
 
-- [/Qifist (_ftol を抑制する呼び出しません)](../../build/reference/qifist-suppress-ftol.md): 抑制`_ftol`浮動小数点型から整数型への変換が必要です (x86 のみ) の場合。
+- [/QIfist (非表示 _ftol)](qifist-suppress-ftol.md): 浮動小数点型から整数型への変換が必要な場合に `_ftol` を抑制します (x86 のみ)。
 
-- [/Qimprecise_fwaits (Try ブロック内部の fwaits を削除)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): 削除`fwait`コマンド内で`try`ブロックします。
+- [/Qimprecise_fwaits (Try ブロック内の fwaits を削除)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): `try` ブロック内の `fwait` コマンドを削除します。
 
-- [/Qpar (自動並行化)](../../build/reference/qpar-auto-parallelizer.md): とマークされているループの自動並列化を有効、 [#pragma loop()](../../preprocessor/loop.md)ディレクティブ。
+- [/QIntel-jcc-erratum](qintel-jcc-erratum.md): Intel Jump Conditional CODE (jcc) erratum マイクロコード更新によるパフォーマンスの影響を軽減します。
 
-- [/Qpar-report (自動並行化レポート作成レベル)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): 自動並列化のレベルのレポートを有効にします。
+- [/Qpar (並行化)](qpar-auto-parallelizer.md): [#pragma loop ()](../../preprocessor/loop.md)ディレクティブでマークされているループの自動並列化を有効にします。
 
-- [/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): 浮動小数点レジスタの読み込みし、メモリと MMX の間の移動に関する登録用に最適化を抑制します。
+- [/Qpar-report (自動並行化レポートレベル)](qpar-report-auto-parallelizer-reporting-level.md): 自動並列化のレポートレベルを有効にします。
 
-- [/Qspectre](../../build/reference/qspectre.md): Spectre セキュリティの脆弱性を軽減するために命令を生成します。
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): 浮動小数点レジスタの読み込みと、メモリと MMX レジスタ間の移動の最適化を抑制します。
 
-- [/Qvec-report (自動ベクター化レポート作成レベル)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): 自動ベクター化のレベルのレポートを有効にします。
+- [/Qspectre](qspectre.md): 特定の Spectre セキュリティの脆弱性を軽減するための手順を生成します。
 
-## <a name="see-also"></a>関連項目
+- [/Qspectre-load](qspectre-load.md): 負荷に基づいて Spectre セキュリティの脆弱性を軽減するための手順を生成します。
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+- [/Qspectre-load-cf](qspectre-load-cf.md): 負荷がかかる制御フローの指示に基づいて、Spectre セキュリティの脆弱性を軽減するための手順を生成します。
+
+- [/Qvec-report (自動ベクター化 Reporting Level)](qvec-report-auto-vectorizer-reporting-level.md): 自動ベクター化のレポートレベルを有効にします。
+
+## <a name="see-also"></a>参照
+
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

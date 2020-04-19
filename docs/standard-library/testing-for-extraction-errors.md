@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - extraction errors
 ms.assetid: 6a681028-adba-4557-8f7b-f137932905f8
-ms.openlocfilehash: 62d9c94f366ec666acf2179803c62e4a3ccd7e6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db551a21fd33665d83b11373f040be158406d492
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629230"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453664"
 ---
 # <a name="testing-for-extraction-errors"></a>抽出エラーのテスト
 
@@ -23,4 +23,4 @@ cin>> n;
 
 ## <a name="see-also"></a>関連項目
 
-[入力ストリーム](../standard-library/input-streams.md)<br/>
+[入力ストリーム](../standard-library/input-streams.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 95b0e16e5f5d085e526f45e8e98898474fc5a17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449440"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514033"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-メモリのサイズがサイズのポインターに割り当てられた、サイズのポインター、および 1 次元または多次元配列へのポインターのサイズを指定します。
+サイズ設定されたポインターに割り当てられるメモリのサイズ、サイズポインターへのサイズポインター、および単一または多次元の配列を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,16 +25,16 @@ ms.locfileid: "50449440"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
-サイズのポインターに割り当てられたメモリのサイズ。
+*式 (expression)*<br/>
+サイズ設定されたポインターに割り当てられたメモリのサイズ。
 
 ## <a name="remarks"></a>Remarks
 
-**Size_is** C++ 属性と同じ機能を持つ、 [size_is](/windows/desktop/Midl/size-is) MIDL 属性。
+**Size_is** C++属性には、 [size_is](/windows/win32/Midl/size-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[first_is](first-is.md)配列のセクションを指定する方法の例についてはします。
+配列のセクションを指定する方法の例については、 [first_is](first-is.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "50449440"
 
 |||
 |-|-|
-|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**struct**または**union**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|`max_is`|

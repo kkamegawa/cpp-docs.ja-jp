@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496019"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741529"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 
@@ -87,60 +87,60 @@ class CHeaderCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|`CHeaderCtrl` オブジェクトを構築します。|
+|[CHeaderCtrl:: CHeaderCtrl](#cheaderctrl)|`CHeaderCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|ヘッダー コントロールのすべてのフィルターをクリアします。|
-|[CHeaderCtrl::ClearFilter](#clearfilter)|ヘッダー コントロールのフィルターをクリアします。|
-|[CHeaderCtrl::Create](#create)|ヘッダー コントロールを作成し、それにアタッチ、`CHeaderCtrl`オブジェクト。|
-|[CHeaderCtrl::CreateDragImage](#createdragimage)|ヘッダー コントロール内の項目の画像の透明なバージョンを作成します。|
-|[CHeaderCtrl::CreateEx](#createex)|指定した Windows の拡張スタイルを使用して、ヘッダー コントロールを作成しにアタッチします、`CListCtrl`オブジェクト。|
-|[CHeaderCtrl::DeleteItem](#deleteitem)|ヘッダー コントロールから項目を削除します。|
-|[CHeaderCtrl::DrawItem](#drawitem)|ヘッダー コントロールの指定した項目を描画します。|
-|[CHeaderCtrl::EditFilter](#editfilter)|ヘッダー コントロールの指定したフィルターの編集を開始します。|
-|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|ヘッダー コントロールのビットマップの余白の幅を取得します。|
-|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|フォーカスがある現在のヘッダー コントロールで項目の識別子を取得します。|
-|[CHeaderCtrl::GetImageList](#getimagelist)|ヘッダー コントロールの項目を描画に使用するイメージ リストのハンドルを取得します。|
-|[CHeaderCtrl::GetItem](#getitem)|ヘッダー コントロールの項目に関する情報を取得します。|
-|[CHeaderCtrl::GetItemCount](#getitemcount)|ヘッダー コントロールの項目の数を取得します。|
-|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|ヘッダー コントロールの指定のドロップダウン ボタンの外接する四角形の情報を取得します。|
-|[CHeaderCtrl::GetItemRect](#getitemrect)|ヘッダー コントロールの特定の項目の外接する四角形を取得します。|
-|[CHeaderCtrl::GetOrderArray](#getorderarray)|ヘッダー コントロールの項目の左から右の順序を取得します。|
-|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|現在のヘッダー コントロールのオーバーフロー ボタンの外接する四角形を取得します。|
-|[CHeaderCtrl::HitTest](#hittest)|どのヘッダー項目がある場合、指定したポイントにあるかを決定します。|
-|[として](#insertitem)|ヘッダー コントロールには、新しい項目を挿入します。|
-|[配置](#layout)|指定した四角形内のヘッダー コントロールの位置とサイズを取得します。|
-|[CHeaderCtrl::OrderToIndex](#ordertoindex)|ヘッダー コントロール内での順序に基づいて、item のインデックス値を取得します。|
-|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|ヘッダー コントロールのビットマップの余白の幅を設定します。|
-|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|フィルター属性が、変更時の転記までのタイムアウト間隔を設定、`HDN_FILTERCHANGE`通知します。|
-|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|現在のヘッダー コントロールの指定したヘッダー項目にフォーカスを設定します。|
-|[CHeaderCtrl::SetHotDivider](#sethotdivider)|変更を手動で示すためにヘッダー項目間の境界線をドラッグし、ヘッダー項目のドロップします。|
-|[CHeaderCtrl::SetImageList](#setimagelist)|イメージ リストをヘッダー コントロールに割り当てます。|
-|[CHeaderCtrl::SetItem](#setitem)|ヘッダー コントロールの指定した項目の属性を設定します。|
-|[CHeaderCtrl::SetOrderArray](#setorderarray)|ヘッダー コントロールの項目の左から右の順序を設定します。|
+|[CHeaderCtrl:: ClearAllFilters](#clearallfilters)|ヘッダーコントロールのすべてのフィルターをクリアします。|
+|[CHeaderCtrl:: ClearFilter](#clearfilter)|ヘッダーコントロールのフィルターをクリアします。|
+|[CHeaderCtrl:: Create](#create)|ヘッダーコントロールを作成し、 `CHeaderCtrl`オブジェクトにアタッチします。|
+|[CHeaderCtrl:: CreateDragImage](#createdragimage)|ヘッダーコントロール内の項目のイメージの透明バージョンを作成します。|
+|[CHeaderCtrl:: CreateEx](#createex)|指定した Windows 拡張スタイルを使用してヘッダーコントロールを作成し`CListCtrl` 、オブジェクトに添付します。|
+|[CHeaderCtrl::DeleteItem](#deleteitem)|ヘッダーコントロールから項目を削除します。|
+|[CHeaderCtrl::D rawItem](#drawitem)|ヘッダーコントロールの指定された項目を描画します。|
+|[CHeaderCtrl:: EditFilter](#editfilter)|ヘッダーコントロールの指定したフィルターの編集を開始します。|
+|[CHeaderCtrl:: GetBitmapMargin](#getbitmapmargin)|ヘッダーコントロールのビットマップの余白の幅を取得します。|
+|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|フォーカスがある現在のヘッダーコントロール内の項目の識別子を取得します。|
+|[CHeaderCtrl:: GetImageList](#getimagelist)|ヘッダーコントロールのヘッダー項目を描画するために使用されるイメージリストのハンドルを取得します。|
+|[CHeaderCtrl:: GetItem](#getitem)|ヘッダーコントロールの項目に関する情報を取得します。|
+|[CHeaderCtrl::GetItemCount](#getitemcount)|ヘッダーコントロール内の項目の数を取得します。|
+|[CHeaderCtrl:: GetItemDropDownRect](#getitemdropdownrect)|ヘッダーコントロールの指定されたドロップダウンボタンの外接する四角形の情報を取得します。|
+|[CHeaderCtrl::GetItemRect](#getitemrect)|ヘッダーコントロール内の指定された項目の外接する四角形を取得します。|
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|ヘッダーコントロール内の項目の左から右の順序を取得します。|
+|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|現在のヘッダーコントロールのオーバーフローボタンの外接する四角形を取得します。|
+|[CHeaderCtrl::HitTest](#hittest)|指定したポイントに存在するヘッダー項目を判断します。|
+|[CHeaderCtrl::InsertItem](#insertitem)|新しい項目をヘッダーコントロールに挿入します。|
+|[CHeaderCtrl::Layout](#layout)|指定された四角形内のヘッダーコントロールのサイズと位置を取得します。|
+|[CHeaderCtrl::OrderToIndex](#ordertoindex)|ヘッダーコントロールの順序に基づいて、項目のインデックス値を取得します。|
+|[CHeaderCtrl:: SetBitmapMargin](#setbitmapmargin)|ヘッダーコントロールのビットマップの余白の幅を設定します。|
+|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|フィルター属性および`HDN_FILTERCHANGE`通知の投稿で変更が行われるまでのタイムアウト間隔を設定します。|
+|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|現在のヘッダーコントロール内の指定されたヘッダー項目にフォーカスを設定します。|
+|[CHeaderCtrl:: SetHotDivider](#sethotdivider)|ヘッダー項目を手動でドラッグアンドドロップしたことを示すために、ヘッダー項目間の区分線を変更します。|
+|[CHeaderCtrl:: SetImageList](#setimagelist)|イメージリストをヘッダーコントロールに割り当てます。|
+|[CHeaderCtrl:: SetItem](#setitem)|ヘッダーコントロール内の指定された項目の属性を設定します。|
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|ヘッダーコントロールの項目の左から右への順序を設定します。|
 
 ## <a name="remarks"></a>Remarks
 
-ヘッダー コントロールは、テキストまたは数値の列のセットの上に配置された通常ウィンドウです。 各列のタイトルが含まれているし、部分に分割できる場合します。 ユーザーは、各列の幅を設定する部分を分割する区切り線をドラッグできます。 ヘッダー コントロールの図解は、次を参照してください。[ヘッダー コントロール](/windows/desktop/Controls/header-controls)します。
+ヘッダーコントロールは、通常、テキストまたは数値の列のセットの上に配置されるウィンドウです。 このファイルには、各列のタイトルが含まれており、それぞれの部分に分割できます。 ユーザーは、パーツを区切る分割線をドラッグして、各列の幅を設定できます。 ヘッダーコントロールの図解は、「[ヘッダーコントロール](/windows/win32/Controls/header-controls)」を参照してください。
 
-このコントロール (つまり、`CHeaderCtrl`クラス) は以降 Windows 95/98 および Windows NT 3.51 の下で実行するプログラムにのみ使用できます。
+このコントロール (および`CHeaderCtrl`クラス) は、windows 95/98 および windows NT バージョン3.51 以降で実行されるプログラムに対してのみ使用できます。
 
-Windows 95/Internet Explorer 4.0 のコモン コントロールの追加機能には、次の項目が含まれます。
+Windows 95/Internet Explorer 4.0 コモンコントロールに追加された機能には、次のものが含まれます。
 
-- ヘッダー項目の並べ替え。
+- ヘッダー項目のカスタムの順序付け。
 
-- ヘッダー項目は、ドラッグ アンド ドロップ、ヘッダー項目の順序を並べ替えるため。 HDS_DRAGDROP 形式を使用して、作成するときに、`CHeaderCtrl`オブジェクト。
+- ヘッダー項目を並べ替えるための、ヘッダー項目のドラッグアンドドロップ。 オブジェクトを`CHeaderCtrl`作成するときは、HDS_DRAGDROP スタイルを使用します。
 
-- ヘッダー列のテキストが列のサイズ変更時に常に表示できます。 HDS_FULLDRAG スタイルを使用して、作成するときに、`CHeaderCtrl`オブジェクト。
+- ヘッダー列のテキストは、列のサイズ変更中に常に表示できます。 オブジェクトを`CHeaderCtrl`作成するときは、HDS_FULLDRAG スタイルを使用します。
 
-- ヘッダーのホット トラッキングが、ポインターが上に配置されているときにヘッダー項目を強調表示されます。 作成するときにするときを使用して、`CHeaderCtrl`オブジェクト。
+- ヘッダーホットトラッキング。ポインターがその上にポインターを置いたときに、ヘッダー項目を強調表示します。 オブジェクトを`CHeaderCtrl`作成するときは、HDS_HOTTRACK スタイルを使用します。
 
-- イメージ リストのサポート。 ヘッダー項目が格納されているイメージを含めることができます、`CImageList`オブジェクトまたはテキスト。
+- イメージリストのサポート。 ヘッダー項目には、 `CImageList`オブジェクトまたはテキストに格納されているイメージを含めることができます。
 
-使用しての詳細については`CHeaderCtrl`を参照してください[コントロール](../../mfc/controls-mfc.md)と[を使用して CHeaderCtrl](../../mfc/using-cheaderctrl.md)します。
+の使用`CHeaderCtrl`方法の詳細については、「 [Controls](../../mfc/controls-mfc.md) and [using CHeaderCtrl](../../mfc/using-cheaderctrl.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -170,7 +170,7 @@ CHeaderCtrl();
 
 ##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters
 
-ヘッダー コントロールのすべてのフィルターをクリアします。
+ヘッダーコントロールのすべてのフィルターをクリアします。
 
 ```
 BOOL ClearAllFilters();
@@ -178,11 +178,11 @@ BOOL ClearAllFilters();
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Win32 メッセージの動作を実装[HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter)列値は-1 で、Windows SDK で説明されているようです。
+このメソッドは、Windows SDK で説明されているように、列の値が-1 である Win32 message [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -190,7 +190,7 @@ BOOL ClearAllFilters();
 
 ##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter
 
-ヘッダー コントロールのフィルターをクリアします。
+ヘッダーコントロールのフィルターをクリアします。
 
 ```
 BOOL ClearFilter(int nColumn);
@@ -198,16 +198,16 @@ BOOL ClearFilter(int nColumn);
 
 ### <a name="parameters"></a>パラメーター
 
-*nColumn*<br/>
-列の値をクリアするフィルターを示します。
+*n 列*<br/>
+クリアするフィルターを示す列の値。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Win32 メッセージの動作を実装[HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter)」の説明に従って、Windows SDK。
+このメソッドは、Windows SDK で説明されているように、Win32 message [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -215,7 +215,7 @@ BOOL ClearFilter(int nColumn);
 
 ##  <a name="create"></a>  CHeaderCtrl::Create
 
-ヘッダー コントロールを作成し、それにアタッチ、`CHeaderCtrl`オブジェクト。
+ヘッダーコントロールを作成し、 `CHeaderCtrl`オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -228,60 +228,60 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *dwStyle*<br/>
-ヘッダー コントロールのスタイルを指定します。 ヘッダー コントロールのスタイルの説明は、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)Windows SDK に含まれています。
+ヘッダーコントロールのスタイルを指定します。 ヘッダーコントロールスタイルの説明については、「Windows SDK の[ヘッダーコントロールスタイル](/windows/win32/Controls/header-control-styles)」を参照してください。
 
 *rect*<br/>
-ヘッダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+ヘッダーコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のいずれかになります。
 
 *pParentWnd*<br/>
-通常、ヘッダー コントロールの親ウィンドウを指定します、`CDialog`します。 NULL は指定できません。
+ヘッダーコントロールの親ウィンドウ (通常は`CDialog`) を指定します。 NULL にすることはできません。
 
 *nID*<br/>
-ヘッダー コントロールの ID を指定します
+ヘッダーコントロールの ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-初期化が成功した場合、0 以外の場合それ以外の場合 0 を返します。
+初期化が成功した場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>Remarks
 
-構築する、 `CHeaderCtrl` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出して`Create`、ヘッダー コントロールを作成しにアタッチする`CHeaderCtrl`オブジェクト。
+オブジェクトを構築`CHeaderCtrl`するには、2つの手順を実行します。 まず、コンストラクターを呼び出し、次に`Create`を呼び出します。これにより、ヘッダーコントロールが`CHeaderCtrl`作成され、オブジェクトにアタッチされます。
 
-ヘッダー コントロールの位置し、サイズ変更を確認する次の一般的なコントロールのスタイルを使用するだけでなく、ヘッダー コントロールのスタイル (を参照してください[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)詳細)。
+ヘッダーコントロールスタイルに加えて、次のコモンコントロールスタイルを使用して、ヘッダーコントロールの位置とサイズの変更方法を決定できます (詳細については、「[コモンコントロールスタイル](/windows/win32/Controls/common-control-styles)」を参照してください)。
 
-- CCS_BOTTOM 自体を親ウィンドウのクライアント領域の下部にある位置にコントロールし、ウィンドウの幅を親と同じ幅に設定します。
+- CCS_BOTTOM を指定すると、コントロールが親ウィンドウのクライアント領域の下部に配置され、幅が親ウィンドウの幅と同じになるように設定されます。
 
-- コントロールの上部に描画される CCS_NODIVIDER により 2 ピクセルは強調表示します。
+- CCS_NODIVIDER は、コントロールの上部に2ピクセルの強調表示を描画しないようにします。
 
-- CCS_NOMOVEY では、コントロールにサイズを変更して、WM_SIZE メッセージへの応答で垂直方向にではありませんが、水平方向に移動させます。 CCS_NORESIZE スタイルを使用する場合は、このスタイルは適用されません。 ヘッダー コントロールでは、既定ではこのスタイルが適用されます。
+- CCS_NOMOVEY を指定すると、コントロールのサイズが変更され、そのコントロール自体は、WM_SIZE メッセージに応答して垂直方向ではなく、水平方向に移動します。 CCS_NORESIZE スタイルが使用されている場合、このスタイルは適用されません。 既定では、ヘッダーコントロールにこのスタイルが設定されています。
 
-- CCS_NOPARENTALIGN では、コントロールが上部または親ウィンドウの下部に自動的に移動できなくなります。 代わりに、コントロールは、親ウィンドウのサイズへの変更に関係なく、親ウィンドウ内の位置を保持します。 CCS_TOP または CCS_BOTTOM スタイルも使用する場合を既定の高さが調整されますが、位置と幅は変更されません。
+- CCS_NOPARENTALIGN は、コントロールが親ウィンドウの上部または下部に自動的に移動しないようにします。 代わりに、親ウィンドウのサイズが変更されても、コントロールの位置は親ウィンドウ内で保持されます。 CCS_TOP または CCS_BOTTOM スタイルも使用されている場合は、高さが既定値に調整されますが、位置と幅は変わりません。
 
-- CCS_NORESIZE では、コントロールがその初期サイズまたは新しいサイズを設定するときに、既定の幅と高さを使用することを防ぎます。 代わりに、幅と高さの作成やサイズ変更要求で指定されたコントロールを使用します。
+- CCS_NORESIZE は、初期サイズまたは新しいサイズを設定するときに、コントロールが既定の幅と高さを使用しないようにします。 代わりに、コントロールは要求で指定された幅と高さを使用して作成またはサイズ変更を行います。
 
-- CCS_TOP 自体を親ウィンドウのクライアント領域の上部にある位置をコントロールし、ウィンドウの幅を親と同じ幅に設定します。
+- CCS_TOP を指定すると、コントロールが親ウィンドウのクライアント領域の上端に配置され、幅が親ウィンドウの幅と同じになるように設定されます。
 
-ヘッダー コントロールに、次のウィンドウ スタイルを適用することもできます (を参照してください[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)詳細)。
+次のウィンドウスタイルをヘッダーコントロールに適用することもできます (詳細については、「[ウィンドウのスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)」を参照してください)。
 
-- WS_CHILD は、子ウィンドウを作成します。 WS_POPUP スタイルでは使用できません。
+- WS_CHILD 子ウィンドウを作成します。 WS_POPUP スタイルと共に使用することはできません。
 
-- WS_VISIBLE は、最初に表示されているウィンドウを作成します。
+- WS_VISIBLE 最初に表示されるウィンドウを作成します。
 
-- WS_DISABLED は、最初に無効になっているウィンドウを作成します。
+- WS_DISABLED は、最初は無効になっているウィンドウを作成します。
 
-- WS_GROUP では、最初のコントロールをユーザーに移動できます 1 つのコントロールから、[次へ] 矢印キーでコントロールのグループを指定します。 最初のコントロールが同じグループに属している後に WS_GROUP スタイルで定義されたすべてのコントロール。 WS_GROUP スタイルでは、次のコントロールは、スタイルのグループを終了し、[次へ] のグループ (は、1 つのグループの末尾が次の開始位置) を開始します。
+- WS_GROUP は、ユーザーが方向キーを使用して1つのコントロールから次のコントロールに移動できる、コントロールのグループの最初のコントロールを指定します。 最初のコントロールの後に WS_GROUP スタイルを使用して定義されたすべてのコントロールが、同じグループに属しています。 WS_GROUP スタイルを使用した次のコントロールは、スタイルグループを終了し、次のグループを開始します (つまり、次の開始位置にある1つのグループが終了します)。
 
-- WS_TABSTOP を指定します任意の数のいずれかのコントロールにより、ユーザーが TAB キーを使用して移動できます。 TAB キーでは、WS_TABSTOP スタイルで指定された次のコントロールにユーザーを移動します。
+- WS_TABSTOP は、TAB キーを使用してユーザーが移動できる任意の数のコントロールを指定します。 TAB キーを押すと、ユーザーが WS_TABSTOP スタイルで指定された次のコントロールに移動します。
 
-コントロールで拡張ウィンドウ スタイルを使用する場合は、呼び出す[CreateEx](#createex)の代わりに`Create`します。
+拡張 windows スタイルをコントロールで使用する場合は、ではなく`Create` [CreateEx](#createex) を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]
 
-##  <a name="createex"></a>  CHeaderCtrl::CreateEx
+##  <a name="createex"></a>CHeaderCtrl:: CreateEx
 
-コントロール (子ウィンドウ) を作成し、関連付けること、`CHeaderCtrl`オブジェクト。
+コントロール (子ウィンドウ) を作成し、 `CHeaderCtrl`オブジェクトに関連付けます。
 
 ```
 virtual BOOL CreateEx(
@@ -295,19 +295,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成されるコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK に含まれています。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
 
 *dwStyle*<br/>
-ヘッダー コントロールのスタイル。 ヘッダー コントロールのスタイルの説明は、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)Windows SDK に含まれています。 参照してください[作成](#create)追加スタイルの一覧についてはします。
+ヘッダーコントロールのスタイル。 ヘッダーコントロールスタイルの説明については、「Windows SDK の[ヘッダーコントロールスタイル](/windows/win32/Controls/header-control-styles)」を参照してください。 追加のスタイルの一覧については、「[作成](#create)」を参照してください。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
 
 *nID*<br/>
-コントロールの子ウィンドウ ID
+コントロールの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -315,11 +315,11 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>Remarks
 
-使用`CreateEx`の代わりに`Create`、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。
+Windows `CreateEx`拡張スタイル`Create`の先頭**WS_EX_** で指定されている拡張 Windows スタイルを適用するには、の代わりにを使用します。
 
-##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
+##  <a name="createdragimage"></a>CHeaderCtrl:: CreateDragImage
 
-ヘッダー コントロール内の項目の画像の透明なバージョンを作成します。
+ヘッダーコントロール内の項目のイメージの透明バージョンを作成します。
 
 ```
 CImageList* CreateDragImage(int nIndex);
@@ -328,21 +328,21 @@ CImageList* CreateDragImage(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-ヘッダー コントロール内の項目の 0 から始まるインデックス。 この項目に割り当てられているイメージは、透過的なイメージの基盤です。
+ヘッダーコントロール内の項目の0から始まるインデックス。 この項目に割り当てられたイメージは、透明なイメージの基礎となります。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)成功。 それ以外の場合に NULL の場合は、オブジェクト。 返された一覧には、1 つのイメージが含まれています。
+成功した場合は、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトへのポインター。それ以外の場合は NULL。 返される一覧には、イメージが1つだけ含まれます。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage)」の説明に従って、Windows SDK。 ヘッダー項目のドラッグ アンド ドロップをサポートするために提供されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_CREATEDRAGIMAGE](/windows/win32/Controls/hdm-createdragimage)の動作を実装します。 ヘッダー項目のドラッグアンドドロップをサポートするために用意されています。
 
-`CImageList`返されたポインターを一時オブジェクトし、では、次のアイドル処理が削除されたオブジェクト。
+返されたポインターが指すオブジェクトは一時オブジェクトであり、次のアイドル時の処理で削除されます。`CImageList`
 
 ##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem
 
-ヘッダー コントロールから項目を削除します。
+ヘッダーコントロールから項目を削除します。
 
 ```
 BOOL DeleteItem(int nPos);
@@ -351,7 +351,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="parameters"></a>パラメーター
 
 *nPos*<br/>
-削除する項目の 0 から始まるインデックスを指定します。
+削除する項目の0から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -361,9 +361,9 @@ BOOL DeleteItem(int nPos);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]
 
-##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem
+##  <a name="drawitem"></a>CHeaderCtrl::D rawItem
 
-オーナー描画ヘッダー コントロールの変更の視覚的要素のときにフレームワークによって呼び出されます。
+オーナー描画ヘッダーコントロールの視覚的な側面が変更されたときに、フレームワークによって呼び出されます。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -372,15 +372,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-ポインターを[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)構造体を描画する項目を記述します。
+描画する項目を記述する[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)構造体へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-`itemAction`のメンバー、`DRAWITEMSTRUCT`構造体を実行する描画の動作を定義します。
+構造`DRAWITEMSTRUCT`体のメンバーは`itemAction` 、実行する描画アクションを定義します。
 
-既定では、このメンバー関数は何もしません。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CHeaderCtrl`オブジェクト。
+既定では、このメンバー関数は何も行いません。 オーナー描画`CHeaderCtrl`オブジェクトの描画を実装するには、このメンバー関数をオーバーライドします。
 
-アプリケーションで提供されるディスプレイ コンテキスト用に選択したすべてのグラフィックス デバイス インターフェイス (GDI) オブジェクトを復元する必要があります*lpDrawItemStruct*このメンバーの前に、関数が終了します。
+このメンバー関数が終了する前に、アプリケーションでは、 *lpDrawItemStruct*で指定された表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
 
 ### <a name="example"></a>例
 
@@ -388,7 +388,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter
 
-ヘッダー コントロールの指定したフィルターの編集を開始します。
+ヘッダーコントロールの指定されたフィルターの編集を開始します。
 
 ```
 BOOL EditFilter(
@@ -398,21 +398,21 @@ BOOL EditFilter(
 
 ### <a name="parameters"></a>パラメーター
 
-*nColumn*<br/>
+*n 列*<br/>
 編集する列。
 
 *bDiscardChanges*<br/>
-ユーザーを処理する方法を指定する値は、ユーザーがフィルターの編集中の場合、変更内容の編集時に、 [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter)メッセージを送信します。
+[HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)メッセージの送信時にユーザーがフィルターを編集している場合に、ユーザーの編集変更を処理する方法を指定する値。
 
-指定する場合は TRUE をユーザーが行った変更を受け入れるように、ユーザー、または FALSE を行った変更を破棄します。
+ユーザーによって行われた変更を破棄する場合は TRUE を、ユーザーが行った変更を受け入れる場合は FALSE を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Win32 メッセージの動作を実装[HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter)」の説明に従って、Windows SDK。
+このメソッドは、Windows SDK で説明されているように、Win32 message [HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -420,7 +420,7 @@ BOOL EditFilter(
 
 ##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin
 
-ヘッダー コントロールのビットマップの余白の幅を取得します。
+ヘッダーコントロールのビットマップの余白の幅を取得します。
 
 ```
 int GetBitmapMargin() const;
@@ -428,11 +428,11 @@ int GetBitmapMargin() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップのピクセルの余白の幅。
+ビットマップ余白の幅 (ピクセル単位)。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin)」の説明に従って、Windows SDK。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_GETBITMAPMARGIN](/windows/win32/Controls/hdm-getbitmapmargin)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -440,7 +440,7 @@ int GetBitmapMargin() const;
 
 ##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem
 
-現在のヘッダー コントロールでフォーカスのある項目のインデックスを取得します。
+現在のヘッダーコントロールでフォーカスがある項目のインデックスを取得します。
 
 ```
 int GetFocusedItem() const;
@@ -448,27 +448,27 @@ int GetFocusedItem() const;
 
 ### <a name="return-value"></a>戻り値
 
-フォーカスがあるヘッダー項目の 0 から始まるインデックス。
+フォーカスがあるヘッダー項目の0から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem)メッセージは、Windows SDK で説明します。
+このメソッドは、Windows SDK で説明されている[HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例は、変数を定義します。 `m_headerCtrl`、つまり現在のヘッダー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。
+次のコード例では、現在`m_headerCtrl`のヘッダーコントロールにアクセスするために使用される変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>例
 
-次のコード例に示します、`SetFocusedItem`と`GetFocusedItem`メソッド。 コードの前のセクションでは、5 つの列のヘッダー コントロールを作成しました。 ただし、列が表示されないように、列区切り記号をドラッグできます。 次の例では、設定し、しフォーカス アイテムと最後の列ヘッダーを確認します。
+次のコード例は、 `SetFocusedItem`メソッド`GetFocusedItem`とメソッドを示しています。 コードの前のセクションでは、5つの列を持つヘッダーコントロールを作成しました。 ただし、列が表示されないようにするには、列の区切り線をドラッグします。 次の例では、を設定し、最後の列ヘッダーをフォーカス項目として確認します。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
 ##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList
 
-ヘッダー コントロールの項目を描画に使用するイメージ リストのハンドルを取得します。
+ヘッダーコントロールのヘッダー項目を描画するために使用されるイメージリストのハンドルを取得します。
 
 ```
 CImageList* GetImageList() const;
@@ -476,11 +476,11 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト。
+[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist)」の説明に従って、Windows SDK。 `CImageList`返されたポインターを一時オブジェクトし、では、次のアイドル処理が削除されたオブジェクト。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)の動作を実装します。 返されたポインターが指すオブジェクトは一時オブジェクトであり、次のアイドル時の処理で削除されます。`CImageList`
 
 ### <a name="example"></a>例
 
@@ -488,7 +488,7 @@ CImageList* GetImageList() const;
 
 ##  <a name="getitem"></a>  CHeaderCtrl::GetItem
 
-ヘッダー コントロールの項目に関する情報を取得します。
+ヘッダーコントロール項目に関する情報を取得します。
 
 ```
 BOOL GetItem(
@@ -499,10 +499,10 @@ BOOL GetItem(
 ### <a name="parameters"></a>パラメーター
 
 *nPos*<br/>
-取得する項目の 0 から始まるインデックスを指定します。
+取得する項目の0から始まるインデックスを指定します。
 
 *pHeaderItem*<br/>
-ポインター、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)を新しい項目を受け取る構造体。 この構造体を併用、`InsertItem`と`SetItem`メンバー関数。 任意のフラグ設定、`mask`要素は、対応する要素の値が戻り時に正しく入力あることを確認します。 場合、`mask`要素が 0 に設定されている、他の構造体の要素の値は意味がありません。
+新しい項目を受け取る[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)構造体へのポインター。 この構造体は、 `InsertItem`および`SetItem`メンバー関数と共に使用されます。 `mask`要素に設定されているフラグによって、返されるときに、対応する要素の値が正しく入力されます。 `mask`要素がゼロに設定されている場合、他の構造体要素の値は無意味になります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -514,7 +514,7 @@ BOOL GetItem(
 
 ##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount
 
-ヘッダー コントロールの項目の数を取得します。
+ヘッダーコントロール内の項目の数を取得します。
 
 ```
 int GetItemCount() const;
@@ -522,15 +522,15 @@ int GetItemCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、ヘッダー コントロール項目の数それ以外の場合 - 1。
+成功した場合はヘッダーコントロール項目の数。それ以外の場合は-1。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CHeaderCtrl::DeleteItem](#deleteitem)します。
+  [CHeaderCtrl::D eleteitem](#deleteitem)の例を参照してください。
 
-##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect
+##  <a name="getitemdropdownrect"></a>CHeaderCtrl:: GetItemDropDownRect
 
-現在のヘッダー コントロールのヘッダー項目のドロップダウン ボタンの外接する四角形を取得します。
+現在のヘッダーコントロールのヘッダー項目のドロップダウンボタンの外接する四角形を取得します。
 
 ```
 BOOL GetItemDropDownRect(
@@ -542,32 +542,32 @@ BOOL GetItemDropDownRect(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iItem*|[in]スタイルがヘッダー項目の 0 から始まるインデックス。 詳細については、次を参照してください。、`fmt`のメンバー、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)構造体。|
-|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|
+|*iItem*|からスタイルが HDF_SPLITBUTTON であるヘッダー項目の0から始まるインデックス。 詳細については、 `fmt` [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)構造体のメンバーを参照してください。|
+|*lpRect*|入出力外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
-この関数が成功した場合は TRUE。それ以外の場合、FALSE です。
+この関数が成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect)メッセージは、Windows SDK で説明します。
+このメソッドは、Windows SDK で説明されている[HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例は、変数を定義します。 `m_headerCtrl`、つまり現在のヘッダー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。
+次のコード例では、現在`m_headerCtrl`のヘッダーコントロールにアクセスするために使用される変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>例
 
-次のコード例に示します、`GetItemDropDownRect`メソッド。 コードの前のセクションでは、5 つの列のヘッダー コントロールを作成しました。 次のコード例は、ヘッダーのドロップダウン ボタン用に予約されている最初の列の場所の周囲の 3D の四角形を描画します。
+次のコード例は、 `GetItemDropDownRect`メソッドを示しています。 コードの前のセクションでは、5つの列を持つヘッダーコントロールを作成しました。 次のコード例では、ヘッダーのドロップダウンボタン用に予約されている最初の列の位置を囲む3D 四角形を描画します。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]
 
 ##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect
 
-ヘッダー コントロールの特定の項目の外接する四角形を取得します。
+ヘッダーコントロール内の指定された項目の外接する四角形を取得します。
 
 ```
 BOOL GetItemRect(
@@ -578,10 +578,10 @@ BOOL GetItemRect(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-ヘッダー コントロールの項目の 0 から始まるインデックス。
+ヘッダーコントロール項目の0から始まるインデックス。
 
 *lpRect*<br/>
-アドレスへのポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。
+外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のアドレスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -589,11 +589,11 @@ BOOL GetItemRect(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Win32 メッセージの動作を実装[HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect)」の説明に従って、Windows SDK。
+このメソッドは、Windows SDK で説明されているように、Win32 message [HDM_GETITEMRECT](/windows/win32/Controls/hdm-getitemrect)の動作を実装します。
 
 ##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray
 
-ヘッダー コントロールの項目の左から右の順序を取得します。
+ヘッダーコントロール内の項目の左から右の順序を取得します。
 
 ```
 BOOL GetOrderArray(
@@ -604,10 +604,10 @@ BOOL GetOrderArray(
 ### <a name="parameters"></a>パラメーター
 
 *piArray*<br/>
-表示される左から右へ順に、ヘッダー コントロールの項目のインデックス値を受け取るバッファーのアドレスへのポインター。
+ヘッダーコントロール内の項目のインデックス値を、左から右へと表示される順序で受け取るバッファーのアドレスへのポインター。
 
 *iCount*<br/>
-ヘッダー コントロールの項目の数。 負でない必要があります。
+ヘッダーコントロール項目の数。 負でない値である必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -615,7 +615,7 @@ BOOL GetOrderArray(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray)」の説明に従って、Windows SDK。 ヘッダー項目の並べ替えをサポートするために提供されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_GETORDERARRAY](/windows/win32/Controls/hdm-getorderarray)の動作を実装します。 ヘッダー項目の順序付けをサポートするために用意されています。
 
 ### <a name="example"></a>例
 
@@ -623,7 +623,7 @@ BOOL GetOrderArray(
 
 ##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect
 
-現在のヘッダー コントロールのオーバーフロー ボタンの外接する四角形を取得します。
+現在のヘッダーコントロールのオーバーフローボタンの外接する四角形を取得します。
 
 ```
 BOOL GetOverflowRect(LPRECT lpRect) const;
@@ -633,33 +633,33 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|
+|*lpRect*|入出力外接する四角形の情報を受け取る[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
-この関数が成功した場合は TRUE。それ以外の場合、FALSE です。
+この関数が成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-ヘッダー コントロールに同時に表示できるほど多くの項目が含まれている場合、コントロールは表示されない項目をスクロールするオーバーフロー ボタンを表示できます。 ヘッダー コントロールには、HDS_OVERFLOW と HDF_SPLITBUTTON スタイル オーバーフロー ボタンを表示する必要があります。 外接する四角形は、オーバーフロー ボタンを囲むし、オーバーフロー ボタンが表示される場合にのみ存在します。 詳細については、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)します。
+同時に表示できない項目がヘッダーコントロールに含まれている場合、コントロールは、表示されていない項目にスクロールするオーバーフローボタンを表示できます。 オーバーフローボタンを表示するには、ヘッダーコントロールに HDS_OVERFLOW と HDF_SPLITBUTTON のスタイルが設定されている必要があります。 外接する四角形はオーバーフローボタンを囲み、オーバーフローボタンが表示されている場合にのみ存在します。 詳細については、「[ヘッダーコントロールのスタイル](/windows/win32/Controls/header-control-styles)」を参照してください。
 
-このメソッドは、送信、 [HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect)メッセージは、Windows SDK で説明します。
+このメソッドは、Windows SDK で説明されている[HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例は、変数を定義します。 `m_headerCtrl`、つまり現在のヘッダー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。
+次のコード例では、現在`m_headerCtrl`のヘッダーコントロールにアクセスするために使用される変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>例
 
-次のコード例に示します、`GetOverflowRect`メソッド。 コードの前のセクションでは、5 つの列のヘッダー コントロールを作成しました。 ただし、列が表示されないように、列区切り記号をドラッグできます。 一部の列が表示されない場合、ヘッダー コントロールは、オーバーフロー ボタンを描画します。 次のコード例は、オーバーフロー ボタンの場所の周囲の 3D の四角形を描画します。
+次のコード例は、 `GetOverflowRect`メソッドを示しています。 コードの前のセクションでは、5つの列を持つヘッダーコントロールを作成しました。 ただし、列が表示されないようにするには、列の区切り線をドラッグします。 一部の列が表示されていない場合、ヘッダーコントロールはオーバーフローボタンを描画します。 次のコード例では、オーバーフローボタンの位置を囲む3D 四角形を描画します。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]
 
 ##  <a name="hittest"></a>  CHeaderCtrl::HitTest
 
-どのヘッダー項目がある場合、指定したポイントにあるかを決定します。
+指定したポイントに存在するヘッダー項目を判断します。
 
 ```
 int HitTest(LPHDHITTESTINFO* phdhti);
@@ -669,31 +669,31 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*phdhti*|[入力、出力]ポインターを[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)をテストする点を指定し、テストの結果を受け取る構造体。|
+|*phdhti*|[入力、出力]テストの結果をテストして受け取るポイントを指定する[Hdhittestinfo](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
-指定した位置に存在する場合、ヘッダー項目の 0 から始まるインデックスそれ以外の場合、-1 を返します。
+ヘッダー項目の0から始まるインデックス (存在する場合)。指定した位置にある場合は。それ以外の場合は-1。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [HDM_HITTEST](/windows/desktop/Controls/hdm-hittest)メッセージは、Windows SDK で説明します。
+このメソッドは、Windows SDK で説明されている[HDM_HITTEST](/windows/win32/Controls/hdm-hittest)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例は、変数を定義します。 `m_headerCtrl`、つまり現在のヘッダー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。
+次のコード例では、現在`m_headerCtrl`のヘッダーコントロールにアクセスするために使用される変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>例
 
-次のコード例に示します、`HitTest`メソッド。 このコード例の前のセクションでは、5 つの列のヘッダー コントロールを作成しました。 ただし、列が表示されないように、列区切り記号をドラッグできます。 この例は、表示されている場合に、列のインデックスをレポートし、列が表示されていない場合は-1。
+次のコード例は、 `HitTest`メソッドを示しています。 このコード例の前のセクションでは、5つの列を持つヘッダーコントロールを作成しました。 ただし、列が表示されないようにするには、列の区切り線をドラッグします。 この例では、列が表示されている場合はそのインデックスを報告し、列が表示されていない場合は-1 を報告します。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
-##  <a name="insertitem"></a>  として
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem
 
-指定したインデックス位置にあるヘッダー コントロールには、新しい項目を挿入します。
+ヘッダーコントロール内の指定したインデックス位置に新しい項目を挿入します。
 
 ```
 int InsertItem(
@@ -704,22 +704,22 @@ int InsertItem(
 ### <a name="parameters"></a>パラメーター
 
 *nPos*<br/>
-挿入する項目の 0 から始まるインデックス。 値が 0 の場合は、ヘッダー コントロールの先頭に、項目が挿入されます。 値が最大値より大きい場合は、ヘッダー コントロールの最後に、項目が挿入されます。
+挿入する項目の 0 から始まるインデックス。 値が0の場合は、ヘッダーコントロールの先頭に項目が挿入されます。 値が最大値より大きい場合は、ヘッダーコントロールの末尾に項目が挿入されます。
 
 *phdi*<br/>
-ポインター、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)を挿入する項目に関する情報を含む構造体。
+挿入する項目に関する情報を格納している[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、新しい項目のインデックスそれ以外の場合 - 1。
+成功した場合は、新しい項目のインデックス。それ以外の場合は-1。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]
 
-##  <a name="layout"></a>  配置
+##  <a name="layout"></a>  CHeaderCtrl::Layout
 
-指定した四角形内のヘッダー コントロールの位置とサイズを取得します。
+指定された四角形内のヘッダーコントロールのサイズと位置を取得します。
 
 ```
 BOOL Layout(HDLAYOUT* pHeaderLayout);
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>パラメーター
 
 *pHeaderLayout*<br/>
-ポインター、 [HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout)構造体は、ヘッダー コントロールの位置とサイズを設定するための情報が含まれています。
+ヘッダーコントロールのサイズと位置を設定するために使用される情報を格納する、 [Hdlayout](/windows/win32/api/commctrl/ns-commctrl-hdlayout)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -736,7 +736,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 
 ### <a name="remarks"></a>Remarks
 
-この関数を使用して、指定した四角形を占有するようにある新しいヘッダー コントロールの適切な大きさを決定します。
+この関数は、指定された四角形を占有する新しいヘッダーコントロールの適切な次元を決定するために使用されます。
 
 ### <a name="example"></a>例
 
@@ -744,7 +744,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 
 ##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex
 
-ヘッダー コントロール内での順序に基づいて、item のインデックス値を取得します。
+ヘッダーコントロールの順序に基づいて、項目のインデックス値を取得します。
 
 ```
 int OrderToIndex(int nOrder) const;
@@ -753,19 +753,19 @@ int OrderToIndex(int nOrder) const;
 ### <a name="parameters"></a>パラメーター
 
 *nOrder*<br/>
-アイテムをヘッダー コントロールで、左から右へ表示する 0 から始まる順序。
+ヘッダーコントロールの項目が左から右へと表示される、0から始まる順序。
 
 ### <a name="return-value"></a>戻り値
 
-ヘッダー コントロール内での順序に基づいて、項目のインデックス。 インデックスの数は、左から右、0 から始まるをします。
+ヘッダーコントロールの順序に基づいた項目のインデックス。 インデックスは、0から順に左から右にカウントされます。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 のマクロの動作を実装[HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355)」の説明に従って、Windows SDK。 ヘッダー項目の並べ替えをサポートするために提供されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 マクロ[HDM_ORDERTOINDEX](/windows/win32/controls/hdm-ordertoindex)の動作を実装します。 ヘッダー項目の順序付けをサポートするために用意されています。
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 
-ヘッダー コントロールのビットマップの余白の幅を設定します。
+ヘッダーコントロールのビットマップの余白の幅を設定します。
 
 ```
 int SetBitmapMargin(int nWidth);
@@ -774,15 +774,15 @@ int SetBitmapMargin(int nWidth);
 ### <a name="parameters"></a>パラメーター
 
 *nWidth*<br/>
-既存のヘッダー コントロール内にあるビットマップの周囲の余白 (ピクセル) で指定された幅。
+既存のヘッダーコントロール内のビットマップを囲む余白の幅 (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップのピクセルの余白の幅。
+ビットマップ余白の幅 (ピクセル単位)。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin)」の説明に従って、Windows SDK。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_SETBITMAPMARGIN](/windows/win32/Controls/hdm-setbitmapmargin)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -790,7 +790,7 @@ int SetBitmapMargin(int nWidth);
 
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout
 
-フィルター属性が、変更時の転記までのタイムアウト間隔を設定、[から](/windows/desktop/Controls/hdn-filterchange)通知します。
+フィルター属性で変更が行われるまでのタイムアウト間隔と、 [HDN_FILTERCHANGE](/windows/win32/Controls/hdn-filterchange)通知の投稿を設定します。
 
 ```
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -799,15 +799,15 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="parameters"></a>パラメーター
 
 *dwTimeOut*<br/>
-タイムアウト値 (ミリ秒)。
+タイムアウト値 (ミリ秒単位)。
 
 ### <a name="return-value"></a>戻り値
 
-変更されるフィルター コントロールのインデックス。
+変更されるフィルターコントロールのインデックス。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout)」の説明に従って、Windows SDK。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_SETFILTERCHANGETIMEOUT](/windows/win32/Controls/hdm-setfilterchangetimeout)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -815,7 +815,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 
 ##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem
 
-現在のヘッダー コントロールの指定したヘッダー項目にフォーカスを設定します。
+現在のヘッダーコントロール内の指定されたヘッダー項目にフォーカスを設定します。
 
 ```
 BOOL SetFocusedItem(int iItem);
@@ -825,31 +825,31 @@ BOOL SetFocusedItem(int iItem);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iItem*|[in]ヘッダー項目の 0 から始まるインデックス。|
+|*iItem*|からヘッダー項目の0から始まるインデックス。|
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem)メッセージは、Windows SDK で説明します。
+このメソッドは、Windows SDK で説明されている[HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例は、変数を定義します。 `m_headerCtrl`、つまり現在のヘッダー コントロールにアクセスするために使用します。 この変数は次の例で使用されています。
+次のコード例では、現在`m_headerCtrl`のヘッダーコントロールにアクセスするために使用される変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>例
 
-次のコード例に示します、`SetFocusedItem`と`GetFocusedItem`メソッド。 コードの前のセクションでは、5 つの列のヘッダー コントロールを作成しました。 ただし、列が表示されないように、列区切り記号をドラッグできます。 次の例では、設定し、しフォーカス アイテムと最後の列ヘッダーを確認します。
+次のコード例は、 `SetFocusedItem`メソッド`GetFocusedItem`とメソッドを示しています。 コードの前のセクションでは、5つの列を持つヘッダーコントロールを作成しました。 ただし、列が表示されないようにするには、列の区切り線をドラッグします。 次の例では、を設定し、最後の列ヘッダーをフォーカス項目として確認します。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
 ##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider
 
-変更を手動で示すためにヘッダー項目間の境界線をドラッグし、ヘッダー項目のドロップします。
+ヘッダー項目を手動でドラッグアンドドロップしたことを示すために、ヘッダー項目間の区分線を変更します。
 
 ```
 int SetHotDivider(CPoint pt);
@@ -858,19 +858,19 @@ int SetHotDivider(int nIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*pt*<br/>
-ポインターの位置。 ヘッダー コントロールには、ポインターの位置に基づいて適切な区分線が強調表示されます。
+*未満*<br/>
+ポインターの位置。 ヘッダーコントロールは、ポインターの位置に基づいて適切な区分線を強調表示します。
 
 *nIndex*<br/>
-強調表示されている区分線のインデックス。
+強調表示された区分線のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-強調表示されている区分線のインデックス。
+強調表示された区分線のインデックス。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider)」の説明に従って、Windows SDK。 ヘッダー項目のドラッグ アンド ドロップをサポートするために提供されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_SETHOTDIVIDER](/windows/win32/Controls/hdm-sethotdivider)の動作を実装します。 ヘッダー項目のドラッグアンドドロップをサポートするために用意されています。
 
 ### <a name="example"></a>例
 
@@ -878,7 +878,7 @@ int SetHotDivider(int nIndex);
 
 ##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList
 
-イメージ リストをヘッダー コントロールに割り当てます。
+イメージリストをヘッダーコントロールに割り当てます。
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -887,23 +887,23 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>パラメーター
 
 *pImageList*<br/>
-ポインターを`CImageList`ヘッダー コントロールに割り当てられるイメージ リストを含むオブジェクト。
+ヘッダーコントロールに割り当て`CImageList`られるイメージリストを格納しているオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)ヘッダー コントロールに割り当てられているオブジェクト。
+以前にヘッダーコントロールに割り当てられた[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 メッセージの動作を実装[HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist)」の説明に従って、Windows SDK。 `CImageList`返されたポインターを一時オブジェクトし、では、次のアイドル処理が削除されたオブジェクト。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)の動作を実装します。 返されたポインターが指すオブジェクトは一時オブジェクトであり、次のアイドル時の処理で削除されます。`CImageList`
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CHeaderCtrl::GetImageList](#getimagelist)します。
+  [CHeaderCtrl:: GetImageList](#getimagelist)の例を参照してください。
 
 ##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
-ヘッダー コントロールの指定した項目の属性を設定します。
+ヘッダーコントロール内の指定された項目の属性を設定します。
 
 ```
 BOOL SetItem(
@@ -914,10 +914,10 @@ BOOL SetItem(
 ### <a name="parameters"></a>パラメーター
 
 *nPos*<br/>
-操作する項目の 0 から始まるインデックス。
+操作する項目の0から始まるインデックス。
 
 *pHeaderItem*<br/>
-ポインター、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)新しい項目の情報を含む構造体。
+新しい項目に関する情報を格納している[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -925,11 +925,11 @@ BOOL SetItem(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CHeaderCtrl::GetItem](#getitem)します。
+  [CHeaderCtrl:: GetItem](#getitem)の例を参照してください。
 
 ##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
 
-ヘッダー コントロールの項目の左から右の順序を設定します。
+ヘッダーコントロールの項目の左から右への順序を設定します。
 
 ```
 BOOL SetOrderArray(
@@ -940,10 +940,10 @@ BOOL SetOrderArray(
 ### <a name="parameters"></a>パラメーター
 
 *iCount*<br/>
-ヘッダー コントロールの項目の数。
+ヘッダーコントロール項目の数。
 
 *piArray*<br/>
-表示される左から右へ順に、ヘッダー コントロールの項目のインデックス値を受け取るバッファーのアドレスへのポインター。
+ヘッダーコントロール内の項目のインデックス値を、左から右へと表示される順序で受け取るバッファーのアドレスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -951,11 +951,11 @@ BOOL SetOrderArray(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 のマクロの動作を実装[HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray)」の説明に従って、Windows SDK。 ヘッダー項目の並べ替えをサポートするために提供されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 マクロ[HDM_SETORDERARRAY](/windows/win32/Controls/hdm-setorderarray)の動作を実装します。 ヘッダー項目の順序付けをサポートするために用意されています。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CHeaderCtrl::GetOrderArray](#getorderarray)します。
+  [CHeaderCtrl:: GetOrderArray](#getorderarray)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

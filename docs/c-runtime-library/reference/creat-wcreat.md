@@ -1,10 +1,10 @@
 ---
 title: _creat、_wcreat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _creat
 - _wcreat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcreat
 - _wcreat
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d278bffbfdf856956a20b01da4dad2ba00952359
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494992"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938886"
 ---
-# <a name="creat-wcreat"></a>_creat、_wcreat
+# <a name="_creat-_wcreat"></a>_creat、_wcreat
 
-新しいファイルを作成します。 **_creat**と **_wcreat**非推奨とされました。 使用[_sopen_s、_wsopen_s](sopen-s-wsopen-s.md)代わりにします。
+新しいファイルを作成します。 **_creat**と **_wcreat**は非推奨とされました。代わりに[、_sopen_s、_wsopen_s](sopen-s-wsopen-s.md)を使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -66,21 +69,21 @@ int _wcreat(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は正常に実行された場合、作成されたファイルにファイル記述子を返します。 関数が-1 を返しますそれ以外の場合、設定と**errno**次の表に示すようにします。
+これらの関数は正常に実行された場合、作成されたファイルにファイル記述子を返します。 それ以外の場合、次の表に示すように、関数は-1 を返し、 **errno**を設定します。
 
-|**errno**設定|説明|
+|**errno**の設定|説明|
 |---------------------|-----------------|
-|**EACCES**|*ファイル名*既存の読み取り専用ファイルを指定しますまたは、ファイルの代わりに、ディレクトリを指定します。|
+|**EACCES**|*filename*には、既存の読み取り専用ファイルを指定するか、ファイルの代わりにディレクトリを指定します。|
 |**EMFILE**|ファイル記述子をこれ以上使用できません。|
 |**ENOENT**|指定されたファイルが見つかりませんでした。|
 
-場合*filename*は**NULL**、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+*Filename*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Creat**関数の新しいファイルを作成または開き、既存のものを切り捨てます。 **_wcreat**のワイド文字バージョンです **_creat**、 *filename*への引数 **_wcreat**はワイド文字列です。 **_wcreat**と **_creat**動作は同じです。
+**_Creat**関数は、新しいファイルを作成するか、既存のファイルを開き、切り捨てます。 **_wcreat**は、 **_creat**のワイド文字バージョンです。 **_wcreat**の*filename*引数はワイド文字列です。 それ以外では、 **_wcreat**と **_creat**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -88,17 +91,17 @@ int _wcreat(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-によって、ファイルが指定されている場合*filename*が存在しない新しいファイルが指定されたアクセス許可を設定して作成および書き込み用に開きます。 ファイルが既に存在し、そのアクセス許可の設定により、書き込み、 **_creat**切り捨てますファイルを長さ 0 の場合、以前の内容を破棄して、書き込み用に開きます。 アクセス許可の設定、 *pmode*、新しく作成されたファイルのみに適用されます。 新しいファイルは、最初に閉じた後に、指定されたアクセス許可設定を受け取ります。 整数式*pmode*マニフェスト定数の一方または両方を含む **_S_IWRITE**と **_S_IREAD**、sys \stat.h で定義されています。 ビットごとに参加している両方の定数が指定されると、or 演算子 ( **&#124;** )。 *Pmode*パラメーターは、次の値のいずれかに設定します。
+*Filename*によって指定されたファイルが存在しない場合は、指定されたアクセス許可の設定で新しいファイルが作成され、書き込み用に開かれます。 ファイルが既に存在し、そのアクセス許可の設定で書き込みが許可されている場合、 **_creat**はファイルを長さ0に切り詰め、前の内容を破棄して、書き込み用に開きます。 アクセス許可の設定である*pmode*は、新しく作成されたファイルにのみ適用されます。 新しいファイルは、最初に閉じた後に、指定されたアクセス許可設定を受け取ります。 整数式*pmode*には、 **_S_IWRITE**および **_S_IREAD**で定義されているマニフェスト定数の1つまたは両方が含まれています。 両方の定数が指定されている場合は、ビットごとの **&#124;** or 演算子 () と結合されます。 *Pmode*パラメーターは、次のいずれかの値に設定されます。
 
-|[値]|定義|
+|値|定義|
 |-----------|----------------|
 |**_S_IWRITE**|書き込みが許可されます。|
 |**_S_IREAD**|読み取りが許可されます。|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|読み取りと書き込みが許可されます。|
+|**_S_IREAD**&#124; **_S_IWRITE**|読み取りと書き込みが許可されます。|
 
-書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モード **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同じになります。 使用して開かれたファイル **_creat**は常に、互換性モードで開く (を参照してください[_sopen](sopen-wsopen.md)) と **_SH_DENYNO**します。
+書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 これらのモード **_S_IWRITE**と **_S_IREAD** |  **_S_IWRITE**は同等です。 **_Creat**を使用して開いたファイルは常に互換モード ( [_sopen](sopen-wsopen.md)を参照) で**開かれます**。
 
-**_creat** 、現在のファイルのアクセス許可マスクが適用される*pmode*アクセス許可を設定する前に (を参照してください[_umask](umask.md))。 **_creat**主以前のライブラリと互換性のために提供されます。 呼び出し **_open**で **_O_CREAT**と **_O_TRUNC**で、 *oflag*パラメーターは **_creat**し、新しいコードをお勧めします。
+**_creat**は、アクセス許可を設定する前に、現在のファイルアクセス許可マスクを*pmode*に適用します ( [_umask](umask.md)を参照)。 **_creat**は、主に以前のライブラリとの互換性のために用意されています。 *Oflag*パラメーターで **_O_CREAT**と **_O_TRUNC**を指定して **_open**を呼び出すと、 **_creat**に相当し、新しいコードに適しています。
 
 ## <a name="requirements"></a>必要条件
 

@@ -1,18 +1,18 @@
 ---
-title: '方法: マーシャリング ライブラリを拡張する'
+title: '方法: マーシャ リング ライブラリを拡張します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 697a246012544e6be1189b6cc40d6185e5ec26d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387306"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>方法: マーシャリング ライブラリを拡張する
+# <a name="how-to-extend-the-marshaling-library"></a>方法: マーシャ リング ライブラリを拡張します。
 
 このトピックでは、データ型の間での複数の変換を提供するマーシャ リング ライブラリを拡張する方法について説明します。 ユーザーは、データ変換を実行するライブラリによってサポートされていないマーシャ リング ライブラリを拡張できます。
 
@@ -30,7 +30,7 @@ ms.locfileid: "50569849"
 
    - windows のデータ型の marshal_windows.h します。
 
-   - C++ 標準ライブラリのデータ型の marshal_cppstd.h します。
+   - marshal_cppstd.hC++標準ライブラリのデータ型。
 
    - ATL のデータ型の marshal_atl.h します。
 
@@ -59,7 +59,7 @@ namespace msclr {
 
    - windows のデータ型の marshal_windows.h します。
 
-   - C++ 標準ライブラリのデータ型の marshal_cppstd.h します。
+   - marshal_cppstd.hC++標準ライブラリのデータ型。
 
    - ATL のデータ型の marshal_atl.h します。
 

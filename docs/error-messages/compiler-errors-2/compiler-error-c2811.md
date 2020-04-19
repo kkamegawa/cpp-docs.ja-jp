@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2811
 ms.assetid: 6a44b18e-44c1-49d8-9b99-e0545b9a6e7d
-ms.openlocfilehash: 8dfc462cc0eedfff1661ae38f79bbb79c5c1a8fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95d6385cea95f22bbb9bbb9197dace22bd1a3adf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520264"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755253"
 ---
 # <a name="compiler-error-c2811"></a>コンパイラ エラー C2811
 
-'type1': ref 'type2' から継承できませんクラスは、ref クラスまたはインターフェイス クラスからのみ継承できます。
+' type1 ': ' type1 ' から継承することはできません。 ref クラスは ref クラスまたはインターフェイスクラスからのみ継承できます
 
-マネージ クラスの基底クラスとしてアンマネージ クラスを使用しようとしました。
+アンマネージクラスをマネージクラスの基底クラスとして使用しようとしました。
 
 次の例では、C2811 が生成されます。
 
-```
+```cpp
 // C2811.cpp
 // compile with: /clr /c
 struct S{};

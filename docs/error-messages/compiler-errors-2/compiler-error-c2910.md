@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
-ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0061a7171dd08440ec5d8c8b8cadb77303ff8f41
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547265"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761116"
 ---
 # <a name="compiler-error-c2910"></a>コンパイラ エラー C2910
 
-'function': 明示的に特殊化することはできません
+' function ': 明示的に特殊化することはできません。
 
-明示的に特殊化関数を 2 回の試行が検出されました。
+コンパイラは、関数を2回明示的に特殊化しようとしました。
 
 次の例では、C2910 が生成されます。
 
-```
+```cpp
 // C2910.cpp
 // compile with: /c
 template <class T>
@@ -31,11 +31,11 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization
 ```
 
-C2910 は、非テンプレートのメンバーを明示的に特殊化しようとする場合にも生成できます。 関数テンプレートをのみ明示的に特殊化することができます。
+非テンプレートメンバーを明示的に特殊化しようとすると、C2910 を生成することもできます。 つまり、明示的に関数テンプレートを特殊化するだけで済みます。
 
 次の例では、C2910 が生成されます。
 
-```
+```cpp
 // C2910b.cpp
 // compile with: /c
 template <class T> struct A {
@@ -54,13 +54,13 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}
 ```
 
-このエラーは Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成することも: です。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果としても生成されます。
 
-コードは、Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C では有効になります、削除`template <>`します。
+Visual Studio .NET 2003 と visual Studio .NET のバージョンの Visual C++studio でコードを有効にするには、`template <>`を削除します。
 
 次の例では、C2910 が生成されます。
 
-```
+```cpp
 // C2910c.cpp
 // compile with: /c
 template <class T> class A {

@@ -1,12 +1,12 @@
 ---
 title: fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fprintf_s_l
 - fwprintf_s
 - fprintf_s
 - _fwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftprintf_s
 - fprintf_s
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48f15bee685b058c0c059d676bea48e2bc32d699
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639427"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956968"
 ---
-# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
+# <a name="fprintf_s-_fprintf_s_l-fwprintf_s-_fwprintf_s_l"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 
 書式付きデータをストリームに出力します。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md) です。
 
@@ -75,40 +78,40 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
 書式指定文字列。
 
 *argument_list*<br/>
-書式指定文字列に省略可能な引数。
+書式指定文字列への省略可能な引数。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**fprintf_s**書き込まれたバイト数を返します。 **fwprintf_s**書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。
+**fprintf_s**は、書き込まれたバイト数を返します。 **fwprintf_s**は、書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**fprintf_s**書式化して、一連の文字や、出力値を出力*ストリーム*します。 各引数*argument_list* (ある場合) は変換されに対応する書式指定に応じて*形式*します。 *形式*引数は、[書式指定構文の printf および wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。
+**fprintf_s**は、一連の文字と値を書式設定し、出力*ストリーム*に出力します。 *Argument_list*の各引数 (存在する場合) は変換され、*形式*の対応する書式指定に従って出力されます。 *Format*引数は、 [printf 関数と wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)を使用します。
 
-**fwprintf_s**のワイド文字バージョンは、 **fprintf_s**、 **fwprintf_s**、*形式*はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf_s** UNICODE ストリームへの出力をサポートされていません。
+**fwprintf_s**は、 **fprintf_s**のワイド文字バージョンです。**fwprintf_s**では、 *format*はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf_s**は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-保護されていないバージョンと同様 (を参照してください[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))、これらの関数は、パラメーターを検証し、で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)である場合*ストリーム*または*形式*null ポインターです。 書式指定文字列自体はも検証されます。 未知の書式指定子や不適切な形式の書式指定子がある場合、これらの関数は無効なパラメーター例外を生成します。 すべてのケースで続けるには、実行が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+セキュリティで保護されていないバージョン (「 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)」を参照) と同様に、これらの*関数*は 、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、パラメーターを検証し、無効なパラメーターハンドラーを呼び出します。*format*は null ポインターです。 書式指定文字列自体も検証されます。 未知の書式指定子や不適切な形式の書式指定子がある場合、これらの関数は無効なパラメーター例外を生成します。 どのような場合でも、実行の継続が許可された場合、関数は-1 を返し、 **errno**を**EINVAL**に設定します。 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftprintf_s**|**fprintf_s**|**fprintf_s**|**fwprintf_s**|
+|**ftprintf_s (_s)**|**fprintf_s**|**fprintf_s**|**fwprintf_s**|
 |**_ftprintf_s_l**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
 
 詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。

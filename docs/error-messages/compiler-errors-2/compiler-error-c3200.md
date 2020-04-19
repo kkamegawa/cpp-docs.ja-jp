@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
-ms.openlocfilehash: 7eb0c00f4f4c5c59766bf305acfef89e12a6cfb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f6b514231bcda18404e891e0acbe457c8f95146
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505067"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738779"
 ---
 # <a name="compiler-error-c3200"></a>コンパイラ エラー C3200
 
-'template': テンプレート パラメーター 'parameter' に対する無効なテンプレート引数には、クラス テンプレートが必要です。
+' template ': テンプレートパラメーター ' parameter ' の無効なテンプレート引数です。クラステンプレートが必要です
 
-クラス テンプレートに無効な引数が渡されます。 クラス テンプレートでは、パラメーターとしてテンプレートを期待しています。 次の例では、呼び出す`Y<int, int> aY`C3200 が生成されます。 最初のパラメーターをテンプレートをなどある必要があります`Y<X, int> aY`します。
+クラステンプレートに無効な引数を渡しました。 クラステンプレートでは、パラメーターとしてテンプレートが想定されています。 次の例では、`Y<int, int> aY` を呼び出すと、C3200 が生成されます。 最初のパラメーターは、`Y<X, int> aY`などのテンプレートである必要があります。
 
-```
+```cpp
 // C3200.cpp
 template<typename T>
 class X

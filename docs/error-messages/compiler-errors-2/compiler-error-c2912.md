@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2912
 ms.assetid: bd55cecd-ab1a-4636-ab8a-a00393fe7b3d
-ms.openlocfilehash: b7f87ae2df5350fcfb2b7a662f517d8d7bd51ef8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 254252bfd21aa28c87810f1e21b4864e2775a71b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540076"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761086"
 ---
 # <a name="compiler-error-c2912"></a>コンパイラ エラー C2912
 
@@ -21,7 +21,7 @@ template 宣言がない関数は特殊化できません。
 
 次の例では C2912 が生成されます。
 
-```
+```cpp
 // C2912.cpp
 // compile with: /c
 void f(char);
@@ -31,7 +31,7 @@ template<class T> void f(T);   // OK
 
 このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成されることもあります。すべての明示的な特殊化で、そのパラメーターとしてプライマリ テンプレートのパラメーターと一致するパラメーターを選択する必要があります。
 
-```
+```cpp
 // C2912b.cpp
 class CF {
 public:

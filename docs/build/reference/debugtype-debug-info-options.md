@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272296"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (デバッグ情報オプション)
 
@@ -40,11 +40,11 @@ ms.locfileid: "50676994"
 
 使用して、 **/DEBUGTYPE**デバッグ ストリームで再配置テーブル データまたは .pdata および .xdata ヘッダー情報を含めることを指定するオプション。 これにより、リンカーは、カーネルモード コードで中断するときにカーネル デバッガーに表示されるユーザーモード コードに関する情報を含めます。 ときにデバッグ シンボルを使用できるようにする**FIXUP**が指定すると、含める、 **CV**引数。
 
-アプリケーションの一般的なものは、ユーザー モードでコードをデバッグする、 **/DEBUGTYPE**オプションは必要ありません。 既定では、デバッグを指定するコンパイラ スイッチが出力 ([/Z7、/Zi、/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) すべてについては、必要な Visual Studio でデバッガーの出力します。 使用 **/DEBUGTYPE:PDATA**または **/DEBUGTYPE:CV, PDATA、FIXUP**デバイス ドライバーの構成アプリなど、ユーザー モードおよびカーネル モードのコンポーネントを組み合わせてするコードをデバッグします。 カーネル モード デバッガーの詳細については、次を参照してください[デバッグ ツールの Windows (WinDbg、KD、CDB、NTSD)。](/windows-hardware/drivers/debugger/index)
+アプリケーションの一般的なものは、ユーザー モードでコードをデバッグする、 **/DEBUGTYPE**オプションは必要ありません。 既定では、デバッグを指定するコンパイラ スイッチが出力 ([/Z7、/Zi、/ZI](z7-zi-zi-debug-information-format.md)) すべてについては、必要な Visual Studio でデバッガーの出力します。 使用 **/DEBUGTYPE:PDATA**または **/DEBUGTYPE:CV, PDATA、FIXUP**デバイス ドライバーの構成アプリなど、ユーザー モードおよびカーネル モードのコンポーネントを組み合わせてするコードをデバッグします。 カーネル モード デバッガーの詳細については、次を参照してください[デバッグ ツールの Windows (WinDbg、KD、CDB、NTSD)。](/windows-hardware/drivers/debugger/index)
 
 ## <a name="see-also"></a>関連項目
 
-[/DEBUG (デバッグ情報の生成)](../../build/reference/debug-generate-debug-info.md)<br/>
-[/DRIVER (Windows NT カーネル モード ドライバー)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE (パフォーマンス ツール プロファイラー)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[/DEBUG (デバッグ情報の生成)](debug-generate-debug-info.md)<br/>
+[/DRIVER (Windows NT カーネル モード ドライバー)](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (パフォーマンス ツール プロファイラー)](profile-performance-tools-profiler.md)<br/>
 [(WinDbg、KD、CDB、NTSD)、Windows 用デバッグ ツール](/windows-hardware/drivers/debugger/index)

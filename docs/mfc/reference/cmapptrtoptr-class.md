@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: 1a2c9a3a98d46e263dab645805c697da42af41fe
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a44b9524324065581583bad13018b2c4479fc9f3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237748"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr クラス
 
@@ -115,4 +115,3 @@ class CMapPtrToPtr : public CObject
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

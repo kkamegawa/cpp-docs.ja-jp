@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2272
 ms.assetid: 1517706a-9c27-452e-9b10-3424b3d232bc
-ms.openlocfilehash: 1a5a1e47a721cb6edd795012cc45943e63708936
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd6fdecd3a491ce5f068f4d51d413e6767aabe2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537424"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758698"
 ---
 # <a name="compiler-error-c2272"></a>コンパイラ エラー C2272
 
-'function': 修飾子は静的メンバー関数では使用できません
+' function ': 静的メンバー関数では、修飾子は使用できません
 
-A`static`などメンバー関数は、メモリ モデルの指定子で宣言された[const](../../cpp/const-cpp.md)または[揮発性](../../cpp/volatile-cpp.md)でそのような修飾子は許可されず`static`メンバー関数。
+`static` メンバー関数は、 [const](../../cpp/const-cpp.md)や[volatile](../../cpp/volatile-cpp.md)などのメモリモデル指定子を使用して宣言されています。このような修飾子は、`static` メンバー関数では使用できません。
 
 次の例では、C2272 が生成されます。
 
-```
+```cpp
 // C2272.cpp
 // compile with: /c
 class CMyClass {

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-ms.openlocfilehash: 159202445f95e8fbac93902dec43fc0f99180e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3b1c113e5c6c5feb5b2fa1940ee9b984233e4af
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560668"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142205"
 ---
-# <a name="schedulernotattached-class"></a>scheduler_not_attached クラス
+# <a name="scheduler_not_attached-class"></a>scheduler_not_attached クラス
 
 このクラスは、現在のコンテキストにスケジューラがアタッチされている必要がある操作を実行するときにスケジューラがアタッチされていない場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class scheduler_not_attached : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class scheduler_not_attached : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[scheduler_not_attached](#ctor)|オーバーロードされます。 `scheduler_not_attached` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class scheduler_not_attached : public std::exception;
 
 `scheduler_not_attached`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> scheduler_not_attached
+## <a name="ctor"></a>scheduler_not_attached
 
 `scheduler_not_attached` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP scheduler_not_attached(_In_z_ const char* _Message) throw();
 
 scheduler_not_attached() throw();
@@ -57,10 +57,10 @@ scheduler_not_attached() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [Scheduler クラス](scheduler-class.md)

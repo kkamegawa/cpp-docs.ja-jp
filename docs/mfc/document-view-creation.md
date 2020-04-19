@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: eccc65df784d000f8dccc244e295da522658b626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5f9b783e8e14744a816fd63b327ed95d9da8e8a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240789"
 ---
 # <a name="documentview-creation"></a>ドキュメントおよびビューの作成
 
@@ -38,4 +38,3 @@ ms.locfileid: "50633560"
 [ドキュメント テンプレートの作成](../mfc/document-template-creation.md)<br/>
 [各種 MFC オブジェクト間の関係](../mfc/relationships-among-mfc-objects.md)<br/>
 [新しいドキュメント、ウィンドウ、ビューの作成](../mfc/creating-new-documents-windows-and-views.md)
-

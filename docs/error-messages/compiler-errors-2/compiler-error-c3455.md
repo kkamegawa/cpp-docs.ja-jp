@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3455
 ms.assetid: 218e5cfe-5391-4eeb-81c2-85c47e3a6cd2
-ms.openlocfilehash: 4451ddbd8d5a7125112ef8e1c58e8843095bffd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e016105a53b4020ca8ed83a95b0c9b96036b1884
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756670"
 ---
 # <a name="compiler-error-c3455"></a>コンパイラ エラー C3455
 
@@ -19,11 +19,11 @@ ms.locfileid: "50614397"
 
 無効な値が属性の宣言に使用されました。  詳細については、「 [attribute](../../windows/attributes/attribute.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3455 が生成されます。
 
-```
+```cpp
 // C3455.cpp
 // compile with: /clr /c
 using namespace System;

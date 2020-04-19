@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219840"
 ---
 # <a name="frame-windows"></a>フレーム ウィンドウ
 
@@ -71,7 +71,7 @@ MFC フレームワークでは、フレーム ウィンドウを使用して、
 
 - [ダイナミック データ エクス (チェンジ DDE) への応答](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [セミモーダル状態: 状況依存の Windows ヘルプを (その他のウィンドウの動作を調整すること)](../mfc/orchestrating-other-window-actions.md)
+- [セミモーダル状態:(その他のウィンドウの動作を調整すること) Windows ヘルプ](../mfc/orchestrating-other-window-actions.md)
 
 - [セミモーダル状態: 印刷と印刷プレビューを (その他のウィンドウの動作を調整すること)](../mfc/orchestrating-other-window-actions.md)
 
@@ -86,4 +86,3 @@ MFC フレームワークでは、フレーム ウィンドウを使用して、
 ## <a name="see-also"></a>関連項目
 
 [Windows](../mfc/windows.md)
-

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476454"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688539"
 ---
-# <a name="wbufferconvert-class"></a>wbuffer_convert クラス
+# <a name="wbuffer_convert-class"></a>wbuffer_convert クラス
 
 バイト ストリーム バッファーとの間の要素の転送を制御するストリーム バッファーを説明します。
 
@@ -35,11 +35,11 @@ class wbuffer_convert
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、文字の特徴がクラス `Traits` によって記述される型 `_Elem` の要素の、型 `std::streambuf` のバイト ストリーム バッファーとの間での転送を制御するストリーム バッファーについて説明します。
+このクラステンプレートは、`_Elem` 型の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス `Traits` によって記述されており、`std::streambuf` 型のバイトストリームバッファーとの間で伝送されます。
 
 `Elem` 値のシーケンスとマルチバイト シーケンスとの間の変換は、クラス `Codecvt<Elem, char, std::mbstate_t>` のオブジェクトによって実行されます。このことは、標準コード変換ファセット `std::codecvt<Elem, char, std::mbstate_t>` の要件を満たしています。
 
-このテンプレート クラスのオブジェクトは、以下のものを格納します。
+このクラステンプレートのオブジェクトは、次のものを格納します。
 
 - 基になるバイト ストリーム バッファーへのポインター
 

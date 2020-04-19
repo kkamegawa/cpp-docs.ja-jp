@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: f270a1a58bb8023d91d84b0d1ca3395d36298c95
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523066"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452900"
 ---
 # <a name="iscompound-class"></a>is_compound クラス
 
@@ -27,12 +27,12 @@ struct is_compound;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-型述語のインスタンスを保持**false**場合の種類*Ty*が基本型 (場合に、 [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > を保持**true**)。それ以外の場合、保持している**true**します。 そのため、述語を保持して**true**場合*Ty*配列型、関数型へのポインターは、 **void**またはオブジェクトまたは関数、参照、クラス、共用体、列挙体は、または、非静的クラス メンバーへのポインターまたは*cv で修飾された*それらのいずれかの形式。
+*Ty*の型が基本型である場合 (つまり、 [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > が**true**を保持している場合)、型述語のインスタンスは**false**を保持します。それ以外の場合は**true**を保持します。 したがって、 *Ty*が配列型、関数型、 **void**へのポインター、オブジェクトまたは関数、参照、クラス、共用体、列挙体、非静的クラスメンバーへのポインター、または*cv で修飾*された形式の場合、述語は**true**を保持します。そのうちの1つです。
 
 ## <a name="example"></a>例
 
@@ -83,5 +83,5 @@ is_compound<int> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class クラス](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_class クラス](../standard-library/is-class-class.md)

@@ -1,13 +1,13 @@
 ---
 title: logb、logbf、logbl、_logb、_logbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - logb
 - _logb
 - _logbl
 - logbf
 - logbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logb
 - logbl
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953151"
 ---
-# <a name="logb-logbf-logbl-logb-logbf"></a>logb、logbf、logbl、_logb、_logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
 浮動小数点引数の指数の値を抽出します。
 
@@ -82,13 +85,13 @@ float _logbf(
 
 ## <a name="return-value"></a>戻り値
 
-**logb**の公平な指数値を返します*x*として、符号付き整数の浮動小数点値として表されます。
+**logb**は、浮動小数点値として表される符号付き整数として、バイアスをかける*x*の指数値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Logb**関数は、浮動小数点引数の指数値を抽出*x*場合と同様、 *x*無限範囲で表されていました。 場合、引数*x*は非正規化され、そのとして扱われます正規化されています。
+**Logb**関数は、浮動小数点引数*x*の指数値を抽出します。ただし、 *x*は無限範囲で表されます。 引数*x*が非正規化されている場合は、正規化されているかのように扱われます。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **logb**を受け取って返す**float**または**長い****二重**値。 C プログラムで**logb**は、**二重**します。
+でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**logb**のオーバーロードを呼び出すことができます。 C プログラムでは、 **logb**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -100,7 +103,7 @@ float _logbf(
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**logb**、 **logbf**、 **logbl**、 **_logbf**|\<math.h>|
+|**logb**、 **logb**、 **logb**、 **_logbf**|\<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

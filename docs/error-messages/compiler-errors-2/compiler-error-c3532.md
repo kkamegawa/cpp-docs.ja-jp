@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 91d8e28e053d8ce1b307f9345ab3249386bdf1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568891"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761934"
 ---
 # <a name="compiler-error-c3532"></a>コンパイラ エラー C3532
 
-'type': 'auto' の不適切な使用方法
+' type ': ' auto ' の使用法が正しくありません
 
-指定された型を宣言することはできません、`auto`キーワード。 たとえば、使用することはできません、`auto`配列またはメソッドを宣言するキーワードが型を取得します。
+指定された型は、`auto` キーワードを使用して宣言することはできません。 たとえば、`auto` キーワードを使用して、配列またはメソッドの戻り値の型を宣言することはできません。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. 初期化式が有効な型を生成することを確認します。
+1. 初期化式によって有効な型が生成されていることを確認します。
 
-1. 配列またはメソッドの戻り値の型を宣言していないことを確認します。
+1. 配列またはメソッドの戻り値の型が宣言されていないことを確認してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では C3532 のため、`auto`キーワードがメソッドの戻り値の型を宣言できません。
+次の例では、`auto` キーワードがメソッドの戻り値の型を宣言できないため、C3532 が生成されます。
 
-```
+```cpp
 // C3532a.cpp
 // Compile with /Zc:auto
 auto f(){}   // C3532
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では C3532 のため、`auto`キーワードは、配列を宣言できません。
+次の例では、`auto` キーワードで配列を宣言できないため、C3532 が生成されます。
 
-```
+```cpp
 // C3532b.cpp
 // Compile with /Zc:auto
 int main()
@@ -54,6 +54,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto キーワード](../../cpp/auto-keyword.md)

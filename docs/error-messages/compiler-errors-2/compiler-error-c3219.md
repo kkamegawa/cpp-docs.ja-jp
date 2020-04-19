@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3219
 ms.assetid: 9c9757b0-1256-4cdf-9d8c-a3a72f300ce5
-ms.openlocfilehash: a93e9ed1a8e00eaecc664bda02a70c81b6c81ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72d5c3737dd2059dff46369b87d0e2caecef5a4f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621690"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737960"
 ---
 # <a name="compiler-error-c3219"></a>コンパイラ エラー C3219
 
@@ -21,7 +21,7 @@ ms.locfileid: "50621690"
 
 次の例では、C3219 が生成されます。
 
-```
+```cpp
 // C3219.cpp
 // compile with: /clr
 ref class A {};
@@ -34,7 +34,7 @@ ref class E {};   // C3219
 
 次の例では、考えられる解決策を示しています。
 
-```
+```cpp
 // C3219b.cpp
 // compile with: /clr /c
 ref class A {};

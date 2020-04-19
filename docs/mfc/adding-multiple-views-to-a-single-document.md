@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: d76f5796bb8588cae26b17c4f6cf7aae90b354ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394742"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>シングル ドキュメントへのマルチ ビューの追加
 
 Microsoft Foundation Class (MFC) ライブラリで作成されたシングル ドキュメント インターフェイス (SDI) アプリケーションで各ドキュメントの種類は、1 つのビューの種類に関連付けられます。 場合によってに新しいビューを使用して、ドキュメントの現在のビューを切り替えることができることをお勧めします。
 
 > [!TIP]
->  1 つのドキュメントに複数のビューを実装する追加手順については、次を参照してください。 [CDocument::AddView](../mfc/reference/cdocument-class.md#addview)と[収集](../visual-cpp-samples.md)MFC サンプル。
+>  1 つのドキュメントに複数のビューを実装する追加手順については、次を参照してください。 [CDocument::AddView](../mfc/reference/cdocument-class.md#addview)と[収集](../overview/visual-cpp-samples.md)MFC サンプル。
 
 この機能を実装するには、新しい追加`CView`の派生クラスと既存の MFC アプリケーションを動的に、ビューを切り替えるためのコードを追加します。
 
@@ -100,4 +100,3 @@ Include セクションでは、次の行を挿入*MYWINAPP します。CPP*:
 ## <a name="see-also"></a>関連項目
 
 [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
-

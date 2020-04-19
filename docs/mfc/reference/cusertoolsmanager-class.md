@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: 405260d4bc2f7cdf163dbd7a00f342b8afc87d48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323373"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager クラス
 
@@ -108,7 +108,7 @@ class CUserToolsManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例への参照を取得する方法を示します、`CUserToolsManager`オブジェクトと、新しいユーザー ツールを作成する方法。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例への参照を取得する方法を示します、`CUserToolsManager`オブジェクトと、新しいユーザー ツールを作成する方法。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]
 

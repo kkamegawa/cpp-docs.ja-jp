@@ -9,12 +9,12 @@ helpviewer_keywords:
 - device contexts, selecting graphic objects into
 - device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
-ms.openlocfilehash: c879369d445a9330139eff89be4ad8153252bfa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fb1507c1200da4cdf44627557ff6993e927d51e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308531"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>グラフィック オブジェクトをデバイス コンテキストに選択する
 
@@ -39,4 +39,3 @@ ms.locfileid: "50438824"
 ## <a name="see-also"></a>関連項目
 
 [グラフィック オブジェクト](../mfc/graphic-objects.md)
-

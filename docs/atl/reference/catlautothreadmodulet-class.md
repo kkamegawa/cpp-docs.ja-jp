@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: 8492127af8a1267da3beed678f8a66424ba26442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63f1c8dbe3c752773fd64c6e339a9a3b67051d35
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247176"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT クラス
 
@@ -39,7 +39,7 @@ COM サーバーを実装するクラスです。
 *テンプレートパラ*<br/>
 スレッドの選択を管理するクラスです。 既定値は[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)します。
 
-*内部*<br/>
+*dwWait*<br/>
 ミリ秒単位で、タイムアウト間隔を指定します。 既定値は、INFINITE で、決してメソッドのタイムアウト間隔が経過するとします。
 
 ## <a name="members"></a>メンバー

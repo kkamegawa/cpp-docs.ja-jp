@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: 4e12b4dc41c0e384025a2af567cb118d066aaa72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a06891f9413979895175808e109cc4abb7d75e09
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224366"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter クラス
 
@@ -78,7 +78,7 @@ class COleMessageFilter : public CCmdTarget
 
 これは、高度なクラスです。頻度の低い、直接使用する必要があります。
 
-詳細については、この記事を参照してください。[サーバー: サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。
+詳細については、この記事を参照してください。[サーバー。サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -250,7 +250,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 ### <a name="parameters"></a>パラメーター
 
-*タイムアウト*<br/>
+*nTimeout*<br/>
 保留中のメッセージの遅延時間のミリ秒数。
 
 ### <a name="remarks"></a>Remarks
@@ -267,7 +267,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*nretryreply で指定しました。*<br/>
+*nRetryReply*<br/>
 再試行の間のミリ秒数。
 
 ### <a name="remarks"></a>Remarks

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407446"
 ---
 # <a name="parameter-attributes"></a>パラメーター属性
 

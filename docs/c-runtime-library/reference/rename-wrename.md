@@ -1,10 +1,10 @@
 ---
 title: rename、_wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326141"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949302"
 ---
-# <a name="rename-wrename"></a>rename、_wrename
+# <a name="rename-_wrename"></a>rename、_wrename
 
 ファイルまたはディレクトリの名前を変更します。
 
@@ -68,7 +71,7 @@ int _wrename(
 
 ## <a name="return-value"></a>戻り値
 
-名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラー関数は 0 以外の値を返します。 設定および**errno**値は次のいずれかに。
+名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーが発生した場合、関数は0以外の値を返し、 **errno**を次の値のいずれかに設定します。
 
 |errno の値|条件|
 |-|-|
@@ -82,13 +85,13 @@ int _wrename(
 
 **rename** 関数は、*oldname* によって指定されたファイルまたはディレクトリの名前を *newname* によって指定された名前に変更します。 古い名前は、既存のファイルまたはディレクトリのパスである必要があります。 新しい名前を既存のファイルまたはディレクトリのパスにすることはできません。 **rename** を使用して、*newname* 引数で別のパスを指定することにより、1 つのディレクトリまたはデバイスから別のディレクトリまたはデバイスにファイルを移動することができます。 ただし、**rename** を使用してディレクトリを移動することはできません。 ディレクトリの名前を変更することはできますが、移動はできません。
 
-**_wrename**のワイド文字バージョンは、 **_rename**; 引数 **_wrename**はワイド文字列です。 **_wrename**と **_rename**動作は同じです。
+**wrename**は、名前変更のワイド文字バージョンです。 **(_s)** **wrename**の引数はワイド文字列です。 それ以外の場合、 **wrename**と**rename**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_trename**|**rename**|**rename**|**_wrename**|
+|**trename (_d)**|**rename**|**rename**|**_wrename**|
 
 ## <a name="requirements"></a>必要条件
 
@@ -129,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'

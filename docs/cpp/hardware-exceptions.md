@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 17775f3b2ee6dfa235c93d0bf0e3335b464aaa69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553531"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246547"
 ---
 # <a name="hardware-exceptions"></a>ハードウェア例外
 
@@ -27,7 +27,7 @@ Windows で認識されるハードウェア例外を次の表にまとめまし
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|アクセスできないメモリ位置に対する読み取りまたは書き込み。|
 |STATUS_BREAKPOINT|ハードウェア定義されたブレークポイントに遭遇しました。デバッガーでのみ使用します。|
-|STATUS_DATATYPE_MISALIGNMENT|適切にアラインされていないアドレスにあるデータの読み取りまたは書き込み。たとえば、16 ビットのエンティティは 2 バイト境界上に配置する必要があります  (Intel 80 には該当しません*x*86 プロセッサ)。|
+|STATUS_DATATYPE_MISALIGNMENT|適切にアラインされていないアドレスにあるデータの読み取りまたは書き込み。たとえば、16 ビットのエンティティは 2 バイト境界上に配置する必要があります (Intel 80*x*86 プロセッサには適用されません。)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|浮動小数点型の 0.0 による除算。|
 |STATUS_FLOAT_OVERFLOW|浮動小数点型の正の値の指数の最大値を超えています。|
 |STATUS_FLOAT_UNDERFLOW|浮動小数点型の負の値の指数の絶対値の最大値を超えています。|
@@ -38,9 +38,9 @@ Windows で認識されるハードウェア例外を次の表にまとめまし
 |STATUS_INTEGER_OVERFLOW|整数の範囲を超える演算を試みています。|
 |STATUS_SINGLE_STEP|シングル ステップ モードで 1 つの命令を実行しています。デバッガーでのみ使用されます。|
 
-前の表に示した多くの例外は、デバッガーやオペレーティング システムなどの低レベルのコードで処理されることが前提となっています。 整数と浮動小数点数のエラーを除き、コードでこれらのエラーを処理しないでください。 したがって、通常は例外処理フィルターを使用して例外を無視 (0 に評価) してください。 そうしないと、下位レベルのしくみで適切に対応できなくなります。 これらの低レベルのエラーの潜在的な影響に対して適切な対策を行うことができます、ただし、[終了ハンドラーを記述](../cpp/writing-a-termination-handler.md)します。
+前の表に示した多くの例外は、デバッガーやオペレーティング システムなどの低レベルのコードで処理されることが前提となっています。 整数と浮動小数点数のエラーを除き、コードでこれらのエラーを処理しないでください。 したがって、通常は例外処理フィルターを使用して例外を無視 (0 に評価) してください。 そうしないと、下位レベルのしくみで適切に対応できなくなります。 ただし、[終了ハンドラーを記述](../cpp/writing-a-termination-handler.md)することによって、これらの低レベルエラーの潜在的な影響に対して適切な予防措置を講じることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)<br/>
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

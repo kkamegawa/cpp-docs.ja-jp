@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _LK_RLCK constant
 - LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
-ms.openlocfilehash: 721e2433a6d7a76ad73b0f52f033c3e04cab8f6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d559a68e8fede6e0b6dd40505a041b14da703681
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526329"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738493"
 ---
 # <a name="locking-constants"></a>_locking 定数
 
@@ -34,7 +34,7 @@ ms.locfileid: "50526329"
 #include <sys/locking.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_locking` 関数の呼び出しにおける *mode* 引数によって、実行されるロック操作が指定されます。
 
@@ -48,7 +48,7 @@ ms.locfileid: "50526329"
 | `_LK_NBRLCK`  | `_LK_NBLCK` と同じ。  |
 | `_LK_UNLCK`  | 指定したバイトをロック解除します。 (バイトはすでにロックされている必要があります)。  |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_locking](../c-runtime-library/reference/locking.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

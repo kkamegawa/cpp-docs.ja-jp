@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519556"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498746"
 ---
-# <a name="comerror-class"></a>_com_error クラス
+# <a name="_com_error-class"></a>_com_error クラス
 
 **Microsoft 固有の仕様**
 
-A **_com_error**オブジェクトは、タイプ ライブラリから生成されたヘッダー ファイル内のエラー処理ラッパー関数によって、または COM サポート クラスのいずれかで検出された例外条件を表します。 **_Com_error** HRESULT エラー コードおよび関連クラスがカプセル化`IErrorInfo Interface`オブジェクト。
+エラーオブジェクトは、タイプライブラリから生成されたヘッダーファイル内のエラー処理ラッパー関数、またはいずれかの com サポートクラスによって検出された例外条件を表します。 **エラー**クラスは、HRESULT エラーコードおよび関連付けられている`IErrorInfo Interface`オブジェクトをカプセル化します。
 
 ### <a name="construction"></a>構築
 
 |||
 |-|-|
-|[_com_error](../cpp/com-error-com-error.md)|構築、 **_com_error**オブジェクト。|
+|[_com_error](../cpp/com-error-com-error.md)|エラーオブジェクトを構築します ( **_t** )。|
 
 ### <a name="operators"></a>演算子
 
 |||
 |-|-|
-|[演算子 =](../cpp/com-error-operator-equal.md)|既存 **_com_error**を別のオブジェクト。|
+|[operator=](../cpp/com-error-operator-equal.md)|既存の**エラー**オブジェクトを別のオブジェクトに割り当てます。|
 
 ### <a name="extractor-functions"></a>抽出関数
 
 |||
 |-|-|
-|[エラー](../cpp/com-error-error.md)|コンス トラクターに渡された HRESULT を取得します。|
+|[エラー](../cpp/com-error-error.md)|コンストラクターに渡された HRESULT を取得します。|
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|コンストラクターに渡された `IErrorInfo` オブジェクトを取得します。|
-|[WCode](../cpp/com-error-wcode.md)|カプセル化された HRESULT にマップされた 16 ビット エラー コードを取得します。|
+|[WCode](../cpp/com-error-wcode.md)|カプセル化された HRESULT にマップされた16ビットエラーコードを取得します。|
 
 ### <a name="ierrorinfo-functions"></a>IErrorInfo の関数
 
@@ -53,24 +53,24 @@ A **_com_error**オブジェクトは、タイプ ライブラリから生成さ
 
 |||
 |-|-|
-|[エラー メッセージ](../cpp/com-error-errormessage.md)|格納された HRESULT の文字列メッセージを取得、 **_com_error**オブジェクト。|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|HRESULT の文字列メッセージを取得します。**エラー**オブジェクトに格納されます。|
 
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode と HRESULT のマッパー
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|16 ビットに 32 ビットの HRESULT をマップ`wCode`します。|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|16 ビット マップ`wCode`HRESULT の 32 ビットにします。|
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|32ビットの HRESULT を16ビット`wCode`にマップします。|
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|16ビット`wCode`を32ビット HRESULT にマップします。|
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<comdef.h >
+**ヘッダー:** \<comdef. h >
 
-`Lib:` comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)
+`Lib:`(詳細については、「 [/zc: wchar_t (Wchar_t はネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 」を参照してください)
 
 ## <a name="see-also"></a>関連項目
 
 [コンパイラ COM サポート クラス](../cpp/compiler-com-support-classes.md)<br/>
-[IErrorInfo インターフェイス](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[IErrorInfo インターフェイス](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

@@ -1,4 +1,4 @@
----
+﻿---
 title: _variant_t::operator =
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 ms.openlocfilehash: 6a8f31e8db6f5ca5a680dd47b5d5391c84ce5025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403319"
 ---
-# <a name="varianttoperator-"></a>_variant_t::operator =
+# <a name="_variant_toperator-"></a>_variant_t::operator =
 
 **Microsoft 固有の仕様**
 
@@ -119,35 +119,35 @@ _variant_t& operator=(
 
 この演算子は、`_variant_t` オブジェクトに新しい値を代入します。
 
-- **operator = (***varSrc***)** に既存`VARIANT`を`_variant_t`オブジェクト。
+- **operator = (** *varSrc* **)** に既存`VARIANT`を`_variant_t`オブジェクト。
 
-- **operator = (***pVarSrc***)** に既存`VARIANT`を`_variant_t`オブジェクト。
+- **operator = (** *pVarSrc* **)** に既存`VARIANT`を`_variant_t`オブジェクト。
 
-- **operator = (***var_t_Src***)** 既存`_variant_t`オブジェクトを`_variant_t`オブジェクト。    
+- **operator = (** *var_t_Src* **)** 既存`_variant_t`オブジェクトを`_variant_t`オブジェクト。
 
-- **演算子 = (***sSrc***)** 割り当てます、**短い**整数値を`_variant_t`オブジェクト。
+- **演算子 = (** *sSrc* **)** 割り当てます、**short**整数値を`_variant_t`オブジェクト。
 
-- **演算子 = (**`lSrc`**)** 割り当てます、**長い**整数値を`_variant_t`オブジェクト。
+- **演算子 = (** `lSrc` **)** 割り当てます、**long**整数値を`_variant_t`オブジェクト。
 
-- **演算子 = (***fltSrc***)** 割り当てます、 **float**数値を`_variant_t`オブジェクト。
+- **演算子 = (** *fltSrc* **)** 割り当てます、 **float**数値を`_variant_t`オブジェクト。
 
-- **演算子 = (***dblSrc***)** 割り当てます、**二重**数値を`_variant_t`オブジェクト。
+- **演算子 = (** *dblSrc* **)** 割り当てます、**double**数値を`_variant_t`オブジェクト。
 
-- **operator = (***cySrc***)** 割り当てます、`CY`オブジェクトを`_variant_t`オブジェクト。
+- **operator = (** *cySrc* **)** 割り当てます、`CY`オブジェクトを`_variant_t`オブジェクト。
 
-- **operator = (***bstrSrc***)** 割り当てます、`BSTR`オブジェクトを`_variant_t`オブジェクト。
+- **operator = (** *bstrSrc* **)** 割り当てます、`BSTR`オブジェクトを`_variant_t`オブジェクト。
 
-- **operator = (***wstrSrc***)** に Unicode 文字列を代入、`_variant_t`オブジェクト。
+- **operator = (** *wstrSrc* **)** に Unicode 文字列を代入、`_variant_t`オブジェクト。
 
-- **operator = (**`strSrc`**)** にマルチバイト文字列を代入、`_variant_t`オブジェクト。
+- **operator = (** `strSrc` **)** にマルチバイト文字列を代入、`_variant_t`オブジェクト。
 
 - **operator = (** `bSrc` **)** 割り当てます、 **bool**値を`_variant_t`オブジェクト。
 
-- **operator = (***pDispSrc***)** 割り当てます、`VT_DISPATCH`オブジェクトを`_variant_t`オブジェクト。
+- **operator = (** *pDispSrc* **)** 割り当てます、`VT_DISPATCH`オブジェクトを`_variant_t`オブジェクト。
 
-- **operator = (***pIUnknownSrc***)** 割り当てます、`VT_UNKNOWN`オブジェクトを`_variant_t`オブジェクト。
+- **operator = (** *pIUnknownSrc* **)** 割り当てます、`VT_UNKNOWN`オブジェクトを`_variant_t`オブジェクト。
 
-- **operator = (***decSrc***)** 割り当てます、`DECIMAL`値を`_variant_t`オブジェクト。
+- **operator = (** *decSrc* **)** 割り当てます、`DECIMAL`値を`_variant_t`オブジェクト。
 
 - **operator = (** `bSrc` **)** 割り当てます、`BYTE`値を`_variant_t`オブジェクト。
 

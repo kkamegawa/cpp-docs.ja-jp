@@ -1,33 +1,33 @@
 ---
 title: 定義済みのシンボル ID
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: cb2f80315e0480c3fcb73092123cad88712dff05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362297"
 ---
 # <a name="predefined-symbol-ids"></a>定義済みのシンボル ID
 
 新しいプロジェクトを開始する時点で、ユーザーが使用できるように、プロジェクトの種類に応じていくつかのシンボル ID が事前に定義されています。 これらのシンボル ID は、MFC など、さまざまなライブラリとプロジェクトの種類をサポートします。 これらのシンボル ID は、アプリケーションに通常含まれている共通のタスクか、マウスやポインターなどのハードウェア アイテムのアクションを表します。
 
-これらのシンボル ID は、リソースを使用する際に重要になります。 また、アクセラレータ テーブルを編集するときにも使用できます。既に仮想キーに関連付けられているシンボル ID もあります。 手順で利用可能なことも、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 定義済みの任意のシンボル ID を新しいリソースに割り当てたり、これらのシンボル ID にアクセラレータ キーを割り当てたりできます。シンボル ID に関連付けられている機能は、自動的にそのキーの組み合わせに関連付けられます。
+これらのシンボル ID は、リソースを使用する際に重要になります。 アクセラレータ テーブルを編集すると、既に仮想キーに関連付けられているそれらの一部では利用です。 介して利用可能にもなる、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 定義済みシンボル Id のいずれかを新しいリソースに割り当てることができますか、アクセラレータ キーと ID は、そのキーの組み合わせを自動的に関連付けますシンボルに関連付けられている機能に割り当てることができます。
 
-これらのライブラリには、プロジェクトの一部として表示される以下の定義済みのシンボルがあります。
-
-- [MFC の定義済みシンボル](../windows/mfc-predefined-symbols.md)
+ライブラリには、プロジェクトの一部として表示されるシンボルが定義済みがあります。
 
 - [ATL の定義済みシンボル](../windows/atl-predefined-symbols.md)
 
+- [MFC の定義済みシンボル](../windows/mfc-predefined-symbols.md)
+
 - [Win32 の定義済みシンボル](../windows/win32-predefined-symbols.md)
 
-   > [!NOTE]
-   > 定義済みのシンボルは、常に読み取り専用です。
+> [!NOTE]
+> 定義済みのシンボルは、常に読み取り専用です。
 
 ## <a name="requirements"></a>必要条件
 
@@ -35,4 +35,6 @@ Win32、MFC、または ATL
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)
+[リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
+[方法: シンボルの作成](../windows/creating-new-symbols.md)<br/>
+[方法: シンボルの管理](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

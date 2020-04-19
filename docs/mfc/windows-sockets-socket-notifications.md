@@ -1,31 +1,31 @@
 ---
-title: 'Windows ソケット : ソケット通知'
+title: Windows ソケット:ソケット通知
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], notifications
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: e49001e9693872d23162284df49f128097e68784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358192"
 ---
-# <a name="windows-sockets-socket-notifications"></a>Windows ソケット : ソケット通知
+# <a name="windows-sockets-socket-notifications"></a>Windows ソケット:ソケット通知
 
 この記事では、ソケット クラス内の通知関数について説明します。 これらのメンバー関数は、重要なイベント、ソケット オブジェクトに通知するフレームワークから呼び出されるコールバック関数です。 通知関数は次のとおりです。
 
-- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): このソケットを呼び出して取得するためのバッファーでデータがあることを通知[受信](../mfc/reference/casyncsocket-class.md#receive)します。
+- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive):このソケットを呼び出して取得するためのバッファーでデータがあることを通知[受信](../mfc/reference/casyncsocket-class.md#receive)します。
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): このソケットを呼び出してデータを送信できるようになりましたことを通知[送信](../mfc/reference/casyncsocket-class.md#send)します。
+- [OnSend](../mfc/reference/casyncsocket-class.md#onsend):このソケットを呼び出してデータを送信できるようになりましたことを通知[送信](../mfc/reference/casyncsocket-class.md#send)します。
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): 保留中の接続要求を呼び出すことによって受け付けられることをリッスンしているソケットに通知[Accept](../mfc/reference/casyncsocket-class.md#accept)します。
+- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept):呼び出すことによって保留中の接続要求を受け付けられるこのリッスン ソケットに通知[Accept](../mfc/reference/casyncsocket-class.md#accept)します。
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): 接続の試行が完了しているソケットの通知: おそらく正常完了またはエラーが発生します。
+- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect):その接続試行が完了しているソケットの通知: おそらく正常完了またはエラーが発生します。
 
-- [OnClose](../mfc/reference/casyncsocket-class.md#onclose): に接続されているソケットが閉じられているこのソケットに通知します。
+- [OnClose](../mfc/reference/casyncsocket-class.md#onclose):接続されているソケットが閉じられているこのソケットに通知します。
 
     > [!NOTE]
     >  追加の通知、関数は、 [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata)します。 この通知は、送信側のソケットに送信する「帯域外」のデータを受信側のソケットに指示します。 帯域外のデータは、接続されているストリーム ソケットの各ペアに関連付けられている論理的に独立したチャネルです。 帯域外のチャネルは通常、「緊急」のデータ送信に使用されます。 MFC では、帯域外のデータをサポートします。 クラスを操作するユーザーを高度な[CAsyncSocket](../mfc/reference/casyncsocket-class.md)クラスのユーザーは、帯域外のチャネルを使用する必要があります[CSocket](../mfc/reference/csocket-class.md)これを使用しないでください。 簡単な方法では、このようなデータを渡すための 2 つ目のソケットを作成します。 帯域外のデータの詳細については、Windows SDK で利用できる Windows ソケット仕様を参照してください。
@@ -43,7 +43,7 @@ MFC が通知される時に、ソケットの動作をカスタマイズでき�
 > [!NOTE]
 >  `CSocket`、`OnConnect`通知関数を呼び出すことはありません。 接続は、呼び出す`Connect`、(正常にまたはエラー)、接続が完了したときに返されます。 MFC 実装の詳細は、接続の通知を処理する方法。
 
-詳細については、通知の各関数は、クラスの下にある関数を参照してください。`CAsyncSocket`で、 *MFC リファレンス*します。 ソース コードと MFC のサンプルについては、「 [MFC サンプル](../visual-cpp-samples.md)します。
+詳細については、通知の各関数は、クラスの下にある関数を参照してください。`CAsyncSocket`で、 *MFC リファレンス*します。 ソース コードと MFC のサンプルについては、「 [MFC サンプル](../overview/visual-cpp-samples.md)します。
 
 詳細については次を参照してください:
 
@@ -62,4 +62,3 @@ MFC が通知される時に、ソケットの動作をカスタマイズでき�
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-ms.openlocfilehash: db899b58c68dabc25e571c390db0575a2d2ebb58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323597"
 ---
 # <a name="ctreeview-class"></a>CTreeView クラス
 

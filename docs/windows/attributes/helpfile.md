@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 594ab4d02065e9b4efe1142c5ced9b76642e5481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488050"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501553"
 ---
 # <a name="helpfile"></a>helpfile
 
-タイプ ライブラリのヘルプ ファイルの名前を設定します。
+タイプライブラリのヘルプファイルの名前を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "50488050"
 ### <a name="parameters"></a>パラメーター
 
 *ファイル名*<br/>
-ヘルプ トピックを含むファイルの名前。
+ヘルプトピックが含まれているファイルの名前。
 
 ## <a name="remarks"></a>Remarks
 
-**Helpfile** C++ 属性と同じ機能を持つ、 [helpfile](/windows/desktop/Midl/helpfile) MIDL 属性。
+**Helpfile** C++属性には、 [helpfile](/windows/win32/Midl/helpfile) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[モジュール](module-cpp.md)を使用する方法の例については**helpfile**します。
+**Helpfile**の使用例については、[モジュール](module-cpp.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "50488050"
 
 |||
 |-|-|
-|**対象**|**インターフェイス**、 **typedef**、**クラス**、メソッド、**プロパティ**|
+|**対象**|**interface**、 **typedef**、 **class**、method、 **property**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

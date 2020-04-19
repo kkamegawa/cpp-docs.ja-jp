@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 1b3982e29d1bbf919e326e39f62ddb361d4c12ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291497"
 ---
 # <a name="lib-reference"></a>LIB リファレンス
 
@@ -24,18 +24,18 @@ Microsoft ライブラリ マネージャー (LIB.exe) を作成および一般�
 > [!NOTE]
 >  このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
 
-- [LIB の概要](../../build/reference/overview-of-lib.md)
+- [LIB の概要](overview-of-lib.md)
 
-- [方法: Visual Studio の開発環境で LIB.EXE オプションを設定する](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [方法: Visual Studio の開発環境で LIB.EXE オプションを設定する](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
-- [LIB の実行](../../build/reference/running-lib.md)
+- [LIB の実行](running-lib.md)
 
-- [ライブラリの管理](../../build/reference/managing-a-library.md)
+- [ライブラリの管理](managing-a-library.md)
 
-- [ライブラリ メンバーの抽出](../../build/reference/extracting-a-library-member.md)
+- [ライブラリ メンバーの抽出](extracting-a-library-member.md)
 
-- [インポート ライブラリとエクスポート ファイル](../../build/reference/working-with-import-libraries-and-export-files.md)
+- [インポート ライブラリとエクスポート ファイル](working-with-import-libraries-and-export-files.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)

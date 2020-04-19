@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char> class
 ms.assetid: abd9373a-77db-4031-bf4b-f8ac15087581
-ms.openlocfilehash: 6793a039b94a1ddc2daa80c5eb4d47fbdf6d6222
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccb08f3e505122757080129b36558490456fc2c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509981"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688321"
 ---
-# <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; 構造体
+# <a name="char_traitsltchargt-struct"></a>char_traits&lt;char&gt; 構造体
 
-テンプレート構造体の特殊化した構造体**char_traits\<CharType >** 型の要素を**char**します。
+テンプレート構造体**char_traits \<CharType**を特殊化した構造体。 **char**型の要素に > ます。
 
 ## <a name="syntax"></a>構文
 
@@ -27,8 +27,8 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>Remarks
 
-特殊化によりこの型のオブジェクトを操作するライブラリ関数を活用するために構造体**char**します。
+特殊化を使用すると、この型**char**のオブジェクトを操作するライブラリ関数を構造体で利用できます。
 
 ## <a name="example"></a>例
 
-テンプレート クラス [char_traits クラス](../standard-library/char-traits-struct.md)の typedef およびメンバー関数を参照してください
+クラステンプレート[Char_traits クラス](../standard-library/char-traits-struct.md)の typedef とメンバー関数を参照してください。

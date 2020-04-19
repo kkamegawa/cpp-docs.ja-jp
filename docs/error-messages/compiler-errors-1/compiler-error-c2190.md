@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2190
 ms.assetid: 34e15f85-d979-4948-80fc-46c414508a70
-ms.openlocfilehash: b52797b945b1a652506b4a85171e60a91544bbf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 027c7f49b361ef3aa06a4d74e10f0ff27331b4a9
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546482"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301887"
 ---
 # <a name="compiler-error-c2190"></a>コンパイラ エラー C2190
 
-2 つ目を超える最初のパラメーター リスト
+最初のパラメーターリストが秒より長くなっています
 
-C の関数は、パラメーター一覧を短くしてもう一度で宣言されました。 C では、オーバー ロードされた関数はサポートされません。
+C 関数は、より短いパラメーターリストを使用して2回目に宣言されました。 C は、オーバーロードされた関数をサポートしていません。
 
 次の例では、C2190 が生成されます。
 
-```
+```c
 // C2190.c
 // compile with: /Za /c
 void func( int, float );

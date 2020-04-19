@@ -1,18 +1,18 @@
 ---
-title: '方法: リボン コントロールとイベント ハンドラーを追加する'
+title: '方法: リボン コントロールとイベント ハンドラーを追加します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c21e8b86962ebf37ca1a06bae056d09b9a9dbb2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389516"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>方法: リボン コントロールとイベント ハンドラーを追加する
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>方法: リボン コントロールとイベント ハンドラーを追加します。
 
 リボン コントロールは、ボタンやコンボ ボックス、パネルに追加するなどの要素です。 パネルは、関連するコントロールのグループを表示するリボン バーの領域です。
 
@@ -40,6 +40,5 @@ ms.locfileid: "51518399"
 
 ## <a name="see-also"></a>関連項目
 
-[RibbonGadgets サンプル: リボン ガジェット アプリケーション](../visual-cpp-samples.md)<br/>
+[RibbonGadgets サンプル:リボンのガジェット アプリケーション](../overview/visual-cpp-samples.md)<br/>
 [リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
-

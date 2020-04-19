@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308214"
 ---
 # <a name="serialization-in-mfc"></a>MFC におけるシリアル化
 
@@ -27,7 +27,7 @@ MFC には、クラスでシリアル化のための組み込みサポート`COb
 
 MFC のオブジェクトを使用して、`CArchive`ストレージ メディアとシリアル化するオブジェクトの間の仲介役としてのクラス。 このオブジェクトは常に関連付け、`CFile`からファイル名を含む、シリアル化に必要な情報を取得し、要求された操作が読み取りまたは書き込みがかどうかのオブジェクト。 シリアル化操作を実行するオブジェクトを使用して、`CArchive`ストレージ メディアの種類に関係なくオブジェクト。
 
-A`CArchive`オブジェクトは、オーバー ロードされた挿入を使用して (**<\<**) と抽出 (**>>**) の記述と読み取り操作を実行する演算子。 詳細については、次を参照してください。[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)でシリアル化: オブジェクトのシリアル化します。
+A`CArchive`オブジェクトは、オーバー ロードされた挿入を使用して (**<\<**) と抽出 (**>>**) の記述と読み取り操作を実行する演算子。 詳細については、次を参照してください。[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)シリアル化の記事。オブジェクトのシリアル化します。
 
 > [!NOTE]
 >  混同しないでください、`CArchive`クラスは、汎用的な iostream クラスは、テキストのみを書式設定します。 `CArchive`クラスは、バイナリ形式でシリアル化されたオブジェクト。
@@ -40,7 +40,7 @@ A`CArchive`オブジェクトは、オーバー ロードされた挿入を使�
 
 - [シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
 
-この記事[シリアル化: シリアル化とします。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)とシリアル化は、データベース アプリケーションでの適切な入力/出力手法について説明します。
+この記事[シリアル化します。シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)とシリアル化は、データベース アプリケーションでの適切な入力/出力手法について説明します。
 
 ## <a name="see-also"></a>関連項目
 

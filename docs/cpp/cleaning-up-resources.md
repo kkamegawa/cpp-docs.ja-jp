@@ -1,4 +1,4 @@
----
+﻿---
 title: リソースの後処理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575696"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246647"
 ---
 # <a name="cleaning-up-resources"></a>リソースの後処理
 
-終了ハンドラーの実行中は、終了ハンドラーが呼び出される前に実際に割り当てられたリソースがわからない場合があります。 できますが、 **_ _try**ステートメント ブロックは、そのすべてのリソースが開かれたようにすべてのリソースが割り当てられた、前に中断されました。
+終了ハンドラーの実行中は、終了ハンドラーが呼び出される前に実際に割り当てられたリソースがわからない場合があります。 すべてのリソースが割り当てられる前に、 **__try**ステートメントブロックが中断されている可能性があります。これにより、すべてのリソースが開かれているわけではありません。
 
 したがって、安全のために、終了処理のクリーンアップに進む前に、どのリソースが実際に開いているかをチェックする必要があります。 推奨される手順は、次のとおりです。
 
 1. 各ハンドルを NULL に初期化します。
 
-1. **_ _Try**ステートメント ブロックに、リソースを割り当てます。 各ハンドルは、リソースが割り当てられると、正の値に設定されます。
+1. **__Try**ステートメントブロックで、リソースを割り当てます。 各ハンドルは、リソースが割り当てられると、正の値に設定されます。
 
-1. **_ _Finally**ステートメント ブロック、0 以外の場合は、対応するハンドルまたはフラグ変数を持つ各リソースを解放または not NULL します。
+1. **__Finally**ステートメントブロックで、対応する handle 変数または flag 変数が0以外であるか、NULL ではない各リソースを解放します。
 
 ## <a name="example"></a>例
 
-次のコードは終了ハンドラーを使用して、3 つのファイルとで割り当てられたメモリ ブロックを閉じるなど、 **_ _try**ステートメント ブロックです。 コードでは、リソースをクリーンアップする前に、まずリソースが割り当てられているかどうかを確認しています。
+たとえば、次のコードでは、終了ハンドラーを使用して、3つのファイルと、 **__try**ステートメントブロックで割り当てられたメモリブロックを閉じます。 コードでは、リソースをクリーンアップする前に、まずリソースが割り当てられているかどうかを確認しています。
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

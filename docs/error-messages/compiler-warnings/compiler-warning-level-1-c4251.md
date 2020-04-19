@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207358"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>コンパイラの警告 (レベル 1) C4251
 
@@ -29,7 +29,7 @@ ms.locfileid: "50649658"
 
 クラスのインスタンスを作成する仮想関数を持つクラスを定義し、機能する DLL を呼び出すことができますを定義して、型のオブジェクトを削除してエクスポートを回避できます。  仮想関数を型でだけ呼び出すことができます、します。
 
-デバッグのリリースをコンパイルする C++ 標準ライブラリ内の型から派生した場合に無視できる C4251 (**/MTd**)、コンパイラのエラー メッセージは _Container_base を指します。
+内の型から派生した場合に無視できる C4251、C++標準ライブラリは、コンパイル、デバッグ リリース (**/MTd**)、コンパイラのエラー メッセージは _Container_base を指します。
 
 ```cpp
 // C4251.cpp

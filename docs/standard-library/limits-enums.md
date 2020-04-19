@@ -5,20 +5,16 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 68f0ba605b62f2492f49a2b81030c42dca80bf5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653285"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245353"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列挙型
 
-|||
-|-|-|
-|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|
-
-## <a name="float_denorm_style"></a>  float_denorm_style 列挙型
+## <a name="float_denorm_style"></a> float_denorm_style
 
 この列挙体では、小さすぎて、正規化された値としては表現できない非正規化された浮動小数点値を表現するために、実装で選択できるさまざまなメソッドを記述します。
 
@@ -43,7 +39,7 @@ enum float_denorm_style {
 
 この列挙型の値にアクセスする例については、「[numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)」を参照してください。
 
-## <a name="float_round_style"></a>  float_round_style 列挙型
+## <a name="float_round_style"></a> float_round_style
 
 この列挙体では、浮動小数点値を整数値に丸めるために、実装で選択できるさまざまなメソッドを記述します。
 
@@ -73,7 +69,3 @@ enum float_round_style {
 ### <a name="example"></a>例
 
 この列挙型の値にアクセスする例については、「[numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style)」を参照してください。
-
-## <a name="see-also"></a>関連項目
-
-[\<limits>](../standard-library/limits.md)<br/>

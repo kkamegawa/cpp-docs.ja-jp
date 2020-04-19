@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253532"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty クラス
 
@@ -64,9 +64,9 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 インターネット アプリケーションで非同期モニカーと ActiveX コントロールを使用する方法の詳細については、次の記事を参照してください。
 
-- [インターネット最初のステップ: ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
+- [インターネット最初のステップ:ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
 
-- [最初のステップ: インターネット非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [インターネット最初のステップ:非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -217,7 +217,7 @@ void SetPath(LPCTSTR lpszPath);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプル イメージ](../../visual-cpp-samples.md)<br/>
+[MFC のサンプル イメージ](../../overview/visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile クラス](../../mfc/reference/casyncmonikerfile-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CAsyncMonikerFile クラス](../../mfc/reference/casyncmonikerfile-class.md)

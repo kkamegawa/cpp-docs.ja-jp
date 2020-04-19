@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216858"
 ---
 # <a name="basic-cstring-operations"></a>CString の基本操作
 
@@ -85,7 +85,7 @@ C スタイルのリテラル文字列を割り当てることができます、
 
 ##  <a name="_core_converting_cstring_objects"></a> CString オブジェクトに変換します。
 
-CString オブジェクトを他の文字列型に変換する方法の詳細については、次を参照してください。[方法: さまざまな文字列型の間で変換](../text/how-to-convert-between-various-string-types.md)します。
+CString オブジェクトを他の文字列型に変換する方法の詳細については、次を参照してください。[方法。さまざまな文字列型の間で変換](../text/how-to-convert-between-various-string-types.md)します。
 
 ## <a name="using-cstring-with-wcout"></a>Wcout での CString の使用
 
@@ -105,4 +105,3 @@ wcout << (const wchar_t*) cs << endl;
 [CStringT クラス](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [クラス テンプレートの部分的特殊化](../cpp/template-specialization-cpp.md)<br/>
 [方法: さまざまな文字列型間で変換する](../text/how-to-convert-between-various-string-types.md)
-

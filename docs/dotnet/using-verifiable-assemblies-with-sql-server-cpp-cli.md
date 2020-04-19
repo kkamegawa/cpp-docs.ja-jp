@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384414"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 
@@ -19,9 +19,9 @@ ms.locfileid: "52389930"
 
 SQL Server TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブリをインストールすることを許可する拡張機能を提供します。 SQL Server のアクセス許可セットでは、次のセキュリティ レベルで、セキュリティ コンテキストを指定します。
 
-- 無制限のモード: コードを各自の責任で実行コードはタイプ セーフではありません。
+- 無制限のモード:コードを各自の責任で実行します。コードはタイプ セーフではありません。
 
-- セーフ モード: 検証可能なタイプ セーフなコードの実行/clr:safe と共にコンパイル。
+- セーフ モード:検証可能なタイプ セーフなコードを実行します。/clr:safe と共にコンパイル。
 
 > [!IMPORTANT]
 > Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2488
 ms.assetid: cd435909-43e4-43c6-a57c-5d02468ef75f
-ms.openlocfilehash: 9b49d49c8a261bb3d636446f820a45699361830f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c361db98e0ffd3f37f9e08b78f52ba7ae547030
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452118"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757112"
 ---
 # <a name="compiler-error-c2488"></a>コンパイラ エラー C2488
 
-'identifier': 'naked' のみに適用できる非メンバー関数の定義
+' identifier ': ' 生 ' は、非メンバー関数の定義にのみ適用できます
 
-[Naked](../../cpp/naked-cpp.md)属性は関数宣言に適用されました。
+関数宣言に[生](../../cpp/naked-cpp.md)の属性が適用されました。
 
 次の例では、C2488 が生成されます。
 
-```
+```cpp
 // C2488.cpp
 // compile with: /c
 // processor: x86

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429143"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447751"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator クラス
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*各種*\
 入力ストリームから抽出されるオブジェクトの型。
 
-*CharType*<br/>
-`istream_iterator` の文字型を表す型。 この引数は省略可能、既定値は**char**します。
+*CharType*\
+`istream_iterator` の文字型を表す型。 この引数は省略可能であり、既定値は**char**です。
 
-*Traits*<br/>
+*名札*\
 `istream_iterator` の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`< `CharType`> です。
 
-*Distance*<br/>
+*単位*\
 `istream_iterator` の相違点の種類を表す符号付き整数型。 この引数は省略可能であり、既定値は `ptrdiff_t` です。
 
 null 以外の格納されたポインターを使用して istream_iterator クラスのオブジェクトを構築またはインクリメントすると、オブジェクトは、関連付けられている入力ストリームから `Type` 型のオブジェクトを抽出および格納することを試行します。 抽出が失敗した場合、オブジェクトは効果的に格納されたポインターを null ポインターに置き換え、シーケンス終端のインジケーターを作成します。
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*<br/>
+*_Istr*\
 `istream_iterator` を初期化するために読み込まれる入力ストリーム。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、null ポインターを使用して入力ストリーム ポインターを初期化し、ストリームの終わり反復子を作成します。 2 番目のコンス トラクターを使用して、入力ストリーム ポインターを初期化します *& _Istr*を抽出し、型のオブジェクトの格納を試みます`Type`します。
+最初のコンストラクターは、null ポインターを使用して入力ストリーム ポインターを初期化し、ストリームの終わり反復子を作成します。 2番目のコンストラクターは *& _Istr*を使用して入力ストリームポインターを初期化した後、型`Type`のオブジェクトの抽出と格納を試みます。
 
 ストリームの終わり反復子は、`istream_iterator` がストリームの終わりに達しているかどうかのテストに使用できます。
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>戻り値
 
-型の格納オブジェクト`Type`します。
+型`Type`の格納されているオブジェクト。
 
 ### <a name="example"></a>例
 
@@ -255,7 +255,7 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>Remarks
 
-`i->m` 等価します。 `(*i).m`
+`i->m`はと同じです。`(*i).m`
 
 この演算子は `&*this` を返します。
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>戻り値
 
-最初のメンバー演算子は、型のインクリメントされたオブジェクトへの参照を返します`Type`抽出から入力ストリームと、オブジェクトのコピーを 2 番目のメンバー関数を返します。
+最初のメンバー演算子は、入力ストリームから抽出された`Type`型のインクリメントされたオブジェクトへの参照を返します。2番目のメンバー関数は、オブジェクトのコピーを返します。
 
 ### <a name="example"></a>例
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[input_iterator_tag 構造体](../standard-library/input-iterator-tag-struct.md)<br/>
-[iterator 構造体](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[input_iterator_tag 構造体](../standard-library/input-iterator-tag-struct.md)\
+[iterator 構造体](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

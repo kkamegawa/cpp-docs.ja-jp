@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520336"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689529"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>integral_constant クラス、bool_constant クラス
+# <a name="integral_constant-class-bool_constant-class"></a>integral_constant クラス、bool_constant クラス
 
 型および値から整数定数を作成します。
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*T* \
 定数の型。
 
-*v*<br/>
+*v* \
 定数の値。
 
 ## <a name="remarks"></a>Remarks
 
-`integral_constant` テンプレート クラスは、整数型 *T* とその型の値 *v* で特殊化されると、指定された値の整数型の定数を保持するオブジェクトを表します。 `type` という名前のメンバーは、生成済みテンプレートの特殊化型のエイリアスです。`value` メンバーは、特殊化を作成するために使用された値 *v* を保持します。
+@No__t_0 クラステンプレートは、整数型*t*とその型の値*v*で特殊化されている場合、指定された値を持つその整数型の定数を保持するオブジェクトを表します。 `type` という名前のメンバーは、生成済みテンプレートの特殊化型のエイリアスです。`value` メンバーは、特殊化を作成するために使用された値 *v* を保持します。
 
-`bool_constant`テンプレート クラスの明示的な部分的特殊化は、`integral_constant`を使用して**bool**として、 *T*引数。
+@No__t_0 クラステンプレートは、 **bool**を*t*引数として使用する `integral_constant` の明示的な部分的特殊化です。
 
 ## <a name="example"></a>例
 
@@ -72,7 +72,7 @@ integral_constant<int, 5> == 5
 integral_constant<bool, false> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 
@@ -80,6 +80,6 @@ integral_constant<bool, false> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type) \
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3273
 ms.assetid: 1d2ce9d9-222b-4cab-94e2-d2c1a9f5ebe0
-ms.openlocfilehash: 466a9d6687dd5bfdab80ce1dfc9096ef7540ebaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ab0d4f51ef893d263e219a3915bce9be52ffec0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511671"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753836"
 ---
 # <a name="compiler-error-c3273"></a>コンパイラ エラー C3273
 
@@ -19,7 +19,7 @@ __finally はアンマネージ コード内の例外ブロックで使用でき
 
 次の例では C3273 が生成されます。
 
-```
+```cpp
 // C3273.cpp
 // compile with: /GX
 int main()

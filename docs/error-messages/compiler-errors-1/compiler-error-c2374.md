@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2374
 ms.assetid: 73b51965-e91c-4e21-9732-f71c1449d22e
-ms.openlocfilehash: 44f2d9d8c80af2111e7c63d976ef39cfa4809e48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b3dbcd4f19d594082d8b961c8dbc92c393699a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483305"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745539"
 ---
 # <a name="compiler-error-c2374"></a>コンパイラ エラー C2374
 
@@ -21,7 +21,7 @@ ms.locfileid: "50483305"
 
 次の例では C2374 が生成されます。
 
-```
+```cpp
 // C2374.cpp
 // compile with: /c
 int i = 0;

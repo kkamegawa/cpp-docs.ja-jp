@@ -1,9 +1,9 @@
 ---
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942416"
 ---
-# <a name="crtgetallochook"></a>_CrtGetAllocHook
+# <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
 C ランタイム デバッグのメモリ割り当てプロセスにフックする現在のクライアント定義割り当て関数を取得します (デバッグ バージョンのみ)。
 
@@ -45,7 +48,7 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="remarks"></a>Remarks
 
-**_CrtGetAllocHook** C ランタイム デバッグ ライブラリのメモリ割り当てプロセスの現在のアプリケーションのクライアント定義フック関数を取得します。
+**_CrtGetAllocHook**は、C ランタイムデバッグライブラリのメモリ割り当てプロセスのために、現在のクライアント定義アプリケーションのフック関数を取得します。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 

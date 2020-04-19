@@ -1,5 +1,5 @@
 ---
-title: 'SQL: レコードセットの SQL ステートメントのカスタマイズ (ODBC)'
+title: SQL:レコード セットの SQL ステートメント (ODBC) のカスタマイズ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, SQL statements
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 84ce18ccbf3cc59dd9c94826366595d2f128784f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329934"
 ---
-# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: レコードセットの SQL ステートメントのカスタマイズ (ODBC)
+# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL:レコード セットの SQL ステートメント (ODBC) のカスタマイズ
 
 このトピックでは、次の内容について説明します。
 
@@ -56,7 +56,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  フィルター (または、SQL ステートメントの他の部分) でリテラル文字列を使用する場合は、"を"引用する必要があります (指定された区切り記号で囲みます) このような文字列を DBMS に固有のリテラル プレフィックスを持つとリテラル サフィックス文字 (または文字)。
 
-DBMS によって外部結合などの操作の特別な構文の要件を生じる可能性があります。 ODBC 関数を使用して、dbms、ドライバーからこの情報を取得します。 たとえば、`::SQLGetTypeInfo`特定のデータ型の場合など`SQL_VARCHAR`LITERAL_PREFIX と LITERAL_SUFFIX 文字を要求するには、します。 データベースに依存しないコードを記述する場合は、次を参照してください。[付録 c: SQL の文法](/sql/odbc/reference/appendixes/appendix-c-sql-grammar)で、 [ODBC プログラマ リファレンス](/sql/odbc/reference/odbc-programmer-s-reference)構文の詳細についてはします。
+DBMS によって外部結合などの操作の特別な構文の要件を生じる可能性があります。 ODBC 関数を使用して、dbms、ドライバーからこの情報を取得します。 たとえば、`::SQLGetTypeInfo`特定のデータ型の場合など`SQL_VARCHAR`LITERAL_PREFIX と LITERAL_SUFFIX 文字を要求するには、します。 データベースに依存しないコードを記述する場合は、次を参照してください[付録 c:。SQL 文法](/sql/odbc/reference/appendixes/appendix-c-sql-grammar)で、 [ODBC プログラマ リファレンス](/sql/odbc/reference/odbc-programmer-s-reference)構文の詳細についてはします。
 
 レコード セット オブジェクトは、カスタム SQL ステートメントを指定しないと、レコードを選択するために使用する SQL ステートメントを構築します。 主に渡す値に依存これを行う方法、 *lpszSQL*のパラメーター、`Open`メンバー関数。
 
@@ -86,8 +86,8 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
 
 |Case|LpszSQL を渡します|結果の SELECT ステートメント|
 |----------|------------------------------|------------------------------------|
-|1|NULL|**選択** *rfx* **FROM** *テーブル名*<br /><br /> `CRecordset::Open` 呼び出し`GetDefaultSQL`テーブル名を取得します。 結果の文字列がいずれかの内容に合わせてケース 2 ~ 5、`GetDefaultSQL`を返します。|
-|2|テーブル名|**選択** *rfx* **FROM** *テーブル名*<br /><br /> フィールド一覧の RFX ステートメントから取得されます`DoFieldExchange`します。 場合`m_strFilter`と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|
+|1|NULL|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> `CRecordset::Open` 呼び出し`GetDefaultSQL`テーブル名を取得します。 結果の文字列がいずれかの内容に合わせてケース 2 ~ 5、`GetDefaultSQL`を返します。|
+|2|テーブル名|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> フィールド一覧の RFX ステートメントから取得されます`DoFieldExchange`します。 場合`m_strFilter`と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|
 |3 \*|完全な**選択**ステートメントがない、**場所**または**ORDER BY**句|渡されました。 場合`m_strFilter`と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|
 |4 \*|完全な**選択**ステートメントを**場所**や**ORDER BY**句|渡されました。 `m_strFilter` や`m_strSort`する必要があります空、またはこの 2 つのフィルターや並べ替えステートメントが生成されます。|
 |5 \*|ストアド プロシージャへの呼び出し|渡されました。|
@@ -144,11 +144,11 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
 
    など、アプリケーションの配布された後は、データベース テーブルに、アプリケーションの顧客が追加された新しい列に対応することができます。 ウィザードを使用して、クラスを宣言したときに認識されたありませんこれら追加のフィールド データ メンバーを追加する必要があります。
 
-   内に列挙されている、列の一覧を列名と同じ順序で型が一致`DoFieldExchange`、その後に、手動でバインドされた列の名前。 詳細については、次を参照してください。[レコード セット: データ列を動的にバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。
+   内に列挙されている、列の一覧を列名と同じ順序で型が一致`DoFieldExchange`、その後に、手動でバインドされた列の名前。 詳細については、次を参照してください。[レコード セット。動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。
 
 - 複数のテーブルを指定することでテーブルを結合する、 **FROM**句。
 
-   情報と例では、次を参照してください。[レコード セット: 結合 (ODBC) を実行する](../../data/odbc/recordset-performing-a-join-odbc.md)します。
+   情報と例では、次を参照してください。[レコード セット。結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)します。
 
 ### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>ケース 4 = 選択/から Plus、または ORDER BY
 
@@ -158,7 +158,7 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
 
 記述する必要があります (Microsoft SQL Server データベースでストアド プロシージャ) などの定義済みのクエリを呼び出す必要がある場合、**呼び出す**に渡す文字列内のステートメント*lpszSQL*します。 ウィザードは、定義済みのクエリを呼び出すためのレコード セット クラスの宣言をサポートしていません。 定義済みのすべてのクエリでは、レコードが返されます。
 
-定義済みのクエリがレコードを返さない場合は使用できます、`CDatabase`メンバー関数は`ExecuteSQL`直接します。 レコードが返されますが、定義済みクエリの記述する必要ありますも手動で呼び出し、RFX`DoFieldExchange`プロシージャは、列を返します。 Rfx 関数の呼び出しは、同じ順序であるし、定義済みのクエリと同じ型を返す必要があります。 詳細については、次を参照してください。[レコード セット: 定義済みクエリ (ODBC) のクラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)します。
+定義済みのクエリがレコードを返さない場合は使用できます、`CDatabase`メンバー関数は`ExecuteSQL`直接します。 レコードが返されますが、定義済みクエリの記述する必要ありますも手動で呼び出し、RFX`DoFieldExchange`プロシージャは、列を返します。 Rfx 関数の呼び出しは、同じ順序であるし、定義済みのクエリと同じ型を返す必要があります。 詳細については、次を参照してください。[レコード セット。クラスの定義済みクエリ (ODBC) 宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

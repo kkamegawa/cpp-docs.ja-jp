@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: 5bb306ec29da225293affd0207f67271f59ec599
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521259"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450054"
 ---
 # <a name="issame-class"></a>is_same クラス
 
@@ -27,15 +27,15 @@ struct is_same;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty1*<br/>
+*Ty1*\
 照会する最初の型。
 
-*Ty2*<br/>
+*Ty2*\
 照会する 2 番目の型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty1*と*Ty2*同じ型には、それ以外の場合は false を保持します。
+型*Ty1*と*Ty2*の型が同じである場合、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -88,6 +88,6 @@ is_same<int, const int> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible クラス](../standard-library/is-convertible-class.md)<br/>
-[is_base_of クラス](../standard-library/is-base-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible クラス](../standard-library/is-convertible-class.md)\
+[is_base_of クラス](../standard-library/is-base-of-class.md)

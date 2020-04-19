@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-ms.openlocfilehash: 894ac0bf7703bf68c9125d11023dbc32cfbb5941
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d26d0fe0e4e4152cf05476f546b753650209dfe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486763"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459598"
 ---
-# <a name="basicfstream-class"></a>basic_fstream クラス
+# <a name="basic_fstream-class"></a>basic_fstream クラス
 
 `Elem` 型の要素を含む [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> クラスのストリーム バッファーを使用して要素とエンコードされたオブジェクトを挿入および抽出する際に、この処理を制御するオブジェクトを記述します。この型の特性は、`Tr` クラスによって決定されます。
 
@@ -36,10 +36,10 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 ファイル バッファーの基本要素。
 
-*Tr*<br/>
+*Tr*\
 ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>Remarks
@@ -127,20 +127,20 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*<br/>
+*ファイル名 (_d)* \
 開くファイルの名前。
 
-*モード (_m)*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*<br/>
-保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
+*_Prot*\
+既定のファイルを開く保護。 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)の*shflag*パラメーターと同じです。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンス トラクターを呼び出して基底クラスを初期化する[basic_iostream](../standard-library/basic-iostream-class.md)(`sb`) ここで、`sb`クラスの格納されているオブジェクトは、 [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**、 **Tr**>。 初期化も`sb`呼び出して`basic_filebuf` \< **Elem**、 **Tr**>。
+最初のコンストラクターは、 [basic_iostream](../standard-library/basic-iostream-class.md)`sb`() を`sb`呼び出すことによって基底クラスを初期化します。は、 [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**> クラスの格納されているオブジェクトです。 `sb`また、 **Elem**, **Tr**> を呼び出す`basic_filebuf` \<ことによって初期化します。
 
-2 番目と 3 番目のコンストラクターは、`basic_iostream`( **sb**) を呼び出すことで基底クラスを初期化します。 またを初期化します`sb`呼び出して`basic_filebuf` \< **Elem**、 **Tr**>、し**sb.**[開く](../standard-library/basic-filebuf-class.md#open)(_ *Filename*、 `_Mode`)。 コンス トラクターを呼び出す場合は後者の関数は、null ポインターを返す、 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。
+2 番目と 3 番目のコンストラクターは、`basic_iostream`( **sb**) を呼び出すことで基底クラスを初期化します。 また`sb` 、 **Elem**, **Tr**> を呼び出し、それから**sb.** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename* `_Mode`,) を呼び出す`basic_filebuf` \<ことによって初期化します。 後者の関数が null ポインターを返す場合、コンストラクターは[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`) を呼び出します。
 
 4 番目のコンストラクターは、右辺値参照として扱われる `right` のコンテンツでオブジェクトを初期化します。
 
@@ -158,7 +158,7 @@ void close();
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、[rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close) を呼び出します。
+メンバー関数は、[rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close) を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -178,7 +178,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、[rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open) を返します。
+このメンバー関数は、[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open) を返します。
 
 ### <a name="example"></a>例
 
@@ -210,22 +210,22 @@ void open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Filename*<br/>
+*ファイル名 (_d)* \
 開くファイルの名前。
 
-*モード (_m)*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*_Prot*<br/>
-保護のと同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
+*_Prot*\
+既定のファイルを開く保護。 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)の*shflag*パラメーターと同じです。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`) を呼び出します。 その関数がポインターを null を返す場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`)。
+メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`) を呼び出します。 この関数が null ポインターを返す場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`) を呼び出します。
 
 ### <a name="example"></a>例
 
-参照してください[basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)を使用する方法の例については`open`します。
+の使用`open`例については、「 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 」を参照してください。
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -237,7 +237,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 `basic_fstream` オブジェクトへの左辺値参照。
 
 ### <a name="return-value"></a>戻り値
@@ -246,7 +246,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー演算子の内容を使用して、オブジェクトの内容が置き換えられます*右*、右辺値参照として扱われます。
+メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 
@@ -274,15 +274,15 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 `basic_fstream` オブジェクトへの `lvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、このオブジェクトの内容との内容を交換する*右*します。
+このメンバー関数は、このオブジェクトの内容と、 *right*の内容を交換します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

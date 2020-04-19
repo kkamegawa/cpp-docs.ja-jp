@@ -1,26 +1,27 @@
 ---
 title: '@CatStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@CatStr'
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: 7c314ee362132da75a6024b76b011963fe6ce3db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d244cb678c082515713d83716f8752000f9ccdea
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499646"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316461"
 ---
-# <a name="catstr"></a>@CatStr
+# <a name="catstr"></a>\@CatStr
 
-1 つまたは複数の文字列を連結するマクロ関数です。 文字列を返します。
+1つ以上の文字列を連結するマクロ関数。 文字列を返します。
 
 ## <a name="syntax"></a>構文
 
-> @CatStr([、string1 string2...])
+> **\@catstr (** *string1* ⟦ __,__ *string2*...⟧ **)**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

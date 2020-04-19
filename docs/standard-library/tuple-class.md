@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518529"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257105"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -20,9 +20,8 @@ ms.locfileid: "51518529"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,17 +36,17 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このテンプレート クラスは、型の N のオブジェクトを格納するオブジェクトを表します`T1`、 `T2`,...,`TN`をそれぞれ、`0 <= N <= Nmax`します。 タプル インスタンスのエクステント`tuple<T1, T2, ..., TN>`番号`N`テンプレート引数の。 テンプレート引数のインデックス`Ti`し、その型の対応する格納されている値は`i - 1`します。 そのため、1 から N へこのドキュメントで型に番号を振れば、中に、対応するインデックスは 0 ~ n-1 の範囲を値です。
+クラステンプレートは、`T1`、`T2`、...、`TN`の型の N 個のオブジェクトをそれぞれ `0 <= N <= Nmax`で格納するオブジェクトを表します。 `tuple<T1, T2, ..., TN>` 組インスタンスの範囲は、そのテンプレート引数の `N` 数です。 テンプレート引数の `Ti` と、その型の対応する格納値のインデックスが `i - 1`ます。 このドキュメントでは、1から N の型に番号を付けますが、対応するインデックス値の範囲は 0 ~ N-1 です。
 
 ## <a name="example"></a>例
 
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<tuple>
-
-**名前空間:** std
-
-## <a name="op_eq"></a>  tuple::operator=
+## <a name="op_eq"></a>operator =
 
 `tuple` オブジェクトを割り当てます。
 
@@ -144,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-*解除*<br/>
+\ の*解除*
 N 番目のコピーされたタプル要素の型。
 
-*right*<br/>
+*右*\
 コピー元のタプル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-最初の 2 つのメンバー演算子は、の要素を割り当てる*右*の対応する要素に`*this`します。 3 番目のメンバー演算子は、`*this` のインデックス 0 位置の要素に `right.first` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
+最初の2つのメンバー演算子は、*右*の要素を `*this`の対応する要素に代入します。 3 番目のメンバー演算子は、`right.first` のインデックス 0 位置の要素に `*this` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
 
 残りのメンバー演算子はそれ以前のコンストラクターと似ていますが、[Rvalue 参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用します。
 
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>  tuple:swap
+## <a name="tuple_swap"></a>フォト
 
 2 つのタプルの要素を交換します。
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|要素がタプルのものと交換されるタプル*右*します。|
-|*right*|要素がタプルのものと交換されるタプル*左*します。|
+*左*\
+要素が組*right*の要素と交換される組。
 
-### <a name="remarks"></a>Remarks
+*右*\
+要素が*左*の組の要素と交換される組。
+
+### <a name="remarks"></a>コメント
 
 この関数は、`left.swap(right)` を実行します。
 
-## <a name="tuple"></a>  tuple::tuple
+## <a name="tuple"></a>タプル
 
 `tuple` オブジェクトを構築します。
 
@@ -252,19 +246,19 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-*解除*<br/>
+\ の*解除*
 N 番目のコピーされたタプル要素の型。
 
-*right*<br/>
+*右*\
 コピー元のタプル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 1 つ目のコンストラクターは、要素が既定で構築されるオブジェクトを構築します。
 
 2 番目のコンス トラクターは、引数 `P1`、`P2`...`PN` に基づいて構築されるコピーを要素とするオブジェクトを構築します。これらの `Pi` は、インデックス `i - 1` で要素を初期化します。
 
-3 番目と 4 番目のコンス トラクターは要素がコピーの対応する要素から構築されたオブジェクトを構築*右*します。
+3番目と4番目のコンストラクターは、*右*の対応する要素から構築されたコピーを要素として持つオブジェクトを構築します。
 
 5 番目のコンストラクターは、インデックス 0 の要素が `right.first` から構築されたコピーで、インデックス 1 の要素が `right.second` から構築されたコピーであるオブジェクトを構築します。
 
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

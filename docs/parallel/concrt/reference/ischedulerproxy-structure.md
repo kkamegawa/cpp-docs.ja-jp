@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523149"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140328"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 構造体
 
-スケジューラは、このインターフェイスを使用して同時実行ランタイムのリソース マネージャーと通信して、リソース割り当てをネゴシエートします。
+スケジューラは、このインターフェイスを使用してコンカレンシー ランタイムのリソース マネージャーと通信して、リソース割り当てをネゴシエートします。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct ISchedulerProxy;
 ```
 
@@ -34,150 +34,150 @@ struct ISchedulerProxy;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[ISchedulerProxy::BindContext](#bindcontext)|いずれかで関連付けられていない場合は、スレッド プロキシを使用して、実行コンテキストを関連付けます。|
-|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|既存の実行リソースに関連付けられたハードウェア スレッドで新しい仮想プロセッサ ルートを作成します。|
-|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|仮想プロセッサ ルートの最初の割り当てを要求します。 すべての仮想プロセッサ ルートでは、スケジューラの作業を実行できる 1 つのスレッドを実行する機能を表します。|
-|[ISchedulerProxy::Shutdown](#shutdown)|スケジューラがシャット ダウンしてリソース マネージャーに通知します。 これをすぐに、スケジューラに付与されたすべてのリソースを解放する Resource Manager になります。|
-|[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|このスケジューラに関連付けられた、Resource Manager で、現在のスレッドを登録します。|
-|[ISchedulerProxy::UnbindContext](#unbindcontext)|指定された実行コンテキストからスレッド プロキシの関連付けを解除、`pContext`パラメーターと、スレッド プロキシ ファクトリの空きプールに返します。 このメソッドを使用してバインドされた実行コンテキストにのみ呼び出すことがあります、 [ischedulerproxy::bindcontext](#bindcontext)メソッド中でまだ開始されていないと、`pContext`のパラメーター、 [ithreadproxy::switchto](ithreadproxy-structure.md#switchto)メソッドの呼び出し。|
+|[ISchedulerProxy:: BindContext](#bindcontext)|まだ関連付けられていない場合は、実行コンテキストをスレッドプロキシに関連付けます。|
+|[ISchedulerProxy:: CreateOversubscriber](#createoversubscriber)|既存の実行リソースに関連付けられているハードウェアスレッドに新しい仮想プロセッサルートを作成します。|
+|[ISchedulerProxy:: RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|仮想プロセッサルートの初期割り当てを要求します。 すべての仮想プロセッサルートは、スケジューラに対して処理を実行できる1つのスレッドを実行する機能を表します。|
+|[ISchedulerProxy:: Shutdown](#shutdown)|スケジューラがシャットダウン中であることをリソースマネージャーに通知します。 これにより、リソースマネージャーは、スケジューラに付与されているすべてのリソースを直ちに回収します。|
+|[ISchedulerProxy:: SubscribeCurrentThread](#subscribecurrentthread)|現在のスレッドをリソースマネージャーに登録し、このスケジューラに関連付けます。|
+|[ISchedulerProxy:: UnbindContext](#unbindcontext)|`pContext` パラメーターによって指定された実行コンテキストからスレッドプロキシの関連付けを解除し、スレッドプロキシファクトリの解放プールに返します。 このメソッドは、 [ISchedulerProxy:: BindContext](#bindcontext)メソッドを使用してバインドされた実行コンテキストでのみ呼び出すことができます。また、 [Ithreadproxy:: SwitchTo](ithreadproxy-structure.md#switchto)メソッド呼び出しの `pContext` パラメーターではまだ開始されていません。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-リソース マネージャーに渡して、`ISchedulerProxy`インターフェイスを使用して登録するすべてのスケジューラを[iresourcemanager::registerscheduler](iresourcemanager-structure.md#registerscheduler)メソッド。
+リソースマネージャーは、 [Iresourcemanager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler)メソッドを使用して、それに登録するすべてのスケジューラに `ISchedulerProxy` インターフェイスを渡します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `ISchedulerProxy`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrtrm.h
+**ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-##  <a name="bindcontext"></a>  Ischedulerproxy::bindcontext メソッド
+## <a name="bindcontext"></a>ISchedulerProxy:: BindContext メソッド
 
-いずれかで関連付けられていない場合は、スレッド プロキシを使用して、実行コンテキストを関連付けます。
+まだ関連付けられていない場合は、実行コンテキストをスレッドプロキシに関連付けます。
 
-```
+```cpp
 virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *pContext*<br/>
-関連付けるスレッド プロキシを使用した実行コンテキストへのインターフェイス。
+スレッドプロキシに関連付ける実行コンテキストへのインターフェイス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-通常、 [ithreadproxy::switchto](ithreadproxy-structure.md#switchto)メソッドでは、スレッド プロキシは要求時に実行コンテキストにバインドします。 ある、ただし、いることを確認するには、事前にコンテキストをバインドする必要がある場合、`SwitchTo`メソッドが既にバインドされているコンテキストに切り替えます。 これはスケジュール コンテキスト、メモリの割り当てメソッドを呼び出すことはできません UMS のケースであり、スレッド プロキシを工場出荷時の空きプールのスレッド プロキシがすぐに使用できない場合に、メモリの割り当て、スレッド プロキシをバインドする必要があります。
+通常、 [Ithreadproxy:: SwitchTo](ithreadproxy-structure.md#switchto)メソッドは、必要に応じてスレッドプロキシを実行コンテキストにバインドします。 ただし、`SwitchTo` メソッドが既にバインドされたコンテキストに切り替わるように、コンテキストを事前にバインドする必要がある状況があります。 これは、メモリを割り当てるメソッドを呼び出すことができず、スレッドプロキシファクトリの空きプールでスレッドプロキシを使用できない場合に、スレッドプロキシのバインドにメモリの割り当てが含まれている可能性があるため、UMS スケジューリングコンテキストの場合です。
 
-`invalid_argument` 場合にスローされるパラメーター `pContext` 、値を持つ`NULL`します。
+パラメーター `pContext` に `NULL`値がある場合、`invalid_argument` がスローされます。
 
-##  <a name="createoversubscriber"></a>  Ischedulerproxy::createoversubscriber メソッド
+## <a name="createoversubscriber"></a>ISchedulerProxy:: CreateOversubscriber メソッド
 
-既存の実行リソースに関連付けられたハードウェア スレッドで新しい仮想プロセッサ ルートを作成します。
+既存の実行リソースに関連付けられているハードウェアスレッドに新しい仮想プロセッサルートを作成します。
 
-```
+```cpp
 virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* pExecutionResource) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *pExecutionResource*<br/>
-`IExecutionResource`オーバーサブスク ライブするハードウェア スレッドを表すインターフェイスです。
+オーバーサブスクライブするハードウェアスレッドを表す `IExecutionResource` インターフェイス。
 
 ### <a name="return-value"></a>戻り値
 
-`IVirtualProcessorRoot` インターフェイス。
+`IVirtualProcessorRoot` インターフェイスです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-スケジューラが一定時間の特定のハードウェア スレッドをオーバーサブスク ライブするときに、このメソッドを使用します。 完了すると、仮想プロセッサ ルートとする必要があります値を返す、resource manager を呼び出すことによって、[削除](iexecutionresource-structure.md#remove)メソッドを`IVirtualProcessorRoot`インターフェイス。
+スケジューラが特定のハードウェアスレッドを制限時間内にオーバーサブスクライブする場合は、このメソッドを使用します。 仮想プロセッサルートが完成したら、`IVirtualProcessorRoot` インターフェイスで[Remove](iexecutionresource-structure.md#remove)メソッドを呼び出して、それをリソースマネージャーに返す必要があります。
 
-でもオーバーサブスク ライブできます既存の仮想プロセッサ ルートのため、`IVirtualProcessorRoot`インターフェイスから継承、`IExecutionResource`インターフェイス。
+`IVirtualProcessorRoot` インターフェイスは `IExecutionResource` インターフェイスから継承するため、既存の仮想プロセッサルートをオーバーサブスクライブすることもできます。
 
-##  <a name="requestinitialvirtualprocessors"></a>  Ischedulerproxy::requestinitialvirtualprocessors メソッド
+## <a name="requestinitialvirtualprocessors"></a>ISchedulerProxy:: RequestInitialVirtualProcessors メソッド
 
-仮想プロセッサ ルートの最初の割り当てを要求します。 すべての仮想プロセッサ ルートでは、スケジューラの作業を実行できる 1 つのスレッドを実行する機能を表します。
+仮想プロセッサルートの初期割り当てを要求します。 すべての仮想プロセッサルートは、スケジューラに対して処理を実行できる1つのスレッドを実行する機能を表します。
 
-```
+```cpp
 virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurrentThread) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *doSubscribeCurrentThread*<br/>
-現在のスレッドを購読し、リソースの割り当て中に考慮するかどうか。
+リソース割り当て中に、現在のスレッドとアカウントをサブスクライブするかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-`IExecutionResource`インターフェイスの現在のスレッドの場合、パラメーター `doSubscribeCurrentThread` 、値を持つ**true**します。 値が場合**false**NULL が返されます。
+パラメーター `doSubscribeCurrentThread` の値が**true**の場合、現在のスレッドの `IExecutionResource` インターフェイス。 値が**false**の場合、メソッドは NULL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-スケジューラは作業を実行する前に、Resource Manager からの仮想プロセッサ ルートを要求するのにこのメソッドを使用してください。 Resource Manager は、スケジューラのポリシーへのアクセスを使用して[ischeduler::getpolicy](ischeduler-structure.md#getpolicy)ポリシー キーの値を使用して`MinConcurrency`、`MaxConcurrency`と`TargetOversubscriptionFactor`に割り当てるハードウェア スレッドの数を決定する、スケジューラ最初に、すべてのハードウェア スレッドを作成する方法の多くの仮想プロセッサ ルート。 スケジューラの初期の割り当てを判断するスケジューラ ポリシーを使用する方法の詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)します。
+スケジューラは、すべての作業を実行する前に、この方法を使用してリソースマネージャーの仮想プロセッサルートを要求します。 リソースマネージャーは[IScheduler:: GetPolicy](ischeduler-structure.md#getpolicy)を使用してスケジューラのポリシーにアクセスし、ポリシーキー `MinConcurrency`、`MaxConcurrency` および `TargetOversubscriptionFactor` の値を使用して、スケジューラに割り当てるハードウェアスレッドの数と、各ハードウェアスレッドに対して作成する仮想プロセッサのルートの数を決定します。 スケジューラポリシーを使用してスケジューラの初期割り当てを決定する方法の詳細については、「 [Policyelementkey](concurrency-namespace-enums.md)」を参照してください。
 
-Resource Manager は、メソッドを呼び出して、スケジューラにリソースを付与[ischeduler::addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors)仮想プロセッサ ルートの一覧。 メソッドには、このメソッドが戻る前に、スケジューラにコールバックとして呼び出さします。
+リソースマネージャーは、仮想プロセッサルートのリストを使用して[IScheduler:: AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors)メソッドを呼び出すことにより、リソースをスケジューラに付与します。 メソッドは、このメソッドが返される前に、スケジューラにコールバックとして呼び出されます。
 
-スケジューラがパラメーターを設定して、現在のスレッドのサブスクリプションを要求するかどうか`doSubscribeCurrentThread`に**true**、メソッドを返します、`IExecutionResource`インターフェイス。 使用して、後で、サブスクリプションを終了する必要があります、 [iexecutionresource::remove](iexecutionresource-structure.md#remove)メソッド。
+パラメーター `doSubscribeCurrentThread` を**true**に設定してスケジューラが現在のスレッドのサブスクリプションを要求した場合、メソッドは `IExecutionResource` インターフェイスを返します。 サブスクリプションは、 [Iexecutionresource:: Remove](iexecutionresource-structure.md#remove)メソッドを使用して、後で終了する必要があります。
 
-ハードウェア スレッドが選択されているかを決定するときに、リソース マネージャーはプロセッサ ノード アフィニティを最適化しようとします。 現在のスレッドのサブスクリプションが要求された場合は、現在のスレッドがこのスケジューラに割り当てられている作業に参加することを示しています。 このような場合は、割り当てられた仮想プロセッサ ルートは、現在のスレッドが可能であれば、実行するプロセッサのノードにあります。
+選択されているハードウェアスレッドを特定するときに、リソースマネージャーはプロセッサノードアフィニティの最適化を試行します。 現在のスレッドに対してサブスクリプションが要求された場合、現在のスレッドがこのスケジューラに割り当てられた作業に参加することを示します。 このような場合、割り当てられた仮想プロセッサのルートは、可能であれば、現在のスレッドが実行されているプロセッサノードに配置されます。
 
-スレッドのサブスクライブは、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプションが終了したときにいずれかによって、サブスクリプション レベルが減少します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+スレッドをサブスクライブすることにより、基になるハードウェアスレッドのサブスクリプションレベルが1ずつ増加します。 サブスクリプションを終了すると、サブスクリプションレベルは1つ減少します。 サブスクリプションレベルの詳細については、「 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)」を参照してください。
 
-##  <a name="shutdown"></a>  Ischedulerproxy::shutdown メソッド
+## <a name="shutdown"></a>ISchedulerProxy:: Shutdown メソッド
 
-スケジューラがシャット ダウンしてリソース マネージャーに通知します。 これをすぐに、スケジューラに付与されたすべてのリソースを解放する Resource Manager になります。
+スケジューラがシャットダウン中であることをリソースマネージャーに通知します。 これにより、リソースマネージャーは、スケジューラに付与されているすべてのリソースを直ちに回収します。
 
-```
+```cpp
 virtual void Shutdown() = 0;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-すべて`IExecutionContext`インターフェイスのメソッドを使用して外部のスレッドの購読の結果として受信したスケジューラ`ISchedulerProxy::RequestInitialVirtualProcessors`または`ISchedulerProxy::SubscribeCurrentThread`Resource Manager に返す必要があるを使用して`IExecutionResource::Remove`スケジューラでは、自身をシャット ダウンする前にします。
+スケジューラがシャットダウンする前に、`ISchedulerProxy::RequestInitialVirtualProcessors` または `ISchedulerProxy::SubscribeCurrentThread` メソッドを使用して外部スレッドをサブスクライブした結果としてスケジューラが受信したすべての `IExecutionContext` インターフェイスは、`IExecutionResource::Remove` を使用してリソースマネージャーに返される必要があります。
 
-非アクティブ化されたいずれかの仮想プロセッサ ルート、スケジューラがある場合は、それらをアクティブ化する必要がありますを使用して[ivirtualprocessorroot::activate](ivirtualprocessorroot-structure.md#activate)のままにして実行するスレッド プロキシがあると、`Dispatch`メソッドの実行呼び出す前に、ディスパッチはコンテキスト`Shutdown`スケジューラ プロキシ。
+スケジューラが非アクティブ化された仮想プロセッサルートを持っている場合は、 [Ivirtualprocessorroot:: activate](ivirtualprocessorroot-structure.md#activate)を使用してアクティブ化する必要があります。また、スケジューラプロキシで `Shutdown` を起動する前に、スレッドプロキシがディスパッチされる実行コンテキストの `Dispatch` メソッドをそのまま使用することもできます。
 
-スケジューラを個別に返すすべての仮想プロセッサ ルートへの呼び出しによって付与 Resource Manager の必要はありません、`Remove`メソッドすべての仮想プロセッサ ルートはシャット ダウン時に Resource Manager に返されるためです。
+スケジューラは、すべての仮想プロセッサルートがシャットダウン時にリソースマネージャーに返されるため、`Remove` メソッドの呼び出しを通じて、リソースマネージャーによって付与されたすべての仮想プロセッサルートを個別に返す必要はありません。
 
-##  <a name="subscribecurrentthread"></a>  Ischedulerproxy::subscribecurrentthread メソッド
+## <a name="subscribecurrentthread"></a>ISchedulerProxy:: SubscribeCurrentThread メソッド
 
-このスケジューラに関連付けられた、Resource Manager で、現在のスレッドを登録します。
+現在のスレッドをリソースマネージャーに登録し、このスケジューラに関連付けます。
 
-```
+```cpp
 virtual IExecutionResource* SubscribeCurrentThread() = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-`IExecutionResource`ランタイムでは、現在のスレッドを表すインターフェイスします。
+ランタイムの現在のスレッドを表す `IExecutionResource` インターフェイス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-リソース マネージャーは、スケジューラ、およびその他のスケジューラにリソースを割り当てているときに、現在のスレッドに対応する場合は、このメソッドを使用します。 作業に参加するスレッドのプランは、スケジューラは、Resource Manager からの受信仮想プロセッサ ルートと、スケジューラ キューに置かれたときに特に便利です。 Resource Manager では、システム上のハードウェア スレッドの不要なオーバー サブスクリプションを防ぐために情報を使用します。
+リソースマネージャーが、スケジューラや他のスケジューラにリソースを割り当てるときに現在のスレッドを考慮する必要がある場合は、この方法を使用します。 これは特に、スケジューラにキューに置かれている作業にスレッドが参加する予定の場合に、スケジューラがリソースマネージャーから受け取る仮想プロセッサルートと共に役立ちます。 リソースマネージャーは情報を使用して、システム上のハードウェアスレッドの不要なオーバーサブスクリプションを防止します。
 
-このメソッドを使用して受信した実行リソースは Resource Manager へ返す必要があるを使用して、 [iexecutionresource::remove](iexecutionresource-structure.md#remove)メソッド。 呼び出すスレッド、`Remove`メソッドは以前に呼び出されている同じスレッドである必要があります、`SubscribeCurrentThread`メソッド。
+このメソッドを使用して受信した実行リソースは、 [Iexecutionresource:: Remove](iexecutionresource-structure.md#remove)メソッドを使用してリソースマネージャーに返される必要があります。 `Remove` メソッドを呼び出すスレッドは、以前に `SubscribeCurrentThread` メソッドを呼び出したスレッドと同じである必要があります。
 
-スレッドのサブスクライブは、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプションが終了したときにいずれかによって、サブスクリプション レベルが減少します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+スレッドをサブスクライブすることにより、基になるハードウェアスレッドのサブスクリプションレベルが1ずつ増加します。 サブスクリプションを終了すると、サブスクリプションレベルは1つ減少します。 サブスクリプションレベルの詳細については、「 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)」を参照してください。
 
-##  <a name="unbindcontext"></a>  Ischedulerproxy::unbindcontext メソッド
+## <a name="unbindcontext"></a>ISchedulerProxy:: UnbindContext メソッド
 
-指定された実行コンテキストからスレッド プロキシの関連付けを解除、`pContext`パラメーターと、スレッド プロキシ ファクトリの空きプールに返します。 このメソッドを使用してバインドされた実行コンテキストにのみ呼び出すことがあります、 [ischedulerproxy::bindcontext](#bindcontext)メソッド中でまだ開始されていないと、`pContext`のパラメーター、 [ithreadproxy::switchto](ithreadproxy-structure.md#switchto)メソッドの呼び出し。
+`pContext` パラメーターによって指定された実行コンテキストからスレッドプロキシの関連付けを解除し、スレッドプロキシファクトリの解放プールに返します。 このメソッドは、 [ISchedulerProxy:: BindContext](#bindcontext)メソッドを使用してバインドされた実行コンテキストでのみ呼び出すことができます。また、 [Ithreadproxy:: SwitchTo](ithreadproxy-structure.md#switchto)メソッド呼び出しの `pContext` パラメーターではまだ開始されていません。
 
-```
+```cpp
 virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *pContext*<br/>
-そのスレッド プロキシから関連付けを解除する実行コンテキスト。
+スレッドプロキシから関連付けを解除する実行コンテキスト。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [IScheduler 構造体](ischeduler-structure.md)<br/>

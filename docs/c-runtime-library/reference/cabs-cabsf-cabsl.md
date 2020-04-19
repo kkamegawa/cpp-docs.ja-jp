@@ -1,11 +1,11 @@
 ---
 title: cabs、cabsf、cabsl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cabs
 - cabsf
 - cabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabs
 - cabsf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623965"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939416"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -68,17 +71,17 @@ long double cabsl(
 
 ## <a name="return-value"></a>戻り値
 
-絶対値*z*します。
+*Z*の絶対値。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cabs**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**cabs**は常に、 **_Dcomplex**値を返します、**二重**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**値または **_Lcomplex**値を受け取る**cab**のオーバーロードを呼び出し、 **float**型または**long** **double**型の値を返すことができます。 C プログラムでは、 **cab**は常に、 **double**型の**値を取得**し、double 値を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**cabs**、 **cabsf**、 **cabsl**|\<complex.h>|\<ccomplex>|
+|**キャビネット**、 **cabsf**、 **cabsf**|\<complex.h>|\<ccomplex>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

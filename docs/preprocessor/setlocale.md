@@ -1,6 +1,6 @@
 ---
-title: setlocale
-ms.date: 11/04/2016
+title: setlocale プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - setlocale_CPP
 - vc-pragma.setlocale
@@ -8,37 +8,35 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: e5a190e18dd38c5d2b6e03703c5ee08043cd6e41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487959"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218176"
 ---
-# <a name="setlocale"></a>setlocale
+# <a name="setlocale-pragma"></a>setlocale プラグマ
 
-ワイド文字定数、リテラル文字列を変換するときに使用するロケール (国/地域および言語) を定義します。
+ワイド文字定数とリテラル文字列を変換するときに使用する*ロケール*、国、地域、および言語を定義します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma setlocale( "[locale-string]" )
-```
+> **#pragma setlocale ("** [ *locale-string* ] **")**
 
 ## <a name="remarks"></a>Remarks
 
-マルチバイト文字をワイド文字に変換するアルゴリズムはロケールやコンパイルによって異なる場合や、実行可能ファイルを実行するロケールとは別のロケールでコンパイルされる場合があるため、このプラグマはコンパイル時にターゲットのロケールを指定する方法を提供します。 これによって、ワイド文字列が必ず正しい形式で保存されるようになります。
+マルチバイト文字をワイド文字に変換するためのアルゴリズムはロケールによって異なる場合があります。また、コンパイルは実行可能ファイルを実行する別のロケールで実行される可能性があるため、このプラグマを使用すると、コンパイル時にターゲットロケールを指定することができます。 これは、ワイド文字列が正しい形式で格納されることを保証します。
 
-既定の*ロケール文字列*は""です。
+既定の*ロケール文字列*は "" です。
 
-"C"ロケールでは、文字列内の各文字をマップとしてその値を**wchar_t** (unsigned short 型)。 その他の値に対して有効な`setlocale`内にあるこれらのエントリには、[言語識別文字列](../c-runtime-library/language-strings.md)一覧。 たとえば、次のように発行します。
+"C" ロケールでは、文字列内の各文字が**wchar_t**として値にマップされます。 の`setlocale`その他の有効な値は、[[言語文字列](../c-runtime-library/language-strings.md)] ボックスの一覧にあるエントリです。 たとえば、次のように指定できます。
 
 ```cpp
 #pragma setlocale("dutch")
 ```
 
-言語文字列を発行する機能は、コンピューター上でのコード ページおよび言語 ID のサポートによって異なります。
+言語文字列を指定する機能は、お使いのコンピューターのコードページと言語 ID のサポートによって異なります。
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

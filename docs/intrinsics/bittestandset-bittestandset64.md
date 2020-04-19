@@ -1,6 +1,6 @@
 ---
 title: _bittestandset、_bittestandset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandset_cpp
 - _bittestandset64_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: 95acb833b05b67e7781973d6b3bd6fdcfe97615b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513023"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216886"
 ---
-# <a name="bittestandset-bittestandset64"></a>_bittestandset、_bittestandset64
+# <a name="_bittestandset-_bittestandset64"></a>_bittestandset、_bittestandset64
 
 **Microsoft 固有の仕様**
 
-アドレス `b` のビット `a` を検査する命令を生成し、そのビットの現在値を返してビットに 1 を設定します。
+`b` アドレス`a`のビットを確認する命令を生成し、その現在の値を返し、ビットを1に設定します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char _bittestandset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandset64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 [入力、出力]検査するメモリへのポインター。
 
-*b*<br/>
-[in]テストするビット位置。
+*b*\
+からテストするビット位置。
 
 ## <a name="return-value"></a>戻り値
 
@@ -53,10 +53,10 @@ unsigned char _bittestandset64(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_bittestandset`|x86、ARM、x64|
-|`_bittestandset64`|X64|
+|`_bittestandset`|x86、ARM、x64、ARM64|
+|`_bittestandset64`|x64、ARM64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,7 +64,7 @@ unsigned char _bittestandset64(
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // bittestandset.cpp
 // processor: x86, ARM, x64
 // This example uses several of the _bittest family of intrinsics

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
-ms.openlocfilehash: 80015118bf9e8bc8d8c4fba578f4ff1fa4651034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 461492946271a141cbdb563b34769e69e9cf75e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452560"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755175"
 ---
 # <a name="compiler-error-c2128"></a>コンパイラ エラー C2128
 
-'function': alloc_text/same_seg C リンケージを持つ関数にのみ
+' function ': alloc_text/same_seg C リンケージを持つ関数にのみ適用できます
 
-`pragma` `alloc_text` C リンケージを持つ宣言された関数でのみ使用できます。
+`pragma` `alloc_text` は、C リンケージを持つように宣言された関数でのみ使用できます。
 
 次の例では、C2128 が生成されます。
 
-```
+```cpp
 // C2128.cpp
 // compile with: /c
 

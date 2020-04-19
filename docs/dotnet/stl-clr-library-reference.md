@@ -1,18 +1,18 @@
 ---
 title: STL/CLR ライブラリ リファレンス
-ms.date: 09/18/2018"
+ms.date: 09/18/2018
 ms.topic: reference
 helpviewer_keywords:
 - STL/CLR Library
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: b3c25a40fdb5bade02e112b13d16420b248a177f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384635"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR ライブラリ リファレンス
 

@@ -1,39 +1,37 @@
 ---
-title: Idispeventsimpleimpl の使用 (ATL)
-ms.date: 11/04/2016
-f1_keywords:
-- IDispEventSimpleImpl
+title: IDispEventSimpleImpl の使用 (ATL)
+ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-ms.openlocfilehash: 4b8b651b9f300d3de87297fc62ba54b549e99001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a5e64093d2687efc6c6c5e9b0ce89402d2b99a4
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538269"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630577"
 ---
-# <a name="using-idispeventsimpleimpl"></a>Idispeventsimpleimpl の使用
+# <a name="using-idispeventsimpleimpl"></a>IDispEventSimpleImpl の使用
 
-使用する場合`IDispEventSimpleImpl`イベントを処理する必要があります。
+を使用`IDispEventSimpleImpl`してイベントを処理する場合は、次の操作を行う必要があります。
 
-- クラスを派生[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)します。
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)からクラスを派生させます。
 
-- クラスにイベント シンク マップを追加します。
+- イベントシンクマップをクラスに追加します。
 
-- 定義[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)のイベントを表す構造体。
+- イベントを記述する[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)構造体を定義します。
 
-- イベント シンク マップを使用するエントリを追加、 [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)マクロ。
+- [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)マクロを使用して、イベントシンクマップにエントリを追加します。
 
-- 処理したいメソッドを実装します。
+- 処理するメソッドを実装します。
 
-- イベント ソースをアドバイズことをお勧めします.
+- イベントソースをアドバイスし、アドバイズを中止します。
 
 ## <a name="example"></a>例
 
-次の例は、処理する方法を示します、`DocumentChange`によって Word のイベントが発生した**アプリケーション**オブジェクト。 このイベントは、メソッドとしてで定義されている、`ApplicationEvents`ディスパッチ インターフェイス。
+次の例は、Word の**Application**オブジェクト`DocumentChange`によって発生するイベントを処理する方法を示しています。 このイベントは、 `ApplicationEvents`ディスパッチインターフェイスのメソッドとして定義されます。
 
-例は、[コード](../visual-cpp-samples.md)します。
+この例は、 [ATLEventHandling サンプル](../overview/visual-cpp-samples.md)からのものです。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -51,22 +49,21 @@ methods:
 };
 ```
 
-この例では`#import`Word のタイプ ライブラリから必要なヘッダー ファイルを生成します。 Word の他のバージョンでこの例を使用する場合は、正しい mso dll ファイルを指定する必要があります。 たとえば、Office 2000 mso9.dll を提供し、OfficeXP が mso.dll を提供します。 このコードは、stdafx.h から簡素化します。
+この例で`#import`は、を使用して、Word のタイプライブラリから必要なヘッダーファイルを生成します。 他のバージョンの Word でこの例を使用する場合は、正しい mso dll ファイルを指定する必要があります。 たとえば、Office 2000 には mso9 が用意されており、OfficeXP には mso.dll が用意されています。 このコードは、 *.pch* (Visual Studio 2017 以前の*stdafx.h* ) から単純化されています。
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]
 
-この例では実際に使用されるタイプ ライブラリからの唯一の情報は、Word の CLSID`Application`オブジェクトとの IID、`ApplicationEvents`インターフェイス。 この情報はコンパイル時にのみ使用します。
+この例で実際に使用されているタイプライブラリの情報は、Word `Application`オブジェクトの CLSID と`ApplicationEvents`インターフェイスの IID だけです。 この情報は、コンパイル時にのみ使用されます。
 
-Simple.h に次のコードが表示されます。 関連するコードは、コメントでされています。
+次のコードは、単純な .h に記述されています。 関連するコードは、コメントによって示されます。
 
 [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]
 
-次のコードは Simple.cpp:
+次のコードは、単純な .cpp からのものです。
 
 [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
 [イベント処理](../atl/event-handling-and-atl.md)<br/>
-[コード](../visual-cpp-samples.md)
-
+[ATLEventHandling サンプル](../overview/visual-cpp-samples.md)

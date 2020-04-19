@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62283821"
 ---
 # <a name="provider-support-for-bookmarks"></a>プロバイダーのブックマーク サポート
 
@@ -25,7 +25,7 @@ ms.locfileid: "51264724"
 
 - ブックマークのサポートを追加します。
 
-`IRowsetLocate` インターフェイスは `IRowset` のインターフェイスから継承されます。 追加する、`IRowsetLocate`インターフェイスを継承`CCustomRowset`から[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)します。
+`IRowsetLocate` インターフェイスは `IRowset` インターフェイスを継承します。 追加する、`IRowsetLocate`インターフェイスを継承`CCustomRowset`から[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)します。
 
 追加、`IRowsetLocate`インターフェイスは、ほとんどのインターフェイスとは少し異なります。 プロバイダー テンプレートを OLE DB を vtable を行うには、派生インターフェイスを処理するためにテンプレート パラメーターにあります。 次のコードは、新しい継承のリストを示しています。
 

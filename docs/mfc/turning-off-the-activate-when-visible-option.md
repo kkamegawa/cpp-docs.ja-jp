@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
-ms.openlocfilehash: 42dbec7a55085235e43fa14ab6406bfb3526afdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7afe9617aa356916fe184828d7684f228293e39
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181498"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>[表示時にアクティブ] オプションのオフ
 
@@ -27,4 +27,3 @@ ms.locfileid: "50464832"
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)
-

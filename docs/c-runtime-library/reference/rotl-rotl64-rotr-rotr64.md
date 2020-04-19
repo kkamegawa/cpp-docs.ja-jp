@@ -1,12 +1,12 @@
 ---
 title: _rotl、_rotl64、_rotr、_rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567415"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949148"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 
-左側のビットを回転 (**_rotl**) または右 (**_rotr**)。
+ビットを左 ( **_rotl**) または右 ( **_rotr**) に回転させます。
 
 ## <a name="syntax"></a>構文
 
@@ -75,7 +78,7 @@ unsigned __int64 _rotr64(
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 回転させる値。
 
 *shift*<br/>
@@ -87,14 +90,14 @@ unsigned __int64 _rotr64(
 
 ## <a name="remarks"></a>Remarks
 
-**_Rotl**と **_rotr**関数は、符号なし回転*値*によって*shift*ビット。 **_rotl**は値を左に回転します。 **_rotr**値右方向に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
+**_Rotl**関数と **_rotr**関数は、符号なしの*値*を*シフト*ビットで回転させます。 **_rotl**は、値を左に回転します。 **_rotr**は、値を右に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_rotl**、 **_rotl64**|\<stdlib.h>|
-|**_rotr**、 **_rotr64**|\<stdlib.h>|
+|**_rotr**、 **rotr64**|\<stdlib.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -129,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98

@@ -1,30 +1,35 @@
 ---
 title: ELSEIF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - ElseIf
 helpviewer_keywords:
 - ELSEIF directive
 ms.assetid: 20a685d6-836e-4e64-902e-4f3daf2e51c2
-ms.openlocfilehash: 1971c71af67f7e8620da3c3371b619b33fc8830e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26b5c5415c1d0b065e2d21c3e3cac86155788b0d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590399"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317410"
 ---
-# <a name="elseif-masm"></a>ELSEIF (MASM)
+# <a name="elseif"></a>ELSEIF
 
-結合[ELSE](../../assembler/masm/else-masm.md)と[場合](../../assembler/masm/if-masm.md)1 つのステートメントにします。
+[ELSE](else-masm.md)と[if](if-masm.md)を1つのステートメントに結合します。
 
 ## <a name="syntax"></a>構文
 
-> ELSEIF
+> **ELSEIF** *constantExpression*\
+> *ステートメント*の\
+> ⟦**ELSE**\
+> *else-ステートメント*⟧ \
+> **ENDIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[場合](../../assembler/masm/if-masm.md)します。
+詳細について[は](if-masm.md)、「」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

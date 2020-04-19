@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537736"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458060"
 ---
 # <a name="ostrstream-class"></a>ostrstream クラス
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Freezeit*<br/>
-A **bool**ストリームを停止するかどうかを示します。
+*_Freezeit*\
+ストリームを固定するかどうかを示す**ブール**値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -76,7 +76,7 @@ A **bool**ストリームを停止するかどうかを示します。
 
 ### <a name="example"></a>例
 
-参照してください[strstream::freeze](../standard-library/strstreambuf-class.md#freeze)を使用する例については`freeze`します。
+の使用`freeze`例については、「 [strstream:: freeze](../standard-library/strstreambuf-class.md#freeze) 」を参照してください。
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -92,22 +92,22 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ポインター*\
 バッファー。
 
-*count*<br/>
+*数*\
 バッファーのサイズ (バイト単位)。
 
-*モード (_m)*<br/>
+*_Mode*\
 バッファーの入出力モード。 詳細については、[ios_base::openmode](../standard-library/ios-base-class.md#openmode) をご覧ください。
 
 ### <a name="remarks"></a>Remarks
 
-両方のコンス トラクターを呼び出して基底クラスを初期化する[ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**) ここで、`sb`クラスの格納されているオブジェクトは、 [strstreambuf](../standard-library/strstreambuf-class.md)します。 最初のコンス トラクターによって初期化も`sb`呼び出して`strstreambuf`します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
+どちらのコンストラクターも、 [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**) を呼び出すことに`sb`よって基底クラスを初期化します。ここで、は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初のコンストラクターは、 `sb`を呼び`strstreambuf`出すことによっても初期化します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
 
-- 場合`_Mode`  &  **ios_base::app**し、0 を = =`ptr`の配列の最初の要素を指定する必要があります`count`要素、およびコンス トラクター呼び出し`strstreambuf`(`ptr`、 `count`, `ptr`).
+- Ios_base `_Mode` `count`  &  `strstreambuf` **::** `ptr` app=`count`= 0 の場合、は要素の配列の最初の要素を指定する必要があり、コンストラクターは(,,)を呼び出します。`ptr` `ptr`).
 
-- それ以外の場合、`ptr`配列の count 要素の C 文字列を含む最初の要素がで指定された最初の要素を指定する必要があります`ptr`、コンス トラクターの呼び出しと`strstreambuf`(`ptr`、 `count`、 `ptr` + `strlen`( `ptr`) ).
+- それ以外`ptr`の場合は、最初の要素がによって`ptr`指定された C 文字列を含む count 要素の最初の要素を指定する`ptr`必要`count`があります。また、コンストラクターは (,, を`strstreambuf` `ptr`呼び出します。 + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -143,7 +143,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、型の格納されたストリーム バッファーのアドレスを返します`pointer`に[strstreambuf](../standard-library/strstreambuf-class.md)します。
+このメンバー関数は、型`pointer`の格納されているストリームバッファーのアドレスを[strstreambuf](../standard-library/strstreambuf-class.md)に返します。
 
 ### <a name="example"></a>例
 
@@ -167,11 +167,11 @@ char *str();
 
 ### <a name="example"></a>例
 
-参照してください[strstream::str](../standard-library/strstreambuf-class.md#str)を使用するサンプルの`str`します。
+を使用`str`するサンプルについては、「 [strstream:: str](../standard-library/strstreambuf-class.md#str) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

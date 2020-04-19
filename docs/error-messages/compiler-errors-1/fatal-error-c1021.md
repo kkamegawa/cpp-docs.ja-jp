@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1021
 ms.assetid: e23171f4-ca6b-40c0-a913-a2edc6fa3766
-ms.openlocfilehash: 35b94e6cea177121c38d06706b42437ec610c38a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 861e768563cf737d6925d5753d80cd9269eff4fe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587106"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756891"
 ---
 # <a name="fatal-error-c1021"></a>致命的なエラー C1021
 
@@ -21,7 +21,7 @@ ms.locfileid: "50587106"
 
 次の例では C1021 が生成されます。
 
-```
+```cpp
 // C1021.cpp
 #BadPreProcName    // C1021 delete line
 ```

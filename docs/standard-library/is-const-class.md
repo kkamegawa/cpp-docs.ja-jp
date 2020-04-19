@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_const class
 - is_const
 ms.assetid: 55b8e887-9c3f-4a1d-823a-4a257337b205
-ms.openlocfilehash: 25f10d8a8aed8bad6c11663687ace56a0b65afee
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92059f43e73c4b76f45ea9aeae61daf573367b43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523976"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452874"
 ---
 # <a name="isconst-class"></a>is_const クラス
 
@@ -27,12 +27,12 @@ struct is_const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持*Ty*は`const-qualified`します。
+*Ty*がの場合、型の述語のインスタンスは`const-qualified`true を保持します。
 
 ## <a name="example"></a>例
 
@@ -77,5 +77,5 @@ is_const<const int> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_volatile クラス](../standard-library/is-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_volatile クラス](../standard-library/is-volatile-class.md)

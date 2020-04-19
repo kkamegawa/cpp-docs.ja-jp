@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: af600704f82a0cad402948286fa0d4b11dca0c71
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391284"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition クラス
 
@@ -69,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>Remarks
 
-CCustomTransitions クラスは、開発者がカスタム遷移を実装するを使用できます。 作成されたので、標準の遷移と使用が、そのコンス トラクターがパラメーターとしてカスタム インターポレーターへのポインターを受け取ります。 カスタム遷移を使用する次の手順に従います: 1。 CCustomInterpolator からクラスを派生し、実装には少なくとも InterpolateValue メソッド。 2. カスタム インターポレーター オブジェクトの有効期間でなければならないことのアニメーションの期間より長く使用されていることを確認します。 3. CCustomTransition オブジェクト インスタンス (新しい演算子を使用して) し、コンス トラクターでカスタム インターポレーターへのポインターを渡します。 4. これらのパラメーターがカスタム補間の必要な場合は、CCustomTransition::SetInitialValue と CCustomTransition::SetInitialVelocity を呼び出します。 5. アニメーション オブジェクト、カスタム アルゴリズムで値をアニメーション化する AddTransition メソッドにカスタム遷移へのポインターを渡します。 6. アニメーション オブジェクトの値を変更する必要がある場合は、Windows Animation API が CCustomInterpolator でに InterpolateValue (およびその他の関連するメソッド) を呼び出します。
+CCustomTransitions クラスは、開発者がカスタム遷移を実装するを使用できます。 作成されたので、標準の遷移と使用が、そのコンス トラクターがパラメーターとしてカスタム インターポレーターへのポインターを受け取ります。 カスタム遷移を使用する次の手順に従います。1. CCustomInterpolator からクラスを派生し、実装には少なくとも InterpolateValue メソッド。 2. カスタム インターポレーター オブジェクトの有効期間でなければならないことのアニメーションの期間より長く使用されていることを確認します。 3. CCustomTransition オブジェクト インスタンス (新しい演算子を使用して) し、コンス トラクターでカスタム インターポレーターへのポインターを渡します。 4. これらのパラメーターがカスタム補間の必要な場合は、CCustomTransition::SetInitialValue と CCustomTransition::SetInitialVelocity を呼び出します。 5. アニメーション オブジェクト、カスタム アルゴリズムで値をアニメーション化する AddTransition メソッドにカスタム遷移へのポインターを渡します。 6. アニメーション オブジェクトの値を変更する必要がある場合は、Windows Animation API が CCustomInterpolator でに InterpolateValue (およびその他の関連するメソッド) を呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -167,7 +167,7 @@ void SetInitialValue(DOUBLE initialValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*初期値*
+*initialValue*
 
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity
 

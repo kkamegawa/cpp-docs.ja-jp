@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323818"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd クラス
 
@@ -175,9 +175,9 @@ A`CSplitterWnd`オブジェクトが親に埋め込まれた通常[CFrameWnd](..
 
 動的分割ウィンドウを作成する方法の詳細についてを参照してください。
 
-- MFC サンプル[Scribble](../../visual-cpp-samples.md)
+- MFC サンプル[Scribble](../../overview/visual-cpp-samples.md)
 
-- MFC サンプル[VIEWEX](../../visual-cpp-samples.md)します。
+- MFC サンプル[VIEWEX](../../overview/visual-cpp-samples.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -456,7 +456,7 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>パラメーター
 
-*行を削除します。*<br/>
+*rowDelete*<br/>
 削除する行を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -487,7 +487,7 @@ virtual void DeleteView(
 
 このメンバー関数は (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
 
-##  <a name="dokeyboardsplit"></a>  あると
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit
 
 キーボード分割コマンドでは、通常は「ウィンドウの分割します。」を実行します。
 
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 描画するためのデバイス コンテキストへのポインター。 場合*pDC*が null の場合、 [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)と呼びますフレームワークおよびありません分割によってウィンドウが描画されます。
 
-*%n タイプ*<br/>
+*nType*<br/>
 値、`enum ESplitType`次のいずれかを指定することができます。
 
     - `splitBox` 分割ドラッグ ボックス。
@@ -1036,7 +1036,7 @@ virtual void OnDraw(CDC* pDC);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC サンプル VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CView クラス](../../mfc/reference/cview-class.md)<br/>

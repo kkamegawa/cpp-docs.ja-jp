@@ -1,21 +1,21 @@
 ---
-title: nonextensible (C++ COM の属性)
+title: 非拡張 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 332f61148ccf8cb5816e8bd347181ac9d130a730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512451"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514399"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-指定します、`IDispatch`実装にはプロパティのみが含まれていて、メソッドは、インターフェイスの説明に記載して、実行時にメンバーを追加して拡張することはできません。
+実装に`IDispatch` 、インターフェイスの説明に示されているプロパティとメソッドのみが含まれ、実行時に追加のメンバーで拡張できないことを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,13 +25,13 @@ ms.locfileid: "50512451"
 
 ## <a name="remarks"></a>Remarks
 
-**Nonextensible** C++ 属性と同じ機能を持つ、 [nonextensible](/windows/desktop/Midl/nonextensible) MIDL 属性。
+**非拡張** C++属性には、[非拡張](/windows/win32/Midl/nonextensible)MIDL 属性と同じ機能があります。
 
-使用**nonextensible**も必要です、 [oleautomation](oleautomation.md)属性。
+**非拡張**を使用する場合は、 [oleautomation](oleautomation.md)属性も必要です。
 
 ## <a name="example"></a>例
 
-次のコードの用途の 1 つを示しています、 **nonextensible**属性。
+次のコードは、**非拡張**属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,7 +56,7 @@ __interface IFireTabCtrl
 |-|-|
 |**対象**|**interface**|
 |**反復可能**|いいえ|
-|**必要な属性**|`dual` `oleautomation`、または `dispinterface`|
+|**必要な属性**|`dual`and `oleautomation`、or`dispinterface`|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。

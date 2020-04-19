@@ -2,12 +2,12 @@
 title: UWP アプリで C++ AMP の使用
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-ms.openlocfilehash: 9e17cb8691408d664f403b53e9cd8ad70fe6e5e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405353"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>UWP アプリで C++ AMP の使用
 
@@ -17,7 +17,7 @@ ms.locfileid: "50447757"
 
 Visual C コンポーネント拡張 C + を使用しているかどうか/cli CX、ユニバーサル Windows プラットフォーム (UWP) アプリを作成すると共に連続した記憶域プレーン old data (POD) 型を使用することをお勧めします — たとえば、`std::vector`または C スタイル配列 — となるデータの。C++ AMP で使用します。 マーシャリングの必要がないため、非 POD 型または Windows RT コンテナーを使用する場合より高いパフォーマンスの実現に役立ちます.
 
-C ++ AMP カーネルで、この方法で格納されているデータにアクセスするには、`std::vector` または配列記憶域を `concurrency::array_view` でラップし、この配列ビューを `concurrency::parallel_for_each` ループで使用します。
+C++ AMP カーネルで、この方法で格納されているデータにアクセスするには、`std::vector` または配列記憶域を `concurrency::array_view` でラップし、この配列ビューを `concurrency::parallel_for_each` ループで使用します。
 
 ```cpp
 // simple vector addition example

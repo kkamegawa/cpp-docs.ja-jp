@@ -1,38 +1,40 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439627"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318671"
 ---
 # <a name="proc"></a>PROC
 
-呼ばれるプロシージャのブロックの開始と終了をマーク*ラベル*します。 ブロック内のステートメントを呼び出すことができます、**呼び出す**命令または[INVOKE](../../assembler/masm/invoke.md)ディレクティブ。
+*Label*と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL**命令または[INVOKE](invoke.md)ディレクティブを使用して呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
-> *ラベル*PROC [*距離*] [*langtype*] [*可視性*] [\<*prologuearg*>] [使用して*reglist*] [、*パラメーター* [:*タグ*]].<br/>
-> [フレーム [:*ehandler アドレス*]]<br/>
-> *ステートメント*<br/>
-> *ラベル*ENDP
+> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦ **PUBLIC** | **PRIVATE** | **EXPORT** ⟧⟦ __\<__ *prologu氏 g* __>__ ⟧⟦**は** *reglist*⟧⟦ __、__ *parameter* ⟦ __:__ *tag*⟧...⟧\
+> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧ \
+> *ステートメント*の\
+> *ラベル*の**endp**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-[フレーム [:*ehandler アドレス*]] は ml64.exe でのみ有効と MASM .pdata で関数のテーブルのエントリを生成し、関数の構造化の .xdata 内の情報をアンワインドすると、例外処理のアンワインド動作します。
+⟦*Distance*⟧と⟦*language type*⟧引数は、32ビット MASM でのみ有効です。
 
-ときに、**フレーム**属性は、使用が続く必要がありますが、[します。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。
+⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧は ml64.exe でのみ有効であり、MASM は .xdata 内の関数テーブルエントリを生成し、関数の構造化例外処理のアンワインド動作を実行します。
 
-参照してください[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) ml64.exe の使用の詳細についてはします。
+**FRAME**属性を使用する場合は、の後にを指定する必要があり[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。
 
-## <a name="example"></a>例
+Ml64.exe の使用方法の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md) 」を参照してください。
+
+## <a name="example"></a>使用例
 
 ```asm
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE
@@ -54,7 +56,7 @@ _text ENDS
 END
 ```
 
-上記のコードは、次の関数のテーブルを生成し、アンワインド情報。
+上記のコードでは、次の関数テーブルとアンワインド情報が出力されます。
 
 ```Output
 FileHeader->Machine 34404
@@ -79,4 +81,5 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

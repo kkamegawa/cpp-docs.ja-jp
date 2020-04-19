@@ -2,12 +2,12 @@
 title: x64 プロローグとエピローグ
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: b808703e9c89b8e455e9df2b5959a2f0dd10b939
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: a225786853fcc2eb7b6a21de29f1ccf4901e4377
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295242"
 ---
 # <a name="x64-prolog-and-epilog"></a>x64 プロローグとエピローグ
 
@@ -95,4 +95,4 @@ ms.locfileid: "53627229"
 
 ## <a name="see-also"></a>関連項目
 
-[x64 ソフトウェア規約](../build/x64-software-conventions.md)
+[x64 ソフトウェア規約](x64-software-conventions.md)

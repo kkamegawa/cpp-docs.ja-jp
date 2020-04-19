@@ -1,11 +1,11 @@
 ---
 title: fmax、fmaxf、fmaxl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmax
 - fmaxf
 - fmaxl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmax
 - fmaxf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 371d53257427f2235048807968c82fec1b8bf699
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523703"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957116"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax、fmaxf、fmaxl
 
@@ -80,15 +83,15 @@ long double fmaxl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合のうち、大きい方を返します*x*または*y*します。 返される値は正確であり、どの丸め処理の形式にも依存しません。
+成功した場合、 *x*または*y*のうち、大きい方を返します。 返される値は正確であり、どの丸め処理の形式にも依存しません。
 
 それ以外の場合は、次の値のいずれかを返します。
 
-|懸案事項|Return|
+|問題|Return|
 |-----------|------------|
 |*x* = NaN|*y*|
 |*y* = NaN|*x*|
-|*x*と*y* = NaN|NaN|
+|*x*および*y* = NaN|NaN|
 
 この関数では、[_matherr](matherr.md) で指定されたエラーを使用しません。
 

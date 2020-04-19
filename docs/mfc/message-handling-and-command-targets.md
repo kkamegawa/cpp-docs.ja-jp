@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-ms.openlocfilehash: f9212e32605a1fed179c931d4f63833e17870b5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 702cb96da13d6109c17a28e58c08a30af3f77fd4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383803"
 ---
 # <a name="message-handling-and-command-targets"></a>メッセージ処理とコマンド ターゲット
 
@@ -52,4 +52,3 @@ interface IOleCommandTarget : IUnknown
 ## <a name="see-also"></a>関連項目
 
 [Active ドキュメント コンテナー](../mfc/active-document-containers.md)
-

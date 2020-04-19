@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: ffead8d1f4a903fba79e4b22eefbf0a2955f56fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c110ec8f7c232180bf054e8e4ba90a18f1902c1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388438"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget クラス
 
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 
 ### <a name="parameters"></a>パラメーター
 
-*ビットマップ*<br/>
+*bitmap*<br/>
 このメソッドが戻るときに、このレンダー ターゲットの有効なビットマップが含まれています。 このビットマップは、描画操作に使用できます。
 
 ### <a name="return-value"></a>戻り値

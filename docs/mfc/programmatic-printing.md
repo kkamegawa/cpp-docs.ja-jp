@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-ms.openlocfilehash: d01dcd901425fb3957201dca754a01042e629ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630660"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342091"
 ---
 # <a name="programmatic-printing"></a>プログラムによる印刷
 
@@ -46,7 +46,7 @@ interface IPrint : IUnknown
 
 オブジェクトをサポートする`IPrint`オブジェクトの CLSID で格納されている"Printable"キーで、レジストリでマークされます。
 
-Hkey_classes_root \clsid\\{...}\Printable
+HKEY_CLASSES_ROOT\CLSID\\{...}\Printable
 
 `IPrint` 同じオブジェクトをサポートしていますが、通常は実装されている`IPersistFile`または`IPersistStorage`します。 呼び出し元には、"Printable"キーのレジストリでクラスのいくつかの永続的な状態をプログラムにより印刷する機能に注意してください。 現時点では、「印刷可能な」のサポートを指定には少なくとも`IPrint`; 他のインターフェイスが定義されて、今後利用し、なります`QueryInterface`場所`IPrint`単にベース レベルのサポートを表します。
 
@@ -72,4 +72,3 @@ interface IContinueCallback : IUnknown
 ## <a name="see-also"></a>関連項目
 
 [Active ドキュメント コンテナー](../mfc/active-document-containers.md)
-

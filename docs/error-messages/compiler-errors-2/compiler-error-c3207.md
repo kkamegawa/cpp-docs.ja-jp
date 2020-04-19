@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3207
 ms.assetid: 4a28b976-142a-4cff-aa2f-480b892c50ca
-ms.openlocfilehash: 51873e089499e42f4ddeb97c95e3f18416df447c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 718c731985e6578787d190c70cb8041bd85ab8e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515493"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751078"
 ---
 # <a name="compiler-error-c3207"></a>コンパイラ エラー C3207
 
@@ -21,7 +21,7 @@ ms.locfileid: "50515493"
 
 次の例では C3207 が生成されます。
 
-```
+```cpp
 // C3207.cpp
 template <template <class T> class TT>
 void f(){}

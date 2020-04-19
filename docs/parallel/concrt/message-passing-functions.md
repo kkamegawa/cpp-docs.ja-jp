@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: e258a73723e78090f61230555748e109c28cf01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e1052a59f355c4ad5a7c6b57724268c24a209b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476025"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143297"
 ---
 # <a name="message-passing-functions"></a>メッセージ パッシング関数
 
-Asynchronous Agents Library では、コンポーネント間でメッセージを渡すことができます関数がいくつか提供します。
+非同期エージェントライブラリには、コンポーネント間でメッセージを渡すための関数がいくつか用意されています。
 
-これらのメッセージ パッシング関数は、さまざまなメッセージ ブロックの型で使用されます。 同時実行ランタイムによって定義されているメッセージ ブロックの型の詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
+これらのメッセージパッシング関数は、さまざまなメッセージブロックの型と共に使用されます。 同時実行ランタイムによって定義されるメッセージブロック型の詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
-##  <a name="top"></a> セクション
+## <a name="top"></a> セクション
 
-このトピックでは、次のメッセージ パッシング関数について説明します。
+このトピックでは、次のメッセージパッシング関数について説明します。
 
-- [送信および asend](#send)
+- [send と asend](#send)
 
-- [受信および try_receive](#receive)
+- [receive および try_receive](#receive)
 
-- [例](#examples)
+- [使用例](#examples)
 
-##  <a name="send"></a> 送信および asend
+## <a name="send"></a>send と asend
 
-[Concurrency::send](reference/concurrency-namespace-functions.md#send)関数のメッセージから指定したターゲットの同期的に送信し、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)関数のメッセージから指定された対象への非同期的に送信します。 両方の`send`と`asend`関数が、ターゲットが、これは最終的に同意または拒否メッセージを示すまでに待機します。
+[Concurrency:: send](reference/concurrency-namespace-functions.md#send)関数は、指定されたターゲットにメッセージを同期的に送信します。 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend)関数は、指定されたターゲットにメッセージを非同期的に送信します。 `send` 関数と `asend` 関数はどちらも、最終的にメッセージが受け入れられるか拒否されることをターゲットが示すまで待機します。
 
-`send`関数が、ターゲットを受け入れるかを返す前に、メッセージを拒否するまでに待機します。 `send`関数が返される**true**場合は、メッセージの配信と**false**それ以外の場合。 `send`関数は同期的に、動作、`send`関数を返す前にメッセージを受信するターゲットを待機します。
+`send` 関数は、が返される前に、ターゲットがメッセージを受け入れるか拒否するまで待機します。 `send` 関数は、メッセージが配信された場合は**true** 、それ以外の場合は**false**を返します。 `send` 関数は同期的に動作するため、`send` 関数は、送信先がメッセージを受信するまで待機してから制御を戻します。
 
-逆に、`asend`関数が返す前に、メッセージを承諾または拒否するようにターゲットの待機しません。 代わりに、`asend`関数が返される**true**場合は、ターゲットがメッセージを受け入れるし、実行は最終的にします。 それ以外の場合、`asend`返します**false**を示すこと、ターゲットがメッセージを拒否または、メッセージを受け取るかどうかの決定を延期します。
-
-[[トップ](#top)]
-
-##  <a name="receive"></a> 受信および try_receive
-
-[Concurrency::receive](reference/concurrency-namespace-functions.md#receive)と[concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive)関数は、指定したソースからデータを読み取ります。 `receive`関数は、使用可能になるデータを待機は、`try_receive`関数をすぐに返します。
-
-使用して、`receive`続行データがある必要なときに機能します。 使用して、`try_receive`関数の場合は、現在のコンテキストをブロックする必要がありますまたは続行するデータが存在する必要はありません。
+逆に、`asend` 関数は、が返される前に、ターゲットがメッセージを受け入れたり拒否したりするのを待機しません。 代わりに、`asend` 関数は、ターゲットがメッセージを受け入れ、最終的にそれを受け取る場合に**true**を返します。 それ以外の場合、`asend` は**false**を返して、ターゲットがメッセージを拒否したか、メッセージを取得するかどうかの決定を延期したことを示します。
 
 [[トップ](#top)]
 
-##  <a name="examples"></a> 例
+## <a name="receive"></a>receive および try_receive
 
-使用する例については、`send`と`asend`と`receive`関数の場合は、次のトピックを参照してください。
+[Concurrency:: receive](reference/concurrency-namespace-functions.md#receive)および[concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive)関数は、指定されたソースからデータを読み取ります。 `receive` 関数は、データが使用可能になるまで待機し、`try_receive` 関数はすぐに制御を戻します。
+
+続行するには、`receive` 関数を使用します。 現在のコンテキストをブロックしない場合、またはデータを続行する必要がない場合は、`try_receive` 関数を使用します。
+
+[[トップ](#top)]
+
+## <a name="examples"></a> 例
+
+`send` と `asend`、および `receive` 関数を使用する例については、次のトピックを参照してください。
 
 - [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -65,7 +65,7 @@ Asynchronous Agents Library では、コンポーネント間でメッセージ�
 
 [[トップ](#top)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
@@ -73,4 +73,3 @@ Asynchronous Agents Library では、コンポーネント間でメッセージ�
 [asend 関数](reference/concurrency-namespace-functions.md#asend)<br/>
 [receive 関数](reference/concurrency-namespace-functions.md#receive)<br/>
 [try_receive 関数](reference/concurrency-namespace-functions.md#try_receive)
-

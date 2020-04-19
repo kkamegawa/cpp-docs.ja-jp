@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
-ms.openlocfilehash: 40c6724daf17c1c0b546bb7bc64bb704f732e8d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045b3f6e615e11c24caa9a088baf6ea9f6448efb
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441250"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627314"
 ---
 # <a name="compiler-warning-level-1-c4010"></a>コンパイラの警告 (レベル 1) C4010
 
-単一行コメントには、行連結文字が含まれています。
+単一行コメントには、行連結文字が含まれます
 
-導入された単一行のコメント//、円記号が含まれています (\\) 行連結文字として機能します。 コンパイラは、続きとなる次の行を考慮し、コメントとして扱われます。
+//によって導入される1行のコメントには、行連結文字として機能する円記号 (\\) が含まれています。 コンパイラは次の行を継続と見なし、それをコメントとして扱います。
 
-いくつか構文エディターは、コメントとして連結文字の次の行を示していません。 構文の色分けで、この警告が発生した行を無視します。
+一部の構文指向エディターは、継続文字の後の行をコメントとして示していません。 この警告の原因となった行の構文の色分けを無視します。
 
 次の例では、C4010 が生成されます。
 
-```
+```cpp
 // C4010.cpp
 // compile with: /WX
 int main() {

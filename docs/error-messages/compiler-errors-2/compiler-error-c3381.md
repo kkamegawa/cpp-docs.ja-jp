@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3381
 ms.assetid: d276c89f-8377-4cb6-a8d4-7770885f06c4
-ms.openlocfilehash: ae416d68831d1964c89d938dfcddd364e521195c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eadc9b45b4cd4f2d9b533f387dadd66be8acc963
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440275"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749569"
 ---
 # <a name="compiler-error-c3381"></a>コンパイラ エラー C3381
 
 'アセンブリ' : アセンブリ アクセス指定子は、/clr オプションと共にコンパイルされたコードでのみ使用できます
 
-ネイティブ型をアセンブリ外部から参照できることができますでのネイティブ型のアセンブリへのアクセスのみを指定できます、 **/clr**コンパイルします。
+ネイティブ型はアセンブリの外部で参照できますが、ネイティブ型のアセンブリアクセスは、 **/clr**コンパイルでのみ指定できます。
 
-詳細については、次を参照してください。[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+詳細については、「[型の可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)」と「 [/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3381 が生成されます。
 
-```
+```cpp
 // C3381.cpp
 // compile with: /c
 public class A {};   // C3381

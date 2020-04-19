@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-ms.openlocfilehash: 335489011076b1e30a9c36720a3bf2e94c7918b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9178fe989e476111a3da55861642e9aa6311872
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180532"
 ---
 # <a name="using-a-hot-key-control"></a>ホット キー コントロールの使い方
 
@@ -32,4 +32,3 @@ ms.locfileid: "50542195"
 
 [CHotKeyCtrl の使い方](../mfc/using-chotkeyctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

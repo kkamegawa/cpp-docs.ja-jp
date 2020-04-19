@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223319"
 ---
 # <a name="atl-control-containment-faq"></a>ATL コントロール コンテインメント : Q & A 集
 
@@ -101,7 +101,7 @@ ATL のコントロール ホスト API は、ActiveX コントロール コン�
 |5|子ウィンドウ|複数のステップ|CreateControlLic|
 |6|メイン ウィンドウ|複数のステップ|AtlAxCreateControlLic|
 |7|子ウィンドウ|複数のステップ|CreateControl|
-|8|メイン ウィンドウ|複数のステップ|AtlAxCreateControl|
+|9|メイン ウィンドウ|複数のステップ|AtlAxCreateControl|
 
 [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: 50c6d108c8f2bc42a624ce6376d66111df00478b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608882"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761544"
 ---
 # <a name="compiler-error-c3538"></a>コンパイラ エラー C3538
 
@@ -23,11 +23,11 @@ ms.locfileid: "50608882"
 
 1. リスト内のすべての `auto` 宣言が同じ型を推測していることを確認します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のステートメントは C3538 を生成します。 各ステートメントは複数の変数を宣言していますが、それぞれの 　`auto` キーワードの使用が同じ型を推測していません。
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected
@@ -45,6 +45,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto キーワード](../../cpp/auto-keyword.md)

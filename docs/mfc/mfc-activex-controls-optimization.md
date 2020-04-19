@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : 最適化'
+title: MFC ActiveX コントロール:最適化
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: cc4d210abe0bca5ba8d3a442796173111f45f6e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186893"
 ---
-# <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール : 最適化
+# <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール:最適化
 
 この記事では、パフォーマンス向上のため、ActiveX コントロールを最適化するために使用できる手法について説明します。
 
@@ -68,4 +68,3 @@ Windows OLE オブジェクトの 2 つの主な欠点がある: 透明または
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

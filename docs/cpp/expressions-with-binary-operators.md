@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154309"
 ---
 # <a name="expressions-with-binary-operators"></a>二項演算子を含む式
 
@@ -39,13 +39,13 @@ ms.locfileid: "50505128"
 
 - [関係演算子と等値演算子](../cpp/relational-operators-equal-and-equal.md)
 
-   - 小さい (\<)
+   - より小さい (\<)
 
    - 大なり (>)
 
    - 等しいまたはそれよりも小さい (\<=)
 
-   - 以上 (>=)
+   - 以上 (> =)
 
    - 等しい (==)
 
@@ -81,9 +81,9 @@ ms.locfileid: "50505128"
 
    - 左シフト代入 (<\<=)
 
-   - 右シフト代入 (>>=)
+   - 右シフト代入 (>> =)
 
-   - ビットごとの AND 代入 (&=)
+   - ビットごとの AND 代入 (& =)
 
    - ビットごとの排他的 OR 代入 (^=)
 

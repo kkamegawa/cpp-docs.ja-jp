@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676253"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301523"
 ---
 # <a name="function-call-operator-"></a>関数呼び出し演算子: ()
 
-後置式の後ろに関数呼び出し演算子 **()**、関数呼び出しを指定します。
+後置式の後に関数呼び出し演算子 **()** が続く場合は、関数呼び出しを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,13 +28,13 @@ postfix-expression
 ( [argument-expression-list ] )
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 関数呼び出し演算子への引数は、コンマで区切ったゼロ個以上の式 (関数への実引数) です。
 
-*後置式*関数のアドレス (たとえば、関数の識別子または関数ポインターの値) に評価される必要がありますと*引数式リスト*(区切られた式の一覧を示しますコンマ) で値を持つ (引数) は、関数に渡されます。 *argument-expression-list* 引数は空の場合もあります。
+*後置式*は、関数アドレス (たとえば、関数の識別子または関数ポインターの値) に評価される必要があります。また、*引数式リスト*は、(コンマで区切られた) 値 (引数) が関数に渡される式のリストです。 *argument-expression-list* 引数は空の場合もあります。
 
-*後置式*これらの型のいずれかを指定する必要があります。
+*後置式*は、次のいずれかの型である必要があります。
 
 - 関数の戻り値の型 `T`。 以下に宣言例を示します。
 
@@ -61,7 +61,7 @@ postfix-expression
     (Object.*pmf)();
     ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、3 個の引数を持つ標準ライブラリ関数 `strcat_s` を呼び出しています。
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-上記のコードと呼ばれるクラスを定義する`Point`、プライベート データを含むオブジェクトを表す*x*と*y*座標。 これらのデータ オブジェクトを変更し、値を取得する必要があります。 このプログラムは、このようなクラスのいくつかの設計の 1 つに過ぎません。`GetX` と `SetX` または `GetY` と `SetY` 関数を使う設計も可能です。
+上のコードでは `Point`というクラスを定義しています。これには、 *x*座標と*y*座標を表すプライベートデータオブジェクトが含まれています。 これらのデータ オブジェクトを変更し、値を取得する必要があります。 このプログラムは、このようなクラスのいくつかの設計の 1 つに過ぎません。`GetX` と `SetX` または `GetY` と `SetY` 関数を使う設計も可能です。
 
 クラス型を返す関数、クラス型へのポインター、またはクラス型への参照は、メンバー選択演算子の左のオペランドとして使用できます。 したがって、次のコードは有効です。
 
@@ -174,10 +174,10 @@ int main() {
 }
 ```
 
-関数は再帰的に呼び出すことができます。 関数の宣言に関する詳細については、次を参照してください。[関数](functions-cpp.md)します。 関連資料は[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
+関数は再帰的に呼び出すことができます。 関数宣言の詳細については、「[関数](functions-cpp.md)」を参照してください。 関連資料は[、翻訳単位およびリンケージ](../cpp/program-and-linkage-cpp.md)に含まれています。
 
 ## <a name="see-also"></a>関連項目
 
 [後置式](../cpp/postfix-expressions.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [関数呼び出し](../c-language/function-call-c.md)

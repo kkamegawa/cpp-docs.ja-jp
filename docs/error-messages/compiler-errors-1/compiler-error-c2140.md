@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: e04a44007161fcfae5bab948584809590edbc095
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0329872ff0baee595bf32486a53d6abf91d208d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668703"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756527"
 ---
 # <a name="compiler-error-c2140"></a>コンパイラ エラー C2140
 
-'type': ジェネリック型パラメーターに依存する型がコンパイラの組み込み型の特徴である 'trait' への引数として許可されていません
+' type ': ジェネリック型パラメーターに依存する型は、コンパイラの組み込み型の特徴である ' 特徴 ' に対する引数として許可されていません
 
-無効な型の指定子は、型の特徴に渡されました。
+型の特徴に無効な型指定子が渡されました。
 
-詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
+詳細については、「[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2140 が生成されます。
 
-```
+```cpp
 // C2140.cpp
 // compile with: /clr /c
 template <class T>

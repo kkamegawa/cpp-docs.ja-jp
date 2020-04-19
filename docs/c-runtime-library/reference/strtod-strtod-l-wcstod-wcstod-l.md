@@ -1,12 +1,12 @@
 ---
 title: strtod、_strtod_l、wcstod、_wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946491"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod、_strtod_l、wcstod、_wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
 文字列を倍精度値に変換します。
 
@@ -89,13 +92,13 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtod**表現が +/-が返す場合、関数に、オーバーフローを発生する場合を除き、浮動小数点数の値を返します**HUGE_VAL**します。 符号**HUGE_VAL**表現できない値の符号と一致します。 **strtod**変換を実行できないか、アンダー フローが発生した場合は 0 を返します。
+**strtod**は、表現がオーバーフローを引き起こす場合を除き、浮動小数点数の値を返します。この場合、関数は +/-**HUGE_VAL**を返します。 **HUGE_VAL**の符号は、表現できない値の符号と一致します。 変換を実行できない場合、またはアンダーフローが発生した場合、 **strtod**は0を返します。
 
-**wcstod**と同様に値を返します**strtod**します。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローまたはアンダー フローが発生し、」の説明に従って、無効なパラメーター ハンドラーが呼び出された場合[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 戻り値の詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+**wcstod**は、 **strtod**にと同様値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生して、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されると、 **errno**は**ERANGE**に設定されます。 戻り値の詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-各関数は、入力文字列を変換*strSource*を**二重**します。 **Strtod**関数に変換します*strSource*倍精度値にします。 **strtod**文字列の読み取りを停止する*strSource*数値の一部として認識できない最初の文字。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 **wcstod**のワイド文字バージョンは、 **strtod**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
+各関数は、入力文字列の*Strsource*を**double**に変換します。 **Strtod**関数は、 *strsource*を倍精度値に変換します。 **strtod**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 **wcstod**は**strtod**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -104,17 +107,17 @@ NULL で終わる変換対象の文字列。
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-**LC_NUMERIC** 、現在のロケールのカテゴリの設定は、基数ポイント文字が認識を決定します。 *strSource*します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 せず、関数、 **_l**サフィックスを使用して、現在のロケール **_strtod_l**ヲェヒェケェ ・ **_strtod_l**使用することを除き、*ロケール*代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの**LC_NUMERIC** category 設定によって、 *strsource*の小数点文字が認識されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。 **_strtod_l**は、渡された*ロケール*を代わりに使用する点を除いて、 **_strtod_l**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*ない**NULL**、スキャンを停止させた文字へのポインターが指す位置に格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*が指す位置に格納されて*endptr*します。
+*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
 
-**strtod**は*strSource*形式は次のいずれかの文字列を指すようにします。
+**strtod**は、 *strsource*が次のいずれかの形式の文字列を指すことを想定しています。
 
-[*空白*] [*サインオン*] {*桁*[*基数**桁*] &#124; *基数**桁*} [{**e** &#124; **E**} [*サインオン*]*桁*] [*空白*] [*サインオン*] {**0 x** &#124; **0 X**} {*hexdigits* [*基数* *hexdigits*] &#124; *基数* *hexdigits*} [{**p** &#124;**P**} [*サインオン*] *hexdigits*] [*空白*] [*サインオン*] {**INF** &#124; **無限大**} [*空白*] [*サインオン*] **NAN** [*シーケンス*]
+[*空白*][*sign*]{*数字*[*基数* *]* &#124; *基数* *}* [{**e** &#124; **e}** [*sign*] *digits*] [*whitespace*] [*sign*] {**0x** &#124; **0x**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **p}** [*sign*] *hexdigits*] [*whitespace*] [*sign*] {**INF** &#124; **無限大**} [*whitespace*] [*sign*] **NAN** [*sequence*]
 
-省略可能なリード*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*サインオン*はプラス (+) またはマイナス記号 (-)。*桁*は 1 つ以上の 10 進数字です。*hexdigits*は 1 つ以上の 16 進数字。*基数*は小数点ポイントの文字のピリオド (.)、既定の"C"ロケールで、またはロケール固有値の現在のロケールが異なる場合、または*ロケール*; 指定、 *シーケンス*英数字のシーケンスまたはアンダー スコア。 10 進数と 16 進数の両方の番号形式で基数ポイントの文字の前に数字が表示されない場合は少なくとも 1 つが後に必要基数ポイントの文字。 10 進数のフォームでは、10 進数字が続きますは指数部の開始文字で構成されています (**e**または**E**) および必要に応じて符号付き整数。 16 進数の形式で、指数部の開始文字で構成される 16 進数の数字を続けてことができます (**p**または**P**) と、必要に応じて符号付き 16 進整数を表す、2 のべき乗の指数。 いずれかの形式では、指数部と小数点ポイントの文字のどちらが表示されたら、基数ポイントの文字と見なされます、文字列の最後の桁に従ってください。 両方で大文字と小文字が、 **INF**と**NAN**フォーム。 これらの形式のいずれかに適合しない最初の文字は、スキャンを停止します。
+省略可能な先頭の*空白*文字は、スペースとタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。*数字*は1桁以上の10進数です。*hexdigits*は、1つまたは複数の16進数字です。*基数*は、小数点文字 (既定の "C" ロケールのピリオド (.))、またはロケールに固有の値 (現在のロケールが異なる場合、または*ロケール*が指定されている場合) です。*シーケンス*は、英数字またはアンダースコア文字のシーケンスです。 10進数と16進数の両方の形式で、小数点文字の前に数字がない場合は、少なくとも1つは小数点以下を表す必要があります。 10進数形式では、10進数の後に指数部を指定できます。指数部は、指数部の導入文字 (**e**または**e**) と、必要に応じて符号付き整数で構成されます。 16進数形式では、16進数字の後に指数部を指定できます。指数部は、指数部を表す文字 (**p**または**p**) と、必要に応じて符号付き16進整数 (指数部は2の累乗) で構成されます。 どちらの形式でも、指数部と小数点文字のどちらも表示されない場合、基数のポイント文字は文字列の最後の桁に続くと見なされます。 **INF**と**NAN**の両方の形式では、Case は無視されます。 これらの形式のいずれかに一致しない最初の文字は、スキャンを停止します。
 
-これらの関数の UCRT バージョンは Fortran スタイルの変換をサポートしていません (**d**または**D**) 指数の文字。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。 UCRT バージョンは、16 進文字列と以前のバージョンでサポートされていませんでした INF 値と NAN 値のラウンド トリップをサポートします。 コードで重大な変更もができます。 たとえば、文字列"0x1a"は、によって解釈されるは**strtod** 0.0 以前のバージョンでは、UCRT バージョン 26.0 として。
+これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。 UCRT バージョンでは、16進文字列と INF 値と NAN 値のラウンドトリップがサポートされていましたが、以前のバージョンではサポートされていませんでした。 これにより、コードに重大な変更が加えられる可能性もあります。 たとえば、文字列 "0x1a" は、 **strtod**によって以前のバージョンの0.0 として解釈されますが、ucrt バージョンでは26.0 として解釈されます。
 
 ## <a name="requirements"></a>必要条件
 

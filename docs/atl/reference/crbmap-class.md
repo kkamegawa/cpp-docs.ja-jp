@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: fc702feacff5b2f2bbe53a9ea49f664a241d788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278125"
 ---
 # <a name="crbmap-class"></a>CRBMap クラス
 
@@ -139,7 +139,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 検索する要素を識別するキーを指定します。
 
-*値*<br/>
+*value*<br/>
 検索する値を受け取る変数。
 
 ### <a name="return-value"></a>戻り値
@@ -194,7 +194,7 @@ POSITION SetAt(
 *key*<br/>
 追加するキー値、`CRBMap`オブジェクト。
 
-*値*<br/>
+*value*<br/>
 追加する値、`CRBMap`オブジェクト。
 
 ### <a name="return-value"></a>戻り値

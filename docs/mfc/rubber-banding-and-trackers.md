@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-ms.openlocfilehash: f15256f99a744273b3487925bf273ad563c32aff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 095f3c15546466c6a495f6aa348990ed69b04a9e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450805"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127367"
 ---
 # <a name="rubber-banding-and-trackers"></a>ラバー バンド処理とトラッカー
 
-トラッカーで提供されるもう 1 つの機能は、「ラバー バンド」の選択範囲を選択できるアイテムの周囲のサイズ変更の四角形をドラッグして、複数の OLE 項目を選択することが可能です。 マウスの左ボタンを離したときに、ユーザーが選択したリージョン内の項目が選択され、ユーザーが操作することができます。 たとえば、ユーザーは、別のコンテナー アプリケーションに選択範囲をドラッグする可能性があります。
+トラッカーに用意されているもう1つの機能は "ラバーバンド" の選択です。これにより、ユーザーは、選択する項目の周囲にサイズ変更の四角形をドラッグすることで、複数の OLE 項目を選択できます。 ユーザーがマウスの左ボタンを離すと、ユーザーが選択した領域内の項目が選択され、ユーザーが操作できるようになります。 たとえば、ユーザーが選択項目を別のコンテナーアプリケーションにドラッグする場合があります。
 
-この機能を実装するには、アプリケーションの WM_LBUTTONDOWN ハンドラー関数でいくつかのコードを追加する必要があります。
+この機能を実装するには、アプリケーションの WM_LBUTTONDOWN ハンドラー関数に追加のコードが必要です。
 
-次のコード サンプルでは、ラバー バンド選択とその他の機能を実装します。
+次のコードサンプルでは、ラバーバンドの選択と追加機能を実装しています。
 
 [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
 
-ラバー バンド処理中にトラッカーの元に戻すことの向きを許可する場合を呼び出す必要があります[CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) 3 番目のパラメーターを設定して**TRUE**します。 向きを元に戻すことを許可することが原因場合がありますに注意してください。[裏返し](../mfc/reference/crecttracker-class.md#m_rect)反転になります。 これへの呼び出しによって修正できる[CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)します。
+ラバーバンド処理中にトラッカーの向きを元に戻せるようにするには、3番目のパラメーターを**TRUE**に設定して[CRectTracker:: TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband)を呼び出す必要があります。 向きを反転可能にすると、 [CRectTracker:: m_rect](../mfc/reference/crecttracker-class.md#m_rect)が逆になる場合があることに注意してください。 これは、 [CRect:: NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)を呼び出すことによって修正できます。
 
-詳細については、次を参照してください。[コンテナー クライアント アイテム](../mfc/containers-client-items.md)と[をカスタマイズするドラッグ アンド ドロップ](../mfc/drag-and-drop-customizing.md)します。
+詳細については、「[コンテナークライアントアイテム](../mfc/containers-client-items.md)」および「 [OLE ドラッグアンドドロップ: カスタマイズドラッグアンドドロップ](../mfc/drag-and-drop-ole.md#customize-drag-and-drop)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [トラッカー: OLE アプリケーションでのトラッカーの実装](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
 [CRectTracker クラス](../mfc/reference/crecttracker-class.md)

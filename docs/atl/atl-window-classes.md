@@ -10,12 +10,12 @@ helpviewer_keywords:
 - superclassing
 - superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-ms.openlocfilehash: 3c9188cedda35d8ba9e265edbb333ae8bdd79f37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15c59f964e6b6794f64ed8da64cba6f569879fac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223330"
 ---
 # <a name="atl-window-classes"></a>ATL ウィンドウ クラス
 
@@ -50,4 +50,3 @@ Active Template Library を使用してプログラミングする方法に関�
 
 [Windows サポート クラス](../atl/windows-support-classes.md)<br/>
 ATL で windows とメッセージ マップをサポートするその他の ATL クラスを一覧表示されます。
-

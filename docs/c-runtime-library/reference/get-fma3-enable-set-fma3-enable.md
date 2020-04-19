@@ -1,15 +1,18 @@
 ---
 title: _get_FMA3_enable、_set_FMA3_enable
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _get_FMA3_enable
 - _set_FMA3_enable
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
@@ -19,16 +22,16 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544366"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857812"
 ---
-# <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable、_set_FMA3_enable
+# <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable、_set_FMA3_enable
 
-超越数値演算ライブラリの浮動小数点関数が、x64 コンパイルされたコードで FMA3 命令を使用するかどうかを指定するフラグを取得またはプラットフォーム。
+超越 math 浮動小数点ライブラリ関数が、X64 プラットフォーム用にコンパイルされたコードで FMA3 命令を使用するかどうかを指定するフラグを取得または設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,29 +43,29 @@ int _get_FMA3_enable();
 ### <a name="parameters"></a>パラメーター
 
 *flag*<br/>
-1 に設定すると、x64 超越の数値演算ライブラリの浮動小数点関数の FMA3 実装を有効にするプラットフォームでは、または FMA3 命令を使用して実装を使用する場合は 0 にします。
+を1に設定すると、X64 プラットフォームでの超越 math 浮動小数点ライブラリ関数の FMA3 実装が有効になります。または、FMA3 命令を使用しない実装を使用する場合は0に設定されます。
 
 ## <a name="return-value"></a>戻り値
 
-超越数値演算ライブラリの浮動小数点関数の FMA3 実装が有効な場合は 0 以外の値。 それ以外の場合、0 を返します。
+超越 math 浮動小数点ライブラリ関数の FMA3 実装が有効になっている場合は、0以外の値。 それ以外の場合は0。
 
 ## <a name="remarks"></a>Remarks
 
-使用して、 **_set_FMA3_enable**を有効にまたは CRT ライブラリの超越数学浮動小数点関数での FMA3 命令の使用を無効にします。 戻り値には、使用中の変更後の実装が反映されます。 CPU が FMA3 命令をサポートしていない場合は、この関数をライブラリで有効にすることはできませんし、戻り値は 0。 使用 **_get_FMA3_enable**ライブラリの現在の状態を取得します。 既定では、x64 プラットフォームでは、CRT スタートアップ コードは、CPU について、FMA3 命令をサポートしているとにより、またはライブラリでの FMA3 実装を無効にしますでかどうかを検出します。
+CRT ライブラリの超越 math 浮動小数点関数で FMA3 命令の使用を有効または無効にするには、 **_set_FMA3_enable**関数を使用します。 戻り値には、変更後に使用される実装が反映されます。 CPU で FMA3 命令がサポートされていない場合、この関数はライブラリで有効にすることができず、戻り値はゼロになります。 **_Get_FMA3_enable**を使用して、ライブラリの現在の状態を取得します。 既定では、X64 プラットフォームでは、CRT スタートアップコードは、CPU が FMA3 命令をサポートしているかどうかを検出し、ライブラリ内の FMA3 実装を有効または無効にします。
 
-FMA3 実装を有効または無効になっている、またはか FMA3 をサポートしているコンピューター間で FMA3 実装では、異なるアルゴリズムを使用するためには、計算の結果がわずかに異なるで観測可能なオブジェクト可能性があります。 詳細については、次を参照してください。[浮動小数点の移行に関する問題](../../porting/floating-point-migration-issues.md)します。
+FMA3 の実装では異なるアルゴリズムが使用されているため、FMA3 の実装が有効または無効になっている場合、または FMA3 をサポートしていないコンピューターの場合は、計算結果の微妙な違いが観察される可能性があります。 詳細については、「[浮動小数点の移行に関する問題](../../porting/floating-point-migration-issues.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**_Set_FMA3_enable**と **_get_FMA3_enable**関数は、X64 で使用できるだけのバージョンの CRT します。
+**_Set_FMA3_enable**および **_get_FMA3_enable**関数は、CRT の X64 バージョンでのみ使用できます。
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_set_FMA3_enable**、 **_get_FMA3_enable**| C: \<math.h><br />C++: \<cmath > または\<math.h >|
+|**_set_FMA3_enable**、 **_get_FMA3_enable**| C: \<math.h><br />C++: \<cmath > または \<の数値演算 >|
 
-**_Set_FMA3_enable**と **_get_FMA3_enable**関数は、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Set_FMA3_enable**関数と **_get_FMA3_enable**関数は、Microsoft 固有の関数です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [浮動小数点の移行に関する問題](../../porting/floating-point-migration-issues.md)<br/>

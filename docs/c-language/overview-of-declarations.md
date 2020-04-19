@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 4e6c166763afd18db79798024d8b2f159ffed76d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582755"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857061"
 ---
 # <a name="overview-of-declarations"></a>宣言の概要
 
@@ -19,9 +19,9 @@ ms.locfileid: "50582755"
 ## <a name="syntax"></a>構文
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> は Microsoft 仕様です */
+/\**属性-seq*<sub>opt</sub>は Microsoft 固有 */
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -51,7 +51,7 @@ int const *fp;
 
 このコードは、`fp` という名前の変数を、変更不可能な (**const**) `int` 値へのポインターとして宣言します。 コンマで区切った複数の宣言子を使用して、複数の変数を宣言で定義できます。
 
-宣言は、少なくとも 1 つの宣言子を持つか、その型指定子が構造体タグ、共用体タグ、または列挙のメンバーを宣言する必要があります。 宣言子は、識別子に関するその他の情報を提供します。 宣言子は、配列、ポインター、または関数型を宣言するための角かっこ (**[ ]**)、アスタリスク (<strong>\*</strong>)、またはかっこ (**( )**) で変更できる識別子です。 単純な変数 (文字、整数、浮動小数点項目など) または単純な変数の構造体/共用体を宣言する場合、`declarator` は単なる識別子です。 宣言子の詳細については、「[宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)」を参照してください。
+宣言は、少なくとも 1 つの宣言子を持つか、その型指定子が構造体タグ、共用体タグ、または列挙のメンバーを宣言する必要があります。 宣言子は、識別子に関するその他の情報を提供します。 宣言子は、配列、ポインター、または関数型を宣言するための角かっこ ( **[ ]** )、アスタリスク (<strong>\*</strong>)、またはかっこ ( **( )** ) で変更できる識別子です。 単純な変数 (文字、整数、浮動小数点項目など) または単純な変数の構造体/共用体を宣言する場合、`declarator` は単なる識別子です。 宣言子の詳細については、「[宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)」を参照してください。
 
 すべての定義は暗黙の宣言ですが、すべての宣言が定義というわけではありません。 たとえば、`extern` ストレージ クラス指定子で始まる変数宣言は、"定義" 宣言ではなく "参照" 宣言になります。 外部変数を定義する前に参照する場合、または外部変数を使用されている場所とは異なるソース ファイルで定義する場合は、`extern` 宣言が必要です。 ストレージは "参照" 宣言によって割り当てられず、変数は宣言で初期化できません。
 

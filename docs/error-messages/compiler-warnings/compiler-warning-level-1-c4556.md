@@ -2,17 +2,16 @@
 title: コンパイラの警告 (レベル 1) C4556
 ms.date: 08/27/2018
 f1_keywords:
-- xml
 - C4556
 helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-ms.openlocfilehash: 53261b97249340ce56ce6ae0f5cc0eab7e97a107
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c31602766261a8d6d0c4f0bb0a880ee34ee1ed45
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397316"
 ---
 # <a name="compiler-warning-level-1-c4556"></a>コンパイラの警告 (レベル 1) C4556
 

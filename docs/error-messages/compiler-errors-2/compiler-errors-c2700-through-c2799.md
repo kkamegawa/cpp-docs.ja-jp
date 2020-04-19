@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2700 C2799 から
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2700 - C2799)
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677852"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857633"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>コンパイラ エラー C2700 C2799 から
+# <a name="compiler-errors-c2700-through-c2799"></a>コンパイラ エラー (C2700 - C2799)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -59,17 +59,17 @@ ms.locfileid: "50677852"
 |-----------|-------------|
 |[コンパイラ エラー C2700](compiler-error-c2700.md)|'*型*' (詳細については/W4 を使用) がスローされることはできません。|
 |[コンパイラ エラー C2701](compiler-error-c2701.md)|'*関数*': 関数テンプレートまたはジェネリックは、ローカル クラスのフレンドをすることはできません|
-|[コンパイラ エラー C2702](compiler-error-c2702.md)| _ _except は終了ブロック内では表示されない場合があります。|
+|[コンパイラ エラー C2702](compiler-error-c2702.md)| __except は終了ブロック内では表示されない場合があります。|
 |[コンパイラ エラー C2703](compiler-error-c2703.md)|無効な _leave ステートメント|
-|[コンパイラ エラー C2704](compiler-error-c2704.md)|'*関数*': _ _va_start intrinsic のみ varargs 中|
+|[コンパイラ エラー C2704](compiler-error-c2704.md)|'*関数*': __va_start intrinsic のみ varargs 中|
 |[コンパイラ エラー C2705](compiler-error-c2705.md)|'*ラベル*': 無効なジャンプに'*exception_block*' スコープ|
-|[コンパイラ エラー C2706](compiler-error-c2706.md)|_ _try に一致なしの _ _except が正しくありません (不足している '}' で _ _try ブロックでしょうか)。|
+|[コンパイラ エラー C2706](compiler-error-c2706.md)|__try に一致なしの __except が正しくありません (不足している '}' で __try ブロックでしょうか)。|
 |[コンパイラ エラー C2707](compiler-error-c2707.md)|'*識別子*': 組み込み関数のコンテキストが正しくありません|
 |[コンパイラ エラー C2708](compiler-error-c2708.md)|'*識別子*': 実パラメーターの長さ (バイト単位) は、前の呼び出しまたは参照によって異なります。|
 |[コンパイラ エラー C2709](compiler-error-c2709.md)|'*識別子*': 仮パラメーターの長さ (バイト単位) は、前の宣言によって異なります。|
-|[コンパイラ エラー C2710](compiler-error-c2710.md)|'*識別子*':' _ _declspec (*修飾子*)' は、ポインターを返す関数にのみ適用します。|
+|[コンパイラ エラー C2710](compiler-error-c2710.md)|'*識別子*':' __declspec (*修飾子*)' は、ポインターを返す関数にのみ適用します。|
 |[コンパイラ エラー C2711](compiler-error-c2711.md)|'*関数*': この関数にすることはできませんマネージとしてコンパイル #pragma アンマネージドを使用を検討してください|
-|[コンパイラ エラー C2712](compiler-error-c2712.md)|オブジェクト アンワインディングが必要な関数で _ _try を使用できません。|
+|[コンパイラ エラー C2712](compiler-error-c2712.md)|オブジェクト アンワインディングが必要な関数で __try を使用できません。|
 |[コンパイラ エラー C2713](compiler-error-c2713.md)|1 つだけの形式の関数ごとに許可する例外処理|
 |[コンパイラ エラー C2714](compiler-error-c2714.md)|alignof (void) は許可されていません|
 |[コンパイラ エラー C2715](compiler-error-c2715.md)|'*型*': スローまたはキャッチできません|
@@ -100,7 +100,7 @@ ms.locfileid: "50677852"
 |コンパイラ エラー C2740|オペランドの値 '*数*'が範囲外です'*lower_bound* - *upper_bound*'|
 |コンパイラ エラー C2741|フレーム サイズが大きすぎます|
 |コンパイラ エラー C2742|互換性のために残されています。|
-|[コンパイラ エラー C2743](compiler-error-c2743.md)|'*型*': _ _clrcall デストラクターまたはコピー コンス トラクターでネイティブをキャッチすることはできません|
+|[コンパイラ エラー C2743](compiler-error-c2743.md)|'*型*': __clrcall デストラクターまたはコピー コンス トラクターでネイティブをキャッチすることはできません|
 |コンパイラ エラー C2744|'*演算子*' は有効な CLR または WinRT 演算子ではありません|
 |[コンパイラ エラー C2745](compiler-error-c2745.md)|'*トークン*': このトークンは、識別子に変換することはできません|
 |コンパイラ エラー C2746|互換性のために残されています。|
@@ -143,7 +143,7 @@ ms.locfileid: "50677852"
 |[コンパイラ エラー C2783](compiler-error-c2783.md)|'*宣言*': テンプレートやジェネリック引数を推測できませんでした'*識別子*'|
 |[コンパイラ エラー C2784](compiler-error-c2784.md)|'*宣言*': テンプレートやジェネリック引数を推測できませんでした'*type1*'from'*type2*'|
 |[コンパイラ エラー C2785](compiler-error-c2785.md)|'*declaration1*'と'*declaration2*' 戻り値の種類があります|
-|[コンパイラ エラー C2786](compiler-error-c2786.md)|'*型*': _ _uuidof の無効なオペランドです|
+|[コンパイラ エラー C2786](compiler-error-c2786.md)|'*型*': __uuidof の無効なオペランドです|
 |[コンパイラ エラー C2787](compiler-error-c2787.md)|'*識別子*': このオブジェクトに関連付けられた GUID はありません。|
 |[コンパイラ エラー C2788](compiler-error-c2788.md)|'*識別子*': このオブジェクトに関連付けられている 1 つ以上の GUID|
 |コンパイラ エラー C2789|'*識別子*': const で修飾された型のオブジェクトを初期化する必要があります|
@@ -157,3 +157,8 @@ ms.locfileid: "50677852"
 |[コンパイラ エラー C2797](compiler-error-c2797.md)|(廃止)'*識別子*': メンバー初期化子リストまたは非静的データ メンバー初期化子の内部リストの初期化は実装されていません|
 |[コンパイラ エラー C2798](compiler-error-c2798.md)|'super::*識別子*' があいまいです|
 |コンパイラ エラー C2799|'*識別子*': ユーザーが提供する既定のコンス トラクターのない const で修飾されたクラス型のオブジェクトを初期化する必要があります|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

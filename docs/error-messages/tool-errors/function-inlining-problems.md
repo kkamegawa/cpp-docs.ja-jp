@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: e8d2a97e4d887b914d15871ce1679c95cc3cda97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856887"
 ---
 # <a name="function-inlining-problems"></a>関数インライン展開の問題
 
@@ -24,7 +24,7 @@ ms.locfileid: "50452729"
 
 - インライン化、ヘッダー ファイルで ON になっています。
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 この場合、次のようになります。
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ int main() {
 
 同様に、関数のインライン化を使用するプロジェクトがまだ関数を定義、.cpp ファイルにファイルが LNK2019 をやはりヘッダーではなく。 ヘッダー ファイルが含まれるすべての場所で、適切なと見なされますが、関数にのみインライン .cpp ファイルは、コンパイラを通過するときそのため、リンカーでは、他のモジュールで使用すると未解決の外部項目として、関数が表示されます。
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 それから
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 それから
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

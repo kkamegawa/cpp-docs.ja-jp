@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 12fc36a9256a8a744e789fc95bb8603ee6cbf3d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581351"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459052"
 ---
 # <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; 構造体
 
@@ -37,5 +37,5 @@ struct char_traits<char32_t>;
 
 ## <a name="see-also"></a>関連項目
 
-[\<string>](../standard-library/string.md)<br/>
-[char_traits 構造体](../standard-library/char-traits-struct.md)<br/>
+[\<string>](../standard-library/string.md)\
+[char_traits 構造体](../standard-library/char-traits-struct.md)

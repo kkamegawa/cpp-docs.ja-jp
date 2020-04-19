@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c682b309cbabbaf97346e37038806d331f949ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573517"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052606"
 ---
 # <a name="compiler-warning-level-1-c4615"></a>コンパイラの警告 (レベル 1) C4615
 
-\#pragma 警告: 不明な警告型
+\#プラグマ警告: 不明なユーザー警告の種類
 
-無効な警告指定子が使用されていた**プラグマ**[警告](../../preprocessor/warning.md)します。 エラーを解決するには、有効な警告指定子を使用します。
+**プラグマ**[警告](../../preprocessor/warning.md)と共に無効な警告指定子が使用されました。 このエラーを解決するには、有効な警告指定子を使用します。
 
 次の例では、C4615 が生成されます。
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

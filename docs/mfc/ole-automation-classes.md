@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Automation classes [MFC]
 - OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
-ms.openlocfilehash: 590a2846f4e732179331eba1b0c61d3b9d6c1a19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08e33e1fce3f792e76e2eec4ecb59601c99d9822
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348719"
 ---
 # <a name="ole-automation-classes"></a>OLE オートメーション クラス
 
@@ -30,4 +30,3 @@ OLE オートメーションの中にエラーによる例外。 Automation の�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466080"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949275"
 ---
 # <a name="rewind"></a>rewind
 
@@ -45,20 +48,20 @@ void rewind(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="remarks"></a>Remarks
 
-**巻き戻し**関数に関連付けられたファイル ポインターを移動する*ストリーム*ファイルの先頭にします。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
+**Rewind**関数は、*ストリーム*に関連付けられたファイルポインターをファイルの先頭に再配置します。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
 
-**fseek 定数 (void) (** _ストリーム_**、0l SEEK_SET)。**
+**(void) fseek (** _stream_ **, 0L, SEEK_SET);**
 
-ただしとは異なり[fseek](fseek-fseeki64.md)、**巻き戻し**ストリームのエラー インジケーターとファイルの終わりインジケーターをクリアします。 またとは異なり[fseek](fseek-fseeki64.md)、**巻き戻し**はポインターが正常に移動されたかどうかを示す値を返しません。
+ただし、 [fseek](fseek-fseeki64.md)とは異なり、**巻き戻し**はストリームのエラーインジケーターとファイルの終端インジケーターをクリアします。 また、 [fseek](fseek-fseeki64.md)とは異なり、 **rewind**はポインターが正常に移動されたかどうかを示す値を返しません。
 
-キーボード バッファをクリアする**巻き戻し**ストリーム**stdin**、既定では、キーボードに関連付けられています。
+キーボードバッファーをクリアするには、既定でキーボードに関連付けられているストリーム**stdin**で**rewind**を使用します。
 
-ストリームがある場合、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返しますと**errno**に設定されている**EINVAL**します。
+Stream が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数はを返し、 **errno**は**EINVAL**に設定されます。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
@@ -107,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 The values written are: 1 and -37

@@ -1,12 +1,12 @@
 ---
 title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cprintf_p_l
 - _cwprintf_p_l
 - _cwprintf_p
 - _cprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cprintf_p
 - cwprintf_p
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a02de28a61812147c192495c4794830f85567a10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942645"
 ---
-# <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
+# <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 
 書式化してコンソールに出力します。書式指定文字列で位置指定パラメーターをサポートしています。
 
@@ -97,16 +100,16 @@ int _cwprintf_p_l(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数の書式を設定し、一連の文字や、コンソールへの直接値を使用して、 **_putch**と **_putwch**文字を出力する関数。 各*引数*(ある場合) は変換されに対応する書式指定に応じて*形式*します。 形式が同じ形式し、機能、*形式*のパラメーター、 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数。 間の差 **_cprintf_p**と**cprintf_s**される **_cprintf_p**引数の順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの関数は、 **_putch**関数と **_putwch**関数を使用して文字を出力することで、一連の文字および値を書式設定し、コンソールに直接出力します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は、 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **_Cprintf_p**と**cprintf_s**の違いは、 **_cprintf_p**は位置指定パラメーターをサポートしている点です。これにより、書式設定文字列で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-異なり、 **fprintf_p**、 **printf_p**、および**sprintf_p**関数も、 **_cprintf_p**も **_cwprintf_p**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換するときに出力します。 重要な違いは **_cwprintf_p** Windows NT で使用すると、Unicode 文字が表示されます。 異なり **_cprintf_p**、 **_cwprintf_p**コンソールの現在のロケール設定を使用します。
+**Fprintf_p**、 **printf_p**、および**sprintf_p**関数とは異なり、出力時に、 **_cprintf_p**と **_cwprintf_p**はどちらもラインフィード文字をキャリッジリターンラインフィード (cr-lf) の組み合わせに変換しません。 重要な違いは、 **_cwprintf_p**では、Windows NT で使用されている場合に Unicode 文字が表示されることです。 **_Cprintf_p**とは異なり、 **_cwprintf_p**は現在のコンソールのロケール設定を使用します。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-また、 **_cprintf_s**と **_cwprintf_s**、入力ポインターと書式指定文字列を検証します。 場合*形式*または*引数*は**NULL**、または形式の文字列に無効な書式指定文字が含まれています、これらの関数として、無効なパラメーター ハンドラーを呼び出します説明されている[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
+また、 **_cprintf_s**や **_cwprintf_s**のように、これらは入力ポインターと書式指定文字列を検証します。 *Format*または*引数*が**NULL**の場合、または書式指定文字列に無効な書式指定文字が含まれている場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

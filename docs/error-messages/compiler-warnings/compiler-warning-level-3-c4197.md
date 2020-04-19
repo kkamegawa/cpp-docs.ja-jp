@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
-ms.openlocfilehash: 15b2fba94bfc956775a1e454893e7509a32000e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d7c8cee42f17ad3301980852b8333ea37f5ca6be
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522624"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051784"
 ---
 # <a name="compiler-warning-level-3-c4197"></a>コンパイラの警告 (レベル 3) C4197
 
-'type': キャストのトップレベルの volatile は無視されます
+' type ': キャストの最上位レベルの volatile は無視されます
 
-修飾されている、右辺値の型へのキャストが検出されました[揮発性](../../cpp/volatile-cpp.md)、または volatile で修飾されているいくつかの型に右辺値の型のキャスト。 C の標準 (6.5.3)、修飾型に関連付けられているプロパティは、左辺値式に対してのみ意味を持つです。
+コンパイラは、 [volatile](../../cpp/volatile-cpp.md)で修飾された r 値型へのキャスト、または、volatile で修飾された型への r 値型のキャストを検出しました。 C 標準 (6.5.3) によれば、修飾型に関連付けられているプロパティは、左辺値の式に対してのみ意味があります。
 
 次の例では、C4197 が生成されます。
 
-```
+```cpp
 // C4197.cpp
 // compile with: /W3
 #include <stdio.h>

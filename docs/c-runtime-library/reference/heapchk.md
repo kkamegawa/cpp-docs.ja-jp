@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331400"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954819"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 ヒープに対して整合性チェックを実行します。
 
@@ -45,7 +48,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapchk** Malloc.h に定義されている次の整数マニフェスト定数のいずれかを返します。
+**_heapchk**は、次のいずれかの整数マニフェスト定数を返します Malloc. h です。
 
 |戻り値|条件|
 |-|-|
@@ -55,11 +58,11 @@ int _heapchk( void );
 | **_HEAPEMPTY** | ヒープが初期化されていません。 |
 | **_HEAPOK** | ヒープは一貫性があると思われます。 |
 
-さらに、エラーが発生する場合に **_heapchk**設定**errno**に**返る**します。
+さらに、エラーが発生した場合、 **_heapchk**は**errno**をに設定**します。**
 
 ## <a name="remarks"></a>Remarks
 
-**_Heapchk**関数により、ヒープの最小限の一貫性をチェックしてヒープ関連の問題をデバッグします。 オペレーティング システムがサポートされていない場合 **_heapchk**関数を返します (たとえば、Windows 98) **_HEAPOK**設定と**errno**に**返る**.
+**_Heapchk**関数は、ヒープの最小限の一貫性をチェックすることにより、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティングシステムが **_heapchk**(Windows 98 など) をサポートしていない場合、関数は **_HEAPOK**を返し、 **errno**を**に設定**します。
 
 ## <a name="requirements"></a>必要条件
 

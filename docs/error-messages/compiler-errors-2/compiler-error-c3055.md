@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3055
 ms.assetid: 60446ee0-18dd-48fc-9059-f0a14229dce8
-ms.openlocfilehash: 2a770709b4958f446e8e5a64b245f2932f99460f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bfd045079a7f0fbbd078d3d859d5687e96338dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761173"
 ---
 # <a name="compiler-error-c3055"></a>コンパイラ エラー C3055
 
@@ -21,7 +21,7 @@ ms.locfileid: "50540973"
 
 次の例では C3055 が生成されます。
 
-```
+```cpp
 // C3055.cpp
 // compile with: /openmp
 int x, y;
@@ -36,9 +36,9 @@ void test() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C3055b.cpp
 // compile with: /openmp /LD
 int x, y, z;

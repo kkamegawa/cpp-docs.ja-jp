@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153314"
 ---
 # <a name="connection-points"></a>コネクション ポイント
 
@@ -49,7 +49,7 @@ MFC 実装では、このモデル、 [CConnectionPoint](../mfc/reference/cconne
 
 1 つ以上の接続ポイントし、追加の挿入があるかどうかは**CONNECTION_PART**マクロの間、 **BEGIN_CONNECTION_MAP**と**END_CONNECTION_MAP**マクロ。
 
-最後への呼び出しを追加`EnableConnections`クラスのコンス トラクター内。 例えば:
+最後への呼び出しを追加`EnableConnections`クラスのコンス トラクター内。 例:
 
 [!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]
 
@@ -67,4 +67,3 @@ MFC で実装されたコネクション ポイント
 ## <a name="see-also"></a>関連項目
 
 [MFC COM](../mfc/mfc-com.md)
-

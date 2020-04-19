@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: a7fde40352a878575ddce8b48b4c97093ae7a960
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8b3c61676f784bf9369c22b5db97d7b251f7ac6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482876"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447279"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size クラス
 
@@ -67,11 +67,11 @@ void allocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Nx*|増分値。|
+|*Nx (_s)*|増分値。|
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、追加 *_Nx*に格納されている値`_Nallocs`します。 によって呼び出しが成功した後にこのメンバー関数が呼び出されます`cache_freelist::allocate`演算子**新しい**します。 引数 *_Nx*演算子によって割り当てられたチャンク内のメモリ ブロックの数は、**新しい**します。
+このメンバー関数は 、格納されている`_Nallocs`値に Nx を追加します。 このメンバー関数は、operator `cache_freelist::allocate` **new**によるの呼び出しが成功するたびに呼び出されます。 引数 *(_s)* は、 **new**演算子によって割り当てられたチャンク内のメモリブロックの数です。
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
@@ -85,11 +85,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Nx*|増分値。|
+|*Nx (_s)*|増分値。|
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、減算 *_Nx*格納されている値から`_Nallocs`します。 によって、各呼び出しの後にこのメンバー関数が呼び出されます`cache_freelist::deallocate`演算子**削除**します。 引数 *_Nx*演算子によって割り当て解除されたチャンク内のメモリ ブロックの数は、**削除**します。
+このメンバー関数は 、格納されている`_Nallocs`値から Nx を減算します。 このメンバー関数は、が operator **delete**に`cache_freelist::deallocate`対してを呼び出すたびに呼び出されます。 引数 *(_s)* は、 **delete**演算子によって割り当て解除されたチャンク内のメモリブロックの数です。
 
 ## <a name="full"></a>  max_variable_size::full
 
@@ -101,11 +101,11 @@ bool full();
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合`_Nallocs / 16 + 16 <= _Nblocks`します。
+の場合`_Nallocs / 16 + 16 <= _Nblocks`は true。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出し、返される場合**true**、 `deallocate` false の場合、返された場合は、フリー リスト; にメモリ ブロックを配置`deallocate`呼び出し演算子**削除**割り当てを解除するブロック。
+このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しで**true**が返され`deallocate`た場合、はメモリブロックをフリーリストに格納します。 `deallocate` false が返された場合は、operator **delete**を呼び出してブロックの割り当てを解除します。
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 
@@ -145,4 +145,4 @@ void saved();
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

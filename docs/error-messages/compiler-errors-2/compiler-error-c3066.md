@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3066
 ms.assetid: 226f6de5-c4c5-41e2-b31a-2e30a37fbbeb
-ms.openlocfilehash: 126175b44bf0e6f4a58bc0e675cfd0cac1acc1ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80468f4e35ffd9d09706b8bb8fc2fdc6eb8e679e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459223"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738857"
 ---
 # <a name="compiler-error-c3066"></a>コンパイラ エラー C3066
 
-この型のオブジェクトを呼び出すことがあるいくつかの方法でこれらの引数
+これらの引数を使用して、この型のオブジェクトを呼び出すことができる方法は複数あります。
 
-サロゲートを伴う、あいまいな関数呼び出しが検出されました。
+サロゲートを含むあいまいな関数呼び出しが検出されました。
 
 次の例では、C3066 が生成されます。
 
-```
+```cpp
 // C3066.cpp
 template <class T, class U> void func(T*, U*){}
 

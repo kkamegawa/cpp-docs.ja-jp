@@ -7,12 +7,12 @@ helpviewer_keywords:
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3adbd32456b1375bd2dc8574220e083ca3d83ee9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306815"
 ---
 # <a name="styles-for-the-progress-control"></a>プログレス コントロールのスタイル
 
@@ -45,4 +45,3 @@ PBS_SMOOTH と PBS_VERTICAL スタイル。
 ## <a name="see-also"></a>関連項目
 
 [CProgressCtrl の使い方](../mfc/using-cprogressctrl.md)
-

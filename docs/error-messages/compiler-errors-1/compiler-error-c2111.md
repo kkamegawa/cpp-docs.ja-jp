@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2111
 ms.assetid: 38fd42ec-1480-4a44-aaca-ae4593ed5f50
-ms.openlocfilehash: 9545e44518a7a377378929d684bf08573a214b18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 193fa787c8e6beb0d4a45f419d3af3baf7988cc1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437138"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757814"
 ---
 # <a name="compiler-error-c2111"></a>コンパイラ エラー C2111
 
@@ -21,7 +21,7 @@ ms.locfileid: "50437138"
 
 次の例では C2111 が生成されます。
 
-```
+```cpp
 // C2111.cpp
 int main() {
    int *a = 0, *pa = 0, b = 0;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496058"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752952"
 ---
 # <a name="compiler-error-c3731"></a>コンパイラ エラー C3731
 
-'function1' の互換性のないイベントとハンドラー 'function2';イベント ソースとイベント ハンドラーが同じ型にする必要があります。
+互換性のないイベント ' function1 ' とハンドラー ' function2 ';イベントソースとイベントハンドラーは同じ型でなければなりません
 
-イベント ソースとイベント レシーバーは、同じ型を持つ必要があります (たとえば`native`と`com`型)。 このエラーを修正するには、イベント ソースとイベント ハンドラーの一致の種類を確認します。
+イベントソースとイベントレシーバーの型は同じである必要があります (たとえば、`native` 対 `com` 型)。 このエラーを修正するには、イベントソースの型とイベントハンドラーが一致するようにします。
 
 次の例では、C3731 が生成されます。
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

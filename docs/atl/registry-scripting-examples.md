@@ -7,12 +7,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: d15c2d9b6641f7d87f394327aa4be71e51afb613
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dffdd111d33d6fbd845e1534cdef1d5c8e1749d2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275413"
 ---
 # <a name="registry-scripting-examples"></a>レジストリ スクリプトの例
 
@@ -113,4 +113,3 @@ HKEY_CURRENT_USER
 ## <a name="see-also"></a>関連項目
 
 [レジストラー スクリプトの作成](../atl/creating-registrar-scripts.md)
-

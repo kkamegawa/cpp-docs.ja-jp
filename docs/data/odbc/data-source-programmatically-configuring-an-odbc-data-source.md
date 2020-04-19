@@ -1,5 +1,5 @@
 ---
-title: 'データ ソース: プログラムにおける ODBC データ ソースの設定'
+title: 'データ ソース:データ ソース : プログラムにおける ODBC データ ソースの設定'
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395932"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>データ ソース: プログラムにおける ODBC データ ソースの設定
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>データ ソース:データ ソース : プログラムにおける ODBC データ ソースの設定
 
 このトピックでは、ODBC (Open Database Connectivity) データ ソース名をプログラムで設定する方法について説明します。 この方法を使うと、柔軟なデータ アクセスが可能になり、ユーザーが ODBC データ ソース アドミニストレーターなどのプログラムを使って明示的にデータ ソースを指定する必要もありません。
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 このデータ ソースは、実際はフォルダー (C:\EXCELDIR) です。このフォルダーは存在している必要があります。 Excel ドライバーは、フォルダーをそのデータ ソースとして使用し、ファイルを各テーブル (.xls ファイルごとに 1 テーブル) として使用するからです。
 
-テーブルの作成の詳細については、次を参照してください。[データ ソース: プログラムにおける ODBC データ ソース テーブルの作成](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)です。
+テーブルの作成の詳細については、次を参照してください。[データ ソース。プログラムにおける ODBC データ ソース テーブルの作成](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)です。
 
 次の情報に渡される必要があるパラメーターの説明、 `::SQLConfigDataSource` ODBC API 関数。 使用する`::SQLConfigDataSource`、Odbcinst.h ヘッダー ファイルをインクルードし、Odbcinst.lib インポート ライブラリを使用する必要があります。 また、実行時には、パスに Odbccp32.dll (16 ビットの場合は Odbcinst.dll) を指定する必要があります。
 
@@ -94,7 +94,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
    - 32 ビットの場合、キーを見つける**HKEY_CURRENT_USER\Software\ODBC\ODBC します。データ ソースの INI\ODBC**左側のウィンドウでします。
 
-      右側のウィンドウには、フォームのエントリが一覧表示されます:"pub: REG_SZ:*<data source name>*"ここで、 *<data source name>* するドライバーに必要な設定を既に構成されているデータ ソース使用します。 たとえば、SQL Server、データ ソースを選択します。 文字列に続く項目"pub:"では順序、keyname と値で使用するは、 *lpszAttributes*パラメーター。
+      右側のウィンドウには、フォームのエントリが一覧表示されます:"pub:REG_SZ:*<data source name>*"ここで、 *<data source name>* を使用するドライバーに必要な設定を既に構成されているデータ ソースです。 たとえば、SQL Server、データ ソースを選択します。 文字列に続く項目"pub:"では順序、keyname と値で使用するは、 *lpszAttributes*パラメーター。
 
    - 16 ビットでマークされている Odbc.ini ファイルでセクションを見つけます。 [*\<データ ソース名 >*]。
 

@@ -1,40 +1,44 @@
 ---
 title: MMWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - MMWORD
 helpviewer_keywords:
 - MMWORD directive
 ms.assetid: b4c5a104-9078-4fb4-afc3-d1e63abe562a
-ms.openlocfilehash: e4ebaa9d47a569bc9cf7d843d3ddb54ca5d713a0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fd3b9f40b7ff9fa4dae570e0ed906c13a9456424
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328228"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311924"
 ---
 # <a name="mmword"></a>MMWORD
 
-MMX と SSE (XMM) の手順で、64 ビット マルチ メディア オペランドに使用されます。
+MMX および SSE (XMM) 命令で64ビットのマルチメディアオペランドに使用されます。
 
 ## <a name="syntax"></a>構文
 
-> MMWORD
+> **MMWORD**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`MMWORD` 型です。  MMWORD MASM に追加されている、前に同等の機能を獲得しましたでした。
+**Mmword**は型です。  **Mmword**が MASM に追加される前に、同等の機能がによって実現されました。
 
 ```asm
     mov mm0, qword ptr [ebx]
 ```
 
-両方の手順については、64 ビットのオペランドで作業中に`QWORD`は 64 ビット符号なし整数の型と`MMWORD`は 64 ビットのマルチ メディア値の型です。
+どちらの命令も64ビットオペランドで動作しますが、 **QWORD**は64ビット符号なし整数の型であり、 **mmword**は64ビットマルチメディア値の型です。
 
-`MMWORD` 同じ型を表すために、 [_ _m64](../../cpp/m64.md)します。
+**Mmword**は[__m64](../../cpp/m64.md)と同じ型を表すことを目的としています。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```asm
     movq     mm0, mmword ptr [ebx]
 ```
+
+## <a name="see-also"></a>参照
+
+[MASM BNF 文法](masm-bnf-grammar.md)

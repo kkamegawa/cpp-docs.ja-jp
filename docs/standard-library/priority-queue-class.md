@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333216"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458425"
 ---
 # <a name="priorityqueue-class"></a>priority_queue クラス
 
@@ -40,20 +40,20 @@ class priority_queue
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*各種*\
 priority_queue に格納される要素のデータ型。
 
-*コンテナー*<br/>
+*コンテナー*\
 priority_queue を実装するために使用する基になるコンテナーの型。
 
-*Compare*<br/>
+*対照*\
 2 つの要素の値を並べ替えキーとして比較して、priority_queue 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 `less<typename Container::value_type>` です。
 
 ## <a name="remarks"></a>Remarks
 
-クラスの要素`Type`最初のテンプレートで規定されているキュー オブジェクトのパラメーター [value_type](#value_type)基になるコンテナー クラス内の要素の型に一致する必要がありますと`Container`によって規定、2 番目のテンプレート パラメーター。 `Type`その型のオブジェクトをコピーして、その型の変数に値を割り当てることができるように、割り当てることがあります。
+Queue オブジェクトの最初`Type`のテンプレートパラメーターで指定されるクラスの要素は[value_type](#value_type)と同義であり、2つ目のテンプレートによって指定`Container`される、基になるコンテナークラスの要素の型と一致している必要があります。引き. その`Type`型のオブジェクトをコピーし、その型の変数に値を割り当てることができるように、は割り当て可能である必要があります。
 
-Priority_queue がクラスの格納されている関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます`Traits`します。 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。
+Priority_queue は、クラス`Traits`の格納されている関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。
 
 priority_queue に適した基になるコンテナー クラスには、[deque クラス](../standard-library/deque-class.md)および既定の [vector クラス](../standard-library/vector-class.md)、または `front`、`push_back`、および `pop_back` の各操作をサポートするその他すべてのシーケンス コンテナーがあります。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
 
@@ -242,28 +242,28 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>パラメーター
 
-*_comp*<br/>
+*カンプ (_s)* \
 priority_queue 内の要素の並べ替えに使用される、**constTraits** 型の比較関数。既定では基本コンテナーの関数を比較します。
 
-*_Cont*<br/>
+*続き*\
 構築された priority_queue がコピーになる元の基本コンテナー。
 
-*right*<br/>
+*そうです*\
 構築される set のコピー元となる priority_queue。
 
-*first*<br/>
+*まずは*\
 コピーする要素範囲内の最初の要素の位置。
 
-*last*<br/>
+*前の*\
 コピーする要素範囲を超える最初の要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
-空の初期 priority_queue を 2 つ目も指定して、比較関数の型の最初の 3 つのコンス トラクターを指定します (`comp`) と、3 番目の要素の順序を明示的に確立するため、を指定する`container_type`(`_Cont`) を使用します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
+最初の3つの各コンストラクターは、空の初期 priority_queue を指定します。2番目の`comp`コンストラクターは、要素の順序を確立するために使用する比較関数の型 () も指定し、3番目のコンストラクターはを明示的に指定`container_type`します。(`_Cont`) を使用します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
 
-4 番目のコンス トラクターには、priority_queue のコピーを示す*右*します。
+4番目のコンストラクターは、priority_queue*権限*のコピーを指定します。
 
-最後の 3 つのコンス トラクターは、範囲をコピー \[*最初*、*最後*) 一部のコンテナーの種類を指定するときになるほど、priority_queue を初期化するために、値を使用クラスの比較関数`Traits`と`container_type`します。
+最後の3つのコンストラクターは\[、いくつかのコンテナーの*最初*の範囲をコピーし、その値を使用して priority_queue を初期化し*ます。* 下`Traits`は、クラスの比較関数の型を指定します`container_type`。
 
 ### <a name="example"></a>例
 
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 priority_queue の最上位に追加された要素。
 
 ### <a name="remarks"></a>Remarks
@@ -492,7 +492,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>戻り値
 
-によって決定される最大の要素への参照、`Traits`関数、priority_queue のオブジェクト。
+Priority_queue のオブジェクトによって`Traits`決定される最大の要素への参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

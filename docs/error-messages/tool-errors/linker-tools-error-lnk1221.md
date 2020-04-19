@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1221
 ms.assetid: 70654bf9-1520-4fa3-a063-1219dd88abf7
 ms.openlocfilehash: 99e2354a45b6f0d5cfcd1dece2b705ba1c88ca16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242709"
 ---
 # <a name="linker-tools-error-lnk1221"></a>リンカ ツール エラー LNK1221
 

@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-ms.openlocfilehash: 44f7988f9fedb882972b2823f2fe70d9512d4e87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d2ea3677d883fa4843c37a41d733872b23cbba0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484787"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760674"
 ---
 # <a name="compiler-error-c2801"></a>コンパイラ エラー C2801
 
-'operator 演算子' は非静的メンバーである必要があります。
+' operator operator ' は静的でないメンバーでなければなりません
 
-非静的メンバーとしてのみ、次の演算子をオーバー ロードできます。
+次の演算子は、非静的メンバーとしてのみオーバーロードできます。
 
-- 割り当て `=`
+- 割り当ての `=`
 
-- クラス メンバーへのアクセス `->`
+- クラスメンバーアクセス `->`
 
-- 添字演算子 `[]`
+- 時 `[]`
 
 - 関数呼び出し `()`
 
-C2801 の考えられる原因:
+考えられる C2801 原因:
 
-- オーバー ロードされた演算子は、クラス、構造体または共用体のメンバーではありません。
+- オーバーロードされた演算子は、クラス、構造体、または共用体のメンバーではありません。
 
-- オーバー ロードされた演算子が宣言されて`static`します。
+- オーバーロードされた演算子は `static`として宣言されます。
 
 - 次の例では、C2801 が生成されます。
 
-```
+```cpp
 // C2801.cpp
 // compile with: /c
 operator[]();   // C2801 not a member

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: e483ece1019d4a8203215eddbc4d3b9d545328a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409637"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -54,7 +54,7 @@ ms.locfileid: "50663196"
 
 ## <a name="remarks"></a>Remarks
 
-**Event_receiver** C++ 属性は、クラスまたは構造体を適用するによって Visual C の統一イベント モデルを使用して、イベント レシーバーがなることを指定します。
+**Event_receiver** C++属性は、クラスまたは構造体を適用するによって、ビジュアルを使用して、イベント レシーバーがなることを指定しますC++統一イベント モデル。
 
 **event_receiver**を併用、 [event_source](event-source.md)属性と[_ _hook](../../cpp/hook.md)と[_ _unhook](../../cpp/unhook.md)キーワード。 使用`event_source`イベント ソースを作成します。 使用 **_ _hook**にイベント ソースのイベントをイベント レシーバー メソッドを (「フック」) を関連付けるイベント レシーバーのメソッド内で。 使用 **_ _unhook**の関連付けを解除しています。
 

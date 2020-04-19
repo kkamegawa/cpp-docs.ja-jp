@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: 242c55cfa6b62e49aa5b73de0aa1a353c16827f9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517736"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452589"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point クラス
 
@@ -27,14 +27,14 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*が浮動小数点型または`cv-qualified`形式の浮動小数点型、それ以外の場合は false を保持します。
+型*Ty*が浮動小数点型または`cv-qualified`浮動小数点型の形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-A の 1 つは、浮動小数点型**float**、**二重**、または**long double**します。
+浮動小数点型は、 **float**、 **double**、または**long double**のいずれかです。
 
 ## <a name="example"></a>例
 
@@ -76,5 +76,5 @@ is_floating_point<float> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_integral クラス](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_integral クラス](../standard-library/is-integral-class.md)

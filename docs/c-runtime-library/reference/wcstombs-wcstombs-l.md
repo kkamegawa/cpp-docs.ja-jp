@@ -1,10 +1,10 @@
 ---
 title: wcstombs、_wcstombs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcstombs
 - _wcstombs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs
 - _wcstombs_l
@@ -29,14 +33,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: 0396230454636759f58881a44a5ef7f7093415fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573564"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945122"
 ---
-# <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
+# <a name="wcstombs-_wcstombs_l"></a>wcstombs、_wcstombs_l
 
 ワイド文字のシーケンスを、対応するマルチバイト文字のシーケンスに変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[wcstombs_s、_wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)」をご覧ください。
 
@@ -85,19 +89,19 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**wcstombs**マルチバイト文字列を正常に変換 (ある場合)、終端の null を除く、マルチバイト出力文字列に書き込まれたバイト数を返します。 場合、 *mbstr*引数が**NULL**、 **wcstombs**対象文字列のバイト単位で必要なサイズを返します。 場合**wcstombs**マルチバイト文字に変換できないワイド文字が検出された型にキャストする-1 を返します**size_t**設定と**errno**に**EILSEQ**.
+**Wcstombs**がマルチバイト文字列を正常に変換した場合は、終端の null (存在する場合) を除いて、マルチバイト出力文字列に書き込まれたバイト数を返します。 *Mbstr*引数が**NULL**の場合、 **wcstombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。 **Wcstombs**がマルチバイト文字に変換できないワイド文字を検出した場合、型**size_t**にキャストされた-1 を返し、 **errno**を**EILSEQ**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Wcstombs**関数が指すワイド文字の文字列に変換*wcstr*に対応するマルチバイト文字の文字し、に結果を格納、 *mbstr*配列。 *カウント*パラメーターはマルチバイト出力文字列に格納できるバイトの最大数を示します (のサイズは、 *mbstr*)。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 (ワイド文字の null を含む) 入力文字列内のすべてのワイド文字をマルチバイト出力文字列に 2 バイトがある場合は、結果を必ず収まります。
+**Wcstombs**関数は、 *wcstr*が指すワイド文字列を対応するマルチバイト文字に変換し、結果を*mbstr*配列に格納します。 *Count*パラメーターは、マルチバイト出力文字列 (つまり、 *mbstr*のサイズ) に格納できる最大バイト数を示します。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 入力文字列内のワイド文字ごとに、マルチバイト出力文字列に2バイト (ワイド文字の null を含む) がある場合、結果は確実に一致します。
 
-場合**wcstombs**前に、かワイド文字の null 文字 (L '\0') が発生した*カウント*発生するに変換する 8 ビット 0 して停止します。 したがって、マルチバイト文字の文字列*mbstr*が null で終わる場合にのみ**wcstombs**変換中にワイド文字の null 文字を検出するとします。 によって、シーケンスを指している場合*wcstr*と*mbstr*の動作が重なる**wcstombs**が定義されていません。
+**Wcstombs**が、 *count*の前または後に、ワイド文字の null 文字 (L ' \ 0 ') を検出すると、それを8ビットの0に変換して停止します。 このため、 *mbstr*のマルチバイト文字列は、 **wcstombs**が変換中にワイド文字の null 文字を検出した場合にのみ、null で終了します。 *Wcstr*と*mbstr*が指すシーケンスが重なり合う場合、 **wcstombs**の動作は未定義になります。
 
-場合、 *mbstr*引数が**NULL**、 **wcstombs**対象文字列のバイト単位で必要なサイズを返します。
+*Mbstr*引数が**NULL**の場合、 **wcstombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。
 
-**wcstombs**パラメーターを検証します。 場合*wcstr*は**NULL**、または*カウント*がより大きい**INT_MAX**、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL** -1 を返します。
+**wcstombs**は、そのパラメーターを検証します。 *Wcstr*が**NULL**の場合、または*count*が**INT_MAX**より大きい場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
-**wcstombs**ロケールに依存する動作に現在のロケールを使用 **_wcstombs_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wcstombs**は、ロケールに依存する動作に現在のロケールを使用します。 **_wcstombs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -112,7 +116,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="example"></a>例
 
-このプログラムの動作を示しています、 **wcstombs**関数。
+このプログラムは、 **wcstombs**関数の動作を示しています。
 
 ```C
 // crt_wcstombs.c
@@ -160,4 +164,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

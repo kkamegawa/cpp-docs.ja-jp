@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 9d83cae79b257c9ddfc6d9ab910bb5502ae78307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148264"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50559693"
 
 ## <a name="remarks"></a>Remarks
 
-**Com_interface_entry** C++ 属性は、ターゲット オブジェクトの COM インターフェイス マップに unabridged 文字の文字列の内容を挿入します。 属性は、ターゲット オブジェクトに 1 回適用されている場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトを繰り返し適用されている場合、エントリが受信される順序でインターフェイス マップの先頭に挿入されます。
+**Com_interface_entry** C++属性は、ターゲット オブジェクトの COM インターフェイス マップに unabridged 文字の文字列の内容を挿入します。 属性は、ターゲット オブジェクトに 1 回適用されている場合、エントリは、既存のインターフェイス マップの先頭に挿入されます。 属性は、同じターゲット オブジェクトを繰り返し適用されている場合、エントリが受信される順序でインターフェイス マップの先頭に挿入されます。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
 
@@ -103,7 +103,7 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 

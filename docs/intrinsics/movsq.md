@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 06f42befa24d4024b3ad4b0c0a8d0897cb2aee9b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326369"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217264"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Microsoft 固有の仕様**
 
-繰り返しの移動の文字列が生成されます (`rep movsq`) 命令。
+繰り返しの移動文字列 (`rep movsq`) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*ソース*<br/>
-[in]操作のソース。
+*Source*\
+から操作のソース。
 
-*カウント*<br/>
-[in]コピーする (クワドワード)。 の数。
+*数*\
+からコピーする quadwords の数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-その結果、最初の`Count`によって示される (クワドワード)。`Source`にコピーされます、`Dest`文字列。
+結果として、*ソース*によってポイントされている最初の*カウント*Quadwords が、コピー*先*の文字列にコピーされます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>

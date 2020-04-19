@@ -1,38 +1,36 @@
 ---
 title: 初期化子
-ms.date: 11/19/2018
+ms.date: 07/29/2019
+description: でC++クラス、構造体、配列、および基本型を初期化する方法について説明します。
 helpviewer_keywords:
-- array-element initializers
-- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
-- declarators, as initializers
-- initializers, array element
+- aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176290"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123969"
 ---
 # <a name="initializers"></a>初期化子
 
 初期化子は変数の初期値を指定します。 変数は次のコンテキストで初期化できます。
 
-- 変数の定義内: 
+- 変数の定義内:
 
     ```cpp
     int i = 3;
     Point p1{ 1, 2 };
     ```
 
-- 関数のいずれかのパラメーターとして: 
+- 関数のいずれかのパラメーターとして:
 
     ```cpp
     set_point(Point{ 5, 6 });
     ```
 
-- 関数の戻り値として: 
+- 関数の戻り値として:
 
     ```cpp
     Point get_new_point(int x, int y) { return { x, y }; }
@@ -83,11 +81,11 @@ ms.locfileid: "52176290"
 
 - 数値変数は 0 (0.0 や 0.0000000000 など) に初期化されます。
 
-- Char 型の変数に初期化される`'\0'`します。
+- Char 変数は `'\0'`に初期化されます。
 
-- 初期化されたポインターは**nullptr**します。
+- ポインターは**nullptr**に初期化されます。
 
-- 配列、[ポッド](../standard-library/is-pod-class.md)クラス、構造体、および共用体があるそのメンバーの値をゼロに初期化します。
+- 配列、[ポッド](../standard-library/is-pod-class.md)クラス、構造体、および共用体のメンバーは、ゼロ値に初期化されます。
 
 ゼロ初期化は次のさまざまなタイミングで行われます。
 
@@ -116,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a> 既定値初期化
+### <a name="default_initialization"></a>既定の初期化
 
-クラス、構造体、共用体の既定値初期化は、既定のコンストラクターによる初期化です。 初期化式なしで、既定のコンス トラクターを呼び出すことができます、**新しい**キーワード。
+クラス、構造体、共用体の既定値初期化は、既定のコンストラクターによる初期化です。 既定のコンストラクターは、初期化式なしで、または**new**キーワードを使用して呼び出すことができます。
 
 ```cpp
 MyClass mc1;
@@ -175,7 +173,7 @@ int main() {
 }
 ```
 
-グローバルな静的オブジェクトの初期化の詳細については、次を参照してください。[追加の起動に関する考慮事項](../cpp/additional-startup-considerations.md)します。
+グローバルな静的オブジェクトの初期化の詳細については、「 [main 関数とコマンドライン引数](main-function-command-line-args.md)」を参照してください。
 
 ### <a name="value-initialization"></a>値の初期化
 
@@ -185,7 +183,7 @@ int main() {
 
 - 匿名の一時オブジェクトが空の丸かっこまたは中かっこを使用して初期化される。
 
-- オブジェクトが初期化されて、**新しい**キーワードと空のかっこまたは中かっこ
+- **new**キーワードと空のかっこまたは中かっこを使用してオブジェクトが初期化されます。
 
 値の初期化では次の処理が実行されます。
 
@@ -226,7 +224,7 @@ int main() {
 
 - 非静的データ メンバーが等号を使用して初期化される。
 
-- クラス、構造体、共用体のメンバーが集約の初期化時にコピー初期化によって初期化される。 参照してください[集約の初期化](#agginit)例についてはします。
+- クラス、構造体、共用体のメンバーが集約の初期化時にコピー初期化によって初期化される。 例については、「[集計の初期化](#agginit)」をご覧ください。
 
 次のコードは、コピー初期化のいくつかの例を示しています。
 
@@ -276,9 +274,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - 変数が空でない中かっこまたは丸かっこを使用して初期化される。
 
-- 変数が初期化される、**新しい**キーワードの空でない中かっこまたはかっこ
+- **new**キーワードと空でない中かっこまたはかっこを使用して変数が初期化されています
 
-- 変数が初期化される**static_cast**
+- 変数が**static_cast**で初期化されています
 
 - コンストラクターで、基底クラスと非静的メンバーが初期化子リストを使用して初期化される。
 
@@ -319,7 +317,7 @@ int main(){
 
 - 変数が初期化される。
 
-- クラスの初期化、**新しい**キーワード
+- クラスは、 **new**キーワードを使用して初期化されます。
 
 - オブジェクトが関数から返される。
 
@@ -364,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a> 集約の初期化
+### <a name="agginit"></a>集計の初期化
 
 集約の初期化は、リストの初期化の一形態であり、次のような配列またはクラス型 (多くの場合は構造体や共用体) に使用されます。
 
@@ -377,7 +375,7 @@ int main() {
 - 仮想メンバー関数がない。
 
 > [!NOTE]
-> <!--conformance note-->Visual Studio 2015 以降では、非静的メンバーの中かっこまたは等号の初期化子を持つには、集計は許可されません。 この制限は、c++ 14 標準では削除され、Visual Studio 2017 で実装されました。
+> <!--conformance note-->Visual Studio 2015 以前では、非静的メンバーに対して、中かっこまたは等号の初期化子を集計に使用することはできません。 この制限は、C++ 14 標準では削除されており、Visual Studio 2017 で実装されています。
 
 次の例のように、集約の初期化子は、中かっこで囲まれた初期化子リストで構成しています。等号は使用してもしなくてもかまいません。
 
@@ -390,9 +388,14 @@ struct MyAggregate{
     char myChar;
 };
 
+struct MyAggregate2{
+    int myInt;
+    char myChar = 'Z'; // member-initializer OK in C++14
+};
+
 int main() {
     MyAggregate agg1{ 1, 'c' };
-
+    MyAggregate2 agg2{2};
     cout << "agg1: " << agg1.myChar << ": " << agg1.myInt << endl;
     cout << "agg2: " << agg2.myChar << ": " << agg2.myInt << endl;
 
@@ -414,17 +417,17 @@ int main() {
 }
 ```
 
-次の出力が表示されます。
+以下の出力が表示されます。
 
 ```Output
 agg1: c: 1
-agg2: d: 2
+agg2: Z: 2
 myArr1: 1 2 3 4
 myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 配列のメンバーが宣言されているが集約の初期化中に明示的に初期化をように、ゼロに初期化`myArr3`上。
+> 前の `myArr3` のように、宣言されているが、集計初期化中に明示的に初期化されていない配列メンバーはゼロ初期化されます。
 
 #### <a name="initializing-unions-and-structs"></a>共用体と構造体の初期化
 
@@ -477,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>参照の初期化
 
-参照型の変数は、参照型の派生元のオブジェクト型、または参照型の派生元の型に変換できるオブジェクト型により初期化する必要があります。 例えば:
+参照型の変数は、参照型の派生元のオブジェクト型、または参照型の派生元の型に変換できるオブジェクト型により初期化する必要があります。 例:
 
 ```cpp
 // initializing_references.cpp
@@ -502,25 +505,25 @@ reference-type 変数の初期化と reference-type 変数の代入は、構文�
 
 Reference-type 変数は、以下の場合にのみ初期化子なしで宣言できます。
 
-- 関数宣言 (プロトタイプ)。 例えば:
+- 関数宣言 (プロトタイプ)。 例:
 
     ```cpp
     int func( int& );
     ```
 
-- Function-return 型宣言。 例えば:
+- Function-return 型宣言。 例:
 
     ```cpp
     int& func( int& );
     ```
 
-- reference-type クラス メンバーの宣言。 例えば:
+- reference-type クラス メンバーの宣言。 例:
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- として明示的に指定された変数の宣言**extern**します。 例えば:
+- **Extern**として明示的に指定された変数の宣言。 例:
 
     ```cpp
     extern int& iVal;
@@ -528,13 +531,13 @@ Reference-type 変数は、以下の場合にのみ初期化子なしで宣言�
 
 reference-type 変数を初期化する場合、コンパイラではオブジェクトに対する参照の作成、または参照先の一時オブジェクトの作成のいずれかを選択するために、次の図に示す判定グラフを使用します。
 
-![参照型の初期化の判定グラフ](../cpp/media/vc38s71.gif "参照型の初期化の判定グラフ") <br/>
-参照型の初期化の判定グラフ
+![参照型の初期化のためのデシジョングラフ](../cpp/media/vc38s71.gif "参照型の初期化のためのデシジョングラフ") <br/>
+参照型の初期化のためのデシジョングラフ
 
-参照**揮発性**型 (として宣言されている**揮発性** *typename* <strong>&</strong> *の識別子*)初期化できます**揮発性**オブジェクトとして宣言されていないオブジェクトと同じ型の**揮発性**します。 できませんただしで初期化する同じ**const**その型のオブジェクト。 同様への参照**const**型 (として宣言されている**const** *typename* <strong>&</strong> *識別子*) で初期化できます**const**同じ型のオブジェクト (またはとして宣言されていないオブジェクト、またはその型に変換が含まれている**const**)。 できませんただしで初期化する同じ**揮発性**その型のオブジェクト。
+Volatile 型 ( **volatile** *typename* <strong>&</strong> *identifier* **) への**参照は、同じ型の**volatile**オブジェクト、または**volatile**として宣言されていないオブジェクトを使用して初期化できます。 ただし、その型の**const**オブジェクトを使用して初期化することはできません。 同様に、const**型への**参照 ( **const** *typename* <strong>&</strong> *identifier*として宣言) は、同じ型の**const**オブジェクト (または、その型への変換または**const**として宣言されていないオブジェクトによる変換を含むすべてのオブジェクト) を使用して初期化できます。 ただし、その型の**volatile**オブジェクトを使用して初期化することはできません。
 
-いずれかで修飾されていない参照、 **const**または**揮発性**キーワードはいずれも宣言されているオブジェクトでのみ初期化できます**const**も**揮発性**します。
+**Const**または**volatile**キーワードで修飾されていない参照は、 **const**および**volatile**として宣言されたオブジェクトでのみ初期化できます。
 
 ### <a name="initialization-of-external-variables"></a>外部変数の初期化
 
-自動、static、および外部変数の宣言は、初期化子を含めることができます。 ただし、外部変数の宣言は初期化子を含めるとして変数が宣言されていない場合にのみ**extern**します。
+自動変数、静的変数、外部変数の宣言には初期化子を含めることができます。 ただし、外部変数の宣言には、変数が**extern**として宣言されていない場合にのみ、初期化子を含めることができます。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322983"
 ---
 # <a name="delegate-and-interface-map-macros"></a>デリゲートとインターフェイス マップ マクロ
 
@@ -50,10 +50,6 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** msclr\event.h
-
-### <a name="see-also"></a>関連項目
-
-[方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
@@ -102,17 +98,13 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 このデリゲートは、コマンド ソース、コールバック メソッドを登録します。 コマンド ソース オブジェクトにデリゲートを追加すると、コールバック メソッドには、指定したソースからのコマンドのハンドラーになります。
 
-詳細については、次を参照してください。[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
+詳細については、「[方法 :コマンドの追加フォーム コントロールを Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
-
-### <a name="see-also"></a>関連項目
-
-[方法: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>CommandUIHandler
 
@@ -142,11 +134,6 @@ Windows フォームの使用に関する詳細については、次を参照し
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
-### <a name="see-also"></a>関連項目
-
-[方法: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 デリゲートのマップを終了します。
@@ -165,10 +152,6 @@ END_DELEGATE_MAP();
 
 **ヘッダー:** msclr\event.h
 
-### <a name="see-also"></a>関連項目
-
-[方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 実装ファイルのインターフェイス マップを終了します。
@@ -186,11 +169,6 @@ END_INTERFACE_MAP( )
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
@@ -219,7 +197,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="example"></a>例
 
-次のコード例は、EVENT_DELEGATE_ENTRY を使用して、デリゲートのマップのエントリを作成する方法を示しています、`OnClick`イベント ハンドラー。 また MAKE_DELEGATE のコード例を参照してください。 詳細については、次を参照してください。[方法: ネイティブの C++ クラスから Windows フォーム イベントをシンク](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)します。
+次のコード例は、EVENT_DELEGATE_ENTRY を使用して、デリゲートのマップのエントリを作成する方法を示しています、`OnClick`イベント ハンドラー。 また MAKE_DELEGATE のコード例を参照してください。 詳細については、「[方法 :ネイティブ C++ クラスから Windows フォーム イベントをシンク](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)します。
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** msclr\event.h
-
-### <a name="see-also"></a>関連項目
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -278,7 +250,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="parameters"></a>パラメーター
 
-*デリゲート*<br/>
+*DELEGATE*<br/>
 管理対象のイベント ハンドラーの型を委任するよう[EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True)します。
 
 *メンバー*<br/>
@@ -290,7 +262,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="example"></a>例
 
-次のコード例は、呼び出す方法を示しています。`MAKE_DELEGATE`をアタッチする、 `OnClick` MFC コントロールにイベント ハンドラーを`MyControl`します。 MFC アプリケーションでこのマクロのしくみの広範な説明については、次を参照してください。[方法: ネイティブの C++ クラスから Windows フォーム イベントをシンク](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)します。
+次のコード例は、呼び出す方法を示しています。`MAKE_DELEGATE`をアタッチする、 `OnClick` MFC コントロールにイベント ハンドラーを`MyControl`します。 MFC アプリケーションでこのマクロのしくみの広範な説明については、次を参照してください。[方法。ネイティブ C++ クラスから Windows フォーム イベントをシンク](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)します。
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **ヘッダー:** msclr\event.h
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[方法: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[マクロとグローバル](mfc-macros-and-globals.md)<br/>

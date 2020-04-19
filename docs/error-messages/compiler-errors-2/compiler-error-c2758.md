@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2758
+title: コンパイラエラー C2758
 ms.date: 11/04/2016
 f1_keywords:
 - C2758
 helpviewer_keywords:
 - C2758
 ms.assetid: 1d273034-194c-4926-9869-142d1b219cbe
-ms.openlocfilehash: c3a86b8b8c7f122929a52221d4f01a17c50395be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c854aeff1c57b8be6b445bc3615008519ca00af7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759517"
 ---
-# <a name="compiler-error-c2758"></a>コンパイラ エラー C2758
+# <a name="compiler-error-c2758"></a>コンパイラエラー C2758
 
 'member': 参照型のメンバーは初期化する必要があります
 
@@ -21,7 +21,7 @@ ms.locfileid: "50618033"
 
 次の例では C2758 エラーが生成されます。
 
-```
+```cpp
 // C2758.cpp
 // Compile by using: cl /W3 /c C2758.cpp
 struct A {

@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2698
+title: コンパイラエラー C2698
 ms.date: 11/04/2016
 f1_keywords:
 - C2698
 helpviewer_keywords:
 - C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
-ms.openlocfilehash: f643b7d8c035b4d1d7d8806feb5b121cf76d7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6129ff691f804b31fdb8cb487ac4609e4bca6ef2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651910"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755188"
 ---
-# <a name="compiler-error-c2698"></a>コンパイラ エラー C2698
+# <a name="compiler-error-c2698"></a>コンパイラエラー C2698
 
-使用して、宣言には、' 1' の宣言は、既存の using 宣言用と共存できません ' 2' の宣言
+' 宣言 1 ' の using 宣言は、' 宣言 2 ' の既存の using 宣言と共存することはできません
 
-作成したら、[宣言を使用して](../../cpp/using-declaration.md)すべてを使用して、データ メンバー関数のみをオーバー ロードできるよう、同じ名前を使用して、同じスコープ内宣言は許可されませんが。
+データメンバーに[using 宣言](../../cpp/using-declaration.md)を使用すると、同じ名前を使用する同じスコープ内のすべての using 宣言は許可されません。これは、関数だけがオーバーロードされるためです。
 
 次の例では、C2698 が生成されます。
 
-```
+```cpp
 // C2698.cpp
 struct A {
    int x;

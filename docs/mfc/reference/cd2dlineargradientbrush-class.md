@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348628"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush クラス
 
@@ -74,7 +74,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|返します ID2D1LinearGradientBrush インターフェイス|
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|返します ID2D1LinearGradientBrush インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -153,7 +153,7 @@ GradientStops 配列内のグラデーションの分岐点の数を指定する
 *colorInterpolationGamma*<br/>
 グラデーションの分岐点間の補間を実行する色で領域。
 
-*オン*<br/>
+*extendMode*<br/>
 [0, 1] の正規化された範囲外のグラデーションの動作です。
 
 *pBrushProperties*<br/>
@@ -251,7 +251,7 @@ ID2D1LinearGradientBrush へのポインター。
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *
+##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
 
 返します ID2D1LinearGradientBrush インターフェイス
 

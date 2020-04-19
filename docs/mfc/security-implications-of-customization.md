@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security, MFC Feature Pack
 - MFC Feature Pack, security
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
-ms.openlocfilehash: cdb8e0d39a76f749011ca3c680e25b86212b6519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9164983a6634e069195f3498bea56b595a2a2381
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308473"
 ---
 # <a name="security-implications-of-customization"></a>カスタマイズによるセキュリティへの影響
 
@@ -35,4 +35,3 @@ MFC で、ユーザーは、ボタンとアイコンの外観など、アプリ�
 ## <a name="see-also"></a>関連項目
 
 [MFC のカスタマイズ](../mfc/customization-for-mfc.md)
-

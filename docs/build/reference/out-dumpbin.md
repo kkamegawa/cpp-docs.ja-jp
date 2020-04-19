@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OUT dumpbin option
 - -OUT dumpbin option
 ms.assetid: 984f9ab6-685f-480b-a515-69abe9d83a65
-ms.openlocfilehash: be88bfe232d3c4cb0aa296f9180cfd8ff8e7e6ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f102a6bd43424f3d0e0f607bc9038d9ab351768
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320124"
 ---
 # <a name="out-dumpbin"></a>/OUT (DUMPBIN)
 
@@ -25,8 +25,8 @@ ms.locfileid: "50556378"
 
 このオプションを指定します、 *filename*出力します。 、既定では、DUMPBIN は標準出力に情報を表示します。
 
-のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+[DUMPBIN オプション](dumpbin-options.md)

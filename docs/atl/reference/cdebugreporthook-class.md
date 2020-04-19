@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7187448b2ba2c9d3ab0399aa3e75ce8d757bfec1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551490"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496770"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook クラス
 
-このクラスを使用すると、名前付きパイプにデバッグ レポートを送信します。
+このクラスを使用して、デバッグレポートを名前付きパイプに送信します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,34 +36,34 @@ class CDebugReportHook
 
 |名前|説明|
 |----------|-----------------|
-|[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|呼び出し[SetPipeName](#setpipename)、 [SetTimeout](#settimeout)、および[SetHook](#sethook)します。|
-|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|呼び出し[CDebugReportHook::RemoveHook](#removehook)します。|
+|[CDebugReportHook:: CDebugReportHook](#cdebugreporthook)|[Setpipename](#setpipename)、 [SetTimeout](#settimeout)、および[sethook](#sethook)を呼び出します。|
+|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|[Cdebugreporthook:: RemoveHook](#removehook)を呼び出します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(静的)C ランタイム デバッグ レポート プロセスにフックされます。 カスタム レポート関数。|
-|[CDebugReportHook::RemoveHook](#removehook)|名前付きパイプへのデバッグ レポートの送信を停止するには、このメソッドを呼び出すし、前のレポート用のフックを復元します。|
-|[CDebugReportHook::SetHook](#sethook)|名前付きパイプのデバッグ レポートの送信を開始するには、このメソッドを呼び出します。|
-|[CDebugReportHook::SetPipeName](#setpipename)|コンピューターとは、デバッグ レポートを送信するパイプの名前を設定するには、このメソッドを呼び出します。|
-|[CDebugReportHook::SetTimeout](#settimeout)|このクラスで使用可能になる名前付きパイプが待機するミリ秒単位で時間を設定するには、このメソッドを呼び出します。|
+|[CDebugReportHook:: CDebugReportHookProc](#cdebugreporthookproc)|雑音C ランタイムデバッグレポートプロセスにフックされるカスタムレポート関数。|
+|[CDebugReportHook::RemoveHook](#removehook)|名前付きパイプへのデバッグレポートの送信を停止し、以前のレポートフックを復元するには、このメソッドを呼び出します。|
+|[CDebugReportHook:: SetHook](#sethook)|このメソッドを呼び出して、名前付きパイプへのデバッグレポートの送信を開始します。|
+|[CDebugReportHook:: SetPipeName](#setpipename)|このメソッドを呼び出して、デバッグレポートが送信されるパイプのコンピューターと名前を設定します。|
+|[CDebugReportHook:: SetTimeout](#settimeout)|このメソッドを呼び出して、名前付きパイプが使用可能になるのをこのクラスが待機する時間をミリ秒単位で設定します。|
 
 ## <a name="remarks"></a>Remarks
 
-サービスまたは名前付きパイプにデバッグ レポートを送信するアプリケーションのデバッグ ビルドでは、このクラスのインスタンスを作成します。 デバッグ レポートが呼び出すことによって生成される[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)またはこの関数のラッパーをなどを使用して、 [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace)と[ATLASSERT](debugging-and-error-reporting-macros.md#atlassert)マクロ。
+サービスまたはアプリケーションのデバッグビルドで、このクラスのインスタンスを作成して、名前付きパイプにデバッグレポートを送信します。 デバッグレポートは、 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)を呼び出すか、または[atltrace](debugging-and-error-reporting-macros.md#atltrace)マクロや[ATLASSERT](debugging-and-error-reporting-macros.md#atlassert)マクロなどのこの関数のラッパーを使用して生成されます。
 
-このクラスの使用では、非対話型で実行されるコンポーネントを対話的にデバッグできます。[ウィンドウ ステーション](/windows/desktop/winstation/window-stations)します。
+このクラスを使用すると、対話型でない[ウィンドウステーション](/windows/win32/winstation/window-stations)で実行されているコンポーネントを対話的にデバッグできます。
 
-スレッドの基になるセキュリティ コンテキストを使用してデバッグ レポートを送信することに注意してください。 デバッグ レポートを低い特権のユーザーの権限の借用が行わなどの web アプリケーションでの状況で表示するように、権限借用が一時的に無効にします。
+デバッグレポートは、スレッドの基になるセキュリティコンテキストを使用して送信されることに注意してください。 偽装は一時的に無効になっているので、web アプリケーションなど、低い特権のユーザーの権限借用が発生している状況でデバッグレポートを表示することができます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlutil.h
+**ヘッダー:** atlutil. h
 
-##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook
+##  <a name="cdebugreporthook"></a>CDebugReportHook:: CDebugReportHook
 
-呼び出し[SetPipeName](#setpipename)、 [SetTimeout](#settimeout)、および[SetHook](#sethook)します。
+[Setpipename](#setpipename)、 [SetTimeout](#settimeout)、および[sethook](#sethook)を呼び出します。
 
 ```
 CDebugReportHook(
@@ -75,17 +75,17 @@ CDebugReportHook(
 ### <a name="parameters"></a>パラメーター
 
 *szMachineName*<br/>
-デバッグ出力を送信するマシンの名前。 ローカル コンピューターに既定値です。
+デバッグ出力の送信先となるコンピューターの名前。 既定値はローカルコンピューターです。
 
 *szPipeName*<br/>
 デバッグ出力の送信先となる名前付きパイプの名前。
 
 *dwTimeout*<br/>
-このクラスで使用可能になる名前付きパイプが待機するミリ秒単位の時間。
+名前付きパイプが使用可能になるのをこのクラスが待機する時間 (ミリ秒単位)。
 
-##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
+##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook
 
-呼び出し[CDebugReportHook::RemoveHook](#removehook)します。
+[Cdebugreporthook:: RemoveHook](#removehook)を呼び出します。
 
 ```
 ~CDebugReportHook() throw();
@@ -93,7 +93,7 @@ CDebugReportHook(
 
 ##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc
 
-C ランタイム デバッグ レポート プロセスにフックされます。 カスタム レポート関数。
+C ランタイムデバッグレポートプロセスにフックされるカスタムレポート関数。
 
 ```
 static int __cdecl CDebugReportHookProc(
@@ -105,27 +105,27 @@ static int __cdecl CDebugReportHookProc(
 ### <a name="parameters"></a>パラメーター
 
 *reportType*<br/>
-(前述、_CRT_ERROR、または _CRT_ASSERT) レポートの種類。
+レポートの種類 (_CRT_WARN、_CRT_ERROR、または _CRT_ASSERT)。
 
 *message*<br/>
 メッセージ文字列。
 
-*戻り値*<br/>
-によって返される値[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)します。
+*returnValue*<br/>
+[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)によって返される値。
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、フックでメッセージを完全に処理さらにレポートを作成する必要はありませんようにに FALSE を返します。 場合に TRUE を返します`_CrtDbgReport`通常の方法でメッセージを報告する必要があります。
+フックが問題のメッセージを完全に処理して、それ以上のレポートが必要ない場合は、FALSE を返します。 が通常の`_CrtDbgReport`方法でメッセージを報告する場合は TRUE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-レポートの関数は、名前付きパイプを開くし、プロセスをもう一方の端との通信を試みます。 パイプがビジー状態の場合は、レポートの関数はパイプが無料か、タイムアウトが経過するまで待機します。 コンス トラクターまたはへの呼び出しによって、タイムアウトを設定できる[CDebugReportHook::SetTimeout](#settimeout)します。
+レポート関数は、名前付きパイプを開いて、もう一方の側のプロセスと通信しようとします。 パイプがビジー状態の場合、レポート関数はパイプが解放されるか、タイムアウトが経過するまで待機します。 タイムアウトは、コンストラクターまたは[Cdebugreporthook:: SetTimeout](#settimeout)の呼び出しによって設定できます。
 
-この関数のコードが呼び出し元のスレッドの基になるセキュリティ コンテキストで実行される、この関数の実行中、権限借用は、無効になっています。
+この関数のコードは、呼び出し元のスレッドの基になるセキュリティコンテキストで実行されます。つまり、この関数の間は偽装が無効になります。
 
 ##  <a name="removehook"></a>  CDebugReportHook::RemoveHook
 
-名前付きパイプへのデバッグ レポートの送信を停止するには、このメソッドを呼び出すし、前のレポート用のフックを復元します。
+名前付きパイプへのデバッグレポートの送信を停止し、以前のレポートフックを復元するには、このメソッドを呼び出します。
 
 ```
 void RemoveHook() throw();
@@ -133,11 +133,11 @@ void RemoveHook() throw();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)前のレポート用のフックを復元します。
+[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)を呼び出して、以前のレポートフックを復元します。
 
-##  <a name="sethook"></a>  CDebugReportHook::SetHook
+##  <a name="sethook"></a>CDebugReportHook:: SetHook
 
-名前付きパイプのデバッグ レポートの送信を開始するには、このメソッドを呼び出します。
+このメソッドを呼び出して、名前付きパイプへのデバッグレポートの送信を開始します。
 
 ```
 void SetHook() throw();
@@ -145,11 +145,11 @@ void SetHook() throw();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)デバッグ レポートを経由してルーティング[CDebugReportHookProc](#cdebugreporthookproc)名前付きパイプにします。 このクラスの追跡、前のレポート用のフックできるように復元するときに[RemoveHook](#removehook)が呼び出されます。
+[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)を呼び出して、 [Cdebugreporthookproc](#cdebugreporthookproc)経由で名前付きパイプにルーティングされるデバッグレポートを作成します。 このクラスは、 [Removehook](#removehook)が呼び出されたときに復元できるように、前のレポートフックを追跡します。
 
-##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName
+##  <a name="setpipename"></a>CDebugReportHook:: SetPipeName
 
-コンピューターとは、デバッグ レポートを送信するパイプの名前を設定するには、このメソッドを呼び出します。
+このメソッドを呼び出して、デバッグレポートが送信されるパイプのコンピューターと名前を設定します。
 
 ```
 BOOL SetPipeName(
@@ -160,18 +160,18 @@ BOOL SetPipeName(
 ### <a name="parameters"></a>パラメーター
 
 *szMachineName*<br/>
-デバッグ出力を送信するマシンの名前。
+デバッグ出力の送信先となるコンピューターの名前。
 
 *szPipeName*<br/>
 デバッグ出力の送信先となる名前付きパイプの名前。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout
 
-このクラスで使用可能になる名前付きパイプが待機するミリ秒単位で時間を設定するには、このメソッドを呼び出します。
+このメソッドを呼び出して、名前付きパイプが使用可能になるのをこのクラスが待機する時間をミリ秒単位で設定します。
 
 ```
 void SetTimeout(DWORD dwTimeout);
@@ -180,7 +180,7 @@ void SetTimeout(DWORD dwTimeout);
 ### <a name="parameters"></a>パラメーター
 
 *dwTimeout*<br/>
-このクラスで使用可能になる名前付きパイプが待機するミリ秒単位の時間。
+名前付きパイプが使用可能になるのをこのクラスが待機する時間 (ミリ秒単位)。
 
 ## <a name="see-also"></a>関連項目
 

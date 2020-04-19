@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2423
 ms.assetid: 8797fb8b-b58b-4add-b6e6-2a9a3cd9084d
-ms.openlocfilehash: 47598ac08c0f8b6b41d88daf9e1eb9f0ca00131b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29203d3816f82bce95be656fdf71cb6536b325b9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489922"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744668"
 ---
 # <a name="compiler-error-c2423"></a>コンパイラ エラー C2423
 
-'number': スケーリングが正しくありません
+' number ': 小数点以下桁数が正しくありません。
 
-インライン アセンブラー コードでは、1、2、4、または 8 以外の数値を使用して、レジスタのスケーリングします。
+インラインアセンブリコードは、1、2、4、または8以外の数値を使用してレジスタをスケーリングします。
 
 次の例では、C2423 が生成されます。
 
-```
+```cpp
 // C2423.cpp
 // processor: x86
 int main() {

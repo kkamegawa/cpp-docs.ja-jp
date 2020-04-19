@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2369
 ms.assetid: 2a3933f6-2313-40ff-800f-921b296fdbbf
-ms.openlocfilehash: 8abb9a7b8d15fa2dd9999612551a0d0da1e34e30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed7bcbf24ec7ef88ec12d83af4f08b12d56b347b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745760"
 ---
 # <a name="compiler-error-c2369"></a>コンパイラ エラー C2369
 
@@ -21,7 +21,7 @@ ms.locfileid: "50500467"
 
 次の例では C2369 が生成されます。
 
-```
+```cpp
 // C2369.cpp
 // compile with: /c
 int a[10];

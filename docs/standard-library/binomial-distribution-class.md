@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 1cbb7aff254cee848d711b22414b38deee8cfc07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512966"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688372"
 ---
-# <a name="binomialdistribution-class"></a>binomial_distribution クラス
+# <a name="binomial_distribution-class"></a>binomial_distribution クラス
 
 二項分布を生成します。
 
@@ -71,24 +71,24 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*<br/>
-整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Inttype* \
+整数の結果型、既定値は**int**です。使用できる型については、「 [\<random >](../standard-library/random.md)」を参照してください。
 
-*URNG*<br/>
-Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Urng* \
+均一乱数ジェネレーターエンジン。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**int**がない場合は、二項分布の離散確率関数に従って分散されます。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**int**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-プロパティ メンバー`t()`と`p()`格納されている分布パラメーター値を返す*t*と*p*それぞれします。
+プロパティメンバー `t()` と `p()` は、現在格納されている分布パラメーターの値*t*と*p*をそれぞれ返します。
 
-プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -96,9 +96,9 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) を参照してください。
+分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
 
-二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事「[二項分布](http://go.microsoft.com/fwlink/p/?linkid=398469)」を参照してください。
+二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事「[二項分布](https://go.microsoft.com/fwlink/p/?linkid=398469)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -225,7 +225,7 @@ Histogram for 100 samples:
     21 :
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -242,22 +242,22 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*t*<br/>
+*t* \
 `t` 分布パラメーター。
 
-*p*<br/>
+*p* \
 `p` 分布パラメーター。
 
-*parm*<br/>
+*parm* \
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
 
 **前提条件:** `0 ≤ t` および `0.0 ≤ p ≤ 1.0`
 
-最初のコンス トラクターは、オブジェクトを構築します。 あるストアド*p*値を保持*p*とがストアド*t*値を保持*t*します。
+1つ目のコンストラクターは、格納された*p*値が*p*の値を保持し、格納されている*t*値が値*t*を保持するオブジェクトを構築します。
 
-2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
 ## <a name="param_type"></a>  binomial_distribution::param_type
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*t*<br/>
+*t* \
 `t` 分布パラメーター。
 
-*p*<br/>
+*p* \
 `p` 分布パラメーター。
 
-*right*<br/>
+*右*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -294,4 +294,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

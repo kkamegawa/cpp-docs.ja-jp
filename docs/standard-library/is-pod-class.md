@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492239"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455759"
 ---
 # <a name="ispod-class"></a>is_pod クラス
 
@@ -27,12 +27,12 @@ struct is_pod;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-`is_pod<T>::value` **true**場合型*T*はプレーンな古いデータ (POD)。 それ以外の場合は**false**します。
+`is_pod<T>::value`*T*型が Plain Old DATA (POD) の場合、は**true**になります。 それ以外の場合は**false**になります。
 
 演算型、列挙型、ポインター型、およびメンバーへのポインター型は、POD です。
 
@@ -102,4 +102,4 @@ is_pod<throws> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4570
 ms.assetid: feec1225-e6ad-4995-8d96-c22e864a77bd
-ms.openlocfilehash: 1c92bd7f632ea6662c3cee1bcaa1dd0c917fb2a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13767cdbd34c72953568181c15ad33119bf5179a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661306"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991930"
 ---
 # <a name="compiler-warning-level-3-c4570"></a>コンパイラの警告 (レベル 3) C4570
 
-'type': 抽象ですが、抽象関数として明示的に宣言されていません
+' type ': は抽象として明示的に宣言されていませんが、抽象関数を含んでいます
 
-含む型[抽象](../../windows/abstract-cpp-component-extensions.md)関数は自体が abstract としてマークされました。
+[抽象](../../extensions/abstract-cpp-component-extensions.md)関数を含む型は、それ自体が abstract としてマークされている必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4570 が生成されます。
 
-```
+```cpp
 // C4570.cpp
 // compile with: /clr /W3 /c
 ref struct X {   // C4570

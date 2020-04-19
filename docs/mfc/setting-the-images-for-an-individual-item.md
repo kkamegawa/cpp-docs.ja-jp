@@ -5,40 +5,40 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-ms.openlocfilehash: 61e152534dbea09fbca0af819b0847e82a1c4146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177c06acfe665a43921b19407d9d357d4545e748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512074"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511277"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>各項目のイメージの設定
 
-拡張コンボ ボックスの項目で使用されるイメージのさまざまな種類は内の値によって決まります、*画像を*、 *iSelectedImage*、および*iOverlay* のメンバー[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)構造体。 各値は、コントロールの関連付けられているイメージ リスト内のイメージのインデックスです。 既定では、これらのメンバーを項目のイメージを表示しないコントロールの原因を 0 に設定されます。 特定の項目のイメージを使用する場合、コンボ ボックス アイテムを挿入する場合または既存のコンボ ボックス項目を変更することで状況に応じて、構造を変更することができます。
+拡張コンボボックス項目で使用されるさまざまな種類のイメージは、 [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw)構造体の*iImage*、 *iselectedimage*、および*iオーバーレイ*メンバーの値によって決定されます。 各値は、コントロールの関連付けられたイメージリスト内のイメージのインデックスです。 既定では、これらのメンバーは0に設定されているため、コントロールには項目のイメージが表示されません。 特定の項目に対してイメージを使用する場合は、コンボボックス項目を挿入するとき、または既存のコンボボックス項目を変更して、構造を適宜変更することができます。
 
 ## <a name="setting-the-image-for-a-new-item"></a>新しい項目のイメージの設定
 
-新しい項目を挿入する場合は、初期化、*画像を*、 *iSelectedImage*、および*iOverlay*への呼び出しを持つ項目を挿入し、適切な値を持つメンバーを構造体であり[CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem)します。
+新しい項目を挿入する場合は、適切な値を使用して*iImage*、 *iselectedimage*、および*iオーバーレイ*構造体のメンバーを初期化し、 [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem)への呼び出しを使用して項目を挿入します。
 
-次の例は、新しい拡張コンボ ボックス項目を挿入 (`cbi`) 拡張コンボ ボックス コントロールに (`m_comboEx`)、3 つのすべての状態のイメージのインデックスを指定します。
+次の例では、新しい拡張コンボボックス項目`cbi`() を拡張コンボボックスコントロール (`m_comboEx`) に挿入し、3つのイメージ状態すべてのインデックスを提供します。
 
 [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]
 
-## <a name="setting-the-image-for-an-existing-item"></a>既存の項目のイメージの設定
+## <a name="setting-the-image-for-an-existing-item"></a>既存の項目のイメージを設定する
 
-使用する必要がある既存の項目を変更する場合は、*マスク*のメンバー、**受け取る**構造体。
+既存のアイテムを変更する場合は、 **COMBOBOXEXITEM**構造体の*mask*メンバーを使用する必要があります。
 
-#### <a name="to-modify-an-existing-item-to-use-images"></a>イメージを使用する既存の項目を変更するには
+#### <a name="to-modify-an-existing-item-to-use-images"></a>既存の項目を変更してイメージを使用するには
 
-1. 宣言を**受け取る**構造体し、設定、*マスク*変更興味があるデータ メンバーの値にします。
+1. **COMBOBOXEXITEM**構造体を宣言し、変更対象の値に*mask*データメンバーを設定します。
 
-1. 呼び出しをこの構造体を使用して行う[CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem)します。
+1. この構造体を使用して、 [CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem)を呼び出します。
 
-1. 変更、*マスク*、*画像を*、および*iSelectedImage*適切な値を使用して、新しく返された構造体のメンバー。
+1. 適切な値を使用して、新しく返された構造体の*mask*、 *IImage*、および*iselectedimage*メンバーを変更します。
 
-1. 呼び出す[CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem)、変更された構造体に渡します。
+1. [CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem)を呼び出して、変更された構造体を渡します。
 
-次の例では、3 番目の拡張コンボ ボックス アイテムの選択と選択されていないイメージをスワップしてこの手順を示しています。
+次の例では、3番目の拡張コンボボックス項目の選択したイメージと選択されていないイメージをスワップすることにより、この手順を示します。
 
 [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]
 
@@ -46,4 +46,3 @@ ms.locfileid: "50512074"
 
 [CComboBoxEx の使い方](../mfc/using-ccomboboxex.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

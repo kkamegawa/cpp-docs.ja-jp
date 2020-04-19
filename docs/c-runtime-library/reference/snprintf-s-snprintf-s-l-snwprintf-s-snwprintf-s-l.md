@@ -1,12 +1,12 @@
 ---
 title: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snprintf_s
 - _snprintf_s_l
 - _snwprintf_s
 - _snwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,11 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snwprintf_s_l
 - _sntprintf_s_l
@@ -46,14 +50,14 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b95145a468d382ea63ef4d409c095ec217e42f1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560031"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948017"
 ---
-# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
+# <a name="_snprintf_s-_snprintf_s_l-_snwprintf_s-_snwprintf_s_l"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 
 文字列に書式付きデータを書き込みます。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) の説明にあるとおり、セキュリティが強化されたバージョンの [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) です。
 
@@ -112,7 +116,7 @@ int _snwprintf_s(
 出力の格納場所。
 
 *sizeOfBuffer*<br/>
-出力の格納場所のサイズ。 サイズ**バイト**の **_snprintf_s**サイズ、または**単語**の **_snwprintf_s**します。
+出力の格納場所のサイズ。 ( **Snprintf_s**の場合は**バイト**単位)、または**単語**単位のサイズ **(_t)** 。
 
 *count*<br/>
 格納する最大文字数、または [_TRUNCATE](../../c-runtime-library/truncate.md)。
@@ -128,26 +132,26 @@ int _snwprintf_s(
 
 ## <a name="return-value"></a>戻り値
 
-**_snprintf_s**で格納されている文字の数を返します*バッファー*、終端の null 文字を含みません。 **_snwprintf_s**で格納されるワイド文字の数を返します*バッファー*、終端の null ワイド文字を含みません。
+**snprintf_s**は、*バッファー*に格納されている文字数を返します。終端の null 文字はカウントされません。 **snwprintf_s**は、*バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。
 
-データと終端の null の格納に必要なストレージを超える場合*sizeOfBuffer*で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数の設定は無効パラメーター ハンドラーの後に実行が引き続き発生する場合*バッファー*空の文字列に次のように設定します。 **errno**に**ERANGE**、-1 を返します。
+データと終端の null を格納するために必要なストレージが*sizeOfBuffer*を超えている場合は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 無効なパラメーターハンドラーの後に実行が継続する場合、これらの関数は*buffer*を空の文字列に設定し、 **errno**を**ERANGE**に設定し、-1 を返します。
 
-場合*バッファー*または*形式*は、 **NULL**ポインター、または*カウント*と同じかそれよりも少ない対 0 の場合、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+*バッファー*または*形式*が**NULL**ポインターの場合、または*count*が0以下の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Snprintf_s**関数の書式設定して格納*カウント*以下の文字*バッファー*終端の null を追加します。 各引数 (指定されている場合) は変換されに対応する書式指定に応じて*形式*します。 一貫した書式指定は、 **printf**ファミリの関数は、「」を参照[書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**(_T)** 関数は、*カウント*または*バッファー*内の文字数を書式設定して格納し、終端の null を追加します。 各引数 (存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 書式設定は、 **printf**関数ファミリと一致します。「[書式指定構文: Printf 関数と Wprintf 関数」を](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)参照してください。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md)、し **_snprintf_s**に収まる限りの文字列の書き込み*バッファー*用の空きを残しているときに、null 終了しています。 文字列全体 (終端の null) では、内に収まる場合*バッファー*、し **_snprintf_s** (終端の null は含まない) に書き込まれた; 文字の数を返しますそれ以外の場合、 **_snprintf_s** -1 切り捨てが発生したを返します。
+*Count*が[TRUNCATE](../../c-runtime-library/truncate.md)の場合は、終端の null を格納するために、*バッファー*に収まる限りの文字列がによっ**て書き込まれ**ます。 (終端の null を含む) 文字列全体が*バッファー*に格納されている場合は、(終端の null は含まない) 書き込まれた文字数**が返されます。** それ以外の場合は、切り捨てが発生したことを示す-1**を返します**。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-**_snwprintf_s**のワイド文字バージョンは、 **_snprintf_s**; へのポインター引数 **_snwprintf_s**はワイド文字列です。 エンコーディング エラーの検出 **_snwprintf_s**で異なる場合があります **_snprintf_s**します。 **_snwprintf_s**と同様に、 **swprintf_s**、型の出力先ではなく文字列に出力を書き込む**ファイル**します。
+**snwprintf_s**は、ワイド文字バージョンです。 **(_t)** ポインター引数 **(snwprintf_s)** はワイド文字列です。 **(Snwprintf_s**での) エンコードエラーの検出は、 **snprintf_s**では異なる場合があります。 **swprintf_s**のように、 **snwprintf_s**は、型**ファイル**の出力先ではなく文字列に出力を書き込みます。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -155,15 +159,15 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_sntprintf_s**|**_snprintf_s**|**_snprintf_s**|**_snwprintf_s**|
+|**sntprintf_s (_d)**|**_snprintf_s**|**_snprintf_s**|**_snwprintf_s**|
 |**_sntprintf_s_l**|**_snprintf_s_l**|**_snprintf_s_l**|**_snwprintf_s_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_snprintf_s**、 **_snprintf_s_l**|\<stdio.h>|
-|**_snwprintf_s**、 **_snwprintf_s_l**|\<stdio.h> または \<wchar.h>|
+|**snprintf_s**、 **_snprintf_s_l**|\<stdio.h>|
+|**snwprintf_s**、 **_snwprintf_s_l**|\<stdio.h> または \<wchar.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

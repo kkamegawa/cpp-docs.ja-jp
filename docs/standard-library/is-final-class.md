@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446540"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452652"
 ---
 # <a name="isfinal-class"></a>is_final クラス
 
@@ -26,12 +26,12 @@ struct is_final;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*T*クラス型がマークされている`final`、それ以外の場合は false を保持します。 場合*T*クラスの型は、完全な型があります。
+型*T*がとマーク`final`されたクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 *T*がクラス型の場合は、完全な型である必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -41,5 +41,5 @@ struct is_final;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[final 指定子](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[final 指定子](../cpp/final-specifier.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: 5d9ab804478dbf72ec51265a851f62d025ebfba5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259080"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator クラス
 
@@ -33,9 +33,9 @@ class ATL::CCRTAllocator
 
 |名前|説明|
 |----------|-----------------|
-|[Ccrtallocator::allocate](#allocate)|(静的)メモリを割り当てるには、このメソッドを呼び出します。|
-|[Ccrtallocator::free](#free)|(静的)メモリを解放するには、このメソッドを呼び出します。|
-|[Ccrtallocator::reallocate](#reallocate)|(静的)メモリを再割り当てするには、このメソッドを呼び出します。|
+|[CCRTAllocator::Allocate](#allocate)|(静的)メモリを割り当てるには、このメソッドを呼び出します。|
+|[CCRTAllocator::Free](#free)|(静的)メモリを解放するには、このメソッドを呼び出します。|
+|[CCRTAllocator::Reallocate](#reallocate)|(静的)メモリを再割り当てするには、このメソッドを呼び出します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -45,7 +45,7 @@ class ATL::CCRTAllocator
 
 **ヘッダー:** atlcore.h
 
-##  <a name="allocate"></a>  Ccrtallocator::allocate
+##  <a name="allocate"></a>  CCRTAllocator::Allocate
 
 メモリを割り当てる場合は、この静的関数を呼び出します。
 
@@ -66,7 +66,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 メモリを割り当てます。 参照してください[malloc](../../c-runtime-library/reference/malloc.md)の詳細。
 
-##  <a name="free"></a>  Ccrtallocator::free
+##  <a name="free"></a>  CCRTAllocator::Free
 
 メモリを解放する、この静的関数を呼び出します。
 
@@ -83,7 +83,7 @@ static void Free(void* p) throw();
 
 割り当てられたメモリを解放します。 参照してください[無料](../../c-runtime-library/reference/free.md)の詳細。
 
-##  <a name="reallocate"></a>  Ccrtallocator::reallocate
+##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
 
 メモリを再割り当てする場合は、この静的関数を呼び出します。
 

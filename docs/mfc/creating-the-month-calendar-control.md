@@ -6,37 +6,36 @@ helpviewer_keywords:
 - month calendar controls [MFC], creating
 - month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
-ms.openlocfilehash: f98ce6c0272b64442d42cb0ba78b10affe5ede8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e430a86c2ac08bde0f031a4c91b9ae5c6f570f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523773"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907502"
 ---
 # <a name="creating-the-month-calendar-control"></a>月間予定表コントロールの作成
 
-月間予定表コントロールの作成方法は、ダイアログ ボックスで、コントロールの使用または以外のウィンドウで作成するかどうかによって異なります。
+月間予定表コントロールの作成方法は、ダイアログボックスでコントロールを使用しているか、nondialog ウィンドウで作成したかによって異なります。
 
-### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>CMonthCalCtrl をダイアログ ボックスで直接使用するには
+### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>ダイアログボックスで CMonthCalCtrl を直接使用するには
 
-1. ダイアログ エディターでダイアログ テンプレート リソースを 1 か月のカレンダー コントロールを追加します。 そのコントロールの ID を指定します
+1. ダイアログエディターで、ダイアログテンプレートリソースに月間予定表コントロールを追加します。 コントロール ID を指定します。
 
-1. 月間予定表コントロールのプロパティ ダイアログ ボックスを使用して、必要に応じてスタイルを指定します。
+1. 月間予定表コントロールの [プロパティ] ダイアログボックスを使用して、必要なスタイルを指定します。
 
-1. 使用して、[メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md)型のメンバー変数を追加する[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)コントロール プロパティにします。 このメンバーを使用するには、呼び出しと`CMonthCalCtrl`メンバー関数。
+1. [メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md)を使用して、 [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)型のメンバー変数をコントロールプロパティに追加します。 このメンバーを使用して、 `CMonthCalCtrl`メンバー関数を呼び出すことができます。
 
-1. 使用ダイアログ クラスのハンドラー関数をマップする任意の 1 か月カレンダー コントロールの通知メッセージの [プロパティ] ウィンドウを処理する必要があります (を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md))。
+1. [クラスウィザード](reference/mfc-class-wizard.md)を使用すると、処理する必要がある月間予定表コントロールの通知メッセージのダイアログクラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
 
-1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)、追加のスタイルを設定、`CMonthCalCtrl`オブジェクト。
+1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)で、 `CMonthCalCtrl`オブジェクトの追加のスタイルを設定します。
 
-### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>以外のウィンドウで関数を使用するには
+### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>Nondialog ウィンドウで CMonthCalCtrl を使用するには
 
-1. ビューまたはウィンドウのクラスでは、コントロールを定義します。
+1. ビューまたはウィンドウクラスでコントロールを定義します。
 
-1. コントロールの呼び出し[作成](../mfc/reference/cmonthcalctrl-class.md#create)メンバー関数は、おそらくで[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)、親ウィンドウの可能性がありますの早期[OnCreate](../mfc/reference/cwnd-class.md#oncreate)いる場合、ハンドラー関数コントロールをサブクラス)。 コントロールのスタイルを設定します。
+1. コントロールの Create member 関数を呼び出します。これは、おそらく親ウィンドウの[OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler 関数 (コントロールをサブクラス化している場合) のように、 [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)で[作成](../mfc/reference/cmonthcalctrl-class.md#create)します。 コントロールのスタイルを設定します。
 
 ## <a name="see-also"></a>関連項目
 
 [CMonthCalCtrl の使い方](../mfc/using-cmonthcalctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

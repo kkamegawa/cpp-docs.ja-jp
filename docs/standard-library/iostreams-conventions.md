@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 52cdd06385994e49ff793e40318ca4cbbbcfcda0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 222a65f60b231ba4b3768131c15d6e0d736f211e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645563"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449012"
 ---
 # <a name="iostreams-conventions"></a>iostreams の規則
 
@@ -32,6 +32,6 @@ iostreams の最も単純に使用するには、[\<iostream >](../standard-libr
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

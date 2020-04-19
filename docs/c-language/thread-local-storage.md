@@ -8,18 +8,18 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330308"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500263"
 ---
 # <a name="thread-local-storage"></a>スレッド ローカル ストレージ
 
 **Microsoft 固有の仕様**
 
-スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる手段です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、Windows SDK の「[Processes and Threads](/windows/desktop/ProcThread/processes-and-threads)」 (プロセスとスレッド) をご覧ください。
+スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる手段です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、Windows SDK の「[Processes and Threads](/windows/win32/ProcThread/processes-and-threads)」 (プロセスとスレッド) をご覧ください。
 
 Microsoft C 言語には、スレッド ローカル変数を宣言するために __declspec キーワードと共に使用される、拡張ストレージ クラスの属性、スレッドが含まれています。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。
 
@@ -75,7 +75,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */
     ```
 
-- C では、自分自身を参照している式で変数を初期化できます。ただし、この場合のオブジェクトは、非静的なものに限られます。 例:
+- C では、自分自身を参照している式で変数を初期化できます。ただし、この場合のオブジェクトは、非静的なものに限られます。 次に例を示します。
 
     ```C
     #define Thread   __declspec( thread )
@@ -92,6 +92,6 @@ __declspec( thread ) int tls_i = 1;
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)

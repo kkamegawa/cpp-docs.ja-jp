@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412819"
 ---
 # <a name="asynchronous-agents"></a>非同期エージェント
 
@@ -47,7 +47,7 @@ ms.locfileid: "52176537"
 |[start](reference/agent-class.md#start)|スケジュール、`agent`実行のオブジェクトに設定し、`agent_runnable`状態。|
 |[run](reference/agent-class.md#run)|によって実行されるタスクを実行、`agent`オブジェクト。|
 |[done](reference/agent-class.md#done)|エージェントでの移動、`agent_done`状態。|
-|[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|このメソッドは、エージェントの実行をキャンセルし、設定して、エージェントが開始されていない場合、`agent_canceled`状態。|
+|[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|このメソッドは、エージェントの実行をキャンセルし、設定して、エージェントが開始されていない場合、`agent_canceled`状態。|
 |[status](reference/agent-class.md#status)|現在の状態を取得、`agent`オブジェクト。|
 |[wait](reference/agent-class.md#wait)|待機、`agent`を入力するオブジェクト、`agent_done`または`agent_canceled`状態。|
 |[wait_for_all](reference/agent-class.md#wait_for_all)|提供されるすべての待機`agent`を入力するオブジェクト、`agent_done`または`agent_canceled`状態。|
@@ -59,9 +59,8 @@ ms.locfileid: "52176537"
 
 ## <a name="example"></a>例
 
-基本的なエージェント ベースのアプリケーションを作成する方法の例を参照してください[チュートリアル: エージェント ベースのアプリケーションを作成する](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)します。
+基本的なエージェント ベースのアプリケーションを作成する方法の例を参照してください[チュートリアル。エージェント ベースのアプリケーションを作成する](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)
-

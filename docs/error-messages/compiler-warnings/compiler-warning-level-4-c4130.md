@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4130
 ms.assetid: 45e4c7b2-6b51-41c7-ba5e-941aa5c7d3dc
-ms.openlocfilehash: 1b1fb72d68309a4bef56ccd844ad30d967bbadbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3bc632bf641fa3944cfd21dc405590c803498d80
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552946"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991564"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>コンパイラの警告 (レベル 4) C4130
 
@@ -21,7 +21,7 @@ ms.locfileid: "50552946"
 
 次の例では C4130 が生成されます。
 
-```
+```cpp
 // C4130.cpp
 // compile with: /W4
 int main()

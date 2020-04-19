@@ -1,25 +1,25 @@
 ---
 title: ML の警告 A4014
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A4014
 helpviewer_keywords:
 - A4014
 ms.assetid: 11bc8920-3255-4ac8-999a-b9ea9c15bc81
-ms.openlocfilehash: b5354fd074bfde505b8fce0e4a0b248e5810439b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73a25551a99d2bdbbaee0a1989e773457e75b7c5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558224"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316760"
 ---
 # <a name="ml-warning-a4014"></a>ML の警告 A4014
 
-手順と初期化されたデータが BSS セグメントでサポートされていません
+BSS セグメントでサポートされていない命令および初期化データ
 
-BSS セクション内で初期化されたデータを定義しようとしました。  BSS セクションは、名前を持つが BSS クラスとして定義されます。  これにより、簡素化されたセグメントが含まれます。`.data?`します。
+BSS セクション内に初期化されたデータを定義しようとしました。  BSS セクションは、名前が BSS であるクラスとして定義されます。  これには、`.data?`の簡略化されたセグメントが含まれます。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

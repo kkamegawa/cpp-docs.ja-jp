@@ -1,28 +1,28 @@
 ---
 title: __wbinvd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __wbinvd
 helpviewer_keywords:
 - __wbinvd intrinsic
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
-ms.openlocfilehash: 0f775ba94c2dee1c2568e66b09fa1ffb31f512bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe888ef578f0c2e077911537d401890b63372a0b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482538"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219388"
 ---
-# <a name="wbinvd"></a>__wbinvd
+# <a name="__wbinvd"></a>__wbinvd
 
 **Microsoft 固有の仕様**
 
-書き戻しとキャッシュの無効化が生成されます (`wbinvd`) 命令。
+書き戻しを生成し、Cache (`wbinvd`) 命令を無効にします。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __wbinvd(void);
 ```
 
@@ -32,11 +32,11 @@ void __wbinvd(void);
 |---------------|------------------|
 |`__wbinvd`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この関数は、0 の特権レベル (CPL) でのカーネル モードで使用可能なのみとルーチンは組み込みとして使用できるのみです。
+この関数は、特権レベル (CPL) が0のカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 

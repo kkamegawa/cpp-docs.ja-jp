@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2626
+title: コンパイラエラー C2626
 ms.date: 11/04/2016
 f1_keywords:
 - C2626
 helpviewer_keywords:
 - C2626
 ms.assetid: 4c283ad0-251b-4571-bc18-468b9836746f
-ms.openlocfilehash: 434858991c23345e2a6c174c8f323000d42b9b6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 339d48265bdc1f68ea4e18fadfde48fca956dd1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565181"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754746"
 ---
-# <a name="compiler-error-c2626"></a>コンパイラ エラー C2626
+# <a name="compiler-error-c2626"></a>コンパイラエラー C2626
 
 'identifier': プライベートまたはプロテクト データ メンバーは、匿名構造体または共用体では許可されていません
 
@@ -21,7 +21,7 @@ ms.locfileid: "50565181"
 
 次の例では C2626 が生成されます。
 
-```
+```cpp
 // C2626.cpp
 int main() {
    union {
@@ -35,7 +35,7 @@ int main() {
 
 この問題を解決するには、プライベートまたはプロテクト タグを削除します。
 
-```
+```cpp
 // C2626b.cpp
 int main() {
    union {

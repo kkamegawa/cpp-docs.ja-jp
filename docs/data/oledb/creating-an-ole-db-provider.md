@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-ms.openlocfilehash: b6e59dba375e78878d13a6014ce75edf2a21758b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361894"
 ---
 # <a name="creating-an-ole-db-provider"></a>OLE DB プロバイダーの作成
 
@@ -38,5 +38,5 @@ OLE DB プロバイダーを作成する推奨される方法は、ウィザー�
 
 ## <a name="see-also"></a>関連項目
 
-[CatDB サンプル: データ ソースのスキーマのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
-[DBViewer サンプル: データベースのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
+[CatDB サンプル:データ ソースのスキーマのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[DBViewer サンプル:データベースのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

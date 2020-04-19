@@ -13,12 +13,12 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 5982aa367aa043dbe7a5c41128c3646f520d3b4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666909"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748924"
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 
@@ -33,7 +33,7 @@ ms.locfileid: "50666909"
 extern char **_environ;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `main` 関数を使用するプログラムでは、`_environ` は、オペレーティング システムの環境から取られる設定に従って、プログラムの起動時に初期化されます。 環境は、次の形式の 1 つ以上のエントリから構成されます。
 
@@ -74,7 +74,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
 
 したがって、マルチバイト環境では、値 "`env_var_z`" は `putenv` への最初の暗黙的な呼び出しの後には "`string1`" ですが、`putenv` への 2 回目の暗黙的な呼び出しでこの値は上書きされ、"`env_var_z`" の値は "`string2`" に設定されます。 Unicode 環境 (`_wenviron` にある) およびマルチバイト環境 (`_environ` にある) は、この一連の呼び出しの後には異なっていることになります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)<br/>
 [getenv、 _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>

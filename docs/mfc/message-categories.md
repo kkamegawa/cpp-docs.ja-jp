@@ -10,12 +10,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: e8b7385a233c2074fe9bfc491d89de7629c730c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07d9e706e8ed01a81ee580e7c4e11fa1f1a7a8df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206881"
 ---
 # <a name="message-categories"></a>メッセージの種類
 
@@ -46,4 +46,3 @@ ms.locfileid: "50619857"
 ## <a name="see-also"></a>関連項目
 
 [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: ff795a551c091deb73c5fae1e3b67a61d9966ff0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482811"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757684"
 ---
 # <a name="compiler-error-c2039"></a>コンパイラ エラー C2039
 
@@ -19,11 +19,11 @@ ms.locfileid: "50482811"
 
 コードで、構造体、クラス、または共用体のメンバーを誤って呼び出しているか、参照しています。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、C2039 を生成します。
+次の例では、C2039 が生成されます。
 
-```
+```cpp
 // C2039.cpp
 struct S {
    int mem0;
@@ -35,11 +35,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、C2039 を生成します。
+次の例では、C2039 が生成されます。
 
-```
+```cpp
 // C2039_b.cpp
 // compile with: /clr
 using namespace System;
@@ -50,11 +50,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、C2039 を生成します。
+次の例では、C2039 が生成されます。
 
-```
+```cpp
 // C2039_c.cpp
 // compile with: /clr /c
 ref struct S {
@@ -68,7 +68,7 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 C2039 は、既定のインデクサーに誤ってアクセスしようとした場合にも発生することがあります。 C# でコンポーネントを定義する例を次に示します。
 
@@ -85,11 +85,11 @@ public class B {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、C2039 を生成します。
+次の例では、C2039 が生成されます。
 
-```
+```cpp
 // C2039_e.cpp
 // compile with: /clr
 using namespace System;
@@ -104,11 +104,11 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C2039 は、ジェネリックを使用するときも発生します。 次の例では、C2039 を生成します。
+C2039 は、ジェネリックを使用するときも発生します。 次の例では、C2039 が生成されます。
 
-```
+```cpp
 // C2039_f.cpp
 // compile with: /clr
 interface class I {};
@@ -129,13 +129,13 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C2039 は、マネージド リソースまたはアンマネージド リソースを解放しようとしたときに発生する場合があります。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+C2039 は、マネージド リソースまたはアンマネージド リソースを解放しようとしたときに発生する場合があります。 詳細については、「[デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
-次の例では、C2039 を生成します。
+次の例では、C2039 が生成されます。
 
-```
+```cpp
 // C2039_g.cpp
 // compile with: /clr
 using namespace System;

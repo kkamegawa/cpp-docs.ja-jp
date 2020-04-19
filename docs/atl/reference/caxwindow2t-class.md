@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: 3e28bfe15c55342cbdfb50b125243c170ba97698
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260029"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T クラス
 

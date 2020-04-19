@@ -7,12 +7,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 973c4a12f3b3bdc91269736874b7193130290a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240238"
 ---
 # <a name="handling-tool-tip-notifications"></a>ツール ヒントの通知の処理
 
@@ -31,7 +31,7 @@ ms.locfileid: "50548916"
 
 加え、 **TTN_NEEDTEXT**通知では、ツール ヒント コントロール通知を送信できます、次をツール バー コントロール。
 
-|通知|説明|
+|Notification|説明|
 |------------------|-------------|
 |**TTN_NEEDTEXTA**|ツール ヒント コントロールには、ASCII テキスト (Windows 95 の場合のみ) が必要です。|
 |**TTN_NEEDTEXTW**|ツール ヒント コントロールには、UNICODE テキスト (Windows NT のみ) が必要です。|
@@ -47,4 +47,3 @@ ms.locfileid: "50548916"
 
 [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -5,51 +5,50 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 7c5973f8010d7c428406a8a3f69574eab20edf82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519491"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512823"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>コンカレンシー ランタイムのチュートリアル
 
-このセクションでは、シナリオ ベースのトピックでは、多くの同時実行ランタイムの機能を使用する方法を示します。
+このセクションのシナリオベースのトピックでは、同時実行ランタイムの多くの機能を使用する方法について説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-使用する方法を示しています、 [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)ユニバーサル Windows プラットフォーム (UWP) アプリで web サービスに HTTP GET および POST 要求を送信するタスクとのインターフェイス。
+[IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)インターフェイスと[IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback)インターフェイスをタスクと共に使用して、HTTP GET および POST 要求をユニバーサル Windows プラットフォーム (UWP) アプリの web サービスに送信する方法について説明します。
 
 [チュートリアル: エージェント ベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-基本的なエージェント ベースのアプリケーションを作成する方法について説明します。
+基本的なエージェントベースのアプリケーションを作成する方法について説明します。
 
 [チュートリアル: データフロー エージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-制御フローの代わりに、データ フローに基づくエージェント ベースのアプリケーションを作成する方法を示します。
+制御フローではなく、データフローに基づくエージェントベースのアプリケーションを作成する方法を示します。
 
 [チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
-イメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法を示します。
+イメージ処理を実行する非同期メッセージブロックのネットワークを作成する方法を示します。
 
 [チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)<br/>
-後で使用できる値を非同期的に計算する方法を示します。
+後で使用できるように値を非同期的に計算する方法について説明します。
 
 [チュートリアル: join を使用したデッドロックの防止](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)<br/>
-使用する方法を説明するために食事する哲学者の問題を使用して、 [concurrency::join](../../parallel/concrt/reference/join-class.md)アプリケーションでデッドロックを防止するクラス。
+食事の哲学者の問題を使用して、 [concurrency:: join](../../parallel/concrt/reference/join-class.md)クラスを使用してアプリケーションでデッドロックを防止する方法を説明します。
 
 [チュートリアル: ユーザー インターフェイス スレッドからの処理の除去](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
-マンデルブロ フラクタルを描画する MFC アプリケーションのパフォーマンスを向上させる方法を示します。
+マンデルブロフラクタルを描画する MFC アプリケーションのパフォーマンスを向上させる方法を示します。
 
-[チュートリアル: COM 対応アプリケーションでのコンカレンシー ランタイムの使用](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
-コンポーネント オブジェクト モデル (COM) を使用するアプリケーションで同時実行ランタイムを使用する方法を示します。
+[チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
+コンポーネントオブジェクトモデル (COM) を使用するアプリケーションで同時実行ランタイムを使用する方法を示します。
 
 [チュートリアル: 既存のコードを改変して軽量タスクを使用する](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)<br/>
-軽量タスクを使用するスレッドの実行を作成し、Windows API を使用する既存のコードを改変する方法を示します。
+Windows API を使用する既存のコードを調整して、軽量タスクを使用するスレッドを作成および実行する方法について説明します。
 
 [チュートリアル: カスタム メッセージ ブロックの作成](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)<br/>
-優先順位によって受信メッセージを並べるカスタム メッセージ ブロックの型を作成する方法について説明します。
+受信メッセージを優先度順に並べ替えるカスタムメッセージブロックの型を作成する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
-Visual C の同時実行のプログラミング フレームワークが導入されています。
-
+ビジュアルC++の同時実行プログラミングフレームワークについて説明します。

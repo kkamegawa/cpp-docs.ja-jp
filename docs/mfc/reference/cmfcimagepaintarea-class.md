@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: af1d485d6d6281e909e33176ee1ae2b736c76600
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37d975ace4d144cc6274b49a3406382f0fb300ee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374182"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea クラス
 

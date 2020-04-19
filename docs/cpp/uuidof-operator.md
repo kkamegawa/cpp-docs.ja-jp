@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244162"
 ---
 # <a name="uuidof-operator"></a>__uuidof 演算子
 
@@ -39,7 +39,7 @@ __uuidof (expression)
 
 - オブジェクトによって、 [uuid](../cpp/uuid-cpp.md)拡張属性。
 
-- 作成されたライブラリ ブロック、[モジュール](../windows/module-cpp.md)属性。
+- 作成されたライブラリ ブロック、[モジュール](../windows/attributes/module-cpp.md)属性。
 
 > [!NOTE]
 > デバッグ ビルドで **_ _uuidof**常に動的に (実行時) にオブジェクトを初期化します。 リリース ビルドで **_ _uuidof**静的 (コンパイル時) にオブジェクトを初期化できます。
@@ -73,7 +73,7 @@ int main() {
 
 ## <a name="comments"></a>コメント
 
-ライブラリ名が不要になったスコープ内の場合、使用することができます`__LIBID_`の代わりに **_ _uuidof**します。 例えば:
+ライブラリ名が不要になったスコープ内の場合、使用することができます`__LIBID_`の代わりに **_ _uuidof**します。 例:
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);

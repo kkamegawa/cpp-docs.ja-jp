@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2313
 ms.assetid: f70eb19b-c0a3-4fb2-ade1-3890a589928d
-ms.openlocfilehash: 276dea87770035967a08ca5ac3e95316832ffc1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0eb085d9959359b31b022c2268f0ea8c7b811b20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641078"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748126"
 ---
 # <a name="compiler-error-c2313"></a>コンパイラ エラー C2313
 
@@ -21,7 +21,7 @@ ms.locfileid: "50641078"
 
 次の例では C2313 が生成されます。
 
-```
+```cpp
 // C2313.cpp
 // compile with: /EHsc
 #include <eh.h>

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 43: RFX ルーチン'
+title: TN043:RFX ルーチン
 ms.date: 06/28/2018
 f1_keywords:
 - RFX
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 278351ad1cf81215f4c6033f4cff0b100adedf23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305399"
 ---
-# <a name="tn043-rfx-routines"></a>テクニカル ノート 43: RFX ルーチン
+# <a name="tn043-rfx-routines"></a>TN043:RFX ルーチン
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -112,7 +112,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 既定の RFX メカニズムを拡張するいくつかの方法はあります。 できます
 
-- 新しいデータ型を追加します。 例えば:
+- 新しいデータ型を追加します。 例:
 
     ```cpp
     CBookmark
@@ -144,15 +144,15 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 独自のカスタム RFX 関数を作成するには、既存の RFX 関数をコピーして、独自の目的に変更するお勧めします。 コピーする右の RFX を選択することができます、ジョブをはるかに簡単。 一部の RFX 関数では、いくつかのコピー先を決定する際に考慮する一意のプロパティがあります。
 
-`RFX_Long` `RFX_Int`: これらは最も簡単な RFX 関数。 データ値では、何らかの解釈を必要はありませんし、データ サイズは固定します。
+`RFX_Long` `RFX_Int`:これらは、最も簡単な RFX 関数です。 データ値では、何らかの解釈を必要はありませんし、データ サイズは固定します。
 
-`RFX_Single` `RFX_Double`: のような RFX_Long RFX_Int 上、これらの関数単純とはことができますの既定の実装を幅広く使用します。 保存されている、dbrfx.cpp ではなくようにでただし、浮動小数点ライブラリを明示的に参照されている場合にのみ、ランタイムの読み込みを有効にします。
+`RFX_Single` `RFX_Double`:RFX_Long や RFX_Int 上記のようにこれらの関数は単純なとすると、既定の実装を幅広く使用します。 保存されている、dbrfx.cpp ではなくようにでただし、浮動小数点ライブラリを明示的に参照されている場合にのみ、ランタイムの読み込みを有効にします。
 
-`RFX_Text` `RFX_Binary`: これら 2 つの関数を選択し、文字列/バイナリの情報を保持する静的バッファーを事前登録 (&) 値ではなく、ODBC SQLBindCol をこれらのバッファーを登録する必要があります。 このため、これら 2 つの関数は特殊なコードの多くがあります。
+`RFX_Text` `RFX_Binary`:これら 2 つの関数は、文字列/バイナリの情報を保持する静的バッファーを事前に割り当てるし、登録 (&) 値ではなく、ODBC SQLBindCol をこれらのバッファーを登録する必要があります。 このため、これら 2 つの関数は特殊なコードの多くがあります。
 
-`RFX_Date`: ODBC では、独自の TIMESTAMP_STRUCT データ構造で日付と時刻の情報を返します。 この関数では、「プロキシ」として、TIMESTAMP_STRUCT が動的に日付時刻のデータを送受信するために割り当てます。 さまざまな操作は、C++ の間で日付と時刻の情報を転送する必要があります`CTime`オブジェクトと TIMESTAMP_STRUCT プロキシ。 この関数を大きく複雑にこれが、データ転送にプロキシを使用する方法の良い例です。
+`RFX_Date`:ODBC では、独自の TIMESTAMP_STRUCT データ構造で日付と時刻の情報を返します。 この関数では、「プロキシ」として、TIMESTAMP_STRUCT が動的に日付時刻のデータを送受信するために割り当てます。 さまざまな操作の間で日付と時刻の情報を転送する必要があります、 C++ `CTime`オブジェクトと TIMESTAMP_STRUCT プロキシ。 この関数を大きく複雑にこれが、データ転送にプロキシを使用する方法の良い例です。
 
-`RFX_LongBinary`: これは、RFX 関数のデータを送受信する列のバインドを使用しない唯一のクラス ライブラリです。 この関数は BindFieldToColumn 操作を無視し、代わりに、フィックス アップ時に、着信 SQL_LONGVARCHAR または SQL_LONGVARBINARY データを保持するストレージが割り当てられます、割り当て済み記憶域に値を取得する SQLGetData 呼び出しを実行します。 (NameValue および値の操作) などのデータ ソースへのデータ値を返信する準備をするときに、この関数は、ODBC の DATA_AT_EXEC 機能を使用します。 参照してください[テクニカル ノート 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) SQL_LONGVARBINARY データ型と SQL_LONGVARCHARs の操作の詳細についてはします。
+`RFX_LongBinary`:これは、RFX 関数のデータを送受信する列のバインドを使用しない唯一のクラス ライブラリです。 この関数は BindFieldToColumn 操作を無視し、代わりに、フィックス アップ時に、着信 SQL_LONGVARCHAR または SQL_LONGVARBINARY データを保持するストレージが割り当てられます、割り当て済み記憶域に値を取得する SQLGetData 呼び出しを実行します。 (NameValue および値の操作) などのデータ ソースへのデータ値を返信する準備をするときに、この関数は、ODBC の DATA_AT_EXEC 機能を使用します。 参照してください[テクニカル ノート 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) SQL_LONGVARBINARY データ型と SQL_LONGVARCHARs の操作の詳細についてはします。
 
 独自の書き込み時に**rfx _** 関数の場合、多くの場合、ことができますを使用する`CFieldExchange::Default`特定の操作を実装します。 問題の操作の既定の実装を見てください。 操作を実行する場合を記述したこと、 **rfx _** 関数を委任することができます、`CFieldExchange::Default`します。 呼び出し元の例を参照できます`CFieldExchange::Default`dbrfx.cpp で
 

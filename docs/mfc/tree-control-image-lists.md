@@ -6,29 +6,28 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: e42e601fbf803f8ccfe359a10664149ac8f11086
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8f9e323244657ea6a7cc132deab6deedfcd1a167
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693246"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513362"
 ---
 # <a name="tree-control-image-lists"></a>ツリー コントロールのイメージ リスト
 
-ツリー コントロール内の各アイテム ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 関連付けられているビットマップ イメージのペアを持つことができます。 項目のラベルの左側にある、画像が表示されます。 項目が選択されているし、項目が選択されていないときに、もう一方が表示されます、1 つのイメージが表示されます。 たとえば、項目が選択されていないときに、開いているフォルダーが選択されているときと閉じたフォルダーを表示可能性があります。
+ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) の各項目には、1組のビットマップイメージを関連付けることができます。 項目のラベルの左側に画像が表示されます。 項目が選択されると1つのイメージが表示され、項目が選択されていないときにもう一方のイメージが表示されます。 たとえば、項目を選択したときに開いているフォルダーを表示し、選択されていない場合は閉じたフォルダーを表示することができます。
 
-項目のイメージを使用するには、構築することでイメージ リストを作成する必要があります、 [CImageList](../mfc/reference/cimagelist-class.md)オブジェクトとを使用して、 [CImageList::Create](../mfc/reference/cimagelist-class.md#create)関連付けられているイメージ リストを作成する関数。 必要なビットマップを一覧に追加しを使用して、リストをツリーのコントロールに関連付ける、 [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)メンバー関数。 既定では、すべての項目は、および非選択状態の両方のイメージ リストの最初のイメージを表示します。 特定の項目の既定の動作を変更するにはツリーのコントロールを使用する項目を追加するときに、選択したイメージのインデックスを指定することによって、 [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)メンバー関数。 使用して項目を追加した後、インデックスを変更することができます、 [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage)メンバー関数。
+項目イメージを使用するには、 [cimagelist](../mfc/reference/cimagelist-class.md)オブジェクトを構築し、 [Cimagelist:: create](../mfc/reference/cimagelist-class.md#create)関数を使用して、関連付けられているイメージリストを作成することによって、イメージリストを作成する必要があります。 次に、目的のビットマップをリストに追加し、 [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)メンバー関数を使用してリストをツリーコントロールに関連付けます。 既定では、[すべての項目] には、選択状態と非選択状態の両方のイメージリストの最初のイメージが表示されます。 特定の項目の既定の動作を変更するには、 [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)メンバー関数を使用して項目をツリーコントロールに追加するときに、選択したイメージと選択されていないイメージのインデックスを指定します。 [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage)メンバー関数を使用すると、項目を追加した後でインデックスを変更できます。
 
-ツリー コントロールのイメージ リストは、オーバーレイのイメージは、項目のイメージ上に重ねて表示するのを含めることもできます。 ツリー コントロール項目の状態の 8 ~ 11 ビット単位で 0 以外の値がオーバーレイ画像の 1 から始まるインデックスを指定します (0 を示しますオーバーレイ画像なし)。 4 ビット、1 から始まるインデックスを使用しているために、イメージ リストの最初の 15 のイメージ間でイメージのオーバーレイを引き起こすことがあります。 ツリー コントロール項目の状態の詳細については、次を参照してください。[ツリー コントロール項目の状態の概要](../mfc/tree-control-item-states-overview.md)このトピックで前述しました。
+ツリーコントロールのイメージリストには、項目イメージに重ねて表示されるオーバーレイイメージを含めることもできます。 ツリーコントロール項目の状態のビット 8 ~ 11 の0以外の値は、オーバーレイイメージの1から始まるインデックスを指定します (0 はオーバーレイイメージがないことを示します)。 4ビットの、1から始まるインデックスが使用されるため、オーバーレイイメージはイメージリスト内の最初の15イメージの中にある必要があります。 ツリーコントロール項目の状態の詳細については、このトピックで前述した「[ツリーコントロール項目の状態の概要](../mfc/tree-control-item-states-overview.md)」を参照してください。
 
-状態イメージのリストが指定されている場合、ツリー コントロールには、状態の画像の各項目のアイコンの左側の領域が確保されます。 アプリケーションでは、オンとオフのチェック ボックスなどの状態のイメージを使用して、アプリケーション定義の項目の状態を示します。 状態イメージの 1 から始まるインデックスを指定するビット 12 ~ 15 に 0 以外の値 (0 を示します状態の画像なし)。
+状態イメージリストが指定されている場合、ツリーコントロールは、状態イメージの各項目のアイコンの左側に領域を予約します。 アプリケーションでは、チェックボックスや消去されたチェックボックスなどの状態イメージを使用して、アプリケーション定義の項目の状態を示すことができます。 ビット 12 ~ 15 の0以外の値は、状態イメージの1から始まるインデックスを指定します (0 は状態イメージがないことを示します)。
 
-指定することによって、**番号**値、イメージのインデックスではなく項目が再描画するまでに、選択または選択されていないイメージを指定することを遅らせることができます。 **番号**指示を送信して、インデックスのアプリケーションをクエリするツリー コントロール、 [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo)通知メッセージ。
+イメージのインデックスの代わりに**I_IMAGECALLBACK**値を指定することにより、項目が再描画されるまで、選択されたイメージまたは選択を終了するイメージの指定を遅らせます。 **I_IMAGECALLBACK**は、 [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo)通知メッセージを送信することによって、インデックスのアプリケーションをクエリするようにツリーコントロールに指示します。
 
-[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)メンバー関数は、ツリー コントロールのイメージ リストのハンドルを取得します。 この関数は、イメージを一覧に追加する必要がある場合に便利です。 イメージ リストの詳細については、次を参照してください[を使用して CImageList](../mfc/using-cimagelist.md)、 [CImageList](../mfc/reference/cimagelist-class.md)で、 *MFC リファレンス*、および[イメージ リスト](/windows/desktop/controls/image-lists)で、。Windows SDK。
+[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)メンバー関数は、ツリーコントロールのイメージリストのハンドルを取得します。 この関数は、一覧にイメージを追加する必要がある場合に便利です。 イメージリストの詳細については、「 [Using cimagelist](../mfc/using-cimagelist.md),、 *MFC リファレンス*の[cimagelist](../mfc/reference/cimagelist-class.md) 」、および「Windows SDK の[イメージリスト](/windows/win32/controls/image-lists)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

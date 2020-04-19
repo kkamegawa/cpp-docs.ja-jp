@@ -1,10 +1,10 @@
 ---
 title: _ftell_nolock、_ftelli64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64_nolock
 - _ftell_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64_nolock
 - ftelli64_nolock
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e72687077cc5401bb411fca81a3ccec48a6258f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580844"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956362"
 ---
-# <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
+# <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock、_ftelli64_nolock
 
 スレッドをロックせずに、ファイル ポインターの現在の位置を取得します。
 
@@ -53,16 +56,16 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
-ターゲット、**ファイル**構造体。
+*一連*<br/>
+**ファイル**構造をターゲットにします。
 
 ## <a name="return-value"></a>戻り値
 
-同じ**ftell**と **_ftelli64**します。 詳細については、次を参照してください。 [ftell、_ftelli64](ftell-ftelli64.md)します。
+**Ftell**と **_ftelli64**と同じです。 詳細については、「 [ftell、_ftelli64](ftell-ftelli64.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は、ロックしないバージョンの**ftell**と **_ftelli64**、それぞれします。 同じですが**ftell**と **_ftelli64**する点を除いて、他のスレッドによる干渉から保護されません。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、それぞれ**ftell**と **_ftelli64**の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されないことを除いて、 **ftell**と **_ftelli64**と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ## <a name="requirements"></a>必要条件
 

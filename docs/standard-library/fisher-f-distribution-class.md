@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525129"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689716"
 ---
-# <a name="fisherfdistribution-class"></a>fisher_f_distribution クラス
+# <a name="fisher_f_distribution-class"></a>fisher_f_distribution クラス
 
 フィッシャー分布を生成します。
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Realtype* \
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-*URNG*<br/>
-Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Urng* \
+均一乱数ジェネレーターエンジン。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、ユーザー指定の浮動小数点の値を生成する分布を表します。 型、または型**二重**がない場合は、フィッシャー F 分布に従って分散します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、フィッシャーの F 分布に従って分布した、ユーザー指定の浮動小数点型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 プロパティ関数 `m()` および `n()` は、格納されている分布パラメーター `m` および `n` に対してそれぞれの値を返します。
 
-プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -94,9 +94,9 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
 
-F 分布の詳細については、Wolfram MathWorld の記事「[F-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899)」(F 分布) を参照してください。
+F 分布の詳細については、Wolfram MathWorld の記事「[F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899)」(F 分布) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -231,7 +231,7 @@ Distribution for 10 samples:
     10: 3.4363333954
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*m*<br/>
+*m* \
 `m` 分布パラメーター。
 
-*n*<br/>
+*n*\
 `n` 分布パラメーター。
 
-*parm*<br/>
+*parm* \
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -263,7 +263,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 1 つ目のコンストラクターは、格納されている値 `m` と `n` にそれぞれ *m* と *n* の値を保持するオブジェクトを作成します。
 
-2 つ目のコンストラクターは、格納パラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
 ## <a name="param_type"></a>  fisher_f_distribution::param_type
 
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*m*<br/>
+*m* \
 `m` 分布パラメーター。
 
-*n*<br/>
+*n*\
 `n` 分布パラメーター。
 
-*right*<br/>
+*右*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -300,4 +300,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

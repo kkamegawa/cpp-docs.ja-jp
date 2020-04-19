@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: d1022d9a49e12585a6588e7b3202155f533e4706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: affa217f481cc6d9e125d526f1b97be9120e0990
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392844"
 ---
 # <a name="frame-window-classes-architecture"></a>フレーム ウィンドウ クラス (アーキテクチャ)
 
@@ -36,4 +36,3 @@ MDI アプリケーションのドキュメント フレーム ウィンドウ�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

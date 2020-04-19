@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2147
 ms.assetid: d1adb3bf-7ece-4815-922c-ad7492fb6670
-ms.openlocfilehash: 0a093bbbaf9cf9f72625226f949a27b681005c35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0af88d89ff264ca9efd02477a62e5bd7532271bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614488"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756488"
 ---
 # <a name="compiler-error-c2147"></a>コンパイラ エラー C2147
 
-構文エラー: 'identifier' は新しいキーワード
+構文エラー: ' identifier ' は新しいキーワードです
 
-言語の予約済みキーワードが、識別子が使用されました。
+言語で予約済みキーワードになった識別子が使用されました。
 
 次の例では、C2147 が生成されます。
 
-```
+```cpp
 // C2147.cpp
 // compile with: /clr
 int main() {

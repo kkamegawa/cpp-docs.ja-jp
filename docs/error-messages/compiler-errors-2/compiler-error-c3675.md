@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: c154a0fe1989c92bb5e07c0710d3846883d1a113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6772572d29765370d6cdbf52ed8470ff2f3f054e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546316"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758074"
 ---
 # <a name="compiler-error-c3675"></a>コンパイラ エラー C3675
 
-'function': 'property' が定義されているためには、予約されています。
+' function ': ' property ' が定義されているため、予約されています
 
-Get および set アクセサー メソッドと、コンパイラは生成単純なプロパティを宣言するときに名前が、プログラムのスコープ内に存在します。  コンパイラによって生成された名前は、get _ と set _ プロパティの名前を付けることによって形成されます。  そのため、コンパイラによって生成されたアクセサーとして同じ名前を持つ関数を宣言できません。
+単純なプロパティを宣言すると、コンパイラは get アクセサーメソッドと set アクセサーメソッドを生成し、これらの名前はプログラムのスコープ内に存在します。  コンパイラによって生成される名前は、get_ を付加し、プロパティ名に set_ することによって形成されます。  そのため、コンパイラによって生成されたアクセサーと同じ名前の関数を宣言することはできません。
 
-詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。
+詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3675 が生成されます。
 
-```
+```cpp
 // C3675.cpp
 // compile with: /clr /c
 ref struct C {

@@ -1,10 +1,10 @@
 ---
 title: _access、_waccess
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access
 - _waccess
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _waccess
 - _access
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565478"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943940"
 ---
-# <a name="access-waccess"></a>_access、_waccess
+# <a name="_access-_waccess"></a>_access、_waccess
 
 ファイルが読み取り専用かどうかを判断します。 セキュリティを強化したバージョンを使用できます。「[_access_s、_waccess_s](access-s-waccess-s.md)」をご覧ください。
 
@@ -65,7 +68,7 @@ int _waccess(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 名前付きのファイルが存在しないか、特定のモードがない場合は-1 を返しますこの場合、`errno`に次の表に示すように設定します。
+ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定されたファイルが存在しない場合、または指定されたモードがない場合、この関数は-1 を返します。この場合、 `errno`は次の表に示すように設定されます。
 
 |||
 |-|-|
@@ -77,20 +80,20 @@ int _waccess(
 
 ## <a name="remarks"></a>Remarks
 
-ファイルを使用すると、 **_access**関数は、指定したファイルまたはディレクトリが存在しの値で指定された属性を持つかどうかを決定します。*モード*します。 ディレクトリを使用すると **_access**だけを指定したディレクトリが存在するかどうか判断します。 Windows 2000 以降のオペレーティング システムを保存のすべてのディレクトリの読み取りおよび書き込みアクセス。
+ファイルと共に使用する場合、 **_access**関数は、指定したファイルまたはディレクトリが存在するかどうかを判断し、*モード*の値によって指定された属性を持ちます。 ディレクトリと共に使用すると、 **_access**は、指定されたディレクトリが存在するかどうかのみを判断します。Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
 |*モード*値|ファイル チェックの目的|
 |------------------|---------------------|
 |00|存在のみ|
 |02|書き込み専用|
-|04|読み取り専用|
+|04|読み取り専用です。|
 |06|読み取りおよび書き込み|
 
-この関数は、ファイルとディレクトリが読み取り専用かどうかだけを確認し、ファイルシステムのセキュリティ設定は確認しません。 そのためには、アクセス トークンが必要です。 ファイルシステムのセキュリティの詳細については、「[アクセス トークン](/windows/desktop/SecAuthZ/access-tokens)」を参照してください。 ATL クラスはこの機能を提供するために存在します。「[CAccessToken クラス](../../atl/reference/caccesstoken-class.md)」を参照してください。
+この関数は、ファイルとディレクトリが読み取り専用かどうかだけを確認し、ファイルシステムのセキュリティ設定は確認しません。 そのためには、アクセス トークンが必要です。 ファイルシステムのセキュリティの詳細については、「[アクセス トークン](/windows/win32/SecAuthZ/access-tokens)」を参照してください。 ATL クラスはこの機能を提供するために存在します。「[CAccessToken クラス](../../atl/reference/caccesstoken-class.md)」を参照してください。
 
-**_waccess**のワイド文字バージョンです **_access**、*パス*への引数 **_waccess**はワイド文字列です。 **_waccess**と **_access**動作は同じです。
+**_waccess**は、 **_access**のワイド文字バージョンです。 **_waccess**への*パス*引数は、ワイド文字列です。 それ以外では、 **_waccess**と **_access**は同じように動作します。
 
-この関数は、パラメーターを検証します。 場合*パス*null または*モード*有効なモードを指定しない」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
+この関数は、パラメーターを検証します。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -107,7 +110,7 @@ int _waccess(
 
 ## <a name="example"></a>例
 
-次の例では **_access**はという名前のファイルを確認します。C が存在するかどうかと、書き込みが許可されているかどうかを確認します。
+次の例では、 **_access**を使用して、crt_ACCESS という名前のファイルを確認します。C は、存在するかどうか、書き込みが許可されているかどうかを確認します。
 
 ```C
 // crt_access.c

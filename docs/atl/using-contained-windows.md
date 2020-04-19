@@ -6,12 +6,12 @@ helpviewer_keywords:
 - windows [C++], ATL
 - contained windows in ATL
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
-ms.openlocfilehash: 800ae7cab5fd99bfa140b481f87b1615ff5b2a13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b9a36c6aac80a7c77cde102d6da93c51788e4e1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198604"
 ---
 # <a name="using-contained-windows"></a>含まれている Windows を使用します。
 
@@ -37,4 +37,3 @@ ATL に含まれているウィンドウを実装する[CContainedWindowT](../at
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ クラス](../atl/atl-window-classes.md)
-

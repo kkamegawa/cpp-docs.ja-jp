@@ -1,12 +1,12 @@
 ---
 title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _atoi64_l
 - _wtoi64
 - _atoi64
 - _wtoi64_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoi64
 - _tstoi64
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 950774e74462e8d1f301a1d5b933e57feaa9f840
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515480"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939484"
 ---
-# <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
+# <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
 文字列を 64 ビット整数に変換します。
 
@@ -86,11 +89,11 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、 **_ _int64**入力文字を数字として解釈して生成された値。 戻り値は 0 です **_atoi64**場合は、入力は、その型の値に変換できません。
+各関数は、入力文字を数値として解釈することによって生成される **__int64**値を返します。 入力をその型の値に変換できない場合、 **_atoi64**の戻り値は0になります。
 
-大きい正の整数値によるオーバーフローの場合 **_atoi64**返します**I64_MAX**と**I64_MIN**大きい負の整数値によるオーバーフローの場合。
+大きな正の整数値によるオーバーフローの場合、 **_atoi64**は、大きな負の整数値を持つオーバーフローの場合、 **I64_MAX**と**I64_MIN**を返します。
 
-すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 パラメーターが渡される場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -98,15 +101,15 @@ __int64 _wtoi64_l(
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-*Str*引数 **_atoi64**は次の形式があります。
+**_Atoi64**の*str*引数の形式は次のとおりです。
 
-> [*空白*] [*サインオン*] [*桁*]
+> [*空白*][*sign*][*数字*]
 
-A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
+*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の数字です。
 
-**_wtoi64**ヲェヒェケェ ・ **_atoi64**ワイド文字の文字列をパラメーターとして受け取る点を除いて。
+**_wtoi64**は、ワイド文字列をパラメーターとして受け取る点を除いて、 **_atoi64**と同じです。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -124,7 +127,7 @@ A*空白*は無視されますスペースまたはタブ文字含まれてい�
 
 ## <a name="example"></a>例
 
-このプログラムは、文字列として格納されている数字を使用して数値の値に変換する方法を示しています、 **_atoi64**関数。
+このプログラムは、 **_atoi64**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
 
 ```C
 // crt_atoi64.c

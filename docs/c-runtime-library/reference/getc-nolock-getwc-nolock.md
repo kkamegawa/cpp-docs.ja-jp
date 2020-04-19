@@ -1,10 +1,10 @@
 ---
 title: _getc_nolock、_getwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getc_nolock
 - _getwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getc_nolock
 - _gettc_nolock
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465352"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955504"
 ---
-# <a name="getcnolock-getwcnolock"></a>_getc_nolock、_getwc_nolock
+# <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock、_getwc_nolock
 
 ストリームから文字を読み取ります。
 
@@ -59,7 +62,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 入力ストリーム。
 
 ## <a name="return-value"></a>戻り値
@@ -68,7 +71,7 @@ wint_t _getwc_nolock(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数と同じ**getc**と**getwc**する点を除いて、呼び出し元のスレッドをロックしないでください。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、呼び出し元のスレッドをロックしない点を除いて、 **getc**および**getwc**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -121,14 +124,14 @@ int main()
 }
 ```
 
-### <a name="input-crtgetcnolocktxt"></a>入力: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>入力: crt_getc_nolock.txt
 
 ```Input
 Line the first.
 Line the second.
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Input was: Line the first.

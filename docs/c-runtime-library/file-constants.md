@@ -25,12 +25,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220440"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739979"
 ---
 # <a name="file-constants"></a>ファイル定数
 
@@ -40,7 +40,7 @@ ms.locfileid: "54220440"
 #include <fcntl.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 以下の 1 つまたは複数の定数で形成される整数式によって、許可される読み取りまたは書き込みの操作の種類が決定されます。 これは、1 つまたは複数の定数と、変換モードの定数を組み合わせることによって形成されます。
 
@@ -56,7 +56,7 @@ ms.locfileid: "54220440"
 | `_O_TRUNC`  | 既存のファイルを開き、長さをゼロに切り詰めます。ファイルに書き込みアクセス許可が必要です。 ファイルの内容は破棄されます。 このフラグを指定すると、`_O_RDONLY` は指定できません。  |
 | `_O_WRONLY`  | 書き込み専用のファイルを開きます。このフラグを指定すると、`_O_RDONLY` と `_O_RDWR` は指定できません。  |
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

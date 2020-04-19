@@ -1,6 +1,7 @@
 ---
 title: initializer_list クラス
-ms.date: 11/04/2016
+description: Visual Studio で Microsoft によって実装C++されている、標準ライブラリの initializer_list クラスのリファレンスです。
+ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6be51835958a07162ce22ff9d619fb793102669f
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466912"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894334"
 ---
-# <a name="initializerlist-class"></a>initializer_list クラス
+# <a name="initializer_list-class"></a>initializer_list クラス
 
 すべてのメンバーが指定された型である要素の配列にアクセスできます。
 
@@ -32,9 +33,8 @@ class initializer_list
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Type*|`initializer_list` に格納される要素のデータ型。|
+*型*\
+`initializer_list` に格納される要素のデータ型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,24 +44,24 @@ class initializer_list
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-関数のシグネチャで `initializer_list` が必要になる場合、コンパイラでは、中かっこで囲んだ初期化子リストが同種の要素を含んでいると、このリストは必ず `initializer_list` に変換されます。 `initializer_list` の使用に関する詳細については、「[均一な初期化とコンストラクターのデリゲート](../cpp/uniform-initialization-and-delegating-constructors.md)」をご覧ください。
+関数のシグネチャで `initializer_list` が必要になる場合、コンパイラでは、中かっこで囲んだ初期化子リストが同種の要素を含んでいると、このリストは必ず `initializer_list` に変換されます。 `initializer_list`の使用方法の詳細については、「 [Uniform initialization and デリゲートコンストラクター](../cpp/uniform-initialization-and-delegating-constructors.md) 」を参照してください。
 
 ### <a name="constructors"></a>コンストラクター
 
 |コンストラクター|説明|
 |-|-|
-|[initializer_list](../standard-library/forward-list-class.md#forward_list)|`initializer_list` 型のオブジェクトを構築します。|
+|[initializer_list](#initializer_list)|`initializer_list` 型のオブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
-|value_type|`initializer_list` 内の要素の型。|
-|参照|`initializer_list` 内の要素への参照を提供する型。|
-|const_reference|`initializer_list` 内の要素への定数参照を提供する型。|
-|size_type|`initializer_list` 内の要素の数を表す型。|
-|iterator|`initializer_list` に反復子を提供する型。|
-|const_iterator|`initializer_list` に定数反復子を提供する型。|
+|`value_type`|`initializer_list` 内の要素の型。|
+|`reference`|`initializer_list` 内の要素への参照を提供する型。|
+|`const_reference`|`initializer_list` 内の要素への定数参照を提供する型。|
+|`size_type`|`initializer_list` 内の要素の数を表す型。|
+|`iterator`|`initializer_list` に反復子を提供する型。|
+|`const_iterator`|`initializer_list` に定数反復子を提供する型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -71,9 +71,9 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 |[end](#end)|`initializer_list` 内の最後の要素の 1 つ後ろへのポインターを返します。|
 |[size](#size)|`initializer_list` 内の要素数を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<initializer_list>
+**ヘッダー:** \<initializer_list >
 
 **名前空間:** std
 
@@ -89,8 +89,6 @@ constexpr const InputIterator* begin() const noexcept;
 
 `initializer_list` の最初の要素へのポインター。 リストが空の場合、ポインターはリストの先頭および末尾と同じです。
 
-### <a name="remarks"></a>Remarks
-
 ## <a name="end"></a>  initializer_list::end
 
 `initializer list` 内の最後の要素の 1 つ後ろへのポインターを返します。
@@ -101,7 +99,7 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-リスト内の最後の要素の 1 つ後ろを指すポインター。 リストが空の場合、これはリストの最初の要素へのポインターと同じです。
+リスト内の最後の要素の 1 つ後ろを指すポインター。 リストが空の場合は、リスト内の最初の要素へのポインターと同じになります。
 
 ## <a name="initializer_list"></a>  initializer_list::initializer_list
 
@@ -114,16 +112,17 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+*最初*の\
+コピーする要素範囲内の最初の要素の位置。
+
+*最後*の\
+コピーする要素範囲を超える最初の要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
-`initializer_list` は、指定された型のオブジェクトの配列に基づいています。 `initializer_list` をコピーすると、同じオブジェクトを指すリストの 2 番目のインスタンスが作成されますが、基になるオブジェクトはコピーされません。
+`initializer_list` は、指定された型のオブジェクトの配列に基づいています。 `initializer_list` をコピーすると、同じオブジェクトを指すリストの2番目のインスタンスが作成されます。基になるオブジェクトはコピーされません。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // initializer_list_class.cpp
@@ -170,11 +169,6 @@ int main()
         cout << " " << c;
     cout << endl;
 
-    cout << "c4 =";
-    for (auto c : c4)
-        cout << " " << c;
-    cout << endl;
-
     cout << "c5 =";
     for (auto c : c5)
         cout << " " << c;
@@ -183,7 +177,10 @@ int main()
 ```
 
 ```Output
-c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4
+c1 = 3
+c2 = 5 4 3 2 1
+c3 = 5 4 3 2 1
+c5 = 5 4
 ```
 
 ## <a name="size"></a>  initializer_list::size
@@ -198,8 +195,6 @@ constexpr size_t size() const noexcept;
 
 リストの要素数。
 
-### <a name="remarks"></a>Remarks
-
 ## <a name="see-also"></a>関連項目
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

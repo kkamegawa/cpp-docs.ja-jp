@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 22ea136dd91a514ff10e13cd02b796565b7b0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197407"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient インターフェイス
 
@@ -83,7 +83,7 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>パラメーター
 
-*について*<br/>
+*dwParam*<br/>
 ユーザー パラメーター。
 
 *hObject*<br/>

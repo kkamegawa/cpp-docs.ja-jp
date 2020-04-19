@@ -1,37 +1,102 @@
 ---
-title: 新しいダイアログ ボックス (C++) の作成
-ms.date: 11/04/2016
+title: '方法: 作成 ダイアログ ボックス (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
 - dialog boxes [C++], creating
 - Dialog Editor [C++], creating dialog boxes
+- modal dialog boxes [C++], logon screens
+- logon screens
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes [C++], testing
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: ed1bb21029b2a61eb51b54386ed51ef08b90e149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605335"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344205"
 ---
-# <a name="creating-a-new-dialog-box-c"></a>新しいダイアログ ボックス (C++) の作成
+# <a name="how-to-create-a-dialog-box-c"></a>方法: 作成 ダイアログ ボックス (C++)
+
+場所と C++ のダイアログ ボックスと場所のサイズと、内のコントロールのサイズは、ダイアログ単位で測定されます。 個々 のコントロールと、ダイアログ ボックスの値は、Visual Studio のステータス バーの選択した場合の右下に表示されます。
+
+> [!NOTE]
+> 場合は、プロジェクトに .rc ファイル含まれていないを参照してください。[リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)です。
+
+## <a name="how-to"></a>方法
+
+**ダイアログ エディター**できます。
 
 ### <a name="to-create-a-new-dialog-box"></a>新しいダイアログ ボックスを作成するには
 
-1. [リソース ビュー](../windows/resource-view-window.md)、.rc ファイルを右クリックし **リソースの追加**ショートカット メニューからです。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を右クリックし、 *.rc*ファイルおよび選択**リソースの追加**します。
 
-   > [!NOTE]
-   > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
+1. **リソースの追加**ダイアログ ボックスで、**ダイアログ**で、**リソースの種類**し選択**新規**します。
 
-2. **リソースの追加**ダイアログ ボックスで、**ダイアログ**で、**リソースの種類** をクリックし、**新規**します。
+   プラス記号の場合 ( **+** ) 横に表示されます、**ダイアログ**ダイアログ ボックスのテンプレートが使用できることを意味、リソースの種類。 テンプレートの一覧を展開し、テンプレートを選択して、選択、プラス記号を選択します。**新規**します。
 
-   プラス記号の場合 (**+**) 横に表示されます、**ダイアログ**ダイアログ ボックスのテンプレートが使用できることを意味、リソースの種類。 テンプレートの一覧を展開し、テンプレートを選択してをクリックするには、プラス記号をクリックします。**新規**します。
+   新しいダイアログ ボックスが開き、**ダイアログ エディター**します。
 
-   新しいダイアログ ボックスが開き、**ダイアログ**エディター。
+編集 ダイアログ ボックスのエディターで既存のダイアログ ボックスを開くこともできます。
 
-   できます[の編集 ダイアログ ボックスのエディターで既存のダイアログ ボックスを開く](../windows/viewing-and-editing-resources-in-a-resource-editor.md)します。
+### <a name="to-create-a-dialog-box-that-a-user-cant-exit"></a>ユーザーが終了できないダイアログ ボックスを作成するには
 
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+ユーザーが終了できない実行時のダイアログ ボックスを作成することができます。 この種のダイアログ ボックスはログオンの場合や、アプリケーションやドキュメントをロックする場合に便利です。
+
+1. ダイアログ ボックスの **[プロパティ]** ウィンドウで、 **[システム メニュー]** プロパティを **[false]** に設定します。
+
+   この設定は、ダイアログ ボックスのシステム メニューを無効にし、**閉じる**ボタンをクリックします。
+
+1. ダイアログ ボックスのフォームで、 **[キャンセル]** ボタンと **[OK]** ボタンを削除します。
+
+   ユーザーは、実行時に、これらの特性を持つモーダル ダイアログ ボックスを終了できません。
+
+この種のダイアログ ボックスのテストを有効にする ダイアログ ボックスのテスト機能を検出ときに**Esc**が押されました。 **Esc** VK_ESCAPE 仮想キーとも呼ばれます。 実行時の動作 ダイアログ ボックスの設計方法に関係なく、キーを押してテスト モードを終了できます**Esc**します。
+
+> [!NOTE]
+> MFC アプリケーションの場合にユーザーが終了できないダイアログ ボックスを作成する必要があります動作をオーバーライドする、既定の`OnOK`と`OnCancel`に関連付けられたボタンを削除する場合でもダイアログ ボックスはキーを押しても閉じることができますので**入力**または**Esc**します。
+
+### <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>ダイアログ ボックスのサイズと場所を指定するには
+
+設定できるプロパティがある、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window) ダイアログ ボックスを画面に表示を指定します。
+
+- ブール値を**Center**プロパティ。
+
+   値を設定する場合**True**画面の中央で、ダイアログ ボックスが表示されます。 このプロパティを設定する場合**False**、設定することができます、 **XPos**と**YPos**プロパティ。
+
+- **XPos**と**YPos**画面に表示される場所を明示的に定義に使用されるプロパティ ダイアログ ボックスが表示されます。
+
+   これらのプロパティの位置として定義されている表示領域の左上隅からのオフセット値`{X=0, Y=0}`します。
+
+- **Absolute Align**位置に影響するプロパティ。
+
+   場合**True**座標は画面を基準とします。 場合**False**座標はダイアログのオーナー ウィンドウを基準とします。
+
+### <a name="to-test-a-dialog-box"></a>ダイアログ ボックスをテストするには
+
+ダイアログ ボックスを設計する際には、プログラムをコンパイルせずに実行時の動作をシミュレートし、テストできます。 このモードでは、次を行うことができます。
+
+- テキストの入力、コンボ ボックスの一覧での選択、オプションのオンとオフの切り替え、コマンドの選択。
+
+- タブ オーダーのテスト。
+
+- オプション ボタンやチェック ボックスなど、コントロールのグループ化のテスト。
+
+- ダイアログ ボックスにあるコントロールのキーボード ショートカットのテスト。
+
+> [!NOTE]
+> ウィザードを使用したダイアログ ボックスのコードへの接続は、シミュレーションに含まれません。
+
+通常、テストするダイアログ ボックスはメイン プログラム ウィンドウの相対位置に表示されます。 ダイアログ ボックスを設定した場合**Absolute Align**プロパティを**True**画面の左上隅に対して相対的な位置にあるダイアログ ボックスが表示されます。
+
+1. ときに、**ダイアログ エディター**メニューに移動して、アクティブなウィンドウ**形式** > **テスト ダイアログ**します。
+
+1. シミュレーションを終了するには、キーを押します**Esc**または選択、**閉じる** ダイアログ ボックスでテストしているボタンをクリックします。
 
 ## <a name="requirements"></a>必要条件
 
@@ -39,6 +104,5 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[方法: リソースを作成する](../windows/how-to-create-a-resource.md)<br/>
-[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
-[ダイアログ エディター](../windows/dialog-editor.md)
+[ダイアログ エディター](../windows/dialog-editor.md)<br/>
+[方法: ダイアログ ボックスのコントロールを管理します。](../windows/controls-in-dialog-boxes.md)<br/>

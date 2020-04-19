@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2120
 ms.assetid: b0f3f66c-6cd2-4f48-9ea3-c270b53c2b8c
-ms.openlocfilehash: 699a80b2cdb1de175c78efb918ba9389ec3695f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b188f4f3e898a17a5f8fbeafaa2d1c3c6e08552
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486295"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737973"
 ---
 # <a name="compiler-error-c2120"></a>コンパイラ エラー C2120
 
-すべての種類 'void' が無効です。
+' void ' はすべての型で無効です
 
-`void`別の型を含む宣言で型を使用します。
+`void` 型は、別の型の宣言で使用されています。
 
 次の例では、C2120 が生成されます。
 
-```
+```cpp
 // C2120.cpp
 int main() {
    void int i;   // C2120

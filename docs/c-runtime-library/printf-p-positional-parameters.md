@@ -1,26 +1,29 @@
 ---
 title: printf_p の位置指定パラメーター
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: 2801f1b4c61247ebb9a1402b6244f0c63c2b7dd2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498034"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944050"
 ---
-# <a name="printfp-positional-parameters"></a>printf_p の位置指定パラメーター
+# <a name="printf_p-positional-parameters"></a>printf_p の位置指定パラメーター
 
 位置指定パラメータを使用すると、書式指定文字列のフィールドに代入する引数を番号で指定することができます。 次の位置指定パラメーター `printf` 関数を使用できます。
 
@@ -86,7 +89,7 @@ _printf_p("%1$d times %1$d is %2$d", 10, 100);
 _printf_p("%1$*2$s","Hello", 10);
 ```
 
-または
+or
 
 ```C
 _printf_p("%2$*1$s", 10, "Hello");
@@ -146,6 +149,6 @@ ghi abc def
 333.333300 2.22 0.100
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [書式指定構文: printf 関数と wprintf 関数](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

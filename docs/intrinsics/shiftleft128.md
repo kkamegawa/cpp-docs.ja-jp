@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 4fb1f9e65210ca9f9e38afd6fc13e01c7eb8f045
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325566"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218003"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Microsoft 固有の仕様**
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325566"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*下位*<br/>
-[in]シフトする 128 ビット数の下位 64 ビット。
+*LowPart*\
+からシフトする128ビット数量の下位64ビット。
 
-*上位*<br/>
-[in]シフトする 128 ビット数の上位 64 ビット。
+*Largeint.highpart*\
+からシフトする128ビット数量の上位64ビット。
 
-*Shift*<br/>
-[in]シフトするビット数。
+*転換*\
+からシフトするビット数。
 
 ## <a name="return-value"></a>戻り値
 
@@ -50,15 +50,15 @@ unsigned __int64 __shiftleft128(
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-`Shift` の値は常にモジュロ 64 です。このため、たとえば `__shiftleft128(1, 0, 64)` をコールすると、上位部分が `0` ビット右にシフトされ、下位部分である `0` が返されます。`1` ではありません。
+*シフト*値は常にモジュロ64であるため、たとえば、を呼び出す`__shiftleft128(1, 0, 64)`と、関数は低位部分`0`のビットを左にシフトし、の大`0`部分を`1`返しますが、それ以外の場合はを返します。
 
 ## <a name="example"></a>例
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
+[__shiftright128](../intrinsics/shiftright128.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

@@ -64,12 +64,12 @@ f1_keywords:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5caf40fc757e2c5c90c06e1698ce4c15d1ed6240
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338060"
 ---
 # <a name="afx-messages"></a>AFX メッセージ
 
@@ -81,7 +81,7 @@ ms.locfileid: "50594689"
 
 ||||||
 |-|-|-|-|-|
-|メッセージ|説明|[in]*wParam*|*lParam* (すべてのパラメーターは [in] 特に明記しない限り)。|戻り値|
+|メッセージ|説明|[in] *wParam*|*lParam* (すべてのパラメーターは [in] 特に明記しない限り)。|戻り値|
 |AFX_WM_ACCGETOBJECT|使用しません。|使用しません。|該当なし。|該当なし。|
 |AFX_WM_ACCGETSTATE|ユーザー補助のサポートに使用されます。 このメッセージを送信`CMFCPopupMenu`または`CMFCRibbonPanelMenu`現在の要素の状態を取得します。|メニュー ボタンまたは区切り記号である可能性がある、要素のインデックス。|使用しません。|要素の状態。 インデックスが有効でない場合は-1、メニュー ボタンが特別な属性を持っていない場合は 0。 それ以外の場合、次のフラグの組み合わせです。<br /><br /> TBBS_DISABLED: 項目が無効になっています<br /><br /> TBBS_CHECKED: 項目は、オンします。<br /><br /> TBBS_BUTTON-項目が標準のプッシュ ボタンです。<br /><br /> TBBS_PRESSED: ボタンが押されました。<br /><br /> TBBS_INDETERMINATE: 未定義の状態<br /><br /> TBBS_SEPARATOR - ではなくメニュー ボタンでは、他のメニュー項目間の分離をこの要素のフォーム|
 |AFX_WM_CHANGE_ACTIVE_TAB|フレームワークは、サイズ変更可能なコントロール バー コントロールにこのメッセージを送信します。 通知を受信するには、このメッセージを処理`CMFCTabCtrl`オブジェクトをユーザーには、アクティブなタブが変更されたとき。|タブのインデックス。|使用しません。|0 以外の値。|

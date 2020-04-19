@@ -17,12 +17,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592505"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449063"
 ---
 # <a name="iostream-programming"></a>iostream プログラミング
 
@@ -44,5 +44,5 @@ ms.locfileid: "50592505"
 
 ## <a name="see-also"></a>関連項目
 
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

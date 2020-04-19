@@ -1,12 +1,12 @@
 ---
 title: atof、_atof_l、_wtof、_wtof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstof
 - _ttof
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471176"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939566"
 ---
-# <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
+# <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
 文字列を double 型に変換します。
 
@@ -86,9 +89,9 @@ double _wtof_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、**二重**入力文字を数字として解釈して生成された値。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
+各関数は、入力文字を数値として解釈することによって生成される**double**値を返します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
 
-すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 パラメーターが渡される場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -96,15 +99,15 @@ double _wtof_l(
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-*Str*引数**atof**と **_wtof**は次の形式があります。
+**Atof**と **_wtof**の*str*引数の形式は次のとおりです。
 
-[*空白*] [*サインオン*] [*桁*] [__.__*桁*] [{**e** &#124; **E** } [*サインオン*]*桁*]
+[*whitespace*] [*sign*] [*digits*] [ __.__ *digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
 
-A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の 10 進数字。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10 進数字の後に、指数部の開始文字で構成されること (**e**、または**E**) および必要に応じて符号付き 10 進整数。
+*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の10進数です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の先頭文字 (**e**または**e**) と、必要に応じて符号付き10進整数で構成されます。
 
-これらの関数の UCRT バージョンは Fortran スタイルの変換をサポートしていません (**d**または**D**) 指数の文字。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
+これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
-これらの関数のバージョン、 **_l**を使用する点を除いて、サフィックスと同じですが、*ロケール*現在のロケールの代わりに渡されるパラメーター。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -117,12 +120,12 @@ A*空白*は無視されますスペースまたはタブ文字含まれてい�
 
 |ルーチン|必須ヘッダー|
 |------------------|---------------------|
-|**atof**、 **_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
+|**atof**、 **_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
 |**_wtof**、 **_wtof_l**|C: \<stdlib.h > または \<wchar.h > C++: \<cstdlib >、\<stdlib.h > または \<wchar.h >|
 
 ## <a name="example"></a>例
 
-このプログラムは、文字列として格納されている数字を使用して数値の値に変換する方法を示しています、 **atof**と **_atof_l**関数。
+このプログラムは、 **atof**関数と **_b**関数を使用して、文字列として格納されている数値を数値に変換する方法を示します。
 
 ```C
 // crt_atof.c

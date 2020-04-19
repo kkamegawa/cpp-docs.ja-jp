@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: ec0018fc1aafc7e3e0423608f4db9f78946e4597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743134"
 ---
 # <a name="compiler-error-c3482"></a>コンパイラ エラー C3482
 
@@ -25,11 +25,11 @@ ms.locfileid: "50432640"
 
 - ラムダ式のキャプチャ リストから `this` ポインターを削除します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3482 が生成されます。
 
-```
+```cpp
 // C3482.cpp
 // compile with: /c
 
@@ -43,6 +43,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

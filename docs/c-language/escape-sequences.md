@@ -13,7 +13,7 @@ helpviewer_keywords:
 - tab 	 escape sequence
 - "\f escape sequence"
 - quotation marks, single
-- "formfeed \f escape sequence"
+- "form feed \f escape sequence"
 - "\v escape sequence"
 - control character escape sequences
 - " symbol in escape sequences"
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - "newline character \n escape sequence"
 - nongraphic control characters
 - question mark, literal
-- "\nescape sequence"
+- "\n escape sequence"
 - "vertical tab \v escape sequence"
 - "\a escape sequence"
 - '? symbol'
@@ -30,20 +30,20 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 810d091b923bd976a4a8bbe6814e8ddc0b243bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5de0b5f1a73fcfb6ea0325bea3247ebe4c85d411
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431201"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375827"
 ---
 # <a name="escape-sequences"></a>エスケープ シーケンス
 
-先頭に円記号 (**\\**) が指定されている、アルファベットや数字で構成される文字の組み合わせは、"エスケープ シーケンス" と呼ばれます。 改行文字や単一引用符など、文字定数内の特定の文字を表すには、エスケープ シーケンスを使用する必要があります。 エスケープ シーケンスは 1 つの文字と見なされるため、文字定数として有効です。
+先頭に円記号 ( **\\** ) が指定されている、アルファベットや数字で構成される文字の組み合わせは、"エスケープ シーケンス" と呼ばれます。 改行文字や単一引用符など、文字定数内の特定の文字を表すには、エスケープ シーケンスを使用する必要があります。 エスケープ シーケンスは 1 つの文字と見なされるため、文字定数として有効です。
 
-通常、エスケープ シーケンスは、ターミナルとプリンターでは、復帰とタブ移動などの操作を指定するために使用されます。 これらは、印字できない文字と、二重引用符 (**"**) などの通常は特別な意味を持つ文字のリテラル表現を提供するためにも使用されます。 次の表は、ANSI エスケープ シーケンスと、それが何を表すかを示す一覧です。
+通常、エスケープ シーケンスは、ターミナルとプリンターでは、復帰とタブ移動などの操作を指定するために使用されます。 これらは、印字できない文字と、二重引用符 ( **"** ) などの通常は特別な意味を持つ文字のリテラル表現を提供するためにも使用されます。 次の表は、ANSI エスケープ シーケンスと、それが何を表すかを示す一覧です。
 
-文字シーケンスがトライグラフとして誤って解釈されるような場合、疑問符の前に円記号 (**\\?**) を置くと、リテラル疑問符を指定できます。 詳細については、「[トライグラフ](../c-language/trigraphs.md)」を参照してください。
+文字シーケンスがトライグラフとして誤って解釈されるような場合、疑問符の前に円記号 ( **\\?** ) を置くと、リテラル疑問符を指定できます。 詳細については、「[トライグラフ](../c-language/trigraphs.md)」を参照してください。
 
 ### <a name="escape-sequences"></a>エスケープ シーケンス
 
@@ -70,15 +70,15 @@ ms.locfileid: "50431201"
 
 **Microsoft 固有の仕様はここまで**
 
-エスケープ シーケンスは、ディスプレイ デバイスに非グラフィカル制御文字を渡すことができます。 たとえば、ESC 文字 (**\033**) は、端末またはプリンターの制御コマンドの最初の文字としてよく使用されます。 一部のエスケープ シーケンスはデバイス固有です。 たとえば、垂直タブとフォーム フィードのエスケープ シーケンス (**\v** と **\f**) は、画面出力には影響しませんが、適切なプリンター操作を実行します。
+エスケープ シーケンスは、ディスプレイ デバイスに非グラフィカル制御文字を渡すことができます。 たとえば、ESC 文字 ( **\033**) は、端末またはプリンターの制御コマンドの最初の文字としてよく使用されます。 一部のエスケープ シーケンスはデバイス固有です。 たとえば、垂直タブとフォーム フィードのエスケープ シーケンス ( **\v** と **\f**) は、画面出力には影響しませんが、プリンターでは該当する操作が実行されます。
 
-また、円記号 (**\\**) を連結文字としても使用できます。 円記号のすぐ後に改行文字 (Enter キーを押すことに相当します) があると、コンパイラは円記号と改行文字を無視し、前の行の一部として次の行を処理します。 これは、主に、1 行より長いプリプロセッサ定義で便利です。 例:
+また、円記号 ( **\\** ) を連結文字としても使用できます。 円記号のすぐ後に改行文字 (Enter キーを押すことに相当します) があると、コンパイラは円記号と改行文字を無視し、前の行の一部として次の行を処理します。 これは、主に、1 行より長いプリプロセッサ定義で便利です。 次に例を示します。
 
 ```
 #define assert(exp) \
 ( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 文字定数](../c-language/c-character-constants.md)

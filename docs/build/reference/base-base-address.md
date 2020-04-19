@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329853"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341022"
 ---
 # <a name="base-base-address"></a>/BASE (ベース アドレス)
 
@@ -33,14 +33,14 @@ ms.locfileid: "51329853"
 
 ## <a name="syntax"></a>構文
 
-> **/BASE:**{*アドレス*[**、**<em>サイズ</em>] |**\@** <em>filename</em>**、**<em>キー</em>}
+> **/BASE:**{*address*[**,**<em>size</em>] | **\@**<em>filename</em>**,**<em>key</em>}
 
 ## <a name="remarks"></a>Remarks
 
 > [!NOTE]
-> セキュリティ上の理由から、使用するをお勧めします。、 [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)実行可能ファイルのベース アドレスを指定する代わりにオプション。 これには、ランダムに再ベースできる読み込み時に Windows のアドレス空間レイアウト randomization (ASLR) 機能を使用して実行可能イメージが生成されます。 /DYNAMICBASE オプションが既定でオンにします。
+> セキュリティ上の理由から、使用するをお勧めします。、 [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)実行可能ファイルのベース アドレスを指定する代わりにオプション。 これには、ランダムに再ベースできる読み込み時に Windows のアドレス空間レイアウト randomization (ASLR) 機能を使用して実行可能イメージが生成されます。 /DYNAMICBASE オプションが既定でオンにします。
 
-/、基本オプションは、.exe ファイルまたは DLL ファイルの既定の場所をオーバーライドして、プログラムのベース アドレスを設定します。 .Exe ファイルの既定のベース アドレスは、32 ビット イメージの 0x400000 または 64 ビット イメージの 0x140000000 は。 Dll の場合、既定のベース アドレスは、32 ビット イメージの 0x10000000 または 64 ビット イメージの 0x180000000 します。 アドレス空間レイアウト randomization (ASLR) をサポートしていないか、/DYNAMICBASE:NO オプションが設定されたオペレーティング システムでオペレーティング システムは、最初に、指定したプログラムまたは既定のベース アドレスをロードを試みます。 十分な空き領域がない場合は使用可能なシステムには、プログラムが再配置します。 再配置を防ぐためには、使用、 [/fixed](../../build/reference/fixed-fixed-base-address.md)オプション。
+/、基本オプションは、.exe ファイルまたは DLL ファイルの既定の場所をオーバーライドして、プログラムのベース アドレスを設定します。 .Exe ファイルの既定のベース アドレスは、32 ビット イメージの 0x400000 または 64 ビット イメージの 0x140000000 は。 Dll の場合、既定のベース アドレスは、32 ビット イメージの 0x10000000 または 64 ビット イメージの 0x180000000 します。 アドレス空間レイアウト randomization (ASLR) をサポートしていないか、/DYNAMICBASE:NO オプションが設定されたオペレーティング システムでオペレーティング システムは、最初に、指定したプログラムまたは既定のベース アドレスをロードを試みます。 十分な空き領域がない場合は使用可能なシステムには、プログラムが再配置します。 再配置を防ぐためには、使用、 [/fixed](fixed-fixed-base-address.md)オプション。
 
 場合、リンカーはエラーを発行*アドレス*64 K の倍数ではありません。 必要に応じて、プログラムのサイズを指定することができます。リンカーは、プログラムが指定したサイズに収まらない場合に警告を発行します。
 
@@ -62,11 +62,11 @@ two    0x28100000    0x00300000    ; for DLLTWO.DLL
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-ベース アドレスを設定する別の方法を使用して、*基本*で引数を[名前](../../build/reference/name-c-cpp.md)または[ライブラリ](../../build/reference/library.md)ステートメント。 /Baseaddress と[/DLL](../../build/reference/dll-build-a-dll.md)オプションはまとめてと同じですが、**ライブラリ**ステートメント。
+ベース アドレスを設定する別の方法を使用して、*基本*で引数を[名前](name-c-cpp.md)または[ライブラリ](library.md)ステートメント。 /Baseaddress と[/DLL](dll-build-a-dll.md)オプションはまとめてと同じですが、**ライブラリ**ステートメント。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
 
@@ -78,5 +78,5 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

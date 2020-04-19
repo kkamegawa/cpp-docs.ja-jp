@@ -1,21 +1,21 @@
 ---
-title: (C++ COM 属性) を非表示
+title: hidden (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: c1d8c8d894ed9a54c0dd3af775d6fbfda0385906
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597614"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501449"
 ---
 # <a name="hidden"></a>hidden
 
-項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。
+項目が存在するが、ユーザー指向のブラウザーに表示されないことを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50597614"
 
 ## <a name="remarks"></a>Remarks
 
-**隠し**C++ 属性と同じ機能を持つ、[隠し](/windows/desktop/Midl/hidden)MIDL 属性。
+**Hidden** C++属性には、[隠し](/windows/win32/Midl/hidden)MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)を使用する方法の例については**隠し**します。
+**非表示**の使用方法の例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -37,9 +37,9 @@ ms.locfileid: "50597614"
 
 |||
 |-|-|
-|**対象**|**インターフェイス**、**クラス**、**構造体**メソッド、プロパティ|
+|**対象**|**interface**、 **class**、 **struct**、method、property|
 |**反復可能**|いいえ|
-|**必要な属性**|**コクラス**(に適用すると**クラス**または**構造体**)|
+|**必要な属性**|**コクラス**(**クラス**または**構造体**に適用される場合)|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。

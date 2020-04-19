@@ -1,12 +1,12 @@
 ---
 title: ___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 - ___mb_cur_max_func
 - __mb_cur_max
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -14,7 +14,11 @@ apilocation:
 - msvcrt.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+- api-ms-win-crt-locale-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___mb_cur_max_func
 - ___mb_cur_max_l_func
@@ -26,14 +30,14 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: cb84c77ebafc7fb53c1544f9ec07db3fba6f02d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a37ae2134d92310d6a530c759559b5e4b4af00f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657042"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944195"
 ---
-# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
+# <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
 
 内部 CRT 関数。 現在または指定されたロケールのマルチバイト文字の最大バイト数を取得します。
 
@@ -54,7 +58,7 @@ locale 結果の取得元のロケール構造。 この値が null の場合は
 
 現在のスレッド ロケールまたは指定されたロケールのマルチバイト文字の最大バイト数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これは、スレッド ローカル ストレージから [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) マクロの現在の値を取得するために CRT で使用される内部関数です。 移植性を考慮して、コードでは `MB_CUR_MAX` マクロを使用することをお勧めします。
 
@@ -66,8 +70,8 @@ locale 結果の取得元のロケール構造。 この値が null の場合は
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|`___mb_cur_max_func`、 `___mb_cur_max_l_func`、 `__p___mb_cur_max`|\<ctype.h>、\<stdlib.h>|
+|`___mb_cur_max_func`、`___mb_cur_max_l_func`、`__p___mb_cur_max`|\<ctype.h>、\<stdlib.h>|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)

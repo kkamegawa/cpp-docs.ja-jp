@@ -2,12 +2,12 @@
 title: MFC ウィザードとダイアログ ボックス
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310189"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC ウィザードとダイアログ ボックス
 
@@ -15,7 +15,7 @@ Microsoft Foundation Class (MFC) ウィザードでは、さまざまな種類�
 
 ## <a name="related-articles"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[MFC DLL プロジェクトの作成](../../mfc/reference/creating-an-mfc-dll-project.md)|MFC ベースで DLL を作成します。|
 |[MFC アプリケーションの作成](../../mfc/reference/creating-an-mfc-application.md)|MFC アプリケーションが生成されます。|
@@ -28,4 +28,3 @@ Microsoft Foundation Class (MFC) ウィザードでは、さまざまな種類�
 |[MFC プロジェクトでの ATL サポート](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|ヘッダーと必要な Active Template Library (ATL) でマクロを作成します。|
 |[MFC クラス ウィザード](../../mfc/reference/mfc-class-wizard.md)|.H ファイルと .cpp ファイルを作成します。|
 |[MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)|MFC のドキュメントにリンクします。|
-

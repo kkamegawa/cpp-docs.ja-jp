@@ -32,17 +32,17 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 6e20b8fd2c8b40f907301c36f2aa3acef144d7b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a83e45176f7fc6020da1f0d0ee5923ef0f466c
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559147"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866154"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl クラス
 
 リボン上に配置するハイパーリンクを実装します。 ハイパーリンクをクリックすると、Web ページが表示されます。
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -63,13 +63,13 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |名前|説明|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|( `CMFCRibbonButton::CopyFrom`をオーバーライドします)。|
-|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(上書き[cmfcribbonbutton::getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize))。|
+|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|( [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)をオーバーライドします。)|
 |[CMFCRibbonLinkCtrl::GetLink](#getlink)|ハイパーリンクの値を返します。|
-|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(上書き[cmfcribbonbutton::getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize))。|
-|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(上書き[cmfcribbonbutton::gettooltiptext](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext))。|
+|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|( [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)をオーバーライドします。)|
+|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|( [CMFCRibbonButton:: GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext)をオーバーライドします。)|
 |[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|( `CMFCRibbonButton::IsDrawTooltipImage`をオーバーライドします)。|
-|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(上書き[cmfcribbonbutton::ondraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw))。|
-|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(上書き[cmfcribbonbaseelement::ondrawmenuimage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage))。|
+|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|( [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)をオーバーライドします)。|
+|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|( [CMFCRibbonBaseElement:: OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)をオーバーライドします。)|
 |[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|( `CMFCRibbonButton::OnMouseMove`をオーバーライドします)。|
 |[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||
 |[CMFCRibbonLinkCtrl::OpenLink](#openlink)|ハイパーリンクで指定されている Web ページを開きます。|
@@ -77,21 +77,22 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 ## <a name="remarks"></a>Remarks
 
-ハイパーリンクを作成した後に追加パネルを呼び出すことによって[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)します。
+ハイパーリンクを作成したら、 [CMFCRibbonPanel:: add](../../mfc/reference/cmfcribbonpanel-class.md#add)を呼び出してパネルに追加します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
-
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxRibbonLinkCtrl.h
+**ヘッダー:** afxRibbonLinkCtrl
 
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
 
-構築し、初期化、 [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)オブジェクト。
+[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)オブジェクトを構築し、初期化します。
 
 ```
 CMFCRibbonLinkCtrl(
@@ -103,17 +104,17 @@ CMFCRibbonLinkCtrl(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]リンク コントロールがクリックされたときに実行されるコマンドのコマンド ID を指定します。
+からリンクコントロールがクリックされたときに実行されるコマンドのコマンド ID を指定します。
 
 *lpszText*<br/>
-[in]リンク コントロールに表示するラベルを指定します。
+からリンクコントロールに表示するラベルを指定します。
 
 *lpszLink*<br/>
-[in]リンク コントロールに関連付けられたハイパーリンクを指定します。
+からリンクコントロールに関連付けられているハイパーリンクを指定します。
 
 ### <a name="example"></a>例
 
-次の例では、コンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラス。 このコード スニペットの一部、[リボン ガジェット サンプル](../../visual-cpp-samples.md)します。
+`CMFCRibbonLinkCtrl`クラスのコンストラクターを使用する方法を次の例に示します。 このコードスニペットは、リボンの[ガジェットサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 
@@ -125,7 +126,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*src*<br/>
+から*src*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -137,7 +138,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*<br/>
+から*pDC*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -165,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*<br/>
+から*pDC*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -189,14 +190,14 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*CDC&#42;*<br/>
-[in]*CRect*<br/>
+から*CDC&#42;*<br/>
+から*CRect*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonLinkCtrl::IsDrawTooltipImage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -214,7 +215,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*<br/>
+から*pDC*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -226,7 +227,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ポイント*<br/>
+から*ポイント*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -248,11 +249,11 @@ BOOL OpenLink();
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられている web ページが正常に開かれた場合は TRUE。それ以外の場合、FALSE です。
+関連付けられた web ページが正常に開かれた場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-関連付けられているハイパーリンクを使用して web ページを開き、`CMFCRibbonLinkCtrl`オブジェクト。
+`CMFCRibbonLinkCtrl`オブジェクトに関連付けられているハイパーリンクを使用して、web ページを開きます。
 
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink
 
@@ -265,7 +266,7 @@ void SetLink(LPCTSTR lpszLink);
 ### <a name="parameters"></a>パラメーター
 
 *lpszLink*<br/>
-[in]ハイパーリンクのテキストを指定します。
+からハイパーリンクのテキストを指定します。
 
 ## <a name="see-also"></a>関連項目
 

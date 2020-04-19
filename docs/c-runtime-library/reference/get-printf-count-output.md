@@ -1,9 +1,9 @@
 ---
 title: _get_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_printf_count_output
 - _get_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-ms.openlocfilehash: 477e4a9e987f27bd70b9707e91b9ea9d84b69993
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b37ac759821ad56cc5c03c9b98719d8f0cc19a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610636"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955709"
 ---
-# <a name="getprintfcountoutput"></a>_get_printf_count_output
+# <a name="_get_printf_count_output"></a>_get_printf_count_output
 
-示すかどうか[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-ファミリの関数のサポート、 **%n**形式。
+[Printf、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)の各関数が **% n**形式をサポートするかどうかを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,11 +46,11 @@ int _get_printf_count_output();
 
 ## <a name="return-value"></a>戻り値
 
-0 以外の場合 **%n**はサポートされている場合は 0 **%n**はサポートされていません。
+**% N**がサポートされている場合は0以外、 **% n**がサポートされていない場合は0です。
 
 ## <a name="remarks"></a>Remarks
 
-場合 **%n**は (既定値) はサポートされていませんが発生して **%n**のいずれかの書式指定文字列で、 **printf** 」の説明に従って、関数は無効なパラメーター ハンドラーを呼び出しますが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 場合 **%n**サポートが有効になっている (を参照してください[_set_printf_count_output](set-printf-count-output.md)) し、 **%n** 」の説明に従って動作[書式指定構文: printf および wprintf関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。
+**% N**がサポートされていない場合 (既定)、いずれかの**printf**関数の書式指定文字列で **% n**を検出すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 **% N**サポートが有効になっている場合 ( [_set_printf_count_output](set-printf-count-output.md)を参照)、 **% n**は[書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)の説明に従って動作します。
 
 ## <a name="requirements"></a>必要条件
 

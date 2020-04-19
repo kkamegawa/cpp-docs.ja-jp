@@ -1,7 +1,7 @@
 ---
 title: _STATIC_ASSERT マクロ
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _STATIC_ASSERT
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 5d3aa1d9665b48a0690d8eb62353fc98c5a550f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539543"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957939"
 ---
-# <a name="staticassert-macro"></a>_STATIC_ASSERT マクロ
+# <a name="_static_assert-macro"></a>_STATIC_ASSERT マクロ
 
-コンパイル時に式を評価し、結果がエラーを生成**FALSE**します。
+コンパイル時に式を評価し、結果が**FALSE**の場合にエラーを生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,16 +42,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>パラメーター
 
-*ブール式*<br/>
-0 以外の値に評価される式 (ポインターを含む) (**TRUE**) または 0 (**FALSE**)。
+*booleanExpression*<br/>
+0以外 (**TRUE**) または 0 (**FALSE**) に評価される式 (ポインターを含む)。
 
 ## <a name="remarks"></a>Remarks
 
-このマクロに似ています、 [_assert マクロと _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)ことを除いて、*ブール式*は実行時ではなく、コンパイル時に評価されます。 場合*ブール式*に評価される**FALSE** (0)、[コンパイラ エラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
+このマクロは[_ASSERT マクロと _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)に似ていますが、 *booleanExpression*は実行時ではなくコンパイル時に評価される点が異なります。 *BooleanExpression*が**FALSE** (0) に評価される場合、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
 
 ## <a name="example"></a>例
 
-この例で確認かどうか、 [sizeof](../../c-language/sizeof-operator-c.md) 、 **int** 2 バイト以上かどうかおよび、 [sizeof](../../c-language/sizeof-operator-c.md) 、**長い**1 バイトします。 プログラムはコンパイルされずが生成されます[コンパイラ エラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)ため、**長い**が 1 バイトを超えています。
+この例では、 [sizeof](../../c-language/sizeof-operator-c.md) a **int**が2バイト以上であるかどうか、および[sizeof](../../c-language/sizeof-operator-c.md) a **long**が1バイトかどうかを確認します。 プログラムはコンパイルされず、 **long**が1バイトを超えるため、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
 
 ```C
 // crt__static_assert.c

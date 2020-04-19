@@ -1,10 +1,10 @@
 ---
 title: _ismbbprint、_ismbbprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbprint_l
 - _ismbbprint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbprint_l
 - _ismbbprint
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 2fc697dd3ee4fee487beedf5e6e3deb706cc5f75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954042"
 ---
-# <a name="ismbbprint-ismbbprintl"></a>_ismbbprint、_ismbbprint_l
+# <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint、_ismbbprint_l
 
 指定されたマルチバイト文字が印刷文字かどうかを判定します。
 
@@ -61,11 +64,11 @@ int _ismbbprint_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbprint**場合 0 以外の値を返す式。
+次の式の場合、 **_ismbbprint**は0以外の値を返します。
 
 `isprint(c) || _ismbbkprint(c)`
 
-0 以外の場合は、 *c*、または 0 でない場合。 **_ismbbprint**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*c*の場合は0以外の。それ以外の場合は0。 **_ismbbprint**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

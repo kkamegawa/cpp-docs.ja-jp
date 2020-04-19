@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183569"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>インクリメント演算子とデクリメント演算子のオーバーロード (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50557274"
 
 - 前置デクリメントと後置デクリメント
 
-オーバーロードされた演算子関数を記述する場合、これらの演算子の前置バージョンと後置バージョン用に別々のバージョンを実装すると便利です。 2 つを区別するために、次の規則が守られて: 演算子の前置形式には、単項演算子; とまったく同じ方法が宣言されています。後置形式は、型の追加の引数を受け入れる**int**します。
+オーバーロードされた演算子関数を記述する場合、これらの演算子の前置バージョンと後置バージョン用に別々のバージョンを実装すると便利です。 2 つを区別するために、次の規則に従っては。演算子の前置形式には、単項演算子; とまったく同じ方法が宣言されています。後置形式は、型の追加の引数を受け入れる**int**します。
 
 > [!NOTE]
 >  追加の引数が型である必要がありますを後置形式のインクリメントまたはデクリメント演算子のオーバー ロードされた演算子を指定するときに**int**; その他の種類を指定すると、エラーが発生します。

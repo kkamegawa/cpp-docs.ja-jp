@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: d1a5632328c00ca2dcd03519d03fbdb648776a51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a627ce28e60f42dabcf0a257464a8bfbd58b9a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361361"
 ---
 # <a name="compiler-error-c2483"></a>コンパイラ エラー C2483
 
->'*識別子*': 'thread' コンス トラクターまたはデストラクターを持つオブジェクトを宣言することはできません
+>'*identifier*' : object with constructor or destructor cannot be declared 'thread'
 
 このエラー メッセージは、Visual Studio 2015 以降で廃止されています。 以前のバージョンで宣言された変数、`thread`コンス トラクターまたは実行時の評価が必要なその他の式では、属性を初期化できません。 静的な式が初期化に必要な`thread`データ。
 

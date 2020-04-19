@@ -9,11 +9,11 @@ helpviewer_keywords:
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
 ms.openlocfilehash: dcd1f9002362b7726883c6ce4f74fda9ab593544
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268067"
 ---
 # <a name="results-of-calling-example"></a>サンプル呼び出しの結果
 
@@ -31,7 +31,7 @@ C の装飾関数名は`_MyFunc`します。
 C の装飾名 (**_ _stdcall**) は`_MyFunc@20`します。 C++ の装飾名は、実装に固有です。
 
 ![&#95;&#95;stdcall と thiscall の呼び出し規約](../cpp/media/vc37i02.gif "&#95;&#95;stdcall と thiscall の呼び出し規約") <br/>
-__stdcall と thiscall の呼び出し規則
+__stdcall と thiscall の呼び出し規約
 
 ## <a name="fastcall"></a>__fastcall
 

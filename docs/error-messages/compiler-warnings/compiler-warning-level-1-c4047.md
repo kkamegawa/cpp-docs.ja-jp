@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-ms.openlocfilehash: 87c9e39e5dac40341adc63af45cc0e460806c736
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bfbcb0e88380dfcc21eb724fc3682ac66b655e6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666506"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624945"
 ---
 # <a name="compiler-warning-level-1-c4047"></a>コンパイラの警告 (レベル 1) C4047
 
 'operator' : 間接参照のレベルが 'identifier1' と 'identifier2' で異なっています。
 
-ポインターを別のポインターと変数 (2 レベルの間接参照) を指す変数 (間接参照の 1 つのレベル) をポイントできます。
+ポインターは、変数 (1 レベルの間接参照)、変数 (2 つのレベルの間接参照) を指す別のポインターを指すことができます。
 
 ## <a name="example"></a>例
 
 次の例では、C4047 が生成されます。
 
-```
+```c
 // C4047.c
 // compile with: /W1
 
@@ -43,7 +43,7 @@ int main() {
 
 次の例では、C4047 が生成されます。
 
-```
+```c
 // C4047b.c
 // compile with: /W1
 #include <stdio.h>

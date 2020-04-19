@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2775
+title: コンパイラエラー C2775
 ms.date: 11/04/2016
 f1_keywords:
 - C2775
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: b0f04a64354f549115c8636cf6130d6e96470016
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547161"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740053"
 ---
-# <a name="compiler-error-c2775"></a>コンパイラ エラー C2775
+# <a name="compiler-error-c2775"></a>コンパイラエラー C2775
 
-'identifier': このプロパティに関連付けられた 'get' メソッドはありません
+' identifier ': このプロパティに関連付けられている ' get ' メソッドはありません
 
-宣言されたデータ メンバー、[プロパティ](../../cpp/property-cpp.md)拡張属性がない、`get`関数指定が、その値を取得しようとする式。
+[プロパティ](../../cpp/property-cpp.md)拡張属性を使用して宣言されたデータメンバーには `get` 関数が指定されていませんが、式がその値を取得しようとしています。
 
 次の例では、C2775 が生成されます。
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

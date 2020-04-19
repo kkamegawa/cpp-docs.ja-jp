@@ -1,30 +1,31 @@
 ---
 title: IFB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFB
 helpviewer_keywords:
 - IFB directive
 ms.assetid: 6395e313-e590-41b3-824c-577f200faf80
-ms.openlocfilehash: 815cb75e0d00cc660c8dfad896fbe0064881edd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8494918408e51c2bc7e8fa77f72c48115418c4c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658563"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317267"
 ---
 # <a name="ifb"></a>IFB
 
-場合、アセンブリの許可*テキスト アイテム*空白であること。
+*Textitem*が空白の場合、アセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
-> IFB*テキスト アイテム*
+> **IFB** *textitem*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
+完全な構文について[は](if-masm.md)、「」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

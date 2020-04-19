@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 4f880e3c44cd9f301aa65d45500ed7f1d1725bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b4cb6a856d6da7b8eee7f9cba1ad51e375c024d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636658"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140055"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 構造体
 
@@ -25,7 +25,7 @@ ms.locfileid: "50636658"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct ITopologyNode;
 ```
 
@@ -33,87 +33,87 @@ struct ITopologyNode;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|このノードでグループ化の実行リソースの数を返します。|
-|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|列挙の順番でこのノードの下にグループ化された最初の実行リソースを返します。|
-|[ITopologyNode::GetId](#getid)|このノードのリソース マネージャーの一意の識別子を返します。|
-|[ITopologyNode::GetNext](#getnext)|列挙の順番で次のトポロジのノードにインターフェイスを返します。|
-|[ITopologyNode::GetNumaNode](#getnumanode)|Windows が割り当てた、このリソース マネージャー ノードが属する、NUMA ノードの数を返します。|
+|[ITopologyNode:: GetExecutionResourceCount](#getexecutionresourcecount)|このノードの下にグループ化された実行リソースの数を返します。|
+|[ITopologyNode:: GetFirstExecutionResource](#getfirstexecutionresource)|列挙の順序で、このノードの下にグループ化された最初の実行リソースを返します。|
+|[ITopologyNode:: GetId](#getid)|このノードのリソースマネージャーの一意の識別子を返します。|
+|[ITopologyNode:: GetNext](#getnext)|列挙の順序で次のトポロジノードへのインターフェイスを返します。|
+|[ITopologyNode:: GetNumaNode](#getnumanode)|Windows が割り当てた、このリソース マネージャー ノードが属する、NUMA ノードの数を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このインターフェイスは、リソース マネージャーで見られたものと、システムのトポロジを通常使用されます。
+このインターフェイスは、通常、リソースマネージャーによって監視されるシステムのトポロジを調べるために使用されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `ITopologyNode`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrtrm.h
+**ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-##  <a name="getexecutionresourcecount"></a>  Itopologynode::getexecutionresourcecount メソッド
+## <a name="getexecutionresourcecount"></a>ITopologyNode:: GetExecutionResourceCount メソッド
 
-このノードでグループ化の実行リソースの数を返します。
+このノードの下にグループ化された実行リソースの数を返します。
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceCount() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-リソースの実行の数は、このノードの下一緒にグループ化します。
+このノードの下にグループ化された実行リソースの数。
 
-##  <a name="getfirstexecutionresource"></a>  Itopologynode::getfirstexecutionresource メソッド
+## <a name="getfirstexecutionresource"></a>ITopologyNode:: GetFirstExecutionResource メソッド
 
-列挙の順番でこのノードの下にグループ化された最初の実行リソースを返します。
+列挙の順序で、このノードの下にグループ化された最初の実行リソースを返します。
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-列挙の順番でこのノードの下に最初の実行リソースがグループ化されます。
+列挙の順序で、このノードの下にグループ化された最初の実行リソース。
 
-##  <a name="getid"></a>  Itopologynode::getid メソッド
+## <a name="getid"></a>ITopologyNode:: GetId メソッド
 
-このノードのリソース マネージャーの一意の識別子を返します。
+このノードのリソースマネージャーの一意の識別子を返します。
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-このノードのリソース マネージャーの一意の識別子。
+このノードのリソースマネージャーの一意の識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-同時実行ランタイムでは、プロセッサのノードのグループで、システム上のハードウェア スレッドを表します。 ノードは、通常、システムのハードウェア トポロジから派生します。 たとえば、特定のソケットまたは特定の NUMA ノードのすべてのプロセッサが同一プロセッサ ノードに属している可能性があります。 Resource Manager では、以降ではこれらのノードに一意の識別子を割り当てます`0`まで`nodeCount - 1`ここで、`nodeCount`システム上のプロセッサ ノードの合計数を表します。
+同時実行ランタイムは、システム上のハードウェアスレッドをプロセッサノードのグループ単位で表します。 通常、ノードはシステムのハードウェアトポロジから派生します。 たとえば、特定のソケットまたは特定の NUMA ノードのすべてのプロセッサが、同じプロセッサノードに属している場合があります。 リソースマネージャーでは、これらのノードに一意の識別子が割り当てられます。これらのノードの `0` は `nodeCount - 1`を含みます。 `nodeCount` は、システム上のプロセッサノードの合計数を表します。
 
-ノードの数は、関数から取得できます[GetProcessorNodeCount](concurrency-namespace-functions.md)します。
+ノードの数は、関数[GetProcessorNodeCount](concurrency-namespace-functions.md)から取得できます。
 
-##  <a name="getnext"></a>  Itopologynode::getnext メソッド
+## <a name="getnext"></a>ITopologyNode:: GetNext メソッド
 
-列挙の順番で次のトポロジのノードにインターフェイスを返します。
+列挙の順序で次のトポロジノードへのインターフェイスを返します。
 
-```
+```cpp
 virtual ITopologyNode *GetNext() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-列挙の順番で次のノードへのインターフェイス。 このメソッドが値を返すシステム トポロジの列挙の順番にないノードがある場合`NULL`します。
+列挙順序での次のノードへのインターフェイス。 システムトポロジの列挙順序にノードがそれ以上ない場合、このメソッドは `NULL`値を返します。
 
-##  <a name="getnumanode"></a>  Itopologynode::getnumanode メソッド
+## <a name="getnumanode"></a>ITopologyNode:: GetNumaNode メソッド
 
 Windows が割り当てた、このリソース マネージャー ノードが属する、NUMA ノードの数を返します。
 
-```
+```cpp
 virtual unsigned long GetNumaNode() const = 0;
 ```
 
@@ -121,10 +121,10 @@ virtual unsigned long GetNumaNode() const = 0;
 
 Windows が割り当てた、このリソース マネージャー ノードが属する、NUMA ノードの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このノードに属する仮想プロセッサ ルートで実行中のスレッド プロキシは、このメソッドが返す NUMA ノードに、少なくとも NUMA ノードのレベルで関係があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: d8ad46fa219ec29c7973677e2184e7b6d65c74b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6ed6062be02fddc111e4eda4d26226b7a7a0c63
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260676"
 ---
 # <a name="catlexception-class"></a>CAtlException クラス
 

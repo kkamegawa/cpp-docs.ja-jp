@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: bc505a9a946f564425513dad8107fd962eb054b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269701"
 ---
 # <a name="lib-output-files"></a>LIB の出力ファイル
 
@@ -25,4 +25,4 @@ LIB によって生成された出力ファイルは、次の表に示すよう�
 
 ## <a name="see-also"></a>関連項目
 
-[LIB の概要](../../build/reference/overview-of-lib.md)
+[LIB の概要](overview-of-lib.md)

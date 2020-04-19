@@ -15,14 +15,14 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d72cfaae2e7f6768a68439fbc30aa5ab0d38f270
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676656"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686429"
 ---
-# <a name="shuffleorderengine-class"></a>shuffle_order_engine クラス
+# <a name="shuffle_order_engine-class"></a>shuffle_order_engine クラス
 
 ベースのエンジンから返された値を並べ替えることで、ランダム シーケンスを生成します。
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*エンジン*<br/>
+*エンジン*の \
 ベースのエンジンの型。
 
-*K*<br/>
+*K* \
 **テーブル サイズ**。 バッファー (テーブル) 内の要素の数。 **前提条件**: `0 < K`
 
 ## <a name="members"></a>メンバー
@@ -52,9 +52,9 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ベースのエンジンによって返される値を並べ替えることで値を生成する*エンジン アダプター*を表します。 各コンス トラクターを内部テーブルに格納*K*ベースのエンジンによって返される値と値が要求されたときに、テーブルからランダムに要素が選択されています。
+このクラステンプレートは、ベースエンジンによって返された値を並べ替えることによって値を生成する*エンジンアダプター*を表します。 各コンストラクターは、ベースエンジンによって返された*K*値を使用して内部テーブルにデータを入力し、値が要求されたときにテーブルからランダムな要素が選択されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -62,4 +62,4 @@ class shuffle_order_engine;
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

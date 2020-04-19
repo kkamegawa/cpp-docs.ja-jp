@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: embedded_idl import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525607"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216329"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>embedded_idl import 属性
 
-**C++ 固有の仕様**
+**C++のみ**
 
-属性が生成されたコードを保持して、タイプ ライブラリを .tlh ファイルに書き込むことを指定します。
+属性によって生成されたコード`.tlh`が保存されているファイルにタイプライブラリを書き込むかどうかを指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-embedded_idl[("param")]
-```
+> **#import***タイプライブラリ***embedded_idl**[ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>パラメーター
 
-*param*<br/>
-次の 2 つの値のいずれかを指定します。
+**emitidl**\
+*タイプライブラリ*からインポートされた型情報は、属性付きプロジェクト用に生成された IDL に存在します。 この動作は既定値であり、に`embedded_idl`パラメーターを指定しない場合は有効です。
 
-- **emitidl**: typelib からインポートされた情報は、属性付きプロジェクト用に生成された IDL に表示されます。  これは既定値であり、`embedded_idl` にパラメーターを指定しない場合に有効になります。
-
-- **no_emitidl**: typelib からインポートされた情報は、属性付きプロジェクト用に生成された IDL に存在できません。
+**"no_emitidl"** \
+*タイプライブラリ*からインポートされた型情報が、属性付きプロジェクト用に生成された IDL に存在しません。
 
 ## <a name="example"></a>例
 
@@ -44,11 +41,9 @@ embedded_idl[("param")]
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Remarks
-
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

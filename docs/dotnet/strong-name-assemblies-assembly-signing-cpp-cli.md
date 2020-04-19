@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: c23c3b70a2152fbceb771e085b73d7daf7aa3c2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384583"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>厳密名アセンブリ (アセンブリ署名) (C++/CLI)
 
@@ -34,7 +34,7 @@ Visual C を使用する場合は、アセンブリの署名の CLR 属性に関
 
 コマンドラインでビルドして、リンカー オプションを使用して、アセンブリに署名し、(mt.exe) のような処理後のツールを実行しての場合は、sn.exe を使用してアセンブリを再署名する必要があります。 または、ビルド、アセンブリに遅延署名し、処理後のツールを実行した後、署名を完了します。
 
-Sn.exe を明示的に呼び出すことによってアセンブリに署名する場合は、開発環境で構築するときに署名属性を使用すると、正常にできます ([Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)) でビルド後のイベント。 詳細については、「[ビルド イベントの指定](../ide/specifying-build-events.md)」を参照してください。 属性、およびリンカー オプションを使用する場合に比べて、ビルド後イベントを使用する場合は、ビルド時間は以下で指定できます。
+Sn.exe を明示的に呼び出すことによってアセンブリに署名する場合は、開発環境で構築するときに署名属性を使用すると、正常にできます ([Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)) でビルド後のイベント。 詳細については、「[ビルド イベントの指定](../build/specifying-build-events.md)」を参照してください。 属性、およびリンカー オプションを使用する場合に比べて、ビルド後イベントを使用する場合は、ビルド時間は以下で指定できます。
 
 次のリンカー オプションは、アセンブリの署名をサポートします。
 

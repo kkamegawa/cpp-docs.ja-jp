@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663948"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457380"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,14 +17,14 @@ ms.locfileid: "50663948"
 
 このヘッダーではコンカレンシー ランタイム (ConcRT) が使用されます。これにより、このヘッダーを他の ConcRT メカニズムと共に使用できます。 ConcRT の詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <condition_variable>
-```
+**ヘッダー:** \<condition_variable >
+
+**名前空間:** std
 
 > [!NOTE]
-> 使用してコンパイルされたコードで **/clr**、このヘッダーはブロックされます。
+> **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -49,16 +49,24 @@ while (condition is false)
 
 - `wait_for` は指定された `time interval` の間待機します。
 
-これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 述語になるまでは、メソッドが返されません**true**します。
+これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 述語が**true**になるまで、メソッドはを返しません。
 
-各クラスの状態にある条件変数を通知に使用される 2 つのメソッドもあります**true**します。
+各クラスには、条件が**true**であることを条件変数に通知するために使用される2つのメソッドもあります。
 
 - `notify_one` は、条件変数を待機しているスレッドの 1 つをウェイクアップします。
 
 - `notify_all` は、条件変数を待機しているすべてのスレッドをウェイクアップします。
 
+## <a name="functions-and-enums"></a>関数と列挙型
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
+
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable クラス](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any クラス](../standard-library/condition-variable-any-class.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable クラス](../standard-library/condition-variable-class.md)\
+[condition_variable_any クラス](../standard-library/condition-variable-any-class.md)

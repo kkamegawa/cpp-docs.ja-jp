@@ -1,8 +1,6 @@
 ---
 title: CWindowImpl でウィンドウを実装
 ms.date: 11/04/2016
-f1_keywords:
-- CWindowImpl
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], subclassing
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: f9286598184cfb12c415de637fccc07011369fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 265c3145d8ceacae540286f72939dc046e7c8b35
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197846"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl でウィンドウを実装
 
@@ -69,4 +67,3 @@ DECLARE_WND_SUPERCLASS を使用する場合は、新しい Windows クラスが
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウの実装](../atl/implementing-a-window.md)
-

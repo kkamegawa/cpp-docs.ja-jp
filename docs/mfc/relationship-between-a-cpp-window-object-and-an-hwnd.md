@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWnd class [MFC], HWND
 - HWND, window objects [MFC]
 ms.assetid: f2e76340-6691-4ee6-9424-0345634a9469
-ms.openlocfilehash: fcd885fbaf7e81d68bcd51edc4b74c553f70578b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8cf8856be7166768c507932184e257cf69b0eb35
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309336"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>C++ ウィンドウ オブジェクトと HWND の関係
 

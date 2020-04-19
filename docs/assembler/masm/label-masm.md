@@ -1,28 +1,29 @@
 ---
 title: LABEL (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Label
 helpviewer_keywords:
 - LABEL directive
 ms.assetid: 39ec44e8-91e6-4f3c-8cf0-b66479974e42
-ms.openlocfilehash: 0b90dd4b9c1a0a02526b63f98467a037aff484cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 65f0e4912b19ede978296e8bcb2992fa48b78f8e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325823"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312990"
 ---
-# <a name="label-masm"></a>LABEL (MASM)
+# <a name="label"></a>LABEL
 
-現在の場所カウンター値を割り当てることで新しいラベルを作成しますと、指定された*型*に*名前*。
+現在の場所-カウンター値と指定された*qualifiedType*を*名前*に割り当てることによって、新しいラベルを作成します。
 
 ## <a name="syntax"></a>構文
 
-> *名前*ラベル*型*
+> *名前***ラベル** *qualifiedType*
 >
-> *名前*ラベル\[NEAR |ここまで |PROC] PTR \[*型*]
+> *name* **LABEL** ⟦ | NEAR ** | ** **PROC**⟧ **PTR** ⟦*qualifiedType*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

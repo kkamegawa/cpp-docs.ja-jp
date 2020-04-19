@@ -1,37 +1,40 @@
 ---
 title: .PUSHREG
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .PUSHREG
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 19e36f1c0b073c5b174ea9acb0f1eaac7d771c46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6ffd3668f47732144e8c632410f6dfde6b2f31
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501765"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318294"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-生成されます、`UWOP_PUSH_NONVOL`アンワインド コード エントリを指定した数の現在のプロローグ内のオフセットを使用してを登録します。
+プロローグ内の現在のオフセットを使用して、指定したレジスタ番号に `UWOP_PUSH_NONVOL` アンワインドコードエントリを生成します。
 
 ## <a name="syntax"></a>構文
 
-> .PUSHREG 登録
+> .PUSHREG*レジスタ*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-.フレームの関数のアンワインドされるとから拡張すると、プロローグ内でのみ許可が指定できる ml64.exe の PUSHREG、 [PROC](../../assembler/masm/proc.md)フレームの宣言、[します。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブは、コードを生成しませんのみを生成する`.xdata`と`.pdata`します。 .PUSHREG は、実際にアンワインド操作を実装する手順によって先行されなければなりません。 アンワインド ディレクティブと契約を確認します。 マクロでのアンワインドに本来はコードの両方をラップすることをお勧めします。
+**.PUSHREG**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](proc.md) **frame**宣言からに拡張されるプロローグ内でのみ使用でき[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.PUSHREG**の前には、アンワインドするアクションを実際に実装する手順が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+*register*は次のいずれかです: \
+RAX |RCX |RDX |RBX |RDI |RSI |RBP |R8 |R9 |R10 |R11 |R12 |R13 |R14 |R15.
 
-## <a name="sample"></a>サンプル
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
+
+## <a name="sample"></a>［サンプル］
 
 ### <a name="description"></a>説明
 
-次の例では、非 volatile レジスタをプッシュする方法を示します。
+次の例は、非 volatile レジスタをプッシュする方法を示しています。
 
 ### <a name="code"></a>コード
 
@@ -57,4 +60,5 @@ END
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

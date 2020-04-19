@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2160
 ms.assetid: a1f694a7-fb16-4437-b7f5-a1af6da94bc5
-ms.openlocfilehash: bd0c49f44bce09958541a47db0c66bc22d7f2b76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cfc0822ab790a456c6fa56142047c1826257477
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454510"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740859"
 ---
 # <a name="compiler-error-c2160"></a>コンパイラ エラー C2160
 
@@ -21,7 +21,7 @@ ms.locfileid: "50454510"
 
 次の例では C2160 が生成されます。
 
-```
+```cpp
 // C2160.cpp
 // compile with: /c
 #define mac(a,b) #a   // OK

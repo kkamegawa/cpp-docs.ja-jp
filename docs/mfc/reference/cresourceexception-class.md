@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: aa7fd6e2caa15a256cec2eae5ede6c6e47cd1518
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372199"
 ---
 # <a name="cresourceexception-class"></a>CResourceException クラス
 
@@ -69,4 +69,3 @@ CResourceException();
 
 [CException クラス](cexception-class.md)<br/>
 [階層図](../hierarchy-chart.md)
-

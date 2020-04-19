@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: c6b51ec0cd619375b76810a95e80042589e599d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241949"
 ---
 # <a name="creating-windows"></a>ウィンドウの作成
 
@@ -31,4 +31,3 @@ ms.locfileid: "50544678"
 ## <a name="see-also"></a>関連項目
 
 [Window オブジェクト](../mfc/window-objects.md)
-

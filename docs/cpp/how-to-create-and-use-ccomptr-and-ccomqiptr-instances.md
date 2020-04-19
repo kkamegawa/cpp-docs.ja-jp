@@ -1,19 +1,19 @@
 ---
-title: '方法: 作成し、CComPtr および CComQIPtr インスタンスを使用'
+title: '方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220550"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246537"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: 作成し、CComPtr および CComQIPtr インスタンスを使用
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する
 
-従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の詳細については、「 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)」を参照してください。
+従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の詳細については、「 [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal)」を参照してください。
 
 コンポーネント オブジェクト モデル (COM) オブジェクトをインスタンス化するときは、デストラクターの `AddRef` と `Release` の呼び出しを使用して参照のカウントを実行する COM スマート ポインターにインターフェイス ポインターを格納します。 Active Template Library (ATL) または Microsoft Foundation Class ライブラリ (MFC) を使用している場合は、 `CComPtr` スマート ポインターを使用します。 ATL または MFC を使用していない場合は、 `_com_ptr_t`を使用します。 COM には `std::unique_ptr`に相当するものがないため、これらのスマート ポインターを単一所有者のシナリオと複数所有者のシナリオの両方に使用します。 `CComPtr` と `ComQIPtr` のどちらも、右辺値参照が含まれる移動操作をサポートしています。
 
@@ -23,7 +23,7 @@ ms.locfileid: "54220550"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` その関連は、ATL の一部であるありで定義された\<atlcomcli.h >。 `_com_ptr_t` 宣言されている\<comip.h >。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。
+`CComPtr` とその親戚は ATL に含まれており、\<atlcomcli. h > で定義されています。 `_com_ptr_t` は \<comip > で宣言されています。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。
 
 ## <a name="example"></a>例
 
@@ -37,6 +37,6 @@ ATL では、よりシンプルな構文を持つ `CComQIPtr`も提供されま�
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

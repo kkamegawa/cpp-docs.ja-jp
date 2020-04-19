@@ -9,12 +9,12 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 23a7ab9efc96ec10f4ad14547b0c0a20f13ac014
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318603"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -52,14 +52,14 @@ ms.locfileid: "50523306"
 |1|1|
 |2|2|
 |4|4|
-|9|8|
+|8|8|
 |p|16|
 |t|32|
-|秒|64|
+|s|64|
 |x|合わせなし|
 
 指定、`attributes`と*配置*文字として空白を含む文字列。 文字では大文字小文字が区別されません。
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

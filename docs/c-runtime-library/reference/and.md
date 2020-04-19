@@ -1,7 +1,7 @@
 ---
-title: と、呼び出し
+title: and
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - And
 - std.and
@@ -20,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - and macro
 ms.assetid: 2644ab57-8e1b-48f0-9021-cafe3e26bdc4
-ms.openlocfilehash: 17acab4402955ad2a7f18eaac3db1f99cdfe6287
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5940cd9c9cf7bb37b7731f62b1d3ff9d0101f748
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520063"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939686"
 ---
-# <a name="and"></a>と、呼び出し
+# <a name="and"></a>and
 
 && 演算子の代替手段。
 

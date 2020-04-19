@@ -1,5 +1,5 @@
 ---
-title: 'Windows ソケット : アーカイブ付きソケットの動作'
+title: Windows ソケット:アーカイブ付きソケットのしくみ
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389456"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows ソケット : アーカイブ付きソケットの動作
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows ソケット:アーカイブ付きソケットのしくみ
 
 この記事で説明する方法、 [CSocket](../mfc/reference/csocket-class.md)オブジェクト、 [CSocketFile](../mfc/reference/csocketfile-class.md)オブジェクト、および[CArchive](../mfc/reference/carchive-class.md)オブジェクトが結合され、Windows を使用してデータの送受信を簡略化ソケット。
 
-この記事[Windows ソケット: 例のソケットを使用してアーカイブ](../mfc/windows-sockets-example-of-sockets-using-archives.md)を表示します、`PacketSerialize`関数。 アーカイブのオブジェクト、`PacketSerialize`例は、MFC に渡されるアーカイブ オブジェクトと同様、動作[Serialize](../mfc/reference/cobject-class.md#serialize)関数。 重要な違いは、ソケットのアーカイブが接続されている標準[CFile](../mfc/reference/cfile-class.md) (通常はディスク ファイルに関連付けられている) オブジェクトには、`CSocketFile`オブジェクト。 ディスク ファイルへの接続ではなく、`CSocketFile`オブジェクトの接続先を`CSocket`オブジェクト。
+この記事[Windows ソケット。アーカイブを使用するソケットの例](../mfc/windows-sockets-example-of-sockets-using-archives.md)提示、`PacketSerialize`関数。 アーカイブのオブジェクト、`PacketSerialize`例は、MFC に渡されるアーカイブ オブジェクトと同様、動作[Serialize](../mfc/reference/cobject-class.md#serialize)関数。 重要な違いは、ソケットのアーカイブが接続されている標準[CFile](../mfc/reference/cfile-class.md) (通常はディスク ファイルに関連付けられている) オブジェクトには、`CSocketFile`オブジェクト。 ディスク ファイルへの接続ではなく、`CSocketFile`オブジェクトの接続先を`CSocket`オブジェクト。
 
 A`CArchive`オブジェクトは、バッファーを管理します。 格納 (送信) アーカイブのバッファーがいっぱいのとき、関連付けられている`CFile`オブジェクトは、バッファーの内容を書き込みます。 ソケットにアタッチされているアーカイブのバッファーのフラッシュは、メッセージの送信と同じです。 読み込み (受信) アーカイブのバッファーがいっぱいで、ときに、`CFile`バッファーが再び使用可能になるまで、オブジェクトが読み取りを停止します。
 
@@ -46,7 +46,7 @@ A`CSocket`オブジェクトは、実際には 2 つの状態のオブジェク�
 
 その「アーカイブ互換性のある」モードで、`CSocketFile`オブジェクト パフォーマンスが向上し、「デッドロック」の危険性は減少 ソケットの送信側と受信側の両方が、互いに待機または一般的なリソースを待機しているときに、デッドロックが発生します。 場合に、このような状況が発生する可能性があります、`CArchive`と協力して、オブジェクト、`CSocketFile`と同様、`CFile`オブジェクト。 `CFile`アーカイブの場合、要求したバイト数、受信ファイルの末尾に達したことを想定できます。 `CSocketFile`、ただし、データは、メッセージ ベース; バッファーは、複数のメッセージを含めることができます、要求されたバイト数よりも少ないのため受信ファイルの終わりを意味しません。 アプリケーションでは、それほどで、ここではブロックされません`CFile`バッファーが空になるまで、バッファーからメッセージの読み取りを続けます。 [時](../mfc/reference/carchive-class.md#isbufferempty)関数`CArchive`はこのような場合、アーカイブのバッファーの状態を監視するために便利です。
 
-詳細については、次を参照してください[Windows ソケット: アーカイブ付きソケットの使用。](../mfc/windows-sockets-using-sockets-with-archives.md)
+詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>関連項目
 

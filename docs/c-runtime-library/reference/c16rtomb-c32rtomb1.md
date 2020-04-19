@@ -1,10 +1,10 @@
 ---
 title: c16rtomb、c32rtomb
-ms.date: 01/22/2018
-apiname:
+ms.date: 10/22/2019
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702779"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811070"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb、c32rtomb
 
-UTF-16 または UTF-32 ワイド文字を現在のロケールのマルチバイト文字に変換します。
+UTF-16 または UTF-32 ワイド文字を UTF-8 マルチバイト文字に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,40 +57,44 @@ size_t c32rtomb(
 
 ### <a name="parameters"></a>パラメーター
 
-*mbchar*<br/>
-変換されたマルチバイト文字を格納する配列へのポインター。
+*mbchar*\
+変換された UTF-8 マルチバイト文字を格納する配列へのポインター。
 
-*wchar*<br/>
+*wchar*\
 変換するワイド文字。
 
-*state*<br/>
-ポインター、 **mbstate_t**オブジェクト。
+*状態*\
+**Mbstate_t**オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-配列オブジェクトに格納されるバイト数*mbchar*、シフト シーケンスを含むです。 場合*wchar*有効なワイド文字で、値はありません (**size_t**)(-1) が返される**errno**に設定されている**EILSEQ**の値*状態*が指定されていません。
+配列オブジェクト*mbchar*に格納されているバイト数 (シフトシーケンスを含む)。 *Wchar*が有効なワイド文字ではない場合、値 (**size_t**) (-1) が返されます。 **errno**は**EILSEQ**に設定され、 *state*の値は未指定になります。
 
 ## <a name="remarks"></a>Remarks
 
-**C16rtomb**関数 utf-16 の文字変換*wchar*を現在のロケールで同等のマルチバイトのナロウ文字シーケンス。 場合*mbchar*によって示される配列オブジェクトに変換されたシーケンスの関数は、null ポインターではない*mbchar*します。 最大**MB_CUR_MAX**格納されるバイト*mbchar*と*状態*が結果として得られるマルチバイトのシフト状態に設定します。    場合*wchar* null ワイド文字に必要なシーケンスは、初期のシフト状態が格納されている、必要な場合、復元後に、null 文字と*状態*が初期の変換状態に設定します。 **C32rtomb**関数は同じですが、utf-32 文字に変換します。
+**C16rtomb**関数は、utf-16 LE 文字*wchar*を等価の utf-8 マルチバイトナロー文字シーケンスに変換します。 *Mbchar*が null ポインターではない場合、関数は、 *mbchar*が指す配列オブジェクトに変換されたシーケンスを格納します。 最大**MB_CUR_MAX**バイトは*mbchar*に格納され、*状態*は結果のマルチバイトシフト状態に設定されます。
 
-場合*mbchar* null ポインターの場合は、動作は同等の内部バッファーを置換する関数への呼び出しに*mbchar*とのワイド null 文字*wchar*します。
+*Wchar*が null ワイド文字である場合、初期シフト状態の復元に必要なシーケンスが格納され、必要に応じて null 文字が続きます。 *state*が初期変換状態に設定されます。 **C32rtomb**関数は同じですが、32文字が変換されます。
 
-*状態*変換状態オブジェクトを使用すると、この関数とマルチバイト出力のシフト状態を維持するその他の再開可能関数への後続の呼び出しを行います。 結果は、再開可能と再開不可能関数の使用を混在させることへの呼び出しの場合、または未定義**setlocale**再開可能な関数呼び出しの間で確立します。
+*Mbchar*が null ポインターの場合、この動作は、 *mbchar*の内部バッファーと*wchar*のワイド null 文字を置換する関数の呼び出しと同じです。
 
-## <a name="requirements"></a>必要条件
+*状態*変換状態オブジェクトを使用すると、この関数およびマルチバイト出力文字のシフト状態を維持するその他の再開可能な関数への後続の呼び出しを行うことができます。 再開可能な関数と再開不可能な関数を混在させた場合、結果は未定義になります。
+
+Utf-16 文字を非 UTF-8 マルチバイト文字に変換するには、 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)、 [wcstombs_s、または _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)関数を使用します。
+
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**c16rtomb**、 **c32rtomb**|C、C++: \<uchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「 [互換性](../compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[mbrtoc16、mbrtoc32](mbrtoc16-mbrtoc323.md)<br/>
-[wcrtomb](wcrtomb.md)<br/>
-[wcrtomb_s](wcrtomb-s.md)<br/>
+[データ変換](../data-conversion.md)の\
+[ロケール](../locale.md)\
+[マルチバイト文字のシーケンスの解釈](../interpretation-of-multibyte-character-sequences.md)\
+[mbrtoc16、mbrtoc32](mbrtoc16-mbrtoc323.md)\
+[wcrtomb](wcrtomb.md)\
+[wcrtomb_s](wcrtomb-s.md)

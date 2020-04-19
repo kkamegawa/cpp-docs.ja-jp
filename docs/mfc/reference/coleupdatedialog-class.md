@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 454d6686a389b1578bb777e8573e9281b2a5e6c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642958"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503167"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog クラス
 
@@ -39,11 +39,11 @@ class COleUpdateDialog : public COleLinksDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|表示、**リンクの編集**更新モードでのダイアログ ボックス。|
+|[COleUpdateDialog::D oModal](#domodal)|更新モードで **[リンクの編集]** ダイアログボックスを表示します。|
 
 ## <a name="remarks"></a>Remarks
 
-OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。
+OLE 固有のダイアログボックスの詳細については、 [ole の記事のダイアログボックス](../../mfc/dialog-boxes-in-ole.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,9 +65,9 @@ OLE に固有のダイアログ ボックスの詳細については、記事を
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxodlgs.h
+**ヘッダー:** afxodlgs
 
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
 
 `COleUpdateDialog` オブジェクトを構築します。
 
@@ -82,24 +82,24 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>パラメーター
 
 *pDoc*<br/>
-更新が必要なリンクを含むドキュメントを指します。
+更新が必要な可能性のあるリンクを含むドキュメントを指します。
 
 *bUpdateLinks*<br/>
-リンク オブジェクトを更新するかどうかを決定するフラグ。
+リンクオブジェクトを更新するかどうかを示すフラグです。
 
-*bUpdateEmbeddings*<br/>
+*bUpdateEmbeddings 込み*<br/>
 埋め込みオブジェクトを更新するかどうかを決定するフラグ。
 
 *pParentWnd*<br/>
-親またはオーナー ウィンドウのオブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ ボックスの親ウィンドウは、メイン アプリケーション ウィンドウに設定されます。
+ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト ( `CWnd`型) を指します。 NULL の場合は、ダイアログボックスの親ウィンドウがメインアプリケーションウィンドウに設定されます。
 
 ### <a name="remarks"></a>Remarks
 
-この関数の作成のみを`COleUpdateDialog`オブジェクト。 ダイアログ ボックスを表示するには、呼び出す[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)します。 このクラスは、の代わりに使用する必要があります`COleLinksDialog`リンクまたは埋め込みアイテムの既存ののみを更新する場合。
+この関数は、オブジェクト`COleUpdateDialog`のみを構築します。 ダイアログボックスを表示するには、 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)を呼び出します。 このクラスは、既存のリンク`COleLinksDialog`または埋め込まれた項目のみを更新する場合に、の代わりに使用する必要があります。
 
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+##  <a name="domodal"></a>COleUpdateDialog::D oModal
 
-モードを更新するリンクの編集 ダイアログ ボックスが表示されます。
+更新モードで [リンクの編集] ダイアログボックスを表示します。
 
 ```
 virtual INT_PTR DoModal();
@@ -107,13 +107,13 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスの完了ステータス。 次のいずれかの値です。
+ダイアログボックスの完了ステータス。 次のいずれかの値です。
 
-- IDOK ダイアログ ボックスが正常に返された場合。
+- IDOK ダイアログボックスが正常に返された場合はです。
 
-- 現在のドキュメントでリンクまたは埋め込み項目を更新する必要がある場合は IDCANCEL。
+- 現在のドキュメント内のリンクされた項目または埋め込み項目が更新を必要としない場合は IDCANCEL。
 
-- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa)Windows SDK 内の関数。
+- エラーが発生した場合は IDABORT。 IDABORT が返された場合は、 [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の[Oleuieditlinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw)関数に関するページを参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -121,7 +121,7 @@ virtual INT_PTR DoModal();
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC サンプル OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleLinksDialog クラス](../../mfc/reference/colelinksdialog-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleLinksDialog クラス](../../mfc/reference/colelinksdialog-class.md)

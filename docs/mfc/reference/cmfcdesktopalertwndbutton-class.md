@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: daa2f978b306bbe45f91514ada0f264a848521c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403660"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton クラス
 
@@ -34,7 +34,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 |||
 |-|-|
 |名前|説明|
-|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|既定のコンストラクター|
+|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|既定のコンストラクターです。|
 |`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -61,7 +61,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 ## <a name="example"></a>例
 
-次の例では、使用する方法、`SetImage`メソッドで、`CMFCDesktopAlertWndButton`クラス。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`SetImage`メソッドで、`CMFCDesktopAlertWndButton`クラス。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]

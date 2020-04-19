@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315990"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (演算子の新しいスロー)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50561227"
 
 ISO c++ 98 以降、標準が指定される既定の[new 演算子](../../standard-library/new-operators.md#op_new)をスローします`std::bad_alloc`メモリの割り当てに失敗するとします。 バージョンの Visual Studio 6.0 までの Visual C では、割り当ての失敗時に null ポインターが返されます。 以降では、Visual Studio 2002、`operator new`標準に準拠しているし、エラーをスローします。 Visual Studio を古い形式の割り当てを使用するコードをサポートするには、リンク可能な実装を提供します`operator new`nothrownew.obj と失敗時に null ポインターを返すにします。 既定では、コンパイラでは、旧式のアロケーターはこれらのエラー発生時の即時のクラッシュの原因を防ぐために防御の null チェックも生成されます。 **/Zc:throwingNew**オプション、コンパイラはこれらの null チェックを除外する、メモリすべてリンクされていることを前提としてのアロケーターは、標準に準拠しています。 これは、明示的なスローしないには適用されません`operator new`オーバー ロードは、型の追加のパラメーターを使用して宣言されて`std::nothrow_t`いて、明示的な`noexcept`仕様。
 
-コンパイラ生成をそのメモリを割り当てるコードをフリー ストアにオブジェクトを作成、概念的をクリックし、メモリを初期化するために、そのコンス トラクターを呼び出します。 Visual C コンパイラ通常判別できないかどうかは、このコードが非準拠、非スローのアロケーターにリンクが、ため、既定でも生成します、コンス トラクターを呼び出す前に null チェックします。 これにより、null ポインターをスローしない割り当てに失敗した場合、コンス トラクターの呼び出しで逆参照します。 ほとんどの場合、これらのチェックは必要ありませんので、既定`operator new`アロケーターが null ポインターを返す代わりにスローします。 チェックには、残念ながらの副作用もがあります。 コード サイズを膨張させるが、分岐予測子で、過負荷になる、および devirtualization または初期化されているオブジェクトから const の伝達などその他の便利なコンパイラの最適化を抑制します。 サポート コードにリンクするだけに存在して、チェック*nothrownew.obj と*か、カスタム非準拠`operator new`実装します。 非準拠を使用しない場合`operator new`を使用することをお勧めします。 **/Zc:throwingNew**コードを最適化します。
+コンパイラ生成をそのメモリを割り当てるコードをフリー ストアにオブジェクトを作成、概念的をクリックし、メモリを初期化するために、そのコンス トラクターを呼び出します。 MSVC コンパイラ通常判別できないかどうかは、このコードが非準拠、非スローのアロケーターにリンクが、ため、既定でも生成します、コンス トラクターを呼び出す前に null チェックします。 これにより、null ポインターをスローしない割り当てに失敗した場合、コンス トラクターの呼び出しで逆参照します。 ほとんどの場合、これらのチェックは必要ありませんので、既定`operator new`アロケーターが null ポインターを返す代わりにスローします。 チェックには、残念ながらの副作用もがあります。 コード サイズを膨張させるが、分岐予測子で、過負荷になる、および devirtualization または初期化されているオブジェクトから const の伝達などその他の便利なコンパイラの最適化を抑制します。 サポート コードにリンクするだけに存在して、チェック*nothrownew.obj と*か、カスタム非準拠`operator new`実装します。 非準拠を使用しない場合`operator new`を使用することをお勧めします。 **/Zc:throwingNew**コードを最適化します。
 
 **/Zc:throwingNew**オプションは、既定で無効として影響はありません、 [/permissive -](permissive-standards-conformance.md)オプション。
 
@@ -42,9 +42,9 @@ ISO c++ 98 以降、標準が指定される既定の[new 演算子](../../stand
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
-## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **構成**ドロップダウン メニューで、**すべて構成**します。
 
@@ -54,9 +54,9 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[/Zc (準拠)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [例外の仕様 (スロー) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [(例外) を終了します。](../../standard-library/exception-functions.md#terminate)<br/>

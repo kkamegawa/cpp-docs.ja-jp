@@ -1,6 +1,6 @@
 ---
 title: 複合コントロールに関するマクロ
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
 - atlcom/ATL::END_SINK_MAP
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498979"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221106"
 ---
 # <a name="composite-control-macros"></a>複合コントロールに関するマクロ
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>パラメーター
 
-*(_c)*<br/>
+*_class*<br/>
 [in]コントロールを指定します。
 
 ### <a name="example"></a>例
@@ -97,7 +97,7 @@ SINK_ENTRY( id, dispid, fn )
 
 ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX と SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX and SINK_ENTRY_EX_P
 
 ハンドラー関数を宣言します (*fn*) 指定したイベント (*dispid*)、ディスパッチ インターフェイスの (*iid*) で指定されたコントロールの*id*.
 
@@ -131,7 +131,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
 
-##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO と SINK_ENTRY_INFO_P
+##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO and SINK_ENTRY_INFO_P
 
 必要な情報を提供するイベント シンク マップ内を使用して[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)関連するハンドラー関数にイベントをルーティングします。
 

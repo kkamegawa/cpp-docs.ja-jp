@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151221"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef クラス
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 このフィールドの名前を指定する文字列式へのポインター。
 
-*%n タイプ*<br/>
+*nType*<br/>
 フィールドのデータ型を示す値。 設定には、これらの値のいずれかを指定できます。
 
 |型|サイズ (バイト)|説明|
@@ -325,8 +325,8 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
 |`dbCurrency`|8|通貨 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
-|`dbSingle`|4|float|
-|`dbDouble`|8|double|
+|`dbSingle`|4|フローティング|
+|`dbDouble`|8|二重線|
 |`dbDate`|8|日付/時刻 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|テキスト ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|長いバイナリ (OLE オブジェクト)、 [CLongBinary](../../mfc/reference/clongbinary-class.md)または[CByteArray](../../mfc/reference/cbytearray-class.md)|
@@ -582,9 +582,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` (既定値)名前、種類、サイズ、属性。 最速のパフォーマンスには、このオプションを使用します。
 
-- `AFX_DAO_SECONDARY_INFO` プライマリについては、plus: 必要に応じての序数位置 0 長、照合順序では、外部名、ソース フィールド、ソース テーブルを許可します。
+- `AFX_DAO_SECONDARY_INFO` プライマリの情報と。必要に応じて、序数の位置、長さ 0 は、順序、外部名、ソース フィールド、ソース テーブルの照合を許可します。
 
-- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と: 検証規則、入力テキストの場合は、既定値
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。検証規則、入力テキストの場合は、既定値
 
 *lpszName*<br/>
 名前で検索する場合、フィールド オブジェクトの名前へのポインター。 名前は、フィールドの一意名で、最大 64 文字の文字列です。
@@ -644,9 +644,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` 名前、フィールドについては、フィールドです。 最速のパフォーマンスには、このオプションを使用します。
 
-- `AFX_DAO_SECONDARY_INFO` プライマリについては、plus: プライマリ、Unique、クラスター化された、無視の Null、必要に応じて、外部
+- `AFX_DAO_SECONDARY_INFO` プライマリの情報と。クラスター化すると、null 値、必須で、外部を無視する、一意のプライマリ
 
-- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と: 個別のカウント
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。Distinct Count
 
 *lpszName*<br/>
 名前で検索する場合、インデックス オブジェクトの名前へのポインター。
@@ -862,22 +862,22 @@ ODBC または ISAM のインストール可能なドライバーに渡す追加
 
 |データベースの種類|指定子|パス|
 |-------------------|---------------|----------|
-|Jet データベース エンジンを使用してデータベース|"[ `database`];"|" `drive`:\\\ *パス*\\\ *filename*します。MDB"|
+|Jet データベース エンジンを使用してデータベース|"[ `database`];"|" `drive`:\\\ *path*\\\ *filename*.MDB"|
 |dBASE III|"dBASE III;"|" `drive`:\\\ *パス*"|
 |dBASE IV|"dBASE IV;"|" `drive`:\\\ *パス*"|
-|dBASE 5|"dBASE 5.0 です。"|" `drive`:\\\ *パス*"|
+|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *パス*"|
 |Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *パス*"|
 |Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *パス*"|
 |Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *パス*"|
-|Excel 3.0|「Excel 3.0」です。|" `drive`:\\\ *パス*\\\ *filename*します。XLS"|
-|Excel 4.0|「Excel 4.0;」|" `drive`:\\\ *パス*\\\ *filename*します。XLS"|
-|Excel 5.0 または Excel 95|「Excel 5.0 です。」|" `drive`:\\\ *パス*\\\ *filename*します。XLS"|
-|Excel 97|「Excel 8.0」;|" `drive`:\\\ *パス*\ *filename*します。XLS"|
+|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *パス*\\\ *filename*します。XLS"|
+|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *パス*\\\ *filename*します。XLS"|
+|Excel 5.0 または Excel 95|"Excel 5.0;"|" `drive`:\\\ *パス*\\\ *filename*します。XLS"|
+|Excel 97|"Excel 8.0;"|" `drive`:\\\ *パス*\ *filename*します。XLS"|
 |HTML のインポート|「HTML のインポート。」|" `drive`:\\\ *パス*\ *filename*"|
 |HTML のエクスポート|「HTML エクスポート;」|" `drive`:\\\ *パス*"|
-|テキスト|「テキスト」|"ドライブ:\\\path"|
+|テキスト|「テキスト」|"drive:\\\path"|
 |ODBC|"ODBC;DATABASE = `database`;UID =*ユーザー*;PWD =*パスワード*;DSN = *%datasourcename;* LOGINTIMEOUT =*秒;*"(すべてのサーバーの完全な接続文字列は限りませんではほんの一例です。 パラメーター間のスペースに非常に重要ですが、します。)|なし|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [プロファイル =*プロファイル*;]<br /><br /> [PWD =*パスワード*;]<br /><br /> [DATABASE = `database`;]"|*"ドライブ*:\\\ *パス*\\\ *filename*します。MDB"|
+|Exchange|"Exchange;<br /><br /> MAPILEVEL= *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"drive*:\\\ *path*\\\ *filename*.MDB"|
 
 > [!NOTE]
 >  DAO 3.5 の時点では、市販がサポートされていません。

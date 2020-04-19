@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514427"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-有効な配列のインデックスの最大値を指定します。
+有効な配列インデックスの最大値を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,12 +25,12 @@ ms.locfileid: "50627475"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
-1 つ以上の C 言語の式。 空の引数スロットが許可されます。
+*式 (expression)*<br/>
+1つ以上の C 言語式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Max_is** C++ 属性と同じ機能を持つ、 [max_is](/windows/desktop/Midl/max-is) MIDL 属性。
+**Max_is** C++属性には、 [max_is](/windows/win32/Midl/max-is) MIDL 属性と同じ機能があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -38,7 +38,7 @@ ms.locfileid: "50627475"
 
 |||
 |-|-|
-|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**struct**または**union**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|**size_is**|
@@ -47,7 +47,7 @@ ms.locfileid: "50627475"
 
 ## <a name="example"></a>例
 
-参照してください[first_is](first-is.md)配列のセクションを指定する方法の例についてはします。
+配列のセクションを指定する方法の例については、「 [first_is](first-is.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

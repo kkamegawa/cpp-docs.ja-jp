@@ -1,19 +1,19 @@
 ---
-title: 方法:-clr コンパイルを検出
+title: '方法: -Clr コンパイルを検出します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, detecting /clr
 - /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
-ms.openlocfilehash: 600c74bfda6673295269902021afcecd95b90077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b02be1bcd0afc9fd857e689ceafdcab5eaf05d1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387358"
 ---
-# <a name="how-to-detect-clr-compilation"></a>方法: Detect /clr コンパイルを検出する
+# <a name="how-to-detect-clr-compilation"></a>方法: /Clr のコンパイルを検出します。
 
 使用して、`_MANAGED`または`_M_CEE`モジュールをコンパイルしたかどうかに表示するマクロ **/clr**します。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 

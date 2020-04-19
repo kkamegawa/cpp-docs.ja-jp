@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: c32c439af5544eb561f776381cb1afa98337efcb
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328839"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219981"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Microsoft 固有の仕様**
 
-ストアの文字列の命令が生成されます (`rep stosd`)。
+ストア文字列命令 (`rep stosd`) を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*データ*<br/>
-[in]格納するデータ。
+*データ*\
+から格納するデータ。
 
-*カウント*<br/>
-[in]書き込むダブルワードのブロックの長さ。
+*数*\
+から書き込むダブルワードのブロックの長さ。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-結果はダブルワード`Data`のブロックに書き込まれる`Count`によって示されるメモリ位置にダブルワード`Dest`します。
+その結果、ダブルワード*データ*は、*変換先*が指すメモリ位置にある*Count*ダブルワードのブロックに書き込まれます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-ms.openlocfilehash: 5f5843f25faed90c195f7f2c605027858f089fb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 939aad78b7cf8cca9c940bae11892d23dbb659cb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180851"
 ---
 # <a name="types-of-image-lists"></a>イメージ リストの種類
 
@@ -25,4 +25,3 @@ ms.locfileid: "50498888"
 
 [CImageList の使い方](../mfc/using-cimagelist.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

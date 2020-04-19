@@ -1,6 +1,6 @@
 ---
-title: 例外 (C/C++)
-ms.date: 11/04/2016
+title: DLL の読み込み中に発生しC++た例外コード (C/)
+ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 14440e625ffdb28b4b8daf6a78563ba839834213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f557fe736f45f8c3f5411d076a0be18f1d1b670e
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647760"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74243847"
 ---
 # <a name="exceptions-cc"></a>例外 (C/C++)
 
-2 つの例外コードは、エラーが発生したときに発生することができます。
+エラーが発生すると、次の2つの例外コードが生成されます。
 
-- **LoadLibrary**エラー
+- **LoadLibrary**エラーの場合
 
-- **GetProcAddress**エラー
+- **GetProcAddress**エラーの場合
 
 例外情報を次に示します。
 
@@ -37,12 +37,12 @@ ms.locfileid: "50647760"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-スローされた例外コードは、標準の VcppException (ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND) と VcppException (ERROR_SEVERITY_ERROR、ERROR_PROC_NOT_FOUND) 値です。 例外へのポインターを渡す、 **DelayLoadInfo** LPDWORD 値を取得できる構造**GetExceptionInformation**で、 [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record)構造体、ExceptionInformation [0] のフィールド。
+スローされる例外コードは、標準の VcppException (ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND) と VcppException (ERROR_SEVERITY_ERROR、ERROR_PROC_NOT_FOUND) の値です。 例外は、LPDWORD 値の**Delayloadinfo**構造体へのポインターを渡します。この値は、 [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure の exceptioninformation [0] フィールドの**getexceptioninformation**によって取得できます。
 
-さらに、不適切なビットを grAttrs フィールドに設定されている場合、例外が試行がスローされます。 この例外を消して、致命的です。
+また、grAttrs フィールドで間違ったビットが設定されている場合は、例外 ERROR_INVALID_PARAMETER がスローされます。 この例外は、すべてのインテントと目的で致命的です。
 
-参照してください[構造体と定数定義](../../build/reference/structure-and-constant-definitions.md)詳細についてはします。
+詳細については[、「構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[エラー処理と通知](../../build/reference/error-handling-and-notification.md)
+[エラー処理と通知](error-handling-and-notification.md)

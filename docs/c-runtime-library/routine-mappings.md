@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: d07e759c67aa1a38f64272a6a974c8980d7ba71a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466301"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746892"
 ---
 # <a name="routine-mappings"></a>ルーチンのマップ
 
@@ -262,7 +262,7 @@ ms.locfileid: "50466301"
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)<br/>
 [データ型のマップ](../c-runtime-library/data-type-mappings.md)<br/>

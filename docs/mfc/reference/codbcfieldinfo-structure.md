@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ODBC [MFC], data source information
 - CODBCFieldInfo structure [MFC]
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
-ms.openlocfilehash: 5ad7d8f710c763b25771e3d1fa8839b5b64802ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc2ad0c8319a60b773211dbd6b52b57bb2dbcafb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388196"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 構造体
 
@@ -46,7 +46,7 @@ struct CODBCFieldInfo
 フィールドの小数点以下桁数。 詳細については、Windows SDK の「有効桁数、スケール、長さ、および表示サイズ」を参照してください。
 
 *m_nNullability*<br/>
-かどうか、フィールドは、Null 値を受け入れます。 これは 2 つの値のいずれかを指定できます: SQL_NULLABLE フィールドは Null 値を受け入れるか SQL_NO_NULLS フィールドを受け入れない場合は Null 値。
+かどうか、フィールドは、Null 値を受け入れます。 2 つの値のいずれかを指定できます。SQL_NULLABLE フィールドは Null 値を受け入れるか SQL_NO_NULLS フィールドを受け入れない場合は Null 値。
 
 ## <a name="remarks"></a>Remarks
 
@@ -59,6 +59,5 @@ struct CODBCFieldInfo
 ## <a name="see-also"></a>関連項目
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[に](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
+[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
 [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
-

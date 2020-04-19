@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: 5bcebc4f9321ebf3f85bdd757118f779a759fc62
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dc27b3af0d430aedb8159b4591004f46d197ccd5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220518"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751545"
 ---
 # <a name="sharing-constants"></a>共有モード定数
 
@@ -37,7 +37,7 @@ ms.locfileid: "54220518"
 #include <share.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 *shflag* 引数で、1 つまたは複数のマニフェスト定数で構成される共有モードを決定します。 これらは、*oflag* 引数と組み合わせて使用できます (「[ファイル定数](../c-runtime-library/file-constants.md)」をご覧ください)。
 
@@ -51,7 +51,7 @@ ms.locfileid: "54220518"
 |`_SH_DENYNO`|読み取りおよび書き込みアクセスを許可|
 |`_SH_SECURE`|セキュリティで保護されたモードを設定 (共有読み取り、排他的な書き込みアクセス)。|
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

@@ -1,30 +1,31 @@
 ---
 title: =
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - =
 helpviewer_keywords:
 - = directive
 ms.assetid: 285fa799-28d2-49f2-9a80-d701185f4f7b
-ms.openlocfilehash: c0698b1f41a51873a5ed143bdc86f2d85ac12f37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13b979b01327154761733929b7a0fce817d6d9ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616346"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313419"
 ---
 # <a name=""></a>=
 
-数値の値を割り当てます*式*に*名前*します。
+*名前*に*式*の数値を代入します。
 
 ## <a name="syntax"></a>構文
 
-> *名前* = *式*
+> *名前* **=** *式*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-シンボルは、後で再定義することができます。
+シンボルは後で再定義できます。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

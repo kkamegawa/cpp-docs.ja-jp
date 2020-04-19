@@ -1,6 +1,6 @@
 ---
 title: /Z7、/Zi、/ZI (デバッグ情報の形式)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316289"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (デバッグ情報の形式)
 
@@ -50,15 +50,15 @@ ms.locfileid: "50479044"
 
 **/Z7**オプションも、デバッガーで使用するための完全なシンボリック デバッグ情報が含まれているオブジェクト ファイルが生成されます。 これらのオブジェクト ファイルとビルドの実行可能ファイルは、デバッグ情報のないファイルよりも大幅に拡大できます。 シンボリック デバッグ情報には、変数や関数の名前と型、および行番号が含まれます。 PDB ファイルは生成されません。
 
-サード パーティ製ライブラリのデバッグ バージョンのディストリビューターの場合、PDB ファイルを持たないことによる利点があります。 ただし、プリコンパイル済みヘッダーのオブジェクト ファイルは、ライブラリのリンク フェーズ中、およびデバッグに必要です。 使用する必要がある .pch オブジェクト ファイルの情報 (とコードなし) を入力のみが場合、 [/Yl (挿入 PCH 参照のライブラリのデバッグ)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)オプションは、ライブラリをビルドするときに、既定で有効にします。
+サード パーティ製ライブラリのデバッグ バージョンのディストリビューターの場合、PDB ファイルを持たないことによる利点があります。 ただし、プリコンパイル済みヘッダーのオブジェクト ファイルは、ライブラリのリンク フェーズ中、およびデバッグに必要です。 使用する必要がある .pch オブジェクト ファイルの情報 (とコードなし) を入力のみが場合、 [/Yl (挿入 PCH 参照のライブラリのデバッグ)](yl-inject-pch-reference-for-debug-library.md)オプションは、ライブラリをビルドするときに、既定で有効にします。
 
-[/Gm (簡易リビルドの有効)](../../build/reference/gm-enable-minimal-rebuild.md)場合オプションは使用できません **/Z7**を指定します。
+非推奨とされる[/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)場合オプションは使用できません **/Z7**を指定します。
 
 ### <a name="zi"></a>/ZI
 
 **/Zi**オプションはすべて、シンボリック デバッグ情報を格納用に、デバッガーで別の PDB ファイルを生成します。 オブジェクト ファイルにデバッグ情報が含まれていないか、実行可能なものになりますかなり小さくなります。
 
-使用 **/Zi**の最適化には影響しません。 ただし、 **/Zi**わけでは **/debug**; を参照してください[/DEBUG (デバッグ情報の生成)](../../build/reference/debug-generate-debug-info.md)詳細についてはします。
+使用 **/Zi**の最適化には影響しません。 ただし、 **/Zi**わけでは **/debug**; を参照してください[/DEBUG (デバッグ情報の生成)](debug-generate-debug-info.md)詳細についてはします。
 
 両方を指定すると **/Zi**と **/clr**、<xref:System.Diagnostics.DebuggableAttribute>属性がアセンブリのメタデータには配置されません。 場合は、ソース コードで指定する必要があります。 この属性は、アプリケーションの実行時パフォーマンスに影響します。 方法の詳細については**Debuggable**属性がパフォーマンスに影響し、パフォーマンスに与える影響を変更する方法を参照してください。[デバッグをイメージの簡略化する](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug)します。
 
@@ -70,16 +70,16 @@ PDB ファイルの名前、コンパイラ*プロジェクト*.pdb。 プロジ
 
 **/ZI**オプションはのような **/Zi**をサポートする形式での PDB ファイルが生成されますが、[エディット コンティニュ](/visualstudio/debugger/edit-and-continue-visual-cpp)機能します。 エディット コンティニュのデバッグ機能を使用するには、このオプションを使用する必要があります。 エディット コンティニュの機能は開発者の生産性、便利ですが、サイズ、パフォーマンス、およびコンパイラの準拠をコードで問題が発生することができます。 使用しているため、ほとんどの最適化は、エディット コンティニュと互換性がない、 **/ZI**無効になります`#pragma optimize`ステートメントをコードにします。 **/ZI**オプションは、またの使用と互換性のある、 [ &#95;&#95;行&#95;&#95;定義済みマクロが](../../preprocessor/predefined-macros.md); のコードをコンパイル **/ZI** を使用することはできません **&#95;&#95;行&#95;&#95;** 非型テンプレート引数としてが **&#95;&#95;行&#95;&#95;** マクロの展開で使用できます。
 
-**/ZI**オプションを有効にどちらも、 [/Gy (関数レベルのリンクの有効にする)](../../build/reference/gy-enable-function-level-linking.md)と[/FC (完全なソース コード ファイルのパスで診断)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)コンパイル時に使用するオプション。
+**/ZI**オプションを有効にどちらも、 [/Gy (関数レベルのリンクの有効にする)](gy-enable-function-level-linking.md)と[/FC (完全なソース コード ファイルのパスで診断)](fc-full-path-of-source-code-file-in-diagnostics.md)コンパイル時に使用するオプション。
 
-**/ZI**と互換性がない[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+**/ZI**と互換性がない[/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)します。
 
 > [!NOTE]
 > **/ZI**オプションは、x86 および x64 プロセッサを対象とするコンパイラで使用できるのみ、このコンパイラ オプションは ARM プロセッサを対象とするコンパイラで使用できません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 開く、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
 
@@ -91,6 +91,6 @@ PDB ファイルの名前、コンパイラ*プロジェクト*.pdb。 プロジ
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
 

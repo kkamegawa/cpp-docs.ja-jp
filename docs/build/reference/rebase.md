@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42cbcb911fcd0aa7753d84aae5523d28371b9972
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319201"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -26,7 +26,7 @@ ms.locfileid: "50463649"
 
 ## <a name="remarks"></a>Remarks
 
-このオプションは、指定したファイルのベース アドレスを設定します。 EDITBIN には、最も近い 64 KB に切り上げ、各ファイルのサイズに基づいて連続したアドレス空間に新しいベース アドレスが割り当てられます。 詳細については、ベース アドレスは、次を参照してください。、[ベース アドレス](../../build/reference/base-base-address.md)(/base) リンカー オプション。
+このオプションは、指定したファイルのベース アドレスを設定します。 EDITBIN には、最も近い 64 KB に切り上げ、各ファイルのサイズに基づいて連続したアドレス空間に新しいベース アドレスが割り当てられます。 詳細については、ベース アドレスは、次を参照してください。、[ベース アドレス](base-base-address.md)(/base) リンカー オプション。
 
 プログラムの実行可能ファイルと Dll の指定、*ファイル*に基づいている順序で EDITBIN コマンドライン引数。 1 つまたは複数を指定することができます必要に応じて*修飾子*、それぞれ、コンマで区切られた (**、**)。
 
@@ -38,4 +38,4 @@ ms.locfileid: "50463649"
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

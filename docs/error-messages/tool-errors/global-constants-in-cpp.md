@@ -5,12 +5,12 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 3da61b7718dadba9b454ee079651ce6372f21756
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432618"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856104"
 ---
 # <a name="global-constants-in-c"></a>C++ のグローバル定数
 
@@ -20,7 +20,7 @@ C++ のグローバル定数は、静的リンケージを持ちます。 これ
 
 次の例では、C2019 が生成されます。
 
-```
+```cpp
 // global_constants.cpp
 // LNK2019 expected
 void test(void);
@@ -33,7 +33,7 @@ int main() {
 
 この場合、次のようになります。
 
-```
+```cpp
 // global_constants_2.cpp
 // compile with: global_constants.cpp
 extern int lnktest1;

@@ -1,21 +1,21 @@
 ---
-title: '方法 : マニフェストを C/C++ アプリケーションに埋め込む'
-ms.date: 11/04/2016
+title: '方法: マニフェストを C/C++ アプリケーション内に埋め込む'
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624866"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220709"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法 : マニフェストを C/C++ アプリケーションに埋め込む
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法: マニフェストを C/C++ アプリケーション内に埋め込む
 
-C/C++ アプリケーション (またはライブラリ) にほとんどのシナリオで適切な実行時の動作が保証されるため、最終的なバイナリ内に埋め込まれたマニフェストがあることをお勧めします。 既定では、Visual Studio がソース ファイルからプロジェクトをビルドするときに、マニフェストを埋め込むしよう参照してください[Visual Studio でのマニフェスト生成](../build/manifest-generation-in-visual-studio.md)詳細についてはします。 ただしアプリケーションを作成するには、nmake を使用して、既存のメイクファイルにいくつかの変更は必要な。 このセクションでは、自動的に最終的なバイナリ内のマニフェストを埋め込むには既存のメイクファイルを変更する方法を示します。
+ほとんどのシナリオで適切な実行時の動作が保証されるため、アプリケーションまたはライブラリが最終的なバイナリ内のマニフェストを埋め込むことをお勧めします。 既定では、Visual Studio はプロジェクトをビルドするときに、マニフェストを埋め込むしようとします。 詳細については、次を参照してください。 [Visual Studio でのマニフェスト生成](manifest-generation-in-visual-studio.md)します。 ただし、nmake を使用して、アプリケーションをビルドする場合は、メイクファイルにいくつかの変更する必要があります。 このセクションでは、最終的なバイナリ内のマニフェストを自動的に埋め込まれますので、メイクファイルを変更する方法を示します。
 
 ## <a name="two-approaches"></a>2 つの方法
 
@@ -23,15 +23,19 @@ C/C++ アプリケーション (またはライブラリ) にほとんどのシ�
 
 - インクリメンタル ビルドを実行しない場合は、ビルド後の手順として、次のようなコマンドラインを使用してマニフェストを直接埋め込むことができます。
 
-   **mt.exe のマニフェスト MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    または
 
-   **mt.exe のマニフェスト MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 exe、DLL では 2 です。)
+   Dll、EXE と 2 の 1 を使用します。
 
-- インクリメンタル ビルドを実行している場合次に示すように、リソースを直接編集はインクリメンタル ビルドを無効にして全体の再構築が発生します。そのため、別のアプローチを実行する必要があります。
+- インクリメンタル ビルドを実行している場合は、次の手順を使用します。
 
    - MyApp.exe.manifest ファイルを生成するバイナリにリンクします。
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Visual C で変更されていない、このスクリプトが実行される場合、MyApp.exe が正常に作成します。 実行時に依存するアセンブリをロードするオペレーティング システムで使用するための外部のマニフェスト ファイル MyApp.exe.manifest も作成します。
+このスクリプトを Visual Studio でそのまま実行する場合、MyApp.exe 正常に作成します。 実行時に依存するアセンブリをロードするオペレーティング システムで使用するための外部のマニフェスト ファイル MyApp.exe.manifest も作成します。
 
 MyLibrary.dll の (nmake の) スクリプトはよく似ています。
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-今すぐ makefile.targ.inc を作成し、次をコピーします。
+今すぐ作成**makefile.targ.inc**し、次をコピーします。
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile
@@ -255,4 +259,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ プログラムのマニフェスト生成についての理解](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[C/C++ プログラムのマニフェスト生成についての理解](understanding-manifest-generation-for-c-cpp-programs.md)

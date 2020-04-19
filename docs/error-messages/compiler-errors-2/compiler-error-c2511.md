@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-ms.openlocfilehash: 9d9ba48b0607e7a30b8748d4e9ae4f7025f11dea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff78cb50b274fe40d513739264bd7e9894bbed9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746566"
 ---
 # <a name="compiler-error-c2511"></a>コンパイラ エラー C2511
 
-'identifier': オーバー ロード メンバー関数の 'class' に見つかりませんでした
+' identifier ': オーバーロードされたメンバー関数が ' class ' に見つかりませんでした
 
-指定されたパラメーターでは、バージョンの関数は宣言されていません。  以下の原因が考えられます。
+指定されたパラメーターを使用して関数のバージョンが宣言されていません。  次の原因が考えられます。
 
-1. 不適切なパラメーターは、関数に渡されます。
+1. 関数に渡されたパラメーターが正しくありません。
 
-1. 間違った順序でパラメーターが渡されます。
+1. 間違った順序で渡されたパラメーター。
 
-1. パラメーター名のスペルが間違っています。
+1. パラメーター名のスペルが正しくありません。
 
 次の例では、C2511 が生成されます。
 
-```
+```cpp
 // C2511.cpp
 // compile with: /c
 class C {

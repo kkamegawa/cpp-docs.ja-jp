@@ -1,9 +1,9 @@
 ---
 title: _abnormal_termination
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _abnormal_termination
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _abnormal_termination
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: 231a5a521d9e234d3e31e6ccdbe98b207a89b3eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433541"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944708"
 ---
-# <a name="abnormaltermination"></a>_abnormal_termination
+# <a name="_abnormal_termination"></a>_abnormal_termination
 
 システムが終了ハンドラーの内部リストの実行中に、[try-finally ステートメント](../cpp/try-finally-statement.md)の `__finally` ブロックが入力されているかどうかを示します。
 
@@ -39,7 +42,7 @@ int   _abnormal_termination(
 
 **true** システムがスタックを*アンワインド*する場合は、それ以外は **false** です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これは、アンワインドの例外を管理するために使用される内部関数で、ユーザー コードから呼び出されるものではありません。
 
@@ -49,6 +52,6 @@ int   _abnormal_termination(
 |-------------|---------------------|
 |_abnormal_termination|excpt.h|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [try-finally ステートメント](../cpp/try-finally-statement.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-ms.openlocfilehash: 7f868800bb8453ac47ec0f188d6a2970aee7a55f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 043c170021ce1ceb072dba3e5a450375f556753a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248851"
 ---
 # <a name="atl-dialog-wizard"></a>ATL ダイアログ ウィザード
 
@@ -26,7 +26,7 @@ ms.locfileid: "50458055"
 
    ATL ダイアログ オブジェクトの省略名を設定します。 指定した名前では、これらのフィールドを個別に変更しない限り、クラス名とファイル (.cpp、.h) 名を決定します。
 
-- **クラス**
+- **Class**
 
    作成するクラスの名前を設定します。 この名前がで指定した名前に基づいて**短い名前**'C'、クラス名の一般的なプレフィックスが付いた、します。
 
@@ -45,4 +45,3 @@ ms.locfileid: "50458055"
 ## <a name="see-also"></a>関連項目
 
 [ATL ダイアログ ボックス](../../atl/reference/adding-an-atl-dialog-box.md)
-

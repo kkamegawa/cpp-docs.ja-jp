@@ -1,9 +1,9 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - rand_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand_s
 helpviewer_keywords:
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: d196a6f5d7483deb9a7e1b8d7fa929532b6197db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572719"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949656"
 ---
-# <a name="rands"></a>rand_s
+# <a name="rand_s"></a>rand_s
 
-疑似乱数を生成します。 これは、関数のバージョンがより安全な[rand](rand.md)、セキュリティが強化された」の説明に従って[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)します。
+疑似乱数を生成します。 これは、「 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化された、関数[rand](rand.md)のより安全なバージョンです。
 
 ## <a name="syntax"></a>構文
 
@@ -51,20 +54,20 @@ errno_t rand_s(unsigned int* randomValue);
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。 場合、入力ポインター _randomValue_ null ポインターの場合は、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。 その他の何らかの理由で、関数が失敗した場合 *_randomValue_は 0 に設定します。
+正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。 入力ポインター _randomValue_が null ポインターの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。 他の何らかの理由で関数が失敗した場合、*_randomValue_は0に設定されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Rand_s**関数は、0 ~ の範囲内で擬似乱数の整数を書き込みます**UINT_MAX**入力ポインターにします。 **Rand_s**関数は、オペレーティング システムを使用して、暗号強度が高い乱数を生成します。 によって生成されたシードを使用しない、 [srand](srand.md)関数で使用されるランダムな番号のシーケンスを影響[rand](rand.md)します。
+**Rand_s**関数は、0 ~ **UINT_MAX**の範囲のランダムな整数を入力ポインターに書き込みます。 **Rand_s**関数は、オペレーティングシステムを使用して、暗号的に保護されたランダムな数値を生成します。 [Srand](srand.md)関数によって生成されたシードは使用されません。また、 [rand](rand.md)で使用される乱数シーケンスにも影響しません。
 
-**Rand_s**関数には、その定数が必要な **_CRT_RAND_S**インクルード ステートメント、関数を次の例のように、宣言の前に定義します。
+**Rand_s**関数を使用するには、次の例のように、関数を宣言するために、include ステートメントの前に定数 **_CRT_RAND_S**が定義されている必要があります。
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s**によって異なります、 [rtlgenrandom で](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom)API で、Windows XP で使用でき、後でのみです。
+**rand_s**は、Windows XP 以降でのみ使用できる[Rtlgenrandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API に依存しています。
 
 ## <a name="requirements"></a>必要条件
 

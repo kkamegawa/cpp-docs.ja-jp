@@ -1,16 +1,16 @@
 ---
-title: x64 呼び出し規則
+title: x64 での呼び出し規則
 description: 既定の x64 ABI の呼び出し規約の詳細です。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636215"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861159"
 ---
-# <a name="x64-calling-convention"></a>x64 呼び出し規則
+# <a name="x64-calling-convention"></a>x64 での呼び出し規則
 
 このセクションでは、標準のプロセスと x64 の別の関数 (呼び出し先) に呼び出しを実行する 1 つの関数 (呼び出し元) を使用する規則について説明します。 コード。
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>呼び出し元/呼び出し先保存済みレジスタ
 
-揮発性と見なされ、考慮する必要があります RAX、RCX、RDX、R8、R9、R10、R11 レジスタが関数の呼び出しで破棄 (しない限り、それ以外の場合の安全性が証明可能なプログラム全体の最適化などの分析によって)。
+RAX、RCX、RDX、R8、R9、R10、R11、XMM0 ~ 5、および場合は YMM0 ~ 15 と ZMM0 15 の上の部分は揮発性と見なされます、見なす必要があります、レジスタが関数の呼び出しで破棄 (しない限り、それ以外の場合の安全性が証明可能なプログラム全体の最適化などの分析によって)。 AVX512VL、16 ~ 31 の ZMM、YMM、および XMM レジスタは揮発性です。
 
-RBX、RBP、RDI、RSI、RSP、R12、R13、R14、および R15 レジスタの不揮発性と見なされます保存する必要がありますや関数によって復元されるそれらを使用します。
+RBX、RBP、RDI、RSI、RSP、R12、R13、R14、R15、および XMM6 15 レジスタの不揮発性と見なされます保存する必要がありますや関数によって復元されるそれらを使用します。
 
 ## <a name="function-pointers"></a>関数ポインター
-
+ 
 関数ポインターは、個々 の関数のラベルへのポインターだけです。 関数ポインターの目次 (TOC) の要件の表ではありません。
 
 ## <a name="floating-point-support-for-older-code"></a>古いコードの浮動小数点サポート

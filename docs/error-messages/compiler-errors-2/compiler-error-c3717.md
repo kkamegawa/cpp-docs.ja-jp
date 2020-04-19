@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
-ms.openlocfilehash: f7e60b4f1b6a1337ef93088e4f36ce2a1b34dc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd9a97f1b0d9c9eecfa6a42f735f21a42fd846e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599306"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753238"
 ---
 # <a name="compiler-error-c3717"></a>コンパイラ エラー C3717
 
-'method': イベントを発生させるメソッドを定義することはできません
+' method ': イベントを発生させるメソッドを定義することはできません
 
-実装を含むイベント メソッドが宣言されています。 [_ _Event](../../cpp/event.md)メソッドの宣言は定義を持つことはできません。 このエラーを解決するには、定義を持つイベントのメソッド宣言がないことを確認します。 たとえば、次のコードから関数の本体を削除、`event1`宣言のコメントで示されます。
+実装を含むイベントメソッドを宣言しました。 [__Event](../../cpp/event.md)メソッドの宣言に定義を含めることはできません。 このエラーを修正するには、イベントメソッドの宣言に定義がないことを確認します。 たとえば、次のコードでは、コメントで示されているように、`event1` 宣言から関数本体を削除します。
 
 次の例では、C3717 が生成されます。
 
-```
+```cpp
 // C3717.cpp
 [event_source(native)]
 class CEventSrc {

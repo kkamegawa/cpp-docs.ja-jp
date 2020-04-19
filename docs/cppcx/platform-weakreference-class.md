@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: 706877843602861d0dcf7f04a18999f30d3b77de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182965"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference クラス
 
@@ -132,4 +132,4 @@ MyClass^ copy2 = wr.Resolve<MyClass>();
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-ms.openlocfilehash: c02cf723ee7711ec1bfe00841c90bbde8c260ac1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8d1fcd9737b33d52038746a26f4e1bd1043e95
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309045"
 ---
 # <a name="relationships-among-mfc-objects"></a>各種 MFC オブジェクト間の関係
 
@@ -52,4 +52,3 @@ ms.locfileid: "50585511"
 [ドキュメント テンプレートの作成](../mfc/document-template-creation.md)<br/>
 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)<br/>
 [新しいドキュメント、ウィンドウ、ビューの作成](../mfc/creating-new-documents-windows-and-views.md)
-

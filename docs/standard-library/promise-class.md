@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592566"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458361"
 ---
 # <a name="promise-class"></a>promise クラス
 
@@ -65,11 +65,11 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-*promise*<br/>
+*promise*
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<将来 >
+**ヘッダー:** \<今後の >
 
 **名前空間:** std
 
@@ -97,7 +97,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*他の*\
 `promise` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -106,7 +106,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-この演算子から関連付けられた非同期状態を転送する*他*します。 転送の後、*他*は*空*します。
+この演算子は、関連付けられている非同期状態を*他の*から転送します。 転送後、 *Other*は*空*になります。
 
 ## <a name="promise"></a>  promise::promise コンストラクター
 
@@ -121,19 +121,19 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Al*<br/>
+*ウムアルクラ*\
 メモリ割り当て。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」をご覧ください。
 
-*その他*<br/>
+*他の*\
 `promise` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンス トラクターのコンストラクト、*空*`promise`オブジェクト。
+最初のコンストラクターは、*空* `promise`のオブジェクトを構築します。
 
-2 番目のコンス トラクターが、空を構築`promise`オブジェクトと使用*Al*メモリの割り当て。
+2番目のコンストラクターは`promise` 、空のオブジェクトを構築し、メモリの割り当てに*Al*を使用します。
 
-3 番目のコンス トラクターの構成要素を`promise`オブジェクトし、の関連付けられた非同期状態を転送*他*、出入り*他*空。
+3番目のコンストラクター `promise`は、オブジェクトを構築し、関連付けられている非同期状態を*他*のから転送し、*他の*空のままにします。
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>パラメーター
 
-*排他*<br/>
+*除外*\
 このメソッドにより例外結果として格納されている [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>Remarks
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>パラメーター
 
-*排他*<br/>
+*除外*\
 このメソッドにより例外結果として格納されている [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>Remarks
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*Val*\
 結果として格納される値。
 
 ### <a name="remarks"></a>Remarks
@@ -201,11 +201,11 @@ void promise<void>::set_value();
 
 このメソッドの結果として、関連付けられた非同期状態に対してブロックされているすべてのスレッドのブロックが解除されます。
 
-最初のメソッドもときにスローされる例外をスロー *Val*関連付けられた非同期状態にコピーされます。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
+最初のメソッドは、 *Val*が関連付けられた非同期状態にコピーされたときにスローされる例外もスローします。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
 
-2 番目のメソッドもときにスローされる例外をスロー *Val*が関連付けられた非同期状態に移動します。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
+2番目のメソッドは、 *Val*が関連付けられた非同期状態に移動したときにスローされる例外もスローします。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
 
-部分的特殊化`promise<Ty&>`、格納されている値はへの参照が有効で*Val*します。
+部分的特殊化`promise<Ty&>`では、格納された値は*Val*への参照になります。
 
 特殊化 `promise<void>` の場合、格納されている値は存在しません。
 
@@ -222,7 +222,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*Val*\
 結果として格納される値。
 
 ### <a name="remarks"></a>Remarks
@@ -233,11 +233,11 @@ promise オブジェクトに*関連付けられた非同期状態*がない場�
 
 `set_value` とは対照的に、関連付けられた非同期状態は、現在のスレッドのスレッド ローカルのオブジェクトがすべて破棄されるまでは準備完了に設定されません。 通常、関連付けられた非同期状態に対してブロックされたスレッドは、現在のスレッドが終了するまでブロック解除されません。
 
-最初のメソッドもときにスローされる例外をスロー *Val*関連付けられた非同期状態にコピーされます。
+最初のメソッドは、 *Val*が関連付けられた非同期状態にコピーされたときにスローされる例外もスローします。
 
-2 番目のメソッドもときにスローされる例外をスロー *Val*が関連付けられた非同期状態に移動します。
+2番目のメソッドは、 *Val*が関連付けられた非同期状態に移動したときにスローされる例外もスローします。
 
-部分的特殊化`promise<Ty&>`、格納されている値への参照では実質的に*Val*します。
+部分的特殊化`promise<Ty&>`では、格納された値は実質的に*Val*への参照です。
 
 特殊化 `promise<void>` の場合、格納されている値は存在しません。
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*他の*\
 `promise` オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

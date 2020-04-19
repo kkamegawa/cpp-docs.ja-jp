@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s、_wdupenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s
 - _wdupenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tdupenv_s
 - _dupenv_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646501"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942022"
 ---
-# <a name="dupenvs-wdupenvs"></a>_dupenv_s、_wdupenv_s
+# <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s、_wdupenv_s
 
 現在の環境から値を取得します。
 
@@ -68,7 +71,7 @@ errno_t _wdupenv_s(
 変数の値を格納するバッファー。
 
 *numberOfElements*<br/>
-サイズ*バッファー*します。
+*バッファー*のサイズ。
 
 *varname*<br/>
 環境変数名。
@@ -77,26 +80,26 @@ errno_t _wdupenv_s(
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-これらの関数は、パラメーターを検証します。場合*バッファー*または*varname*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+これらの関数は、パラメーターを検証します。*buffer*または*varname*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**errno**を**einval**に設定し、 **einval**を返します。
 
-設定する場合、これらの関数は、十分なメモリを割り当てることはできません、*バッファー*に**NULL**と*numberOfElements* 0、および戻り値に**ENOMEM**します。
+これらの関数が十分なメモリを割り当てられない場合、 *buffer*を**NULL**に設定し、 *numberofelements*を0に設定して、 **ENOMEM**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Dupenv_s**関数用の環境変数の一覧を検索する*varname*します。 変数が見つかった場合 **_dupenv_s**はバッファーを割り当てるし、変数の値をバッファーにコピーします。 バッファーのアドレスと長さがで返される*バッファー*と*numberOfElements*します。 バッファー自体を割り当てることによって **_dupenv_s**に代わるより便利な手段を提供します。 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)します。
+**_Dupenv_s**関数は、変数*varname*の環境変数の一覧を検索します。 変数が見つかった場合、 **_dupenv_s**はバッファーを割り当て、変数の値をバッファーにコピーします。 バッファーのアドレスと長さは、 *Buffer* *要素と numberofelements*で返されます。 **_Dupenv_s**は、バッファー自体を割り当てることにより、 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)に代わる便利な手段を提供します。
 
 > [!NOTE]
 > [free](free.md) の呼び出しによるメモリの解放は、呼び出し元プログラムが行います。
 
-変数が見つからない場合、し*バッファー*に設定されている**NULL**、 *numberOfElements*を 0 に設定されているこのような状況は、エラーが発生すると見なされないため、戻り値は 0条件。
+変数が見つからない場合、 *buffer*は**NULL**に設定され、 *numberofelements*は0に設定され、戻り値は0になります。これは、この状況がエラー状態であるとは見なされないためです。
 
-バッファーのサイズが必要ない場合は、渡す**NULL**の*numberOfElements*します。
+バッファーのサイズに関心がない場合は、 *Numberofelements*に**NULL**を渡すことができます。
 
-**_dupenv_s** Windows オペレーティング システムで大文字小文字は区別されません。 **_dupenv_s**グローバル変数が指す環境のコピーを使用して **_environ**環境にアクセスします。 「解説」を参照してください。 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)の詳細については **_environ**します。
+Windows オペレーティングシステムでは、 **_dupenv_s**は大文字と小文字が区別されません。 **_dupenv_s**は、グローバル変数 **_environ**が指す環境のコピーを使用して環境にアクセスします。 **_Environ**の説明については、 [getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)の「解説」を参照してください。
 
-値*バッファー*環境変数の値のコピーであることを変更しても環境への影響はありません。 環境変数の値を変更するには、[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 関数を使います。
+*Buffer*の値は、環境変数の値のコピーです。これを変更しても、環境には影響しません。 環境変数の値を変更するには、[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 関数を使います。
 
-**_wdupenv_s**のワイド文字バージョンは、 **_dupenv_s**; の引数 **_wdupenv_s**はワイド文字列です。 **_Wenviron**グローバル変数はワイド文字バージョンの **_environ**します。 「解説」を参照してください。 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)について **_wenviron**します。
+**_wdupenv_s**は、 **_dupenv_s**のワイド文字バージョンです。 **_wdupenv_s**の引数はワイド文字列です。 **_Wenviron**グローバル変数は、 **_environ**のワイド文字バージョンです。 **_Wenviron**の詳細については、 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)の解説を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

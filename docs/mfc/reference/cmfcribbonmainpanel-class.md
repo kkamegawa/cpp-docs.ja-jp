@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 101c718d25a2e06461156045deea5f42d85e2f4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403595"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel クラス
 
@@ -39,7 +39,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|既定のコンストラクター|
+|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|既定のコンストラクターです。|
 |`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404651"
 ---
 # <a name="platformbox-class"></a>Platform::Box クラス
 
@@ -26,7 +26,7 @@ ref class Box abstract;
 
 **ヘッダー:** vccorlib.h
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 ### <a name="members"></a>メンバー
 
@@ -168,5 +168,5 @@ virtual property T Value{
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
 [ボックス化](../cppcx/boxing-c-cx.md)

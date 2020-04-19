@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: a0f66e888220fbc5a4a484ddd37a3f28dff66065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278073"
 ---
 # <a name="crbtree-class"></a>CRBTree クラス
 
@@ -188,7 +188,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *key*<br/>
 キーを受け取る変数です。
 
-*値*<br/>
+*value*<br/>
 値を受け取る変数です。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +291,7 @@ void GetNextAssoc(
 *key*<br/>
 ツリーのキーの種類を指定するテンプレート パラメーター。
 
-*値*<br/>
+*value*<br/>
 ツリーの値の型を指定するテンプレート パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -467,7 +467,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *pos*<br/>
 などのメソッドの前回の呼び出しによって返される位置カウンター [CRBTree::GetHeadPosition](#getheadposition)または[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)します。
 
-*値*<br/>
+*value*<br/>
 追加する値、`CRBTree`オブジェクト。
 
 ### <a name="remarks"></a>Remarks

@@ -1,6 +1,6 @@
 ---
 title: __lzcnt16、__lzcnt、__lzcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fcd801717974a230fbd19cc7802d8f6a011774f7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523456"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221805"
 ---
-# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
+# <a name="__lzcnt16-__lzcnt-__lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 
 **Microsoft 固有の仕様**
 
-16 ビット、32 ビットまたは 64 ビット整数で 0 リードの数がカウントされます。
+16、32、または64ビットの整数の先行ゼロの数をカウントします。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned short __lzcnt16(
    unsigned short value
 );
@@ -41,36 +41,36 @@ unsigned __int64 __lzcnt64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*値*<br/>
-[in]16 ビット、32 ビット、または先行ゼロをスキャンする 64 ビット符号なし整数。
+*value*\
+から先頭のゼロをスキャンする 16-、32-、または64ビットの符号なし整数。
 
 ## <a name="return-value"></a>戻り値
 
-先頭のゼロのビット数、`value`パラメーター。 場合`value`が 0 の場合、戻り値は、入力のオペランド (16、32、または 64) のサイズ。 場合、最もの上位ビット`value`は 1 つは、戻り値は 0。
+`value`パラメーターの先頭のゼロビットの数。 が`value` 0 の場合、戻り値は入力オペランドのサイズ (16、32、または 64) です。 の`value`最上位ビットが1の場合、戻り値は0です。
 
 ## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`__lzcnt16`|AMD: 高度なビット操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt`|AMD: 高度なビット操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD:、64 ビット モードでのビット操作 (ABM) が高度な。<br /><br /> Intel: Haswell|
+|`__lzcnt16`|AMD高度なビット操作 (ABM)<br /><br /> IntelHaswell|
+|`__lzcnt`|AMD高度なビット操作 (ABM)<br /><br /> IntelHaswell|
+|`__lzcnt64`|AMD64ビットモードでの高度なビット操作 (ABM)。<br /><br /> IntelHaswell|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-これらの組み込みの生成、`lzcnt`命令。  値のサイズを`lzcnt`命令は、引数のサイズと同じを返します。  32 ビット モードではありません 64 ビット汎用レジスタ、したがっていいえ 64 ビット`lzcnt`します。
+各組み込みは、命令を`lzcnt`生成します。  `lzcnt`命令が返す値のサイズは、引数のサイズと同じです。  32ビットモードでは、64ビットの汎用レジスタがないため、64ビット`lzcnt`はサポートされていません。
 
-ハードウェアのサポートを決定する、`lzcnt`命令の呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 5 をチェックし、`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1、0 になります。 `lzcnt`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。
+`lzcnt`命令のハードウェアサポートを確認するには、 `__cpuid`で`InfoType=0x80000001`組み込みを呼び出し、の`CPUInfo[2] (ECX)`ビット5を確認します。 命令がサポートされている場合、このビットは1になり、それ以外の場合は0になります。 `lzcnt`命令をサポートしていないハードウェアに組み込みを使用するコードを実行する場合、結果は予測できません。
 
-Intel プロセッサをサポートしないで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(ビット スキャン逆)。 コードの移植性を重視する場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、次を参照してください。 [_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)します。
+`lzcnt`命令をサポートしていない Intel プロセッサでは、命令バイトエンコーディング`bsr`が (ビットスキャン反転) として実行されます。 コードの移植性に問題がある場合は、 `_BitScanReverse`代わりに組み込みのを使用することを検討してください。 詳細については、「 [_BitScanReverse64」を](../intrinsics/bitscanreverse-bitscanreverse64.md)参照してください。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // Compile this test with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -107,7 +107,7 @@ __lzcnt(0xffffffff) = 0
 
 **Microsoft 固有の仕様はここまで**
 
-このコンテンツの一部は高度なマイクロ デバイス, inc. Copyright 2007 です。All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
+このコンテンツの一部は、高度なマイクロデバイス (Inc.) の著作権2007です。All rights reserved. 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ODBC Administrator [C++]
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-ms.openlocfilehash: 5e83657462952be12a6a2d086aa2419093e06d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac893981ff8c697dc090f1e6ad5ac61886a69f99
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395847"
 ---
 # <a name="odbc-administrator"></a>ODBC データ ソース アドミニストレーター
 

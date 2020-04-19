@@ -1,19 +1,19 @@
 ---
-title: 'コンテナー : クライアント アイテムへの通知'
+title: コンテナー:クライアント アイテム通知
 ms.date: 11/04/2016
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153426"
 ---
-# <a name="containers-client-item-notifications"></a>コンテナー : クライアント アイテムへの通知
+# <a name="containers-client-item-notifications"></a>コンテナー:クライアント アイテム通知
 
 この記事では、MFC フレームワークが呼び出すサーバー アプリケーション、クライアント アプリケーションのドキュメント内の項目を変更するときにオーバーライド可能な関数について説明します。
 
@@ -21,7 +21,7 @@ ms.locfileid: "50528896"
 
 フレームワークへの呼び出しを使用して変更のコンテナー アプリケーションに通知`COleClientItem::OnChange`、オーバーライド可能な関数のうち、その実装が必要です。 保護されたこの関数は、2 つの引数を受け取ります。 1 つ目は、サーバーは、項目を変更した理由を指定します。
 
-|通知|説明|
+|Notification|説明|
 |------------------|-------------|
 |**OLE_CHANGED**|OLE 項目の外観が変更されました。|
 |**で**|OLE 項目が保存されました。|
@@ -38,9 +38,9 @@ ms.locfileid: "50528896"
 |----------------------------|---------------------|
 |**OLE_SAVED**または**OLE_CLOSED**|使用されません。|
 |**OLE_CHANGED**|OLE 項目が変更されたことの縦横比を指定します。|
-|**OLE_CHANGED_STATE**|入力されている状態について説明します (*これ*、 *loadedState*、 *openState*、 *activeState*、または*activeUIState*)。|
+|**OLE_CHANGED_STATE**|入力されている状態について説明します (*this*、 *loadedState*、 *openState*、 *activeState*、または*activeUIState*)。|
 
-クライアント アイテムの状態の詳細については、次を参照してください。[コンテナー: クライアント アイテムの状態](../mfc/containers-client-item-states.md)します。
+クライアント アイテムの状態の詳細については、次を参照してください。[コンテナー。クライアント アイテムの状態](../mfc/containers-client-item-states.md)します。
 
 Framework 呼び出し`COleClientItem::OnGetItemPosition`で埋め込み先編集の項目がアクティブ化されている場合。 実装は、インプレース編集をサポートするアプリケーションに必要です。 MFC アプリケーション ウィザードに、項目の座標を割り当てます、基本的な実装を提供する、`CRect`への引数として渡されるオブジェクト`OnGetItemPosition`します。
 
@@ -49,6 +49,5 @@ Framework 呼び出し`COleClientItem::OnGetItemPosition`で埋め込み先編�
 ## <a name="see-also"></a>関連項目
 
 [コンテナー](../mfc/containers.md)<br/>
-[コンテナー: クライアント アイテムの状態](../mfc/containers-client-item-states.md)<br/>
-[に](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-
+[コンテナー:クライアント アイテムの状態](../mfc/containers-client-item-states.md)<br/>
+[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)

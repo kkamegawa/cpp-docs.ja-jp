@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3274
 ms.assetid: 1f03f18e-b569-48eb-9249-11c70122a305
-ms.openlocfilehash: a44a7d471e7e079ee43afa8bf58fd590be2f4bf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d28deea0729a091ce0829187323a0d5a2d184944
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753823"
 ---
 # <a name="compiler-error-c3274"></a>コンパイラ エラー C3274
 
@@ -21,7 +21,7 @@ __finally/finally に対応する try がありません
 
 次の例では C3274 が生成されます。
 
-```
+```cpp
 // C3274.cpp
 // compile with: /clr
 // C3274 expected

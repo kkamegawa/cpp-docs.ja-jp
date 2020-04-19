@@ -8,12 +8,12 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: 5f46d55dc3898fdf5fede075a0d44f04a9f8326a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184255"
 ---
 # <a name="explicit-overrides-c"></a>明示的なオーバーライド (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325862"
 
 2 つまたは複数の同じ仮想関数が宣言されている[インターフェイス](../cpp/interface.md)と場合、これらのインターフェイスから派生したクラスは、各仮想関数を明示的にオーバーライドすることができます。
 
-新しいマネージ構文を使用してマネージ コードで明示的に情報を上書きするを参照してください。[明示的なオーバーライド](../windows/explicit-overrides-cpp-component-extensions.md)します。
+C + を使用してマネージ コードで明示的なオーバーライドについて/cli CLI を参照してください[明示的なオーバーライド](../extensions/explicit-overrides-cpp-component-extensions.md)します。
 
 **Microsoft 固有の仕様はここまで**
 

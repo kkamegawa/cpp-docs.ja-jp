@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用'
+title: MFC ActiveX コントロール:ActiveX コントロールにおけるデータ バインディングの使用
 ms.date: 11/19/2018
 f1_keywords:
 - bindable
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239543"
 ---
-# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールにおけるデータ バインディングの使用
 
 ActiveX コントロールのより強力な用途の 1 つは、データ バインディングは、データベース内の特定のフィールドにバインドするコントロールのプロパティを使用します。 ユーザーは、このバインドのプロパティ内のデータを変更するとき、コントロールは、データベースとレコードのフィールドを更新する要求を通知します。 データベースでは、成功のコントロールまたは要求の失敗が通知します。
 
@@ -93,7 +93,7 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 1. プロパティ名を入力、**プロパティ名**ボックス。 使用`MyProp`この例です。
 
-1. データ型を選択、**プロパティ型**ドロップダウン リスト ボックス。 使用**短い**この例です。
+1. データ型を選択、**プロパティ型**ドロップダウン リスト ボックス。 使用**short**この例です。
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
@@ -136,4 +136,3 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

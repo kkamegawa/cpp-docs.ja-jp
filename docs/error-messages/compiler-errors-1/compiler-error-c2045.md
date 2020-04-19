@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2045
 ms.assetid: 2fca668e-9b20-4933-987a-18c0fd0187df
-ms.openlocfilehash: 55eccbae84fb7f700c3ac9fdf6721d3f25582862
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf3644c49e424315fb406fa9548fcf6ce1bfcbc7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581884"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740378"
 ---
 # <a name="compiler-error-c2045"></a>コンパイラ エラー C2045
 
@@ -21,7 +21,7 @@ ms.locfileid: "50581884"
 
 次の例では C2045 が生成されます。
 
-```
+```cpp
 // C2045.cpp
 int main() {
    label: {

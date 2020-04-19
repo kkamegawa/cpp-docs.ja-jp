@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 25b037d17c1648816fe97fc5140aa0bfa7284f05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465209"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221216"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Microsoft 固有の仕様**
 
-ストアの文字列の命令が生成されます (`rep stosb`)。
+ストア文字列命令 (`rep stosb`) を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*データ*<br/>
-[in]格納するデータ。
+*データ*\
+から格納するデータ。
 
-*カウント*<br/>
-[in]書き込むバイトのブロックの長さ。
+*数*\
+から書き込むバイトブロックの長さ。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-結果は、文字`Data`のブロックに書き込まれる`Count`バイト、`Dest`文字列。
+その結果、文字*データ*は、*コピー先*の文字列の*Count*バイトのブロックに書き込まれます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 

@@ -1,9 +1,9 @@
 ---
 title: __dllonexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __dllonexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
@@ -12,20 +12,23 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __dllonexit
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 70e69952e350f96179298e2d64ec6ddf7b9167bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d63c751dd755bf8a7680c674681e114945814b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625421"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940440"
 ---
-# <a name="dllonexit"></a>__dllonexit
+# <a name="__dllonexit"></a>__dllonexit
 
 終了時に呼び出されるルーチンを登録します。
 
@@ -53,7 +56,7 @@ _onexit_t __dllonexit(   _onexit_t func,
 
 成功した場合、ユーザーの関数へのポインター。 失敗した場合、**NULL** ポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `__dllonexit` 関数は [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) 関数に似ていますが、_onexit 関数で使われるグローバル変数をこのルーチンでは参照できない点が異なります。 グローバル変数の代わりに、この関数は `pbegin` および `pend` パラメーターを使います。
 
@@ -67,6 +70,6 @@ MSVCRT.LIB とリンクされた DLL の `_onexit` および `atexit` 関数は�
 |-------------|-------------------|
 |__dllonexit|onexit.c|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

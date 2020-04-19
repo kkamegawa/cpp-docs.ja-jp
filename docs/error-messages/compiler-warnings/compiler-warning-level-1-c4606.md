@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d36031aa9a831d4669d796d8a40292e2d6ba15a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569274"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964977"
 ---
 # <a name="compiler-warning-level-1-c4606"></a>コンパイラの警告 (レベル 1) C4606
 
-\#pragma 警告: 'warning_number' を無視する場合コード分析の警告が警告レベルに関連付けられていません。
+\#プラグマ警告: ' warning_number ' は無視されます。コード分析の警告は警告レベルに関連付けられていません
 
-コード分析の警告のみ`error`、 `once`、および`default`でサポートされる、[警告](../../preprocessor/warning.md)プラグマ。
+コード分析の警告の場合、`error`、`once`、および `default` のみが[warning](../../preprocessor/warning.md)プラグマでサポートされます。
 
 ## <a name="example"></a>例
 
 次の例では、C4606 が生成されます。
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

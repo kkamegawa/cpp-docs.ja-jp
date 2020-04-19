@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: bcadf31eda079ebb8ea7a496efe4c945e16b1ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b47eb192bc01e6fe2c6c9423ed2c672f16c6818f
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622847"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966246"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>コンパイラの警告 (レベル 1) C4532
 
-'continue': _ _finally/finally にブロックからのジャンプでが終了処理中に、動作が定義されていません
+' continue ': __finally/finally ブロックからジャンプすると、終了処理中に未定義の動作が発生します
 
-コンパイラには、次のキーワードのいずれかが発生しました。
+コンパイラは、次のいずれかのキーワードを検出しました。
 
 - [continue](../../cpp/continue-statement-cpp.md)
 
@@ -25,15 +25,15 @@ ms.locfileid: "50622847"
 
 - [goto](../../cpp/goto-statement-cpp.md)
 
-ジャンプ先の原因を[_ _finally](../../cpp/try-finally-statement.md)または[最後に](../../dotnet/finally.md)異常終了時にブロックします。
+異常終了時に[__finally](../../cpp/try-finally-statement.md)または[finally](../../dotnet/finally.md)ブロックからジャンプする。
 
-終了ハンドラーの実行中に、スタックが展開されるときに例外が発生する場合、(、 `__finally` finally ブロックまたは)、コードは、の外部にジャンプし、`__finally`する前にブロック、`__finally`ブロックの終了動作が定義されていません。 例外は正しく処理されないように、コントロールは、アンワインド コードを返されません可能性があります。
+例外が発生したとき、終了ハンドラーの実行中にスタックがアンワインドされているとき (`__finally` または finally ブロック)、`__finally` ブロックが終了する前にコードが `__finally` ブロックからジャンプした場合、動作は未定義になります。 コントロールはアンワインドコードに戻らない場合があるため、例外が適切に処理されない可能性があります。
 
-場合の外部にジャンプする必要があります、 **_ _finally**ブロック、異常終了をまずチェックします。
+**__Finally**ブロックから移動する必要がある場合は、最初に異常終了を確認してください。
 
-次の例には、C4532; が生成されます。警告を解決するのには、ジャンプ ステートメントをコメントだけです。
+次の例では、C4532 が生成されます。警告を解決するには、ジャンプステートメントをコメントアウトするだけです。
 
-```
+```cpp
 // C4532.cpp
 // compile with: /W1
 // C4532 expected

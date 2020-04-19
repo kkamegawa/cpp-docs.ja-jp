@@ -11,16 +11,16 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235623"
 ---
 # <a name="date-type"></a>日付型
 
-日付型は、8 バイトの浮動小数点数を使用して実装されます。 日付は 1899 年 12 月 30 日 0 時として午前 0 時から始まる整数値の増分で表されます。 時間の値は、数値の小数部の絶対値として表現されます。 次の表は、それらの日付型の数値とと共にいくつかの日付を示しています。
+日付型は、8 バイトの浮動小数点数を使用して実装されます。 日付は 1899 年 12 月 30 日 0 時として午前 0 時から始まる整数値の増分で表されます。 時間の値は、数値の小数部分の絶対値で表されます。 次の表は、それらの日付型の数値とと共にいくつかの日付を示しています。
 
 |日付と時刻|表現|
 |-------------------|--------------------|
@@ -62,10 +62,9 @@ Automation でこれらの日付と時刻の形式を使用する場合、次の
 > [!CAUTION]
 >  6時 00分 AM がかどうか、1 日を表す整数が正の値 (1899 年 12 月 30 日) の後に関係なく 0.25 小数値で表される常にまたは負の値 (1899 年 12 月 30 日) の前に、単純な浮動ポイントの比較は誤って並べ替えために注意してください。任意の日付として 12/30/1899 より前の日に 6時 00分 AM を表す*後*同じ日に 7時 00分 AM を表す日付よりもします。
 
-問題の詳細については、日付に関連して`COleDateTime`型は、「 [COleDateTime クラス](../atl-mfc-shared/reference/coledatetime-class.md)と[日付と時刻: オートメーション サポート](../atl-mfc-shared/date-and-time-automation-support.md)。
+問題の詳細については、日付に関連して`COleDateTime`型は、「 [COleDateTime クラス](../atl-mfc-shared/reference/coledatetime-class.md)と[日付と時刻。オートメーションのサポート](../atl-mfc-shared/date-and-time-automation-support.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [日付と時刻](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime クラス](../atl-mfc-shared/reference/coledatetime-class.md)
-

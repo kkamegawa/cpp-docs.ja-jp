@@ -9,12 +9,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591284"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445908"
 ---
 # <a name="asm"></a>__asm
 
@@ -28,12 +28,12 @@ ms.locfileid: "50591284"
 ## <a name="grammar"></a>文法
 
 *asm ブロック*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _asm** *アセンブリ命令* **;**<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _asm {** *アセンブリの命令リスト* **}** **;**<sub>選択</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
 
 *アセンブリの命令リスト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **;**<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **;***アセンブリの命令リスト* **;**<sub>選択</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>Remarks
 
@@ -41,7 +41,7 @@ ms.locfileid: "50591284"
 
 `__asm` キーワードはステートメント区切り文字であるため、アセンブリ命令も同じ行に記述できます。
 
-Visual C++ 2005 以前で、次の命令が実行されたとします。
+Visual Studio 2005 で命令する前に
 
 ```cpp
 __asm int 3

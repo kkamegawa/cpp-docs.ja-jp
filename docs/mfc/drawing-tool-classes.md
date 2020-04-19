@@ -8,12 +8,12 @@ helpviewer_keywords:
 - screen output classes [MFC]
 - output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
-ms.openlocfilehash: 6b1e51e2d4c8e8bed39fe9076124879c02f1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96bda696a310fdd59a124abea2d29bc5001c3ab1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407979"
 ---
 # <a name="drawing-tool-classes"></a>描画ツール クラス
 
@@ -43,4 +43,3 @@ GDI 描画ツールの基本クラスです。
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

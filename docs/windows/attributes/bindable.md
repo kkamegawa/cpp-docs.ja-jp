@@ -1,17 +1,17 @@
 ---
-title: バインド可能な (C++ COM の属性)
+title: バインド可能C++ (COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664153"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501825"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ ms.locfileid: "50664153"
 
 ## <a name="remarks"></a>Remarks
 
-**バインド可能な**C++ 属性と同じ機能を持つ、[バインド可能な](/windows/desktop/Midl/bindable)MIDL 属性。 定義されたプロパティで使用することができます、 [propget](propget.md)、 [propput](propput.md)、または[propputref](propputref.md)属性、またはことにより手動でバインド可能なメソッドが定義できます。
+**バインド** C++可能な属性には、[バインド](/windows/win32/Midl/bindable)可能な MIDL 属性と同じ機能があります。 これは、 [propget](propget.md)、 [propput](propput.md)、または[propputref](propputref.md)属性で定義されたプロパティで使用できます。また、バインド可能なメソッドを手動で定義することもできます。
 
-次の MFC のサンプルでの使用方法を示して**バインド可能な**:
+次の MFC サンプルは、**バインド**可能の使用方法を示しています。
 
-- [コントロールのサンプル: MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [コントロールのサンプル:MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [ActiveX コントロールの円のサンプル:](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [CIRC サンプル:ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [ヒントとヘルプ TESTHELP サンプル: ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP サンプル:ツールヒントとヘルプが表示された ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法を示しています。**バインド可能な**プロパティ。
+次のコードは、プロパティで**バインド**可能なを使用する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_bindable.cpp

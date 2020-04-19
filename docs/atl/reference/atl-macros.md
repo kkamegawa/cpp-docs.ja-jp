@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, macros
 - macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
-ms.openlocfilehash: 9523ceef462dc0fbf7669467a72749a8cbd83617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2331f100f627dcd79ba2976b44da30474d93dd3a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260884"
 ---
 # <a name="atl-macros"></a>ATL マクロ
 
@@ -80,4 +80,3 @@ ActiveX コントロールに属しているフラグを設定します。
 [グローバル変数](../../atl/reference/atl-global-variables.md)<br/>
 [クラスと構造体](../../atl/reference/atl-classes.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)
-

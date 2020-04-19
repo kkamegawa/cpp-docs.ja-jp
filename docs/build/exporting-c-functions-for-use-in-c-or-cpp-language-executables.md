@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: 0b7347ee29e973e1043a153f8284baa47b674a4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273574"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>C/C++ 言語の実行形式で使う C 関数のエクスポート
 
-C 言語または C++ 言語のモジュールからアクセスすることは、使用する必要があります、C で記述された DLL 内の関数がある場合、 **_ _cplusplus**言語を判断するプリプロセッサ マクロがコンパイルされると、これらを宣言C++ 言語のモジュールから使用されている場合、C リンケージを持つ関数です。 この手法を使用して DLL のヘッダー ファイルを提供する場合、変更なしでの C および C++ のユーザーがこれらの関数を使用できます。
+DLL 内の関数がある場合に C 言語からアクセスする C で記述されたまたはC++言語のモジュールを使用する必要がある、 **_ _cplusplus**言語を判断するプリプロセッサ マクロがコンパイルされると、これらを宣言使用されている場合は、C リンケージを持つ関数をC++言語モジュール。 この手法を使用して DLL のヘッダー ファイルを提供する場合、変更なしでの C および C++ のユーザーがこれらの関数を使用できます。
 
 次のコードでは、C および C++ のクライアント アプリケーションで使用できるヘッダー ファイルを示します。
 
@@ -46,24 +46,24 @@ extern "C" {
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.Def ファイルを使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-def-files.md)
+- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)
+- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [装飾名](../build/reference/decorated-names.md)
+- [装飾名](reference/decorated-names.md)
 
 - [extern を使用したリンケージの指定](../cpp/using-extern-to-specify-linkage.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL からのエクスポート](../build/exporting-from-a-dll.md)
+[DLL からのエクスポート](exporting-from-a-dll.md)

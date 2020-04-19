@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, COM+ 1.0 support
 ms.assetid: 51fb08ac-d632-4657-a4e0-d3f989f0b6f8
-ms.openlocfilehash: 4bc7683d6121dec748e30c1ea717042b9cf1ecbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a3597b8df833d89942e31b361f791b14ceb8c9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278476"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 ATL プロジェクトでサポートします。
 
@@ -32,4 +32,3 @@ COM + 1.0 は、コンポーネント ベースの分散アプリケーション
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
-

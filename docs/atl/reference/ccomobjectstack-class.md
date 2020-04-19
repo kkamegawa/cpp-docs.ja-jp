@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: dfe8c58803a0eb06ea17ae1b241e1e435f0263f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259587"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack クラス
 
@@ -42,7 +42,7 @@ class CComObjectStack : public Base
 |名前|説明|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|コンストラクターです。|
-|[CComObjectStack:: ~ CComObjectStack](#dtor)|デストラクターです。|
+|[CComObjectStack::~CComObjectStack](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

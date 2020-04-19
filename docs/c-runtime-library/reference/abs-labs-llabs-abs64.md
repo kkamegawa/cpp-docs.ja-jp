@@ -1,12 +1,12 @@
 ---
 title: abs、labs、llabs、_abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506237"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857854"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
 引数の絶対値を計算します。
 
@@ -71,24 +74,24 @@ float abs( float n );   // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Abs**、 **labs**、 **llabs**と **_abs64**関数がパラメーターの絶対値を返す*n*. エラーの戻り値はありません。
+**Abs**、 **labs**、 **llabs** 、および **_abs64**関数は、パラメーター *n*の絶対値を返します。 エラーの戻り値はありません。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **abs**を受け取って返す**長い**、**長い****長い**、 **float**、**二重**、および**長い****二重**値。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムで**abs**は、 **int**します。
+でC++はオーバーロードが可能であるため、 **long** **、long** **long**、 **float**、 **double**、および**long** **double**値を取得して返す**abs**のオーバーロードを呼び出すことができます。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムでは、 **abs**は常に**int**を受け取り、返します。
 
-**Microsoft 固有の仕様**: 任意の整数型を使用して表すことができる負の整数の範囲はその型を使用して表すことができる正の整数の範囲より大きいため、これらの引数を指定することは変換できない機能です。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数が変更されていない引数の値を返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 つまり、 **abs**関数を使用して、正の値を保証することはできません。
+**Microsoft 固有**: 任意の整数型を使用して表すことができる負の整数の範囲は、その型を使用して表すことができる正の整数の範囲より大きいため、変換できないこれらの関数に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数は引数の値を変更せずに返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 これは、 **abs**関数を使用して正の値を保証することができないことを意味します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|-----------------------|---------------------------|
 |**abs**、 **labs**、 **llabs**|\<math.h> または \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h>、または \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> または \<stdlib.h>|
 
-オーバー ロードされたバージョンを使用する**abs** C++ では、含める必要がありますが、 \<cmath > ヘッダー。
+のC++オーバーロードされたバージョンの**abs**を使用するには、\<cmath > ヘッダーを含める必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のプログラムでは、複数の数値の絶対値を計算して表示します。
 
@@ -145,7 +148,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-ms.openlocfilehash: 1ec42f17d22b24aac3d19a3b129babe723930ae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8723c3f09a5e9a8eecf0e552c9f5a7fd9b7f6c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620234"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152366"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C)
 
@@ -58,6 +58,6 @@ Dllimport int j;          /* a declaration. */
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [DLL インポートおよびエクスポート関数](../c-language/dll-import-and-export-functions.md)

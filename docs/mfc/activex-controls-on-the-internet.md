@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603711"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448192"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 
@@ -49,7 +49,7 @@ ActiveX コントロールは、インターネットに限定されません。
 
 コントロールのパフォーマンスを向上させるのには、次のヒントを参考に、効率性に関する考慮事項を実行します。
 
-- この記事で説明する手法を実装[ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)します。
+- この記事で説明する手法を実装[ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
 
 - コントロールがインスタンス化する方法を検討してください。
 
@@ -85,11 +85,11 @@ ActiveX コントロールは、インターネットに限定されません。
 
 1. クリックして**新規**上、**ファイル**メニュー。
 
-1. 選択**MFC ActiveX コントロール ウィザード**から Visual C プロジェクトし、プロジェクトの名前します。
+1. 選択**MFC ActiveX コントロール ウィザード**Visual Studio からC++プロジェクトし、プロジェクトの名前します。
 
 1. **コントロール設定**] ページで、[**プロパティを非同期的に読み込みます**します。 このオプションを選択する準備完了状態プロパティおよび状態変更イベントを設定します。
 
-   など、その他の最適化を選択することもできます。**ウィンドウなしのアクティベーション**、に記載されている[ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)します。
+   など、その他の最適化を選択することもできます。**ウィンドウなしのアクティベーション**、に記載されている[ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
 
 1. 選択**完了**プロジェクトを作成します。
 
@@ -107,7 +107,7 @@ ActiveX コントロールは、インターネットに限定されません。
 
    AFXCMN を含める必要があることに注意してください。使用する H、`CListCtrl`クラス。
 
-1. コントロールの全体的な状態が変化 (たとえば、読み込みに初期化されたまたはユーザーから対話型)、呼び出し`COleControl::InternalSetReadyState`します。 コードを追加するには、コントロールに 1 つのデータ パスのプロパティがある場合は、**知らせる**ダウンロードが完了したコンテナーに通知します。 例えば:
+1. コントロールの全体的な状態が変化 (たとえば、読み込みに初期化されたまたはユーザーから対話型)、呼び出し`COleControl::InternalSetReadyState`します。 コードを追加するには、コントロールに 1 つのデータ パスのプロパティがある場合は、**知らせる**ダウンロードが完了したコンテナーに通知します。 例:
 
    [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
@@ -127,7 +127,8 @@ ActiveX コントロールは、インターネットに限定されません。
 
    [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
-1. `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
+1. 
+  `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
 
    [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
@@ -183,7 +184,7 @@ ActiveX コントロールは、インターネットに限定されません。
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>ActiveX コントロールの新しい機能を使用する既存の OLE コントロールを更新しています
 
-OLE コントロールは、Visual C の 4.2 より前のバージョンで作成されている場合、パフォーマンスが向上し、その機能を強化するために行える手順があります。 これらの変更の詳細については、次を参照してください。 [ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)します。
+OLE コントロールは、Visual C の 4.2 より前のバージョンで作成されている場合、パフォーマンスが向上し、その機能を強化するために行える手順があります。 これらの変更の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
 
 非同期のプロパティのサポートを追加する既存のコントロールには、準備完了状態プロパティを追加する必要があります、`ReadyStateChange`イベント自分でします。 コントロールのコンス トラクターは、次のように追加します。
 
@@ -195,4 +196,3 @@ OLE コントロールは、Visual C の 4.2 より前のバージョンで作�
 
 [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
-

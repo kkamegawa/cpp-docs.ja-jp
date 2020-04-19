@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388502"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog クラス
 
@@ -116,7 +116,7 @@ CMFCKeyMapDialog(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCKeyMapDialog`クラス。 この例は、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCKeyMapDialog`クラス。 この例は、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]
 
@@ -210,7 +210,7 @@ virtual int OnPrintHeader(
 *dc*<br/>
 [in]プリンター デバイス コンテキスト。
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]印刷するページ番号。
 
 *cx*<br/>

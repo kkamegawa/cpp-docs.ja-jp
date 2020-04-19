@@ -1,22 +1,22 @@
 ---
 title: プリプロセッサ ディレクティブ
-ms.date: 06/28/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86432ebf210523dd958f3258075d9e9c6d3bb4e6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608027"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222272"
 ---
 # <a name="preprocessor-directives"></a>プリプロセッサ ディレクティブ
 
-プリプロセッサ ディレクティブなど`#define`と`#ifdef`、通常を使用してソース プログラムを簡単に変更し、異なる実行環境でコンパイルを容易にします。 ソース ファイルのディレクティブはプリプロセッサに特定のアクションを実行するよう通知します。 たとえば、プリプロセッサは、テキストのトークンを置き換えたり、ソース ファイルに他のファイルの内容を挿入したり、テキストのセクションの削除によりファイルの一部のコンパイルを中止したりできます。 プリプロセッサ行は、マクロの展開の前に認識され、実行されます。 したがって、マクロがプリプロセッサ コマンドのように見えるコマンドに展開されても、そのコマンドはプリプロセッサによって認識されません。
+`#define` や`#ifdef`などのプリプロセッサディレクティブは、通常、ソースプログラムの変更を容易にし、異なる実行環境で簡単にコンパイルできるようにするために使用されます。 ソースファイル内のディレクティブは、特定のアクションを実行するようにプリプロセッサに指示します。 たとえば、プリプロセッサは、テキストのトークンを置き換えたり、ソース ファイルに他のファイルの内容を挿入したり、テキストのセクションの削除によりファイルの一部のコンパイルを中止したりできます。 プリプロセッサ行は、マクロの展開の前に認識され、実行されます。 したがって、マクロがプリプロセッサコマンドのようなものに展開されると、プリプロセッサによって認識されません。
 
-プリプロセッサ ステートメントは、ソース ファイル ステートメントと同じ文字セットを使用しますが、エスケープ シーケンスはサポートされていません。 プリプロセッサ ステートメントで使用される文字セットは、実行文字セットと同じです。 プリプロセッサは、負の文字値も認識します。
+プリプロセッサステートメントは、ソースファイルステートメントと同じ文字セットを使用しますが、エスケープシーケンスはサポートされていません。 プリプロセッサ ステートメントで使用される文字セットは、実行文字セットと同じです。 プリプロセッサは、負の文字値も認識します。
 
 プリプロセッサは次のディレクティブを認識します。
 
@@ -27,12 +27,12 @@ ms.locfileid: "50608027"
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-シャープ記号 (**#**) する必要があります。 ディレクティブを含む行で最初の非空白文字を指定、番号記号とディレクティブの最初の文字間の空白文字を表示できます。 一部のディレクティブには、引数または値が含まれます。 単一行コメントの区切り記号の前が必要 (引数またはディレクティブの一部である値) を除く、ディレクティブに続くテキスト (**//**) コメントの区切り記号で囲まれた、または ( __/\*\*/__). プリプロセッサ ディレクティブを含む行を継続するには円記号では、行末マーカーの直前に (**\\**)。
+シャープ記号 (`#`) は、ディレクティブを含む行の最初のシャープ空白文字である必要があります。 数字記号とディレクティブの最初の文字の間に空白文字を含めることができます。 一部のディレクティブには、引数または値が含まれます。 ディレクティブ (ディレクティブの一部である引数または値を除く) の後に続くテキストは、前に単一行コメント区切り記号 (`//`) を付けるか、コメント区切り記号 (`/* */`) で囲む必要があります。 プリプロセッサディレクティブを含む行は、行末のマーカーの直前に円記号 (`\`) を付けて続けることができます。
 
-プリプロセッサ ディレクティブはソース ファイル内の任意の場所で使用できますが、ソース ファイルの残りの部分だけに適用されます。
+プリプロセッサディレクティブは、ソースファイル内の任意の場所で使用できますが、ソースファイルの残りの部分にのみ適用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)<br/>
-[定義済みマクロ](../preprocessor/predefined-macros.md)<br/>
-[C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)
+[プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)\
+[定義済みマクロ](../preprocessor/predefined-macros.md)\
+[c/c++ プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

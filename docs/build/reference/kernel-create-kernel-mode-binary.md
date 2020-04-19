@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291341"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (カーネル モード バイナリの作成)
 
@@ -46,7 +46,7 @@ Windows カーネルで実行できるバイナリを作成します。
 |RTTI|無効になります。 すべてのインスタンス、`dynamic_cast`と`typeid`キーワードが、コンパイラ エラーを出力しない限り、`dynamic_cast`静的に使用されます。|
 |`new` および `delete`|明示的に定義する必要があります、`new()`または`delete()`演算子は、コンパイラも、ランタイムでもないに default 定義を指定します。|
 
-呼び出し規則、カスタム、 [/GS](../../build/reference/gs-buffer-security-check.md)を使用する場合に、許可されるビルド オプション、およびすべての最適化、 **/kernel**オプション。 インライン展開はほとんど受けません **/kernel**、コンパイラによって受け入れと同じセマンティクスを持つ。 確認する場合、`__forceinline`インライン展開の修飾子を受け入れ、必ずその警告[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)特定がわかるようにが有効になって`__forceinline`関数はインラインではありません。
+呼び出し規則、カスタム、 [/GS](gs-buffer-security-check.md)を使用する場合に、許可されるビルド オプション、およびすべての最適化、 **/kernel**オプション。 インライン展開はほとんど受けません **/kernel**、コンパイラによって受け入れと同じセマンティクスを持つ。 確認する場合、`__forceinline`インライン展開の修飾子を受け入れ、必ずその警告[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)特定がわかるようにが有効になって`__forceinline`関数はインラインではありません。
 
 コンパイラが渡された場合、 **/kernel**スイッチが事前に定義するプリプロセッサ マクロは、という`_KERNEL_MODE`と値を保持**1**します。 条件付きで実行環境がユーザー モードまたはカーネル モードがかどうかに基づいてコードをコンパイルするのにには、これを使用できます。 たとえば、次のコードでは、カーネル モード実行のコンパイル時にクラスが非ページング メモリ セグメントであることを指定します。
 
@@ -79,8 +79,8 @@ class NONPAGESECTION MyNonPagedClass
 
    ||**/kernel** obj|**/kernel-** obj、MASM obj、または cvtresed|混在 **/kernel**と **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**リンク/kernel**|はい|はい|警告 LNK4257 ○ します。|
-   |**リンク**|はい|[はい]|はい|
+   |**リンク/kernel**|[はい]|はい|警告 LNK4257 ○ します。|
+   |**リンク**|[はい]|はい|[はい]|
 
    **LNK4257/KERNEL; でコンパイルされないオブジェクトのリンクイメージは動作しない可能性があります。**
 
@@ -88,7 +88,7 @@ class NONPAGESECTION MyNonPagedClass
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Visual Studio で/kernel コンパイラ オプションを設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、 **C/C++** フォルダー。
 
@@ -98,5 +98,5 @@ class NONPAGESECTION MyNonPagedClass
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

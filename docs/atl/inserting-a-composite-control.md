@@ -6,12 +6,12 @@ helpviewer_keywords:
 - composite controls
 - ATL Control Wizard
 ms.assetid: f10b1927-9fc6-40a7-ac29-efdac70584fe
-ms.openlocfilehash: c9e4f348f03800051a2eab518e5642f00ba59bee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89cadf3c966eebb1b96cbd378bb422cbcff48727
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250322"
 ---
 # <a name="inserting-a-composite-control"></a>複合コントロールの挿入
 
@@ -24,4 +24,3 @@ ms.locfileid: "50448777"
 ## <a name="see-also"></a>関連項目
 
 [複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)
-

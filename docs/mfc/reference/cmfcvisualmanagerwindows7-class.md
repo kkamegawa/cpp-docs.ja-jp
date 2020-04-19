@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: b71cce32d364200e6f6a8684ffd696c4ea33f1d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373632"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 クラス
 
@@ -33,8 +33,8 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|既定のコンストラクター|
-|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|既定のデストラクター。|
+|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|既定のコンストラクターです。|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|既定のデストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|現在の visual スタイルをクリアし、既定の visual スタイルをリセットします。|
 |`CMFCVisualManagerWindows7::CleanUp`|すべてのユーザー インターフェイスでオブジェクトをクリアし、メニューをリセットします。|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|非クライアント領域にフレームのボタンを描画します。 描画するには、このメソッドを最小化するフレームワークが使用が最大化、閉じる、ウィンドウ フレームの右上隅にあるボタンを復元します。 非 Aero のテーマを使用する、プログラムの場合、このメソッドは呼び出されません。|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|非クライアント領域にフレームのボタンを描画します。 描画するには、このメソッドを最小化するフレームワークが使用が最大化、閉じる、ウィンドウ フレームの右上隅にあるボタンを復元します。 プログラムを使用する場合にのみ、このメソッドが呼び出す、`Aero`テーマ。|
 |`CMFCVisualManagerWindows7::DrawNcText`|非クライアント領域で、フレームでテキストを描画します。 フレームワークは、フレーム ウィンドウの上部にあるタイトル バーで、アプリケーションのタイトルを描画するために、このメソッドを使用します。|
 |`CMFCVisualManagerWindows7::DrawSeparator`|区分線を描画、 [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)します。|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|取得、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)ユーザー インターフェイスに関連付けられています。|
@@ -127,7 +127,7 @@ virtual ~CMFCVisualManagerWindows7();
 
 ##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
 
-既定のコンストラクター
+既定のコンストラクターです。
 
 ```
 CMFCVisualManagerWindows7();
@@ -173,7 +173,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in]ポインター、`CMFCToolBarButton`します。 フレームワークは、このボタンの背景を塗りつぶします。
 
-*rect*<br/>
+*四角形*<br/>
 [in]メニュー ボタンの画像領域の境界を指定する四角形。
 
 *state*<br/>

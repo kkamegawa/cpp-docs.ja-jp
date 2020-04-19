@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: af091d1d35fff955afcc5af3da48b80416e79f36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485633"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052427"
 ---
 # <a name="compiler-warning-level-1-c4731"></a>コンパイラの警告 (レベル 1) C4731
 
-'pointer': フレーム ポインター レジスタが 'の ' 登録インライン アセンブラー コードによって変更されました。
+' pointer ': インラインアセンブリコードによって変更されたフレームポインターレジスタ ' register '
 
-フレーム ポインター レジスタが変更されました。 保存して、インライン アセンブリ ブロックまたはフレーム変数 (ローカルまたは登録の変更に応じて、パラメーター) に登録を復元する必要があります。 またはコードが正しく動作しない可能性があります。
+フレームポインターレジスタが変更されました。 インラインアセンブリブロックまたはフレーム変数 (変更されたレジスタに応じてローカルまたはパラメーター) に登録を保存して復元する必要があります。または、コードが正しく機能しない可能性があります。
 
 次の例では、C4731 が生成されます。
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86
@@ -39,4 +39,4 @@ void bad(int p) {
 }
 ```
 
-EBP フレーム ポインターを (FPO は許可されていません) は、変更されている. ときに`p`は後で参照されている、に対して相対的に参照されている`EBP`します。 `EBP`が、コードで上書きされているため、プログラムが正しく機能しませんし、エラーも可能性があります。
+EBP はフレームポインターです (FPO は許可されていません)。変更されています。 `p` が後で参照されると、`EBP`に対して相対的に参照されます。 ただし、`EBP` はコードによって上書きされているため、プログラムが正常に動作せず、エラーが発生する可能性もあります。

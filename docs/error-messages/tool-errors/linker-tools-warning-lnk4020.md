@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4020
 ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298582"
 ---
 # <a name="linker-tools-warning-lnk4020"></a>リンカー ツールの警告 LNK4020
 

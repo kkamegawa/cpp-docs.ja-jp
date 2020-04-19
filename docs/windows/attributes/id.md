@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630037"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501415"
 ---
-# <a name="id"></a>ID
+# <a name="id"></a>id
 
-指定します、 *dispid* (プロパティまたはメソッド、インターフェイスまたは dispinterface) のメンバー関数のパラメーター。
+メンバー関数 (インターフェイスまたはディスパッチインターフェイスのプロパティまたはメソッド) の*dispid*パラメーターを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "50630037"
 ### <a name="parameters"></a>パラメーター
 
 *dispid*<br/>
-インターフェイス メソッドのディスパッチ ID。
+インターフェイスメソッドのディスパッチ ID。
 
 ## <a name="remarks"></a>Remarks
 
-**Id** C++ 属性と同じ機能を持つ、 [id](/windows/desktop/Midl/id) MIDL 属性。
+**Id** C++属性には、 [id](/windows/win32/Midl/id) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)を使用する方法の例については**id**します。
+**Id**の使用方法の例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

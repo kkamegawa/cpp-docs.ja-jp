@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitwise operations
 - signed bitwise operations
 ms.assetid: 1e5cf65b-ee32-41a0-a5c2-82c1854091f6
-ms.openlocfilehash: d178900a25a5d7a080068fb1919fcba2853bef14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43f65fd5d1ea14ef5e15f18d9c8516ccf5fb1e08
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652011"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147595"
 ---
 # <a name="signed-bitwise-operations"></a>Signed Bitwise Operations (符号付きビット処理演算)
 
@@ -27,6 +27,6 @@ ms.locfileid: "50652011"
 
 ビットごとの AND の結果は 96 です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [整数](../c-language/integers.md)

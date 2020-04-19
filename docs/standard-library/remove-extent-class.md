@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-ms.openlocfilehash: 1425de12158354c649ec355124f8c255255b29c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73af53d2b93d794e2479a33721bfeae71e531794
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436387"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451289"
 ---
 # <a name="removeextent-class"></a>remove_extent クラス
 
@@ -30,12 +30,12 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-インスタンス`remove_extent<T>`、修飾型であるを保持`T1`とき*T*の形式は`T1[N]`それ以外の場合、 *T*します。
+*T*の形式`remove_extent<T>` `T1` が`T1[N]`である場合、のインスタンスは変更された型を保持します。それ以外の場合は*t*です。
 
 ## <a name="example"></a>例
 
@@ -72,5 +72,5 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents クラス](../standard-library/remove-all-extents-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents クラス](../standard-library/remove-all-extents-class.md)

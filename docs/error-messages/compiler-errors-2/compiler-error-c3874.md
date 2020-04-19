@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3874
 ms.assetid: fd55fc05-69a7-4237-b3b7-dca1d5400b4f
-ms.openlocfilehash: 73476d50b6cfe098ee9d8084837c2090e198a6cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e46f5934653a0c7cdba463c71c44b10ea28e3bf5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736699"
 ---
 # <a name="compiler-error-c3874"></a>コンパイラ エラー C3874
 
-'function' の戻り値の型 'type' ではなく ' int' をする必要があります。
+' function ' の戻り値の型は ' type ' ではなく ' int ' でなければなりません
 
-関数のコンパイラで想定されていた戻り値の型ではありません。
+関数には、コンパイラによって予期された戻り値の型がありません。
 
 次の例では、C3874 が生成されます。
 
-```
+```cpp
 // C3874b.cpp
 double main()
 {   // C3874

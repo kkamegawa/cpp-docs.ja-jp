@@ -1,5 +1,5 @@
 ---
-title: 方法:-clr を使用して MFC および ATL コードのコンパイル
+title: '方法: Clr を使用して MFC および ATL コードをコンパイルします。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379049"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>方法: /clr を使用して MFC および ATL コードをコンパイルする
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>方法: MFC および ATL コードを使用して、/clr をコンパイルします。
 
 このトピックでは、共通言語ランタイムをターゲットに既存の MFC および ATL プログラムをコンパイルする方法について説明します。
 

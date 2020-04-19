@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 1da9aeb0ff285893ed4f81277f379ad8bffcc65b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 116c550f45bf622e7620b3a6f552339b4bcc24a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590906"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497927"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection クラス
 
-`CComAutoCriticalSection` 取得とクリティカル セクション オブジェクトの所有権を解放するメソッドを提供します。
+`CComAutoCriticalSection`クリティカルセクションオブジェクトの所有権を取得および解放するためのメソッドを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,11 +36,11 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 ## <a name="remarks"></a>Remarks
 
-`CComAutoCriticalSection` クラスに似ていますが[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)、除く`CComAutoCriticalSection`コンス トラクターでクリティカル セクション オブジェクトを自動的に初期化します。
+`CComAutoCriticalSection`はクラス[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)に似てい`CComAutoCriticalSection`ますが、コンストラクターでクリティカルセクションオブジェクトが自動的に初期化される点が異なります。
 
-通常、使用して`CComAutoCriticalSection`を通じて、`typedef`名前[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)します。 この名前の参照`CComAutoCriticalSection`とき[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されています。
+通常は、 `CComAutoCriticalSection` [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)という`typedef`名前を使用します。 この名前は`CComAutoCriticalSection` 、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されている場合に参照されます。
 
-`Init`と`Term`メソッドから[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)このクラスを使用する場合は使用できません。
+この`Init`クラス`Term`を使用する場合、 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)のメソッドとメソッドは使用できません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -50,9 +50,9 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcore.h
+**ヘッダー:** atlcore .h
 
-##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection
+##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection
 
 コンストラクターです。
 
@@ -62,9 +62,9 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>Remarks
 
-Win32 関数を呼び出す[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)、クリティカル セクション オブジェクトを初期化します。
+クリティカルセクションオブジェクトを初期化する Win32 関数[InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection)を呼び出します。
 
-##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection
+##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection
 
 デストラクターです。
 
@@ -74,7 +74,7 @@ Win32 関数を呼び出す[InitializeCriticalSection](/windows/desktop/api/sync
 
 ### <a name="remarks"></a>Remarks
 
-デストラクターの呼び出し[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)、クリティカル セクション オブジェクトによって使用されるすべてのシステム リソースを解放します。
+このデストラクターは[DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection)を呼び出します。これにより、クリティカルセクションオブジェクトによって使用されるすべてのシステムリソースが解放されます。
 
 ## <a name="see-also"></a>関連項目
 

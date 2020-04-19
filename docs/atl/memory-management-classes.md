@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - memory, managing
 ms.assetid: be564a5e-577e-40a7-bfe3-25ad21e57270
-ms.openlocfilehash: 76207259e7a4c769580ff41263642b278ee11f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7e0085d79237b153150297f2a2d00998a93a514
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262321"
 ---
 # <a name="memory-management-classes"></a>メモリ管理クラス
 
@@ -61,4 +61,3 @@ ms.locfileid: "50545198"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)
-

@@ -1,11 +1,11 @@
 ---
 title: _get_purecall_handler、_set_purecall_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_purecall_handler
 - _set_purecall_handler_m
 - _get_purecall_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646364"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955674"
 ---
-# <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler、_set_purecall_handler
+# <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler、_set_purecall_handler
 
 純粋仮想関数呼び出しのエラー ハンドラーを取得または設定します。
 
@@ -58,21 +61,21 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>パラメーター
 
 *function*<br/>
-純粋仮想関数が呼び出されたときに呼び出される関数。 A **_purecall_handler**関数は void 戻り値の型である必要があります。
+純粋仮想関数が呼び出されたときに呼び出される関数。 関数**の戻り値の型**は void である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
-前の **_purecall_handler**します。 返します**nullptr**以前のハンドラーがない場合。
+以前の**すべてのハンドラー (_a**)。 前のハンドラーがなかった場合は**nullptr**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Get_purecall_handler**と **_set_purecall_handler**関数は Microsoft 固有の仕様と C++ コードにのみ適用されます。
+**_Get_purecall_handler**関数と **_set_purecall_handler**関数は、Microsoft 固有の関数でありC++ 、コードにのみ適用されます。
 
-純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 既定では、純粋仮想関数が呼び出されるとコンパイラによってエラー ハンドラー関数を呼び出すコードが生成され、プログラムが終了します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラー関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 エラー ハンドラーを使用するを持つ関数を作成、 **_purecall_handler**のシグネチャを使用して **_set_purecall_handler**を現在のハンドラーします。
+純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 既定では、純粋仮想関数が呼び出されるとコンパイラによってエラー ハンドラー関数を呼び出すコードが生成され、プログラムが終了します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラー関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラーハンドラーを使用するには、**ハンドラー**シグネチャを持つ関数を作成し、 **_set_purecall_handler**を使用してそれを現在のハンドラーにします。
 
-1 つしかないため、 **_purecall_handler**を呼び出すと、各プロセスの **_set_purecall_handler**すべてのスレッドをすぐに影響します。 ハンドラーは、すべてのスレッドでの最後の呼び出し元によって設定されます。
+各プロセスの**ハンドラー**は1つだけであるため、 **_set_purecall_handler**を呼び出すと、すぐにすべてのスレッドに影響します。 ハンドラーは、すべてのスレッドでの最後の呼び出し元によって設定されます。
 
-既定の動作を復元するには、呼び出す **_set_purecall_handler**を使用して、 **nullptr**引数。
+既定の動作を復元するには、 **nullptr**引数を使用して **_set_purecall_handler**を呼び出します。
 
 ## <a name="requirements"></a>必要条件
 

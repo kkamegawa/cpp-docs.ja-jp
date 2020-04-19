@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: dc36679a9457939bb5fb110219b2ddfbf05c643e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404482"
 ---
 # <a name="double-thunking-c"></a>ダブル サンキング (C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50546407"
 
 同様に、エクスポートする場合 ([dllexport、dllimport](../cpp/dllexport-dllimport.md)) マネージ関数では、ネイティブ エントリ ポイントは生成され、インポートし、その関数を呼び出す関数はネイティブ エントリ ポイントを呼び出します。 このような状況でダブル サンキングを避けるため、使用しないネイティブのエクスポート/インポート セマンティクスです。使用してメタデータを参照するだけ`#using`(を参照してください[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md))。
 
-ダブル サンキングの不要なため、コンパイラが更新されました。 たとえば、(戻り値の型を含む) のシグネチャのマネージド型の関数は暗黙的としてマークされます`__clrcall`します。 ダブル サンクの削除の詳細については、次を参照してください。 [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)します。
+ダブル サンキングの不要なため、コンパイラが更新されました。 たとえば、(戻り値の型を含む) のシグネチャのマネージド型の関数は暗黙的としてマークされます`__clrcall`します。
 
 ## <a name="example"></a>例
 

@@ -1,21 +1,21 @@
 ---
-title: (C++ COM 属性) を含める
+title: include (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544756"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514556"
 ---
 # <a name="include-c"></a>include (C++)
 
-生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。
+生成される .idl ファイルに含める1つ以上のヘッダーファイルを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,17 +26,17 @@ ms.locfileid: "50544756"
 ### <a name="parameters"></a>パラメーター
 
 *header_file*<br/>
-生成された .idl ファイルに含まれるファイルの名前。
+生成された .idl ファイルに追加するファイルの名前。
 
 ## <a name="remarks"></a>Remarks
 
-**含める**C++ 属性によって、`#include`ステートメントの下に配置されます、`import "docobj.idl"`生成された .idl ファイル内のステートメント。
+**Include** C++ `import "docobj.idl"`属性を指定すると、ステートメントが生成された.idlファイル内のステートメントの下に配置されます。`#include`
 
-**含める**C++ 属性と同じ機能を持つ、[含める](/windows/desktop/Midl/include)MIDL 属性。
+**Include** C++属性には、 [include](/windows/win32/Midl/include) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法の例を示します**含める**します。 この例では、ファイル include.h のみを含む、`#include`ステートメント。
+次のコードは、 **include**を使用する方法の例を示しています。 この例では、ファイルには`#include`ステートメントだけが含まれています。
 
 ```cpp
 // cpp_attr_ref_include.cpp

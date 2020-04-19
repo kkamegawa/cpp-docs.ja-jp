@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: a6ebbb09bc724fe1d3b2f06a27cb6708acb7566b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538360"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746944"
 ---
 # <a name="security-features-in-the-crt"></a>CRT のセキュリティ機能
 
@@ -86,7 +86,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Format string syntax checking`。 無効な文字列が検出されます。たとえば、`printf` 書式指定文字列の不正な型フィールド文字を使用した場合です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [パラメーターの検証](../c-runtime-library/parameter-validation.md)<br/>
 [セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)<br/>

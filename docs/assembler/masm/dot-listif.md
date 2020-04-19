@@ -1,30 +1,31 @@
 ---
 title: .LISTIF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTIF
 helpviewer_keywords:
 - .LISTIF directive
 ms.assetid: 1189ff45-1fa1-4035-a74f-70c2c62b06fd
-ms.openlocfilehash: 11f6f09430be30bfab37428c1b33abd91ef01f4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9fe1100a3513fb356e721cc677ad07f0cd7151c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483474"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317670"
 ---
 # <a name="listif"></a>.LISTIF
 
-False の条件付きブロック内のステートメントの一覧表示を開始します。
+False 条件ブロック内のステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
-> .LISTIF
+> **.LISTIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-同じ[します。LFCOND](../../assembler/masm/dot-lfcond.md)します。
+と同じ[です.LFCOND](dot-lfcond.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

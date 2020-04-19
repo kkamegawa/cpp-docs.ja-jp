@@ -1,19 +1,19 @@
 ---
 title: ネイティブ C++ でのイベント処理
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 210eea760e80814041b4e97f50c4164ef98d75e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457552"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222182"
 ---
 # <a name="event-handling-in-native-c"></a>ネイティブ C++ でのイベント処理
 
-使用してイベント ソースとイベント レシーバーを設定するネイティブ C++ イベント処理で、 [event_source](../windows/event-source.md)と[event_receiver](../windows/event-receiver.md)指定それぞれ属性`type` = `native`. これらの属性により、適用先のクラスは、イベントを発生させ、ネイティブの非 COM コンテキストでイベントを処理できます。
+ネイティブC++を使用してイベント ソースとイベント レシーバーを設定すると、イベント処理、 [event_source](../windows/attributes/event-source.md)と[event_receiver](../windows/attributes/event-receiver.md)指定それぞれ属性`type` =`native`. これらの属性により、適用先のクラスは、イベントを発生させ、ネイティブの非 COM コンテキストでイベントを処理できます。
 
 ## <a name="declaring-events"></a>イベントの宣言
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 MyHandler2 was called with value 123.

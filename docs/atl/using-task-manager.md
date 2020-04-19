@@ -6,12 +6,12 @@ helpviewer_keywords:
 - breakpoints, Task Manager
 - debugging [ATL], using Task Manager
 ms.assetid: 773fccd5-308d-42c2-a17f-60ae94989062
-ms.openlocfilehash: 4f5e90b35a15cfda32b4cc23c08e4d3a0d84a284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cba3abb98136c78530150a66e91004dcc9614d5a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195248"
 ---
 # <a name="using-task-manager"></a>タスク マネージャーを使用します。
 
@@ -20,4 +20,3 @@ ms.locfileid: "50483539"
 ## <a name="see-also"></a>関連項目
 
 [デバッグのヒント](../atl/debugging-tips.md)
-

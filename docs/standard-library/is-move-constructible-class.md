@@ -1,21 +1,21 @@
 ---
 title: is_move_constructible クラス
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - type_traits/std::is_move_constructible
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9585a932a34a24769201aaa379525a9b4c181e41
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508994"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920089"
 ---
-# <a name="ismoveconstructible-class"></a>is_move_constructible クラス
+# <a name="is_move_constructible-class"></a>is_move_constructible クラス
 
-型に移動コンストラクターが存在するかどうかをテストします。
+移動操作を使用して型を構築できるかどうかをテストします。
 
 ## <a name="syntax"></a>構文
 
@@ -26,14 +26,14 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
-評価される型
+*T* \
+評価される型。
 
 ## <a name="remarks"></a>Remarks
 
-型の場合に true に評価される型の述語*T*移動操作を使用して構築できます。 この述語は `is_constructible<T, T&&>` と同じです。
+移動操作を使用して型*T*を構築できる場合は**true**に評価される型述語。 この述語は `is_constructible<T, T&&>` と同じです。 移動コンストラクターを持たないが、`const T&` 引数を受け取るコピーコンストラクターを持つ型*T*は、`std::is_move_constructible`を満たします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 
@@ -41,4 +41,4 @@ struct is_move_constructible;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -8,19 +8,18 @@ helpviewer_keywords:
 - controls [MFC], header
 - owner-drawn header controls [MFC]
 ms.assetid: 455c113b-e8d0-400c-8690-dbb92cba0d05
-ms.openlocfilehash: 90ce572560706f237b3a4fa54a4850e7b24b22ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9147708f672a5aec26f58a3c81ed7a5dfcf8cad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549800"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508318"
 ---
 # <a name="making-owner-drawn-header-controls"></a>オーナー描画ヘッダー コントロールの作成
 
-ヘッダー コントロールの個々 の項目を定義することができます ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オーナー描画項目にします。 詳細については、次を参照してください。[ヘッダー コントロールのオーナー](/windows/desktop/Controls/header-controls) Windows SDK に含まれています。
+ヘッダーコントロール ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) の個々の項目を定義して、オーナー描画項目にすることができます。 詳細については、「Windows SDK の[オーナー描画ヘッダーコントロール](/windows/win32/Controls/header-controls)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

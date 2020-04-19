@@ -1,5 +1,5 @@
 ---
-title: ステータス バーにコマンド情報を表示する方法
+title: '方法: ステータス バーにコマンド情報を表示'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - prompts [MFC]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: 6da45edf611d70920340d8f9a9c2fd8de5cc0307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c93787b3799306d6008299e7c1be6e429bc4c2d9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160290"
 ---
-# <a name="how-to-display-command-information-in-the-status-bar"></a>ステータス バーにコマンド情報を表示する方法
+# <a name="how-to-display-command-information-in-the-status-bar"></a>方法: ステータス バーにコマンド情報を表示
 
 アプリケーションのスケルトンを作成するアプリケーション ウィザードを実行するときに、ツールバーとステータス バーをサポートできます。 アプリケーション ウィザード内の 1 つのオプションは、両方をサポートします。 ステータス バーが存在する場合は、アプリケーションでユーザーが、メニュー項目にポインターを移動すると、操作に役立つ情報が自動的に提供します。 アプリケーションは、メニュー項目が強調表示すると自動的にプロンプト文字列とステータス バーに表示します。 に、ユーザーがポインターを移動したときになど、**切り取り**コマンドを**編集**メニュー、ステータス バー、ステータス バーのメッセージ領域で"選択範囲を切り取ってクリップボードに保存します。"と表示可能性があります。 プロンプトでは、ユーザーがメニュー項目の目的を理解するのに役立ちます。 これは、ユーザーがツール バー ボタンをクリックしたときにも機能します。
 
@@ -25,4 +25,3 @@ ms.locfileid: "50654104"
 ## <a name="see-also"></a>関連項目
 
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
-

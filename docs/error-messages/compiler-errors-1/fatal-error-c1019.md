@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1019
 ms.assetid: c4f8968b-bc62-4200-b3ca-69d06c163236
-ms.openlocfilehash: 2d8e63510b762b0de0cda50ab7a03b773dfb949a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f33139393f7f6225edf0c4b3f992b93d35bd6afa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574084"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756917"
 ---
 # <a name="fatal-error-c1019"></a>致命的なエラー C1019
 
 予期しない #else です。
 
-`#else` ディレクティブが、 `#if`、 `#ifdef`、または `#ifndef` 構成体の外側に置かれています。 `#else` は、これらの構成体のいずれかの内側だけで使用してください。
+`#else` ディレクティブが、 `#if`、 `#ifdef`、または `#ifndef` コンストラクトの外側に置かれています。 `#else` は、これらのコンストラクトのいずれかの内側だけで使用してください。
 
 次の例では C1019 が生成されます。
 
-```
+```cpp
 // C1019.cpp
 #else   // C1019
 #endif
@@ -29,9 +29,9 @@ ms.locfileid: "50574084"
 int main() {}
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C1019b.cpp
 #if 1
 #else

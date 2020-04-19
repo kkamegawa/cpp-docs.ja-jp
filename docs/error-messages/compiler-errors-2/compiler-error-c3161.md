@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C3161
+title: コンパイラエラー C3161
 ms.date: 11/04/2016
 f1_keywords:
 - C3161
 helpviewer_keywords:
 - C3161
 ms.assetid: 1fe2be85-a343-487b-8476-bf9e257eb29d
-ms.openlocfilehash: 22ecc176036308699c3ad7bd8c015836be910073
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7315dad7959cdd3b950ed814b13be3867399d332
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501661"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761817"
 ---
-# <a name="compiler-error-c3161"></a>コンパイラ エラー C3161
+# <a name="compiler-error-c3161"></a>コンパイラエラー C3161
 
-'interface': クラスを入れ子構造体、共用体、またはインターフェイスのインターフェイスは無効です。クラス、構造体または共用体でインターフェイスを入れ子は無効です。
+' interface ': インターフェイスでクラス、構造体、共用体、またはインターフェイスを入れ子にすることはできません。クラス、構造体、または共用体にインターフェイスを入れ子にすることは無効です
 
-[_ _Interface](../../cpp/interface.md)グローバル スコープまたは名前空間内でだけ記述できます。 クラス、構造体、または共用体は、インターフェイスではできません。
+[__Interface](../../cpp/interface.md)は、グローバルスコープまたは名前空間内でのみ使用できます。 クラス、構造体、または共用体は、インターフェイスには記述できません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3161 が生成されます。
 
-```
+```cpp
 // C3161.cpp
 // compile with: /c
 __interface X {

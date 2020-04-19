@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: 23974a9e20f8259c3a38af15664d328ded7ff7d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273288"
 ---
 # <a name="pdb-files-as-linker-input"></a>リンカー入力としての .pdb ファイル
 
@@ -20,5 +20,5 @@ ms.locfileid: "50628895"
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[LINK の入力ファイル](link-input-files.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

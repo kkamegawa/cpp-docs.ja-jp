@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-ms.openlocfilehash: 3e20ef1f3643b9e802c7cdc399d3436ceadeae79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f43aa0d37c5e614636b3d7543bc927d41039b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378077"
 ---
 # <a name="window-objects"></a>ウィンドウ オブジェクト
 
@@ -60,4 +60,3 @@ Windows が使用する方法を学習するための適切なリソースをプ
 ## <a name="see-also"></a>関連項目
 
 [Windows](../mfc/windows.md)
-

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666519"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966497"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>コンパイラの警告 (レベル 1) C4378
 
-初期化子を実行する関数ポインターを取得する必要があります。System::ModuleHandle::ResolveMethodHandle を検討してください。
+初期化子を実行するには、関数ポインターを取得する必要があります。System:: ModuleHandle:: ResolveMethodHandle を検討します。
 
-**/Clr**、初期化子のシンボルには、関数のトークン、関数ポインターではありませんが含まれます。  トークンを使用してポインターに変換する必要がある<xref:System.ModuleHandle.ResolveMethodHandle%2A>します。
+**/Clr**の下では、初期化子シンボルに関数のポインターではなく関数トークンが含まれています。  <xref:System.ModuleHandle.ResolveMethodHandle%2A>を使用して、トークンをポインターに変換する必要があります。
 
 ## <a name="example"></a>例
 
 次の例では、C4378 が生成されます。
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -65,9 +65,9 @@ int main () {
 
 ## <a name="example"></a>例
 
-次の例では、C4378 を解決する方法を示します。
+次の例は、C4378 を解決する方法を示しています。
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

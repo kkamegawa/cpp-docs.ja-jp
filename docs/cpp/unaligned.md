@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626865"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857256"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Microsoft 固有の仕様**します。 マウス ポインターを宣言する場合、 **_ _unaligned**修飾子は、コンパイラはポインターがアラインされていないデータをアドレスします。 その結果、プラットフォームに適したコードでは、アラインされていない読み取りを処理するためが生成され、ポインターを書き込みます。
+**Microsoft 固有**。 **__Unaligned**修飾子を使用してポインターを宣言すると、コンパイラは、アラインされていないデータをポインターが指すと見なします。 その結果、プラットフォームに適したコードが生成され、ポインターを介して、整列されていない読み取りと書き込みが処理されます。
 
 ## <a name="remarks"></a>Remarks
 
-この修飾子はポインターによってアドレス指定されたデータのアラインメントをについて説明しますポインター自体は、配置すると見なされます。
+この修飾子は、ポインターによってアドレス指定されるデータの配置を表します。ポインター自体は、固定されていると見なされます。
 
-必要性、 **_ _unaligned**キーワードは、プラットフォームおよび環境によって異なります。 エラー データを適切にマークすると、パフォーマンスの低下からハードウェアの障害に至るまでの問題があります。 **_ _Unaligned**修飾子は無効です、x86 プラットフォーム。
+**__Unaligned**キーワードの必要性は、プラットフォームと環境によって異なります。 データを適切にマークしないと、パフォーマンスの低下からハードウェア障害まで、問題が発生する可能性があります。 **__Unaligned**修飾子は、x86 プラットフォームでは無効です。
 
-以前のバージョンとの互換性のため **_unaligned**のシノニムです **_ _unaligned**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)指定します。
+以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_unaligned**は **__unaligned**のシノニムになります。
 
 アラインメントの詳細については、次のトピックを参照してください。
 
@@ -39,6 +39,6 @@ ms.locfileid: "53626865"
 
 - [構造体の配置例](../build/x64-software-conventions.md#examples-of-structure-alignment)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)

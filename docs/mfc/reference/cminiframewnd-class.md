@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 45b4698cc70487a6c3fe1470fe27f7b5c4f95402
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693527"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504601"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 
@@ -41,16 +41,16 @@ class CMiniFrameWnd : public CFrameWnd
 
 |名前|説明|
 |----------|-----------------|
-|[には](#create)|作成、`CMiniFrameWnd`構築後のオブジェクト。|
-|[CMiniFrameWnd::CreateEx](#createex)|作成、`CMiniFrameWnd`構築後 (その他のオプション) を含むオブジェクト。|
+|[CMiniFrameWnd:: Create](#create)|構築後`CMiniFrameWnd`にオブジェクトを作成します。|
+|[CMiniFrameWnd:: CreateEx](#createex)|構築後`CMiniFrameWnd`に、追加のオプションを使用してオブジェクトを作成します。|
 
 ## <a name="remarks"></a>Remarks
 
-これらのミニフレーム ウィンドウは、点が異なりますを最小化/最大化ボタンがないか、メニューおよびするがシステム メニューを閉じるには、1 回のクリックだけが通常のフレーム ウィンドウと同様に動作します。
+これらのミニフレームウィンドウは通常のフレームウィンドウと同様に動作しますが、最小化/最大化のボタンやメニューがない点が異なります。また、[システム] メニューをクリックするだけで、それらを閉じることができます。
 
-使用する、`CMiniFrameWnd`オブジェクト、最初のオブジェクトを定義します。 呼び出して、[作成](#create)ミニフレーム ウィンドウを表示するメンバー関数。
+`CMiniFrameWnd`オブジェクトを使用するには、まずオブジェクトを定義します。 次に、 [Create](#create) member 関数を呼び出してミニフレームウィンドウを表示します。
 
-使用する方法の詳細についての`CMiniFrameWnd`オブジェクトは、記事をご覧ください。[ドッキングとフローティング ツールバー](../../mfc/docking-and-floating-toolbars.md)します。
+オブジェクトの使用`CMiniFrameWnd`方法の詳細については、「[ドッキングツールバーとフローティングツールバー](../../mfc/docking-and-floating-toolbars.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -68,9 +68,9 @@ class CMiniFrameWnd : public CFrameWnd
 
 **ヘッダー:** afxwin.h
 
-##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd
+##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd
 
-構築、`CMiniFrameWnd`オブジェクトは、ウィンドウを作成しません。
+オブジェクトを`CMiniFrameWnd`構築しますが、ウィンドウを作成しません。
 
 ```
 CMiniFrameWnd();
@@ -78,11 +78,11 @@ CMiniFrameWnd();
 
 ### <a name="remarks"></a>Remarks
 
-ウィンドウを作成するには[には](#create)します。
+ウィンドウを作成するには、 [CMiniFrameWnd:: create](#create)を呼び出します。
 
-##  <a name="create"></a>  には
+##  <a name="create"></a>  CMiniFrameWnd::Create
 
-Windows のミニフレーム ウィンドウを作成しにアタッチします、`CMiniFrameWnd`オブジェクト。
+Windows ミニフレームウィンドウを作成し、 `CMiniFrameWnd`オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -97,46 +97,46 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *lpClassName*<br/>
-Windows クラスの名前を示す文字の null で終わる文字列を指します。 クラス名はグローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数。 NULL の場合、ウィンドウ クラスは、フレームワークによってが登録されます。 MFC で既定のクラスは、次のスタイルと属性。
+Windows クラスに名前を指定する null で終わる文字列を指します。 クラス名には、グローバル[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数に登録されている任意の名前を指定できます。 NULL の場合、ウィンドウクラスはフレームワークによって登録されます。 MFC では、既定のクラスに次のスタイルと属性が付与されます。
 
-- セットのスタイルのビット CS_DBLCLKS、送信、ユーザーがマウスをダブルクリックしたときにウィンドウ プロシージャへのメッセージをダブルクリックします。
+- スタイルビット CS_DBLCLKS を設定します。これは、ユーザーがマウスをダブルクリックすると、ダブルクリックメッセージをウィンドウプロシージャに送信します。
 
-- ウィンドウ サイズが変更されたときに再描画されるクライアント領域の内容を直接 CS_HREDRAW と CS_VREDRAW、スタイルのビットを設定します。
+- スタイルのビット CS_HREDRAW と CS_VREDRAW を設定します。これは、ウィンドウのサイズが変更されたときに再描画されるクライアント領域の内容を指定します。
 
-- Windows 標準 IDC_ARROW クラス カーソルに設定します。
+- クラスカーソルを Windows 標準 IDC_ARROW に設定します。
 
-- ウィンドウはその背景を消去されませんので、NULL にクラスの背景ブラシを設定します。
+- クラスの背景ブラシを NULL に設定します。これにより、ウィンドウの背景が消去されません。
 
-- クラスのアイコンを手を振るフラグの標準の Windows ロゴのアイコンに設定します。
+- クラスアイコンを標準の [フラグが設定された Windows ロゴ] アイコンに設定します。
 
-- Windows で示されている既定のサイズと位置に、ウィンドウを設定します。
+- Windows によって示される既定のサイズと位置にウィンドウを設定します。
 
 *lpWindowName*<br/>
-ウィンドウの名前を含む null で終わる文字列へのポインター。
+ウィンドウ名を含む null で終わる文字列を指します。
 
 *dwStyle*<br/>
-ウィンドウのスタイル属性を指定します。 これらは、標準のウィンドウ スタイルと 1 つ以上の次の特殊なスタイルを含めることができます。
+ウィンドウスタイル属性を指定します。 これには、標準のウィンドウスタイルと、次の特殊なスタイルの1つ以上を含めることができます。
 
-- MFS_MOVEFRAME により、ミニフレーム ウィンドウ キャプションだけでなく、ウィンドウの端をクリックして移動します。
+- MFS_MOVEFRAME を使用すると、キャプションだけでなく、ウィンドウの任意の端をクリックして、ミニフレームウィンドウを移動できます。
 
-- ミニフレーム ウィンドウのサイズ変更 MFS_4THICKFRAME を無効にします。
+- MFS_4THICKFRAME は、ミニフレームウィンドウのサイズ変更を無効にします。
 
-- 返さでは、親ウィンドウのアクティブ化するミニフレーム ウィンドウのアクティブ化を同期します。
+- MFS_SYNCACTIVE は、ミニフレームウィンドウのアクティブ化を、親ウィンドウのアクティブ化に同期します。
 
-- MFS_THICKFRAME により、ミニフレーム ウィンドウのクライアント領域の内容のような小さいサイズを使用できます。
+- MFS_THICKFRAME を使用すると、クライアント領域のコンテンツで許可されているサイズでミニフレームウィンドウのサイズを小さくすることができます。
 
-- システム メニューと、[コントロール] メニューへのアクセスの MFS_BLOCKSYSMENU を無効にされ、キャプション (タイトル バー) の一部に変換します。
+- MFS_BLOCKSYSMENU は、[システム] メニューと [コントロール] メニューへのアクセスを無効にし、キャプション (タイトルバー) の一部に変換します。
 
-参照してください[cwnd::create](../../mfc/reference/cwnd-class.md#create)の利用可能なウィンドウ スタイル値の説明。 ミニフレーム ウィンドウを使用する一般的な組み合わせが WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU します。
+使用可能なウィンドウスタイル値の説明については、「 [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) 」を参照してください。 ミニフレームウィンドウで使用される一般的な組み合わせは&#124;、&#124;WS_POPUP WS_CAPTION WS_SYSMENU です。
 
 *rect*<br/>
-A`RECT`構造は、ウィンドウの大きさを指定します。
+ウィンドウの目的の大きさを指定する構造体。`RECT`
 
 *pParentWnd*<br/>
-親ウィンドウへのポインター。 トップ レベル ウィンドウに対して NULL を使用します。
+親ウィンドウをポイントします。 トップレベルウィンドウには NULL を使用します。
 
 *nID*<br/>
-これは、子コントロールの識別子を子ウィンドウとして、ミニフレーム ウィンドウが作成される場合それ以外の場合 0 を返します。
+ミニフレームウィンドウが子ウィンドウとして作成された場合、これは子コントロールの識別子になります。それ以外の場合は0です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -144,9 +144,9 @@ A`RECT`構造は、ウィンドウの大きさを指定します。
 
 ### <a name="remarks"></a>Remarks
 
-`Create` ウィンドウのクラス名とウィンドウの名前を初期化し、そのスタイルと親の既定値を登録します。
+`Create`ウィンドウのクラス名とウィンドウ名を初期化し、そのスタイルと親の既定値を登録します。
 
-##  <a name="createex"></a>  CMiniFrameWnd::CreateEx
+##  <a name="createex"></a>CMiniFrameWnd:: CreateEx
 
 `CMiniFrameWnd` オブジェクトを作成します。
 
@@ -164,45 +164,45 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-拡張スタイルを指定します、`CMiniFrameWnd`作成中です。 任意の適用、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)ウィンドウにします。
+作成する`CMiniFrameWnd`の拡張スタイルを指定します。 ウィンドウに任意の[拡張ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)を適用します。
 
 *lpClassName*<br/>
-Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)構造)。 クラス名はグローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数またはそのいずれかの定義済みのコントロール クラス名。 NULL は指定できません。
+Windows クラス ( [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体) に名前を指定する null で終わる文字列を指します。 クラス名には、グローバル[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数に登録されている任意の名前を指定することも、定義済みのコントロールクラス名を使用することもできます。 NULL にすることはできません。
 
 *lpWindowName*<br/>
-ウィンドウの名前を含む null で終わる文字列へのポインター。
+ウィンドウ名を含む null で終わる文字列を指します。
 
 *dwStyle*<br/>
-ウィンドウのスタイル属性を指定します。 参照してください[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[cwnd::create](../../mfc/reference/cwnd-class.md#create)の使用可能な値の説明。
+ウィンドウスタイル属性を指定します。 使用可能な値の説明については、「[ウィンドウのスタイル」](../../mfc/reference/styles-used-by-mfc.md#window-styles)および「 [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) 」を参照してください。
 
 *rect*<br/>
-クライアント座標で、ウィンドウの位置とサイズ*pParentWnd*します。
+ウィンドウのサイズと位置 ( *pParentWnd*のクライアント座標)。
 
 *pParentWnd*<br/>
-親ウィンドウ オブジェクトへのポインター。
+親ウィンドウオブジェクトを指します。
 
 *nID*<br/>
 子ウィンドウの識別子。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-`CreateEx` WNDCLASS、ウィンドウ スタイル、および (必要に応じて) 初期位置、およびウィンドウのサイズを指定します。 `CreateEx` また、ウィンドウの親 (ある場合) と ID を指定します
+パラメーター `CreateEx`では、ウィンドウの WNDCLASS、ウィンドウスタイル、および (必要に応じて) 初期位置とサイズを指定します。 `CreateEx`ウィンドウの親 (存在する場合) と ID も指定します。
 
-ときに`CreateEx`実行されると、Windows の送信、 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)メッセージは、ウィンドウに表示します。
+を`CreateEx`実行すると、Windows は[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)の各メッセージをウィンドウに送信します。
 
-既定のメッセージ処理を拡張するには、派生クラスを`CMiniFrameWnd`メッセージ マップを新しいクラスに追加し、上記のメッセージのメンバー関数を提供します。 オーバーライド`OnCreate`、たとえば、新しいクラスに必要な初期化を実行します。
+既定のメッセージ処理を拡張するには、から`CMiniFrameWnd`クラスを派生させ、新しいクラスにメッセージマップを追加して、上記のメッセージのメンバー関数を指定します。 たとえば`OnCreate`、新しいクラスに必要な初期化を実行する場合は、をオーバーライドします。
 
-さらにオーバーライド`On`*メッセージ*メッセージ ハンドラーは、派生クラスに機能を追加します。
+さら`On`に*メッセージ*メッセージハンドラーをオーバーライドして、派生クラスにさらに機能を追加します。
 
-WS_VISIBLE スタイルを指定すると、Windows はアクティブ化し、ウィンドウを表示するために必要なすべてのメッセージをウィンドウに送信します。 ウィンドウのスタイルは、タイトル バーを指定する場合、ウィンドウのタイトルが指す、*したとき*パラメーターは、タイトル バーに表示されます。
+WS_VISIBLE スタイルが指定されている場合、アクティブ化してウィンドウを表示するために必要なすべてのメッセージがウィンドウに送信されます。 ウィンドウスタイルでタイトルバーが指定されている場合は、 *lpszWindowName*パラメーターによって示されるウィンドウタイトルがタイトルバーに表示されます。
 
-*DwStyle*パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
+*DwStyle*パラメーターには、[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の任意の組み合わせを指定できます。
 
-古いスタイル パレットのツールボックス ウィンドウがサポートされていません。 以前のバージョンの Windows では、MFC アプリケーションを実行するときに、"X"の閉じるボタンを設定されていない、以前のスタイルがサポートされていましたが、Visual C .NET でサポートされて不要になった。 新しい WS_EX_TOOLWINDOW スタイルのみがサポートされるようになりました。このスタイルの説明は、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)します。
+旧形式の [パレット] ツールボックスウィンドウはサポートされなくなりました。 以前のバージョンの Windows で MFC アプリケーションを実行しているときに、"X" 閉じるボタンのない古いスタイルはサポートされていましたが、 C++Visual .net ではサポートされなくなりました。 新しい WS_EX_TOOLWINDOW スタイルのみがサポートされるようになりました。このスタイルの詳細については、「[拡張ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

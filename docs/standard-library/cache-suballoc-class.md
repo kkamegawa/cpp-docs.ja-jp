@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438871"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688345"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc クラス
+# <a name="cache_suballoc-class"></a>cache_suballoc クラス
 
 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除する[ブロック アロケーター](../standard-library/allocators-header.md)を定義します。
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*sz*|割り当てられる配列内の要素の数。|
+|*Sz*|割り当てられる配列内の要素の数。|
 
 ## <a name="remarks"></a>Remarks
 
-Cache_suballoc テンプレート クラスは、無限の長さのフリー リストの割り当てが解除されたメモリ ブロックを格納するを使用して`freelist<sizeof(Type), max_unbounded>`、メモリ ブロックを使用して割り当てられた大きいチャンクからなると**演算子 new**フリー リストの場合空です。
+Cache_suballoc クラステンプレートは、割り当てが解除されたメモリブロックを、長さが無制限のフリーリストに格納します。また、`freelist<sizeof(Type), max_unbounded>` を使用し、フリーリストが空の場合に**operator new**で割り当てられた大きなチャンクからメモリブロックを割り当てます。
 
-各チャンクを保持`Sz * Nelts`使用可能なメモリと、データのバイトを**演算子 new**と**delete 演算子**が必要です。 割り当てたチャンクが解放されることはありません。
+各チャンクは `Sz * Nelts` バイトの使用可能なメモリと、 **operator new**および**operator delete**に必要なデータを保持します。 割り当てたチャンクが解放されることはありません。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -53,7 +53,7 @@ Cache_suballoc テンプレート クラスは、無限の長さのフリー リ
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - future/std::is_error_code_enum
 ms.assetid: 84ae4b99-66d2-41ba-9b50-645fcbe14630
-ms.openlocfilehash: 54def287aa6b4bbb06d88006615b5df45b482051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a9f0d6b812b430ba3fca2d39343f912791da6f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676422"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452609"
 ---
 # <a name="iserrorcodeenum-structure"></a>is_error_code_enum 構造体
 
@@ -24,11 +24,11 @@ struct is_error_code_enum<Future_errc> : public true_type;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<将来 >
+**ヘッダー:** \<今後の >
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

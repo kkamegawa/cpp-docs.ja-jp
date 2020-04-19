@@ -2,12 +2,12 @@
 title: 自動並行化と自動ベクター化
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 06ab255e7769bfa56d5a8d22cdbe19d415ce6b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618345"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450240"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動並行化と自動ベクター化
 
@@ -107,12 +107,12 @@ for (int i = 0; i < 1000; ++i)
 
 理由コードとメッセージの詳細については、次を参照してください。[ベクター化と並行化メッセージ](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)します。
 
-実際には、ベクター化のしくみを示す例は、次を参照してください[Project Austin Part 2 of 6: Page Curling。](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+実際には、ベクター化のしくみを示す例は、次を参照してください。 [Project Austin Part 2 of 6。ページ カーリング](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>関連項目
 
 [loop](../preprocessor/loop.md)<br/>
-[ネイティブ コードでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[ネイティブ コードでの並列プログラミング](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (自動並行化)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar-report (自動並行化レポート作成レベル)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (自動ベクター化レポート作成レベル)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

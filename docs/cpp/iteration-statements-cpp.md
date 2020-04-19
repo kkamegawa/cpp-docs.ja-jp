@@ -6,11 +6,11 @@ helpviewer_keywords:
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
 ms.openlocfilehash: 72f81e2fc58a31db0c4cd3f77ba182bd8b8152a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366577"
 ---
 # <a name="iteration-statements-c"></a>繰り返しステートメント (C++)
 
@@ -24,8 +24,8 @@ C には、次の 4 つの繰り返しステートメントが用意されてい
 |---------------|------------------|--------------------|---------------|
 |**while**|ループの先頭|いいえ|いいえ|
 |**do**|ループの最後|いいえ|いいえ|
-|**for**|ループの先頭|はい|はい|
-|**範囲ベースの for**|ループの先頭|はい|はい|
+|**for**|ループの先頭|はい|[はい]|
+|**範囲ベースの for**|ループの先頭|[はい]|[はい]|
 
 繰り返しステートメントのステートメント部分は宣言にできません。 ただし、宣言を含む複合ステートメントにすることができます。
 

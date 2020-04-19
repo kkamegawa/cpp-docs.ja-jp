@@ -1,26 +1,27 @@
 ---
-title: SUBTITLE
-ms.date: 08/30/2018
+title: 字幕
+ms.date: 12/16/2019
 f1_keywords:
 - SUBTITLE
 helpviewer_keywords:
 - SUBTITLE directive
 ms.assetid: b882ae31-9998-46ed-bd88-6656263143e7
-ms.openlocfilehash: 8029e66b8a8c9c3b274c925c756ebca5a5ef0bf5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cba9c43a7d070ee4a028f302a1c1517258ed1b9a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654156"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319204"
 ---
-# <a name="subtitle"></a>SUBTITLE
+# <a name="subtitle"></a>字幕
 
-一覧の字幕を定義します。 同じ[SUBTTL](../../assembler/masm/subttl.md)します。
+リスティングのサブタイトルを定義します。 [Subttl](subttl.md)と同じです。
 
 ## <a name="syntax"></a>構文
 
-> サブタイトル テキスト
+> **サブタイトル**の*テキスト*
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

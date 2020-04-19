@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-ms.openlocfilehash: 290491f7afb22873d60abb6662b470d8e7abefc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c470bb7335a5997ae26327f99b8c5f31d20b4edb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486932"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452054"
 ---
 # <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>独自クラスの &lt;&lt; 演算子のオーバーロード
 
@@ -72,4 +72,4 @@ cout <<"The date is" <<dt <<flush;
 
 ## <a name="see-also"></a>関連項目
 
-[出力ストリーム](../standard-library/output-streams.md)<br/>
+[出力ストリーム](../standard-library/output-streams.md)

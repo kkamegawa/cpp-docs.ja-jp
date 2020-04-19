@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3262
 ms.assetid: 3e74b9aa-de3c-4492-9331-ee73012b958b
-ms.openlocfilehash: 1b6f9c1cd8ed983ba0784a49b8972325047c8d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f810cb300ab6db61cc6188aa5e9427ed2141338
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574345"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754200"
 ---
 # <a name="compiler-error-c3262"></a>コンパイラ エラー C3262
 
@@ -21,7 +21,7 @@ ms.locfileid: "50574345"
 
 次の例では C3262 が生成されます。
 
-```
+```cpp
 // C3262.cpp
 // compile with: /clr
 #using <mscorlib.dll>

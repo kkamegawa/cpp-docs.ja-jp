@@ -1,6 +1,6 @@
 ---
 title: index クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,25 +8,25 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a5fa9a2d7e645c46b90ace957d31251baed81c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529312"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127804"
 ---
 # <a name="index-class"></a>index クラス
 
-定義、 *N*-次元インデックス pographics cpp amp.md します。
+*N*次元のインデックスベクターを定義します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <int _Rank>
 class index;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *_Rank*<br/>
 ランク (次元数)。
@@ -35,19 +35,19 @@ class index;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[インデックスのコンス トラクター](#ctor)|`index` クラスの新しいインスタンスを初期化します。|
+|[インデックスコンストラクター](#index_ctor)|`index` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[operator--](#operator--)|`index` オブジェクトの各要素をデクリメントします。|
-|[operator(mod)=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
+|[operator%=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
 |[operator*=](#operator_star_eq)|`index` オブジェクトの各要素をある数で乗算します。|
 |[operator/=](#operator_div_eq)|`index` オブジェクトの各要素をある数で除算します。|
-|[index::operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
+|[index:: operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
 |[operator++](#operator_add_add)|`index` オブジェクトの各要素をインクリメントします。|
 |[operator+=](#operator_add_eq)|指定した数を `index` オブジェクトの各要素に加算します。|
 |[operator=](#operator_eq)|指定された `index` オブジェクトの内容をこのオブジェクトにコピーします。|
@@ -55,7 +55,7 @@ class index;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[rank 定数](#rank)|`index` オブジェクトのランクを格納します。|
 
@@ -63,21 +63,21 @@ class index;
 
 `index`
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`index`構造体の座標ベクターを表します*N*内の一意の位置を示す整数を*N*-次元空間。 ベクターの値は最上位から最下位へ順に並べ替えられます。 使用してコンポーネントの値を取得できます[演算子 =](#operator_eq)します。
+`index` 構造体は、 *n*次元空間内の一意の位置を指定する*n 個*の整数の座標ベクトルを表します。 ベクターの値は最上位から最下位へ順に並べ替えられます。 [Operator =](#operator_eq)を使用して、コンポーネントの値を取得できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** amp.h
 
 **名前空間:** Concurrency
 
-## <a name="index_ctor"></a> インデックスのコンス トラクター
+## <a name="index_ctor"></a>インデックスコンストラクター
 
-Index クラスの新しいインスタンスを初期化します。
+index クラスの新しいインスタンスを初期化します。
 
-```
+```cpp
 index() restrict(amp,cpu);
 
 index(
@@ -122,12 +122,13 @@ explicit index(
 最下位の次元の長さ。
 
 *_Other*<br/>
-新しいインデックス オブジェクトの基になるインデックス オブジェクト。
+新しいインデックスオブジェクトの基になる index オブジェクト。
 
-## <a name="operator--"></a>  operator--
+## <a name="operator--"></a>operator--
 
-デクリメント インデックス オブジェクトの各要素。
-```
+index オブジェクトの各要素をデクリメントします。
+
+```cpp
 index<_Rank>& operator--() restrict(amp,cpu);
 
 index operator--(
@@ -137,13 +138,13 @@ index operator--(
 
 ### <a name="return-values"></a>戻り値
 
-前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
+前置演算子の場合は、index オブジェクト (* this) です。 サフィックス演算子の場合は、新しいインデックスオブジェクト。
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a>% = 演算子
 
-その要素が、指定した数で除算したときに、インデックスのオブジェクト内の各要素の剰余 (余り) を計算します。
+要素が指定した数値で除算されたときに、インデックスオブジェクト内の各要素の剰余 (剰余) を計算します。
 
-```
+```cpp
 index<_Rank>& operator%=(
    int _Rhs
 ) restrict(cpu, amp);
@@ -152,15 +153,17 @@ index<_Rank>& operator%=(
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
-5/3 を除算する数値。
+剰余を求めるために除算する数値。
 
 ## <a name="return-value"></a>戻り値
-インデックス オブジェクト。
 
-## <a name="operator_star_eq"></a>  operator*=
+インデックスオブジェクトです。
 
-指定した数値でインデックス オブジェクト内の各要素を乗算します。
-```
+## <a name="operator_star_eq"></a>operator * =
+
+index オブジェクトの各要素を指定した数で乗算します。
+
+```cpp
 index<_Rank>& operator*=(
    int _Rhs
 ) restrict(amp,cpu);
@@ -171,11 +174,11 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 乗算対象の数です。
 
-## <a name="operator_div_eq"></a>  operator/=
+## <a name="operator_div_eq"></a>operator/=
 
-Index オブジェクト内の各要素を指定した数で除算します。
+指定された数で index オブジェクトの各要素を除算します。
 
-```
+```cpp
 index<_Rank>& operator/=(
    int _Rhs
 ) restrict(amp,cpu);
@@ -190,7 +193,7 @@ index<_Rank>& operator/=(
 
 指定した位置にあるインデックスのコンポーネントを返します。
 
-```
+```cpp
 int operator[] (
    unsigned _Index
 ) const restrict(amp,cpu);
@@ -209,10 +212,11 @@ int& operator[] (
 
 指定したインデックス位置にある要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 次の例では、インデックスのコンポーネント値を表示します。
-```
+
+```cpp
 // Prints 1 2 3.
 concurrency::index<3> idx(1, 2, 3);
 std::cout << idx[0] << "\n";
@@ -220,10 +224,11 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  + + 演算子
+## <a name="operator_add_add"></a>+ + 演算子
 
-Index オブジェクトの各要素をインクリメントします。
-```
+index オブジェクトの各要素をインクリメントします。
+
+```cpp
 index<_Rank>& operator++() restrict(amp,cpu);
 
 index<_Rank> operator++(
@@ -233,12 +238,13 @@ index<_Rank> operator++(
 
 ### <a name="return-value"></a>戻り値
 
-前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
+前置演算子の場合は、index オブジェクト (* this) です。 サフィックス演算子の場合は、新しいインデックスオブジェクト。
 
-## <a name="operator_add_eq"></a>  operator+=
+## <a name="operator_add_eq"></a>演算子 + =
 
-Index オブジェクトの各要素には、指定した数を追加します。
-```
+指定した数を index オブジェクトの各要素に加算します。
+
+```cpp
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
 ) restrict(amp,cpu);
@@ -255,12 +261,13 @@ index<_Rank>& operator+=(
 
 ### <a name="return-value"></a>戻り値
 
-インデックス オブジェクト。
+インデックスオブジェクトです。
 
 ## <a name="operator_eq"></a>  operator=
 
-これには、指定したインデックス オブジェクトの内容をコピーします。
-```
+指定された index オブジェクトの内容をこのオブジェクトにコピーします。
+
+```cpp
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
@@ -269,16 +276,17 @@ index<_Rank>& operator=(
 ### <a name="parameters"></a>パラメーター
 
 *_Other*<br/>
-コピーするインデックス オブジェクト。
+コピー元のインデックスオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-このインデックスのオブジェクトへの参照。
+このインデックスオブジェクトへの参照。
 
-## <a name="operator_-_eq"></a>  operator-=
+## <a name="operator_-_eq"></a>operator-=
 
-Index オブジェクトの各要素から指定した数値を減算します。
-```
+指定した数を index オブジェクトの各要素から減算します。
+
+```cpp
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
 ) restrict(amp,cpu);
@@ -295,14 +303,16 @@ index<_Rank>& operator-=(
 
 ### <a name="return-value"></a>戻り値
 
-インデックス オブジェクト。
+インデックスオブジェクトです。
 
-## <a name="rank"></a>  ランク
-  Index オブジェクトのランクを取得します。
-```
+## <a name="rank"></a>ランク
+
+インデックスオブジェクトのランクを取得します。
+
+```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

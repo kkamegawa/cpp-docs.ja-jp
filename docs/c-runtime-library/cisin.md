@@ -1,9 +1,9 @@
 ---
 title: _CIsin
 ms.date: 04/10/2018
-apiname:
+api_name:
 - _CIsin
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr100.dll
 - msvcrt.dll
@@ -11,7 +11,11 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+- api-ms-win-crt-math-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIsin
 - _CIsin
@@ -19,14 +23,14 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: 89350cdc61b7c96b09242731f89c934727e44a19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66f26e9fa4dd08d18b15deca4efa40c236e092c9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481305"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944541"
 ---
-# <a name="cisin"></a>_CIsin
+# <a name="_cisin"></a>_CIsin
 
 浮動小数点スタックのトップ値のサインを計算します。
 
@@ -36,7 +40,7 @@ ms.locfileid: "50481305"
 void __cdecl _CIsin();
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この組み込みバージョンの [sin](../c-runtime-library/reference/sin-sinf-sinl.md) 関数には、コンパイラで認識される特殊な呼び出し規則があります。 コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。
 

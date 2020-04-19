@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180148"
 ---
 # <a name="reference-concurrency-runtime"></a>参照 (コンカレンシー ランタイム)
 
 このセクションには、同時実行ランタイムに関するリファレンス情報が含まれています。
 
 > [!Note]
-> C++ 言語の標準では、ライブラリなどの実装のアンダー スコア (_) 文字で始まる識別子の使用を予約します。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 これらの理由から、このようなコード要素は、同時実行ランタイムのドキュメントから除外されます。
+> C++言語の標準ライブラリなどの実装のアンダー スコア (_) 文字で始まる識別子の使用を予約します。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 これらの理由から、このようなコード要素は、同時実行ランタイムのドキュメントから除外されます。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

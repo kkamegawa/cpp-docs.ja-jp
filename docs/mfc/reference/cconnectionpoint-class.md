@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: efa8a7bf9e14bd93682fcc2d5802a84f1bdb1e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182281"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint クラス
 
@@ -53,7 +53,7 @@ class CConnectionPoint : public CCmdTarget
 
 |名前|説明|
 |----------|-----------------|
-|[は](#getconnections)|コネクション マップ内のすべての接続ポイントを取得します。|
+|[CConnectionPoint::GetConnections](#getconnections)|コネクション マップ内のすべての接続ポイントを取得します。|
 |[CConnectionPoint::GetContainer](#getcontainer)|コネクション マップを所有するコントロールのコンテナーを取得します。|
 |[CConnectionPoint::GetIID](#getiid)|接続ポイントのインターフェイス ID を取得します。|
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|コントロールによってサポートされている接続ポイントの最大数を取得します。|
@@ -110,7 +110,7 @@ BEGIN_CONNECTION_PART と END_CONNECTION_PART マクロ、埋め込みのクラ�
 CConnectionPoint();
 ```
 
-##  <a name="getconnections"></a>  は
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections
 
 接続ポイントのすべてのアクティブな接続を取得するには、この関数を呼び出します。
 
@@ -262,4 +262,3 @@ virtual HRESULT QuerySinkInterface(
 
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

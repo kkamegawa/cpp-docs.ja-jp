@@ -6,27 +6,26 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-ms.openlocfilehash: b502ae36e01c683063a04efc790e7bc503a7a5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ff9be0909a36179802e5f210e728c2bf57b1f02
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664049"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739517"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>リッチ エディット コントロールでの文字書式の設定
 
-リッチ エディット コントロールのメンバー関数を使用することができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 文字の書式設定して、書式設定情報を取得します。 文字は、フォント、サイズ、色、および太字、斜体などの効果を指定し、保護されています。
+リッチエディットコントロール ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) のメンバー関数を使用すると、文字の書式を設定したり、書式設定情報を取得したりできます。 文字の場合は、字体、サイズ、色、および太字、斜体、保護などの効果を指定できます。
 
-使用して文字の書式設定を適用することができます、 [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat)と[SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat)メンバー関数。 選択したテキストの書式設定の現在の文字を調べるには、 [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat)メンバー関数。 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)構造がこれらのメンバー関数で使用を文字の属性を指定します。 いずれかの重要なメンバー **CHARFORMAT**は**dwMask**します。 `SetSelectionCharFormat`と`SetWordCharFormat`、 **dwMask**文字属性は、この関数の呼び出しによって設定されますを指定します。 `GetSelectionCharFormat` レポートの選択範囲の最初の文字の属性**dwMask**選択範囲全体で一貫性のある属性を指定します。
+文字の書式設定を適用するには、 [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat)および[SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat)メンバー関数を使用します。 選択したテキストの現在の文字書式を確認するには、 [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat)メンバー関数を使用します。 [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)構造体は、文字属性を指定するためにこれらのメンバー関数と共に使用されます。 **CHARFORMAT**の重要なメンバーの1つは**dwMask**です。 と`SetSelectionCharFormat` で`SetWordCharFormat`は、 **dwMask**は、この関数呼び出しによって設定される文字属性を指定します。 `GetSelectionCharFormat`選択範囲の最初の文字の属性を報告します。**dwMask**は、選択範囲全体で一貫性のある属性を指定します。
 
-取得でき、"既定の文字の書式設定、"これは、その後に挿入された文字に適用される書式設定できます。 たとえば、アプリケーションは、既定の文字を太字に書式を設定し、ユーザーが文字を入力し場合、その文字が太字にします。 既定の文字書式設定を使用して、 [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat)と[SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat)メンバー関数。
+また、"既定の文字書式" を取得して設定することもできます。これは、それ以降に挿入された文字に適用される書式です。 たとえば、アプリケーションで既定の文字書式を太字に設定し、ユーザーが文字を入力した場合、その文字は太字になります。 既定の文字書式を取得して設定するには、 [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat)および[SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat)メンバー関数を使用します。
 
-"Protected"文字の属性には、テキストの外観は変わりません。 リッチ エディット コントロールがその親ウィンドウを送信する場合は、ユーザーが保護されたテキストを変更しようとすると、 **EN_PROTECTED**通知メッセージを許可するか、変更を禁止する親ウィンドウ。 この通知メッセージを受信する必要があります有効にするを使用して、 [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)メンバー関数。 詳細については、イベント マスクは、次を参照してください。[リッチ エディット コントロールからの通知](../mfc/notifications-from-a-rich-edit-control.md)、このトピックで後述します。
+"Protected" 文字属性は、テキストの外観を変更しません。 ユーザーが保護されたテキストを変更しようとすると、リッチエディットコントロールは親ウィンドウに**EN_PROTECTED**通知メッセージを送信します。これにより、親ウィンドウで変更を許可または禁止できます。 この通知メッセージを受信するには、 [Seteventmask](../mfc/reference/cricheditctrl-class.md#seteventmask)メンバー関数を使用して有効にする必要があります。 イベントマスクの詳細については、このトピックで後述[する「リッチエディットコントロールからの通知](../mfc/notifications-from-a-rich-edit-control.md)」を参照してください。
 
-前景の色は文字の属性が、背景色はリッチ エディット コントロールのプロパティです。 背景色を設定するには、使用、 [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor)メンバー関数。
+前景色は文字属性ですが、背景色はリッチエディットコントロールのプロパティです。 背景色を設定するには、 [Setbackgroundcolor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor)メンバー関数を使用します。
 
 ## <a name="see-also"></a>関連項目
 
 [CRichEditCtrl の使い方](../mfc/using-cricheditctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

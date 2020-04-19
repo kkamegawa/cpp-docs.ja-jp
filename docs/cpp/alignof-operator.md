@@ -15,13 +15,13 @@ helpviewer_keywords:
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258253"
 ---
-# <a name="alignof-operator"></a>__alignof 演算子
+# <a name="__alignof-operator"></a>__alignof 演算子
 
 C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配置を返します。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。
 
@@ -49,7 +49,7 @@ C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配�
 |**__alignof( double )**|8|
 |**__alignof( char\* )**|4|
 
-**_ _Alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。
+**_ _alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。
 
 ```cpp
 typedef struct { int a; double b; } S;

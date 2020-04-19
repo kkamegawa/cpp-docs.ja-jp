@@ -1,6 +1,6 @@
 ---
 title: 識別子 (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653662"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450316"
 ---
 # <a name="identifiers-c"></a>識別子 (C++)
 
@@ -70,7 +70,7 @@ Microsoft C++ 識別子の最初の 2048 文字だけが意味を持ちます。
 
 - 関数の引数の数。
 
-ドル記号 `$` は、Visual C++ の有効な識別子文字です。 Visual C++ では、許可される範囲のユニバーサル文字名で表される実際の文字を、識別子内で使用することもできます。 これらの文字を使用するには、それらを含むファイル エンコーディング コードページを使用してファイルを保存する必要があります。  この例は、拡張文字とユニバーサル文字名の両方をコード内で区別せずに使用する方法を示しています。
+ドル記号`$`は、Microsoft では有効な識別子文字C++コンパイラ (MSVC)。 MSVC では、識別子のユニバーサル文字名の許容範囲によって表される実際の文字を使用することもできます。 これらの文字を使用するには、それらを含むファイル エンコーディング コードページを使用してファイルを保存する必要があります。  この例は、拡張文字とユニバーサル文字名の両方をコード内で区別せずに使用する方法を示しています。
 
 ```cpp
 // extended_identifier.cpp
@@ -87,15 +87,15 @@ int main() {
 }
 ```
 
-識別子で許可される文字の範囲は、C++/CLI コードをコンパイルする場合よりも制限されません。 /clr を使用してコンパイルするコード内の識別子は、  [標準 ECMA 335: 共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)に従う必要があります。
+識別子で許可される文字の範囲は、C++/CLI コードをコンパイルする場合よりも制限されません。 /Clr を使用してコンパイルされたコード内の識別子が従う必要があります[標準 ECMA 335。共通言語基盤 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)します。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 識別子の先頭文字は、英字 (大文字でも小文字でもかまいません) またはアンダースコア ( **_** ) 文字にする必要があります。 C++ の識別子は大文字と小文字が区別されるため、 `fileName` は `FileName`とは異なります。
 
 識別子をキーワードとまったく同じスペルおよび大文字小文字にすることはできません。 キーワードを含む識別子は有効です。 たとえば、`Pint`が含まれている場合でも、有効な識別子を**int**、キーワードします。
 
-2 つの連続したアンダー スコア文字の使用 ( **_ _** ) 識別子、または大文字の後に 1 つ先頭のアンダー スコアでは、すべてのスコープで C++ の実装用に予約されています。 現在または将来の予約済み識別子と競合する可能性があるため、ファイルのスコープを含む名前には、先頭の 1 つのアンダースコアとそれに続く子文字を使用しないようにする必要があります。
+2 つの連続したアンダー スコア文字の使用 ( **_ _** ) 識別子、または大文字の後に 1 つ先頭のアンダー スコアでは、用に予約されてC++すべてのスコープで実装します。 現在または将来の予約済み識別子と競合する可能性があるため、ファイルのスコープを含む名前には、先頭の 1 つのアンダースコアとそれに続く子文字を使用しないようにする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

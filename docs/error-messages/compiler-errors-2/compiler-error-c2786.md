@@ -1,31 +1,31 @@
 ---
-title: コンパイラ エラー C2786
+title: コンパイラエラー C2786
 ms.date: 11/04/2016
 f1_keywords:
 - C2786
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511424"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739611"
 ---
-# <a name="compiler-error-c2786"></a>コンパイラ エラー C2786
+# <a name="compiler-error-c2786"></a>コンパイラエラー C2786
 
-'type': _ _uuidof の無効なオペランドです
+' type ': __uuidof の無効なオペランドです
 
-[_ _Uuidof](../../cpp/uuidof-operator.md)操作はユーザー定義型、またはユーザー定義型のオブジェクトにアタッチされている GUID を使用します。  以下の原因が考えられます。
+[__Uuidof](../../cpp/uuidof-operator.md)演算子は、GUID が割り当てられたユーザー定義型、またはそのようなユーザー定義型のオブジェクトを受け取ります。  次の原因が考えられます。
 
-1. 引数は、ユーザー定義型ではありません。
+1. 引数がユーザー定義型ではありません。
 
-1. `__uuidof` 引数から GUID を抽出することはできません。
+1. `__uuidof` が引数から GUID を抽出できません。
 
 次の例では、C2786 が生成されます。
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

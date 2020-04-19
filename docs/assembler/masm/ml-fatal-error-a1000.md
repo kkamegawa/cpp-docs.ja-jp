@@ -1,43 +1,43 @@
 ---
 title: ML の致命的なエラー A1000
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1000
 helpviewer_keywords:
 - A1000
 ms.assetid: 4fc77a83-8796-4dcf-9c37-6395d635b817
-ms.openlocfilehash: c1149bb4362995c1f63a268deab276b5887b5614
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ebc00a10d2b664fda66b7d4957689152187dded
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632042"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317137"
 ---
 # <a name="ml-fatal-error-a1000"></a>ML の致命的なエラー A1000
 
-**ファイルを開くことができませんファイル名。**
+**ファイルを開くことができません: filename**
 
-アセンブラーは、ソースを開く、インクルード、またはファイルを出力できませんでした。
+アセンブラーは、ソース、インクルード、または出力ファイルを開くことができませんでした。
 
-次の原因が考えられます。
+次のいずれかの原因が考えられます。
 
 - ファイルが存在しません。
 
-- ファイルは、別のプロセスによって使用中です。
+- ファイルは別のプロセスによって使用されています。
 
 - ファイル名が無効です。
 
-- 出力ファイル名読み取り専用ファイルが既に存在します。
+- 出力ファイル名の読み取り専用ファイルが既に存在します。
 
 - 現在のドライブがいっぱいです。
 
-- 現在のディレクトリは、ルートでありがいっぱいです。
+- 現在のディレクトリがルートであり、いっぱいです。
 
-- デバイスを書き込むことはできません。
+- デバイスに書き込めません。
 
-- ドライブ準備ができていません。
+- ドライブの準備ができていません。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

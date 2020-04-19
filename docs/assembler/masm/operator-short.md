@@ -1,27 +1,28 @@
 ---
 title: SHORT 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator SHORT
 helpviewer_keywords:
 - operator SHORT
 - SHORT operator
 ms.assetid: 41e0982a-4f4e-4b48-ba58-e32d72053249
-ms.openlocfilehash: 26307b1838d3f6f185ffc6d71c3f24bd4b9945dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20879bb26ba7e54f1d6f1e5da3589b3adc8b6464
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491755"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318931"
 ---
 # <a name="operator-short"></a>SHORT 演算子
 
-型を設定*ラベル*を短くします。 ジャンプはすべて*ラベル*短い必要があります (ジャンプ命令から 127 バイトに-128 からの範囲で*ラベル*)。
+*ラベル*の種類を short に設定します。 *ラベル*へのすべてのジャンプは、短い形式である必要があります (-128 ~ + 127 バイトの範囲内で、ジャンプ命令から*ラベル*に)。
 
 ## <a name="syntax"></a>構文
 
-> 短いラベル
+> **短い***ラベル*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

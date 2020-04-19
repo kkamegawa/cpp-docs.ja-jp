@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-ms.openlocfilehash: a6ce915102a8b85f135aa2c59e5e824b4fee25cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5abdcc87dba937938ffa3643d19ff69431f62af4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206945"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>標準コントロールからのコントロールの派生
 
@@ -46,4 +46,3 @@ ms.locfileid: "50666285"
 
 [コントロールの作成方法と使い方](../mfc/making-and-using-controls.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

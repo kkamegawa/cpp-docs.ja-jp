@@ -1,26 +1,24 @@
 ---
 title: MFC で使われているコールバック関数
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.functions
 helpviewer_keywords:
 - callback functions [MFC], MFC
 - MFC, callback functions
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178435"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507698"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC で使われているコールバック関数
 
-次の 3 つのコールバック関数は、Microsoft Foundation Class ライブラリに表示されます。 これらのコールバック関数に渡される[cdc::enumobjects](../../mfc/reference/cdc-class.md#enumobjects)、 [cdc::graystring](../../mfc/reference/cdc-class.md#graystring)、および[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)します。 すべてのコールバック関数がコールバックの境界を越えて例外をスローすることはできませんので、Windows に戻る前に MFC の例外をトラップする必要がありますに注意してください。 例外の詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。
+Microsoft Foundation Class ライブラリに3つのコールバック関数が表示されます。 これらのコールバック関数は、 [cdc:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)、 [Cdc:: GrayString](../../mfc/reference/cdc-class.md#graystring)、および[Cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)に渡されます。 コールバックの境界を越えて例外をスローすることはできないため、すべてのコールバック関数は、Windows に戻る前に MFC 例外をトラップする必要があることに注意してください。 例外の詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
-|名前||
+|Name||
 |----------|-----------------|
 |[CDC::EnumObjects 用コールバック関数](#enum_objects)||
 |[CDC::GrayString 用コールバック関数](#graystring)||
@@ -30,9 +28,9 @@ ms.locfileid: "53178435"
 
 **ヘッダー:** afxwin.h
 
-## <a name="enum_objects"></a> Cdc::enumobjects 用コールバック関数
+## <a name="enum_objects"></a>CDC:: EnumObjects のコールバック関数
 
-*ObjectFunc*名は、アプリケーションによって提供される関数名のプレース ホルダーです。
+*Objectfunc* name は、アプリケーションによって提供される関数名のプレースホルダーです。
 
 ### <a name="syntax"></a>構文
 
@@ -45,22 +43,22 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>パラメーター
 
 *lpszLogObject*<br/>
-指す、 [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)または[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)オブジェクトの論理の属性に関する情報を含むデータ構造です。
+オブジェクトの論理属性に関する情報を格納している[LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen)または[logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush)データ構造体を指します。
 
 *lpData*<br/>
-アプリケーションによって提供されるデータへのポインターが渡される、`EnumObjects`関数。
+は、 `EnumObjects`関数に渡されたアプリケーションによって提供されるデータを指します。
 
 ### <a name="return-value"></a>戻り値
 
-コールバック関数が返す、 **int**します。この戻り値の値は、ユーザー定義します。 コールバック関数は 0 を返す場合`EnumObjects`早い段階で列挙を停止します。
+コールバック関数は、 **int**を返します。この戻り値は、ユーザー定義です。 コールバック関数が0を返し`EnumObjects`た場合、は初期の列挙を停止します。
 
 ### <a name="remarks"></a>Remarks
 
 実際の名前をエクスポートする必要があります。
 
-## <a name="graystring"></a>  Cdc::graystring 用コールバック関数
+## <a name="graystring"></a>CDC:: GrayString のコールバック関数
 
-*OutputFunc*アプリケーションによって提供されるコールバック関数名のプレース ホルダーです。
+*Outputfunc*は、アプリケーションによって提供されるコールバック関数名のプレースホルダーです。
 
 ### <a name="syntax"></a>構文
 
@@ -74,7 +72,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>パラメーター
 
 *hDC*<br/>
-少なくとものビットマップをメモリ デバイス コンテキストを識別します。 幅と高さで指定された`nWidth`と`nHeight`に`GrayString`します。
+によって`nWidth`指定された幅と高さ以上のビットマップを持つメモリデバイスコンテキストを`GrayString`に指定します。 `nHeight`
 
 *lpData*<br/>
 描画される文字列を指します。
@@ -84,15 +82,15 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 ### <a name="return-value"></a>戻り値
 
-コールバック関数の戻り値が成功した場合は TRUE にする必要があります。それ以外の場合は、FALSE です。
+成功を示すには、コールバック関数の戻り値が TRUE である必要があります。それ以外の場合は FALSE になります。
 
 ### <a name="remarks"></a>Remarks
 
-コールバック関数 (*OutputFunc*) 座標 (0, 0) を基準として、イメージを描画する必要がありますのではなく (*x*、 *y*)。
+コールバック関数 (*Outputfunc*) は、(*x*, *y*) ではなく、座標 (0, 0) を基準としたイメージを描画する必要があります。
 
-## <a name="setabortproc"></a>  Cdc::setabortproc 用コールバック関数
+## <a name="setabortproc"></a>CDC:: SetAbortProc のコールバック関数
 
-名前*AbortFunc*アプリケーションによって提供される関数名のプレース ホルダーです。
+*Abortfunc*という名前は、アプリケーションによって提供される関数名のプレースホルダーです。
 
 ### <a name="syntax"></a>構文
 
@@ -105,18 +103,18 @@ BOOL CALLBACK EXPORT AbortFunc(
 ### <a name="parameters"></a>パラメーター
 
 *hPr*<br/>
-デバイス コンテキストを識別します。
+デバイスコンテキストを識別します。
 
 *code*<br/>
-エラーが発生したかどうかを指定します。 エラーが発生していない場合は 0 になります。 させることでよりプリント マネージャーがディスク領域が現在しより多くのディスク領域が利用可能になる場合は、アプリケーションが待機します。 場合*コード*させることよりは、アプリケーションは、印刷ジョブを中止する必要はありません。 そうでない場合に呼び出すことによって、プリント マネージャーに譲渡する必要があります、`PeekMessage`または`GetMessage`Windows 関数。
+エラーが発生したかどうかを示します。 エラーが発生しなかった場合は0になります。 印刷マネージャーのディスク領域が不足していて、アプリケーションが待機している場合は、SP_OUTOFDISK になります。 *コード*が SP_OUTOFDISK の場合、アプリケーションは印刷ジョブを中止する必要はありません。 そうでない場合は、または`PeekMessage` `GetMessage` Windows の関数を呼び出して、印刷マネージャーに渡す必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-中止ハンドラー関数の戻り値が 0 以外の場合、印刷ジョブの操作を続行する場合、0 がキャンセルされた場合。
+中止ハンドラー関数の戻り値は、印刷ジョブが続行する場合は0以外、キャンセルされた場合は0になります。
 
 ### <a name="remarks"></a>Remarks
 
-」の「解説」の説明に従って、実際の名前をエクスポートする必要があります[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)します。
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)の「解説」の説明に従って、実際の名前をエクスポートする必要があります。
 
 ## <a name="see-also"></a>関連項目
 
@@ -124,4 +122,3 @@ BOOL CALLBACK EXPORT AbortFunc(
 [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
-

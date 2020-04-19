@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148225"
 ---
 # <a name="data-member-attributes"></a>データ メンバー属性
 
@@ -31,7 +31,7 @@ ms.locfileid: "50512932"
 |[range](range-cpp.md)|引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。|
 |[rdx](rdx.md)|レジストリ キーを作成または既存のレジストリ キーを変更します。|
 |[readonly](readonly-cpp.md)|データ メンバーへの割り当てを禁止します。|
-|[requestedit](requestedit.md)|プロパティをサポートしていることを示します、`OnRequestEdit`通知します。|
+|[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
 
 ## <a name="see-also"></a>関連項目
 

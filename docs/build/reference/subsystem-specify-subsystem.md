@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318246"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (サブシステムの指定)
 
@@ -42,7 +42,7 @@ Win32 文字モード アプリケーションに対して使用します。 オ
 Extensible Firmware Interface サブシステムです。 詳細については、EFI の仕様を参照してください。 例については、Intel の Web サイトを参照してください。 最小および既定のバージョンは 1.0 です。
 
 **ネイティブ**<br/>
-Windows NT 用のカーネル モード ドライバーです。 このオプションは、通常、Windows システム コンポーネントのために予約されています。 場合[/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md)を指定すると、既定では、ネイティブです。
+Windows NT 用のカーネル モード ドライバーです。 このオプションは、通常、Windows システム コンポーネントのために予約されています。 場合[/DRIVER:WDM](driver-windows-nt-kernel-mode-driver.md)を指定すると、既定では、ネイティブです。
 
 **POSIX**<br/>
 Windows NT 上の POSIX サブシステムで実行するアプリケーションです。
@@ -73,7 +73,7 @@ Windows NT 上の POSIX サブシステムで実行するアプリケーショ�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. [リンカー] フォルダーを選択します。
 
@@ -87,5 +87,5 @@ Windows NT 上の POSIX サブシステムで実行するアプリケーショ�
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

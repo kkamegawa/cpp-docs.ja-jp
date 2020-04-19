@@ -1,8 +1,6 @@
 ---
-title: 'テクニカル ノート 11: DLL の構成要素としての MFC'
+title: TN011:DLL の構成要素としての MFC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.dll
 helpviewer_keywords:
 - _USRDLL symbol
 - USRDLLs, compiler switches
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 753612fae101708dd4f8294db121980b62af30b3
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326206"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65610947"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>テクニカル ノート 11: DLL の構成要素としての MFC
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011:DLL の構成要素としての MFC
 
 ここでは、標準 MFC Dll では、Windows ダイナミック リンク ライブラリ (DLL) の一部として、MFC ライブラリを使用することについて説明します。 これは、Windows の Dll とそのビルド方法について理解するいると仮定します。 MFC 拡張 Dll については、作成するために、MFC ライブラリの拡張機能を参照してください[MFC の DLL バージョン](../mfc/tn033-dll-version-of-mfc.md)します。
 
@@ -57,7 +55,7 @@ MFC では、シンボルに静的にリンクされるレギュラー MFC Dll �
 
 アプリケーションと DLL の間のインターフェイス (Api) を明示的にエクスポートする必要があります。 、低帯域幅を、インターフェイスを定義して、C インターフェイスだけを使うことをお勧めします。 直接的な C インターフェイスより複雑な C++ クラスよりも管理が容易です。
 
-C および C++ の両方のファイルを含めることができる別のヘッダーには、独自の Api を配置します。 MFC Advanced Concepts サンプルでは、ヘッダー ScreenCap.h を参照してください。[は](../visual-cpp-samples.md)例についてはします。 関数をエクスポートするには、それらを入力、`EXPORTS`モジュール定義ファイルのセクション (します。DEF)、または含める`__declspec(dllexport)`関数の定義にします。 使用`__declspec(dllimport)`クライアント実行可能ファイルにこれらの関数をインポートします。
+C および C++ の両方のファイルを含めることができる別のヘッダーには、独自の Api を配置します。 MFC Advanced Concepts サンプルでは、ヘッダー ScreenCap.h を参照してください。[は](../overview/visual-cpp-samples.md)例についてはします。 関数をエクスポートするには、それらを入力、`EXPORTS`モジュール定義ファイルのセクション (します。DEF)、または含める`__declspec(dllexport)`関数の定義にします。 使用`__declspec(dllimport)`クライアント実行可能ファイルにこれらの関数をインポートします。
 
 AFX_MANAGE_STATE マクロは、MFC と動的にリンクされるレギュラー MFC Dll でエクスポートされたすべての関数の先頭に追加する必要があります。 このマクロは、DLL のモジュールの現在の状態を設定します。 このマクロを使用するには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。
 
@@ -115,4 +113,3 @@ API で使用される構造体は、MFC クラスから派生していないと
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2927
 ms.assetid: 3f75beec-ff5c-44e1-9085-990ecd55198d
 ms.openlocfilehash: acdb33c28021d007c3f1b25ae7b4419ffbbf6bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382932"
 ---
 # <a name="compiler-error-c2927"></a>コンパイラ エラー C2927
 

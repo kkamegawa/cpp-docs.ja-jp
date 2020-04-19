@@ -3,11 +3,11 @@ title: ボックス化 (C++/CLI)
 ms.date: 11/04/2016
 ms.assetid: f4ee27a8-6a34-432d-b9ec-39285d513b23
 ms.openlocfilehash: 3f756eaef59c24ca5b82c485bd8352dffe9fb1db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614501"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345767"
 ---
 # <a name="boxing-ccli"></a>ボックス化 (C++/CLI)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50614501"
 
 ## <a name="related-articles"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[方法: 明示的にボックス化を要求する](../dotnet/how-to-explicitly-request-boxing.md)|変数に対するボックス化を明示的に要求する方法について説明します。|
 |[方法: gcnew を使用して値型を作成し、暗黙的なボックス化を使用する](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|使用する方法を示します`gcnew`に管理され、ガベージ コレクション ヒープ上に配置できる型をボックス化された値を作成します。|

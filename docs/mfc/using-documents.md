@@ -14,12 +14,12 @@ helpviewer_keywords:
 - printing [MFC], documents
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
-ms.openlocfilehash: 1fcdd365bd3744e1a09b768f56c1044696686c73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb35d1731912b2e322bc61621f7900e0d98e1e72
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411592"
 ---
 # <a name="using-documents"></a>ドキュメントの使い方
 
@@ -56,4 +56,3 @@ ms.locfileid: "50589732"
 ## <a name="see-also"></a>関連項目
 
 [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
-

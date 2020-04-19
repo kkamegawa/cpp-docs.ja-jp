@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: a1826155bec3313afe503ee1c58f786a5c4739e8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390751"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl クラス
 
@@ -162,9 +162,9 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 ## <a name="remarks"></a>Remarks
 
-[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))は行セットの基本インターフェイスです。
+[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))は行セットの基本インターフェイスです。
 
-## <a name="addrefrows"></a> Irowsetimpl::addrefrows
+## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
 既存の行ハンドルには、参照カウントを追加します。
 
@@ -179,9 +179,9 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="createrow"></a> Irowsetimpl::createrow
+## <a name="createrow"></a> IRowsetImpl::CreateRow
 
 によって呼び出されるヘルパー メソッド[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)を割り当てる新しい`HROW`します。
 
@@ -208,7 +208,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 
 このメソッドの呼び出し、行が存在する場合、 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)を返します。 それ以外の場合、RowClass テンプレート変数の新しいインスタンスを割り当てしする追加[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)します。
 
-## <a name="getdata"></a> Irowsetimpl::getdata
+## <a name="getdata"></a> IRowsetImpl::GetData
 
 行の行セットのコピーからデータを取得します。
 
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowset::getdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IRowset::GetData`:
 
@@ -255,9 +255,9 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 ### <a name="return-value"></a>戻り値
 
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))列のフラグ。
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))列のフラグ。
 
-## <a name="getnextrows"></a> Irowsetimpl::getnextrows
+## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
 前の位置を記憶、順番に行をフェッチします。
 
@@ -273,9 +273,9 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowset::getnextrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms709827(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowset::getnextrows](/previous-versions/windows/desktop/ms709827(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="irowsetimpl"></a> Irowsetimpl::irowsetimpl
+## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
 コンストラクターです。
 
@@ -289,7 +289,7 @@ IRowsetImpl();
 
 通常、このメソッドを直接呼び出す必要はありません。
 
-## <a name="refrows"></a> Irowsetimpl::refrows
+## <a name="refrows"></a> IRowsetImpl::RefRows
 
 によって呼び出される[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)と[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)をインクリメントするか、既存の行ハンドルの参照カウントを解放します。
 
@@ -305,13 +305,13 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-## <a name="releaserows"></a> Irowsetimpl::releaserows
+## <a name="releaserows"></a> IRowsetImpl::ReleaseRows
 
 行を解放します。
 
@@ -327,9 +327,9 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[::releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[::releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="restartposition"></a> Irowsetimpl::restartposition
+## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
 次のフェッチ位置を初期位置に再配置します。つまり、行セットが最初の位置が作成されます。
 
@@ -341,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowset::restartposition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowset::restartposition](/previous-versions/windows/desktop/ms712877(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -362,7 +362,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>パラメーター
 
 *statusFlags*<br/>
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))列に設定するフラグ。
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))列に設定するフラグ。
 
 *currentRow*<br/>
 現在の行。
@@ -378,7 +378,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 
 プロバイダーは DBSTATUS_S_ISNULL と DBSTATUS_S_DEFAULT に対する特別な処理を提供するには、この関数をオーバーライドします。
 
-## <a name="bcanfetchback"></a> Irowsetimpl::m_bcanfetchback
+## <a name="bcanfetchback"></a> IRowsetImpl::m_bCanFetchBack
 
 プロバイダーが後方フェッチをサポートしているかどうかを示します。
 
@@ -392,7 +392,7 @@ unsigned m_bCanFetchBack:1;
 
 リンク、`DBPROP_CANFETCHBACKWARDS`プロパティ、`DBPROPSET_ROWSET`グループ。 プロバイダーをサポートする必要があります`DBPROP_CANFETCHBACKWARDS`の`m_bCanFetchBackwards`する**true**します。
 
-## <a name="bcanscrollback"></a> Irowsetimpl::m_bcanscrollback
+## <a name="bcanscrollback"></a> IRowsetImpl::m_bCanScrollBack
 
 プロバイダーで内を後方に向かって、カーソルのスクロールができるかどうかを示します。
 
@@ -406,7 +406,7 @@ unsigned  m_bCanScrollBack:1;
 
 リンク、`DBPROP_CANSCROLLBACKWARDS`プロパティ、`DBPROPSET_ROWSET`グループ。 プロバイダーをサポートする必要があります`DBPROP_CANSCROLLBACKWARDS`の`m_bCanFetchBackwards`する**true**します。
 
-## <a name="breset"></a> Irowsetimpl::m_breset
+## <a name="breset"></a> IRowsetImpl::m_bReset
 
 行セットのカーソル位置が定義されているかどうかを判断するために使用するビット フラグです。
 
@@ -420,7 +420,7 @@ unsigned m_bReset:1;
 
 コンシューマーから呼び出す場合[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 、負の値と`lOffset`または*cRows*と`m_bReset`が true の場合`GetNextRows`を行セットの末尾に移動します。 場合`m_bReset`が false の場合、コンシューマーが OLE DB 仕様に準拠、エラー コードを受信します。 `m_bReset`にフラグが設定を取得**true**行セットが最初に作成されたときと、コンシューマーを呼び出すと[irowsetimpl::restartposition](../../data/oledb/irowsetimpl-restartposition.md)します。 設定**false**を呼び出すと`GetNextRows`します。
 
-## <a name="irowset"></a> Irowsetimpl::m_irowset
+## <a name="irowset"></a> IRowsetImpl::m_iRowset
 
 カーソルを表す行セットのインデックスです。
 

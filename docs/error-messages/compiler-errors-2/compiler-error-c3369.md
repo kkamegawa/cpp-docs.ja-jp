@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3369
 ms.assetid: c6ceb9cb-3df9-4334-9a5c-d16db351d476
-ms.openlocfilehash: 0cd27da4b73732513afe0bd33a2d7312e6ddbe97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee936f4921369b1d59d81b51dcb3e81c69be083c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618960"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755604"
 ---
 # <a name="compiler-error-c3369"></a>コンパイラ エラー C3369
 
@@ -21,7 +21,7 @@ DLL の定義に [idl_module](../../windows/idl-module.md) を使用できるの
 
 次の例では C3369 が生成されます。
 
-```
+```cpp
 // C3369.cpp
 // compile with: /c
 [idl_module(name="name1", dllname="x.dll")]; // C3369

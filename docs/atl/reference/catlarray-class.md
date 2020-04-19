@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260845"
 ---
 # <a name="catlarray-class"></a>CAtlArray クラス
 
@@ -72,7 +72,7 @@ class CAtlArray
 |[IsEmpty](#isempty)|配列が空の場合をテストするには、このメソッドを呼び出します。|
 |[RemoveAll](#removeall)|配列オブジェクトからすべての要素を削除するには、このメソッドを呼び出します。|
 |[RemoveAt](#removeat)|配列から 1 つまたは複数の要素を削除するには、このメソッドを呼び出します。|
-|[Setat メソッド](#setat)|配列オブジェクトに要素の値を設定するには、このメソッドを呼び出します。|
+|[SetAt](#setat)|配列オブジェクトに要素の値を設定するには、このメソッドを呼び出します。|
 |[SetAtGrow](#setatgrow)|必要に応じて、配列を展開する、配列オブジェクトに要素の値を設定するには、このメソッドを呼び出します。|
 |[SetCount](#setcount)|配列オブジェクトのサイズを設定するには、このメソッドを呼び出します。|
 
@@ -190,7 +190,7 @@ CAtlArray() throw();
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 デストラクターです。
 
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  CAtlArray::operator
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 配列の要素への参照を返すには、この演算子を呼び出します。
 
@@ -549,9 +549,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>関連項目
 
-[MMXSwarm サンプル](../../visual-cpp-samples.md)<br/>
-[DynamicConsumer サンプル](../../visual-cpp-samples.md)<br/>
-[UpdatePV サンプル](../../visual-cpp-samples.md)<br/>
-[マーキーのサンプル](../../visual-cpp-samples.md)<br/>
+[MMXSwarm サンプル](../../overview/visual-cpp-samples.md)<br/>
+[DynamicConsumer サンプル](../../overview/visual-cpp-samples.md)<br/>
+[UpdatePV サンプル](../../overview/visual-cpp-samples.md)<br/>
+[マーキーのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [CArray クラス](../../mfc/reference/carray-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

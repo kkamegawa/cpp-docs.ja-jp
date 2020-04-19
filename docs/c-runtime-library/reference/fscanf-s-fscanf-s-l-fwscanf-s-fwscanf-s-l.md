@@ -1,12 +1,12 @@
 ---
 title: fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwscanf_s
 - _fscanf_s_l
 - _fwscanf_s_l
 - fscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwscanf_s_l
 - _fscanf_s_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956554"
 ---
-# <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
+# <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 
 ストリームから書式化されたデータを読み出します。 これらのバージョンの [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md) は、「[CRT のセキュリティ強化](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
@@ -80,7 +83,7 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
@@ -94,26 +97,26 @@ int _fwscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または戻り値は、ファイル ストリームの末尾に達した場合は、最初の変換の前に、 **EOF**の**fscanf_s**と**fwscanf_s**します。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **fscanf_s**および**fwscanf_s**の戻り値は**EOF**になります。
 
-これらの関数では、パラメーターの検証が行われます。 場合*ストリーム*は無効なファイル ポインターの場合、または*形式*null ポインターの場合は、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
+これらの関数では、パラメーターの検証が行われます。 *Stream*が無効なファイルポインターの場合、または*format*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Fscanf_s**関数は、の現在位置からデータを読み取る*ストリーム*で指定されている場所に*引数*(ある場合)。 各*引数*に型指定子に対応する型の変数へのポインターである必要があります*形式*します。 *形式*コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*引数**scanf_s**; を参照してください[書式指定フィールド。scanf 関数と wscanf 関数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)の説明については*形式*します。  **fwscanf_s**のワイド文字バージョンは、 **fscanf_s**; 引数 format **fwscanf_s**はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf_s** UNICODE ストリームからの入力を現在サポートされていません。
+**Fscanf_s**関数は、*ストリーム*の現在位置から、*引数*によって指定された場所 (存在する場合) にデータを読み取ります。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf_s**の*format*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。  **fwscanf_s**は、 **fscanf_s**のワイド文字バージョンです。**fwscanf_s**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf_s**は、現在 UNICODE ストリームからの入力をサポートしていません。
 
-安全な関数の主な違い (がある、 **_s**サフィックス) 他のバージョンがより安全な関数が各文字のサイズを必要として**c**、 **C**、 **s**、 **S**、および **[** 直後、変数を引数として渡される型のフィールド。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
+より安全な関数 ( **_s**サフィックスがある) とその他のバージョンの主な違いは、セキュリティが強化された関数では、各**c**、 **c**、 **s**、 **s**、および **[** type] フィールドのサイズを文字単位で指定する必要があることです。変数の直後に引数として渡されます。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
 > [!NOTE]
-> 型のサイズのパラメーターが**符号なし**ではなく、 **size_t**します。
+> Size パラメーターは、 **size_t**ではなく**unsigned**型です。
 
-これらの関数がのバージョン、 **_l**現在のスレッド ロケールの代わりに渡されるロケール パラメーターを使用することを除き、サフィックスは同じです。
+**_L**サフィックスが付いているこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
+|**ftscanf_s (_d)**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
 |**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
 ## <a name="requirements"></a>必要条件

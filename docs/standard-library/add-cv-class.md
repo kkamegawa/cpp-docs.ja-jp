@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613203"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456595"
 ---
 # <a name="addcv-class"></a>add_cv クラス
 
-**Const volatile**型からの型。
+型から**const volatile**型を作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,12 +30,12 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-変更された型のインスタンス`add_cv<T>`が、`type`メンバー **typedef**等しく*T*両方で変更された[add_volatile](../standard-library/add-volatile-class.md)と[add_const](../standard-library/add-const-class.md)がない限り、 *T* cv 修飾子を持っている場合は、参照か関数です。
+変更後`add_cv<T>`の型のインスタンスに`type`は、 [add_volatile](../standard-library/add-volatile-class.md)と[add_const](../standard-library/add-const-class.md)の両方によって変更された*t*と等価のメンバー **typedef**があります。ただし、既に cv 修飾子があるか、参照であるか、またはプロシージャ.
 
 `add_cv_t<T>` ヘルパー型は、`add_cv<T>` メンバー typedef `type` にアクセスするショートカットです。
 
@@ -92,6 +92,6 @@ invoked const volatile S.f()
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const クラス](../standard-library/remove-const-class.md)<br/>
-[remove_volatile クラス](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const クラス](../standard-library/remove-const-class.md)\
+[remove_volatile クラス](../standard-library/remove-volatile-class.md)

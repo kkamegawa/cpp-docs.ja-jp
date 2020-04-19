@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4986
 ms.assetid: a3a7b008-29dd-4203-85f3-7740ab6790bb
 ms.openlocfilehash: fb52e33ceeadda03105e391d8e0b5b3f6234d6b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280595"
 ---
 # <a name="compiler-warning-c4986"></a>コンパイラの警告 C4986
 

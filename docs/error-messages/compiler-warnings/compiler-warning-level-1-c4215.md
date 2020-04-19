@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4215
 ms.assetid: f2aab64d-1bab-4f75-95ee-89e1263047b1
-ms.openlocfilehash: a45cd6cf86eb8ab1edb33ad5e0df8374972c425e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91be04f927c63ccbb0668bbe70cbd7c5813f8dfc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450825"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627346"
 ---
 # <a name="compiler-warning-level-1-c4215"></a>コンパイラの警告 (レベル 1) C4215
 
-使用される標準の拡張機能: long float
+非標準の拡張機能が使用されています: long float
 
-既定の Microsoft 拡張機能 (/Ze) が扱う**long float**として**二重**します。 ANSI 互換 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) はありません。 使用**二重**互換性を維持します。
+既定の Microsoft 拡張機能 (/Ze) では、 **long float**は**double**として扱われます。 ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) ではありません。 互換性を維持するには、 **double**を使用します。
 
 次の例では、C4215 が生成されます。
 
-```
+```cpp
 // C4215.cpp
 // compile with: /W1 /LD
 long float a;   // C4215

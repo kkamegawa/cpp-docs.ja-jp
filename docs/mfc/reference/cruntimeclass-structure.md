@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372050"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 構造体
 
@@ -33,7 +33,7 @@ struct CRuntimeClass
 |名前|説明|
 |----------|-----------------|
 |[CRuntimeClass::CreateObject](#createobject)|実行時にオブジェクトを作成します。|
-|[で](#fromname)|使い慣れたクラス名を使用して、実行時に、オブジェクトを作成します。|
+|[CRuntimeClass::FromName](#fromname)|使い慣れたクラス名を使用して、実行時に、オブジェクトを作成します。|
 |[CRuntimeClass::IsDerivedFrom](#isderivedfrom)|クラスは、指定したクラスから派生されているかどうかを決定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
@@ -88,13 +88,13 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 
 ### <a name="remarks"></a>Remarks
 
-派生したクラス`CObject`動的作成は、実行時に指定したクラスのオブジェクトを作成する機能をサポートすることができます。 ドキュメント、ビュー、およびフレーム クラスでは、動的な作成をサポートする必要がありますなど。 動的な作成の詳細については、 `CreateObject` 、メンバーを参照してください[CObject クラス](../../mfc/using-cobject.md)と[CObject クラス: 機能のレベルを指定する](../../mfc/specifying-levels-of-functionality.md)します。
+派生したクラス`CObject`動的作成は、実行時に指定したクラスのオブジェクトを作成する機能をサポートすることができます。 ドキュメント、ビュー、およびフレーム クラスでは、動的な作成をサポートする必要がありますなど。 動的な作成の詳細については、 `CreateObject` 、メンバーを参照してください[CObject クラス](../../mfc/using-cobject.md)と[CObject クラス。機能レベルを指定する](../../mfc/specifying-levels-of-functionality.md)します。
 
 ### <a name="example"></a>例
 
   例をご覧ください[IsDerivedFrom](#isderivedfrom)します。
 
-##  <a name="fromname"></a>  で
+##  <a name="fromname"></a>  CRuntimeClass::FromName
 
 取得するには、この関数を呼び出し、`CRuntimeClass`使い慣れた名に関連付けられている構造体。
 
@@ -141,7 +141,7 @@ TRUE の場合、クラスの呼び出し元`IsDerivedFrom`ベースからは派
 > [!NOTE]
 >  使用する、`CRuntimeClass`構造体、実行時のオブジェクトの情報を取得するクラスの実装では、新規クラス、IMPLEMENT_DYNCREATE、または IMPLEMENT_SERIAL マクロを含める必要があります。
 
-使用しての詳細については`CRuntimeClass`、記事をご覧ください[CObject クラス: クラス情報にアクセスする](../../mfc/accessing-run-time-class-information.md)します。
+使用しての詳細については`CRuntimeClass`、記事をご覧ください[CObject クラス。ランタイム クラス情報にアクセスする](../../mfc/accessing-run-time-class-information.md)します。
 
 ### <a name="example"></a>例
 
@@ -219,9 +219,8 @@ ASCII のクラス名を含む null で終わる文字列。
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
-[使うため](../../mfc/reference/cobject-class.md#iskindof)<br/>
+[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
 [RUNTIME_CLASS](run-time-object-model-services.md#runtime_class)<br/>
-[新規クラス](run-time-object-model-services.md#implement_dynamic)<br/>
+[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

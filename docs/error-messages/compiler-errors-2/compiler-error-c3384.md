@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3384
 ms.assetid: c9f92c6a-62a9-4333-b2b1-bc55c7f288b6
-ms.openlocfilehash: 0c9804666bfd73f98541f95434b9cebf5185d2ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 059518462bd7a0463fd03fec6434acbbda7ee60a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566817"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756436"
 ---
 # <a name="compiler-error-c3384"></a>コンパイラ エラー C3384
 
@@ -19,13 +19,13 @@ ms.locfileid: "50566817"
 
 ジェネリック型を `value class` と `ref class`の両方に制限することはできません。
 
-参照してください[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)詳細についてはします。
+詳細については、「[ジェネリック型パラメーターの制約 (C++/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3384 が生成されます。
 
-```
+```cpp
 // C3384.cpp
 // compile with: /c /clr
 generic <typename T>

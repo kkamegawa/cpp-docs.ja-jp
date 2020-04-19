@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: c09e73eec0f020ccc334d443248feb09631a0f7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432472"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152002"
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 
@@ -114,6 +114,6 @@ struct id
 
 変数 *record* には *id* という構造体型があります。*pname* が、*name* という別の構造体型へのポインターとして宣言されていることに注意してください。 この宣言は、*name* 型を定義する前に指定できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

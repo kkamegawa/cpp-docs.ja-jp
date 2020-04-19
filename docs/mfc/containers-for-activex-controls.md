@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-ms.openlocfilehash: 3b0ec605fd6e30033e303ff61872734136cfb73b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23cd9e41ee704327728322f869e67d1a2d0c6cd9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302196"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX コントロールのコンテナー
 
@@ -56,4 +56,3 @@ ActiveX コントロール コンテナーをサポートするアプリケー�
 ## <a name="see-also"></a>関連項目
 
 [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
-

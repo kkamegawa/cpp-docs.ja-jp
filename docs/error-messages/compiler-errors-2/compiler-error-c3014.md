@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3014
 ms.assetid: af1c5b0c-dbf9-4274-b06a-c6c2cdcf2a52
-ms.openlocfilehash: c87c63641fc8071f7a1f29874ae7ae6dbffd4f70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08b8fc2eef4aa3a94ec615ad236cd3f9bebc4883
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492210"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749884"
 ---
 # <a name="compiler-error-c3014"></a>コンパイラ エラー C3014
 
@@ -21,7 +21,7 @@ OpenMP 'directive' ディレクティブの後に for ループが必要です
 
 次の例では C3014 が生成されます。
 
-```
+```cpp
 // C3014.cpp
 // compile with: /openmp
 int main()

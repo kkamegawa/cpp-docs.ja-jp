@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4820
 ms.assetid: 17aa29f4-c287-49b8-bc43-8ed82ffed5ea
-ms.openlocfilehash: adf8b365bc39acc1ce729e89260f8385ecb6c048
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac97a943e6a8178e930d93a097071b0e3da09773
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447828"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989054"
 ---
 # <a name="compiler-warning-level-4-c4820"></a>コンパイラの警告 (レベル 4) C4820
 
 'バイト' : 'バイト' バイトのパディングを 'コンスラクト' 'member_name' の後に追加しました。
 
-型と要素の順序は、構造体の末尾に埋め込みの追加をコンパイラに発生します。 参照してください[align](../../cpp/align-cpp.md)構造体に埋め込みの詳細についてはします。
+要素の型と順序により、コンパイラは構造体の末尾にパディングを追加しました。 構造体の埋め込みの詳細については、「 [align](../../cpp/align-cpp.md) 」を参照してください。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
 次の例では、C4820 が生成されます。
 
-```
+```cpp
 // C4820.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4820)

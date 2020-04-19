@@ -10,12 +10,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 6a45e6caa94054d4d485476786ecc5149545ed8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318928"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (チェックサムの設定)
 
@@ -29,11 +29,11 @@ ms.locfileid: "50478809"
 
 オペレーティング システムでは、デバイス ドライバーのチェックサムが必要です。 将来のオペレーティング システムとの互換性を確保する、デバイス ドライバーのリリース バージョンのチェックサムを設定します。
 
-/RELEASE オプションは既定で設定時に、[中に/subsystem:native が](../../build/reference/subsystem-specify-subsystem.md)オプションを指定します。
+/RELEASE オプションは既定で設定時に、[中に/subsystem:native が](subsystem-specify-subsystem.md)オプションを指定します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -47,5 +47,5 @@ ms.locfileid: "50478809"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

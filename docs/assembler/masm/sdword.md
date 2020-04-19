@@ -1,28 +1,29 @@
 ---
 title: SDWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SDWORD
 helpviewer_keywords:
 - SDWORD directive
 ms.assetid: 12663144-2426-4b4e-aabd-dbe0b04321d0
-ms.openlocfilehash: cd4653078d54e9ab735a0472cedc4dc87b6fabee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c007cfe287fbb2e143dd61e8fc3235939317d820
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589372"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318476"
 ---
 # <a name="sdword"></a>SDWORD
 
-割り当て、必要に応じて、各記憶域の符号付きのダブル ワード (4 バイト) を初期化します`initializer`します。 また、型指定子として使用できる型が有効な任意の場所。
+各*初期化子*について、署名された2単語 (4 バイト) のストレージを割り当て、必要に応じて初期化します。 型が有効である任意の場所で、型指定子として使用することもできます。
 
 ## <a name="syntax"></a>構文
 
-> SDWORD 初期化子の名前 [] の初期化子].
+> *名前* **sdword** *初期化子*⟦ __、__ *初期化子*...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[DWORD](../../assembler/masm/dword.md)<br/>
-[DD](../../assembler/masm/dd.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[DWORD](dword.md)\
+[DD](dd.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

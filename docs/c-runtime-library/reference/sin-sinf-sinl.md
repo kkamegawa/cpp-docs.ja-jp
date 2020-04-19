@@ -1,11 +1,11 @@
 ---
 title: sin、sinf、sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430363"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948071"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -62,7 +65,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Sin**関数のサインを返します*x*します。 場合*x*が 263 以上で、または少ないよりまたは-263 等しくは、結果の有効桁数の損失が発生します。
+**Sin**関数は、 *x*のサインを返します。 *X*が263以上、または-263 以下の場合は、結果の有意性が失われます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -73,13 +76,13 @@ long double sin(long double x);  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sin**を受け取って返す**float**または**長い****二重**値。 C プログラムで**sin**は**二重**します。
+でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**sin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **sin**は常にを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> または \<math.h>|
+|**sin**、 **sinf**、 **sinf**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

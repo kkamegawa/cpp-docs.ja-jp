@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2135
 ms.assetid: aa360d22-4f79-4de1-b384-93cadd10975f
-ms.openlocfilehash: 0b6cc8fb8ec1c6a7b054eb48d914335460811310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bc9d8bc3db5fbd826ded37d93ac812116356eb2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450103"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757489"
 ---
 # <a name="compiler-error-c2135"></a>コンパイラ エラー C2135
 
@@ -21,7 +21,7 @@ ms.locfileid: "50450103"
 
 次の例では C2135 が生成されます。
 
-```
+```cpp
 // C2135.cpp
 struct S {
    int i : 1;

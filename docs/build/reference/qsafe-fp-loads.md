@@ -1,12 +1,12 @@
 ---
 title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.openlocfilehash: e1ef4237fe3af39e76777609a06f90bd585ca422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57aece79dfab617121371e0489aa80f18e143372
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319331"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -22,13 +22,13 @@ ms.locfileid: "50504429"
 
 **/Qsafe_fp_loads**強制的にコンパイラに浮動小数点移動命令ではなく整数移動命令を使用して、メモリと MMX の間のデータの移動を登録します。 また、このオプションを指定すると、値の読み込み時に例外が発生する可能性がある場合 (NaN 値の読み込み時など)、複数のコントロール パスに読み込める浮動小数点値に対してレジスタ読み込み最適化が無効になります。
 
-このオプションは、によってオーバーライド[/fp: を除く](../../build/reference/fp-specify-floating-point-behavior.md)します。 **/Qsafe_fp_loads**で指定されているコンパイラの動作のサブセットを指定 **/fp: 除く**します。
+このオプションは、によってオーバーライド[/fp: を除く](fp-specify-floating-point-behavior.md)します。 **/Qsafe_fp_loads**で指定されているコンパイラの動作のサブセットを指定 **/fp: 除く**します。
 
-**/Qsafe_fp_loads**と互換性がない[/clr](../../build/reference/clr-common-language-runtime-compilation.md)と[/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md)します。 浮動小数点コンパイラ オプションの詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../../build/reference/fp-specify-floating-point-behavior.md)します。
+**/Qsafe_fp_loads**と互換性がない[/clr](clr-common-language-runtime-compilation.md)と[/fp:fast](fp-specify-floating-point-behavior.md)します。 浮動小数点コンパイラ オプションの詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -40,6 +40,6 @@ ms.locfileid: "50504429"
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

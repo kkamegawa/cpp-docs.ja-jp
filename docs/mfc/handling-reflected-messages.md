@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message handling [MFC], reflected messages
 - reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
-ms.openlocfilehash: 9b580c0c8b8fc970d69f5c57f69bbbbe65e22497
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 973e8cff24eca37b1806207d081636f0d1b38365
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240562"
 ---
 # <a name="handling-reflected-messages"></a>反映されたメッセージの処理方法
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515766"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450074"
 ---
 # <a name="packagedtask-class"></a>packaged_task クラス
 
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<将来 >
+**ヘッダー:** \<今後の >
 
 **名前空間:** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 `packaged_task` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -122,7 +122,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Remarks
 
-操作の後*右*関連付けられた非同期状態にはなくなりました。
+操作の後、*右側*には関連付けられた非同期状態がありません。
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
+オブジェクトに関連付けられた非同期状態がある場合は**true** 。それ以外の場合は**false**。
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task コンストラクター
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 `packaged_task` オブジェクト。
 
-*Alloc*<br/>
+*割り当て*\
 メモリ割り当て。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」を参照してください。
 
-*fn*<br/>
+*1億*\
 関数オブジェクトを指定します。
 
 ### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、*関連付けられた非同期状態*がない `packaged_task` オブジェクトを構築します。
 
-2 番目のコンス トラクターの構成要素を`packaged_task`オブジェクトし、関連付けられた非同期状態からの転送*右*します。 操作の後*右*関連付けられた非同期状態にはなくなりました。
+2番目のコンストラクター `packaged_task`は、オブジェクトを構築し、関連付けられた非同期状態を*右*から転送します。 操作の後、*右側*には関連付けられた非同期状態がありません。
 
-3 番目のコンス トラクターの構成要素を`packaged_task`オブジェクトのコピーを持っている*fn*関連付けられた非同期状態に格納されています。
+3番目のコンストラクター `packaged_task`は、関連付けられた非同期状態に*fn*のコピーが格納されているオブジェクトを構築します。
 
-4 番目のコンス トラクターの構成要素を`packaged_task`オブジェクトのコピーを持っている*fn*使用してその関連付けられた非同期状態に格納されている`alloc`メモリの割り当て。
+4番目のコンストラクター `packaged_task`は、関連付けられた非同期状態に*fn*というコピーが格納`alloc`されているオブジェクトを構築し、メモリ割り当てにを使用します。
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task デストラクター
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 `packaged_task` オブジェクト。
 
 ## <a name="valid"></a>  packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
+オブジェクトに関連付けられた非同期状態がある場合は**true** 。それ以外の場合は**false**。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

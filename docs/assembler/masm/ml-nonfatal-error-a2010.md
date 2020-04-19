@@ -1,25 +1,25 @@
 ---
 title: ML の致命的でないエラー A2010
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2010
 helpviewer_keywords:
 - A2010
 ms.assetid: 8bcd57f4-1e3f-421f-9ef8-e702daf57fcb
-ms.openlocfilehash: 0fff8e7cafe8e6165f44e7d0fd7b0e51d8bbe3f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3bfe4ebf03cd02a39ef4c492b0f6bf54059a8d8f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543456"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318034"
 ---
 # <a name="ml-nonfatal-error-a2010"></a>ML の致命的でないエラー A2010
 
-**無効な型の式**
+**型の式が無効です**
 
-オペランド[この](../../assembler/masm/operator-this.md)または[PTR](../../assembler/masm/operator-ptr.md)が有効な型の式。
+[THIS](operator-this.md)または[PTR](operator-ptr.md)のオペランドが有効な型の式ではありませんでした。
 
 ## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

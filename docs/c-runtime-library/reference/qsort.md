@@ -1,9 +1,9 @@
 ---
 title: qsort
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,11 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+- ntoskrnl.exe
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -25,12 +29,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327552"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949709"
 ---
 # <a name="qsort"></a>qsort
 
@@ -52,7 +56,7 @@ void qsort(
 *base*<br/>
 対象となる配列の先頭。
 
-*数*<br/>
+*number*<br/>
 配列サイズ (要素数)。
 
 *width*<br/>
@@ -63,9 +67,9 @@ void qsort(
 
 ## <a name="remarks"></a>Remarks
 
-**Qsort**関数の配列を並べ替えるためのクイック ソート アルゴリズムを実装*数*の各要素は、*幅*バイト。 引数*基本*を並べ替える配列のベースへのポインターです。 **qsort**並べ替えられた要素を使用してこの配列を上書きします。
+**Qsort**関数は、*数値*要素の配列 (それぞれの*幅*バイト) を並べ替えるクイックソートアルゴリズムを実装します。 引数*base*は、並べ替えられる配列のベースへのポインターです。 **qsort**は、並べ替えられた要素を使用して、この配列を上書きします。
 
-**qsort**呼び出し、*比較*日常的な 1 つまたは複数の並べ替え中にタイムアウトし、呼び出しごとに 2 つの配列要素へのポインターを渡します。
+**qsort**は、並べ替え中に*比較*ルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -76,12 +80,12 @@ compare( (void *) & elem1, (void *) & elem2 );
 |関数の戻り値の比較|説明|
 |-----------------------------------|-----------------|
 |< 0|**elem1**未満**elem2**|
-|0|**elem1**等しく**elem2**|
-|> 0|**elem1**より大きい**elem2**|
+|0|**elem2**に相当する**elem1**|
+|> 0|**elem1** **elem2**より大きい|
 
 配列は、比較関数による定義に従って、昇順で並べ替えられます。 配列を降順で並べ替えるには、比較関数の "より大きい" と "より小さい" の意味を入れ替えます。
 
-この関数は、パラメーターを検証します。 場合*比較*または*数*は**NULL**、または*基本*は**NULL**と*数* 0 以外の場合、または*幅*が小さい」の説明に従って、0 よりも、無効なパラメーター ハンドラーが呼び出さは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返しますと**errno**に設定されている**EINVAL**します。
+この関数は、パラメーターを検証します。 *Compare*または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*が0未満の場合は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数はを返し、 **errno**は**EINVAL**に設定されます。
 
 ## <a name="requirements"></a>必要条件
 

@@ -1,6 +1,6 @@
 ---
 title: _bittestandcomplement、_bittestandcomplement64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandcomplement64
 - _bittestandcomplement64_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _bittestandcomplement intrinsic
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-ms.openlocfilehash: 4985967019daf5db832780bb400611bcc5478a35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1dcfe86aad18c8261029c9111681e1882bc96f5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623237"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222207"
 ---
-# <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement、_bittestandcomplement64
+# <a name="_bittestandcomplement-_bittestandcomplement64"></a>_bittestandcomplement、_bittestandcomplement64
 
 **Microsoft 固有の仕様**
 
@@ -26,7 +26,7 @@ ms.locfileid: "50623237"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char _bittestandcomplement(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandcomplement64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 [入力、出力]検査するメモリへのポインター。
 
-*b*<br/>
-[in]テストするビット位置。
+*b*\
+からテストするビット位置。
 
 ## <a name="return-value"></a>戻り値
 
@@ -53,10 +53,10 @@ unsigned char _bittestandcomplement64(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_bittestandcomplement`|x86、ARM、x64|
-|`_bittestandcomplement64`|X64|
+|`_bittestandcomplement`|x86、ARM、x64、ARM64|
+|`_bittestandcomplement64`|x64、ARM64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,7 +64,7 @@ unsigned char _bittestandcomplement64(
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // bittestandcomplement.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>
@@ -92,9 +92,7 @@ int main()
 }
 ```
 
-## <a name="sample-output"></a>出力例
-
-```
+```Output
 Initial value: 1
 Testing bit 1
 Value changed to 3, Result: 0

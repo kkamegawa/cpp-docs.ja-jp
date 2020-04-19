@@ -1,9 +1,9 @@
 ---
 title: fegetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetegenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668092"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941241"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -43,16 +46,16 @@ int fegetenv(
 
 ### <a name="parameters"></a>パラメーター
 
-*penv*<br/>
-ポインター、 **fenv_t**浮動小数点環境の現在の値を格納するオブジェクト。
+*ペン v*<br/>
+現在の浮動小数点環境値を格納する**fenv_t**オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-浮動小数点環境が正常に格納されている場合は 0 を返します*penv*します。 それ以外の場合は、0 以外の値を返します。
+浮動小数点環境が参照*v*に正常に格納された場合は0を返します。 それ以外の場合は、0 以外の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Fegetenv**関数が指すオブジェクトの現在の浮動小数点環境を格納する*penv*します。 浮動小数点環境とは、浮動小数点計算に影響する一連の状態フラグと制御モードです。 浮動小数点例外の丸め方向モードと状態フラグが含まれます。  場合*penv*が有効なを指していない**fenv_t**オブジェクト、その後の動作が定義されていません。
+**Fegetenv**関数は、現在の浮動小数点環境を、参照によって指されるオブジェクトに*格納します*。 浮動小数点環境とは、浮動小数点計算に影響する一連の状態フラグと制御モードです。 浮動小数点例外の丸め方向モードと状態フラグが含まれます。  Fenv_t*が有効*なオブジェクトを指していない場合、後続の動作は定義されません。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 

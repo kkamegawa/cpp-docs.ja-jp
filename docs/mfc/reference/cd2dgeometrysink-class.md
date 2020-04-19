@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391258"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink クラス
 
@@ -87,7 +87,7 @@ class CD2DGeometrySink;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|返します ID2D1GeometrySink インターフェイス|
+|[CD2DGeometrySink::operator ID2D1GeometrySink*](#operator_id2d1geometrysink_star)|返します ID2D1GeometrySink インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -121,7 +121,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>パラメーター
 
-*円弧*<br/>
+*arc*<br/>
 円弧のセグメントの図に追加するには
 
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
@@ -296,7 +296,7 @@ ID2D1GeometrySink へのポインター。
 ID2D1GeometrySink* m_pSink;
 ```
 
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink*
 
 返します ID2D1GeometrySink インターフェイス
 

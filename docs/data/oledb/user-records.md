@@ -1,6 +1,6 @@
 ---
 title: ユーザー レコード
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 f1_keywords:
 - COLUMN_ENTRY_MAP
 helpviewer_keywords:
@@ -15,20 +15,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 4d52c36368b9b39815cbb9a103f84f140626ba2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567441"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525283"
 ---
 # <a name="user-records"></a>ユーザー レコード
 
-静的アクセサーを使用する (から派生したアクセサー `CAccessor`)、コンシューマーはユーザー レコードが存在する必要があります。 ユーザー レコードは、ハンドルの入力または出力するデータ要素を含む C++ クラスです。 **ATL OLE DB コンシューマー ウィザード**コンシューマー ユーザー レコードが生成されます。 メソッドは、コマンドの処理などのオプションのタスクのユーザー レコードを追加できます。
+> [!NOTE]
+> ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
-次のコードでは、コマンドを処理するサンプル レコードを示します。 ユーザーのレコードでは、BEGIN_COLUMN_MAP は、プロバイダーからコンシューマーに渡されるデータ行セットを表します。 BEGIN_PARAM_MAP では、コマンド パラメーターのセットを表します。 この例では、 [CCommand](../../data/oledb/ccommand-class.md)コマンドのパラメーターを処理するクラス。 マップ エントリのデータ メンバーは、1 つの連続したクラスのインスタンスごとにメモリ ブロックのオフセットを表します。 COLUMN_ENTRY マクロは、プロバイダー側で PROVIDER_COLUMN_ENTRY マクロに対応します。
+静的アクセサー ( `CAccessor` から派生したアクセサー) を使用するには、コンシューマーにユーザー レコードが必要です。 ユーザー レコードは、入力や出力を処理するためのデータ要素を含む C++ クラスです。 **ATL OLE DB コンシューマー ウィザード**では、コンシューマーのユーザー レコードが生成されます。 ユーザー レコードにメソッドを追加して、コマンドの処理などのオプションのタスクを実行できます。
 
-COLUMN_MAP と PARAM_MAP マクロの詳細については、次を参照してください。 [OLE DB コンシューマー テンプレート用マクロ](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)します。
+以下のコードは、コマンドを処理するサンプル レコードを示しています。 ユーザー レコード内の BEGIN_COLUMN_MAP は、プロバイダーからコンシューマーに渡されるデータ行セットを表します。 BEGIN_PARAM_MAP は、一連のコマンド パラメーターを表します。 この例では、[CCommand](../../data/oledb/ccommand-class.md) クラスを使用して、コマンド パラメーターを処理しています。 マップ エントリ内のデータ メンバーは、クラスの各インスタンスの隣接する 1 つのメモリ ブロック内へのオフセットを表します。 COLUMN_ENTRY マクロは、プロバイダー側の PROVIDER_COLUMN_ENTRY マクロに対応しています。
+
+COLUMN_MAP および PARAM_MAP マクロの詳細については、[OLE DB コンシューマー テンプレート用のマクロに関するページ](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)をご覧ください。
 
 ```cpp
 class CArtists
@@ -55,13 +58,13 @@ END_PARAM_MAP()
 
 ## <a name="wizard-generated-user-records"></a>ウィザードで生成されたユーザー レコード
 
-使用する場合、 **ATL OLE DB コンシューマー ウィザード**OLE DB テンプレートまたは OLE DB 属性を使用する選択肢があるコンシューマーを生成します。 生成されたコードでは、各ケースで異なります。 このコードの詳細については、次を参照してください。[コンシューマー クラス](../../data/oledb/consumer-wizard-generated-classes.md)します。
+**ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーを生成する場合は、OLE DB テンプレートと OLE DB 属性のいずれを使用するかを選択できます。 生成されるコードは、それぞれの場合で異なります。 このコードの詳細については、「[コンシューマー ウィザードで生成されたクラス](../../data/oledb/consumer-wizard-generated-classes.md)」をご覧ください。
 
-## <a name="user-record-support-for-multiple-accessors"></a>複数のアクセサーのユーザー レコードのサポート
+## <a name="user-record-support-for-multiple-accessors"></a>複数のアクセサーのユーザー レコード サポート
 
-複数のアクセサーを使用する必要があるシナリオの詳細については、次を参照してください。[行セットでの複数のアクセサーを使用して](../../data/oledb/using-multiple-accessors-on-a-rowset.md)します。
+複数のアクセサーを使用する必要があるシナリオの詳細については、「[行セットでの複数アクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)」をご覧ください。
 
-次の例では、行セットに対して複数のアクセサーをサポートするように変更するユーザー レコードを示します。 BEGIN_COLUMN_MAP と END_COLUMN_MAP、代わりに使用して[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)と[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)各アクセサー。 BEGIN_ACCESSOR マクロでは、アクセサーの数 (0 からのオフセット) および、アクセサーが自動でかどうかを指定します。 Autoaccessors 呼び出し`GetData`への呼び出しで自動的にデータを取得する[MoveNext](../../data/oledb/crowset-movenext.md)します。 非自動アクセサーでは、明示的にデータを取得する必要があります。 すべてのレコードを取得するたくない (ビットマップ イメージなどの大規模なデータ フィールドにバインドしている場合は、非自動アクセサーを使用します。
+以下は、ユーザー レコードを変更し、行セットに対して複数のアクセサーがサポートされるようにする例を示しています。 BEGIN_COLUMN_MAP と END_COLUMN_MAP の代わりに、[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) と [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) が各アクセサーで使用されています。 BEGIN_ACCESSOR マクロでは、アクセサーの数 (ゼロからのオフセット) と、アクセサーが自動アクセサーであるかどうかが指定されます。 [MoveNext](../../data/oledb/crowset-movenext.md) が呼び出されると、自動アクセサーは、`GetData` を呼び出して、データを自動的に取得します。 非自動アクセサーでは、データを明示的に取得する必要があります。 すべてのレコードで取得しない大きなデータ フィールド (ビットマップ イメージなど) をバインド先にする場合は、非自動アクセサーを使用します。
 
 ```cpp
 class CMultiArtists
@@ -87,4 +90,4 @@ END_ACCESSOR_MAP()
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)

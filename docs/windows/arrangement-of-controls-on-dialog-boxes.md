@@ -1,41 +1,283 @@
 ---
-title: ダイアログ ボックス (C++) のコントロールの配置 |Microsoft Docs
-ms.date: 11/04/2016
+title: '方法: レイアウト コントロール (C++) |Microsoft Docs'
+ms.date: 02/15/2019
+f1_keywords:
+- vc.editors.dialog.grouping
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
 - Dialog Editor [C++], arranging controls
+- Dialog Editor [C++], guides and margins
+- guides, clearing
+- guides
+- dialog box controls [C++], placement
+- controls [C++], guides and margins
+- guides, creating
+- guides, moving
+- margins, moving
+- DLUs (dialog units)
+- controls [C++], aligning
+- Dialog Editor [C++], snap to guides
+- guides, tick mark interval
+- dialog box controls [C++], placement
+- guides, aligning controls
+- dialog units (DLUs)
+- snap to guides (Dialog editor)
+- controls [C++], sizing
+- tick mark interval in Dialog editor
+- controls [C++], snap to guides/grid
+- guides, disabling snapping
+- controls [C++], snap to guides/grid
+- controls [C++], layout grid
+- snap to layout grid
+- grids, turning on or off
+- layout grid in Dialog Editor
+- grids, changing size
+- grid spacing
+- guides, settings
+- layout grid in Dialog Editor
+- controls [C++], snap to guides/grid
+- Guide Settings dialog box (Dialog editor)
+- controls [C++], aligning
+- controls [C++], positioning
+- Space Evenly command
+- dialog box controls [C++], placement
+- Center in Dialog command
+- Arrange Buttons command
+- buttons, arranging push buttons in dialog boxes
+- push buttons
+- member variables, adding to radio button groups
+- variables, dialog box control member variables
+- dialog box controls [C++], grouping radio buttons
+- grouping controls
+- radio buttons [C++], grouping on dialog boxes
+- controls [C++], tab order
+- focus, tab order
+- tab controls [C++], tab order
+- Tabstop property for controls
+- controls [C++], focus
+- dialog box controls [C++], tab order
+- Dialog Editor [C++], selecting controls
+- dominant controls
+- dialog box controls [C++], selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
+- Make Same Size command
+- combo boxes, sizing
+- list controls [C++], scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars [C++], displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 56062d166e8a58b6bf0211ce57a6a8f6ed3eea75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391069"
 ---
-# <a name="arrangement-of-controls-on-dialog-box-ces"></a>ダイアログ コントロールの配置 (C++) es のボックス
+# <a name="how-to-layout-controls-c"></a>方法: レイアウト コントロール (C++)
 
-**ダイアログ**エディターには、整列やコントロールを自動的にサイズ調整されるレイアウト ツールが用意されています。 ほとんどのタスクを使用することができます、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。 すべて**ダイアログ エディター**ツールバーのコマンドはまた、**形式**メニューで、ほとんどが[ショートカット キー](../windows/accelerator-keys-for-the-dialog-editor.md)します。
+**ダイアログ エディター**の整列やコントロールを自動的にサイズのレイアウト ツールを提供します。 ほとんどのタスクを使用することができます、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。 すべて**ダイアログ エディター**ツールバーのコマンドはまた、**形式**メニューで、ほとんどが[ショートカット キー](../windows/accelerator-keys-for-the-dialog-editor.md)します。
 
-ダイアログ ボックスのレイアウト コマンドは、1 つ以上のコントロールが選択されている場合にのみ使用可能なは。 単一または複数のコントロールを選択して、1 つ以上のコントロールを選択すると、選択した 1 つ目は既定では「高い」コントロール。 コントロールと主要なコントロールを選択する方法については、次を参照してください。[選択コントロール](../windows/selecting-controls.md)します。
+ダイアログ ボックスのレイアウト コマンドは、1 つ以上のコントロールが選択されている場合にのみ使用可能なは。 単一または複数のコントロールを選択して、1 つ以上のコントロールを選択すると、選択した 1 つ目は既定では主要なコントロール。
 
 ステータス バーの右上隅には、場所、高さ、および現在のコントロールの幅が表示されます。 全体のダイアログ ボックスがオンの場合、ステータス バーとして全体とその高さと幅 ダイアログ ボックスの位置が表示されます。
 
-- [ダイアログ エディターの状態 (ガイドとグリッド)](../windows/dialog-editor-states-guides-and-grids.md)
+## <a name="arrange-controls"></a>コントロールを配置します。
 
-- [ダイアログ ボックスのオプション ボタンのグループ化](../windows/grouping-radio-buttons-on-a-dialog-box.md)
+ダイアログ ボックスのコントロールを配置することができます、**ダイアログ エディター** 3 つの異なる状態のいずれか。
 
-- [コントロール グループの配置](../windows/aligning-groups-of-controls.md)
+- ガイドと余白で、既定値として設定します。
 
-- [コントロールの間隔の均等化](../windows/evening-the-spacing-between-controls.md)
+- レイアウト グリッドです。
 
-- [ダイアログ ボックスのコントロールの中央揃え](../windows/centering-controls-in-a-dialog-box.md)
+- なし、スナップや配置機能。
 
-- [ダイアログ ボックスの右端または下端に合わせたプッシュ ボタンの配置](../windows/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)
+[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)状態を制御するボタンが含まれています。
 
-- [コントロールのタブ オーダーの変更](../windows/changing-the-tab-order-of-controls.md)
+- 状態を変更するには、該当するアイコンを選択するか、メニューに移動**形式** > **ガイド設定**します。
 
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+**ガイド設定**ダイアログ ボックスには、次のプロパティ。
+
+|プロパティ|説明|
+|---|---|
+|**レイアウト ガイド**|レイアウト ガイドの設定を表示します。|
+|**None**|レイアウト ツールを非表示にします。|
+|**ルーラーとガイド**|有効な場合は、レイアウト ツールをルーラーを追加し、ガイド、ルーラーに配置することを許可します。 既定のガイドは、余白です。|
+|**グリッド**|レイアウト グリッドを作成します。 新しいコントロールがグリッドに自動的に整列します。|
+|**グリッドの間隔**|ダイアログ ボックスの単位 (Dlu) では、グリッドの間隔の設定を表示します。|
+|**幅：Dlu**|Dlu でレイアウト グリッドの幅を設定します。 水平 DLU は、4 で割った値 ダイアログ ボックスのフォントの平均幅です。|
+|**Height:Dlu**|Dlu でレイアウト グリッドの高さを設定します。 垂直 DLU は 8 で割った値 ダイアログ ボックスのフォントの高さの平均値です。|
+
+### <a name="guides-and-margins"></a>ガイドとマージン
+
+コントロールの追加、コントロールを移動している現在のレイアウトを再配置ガイドとマージン役立つかどうかは、ダイアログ ボックス内に正確にコントロールを配置します。
+
+ダイアログ ボックスを作成するときに余白と呼ばれる 4 つの変更ガイドは、提供され、青い点線として表示されます。
+
+- 余白を移動するには、新しい位置に余白をドラッグします。
+
+- マージンを非表示にするには、余白を 0 の位置に移動します。
+
+- 余白を元に戻します、余白の位置 0 ポインターを置きます、余白を位置に移動します。
+
+ガイドでは、青い点線を表示、エディターの最上部に、左側のルーラーの対応する矢印で表示されるダイアログ ボックスで、**ダイアログ エディター**します。 コントロールのサイズ変更ハンドルは、コントロールの移動、およびガイドに合わせてコントロールがない場合、ガイドがコントロールに合わせるときに、ガイドにスナップされます。 ガイドが移動したときにスナップしたコントロールも移動します。 ガイドでは、いずれかが移動すると、コントロールの 1 つ以上のガイドを基準としてスナップされますがサイズ変更されます。
+
+- 内でのルーラー、ガイドを作成するには、ガイドを作成する 1 回選択するか、ダブルクリックして起動を**番組ガイドの設定** ダイアログ ボックスの番組ガイドの設定を指定できます。
+
+- ダイアログ ボックスで、ガイドを設定するには、ガイドを選択しの新しい位置にドラッグします。 または、ルーラー関連ガイドをドラッグする矢印を選択します。
+
+   ガイドの座標は、ウィンドウの下部にあるステータス バーには、ルーラーが表示されます。 または、ルーラー、ガイドの正確な位置を表示する矢印の上にポインターを移動します。
+
+- ガイドを削除するには、 ダイアログ ボックスから、ガイドをドラッグするか、ルーラーから対応する矢印をドラッグします。
+
+ガイドとコントロールの間隔を決定する定規の目盛りは、ダイアログ単位 (Dlu) によって定義されます。 DLU は、通常、8 ポイント MS Shell Dlg、ダイアログ ボックス フォントのサイズに基づきます。 水平 DLU は、4、ダイアログ ボックスのフォントの平均幅です。 垂直 DLU は 8 で割った値のフォントの高さの平均値です。
+
+- 目盛りの間隔を変更するには、メニューに移動**形式** > **ガイド設定**、次に、**グリッドの間隔**フィールドに、Dlu の新しい幅と高さを指定します。
+
+### <a name="layout-grid"></a>レイアウト グリッド
+
+配置する場合またはレイアウト グリッドを使用してより正確な位置を指定 ダイアログ ボックスでコントロールの配置、実行してください。 グリッドをオンにすると、コントロールは、帯びた場合と、グリッドの点線にスナップされます。
+
+- メニューに移動したレイアウト グリッドをオンまたはオフ、**形式** > **番組ガイドの設定**オンまたはオフにし、**グリッド**ボタンをクリックします。
+
+   個々 のグリッドでも制御できます**ダイアログ エディター**を使用して windows、**グリッドの切り替え**のボタンでは、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。
+
+- レイアウト グリッドのサイズを変更するには、メニューに移動**形式** > **ガイド設定**Dlu で、グリッド内のセルの高さと幅を入力します。 最小の高さまたは幅は 4 です。
+
+### <a name="disable-guides"></a>ガイドを無効にします。
+
+ガイド、スナップに効果を無効にするのに、マウスと組み合わせて特殊なキーを使用できます。 使用して、 **Alt**キーが選択されているガイドのスナップの効果を無効にします。 ガイドを移動、 **Shift**キーは、スナップしたコントロールが、ガイドに移動しないようにします。
+
+- ガイド、スナップに効果を無効にするコントロールを押しながらドラッグ、 **Alt**キー。
+
+- スナップしたコントロールを移動することがなくガイドに移動するを押しながら、ガイドをドラッグ、 **Shift**キー。
+
+- ガイドを無効にする メニューに移動**形式** > **ガイド設定**します。 その後、**レイアウト ガイド**を選択します**None**します。
+
+   > [!TIP]
+   > メニューにショートカットを使用することもできます。**形式** > **ガイドの切り替え**します。
+
+## <a name="select-controls"></a>コントロールを選択します。
+
+コントロールのサイズを選択、配置、移動、コピー、または削除したり、およびし操作を完了します。 ほとんどの場合でサイズ変更と配置ツールを使用する 1 つ以上のコントロールを選択する必要があります、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)します。
+
+コントロールを選択すると、実線 (アクティブ) をアプリや中空 (非アクティブ) のサイズ変更ハンドルを選択範囲の境界線に表示される小さな四角形の周囲の影付きの枠線があります。 複数のコントロールを選択すると主要なコントロールが実線のサイズ変更ハンドルがある白抜きのサイズ変更ハンドルの他のすべての選択したコントロール。
+
+- コントロールを選択する、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)を選択、**ポインター**ツールし、選択するように、次の手順のいずれかを使用します。
+
+  - 選択ボックスで、ダイアログ ボックスで選択するコントロールの周囲へのポインターをドラッグします。 マウス ボタンを離すと、すべて内側と、選択ボックスが選択されているを交差を制御します。
+
+  - 押しながら、 **Shift**キーを選択したいコントロールを選択します。
+
+  - 押しながら、 **Ctrl**キーを選択したいコントロールを選択します。
+
+- 追加またはコントロールを選択したコントロールのグループから削除、キーを押し、 **Shift**キーを追加または削除するコントロールを選択します。
+
+### <a name="dominant-controls"></a>主要なコントロール
+
+複数のコントロールの配置またはサイズ変更する場合、**ダイアログ エディター**主要なコントロールを使用して、他のコントロールのサイズや配置の方法を決定します。 既定では、主要なコントロールは、選択されている最初のコントロールは。
+
+- 押しながら主要なコントロールを指定する、 **Ctrl**キーし、を使用して、サイズやその他のコントロールの場所を制御するコントロールを選択します。*最初*します。 押しながら、 **Ctrl**キーと選択範囲内のコントロールを選択するはその選択範囲内の主要なコントロールを制御するにようにもします。
+
+- 主要なコントロールを変更する現在選択されているすべてのコントロールの外側を選択して現在の選択をオフにし、別のコントロールを選択すると、上記の手順を繰り返して*最初*します。
+
+> [!NOTE]
+> 主要なコントロールのサイズ変更ハンドルは下位のコントロールのハンドルは白抜き点灯します。 すべてのさらにサイズ変更や配置は、主要なコントロールに基づいています。
+
+## <a name="size-controls"></a>コントロールのサイズ
+
+コントロールのサイズを変更するのにには、サイズ変更ハンドルを使用します。 サイズ変更ハンドルにポインターを置き、ときにコントロールをサイズ変更できる方向を示すために図形を変更します。 アクティブなサイズ変更ハンドルは、solid と、その軸に沿ったコントロールのサイズを変更できないサイズ変更ハンドルが中空の場合は、します。
+
+- コントロールのサイズ、コントロールを選択し、サイズを変更するサイズ変更ハンドルをドラッグします。
+
+  - 上と横にあるサイズ ハンドルでは、水平方向または垂直方向のサイズを変更します。
+
+  - 角にあるサイズ ハンドルでは、水平および垂直の両方向のサイズを変更します。
+
+   > [!TIP]
+   > 押しながら、時にコントロールの 1 つのダイアログ単位 (DLU) を変更すること、 **Shift**キーを使用して、**右**と**ダウン**方向キー。
+
+- 内のテキストに合わせてコントロールのサイズを自動的に、メニューに移動**形式**か、コントロールを右クリックして選択**コンテンツ サイズ**します。
+
+- コントロールを同じサイズにするには、サイズを変更し、メニューに移動するコントロールを選択**形式** > **同じサイズに揃える**、いずれかを選択し、**両方**、 **高さ**、または**幅**します。
+
+   シリーズの最初に選択コントロールである主要なコントロールのサイズに基づいてコントロールのグループのサイズを変更するとします。 グループ内のコントロールの最終的なサイズは、主要なコントロールのサイズによって異なります。
+
+- ガイドを使用してコントロールのグループのサイズを変更するには、ガイドでは、コントロール (またはコントロール) の一方の側にスナップし、コントロール (またはコントロール) の反対側のガイドをドラッグします。 今すぐコントロール (またはコントロール) のサイズのいずれかのガイドを移動することができます。
+
+   複数のコントロールで必要に応じて、それぞれに 2 番目のガイドへのスナップのサイズします。
+
+### <a name="other-controls"></a>その他のコントロール
+
+ダイアログ ボックスを追加すると、コンボ ボックスを調整することができます。 ドロップダウン リスト ボックスのサイズを指定することもできます。 詳細については、次を参照してください。[値コンボ ボックス コントロールを追加](../windows/adding-values-to-a-combo-box-control.md)します。
+
+1. コンボ ボックスの右側にある下矢印ボタンを選択します。
+
+   ![MFC プロジェクト コンボ ボックスの矢印](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
+
+   拡張領域のドロップダウンの一覧をコンボ ボックスのサイズを表示するコントロールの変更の概略です。
+
+1. 下のサイズ変更ハンドルを使用すると、ドロップダウン リストの領域の初期サイズを変更できます。
+
+   ![コンボ&#45;MFC プロジェクトで、ボックスのサイズ変更](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+
+1. コンボ ボックスのドロップダウン リストの部分を終了するには、もう一度ドロップダウン矢印を選択します。
+
+> [!NOTE]
+> MFC を使用してダイアログ ボックスに水平スクロール バーを使用して、リスト ボックスを追加すると、スクロール バーは、アプリケーションに自動的に表示されません。
+>
+> 最も幅の広い要素の最大の幅を呼び出すことによって設定[CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent)コードにします。 この値を設定せず、スクロール バーは表示されません、でも、リスト ボックス内の項目は、ボックスよりも広い場合。
+
+## <a name="align-controls"></a>コントロールを配置します。
+
+- コントロールを配置するには、配置するコントロールを選択します。 メニューに移動して**形式** > **Align**以下の配置のいずれかを選択。
+
+   |アラインメント|説明|
+   |-----|-----------|
+   |**[左]**|選択したコントロールの左端に揃えて配置します。|
+   |**センター**|選択したコントロールを水平方向の中心点を配置します。|
+   |**権限**|選択したコントロールの右端に揃えて配置します。|
+   |**上限**|それらの上端に沿った選択したコントロールを配置します。|
+   |**左右中央**|選択したコントロールを垂直方向中央の点に揃えて配置します。|
+   |**下揃え**|選択したコントロールの下端に揃えて配置します。|
+
+   必ず最初に高いにしたいコントロールを選択または配置を実行するか、またはサイズ変更コマンドをコントロールのグループの最後の位置は、主要なコントロールの位置に依存する前に、主要なコントロールに設定します。
+
+- 領域のコントロールに均等にするには、配置を変更するコントロールを選択します。 メニューに移動**形式** > **均等スペース**し、次の間隔の配置のいずれかを選択します。
+
+   |スペース|説明|
+   |---|---|
+   |**間で**|左端と右端に選択したコントロールの間で均等に容量を制御します。|
+   |**ダウン**|最上位にある、選択されている最下位のコントロール間で均等に容量を制御します。|
+
+- コントロールを中央に配置を変更するコントロールを選択します。 メニューに移動**形式** > **ダイアログの中央に**以下の配置のいずれかを選択します。
+
+   |配置|説明|
+   |---|---|
+   |**垂直方向**|ダイアログ ボックスの縦方向に center を制御します。|
+   |**水平方向**|ダイアログ ボックスで水平方向に center を制御します。|
+
+- プッシュ ボタンをアラインするには、1 つまたは複数のプッシュ ボタンを選択します。 メニューに移動して**形式** > **ボタンの配置**、以下の配置の 1 つを選択します。
+
+   |配置|説明|
+   |---|---|
+   |**右**|プッシュ ボタン、ダイアログ ボックスの右端に揃えて配置します。|
+   |**下**|プッシュ ボタン、ダイアログ ボックスの下端に揃えて配置します。|
+
+   プッシュ ボタン以外のコントロールを選択した場合の位置に影響を与えません。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,5 +285,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
-[コントロール](../mfc/controls-mfc.md)
+[ダイアログ ボックスのコントロールを管理します。](controls-in-dialog-boxes.md)<br/>
+[方法: コントロールを追加、編集、または削除する](adding-editing-or-deleting-controls.md)<br/>
+[方法: コントロールのアクセスおよび値を定義する](defining-mnemonics-access-keys.md)<br/>

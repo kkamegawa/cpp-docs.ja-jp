@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353496"
 ---
 # <a name="compiler-error-c2144"></a>コンパイラ エラー C2144
 
@@ -23,7 +23,7 @@ ms.locfileid: "50483331"
 
 C2144 は、空白文字を含む CLR キーワードからマクロを作成しようとしているときにも発生します。
 
-型の転送を実行しようとしている場合にも、C2144 を表示があります。 参照してください[Type Forwarding (C +/cli CLI)](../../windows/type-forwarding-cpp-cli.md)詳細についてはします。
+型の転送を実行しようとしている場合にも、C2144 を表示があります。 参照してください[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)詳細についてはします。
 
 ## <a name="examples"></a>使用例
 

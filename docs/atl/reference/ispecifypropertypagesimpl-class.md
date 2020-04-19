@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-ms.openlocfilehash: fcabbcd2d5977a28f46b3d8ebfc47e8fd978f3cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c201cf6d9d89ab1a6a8e888deee1be79e5770490
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470783"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495406"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl クラス
 
-このクラスは実装`IUnknown`の既定の実装を提供し、 [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)インターフェイス。
+このクラスは`IUnknown`を実装し、 [ISpecifyPropertyPages](/windows/win32/api/ocidl/nn-ocidl-ispecifypropertypages)インターフェイスの既定の実装を提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`ISpecifyPropertyPagesImpl`します。
+から`ISpecifyPropertyPagesImpl`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -43,16 +43,16 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 
 |名前|説明|
 |----------|-----------------|
-|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|UUID の配列のカウント値を設定します。 各 UUID は、オブジェクトのプロパティ シートに表示できるプロパティ ページのいずれかの CLSID に対応します。|
+|[ISpecifyPropertyPagesImpl:: GetPages](#getpages)|UUID 値のカウントされた配列を塗りつぶします。 各 UUID は、オブジェクトのプロパティシートに表示できるいずれかのプロパティページの CLSID に対応します。|
 
 ## <a name="remarks"></a>Remarks
 
-[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)インターフェイスにより、クライアントはオブジェクトでサポートされるプロパティ ページの Clsid の一覧を取得します。 クラス`ISpecifyPropertyPagesImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[ISpecifyPropertyPages](/windows/win32/api/ocidl/nn-ocidl-ispecifypropertypages)インターフェイスを使用すると、クライアントは、オブジェクトでサポートされているプロパティページの clsid の一覧を取得できます。 クラス`ISpecifyPropertyPagesImpl`は、このインターフェイスの既定の実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
 
 > [!NOTE]
->  公開しないで、`ISpecifyPropertyPages`インターフェイスの場合は、オブジェクトがプロパティ ページをサポートしていません。
+>  オブジェクトがプロパティページ`ISpecifyPropertyPages`をサポートしていない場合は、インターフェイスを公開しないでください。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -62,11 +62,11 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages
 
-配列を格納、 [CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid)構造オブジェクトのプロパティ シートに表示できるプロパティ ページの clsid。
+[CAUUID](/windows/win32/api/ocidl/ns-ocidl-cauuid)構造体の配列に、オブジェクトのプロパティシートに表示できるプロパティページの clsid を設定します。
 
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -74,9 +74,9 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 
 ### <a name="remarks"></a>Remarks
 
-ATL では、オブジェクトのプロパティのマップを使用して、各 CLSID を取得します。
+ATL では、オブジェクトのプロパティマップを使用して、各 CLSID を取得します。
 
-参照してください[ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) Windows SDK にします。
+Windows SDK の「 [ISpecifyPropertyPages:: GetPages](/windows/win32/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 617c71115b8a1354dbb1d9998791564f0a5d18de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85adf3f919d94a82f5a68a5cd9e5f44cdca10006
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614709"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141230"
 ---
-# <a name="improperschedulerattach-class"></a>improper_scheduler_attach クラス
+# <a name="improper_scheduler_attach-class"></a>improper_scheduler_attach クラス
 
 このクラスは、現在のコンテキストに既にアタッチされている `Attach` オブジェクトで `Scheduler` メソッドが呼び出された場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class improper_scheduler_attach : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class improper_scheduler_attach : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[improper_scheduler_attach](#ctor)|オーバーロードされます。 `improper_scheduler_attach` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class improper_scheduler_attach : public std::exception;
 
 `improper_scheduler_attach`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_attach
+## <a name="ctor"></a>improper_scheduler_attach
 
 `improper_scheduler_attach` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();
@@ -57,10 +57,10 @@ improper_scheduler_attach() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [Scheduler クラス](scheduler-class.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-ms.openlocfilehash: b61aae9ba9316dded1dcb11353e52eb2fffd49a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a89bc5d510d493f557b7ea74b8eabe5dfd87ac1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196756"
 ---
 # <a name="registry-entries"></a>レジストリ エントリ
 
 DCOM には、アプリケーション Id (Appid)、レジストリで一元的な場所に 1 つまたは複数の DCOM オブジェクトの構成オプションをグループ化の概念が導入されました。 AppID を指定するには、という名前の下にあるオブジェクトの CLSID 値 AppID の値を示します。
 
-既定では、ATL によって生成されたサービスは、GUID としての AppID の CLSID を使用します。 `HKEY_CLASSES_ROOT\AppID`DCOM に固有のエントリを指定することができます。 最初に、2 つのエントリが存在します。
+既定では、ATL によって生成されたサービスは、GUID としての AppID の CLSID を使用します。  `HKEY_CLASSES_ROOT\AppID`DCOM に固有のエントリを指定することができます。 最初に、2 つのエントリが存在します。
 
 - `LocalService`、、サービスの名前と同じ値です。 この値が存在する場合は、代わりに使用、 `LocalServer32` CLSID 下キー。
 
@@ -27,4 +27,3 @@ DCOM サービスも下のもう 1 つのキーを作成する必要がある`HK
 ## <a name="see-also"></a>関連項目
 
 [Services](../atl/atl-services.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 22: 標準コマンドの実装'
+title: TN022:標準コマンドの実装
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306052"
 ---
-# <a name="tn022-standard-commands-implementation"></a>テクニカル ノート 22: 標準コマンドの実装
+# <a name="tn022-standard-commands-implementation"></a>TN022:標準コマンドの実装
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -221,7 +221,7 @@ MFC の標準的なコマンドは、範囲 0 xefff に 0xE000 に収まりま�
 
    現在このコマンドの標準の実装ではありません。 ごとにこれを実装する必要があります`CView`-クラスを派生します。
 
-   このコマンドを実装する場合は、このコマンド ID を使用してお勧めします。 MFC のチュートリアルのサンプルを参照して[SCRIBBLE](../visual-cpp-samples.md)実装例についてはします。
+   このコマンドを実装する場合は、このコマンド ID を使用してお勧めします。 MFC のチュートリアルのサンプルを参照して[SCRIBBLE](../overview/visual-cpp-samples.md)実装例についてはします。
 
 - ID_EDIT_COPY は、現在の選択範囲をクリップボードにコピーします。
 
@@ -438,7 +438,7 @@ MFC の標準的なコマンドは、範囲 0 xefff に 0xE000 に収まりま�
 
    すべての OLE クライアント アプリケーションでは、このコマンドを実装する必要があります。 AppWizard、OLE のオプションでは、スケルトンの実装を作成`OnInsertObject`ビュー クラスを完了する必要があります。
 
-   MFC OLE サンプルを参照して[OCLIENT](../visual-cpp-samples.md)このコマンドの完全な実装の例です。
+   MFC OLE サンプルを参照して[OCLIENT](../overview/visual-cpp-samples.md)このコマンドの完全な実装の例です。
 
 - ID_OLE_EDIT_LINKS 編集 OLE リンク
 
@@ -468,30 +468,29 @@ MFC の標準的なコマンドは、範囲 0 xefff に 0xE000 に収まりま�
 
 いくつかの標準コマンド Id は、ステータス バーのインジケーターとして使用されます。 これらを使用して同じ処理機構の更新コマンド UI アプリケーションのアイドル時間中に、現在の状態を表示します。 ユーザーが選択できないので (つまり、ステータス バー ペインをプッシュできません、) これらのコマンド Id、ON_COMMAND ハンドラーを指定しても意味ができなくなります。
 
-- ID_INDICATOR_CAPS: CAP ロック インジケーター。
+- ID_INDICATOR_CAPS:CAP ロック インジケーター。
 
-- ID_INDICATOR_NUM: NUM lock インジケーター。
+- ID_INDICATOR_NUM:NUM lock インジケーター。
 
-- ID_INDICATOR_SCRL: SCRL ロック インジケーター。
+- ID_INDICATOR_SCRL:SCRL ロック インジケーター。
 
-- ID_INDICATOR_KANA: かなロック インジケーター (日本語のシステムにのみ該当する場合)。
+- ID_INDICATOR_KANA:ひらがなは、インジケーター (日本語のシステムにのみ適用) をロックします。
 
 これらの 3 つすべてがで実装された`CFrameWnd::OnUpdateKeyIndicator`、コマンド ID を使用して、適切な仮想キーにマップする実装ヘルパー。 一般的な実装を有効または無効にします (状態のペインが無効になっている = なしテキスト)、`CCmdUI`仮想キーが現在ロックされているかどうかに依存するオブジェクト。
 
 このコマンド ハンドラーのカスタマイズは推奨されません。
 
-- ID_INDICATOR_EXT: 拡張選択インジケーター。
+- ID_INDICATOR_EXT :拡張選択インジケーター。
 
-- ID_INDICATOR_OVR: 上書きインジケーター。
+- ID_INDICATOR_OVR:上書きインジケーター。
 
-- ID_INDICATOR_REC: は、インジケーターを記録します。
+- ID_INDICATOR_REC:録画のインジケーター。
 
 現在これらのインジケーターの標準の実装ではありません。
 
-これらのインジケーターの Id と、ステータス バー、インジケーターの順序を使用するをお勧めこれらのインジケーターを実装するために選択した場合 (つまり、この順序で: EXT、CAP、NUM、SCRL、上書、推奨値)。
+これらのインジケーターの Id と、ステータス バー、インジケーターの順序を使用するをお勧めこれらのインジケーターを実装するために選択した場合 (つまり、この順序で。EXT、CAP、NUM、SCRL、上書、推奨値)。
 
 ## <a name="see-also"></a>関連項目
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

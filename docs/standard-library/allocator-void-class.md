@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 5591570527946895d1e0456b23327d7fabc4bef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646107"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688531"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; クラス
 
-入力するテンプレート クラス アロケーターの特殊化**void**、このコンテキストで意味のある型を定義します。
+**Void**型へのクラステンプレートアロケーターの特殊化。このコンテキストで意味を持つ型を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Remarks
 
-クラスは、テンプレート クラスを明示的に特殊化[アロケーター](../standard-library/allocator-class.md)型**void**します。 コンストラクターと代入演算子の動作は、同じテンプレート クラスの動作と同じですが、次の型のみを定義します。
+クラスは、 **void**型に対してクラステンプレート[アロケーター](../standard-library/allocator-class.md)を明示的に特殊化します。 コンストラクターと代入演算子は、クラステンプレートと同じように動作しますが、次の型のみを定義します。
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer)
 
@@ -49,14 +49,4 @@ class allocator<void> {
 
 - [value_type](../standard-library/allocator-class.md#value_type)
 
-- [rebind](../standard-library/allocator-class.md#rebind)、入れ子になったテンプレート クラス
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<memory>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+- 入れ子になったクラステンプレートを再[バインド](../standard-library/allocator-class.md#rebind)します。

@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: fd86228417234f705d3f765624cd942c982df875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456187"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126377"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits 構造体
+# <a name="short_vector_traits-structure"></a>short_vector_traits 構造体
 
-short_vector_traits により、基になるベクトルの長さと short ベクター型のスカラー型、またはスカラー型の取得
+short_vector_traits は、short ベクター型またはスカラー型の基になるベクター長とスカラー型を取得できます。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,7 +75,7 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 `T`
 
@@ -83,44 +83,44 @@ struct short_vector_traits<double_4>;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[short_vector_traits::short_vector_traits コンス トラクター](#ctor)||
+|[short_vector_traits:: short_vector_traits コンストラクター](#ctor)||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[short_vector_traits::size 定数](#size)||
+|[short_vector_traits:: size 定数](#size)||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `short_vector_traits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits コンス トラクター
+## <a name="ctor"></a>short_vector_traits:: short_vector_traits コンストラクター
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::size 定数
+## <a name="size"></a>short_vector_traits:: size 定数
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

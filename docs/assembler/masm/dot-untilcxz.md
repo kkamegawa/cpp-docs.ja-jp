@@ -1,22 +1,23 @@
 ---
 title: .UNTILCXZ
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .UNTILCXZ
 helpviewer_keywords:
 - .UNTILCXZ directive
 ms.assetid: 07723c4c-789d-4dfa-9407-c60e72cb975f
-ms.openlocfilehash: 0e008f2712f497556273c56976f5235da014d520
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e351c2a35f2b0dddc80af2f0cfdd7b62baf5200
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641962"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317475"
 ---
-# <a name="untilcxz"></a>.UNTILCXZ
+# <a name="untilcxz-32-bit-masm"></a>.CXZ (32 ビット MASM)
 
-参照してください[します。繰り返し](../../assembler/masm/dot-repeat.md)します。
+(32 ビット MASM のみ。)「」を参照してください[。繰り返し](dot-repeat.md)ます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

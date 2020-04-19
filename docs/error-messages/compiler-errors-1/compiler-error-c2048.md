@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2048
 ms.assetid: 44704726-85fc-42f0-afb9-194df8c4ca7c
-ms.openlocfilehash: 2cdb151d882d7b494e8d32494b0b3c8c62e01b3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 039be85541a7cd3864187433e5b3299bca7d067e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560391"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740131"
 ---
 # <a name="compiler-error-c2048"></a>コンパイラ エラー C2048
 
@@ -21,7 +21,7 @@ switch 文の中に 2 つ以上の 'default' があります。
 
 次の例では C2048 が生成されます。
 
-```
+```cpp
 // C2048.cpp
 int main() {
    int a = 1;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2048b.cpp
 int main() {
    int a = 1;

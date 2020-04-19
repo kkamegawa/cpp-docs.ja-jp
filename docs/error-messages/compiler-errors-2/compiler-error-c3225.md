@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 81316864c9c04c18ca1c96d1e74ad9988734eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541493"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757619"
 ---
 # <a name="compiler-error-c3225"></a>コンパイラ エラー C3225
 
-'arg' のジェネリック型引数は 'type' をすることはできません、値型であるまたはハンドル型にする必要があります。
+' arg ' のジェネリック型引数を ' type ' にすることはできません。値型またはハンドル型にする必要があります
 
-ジェネリック型引数は、正しい型でした。
+ジェネリック型引数の型が正しくありませんでした。
 
-詳細については、「[ジェネリック](../../windows/generics-cpp-component-extensions.md)」を参照してください。
+詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-ネイティブ型を持つジェネリック型をインスタンス化することはできません。 次の例では、C3225 が生成されます。
+ネイティブ型を使用してジェネリック型をインスタンス化することはできません。 次の例では、C3225 が生成されます。
 
-```
+```cpp
 // C3225.cpp
 // compile with: /clr
 class A {};
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、c# を使用してコンポーネントを作成します。 制約は、ジェネリック型が値型でインスタンス化できますのみ指定に注意してください。
+次の例では、をC#使用してコンポーネントを作成します。 制約によって、ジェネリック型が値型でのみインスタンス化できることが指定されていることに注意してください。
 
 ```
 // C3225_b.cs
@@ -52,11 +52,11 @@ int main() {
 public class MyList<T> where T: struct {}
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-この例は、次の使用、c# のコンポーネントを作成し、MyList のみが有効な制約に違反する以外の値の型でインスタンス化された<xref:System.Nullable>します。 次の例では、C3225 が生成されます。
+このサンプルではC#、作成されたコンポーネントを使用し、MyList が <xref:System.Nullable>以外の値型でのみインスタンス化できる制約に違反します。 次の例では、C3225 が生成されます。
 
-```
+```cpp
 // C3225_c.cpp
 // compile with: /clr
 #using "C3225_b.dll"

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 60e89967d139a3f5bc7b96cc1823b31b98a57fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163709"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager クラス
 
@@ -70,7 +70,7 @@ class CMenuTearOffManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例では、作成して初期化する方法、`CMenuTearOffManager`オブジェクトを呼び出すことによって、`CWinAppEX::EnableTearOffMenus`メソッド。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例では、作成して初期化する方法、`CMenuTearOffManager`オブジェクトを呼び出すことによって、`CWinAppEX::EnableTearOffMenus`メソッド。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 
@@ -96,7 +96,7 @@ void Build(
 
 [in]*uiTearOffBarID*<br/>
 
-[in]*strText*<br/>
+[in] *strText*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -202,7 +202,7 @@ void SetInUse(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmdId*<br/>
+[in] *uiCmdId*<br/>
 
 [in]*bUse*<br/>
 

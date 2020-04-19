@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-ms.openlocfilehash: c8896ce27afc40ad095e02a2453628ffc05900da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245834"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits クラス
 

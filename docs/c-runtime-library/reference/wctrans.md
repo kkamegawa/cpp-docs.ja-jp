@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944886"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -45,12 +48,12 @@ wctrans_t wctrans(
 
 ### <a name="parameters"></a>パラメーター
 
-*プロパティ*<br/>
+*property*<br/>
 有効な変換のいずれかを指定する文字列。
 
 ## <a name="return-value"></a>戻り値
 
-場合、 **LC_CTYPE**の現在のロケールのカテゴリが名前に一致するプロパティの文字列マッピングを定義しない*プロパティ*関数は 0 を返します。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
+現在のロケールの**LC_CTYPE**カテゴリで、プロパティ文字列*プロパティ*と一致する名前を持つマッピングが定義されていない場合、この関数は0を返します。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -60,8 +63,8 @@ wctrans_t wctrans(
 
 |関数|同等なもの|
 |--------------|-------------|
-|tolower(c)|towctrans (c、wctrans("towlower"))|
-|towupper(c)|towctrans (c、wctrans("toupper"))|
+|tolower (c)|towctrans (c、wctrans ("towlower"))|
+|towupper (c)|towctrans (c、wctrans ("toupper"))|
 
 ## <a name="requirements"></a>必要条件
 

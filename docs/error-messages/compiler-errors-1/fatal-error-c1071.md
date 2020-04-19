@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C1071
 ms.assetid: 489f1786-370e-4ecd-af67-538fe6e5bd4e
-ms.openlocfilehash: 8fe6b0f3bb1253f72c97f29070ba81cdbdf80508
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f39359d55b5564c6379c84f07e942cf3484e011
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506705"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747411"
 ---
 # <a name="fatal-error-c1071"></a>致命的なエラー C1071
 
 コメント内で予期しない EOF が見つかりました。
 
-コンパイラでは、コメントのスキャン中に、ファイルの末尾に達しました。
+コメントのスキャン中に、コンパイラがファイルの末尾に到達しました。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. コメントの終端記号がありません (*/)。
+1. コメント終端記号 (*/) がありません。
 
-1. ソース ファイルの最後の行でのコメントの後ろに改行文字がありません。
+1. ソースファイルの最後の行にあるコメントの後に改行文字がありません。
 
 次の例では、C1071 が生成されます。
 
-```
+```cpp
 // C1071.cpp
 int main() {
 }

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3094
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
-ms.openlocfilehash: 1b2cd29738763e5b31cc6727126114fca509a47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9d3aaf8911e74734bb6a8ac03dfd6ebe5bc7a8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512578"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751327"
 ---
 # <a name="compiler-error-c3094"></a>コンパイラ エラー C3094
 
 'attribute': 匿名使用は許可されていません
 
-属性のスコープを正しく指定しませんでした。  詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+属性のスコープを正しく指定しませんでした。  詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3094 が生成されます。
 
-```
+```cpp
 // C3094.cpp
 // compile with: /clr /c
 using namespace System;

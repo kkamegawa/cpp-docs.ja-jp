@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 8261d789f50c2750cccce48dac675ef478a70420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504391"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514263"
 ---
-# <a name="pointerdefault"></a>pointer_default
+# <a name="pointer_default"></a>pointer_default
 
-パラメーター リストに表示される最上位レベルのポインターを除く、すべてのポインターの既定のポインターの属性を指定します。
+パラメーターリストに表示されるトップレベルのポインターを除く、すべてのポインターの既定のポインター属性を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,16 +25,16 @@ ms.locfileid: "50504391"
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
-ポインター型を記述する値: **ptr**、 **ref**、または**一意**します。
+*value*<br/>
+ポインターの種類として**ptr**、 **ref**、または**unique**を示す値。
 
 ## <a name="remarks"></a>Remarks
 
-**Pointer_default** C++ 属性と同じ機能を持つ、 [pointer_default](/windows/desktop/Midl/pointer-default) MIDL 属性。
+**Pointer_default** C++属性には、 [pointer_default](/windows/win32/Midl/pointer-default) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[defaultvalue](defaultvalue.md)の使用サンプル**pointer_default**します。
+**Pointer_default**の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -2,17 +2,17 @@
 title: equal_to 構造体
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::equal_to
+- functional/std::equal_to
 helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: ffea2a9329e08796c49aa06888b8cc9a6dac8642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607429"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245835"
 ---
 # <a name="equalto-struct"></a>equal_to 構造体
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*をサポートする任意の型、`operator==`指定または推論された型のオペランドを受け取る。
+*型*、 *T*、 *U*\
+指定または推論された型のオペランドを受け取る `operator==` をサポートする任意の型。
 
-*左*<br/>
+*左*\
 等値演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*<br/>
+*そうです*\
 等値演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
@@ -114,4 +115,3 @@ The vector v2 = ( -0 1 -4 5 -8 9 )
 The result of the element-wise equal_to comparison
 between v1 & v2 is: ( 1 1 0 1 0 1 )
 ```
-

@@ -1,51 +1,47 @@
 ---
 title: リフレクション メッセージ用のメッセージ ハンドラーの定義
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
 helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 89cb1631be7b8588d02518eacbc93b466a275828
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38c63464cacf445688a1d431a65af21eac86f4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531877"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907939"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>リフレクション メッセージ用のメッセージ ハンドラーの定義
 
-新しい MFC コントロール クラスを作成すると、そのメッセージ ハンドラーを定義できます。 リフレクション メッセージ ハンドラーは、親によってメッセージの受信前に、独自のメッセージを処理するコントロール クラスを使用できます。 MFC を使用する[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)コントロールから親ウィンドウにメッセージを送信する関数。
+新しい MFC コントロールクラスを作成したら、それに対応するメッセージハンドラーを定義できます。 リフレクションされたメッセージハンドラーを使用すると、親によってメッセージが受信される前に、コントロールクラスで独自のメッセージを処理できます。 MFC の[CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)関数を使用すると、コントロールから親ウィンドウにメッセージを送信できます。
 
-(オーナー描画) を実行する親ウィンドウに依存するのではなくなどのことがこの機能により、自身を再描画するリスト ボックスを作成します。 反映されたメッセージの詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
+この機能を使用すると、たとえば、親ウィンドウに依存するのではなく、自身を再描画するリストボックスを作成することができます (オーナー描画)。 リフレクションされたメッセージの詳細については、「リフレクションされた[メッセージの処理](../../mfc/handling-reflected-messages.md)」を参照してください。
 
-作成する、 [ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)、同じ機能を持つ ActiveX コントロールのプロジェクトを作成する必要があります。
+同じ機能を持つ[activex コントロール](../../mfc/activex-controls-on-the-internet.md)を作成するには、activex コントロール用のプロジェクトを作成する必要があります。
 
 > [!NOTE]
->  リフレクション メッセージを追加することはできません (ocm _*メッセージ*) の ActiveX を使用して制御プロパティ ウィンドウで、次のようです。 これらのメッセージを手動で追加する必要があります。
+>  次に示すように、クラスウィザードを使用して ActiveX コントロールのリフレクションメッセージ (OCM_*message*) を追加することはできません。 これらのメッセージは手動で追加する必要があります。
 
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>[プロパティ] ウィンドウから反映されたメッセージのメッセージ ハンドラーを定義するには
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-class-wizard"></a>クラスウィザードからリフレクションメッセージのメッセージハンドラーを定義するには
 
-1. リストなどのコントロールや rebar コントロール、ツールバー、ツリー コントロールを MFC プロジェクトに追加します。
+1. リスト、rebar コントロール、ツールバー、ツリーコントロールなどのコントロールを MFC プロジェクトに追加します。
 
-1. クラス ビューで、コントロール クラスの名前をクリックします。
+1. クラスビューで、コントロールクラスの名前をクリックします。
 
-1. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、コントロール クラス名が表示されます、**クラス名**一覧。
+1. [クラスウィザード](mfc-class-wizard.md)で、 **[クラス名]** ボックスの一覧にコントロールクラスの名前が表示されます。
 
-1. をクリックして、**メッセージ**コントロールに追加できる Windows メッセージを表示するボタンをクリックします。
+1. **[メッセージ]** タブをクリックして、コントロールに追加できる Windows メッセージを表示します。
 
-1. 見出しが表示されるまでは、[プロパティ] ウィンドウ内のメッセージの一覧をスクロールして**反映済み**します。 または、クリックして、**カテゴリ**ボタンをクリックし、表示するビューを折りたたんだり、**反映済み**見出し。
+1. ハンドラーを定義するリフレクションメッセージを選択します。 反映されたメッセージには等号 (=) が付いています。
 
-1. リフレクションにハンドラーを定義するメッセージを選択します。 反映されたメッセージは、等号 (=) でマークされます。
+1. クラスウィザードの右側の列にあるセルをクリックすると、ハンドラーの提案された\<名前が [add >*handlername*] として表示されます。 (たとえば、 **= WM_CTLCOLOR**メッセージハンドラーは、add \<>**CTLCOLOR**) を提案します。
 
-1. ハンドラーとしての推奨される名前を表示する [プロパティ] ウィンドウで、右側の列のセルをクリックして\<追加 >*HandlerName*します。 (たとえば、 **= WM_CTLCOLOR**メッセージ ハンドラーを提案\<追加 >**CtlColor**)。
+1. 同意する場合は、推奨される名前をクリックします。 ハンドラーがプロジェクトに追加されます。
 
-1. 受け入れるように推奨される名前をクリックします。 ハンドラーは、プロジェクトに追加されます。
-
-   リフレクション メッセージ ウィンドウの右側の列に追加したメッセージ ハンドラー名が表示されます。
-
-9. を編集またはメッセージ ハンドラーを削除するには、手順 4 ~ 7 を繰り返します。 編集または削除、および適切なタスクをクリックします。 ハンドラー名を含むセルをクリックします。
+1. メッセージハンドラーを編集または削除するには、手順 4. ~ 7. を繰り返します。 編集または削除するハンドラー名を含むセルをクリックし、適切なタスクをクリックします。
 
 ## <a name="see-also"></a>関連項目
 
@@ -56,4 +52,4 @@ ms.locfileid: "50531877"
 [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+[クラス各部へのジャンプ](../../ide/navigate-code-cpp.md)

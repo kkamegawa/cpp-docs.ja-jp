@@ -11,11 +11,11 @@ helpviewer_keywords:
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
 ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331123"
 ---
 # <a name="single-inheritance"></a>単一継承
 
@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 各クラスが派生される基底クラスは、派生クラスを宣言する前に宣言されています。 基底クラスについて前方参照の宣言を指定するだけでは十分ではありません。完全な宣言である必要があります。
 
-前の例では、アクセス指定子で**パブリック**使用されます。 Public、protected、および private の継承の意味については、「[メンバー アクセス コントロール。](../cpp/member-access-control-cpp.md)
+前の例では、アクセス指定子で**public**使用されます。 public、protected、および private の継承の意味については、「[メンバー アクセス コントロール。](../cpp/member-access-control-cpp.md)
 
 クラスは、次の図に示すように、多くの特定のクラスの基底クラスとして機能します。
 

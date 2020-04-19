@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445210"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966557"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>コンパイラの警告 (レベル 1) C4346
 
-'name': 依存名が型ではありません
+' name ': 依存名は型ではありません
 
-[Typename](../../cpp/typename.md)依存名が型として扱われる場合は、キーワードが必要です。 すべてのバージョンの Visual C で同様に動作するコードの場合は、追加`typename`宣言にします。
+依存名を型として扱う場合は、 [typename](../../cpp/typename.md)キーワードを指定する必要があります。 すべてのバージョンのビジュアルC++で同じコードを使用するには、宣言に `typename` を追加します。
 
 次の例では、C4346 が生成されます。
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-次のサンプルは、その他の例を示しています。 場所、 **typename**キーワードが必要です。
+次のサンプルは、 **typename**キーワードが必要なその他の例を示しています。
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -55,7 +55,7 @@ struct M : public L<typename T::Type, T::Value>
 
 でこれを
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

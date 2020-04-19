@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: 2a16ad50911185c27906eee27902cee9971932c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493679"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503005"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML コントロールの変更
 
@@ -35,7 +35,7 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. 3 番目のメソッドを追加`GoToURL`、"UI"で終わらないインターフェイス このメソッドを呼び出すことによって実装[IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)、次のようにします。
+1. 3 番目のメソッドを追加`GoToURL`、"UI"で終わらないインターフェイス このメソッドを呼び出すことによって実装[IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\))、次のようにします。
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
@@ -49,7 +49,7 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 
    HTML、特に、外部の Windows ディスパッチ メソッドの呼び出しを確認します。 HTML の呼び出し、プロジェクトの`OnClick`メソッドとパラメーターは、コントロールの本体を示します (`theBody`) と色を割り当てる ("`red`")。 メソッドの呼び出しに続くテキストは、ボタンに表示されるラベルです。
 
-1. もう 1 つ追加`OnClick`メソッド、色の変更のみです。 例えば:
+1. もう 1 つ追加`OnClick`メソッド、色の変更のみです。 例:
 
     ```html
     <br>
@@ -59,7 +59,7 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 
    このメソッドでは、ラベルのボタンを作成します。**更新**、ユーザーがコントロールを、元の白い背景に返されるクリックできます。
 
-1. 呼び出しを追加、`HelloHTML`メソッドを作成します。 例えば:
+1. 呼び出しを追加、`HelloHTML`メソッドを作成します。 例:
 
     ```html
     <br>

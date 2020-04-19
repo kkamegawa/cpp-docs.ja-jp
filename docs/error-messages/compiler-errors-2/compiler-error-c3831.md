@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
-ms.openlocfilehash: f85f94afa796f4ccf0efecd8f9223c2c48ca623d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61ff2c7f7e99698ffbd521153663b1ab27bd6fde
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508837"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741600"
 ---
 # <a name="compiler-error-c3831"></a>コンパイラ エラー C3831
 
-'member': 'class' は、ピン留めされたデータ メンバー、またはピン ポインターを返すメンバー関数を含めることはできません
+' member ': ' class ' はピンされたデータメンバーまたは固定ポインターを返すメンバー関数を持つことはできません
 
-[pin_ptr (C +/cli CLI)](../../windows/pin-ptr-cpp-cli.md)正しく使用されていません。
+[pin_ptr (C++/cli)](../../extensions/pin-ptr-cpp-cli.md)が正しく使用されませんでした。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3831 が生成されます。
 
-```
+```cpp
 // C3831a.cpp
 // compile with: /clr
 ref class Y

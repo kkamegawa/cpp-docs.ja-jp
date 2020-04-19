@@ -1,9 +1,9 @@
 ---
 title: _callnewh
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _callnewh
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _callnewh
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: 98526f6c8c40b71104345563db71ef098b6cfb8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e14450538807b164897c335f7e37d82d8562314
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643665"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939388"
 ---
-# <a name="callnewh"></a>_callnewh
+# <a name="_callnewh"></a>_callnewh
 
 現在インストールされている*新しいハンドラー*を呼び出します。
 
@@ -47,10 +50,10 @@ int _callnewh(
 
 ## <a name="return-value"></a>戻り値
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|0|エラー: 新しいハンドラーがインストールされていないか、新しいハンドラーがアクティブになっていません。|
-|1|成功: 新しいハンドラーがインストールされ、アクティブになっています。 メモリ割り当てを再試行できます。|
+|0|不具合新しいハンドラーがインストールされていないか、新しいハンドラーがアクティブになっていません。|
+|1|ブランド新しいハンドラーがインストールされ、アクティブになります。 メモリ割り当てを再試行できます。|
 
 ## <a name="exceptions"></a>例外
 

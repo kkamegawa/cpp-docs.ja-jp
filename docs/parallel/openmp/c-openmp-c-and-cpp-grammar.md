@@ -3,11 +3,11 @@ title: 'C:  OpenMP C および C++ の文法'
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
 ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362947"
 ---
 # <a name="c-openmp-c-and-c-grammar"></a>C:  OpenMP C および C++ の文法
 

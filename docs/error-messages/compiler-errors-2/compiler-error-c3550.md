@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3550
 ms.assetid: 9f2d5ffc-e429-41a1-89e3-7acc4fd47e14
-ms.openlocfilehash: dbed14b9f2fa0f2163484edd8b5dfa330af9cbf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 106ac93496eebb25ee603251d84680053e1310b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375913"
 ---
 # <a name="compiler-error-c3550"></a>コンパイラ エラー C3550
 

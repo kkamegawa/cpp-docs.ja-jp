@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-ms.openlocfilehash: a953d3d8d8c28ac7741d0bd8dd11477cf5174eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183146"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices 名前空間
 
@@ -58,7 +58,7 @@ namespace Platform {
 
 **メタデータ:** platform.winmd
 
-**名前空間:** Platform::CompilerServices
+**名前空間:** Platform::compilerservices
 
 ## <a name="see-also"></a>関連項目
 

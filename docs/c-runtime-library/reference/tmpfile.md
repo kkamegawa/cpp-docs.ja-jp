@@ -1,9 +1,9 @@
 ---
 title: tmpfile
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530326"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957539"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -42,15 +45,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **tmpfile**ストリーム ポインターを返します。 それ以外を返します、 **NULL**ポインター。
+成功した場合、 **tmpfile**はストリームポインターを返します。 それ以外の場合は、 **NULL**ポインターを返します。
 
 ## <a name="remarks"></a>Remarks
 
 **Tmpfile**関数は、一時ファイルを作成し、そのストリームへのポインターを返します。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
 
-ファイルを開けない場合**tmpfile**を返します、 **NULL**ポインター。 通常、またはプログラムの終了時に、ファイルが閉じられたときに、この一時ファイルが自動的に削除 **_rmtmp**と呼ばれる場合は、現在の作業ディレクトリが変更しないと仮定します。 一時ファイルを開いた**w + b** (バイナリ読み取り/書き込み) モード。
+ファイルを開くことができない場合、 **tmpfile**は**NULL**ポインターを返します。 この一時ファイルは、ファイルが閉じられたとき、プログラムが正常に終了したとき、または **_rmtmp**が呼び出されたときに自動的に削除されます。これは、現在の作業ディレクトリが変更されていないことを前提としています。 一時ファイルは、 **w + b** (バイナリ読み取り/書き込み) モードで開かれます。
 
-TMP_MAX よりも多くしようとすると、エラーが発生する可能性が (STDIO を参照してください。H) 呼び出し**tmpfile**します。
+TMP_MAX を超える場合、エラーが発生することがあります (「STDIO」を参照してください)。H) **tmpfile**を使用してを呼び出します。
 
 ## <a name="requirements"></a>必要条件
 

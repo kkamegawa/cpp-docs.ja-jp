@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-ms.openlocfilehash: e6b56e98a1adc7426fe0d1b65d623549a4391c8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c5caa0129730750a6429d9f7fa883e9af30f225
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528948"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449262"
 ---
 # <a name="invalidargument-class"></a>invalid_argument クラス
 
@@ -69,5 +69,5 @@ Type class std::invalid_argument
 
 ## <a name="see-also"></a>関連項目
 
-[logic_error クラス](../standard-library/logic-error-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error クラス](../standard-library/logic-error-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_scalar class
 - is_scalar
 ms.assetid: a0cdfc9a-f27e-4808-890f-6ed7942db60c
-ms.openlocfilehash: 2b981e009b895d55c251bc55a654739fe1eb5b95
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d562ba4beb037d547846f57e7b40eaceb409a358
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520310"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449811"
 ---
 # <a name="isscalar-class"></a>is_scalar クラス
 
@@ -27,12 +27,12 @@ struct is_scalar;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-場合、型述語のインスタンスは true を保持型*Ty*が整数型、メンバーの種類、型、列挙型、ポインター型、またはポインター浮動小数点または`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
+型*Ty*が整数型、浮動小数点型、列挙型、ポインター型、またはメンバー型へのポインター、また`cv-qualified`はそのいずれかの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -77,5 +77,5 @@ is_scalar<float> == true
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound クラス](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound クラス](../standard-library/is-compound-class.md)

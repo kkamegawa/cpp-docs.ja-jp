@@ -16,12 +16,12 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 061cc04857b0d1763fb4ee975912bcca1b9d014f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392948"
 ---
 # <a name="accessing-run-time-class-information"></a>ランタイム クラス情報へのアクセス方法
 
@@ -64,4 +64,3 @@ ms.locfileid: "50455277"
 ## <a name="see-also"></a>関連項目
 
 [CObject の使い方](../mfc/using-cobject.md)
-

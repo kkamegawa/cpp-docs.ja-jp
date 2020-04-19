@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161668"
 ---
 # <a name="platformagile-class"></a>Platform::Agile クラス
 
@@ -74,11 +74,11 @@ class Agile;
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **ヘッダー:** agile.h
 
@@ -154,7 +154,7 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>戻り値
 
-`T` 型のオブジェクトへのハンドルのアドレス。
+ `T` 型のオブジェクトへのハンドルのアドレス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -239,7 +239,7 @@ T^ operator=( IUnknown* lp ) throw();
 
 ### <a name="return-value"></a>戻り値
 
-`T` 型のオブジェクトへのハンドル。
+ `T` 型のオブジェクトへのハンドル。
 
 ### <a name="remarks"></a>Remarks
 

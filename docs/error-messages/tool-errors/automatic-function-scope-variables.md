@@ -1,24 +1,24 @@
 ---
 title: 自動変数 (関数スコープ)
-ms.date: 11/04/2016
+ms.date: 04/22/2019
 helpviewer_keywords:
 - automatic variables
 - variables, automatic
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: 8803a1367dca2faf2042e851449eeedb6978b9e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60dcfe61be24516b96054532931fb65245ab31d0
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496097"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856690"
 ---
 # <a name="automatic-function-scope-variables"></a>自動変数 (関数スコープ)
 
 関数内で宣言された変数は、その関数のスコープ内でのみ使用できます。
 
-```
+```cpp
 // LNK2019_AV.cpp
 // compile with: /c
 void test(void);
@@ -35,7 +35,7 @@ int main() {
 
 それから
 
-```
+```cpp
 // LNK2019_AV_2.cpp
 // compile with: LNK2019_AV.cpp
 // LNK2019 expected

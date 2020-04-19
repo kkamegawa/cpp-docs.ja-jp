@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186590"
 ---
 # <a name="ole-background"></a>OLE の背景知識
 
@@ -26,7 +26,7 @@ OLE には、アプリケーション間でシームレスな相互作用の目�
 
 - リンクと埋め込み
 
-   リンクと埋め込みは別のアプリケーションで作成された OLE ドキュメント内で作成された項目を格納するための 2 つの方法です。 2 つの違いの概要については、記事を参照してください。 [OLE 概要: リンクと埋め込み](../mfc/ole-background-linking-and-embedding.md)します。 詳細については、記事を参照してください。[コンテナー](../mfc/containers.md)と[サーバー](../mfc/servers.md)します。
+   リンクと埋め込みは別のアプリケーションで作成された OLE ドキュメント内で作成された項目を格納するための 2 つの方法です。 2 つの違いの概要については、記事を参照してください。 [OLE の背景。リンクと埋め込み](../mfc/ole-background-linking-and-embedding.md)します。 詳細については、記事を参照してください。[コンテナー](../mfc/containers.md)と[サーバー](../mfc/servers.md)します。
 
 - (ビジュアル編集)、インプレース アクティブ化
 
@@ -42,7 +42,7 @@ OLE には、アプリケーション間でシームレスな相互作用の目�
 
 - 複合ファイル
 
-   複合ファイルでは、OLE アプリケーション用の複合ドキュメント構造を格納する簡素化する標準的なファイル形式を提供します。 複合ファイルで記憶域がディレクトリの多くの機能にあり、ストリームのファイルの多くの機能があります。 このテクノロジは、構造化ストレージとも呼ばれます。 複合ファイルの詳細については、記事を参照してください。[コンテナー: 複合ファイル](../mfc/containers-compound-files.md)します。
+   複合ファイルでは、OLE アプリケーション用の複合ドキュメント構造を格納する簡素化する標準的なファイル形式を提供します。 複合ファイルで記憶域がディレクトリの多くの機能にあり、ストリームのファイルの多くの機能があります。 このテクノロジは、構造化ストレージとも呼ばれます。 複合ファイルの詳細については、記事を参照してください。[コンテナー。複合ファイル](../mfc/containers-compound-files.md)します。
 
 - 汎用データ転送
 
@@ -52,23 +52,22 @@ OLE には、アプリケーション間でシームレスな相互作用の目�
 
    ドラッグ アンド ドロップは、簡単に使用できる、直接操作、またはアプリケーションで 1 つのウィンドウ内であっても、アプリケーション内での windows 間でのアプリケーション間でデータを転送する手法です。 転送されるデータが選択され、目的の転送先にドラッグします。 ドラッグ アンド ドロップは、汎用データ転送に基づいています。 ドラッグ アンド ドロップする方法の詳細については、記事を参照してください。[ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)します。
 
-- コンポーネント オブジェクト モデル
+- コンポーネント オブジェクト モデル (Component Object Model)
 
    コンポーネント オブジェクト モデル (COM) OLE オブジェクトが相互に通信するときに使用するインフラストラクチャを提供します。 MFC OLE クラスには、プログラマの COM が簡略化します。 COM は、COM オブジェクト OLE とアクティブの両方のテクノロジの基本となるため、Active のテクノロジの一部です。 COM の詳細については、次を参照してください。、 [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md)トピック。
 
 次の記事では、さらに重要な OLE トピックの一部がについて説明します。
 
-- [OLE 概要: リンクと埋め込み](../mfc/ole-background-linking-and-embedding.md)
+- [OLE の背景知識: リンクと埋め込み](../mfc/ole-background-linking-and-embedding.md)
 
-- [OLE 概要: コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)
+- [OLE の背景知識: コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)
 
-- [OLE の背景知識: 実装の方法](../mfc/ole-background-implementation-strategies.md)
+- [OLE の背景知識: 実装戦略](../mfc/ole-background-implementation-strategies.md)
 
-- [OLE の背景知識: MFC における実装](../mfc/ole-background-mfc-implementation.md)
+- [OLE の背景知識: MFC の実装](../mfc/ole-background-mfc-implementation.md)
 
 全般 OLE については、上記の記事に見つかりませんでした、MSDN で OLE を検索してください。
 
 ## <a name="see-also"></a>関連項目
 
 [OLE](../mfc/ole-in-mfc.md)
-

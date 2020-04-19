@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-ms.openlocfilehash: 89d681f1a092957bc966d2ec788a0f9aa2261ada
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c000a9e927169ef710554372217ba15089ee11b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457292"
 ---
 # <a name="constructing-input-stream-objects"></a>入力ストリーム オブジェクトのコンストラクト
 
@@ -23,7 +23,7 @@ ms.locfileid: "50543677"
 
 入力ファイル ストリームは、2 つの方法で作成できます。
 
-- 使用して、 **void**引数コンス トラクターを呼び出して、`open`メンバー関数。
+- **Void**引数コンストラクターを使用し、次に`open`メンバー関数を呼び出します。
 
    ```cpp
    ifstream myFile; // On the stack
@@ -55,4 +55,4 @@ myString>> amt; // amt contains 123.45
 
 ## <a name="see-also"></a>関連項目
 
-[入力ストリーム](../standard-library/input-streams.md)<br/>
+[入力ストリーム](../standard-library/input-streams.md)

@@ -1,5 +1,5 @@
 ---
-title: isgreater、isgreaterequal、小さければ、islessequal、islessgreater、isunordered
+title: isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 ms.date: 01/31/2019
 f1_keywords:
 - isgreater
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - islessgreater function
 - isunordered function
 ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333704"
 ---
-# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、小さければ、islessequal、islessgreater、isunordered
+# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 
 2 つの浮動小数点値の順序付けの関係を決定します。
 
@@ -113,7 +113,7 @@ inline bool isunordered(
 
 すべての比較では、無限大記号が同じは等しいと比較します。 負の無限大とは、有限値または正の無限大より小さいです。 正の無限大では、任意の有限値または負の無限大を超えています。 ゼロでは、符号に関係なく同じです。 Nan は、同じか、または別の NaN を含む、任意の値より大きいよりも小さいではありません。
 
-どちらの引数が NaN の場合、順序付けのマクロが場合**isgreater**、 **isgreaterequal**、**小さければ**、および**islessequal**ゼロ以外の値を返します場合は値の間で、指定された順序付けリレーションシップ*x*と*y* true を保持します。 これらのマクロは、いずれかまたは両方の引数が Nan である場合、または注文のリレーションシップが false の場合に 0 を返します。 関数フォームは、同様に動作しますが、返す**true**または**false**します。
+どちらの引数が NaN の場合、順序付けのマクロが場合**isgreater**、 **isgreaterequal**、**isless**、および**islessequal**ゼロ以外の値を返します場合は値の間で、指定された順序付けリレーションシップ*x*と*y* true を保持します。 これらのマクロは、いずれかまたは両方の引数が Nan である場合、または注文のリレーションシップが false の場合に 0 を返します。 関数フォームは、同様に動作しますが、返す**true**または**false**します。
 
 **Islessgreater**マクロは、両方に 0 以外の値を返します*x*と*y* 、Nan でないと*x*かよりも大きいか小さい*y*します。 いずれかまたは両方の引数が Nan の場合、または値が等しい場合は 0 を返します。 関数の形式は、同様に動作が返されます**true**または**false**します。
 
@@ -127,14 +127,14 @@ inline bool isunordered(
 
 |関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**、 **isgreaterequal**、**小さければ**、<br/>**islessequal**、 **islessgreater**、 **isunordered** | \<math.h> | \<math.h> または \<cmath> |
+| **isgreater**、 **isgreaterequal**、**isless**、<br/>**islessequal**、 **islessgreater**、 **isunordered** | \<math.h> | \<math.h> または \<cmath> |
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite _finite、_finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>

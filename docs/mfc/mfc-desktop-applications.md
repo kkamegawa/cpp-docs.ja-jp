@@ -1,6 +1,6 @@
 ---
 title: MFC デスクトップ アプリケーション
-ms.date: 11/04/2016
+ms.date: 07/28/2019
 f1_keywords:
 - MFC
 - mfc
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 9c72e9b4964aa76631b1b9d42bfbd158a2ae8fc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604205"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68607539"
 ---
 # <a name="mfc-desktop-applications"></a>MFC デスクトップ アプリケーション
 
-Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の多くにオブジェクト指向のラッパーを提供します。 かなりシンプルなデスクトップ アプリケーションの作成にも使用できますが、複数のコントロールを使用する複雑なユーザー インターフェイスを開発する必要がある場合に最も役立ちます。 MFC を使用すると、Office スタイルのユーザー インターフェイスを持つアプリケーションを作成できます。
+Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の多くにオブジェクト指向のラッパーを提供します。 かなりシンプルなデスクトップ アプリケーションの作成にも使用できますが、複数のコントロールを使用する複雑なユーザー インターフェイスを開発する必要がある場合に最も役立ちます。 MFC を使用すると、Office スタイルのユーザー インターフェイスを持つアプリケーションを作成できます。 Windows プラットフォーム自体に関するドキュメントについては、 [windows のドキュメント](/windows/index)を参照してください。 MFC を使用せずにでC++ windows アプリケーションをビルドする方法の詳細については、「 [Win32 API を使用したデスクトップ Windows アプリの構築](/windows/win32/index)」を参照してください。
 
 『MFC リファレンス』では、Microsoft Foundation Class ライブラリ を構成するクラス、グローバル関数、グローバル変数、マクロについて説明しています。
 
@@ -29,9 +29,9 @@ Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の
 パブリック クラス メンバーおよびプロテクト クラス メンバーは、アプリケーション プログラムや派生クラスでよく使われるものだけを取り上げています。 全クラス メンバーの一覧は、クラスのヘッダー ファイルを参照してください。
 
 > [!IMPORTANT]
->  MFC クラスとそのメンバーは、Windows ランタイム環境で実行するアプリケーションでは使用できません。
+>  MFC クラスとそのメンバーは、Windows ランタイム環境で実行されるアプリケーションでは使用できません。
 >
->  マルチバイト文字エンコード (MBCS) の MFC ライブラリ (DLL) は、Visual Studio に含まれなくなりましたが、Visual Studio アドオンとして使用できます。 詳細については、次を参照してください。 [MFC MBCS DLL アドオン](mfc-mbcs-dll-add-on.md)します。
+>  マルチバイト文字エンコード (MBCS) の MFC ライブラリ (DLL) は、Visual Studio に含まれなくなりましたが、Visual Studio アドオンとして使用できます。 詳細については、「 [MFC MBCS DLL アドオン](mfc-mbcs-dll-add-on.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -47,7 +47,7 @@ MFC ライブラリのクラスをカテゴリ別に一覧表示します。
 [チュートリアル](walkthroughs-mfc.md)<br/>
 MFC ライブラリ機能に関連するさまざまなタスクを解説している記事を紹介します。
 
-[テクニカル ノート](mfc-technical-notes.md)<br/>
+[テクニカルノート](mfc-technical-notes.md)<br/>
 MFC 開発チームの執筆によるクラス ライブラリに関する技術情報へのリンクを提供します。
 
 [MFC のカスタマイズ](customization-for-mfc.md)<br/>
@@ -79,13 +79,13 @@ Visual Studio の MFC アプリケーションを作成するための機能の�
 [ATL/MFC 共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 MFC と ATL で共有されるクラスへのリンクを提供します。
 
-[MFC のサンプル](../visual-cpp-samples.md)<br/>
+[MFC のサンプル](../overview/visual-cpp-samples.md)<br/>
 MFC の使い方を示すサンプルへのリンクを提供します。
 
 [Visual C++ ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
 Visual C++ に用意されているさまざまなライブラリへのリンクがあります。ATL、MFC、OLE DB の各テンプレート、C ランタイム ライブラリ、および C++ 標準ライブラリが含まれます。
 
-[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Visual Studio デバッガーを使用してアプリケーションやストアド プロシージャの論理エラーを修正する方法を説明するトピックへのリンクがあります。
 
 ## <a name="see-also"></a>関連項目

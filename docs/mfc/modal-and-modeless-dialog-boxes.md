@@ -7,35 +7,34 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 7e1dc9c40f60dc46117ee0673a038d5a63df7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528363"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685177"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>モーダルとモードレスのダイアログ ボックス
 
-クラスを使用して[CDialog](../mfc/reference/cdialog-class.md)  ダイアログ ボックスの 2 つの種類を管理します。
+クラス[CDialog](../mfc/reference/cdialog-class.md)を使用すると、次の2種類のダイアログボックスを管理できます。
 
-- *モーダル ダイアログ ボックス*ユーザーがプログラムを続行する前に応答を必要とします。
+- *モーダルダイアログボックス*。プログラムを続行する前にユーザーが応答する必要があります。
 
-- *モードレス ダイアログ ボックス*、常に画面とは、いつでも使用できるはその他のユーザー アクティビティを許可
+- *モードレスダイアログボックス*。画面上に表示され、いつでも使用できますが、他のユーザーアクティビティを許可します。
 
-リソースの編集と、ダイアログ テンプレートを作成する手順は、モーダルとモードレスのダイアログ ボックスのと同じです。
+ダイアログテンプレートを作成するためのリソースの編集と手順は、モーダルおよびモードレスのダイアログボックスでも同じです。
 
-プログラムのダイアログ ボックスを作成するには、次の手順が必要です。
+プログラムのダイアログボックスを作成するには、次の手順を実行する必要があります。
 
-1. 使用して、[ダイアログ エディター](../windows/dialog-editor.md)  ダイアログ ボックスを設計すると、そのダイアログ テンプレート リソースを作成します。
+1. ダイアログボックスをデザインし、ダイアログテンプレートリソースを作成するには、[ダイアログエディター](../windows/dialog-editor.md)を使用します。
 
-1. ダイアログ クラスを作成します。
+1. ダイアログクラスを作成します。
 
-1. 接続、[メッセージ ハンドラーにコントロールをダイアログ リソースの](../windows/adding-event-handlers-for-dialog-box-controls.md)ダイアログ クラス。
+1. ダイアログクラスの[メッセージハンドラーにダイアログリソースのコントロールを](../windows/adding-event-handlers-for-dialog-box-controls.md)接続します。
 
-1. 関連付けられているダイアログ ボックスのコントロールを指定するデータ メンバーを追加する[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)と[ダイアログ データ検証](../mfc/dialog-data-validation.md)コントロール。
+1. ダイアログボックスのコントロールに関連付けられているデータメンバーを追加し、コントロールの[ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)と[ダイアログデータ検証](../mfc/dialog-data-validation.md)を指定します。
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

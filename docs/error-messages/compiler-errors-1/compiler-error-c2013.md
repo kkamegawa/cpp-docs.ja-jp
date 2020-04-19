@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2013
 ms.assetid: 6b5c955c-53da-48ee-8533-64ef5b905173
-ms.openlocfilehash: b279202b8b32197a99d230040207aa50bc100495
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dd8c315351ccf38989fc113e7ee31b25e38a07f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618479"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757411"
 ---
 # <a name="compiler-error-c2013"></a>コンパイラ エラー C2013
 
@@ -21,14 +21,14 @@ ms.locfileid: "50618479"
 
 次の例では C2013 が生成されます。
 
-```
+```cpp
 // C2013.cpp
 #include <stdio.h    // C2013
 ```
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2013b.cpp
 // compile with: /c
 #include <stdio.h>

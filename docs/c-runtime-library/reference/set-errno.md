@@ -1,9 +1,9 @@
 ---
 title: _set_errno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_errno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_errno
 - _set_errno
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: f8dace04a5328c423af21327eb540abc8b062e86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 09800276886ecf1c2fdd2ffee63ddcb8cc57f61e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327591"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948606"
 ---
-# <a name="seterrno"></a>_set_errno
+# <a name="_set_errno"></a>_set_errno
 
-値を設定、 **errno**グローバル変数。
+**Errno**グローバル変数の値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,7 +47,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>パラメーター
 
 *error_value*<br/>
-新しい値**errno**します。
+**Errno**の新しい値。
 
 ## <a name="return-value"></a>戻り値
 

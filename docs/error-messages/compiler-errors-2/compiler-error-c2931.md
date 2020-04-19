@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2931
 ms.assetid: 33430407-b149-4ba3-baf8-b0dae1ea3a5d
-ms.openlocfilehash: 8fffa6e272da64ca7baa35af635b2b0a7d40c6f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03c5c1865343afdc0fd7a67ce393c7e1a5d2966f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661332"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757697"
 ---
 # <a name="compiler-error-c2931"></a>コンパイラ エラー C2931
 
@@ -23,7 +23,7 @@ ms.locfileid: "50661332"
 
 次の例では C2931 が生成されます。
 
-```
+```cpp
 // C2931.cpp
 // compile with: /c
 template<class T>
@@ -40,7 +40,7 @@ struct MyStruct2 {
 
 C2931 は、ジェネリックを使用する場合にも発生することがあります。
 
-```
+```cpp
 // C2931b.cpp
 // compile with: /clr /c
 generic<class T> ref struct GC {};

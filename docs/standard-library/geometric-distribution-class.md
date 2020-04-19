@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579861"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688007"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution クラス
+# <a name="geometric_distribution-class"></a>geometric_distribution クラス
 
 幾何分布を生成します。
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*<br/>
-整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Inttype* \
+整数の結果型、既定値は**int**です。使用できる型については、「 [\<random >](../standard-library/random.md)」を参照してください。
 
-*URNG*<br/>
-Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Urng* \
+均一乱数ジェネレーターエンジン。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、幾何分布を使用してユーザー指定の整数型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、幾何分布を使用してユーザー指定の整数型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -91,9 +91,9 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
 
-カイ 2 乗分布の詳細については、Wolfram MathWorld の記事「[Geometric Distribution (幾何分布)](http://go.microsoft.com/fwlink/p/?linkid=400529)」をご覧ください。
+カイ 2 乗分布の詳細については、Wolfram MathWorld の記事「[Geometric Distribution (幾何分布)](https://go.microsoft.com/fwlink/p/?linkid=400529)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -203,7 +203,7 @@ Distribution for 100 samples:
    35 :
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*p* \
 `p` 分布パラメーター。
 
-*parm*<br/>
+*parm* \
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -232,7 +232,7 @@ explicit geometric_distribution(const param_type& parm);
 
 1 つ目のコンストラクターは、格納されている `p` の値が *p* の値を保持するオブジェクトを作成します。
 
-2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
 ## <a name="param_type"></a>  geometric_distribution::param_type
 
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*p* \
 `p` 分布パラメーター。
 
-*right*<br/>
+*右*\
 これと比較する `param_type` インスタンス。
 
 ### <a name="remarks"></a>Remarks
@@ -265,4 +265,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

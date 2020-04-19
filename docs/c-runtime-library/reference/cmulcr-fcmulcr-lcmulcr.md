@@ -1,11 +1,11 @@
 ---
 title: _Cmulcr、_FCmulcr、_LCmulcr
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcr
 - _FCmulcr
 - _LCmulcr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcr
 - _FCmulcr
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507485"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942899"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr、_FCmulcr、_LCmulcr
+# <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr、_FCmulcr、_LCmulcr
 
-浮動小数点数で複素数を乗算します。
+複素数を浮動小数点数で乗算します。
 
 ## <a name="syntax"></a>構文
 
@@ -51,26 +54,26 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>パラメーター
 
 *x*<br/>
-乗算する複雑なオペランドの 1 つ。
+乗算する複合オペランドの1つ。
 
 *y*<br/>
-乗算する浮動小数点のオペランドです。
+乗算する浮動小数点演算オペランド。
 
 ## <a name="return-value"></a>戻り値
 
-A **_Dcomplex**、 **_Fcomplex**、または **_Lcomplex**複素数の複雑な製品を表す構造*x*とflaoting 点数*y*します。
+複素数*x*と flaoting number *y*の複雑な積を**表す、** **_Fcomplex**、または **_Lcomplex**の構造体。
 
 ## <a name="remarks"></a>Remarks
 
-組み込みの算術演算子は、複合型の Microsoft による実装では動作しないため、 **_Cmulcr**、 **_FCmulcr**、および **_LCmulcr**関数浮動小数点型、複合型の乗算を簡略化します。
+組み込みの算術演算子は、複合型の Microsoft 実装では機能しないため、 **_Cmulcr**、 **_FCmulcr**、および **_LCmulcr**の各関数は、浮動小数点型によって複合型の乗算を簡略化します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**_Cmulcr**、 **_FCmulcr**、 **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-これらの関数は、Microsoft 固有です。 種類 **_Dcomplex**、 **_Fcomplex**、および **_Lcomplex**は実装されていない C99 のネイティブ型に対応する Microsoft 固有**double _Complex**、 **float _Complex**、および**long double _Complex**、それぞれします。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数は、Microsoft 固有の関数です。 型 **(_t**、 **_Fcomplex**、および **_Lcomplex** ) は、実装されていない C99 ネイティブ型に対して、それぞれ**Complex**、 **float**、および**long double complex**の各型に相当します。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

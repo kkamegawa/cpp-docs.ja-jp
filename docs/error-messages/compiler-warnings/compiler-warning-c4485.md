@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 7138f1a3cecaaf75fbab01fd1aee18529b7a3a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652461"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623618"
 ---
 # <a name="compiler-warning-c4485"></a>コンパイラの警告 C4485
 
-'override_function': 基本 ref クラス メソッド 'base_class_function' と一致しますがマークされている 'new' または 'override';'new' (および 'virtual') と見なされます
+' override_function ': 基本 ref クラスメソッド ' base_class_function ' と一致しますが、' new ' または ' override ' に設定されていません。' new ' (および ' virtual ') が想定されています
 
-アクセサーのオーバーライドの有無、`virtual`キーワードを基底クラスのアクセサー関数が、`override`または`new`指定子は、オーバーライドする関数のシグネチャの一部であったされません。 追加、`new`または`override`この警告を解決するのには指定子。
+アクセサーは、基底クラスのアクセサー関数である、`virtual` キーワードの有無にかかわらずオーバーライドします。ただし、`override` または `new` 指定子は、オーバーライドする関数シグネチャの一部ではありませんでした。 この警告を解決するには、`new` または `override` 指定子を追加します。
 
-参照してください[オーバーライド](../../windows/override-cpp-component-extensions.md)と[new (新規のスロット vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)詳細についてはします。
+詳細については、「 [override](../../extensions/override-cpp-component-extensions.md)と[new (vtable の新しいスロット)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) 」を参照してください。
 
-C4485 は常に、エラーとして発行されます。 使用して、[警告](../../preprocessor/warning.md)C4485 を抑制するプラグマ。
+C4485 は常にエラーとして発行されます。 C4485 を抑制するには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
 ## <a name="example"></a>例
 
-次のサンプルの生成 C4485
+次の例では、C4485 が生成されます。
 
-```
+```cpp
 // C4485.cpp
 // compile with: /clr
 delegate void Del();

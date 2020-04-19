@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645550"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453853"
 ---
 # <a name="lockguard-class"></a>lock_guard クラス
 
@@ -44,7 +44,7 @@ class lock_guard;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<mutex >
+**ヘッダー:** \<ミューテックス >
 
 **名前空間:** std
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>パラメーター
 
-*続け*<br/>
+*Mtx.exe*\
 *mutex 型*オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンス トラクターが型のオブジェクトを構築`lock_guard`とロック*続け*します。 場合*続け*が再帰的なミュー テックスにする必要がありますロックを解除するこのコンス トラクターが呼び出されるとします。
+1つ目のコンストラクターは、型`lock_guard`のオブジェクトを構築し、 *mtx.exe*をロックします。 *Mtx.exe*が再帰的なミューテックスでない場合は、このコンストラクターが呼び出されるときにロックを解除する必要があります。
 
-2 番目のコンス トラクターをロックしません*続け*します。 *続け*このコンス トラクターが呼び出されたときにロックされている必要があります。 このコンストラクターでは例外はスローされません。
+2番目のコンストラクターは、 *mtx.exe*をロックしません。 このコンストラクターが呼び出されたときに、 *mtx.exe*をロックする必要があります。 このコンストラクターでは例外はスローされません。
 
 ## <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard デストラクター
 
@@ -83,5 +83,5 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

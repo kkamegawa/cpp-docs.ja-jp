@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483383"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450246"
 ---
 # <a name="syncshared-class"></a>sync_shared クラス
 
@@ -108,10 +108,10 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合の結果`cache.equals(Other.cache)`ここで、`cache`キャッシュ オブジェクトを表すが**true**、それ以外の**false**します。
+の`cache.equals(Other.cache)`結果がキャッシュオブジェクトを  表している場合はtrue、それ以外の`cache`場合は false。
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

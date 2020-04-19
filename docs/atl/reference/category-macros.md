@@ -1,55 +1,37 @@
 ---
-title: カテゴリに関するマクロ
+title: カテゴリマクロ
 ms.date: 11/04/2016
 f1_keywords:
-- atlbase/ATL::AtlGetHexValue
-- atlbase/ATL::AtlGetVersion
-- atlenc/ATL::AtlHexDecode
-- atlenc/ATL::AtlHexDecodeGetRequiredLength
-- atlenc/ATL::AtlHexEncode
-- atlenc/ATL::AtlHexEncodeGetRequiredLength
-- atlenc/ATL::AtlHexValue
-- atlenc/ATL::BEncode
-- atlenc/ATL::BEncodeGetRequiredLength
-- atlenc/ATL::EscapeXML
-- atlenc/ATL::GetExtendedChars
-- atlenc/ATL::IsExtendedChar
-- atlenc/ATL::QEncode
-- atlenc/ATL::QEncodeGetRequiredLength
-- atlenc/ATL::QPDecode
-- atlenc/ATL::QPDecodeGetRequiredLength
-- atlenc/ATL::QPEncode
-- atlenc/ATL::QPEncodeGetRequiredLength
-- atlenc/ATL::UUDecode
-- atlenc/ATL::UUDecodeGetRequiredLength
-- atlenc/ATL::UUEncode
-- atlenc/ATL::UUEncodeGetRequiredLength
+- atlcom/ATL::BEGIN_CATEGORY_MAP
+- atlcom/ATL::END_CATEGORY_MAP
+- atlcom/ATL::IMPLEMENTED_CATEGORY
+- atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0be22a8f7152d7933d4d0ab970fae834200c6d8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609730"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497854"
 ---
-# <a name="category-macros"></a>カテゴリに関するマクロ
+# <a name="category-macros"></a>カテゴリマクロ
 
-これらのマクロは、カテゴリのマップを定義します。
+これらのマクロは、カテゴリマップを定義します。
 
 |||
 |-|-|
-|[BEGIN_CATEGORY_MAP](#begin_category_map)|カテゴリのマップの先頭をマークします。|
-|[END_CATEGORY_MAP](#end_category_map)|カテゴリのマップの最後をマークします。|
-|[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されているカテゴリを示します。|
-|[要求します。](#required_category)|COM オブジェクトによって、コンテナーに必要なカテゴリを示します。|
+|[BEGIN_CATEGORY_MAP](#begin_category_map)|カテゴリマップの先頭をマークします。|
+|[END_CATEGORY_MAP](#end_category_map)|カテゴリマップの終了をマークします。|
+|[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されるカテゴリを示します。|
+|[REQUIRED_CATEGORY](#required_category)|COM オブジェクトによってコンテナーに必要なカテゴリを示します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
-カテゴリのマップの先頭をマークします。
+カテゴリマップの先頭をマークします。
 
 ```
 BEGIN_CATEGORY_MAP(theClass)
@@ -58,20 +40,20 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
-[in]カテゴリのマップを含むクラスの名前。
+からカテゴリマップを格納しているクラスの名前。
 
 ### <a name="remarks"></a>Remarks
 
-カテゴリのマップを使用して、どの COM クラスが実装で、コンテナーから必要とするカテゴリは、コンポーネントのカテゴリを指定します。
+Category マップは、COM クラスが実装するコンポーネントカテゴリと、そのコンテナーから必要なカテゴリを指定するために使用されます。
 
-追加、 [IMPLEMENTED_CATEGORY](#implemented_category) COM クラスで実装される各カテゴリ用にマップするエントリ。 追加、[要求する](#required_category)クラスを実装するには、そのクライアントを必要とするカテゴリごとにマップするエントリ。 Map の末尾を示す、 [END_CATEGORY_MAP](#end_category_map)マクロ。
+COM クラスによって実装されている各カテゴリのマップに[IMPLEMENTED_CATEGORY](#implemented_category)エントリを追加します。 クラスがクライアントを実装する必要がある各カテゴリのマップに[REQUIRED_CATEGORY](#required_category)エントリを追加します。 マップの末尾に[END_CATEGORY_MAP](#end_category_map)マクロを設定します。
 
-クラスに関連付けられている場合、モジュールが登録されると、マップに示されているコンポーネントのカテゴリを自動的に登録されます[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[役立つ](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
+クラスに[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)が関連付けられている場合、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 > [!NOTE]
->  ATL では、標準コンポーネント カテゴリ マネージャーを使用して、コンポーネントのカテゴリを登録します。 モジュールが登録されると、マネージャーがシステムに存在しない場合は、登録が成功するしますが、コンポーネントのカテゴリは、そのクラスは登録されません。
+>  ATL では、標準のコンポーネントカテゴリマネージャーを使用して、コンポーネントカテゴリを登録します。 モジュールが登録されているときに、マネージャーがシステムに存在しない場合、登録は成功しますが、そのクラスにはコンポーネントカテゴリが登録されません。
 
-コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK に含まれています。
+コンポーネントカテゴリの詳細については、「[コンポーネントカテゴリとは」および](/windows/win32/com/component-categories-and-how-they-work)「Windows SDK での動作のしくみ」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -79,7 +61,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ##  <a name="end_category_map"></a>  END_CATEGORY_MAP
 
-カテゴリのマップの最後をマークします。
+カテゴリマップの終了をマークします。
 
 ```
 END_CATEGORY_MAP()
@@ -87,11 +69,11 @@ END_CATEGORY_MAP()
 
 ### <a name="example"></a>例
 
-例をご覧ください[BEGIN_CATEGORY_MAP](#begin_category_map)します。
+[BEGIN_CATEGORY_MAP](#begin_category_map)の例を参照してください。
 
 ##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
 
-コンポーネントを IMPLEMENTED_CATEGORY マクロを追加[カテゴリ マップ](#begin_category_map)で識別されるカテゴリを実装するものとして登録するかを指定する、 *catID*パラメーター。
+コンポーネントの[カテゴリマップ](#begin_category_map)に IMPLEMENTED_CATEGORY マクロを追加して、 *catID*パラメーターで識別されるカテゴリの実装として登録する必要があることを指定します。
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -100,35 +82,35 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>パラメーター
 
 *catID*<br/>
-[in]CATID 定数または実装されているカテゴリのグローバル一意識別子 (GUID) を保持する変数。 アドレス*catID*取得され、マップに追加されます。 ストック カテゴリの選択は、以下の表を参照してください。
+から実装されているカテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-クラスに関連付けられている場合、モジュールが登録されると、マップに示されているコンポーネントのカテゴリを自動的に登録されます[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[役立つ](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロ。
+クラスに関連付けられた[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
-クライアントは、そのインスタンスを作成するのにことがなくその機能と要件を決定するのにクラスの登録されているカテゴリの情報を使用できます。
+クライアントは、クラスに登録されているカテゴリ情報を使用して、そのクラスのインスタンスを作成することなく、その機能と要件を決定できます。
 
-コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK に含まれています。
+コンポーネントカテゴリの詳細については、「[コンポーネントカテゴリとは」および](/windows/win32/com/component-categories-and-how-they-work)「Windows SDK での動作のしくみ」を参照してください。
 
-### <a name="a-selection-of-stock-categories"></a>ストック カテゴリの選択
+### <a name="a-selection-of-stock-categories"></a>ストックカテゴリの選択
 
 |説明|シンボル|レジストリ GUID|
 |-----------------|------------|-------------------|
-|安全なスクリプト|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|安全な初期化|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|シンプルなフレーム サイト コンテインメント|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|スクリプトに対して安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|初期化に対して安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|単純なフレームサイトの含有|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |単純データ バインディング|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|高度なデータ バインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|高度なデータバインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |ウィンドウなしのコントロール|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|インターネットに対応したオブジェクト|参照してください[インターネット対応オブジェクト](/windows/desktop/com/internet-aware-objects)サンプルの一覧については、Windows SDK に含まれています。||
+|インターネット対応オブジェクト|サンプル一覧については、「Windows SDK の[インターネット対応オブジェクト](/windows/win32/com/internet-aware-objects)」を参照してください。||
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  要求します。
+##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-要求するマクロをコンポーネントの追加[カテゴリ マップ](#begin_category_map)で識別されるカテゴリを要求するよう登録するかを指定する、 *catID*パラメーター。
+コンポーネントの[カテゴリマップ](#begin_category_map)に REQUIRED_CATEGORY マクロを追加して、 *catID*パラメーターで識別されるカテゴリを要求するように登録する必要があることを指定します。
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -137,27 +119,27 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>パラメーター
 
 *catID*<br/>
-[in]CATID 定数または必要なカテゴリのグローバル一意識別子 (GUID) を保持する変数。 アドレス*catID*取得され、マップに追加されます。 ストック カテゴリの選択は、以下の表を参照してください。
+から必須カテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-クラスに関連付けられている場合、モジュールが登録されると、マップに示されているコンポーネントのカテゴリを自動的に登録されます[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[役立つ](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロ。
+クラスに関連付けられた[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
-クライアントは、そのインスタンスを作成するのにことがなくその機能と要件を決定するのにクラスの登録されているカテゴリの情報を使用できます。 たとえば、コントロールは、コンテナーがデータ バインディングをサポートする必要があります。 コンテナーは、そのコントロールに必要なカテゴリをカテゴリ マネージャーをクエリすることによって、コントロールをホストするために必要な機能があるかどうかを確認できます。 コンテナーが必要な機能をサポートしていない場合、COM オブジェクトをホストする拒否することができます。
+クライアントは、クラスに登録されているカテゴリ情報を使用して、そのクラスのインスタンスを作成することなく、その機能と要件を決定できます。 たとえば、コントロールでは、コンテナーがデータバインディングをサポートしている必要があります。 コンテナーは、そのコントロールが必要とするカテゴリのカテゴリマネージャーに対してクエリを実行することで、コントロールをホストするために必要な機能があるかどうかを確認できます。 コンテナーが必要な機能をサポートしていない場合、COM オブジェクトのホストを拒否することができます。
 
-サンプルの一覧を含め、コンポーネントのカテゴリの詳細については、次を参照してください。[コンポーネントのカテゴリの概要とどのように動作する](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK に含まれています。
+サンプルリストを含むコンポーネントカテゴリの詳細については、「[コンポーネントのカテゴリとは」および](/windows/win32/com/component-categories-and-how-they-work)「Windows SDK での動作のしくみ」を参照してください。
 
-### <a name="a-selection-of-stock-categories"></a>ストック カテゴリの選択
+### <a name="a-selection-of-stock-categories"></a>ストックカテゴリの選択
 
 |説明|シンボル|レジストリ GUID|
 |-----------------|------------|-------------------|
-|安全なスクリプト|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|安全な初期化|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|シンプルなフレーム サイト コンテインメント|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|スクリプトに対して安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|初期化に対して安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|単純なフレームサイトの含有|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |単純データ バインディング|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|高度なデータ バインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|高度なデータバインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |ウィンドウなしのコントロール|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|インターネットに対応したオブジェクト|参照してください[インターネット対応オブジェクト](/windows/desktop/com/internet-aware-objects)サンプルの一覧については、Windows SDK に含まれています。||
+|インターネット対応オブジェクト|サンプル一覧については、「Windows SDK の[インターネット対応オブジェクト](/windows/win32/com/internet-aware-objects)」を参照してください。||
 
 ### <a name="example"></a>例
 

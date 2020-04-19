@@ -1,5 +1,5 @@
 ---
-title: 'アクティベーション : 動詞'
+title: アクティブ化:動詞
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392909"
 ---
-# <a name="activation-verbs"></a>アクティベーション : 動詞
+# <a name="activation-verbs"></a>アクティブ化:動詞
 
 この記事では、OLE でロールのプライマリとセカンダリの動詞の再生をについて説明します[アクティベーション](../mfc/activation-cpp.md)します。
 
@@ -29,7 +29,7 @@ OLE 項目の多くの種類が 1 つだけの動詞をサポートし、編集�
 
 頻繁に使用されるもう 1 つの動詞は、Open です。 Open 動詞は、別のウィンドウで、サーバー アプリケーションが起動される点を除いて編集と同じです。 コンテナーのアプリケーションまたはサーバー アプリケーションのいずれかが、インプレース アクティブ化をサポートしていない場合、この動詞を使用する必要があります。
 
-項目が選択されているときに、サブメニューのコマンドで主動詞以外のすべての動詞を呼び出す必要があります。 このサブメニュー アイテムでサポートされているすべての動詞を格納してあり、通常は、 *typename* **オブジェクト**コマンドを**編集**メニュー。 については、 *typename* **オブジェクト**コマンドは、「[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
+項目が選択されているときに、サブメニューのコマンドで主動詞以外のすべての動詞を呼び出す必要があります。 このサブメニュー アイテムでサポートされているすべての動詞を格納してあり、通常は、 *typename* **オブジェクト**コマンドを**編集**メニュー。 については、 *typename* **オブジェクト**コマンドは、「[メニューとリソース。コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
 
 サーバー アプリケーションでサポートされる動作は、Windows の登録データベースに一覧表示されます。 場合は、Microsoft Foundation Class ライブラリで、サーバー アプリケーションが書き込まれると、サーバーの起動時にすべての動詞を自動的に登録がされます。 それ以外の場合は、サーバー アプリケーションの初期化フェーズ中にそれらを登録する必要があります。 詳細については、この記事を参照してください。[登録](../mfc/registration.md)します。
 
@@ -38,4 +38,3 @@ OLE 項目の多くの種類が 1 つだけの動詞をサポートし、編集�
 [アクティベーション](../mfc/activation-cpp.md)<br/>
 [コンテナー](../mfc/containers.md)<br/>
 [サーバー](../mfc/servers.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4817
 ms.assetid: a68f5486-6940-4934-9f93-bfd4d71f92a9
-ms.openlocfilehash: bb6eb8899efdab3cae39f77079f7eed72344acc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d729bdbf0f8379b2ffde80567ae4307d0a8dacd7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666879"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052321"
 ---
 # <a name="compiler-warning-level-1-c4817"></a>コンパイラの警告 (レベル 1) C4817
 
@@ -23,7 +23,7 @@ ms.locfileid: "50666879"
 
 次の例では C4817 が生成されます。
 
-```
+```cpp
 // C4817.cpp
 // compile with: /clr /W1
 using namespace System;

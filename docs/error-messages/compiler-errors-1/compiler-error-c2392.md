@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491352"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745006"
 ---
 # <a name="compiler-error-c2392"></a>コンパイラ エラー C2392
 
-'method1': covariant の戻り型がでサポートされていない管理または WinRTtypes、それ以外の場合 'method2' はオーバーライドされます
+' method1 ': 共変の型は、マネージ型または WinRTtypes ではサポートされていません。それ以外の場合、' method2 ' はオーバーライドされます
 
-共変の戻り値の型の使用は、コンパイルする場合が Windows ランタイムのメンバー関数や許可されていません、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプション。
+Windows ランタイムメンバー関数の場合、または[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用してコンパイルする場合、共変の戻り値の型は使用できません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2392 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - MMX instruction set
 ms.assetid: 705deb2d-c3fd-4696-9e22-8bcf25866daf
-ms.openlocfilehash: 3b2de7896c4a688c3428cddc13144a838f906557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: b8b2697fa106506dadfdaa96149fd6b0b093c844
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603867"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445874"
 ---
 # <a name="intel39s-mmx-instruction-set"></a>Intel&#39;s MMX 命令セット
 
 **Microsoft 固有の仕様**
 
-Visual C コンパイラでは、Intel の MMX (マルチ メディア拡張機能) の命令が、インライン アセンブラーのセットを使用できます。 MMX 命令は、デバッガーの逆アセンブリによってもサポートされます。 関数は、MMX 命令が含まれていますが、マルチ メディアの状態を空に EMMS 命令が含まれていない場合、コンパイラは警告メッセージを生成します。 詳細については、Intel の Web サイトを参照してください。
+MicrosoftC++コンパイラでは、Intel の MMX (マルチ メディア拡張機能) の命令が、インライン アセンブラーのセットを使用できます。 MMX 命令は、デバッガーの逆アセンブリによってもサポートされます。 関数は、MMX 命令が含まれていますが、マルチ メディアの状態を空に EMMS 命令が含まれていない場合、コンパイラは警告メッセージを生成します。 詳細については、Intel の Web サイトを参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

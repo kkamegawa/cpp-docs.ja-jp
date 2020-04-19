@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4185
 ms.assetid: 37e7063a-35b1-4e05-ae31-e811dced02b9
-ms.openlocfilehash: c4cabeb206da8da9f9157a8f8eee65c1894ce024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c818f99afb4cd60f5e129f48494aee0c24ba86a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475115"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626199"
 ---
 # <a name="compiler-warning-level-1-c4185"></a>コンパイラの警告 (レベル 1) C4185
 
@@ -21,7 +21,7 @@ ms.locfileid: "50475115"
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4185.cpp
 // compile with: /W1 /c
 #import "stdole2.tlb" no_such_attribute   // C4185

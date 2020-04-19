@@ -1,26 +1,27 @@
 ---
 title: '@InStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@InStr'
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: ed1bda10d7797a2c1bba43a4824a331d196def4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e790204ee6344031018fe79510ff9e064bef3b4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586174"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315759"
 ---
-# <a name="instr"></a>@InStr
+# <a name="instr"></a>\@InStr
 
-最初に見つかったマクロ関数*string2*で*string1*で始まる、*位置*内*string1*します。 場合*位置*が表示されないの先頭から検索を開始*string1*します。 場合に、位置を表す整数または 0 を返します*string2*が見つかりません。
+String1 内の*string2*の最初の出現*箇所を検索*するマクロ関数。 *string1*内の*位置*から始まります。 *位置*が表示されない場合は、 *string1*の先頭から検索が開始されます。 位置の整数を返します。 *string2*が見つからない場合は0を返します。
 
 ## <a name="syntax"></a>構文
 
-> @InStr([位置]、string1、string2)
+> **\@InStr (** ⟦*position*⟧ __,__ *string1* __,__ *string2* **)**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

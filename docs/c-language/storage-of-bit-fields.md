@@ -2,12 +2,12 @@
 title: Storage of Bit Fields (ビット フィールドの格納)
 ms.date: 11/04/2016
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
-ms.openlocfilehash: 7aa6e02c347ff14bb0552320567b343c7215ebc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4dbfb3c6ad27fb023881dafde74bb27132959085
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499088"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147530"
 ---
 # <a name="storage-of-bit-fields"></a>Storage of Bit Fields (ビット フィールドの格納)
 
@@ -40,6 +40,6 @@ cccccccb bbbbaaaa
 
 80x86 プロセッサは整数値の下位バイトを上位バイトの前に格納するため、上記の整数 0x01F2 は、0xF2 の後ろに 0x01 が続くように物理メモリに格納されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [構造体、共用体、列挙体、ビット フィールド](../c-language/structures-unions-enumerations-and-bit-fields.md)

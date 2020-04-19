@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-ms.openlocfilehash: 39a4709c8f66c4dcc2ee5185f2a1df27b0666445
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9626b3a9d28d28fd52a0d2295af8fda8855cd90c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387605"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 名前空間
 
@@ -45,7 +45,7 @@ namespace Platform {
 
 **メタデータ:** platform.winmd
 
-**名前空間:** Platform::Metadata
+**名前空間:** Platform::metadata
 
 ## <a name="see-also"></a>関連項目
 

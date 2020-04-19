@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1100
 ms.assetid: d4d877ea-acd6-4ec7-961e-55e460d98820
-ms.openlocfilehash: 6f64a0009f2adff27725343ddc6ed8a6fb9bf07f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50ff0319e111d30ff93a39a728c19287e16511a0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475622"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501054"
 ---
 # <a name="fatal-error-c1100"></a>致命的なエラー C1100
 
-OLE を初期化できませんシステム エラー メッセージ。
+OLE を初期化できません: システムエラーメッセージ
 
-コンパイラは、コンポーネント オブジェクト モデル (COM) ライブラリを初期化できません。 参照してください[CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize)します。
+コンパイラは、コンポーネントオブジェクトモデル (COM) ライブラリを初期化できません。 「 [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize)」を参照してください。

@@ -1,10 +1,10 @@
 ---
 title: tmpnam_s、_wtmpnam_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpnam_s
 - _wtmpnam_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpnam_s
 - _wtmpnam_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 847df0d2369857d009c39b4dd61adce45094899c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497488"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946038"
 ---
-# <a name="tmpnams-wtmpnams"></a>tmpnam_s、_wtmpnam_s
+# <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s、_wtmpnam_s
 
 一時ファイルの作成に使用できる名前を生成します。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) の説明にあるとおり、セキュリティが強化されたバージョンの [tmpnam および _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) です。
 
@@ -78,19 +81,19 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**戻り値**|**内容***str*|
+|*str*|*sizeInChars*|**戻り値**|**内容**  *str*|
 |**NULL**|任意|**EINVAL**|変更されない|
-|いない**NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
+|Not **NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
 
-場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+*Str*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s**によって返される指定された Windows 一時ディレクトリに一意の名前を[GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw)します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
+これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s**は、 [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)によって返される指定された Windows 一時ディレクトリ内で一意の名前を返します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
 
-**Tmpnam_s**では、この生成されたファイル名を格納する*str*します。 によって返される文字列の最大長**tmpnam_s**は**L_tmpnam_s**STDIO で定義されている。H. 場合*str*は**NULL**、し**tmpnam_s**内部の静的バッファーに結果を残します。 したがって後続の呼び出しは、この値を破棄します。 によって生成された名前**tmpnam_s**プログラムで生成されたファイル名と最初の呼び出し後**tmpnam_s**、base 32 で連番のファイル拡張子 (.1 .1vvvvvu、when **TMP_MAX_S** STDIO でします。H は**INT_MAX**)。
+**Tmpnam_s**では、この生成されたファイル名を*str*に格納できます。 **Tmpnam_s**によって返される文字列の最大長は**L_TMPNAM_S**で、STDIO で定義されています。始め. *Str*が**NULL**の場合、 **tmpnam_s**は、結果を内部の静的バッファーに残します。 したがって後続の呼び出しは、この値を破棄します。 **Tmpnam_s**によって生成される名前は、プログラムによって生成されるファイル名で構成され、 **tmpnam_s**の最初の呼び出しの後に、ベース 32 (. 1-1vvvvvu) の連続する番号のファイル拡張子 (STDIO**の場合)** で構成されます。H は**INT_MAX**)。
 
-**tmpnam_s** OEM コード ページに従ってマルチバイト文字シーケンスを認識し、必要に応じてハンドル マルチバイト文字の文字列の引数が、オペレーティング システムから自動的に取得します。 **_wtmpnam_s**のワイド文字バージョンは、 **tmpnam_s**; の引数と戻り値 **_wtmpnam_s**はワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**動作は同じことを除いて **_wtmpnam_s**マルチバイト文字の文字列を処理しません。
+**tmpnam_s**は、オペレーティングシステムから取得した OEM コードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wtmpnam_s**は、 **tmpnam_s**のワイド文字バージョンです。 **_wtmpnam_s**の引数と戻り値はワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**は、 **_wtmpnam_s**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

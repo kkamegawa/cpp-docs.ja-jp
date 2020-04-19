@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4514
 ms.assetid: cdae966a-9cd4-4e31-af30-2a014e68f614
-ms.openlocfilehash: 0e8acdab20d5ba58b5bd8455fa538e5450518025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac844e3e1bd1353f7ccbffcda8737ef0453c329
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658394"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990739"
 ---
 # <a name="compiler-warning-level-4-c4514"></a>コンパイラの警告 (レベル 4) C4514
 
-'function': 参照されていないインライン関数は削除されました
+' function ': 参照されていないインライン関数は削除されました
 
-オプティマイザーは、呼び出されていないインライン関数を削除します。
+呼び出されていないインライン関数がオプティマイザーによって削除されました。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
 次の例では、C4514 が生成されます。
 
-```
+```cpp
 // C4514.cpp
 // compile with: /W4
 #pragma warning(default : 4514)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 40f901345601193db9752ea6c6dca980ded0625d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579934"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501647"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -26,15 +26,15 @@ COM オブジェクトの既定の vtable インターフェイスとしてイ�
 ### <a name="parameters"></a>パラメーター
 
 *interface*<br/>
-COM オブジェクトの既定の vtable する指定されたインターフェイスです。
+COM オブジェクトの既定の vtable を持つ、指定されたインターフェイス。
 
 ## <a name="remarks"></a>Remarks
 
-**Defaultvtable** C++ 属性と同じ機能を持つ、 [defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL 属性。
+**Defaultvtable** C++属性には、 [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードが使用されるクラスに属性を示します**defaultvtable**を既定のインターフェイスを指定します。
+次のコードは、 **defaultvtable**を使用して既定のインターフェイスを指定するクラスの属性を示しています。
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp

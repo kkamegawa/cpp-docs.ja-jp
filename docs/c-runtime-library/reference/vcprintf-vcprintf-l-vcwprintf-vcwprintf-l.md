@@ -1,12 +1,12 @@
 ---
 title: _vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vcwprintf
 - _vcprintf_l
 - _vcwprintf_l
 - _vcprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vcwprintf_l
 - _vtcprintf
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f2aa3dafc730b060e84558dfa03de5328e52893
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624758"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945632"
 ---
-# <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
+# <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
 引数リストへのポインターを使用して、書式付き出力をコンソールに書き込みます。 これらの関数にはセキュリティが強化されたバージョンがあります。「[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)」をご覧ください。
 
@@ -85,7 +88,7 @@ int _vcwprintf_l(
 *format*<br/>
 書式の指定。
 
-*定義されています*<br/>
+*argptr*<br/>
 引数リストへのポインター。
 
 *locale*<br/>
@@ -95,16 +98,16 @@ int _vcwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。出力エラーが発生した場合は負の値を返します。 場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** -1 が返されます。
+書き込まれた文字数。出力エラーが発生した場合は負の値を返します。 *Format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、-1 が返されます。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf**のワイド文字バージョンは、 **_vcprintf**します。 引数としてワイド文字列を使用します。
+これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf**は、 **(vcprintf)** のワイド文字バージョンです。 引数としてワイド文字列を使用します。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -117,8 +120,8 @@ int _vcwprintf_l(
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**_vcprintf**、 **_vcprintf_l**|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf**、 **_vcwprintf_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
+|**vcprintf**、 **vcprintf_l** (_s)|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**、 **vcwprintf_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V との互換性用。
 

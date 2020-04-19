@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: eb320dda9a69937e49f669153bb77e484c5a15fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c762ca80dc52398d9f246ada86ab29cb6e902129
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549592"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741548"
 ---
 # <a name="compiler-error-c3833"></a>コンパイラ エラー C3833
 
-'type': pointer_type の無効なターゲットの種類
+' type ': pointer_type のターゲット型が無効です
 
-[Interior_ptr](../../windows/interior-ptr-cpp-cli.md)または[pin_ptr](../../windows/pin-ptr-cpp-cli.md)宣言が正しくありません。
+[Interior_ptr](../../extensions/interior-ptr-cpp-cli.md)または[pin_ptr](../../extensions/pin-ptr-cpp-cli.md)が正しく宣言されていません。
 
 次の例では、C3833 が生成されます。
 
-```
+```cpp
 // C3833.cpp
 // compile with: /clr
 
@@ -43,7 +43,7 @@ int main() {
 
 次の例では、C3833 が生成されます。
 
-```
+```cpp
 // C3833b.cpp
 // compile with: /clr /c
 ref class G {

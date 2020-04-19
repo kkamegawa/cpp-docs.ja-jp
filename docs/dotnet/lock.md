@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lock
 - synchronization
 ms.assetid: 48c90da6-d6fb-4710-9c7c-2b9c9344bda1
-ms.openlocfilehash: 117af1c5fd4266116310c0ebb797ae51210f1b9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5776baa222cacd9ab4a2824261425fdc077c4fc6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153386"
 ---
 # <a name="lock"></a>lock
 

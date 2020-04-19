@@ -1,23 +1,26 @@
 ---
 title: _set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_app_type
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: f12e409355fcd10ece474103109286925b1f3a8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569820"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957921"
 ---
-# <a name="setapptype"></a>_set_app_type
+# <a name="_set_app_type"></a>_set_app_type
 
 アプリがコンソール アプリと GUI アプリのどちらであるかを CRT に知らせるためにスタートアップ時に使用する内部関数です。
 
@@ -47,7 +50,7 @@ void __cdecl _set_app_type(
 |_crt_console_app|コンソール (コマンドライン) アプリケーション。|
 |_crt_gui_app|GUI (Windows) アプリケーション。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 通常は、この関数を呼び出す必要はありません。 この関数は、アプリ内での `main` の呼び出し前に実行される C のランタイム スタートアップ コードに含まれています。
 
@@ -56,4 +59,3 @@ void __cdecl _set_app_type(
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |_set_app_type|process.h|
-

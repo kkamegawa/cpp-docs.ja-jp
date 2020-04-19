@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: a433c9987d665aeeb910edbadac692ba9c286e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9909a3e179aa6c0af3a622c7bf1b545326f90bbd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293460"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL の明示的なアンロード
 
-[/Delay](../../build/reference/delay-delay-load-import-settings.md): アンロード リンカー オプションでは、遅延読み込みされた DLL をアンロードできます。 既定で、コードが DLL をアンロード (/delay:unload を使用してと **__FUnloadDelayLoadedDLL2**)、インポート アドレス テーブル (IAT) のままに、遅延読み込みしたインポートします。 ただし、/delay:unload リンカーのコマンドラインを使用する場合、ヘルパー関数がサポート、元の形式に iat を介したをリセットする DLL の明示的なアンロード無効になったポインターが上書きされます。 IAT は内のフィールド、 [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) (存在する) 場合、元の IAT のコピーのアドレスを格納します。
+[/Delay](delay-delay-load-import-settings.md): アンロード リンカー オプションでは、遅延読み込みされた DLL をアンロードできます。 既定で、コードが DLL をアンロード (/delay:unload を使用してと **__FUnloadDelayLoadedDLL2**)、インポート アドレス テーブル (IAT) のままに、遅延読み込みしたインポートします。 ただし、/delay:unload リンカーのコマンドラインを使用する場合、ヘルパー関数がサポート、元の形式に iat を介したをリセットする DLL の明示的なアンロード無効になったポインターが上書きされます。 IAT は内のフィールド、 [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) (存在する) 場合、元の IAT のコピーのアドレスを格納します。
 
 ## <a name="example"></a>例
 
@@ -53,10 +53,10 @@ int main()
 
 - 実装を見つけることができます、 **__FUnloadDelayLoadedDLL2**ファイル内の関数 \VC7\INCLUDE\DELAYHLP します。CPP します。
 
-- Name パラメーター、 **__FUnloadDelayLoadedDLL2**関数が正確に一致 (ケース) を含むどのようなインポート ライブラリが含まれています (つまり文字列は、イメージのインポート テーブル内にも)。 インポート ライブラリの内容を表示する[DUMPBIN/DEPENDENTS](../../build/reference/dependents.md)します。 大文字の文字列の一致が必要な場合は更新できます **__FUnloadDelayLoadedDLL2** CRT の文字列関数、または Windows API の呼び出しのいずれかを使用します。
+- Name パラメーター、 **__FUnloadDelayLoadedDLL2**関数が正確に一致 (ケース) を含むどのようなインポート ライブラリが含まれています (つまり文字列は、イメージのインポート テーブル内にも)。 インポート ライブラリの内容を表示する[DUMPBIN/DEPENDENTS](dependents.md)します。 大文字の文字列の一致が必要な場合は更新できます **__FUnloadDelayLoadedDLL2** CRT の文字列関数、または Windows API の呼び出しのいずれかを使用します。
 
-参照してください[アンロード、「](../../build/reference/unloading-a-delay-loaded-dll.md)詳細についてはします。
+参照してください[アンロード、「](unloading-a-delay-loaded-dll.md)詳細についてはします。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

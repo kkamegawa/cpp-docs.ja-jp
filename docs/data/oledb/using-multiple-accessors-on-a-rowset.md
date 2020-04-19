@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: ac2b7e323fff5d3baa80b509586178a48dbe1f8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216383"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>行セットでの複数アクセサーの使用
 

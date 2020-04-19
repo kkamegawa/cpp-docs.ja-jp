@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286441"
 ---
 # <a name="isnormal"></a>isnormal
 
-浮動小数点値が無限であるかどうかを判断します。
+浮動小数点値が通常の値であるかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -37,11 +37,11 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>戻り値
 
-**isnormal** 0 以外の値を返します (**true** C++ コードで) 場合、引数*x*有限とあるありません。 **isnormal** 0 を返します (**false** C++ コードの) 引数が、非、無限大または NAN の場合。
+**isnormal** 0 以外の値を返します (**true**でC++コード) 場合、引数*x*は 0、非、無限でも、NaN です。 それ以外の場合、 **isnormal** 0 を返します (**false**でC++コード)。
 
 ## <a name="remarks"></a>Remarks
 
-**isnormal** C、C++ としてコンパイルする場合は、インライン テンプレートの関数としてコンパイルすると、マクロは、します。
+**isnormal** C、およびとしてコンパイルする場合は、インライン関数のテンプレートとしてコンパイルすると、マクロは、C++します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -54,7 +54,7 @@ inline bool isnormal(
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite _finite、_finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>

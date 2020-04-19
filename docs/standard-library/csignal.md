@@ -6,16 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: e5c8f9982d4376f9f4751ab253a55bb10ab2a72c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517860"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452330"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-標準 C ライブラリ ヘッダー \<signal.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+C 標準ライブラリのヘッダー \<シグナル > をインクルードし、関連`std`する名前を名前空間に追加します。 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+
 
 ## <a name="syntax"></a>構文
 
@@ -23,12 +24,35 @@ ms.locfileid: "51517860"
 #include <csignal>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="namespace-and-macros"></a>名前空間とマクロ
 
-このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+```cpp
+namespace std {
+    using sig_atomic_t = see below;
+
+    extern using signal-handler = void(int);
+}
+
+#define SIG_DFL
+#define SIG_ERR
+#define SIG_IGN
+#define SIGABRT
+#define SIGFPE
+#define SIGILL
+#define SIGINT
+#define SIGSEGV
+#define SIGTERM
+```
+
+## <a name="functions"></a>関数
+
+```cpp
+signal-handler* signal(int sig, signal-handler* func);
+int raise(int sig);
+```
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372180"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList クラス
 
@@ -103,7 +103,7 @@ void Add(
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*lpszPathName*<br/>
 一覧に追加するパス名を指定します。
 
 *lpszAppID*<br/>
@@ -137,10 +137,10 @@ CRecentFileList(
 
 ### <a name="parameters"></a>パラメーター
 
-*n 開始*<br/>
+*nStart*<br/>
 MRU (最近使用された) ファイル リストのメニュー表示内の番号のオフセットします。
 
-*大文字、小文字*<br/>
+*lpszSection*<br/>
 レジストリのアプリケーションのセクションの名前を指します。INI ファイル MRU ファイル リストの読み取りや書き込みの位置。
 
 *lpszEntryFormat*<br/>
@@ -206,7 +206,7 @@ int GetSize() const;
 
 現在のファイルの数は、最近 (MRU) ファイルの一覧を使用します。
 
-##  <a name="operator_at"></a>  CRecentFileList::operator
+##  <a name="operator_at"></a>  CRecentFileList::operator [ ]
 
 オーバー ロードされた添字 (`[]`) 演算子は、1 つを返します`CString`内の 0 から始まるインデックスによって指定された*nIndex*します。
 
@@ -250,7 +250,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用した (MRU) ファイルのリスト メニューのオブジェクト。
 
 ##  <a name="writelist"></a>  CRecentFileList::WriteList
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

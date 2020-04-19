@@ -1,15 +1,15 @@
 ---
 title: CRT へのリンクに使用する方法の利点とトレードオフ
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-ms.openlocfilehash: b4c91b7fe5182c8457d16de57792ba1b5ab7b3be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: b2e504de91cea9fef6e9acb0fc851bc2cc271e97
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496984"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221269"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>CRT へのリンクに使用する方法の利点とトレードオフ
 
@@ -27,4 +27,3 @@ ms.locfileid: "50496984"
 [ATL および C ランタイム コードによるプログラミング](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL と Visual C++ ランタイム ライブラリの動作](../build/run-time-library-behavior.md)<br/>
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
-

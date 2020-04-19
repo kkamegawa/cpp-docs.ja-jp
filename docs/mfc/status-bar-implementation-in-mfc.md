@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: abd16ecb5e6a492bc42c747f60ec0859e1bc05cb
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175370"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346414"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC でのステータス バーの実装
 
@@ -53,4 +53,3 @@ A [CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトはテキ�
 ## <a name="see-also"></a>関連項目
 
 [ステータス バー](../mfc/status-bars.md)
-

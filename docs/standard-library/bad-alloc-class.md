@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 1ebb427277c985fdab711d5bd84dcea54898a83b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515610"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243978"
 ---
 # <a name="badalloc-class"></a>bad_alloc クラス
 
@@ -22,20 +22,16 @@ ms.locfileid: "50515610"
 ```cpp
 class bad_alloc : public exception {
     bad_alloc();
-virtual ~bad_alloc();
-
+    virtual ~bad_alloc();
+    bad_alloc(const bad_alloc&);
+    bad_alloc& operator=(const bad_alloc&);
+    const char* what() const override;
 };
 ```
 
 ## <a name="remarks"></a>Remarks
 
 によって返される値`what`実装で定義された C 文字列します。 このメンバー関数は、いずれも例外をスローしません。
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<new>
-
-**名前空間:** std
 
 ## <a name="example"></a>例
 
@@ -58,17 +54,6 @@ int main() {
 }
 ```
 
-## <a name="sample-output"></a>出力例
-
 ```Output
 bad allocation
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<new>
-
-## <a name="see-also"></a>関連項目
-
-[exception クラス](../standard-library/exception-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

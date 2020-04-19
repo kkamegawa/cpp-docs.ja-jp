@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - WinMain method [MFC]
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
-ms.openlocfilehash: 8e6e74b8f0fd62f96d6d846bbba867f9189550ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8271a10ad7439d2795dcc45d667b23b0932a0486
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308551"
 ---
 # <a name="run-member-function"></a>Run メンバー関数
 

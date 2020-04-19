@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward、_BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 87bb2a20e786982d8e0c710696f0339f579a84e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440470"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222221"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward、_BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward、_BitScanForward64
 
 **Microsoft 固有の仕様**
 
@@ -26,7 +26,7 @@ ms.locfileid: "50440470"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*Index*<br/>
-[out]見つかった最初のビット セット (1) のビット位置が読み込まれます。
+*化*\
+入出力見つかった最初のセットビット (1) のビット位置を使用して読み込まれます。
 
-*マスク*<br/>
-[in]検索する 32 ビットまたは 64 ビット値。
+*隠す*\
+から検索する32ビットまたは64ビットの値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -57,14 +57,14 @@ unsigned char _BitScanForward64(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_BitScanForward`|x86、ARM、x64|
-|`_BitScanForward64`|ARM、x64|
+|`_BitScanForward`|x86、ARM、x64、ARM64|
+|`_BitScanForward64`|ARM64、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,15 +93,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>入力
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>出力例
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```

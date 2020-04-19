@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 4a50121e1a2e170ba69ee21526f4600512097c74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471670"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514361"
 ---
 # <a name="oleautomation"></a>oleautomation
 
-インターフェイスが Automation と互換性があることを示します。
+インターフェイスがオートメーションと互換性があることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50471670"
 
 ## <a name="remarks"></a>Remarks
 
-**Oleautomation** C++ 属性と同じ機能を持つ、 [oleautomation](/windows/desktop/Midl/oleautomation) MIDL 属性。
+**Oleautomation** C++属性には、 [oleautomation](/windows/win32/Midl/oleautomation) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例を参照してください。 [defaultvalue](defaultvalue.md)と[nonextensible](nonextensible.md)の使用サンプル**oleautomation**します。
+**Oleautomation**の使用例については、 [defaultvalue](defaultvalue.md)の例と[非拡張](nonextensible.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

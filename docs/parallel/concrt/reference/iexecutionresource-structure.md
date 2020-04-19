@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 56042c799f22b0e35bbd0d03d96d649e508f6e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578946"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141276"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 構造体
 
@@ -24,7 +24,7 @@ ms.locfileid: "50578946"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct IExecutionResource;
 ```
 
@@ -32,109 +32,109 @@ struct IExecutionResource;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|ルートの数とこの実行リソースが表す基になるハードウェア スレッドに関連付けられている外部のスレッドを購読してアクティブ化された仮想プロセッサの数を返します。|
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|この実行リソースを表すハードウェア スレッドの一意の識別子を返します。|
-|[IExecutionResource::GetNodeId](#getnodeid)|この実行リソースが属するプロセッサ ノードの一意の識別子を返します。|
-|[IExecutionResource::Remove](#remove)|この実行リソースをリソース マネージャーを返します。|
+|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|この実行リソースが表す、基になるハードウェアスレッドに現在関連付けられている、アクティブ化された仮想プロセッサルートとサブスクライブされた外部スレッドの数を返します。|
+|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|この実行リソースが表すハードウェアスレッドの一意の識別子を返します。|
+|[IExecutionResource:: GetNodeId](#getnodeid)|この実行リソースが属するプロセッサノードの一意の識別子を返します。|
+|[IExecutionResource:: Remove](#remove)|この実行リソースをリソースマネージャーに返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-実行リソースはスタンドアロンでまたは仮想プロセッサ ルートに関連付けられています。 アプリケーションのスレッドがスレッドのサブスクリプションを作成するときに、スタンドアロンの実行リソースが作成されます。 メソッド[ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)と[ischedulerproxy::requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)スレッドのサブスクリプションを作成して返す、`IExecutionResource`インターフェイスを表す、サブスクリプション。 スレッドのサブスクリプションを作成すると、Resource Manager がスケジューラに割り当てる仮想プロセッサ ルートと、スケジューラのキューに置かれた、特定のスレッドが作業に参加する Resource Manager に通知する方法です。 リソース マネージャーは、可能なハードウェア スレッド オーバーサブスク ライブすることを回避するために、情報を使用します。
+実行リソースは、スタンドアロンにすることも、仮想プロセッサルートに関連付けることもできます。 アプリケーションのスレッドがスレッドサブスクリプションを作成すると、スタンドアロンの実行リソースが作成されます。 メソッド[ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)と[ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)は、スレッドサブスクリプションを作成し、サブスクリプションを表す `IExecutionResource` インターフェイスを返します。 スレッドサブスクリプションの作成は、リソースマネージャーに対して、指定されたスレッドがスケジューラに対してキューに登録された作業に参加すること、およびリソースマネージャーがスケジューラに割り当てる仮想プロセッサルートを通知する方法です。 リソースマネージャーは、この情報を使用して、可能な場所にハードウェアスレッドのオーバーサブスクライブを回避します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `IExecutionResource`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrtrm.h
+**ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-##  <a name="currentsubscriptionlevel"></a>  Iexecutionresource::currentsubscriptionlevel メソッド
+## <a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel メソッド
 
-ルートの数とこの実行リソースが表す基になるハードウェア スレッドに関連付けられている外部のスレッドを購読してアクティブ化された仮想プロセッサの数を返します。
+この実行リソースが表す、基になるハードウェアスレッドに現在関連付けられている、アクティブ化された仮想プロセッサルートとサブスクライブされた外部スレッドの数を返します。
 
-```
+```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-現在のサブスクリプション レベル。
+現在のサブスクリプションレベルです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-サブスクリプション レベルは、実行中のスレッドの数はハードウェア スレッドに関連付けられたを指示します。 これには、リソース マネージャーは、サブスクライブしているスレッドとに、スレッド プロキシを実行している仮想プロセッサ ルートの形式での対応のスレッドにはのみが含まれます。
+サブスクリプションレベルは、ハードウェアスレッドに関連付けられている実行中のスレッドの数を示します。 これには、サブスクライブされたスレッドの形式でリソースマネージャーが認識しているスレッドと、スレッドプロキシをアクティブに実行している仮想プロセッサルートだけが含まれます。
 
-メソッドを呼び出す[ischedulerproxy::subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)、またはメソッド[ischedulerproxy::requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)パラメーターと共に`doSubscribeCurrentThread`値に設定**true**ハードウェア スレッドのサブスクリプション レベルを 1 ずつインクリメントします。 返すことも、`IExecutionResource`サブスクリプションを表すインターフェイス。 対応する呼び出し、 [iexecutionresource::remove](#remove)デクリメントを 1 つのハードウェア スレッドのサブスクリプション レベル。
+[ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)メソッドを呼び出すか、`doSubscribeCurrentThread` パラメーターを指定して[ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)メソッドを呼び出すと、true に設定されている**場合**は、ハードウェアスレッドのサブスクリプションレベルが1ずつ増加します。 また、サブスクリプションを表す `IExecutionResource` インターフェイスも返されます。 [Iexecutionresource:: Remove](#remove)を呼び出すと、ハードウェアスレッドのサブスクリプションレベルが1ずつ減少します。
 
-メソッドを使用して仮想プロセッサ ルートをアクティブ化する[ivirtualprocessorroot::activate](ivirtualprocessorroot-structure.md#activate)ハードウェア スレッドのサブスクリプション レベルを 1 ずつインクリメントします。 メソッド[ivirtualprocessorroot::deactivate](ivirtualprocessorroot-structure.md#deactivate)、または[iexecutionresource::remove](#remove)を 1 つをアクティブ化された仮想プロセッサ ルートで呼び出されると、サブスクリプション レベルをデクリメントします。
+[Ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)メソッドを使用して仮想プロセッサルートをアクティブ化すると、ハードウェアスレッドのサブスクリプションレベルが1ずつ増加します。 [Ivirtualprocessorroot::D eactivate](ivirtualprocessorroot-structure.md#deactivate)または[iexecutionresource:: Remove](#remove)のメソッドは、アクティブ化された仮想プロセッサルートで呼び出されると、サブスクリプションレベルを1ずつデクリメントします。
 
-Resource Manager は、スケジューラ間でリソースを移動するかを判断する方法の 1 つとして、サブスクリプション レベルの情報を使用します。
+リソースマネージャーは、スケジューラ間でリソースを移動するタイミングを決定する方法の1つとして、サブスクリプションレベル情報を使用します。
 
-##  <a name="getexecutionresourceid"></a>  Iexecutionresource::getexecutionresourceid メソッド
+## <a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId メソッド
 
-この実行リソースを表すハードウェア スレッドの一意の識別子を返します。
+この実行リソースが表すハードウェアスレッドの一意の識別子を返します。
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-この実行リソースを基になるハードウェア スレッドの一意の識別子。
+この実行リソースの基になるハードウェアスレッドの一意の識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-各ハードウェア スレッドには、同時実行ランタイムによって一意の識別子が割り当てられます。 複数の実行リソースが関連付けられているハードウェアである場合、スレッドすべてが同じ実行リソース識別子。
+各ハードウェアスレッドには、同時実行ランタイムによって一意の識別子が割り当てられます。 複数の実行リソースがハードウェアスレッドに関連付けられている場合、それらはすべて同じ実行リソース識別子を持ちます。
 
-##  <a name="getnodeid"></a>  Iexecutionresource::getnodeid メソッド
+## <a name="getnodeid"></a>IExecutionResource:: GetNodeId メソッド
 
-この実行リソースが属するプロセッサ ノードの一意の識別子を返します。
+この実行リソースが属するプロセッサノードの一意の識別子を返します。
 
-```
+```cpp
 virtual unsigned int GetNodeId() const = 0;
 ```
 
 ### <a name="return-value"></a>戻り値
 
-プロセッサ ノードの一意の識別子。
+プロセッサノードの一意の識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-同時実行ランタイムでは、プロセッサのノードのグループで、システム上のハードウェア スレッドを表します。 ノードは、通常、システムのハードウェア トポロジから派生します。 たとえば、特定のソケットまたは特定の NUMA ノードのすべてのプロセッサが同一プロセッサ ノードに属している可能性があります。 Resource Manager では、以降ではこれらのノードに一意の識別子を割り当てます`0`まで`nodeCount - 1`ここで、`nodeCount`システム上のプロセッサ ノードの合計数を表します。
+同時実行ランタイムは、システム上のハードウェアスレッドをプロセッサノードのグループ単位で表します。 通常、ノードはシステムのハードウェアトポロジから派生します。 たとえば、特定のソケットまたは特定の NUMA ノードのすべてのプロセッサが、同じプロセッサノードに属している場合があります。 リソースマネージャーでは、これらのノードに一意の識別子が割り当てられます。これらのノードの `0` は `nodeCount - 1`を含みます。 `nodeCount` は、システム上のプロセッサノードの合計数を表します。
 
-ノードの数は、関数から取得できます[GetProcessorNodeCount](concurrency-namespace-functions.md)します。
+ノードの数は、関数[GetProcessorNodeCount](concurrency-namespace-functions.md)から取得できます。
 
-##  <a name="remove"></a>  Iexecutionresource::remove メソッド
+## <a name="remove"></a>IExecutionResource:: Remove メソッド
 
-この実行リソースをリソース マネージャーを返します。
+この実行リソースをリソースマネージャーに返します。
 
-```
+```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *pScheduler*<br/>
-この実行リソースを削除する要求を行っているスケジューラへのインターフェイス。
+この実行リソースを削除する要求を行うスケジューラへのインターフェイス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドを使用して、スタンドアロンの実行リソースと Resource Manager への仮想プロセッサ ルートに関連付けられている実行リソースを返します。
+このメソッドを使用して、スタンドアロンの実行リソースだけでなく、仮想プロセッサのルートに関連付けられている実行リソースをリソースマネージャーに返すこともできます。
 
-メソッドのいずれかから受信した場合、これは、スタンドアロンの実行リソース[ischedulerproxy::subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)または[ischedulerproxy::requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)を呼び出すと、メソッド`Remove`にリソースが作成されたスレッドのサブスクリプションが終了を表します。 スケジューラのプロキシをシャット ダウンする前にスレッドのすべてのサブスクリプションを終了する必要があり、呼び出す必要がある`Remove`サブスクリプションを作成したスレッドから。
+[ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)メソッドまたは[ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)メソッドのいずれかから受け取ったスタンドアロンの実行リソースの場合、メソッド `Remove` を呼び出すと、リソースが作成されたスレッドサブスクリプションが終了します。 スケジューラプロキシをシャットダウンする前に、すべてのスレッドサブスクリプションを終了する必要があります。また、サブスクリプションを作成したスレッドから `Remove` を呼び出す必要があります。
 
-仮想プロセッサ ルート、すぎる、によって返される Resource Manager への呼び出し、`Remove`メソッド、ため、インターフェイス`IVirtualProcessorRoot`継承、`IExecutionResource`インターフェイス。 仮想プロセッサ ルートをへの呼び出しに応答で返す必要があります、 [ischeduler::removevirtualprocessors](ischeduler-structure.md#removevirtualprocessors)メソッド、またはをオーバーサブスク ライブの仮想プロセッサ ルートから取得したが完了したら、 [Ischedulerproxy::createoversubscriber](ischedulerproxy-structure.md#createoversubscriber)メソッド。 仮想プロセッサ ルートでは、制限がないスレッドを呼び出すことができます、`Remove`メソッド。
+`Remove` メソッドを呼び出すことによって、仮想プロセッサルートもリソースマネージャーに返すことができます。これは、インターフェイス `IVirtualProcessorRoot` `IExecutionResource` インターフェイスから継承されるためです。 [IScheduler:: RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors)メソッドの呼び出しへの応答として、または[ISchedulerProxy:: createoversubscriber](ischedulerproxy-structure.md#createoversubscriber)メソッドから取得したオーバーサブスクライブ仮想プロセッサルートを使用して完了した場合は、仮想プロセッサルートを返す必要がある場合があります。 仮想プロセッサルートの場合、どのスレッドが `Remove` メソッドを呼び出すことができるかに制限はありません。
 
-`invalid_argument` 場合にスローされるパラメーター`pScheduler`に設定されている`NULL`します。
+パラメーター `pScheduler` が `NULL`に設定されている場合、`invalid_argument` がスローされます。
 
-`invalid_operation` 場合にスローされるパラメーター`pScheduler`は、現在のスレッドがスレッドのサブスクリプションを作成したスレッドと異なる場合、または、スタンドアロンの実行リソースでは、この実行リソースが作成されたこと、スケジューラから異なる。
+パラメーター `pScheduler` が、この実行リソースが作成されたスケジューラと異なる場合、または、現在のスレッドがスレッドサブスクリプションを作成したスレッドと異なる場合は、スタンドアロンの実行リソースを使用して、`invalid_operation` がスローされます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [IVirtualProcessorRoot 構造体](ivirtualprocessorroot-structure.md)

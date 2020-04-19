@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - declaring functions, message handler functions [MFC]
 ms.assetid: f8d3dbc1-4500-4f1e-a18d-7371edf36386
-ms.openlocfilehash: 3a1fdebf9842c4074e29de07d55d06f9b97dc018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24960abd54e2085ba643dc6438d8c1aa5220adc5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241135"
 ---
 # <a name="declaring-message-handler-functions"></a>メッセージ ハンドラー関数の宣言
 
@@ -26,4 +26,3 @@ ms.locfileid: "50652245"
 ## <a name="see-also"></a>関連項目
 
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
-

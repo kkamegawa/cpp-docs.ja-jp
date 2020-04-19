@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524784"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755708"
 ---
 # <a name="c-library-conventions"></a>C++ ライブラリの規則
 
@@ -24,7 +24,7 @@ C++ ライブラリは、標準 C ライブラリとほとんど同じ規則に�
 
 実装では、C++ ライブラリでの型と関数の宣言方法にある程度の自由さがあります。
 
-- 標準 C ライブラリでの関数の名前は、 extern #"C++" または extern "C" リンケージです。 ライブラリ エンティティをインラインで宣言するのではなく、適切な標準 C ヘッダーをインクルードします。
+- 標準 C ライブラリの関数の名前には、extern "C++" または Extern "C" リンケージがあります。 ライブラリ エンティティをインラインで宣言するのではなく、適切な標準 C ヘッダーをインクルードします。
 
 - ライブラリ クラスのメンバー関数名には、このドキュメントに記載されているものに対する追加の関数シグネチャが存在する場合があります。 ここで説明されている関数呼び出しは期待したとおりに動作しますが、ライブラリ メンバー関数のアドレスを確実に取得することはできません (型が予想したものではない場合があります)。
 
@@ -48,7 +48,7 @@ C++ ライブラリは、標準 C ライブラリとほとんど同じ規則に�
 
 - 置き換え可能な関数の既定バージョンを含む、ライブラリで提供されている関数は、*最も多い場合でで*、例外の指定に列記されている例外をスローする可能性があります。 ライブラリによって提供されるデストラクターは例外をスローしません。 `qsort` が例外をスローする比較関数を呼び出すときのように、標準 C ライブラリの関数は例外を伝播することがありますが、それ以外の場合は例外をスローしません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

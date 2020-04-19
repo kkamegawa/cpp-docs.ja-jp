@@ -7,12 +7,12 @@ helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 05baf212f53956095af89377c0877db79b6e25ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3242986d66de7d423b8ab744a691ca1904328de8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411709"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>CStatusBarCtrl を使用して CStatusBarCtrl オブジェクトを作成する方法
 
@@ -36,4 +36,3 @@ ms.locfileid: "50552764"
 
 [CStatusBarCtrl の使い方](../mfc/using-cstatusbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

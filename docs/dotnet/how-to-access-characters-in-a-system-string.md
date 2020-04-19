@@ -1,5 +1,5 @@
 ---
-title: '方法: System::String の文字にアクセスする'
+title: '方法: System::string の文字をアクセス'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222937"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
+# <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::string の文字をアクセス
 
 文字にアクセスすることができます、<xref:System.String>オブジェクトの高パフォーマンスの呼び出しをアンマネージ関数を受け取る`wchar_t*`文字列。 メソッド生成の最初の文字への内部ポインター、<xref:System.String>オブジェクト。 このポインターの直接操作またはピン留めし、通常、関数に渡すことができますが`wchar_t`文字列。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50667048"
 
 `PtrToStringChars` 返します、 <xref:System.Char>、内部ポインターである (とも呼ばれる、 `byref`)。 そのため、ガベージ コレクションの対象になります。 ネイティブ関数に渡すしようとしている場合を除き、このポインターをピン留めする必要はありません。
 
-次のコードについて考えてみましょう。  ピン留めは必要ありませんので`ppchar`、内部ポインターであり、ガベージ コレクターは、文字列の指すを移動する場合は更新も`ppchar`します。 なし、 [pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)コードを実行およびが潜在的なパフォーマンスの影響によるものをピン留めします。
+次のコードについて考えてみましょう。  ピン留めは必要ありませんので`ppchar`、内部ポインターであり、ガベージ コレクターは、文字列の指すを移動する場合は更新も`ppchar`します。 なし、 [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)、コードを実行およびが潜在的なパフォーマンスの影響によるものをピン留めします。
 
 渡した場合`ppchar`、ネイティブ関数にする必要があります固定ポインター。 ガベージ コレクターがアンマネージ スタック フレーム上のポインターを更新することができません。
 

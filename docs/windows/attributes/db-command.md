@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148199"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -39,7 +39,7 @@ OLE DB コマンドのテキストを含むコマンド文字列。 簡単な例
 
 *binding parameter block* は次のように定義します。
 
-> **(\[**  *bindtype* **]** *szVar1* \[、 *szVar2* \[、 *nVar3* \[,...]]**)**
+> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
 
 それぞれの文字について以下に説明します。
 
@@ -97,7 +97,7 @@ TCHAR m_state[3] = 'CA';
 
 値を指定する場合*バインド*、 **db_command**は関連付けられている値を解析し、解析しません、 \[ *bindtype*] パラメーターです。 これにより、OLE DB プロバイダーの構文を使用できます。 パラメーターをバインドせず、解析を無効にするには指定`Bindings=""`します。
 
-値を指定しない場合*バインド*、 **db_command**を探して、バインディング パラメーター ブロックは解析 '**(**'、その後に **\[** _bindtype_**]** で後に角かっこ、1 つまたは複数以前に宣言された C++ メンバー変数を続けて '**)**'。 かっこで囲まれたすべてのテキストが最終的なコマンドから削除され、これらのパラメーターを使用してこのコマンドの列とパラメーターのバインディングが作成されます。
+値を指定しない場合*バインド*、 **db_command**を探して、バインディング パラメーター ブロックは解析 '**(**'、その後に **\[** _bindtype_**]** を 1 つ後に角かっこ、またはより以前に宣言されたC++メンバー変数、続けて '**)**'。 かっこで囲まれたすべてのテキストが最終的なコマンドから削除され、これらのパラメーターを使用してこのコマンドの列とパラメーターのバインディングが作成されます。
 
 *bulk_fetch*<br/>
 (省略可能)フェッチする行の数を指定する整数値。
@@ -122,7 +122,7 @@ OLE DB コンシューマーは、**db_command** によって作成された [CC
 
 この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-movenext.md)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
 
-このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、次を参照してください。[方法: 既存のオブジェクトの参照と、データベースに接続する](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)と[新しい接続を追加](/visualstudio/data-tools/add-new-connections)します。
+このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、次を参照してください。[方法。既存のオブジェクトの参照と、データベースに接続する](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)と[新しい接続を追加](/visualstudio/data-tools/add-new-connections)します。
 
 ```cpp
 // db_command.h
@@ -231,7 +231,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 

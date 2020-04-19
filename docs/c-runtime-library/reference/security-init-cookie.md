@@ -1,9 +1,9 @@
 ---
 title: __security_init_cookie
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __security_init_cookie
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573616"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948715"
 ---
-# <a name="securityinitcookie"></a>__security_init_cookie
+# <a name="__security_init_cookie"></a>__security_init_cookie
 
 グローバル セキュリティ クッキーを初期化します。
 
@@ -45,9 +48,9 @@ void __security_init_cookie(void);
 
 グローバル セキュリティ クッキーは、[/GS (バッファーのセキュリティ チェック)](../../build/reference/gs-buffer-security-check.md) を指定してコンパイルされたコードおよび例外処理を使用するコードでバッファー オーバーランから保護するために使用されます。 オーバーランから保護されている関数を開始するときにクッキーはスタックに配置され、関数が終了するときにスタックの値がグローバルなクッキーと比較されます。 違いがある場合はバッファー オーバーランが発生したことを意味し、プログラムは直ちに終了します。
 
-通常、 **_ _security_init_cookie**が初期化されるとき、CRT によって呼び出されます。 CRT の初期化をバイパスする場合: を使用する場合など[/ENTRY](../../build/reference/entry-entry-point-symbol.md)エントリ ポイントを指定する: 呼び出す必要がありますし、 **_ _security_init_cookie**自分でします。 場合 **_ _security_init_cookie**は呼び出されません、グローバル セキュリティ クッキーは既定値に設定され、バッファー オーバーランの保護が損なわれます。 攻撃者は、バッファー オーバーランのチェックを無効にするこの既定のクッキー値を悪用することができます、ために、常に呼び出すことが勧め **_ _security_init_cookie**エントリ ポイントを定義するとき。
+通常、初期化時に**は、CRT**によってメソッドが呼び出されます。 たとえば、 [/entry](../../build/reference/entry-entry-point-symbol.md)を使用してエントリポイントを指定する場合など、CRT の初期化を省略した場合は、自分で **__ securityinitcookie**を呼び出す必要があります。 既定**値が指定**されていない場合は、グローバルセキュリティ cookie が既定値に設定され、バッファーオーバーランによる保護が損なわれます。 攻撃者はこの既定の cookie 値を悪用してバッファーオーバーランのチェックを破ることができるため、独自のエントリポイントを定義するときは常に、 **__ security_s**を呼び出すことをお勧めします。
 
-呼び出し **_ _security_init_cookie**オーバーランで保護されているいずれかの前に行う必要がある関数の入力は、それ以外の場合、たとえば、見かけ上のバッファー オーバーランが検出されます。 詳細については、「[C Runtime Error R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)」(C ランタイム エラー R6035) をご覧ください。
+オーバーランによって保護されている関数が入力される前に、その呼び出しを**行う必要が**あります。それ以外の場合は、擬似的なバッファーオーバーランが検出されます。 詳細については、「[C Runtime Error R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)」(C ランタイム エラー R6035) をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -59,8 +62,8 @@ void __security_init_cookie(void);
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**_ _security_init_cookie**は標準の C ランタイム ライブラリの Microsoft 拡張です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**__ securityinitcookie**は、標準の C ランタイムライブラリの Microsoft 拡張機能です。 (_s) 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)
+[Microsoft セキュリティレスポンスセンター](https://www.microsoft.com/msrc?rtc=1)

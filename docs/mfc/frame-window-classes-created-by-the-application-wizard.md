@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: 581ceb25e675da6506d06bca3798fb22ca8fd389
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392818"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス
 
-使用すると、[アプリケーション ウィザード](../ide/creating-desktop-projects-by-using-application-wizards.md)アプリケーション ウィザードをアプリケーション、ドキュメント、およびビューのクラスだけでなく、スケルトン アプリケーションを作成するには、アプリケーションのメイン フレーム ウィンドウのフレーム ウィンドウの派生クラスを作成します。 クラスと呼びます`CMainFrame`で既定値、およびそれが含まれるファイルは名前します。H とします。CPP します。
+プロジェクトを新しい MFC を作成するとき、**新しいプロジェクト**ダイアログ ボックスで、アプリケーション、ドキュメント、およびビュー クラスでは、だけでなくアプリケーション ウィザードは、アプリケーションのメイン フレーム ウィンドウのフレーム ウィンドウの派生クラスを作成します。 クラスと呼びます`CMainFrame`で既定値、およびそれが含まれるファイルは名前します。H とします。CPP します。
 
 アプリケーションが SDI の場合、`CMainFrame`クラスから派生したクラスは[CFrameWnd](../mfc/reference/cframewnd-class.md)します。
 
@@ -36,5 +36,5 @@ ms.locfileid: "50629256"
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウ クラス](../mfc/frame-window-classes.md)<br/>
-[MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../ide/mfc-program-or-control-source-and-header-files.md)
+[MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../build/reference/mfc-program-or-control-source-and-header-files.md)
 

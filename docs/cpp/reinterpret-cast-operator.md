@@ -1,4 +1,4 @@
----
+﻿---
 title: reinterpret_cast 演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
 ms.openlocfilehash: 421a1fdce6834f800cd33a55d75c9dc4f88ffc93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403426"
 ---
-# <a name="reinterpretcast-operator"></a>reinterpret_cast 演算子
+# <a name="reinterpret_cast-operator"></a>reinterpret_cast 演算子
 
 ポインターが他のポインター型に変換されることを許可します。 また、整数型から任意のポインター型への変換およびその逆の変換を許可します。
 
@@ -31,7 +31,7 @@ reinterpret_cast < type-id > ( expression )
 
 結果、 **reinterpret_cast**元の型にキャストされている以外は安全に使用することはできません。 その他の使用方法は、最高でも非ポータブルです。
 
-**Reinterpret_cast**演算子はキャストできません、 **const**、**揮発性**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
+**reinterpret_cast**演算子はキャストできません、 **const**、**volatile**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
 
 **Reinterpret_cast**演算子は、null ポインターの値を変換先の型の null ポインター値に変換します。
 

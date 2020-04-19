@@ -1,10 +1,10 @@
 ---
 title: _spawnve、_wspawnve
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _spawnve
 - _wspawnve
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wspawnve
 - _spawnve
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 3e3a8d3cf476dfff7c74007ec371c39f5128bbe7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 37ff1358e8639d49992b8cfafb76b2ddac079889
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326479"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947536"
 ---
-# <a name="spawnve-wspawnve"></a>_spawnve、_wspawnve
+# <a name="_spawnve-_wspawnve"></a>_spawnve、_wspawnve
 
 新しいプロセスを作成して実行します。
 
@@ -71,14 +74,14 @@ intptr_t _wspawnve(
 実行されるファイルのパス。
 
 *argv*<br/>
-引数へのポインターの配列。 引数*argv*[0] 保護モードのパスへのポインターまたはプログラム名にリアル モードでは、通常、 *argv*[1] から*argv***[n]** は、新しい引数リストを形成する文字列へのポインター。 引数*argv*[**n** +1] する必要があります、 **NULL**引数リストの末尾へのポインター。
+引数へのポインターの配列。 引数*argv*[0] は、通常、リアルモードのパスまたは保護モードのプログラム名へのポインターであり、 *argv*[1] ~ *argv* **[n]** は、新しい引数リストを形成する文字列へのポインターです。 引数*argv*[**n** + 1] は、引数リストの末尾を示す**NULL**ポインターでなければなりません。
 
 *envp*<br/>
 環境設定へのポインターの配列。
 
 ## <a name="return-value"></a>戻り値
 
-同期からの戻り値 **_spawnve**または **_wspawnve** (**_P_WAIT**向けに指定された*モード*) は、新しいプロセスの終了ステータス. 非同期の戻り値 **_spawnve**または **_wspawnve** (**_P_NOWAIT**または **_P_NOWAITO**向けに指定された*モード*) は、プロセスのハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に呼び出す場合、0 以外の値を終了ステータスを設定できます、**終了**ルーチン 0 以外の引数。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 は、(新しいプロセスは開始されません) エラーを示します。 この場合、 **errno**値は次のいずれかに設定されます。
+同期 **_spawnve**または **_wspawnve** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期の **_spawnve**または **_wspawnve** (*モード*用に指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値は、プロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で**終了**ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno**は次のいずれかの値に設定されます。
 
 |||
 |-|-|
@@ -94,7 +97,7 @@ intptr_t _wspawnve(
 
 これらの関数は、新しいプロセスを作成して実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。
 
-これらの関数では、パラメーターの検証が行われます。 いずれか*cmdname*または*argv* null ポインターの場合は、場合*argv* null ポインターが指すまたは*argv*[0] は無効な空の文字列パラメーター ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*argv*が null ポインターの場合、または*argv*が null ポインターを指している場合、または*argv*[0] が空の文字列の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
 
 ## <a name="requirements"></a>必要条件
 

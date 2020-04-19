@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e9035a8573a917e732f3452aeb7fd07af160517f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471787"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503137"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl クラス
 
@@ -97,7 +97,7 @@ HRESULT GetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  任意のオブジェクトをサポートする`IObjectSafety`は自身のセキュリティと任意のオブジェクトのデリゲートを担当します。 プログラマする必要があります、ユーザーのコンテキストでコードを実行してから発生した問題を考慮、クロスサイト スクリプティングおよび適切なゾーン チェックを実行します。
 
-参照してください[IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) Windows SDK にします。
+参照してください[IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) Windows SDK にします。
 
 ##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
 
@@ -125,9 +125,9 @@ HRESULT SetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  任意のオブジェクトをサポートする`IObjectSafety`は自身のセキュリティと任意のオブジェクトのデリゲートを担当します。 プログラマする必要があります、ユーザーのコンテキストでコードを実行してから発生した問題を考慮、クロスサイト スクリプティングおよび適切なゾーン チェックを実行します。
 
-参照してください[IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) Windows SDK にします。
+参照してください[IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) Windows SDK にします。
 
 ## <a name="see-also"></a>関連項目
 
-[IObjectSafety インターフェイス](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
+[IObjectSafety インターフェイス](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

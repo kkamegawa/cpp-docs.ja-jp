@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 49e9b1cd12bee562daaf4ffb40492c80d8549ec3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182226"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager クラス
 
@@ -81,7 +81,7 @@ class CContextMenuManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例では、メニューを追加する方法、`CContextMenuManager`オブジェクト、およびアクティブなポップアップ メニューを閉じる方法と、`CContextMenuManager`オブジェクトには、新しいポップアップ メニューが表示されます。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+次の例では、メニューを追加する方法、`CContextMenuManager`オブジェクト、およびアクティブなポップアップ メニューを閉じる方法と、`CContextMenuManager`オブジェクトには、新しいポップアップ メニューが表示されます。 このコード スニペットの一部、[カスタム ページ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 

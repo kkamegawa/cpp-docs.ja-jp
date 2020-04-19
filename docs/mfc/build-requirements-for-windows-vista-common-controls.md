@@ -1,44 +1,40 @@
 ---
-title: Windows Vista コモン コントロールの作成要件
-ms.date: 11/04/2016
+title: Windows コモンコントロールのビルド要件
+ms.date: 08/19/2019
 helpviewer_keywords:
-- common controls (MFC), build requirements
-- common controls (MFC)
+- Common Controls (MFC), build requirements
+- Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: c9a01665339c28b58a5d528cbb9dfaa235e7f1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637074"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630857"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista コモン コントロールの作成要件
+# <a name="build-requirements-for-windows-common-controls"></a>Windows コモンコントロールのビルド要件
 
-Microsoft Foundation Class (MFC) ライブラリでは、Windows のコモン コントロール バージョン 6.1 をサポートします。 Windows Vista のコモン コントロールが含まれているし、ライブラリは、Visual Studio SDK に含まれます。 ライブラリは、既存のクラス、および新しいクラスを強化する新しいメソッドと Windows Vista コモン コントロールをサポートするメソッドを提供します。 アプリケーションをビルドするときに、次のセクションで説明されている、コンパイルと移行の要件に従ってください。
+MFC (Microsoft Foundation Class) ライブラリでは、 [Windows コモンコントロール](/windows/win32/controls/common-controls-intro)がサポートされています。 コモンコントロールは Windows に含まれており、ライブラリは Visual Studio に含まれています。 MFC ライブラリには、既存のクラスを強化する新しいメソッドと、Windows コモンコントロールをサポートする追加のクラスとメソッドが用意されています。 アプリケーションをビルドするときは、次のセクションで説明されているコンパイルと移行の要件に従う必要があります。
 
 ## <a name="compilation-requirements"></a>コンパイルの要件
 
-### <a name="supported-versions"></a>サポートされているバージョン
+### <a name="supported-versions"></a>Supported Versions
 
-Windows Vista のみをサポートし、後で、その他の中にいくつかの新しいクラスとメソッドのメソッドも以前のオペレーティング システムをサポートします。 内のメモ、`Requirements`各メソッドのトピックのセクションでは、最低限に必要なオペレーティング システムが Windows Vista を指定します。
-
-コンピューターが Windows Vista が実行されない場合でも、コンピューターにバージョン 6.1 MFC ヘッダー ファイルがある場合は、Windows Vista で実行される MFC アプリケーションを構築できます。 ただし、具体的には Windows Vista 用に設計された一般的なコントロールは、そのシステムでのみ動作し、以前のオペレーティング システムでは無視されます。
+MFC は、すべてのバージョンのコモンコントロールをサポートしています。 Windows コモンコントロールバージョンの詳細については、「[コモンコントロールバージョン](/windows/win32/controls/common-control-versions)」を参照してください。
 
 ### <a name="supported-character-sets"></a>サポートされている文字セット
 
-新しい Windows コモン コントロールでは、Unicode 文字セットのみと ANSI 文字セットではなくをサポートします。 コマンドラインでアプリケーションをビルドする場合は、次の定義の両方を使用 (/D) 文字セットの基になる Unicode を指定するコンパイラ オプション。
+Windows コモンコントロールは、ANSI 文字セットではなく、Unicode 文字セットのみをサポートしています。 コマンドラインでアプリケーションをビルドする場合は、次の2つの定義 (/D) コンパイラオプションを使用して、基になる文字セットとして Unicode を指定します。
 
 ```
 /D_UNICODE /DUNICODE
 ```
 
-Visual Studio 統合開発環境 (IDE) でアプリケーションをビルドする場合は、指定、 **Unicode 文字セットを**のオプション、**文字セット**プロパティ、**全般**プロジェクトのプロパティのノード。
-
-Windows コモン コントロール バージョン 6.1 以降、ANSI バージョンのいくつかの MFC メソッドを推奨されていませんが。 詳細については、次を参照してください。[非推奨の ANSI Api](../mfc/deprecated-ansi-apis.md)します。
+Visual Studio 統合開発環境 (IDE: integrated development environment) でアプリケーションをビルドする場合は、プロジェクトプロパティの **[全般**] ノードで、 **[文字セット]** プロパティの **[Unicode 文字セット]** オプションを指定します。
 
 ## <a name="migration-requirements"></a>移行の要件
 
-Windows コモン コントロール バージョン 6.1 を使用する新しい MFC アプリケーションをビルドする Visual Studio IDE を使用する場合、IDE は、適切なマニフェストを自動的に宣言します。 ただし、以前のバージョンの Visual Studio から既存の MFC アプリケーションを移行する、新しいコモン コントロールを使用する場合は、IDE に自動的には説明しませんマニフェストでアプリケーションをアップグレードします。 代わりで次のソース コードを挿入する必要があります手動で、 **stdafx.h**ファイル。
+Visual Studio IDE を使用して、Windows コモンコントロールを使用する新しい MFC アプリケーションをビルドする場合、IDE は自動的に適切なマニフェストを宣言します。 ただし、既存の MFC アプリケーションを Visual Studio 2005 以前のバージョンから移行し、コモンコントロールを使用する場合、IDE はアプリケーションをアップグレードするためのマニフェスト情報を自動的に提供しません。 代わりに、プリコンパイル済みヘッダーファイルに次のソースコードを手動で挿入する必要があります。
 
 ```
 #ifdef UNICODE
@@ -59,4 +55,3 @@ Windows コモン コントロール バージョン 6.1 を使用する新し�
 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)<br/>
 [階層図](../mfc/hierarchy-chart.md)<br/>
 [非推奨の ANSI API](../mfc/deprecated-ansi-apis.md)
-

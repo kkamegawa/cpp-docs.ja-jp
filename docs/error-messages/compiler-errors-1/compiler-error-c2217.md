@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
-ms.openlocfilehash: f178f969afa189910c9d23d70226ecc6c15876a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7417c651fde6bef781bb6eb2e081cd3ad8ecc3a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507550"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741301"
 ---
 # <a name="compiler-error-c2217"></a>コンパイラ エラー C2217
 
-'attribute1' が 'attribute2' が必要です。
+' attribute1 ' には ' attribute2 ' が必要です
 
-関数の最初の属性には、2 つ目の属性が必要です。
+最初の関数属性には2番目の属性が必要です。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. 中断 (`__interrupt`) として宣言された関数`near`します。 割り込み関数である必要があります`far`します。
+1. 割り込み (`__interrupt`) 関数が `near`として宣言されています。 割り込み関数は `far`である必要があります。
 
-1. 宣言された関数を中断`__stdcall`、または`__fastcall`します。 割り込み関数呼び出し規約を C++ を使用する必要があります。
+1. `__stdcall`、または `__fastcall`で宣言された割り込み関数。 割り込み関数では、C の呼び出し規約を使用する必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-C2217 は、可変個の引数を受け取る CLR 関数にデリゲートをバインドしようとした場合にも発生します。 また、関数は、e param 配列のオーバー ロードの場合は、代わりに使用します。 次の例では、C2217 が生成されます。
+C2217 は、可変個の引数を受け取る CLR 関数にデリゲートをバインドしようとした場合にも発生する可能性があります。 関数に e param 配列のオーバーロードもある場合は、代わりにを使用します。 次の例では、C2217 が生成されます。
 
-```
+```cpp
 // C2217.cpp
 // compile with: /clr
 using namespace System;

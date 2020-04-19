@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326694"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857594"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft 固有の仕様**
 
-構築、 **_com_ptr_t**オブジェクト。
+**_Com_ptr_t**オブジェクトを構築します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,35 +133,37 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *pInterface*<br/>
 生のインターフェイス ポインター。
 
 *fAddRef*<br/>
-TRUE の場合、`AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。
+TRUE の場合、カプセル化されたインターフェイスポインターの参照カウントをインクリメントするために `AddRef` が呼び出されます。
 
 *cp*<br/>
-A **_com_ptr_t**オブジェクト。
+**_Com_ptr_t**オブジェクト。
 
-*p*<br/>
-このスマート ポインター型と異なる型で生のインターフェイス ポインター **_com_ptr_t**オブジェクト。
+*P*<br/>
+この **_com_ptr_t**オブジェクトのスマートポインター型とは異なる、生のインターフェイスポインター。
 
 *varSrc*<br/>
-`_variant_t` オブジェクト。
+`_variant_t` オブジェクトです。
 
 *clsid*<br/>
-`CLSID`コクラスの。
+コクラスの `CLSID`。
 
 *dwClsContext*<br/>
 実行可能コードを実行するコンテキスト。
 
 *lpcStr*<br/>
-保持するマルチバイト文字列を`CLSID`(以降では"**{**") または`ProgID`します。
+`CLSID` (" **{** " で始まる) または `ProgID`のいずれかを保持するマルチバイト文字列。
 
 *pOuter*<br/>
-不明な外部の[集計](/windows/desktop/com/aggregation)します。
+[集計](/windows/win32/com/aggregation)の不明な外部。
 
-## <a name="see-also"></a>関連項目
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

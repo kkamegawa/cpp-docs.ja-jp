@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276005"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl クラス
 
@@ -44,11 +44,11 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 
 `IServiceProvider`インターフェイスの GUID で指定されたサービスを検索し、サービスに要求されたインターフェイスのインターフェイス ポインターを返します。 クラス`IServiceProviderImpl`このインターフェイスの既定の実装を提供します。
 
-`IServiceProviderImpl` 1 つの方法を指定します: [QueryService](#queryservice)が作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。
+`IServiceProviderImpl` 1 つのメソッドを指定します。[QueryService](#queryservice)が作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。
 
 `IServiceProviderImpl` 以降では、サービス マップを使用して[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)で終わる[END_SERVICE_MAP](service-map-macros.md#end_service_map)します。
 
-サービス マップには、2 つのエントリが含まれています: [SERVICE_ENTRY](service-map-macros.md#service_entry)、オブジェクトでサポートされている指定したサービス id (SID) を示すと[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)、呼び出す`QueryService`別にチェーンオブジェクト。
+サービス マップには、2 つのエントリが含まれています。[SERVICE_ENTRY](service-map-macros.md#service_entry)、オブジェクトでサポートされている指定したサービス id (SID) を示すと[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)、呼び出す`QueryService`を別のオブジェクトのチェーンにします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

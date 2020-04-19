@@ -1,28 +1,29 @@
 ---
 title: .LFCOND
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LFCOND
 helpviewer_keywords:
 - .LFCOND directive
 ms.assetid: ed35590d-cc48-4de6-b775-b4f3434d08af
-ms.openlocfilehash: 68dce22f2040468dde1bfae88d1192c0d49900c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca7b81ea6e45a69536d571fc0a1752a81e5e87a7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432540"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317709"
 ---
 # <a name="lfcond"></a>.LFCOND
 
 ## <a name="syntax"></a>構文
 
-> .LFCOND
+> **.LFCOND**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[します。リスト](../../assembler/masm/dot-listif.md)します。
+「」を参照してください[.LISTIF](dot-listif.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

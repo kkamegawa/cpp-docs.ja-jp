@@ -1,18 +1,18 @@
 ---
-title: '方法 : 空の CLR プロジェクトを作成する'
+title: '方法: 空の CLR プロジェクトを作成します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 0acfa073d0aa11dec63ad26f1fac4ec206cda6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: bd57ac4c6a821536b1c2cf3d222327d9924700cb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612135"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221820"
 ---
-# <a name="how-to-create-clr-empty-projects"></a>方法 : 空の CLR プロジェクトを作成する
+# <a name="how-to-create-clr-empty-projects"></a>方法: 空の CLR プロジェクトを作成します。
 
 空の CLR プロジェクトを作成するには、使用、 **CLR 空プロジェクト**から利用できる、テンプレート、**新しいプロジェクト** ダイアログ ボックス。
 
@@ -36,5 +36,5 @@ ms.locfileid: "50612135"
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)<br/>
-[Visual C++ プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+[C++Visual Studio でプロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br/>
+[C++ プロジェクトのデバッグ](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

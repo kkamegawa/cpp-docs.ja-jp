@@ -8,12 +8,12 @@ helpviewer_keywords:
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-ms.openlocfilehash: df835b35bb036086382fc6adb4beed142f99be76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a93268ca76516c1b3f736c106518ae6d94cc27
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261619"
 ---
 # <a name="adding-an-atl-simple-object"></a>ATL シンプル オブジェクトを追加します。
 

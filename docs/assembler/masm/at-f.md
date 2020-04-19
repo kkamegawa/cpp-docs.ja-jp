@@ -1,26 +1,27 @@
 ---
 title: '@F'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@F'
 helpviewer_keywords:
 - '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-ms.openlocfilehash: 9c7a214d9a160bbf280c0b7ec3dc2f5765ce375a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80f75fe9b191db48fd68e7c926b94cb0b9126d20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619272"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315902"
 ---
-# <a name="f"></a>@F
+# <a name="f"></a>\@F
 
-次の場所[@:](../../assembler/masm/at-at.md)ラベル。
+次の[\@\@:](at-at.md)ラベルの位置。
 
 ## <a name="syntax"></a>構文
 
-> @F
+> **\@F**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

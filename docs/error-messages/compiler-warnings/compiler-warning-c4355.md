@@ -1,4 +1,4 @@
----
+﻿---
 title: コンパイラの警告 C4355
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: 6b74c8dd5ce9860cb218d21790f12ba05e9be22f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1f5e5be2606a03ec5e9ecd0c571f94c25f82494
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554174"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623745"
 ---
 # <a name="compiler-warning-c4355"></a>コンパイラの警告 C4355
 
 'this' : ベース メンバー初期化リストで使用されました。
 
-**この**ポインターが非静的メンバー関数内でのみ有効です。 基底クラスの初期化子リストで使用できません。
+**this**ポインターは、非静的メンバー関数内でのみ有効です。 基底クラスの初期化子リストでは使用できません。
 
-基底クラスのコンス トラクターとクラス メンバーのコンス トラクターが前に呼び出されます**この**コンス トラクター。 実際には、ポインターを渡された別のコンス トラクターに未構築のオブジェクトにしました。 その他のコンス トラクターは、メンバーにアクセスまたはこのメンバー関数を呼び出し、結果は定義できません。 使用しないようにする、**この**すべての構築が完了するまでのポインター。
+基底クラスのコンストラクターとクラスメンバーのコンストラクターは、**this**コンストラクターの前に呼び出されます。 実際には、構築されていないオブジェクトへのポインターを別のコンストラクターに渡しました。 他のコンストラクターがメンバーにアクセスしたり、このでメンバー関数を呼び出したりすると、結果は未定義になります。 すべての構築が完了するまで、**this**ポインターを使用しないでください。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
 次の例では、C4355 が生成されます。
 
-```
+```cpp
 // C4355.cpp
 // compile with: /w14355 /c
 #include <tchar.h>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-ms.openlocfilehash: 1fe48f457f2c44720ad7ecec349a68e63a05268b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404612"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 名前空間 (C++/CX)
 
-C + + CX Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足するものです。
+C++/CX では、Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,5 +41,4 @@ namespace Windows {
 
 **ヘッダー:** collection.h
 
-**名前空間:** Windows::Foundation::Collections
-
+**名前空間:**:Foundation

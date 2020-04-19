@@ -1,26 +1,27 @@
 ---
 title: .CONTINUE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .CONTINUE
 helpviewer_keywords:
 - .CONTINUE directive
 ms.assetid: 60a6e46d-49e6-4d65-97d0-cbe8c47b3fab
-ms.openlocfilehash: ac6d76247499c715ede0be6f7e426435e72bdf3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c6af474e065a17c413700d4826f9a73dcaaade7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647435"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314095"
 ---
-# <a name="continue"></a>.CONTINUE
+# <a name="continue-32-bit-masm"></a>.続行 (32 ビット MASM)
 
-先頭に移動するコードを生成、[します。中に](../../assembler/masm/dot-while.md)または[します。繰り返し](../../assembler/masm/dot-repeat.md)ブロック`condition`は true。
+の先頭に移動するコードを生成[します。また](dot-while.md)は[。](dot-repeat.md)*条件*が true の場合、ブロックを繰り返します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> .引き続き [します。IF 条件]
+> **.** ⟦**を続行します。IF** *condition*⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

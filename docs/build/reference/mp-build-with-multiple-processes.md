@@ -1,6 +1,6 @@
 ---
 title: /MP (複数のプロセスを使用したビルド)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320982"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (複数のプロセスを使用したビルド)
 
@@ -50,10 +50,10 @@ ms.locfileid: "50562085"
 |オプションまたは言語機能|説明|
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) プリプロセッサ ディレクティブ|タイプ ライブラリの型を C++ クラスに変換し、それらのクラスをヘッダー ファイルに書き込みます。|
-|[/E](../../build/reference/e-preprocess-to-stdout.md)、 [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|プリプロセッサ出力を標準出力 (**stdout**) にコピーします。|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|インクリメンタル リビルドを有効にします。|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|インクルード ファイルのリストを標準エラー出力 (**stderr**) に書き込みます。|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|プリコンパイル済みヘッダー ファイルを書き込みます。|
+|[/E](e-preprocess-to-stdout.md)、 [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|プリプロセッサ出力を標準出力 (**stdout**) にコピーします。|
+|[/Gm](gm-enable-minimal-rebuild.md)|非推奨。 インクリメンタル リビルドを有効にします。|
+|[/showIncludes](showincludes-list-include-files.md)|インクルード ファイルのリストを標準エラー出力 (**stderr**) に書き込みます。|
+|[/Yc](yc-create-precompiled-header-file.md)|プリコンパイル済みヘッダー ファイルを書き込みます。|
 
 ## <a name="diagnostic-messages"></a>診断メッセージ
 
@@ -61,7 +61,7 @@ ms.locfileid: "50562085"
 
 |診断メッセージ|説明|コンパイラの動作|
 |------------------------|-----------------|-----------------------|
-|**C2813**|**#import** ディレクティブは **/MP** オプションと互換性がありません。|[コンパイラの警告レベル](../../build/reference/compiler-option-warning-level.md) オプションで他の方法が指定されている場合を除き、コンパイルは終了します。|
+|**C2813**|**#import** ディレクティブは **/MP** オプションと互換性がありません。|[コンパイラの警告レベル](compiler-option-warning-level.md) オプションで他の方法が指定されている場合を除き、コンパイルは終了します。|
 |**D9014**|無効な値が指定されて、 *processMax*引数。|コンパイラは、無効な値を無視し、値が 1 であると見なします。|
 |**D9030**|指定されたオプションは **/MP**オプションと互換性がありません。|コンパイラは **/MP** オプションを無視します。|
 
@@ -99,7 +99,7 @@ ms.locfileid: "50562085"
 
 ソース ファイルは、ソース ファイルをコンパイルするプロセスが利用可能になったときにコンパイルされます。 プロセスよりも多くのファイルがある場合は、利用可能なプロセスによってファイルの最初のセットがコンパイルされます。 残りのファイルは、プロセスが前のファイルの処理を終了し、残りのファイルのいずれかを処理できるようになると処理されます。
 
-コマンド ラインで同じソース ファイルを複数回指定しないでください。 このような状況は、プロジェクト内の依存関係情報に基づいて、ツールが自動的に [makefile](../../build/contents-of-a-makefile.md) を作成する場合などに発生します。 **/MP** オプションを指定しない場合、コンパイラはファイルの一覧を順番に処理し、ファイルが出現するたびに再コンパイルします。 ただし、 **/MP** オプションを指定した場合、異なるコンパイラが同時に同じファイルをコンパイルする場合があります。 その結果、異なるコンパイラが、同時に同じ出力ファイルへの書き込みを試みます。 1 つのコンパイラは、出力ファイルへの排他書き込みアクセスを取得して成功し、他方のコンパイラは、ファイル アクセス エラーで失敗します。
+コマンド ラインで同じソース ファイルを複数回指定しないでください。 このような状況は、プロジェクト内の依存関係情報に基づいて、ツールが自動的に [makefile](contents-of-a-makefile.md) を作成する場合などに発生します。 **/MP** オプションを指定しない場合、コンパイラはファイルの一覧を順番に処理し、ファイルが出現するたびに再コンパイルします。 ただし、 **/MP** オプションを指定した場合、異なるコンパイラが同時に同じファイルをコンパイルする場合があります。 その結果、異なるコンパイラが、同時に同じ出力ファイルへの書き込みを試みます。 1 つのコンパイラは、出力ファイルへの排他書き込みアクセスを取得して成功し、他方のコンパイラは、ファイル アクセス エラーで失敗します。
 
 ### <a name="using-type-libraries-import"></a>タイプ ライブラリの使用 (#import)
 
@@ -124,10 +124,6 @@ MSBuild を使用するかどうかを決定するためのガイドラインま
 - プロジェクトの数が少なく、各プロジェクトのファイルが多い場合は、 **/MP** オプションを使用します。
 
 - プロジェクトとプロジェクトごとのファイルの数が分散された場合は、両方の MSBuild を使用して、 **/MP**します。 初期設定では、 **/maxcpucount** オプションをビルドするプロジェクトの数に設定し、 **/MP** オプションをコンピューター上のプロセッサの数に設定します。 パフォーマンスを測定し、最適な結果を得られるように、設定を調整します。 合計のビルド時間に満足できるまで、このサイクルを繰り返します。
-
-#### <a name="the-gm-compiler-option"></a>/Gm コンパイラ オプション
-
-既定では、プロジェクトのビルドで、デバッグ ビルドの場合は **/Gm** コンパイラ オプション (インクリメンタル ビルド) が有効になり、リリース ビルドでは無効になります。 したがって、デバッグ ビルドの場合、 **/MP** コンパイラ オプションは既定の **/Gm** コンパイラ オプションと競合するため、自動的に無効になります。
 
 ## <a name="see-also"></a>関連項目
 

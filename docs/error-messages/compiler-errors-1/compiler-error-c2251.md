@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2251
 ms.assetid: fefe050c-f8d3-4316-b237-8007dbcdd3bf
-ms.openlocfilehash: b7ffb5b8d425e74523e491827ffb8878b8e03b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d44ed7af3552f0a7c9cc9b5b2b0d14a468713254
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452339"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759699"
 ---
 # <a name="compiler-error-c2251"></a>コンパイラ エラー C2251
 
@@ -21,7 +21,7 @@ ms.locfileid: "50452339"
 
 次の例では C2251 が生成されます。
 
-```
+```cpp
 // C2251.cpp
 // compile with: /c
 namespace A {

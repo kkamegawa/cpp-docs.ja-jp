@@ -1,18 +1,18 @@
 ---
-title: '方法: CLR コンソール アプリケーションを作成する (C++/CLI)'
+title: '方法: CLR コンソール アプリケーションを作成 (C +/cli CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387481"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成する (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成 (C +/cli CLI)
 
 コンソール アプリケーション テンプレートを使用すると、重要なプロジェクト参照とファイルが既に含まれるコンソール アプリ プロジェクトを作成できます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50525663"
 
 - 次の .NET Framework 名前空間への参照
 
-   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)- 一般的な値の型と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および例外処理を定義する、基礎的なクラスと基底クラスが含まれます。
+   - <xref:System.AppDomainManager>— 基礎的なクラスと一般的に使用される値と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および処理例外を定義する基底クラスが含まれています。
 
    - mscorlib - .NET Framework 開発をサポートするアセンブリ DLL。
 
@@ -62,5 +62,5 @@ ms.locfileid: "50525663"
 
 ## <a name="see-also"></a>関連項目
 
-[CLR プロジェクト](../ide/files-created-for-clr-projects.md)
+[CLR プロジェクト](../build/reference/files-created-for-clr-projects.md)
 

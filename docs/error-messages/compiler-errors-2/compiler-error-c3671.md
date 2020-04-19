@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030a6acb19c0907956d2a5b833b683821591e5c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667045"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758113"
 ---
 # <a name="compiler-error-c3671"></a>コンパイラ エラー C3671
 
-'function_1': 関数は 'function_2' をオーバーライドしません
+' function_1 ': 関数は ' function_2 ' をオーバーライドしません
 
-明示的なオーバーライド構文を使用する場合、コンパイラは、関数がオーバーライドされていない場合、エラーを生成します。  参照してください[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)詳細についてはします。
+明示的なオーバーライド構文を使用する場合、関数がオーバーライドされないと、コンパイラはエラーを生成します。  詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3671 が生成されます。
 
-```
+```cpp
 // C3671.cpp
 // compile with: /clr /c
 ref struct S {

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: ffcc622135a9a4d9b46cf6ab62604f9965ac6d47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666230"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150234"
 ---
 # <a name="c-bit-fields"></a>C ビット フィールド
 
@@ -82,6 +82,6 @@ cccccccb bbbbaaaa
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [構造体宣言](../c-language/structure-declarations.md)

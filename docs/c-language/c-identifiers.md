@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 6ec1fc7303a6f5600837e919d96904abde7987e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474141"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152587"
 ---
 # <a name="c-identifiers"></a>C 識別子
 
@@ -96,6 +96,6 @@ Microsoft リンカーでは大文字と小文字が区別されます。 ケー
 
 識別子には "スコープ" と "リンケージ" があります。スコープはプログラムが認識される範囲です。リンケージは、別のスコープ内の同じ名前が同じ識別子を参照するかどうかを決定します。 これらのトピックについては、「[有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)」で説明します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C の要素](../c-language/elements-of-c.md)

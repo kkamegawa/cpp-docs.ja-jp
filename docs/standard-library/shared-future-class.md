@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575631"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450495"
 ---
 # <a name="sharedfuture-class"></a>shared_future クラス
 
@@ -68,7 +68,7 @@ class shared_future;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<将来 >
+**ヘッダー:** \<今後の >
 
 **名前空間:** std
 
@@ -92,7 +92,7 @@ void get() const;
 
 部分的特殊化 `shared_future<Ty&>` では、格納されている値は、実質的には*非同期プロバイダー*に戻り値として渡されたオブジェクトへの参照です。
 
-特殊化に格納されている値が存在しないので`shared_future<void>`、メソッドを返します**void**します。
+特殊化`shared_future<void>`には格納されている値が存在しないため、メソッドは**void**を返します。
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 `shared_future` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -114,9 +114,9 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>Remarks
 
-最初の演算子*右*不要になった操作の完了後、関連付けられた非同期状態を持ちます。
+最初の演算子では、操作の後に、 *Right*に関連付けられた非同期状態がありません。
 
-2 番目のメソッドでは、*右*関連付けられた非同期状態を維持します。
+2番目のメソッドでは、 *Right*は関連付けられた非同期状態を保持します。
 
 ## <a name="shared_future"></a>  shared_future::shared_future コンストラクター
 
@@ -131,16 +131,16 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 [future](../standard-library/future-class.md) または `shared_future` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、*関連付けられた非同期状態*がない `shared_future` オブジェクトを構築します。
 
-2 番目と 3 番目のコンス トラクターを構築、`shared_future`オブジェクトし、関連付けられた非同期状態からの転送*右*します。 *右*関連付けられた非同期状態にはなくなりました。
+2番目と3番目`shared_future`のコンストラクターは、オブジェクトを構築し、関連付けられている非同期状態を*右*から転送します。 *Right*には、関連付けられた非同期状態がありません。
 
-4 番目のコンス トラクターの構成要素を`shared_future`として非同期状態が同じであるオブジェクトに関連付けられている*右*します。
+4番目のコンストラクター `shared_future`は *、と同じ*関連付けられた非同期状態を持つオブジェクトを構築します。
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -152,7 +152,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
+オブジェクトに関連付けられた非同期状態がある場合は**true** 。それ以外の場合は**false**。
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>パラメーター
 
-*Rel_time*<br/>
+*Rel_time*\
 スレッドがブロックする最大の時間間隔を指定する [chrono::duration](../standard-library/duration-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>パラメーター
 
-*Abs_time*<br/>
+*Abs_time*\
 スレッドがブロックを解除できる時間を指定する [chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -214,5 +214,5 @@ future_status wait_until(
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

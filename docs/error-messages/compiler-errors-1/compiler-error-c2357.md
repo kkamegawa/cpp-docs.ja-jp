@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531782"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759920"
 ---
 # <a name="compiler-error-c2357"></a>コンパイラ エラー C2357
 
-'identifier': 'type' 型の関数でなければなりません
+' identifier ': 型 ' type ' の関数でなければなりません
 
-コード宣言のバージョンが、`atexit`バージョンに一致しない関数は、コンパイラによって内部で宣言されました。 宣言`atexit`次のようにします。
+コードで、コンパイラによって内部で宣言されたバージョンと一致しない `atexit` 関数のバージョンが宣言されています。 次のように `atexit` を宣言します。
 
 ```
 int __cdecl atexit(void (__cdecl *)());
 ```
 
-詳細については、次を参照してください。 [init_seg](../../preprocessor/init-seg.md)します。
+詳細については、「 [init_seg](../../preprocessor/init-seg.md)」を参照してください。
 
 次の例では、C2357 が生成されます。
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

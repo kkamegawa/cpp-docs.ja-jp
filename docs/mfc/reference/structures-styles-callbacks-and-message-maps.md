@@ -1,20 +1,18 @@
 ---
 title: 構造体、スタイル、コールバック関数とメッセージ マップ
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.structures
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: 0f7251e93672df438e3b994a1fdad0bf0e926693
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1fa072c5395c9171e0abdd4f3dab3251cd27229
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572944"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611671"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>構造体、スタイル、コールバック関数とメッセージ マップ
 
@@ -36,9 +34,8 @@ MFC ライブラリに表示されているコールバック関数へのリン�
 
 ## <a name="related-sections"></a>関連項目
 
-[クラス ライブラリの概要](../../mfc/class-library-overview.md)<br/>
+[.NET クラス ライブラリの概要](../../mfc/class-library-overview.md)<br/>
 MFC ライブラリのクラスをカテゴリ別に一覧表示します。
 
-[MFC のサンプル](../../visual-cpp-samples.md)<br/>
+[MFC のサンプル](../../overview/visual-cpp-samples.md)<br/>
 MFC ライブラリの使用方法を示すサンプルへのリンクを提供します。
-

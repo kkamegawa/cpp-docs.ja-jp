@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2723
+title: コンパイラエラー C2723
 ms.date: 11/04/2016
 f1_keywords:
 - C2723
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: bc07a99f12ed0e447427990969e54f7f3d3d3b7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635388"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737453"
 ---
-# <a name="compiler-error-c2723"></a>コンパイラ エラー C2723
+# <a name="compiler-error-c2723"></a>コンパイラエラー C2723
 
 'function' : 'specifier' 指定子が関数の定義で誤って指定されています
 
@@ -21,7 +21,7 @@ ms.locfileid: "50635388"
 
 次の例では、C2723 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2723.cpp
 struct X {
    virtual void f();

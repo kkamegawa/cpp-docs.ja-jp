@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: 068cff9ea3827e780bec886bc5d4b0e263c02e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296606"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar クラス
 
@@ -256,7 +256,7 @@ BOOL CreateEx(
 *pParentWnd*<br/>
 親ウィンドウへのポインター。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 ステータス バーのオブジェクトを作成するための追加のスタイルの論理 OR の組み合わせ。
 
 *dwStyle*<br/>
@@ -279,7 +279,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmdID*<br/>
+[in] *uiCmdID*<br/>
 [in]*BOOL*<br/>
 
 ### <a name="return-value"></a>戻り値

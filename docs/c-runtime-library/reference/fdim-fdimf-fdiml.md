@@ -1,11 +1,11 @@
----
+﻿---
 title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518178"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941301"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -80,7 +83,7 @@ long double fdiml(
 
 ## <a name="return-value"></a>戻り値
 
-正の値の差を返します*x*と*y*:
+*X*と*y*の間の正の差を返します。
 
 |戻り値|シナリオ|
 |------------------|--------------|
@@ -89,19 +92,19 @@ long double fdiml(
 
 それ以外の場合は、次のエラーのいずれかを返すことがあります。
 
-|懸案事項|Return|
+|問題|Return|
 |-----------|------------|
 |オーバーフロー範囲エラー|+HUGE_VAL、+HUGE_VALF、または +HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値|
-|*x*または*y* nan|NaN|
+|*x*または*y*が NaN|NaN|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fdim** を受け取って返す **float**と**長い** **二重**型。 C プログラムで**fdim**は、**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fdim** を受け取って返す **float**と**long** **double**型。 C プログラムでは、 **fdim**は常に**double**を取得し、double を返します。
 
-この関数は NaN の処理を除くと等価では`fmax(x - y, 0)`します。
+NaN の処理を除き、この関数はと同じ`fmax(x - y, 0)`です。
 
 ## <a name="requirements"></a>必要条件
 

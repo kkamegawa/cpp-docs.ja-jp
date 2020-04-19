@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384739"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ におけるマーシャリングの概要
 
@@ -54,8 +54,8 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |std::string|System::String^|marshal_as|marshal_cppstd.h|
 |System::String^|std::wstring|marshal_as|marshal_cppstd.h|
 |std::wstring|System::String^|marshal_as|marshal_cppstd.h|
-|System::String^|CStringT\<char >|marshal_as|marshal_atl.h|
-|CStringT\<char >|System::String^|marshal_as|marshal_atl.h|
+|System::String^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|System::String^|marshal_as|marshal_atl.h|
 |System::String^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
 |CStringT<wchar_t>|System::String^|marshal_as|marshal_atl.h|
 |System::String^|CComBSTR|marshal_as|marshal_atl.h|
@@ -70,7 +70,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 
 `#include "msclr\marshal_cppstd.h"`
 
-マーシャリング ライブラリは、独自のマーシャリング型を追加できるように拡張できます。 マーシャ リング ライブラリを拡張する方法の詳細については、次を参照してください。[方法: マーシャ リング ライブラリを拡張する](../dotnet/how-to-extend-the-marshaling-library.md)します。
+マーシャリング ライブラリは、独自のマーシャリング型を追加できるように拡張できます。 マーシャ リング ライブラリを拡張する方法の詳細については、次を参照してください。[方法。マーシャ リング ライブラリを拡張する](../dotnet/how-to-extend-the-marshaling-library.md)します。
 
 以前のバージョンでしたを使用してデータをマーシャ リング.[プラットフォーム呼び出し](/dotnet/framework/interop/consuming-unmanaged-dll-functions)します。 詳細については`PInvoke`を参照してください[マネージ コードからネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)します。
 

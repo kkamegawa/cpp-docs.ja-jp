@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65f7f4db9489de1c9a380d760ed5cab41bfdc2ec
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508785"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504516"
 ---
 # <a name="cmutex-class"></a>CMutex クラス
 
-「ミュー テックス」を表します: リソースへの 1 つのスレッド相互に排他的アクセスを許可する同期オブジェクト。
+"Mutex" を表します。これは、1つのスレッドがリソースに相互に排他的にアクセスできるようにする同期オブジェクトです。
 
 ## <a name="syntax"></a>構文
 
@@ -31,19 +31,19 @@ class CMutex : public CSyncObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMutex::CMutex](#cmutex)|`CMutex` オブジェクトを構築します。|
+|[CMutex:: CMutex](#cmutex)|`CMutex` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>Remarks
 
-ミュー テックスは、データまたはその他の制御されたリソースの変更を一度に 1 つのスレッドができる場合に便利です。 たとえば、リンク リスト ノードの追加は、一度に 1 つのスレッドでのみ許可するプロセスです。 使用して、`CMutex`だけで、一覧に、一度に 1 つのスレッドがアクセスできるリンクのリストを制御するオブジェクト。
+ミューテックスは、一度に1つのスレッドのみがデータまたはその他の制御されたリソースを変更できるようにする場合に便利です。 たとえば、リンクリストへのノードの追加は、一度に1つのスレッドによってのみ許可されるプロセスです。 `CMutex`オブジェクトを使用してリンクリストを制御することにより、一度に1つのスレッドだけがリストにアクセスできます。
 
-使用する、`CMutex`オブジェクト、構築、`CMutex`必要がある場合のオブジェクトします。 待機、ミュー テックスの名前を指定し、アプリケーションが最初に所有する必要があります。 コンス トラクターは、返されるときにミュー テックスをアクセスできます。 呼び出す[したら](../../mfc/reference/csyncobject-class.md#unlock)が終わったら、被制御リソースにアクセスします。
+`CMutex`オブジェクトを使用するには、 `CMutex`必要に応じてオブジェクトを構築します。 待機するミューテックスの名前を指定し、アプリケーションで最初に所有する必要があります。 その後、コンストラクターから制御が戻ったときに mutex にアクセスできます。 制御されたリソースへのアクセスが完了したら、 [CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock)を呼び出します。
 
-代替の方法を使用して`CMutex`オブジェクトは、型の変数を追加する`CMutex`を制御するクラスにデータ メンバーとして。 コンス トラクターを呼び出し、制御されるオブジェクトの構築時に、`CMutex`ミュー テックスが最初に所有する、ミュー テックスの名前 (プロセスの境界を越えて使用) 場合、およびセキュリティ属性を必要なかどうかに指定するデータ メンバー。
+オブジェクトを使用`CMutex`する別の方法として、制御する`CMutex`クラスにデータメンバーとして型の変数を追加する方法があります。 制御されたオブジェクトの構築時に、ミューテックスが`CMutex`最初に所有されているかどうか、ミューテックスの名前 (プロセスの境界を越えて使用される場合)、および必要なセキュリティ属性を指定して、データメンバーのコンストラクターを呼び出します。
 
-によって制御されるリソースにアクセスする`CMutex`オブジェクトが、この方法では、いずれかの型の変数をまず作成[CSingleLock](../../mfc/reference/csinglelock-class.md)または型[CMultiLock](../../mfc/reference/cmultilock-class.md)リソースのアクセス メンバー関数。 呼び出して、ロック オブジェクトの`Lock`メンバー関数 (たとえば、 [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 この時点では、スレッドはいずれか、リソースにアクセスを待機してから、リソースを解放して、アクセスを取得またはリソースが解放されると、リソースへのアクセスに失敗したときのタイムアウトを待ちます。 いずれの場合も、リソースがスレッド セーフな方法でアクセスされました。 リソースを解放するロック オブジェクトを使用して、`Unlock`メンバー関数 (たとえば、 [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))、またはロック オブジェクトがスコープから除外できるようにします。
+この方法でオブジェクトに`CMutex`よって制御されるリソースにアクセスするには、まず、 [CSingleLock](../../mfc/reference/csinglelock-class.md)型の変数を作成するか、リソースのアクセスメンバー関数に[CMultiLock](../../mfc/reference/cmultilock-class.md)を入力します。 次に、lock オブジェクトの`Lock`メンバー関数 (たとえば、 [CSingleLock:: lock](../../mfc/reference/csinglelock-class.md#lock)) を呼び出します。 この時点で、スレッドはリソースへのアクセスを取得し、リソースが解放されてアクセスできるまで待機します。または、リソースが解放され、タイムアウトになるまで待機し、リソースへのアクセスを取得できなくなります。 いずれの場合も、スレッドセーフな方法でリソースにアクセスしています。 リソースを解放するには、lock オブジェクトの`Unlock`メンバー関数 (たとえば、 [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)) を使用するか、ロックオブジェクトがスコープ外に出ることを許可します。
 
-使用しての詳細については`CMutex`オブジェクトは、記事をご覧ください。[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+オブジェクトの使用方法`CMutex`の詳細については、「 [マルチスレッド:同期クラス](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)の使用方法について説明します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -55,11 +55,11 @@ class CMutex : public CSyncObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxmt.h
+**ヘッダー:** afxmt
 
-##  <a name="cmutex"></a>  CMutex::CMutex
+##  <a name="cmutex"></a>CMutex:: CMutex
 
-名前付きセーブポイントまたは名前のない、コンストラクト`CMutex`オブジェクト。
+名前付き`CMutex`オブジェクトまたは名前のないオブジェクトを構築します。
 
 ```
 CMutex(
@@ -70,24 +70,23 @@ CMutex(
 
 ### <a name="parameters"></a>パラメーター
 
-*bInitiallyOwn*<br/>
-場合を指定します、スレッドを作成する、`CMutex`オブジェクトが最初に、ミュー テックスによって制御されるリソースへのアクセスを持ちます。
+*ビン分割*<br/>
+`CMutex`オブジェクトを作成するスレッドが、最初にミューテックスによって制御されるリソースにアクセスできるかどうかを指定します。
 
 *lpszName*<br/>
-`CMutex` オブジェクトの名前。 同じ名前の別のミュー テックスが存在する場合、 *lpszName*プロセスの境界を越えてオブジェクトを使用する場合に指定する必要があります。 場合**NULL**、ミュー テックスは名前付きできません。 名前が既存のミュー テックスに一致する場合、コンス トラクターは新しい`CMutex`その名前のミュー テックスを参照するオブジェクト。 名前には、ミュー テックスではない既存の同期オブジェクトが一致すると、構築は失敗します。
+ `CMutex` オブジェクトの名前。 同じ名前の別のミューテックスが存在する場合、オブジェクトがプロセスの境界を越えて使用される場合は、 *Lpszname*を指定する必要があります。 **NULL**の場合、ミューテックスは無名になります。 名前が既存のミューテックスと一致する場合、コンストラクターはその`CMutex`名前のミューテックスを参照する新しいオブジェクトを作成します。 名前がミューテックスではない既存の同期オブジェクトと一致する場合、構築は失敗します。
 
 *lpsaAttribute*<br/>
-ミュー テックス オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。
+Mutex オブジェクトのセキュリティ属性。 この構造の詳細については、Windows SDK の「 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-アクセスまたはリリースを`CMutex`オブジェクトを作成、 [CMultiLock](../../mfc/reference/cmultilock-class.md)または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトと呼び出しの[ロック](../../mfc/reference/csinglelock-class.md#lock)と[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数。 場合、`CMutex`オブジェクトがスタンドアロンの使用にされている場合、呼び出しの`Unlock`メンバー関数は、それを解放します。
+`CMutex`オブジェクトにアクセスしたり解放したりするには、 [CMultiLock](../../mfc/reference/cmultilock-class.md)オブジェクトまたは[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトを作成し、その[Lock](../../mfc/reference/csinglelock-class.md#lock)および[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数を呼び出します。 オブジェクトがスタンドアロンで使用されている場合は`Unlock` 、そのメンバー関数を呼び出して解放します。 `CMutex`
 
 > [!IMPORTANT]
->  作成した後、`CMutex`オブジェクトを使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスがまだ存在しないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。
+>  `CMutex`オブジェクトを作成した後、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を使用して、ミューテックスが既に存在していないことを確認します。 ミューテックスが予期せずに存在する場合は、不正なプロセスがスクワッティングであることを示している可能性があります。また、ミューテックスを悪用する可能性があります。 この場合、推奨されるセキュリティ意識の高い手順は、ハンドルを閉じて、オブジェクトの作成でエラーが発生したかのように続行することです。
 
 ## <a name="see-also"></a>関連項目
 
 [CSyncObject クラス](../../mfc/reference/csyncobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

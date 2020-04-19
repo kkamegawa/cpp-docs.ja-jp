@@ -1,9 +1,9 @@
 ---
 title: setvbuf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - setvbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setvbuf
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328098"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948179"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +50,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 *バッファー*<br/>
@@ -57,27 +60,27 @@ int setvbuf(
 バッファリングのモード。
 
 *size*<br/>
-バイト単位のバッファー サイズ。 許容範囲: 2 < =*サイズ*< = INT_MAX (2147483647)。 指定された値では内部的には、*サイズ*は最も近い 2 の倍数に切り下げ。
+バイト単位のバッファー サイズ。 許容範囲:2 < = *size* < = INT_MAX (2147483647)。 内部的には、 *size*に指定された値は、最も近い2の倍数に丸められます。
 
 ## <a name="return-value"></a>戻り値
 
 処理が正常に終了した場合は 0 を返します。
 
-場合*ストリーム*は**NULL**、または*モード*または*サイズ*は」の説明に従って有効な変更ではなく、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、この関数は-1 を返し、セットを許可された場合**errno**に**EINVAL**します。
+*Stream*が**NULL**の場合、または*モード*または*サイズ*が有効な変更の範囲内にない場合は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**Setvbuf**関数により、両方のバッファリングを制御し、バッファーのサイズをプログラム*ストリーム*します。 *ストリーム*開かれた後に、I/O 操作を実施されていませんが、開いているファイルを参照する必要があります。 によって示される配列*バッファー*である場合を除き、バッファーとして使用されます**NULL**その場合、 **setvbuf**が自動的に割り当てられたバッファーの長さを使用して*サイズ*/2 \* 2 バイト。
+**Setvbuf**関数を使用すると、プログラムは*ストリーム*のバッファリングとバッファーサイズの両方を制御できます。 *ストリーム*は、開いた後に i/o 操作を実行していない開いているファイルを参照する必要があります。 *Buffer*が指す配列は、 **NULL**でない限り、バッファーとして使用されます。この場合、 **setvbuf**は、自動的に割り当てられ\*た長さ*サイズ*/2 2 バイトのバッファーを使用します。
 
-モードである必要があります **_IOFBF**、 **_IOLBF**、または **_IONBF**します。 場合*モード*は **_IOFBF**または **_IOLBF**、し*サイズ*バッファーのサイズとして使用されます。 場合*モード*は **_IONBF**、ストリームはバッファー処理されず、*サイズ*と*バッファー*は無視されます。 値を*モード*とその意味。
+モードは **_IOFBF**、 **_IOLBF**、または **_IONBF**である必要があります。 *Mode*が **_IOFBF**または **_IOLBF**の場合、*サイズ*はバッファーのサイズとして使用されます。 *Mode*が **_IONBF**の場合、ストリームはバッファーされません。*サイズ*と*バッファー*は無視されます。 *モード*とその意味の値は次のとおりです。
 
 |*モード*値|説明|
 |-|-|
-| **_IOFBF** | フル バッファリングします。つまり、*バッファー*バッファーとして提供されると*サイズ*バッファーのサイズとして使用されます。 場合*バッファー*は**NULL**が自動的に割り当てられたバッファー*サイズ*バイト長を使用します。 |
-| **_IOLBF** | 一部のシステムでは、行バッファリングします。 ただし、win32 の動作は同じ **_IOFBF** -フル バッファリングします。 |
-| **_IONBF** | 使用に関係なく、バッファーがない*バッファー*または*サイズ*します。 |
+| **_IOFBF** | フルバッファリングつまり、バッファーがバッファーとして使用さ*れ、* *サイズ*がバッファーのサイズとして使用されます。 *Buffer*が**NULL**の場合、自動的に割り当てられたバッファー*サイズ*のバイト長が使用されます。 |
+| **_IOLBF** | 一部のシステムでは、行バッファリングします。 ただし、Win32 の場合、動作は **_IOFBF**フルバッファリングと同じです。 |
+| **_IONBF** | *バッファーまたは* *サイズ*に関係なく、バッファーは使用されません。 |
 
 ## <a name="requirements"></a>必要条件
 

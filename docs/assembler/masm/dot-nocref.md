@@ -1,30 +1,31 @@
 ---
 title: .NOCREF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .NOCREF
 helpviewer_keywords:
 - .NOCREF directive
 ms.assetid: 696a6a71-7e88-4b60-8550-7857d772ed20
-ms.openlocfilehash: ef9989d378b9e5af9695b02ddda8cf1e9951d935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05eafa1718c17930a974eb44b704835e750f1bf6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544704"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317618"
 ---
 # <a name="nocref"></a>.NOCREF
 
-シンボルをシンボル テーブルとブラウザーのファイルの一覧を表示しません。
+シンボルテーブルとブラウザーファイル内の記号の一覧を表示しません。
 
 ## <a name="syntax"></a>構文
 
-> .NOCREF [名前 [, name]...]
+> **.Nocref** ⟦*name*⟦ __、__ *name* ...⟧⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-名前が指定されている場合のみ、指定した名前は抑制されます。 同じ[します。XCREF](../../assembler/masm/dot-xcref.md)します。
+名前を指定した場合は、指定した名前だけが抑制されます。 と同じ[です。XCREF](dot-xcref.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

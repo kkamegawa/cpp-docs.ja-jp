@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2000 から C2099
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2000 - C2099)
+ms.date: 04/21/2019
 f1_keywords:
 - C2000
 - C2016
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - C2096
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
-ms.openlocfilehash: aff0faff5d8e58b46aa6280eb8f259dbd64acee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548149"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857139"
 ---
-# <a name="compiler-errors-c2000-through-c2099"></a>コンパイラ エラー C2000 から C2099
+# <a name="compiler-errors-c2000-through-c2099"></a>コンパイラ エラー (C2000 - C2099)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -56,7 +56,7 @@ ms.locfileid: "50548149"
 |コンパイラ エラー C2000|不明なエラーください Visual C ヘルプ メニューに、サポート情報コマンドを選択するかの詳細については、サポート情報ヘルプ ファイルを開く|
 |[コンパイラ エラー C2001](compiler-error-c2001.md)|定数の新しい行|
 |[コンパイラ エラー C2002](compiler-error-c2002.md)|無効なワイド文字定数|
-|[コンパイラ エラー C2003](compiler-error-c2003.md)|予想される ' 定義 id'|
+|[コンパイラ エラー C2003](compiler-error-c2003.md)|'定義 id'が必要です。|
 |[コンパイラ エラー C2004](compiler-error-c2004.md)|'defined (id)' の形式にしてください。|
 |[コンパイラ エラー C2005](compiler-error-c2005.md)|#line に見つかった、行番号が必要です '*トークン*'|
 |[コンパイラ エラー C2006](compiler-error-c2006.md)|'*ディレクティブ*': 予想はファイル名で'*トークン*'|
@@ -76,7 +76,7 @@ ms.locfileid: "50548149"
 |[コンパイラ エラー C2020](compiler-error-c2020.md)|'*メンバー*':'*クラス*' メンバーの再定義|
 |[コンパイラ エラー C2021](compiler-error-c2021.md)|指数の値を期待しない '*文字*'|
 |[コンパイラ エラー C2022](compiler-error-c2022.md)|'*数*': 文字として大きすぎます|
-|コンパイラ エラー C2023|'*識別子*': アライメント (*number1*) 前の宣言と異なる (*number2*)|
+|コンパイラ エラー C2023|'*識別子*'。配置 (*number1*) 前の宣言と異なる (*number2*)|
 |コンパイラ エラー C2024|'alignas' 属性は、変数、データ メンバーおよびタグの種類のみに適用されます。|
 |コンパイラ エラー C2025|無効なまたは破損したバイナリ モジュール インターフェイス ファイル: '*filename*'|
 |[コンパイラ エラー C2026](compiler-error-c2026.md)|文字列が大きすぎるため、末尾の文字は切り捨てられます|
@@ -149,7 +149,12 @@ ms.locfileid: "50548149"
 |[コンパイラ エラー C2093](compiler-error-c2093.md)|'*identifier1*': 自動変数のアドレスを使用して初期化することはできません'*identifier2*'|
 |[コンパイラ エラー C2094](compiler-error-c2094.md)|ラベル '*識別子*' は定義されていません|
 |[コンパイラ エラー C2095](compiler-error-c2095.md)|'*関数*' 実際のパラメーターが型 'void': パラメーター*数。*|
-|コンパイラ エラー C2096|'*識別子*': データ メンバーは、かっこで囲まれた初期化子で初期化できません|
+|コンパイラ エラー C2096|'*識別子*'。データ メンバーは、かっこで囲まれた初期化子で初期化できません。|
 |[コンパイラ エラー C2097](compiler-error-c2097.md)|初期化が正しくありません。|
 |コンパイラ エラー C2098|データ メンバーの後に予期しないトークン '*識別子*'|
 |[コンパイラ エラー C2099](compiler-error-c2099.md)|初期化子が定数ではありません。|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

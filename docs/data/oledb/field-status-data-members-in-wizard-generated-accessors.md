@@ -1,24 +1,32 @@
 ---
 title: ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
-ms.translationtype: MT
+ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524359"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707557"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 
-使用すると、 **ATL OLE DB コンシューマー ウィザード**コンシューマーを作成するには、ウィザードでは、列のマップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーを生成します。 各データ メンバーが型の`DWORD`該当するフィールドに対応する状態値が含まれています。
+::: moniker range="vs-2019"
 
-たとえば、データ メンバー *m_OwnerID*、ウィザードは、フィールドの状態の追加のデータ メンバーを生成 (*dwOwnerIDStatus*)、フィールド長のもう 1 つ (*dwOwnerIDLength*). COLUMN_ENTRY_LENGTH_STATUS エントリを含む列のマップも生成されます。
+ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」を参照してください。
 
-これは、次のコードに示します。
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+**ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーを作成する場合、列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーが生成されます。 各データ メンバーは `DWORD` 型で、それぞれのフィールドに対応するステータス値が含まれています。
+
+たとえば、データ メンバー *m_OwnerID* に対しては、フィールド ステータスが (*dwOwnerIDStatus*) のデータ メンバーと、フィールド長が (*dwOwnerIDLength*) のデータ メンバーが追加で生成されます。 また、COLUMN_ENTRY_LENGTH_STATUS エントリを含む列マップも生成されます。
+
+これを次のコードに示します。
 
 ```cpp
 class CAuthorsAccessor
@@ -54,21 +62,21 @@ public:
 > [!NOTE]
 > ユーザー レコード クラスを変更するか、独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。
 
-状態値は、デバッグ目的で使用できます。 コードを生成している場合、 **ATL OLE DB コンシューマー ウィザード**コンパイル エラーが生成されますなど DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED、する必要があります最初を見てフィールド ステータス データ メンバーの現在の値。 0 以外の値が指定されている問題のある列に対応しています。
+ステータス値はデバッグ目的で使用できます。 **ATL OLE DB コンシューマー ウィザード**で生成したコードで DB_S_ERRORSOCCURRED や DB_E_ERRORSOCCURRED などのコンパイル エラーが生成される場合は、最初にフィールド ステータスのデータ メンバーの現在の値を調べてください。 0 以外の値を持つものが、問題のある列に対応しています。
 
-特定のフィールドに NULL 値を設定するのに状態の値を使用することもできます。 これにより、フィールドの値を 0 ではなく、NULL として区別する場合に役立ちます。 NULL が有効な値、または特殊な値かどうかを判断し、アプリケーションが処理する方法を決定する責任です。 OLE DB は、ジェネリック、NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーは、データを読み取るし、値が null、status フィールドは、DBSTATUS_S_ISNULL に設定されます。 コンシューマーは、NULL 値を設定する場合、コンシューマーは、プロバイダーを呼び出す前に DBSTATUS_S_ISNULL にステータス値を設定します。
+ステータス値を使用して、特定のフィールドに NULL 値を設定することもできます。 これは、フィールドの値を 0 ではなく NULL として区別する場合に役立ちます。 NULL を有効な値と特殊な値のどちらにするか、また、それをアプリケーションでどのように処理するかは、自由に決めることができます。 OLE DB は、汎用的な NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーがデータを読み取り、その値が null であった場合、ステータス フィールドが DBSTATUS_S_ISNULL に設定されます。 コンシューマーが NULL 値を設定する場合、そのコンシューマーは、ステータス値を DBSTATUS_S_ISNULL に設定してからプロバイダーを呼び出します。
 
-次に、Oledb.h と DBSTATUSENUM の検索を開きます。 DBSTATUSENUM 列挙値に対して 0 以外の状態を表す数値を適合できます。 列挙型の名前を参照してください、何が問題を通知するだけで十分でない場合、**状態**でトピック、**データ値のバインド**のセクション、 [OLE DB プログラマ ガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、次を参照してください。、**長さ**内の同じセクションのトピックです。
+次に、Oledb.h を開いて DBSTATUSENUM を検索します。 その後、DBSTATUSENUM 列挙値に対して、0 以外のステータスを表す数値を照合できます。 列挙名から問題を特定できない場合は、「[OLE DB プログラマ ガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)」の**データ値のバインド**に関するセクションで**ステータス**に関するトピックを参照してください。 このトピックには、データを取得または設定するときに使用されるステータス値の表が含まれています。 長さの値については、同じセクションの**長さ**に関するトピックを参照してください。
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>長さまたは列のステータスを取得します。
+## <a name="retrieving-the-length-or-status-of-a-column"></a>列の長さまたはステータスを取得する
 
-可変長列の長さ、または (たとえば、DBSTATUS_S_ISNULL の確認) を列のステータスを取得できます。
+可変長の列の長さ、または列のステータスを取得できます (たとえば、DBSTATUS_S_ISNULL を調べるために)。
 
 - 長さを取得するには、COLUMN_ENTRY_LENGTH マクロを使用します。
 
-- 状態を取得するには、COLUMN_ENTRY_STATUS マクロを使用します。
+- ステータスを取得するには、COLUMN_ENTRY_STATUS マクロを使用します。
 
-- 両方を取得するには、ように、COLUMN_ENTRY_LENGTH_STATUS を使用します。
+- 両方を取得するには、次のように COLUMN_ENTRY_LENGTH_STATUS を使用します。
 
     ```cpp
     class CProducts
@@ -86,7 +94,7 @@ public:
     };
     ```
 
-- ように、長さや状態を次に、アクセスします。
+- その後、次のように長さまたはステータスにアクセスします。
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -102,7 +110,9 @@ public:
     }
     ```
 
-使用すると`CDynamicAccessor`長さと状態を自動的に連結します。 長さと状態の値を取得する、`GetLength`と`GetStatus`メンバー関数。
+`CDynamicAccessor` を使用すると、長さとステータスが自動的にバインドされます。 長さとステータスの値を取得するには、メンバー関数 `GetLength` と `GetStatus` を使用します。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

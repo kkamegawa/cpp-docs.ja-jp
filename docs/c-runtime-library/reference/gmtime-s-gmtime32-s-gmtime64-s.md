@@ -1,11 +1,11 @@
 ---
 title: gmtime_s、_gmtime32_s、_gmtime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _gmtime32_s
 - gmtime_s
 - _gmtime64_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gmtime_s
 - gmtime64_s
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 8225fed21ca9dc67440a4af5dcf43b2ad5cfdffb
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcfc512022393c6a3e8a9cd97efe96d03b4877ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332466"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954841"
 ---
-# <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
+# <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
-時刻値に変換する**tm**構造体。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md) です。
+時刻値を**tm**構造体に変換します。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -66,7 +69,7 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>パラメーター
 
 *tmDest*<br/>
-ポインターを[tm](../../c-runtime-library/standard-types.md)構造体。 返される構造体のフィールドの評価値を保持する、*タイマー*現地時刻ではなく UTC での引数。
+[Tm](../../c-runtime-library/standard-types.md)構造体へのポインター。 返される構造体のフィールドは、*タイマー*引数の評価値を現地時刻ではなく UTC で保持します。
 
 *sourceTime*<br/>
 格納されている時刻へのポインター。 時刻は、世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位) を表します。
@@ -77,44 +80,44 @@ errno_t _gmtime64_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*tmDest*|*sourceTime*|Return|値*tmDest*|
+|*tmDest*|*sourceTime*|Return|*Tmdest*の値|
 |-----------|------------|------------|--------------------|
 |**NULL**|任意|**EINVAL**|変更されません。|
-|いない**NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが-1 に設定されます。|
-|いない**NULL**|< 0|**EINVAL**|すべてのフィールドが-1 に設定されます。|
+|Not **NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが-1 に設定されます。|
+|**NULL**以外|< 0|**EINVAL**|すべてのフィールドが-1 に設定されます。|
 
-最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
+最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Gmtime32_s**関数、 *sourceTime*値し、型の構造体に格納**tm**Time.h に定義します。 構造体のアドレスが渡された*tmDest*します。 値*sourceTime*への呼び出しは通常、[時間](time-time32-time64.md)関数。
+**_Gmtime32_s**関数は、 *sourcetime*値を分割し、time. h で定義されている**tm**型の構造に格納します。 構造体のアドレスは、 *Tmdest*で渡されます。 *Sourcetime*の値は、通常、 [time](time-time32-time64.md)関数の呼び出しから取得されます。
 
 > [!NOTE]
 > 対象の環境によって、夏時間が有効かどうか判断されます。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間を計算します。
 
-型の構造体のフィールドの各は**int**、次の表に示すようにします。
+次の表に示すように、構造体の各フィールドは**int**型です。
 
 |フィールド|説明|
 |-|-|
-|**tm_sec**|秒 (0 - 59)。|
-|**未満**|分 (0 - 59)。|
-|**tm_hour**|午前 0 時からの経過時間 (0 - 23)。|
-|**tm_mday**|(1 ~ 31) の月の日。|
-|**tm_mon**|月 (0 - 11年 1 月 = 0 です)。|
+|**tm_sec**|秒後 (0-59)。|
+|**tm_min**|分後 (0-59)。|
+|**tm_hour**|深夜からの時間 (0-23)。|
+|**tm_mday**|月の通算日 (1-31)。|
+|**tm_mon**|月 (0-11;1月 = 0)。|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
-|**tm_wday**|週の曜日 (0 ~ 6 です。日曜日 = 0)。|
-|**tm_yday**|年の通算日 (0 - 365;1 月 1 日 = 0)。|
-|**tm_isdst**|常に 0 の**gmtime_s**します。|
+|**tm_wday**|曜日 (0-6;日曜日 = 0)。|
+|**tm_yday**|年の通算日 (0-365;1月1日 = 0)。|
+|**tm_isdst**|**Gmtime_s**の場合は常に0です。|
 
-**_gmtime64_s**、使用、 **_ _time64_t**構造体、ことができますを UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表す日付**gmtime32_s**しかまでの日付を表す23時 59分: 59、2038 年 1 月 18 日 UTC。 これらの関数の日付範囲の下限は、どちらも 1970 年 1 月 1 日の午前 0 時です。
+**__time64_t**構造体を使用する **_gmtime64_s**では、23:59:59 年12月 31 3000 日までの日付を表すことができます。一方2038、 **gmtime32_s**は、23:59:59 年1月18日からまでの日付のみを表します。 これらの関数の日付範囲の下限は、どちらも 1970 年 1 月 1 日の午前 0 時です。
 
-**gmtime_s**に評価されるインライン関数は、 **_gmtime64_s**と**time_t**と等価 **_ _time64_t**します。 強制的にコンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**します。 これにより**gmtime_s**をインラインにする **_gmtime32_s**します。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**gmtime_s**は、 **_gmtime64_s**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **gmtime_s**が **_gmtime32_s**にインラインで配置されます。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime > または\<time.h >|
+|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime > また\<は time .h >|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

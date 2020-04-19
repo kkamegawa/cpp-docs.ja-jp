@@ -1,12 +1,12 @@
 ---
 title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534044"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942659"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 
 書式化してコンソールに出力します。 セキュリティが強化されたバージョンがあります。「[_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)」をご覧ください。
 
@@ -95,13 +98,13 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数の書式を設定し、一連の文字や、コンソールへの直接値を使用して、 **_putch**関数 (**_putwch**の **_cwprintf**) 文字を出力する. 各引数*argument_list* (ある場合) は変換されに対応する書式指定に応じて*形式*します。 *形式*引数は、[書式指定構文の printf および wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。 異なり、 **fprintf**、 **printf**、および**sprintf**関数も、 **_cprintf**も **_cwprintf**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換するときに出力します。
+これらの関数は、一連の文字と値を書式設定してコンソールに直接出力します。 **_putch**関数 ( **_cwprintf**の場合は **_putwch** ) を使用して文字を出力します。 *Argument_list*の各引数 (存在する場合) は変換され、*形式*の対応する書式指定に従って出力されます。 *Format*引数は、 [printf 関数と wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)を使用します。 **Fprintf**、 **printf**、および**sprintf**関数とは異なり、 **_cprintf**も **_cwprintf**も、出力時にラインフィード文字をキャリッジリターンラインフィード (cr-lf) の組み合わせに変換しません。
 
-重要な違いは **_cwprintf** Windows で使用すると、Unicode 文字が表示されます。 異なり **_cprintf**、 **_cwprintf**コンソールの現在のロケール設定を使用します。
+重要な違いは、 **_cwprintf**では Windows で使用されている場合に Unicode 文字が表示されるという点です。 **_Cprintf**とは異なり、 **_cwprintf**は現在のコンソールのロケール設定を使用します。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-**_cprintf**検証、*形式*パラメーター。 場合*形式*null ポインターの場合で説明されているように、関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値-1 とセットが許可された場合**errno**に**EINVAL**します。
+**_cprintf**は、 *format*パラメーターを検証します。 *Format*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。

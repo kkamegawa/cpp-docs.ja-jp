@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214121"
 ---
 # <a name="command-line-warning-d9025"></a>コマンド ラインの警告 D9025
 
@@ -23,7 +23,7 @@ ms.locfileid: "50652427"
 
 開発環境からコンパイルするときに、この警告を取得していないことを確認して、競合するオプションの発信元は、次を考慮してください。
 
-- コードまたはプロジェクトのプロジェクト設定のいずれかのオプションを指定できます。 コンパイラを見る場合[コマンド ライン プロパティ ページ](../../ide/command-line-property-pages.md)で競合するオプションを参照する場合と、**オプションをすべて**オプションがオプションで、プロジェクトのプロパティ ページ、それ以外の場合、設定し、フィールドソース コードで設定されます。
+- コードまたはプロジェクトのプロジェクト設定のいずれかのオプションを指定できます。 コンパイラを見る場合[コマンド ライン プロパティ ページ](../../build/reference/command-line-property-pages.md)で競合するオプションを参照する場合と、**オプションをすべて**オプションがオプションで、プロジェクトのプロパティ ページ、それ以外の場合、設定し、フィールドソース コードで設定されます。
 
    プロジェクトのプロパティ ページで、オプションの設定された場合、は、(ソリューション エクスプ ローラーでプロジェクト ノード) で、コンパイラのプリプロセッサのプロパティ ページで確認します。  そこに設定をすることを確認します (ソリューション エクスプ ローラー) でソース コード ファイルごとにプリプロセッサ プロパティ ページの設定を確認のオプションが表示されない場合に追加されませんがあります。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumers, support
 - COleDBRecordView class [MFC]
 ms.assetid: 65245d26-8743-4efd-9a72-90e19aef3c3a
-ms.openlocfilehash: b8d0924817afddf05dc775221a8d4498f2d4ed0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bdae23707ac451f1280a999c9721dec65e09004
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185985"
 ---
 # <a name="ole-db-classes"></a>OLE DB クラス
 
@@ -21,4 +21,3 @@ ms.locfileid: "50677735"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

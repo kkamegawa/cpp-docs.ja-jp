@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: a83fbed524c55c6bc98aa25caa17b80c1e5f89f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592128"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495744"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl クラス
 
-このクラスは実装`IUnknown`ウィンドウ メッセージを受信して、ドラッグ アンド ドロップ操作に参加するウィンドウなしのコントロールを有効にするメソッドを提供します。
+このクラスは`IUnknown`を実装し、ウィンドウなしのコントロールがウィンドウメッセージを受信し、ドラッグアンドドロップ操作に参加できるようにするメソッドを提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -44,7 +44,7 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IOleInPlaceObjectWindowlessImpl`します。
+から`IOleInPlaceObjectWindowlessImpl`派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -52,20 +52,20 @@ class IOleInPlaceObjectWindowlessImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|状況依存のヘルプを有効にします。 ATL の実装では、E_NOTIMPL を返します。|
-|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|装置、`IDropTarget`インプレース アクティブ、窓のないオブジェクトをドラッグ アンド ドロップのサポートのインターフェイス。 ATL の実装では、E_NOTIMPL を返します。|
-|[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|ウィンドウ ハンドルを取得します。|
-|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|アクティブなインプレース コントロールを無効になります。|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|コンテナーから一括で有効になっているウィンドウなしのコントロールへのメッセージをディスパッチします。|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|以前に非アクティブ化されたコントロールを再アクティブ化します。 ATL の実装では、E_NOTIMPL を返します。|
-|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|インプレース コントロールのどの部分が表示されていることを示します。|
-|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|非アクティブ化し、インプレース アクティブ化をサポートするユーザー インターフェイスを削除します。|
+|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|状況依存のヘルプを有効にします。 ATL 実装は E_NOTIMPL を返します。|
+|[IOleInPlaceObjectWindowlessImpl:: GetDropTarget](#getdroptarget)|ドラッグアンドドロップをサポートする、埋め込み先のアクティブなウィンドウなしオブジェクトのインターフェイスを提供します。`IDropTarget` ATL 実装は E_NOTIMPL を返します。|
+|[IOleInPlaceObjectWindowlessImpl:: GetWindow](#getwindow)|ウィンドウハンドルを取得します。|
+|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|アクティブなインプレースコントロールを非アクティブにします。|
+|[IOleInPlaceObjectWindowlessImpl:: OnWindowMessage](#onwindowmessage)|コンテナーから、アクティブな状態のウィンドウなしのコントロールにメッセージをディスパッチします。|
+|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|以前に非アクティブにしたコントロールを再アクティブ化します。 ATL 実装は E_NOTIMPL を返します。|
+|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|埋め込み先コントロールのどの部分を表示するかを示します。|
+|[IOleInPlaceObjectWindowlessImpl:: Uide アクティブ化](#uideactivate)|インプレースアクティベーションをサポートするユーザーインターフェイスを非アクティブ化し、削除します。|
 
 ## <a name="remarks"></a>Remarks
 
-[IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject)インターフェイスは、再アクティブ化を管理し、インプレースの非アクティブ化を制御し、コントロールの量を表示するかを決定します。 [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)インターフェイス ウィンドウ メッセージを受信して、ドラッグ アンド ドロップ操作に参加するウィンドウなしのコントロールを使用できます。 クラス`IOleInPlaceObjectWindowlessImpl`の既定の実装を提供します。`IOleInPlaceObject`と`IOleInPlaceObjectWindowless`実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)インターフェイスは、インプレースコントロールの再アクティブ化と非アクティブ化を管理し、コントロールのどの程度を表示するかを決定します。 [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)インターフェイスを使用すると、ウィンドウなしのコントロールでウィンドウメッセージを受信し、ドラッグアンドドロップ操作に参加できます。 クラス`IOleInPlaceObjectWindowlessImpl`は、および`IOleInPlaceObject` `IOleInPlaceObjectWindowless`の既定の実装を`IUnknown`提供し、デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
 
-**関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事**Atl[チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -75,9 +75,9 @@ class IOleInPlaceObjectWindowlessImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
 E_NOTIMPL を返します。
 
@@ -87,9 +87,9 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Windows SDK にします。
+Windows SDK の「 [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) 」を参照してください。
 
-##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
+##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl:: GetDropTarget
 
 E_NOTIMPL を返します。
 
@@ -99,11 +99,11 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IOleInPlaceObjectWindowless::GetDropTarget](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceObjectWindowless:: GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) 」を参照してください。
 
 ##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow
 
-コンテナーは、コントロールのウィンドウ ハンドルを取得するには、この関数を呼び出します。
+コンテナーは、この関数を呼び出して、コントロールのウィンドウハンドルを取得します。
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -111,13 +111,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Remarks
 
-一部のコンテナーは、現在のウィンドウがある場合でも、ウィンドウなしにされているコントロールでは機能しません。 ATL の実装の場合、コントロール クラスのデータ メンバー`m_bWasOnceWindowless`が true の場合、関数は E_FAIL を返します。 の場合*phwnd*が NULL でない`GetWindow`設定\* *phwnd*コントロール クラスのデータ メンバーに`m_hWnd`S_OK を返します。
+現在ウィンドウに表示されている場合でも、一部のコンテナーはウィンドウなしで動作しません。 ATL の実装では、コントロールクラスのデータメンバー `m_bWasOnceWindowless`が TRUE の場合、関数は E_FAIL を返します。 それ以外の場合、 *phwnd*が NULL `GetWindow`でない場合、は*phwnd*をコントロールクラス`m_hWnd`のデータメンバーに設定\*し、S_OK を返します。
 
-参照してください[IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) Windows SDK にします。
+Windows SDK の「 [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) 」を参照してください。
 
 ##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
 
-インプレース アクティブなコントロールを非アクティブ化するコンテナーによって呼び出されます。
+埋め込み先のアクティブなコントロールを非アクティブ化するために、コンテナーによって呼び出されます。
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +125,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、コントロールの状態に応じて、完全または部分的な非アクティブ化を実行します。 必要に応じて、コントロールのユーザー インターフェイスが非アクティブ化し、存在する場合、コントロールのウィンドウは破棄されます。 コンテナーは、インプレース コントロールがアクティブでなくなったことが通知されます。 `IOleInPlaceUIWindow`領域の枠線し、そのメニューをネゴシエートするコンテナーによって使用されるインターフェイスを解放します。
+このメソッドは、コントロールの状態に応じて、完全な非アクティブ化または部分的な非アクティブ化を実行します。 必要に応じて、コントロールのユーザーインターフェイスが非アクティブ化され、コントロールのウィンドウがある場合は破棄されます。 コンテナーには、コントロールが現在アクティブではなくなったことが通知されます。 メニューと境界領域をネゴシエートするためにコンテナーによって使用されるインターフェイスが解放されます。`IOleInPlaceUIWindow`
 
-参照してください[IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceObject:: Inplace deactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) 」を参照してください。
 
-##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl:: OnWindowMessage
 
-コンテナーから一括で有効になっているウィンドウなしのコントロールへのメッセージをディスパッチします。
+コンテナーから、アクティブな状態のウィンドウなしのコントロールにメッセージをディスパッチします。
 
 ```
 HRESULT OnWindowMessage(
@@ -143,7 +143,7 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IOleInPlaceObjectWindowless::OnWindowMessage](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceObjectWindowless:: OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) 」を参照してください。
 
 ##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
@@ -155,11 +155,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceObject:: Re Andundo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) 」を参照してください。
 
 ##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects
 
-コントロールのサイズや位置が変更されたことを通知するために、コンテナーによって呼び出されます。
+サイズや位置が変更されたことをコントロールに通知するために、コンテナーによって呼び出されます。
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +167,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>Remarks
 
-コントロールの更新`m_rcPos`データ メンバーとコントロールの表示。 クリップ領域と交差するコントロールの一部のみが表示されます。 コントロールの表示が以前にクリップされる領域が削除された場合は、コントロールの完全なビューを再描画するこの関数を呼び出すことができます。
+コントロールの`m_rcPos`データメンバーとコントロールの表示を更新します。 クリップ領域と交差するコントロールの部分のみが表示されます。 コントロールの表示が既にクリップされていても、クリッピングが削除されている場合は、この関数を呼び出して、コントロールの完全なビューを再描画できます。
 
-参照してください[IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) 」を参照してください。
 
-##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate
+##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl:: Uide アクティブ化
 
-非アクティブ化し、インプレース アクティブ化をサポートするコントロールのユーザー インターフェイスを削除します。
+埋め込み先のアクティベーションをサポートするコントロールのユーザーインターフェイスを非アクティブ化し、削除します。
 
 ```
 HRESULT UIDeactivate();
@@ -181,9 +181,9 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>Remarks
 
-コントロール クラスのデータ メンバーを設定`m_bUIActive`を FALSE にします。 この関数の ATL の実装は、常に S_OK を返します。
+コントロールクラスのデータメンバー `m_bUIActive`を FALSE に設定します。 この関数の ATL 実装では、常に S_OK が返されます。
 
-参照してください[IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) Windows SDK にします。
+Windows SDK の「 [IOleInPlaceObject:: Uide activate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

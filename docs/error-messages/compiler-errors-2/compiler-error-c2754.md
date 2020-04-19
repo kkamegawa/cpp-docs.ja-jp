@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2754
+title: コンパイラエラー C2754
 ms.date: 11/04/2016
 f1_keywords:
 - C2754
 helpviewer_keywords:
 - C2754
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
-ms.openlocfilehash: cfe6f8faa1b00faf32ae53e6c25c23532c9f3a3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 179cbaf65bf6440a13da6b35c073af981b074c71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759569"
 ---
-# <a name="compiler-error-c2754"></a>コンパイラ エラー C2754
+# <a name="compiler-error-c2754"></a>コンパイラエラー C2754
 
-'specialization': 部分的特殊化は、依存非型テンプレート パラメーターを含めることはできません
+' 特殊化 ': 部分的特殊化は、依存しない非型テンプレートパラメーターを持つことはできません
 
-依存非型テンプレート パラメーターを持つテンプレート クラスを部分的に特殊化が試行されました。 これは認められていません。
+依存しない非型テンプレートパラメーターを持つテンプレートクラスを部分的に特殊化しようとしました。 これは許可されていません。
 
 次の例では、C2754 が生成されます。
 
-```
+```cpp
 // C2754.cpp
 // compile with: /c
 

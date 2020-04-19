@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237415"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory クラス
 
@@ -374,7 +374,7 @@ CMFCRibbonBaseElement* FindByData(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]リボン要素に関連付けられたデータ。
 
 *bVisibleOnly*<br/>
@@ -1269,7 +1269,7 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 [in]ポインター、`CMFCRibbonCmdUI`を無効にするにはこれを有効にするユーザー インターフェイス要素であると指定するオブジェクト。
 
 *pTarget*<br/>
@@ -1351,7 +1351,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 カテゴリをリボン パネルを折りたたむことが検出されると、指定されたリストの次の要素を検索します。 リストが空、または十分な要素が指定されていない、カテゴリは内部アルゴリズムを使用します。
 
-たとえば、カテゴリは、3 つのリボン パネルが、すべてのパネルが完全に折りたたまれた状態になるまで何度もを折りたたむことができます。 次の折りたたみの順序を設定することができます: 0、0、2、2 です。 この場合は、カテゴリは 2 回に、[0] パネルに折りたたむ、パネル 2 の 2 倍です。 1 のインデックスを持つパネルは折りたたまれていない状態のままになります。
+たとえば、カテゴリは、3 つのリボン パネルが、すべてのパネルが完全に折りたたまれた状態になるまで何度もを折りたたむことができます。 次の折りたたみの順序を設定できます。0, 0, 2, 2. この場合は、カテゴリは 2 回に、[0] パネルに折りたたむ、パネル 2 の 2 倍です。 1 のインデックスを持つパネルは折りたたまれていない状態のままになります。
 
 ### <a name="example"></a>例
 
@@ -1369,7 +1369,7 @@ void SetData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]ユーザー定義データ。
 
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys
@@ -1406,7 +1406,7 @@ void SetName(LPCTSTR lpszName);
 
 リボン カテゴリの keytip を設定する追加の keytip の文字に続く改行エスケープ シーケンス*lpszName*します。
 
-##  <a name="settabcolor"></a>  Cmfcribboncategory::settabcolor
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor
 
 リボン カテゴリの色を設定します。
 

@@ -1,10 +1,10 @@
 ---
 title: _fullpath_dbg、_wfullpath_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfullpath_dbg
 - _fullpath_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath_dbg
 - _wfullpath_dbg
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9271e26bcf4a78ff8d2e4fcf108f1e483c22c1d7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956310"
 ---
-# <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
+# <a name="_fullpath_dbg-_wfullpath_dbg"></a>_fullpath_dbg、_wfullpath_dbg
 
-バージョンの[_fullpath、_wfullpath](fullpath-wfullpath.md)のデバッグ バージョンを使用する**malloc**メモリを割り当てることです。
+[_Wfullpath](fullpath-wfullpath.md)のバージョン。 **malloc**のデバッグバージョンを使用してメモリを割り当てます。
 
 ## <a name="syntax"></a>構文
 
@@ -64,32 +67,32 @@ wchar_t *_wfullpath_dbg(
 ### <a name="parameters"></a>パラメーター
 
 *absPath*<br/>
-絶対または完全パス名を格納するバッファーへのポインターまたは**NULL**します。
+絶対パス名または完全パス名を格納しているバッファーへのポインター、または**NULL**。
 
 *relPath*<br/>
 相対パス名。
 
-*MaxLength*<br/>
-絶対パス名のバッファーの最大長 (*absPath*)。 この長さはバイト単位、 **_fullpath**がワイド文字 (**wchar_t**) の **_wfullpath**します。
+*maxLength*<br/>
+絶対パス名バッファー (*Abspath*) の最大長。 この長さは、 **_wfullpath**の場合はバイト単位**ですが、** の場合はワイド文字 (**wchar_t**) になります。
 
 *blockType*<br/>
-要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
+割り当て操作を要求したソースファイルの名前へのポインターまたは**NULL**。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の番号を行または**NULL**します。
+割り当て操作が要求されたソースファイル内の行番号または**NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-各関数の絶対パス名を格納するバッファーへのポインターを返します (*absPath*)。 エラーがある場合 (値が渡された場合など、 *relPath*が正しくないか、見つからないドライブ文字が含まれます場合、または作成された絶対パス名の長さ (*absPath*) より大きい*maxLength*) を返します**NULL**します。
+各関数は、絶対パス名 (*Abspath*) を格納しているバッファーへのポインターを返します。 エラーが発生した場合 (たとえば、 *relPath*で渡された値に有効でないドライブ文字が含まれている場合や見つからない場合、または作成された絶対パス名 (*abspath*) の長さが*maxLength*よりも大きい場合)、関数はを返します **。NULL**。
 
 ## <a name="remarks"></a>Remarks
 
-**_Fullpath_dbg**と **_wfullpath_dbg**関数と同じ **_fullpath**と **_wfullpath**する点を除いて、 **_DEBUG**が定義されている場合、これらの関数でのデバッグ バージョンを使用**malloc**、 **_malloc_dbg**場合に、メモリを割り当て、 **NULL**が渡されます最初のパラメーター。 デバッグ機能について **_malloc_dbg**を参照してください[_malloc_dbg](malloc-dbg.md)します。
+**_Fullpath_dbg**関数と **_wfullpath_dbg**関数は、および **_wfullpath**と同じですが、 **_debug**が定義されている場合、これらの関数は**malloc**, **_malloc_dbg**, のデバッグ**バージョンを使用**する点が異なります。**NULL**が最初のパラメーターとして渡された場合にメモリを割り当てる場合は。 **_Malloc_dbg**のデバッグ機能の詳細については、 [_malloc_dbg](malloc-dbg.md)を参照してください。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、定義、 **_CRTDBG_MAP_ALLOC**フラグ。 ときに **_CRTDBG_MAP_ALLOC**が定義されている、呼び出し **_fullpath**と **_wfullpath**にマップし直され **_fullpath_dbg**と **_wfullpath_dbg**をそれぞれで、 *blockType*設定 **_NORMAL_BLOCK**します。 したがって、としてヒープ ブロックをマークする場合、これらの関数を明示的に呼び出す必要はない **_CLIENT_BLOCK**します。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、 **_CRTDBG_MAP_ALLOC**フラグを定義できます。 **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_wfullpath**への呼び出しはそれぞれ **_fullpath_dbg**と **_Wfullpath_dbg** **に再**マップされ、 *blocktype*は **_NORMAL_BLOCK**に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK**としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

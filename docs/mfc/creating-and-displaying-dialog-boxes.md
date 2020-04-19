@@ -8,27 +8,26 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 778ee0cbb154c65b0cc74a207a175354c2e2a90b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431084"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685739"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>ダイアログ ボックスの作成と表示
 
-2 フェーズの操作は、ダイアログ ボックスのオブジェクトを作成します。 最初に、ダイアログのオブジェクトを構築し、ダイアログ ウィンドウを作成します。 モーダルとモードレスのダイアログ ボックスでは、作成し、それらを表示するために使用するプロセスが少し異なります。 次の表では、どのモーダルおよびモードレス ダイアログ ボックスは通常生成方法し、表示を示します。
+ダイアログオブジェクトの作成は、2フェーズ操作です。 まず、ダイアログオブジェクトを構築してから、ダイアログウィンドウを作成します。 モーダルおよびモードレスのダイアログボックスは、それらを作成および表示するために使用されるプロセスで多少異なります。 次の表に、モーダルおよびモードレスのダイアログボックスを通常作成して表示する方法を示します。
 
 ### <a name="dialog-creation"></a>ダイアログの作成
 
-|ダイアログの種類|これを作成する方法|
+|ダイアログの種類|作成方法|
 |-----------------|----------------------|
-|[モードレス](../mfc/creating-modeless-dialog-boxes.md)|構築`CDialog`、呼び出して`Create`メンバー関数。|
-|[モーダル](../mfc/creating-modal-dialog-boxes.md)|構築`CDialog`、呼び出して`DoModal`メンバー関数。|
+|[固定](../mfc/creating-modeless-dialog-boxes.md)|@No__t-0 を構築してから、`Create` メンバー関数を呼び出します。|
+|[モード](../mfc/creating-modal-dialog-boxes.md)|@No__t-0 を構築してから、`DoModal` メンバー関数を呼び出します。|
 
-する場合は、作成できますからダイアログ ボックス、[メモリ内のダイアログ テンプレート](../mfc/using-a-dialog-template-in-memory.md)作成したダイアログ テンプレート リソースからではなく。 ただし、高度なトピックになります。
+必要に応じて、ダイアログテンプレートリソースからではなく、構築した[メモリ内ダイアログテンプレート](../mfc/using-a-dialog-template-in-memory.md)からダイアログボックスを作成できます。 ただし、これは高度なトピックです。
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

@@ -1,18 +1,18 @@
 ---
-title: '方法: クラスと構造体を定義および使用する (C++/CLI)'
+title: '方法: クラスと構造体定義および使用 (C +/cli CLI)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436160"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447299"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体を定義および使用する (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体定義および使用 (C +/cli CLI)
 
 この記事では、ユーザー定義の参照型と c++ の値の型定義および使用する方法を示しています。/cli CLI。
 
@@ -97,7 +97,7 @@ int main() {
 
 *暗黙的な抽象クラス*インスタンス化することはできません。 クラスの基本型がインターフェイスで、そのクラスによって一部のインターフェイスのメンバー関数が実装されていない場合、そのクラスは暗黙的な抽象クラスです。
 
-インターフェイスから派生したクラスからオブジェクトを構築できない場合は、それが暗黙的な抽象クラスであることが原因の可能性があります。 抽象クラスの詳細については、次を参照してください。[抽象](../windows/abstract-cpp-component-extensions.md)します。
+インターフェイスから派生したクラスからオブジェクトを構築できない場合は、それが暗黙的な抽象クラスであることが原因の可能性があります。 抽象クラスの詳細については、次を参照してください。[抽象](../extensions/abstract-cpp-component-extensions.md)します。
 
 次のコード例は、`MyClass` が実装されていないため、`MyClass::func2` クラスをインスタンス化できないことを示しています。 例をコンパイルできるようにするには、`MyClass::func2` のコメントを解除します。
 
@@ -127,7 +127,7 @@ int main() {
 
 `public` 含むソース ファイルに表示されることを示します、`#using`型を含むアセンブリのディレクティブ。  `private` 型が含むソース ファイルに表示されないことを示します、`#using`型を含むアセンブリのディレクティブ。 ただし、プライベート型は、同じアセンブリ内には表示されます。 既定では、クラスの可視性は `private` です。
 
-Visual C++ 2005 より前の既定では、ネイティブ型の場合、アセンブリ外にパブリック アクセシビリティがありました。 有効にする[コンパイラの警告 (レベル 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)プライベート ネイティブ型が使用されている正しく確認できるようにします。 使用して、 [make_public](../preprocessor/make-public.md)プラグマで変更できないソース コード ファイルをネイティブ型にパブリック アクセシビリティをできるようにします。
+Visual Studio 2005 の前に、既定では、ネイティブ型には、アセンブリ外にパブリック アクセシビリティが必要があります。 有効にする[コンパイラの警告 (レベル 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)プライベート ネイティブ型が使用されている正しく確認できるようにします。 使用して、 [make_public](../preprocessor/make-public.md)プラグマで変更できないソース コード ファイルをネイティブ型にパブリック アクセシビリティをできるようにします。
 
 詳細については、「[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)」を参照してください。
 
@@ -229,7 +229,7 @@ in Public_Class
 |public|アセンブリの内部と外部の両方でメンバーにアクセスできます。  参照してください[パブリック](../cpp/public-cpp.md)詳細についてはします。|
 |private|アセンブリの内部と外部の両方でメンバーにアクセスできません。  参照してください[プライベート](../cpp/private-cpp.md)詳細についてはします。|
 |protected|アセンブリの内部と外部の両方で、派生型のメンバーにのみアクセスできます。  参照してください[保護](../cpp/protected-cpp.md)詳細についてはします。|
-|internal|メンバーは、アセンブリ内でパブリック、プライベート アセンブリの外側です。  `internal` は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。|
+|internal|メンバーは、アセンブリ内でパブリック、プライベート アセンブリの外側です。  `internal` は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)します。|
 |パブリックの保護の - または - は保護されたパブリック|メンバーはアセンブリ内ではパブリックですが、アセンブリ外では保護されています。|
 |秘密の保護の - または - は保護されたプライベート|メンバーはアセンブリ内では保護されていますが、アセンブリ外ではプライベートです。|
 
@@ -455,7 +455,7 @@ int main() {
 
 静的コンストラクターは、CLR によってのみ呼び出されることが想定されているため、プライベート メンバー関数として定義します。
 
-静的コンス トラクターの詳細については、次を参照してください。[方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)します。
+静的コンス トラクターの詳細については、次を参照してください。[方法。インターフェイス静的コンス トラクターの定義 (C +/cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)します。
 
 ```cpp
 // compile with: /clr
@@ -499,9 +499,9 @@ Visual C++ を使用して型を定義する場合、参照型の `this` ポイ�
 
 詳細については、次のトピックを参照してください。
 
-- [オブジェクト演算子 (^) へのハンドルします。](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-次の例では、Visual C++ コンパイラは、1 つ以上のパラメーターを一致させるために変換が必要な場合でも、最派生クラスで関数を呼び出します。関数呼び出しにより適合する基底クラスの関数は呼び出されません。
+次の例を示します MicrosoftC++コンパイラは、最派生クラスで関数を呼び出す-場合でも、1 つまたは複数のパラメーターと一致する変換が必要です: 関数呼び出しにより適合する基底クラスで関数を呼び出していません。
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ CLR ガベージ コレクターは、不要になった未使用マネージド
 
 Visual C++ ファイナライザーは、<xref:System.Object.Finalize%2A> メソッドと同じではありません  (CLR ドキュメントでは、ファイナライザーと <xref:System.Object.Finalize%2A> メソッドが同じ意味で使用されます)。 <xref:System.Object.Finalize%2A> メソッドはガベージ コレクターによって呼び出され、これにより、クラス継承チェーンの各ファイナライザーが開始されます。 Visual C++ デストラクターとは異なり、派生クラスのファイナライザーの呼び出しにより、コンパイラがすべての基底クラスのファイナライザーを開始することはありません。
 
-Visual C++ コンパイラではリソースの確定的な解放がサポートされるため、<xref:System.IDisposable.Dispose%2A> メソッドまたは <xref:System.Object.Finalize%2A> メソッドは実装しようとしないでください。 ただし、これらのメソッドに慣れている方を対象に、ここでは、Visual C++ ファイナライザーとそのファイナライザーを呼び出すデストラクターが、どのように <xref:System.IDisposable.Dispose%2A> パターンに割り当てられるかを示します。
+MicrosoftC++コンパイラは、リソースの確定的解放をサポートしている、実装しようとしないでください、<xref:System.IDisposable.Dispose%2A>または<xref:System.Object.Finalize%2A>メソッド。 ただし、これらのメソッドに慣れている方を対象に、ここでは、Visual C++ ファイナライザーとそのファイナライザーを呼び出すデストラクターが、どのように <xref:System.IDisposable.Dispose%2A> パターンに割り当てられるかを示します。
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 マネージド型が、確定的に解放することが望ましいマネージド リソースを使用しており、オブジェクトが不要になった後のある時点においてガベージ コレクターで非確定的に解放したくないこともあります。 リソースを確定的に解放すると、パフォーマンスが大幅に向上する可能性があります。
 
-Visual C++ コンパイラを使用すると、デストラクターの定義によりオブジェクトを確定的にクリーンアップできます。 デストラクターを使用して、確定的に解放するすべてのリソースを解放します。  ファイナライザーが存在する場合は、デストラクターからそのファイナライザーを呼び出して、コードの重複を回避します。
+MicrosoftC++コンパイラ確定的にオブジェクトをクリーンアップするデストラクターの定義を有効にします。 デストラクターを使用して、確定的に解放するすべてのリソースを解放します。  ファイナライザーが存在する場合は、デストラクターからそのファイナライザーを呼び出して、コードの重複を回避します。
 
 ```cpp
 // compile with: /clr /c
@@ -797,7 +797,7 @@ Visual C で記述されコンパイルを使用しているコードを **/clr*
 
 - オブジェクトが、デストラクターが実行されているオブジェクトのメンバーである。
 
-- 呼び出す、[削除](../cpp/delete-operator-cpp.md)ハンドル演算子 ([オブジェクト演算子 (^) へのハンドル](../windows/handle-to-object-operator-hat-cpp-component-extensions.md))。
+- 呼び出す、[削除](../cpp/delete-operator-cpp.md)ハンドル演算子 ([オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md))。
 
 - 明示的にデストラクターを呼び出す。
 
@@ -844,7 +844,7 @@ int main() {
 
 ファイナライザーによってマネージド型のネイティブ ポインターが削除された場合は、ネイティブ ポインターへの参照、またはネイティブ ポインターを介した参照の収集が途中で終了していないことを確認する必要があります。<xref:System.GC.KeepAlive%2A> を使用する代わりに、マネージド型でデストラクターを呼び出してください。
 
-コンパイル時に、型にファイナライザーまたはデストラクターがあるかどうかを検出できます。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
+コンパイル時に、型にファイナライザーまたはデストラクターがあるかどうかを検出できます。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
 次の例は 2 つの型を示しています。1 つにはアンマネージド リソースが、もう 1 つには確定的に解放されたマネージド リソースが含まれます。
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

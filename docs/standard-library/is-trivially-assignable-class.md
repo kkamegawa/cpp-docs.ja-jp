@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: eeef85a0b26c25eb745258c7e0e35394f0cab979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495161"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457491"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable クラス
 
@@ -26,15 +26,15 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*目的*<br/>
+*宛先*\
 代入を受け取るオブジェクトの型。
 
-*From*<br/>
+*差出人*\
 値を渡すオブジェクトの型。
 
 ## <a name="remarks"></a>Remarks
 
-式 `declval<To>() = declval<From>()` は正しい形式である必要があり、トリビアルでない演算を必要としないことがコンパイラに判明している必要があります。 両方`From`と`To`完全な型は、必要があります**void**、または不明なバインドの配列。
+式 `declval<To>() = declval<From>()` は正しい形式である必要があり、トリビアルでない演算を必要としないことがコンパイラに判明している必要があります。 と`From` の`To`両方が、完全な型、 **void**、または不明なバインドの配列である必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,4 +44,4 @@ struct is_trivially_assignable;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

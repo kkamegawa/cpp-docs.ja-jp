@@ -1,20 +1,18 @@
 ---
 title: スレッド処理モデルとクリティカル セクションのクラス (ATL)
 ms.date: 11/04/2016
-f1_keywords:
-- vc.atl.threads.models
 helpviewer_keywords:
 - ATL, critical sections
 - ATL, multithreading
 - threading [ATL], models
 - critical sections
 ms.assetid: 759f05ef-6285-4be6-a2cc-78572dd75146
-ms.openlocfilehash: ecc4ae1287c0ff024b27ad62ad57b4e35a142007
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98db15a1fee2637b9493b538468fa9446015404f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196156"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>スレッド処理モデルとクリティカル セクションのクラス
 
@@ -47,4 +45,3 @@ ms.locfileid: "50626968"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)
-

@@ -7,18 +7,17 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: 6b241c8dec2daf9a09c3f15456be28e3082e9963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604361"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685031"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>メモリ内のダイアログ テンプレートの使用
 
-指定されたメソッドを使用する代わりに、[ダイアログの作成テーブル](../mfc/creating-a-dialog-class-with-code-wizards.md)を作成できます ダイアログ ボックスのいずれかのような直接メモリにダイアログ テンプレートから。 詳細については、クラスを参照してください。 [CDialog](../mfc/reference/cdialog-class.md)で、 *MFC リファレンス*します。
+ダイアログ[作成テーブル](../mfc/creating-a-dialog-class-with-code-wizards.md)に指定されたメソッドを使用する代わりに、メモリ内のダイアログテンプレートから、いずれかの種類のダイアログボックスを間接的に作成できます。 詳細については、 *MFC リファレンス*の「クラス[CDialog](../mfc/reference/cdialog-class.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: 9e5fbdcd14c0f988e894718f357d40e4b238c7c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bb242cb53593862cb51e0c193eb739625127adc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380287"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile クラス
 
@@ -96,7 +96,7 @@ Gopher サーバーを検索に使用する文字列へのポインター。 参
 *dwLocLen*<br/>
 内のバイト数を含む DWORD *pstrLocator*します。
 
-*独自*<br/>
+*dwContext*<br/>
 開いているファイルのコンテキスト識別子へのポインター。
 
 ### <a name="remarks"></a>Remarks

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: c5eaff8b3b37096eeca8777b6ba8bb91e01d7cd2
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175343"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>OLE DB サービスの有効化と無効化
 

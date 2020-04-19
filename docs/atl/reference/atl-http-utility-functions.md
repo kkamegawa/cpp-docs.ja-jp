@@ -2,12 +2,12 @@
 title: ATL HTTP ユーティリティ関数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481717"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497974"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP ユーティリティ関数
 
@@ -15,20 +15,20 @@ ms.locfileid: "50481717"
 
 |||
 |-|-|
-|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|安全でない文字とスペースをエスケープ シーケンスに変換を含む URL を正規化します。|
-|[AtlCombineUrl](#atlcombineurl)|1 つの正規の URL には、ベース URL と相対 URL を結合します。|
-|[AtlEscapeUrl](#atlescapeurl)|すべての安全でない文字をエスケープ シーケンスに変換します。|
-|[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|特定のインターネット プロトコルまたはスキームに関連付けられた既定のポート番号を取得します。|
-|[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|文字を URL で使用しても安全かどうかを判断します。|
-|[AtlUnescapeUrl](#atlunescapeurl)|元の値に戻すエスケープ文字を変換します。|
-|[RGBToHtml](#rgbtohtml)|変換を[COLORREF](/windows/desktop/gdi/colorref)にその色の値に対応する HTML テキスト値。|
+|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes は、安全でない文字やスペースをエスケープシーケンスに変換するなど、URL を指定します。|
+|[AtlCombineUrl](#atlcombineurl)|ベース URL と相対 URL を結合して、1つの正規の URL にします。|
+|[AtlEscapeUrl](#atlescapeurl)|安全でないすべての文字をエスケープシーケンスに変換します。|
+|[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|特定のインターネットプロトコルまたはスキームに関連付けられている既定のポート番号を取得します。|
+|[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|文字が URL で安全に使用できるかどうかを判断します。|
+|[AtlUnescapeUrl](#atlunescapeurl)|エスケープされた文字を元の値に変換します。|
+|[RGBToHtml](#rgbtohtml)|[COLORREF](/windows/win32/gdi/colorref)値をその色の値に対応する HTML テキストに変換します。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|システム時刻を HTTP ヘッダーで使用できる形式の文字列に変換します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlutil.h
+**ヘッダー:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a> どうか
+## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 URL を標準形式に変換します。安全でない文字や空白をエスケープ シーケンスに変換する処理などが含まれます。
 
@@ -43,42 +43,38 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="parameters"></a>パラメーター
 
 *szUrl*<br/>
-正規化される URL です。
+正規化される URL。
 
 *szCanonicalized*<br/>
-正規化された URL を受信する呼び出し元が割り当てたバッファー。
+正規化された URL を受信するために、呼び出し元が割り当てたバッファー。
 
 *pdwMaxLength*<br/>
-文字の長さを格納する変数へのポインター *szCanonicalized*します。 関数が成功すると、変数は、終端の null 文字を含むバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の空白を含むバッファーのバイトで、必要な長さを受け取ります。
+*Szcanonicalized*された長さの文字数を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwFlags*<br/>
 この関数の動作を制御する ATL_URL フラグ。
 
-- 「#」の後に文字をデコードまたはエンコード ATL_URL_BROWSER_MODE しませんまたは"?"と後に後続の空白は削除されません"でしょうか。"。 この値が指定されていない場合は、URL 全体はエンコードされ、後続の空白が削除されます。
+- ATL_URL_BROWSER_MODE は、"#" または "?" の後の文字をエンコードまたはデコードしません。また、"?" の後の末尾の空白は削除されません。 この値が指定されていない場合は、URL 全体がエンコードされ、末尾の空白が削除されます。
 
-- ATL_URL_DECODE では、すべての %XX シーケンスを URL を解析する前に、エスケープ シーケンスを含む文字に変換します。
+- ATL_URL_DECODE は、URL が解析される前に、すべての% XX シーケンスをエスケープシーケンスを含む文字に変換します。
 
-- パーセント記号をすべて ATL_URL_ENCODE_PERCENT エンコードが発生しました。 既定では、パーセント記号はエンコードされません。
+- ATL_URL_ENCODE_PERCENT は、検出されたパーセント記号をエンコードします。 既定では、パーセント記号はエンコードされません。
 
-- ATL_URL_ENCODE_SPACES_ONLY エンコード スペースのみです。
+- ATL_URL_ENCODE_SPACES_ONLY は、スペースのみをエンコードします。
 
-- ATL_URL_ESCAPE 変換、対応する文字をすべてのエスケープ シーケンス (%xx を参照)。
+- ATL_URL_ESCAPE は、すべてのエスケープシーケンス (% XX) を対応する文字に変換します。
 
-- 安全でない文字をエスケープ シーケンスに変換 ATL_URL_NO_ENCODE しません。
+- ATL_URL_NO_ENCODE は、安全でない文字をエスケープシーケンスに変換しません。
 
-- メタ シーケンスは削除 ATL_URL_NO_META されません (など".「と」..")、URL から。
+- ATL_URL_NO_META は、URL からメタシーケンス ("." や ".." など) を削除しません。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-現在のバージョンのように動作[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) WinInet または Internet Explorer をインストールするのには必要ありません。
-
-### <a name="see-also"></a>関連項目
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
+現在のバージョンの[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)のように動作しますが、WinInet や Internet Explorer をインストールする必要はありません。
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -99,24 +95,24 @@ inline BOOL AtlCombineUrl(
 ベース URL。
 
 *szRelativeUrl*<br/>
-ベース URL の相対 URL です。
+ベース URL に対して相対的な URL。
 
-*しなかった*<br/>
-正規化された URL を受信する呼び出し元が割り当てたバッファー。
+*szBuffer*<br/>
+正規化された URL を受信するために、呼び出し元が割り当てたバッファー。
 
 *pdwMaxLength*<br/>
-文字の長さを格納する変数へのポインター*しなかった*します。 関数が成功すると、変数は、終端の null 文字を含むバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の空白を含むバッファーのバイトで、必要な長さを受け取ります。
+*Szbuffer*の長さを文字数で格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwFlags*<br/>
-この関数の動作を制御するフラグ。 参照してください[どうか](#atlcanonicalizeurl)します。
+この関数の動作を制御するフラグ。 「 [AtlCanonicalizeUrl](#atlcanonicalizeurl)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-現在のバージョンのように動作[InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) WinInet または Internet Explorer をインストールするのには必要ありません。
+は、現在のバージョンの[Internet連結 Eurl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw)のように動作しますが、WinInet や Internet Explorer をインストールする必要はありません。
 
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
 
@@ -141,23 +137,23 @@ inline BOOL AtlEscapeUrl(
 ### <a name="parameters"></a>パラメーター
 
 *lpszStringIn*<br/>
-変換する URL です。
+変換する URL。
 
 *lpszStringOut*<br/>
-呼び出し元が割り当てたバッファーは変換後の URL が書き込まれます。
+変換後の URL の書き込み先となる、呼び出し元が割り当てたバッファー。
 
 *pdwStrLen*<br/>
-DWORD 変数へのポインター。 関数が成功すると、 *pdwStrLen*は終端の null 文字を含むバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の空白を含むバッファーのバイトで、必要な長さを受け取ります。 このメソッドは、のワイド文字バージョンを使用して*pdwStrLen*のバイト数ではなくに必要な文字の数を受け取ります。
+DWORD 変数へのポインター。 関数が成功した場合、 *pdwStrLen*は、バッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。 このメソッドのワイド文字バージョンを使用する場合、 *pdwStrLen*は、バイト数ではなく、必要な文字数を受け取ります。
 
 *dwMaxLength*<br/>
-バッファーのサイズ*lpszStringOut*します。
+バッファー *Lpszstringout*のサイズ。
 
 *dwFlags*<br/>
-この関数の動作を制御する ATL_URL フラグ。 参照してください[どうか](#atlcanonicalizeurl)使用可能な値。
+この関数の動作を制御する ATL_URL フラグ。 使用可能な値については、 [ATLCanonicalizeUrl](#atlcanonicalizeurl)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
 
@@ -170,11 +166,11 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="parameters"></a>パラメーター
 
 *m_nScheme*<br/>
-[ATL_URL_SCHEME](atl-url-scheme-enum.md)ポート番号を取得するスキームを示す値。
+ポート番号を取得するスキームを識別する[ATL_URL_SCHEME](atl-url-scheme-enum.md)値。
 
 ### <a name="return-value"></a>戻り値
 
-[ATL_URL_PORT](atl-typedefs.md#atl_url_port)スキームが認識されない場合は、指定したスキームまたは ATL_URL_INVALID_PORT_NUMBER に関連付けられています。
+指定したスキームに関連付けられている[ATL_URL_PORT](atl-typedefs.md#atl_url_port) 、またはスキームが認識されない場合は ATL_URL_INVALID_PORT_NUMBER。
 
 ## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
 
@@ -191,11 +187,11 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、入力文字は安全でない、それ以外の場合は TRUE を返します。
+入力文字が安全でない場合は TRUE、それ以外の場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-文字を Url で使用する必要がありますがこの関数を使用してテストすることができを使用して変換[どうか](#atlcanonicalizeurl)します。
+Url で使用しない文字は、この関数を使用してテストし、 [AtlCanonicalizeUrl](#atlcanonicalizeurl)を使用して変換することができます。
 
 ## <a name="atlunescapeurl"></a> AtlUnescapeUrl
 
@@ -218,28 +214,28 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="parameters"></a>パラメーター
 
 *lpszStringIn*<br/>
-変換する URL です。
+変換する URL。
 
 *lpszStringOut*<br/>
-呼び出し元が割り当てたバッファーは変換後の URL が書き込まれます。
+変換後の URL の書き込み先となる、呼び出し元が割り当てたバッファー。
 
 *pdwStrLen*<br/>
-DWORD 変数へのポインター。 関数が成功すると、変数は、終端の null 文字を含むバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の空白を含むバッファーのバイトで、必要な長さを受け取ります。
+DWORD 変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwMaxLength*<br/>
-バッファーのサイズ*lpszStringOut*します。
+バッファー *Lpszstringout*のサイズ。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-によって適用される変換プロセスを反転させます[AtlEscapeUrl](#atlescapeurl)します。
+[AtlEscapeUrl](#atlescapeurl)によって適用された変換処理を反転します。
 
 ## <a name="rgbtohtml"></a> RGBToHtml
 
-変換を[COLORREF](/windows/desktop/gdi/colorref)にその色の値に対応する HTML テキスト値。
+[COLORREF](/windows/win32/gdi/colorref)値をその色の値に対応する HTML テキストに変換します。
 
 ```cpp
 bool inline RGBToHtml(
@@ -251,21 +247,21 @@ bool inline RGBToHtml(
 ### <a name="parameters"></a>パラメーター
 
 *色*<br/>
-RGB 色の値。
+RGB カラー値。
 
 *pbOut*<br/>
-HTML のカラー値のテキストを受け取る呼び出し元が割り当てたバッファー。 バッファーの領域が必要には少なくとも 8 文字の null 終端文字のスペースを含む)。
+HTML カラー値のテキストを受信するために、呼び出し元が割り当てたバッファー。 バッファーには、null 終端文字のスペースを含む8文字以上の領域が必要です。
 
 *nBuffer*<br/>
-(Null 終端文字のスペースを含む) バッファーのバイト サイズ。
+バッファーのサイズ (null 終端文字のスペースを含む)。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-HTML カラー値は、各色の赤、緑、および青のコンポーネントの 2 桁の数字を使用して、6 桁の 16 進値の前にシャープ記号 (例: #FFFFFF は白)。
+HTML カラー値は、カラーの赤、緑、および青の各成分に対して2桁を使用する、シャープ記号と6桁の16進数の値 (たとえば、#FFFFFF が白) です。
 
 ## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 
@@ -279,13 +275,14 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>パラメーター
 
-*st*<br/>
-HTTP の書式指定文字列として取得するシステム時刻。
+*&*<br/>
+HTTP 書式指定文字列として取得されるシステム時刻。
 
 *strTime*<br/>
-RFC 2616 で定義されている HTTP に日付時刻を受け取る文字列変数への参照 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) および RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt))。
+Rfc 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) および rfc 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)) で定義されている HTTP 日付時刻を受け取る文字列変数への参照。
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM デスクトップ コンポーネント](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)

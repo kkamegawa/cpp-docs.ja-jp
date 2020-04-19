@@ -1,9 +1,9 @@
 ---
 title: _setmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031279"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948587"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
 ファイルの変換モードを設定します。
 
@@ -58,23 +61,23 @@ int _setmode (
 
 成功した場合、前の変換モードを返します。
 
-この関数に無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラーが呼び出されます。 実行が続行すると、この関数は-1 を返し、セットを許可された場合**errno**いずれかに**EBADF**、無効なファイル記述子では、これを示しますまたは**EINVAL**を無効なことを示します*モード*引数。
+この関数に無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を、無効なファイル記述子を示す**EBADF**、または無効な*モード*引数を示す**EINVAL**に設定します。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Setmode**関数に設定*モード*により与えられたファイルの変換モード*fd*します。 渡す **_O_TEXT**として*モード*設定 (変換) をテキスト モード。 キャリッジ リターンとライン フィード (CR-LF) の組み合わせは、1 つのライン フィード文字の入力に変換されます。 ライン フィード文字は、出力時に CR-LF の組み合わせに変換されます。 渡す **_O_BINARY**バイナリ (無変換) モードを設定、これらの翻訳が抑制されます。
+**_Setmode**関数は、 *fd*によって指定されたファイルの変換モードを*モード*に設定します。 **_O_TEXT**を*モード*として渡すと、テキスト (変換) モードが設定されます。 キャリッジリターンラインフィード (CR-LF) の組み合わせは、入力時に1つのラインフィード文字に変換されます。 ライン フィード文字は、出力時に CR-LF の組み合わせに変換されます。 **_O_BINARY**を渡すと、変換が抑制されるバイナリ (無変換) モードが設定されます。
 
-渡すこともできます **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**このドキュメントの後半では、2 番目の例に示すように、Unicode モードを有効にします。
-
-> [!CAUTION]
-> Unicode モードがワイド印刷機能のためには (たとえば、 `wprintf`) と幅の狭いの印刷機能はサポートされていません。 Unicode モードのストリームの幅の狭い印刷関数を使用するには、アサートがトリガーされます。
-
-**_setmode**の既定の変換モードを変更するのには通常使用**stdin**と**stdout**が任意のファイルで使用することができます。 適用した場合 **_setmode**をストリームのファイル記述子、呼び出す **_setmode**入力または出力ストリームで操作を実行する前にします。
+このドキュメントで後述する2番目の例に示すように、 **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**を渡して Unicode モードを有効にすることもできます。
 
 > [!CAUTION]
-> データを書き込むファイル ストリームでは、明示的にフラッシュ、コードを使用して場合[fflush](fflush.md)を使用する前に **_setmode**モードを変更します。 コードをフラッシュしないと、予期しない動作が発生することがあります。 ストリームにデータを書き込んでいない場合は、コードをフラッシュする必要はありません。
+> Unicode モードは、ワイド印刷関数 (など`wprintf`) 用であり、ナロー印刷関数ではサポートされていません。 Unicode モードストリームでナロー print 関数を使用すると、アサートがトリガーされます。
+
+**_setmode**は通常、 **stdin**と**stdout**の既定の変換モードを変更するために使用されますが、任意のファイルで使用できます。 ストリームのファイル記述子に **_setmode**を適用する場合は、ストリームに対して入力または出力操作を実行する前に、 **_setmode**を呼び出します。
+
+> [!CAUTION]
+> ファイルストリームにデータを書き込む場合は、 **_setmode**を使用してモードを変更する前に、 [fflush](fflush.md)を使用して明示的にコードをフラッシュします。 コードをフラッシュしないと、予期しない動作が発生することがあります。 ストリームにデータを書き込んでいない場合は、コードをフラッシュする必要はありません。
 
 ## <a name="requirements"></a>必要条件
 

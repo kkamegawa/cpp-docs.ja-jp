@@ -1,19 +1,19 @@
 ---
-title: コンパイラ エラー C2078
+title: コンパイラエラー C2078
 ms.date: 11/04/2016
 f1_keywords:
 - C2078
 helpviewer_keywords:
 - C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
-ms.openlocfilehash: a800a6efa6e02f323b4b6597f1aa983f13674e83
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 514776c0feb12c46dea56dd8e85043345754a229
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518282"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756449"
 ---
-# <a name="compiler-error-c2078"></a>コンパイラ エラー C2078
+# <a name="compiler-error-c2078"></a>コンパイラエラー C2078
 
 初期化子の数が多すぎます。
 
@@ -23,7 +23,7 @@ ms.locfileid: "51518282"
 
 次の例では、C2078 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C2078.cpp
 // Compile by using: cl /c /W4 C2078.cpp
 struct S {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491274"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742120"
 ---
 # <a name="compiler-error-c3020"></a>コンパイラ エラー C3020
 
-'var': OpenMP の 'for' ループのインデックス変数は、ループの本体では変更できません
+' var ': OpenMP ' for ' ループのインデックス変数は、ループ本体では変更できません
 
-OpenMP`for`ループ (ループ カウンター) の本文内のインデックスを変更できない、`for`ループします。
+OpenMP `for` ループでは、`for` ループの本体のインデックス (ループカウンター) を変更できない場合があります。
 
 次の例では、C3020 が生成されます。
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-宣言された変数[lastprivate](../../parallel/openmp/reference/lastprivate.md)並列化されたループ内でのインデックスとして使用できません。
+[A.6 lastprivate](../../parallel/openmp/reference/lastprivate.md)で宣言された変数を、並列化されたループ内のインデックスとして使用することはできません。
 
-次の例は、その lastprivate が for ループ内で最も外側の idx_a への書き込みをトリガーするための 2 つ目の lastprivate C3020 が提供されます。 最初の lastprivate でエラーは、その lastprivate for ループ (技術的には、最後に、最後のイテレーション) 最も外側の外部 idx_a への書き込みをトリガーするためです。 次の例では、C3020 が生成されます。
+次の例では、C3020 を2番目の a.6 lastprivate に対して指定します。これは、a.6 lastprivate が最も外側の for ループ内の idx_a への書き込みをトリガーするためです。 最初の a.6 lastprivate ではエラーが発生しません。これは、a.6 lastprivate が最も外側の for ループの外側に (技術的には最後の反復処理の最後に) idx_a への書き込みをトリガーするためです。 次の例では、C3020 が生成されます。
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -61,7 +61,7 @@ void test(int first, int last)
 
 次の例では、考えられる解決策を示しています。
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

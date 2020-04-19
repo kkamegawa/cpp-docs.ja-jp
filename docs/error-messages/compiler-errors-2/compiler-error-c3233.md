@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3233
 ms.assetid: a9210830-1136-4f02-ba41-030c85f93547
-ms.openlocfilehash: 4a0cf849f7b87bd8d61b0ef087cf91d15669d719
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 110d1ef84ca2f558f597afadadbede61a89da20c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439521"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751106"
 ---
 # <a name="compiler-error-c3233"></a>コンパイラ エラー C3233
 
@@ -21,7 +21,7 @@ ms.locfileid: "50439521"
 
 次の例では C3233 が生成されます。
 
-```
+```cpp
 // C3233.cpp
 // compile with: /clr /LD
 

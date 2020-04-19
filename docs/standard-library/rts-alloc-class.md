@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587266"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688983"
 ---
-# <a name="rtsalloc-class"></a>rts_alloc クラス
+# <a name="rts_alloc-class"></a>rts_alloc クラス
 
-rts_alloc テンプレート クラスは、キャッシュ インスタンスの配列を保持し、コンパイル時ではなく、実行時に割り当てと割り当て解除に使用するインスタンスを判別する[フィルター](../standard-library/allocators-header.md)を記述します。
+Rts_alloc クラステンプレートは、キャッシュインスタンスの配列を保持し、コンパイル時ではなく実行時に割り当てと割り当て解除に使用するインスタンスを決定する[フィルター](../standard-library/allocators-header.md)を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +38,7 @@ class rts_alloc
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、複数のブロック アロケーター インスタンスを保持し、コンパイル時ではなく、実行時に割り当てと割り当て解除に使用するインスタンスを判別します。 再バインドをコンパイルできないコンパイラと一緒に使用します。
+このクラステンプレートは、複数のブロックアロケーターインスタンスを保持し、コンパイル時ではなく、実行時に割り当てまたは割り当て解除に使用するインスタンスを決定します。 再バインドをコンパイルできないコンパイラと一緒に使用します。
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -48,7 +48,7 @@ class rts_alloc
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -74,7 +74,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数を返します`caches[_IDX].allocate(count)`ここで、インデックス`_IDX`は要求されたブロックのサイズによって決まります*カウント*、または、*数*は返しますが大きすぎて、`operator new(count)`します。 キャッシュ オブジェクトを表す `cache`。
+このメンバー関数は `caches[_IDX].allocate(count)` を返します。インデックス `_IDX` は、要求されたブロックサイズの*カウント*によって決定されます。*カウント*が大きすぎる場合は、`operator new(count)` が返されます。 キャッシュ オブジェクトを表す `cache`。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し`caches[_IDX].deallocate(ptr, count)`ここで、インデックス`_IDX`は要求されたブロックのサイズによって決まります*カウント*、または、*数*は返しますが大きすぎて、`operator delete(ptr)`します。
+このメンバー関数は `caches[_IDX].deallocate(ptr, count)` を呼び出します。インデックス `_IDX` は、要求されたブロックサイズの*カウント*によって決定されます。*カウント*が大きすぎる場合は、`operator delete(ptr)` が返されます。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -107,14 +107,14 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Cache*|フィルターに関連付けられているキャッシュ オブジェクト。|
-|*_Other*|等しいかどうかを比較するキャッシュ オブジェクト。|
+|*キャッシュ (_l)*|フィルターに関連付けられているキャッシュ オブジェクト。|
+|*その他 (_d)*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-**true**場合の結果`caches[0].equals(other.caches[0])`、それ以外の**false**します。 `caches` はキャッシュ オブジェクトの配列を表します。
+`caches[0].equals(other.caches[0])` の結果の場合は**true** 。それ以外の場合は**false**。 `caches` はキャッシュ オブジェクトの配列を表します。
 
 ## <a name="see-also"></a>関連項目
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

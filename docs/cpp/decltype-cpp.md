@@ -1,4 +1,4 @@
----
+﻿---
 title: decltype (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527947"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222458"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
-**Decltype**型指定子は、指定された式の型を生成します。 **Decltype**と共に指定子を入力、 [auto キーワード](../cpp/auto-cpp.md)テンプレートのライブラリを作成する開発者を主に役に立ちます。 使用**自動**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**自動**と**decltype**を別の関数の呼び出しをラップし、ラップされた関数の戻り値の型を返すテンプレート関数を宣言します。
+**decltype**型指定子は、指定された式の型を生成します。 **decltype**と共に指定子を入力、 [auto キーワード](../cpp/auto-cpp.md)テンプレートのライブラリを作成する開発者を主に役に立ちます。 使用**auto**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**auto**と**decltype**を別の関数の呼び出しをラップし、ラップされた関数の戻り値の型を返すテンプレート関数を宣言します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*式*|任意の式を指定します。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。|
+|*式 (expression)*|任意の式を指定します。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。|
 
 ## <a name="return-value"></a>戻り値
 
@@ -38,7 +38,7 @@ decltype( expression )
 
 ## <a name="remarks"></a>Remarks
 
-**Decltype**型指定子は、Visual C 2010 またはそれ以降のバージョンでサポートされて、ネイティブまたはマネージ コードで使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。
+**Decltype**型指定子は、Visual Studio 2010 またはそれ以降のバージョンでサポートされて、ネイティブまたはマネージ コードで使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。
 
 コンパイラの種類を決定する、次の規則を使用して、*式*パラメーター。
 
@@ -70,18 +70,18 @@ const A* a = new A();
 
 C++ 14 で使用できます`decltype(auto)`いない後続の戻り値の型テンプレート関数の戻り値の型を宣言すると、テンプレート引数の型に依存します。
 
-C++ 11 で使用することができます、 **decltype**と同時に後続の戻り値の型指定子を入力、**自動**キーワード、テンプレート関数の戻り値の型を宣言するは、そのテンプレートの種類によって異なります。引数。 たとえば、テンプレート関数の戻り値の型がテンプレート引数の型に依存している次のコード例について考えます。 コードの例で、*不明な*プレース ホルダーでは、戻り値の型を指定できないことを示します。
+C++ 11 で使用することができます、 **decltype**と同時に後続の戻り値の型指定子を入力、**auto**キーワード、テンプレート関数の戻り値の型を宣言するは、そのテンプレートの種類によって異なります。引数。 たとえば、テンプレート関数の戻り値の型がテンプレート引数の型に依存している次のコード例について考えます。 コードの例で、*不明な*プレース ホルダーでは、戻り値の型を指定できないことを示します。
 
 ```cpp
 template<typename T, typename U>
 UNKNOWN func(T&& t, U&& u){ return t + u; };
 ```
 
-導入に伴い、 **decltype**型指定子により、開発者は、テンプレート関数によって返される式の型を取得します。 使用して、*代替関数宣言の構文*後で、表示される、**自動**キーワード、および**decltype**宣言指定子を入力、 *指定された遅延*型を返します。 遅延指定された戻り値の型は、宣言がコード化されたときではなく、コンパイルされたときに決定します。
+導入に伴い、 **decltype**型指定子により、開発者は、テンプレート関数によって返される式の型を取得します。 使用して、*代替関数宣言の構文*後で、表示される、**auto**キーワード、および**decltype**宣言指定子を入力、 *指定された遅延*型を返します。 遅延指定された戻り値の型は、宣言がコード化されたときではなく、コンパイルされたときに決定します。
 
-次のプロトタイプは代替関数宣言の構文について説明します。 なお、 **const**と**揮発性**修飾子、および**スロー** [例外の指定](../cpp/exception-specifications-throw-cpp.md)は省略可能です。 *Function_body*プレース ホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのプラクティスとして、*式*内のプレース ホルダー、 **decltype**ステートメントがで指定された式に一致する必要があります、**返す**ステートメントでは、に存在する場合、*function_body*します。
+次のプロトタイプは代替関数宣言の構文について説明します。 なお、 **const**と**volatile**修飾子、および**throw** [例外の指定](../cpp/exception-specifications-throw-cpp.md)は省略可能です。 *Function_body*プレース ホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのプラクティスとして、*式*内のプレース ホルダー、 **decltype**ステートメントがで指定された式に一致する必要があります、**return**文では、に存在する場合、*function_body*します。
 
-**自動** *function_name* **(** *パラメーター*<sub>opt</sub> **)** **const**<sub>opt</sub> **揮発性**<sub>opt</sub> **->** **decltype (***式* **)** **スロー**<sub>opt</sub> **{** *function_body***};**
+**auto** *function_name* **(** *パラメーター*<sub>opt</sub> **)** **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *式* **)** **throw**<sub>opt</sub> **{** *function_body* **};**
 
 次のコード例では、`myFunc` テンプレート関数の遅延指定された戻り値の型は、テンプレート引数 `t` と `u` の型によって決まります。 コーディングのプラクティスとして、このコード例もで右辺値参照と`forward`関数テンプレートは、サポート*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>例
 
-**Visual Studio 2017 以降:** コンパイラが、テンプレートは宣言ではなくインスタンス化されるときに、decltype 引数を解析します。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されずにすぐに処理され、結果として発生したエラーは、その時点で診断されます。
+**Visual Studio 2017 以降:** コンパイラは、テンプレートは宣言ではなくインスタンス化されるときに、decltype 引数を解析します。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されずにすぐに処理され、結果として発生したエラーは、その時点で診断されます。
 
 次の例は、宣言時に発生するこのようなコンパイラ エラーを示しています。
 
@@ -204,6 +204,6 @@ static_assert(test2, "PASS2");
 
 ## <a name="requirements"></a>必要条件
 
-Visual C++ 2010 以降のバージョン。
+Visual Studio 2010 またはそれ以降のバージョン。
 
 `decltype(auto)` Visual Studio 2015 またはそれ以降が必要です。

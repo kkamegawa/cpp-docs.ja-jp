@@ -1,12 +1,12 @@
 ---
 title: strtof、_strtof_l、wcstof、_wcstof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _strtof_l
 - wcstof
 - strtof
 - _wcstof_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstof
 - _tcstof_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2b2e7d230074b5a464260d36b41c28b9951d65b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607923"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957753"
 ---
-# <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof、_strtof_l、wcstof、_wcstof_l
+# <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof、_strtof_l、wcstof、_wcstof_l
 
 文字列を単精度浮動小数点値に変換します。
 
@@ -85,15 +88,15 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtof**表現が +/-が返す場合、関数に、オーバーフローを発生する場合を除き、浮動小数点数の値を返します**HUGE_VALF**します。 符号**HUGE_VALF**表現できない値の符号と一致します。 **strtof**変換を実行できないか、アンダー フローが発生した場合は 0 を返します。
+**strtof**は、表現がオーバーフローを引き起こす場合を除き、浮動小数点数の値を返します。この場合、関数は +/-**HUGE_VALF**を返します。 **HUGE_VALF**の符号は、表現できない値の符号と一致します。 変換を実行できない場合、またはアンダーフローが発生した場合、 **strtof**は0を返します。
 
-**wcstof**と同様に値を返します**strtof**します。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローまたはアンダー フローが発生し、」の説明に従って、無効なパラメーター ハンドラーが呼び出された場合[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+**wcstof**は、 **strtof**にと同様値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生して、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されると、 **errno**は**ERANGE**に設定されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-各関数は、入力文字列を変換*strSource*を**float**します。 **Strtof**関数に変換します*strSource*単精度値にします。 **strtof**文字列の読み取りを停止する*strSource*数値の一部として認識できない最初の文字。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 **wcstof**のワイド文字バージョンは、 **strtof**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
+各関数は、入力文字列の*Strsource*を**float**に変換します。 **Strtof**関数は、 *strsource*を単精度値に変換します。 **strtof**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 **wcstof**は**strtof**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -102,17 +105,17 @@ NULL で終わる変換対象の文字列。
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-**LC_NUMERIC** 、現在のロケールのカテゴリの設定は、基数文字が認識を決定します*strSource*; 詳細については、を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md). 関数がない、 **_l**サフィックスを使用して、現在のロケールは、サフィックスが付いているものは、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの**LC_NUMERIC** category 設定によって、 *strsource*の小数点文字が認識されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。サフィックスが付いているものは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*ない**NULL**、場所を指しているスキャンを停止させた文字へのポインターが格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*によってポイントされている位置に格納されて*endptr*します。
+*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
 
-**strtof**が必要ですが*strSource*次の形式の文字列を指すようにします。
+**strtof**は、 *strsource*が次の形式の文字列を指すことを想定しています。
 
-[*空白*] [*サインオン*] [*桁*] [__.__*桁*] [{**e** &#124; **E**} [*サインオン*]*桁*]
+[*空白*][*sign*][*数字*][ __.__ *数字*][{**e** &#124; **e}** [*sign*]*数字*]
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*サインオン*が plus (**+**) または負符号 (**-**); と*桁*は 1 つ以上の 10 進数字。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数字の後に、指数部の開始文字で構成される (**e**または**E**) および必要に応じて符号付き整数。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
+*空白*は空白文字とタブ文字で構成される場合があり、これらは無視されます。*sign*は、正符号 **+** () または **-** 負符号 () です。*数字*は1桁以上の10進数です。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の最初の文字 (**e**または**e**) と、必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
 
-これらの関数の UCRT バージョンは Fortran スタイルの変換をサポートしていません (**d**または**D**) 指数の文字。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
+これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
 ## <a name="requirements"></a>必要条件
 

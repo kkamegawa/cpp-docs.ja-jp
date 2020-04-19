@@ -4,12 +4,12 @@ ms.date: 12/30/2016
 f1_keywords:
 - VCCORLIB/Platform::Object::ToString
 ms.assetid: 2541955f-d844-4bd8-944d-185198c86579
-ms.openlocfilehash: 316a01019a356feb78aab0f944c9b733955acbbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22ced2fc13f550a4a1f1c809c4854670450ad288
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347273"
 ---
 # <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString メソッド
 
@@ -27,9 +27,9 @@ String^ ToString();
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
 **名前空間:** 既定
 

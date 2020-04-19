@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3702
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
-ms.openlocfilehash: 3a440703b2b17979dda0c00fb2ff87f2b0eb0ff7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f9a3509dfe47f2d6d410a05409a28885983cd7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676396"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758009"
 ---
 # <a name="compiler-error-c3702"></a>コンパイラ エラー C3702
 
-'function': ATL は COM イベントに必要です。
+' function ': COM イベントには ATL が必要です
 
-必要な ATL ヘッダー ファイルを含めずに COM イベントを使用しようとしました。
+必要な ATL ヘッダーファイルを含めずに COM イベントを使用しようとしました。
 
 次の例では、C3702 が生成されます。
 
-```
+```cpp
 // C3702.cpp
 // uncomment the following line to resolve
 // #define _ATL_ATTRIBUTES 1

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4227
 ms.assetid: 78f98374-c00b-4000-aefa-1b1c67b4666b
-ms.openlocfilehash: a93b7f225149f9b557ad6238376ffd1bafec82d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aea4d082b21d59aa430befd89d2032fb7ebc0e65
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550307"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627280"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>コンパイラの警告 (レベル 1) C4227
 
-旧形式に使用されています参照の修飾子は無視されます。
+旧形式: 参照の修飾子は無視されます
 
-などの修飾子を使用して`const`または`volatile`C++ 参照では、旧式の手段です。
+`const` や参照によるC++ `volatile` のような修飾子を使用することは、古い方法です。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4227.cpp
 // compile with: /W1 /c
 int j = 0;

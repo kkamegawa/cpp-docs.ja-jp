@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1287
 ms.assetid: 48dc379d-370c-42f6-8028-5bbcf1cc88bd
 ms.openlocfilehash: 342c3a8b8d70f910cca9a0210efbb213c80cc20d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160524"
 ---
 # <a name="linker-tools-error-lnk1287"></a>リンカ ツール エラー LNK1287
 

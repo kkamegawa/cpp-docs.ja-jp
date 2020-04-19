@@ -1,6 +1,6 @@
 ---
-title: push_macro
-ms.date: 11/04/2016
+title: push_macro プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.push_macro
 - push_macro_CPP
@@ -8,30 +8,27 @@ helpviewer_keywords:
 - pragmas, push_macro
 - push_macro pragma
 ms.assetid: ac89efc9-afd1-4dfe-bfd1-497229b3e81d
-ms.openlocfilehash: 9b866fd5907faf46872665bbcaef97f2352efea9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe890350811649402e284cd3ec81ddb68ac7cbc0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535682"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216262"
 ---
-# <a name="pushmacro"></a>push_macro
-値を保存、 *macro_name*このマクロのスタックの上部にあるマクロ。
+# <a name="push_macro-pragma"></a>push_macro プラグマ
+
+マクロ*名*マクロの値を、このマクロのスタックの一番上に保存します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma push_macro("
-macro_name
-")
-```
+> **#pragma push_macro ("** _マクロ名_ **")**
 
 ## <a name="remarks"></a>Remarks
 
-値を取得する*macro_name*で`pop_macro`します。
+*マクロ名*の値を取得するには、 `pop_macro`を使用します。
 
-参照してください[pop_macro](../preprocessor/pop-macro.md)サンプルについては、します。
+サンプルについては、「 [pop_macro](../preprocessor/pop-macro.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

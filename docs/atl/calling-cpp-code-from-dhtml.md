@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-ms.openlocfilehash: 0fa4f51f4488be61edb0f01d9fddc956cd7a45b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63f8671770f57972a4c789d983bdf9658d5ecb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62251735"
 ---
 # <a name="calling-c-code-from-dhtml"></a>DHTML から C++ コードを呼び出す
 
@@ -44,4 +44,3 @@ HTML ファイル内のメソッドのいずれかを確認します。
 ## <a name="see-also"></a>関連項目
 
 [DHTML コントロールのサポート](../atl/atl-support-for-dhtml-controls.md)
-

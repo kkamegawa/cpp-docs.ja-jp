@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dllexport attribute [C++], inline functions
 - dllexport attribute [C++]
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
-ms.openlocfilehash: 386049b5dcf279290025dd367710465d4c03f587
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e43f01b495a03e4f50295de42afa9b6c6b38173
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610614"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151157"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>dllexport と dllimport を使用したインライン C 関数の定義
 
@@ -28,6 +28,6 @@ ms.locfileid: "50610614"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [DLL インポートおよびエクスポート関数](../c-language/dll-import-and-export-functions.md)

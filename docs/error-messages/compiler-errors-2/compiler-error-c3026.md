@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3026
 ms.assetid: 3297060e-cc5b-4600-a2db-09bfc4ffa21f
-ms.openlocfilehash: da3c42433448dccea9f33e34b771da85d7e5b747
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6779e4181525a9fcb855712f762974d9b49913e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574370"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741808"
 ---
 # <a name="compiler-error-c3026"></a>コンパイラ エラー C3026
 
@@ -19,11 +19,11 @@ ms.locfileid: "50574370"
 
 句に整数値が渡されましたが、値が正の数値ではありませんでした。 値は正の数値である必要があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3026 が生成されます。
 
-```
+```cpp
 // C3026.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

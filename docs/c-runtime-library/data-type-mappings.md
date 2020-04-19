@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 3d6e43d8d39cb208efbb6010ef2591a2880fd584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647899"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749101"
 ---
 # <a name="data-type-mappings"></a>データ型のマップ
 
@@ -56,7 +56,7 @@ ms.locfileid: "50647899"
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
 |`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (後続の文字または文字列を対応する Unicode の文字または文字列に変換する)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)<br/>
 [定数とグローバル変数のマップ](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>

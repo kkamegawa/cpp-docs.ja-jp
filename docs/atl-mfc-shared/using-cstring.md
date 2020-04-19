@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199210"
 ---
 # <a name="using-cstring"></a>CString の使用
 
@@ -82,4 +82,3 @@ MFC で Unicode と MBCS をサポートできるようにする方法につい�
 文字列データを管理する複数の方法について説明したトピックへのリンクが含まれています。
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

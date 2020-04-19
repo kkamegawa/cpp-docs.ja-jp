@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -APPCONTAINER editbin option
 - /APPCONTAINER editbin option
 ms.assetid: 0ca4f1ec-c8de-4a37-b3e2-deda7af0bb88
-ms.openlocfilehash: 0805393990070a10caed8208138e31ab9084bdf0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb922a29b00fee63effae302505f25c98b04523e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274028"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 
@@ -30,5 +30,5 @@ ms.locfileid: "50482553"
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)<br/>
+[EDITBIN オプション](editbin-options.md)<br/>
 [ユニバーサル Windows アプリとは?](/windows/uwp/get-started/universal-application-platform-guide)

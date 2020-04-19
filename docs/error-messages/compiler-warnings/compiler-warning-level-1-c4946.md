@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: f215c621486bf223d8f6c90b0a4f4ae119ad4b1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 238e842202bfde05f41d5ab7bc4e3eb2b8b63735
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574227"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050200"
 ---
 # <a name="compiler-warning-level-1-c4946"></a>コンパイラの警告 (レベル 1) C4946
 
 reinterpret_cast が関連クラスの間で使用されました : 'class1' と 'class2'
 
-使用しない[reinterpret_cast](../../cpp/reinterpret-cast-operator.md)に関連する型の間でキャストします。 使用して、 [static_cast](../../cpp/static-cast-operator.md) 、ポリモーフィックな型は、代わりを使用して、 [dynamic_cast](../../cpp/dynamic-cast-operator.md)します。
+関連する型の間のキャストには[reinterpret_cast](../../cpp/reinterpret-cast-operator.md)を使用しないでください。 代わりに[static_cast](../../cpp/static-cast-operator.md)を使用するか、ポリモーフィックな型の場合は[dynamic_cast](../../cpp/dynamic-cast-operator.md)を使用します。
 
-既定では、この警告はオフです。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
+既定では、この警告はオフになっています。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 
 次のコード例では、C4946 が生成されます。
 
-```
+```cpp
 // C4946.cpp
 // compile with: /W1
 #pragma warning (default : 4946)

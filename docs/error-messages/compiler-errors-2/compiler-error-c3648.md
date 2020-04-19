@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: f3ef949b2651631f30a9c614a0d21b2668b7239f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653766"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751834"
 ---
 # <a name="compiler-error-c3648"></a>コンパイラ エラー C3648
 
-この明示的なオーバーライド構文は/clr:oldSyntax が必要です。
+この明示的なオーバーライド構文には/clr: oldSyntax が必要です
 
-コンパイル時に最新の管理対象の構文については、コンパイラによって明示的な検出されたがサポートされなくなった以前のバージョンの構文をオーバーライドします。
+最新のマネージ構文に対してコンパイルする場合、サポートされなくなった以前のバージョンの明示的なオーバーライド構文がコンパイラによって検出されました。
 
-詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)します。
+詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3648 が生成されます。
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3052
 ms.assetid: 87480c42-1ceb-4775-8d20-88c54a7bb6a6
-ms.openlocfilehash: ed9c27e1602f9372cb9137615ef66932a8df960c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618fac69078987b0322739733c403e5b2cd36486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441835"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761219"
 ---
 # <a name="compiler-error-c3052"></a>コンパイラ エラー C3052
 
@@ -21,7 +21,7 @@ ms.locfileid: "50441835"
 
 次の例では C3052 が生成されます。
 
-```
+```cpp
 // C3052.cpp
 // compile with: /openmp /c
 int main() {

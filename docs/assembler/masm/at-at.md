@@ -1,26 +1,27 @@
 ---
 title: '@@:'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@@:'
 helpviewer_keywords:
 - '@@: symbol'
 ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
-ms.openlocfilehash: 539f2e143e50af8d8fbb0b2f61e49704d5dc8057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e50b16a11335eea605734dbb22c68e3a47e9b565
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325563"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316474"
 ---
 # <a name=""></a>\@\@:
 
-コードの間でのみ認識可能なラベルを定義します*label1*と*label2*ここで、 *label1* 、コードの先頭または前`@@:`ラベル、および *。label2*はコードの末尾または次のいずれか`@@:`ラベル。 参照してください[ \@B](../../assembler/masm/at-b.md)と[ \@F](../../assembler/masm/at-f.md)します。
+*Label1*と*label2*の間でのみ認識できるコードラベルを定義します。ここで、 *label1*はコードの開始または前の `@@:` のラベルで、 *label2*はコードの末尾または次の `@@:` ラベルのいずれかになります。 [\@B](at-b.md)と[\@F](at-f.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 
-> **\@\@:**
+> **\@の \@:**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

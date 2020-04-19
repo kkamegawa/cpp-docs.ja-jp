@@ -6,12 +6,12 @@ helpviewer_keywords:
 - streams, custom stream manipulators
 - output streams, custom stream manipulators
 ms.assetid: fa4655a7-d68f-4fea-a26e-73c3ad5c90a5
-ms.openlocfilehash: 3b66497b399c8d47c834b7c250963664dc275d75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddafa6adfb99c889ee525beb6d7bc88ed771d71e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650700"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460053"
 ---
 # <a name="custom-manipulators-with-arguments"></a>引数を使用するカスタム マニピュレーター
 
@@ -19,10 +19,10 @@ ms.locfileid: "50650700"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[1 つの引数に Stream マニピュレーターを出力](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md)(**int**または**長い**)
+[1 つの引数を持つ出力ストリームマニピュレーター](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md)(**int**または**long**)
 
 [1 つの引数を使用する他の出力ストリーム マニピュレーター](../standard-library/other-one-argument-output-stream-manipulators.md)
 
 ## <a name="see-also"></a>関連項目
 
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
+[iostream プログラミング](../standard-library/iostream-programming.md)

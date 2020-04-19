@@ -1,18 +1,18 @@
 ---
-title: 'クリップボード : データのコピーと貼り付け'
+title: クリップボード:コピーと貼り付けデータ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327146"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>クリップボード : データのコピーと貼り付け
+# <a name="clipboard-copying-and-pasting-data"></a>クリップボード:コピーと貼り付けデータ
 
 このトピックにコピーし、OLE アプリケーションでクリップボードから貼り付けを実装するために必要な最低限の作業について説明します。 確認することをお勧め、[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)トピックを続行する前にします。
 
@@ -32,7 +32,7 @@ ms.locfileid: "50437039"
 
 1. 場合は、ユーザーがコピー操作ではなく切り取り操作を選択してアプリケーションから、選択したデータを削除します。
 
-このシーケンスの例を参照してください、`OnEditCut`と`OnEditCopy`関数で、MFC OLE サンプル プログラム[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。 手順 1 は既に完了しているために、これらのサンプルが、現在選択されているデータへのポインターを保持することに注意してください。
+このシーケンスの例を参照してください、`OnEditCut`と`OnEditCopy`関数で、MFC OLE サンプル プログラム[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。 手順 1 は既に完了しているために、これらのサンプルが、現在選択されているデータへのポインターを保持することに注意してください。
 
 ##  <a name="_core_pasting_data"></a> データの貼り付け
 
@@ -50,7 +50,7 @@ ms.locfileid: "50437039"
 
 1. 形式の貼り付けを実行します。
 
-この動作の例では、実装を参照してください、 `OnEditPaste` MFC OLE サンプル プログラムで定義されているビュー クラスのメンバー関数[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。
+この動作の例では、実装を参照してください、 `OnEditPaste` MFC OLE サンプル プログラムで定義されているビュー クラスのメンバー関数[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。
 
 > [!TIP]
 >  貼り付け操作を独自の関数を分離することの主な利点は、ドラッグ アンド ドロップ操作中に、アプリケーションでデータが削除されるときに、同じコードで貼り付けを使用できることです。 OCLIENT および HIERSVR のように、`OnDrop`関数を呼び出すことも`DoPasteItem`、貼り付けの操作を実装するために記述されたコードを再利用します。
@@ -70,4 +70,3 @@ ms.locfileid: "50437039"
 ## <a name="see-also"></a>関連項目
 
 [クリップボード: OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

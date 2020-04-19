@@ -1,6 +1,7 @@
 ---
 title: extern (C++)
-ms.date: 04/12/2018
+description: 言語 extern キーワードC++のガイド。
+ms.date: 01/28/2020
 f1_keywords:
 - extern
 - extern_CPP
@@ -9,27 +10,35 @@ helpviewer_keywords:
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-ms.openlocfilehash: 4a3a4e158794e06f28c638e87e014ddc3fb99837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+no-loc:
+- extern
+- const
+- constexpr
+- permissive
+ms.openlocfilehash: 422b6960802c59f1c45e0c22a4a85988c808a5b3
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648722"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821767"
 ---
-# <a name="extern-c"></a>extern (C++)
+# <a name="opno-locextern-c"></a>extern (C++)
 
-**Extern**キーワードがそのリソースの名があることを指定するグローバル変数、関数、またはテンプレート宣言に適用される*外部リンケージ*します。 リンケージとグローバル変数の使用が推奨されない理由の背景については、次を参照してください。[プログラムとリンケージ](program-and-linkage-cpp.md)します。
+**extern** キーワードは、グローバル変数、関数、またはテンプレート宣言に適用できます。 シンボルに*外部リンケージ*があることを指定します。 リンケージの背景情報と、グローバル変数の使用を推奨しない理由については、「[翻訳単位とリンケージ](program-and-linkage-cpp.md)」を参照してください。
 
-**Extern**キーワードには、コンテキストに応じて次の 4 つの意味があります。
+**extern** キーワードには、コンテキストに応じて次の4つの意味があります。
 
-1. 非 const グローバル変数宣言で**extern**変数または関数が別の翻訳単位で定義されているを指定します。 **Extern**変数が定義されている 1 つを除くすべてのファイルに適用する必要があります。
-1. const 変数の宣言で変数が外部リンケージを持つことを指定します。 **Extern**すべてのファイル内のすべての宣言に適用する必要があります。 (グローバルの const 変数に、既定である内部リンケージがある)。
-1. **extern"C"** C 言語の呼び出し規約を使用して関数は、他の場所で定義されていることを指定します。 Extern"C"修飾子は、ブロック内の複数の関数宣言にも適用できます。
-1. テンプレートの宣言にあるテンプレートが既にインスタンス化された別の場所を指定します。 これは、現在の場所に新しいハブを作成するのではなく、他のインスタンス化再使用できることをコンパイラに指示する最適化です。 このように使用の詳細については**extern**を参照してください[テンプレート](templates-cpp.md)します。
+- **const** 以外のグローバル変数宣言では、 **extern** は、変数または関数が別の翻訳単位で定義されていることを指定します。 **extern** は、変数が定義されているものを除くすべてのファイルに適用する必要があります。
 
-## <a name="extern-linkage-for-non-const-globals"></a>非定数のグローバルの extern リンケージ
+- **const** 変数宣言では、変数に外部リンケージがあることを指定します。 **extern** は、すべてのファイルのすべての宣言に適用する必要があります。 (グローバル **const** 変数には、既定で内部リンケージがあります)。
 
-リンカーが表示される**extern**別の翻訳単位での定義については、グローバル変数宣言の前に見えます。 グローバル スコープで非 const 変数の宣言は既定では外部のみ適用**extern**宣言、定義を備えていない場合にします。
+- **extern "c"** は、関数が他の場所で定義され、C 言語の呼び出し規約を使用することを指定します。 extern "C" 修飾子は、ブロック内の複数の関数宣言にも適用できます。
+
+- テンプレート宣言では、 **extern** は、テンプレートが別の場所で既にインスタンス化されていることを指定します。 **extern** は、現在の場所に新しいインスタンスを作成するのではなく、他のインスタンス化を再利用できるようにコンパイラに指示します。 この **extern** の使用方法の詳細については、「[明示的なインスタンス化](explicit-instantiation.md)」を参照してください。
+
+## <a name="opno-locextern-linkage-for-non-opno-locconst-globals"></a>const 以外のグローバルのリンケージの extern
+
+リンカーは、グローバル変数宣言の前に **extern** を認識すると、別の翻訳単位で定義を検索します。 グローバルスコープでの非 **const** 変数の宣言は、既定では外部です。 定義を提供しない宣言にのみ **extern** を適用します。
 
 ```cpp
 //fileA.cpp
@@ -46,9 +55,9 @@ int i = 43; // LNK2005! 'i' already has a definition.
 extern int i = 43; // same error (extern is ignored on definitions)
 ```
 
-## <a name="extern-linkage-for-const-globals"></a>const のグローバルの extern リンケージ
+## <a name="opno-locextern-linkage-for-opno-locconst-globals"></a>const globals の extern リンケージ
 
-A **const**グローバル変数は、既定では内部リンケージを持ちます。 外部リンケージを持つ変数にする場合は、適用、 **extern**キーワードを他のファイル内の他のすべての宣言についても定義します。
+**const** のグローバル変数には、既定で内部リンケージがあります。 変数に外部リンケージを設定する場合は、 **extern** キーワードを定義に、他のファイル内の他のすべての宣言に適用します。
 
 ```cpp
 //fileA.cpp
@@ -58,29 +67,29 @@ extern const int i = 42; // extern const definition
 extern const int i;  // declaration only. same as i in FileA
 ```
 
-## <a name="extern-constexpr-linkage"></a>extern constexpr リンケージ
+## <a name="opno-locextern-opno-locconstexpr-linkage"></a>constexpr リンケージの extern
 
-Visual Studio 2017 バージョン 15.3 以前のコンパイラでは、変数には、extern がマークされている場合でも constexpr 変数の内部リンケージが常にしました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)) により、正しい標準準拠の動作が可能になります。 最終的にこれは既定値になります。
+Visual Studio 2017 バージョン15.3 以前では、変数が **extern** としてマークされている場合でも、コンパイラは常に **constexpr** 変数の内部リンケージを与えました。 Visual Studio 2017 バージョン15.5 以降では、 [/zc: externConstexpr](../build/reference/zc-externconstexpr.md)コンパイラスイッチを使用すると、正しい標準準拠の動作が有効になります。 最終的には、このオプションが既定値になります。 [/permissive-](../build/reference/permissive-standards-conformance.md)オプションでは、 **/zc: externConstexpr**は有効になりません。
 
 ```cpp
 extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 ```
 
-マーク済みである必要がありますが、ヘッダー ファイルの変数の宣言された extern constexpr の場合は、 **__declspec(selectany)** 正しく組み合わせて、重複する宣言を確保するために。
+ヘッダーファイルに **extern** **constexpr** として宣言された変数が含まれている場合は、重複する宣言を正しく結合するために、`__declspec(selectany)` としてマークする必要があります。
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"、extern"C++"関数の宣言
+## <a name="opno-locextern-c-and-opno-locextern-c-function-declarations"></a>extern "C" および extern "C++" 関数の宣言
 
-C++ では、文字列を使用すると**extern**により、別の言語のリンケージ規則が使用されていることを指定します。 C の関数とデータには、C リンケージを持つと以前に宣言されている場合にのみ、アクセスできます。 ただし、別にコンパイルされた翻訳単位で定義する必要があります。
+でC++は、文字列と共に使用する場合、 **extern** は別の言語のリンケージ規則が宣言子に使用されることを指定します。 C 関数とデータは、以前に C リンケージを持つように宣言されている場合にのみアクセスできます。 ただし、別にコンパイルされた翻訳単位で定義する必要があります。
 
-Microsoft C は、文字列をサポートしている **"C"** と **"C++"** で、*文字列リテラル*フィールド。 標準のすべてのインクルード ファイルの使用、 **extern** C++ プログラムで使用されるランタイム ライブラリ関数を許可する"C"構文。
+Microsoft C++では、*文字列リテラル*フィールドに文字列 **"C"** と**C++""** をサポートしています。 すべての標準インクルードファイルは、 **"C" 構文extern** を使用して、プログラムでC++ランタイムライブラリ関数を使用できるようにします。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では、C リンケージを持つ名前を宣言する方法を示します。
+次の例は、C リンケージを持つ名前を宣言する方法を示しています。
 
 ```cpp
 // Declare printf with C linkage.
@@ -117,7 +126,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
-関数に複数のリンケージ指定子がある場合、それらは一致する必要があります。関数を C と C++ 両方のリンケージを持つ関数として宣言するとエラーになります。 また、プログラム内に、リンケージ指定子を含む関数宣言と含まない関数宣言がある場合、リンケージ指定子を含む宣言を最初に記述する必要があります。 既にリンケージ指定を持つ関数の冗長な宣言には、最初の宣言で指定したリンケージが与えられます。 例えば:
+関数に複数のリンケージ指定がある場合は、それに同意する必要があります。 関数を C とC++リンケージの両方を持つように宣言すると、エラーになります。 また、プログラム内に、リンケージ指定子を含む関数宣言と含まない関数宣言がある場合、リンケージ指定子を含む宣言を最初に記述する必要があります。 既にリンケージ指定を持つ関数の冗長な宣言には、最初の宣言で指定したリンケージが与えられます。 例:
 
 ```cpp
 extern "C" int CFunc1();
@@ -134,8 +143,8 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
-[プログラムとリンケージ](program-and-linkage-cpp.md)<br/>
-[extern C でのストレージ クラス指定子](../c-language/extern-storage-class-specifier.md)<br/>
-[C 識別子の動作](../c-language/behavior-of-identifiers.md)<br/>
-[C にあるリンケージ](../c-language/linkage.md)
+[キーワード](../cpp/keywords-cpp.md)\
+[翻訳単位とリンケージ](program-and-linkage-cpp.md)\
+[C\ でのストレージクラス指定子のextern](../c-language/extern-storage-class-specifier.md)
+[C\ での識別子の動作](../c-language/behavior-of-identifiers.md)
+[C でのリンケージ](../c-language/linkage.md)

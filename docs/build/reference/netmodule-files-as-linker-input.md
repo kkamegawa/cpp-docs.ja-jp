@@ -1,48 +1,55 @@
 ---
-title: リンカー入力としての .netmodule ファイル
-ms.date: 11/04/2016
+title: に渡します。netmodule リンカー入力としてのファイル
+description: Mixed を使用する方法について説明します。obj そして。netmodule .NET アセンブリを作成するときのリンカー入力としてのファイル。
+ms.date: 01/30/2020
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
-- .netmodules
+- .netmodule files
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+no-loc:
+- obj
+- netmodule
+- clr
+- pure
+- safe
+ms.openlocfilehash: 83eab25624bdb81ba9191e4efe6a774551502ee0
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443578"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912825"
 ---
-# <a name="netmodule-files-as-linker-input"></a>リンカー入力としての .netmodule ファイル
+# <a name="opno-locnetmodule-files-as-linker-input"></a>に渡します。netmodule リンカー入力としてのファイル
 
-link.exe では、入力として MSIL .obj と .netmodule を今すぐ受け取ります。 リンカーによって生成された出力ファイルは、アセンブリまたは .netmodule をリンカーに入力した .netmodule または .obj のいずれかで実行時に依存せずします。
+convert.exe は、入力として MSIL *`.obj`* および *`.netmodule`* ファイルを受け入れます。 リンカーによって生成される出力ファイルは、アセンブリまたは *`.netmodule`* ファイルで、リンカーに入力された *`.obj`* または *`.netmodule`* ファイルには実行時の依存関係がありません。
 
-.netmodule は、Visual C コンパイラによって作成された[/LN (MSIL モジュールの作成)](../../build/reference/ln-create-msil-module.md)またはのリンカーによって[/NOASSEMBLY (MSIL モジュールの作成)](../../build/reference/noassembly-create-a-msil-module.md)します。 .obj は常に、Visual C のコンパイル時に作成されます。 その他の Visual Studio コンパイラを使用して、 **/target:module**コンパイラ オプション。
+## <a name="remarks"></a>Remarks
 
-必要がありますリンカーに渡す .obj ファイルを .netmodule を作成した Visual C コンパイラから。 に、.netmodule を渡すことはサポートされなく、 **/clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+*`.netmodule`* ファイルは、/LN を使用した MSVC コンパイラ[(Msil モジュールの作成)](ln-create-msil-module.md)またはリンカー [(msil モジュールの作成)](noassembly-create-a-msil-module.md)で作成されます。 *`.obj`* ファイルは常にC++コンパイル時に作成されます。 他の Visual Studio コンパイラの場合は、 **/target:module** コンパイラ オプションを使用します。
 
-コマンドラインからリンカーを呼び出す方法については、次を参照してください[リンカーのコマンドライン構文](../../build/reference/linker-command-line-syntax.md)、[コマンドラインでビルドの c/c++ コード](../../build/building-on-the-command-line.md)、および[パスと環境変数の設定。コマンド ライン ビルド](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)します。
+リンカーには、 *`.netmodule`* を作成したC++コンパイルから`.obj`ファイルを渡す必要があります。 **/clr:pure** および **/clr:safe** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 以降ではサポートされていないため、 *`.netmodule`* を渡すことはサポートされなくなりました。
 
-Visual C コンパイラでコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、次を参照してください。 [.netmodule 入力ファイルの形式を選択する](../../build/reference/choosing-the-format-of-netmodule-input-files.md)します。
+コマンドラインからリンカーを呼び出す方法については、「[リンカーコマンドライン構文](linking.md)」、「コマンド[ラインからの MSVC ツールセットの使用](../building-on-the-command-line.md)」、および「[コマンドラインビルドのパスと環境変数の設定](../setting-the-path-and-environment-variables-for-command-line-builds.md)」を参照してください。
 
-リンカーは、ネイティブの .obj ファイルだけでコンパイルされた MSIL .obj ファイルを受け入れる **/clr**します。 同じビルドで混合の .obj を渡すと、生成される出力ファイルの検証可能性は、既定では、最低レベルの入力モジュールの検証可能性と等しくなります。
+**/clr** を使用して MSVC コンパイラによってコンパイルされたリンカーに *`.netmodule`* または *`.dll`* ファイルを渡すと、リンカーエラーが発生する可能性があります。 詳細については、「 [netmodule 入力ファイルの形式の選択](choosing-the-format-of-netmodule-input-files.md)」を参照してください。
 
-現在 2 つ以上のアセンブリで構成されるアプリケーションがある、1 つのアセンブリに含まれるよう、アプリケーションをたい場合は、、アセンブリを再コンパイルを .obj または 1 つのアセンブリを生成するために .netmodule をリンクする必要があります。
+リンカーは **/clr** でコンパイルされたネイティブ *`.obj`* ファイルと MSIL *`.obj`* ファイルの両方を受け入れます。 混合 *`.obj`* ファイルは、同じビルドに渡すことができます。 生成される出力ファイルの既定の検証可能性は、最小入力モジュールの検証可能性と同じです。
 
-使用してエントリ ポイントを指定する必要があります[/ENTRY (エントリ ポイント シンボル)](../../build/reference/entry-entry-point-symbol.md)実行可能イメージを作成するときにします。
+1つのアセンブリに含まれる2つ以上のアセンブリで構成されるアプリケーションを変更できます。 アセンブリのソースを再コンパイルし、 *`.obj`* ファイルまたは *`.netmodule`* ファイルをリンクして、1つのアセンブリを生成します。
 
-MSIL .netmodule、または .obj ファイルを使用してリンクする場合を使用して、 [/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)、それ以外の場合、リンカーには、MSIL .obj または .netmodule が検出されると、再起動されます/LTCG をリンクします。
+実行可能イメージを作成するときに、 [/entry (エントリポイントシンボル)](entry-entry-point-symbol.md)を使用してエントリポイントを指定します。
 
-MSIL .netmodule、または .obj ファイルは、cl.exe に渡すこともできます。
+MSIL *`.obj`* または *`.netmodule`* ファイルとリンクする場合は、 [/ltcg (リンク時のコード生成)](ltcg-link-time-code-generation.md)を使用します。それ以外の場合は、リンカーが msil *`.obj`* または *`.netmodule`* を検出すると、 **/ltcg**でリンクが再起動されます。 リンクが再起動していることを示す情報メッセージが表示されます。 このメッセージは無視してもかまいませんが、リンカーのパフォーマンスを向上させるには、 **/ltcg**を明示的に指定します。
 
-入力の MSIL .obj または .netmodule ファイルには、リソースを埋め込むことはできませんができます。 リソースは、出力ファイル (モジュールまたはアセンブリ) に組み込まれています[/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](../../build/reference/assemblyresource-embed-a-managed-resource.md)リンカー オプション、または、 **/resource**他の Visual Studio コンパイラでコンパイラ オプション。
+MSIL *`.obj`* または *`.netmodule`* ファイルを cl.exe に渡すこともできます。
 
-指定しない場合、MSIL は、次のリンクを実行するときに[/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)リンクを再起動することを通知する情報メッセージが表示されます。 このメッセージに、MSIL リンクのリンカーのパフォーマンスを向上しますが、無視できるを明示的に指定 **/LTCG**します。
+入力 MSIL *`.obj`* または *`.netmodule`* ファイルには、埋め込みリソースを含めることができません。 [/Assemblyresource (マネージリソースの埋め込み)](assemblyresource-embed-a-managed-resource.md)リンカーオプションを使用して、出力モジュールまたはアセンブリファイルにリソースを埋め込みます。 または、他の Visual Studio コンパイラで **/resource**コンパイラオプションを使用します。
 
-## <a name="example"></a>例
+## <a name="examples"></a>使用例
 
-C++ コードで、**キャッチ**の対応するブロック**お試しください**システム以外の例外が呼び出されます。 ただし、既定では、CLR システム以外の例外をラップで<xref:System.Runtime.CompilerServices.RuntimeWrappedException>します。 Visual C および Visual C 以外のモジュールからアセンブリが作成されたときと、実行する、**キャッチ**、対応するから呼び出される C++ コードのブロック**お試しください**句と、 **をお試しください**ブロックが、システム以外の例外をスローする必要がありますを追加する、`[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]`属性以外の C++ モジュールのソース コードをします。
+コードC++では、対応する **`try`** の **`catch`** ブロックが`System` 以外の例外に対して呼び出されます。 ただし、既定では、CLR は <xref:System.Runtime.CompilerServices.RuntimeWrappedException>で`System` 以外の例外をラップします。 アセンブリがC++ C++モジュールと非モジュールから作成され、 **`try`** ブロックが`System` 以外の例外をスローしたときに、対応するC++ **`try`** 句からコード内のC++ **`catch`** ブロックを呼び出す必要がある場合は、非モジュールのソースコードに `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` 属性を追加する必要があります。
 
 ```cpp
 // MSIL_linking.cpp
@@ -67,11 +74,9 @@ int main() {
 */
 ```
 
-## <a name="example"></a>例
+`WrapNonExceptionThrows` 属性の `Boolean` 値を変更することにより、 C++コードの`System` ない例外をキャッチする機能を変更します。
 
-ブール値を変更することで、`WrapNonExceptionThrows`属性に、システム以外の例外をキャッチする Visual C コードの機能を変更します。
-
-```cpp
+```csharp
 // MSIL_linking_2.cs
 // compile with: /target:module /addmodule:MSIL_linking.obj
 // post-build command: link /LTCG MSIL_linking.obj MSIL_linking_2.netmodule /entry:MLinkTest.Main /out:MSIL_linking_2.exe /subsystem:console
@@ -98,5 +103,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>関連項目
 
-- [LINK の入力ファイル](../../build/reference/link-input-files.md)
-- [リンカー オプション](../../build/reference/linker-options.md)
+- [LINK の入力ファイル](link-input-files.md)
+- [MSVC リンカー オプション](linker-options.md)

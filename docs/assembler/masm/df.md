@@ -1,30 +1,31 @@
 ---
 title: DF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - DF
 helpviewer_keywords:
 - DF directive
 ms.assetid: b5587c29-3da9-4c46-aa3a-1ec42d6fa703
-ms.openlocfilehash: d8eebd31092602c4ca6dead7493b08e225dd7658
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb2d81312f2508dafe1975a1b6b55303f93e5f20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529273"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314849"
 ---
 # <a name="df"></a>DF
 
-割り当て、必要に応じて、それぞれの 6 バイトのストレージを初期化します`initializer`します。 `DF` シノニムです[FWORD](../../assembler/masm/fword.md)します。
+は、*初期化子*ごとに6バイトのストレージを割り当て、必要に応じて初期化します。 **DF**は[fword](fword.md)のシノニムです。
 
 ## <a name="syntax"></a>構文
 
-> [name]DF 初期化子 [] の初期化子].
+> ⟦*name*⟧ **DF** *initializer* ⟦ __、__ *initializer* ...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-また、型指定子として使用できる型が有効な任意の場所。
+型が有効である任意の場所で、型指定子として使用することもできます。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

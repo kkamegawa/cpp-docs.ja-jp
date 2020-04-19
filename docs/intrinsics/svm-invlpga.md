@@ -1,41 +1,42 @@
 ---
 title: __svm_invlpga
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_invlpga
 helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0f8ef02efdb64f70bb65f6f017449fcc03beca1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544301"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219890"
 ---
-# <a name="svminvlpga"></a>__svm_invlpga
+# <a name="__svm_invlpga"></a>__svm_invlpga
 
 **Microsoft 固有の仕様**
 
-コンピューターの変換ルックア サイド バッファーのアドレスのマッピング エントリを無効にします。 パラメーターは、仮想アドレスとを無効にするページのアドレス空間の識別子を指定します。
+コンピューターの変換の検索用バッファーのアドレスマッピングエントリを無効にします。 無効にするページの仮想アドレスとアドレス空間識別子をパラメーターで指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-void __svm_invlpga(void *Va, int ASID);
+```C
+void __svm_invlpga(void *Vaddr, int as_id);
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*Va*|[in]無効にするページの仮想アドレス。|
-|*ASID*|[in]無効にするページのアドレス空間識別子 (ASID)。|
+*Vaddr*\
+から無効化するページの仮想アドレス。
+
+*as_id*\
+から無効化するページのアドレス空間識別子 (ASID)。
 
 ## <a name="remarks"></a>Remarks
 
-`__svm_invlpga` 関数は `INVLPGA` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。
+`__svm_invlpga` 関数は `INVLPGA` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「AMD64 アーキテクチャプログラマの手動ボリューム 2:システムプログラミング、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイトの「ドキュメント番号24593、リビジョン3.11」。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,7 +44,7 @@ void __svm_invlpga(void *Va, int ASID);
 |---------------|------------------|
 |`__svm_invlpga`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 **Microsoft 固有の仕様はここまで**
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC drivers, using
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
-ms.openlocfilehash: 6d245a8c4071f8f3822e3bdd6bfe0467251fc852
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa0ccf65584d08088635d3939e609eb2d763abe7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230854"
 ---
 # <a name="work-with-odbc-and-drivers"></a>ODBC と ODBC ドライバーの使用
 

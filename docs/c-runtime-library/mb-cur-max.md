@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MB_CUR_MAX constant
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
-ms.openlocfilehash: 640821f920021435f8e79d9316d5eb0836c5f145
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 8f89d06f11d5da14389c849814e06b56586b3c69
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220128"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746449"
 ---
 # <a name="mbcurmax"></a>MB_CUR_MAX
 
@@ -23,13 +23,13 @@ ms.locfileid: "54220128"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コンテキスト: ANSI マルチバイト文字およびワイド文字の変換関数
 
 `MB_CUR_MAX` の値は、現在のロケールのマルチバイト文字の最大バイト数です。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [_mbclen、mblen、_mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)<br/>

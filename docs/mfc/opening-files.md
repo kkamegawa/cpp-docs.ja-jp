@@ -16,12 +16,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: a29485b8258503682d59abb51dcfa72e383f0b8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394482"
 ---
 # <a name="opening-files"></a>ファイルを開く
 
@@ -53,4 +53,3 @@ Mfc では、ファイルを開く最も一般的な方法は、2 段階プロ�
 [CFile クラス](../mfc/reference/cfile-class.md)<br/>
 [CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
 [ファイル](../mfc/files-in-mfc.md)
-

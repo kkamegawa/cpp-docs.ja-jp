@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: aaca8d48171ebb4043e9c8f0ea66316feb73d39c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462804"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243483"
 ---
 # <a name="unaryfunction-struct"></a>unary_function 構造体
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート構造体は、**result_type**`operator()`( **constargument_type&**) **const** 形式のメンバー関数を定義するクラスの基底になります。
+このテンプレート構造体は、**result_type**`operator()`( **constargument_type&** ) **const** 形式のメンバー関数を定義するクラスの基底になります。
 
 派生した単項関数すべてで、単一の引数型を **argument_type**、戻り値の型を **result_type** として参照できます。
 
@@ -77,19 +77,9 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-/* Output:
-The vector v1 = ( 0 5 10 15 20 25 )
-The number of elements in v1 greater than 10 is: 3.
-*/
 ```
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( 0 5 10 15 20 25 )
+The number of elements in v1 greater than 10 is: 3.
+```

@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1318
 ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160992"
 ---
 # <a name="linker-tools-error-lnk1318"></a>リンカー ツール エラー LNK1318
 

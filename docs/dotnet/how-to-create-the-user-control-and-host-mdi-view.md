@@ -1,28 +1,28 @@
 ---
-title: '方法: ユーザー コントロールを作成し、MDI ビューをホストする'
+title: '方法: ユーザー コントロールおよびホスト MDI ビューを作成します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387436"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>方法: ユーザー コントロールを作成し、MDI ビューをホストする
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>方法: ユーザー コントロールおよびホスト MDI ビューを作成します。
 
 次の手順では、.NET Framework ユーザー コントロールを作成し、そのユーザー コントロールをコントロール クラス ライブラリ (特に Windows コントロール ライブラリ プロジェクト) に作成し、プロジェクトをアセンブリにコンパイルする方法について説明します。 コントロールから派生したクラスを使用する MFC アプリケーションから使用できます[CView クラス](../mfc/reference/cview-class.md)と[CWinFormsView クラス](../mfc/reference/cwinformsview-class.md)します。
 
-Windows フォーム ユーザー コントロールを作成およびコントロール クラス ライブラリを作成する方法については、次を参照してください。[方法: 複合コントロールを](/dotnet/framework/winforms/controls/how-to-author-composite-controls)します。
+Windows フォーム ユーザー コントロールを作成およびコントロール クラス ライブラリを作成する方法については、次を参照してください。[方法。ユーザー コントロールを作成](/dotnet/framework/winforms/controls/how-to-author-composite-controls)です。
 
 > [!NOTE]
 >  サードパーティのグリッド コントロールなどの Windows フォーム コントロールは、MFC アプリケーションでホストした場合に適切に動作しないことがあります。 この問題の推奨回避策は、Windows フォーム ユーザー コントロールを MFC アプリケーションに配置し、サードパーティのグリッド コントロールをユーザー コントロールの内部に配置することです。
 
-この手順の手順に従って、WindowsFormsControlLibrary1 をという名前の Windows フォーム コントロール ライブラリ プロジェクトを作成することを前提と[方法: ダイアログ ボックスで、ユーザー コントロールとホストを作成](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+この手順の手順に従って、WindowsFormsControlLibrary1 をという名前の Windows フォーム コントロール ライブラリ プロジェクトを作成することを前提と[方法。ユーザー コントロールおよびホストを作成 ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)します。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 

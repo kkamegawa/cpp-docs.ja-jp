@@ -1,9 +1,9 @@
 ---
 title: _CItan
 ms.date: 04/11/2018
-apiname:
+api_name:
 - _CItan
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
@@ -11,7 +11,11 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+- api-ms-win-crt-math-l1-1-0.dll
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CItan
 - CItan
@@ -19,14 +23,14 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: fdefe8674ede78de194fbb884bd2c90fe0a96d06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e509d785648148e51004950076147b69c2db18ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650696"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940462"
 ---
-# <a name="citan"></a>_CItan
+# <a name="_citan"></a>_CItan
 
 浮動小数点スタックのトップ値のタンジェントを計算します。
 
@@ -36,7 +40,7 @@ ms.locfileid: "50650696"
 void __cdecl _CItan();
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このバージョンの [tan](../c-runtime-library/reference/tan-tanf-tanl.md) 関数には、コンパイラで認識される特殊な呼び出し規則があります。 この関数は、コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。
 

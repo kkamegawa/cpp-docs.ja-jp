@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568162"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689445"
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine クラス
+# <a name="linear_congruential_engine-class"></a>linear_congruential_engine クラス
 
 線形合同法アルゴリズムでランダム シーケンスを生成します。
 
@@ -45,17 +45,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*<br/>
-結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Uinttype* \
+結果を表す符号なし整数型。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-*A*<br/>
-**乗数**します。 **Precondition**: セクションの「解説」を参照してください。
+*@No__t_1*
+**乗数**。 **前提条件**: 「解説」を参照してください。
 
-*C*<br/>
-**インクリメント**します。 **Precondition**: セクションの「解説」を参照してください。
+*C* \
+**Increment**。 **前提条件**: 「解説」を参照してください。
 
-*M*<br/>
-**剰余**します。 **Precondition**:「解説」を参照してください。
+*M* \
+**剰余**。 **前提条件**: 「解説」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -70,13 +70,13 @@ class linear_congruential_engine{
 
 ## <a name="remarks"></a>Remarks
 
-`linear_congruential_engine` テンプレート クラスは、最も単純なジェネレーター エンジンですが、速度や品質は最高というわけではありません。 このエンジンを改良したものが [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) です。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
+@No__t_0 クラステンプレートは最も単純なジェネレーターエンジンですが、最速または最高の品質ではありません。 このエンジンを改良したものが [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) です。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
 
 このエンジンは、漸化式 ( *周期*) `x(i) = (A * x(i-1) + C) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。
 
-場合*M* 0 の場合は、この剰余演算に使用される値は`numeric_limits<result_type>::max() + 1`します。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
+*M*が0の場合、この剰余演算に使用される値は `numeric_limits<result_type>::max() + 1` です。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
 
-場合*M* 、テンプレート引数の値に 0 以外は*A*と*C*必要がありますより小さい*M*します。
+*M*が0以外の場合、テンプレート引数*A*と*C*の値は*m*より小さくなければなりません。
 
 このエンジンから直接ジェネレーターを構築できますが、定義済みの typedef のいずれかを使用することもできます。
 
@@ -92,9 +92,9 @@ typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_ra
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
 ```
 
-線形合同法エンジン アルゴリズムの詳細については、Wikipedia の記事「[Linear congruential generator (線形合同法)](http://go.microsoft.com/fwlink/p/?linkid=402446)」を参照してください。
+線形合同法エンジン アルゴリズムの詳細については、Wikipedia の記事「[Linear congruential generator (線形合同法)](https://go.microsoft.com/fwlink/p/?linkid=402446)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -102,4 +102,4 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

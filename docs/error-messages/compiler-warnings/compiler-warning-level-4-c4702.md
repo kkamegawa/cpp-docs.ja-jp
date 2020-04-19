@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607234"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990654"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>コンパイラの警告 (レベル 4) C4702
 
 到達できないコード
 
-この警告は、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果: 制御が渡らないコードです。 C4702 が生成されます (バック エンド) のコンパイラでは、到達できないコードを検出すると、レベル 4 の警告。
+この警告は、Visual Studio .NET 2003: 到達できないコードに対して行われたコンパイラ準拠作業の結果です。 コンパイラ (バックエンド) が到達できないコードを検出すると、レベル4の警告 C4702 が生成されます。
 
-コードでは、Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C では有効で、到達できないコードを削除するか、すべてのソース コードが実行の一部のフローによってアクセスできることを保証します。
+Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++で有効なコードの場合は、到達できないコードを削除するか、一部の実行フローですべてのソースコードに到達できることを確認します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4702 が生成されます。
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -36,15 +36,15 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-コンパイルするときに **/GX**、 **/EHc**、 **/EHsc**、または **/EHac**になり、extern C 関数を使用して、コードは到達できないため、extern Cしたがって、catch ブロックで到達可能なはないの関数はスローしないと見なされます。  この警告が無効であるため、関数はスローできる場合、使用してコンパイル **/EHa**または **/EHs**によってスローされる例外。
+**/Gx**、 **/EHc**、 **/ehsc**、または **/EHac**でコンパイルするときに extern C 関数を使用すると、extern c 関数はスローされないと見なされるため、コードに到達できなくなります。したがって、catch ブロックには到達できません。  関数がスローする可能性があるため、この警告が無効であると思われる場合は、スローされた例外に応じて、 **/eha**または **/ehs**を使用してコンパイルします。
 
-詳細については、次を参照してください。 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)詳細についてはします。
+詳細については、「 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md) 」を参照してください。
 
 次の例では、C4702 が生成されます。
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>

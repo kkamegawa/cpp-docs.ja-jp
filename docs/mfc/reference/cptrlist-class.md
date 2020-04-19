@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: dfd545e1758ea257a89606655bf735829dbe8840
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b88b0950b3b46f9738bd26080883c00d46f8555
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372440"
 ---
 # <a name="cptrlist-class"></a>CPtrList クラス
 

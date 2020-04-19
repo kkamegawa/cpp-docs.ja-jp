@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2182
 ms.assetid: dfd8d47d-9606-496e-bd96-4bf41ba1f857
-ms.openlocfilehash: 3c33e722143c15c566d96226429adbb8868b34ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da702087ad4d445d7fd4abe1956040a45b4414b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598433"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737141"
 ---
 # <a name="compiler-error-c2182"></a>コンパイラ エラー C2182
 
@@ -21,7 +21,7 @@ ms.locfileid: "50598433"
 
 次の例では C2182 が生成されます。
 
-```
+```cpp
 // C2182.cpp
 // compile with: /c
 int main() {

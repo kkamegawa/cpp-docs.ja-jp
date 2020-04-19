@@ -9,17 +9,17 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++/CLI], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-ms.openlocfilehash: 4c9af2491518112425668a0856473cd8418338d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d865f96d2e116f09a29cb78f410c4c19d6104a82
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148381"
 ---
 # <a name="attribute"></a>属性
 
 > [!NOTE]
-> **属性**属性が非推奨となりました。  共通言語ランタイムの属性を使用して、`System.Attribute`にユーザー定義の属性を作成するには、直接します。 詳細については、「 [User-Defined Attributes](../user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+> **属性**属性が非推奨となりました。  共通言語ランタイムの属性を使用して、`System.Attribute`にユーザー定義の属性を作成するには、直接します。 詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
 ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408538"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>コンパイラの警告 (レベル 1) C4325
 
@@ -19,13 +19,13 @@ ms.locfileid: "50492597"
 
 ## <a name="remarks"></a>Remarks
 
-標準のセクションの属性は変更できません。 例えば:
+標準のセクションの属性は変更できません。 例:
 
 ```cpp
 #pragma section(".sdata", long)
 ```
 
-これは、上書きは、`.sdata`標準のセクションを使用して、**短い**データ型を**長い**データ型。
+これは、上書きは、`.sdata`標準のセクションを使用して、**short**データ型を**long**データ型。
 
 標準のセクションでは変わらないことがある属性を含めるには、
 

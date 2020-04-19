@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0445c2f8868fc9f2863ad4a2a12cc00261546c75
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329645"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447844"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf クラス
 
@@ -51,13 +51,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*Elem*<br/>
+*Elem*\
 文字列の基本要素の型。
 
-*Tr*<br/>
+*Tr*\
 文字列の基本要素に特化した文字の特徴。
 
 ## <a name="remarks"></a>Remarks
@@ -80,11 +80,11 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 |型名|説明|
 |-|-|
-|[allocator_type](#allocator_type)|型はテンプレート パラメーターのシノニム*アロケーション*します。|
+|[allocator_type](#allocator_type)|この型は、テンプレートパラメーター *Alloc*のシノニムです。|
 |[char_type](#char_type)|型名を *Elem* テンプレート パラメーターに関連付けます。|
-|[int_type](#int_type)|内のこの型は、`basic_filebuf`のスコープ内の同じ名前の型に相当、 *Tr*スコープ。|
-|[off_type](#off_type)|内のこの型は、`basic_filebuf`のスコープ内の同じ名前の型に相当、 *Tr*スコープ。|
-|[pos_type](#pos_type)|内のこの型は、`basic_filebuf`のスコープ内の同じ名前の型に相当、 *Tr*スコープ。|
+|[int_type](#int_type)|は、 *Tr*スコープ`basic_filebuf`内の同じ名前の型と同じスコープ内でこの型を使用します。|
+|[off_type](#off_type)|は、 *Tr*スコープ`basic_filebuf`内の同じ名前の型と同じスコープ内でこの型を使用します。|
+|[pos_type](#pos_type)|は、 *Tr*スコープ`basic_filebuf`内の同じ名前の型と同じスコープ内でこの型を使用します。|
 |[traits_type](#traits_type)|型名を *Tr* テンプレート パラメーターに関連付けます。|
 
 ### <a name="member-functions"></a>メンバー関数
@@ -107,7 +107,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ## <a name="allocator_type"></a>  basic_stringbuf::allocator_type
 
-型はテンプレート パラメーターのシノニム*アロケーション*します。
+この型は、テンプレートパラメーター *Alloc*のシノニムです。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -128,17 +128,17 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*モード (_m)*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*str*<br/>
+*引数*\
 [basic_string](../standard-library/basic-string-class.md) 型のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 詳細については、[basic_streambuf クラス](../standard-library/basic-streambuf-class.md)の「コメント」セクションを参照してください。 格納*モード (_m)* stringbuf モードとして。 詳細については、[basic_stringbuf クラス](../standard-library/basic-stringbuf-class.md)の「コメント」セクションを参照してください。
+最初のコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 詳細については、[basic_streambuf クラス](../standard-library/basic-streambuf-class.md)の「コメント」セクションを参照してください。 また、 *_Mode*を stringbuf モードとして格納します。 詳細については、[basic_stringbuf クラス](../standard-library/basic-stringbuf-class.md)の「コメント」セクションを参照してください。
 
-2 番目のコンス トラクターは、文字列オブジェクトによって制御されるシーケンスのコピーを割り当てます*str*します。 `_Mode & ios_base::in` が 0 以外の場合、シーケンスの先頭から読み取りを開始するように入力バッファーを設定します。 `_Mode & ios_base::out` が 0 以外の場合、シーケンスの先頭から書き込みを開始するように出力バッファーを設定します。 格納*モード (_m)* stringbuf モードとして。 詳細については、[basic_stringbuf クラス](../standard-library/basic-stringbuf-class.md)の「コメント」セクションを参照してください。
+2番目のコンストラクターは、文字列オブジェクト*str*によって制御されるシーケンスのコピーを割り当てます。 `_Mode & ios_base::in` が 0 以外の場合、シーケンスの先頭から読み取りを開始するように入力バッファーを設定します。 `_Mode & ios_base::out` が 0 以外の場合、シーケンスの先頭から書き込みを開始するように出力バッファーを設定します。 また、 *_Mode*を stringbuf モードとして格納します。 詳細については、[basic_stringbuf クラス](../standard-library/basic-stringbuf-class.md)の「コメント」セクションを参照してください。
 
 ## <a name="char_type"></a>  basic_stringbuf::char_type
 
@@ -150,7 +150,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a>  basic_stringbuf::int_type
 
-同じ名前の型と等価の basic_filebuf スコープ内のこの型を作成、`Tr`スコープ。
+`Tr`スコープ内の同じ名前の型と等価な basic_filebuf's スコープ内でこの型を作成します。
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -158,7 +158,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a>  basic_stringbuf::off_type
 
-同じ名前の型と等価の basic_filebuf スコープ内のこの型を作成、`Tr`スコープ。
+`Tr`スコープ内の同じ名前の型と等価な basic_filebuf's スコープ内でこの型を作成します。
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -174,16 +174,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*<br/>
+*メタ (_c)* \
 バッファーに挿入する文字または `traits_type::eof`。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
+関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
 
 ### <a name="remarks"></a>Remarks
 
-場合 *\_メタ* にも等しく**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようとする **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
+場合 *\_メタ* にも等しく**traits_type::** [eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようとする **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
 
 - 書き込み位置が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 
@@ -199,16 +199,16 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>パラメーター
 
-*_Meta*<br/>
+*メタ (_c)* \
 バッファーに挿入する文字または `traits_type::eof`。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
+関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
 
 ### <a name="remarks"></a>Remarks
 
-場合 *_Meta*等しく**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素が **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) で置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
+*Meta*が**traits_type::** [eof](../standard-library/char-traits-struct.md#eof)と等しい場合、プッシュバックする要素は実質的には、現在の要素の前に既にストリームにある要素になります。 それ以外の場合、その要素が **byte** = **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) で置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
 - 戻り位置が使用可能であり、格納されている要素が byte に等しい場合、入力バッファーのネクスト ポインターをデクリメントできます。
 
@@ -216,7 +216,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ## <a name="pos_type"></a>  basic_stringbuf::pos_type
 
-同じ名前の型と等価の basic_filebuf スコープ内のこの型を作成、`Tr`スコープ。
+`Tr`スコープ内の同じ名前の型と等価な basic_filebuf's スコープ内でこの型を作成します。
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
-に対して相対的にシークする位置 *_Way*します。 詳細については、「[basic_stringbuf::off_type](#off_type)」を参照してください。
+*オフ (_r)* \
+に対して相対的にシークする*位置。* 詳細については、「[basic_stringbuf::off_type](#off_type)」を参照してください。
 
-*_Way*<br/>
+*方法 (_c)* \
 オフセット演算の開始位置。 有効値については、「[ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*モード (_m)*<br/>
+*_Mode*\
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。 詳細については、「[ios_base::openmode](../standard-library/ios-base-class.md#openmode)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -254,13 +254,13 @@ virtual pos_type seekoff(
 
 新しい位置は、次のように決定されます。
 
-- 場合`_Way`  ==  `ios_base::beg`、新しい位置はプラス ストリームの先頭 *_Off*します。
+- の`_Way`場合 == 、新しい位置はストリームの先頭とオフになります。  `ios_base::beg`
 
-- 場合`_Way`  ==  `ios_base::cur`、新しい位置は、現在のストリームの位置と *_Off*します。
+- の`_Way`場合 == 、新しい位置は現在のストリームの位置とオフになります。  `ios_base::cur`
 
-- 場合`_Way`  ==  `ios_base::end`、プラス ストリームの末尾が新しい位置 *_Off*します。
+- の`_Way`場合 == 、新しい位置はストリームの末尾にと Off を加えたものになります。  `ios_base::end`
 
-`_Mode & ios_base::in` が 0 以外の場合、関数は入力バッファー内の次に読み取る位置を変更します。 `_Mode & ios_base::out` が 0 以外の場合、関数は出力バッファー内の次に書き込む位置を変更します。 影響を受けるストリームの場合、そのバッファーが存在する必要があります。 配置操作を正常に完了するためには、結果のストリームの位置が被制御シーケンス内になければなりません。 関数が両方のストリームの位置に影響する場合 *_Way*必要があります`ios_base::beg`または`ios_base::end`し、両方のストリームは、同じ要素に配置されます。 それ以外の場合 (またはどちらも位置も影響を受けない場合)、配置操作は失敗します。
+`_Mode & ios_base::in` が 0 以外の場合、関数は入力バッファー内の次に読み取る位置を変更します。 `_Mode & ios_base::out` が 0 以外の場合、関数は出力バッファー内の次に書き込む位置を変更します。 影響を受けるストリームの場合、そのバッファーが存在する必要があります。 配置操作を正常に完了するためには、結果のストリームの位置が被制御シーケンス内になければなりません。 関数が両方のストリームの位置に影響する場合、 `ios_base::beg`どちら`ios_base::end`の*方法*もまたはであり、両方のストリームが同じ要素に配置されている必要があります。 それ以外の場合 (またはどちらも位置も影響を受けない場合)、配置操作は失敗します。
 
 関数がいずれかまたは両方のストリームの位置の変更に成功すると、結果のストリームの位置が返されます。 それ以外の場合は、失敗し、無効なストリームの位置が返されます。
 
@@ -274,10 +274,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>パラメーター
 
-*_Sp*<br/>
+*Sp (_s)* \
 シークする位置。
 
-*モード (_m)*<br/>
+*_Mode*\
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -302,7 +302,7 @@ void str(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newstr*<br/>
+*Newstr (_d)* \
 新しい文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -319,7 +319,7 @@ void str(
 
 - それ以外の場合、コピーされたシーケンスは空になります。
 
-2 番目のメンバー関数は、**\*this** によって現在制御されている任意のシーケンスの割り当てを解除します。 によって制御されるシーケンスのコピーが割り当てられます *_Newstr*します。 **mode & ios_base::in** が 0 以外の場合、シーケンスの先頭から読み取りを開始するように入力バッファーを設定します。 **mode & ios_base::out** が 0 以外の場合、シーケンスの先頭から書き込みを開始するように出力バッファーを設定します。
+2 番目のメンバー関数は、 **\*this** によって現在制御されている任意のシーケンスの割り当てを解除します。 次に、 *Newstr*によって制御されるシーケンスのコピーを割り当てます。 **mode & ios_base::in** が 0 以外の場合、シーケンスの先頭から読み取りを開始するように入力バッファーを設定します。 **mode & ios_base::out** が 0 以外の場合、シーケンスの先頭から書き込みを開始するように出力バッファーを設定します。
 
 ### <a name="example"></a>例
 
@@ -375,11 +375,11 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>戻り値
 
-関数が失敗すると、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) が返されます。 それ以外の場合、変換された入力ストリームの現在の要素が返されます。
+関数が失敗すると、**traits_type::** [eof](../standard-library/char-traits-struct.md#eof) が返されます。 それ以外の場合、変換された入力ストリームの現在の要素が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-現在の要素を抽出しようとするプロテクト仮想メンバー関数`byte`は入力バッファーから現在のストリームの位置を進めるし、要素を返す**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**バイト**)。 1 つの方法で行うことができます。 かかる読み取り位置が使用可能な場合は、`byte`要素は、読み取り位置に格納されていると、入力バッファーのネクスト ポインターを進めます。
+プロテクト仮想メンバー関数は`byte` 、現在の要素を入力バッファーから抽出し、現在のストリームの位置を進め、 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**) として要素を返します。 これは、1つの方法で行うことができます。読み取り位置が使用可能な場合は、 `byte`読み取り位置に格納されている要素としてを受け取り、入力バッファーの次のポインターを進めます。
 
 ## <a name="swap"></a>  basic_streambuf::swap
 
@@ -391,7 +391,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他の*\
 この basic_stringbuf により内容が交換される basic_stringbuf 。
 
 ### <a name="remarks"></a>Remarks
@@ -406,13 +406,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他の*\
 内容が演算子の左側にある stringbuf に割り当てられる、ロケールの特徴を含む basic_stringbuf。
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <typeindex>
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-ms.openlocfilehash: e22ce63c01185112ed512217156470e6f2948cd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 237356a0862ec3fc591264b482b23e62ef2c51cb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566622"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455058"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
@@ -29,6 +29,6 @@ ms.locfileid: "50566622"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

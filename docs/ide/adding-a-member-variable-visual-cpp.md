@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694414"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328962"
 ---
 # <a name="add-a-member-variable"></a>メンバー変数を追加する
 
-クラス ビューを使用して、クラスにメンバー変数を追加することができます。 メンバー変数は、[データ交換とデータの入力規則](../mfc/dialog-data-exchange-and-validation.md)に使用するか、一般にすることができます。 データ メンバー変数ウィザードは、関連情報を取得し、それを使用して適切な場所のソース ファイル内に要素を挿入するために設計されています。 [リソース ビュー](../windows/resource-view-window.md)の[ダイアログ エディター](../windows/dialog-editor.md)から、または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)からメンバー変数を追加できます。
+クラス ビューを使用して、クラスにメンバー変数を追加することができます。 メンバー変数は、[データ交換とデータの入力規則](../mfc/dialog-data-exchange-and-validation.md)に使用するか、一般にすることができます。 データ メンバー変数ウィザードは、関連情報を取得し、それを使用して適切な場所のソース ファイル内に要素を挿入するために設計されています。 [リソース ビュー](../windows/how-to-create-a-resource-script-file.md#create-resources)の[ダイアログ エディター](../windows/dialog-editor.md)から、または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)からメンバー変数を追加できます。
 
 > [!NOTE]
 > ダイアログ ボックスを設計および実装しているときに、ダイアログ エディターを使用して、ダイアログ ボックス コントロールを追加し、コントロールのメンバー変数を実装するとより効率的である場合があります。
@@ -147,7 +147,7 @@ ms.locfileid: "51694414"
 
 次の表は、MFC と[ダイアログ エディター](../windows/dialog-editor.md)でサポートされているすべてのダイアログ ボックス コントロール型をまとめたものです。 また、それらの使用可能な型と値も示されています。
 
-|コントロール|コントロールの種類|コントロール変数の型|値変数の型|最小/最大値 (値の型のみ)|
+|コントロール|コントロール型|コントロール変数の型|値変数の型|最小/最大値 (値の型のみ)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |アニメーション コントロール|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|なし、コントロールのみ|N/A|
 |ボタン|ボタン|[CButton](../mfc/reference/cbutton-class.md)|なし、コントロールのみ|N/A|
@@ -163,7 +163,7 @@ ms.locfileid: "51694414"
 |リッチ エディット 2 コントロール|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|最大文字数|
 |リッチ エディット コントロール|RICHEDIT|`CRichEditCtrl`|`CString`|最大文字数|
 |スクロール バー (垂直または水平)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|最小値/最大値|
-|スライダー コントロール|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|最小値/最大値|
+|Slider コントロール|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|最小値/最大値|
 |スピン コントロール|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|なし、コントロールのみ|N/A|
 |タブ コントロール|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|なし、コントロールのみ|N/A|
 |ツリー コントロール|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|なし、コントロールのみ|N/A|

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3618
 ms.assetid: cacc105d-4389-4cb8-ae6c-41a3622e9a86
-ms.openlocfilehash: 97f2738a67ee84196a49b96301c885c28c41050b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f0edf1addf753054fbc50a1591b5b1a37394087
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759725"
 ---
 # <a name="compiler-error-c3618"></a>コンパイラ エラー C3618
 
-'function': DllImport マークされたメソッドを定義することはできません
+' function ': DllImport とマークされたメソッドを定義することはできません
 
-マークされたメソッド<xref:System.Runtime.InteropServices.DllImportAttribute>が定義されている、指定しました。DLL です。
+<xref:System.Runtime.InteropServices.DllImportAttribute> でマークされたメソッドは、指定されたで定義されます。DLL.
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3618 が生成されます。
 
-```
+```cpp
 // C3618.cpp
 // compile with: /clr /c
 using namespace System;

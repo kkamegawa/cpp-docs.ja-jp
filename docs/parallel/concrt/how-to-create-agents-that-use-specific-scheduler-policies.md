@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 955b1043800c8c10a24abff71a7764d0878b89d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ece6b113e3fe10c2c3179517f73137df281acf87
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663373"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141731"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>方法: 特定のスケジューラ ポリシーを使用するエージェントを作成する
 
@@ -18,15 +18,15 @@ ms.locfileid: "50663373"
 
 どのエージェントにも、固有のアプリケーションの要件があります。 たとえば、ユーザーとのやり取り (入力の取得または出力の表示) を可能にするエージェントは、コンピューティング リソースに優先的にアクセスできなければならない場合があります。 スケジューラでタスクを管理する場合、スケジューラ ポリシーを使用することで、スケジューラが使用する方法を制御できます。 このトピックでは、特定のスケジューラ ポリシーを使用するエージェントの作成方法を示します。
 
-カスタム スケジューラ ポリシーを非同期メッセージ ブロックと共に使用する基本的な例を参照してください。[方法: 特定のスケジューラ ポリシーの指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)します。
+カスタムスケジューラポリシーを非同期メッセージブロックと共に使用する基本的な例については、「[方法: 特定のスケジューラポリシーを指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)する」を参照してください。
 
-このトピックでは、エージェント、メッセージ ブロック、メッセージ パッシング関数などの非同期エージェント ライブラリの機能を使用して、処理を行います。 Asynchronous Agents Library の詳細については、次を参照してください。 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)します。
+このトピックでは、エージェント、メッセージ ブロック、メッセージ パッシング関数などの非同期エージェント ライブラリの機能を使用して、処理を行います。 非同期エージェントライブラリの詳細については、「[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、2 つのクラスから派生した[concurrency::agent](../../parallel/concrt/reference/agent-class.md):`permutor`と`printer`します。 `permutor` クラスは、指定された入力文字列のすべての順列を計算します。 `printer` クラスは、進行状況メッセージをコンソールに出力します。 `permutor` クラスは計算量が非常に多い演算を行うため、使用できるコンピューティング リソースが使い果たされる可能性があります。 `printer` クラスを活かすためには、各進行状況メッセージが適時に出力されなければなりません。
+次の例では、 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md): `permutor` と `printer`から派生する2つのクラスを定義します。 `permutor` クラスは、指定された入力文字列のすべての順列を計算します。 `printer` クラスは、進行状況メッセージをコンソールに出力します。 `permutor` クラスは計算量が非常に多い演算を行うため、使用できるコンピューティング リソースが使い果たされる可能性があります。 `printer` クラスを活かすためには、各進行状況メッセージが適時に出力されなければなりません。
 
-提供する、`printer`コンピューティング リソースにクラスの公正なアクセス、この例は記載されている手順を使用して[方法: スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)カスタム ポリシーを持つスケジューラ インスタンスを作成します。 このカスタム ポリシーで、スレッドの優先順位が最も高い優先順位クラスとなるように指定します。
+この例では、コンピューティングリソースへの `printer` クラスのフェアアクセスを提供するために、「[方法: スケジューラインスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)してカスタムポリシーを持つスケジューラインスタンスを作成する」で説明されている手順を使用します。 このカスタム ポリシーで、スレッドの優先順位が最も高い優先順位クラスとなるように指定します。
 
 カスタム ポリシーを持つスケジューラを使用する利点を示すため、この例ではタスク全体を 2 度実行しています。 まず、既定のスケジューラを使用して両方のタスクをスケジュールします。 次の例では、既定のスケジューラを使用して `permutor` オブジェクトをスケジュールし、カスタム ポリシーを持つスケジューラを使用して `printer` オブジェクトをスケジュールします。
 
@@ -48,12 +48,11 @@ Computing all permutations of 'Grapefruit'...
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`permute-strings.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`permute-strings.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc permute-strings.cpp**
+> **cl.exe/EHsc permute-strings**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スケジューラ ポリシー](../../parallel/concrt/scheduler-policies.md)<br/>
 [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)
-

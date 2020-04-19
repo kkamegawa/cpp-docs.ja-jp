@@ -5,12 +5,12 @@ helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-ms.openlocfilehash: 446d59fe62999e5be652be5efabb53fd907fcd88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ca7e46cabb2d98a64a244863f8574a3e9e2a456
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410780"
 ---
 # <a name="benefits-of-character-set-portability"></a>文字セットにおける移植性の利点
 

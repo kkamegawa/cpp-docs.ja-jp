@@ -1,26 +1,27 @@
 ---
 title: '@FileName'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@FileName'
 helpviewer_keywords:
 - '@FileName symbol'
 ms.assetid: a713bf70-2abd-4953-b187-7875ded58e52
-ms.openlocfilehash: 86fe01e924f4bd8af4e15e4aab2d809ac78dae97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a49be94ecd14f9f81d9d2396a0c2fb4d46713275
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430603"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315772"
 ---
-# <a name="filename"></a>@FileName
+# <a name="filename"></a>\@ファイル名
 
-アセンブリするメインのファイル (テキスト マクロ) の基本名。
+アセンブルするメインファイルの基本名 (テキストマクロ)。
 
 ## <a name="syntax"></a>構文
 
-> @FileName
+> **\@ファイル名**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボルのリファレンス](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

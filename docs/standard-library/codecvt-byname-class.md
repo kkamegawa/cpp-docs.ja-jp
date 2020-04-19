@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641585"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688301"
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname クラス
+# <a name="codecvt_byname-class"></a>codecvt_byname クラス
 
-特定のロケールの照合ファセットとして使用できるオブジェクトを表す派生テンプレート クラス。変換に関する文化的領域に固有の情報を取得できるようにします。
+特定のロケールの collate ファセットとして使用できるオブジェクトを表す派生クラステンプレート。変換に関してカルチャ領域に固有の情報を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,19 +43,19 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*<br/>
+*@No__t_1*
 名前付きのロケール。
 
-*_Refs*<br/>
+*Refs \ (_c)*
 最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
 名前付きのロケールが作成されると、byname ファセットが自動的に作成されます。
 
-名前付きのロケールでその動作が決まります *_Locname*します。 各コンストラクターは、[codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+その動作は、名前付きロケール*名*によって決まります。 各コンストラクターは、[codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -63,4 +63,4 @@ protected:
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

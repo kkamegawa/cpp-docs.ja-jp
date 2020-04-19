@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468901"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149623"
 ---
 # <a name="typedef-declarations"></a>typedef 宣言
 
@@ -51,7 +51,7 @@ typedef 宣言は、変数または関数宣言と同様に解釈されますが
 
 typedef 宣言は型を作成しないことに注意してください。 既存の型のシノニム、またはその他の方法で指定できる型の名前を作成します。 Typedef 名を型指定子として使用するときは、特定の型指定子と組み合わせることはできますが、それ以外とはできません。 使用できる修飾子には **const** と `volatile` が含まれます。
 
-typedef 名は、通常の識別子を使用して名前空間を共有します (詳細については、「[名前空間](../c-language/name-spaces.md)」を参照してください)。 そのため、プログラムは同じ名前の typedef 名とローカル スコープ識別子を持つことができます。 例:
+typedef 名は、通常の識別子を使用して名前空間を共有します (詳細については、「[名前空間](../c-language/name-spaces.md)」を参照してください)。 そのため、プログラムは同じ名前の typedef 名とローカル スコープ識別子を持つことができます。 次に例を示します。
 
 ```C
 typedef char FlagType;
@@ -146,6 +146,6 @@ DRAWF box;
 void box( int, int );
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言と型](../c-language/declarations-and-types.md)

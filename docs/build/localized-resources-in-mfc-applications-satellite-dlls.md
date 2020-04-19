@@ -1,5 +1,5 @@
 ---
-title: 'MFC アプリケーションのローカライズされたリソース: サテライト DLL'
+title: MFC アプリケーションのローカライズされたリソース:サテライト Dll
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multiple language support [C++]
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: e9f9b751da6339cbe8f352bdb7eee4b7af2c359b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658004"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220744"
 ---
-# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC アプリケーションのローカライズされたリソース: サテライト DLL
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC アプリケーションのローカライズされたリソース:サテライト Dll
 
-MFC version 7.0 以降では、サテライト Dll の複数の言語にローカライズされるアプリケーションの作成に役立つ機能の強化されたサポートを提供します。 サテライト DLL は、[リソース専用 DLL](../build/creating-a-resource-only-dll.md)特定の言語のローカライズされたアプリケーションのリソースを格納しています。 アプリケーションの実行開始時に MFC には、環境に最も適したローカライズされたリソースが自動的に読み込まれます。 たとえば、2 つのサテライト Dll は、ドイツ語の翻訳を格納している他のリソースのフランス語の翻訳を格納している 1 つの英語リソースをアプリケーションがある可能性があります。 英語の言語がシステム、アプリケーションを実行すると、英語のリソースが使用されます。 フランス語のリソースを使用して、フランス語のシステムで実行される場合ドイツ語のシステムで実行される場合は、ドイツ語のリソースを使用します。
+MFC version 7.0 以降では、サテライト Dll の複数の言語にローカライズされるアプリケーションの作成に役立つ機能の強化されたサポートを提供します。 サテライト DLL は、[リソース専用 DLL](creating-a-resource-only-dll.md)特定の言語のローカライズされたアプリケーションのリソースを格納しています。 アプリケーションの実行開始時に MFC には、環境に最も適したローカライズされたリソースが自動的に読み込まれます。 たとえば、2 つのサテライト Dll は、ドイツ語の翻訳を格納している他のリソースのフランス語の翻訳を格納している 1 つの英語リソースをアプリケーションがある可能性があります。 英語の言語がシステム、アプリケーションを実行すると、英語のリソースが使用されます。 フランス語のリソースを使用して、フランス語のシステムで実行される場合ドイツ語のシステムで実行される場合は、ドイツ語のリソースを使用します。
 
 サテライト DLL を読み込むように MFC しよう、MFC アプリケーションでローカライズされたリソースをサポートするためにリソースを含む、特定の言語にローカライズされました。 サテライト Dll の名前は*ApplicationNameXXX*.dll、場所*ApplicationName*の .exe または .dll、MFC を使用して名前を指定し、 *XXX*言語に対する 3 文字コードは、リソース (たとえば、'日本語' または 'DEU')。
 
@@ -53,5 +53,5 @@ MFC がサテライト Dll を見つけられない場合は、アプリケー�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)<br/>
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)<br/>
 [テクニカル ノート 57: MFC コンポーネントのローカライズ](../mfc/tn057-localization-of-mfc-components.md)

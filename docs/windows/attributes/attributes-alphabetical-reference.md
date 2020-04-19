@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ecf59b0d920b39d8f129e3ff25b5518f985d78f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148498"
 ---
 # <a name="attributes-alphabetical-reference"></a>属性リファレンス (アルファベット順)
 
@@ -103,7 +103,7 @@ ms.locfileid: "50516910"
 |[readonly](readonly-cpp.md)|変数への代入を禁止します。|
 |[ref](ref-cpp.md)|参照ポインターを識別します。|
 |[registration_script](registration-script.md)|指定した登録スクリプトを実行します。|
-|[requestedit](requestedit.md)|プロパティをサポートしていることを示します、`OnRequestEdit`通知します。|
+|[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
 |[requires_category](requires-category.md)|クラスの必須コンポーネントのカテゴリを指定します。|
 |[restricted](restricted.md)|あるライブラリ、またはモジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを呼び出せないことを指定します。|
 |[retval](retval.md)|メンバーの戻り値を受け取るパラメーターを指定します。|

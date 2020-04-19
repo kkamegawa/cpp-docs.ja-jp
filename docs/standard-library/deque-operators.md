@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: a5e88d421df2746cf2ca0aab5be4c19953162559
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524977"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245660"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; の演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトと等しくないかどうかを調べます。
 
@@ -40,10 +35,10 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `deque` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `deque` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -75,12 +70,13 @@ int main( )
    else
       cout << "The deques are equal." << endl;
 }
-/* Output:
-The deques are not equal.
-*/
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+```Output
+The deques are not equal.
+```
+
+## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトより小さいかどうかを調べます。
 
@@ -90,10 +86,10 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `deque` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `deque` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -129,12 +125,13 @@ int main( )
    else
       cout << "Deque c1 is not less than deque c2." << endl;
 }
-/* Output:
-Deque c1 is less than deque c2.
-*/
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+```Output
+Deque c1 is less than deque c2.
+```
+
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクト以下かどうかを調べます。
 
@@ -144,10 +141,10 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `deque` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `deque` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -183,12 +180,13 @@ int main( )
    else
       cout << "Deque c1 is greater than deque c2." << endl;
 }
-/* Output:
-Deque c1 is less than or equal to deque c2.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+```Output
+Deque c1 is less than or equal to deque c2.
+```
+
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトと等しいかどうかを調べます。
 
@@ -198,10 +196,10 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `deque` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `deque` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -239,13 +237,14 @@ int main( )
    else
       cout << "The deques are not equal." << endl;
 }
-/* Output:
-The deques are equal.
-The deques are not equal.
-*/
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+```Output
+The deques are equal.
+The deques are not equal.
+```
+
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトより大きいかどうかを調べます。
 
@@ -255,10 +254,10 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `deque` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `deque` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -295,12 +294,13 @@ int main( )
    else
       cout << "Deque c1 is not greater than deque c2." << endl;
 }
-/* Output:
-Deque c1 is greater than deque c2.
-*/
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+```Output
+Deque c1 is greater than deque c2.
+```
+
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクト以上かどうかを調べます。
 
@@ -310,10 +310,10 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `deque` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `deque` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -350,11 +350,8 @@ int main( )
    else
       cout << "Deque c1 is less than deque c2." << endl;
 }
-/* Output:
-Deque c1 is greater than or equal to deque c2.
-*/
 ```
 
-## <a name="see-also"></a>関連項目
-
-[\<deque>](../standard-library/deque.md)<br/>
+```Output
+Deque c1 is greater than or equal to deque c2.
+```

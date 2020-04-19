@@ -1,30 +1,31 @@
 ---
 title: IFNDEF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFNDEF
 helpviewer_keywords:
 - IFNDEF directive
 ms.assetid: 8c93efc4-9375-45b6-8583-95f0c92f2a3a
-ms.openlocfilehash: 6312b012ca49633da44272825e09aa9d9b0320f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb8479d9df1eb238960d8f8a794c904847660e6b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630738"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317215"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-場合、アセンブリの許可*名前*が定義されていません。
+*名前*が定義されていない場合、アセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
-> IFNDEF 名
+> **IFNDEF** *名*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
+完全な構文について[は](if-masm.md)、「」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

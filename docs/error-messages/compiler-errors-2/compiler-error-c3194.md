@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C3194
+title: コンパイラエラー C3194
 ms.date: 11/04/2016
 f1_keywords:
 - C3194
 helpviewer_keywords:
 - C3194
 ms.assetid: 49d3ffc6-eff6-4b46-865b-18811692a8bb
-ms.openlocfilehash: 181a18dde45c3363f1f77bc0cbbd5b0ffca3e898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83c07da5383740ca14c9b9de6224f47cf844d5fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608907"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757645"
 ---
-# <a name="compiler-error-c3194"></a>コンパイラ エラー C3194
+# <a name="compiler-error-c3194"></a>コンパイラエラー C3194
 
-'member': 値型は、代入演算子を含めることはできません
+' member ': 値型に代入演算子を指定することはできません
 
-コピー コンス トラクターまたはコピー代入演算子など、コンパイラによって自動起動を必要とする特殊なメンバー関数は値クラス内ではサポートされていません。
+コピーコンストラクターやコピー代入演算子など、コンパイラによる自動呼び出しを必要とする特殊なメンバー関数は、値クラス内ではサポートされていません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3194 が生成されます。
 
-```
+```cpp
 // C3194.cpp
 // compile with: /clr /c
 value struct MyStruct {

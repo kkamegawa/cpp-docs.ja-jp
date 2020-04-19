@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: aaf138ab3b0fa69f2a8c201eed631569b33b079f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486789"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501879"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -32,13 +32,13 @@ ms.locfileid: "50486789"
 集約可能オブジェクトの CLSID を指定します。
 
 *variable_name*<br/>
-挿入する変数の名前。 この変数が含まれています、`IUnknown`の集約対象オブジェクト。
+挿入する変数の名前。 この変数には`IUnknown` 、集計されるオブジェクトのが含まれます。
 
 ## <a name="remarks"></a>Remarks
 
 オブジェクトに適用すると、 **aggregates** C++ 属性は ( `clsid`によって指定された) 集約対象オブジェクトのアウター ラッパーを実装します。
 
-この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
+この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が`vi_progid`適用`progid`されている`coclass`場合、とも適用されます。
 
 ### <a name="atl-projects"></a>ATL プロジェクト
 
@@ -85,7 +85,7 @@ struct CObject : IObject
 |-|-|
 |**対象**|**クラス**、**構造体**|
 |**反復可能**|はい|
-|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
+|**必要な属性**|、、または`coclass` `progid` `vi_progid`が1つ以上あります。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
@@ -95,6 +95,6 @@ struct CObject : IObject
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[集計](/windows/desktop/com/aggregation)<br/>
-[集約可能](/windows/desktop/Midl/aggregatable)<br/>
+[集計](/windows/win32/com/aggregation)<br/>
+[集計](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

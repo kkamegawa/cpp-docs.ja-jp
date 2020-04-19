@@ -1,5 +1,5 @@
 ---
-title: 'データ ソース : 接続 (ODBC)'
+title: データ ソース:接続 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395951"
 ---
-# <a name="data-source-managing-connections-odbc"></a>データ ソース : 接続 (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>データ ソース:接続 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -72,7 +72,7 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> マルチ ユーザー環境での作業
 
-複数のユーザーが同じデータ ソースにアクセスする場合は、自分がアクセスしているレコードセットのデータが、ほかのユーザーによって変更されてしまうおそれがあります。 同じように、自分が他のユーザーのレコードセットを変更してしまう場合もあります。 詳細については、次を参照してください。[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+複数のユーザーが同じデータ ソースにアクセスする場合は、自分がアクセスしているレコードセットのデータが、ほかのユーザーによって変更されてしまうおそれがあります。 同じように、自分が他のユーザーのレコードセットを変更してしまう場合もあります。 詳細については、次を参照してください。[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
 
 ##  <a name="_core_generalizing_the_connection_string"></a> 接続文字列を汎用化します。
 

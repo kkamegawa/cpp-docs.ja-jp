@@ -1,6 +1,6 @@
 ---
 title: 演算子 &quot; &quot;
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '&#34; &#34;'
 - operator &#34; &#34;
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - '&#34; &#34; operator'
 - operator &#34; &#34;
 ms.assetid: e96fd419-06d4-4989-b65b-7d3754f00f81
-ms.openlocfilehash: f9723cfea95a2620683268ae47ac406d1dc1d1ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111667457f9f32f7583406183f4950d88c04017b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480874"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311976"
 ---
 # <a name="operator-quot-quot"></a>演算子 &quot; &quot;
 
-処理"*テキスト*"を文字列として。
+"*Text*" を文字列として扱います。
 
 ## <a name="syntax"></a>構文
 
-> 「テキスト」
+> __"__ *text* __"__
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

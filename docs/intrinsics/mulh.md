@@ -1,40 +1,40 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 28826f285d23b083883237ff1fb02684e32d278c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326122"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221683"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Microsoft 固有の仕様**
 
-2 つの 64 ビット符号付き整数の積の上位 64 ビットを返します。
+2 64 ビット符号付き整数の積の上位64ビットを返します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*a*<br/>
-[in]乗算する最初の数値。
+*ある*\
+[入力] 乗算する最初の数値。
 
-*b*<br/>
-[in]乗算する 2 番目の数値。
+*b*\
+[入力] 乗算する 2 番目の数値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -46,7 +46,7 @@ __int64 __mulh(
 |---------------|------------------|
 |`__mulh`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -54,7 +54,7 @@ __int64 __mulh(
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760775"
 ---
 # <a name="compiler-error-c2897"></a>コンパイラ エラー C2897
 
-デストラクターとファイナライザーは、関数テンプレートをすることはできません。
+デストラクターまたはファイナライザーを関数テンプレートにすることはできません
 
-デストラクターまたはファイナライザー オーバー ロードできません、ため、テンプレートを定義する一連のデストラクター) として、デストラクターを宣言することは許可されていません。
-
-次の例では、C2897 が生成されます。
-
-## <a name="example"></a>例
+デストラクターまたはファイナライザーはオーバーロードできないので、デストラクターをテンプレートとして宣言する (デストラクターのセットを定義する) ことはできません。
 
 次の例では、C2897 が生成されます。
 
-```
+## <a name="example"></a>使用例
+
+次の例では、C2897 が生成されます。
+
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -34,11 +34,11 @@ public:
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2897 が生成されます。
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 997d23fa5736e31b3824459f928a58eddde56e15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605086"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754265"
 ---
 # <a name="compiler-error-c3253"></a>コンパイラ エラー C3253
 
-'function': 明示的なオーバーライドでエラーが発生
+' function ': 明示的なオーバーライドでエラーが発生しています。
 
-明示的なオーバーライドが正しく指定されていません。 たとえば、純粋なとして指定することもオーバーライドの実装を指定できません。 詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)します。
+明示的なオーバーライドが正しく指定されませんでした。 たとえば、純粋として指定するオーバーライドの実装を指定することはできません。 詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3253 が生成されます。
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

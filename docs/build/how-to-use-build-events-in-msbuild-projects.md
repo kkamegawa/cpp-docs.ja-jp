@@ -1,58 +1,56 @@
 ---
-title: '方法: MSBuild プロジェクトでビルド イベントを使用する'
+title: '方法: MSBuild プロジェクトでビルドイベントを使用する'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570275"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060071"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用する
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルドイベントを使用する
 
-ビルド イベントは、ビルド プロセスで特定のステージで MSBuild を実行するコマンドです。 *ビルド前*イベントは、ビルドの開始前に発生します、*リンク前*、リンクの手順を開始する前にイベントが発生した、 *post-build*イベントは、ビルドの後に発生します。正常に終了します。 ビルド イベントは、関連付けられているビルド手順が発生した場合にのみ発生します。 たとえば、リンクの手順が実行されていない場合に、このリンク前イベントは発生しません。
+ビルドイベントは、ビルド処理の特定の段階で MSBuild が実行するコマンドです。 ビルド*前*のイベントは、ビルドが開始される前に発生します。リンク*前*のイベントは、リンクステップが開始される前に発生します。ビルド*後*イベントは、ビルドが正常に終了した後に発生します。 ビルドイベントは、関連付けられたビルドステップが発生した場合にのみ発生します。 たとえば、リンクステップが実行されていない場合、リンク前イベントは発生しません。
 
-Command 要素で、項目定義グループで表される 3 つのビルド イベントの各 (`<Command>`) 実行されると、メッセージの要素 (`<Message>`) されているときに表示される**MSBuild**ビルド イベントを実行します。 各要素は省略可能で、同じ要素を複数回指定する場合、最後に見つかったが優先されます。
+3つの各ビルドイベントは、実行されるコマンド要素 (`<Command>`) と、 **MSBuild**がビルドイベントを実行するときに表示される message 要素 (`<Message>`) によって、項目定義グループで表されます。 各要素は省略可能です。同じ要素を複数回指定した場合は、最後の出現が優先されます。
 
-省略可能な*ビルドでの使用*要素 (`<`*ビルド イベント*`UseInBuild>`) をビルド イベントが実行されるかどうかを示すプロパティ グループで指定できます。 コンテンツの価値を*ビルドでの使用*要素は、いずれかの**true**または**false**します。 しない限り、既定では、ビルド イベントが実行される、対応する*ビルドでの使用*要素に設定されて`false`します。
+ビルドイベントが実行されるかどうか`<`を示すために、オプション*のビルド内*の要素 (*ビルドイベント*`UseInBuild>`) をプロパティグループに指定できます。 *ビルド内*の要素の内容の値は、 **true**または**false**のいずれかになります。 既定では、対応する*ビルド内*の要素がに`false`設定されていない限り、ビルドイベントが実行されます。
 
-次の表では、各ビルド イベントの XML 要素を示します。
-
-|XML 要素|説明|
-|-----------------|-----------------|
-|`PreBuildEvent`|このイベントは、ビルドを開始する前に実行します。|
-|`PreLinkEvent`|このイベントは、リンクの手順を開始する前に実行します。|
-|`PostBuildEvent`|このイベントは、ビルドの完了後に実行します。|
-
-次の表を一覧の各*ビルドでの使用*要素。
+次の表に、各ビルドイベント XML 要素の一覧を示します。
 
 |XML 要素|説明|
 |-----------------|-----------------|
-|`PreBuildEventUseInBuild`|実行するかどうかを指定します、*ビルド前*イベント。|
-|`PreLinkEventUseInBuild`|実行するかどうかを指定します、 *pre-link*イベント。|
-|`PostBuildEventUseInBuild`|実行するかどうかを指定します、 *post-build*イベント。|
+|`PreBuildEvent`|このイベントは、ビルドが開始される前に実行されます。|
+|`PreLinkEvent`|このイベントは、リンクステップが開始される前に実行されます。|
+|`PostBuildEvent`|このイベントは、ビルドが完了した後に実行されます。|
+
+次の表に、各*ビルド*要素の一覧を示します。
+
+|XML 要素|説明|
+|-----------------|-----------------|
+|`PreBuildEventUseInBuild`|*ビルド前*のイベントを実行するかどうかを指定します。|
+|`PreLinkEventUseInBuild`|*リンク前*のイベントを実行するかどうかを指定します。|
+|`PostBuildEventUseInBuild`|*ビルド後*のイベントを実行するかどうかを指定します。|
 
 ## <a name="example"></a>例
 
-作成した myproject.vcxproj ファイルのプロジェクト要素の内部で次の例を追加できる[チュートリアル: Visual C プロジェクトを作成するを使用して MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。 A*ビルド前*main.cpp のコピーは、イベントは*リンク前*main.obj; のコピーおよびイベントにより*post-build* myproject.exe のイベントのコピーします。 プロジェクトをビルドするには、リリース構成を使用して、ビルド イベントが実行されます。 デバッグ構成を使用して、プロジェクトのビルドとビルド イベントは実行されません。
+次の例は、チュートリアルで作成した myproject ファイルの Project 要素の内部に[追加できます。MSBuild を使用してC++プロジェクト](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)を作成する。 *ビルド前*のイベントによって、メイン .cpp のコピーが作成します。*リンク前*のイベントによって、メイン .obj のコピーが作成します。*ビルド後*のイベントによって、myproject のコピーが作成されます。 リリース構成を使用してプロジェクトをビルドすると、ビルドイベントが実行されます。 プロジェクトがデバッグ構成を使用してビルドされている場合、ビルドイベントは実行されません。
 
-```
+``` xml
 <ItemDefinitionGroup>
   <PreBuildEvent>
     <Command>copy $(ProjectDir)main.cpp $(ProjectDir)copyOfMain.cpp</Command>
     <Message>Making a copy of main.cpp </Message>
   </PreBuildEvent>
   <PreLinkEvent>
-<Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
     <Message>Making a copy of main.obj</Message>
   </PreLinkEvent>
   <PostBuildEvent>
-<Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
     <Message>Making a copy of myproject.exe</Message>
   </PostBuildEvent>
 </ItemDefinitionGroup>
@@ -72,5 +70,5 @@ Command 要素で、項目定義グループで表される 3 つのビルド �
 
 ## <a name="see-also"></a>関連項目
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[コマンド ラインでの MSBuild - C++](msbuild-visual-cpp.md)<br/>
+[チュートリアル: MSBuild を使用した C++ プロジェクトの作成](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

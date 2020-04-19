@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: 22255cc0072e6d25bc3ec70086be6ec99a59808a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d935cb5282af16a189d091ee6f40d128a906d392
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411735"
 ---
 # <a name="using-cricheditctrl"></a>CRichEditCtrl の使い方
 
@@ -47,4 +47,3 @@ ms.locfileid: "50498164"
 ## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)
-

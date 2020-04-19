@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535708"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688850"
 ---
-# <a name="tuplesize-class"></a>tuple_size クラス
+# <a name="tuple_size-class"></a>tuple_size クラス
 
 `tuple` を含む要素の数を報告します。
 
@@ -54,31 +54,35 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;
 ```
 
+```cpp
+template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```
+
 ### <a name="parameters"></a>パラメーター
 
-*Tuple*<br/>
+*タプル*の \
 タプルの型。
 
-*Elem*<br/>
+*Elem* \
 配列要素の型。
 
-*Size*<br/>
+@No__t_1*サイズ*
 配列のサイズ。
 
-*T1*<br/>
+*T1* \
 ペアの最初のメンバーの型。
 
-*T2*<br/>
+*T2* \
 ペアの 2 番目のメンバーの型。
 
-*型*<br/>
+*型*\
 タプル要素の型。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、メンバーがある`value`は整数定数式の値は、タプル型の範囲*タプル*します。
+クラステンプレートには、タプル型の*タプル*の範囲を値として持つ整数定数式であるメンバー `value` があります。
 
-配列のテンプレート特殊化を持つメンバー`value`は整数定数式の値は*サイズ*、これは、配列のサイズです。
+配列のテンプレート特殊化には、*値が配列のサイズである*整数定数式である `value` メンバーが含まれています。
 
 ペアのテンプレート特殊化には、2 を値として持つ整数定数式であるメンバー `value` が含まれます。
 
@@ -111,7 +115,7 @@ int main()
 4
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<tuple>
 
@@ -120,9 +124,3 @@ int main()
 **ヘッダー:** \<utility> (ペアの特殊化用)
 
 **名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[tuple](../standard-library/tuple-class.md)<br/>
-[tuple_element クラス](../standard-library/tuple-element-class-tuple.md)<br/>

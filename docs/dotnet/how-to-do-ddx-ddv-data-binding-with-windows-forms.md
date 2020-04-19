@@ -1,19 +1,19 @@
 ---
-title: '方法: Windows フォームで DDX-DDV データ バインディング'
+title: '方法: Windows フォーム バインディング DDX-DDV データの操作を行います'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387319"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>方法: Windows フォームで DDX/DDV データ バインディングを実行する
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>方法: Windows フォーム バインディング DDX/DDV データの操作を行います
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼び出し[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)リソース コントロールの ID に一致するコントロールを作成するには 使用する場合`DDX_ManagedControl`の`CWinFormsControl`コントロール (ウィザードで生成されたコードで)、呼び出す必要はありません`CreateManagedControl`同じコントロールを明示的にします。
 
@@ -27,7 +27,7 @@ MFC 文字列の DDX/DDV データ バインディングの例を次に`m_str`�
 
 コントロールが作成された[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)呼び出し`CMyDlg::DoDataExchange`初めて、そのため、コードを参照する`m_UserControl`後必要があります、`DDX_ManagedControl`呼び出します。
 
-作成した [MFC01 アプリケーションでこのコードを実装する[方法: ユーザー コントロールおよびホストを作成] ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)します。
+このコードで作成した [MFC01 アプリケーションに実装できる[方法。ユーザー コントロールおよびホストを作成] ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)します。
 
 CMFC01Dlg の宣言では、次のコードを配置します。
 

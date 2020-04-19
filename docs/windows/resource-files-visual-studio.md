@@ -1,6 +1,8 @@
 ---
 title: リソース ファイル (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
+f1_keywords:
+- vc.editors.resource
 helpviewer_keywords:
 - resources [C++]
 - .rc files [C++]
@@ -14,68 +16,114 @@ helpviewer_keywords:
 - resource files [C++], types of
 - .rct files [C++]
 - resource script files [C++], unsupported types
+- manifest resources [C++]
+- resources [C++], manifest
+- resources [C++], opening
+- file types [C++], for resources
+- resources [C++], editing
+- files [C++], editable types
+- resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 9ad36f19185bc5b3430e7644ef55164d3cb0839a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461699"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513660"
 ---
 # <a name="resource-files-c"></a>リソース ファイル (C++)
 
 > [!NOTE]
-> これは Windows デスクトップ アプリケーションだけに適用できます。 ユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください。[アプリ リソースの定義](/windows/uwp/app-resources/)します。
+> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 [イメージエディター](../windows/image-editor-for-icons.md)と[バイナリエディター](binary-editor.md)を使用して、マネージプロジェクトのリソースファイルを操作します。
 >
-> マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
->
-> .NET プログラミング言語のプロジェクトでは、リソース スクリプト ファイルは使用しないため、 **ソリューション エクスプローラー**」をご覧ください。 [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
+> 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
 
-"リソース ファイル" という用語は、次のようなさまざまな種類のファイルを示します。
+*リソースファイル*という用語は、次のようなさまざまな種類のファイルを参照できます。
 
 - プログラムのリソース スクリプト (.rc) ファイル。
 
 - リソース テンプレート (.rct) ファイル。
 
-- ビットマップ、アイコン、カーソル ファイルなど、スタンドアロン ファイルとして存在し、.rc ファイルから参照される個別のリソース。
+- スタンドアロンファイルとして存在する個々のリソース。 この型には、.rc ファイルから参照されるビットマップ、アイコン、またはカーソルファイルが含まれています。
 
-- Resource.h など、開発環境で生成され、.rc ファイルから参照されるヘッダー ファイル。
+- 開発環境によって生成されるヘッダーファイル。 この型に`Resource.h`は、.rc ファイルから参照されているが含まれます。
 
-リソースは、.exe、.dll、.res ファイルなど、 [その他の種類のファイル](../windows/editable-file-types-for-resources.md) にも存在します。 リソースとリソース ファイルはプロジェクト内から操作できます。また、現在のプロジェクトの一部でないリソースとリソース ファイルも操作できます。 また、Visual Studio の開発環境で作成されたのではないリソース ファイルも操作できます。 たとえば、次のように操作できます。
+.Exe、.dll、.res ファイルなど、他のファイルの種類で見つかったリソースは、*リソース*と呼ばれます。
+
+*リソースファイル*とリソースは、プロジェクト内から操作できます。 また、現在のプロジェクトの一部ではないものや、Visual Studio の開発環境の外部で作成されたものを使用することもできます。 たとえば、次のように操作できます。
 
 - 入れ子になっていて、条件付きでインクルードされるリソース ファイルの操作。
 
-- 既存のリソースの更新、または Visual C++ 形式への変換。
+- 既存のリソースを更新するか、 C++ビジュアルに変換します。
 
 - グラフィック リソースを現在のリソース ファイルとの間でインポートまたはエクスポートする。
 
 - 開発環境では変更できない共有または読み取り専用識別子 (シンボル) のインクルード。
 
-- 複数のプロジェクト間で共有されるリソースなど、現在のプロジェクトで編集を必要としない (または編集したくない) 実行可能 (.exe) ファイル内のリソースのインクルード。
+- 複数のプロジェクト間で共有されるリソースなど、編集を必要としない (または編集しない) 実行可能 (.exe) ファイルにリソースを含めます。
 
 - 開発環境でサポートされていない種類のリソースのインクルード。
 
-ここでは、以下の内容について説明します。
+リソースの詳細については、「[コンパイル時に](../windows/how-to-include-resources-at-compile-time.md)[リソースを作成](../windows/how-to-create-a-resource-script-file.md)し、リソースを[管理](../windows/how-to-copy-resources.md)し、リソースを含める方法」を参照してください。
 
-- [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)
+## <a name="editable-resources"></a>編集可能なリソース
 
-- [リソースの新規作成](../windows/how-to-create-a-resource.md)
+次の種類のファイルを開いて、含まれているリソースを編集できます。
 
-- [リソース スクリプト ファイル内のリソースの表示](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)
+| ファイル名 | 説明 |
+|---|---|
+| .rc | リソーススクリプトファイル |
+| .rct | リソーステンプレートファイル |
+| .res | リソース ファイル |
+| .resx | マネージリソースファイル |
+| .exe | 実行可能ファイル |
+| .dll | ダイナミックリンクライブラリファイル |
+| .bmp、.ico、.dib、. 同一 | ビットマップ、アイコン、ツールバー、およびカーソルファイル |
 
-- [テキスト形式でリソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-in-text-format.md)
+リソースを編集する場合、Visual Studio 環境はと連携し、次のファイルに影響します。
 
-- [コンパイル時のリソースのインクルード](../windows/how-to-include-resources-at-compile-time.md)
+| ファイル名 | 説明 |
+|---|---|
+| Resource.h | シンボル定義を含む開発環境によって生成されるヘッダーファイル。<br/><br/>このファイルをソース管理に含めます。 |
+| Filename.aps | クイック読み込みに使用される現在のリソーススクリプトファイルのバイナリバージョン。<br /><br /> リソースエディターは、.rc ファイルまたは resource.h ファイルを直接読み取りません。 リソースコンパイラは、リソースエディターによって使用される aps ファイルにそれらをコンパイルします。 これはコンパイル手順のファイルで、シンボル データのみが格納されます。<br/><br/>通常のコンパイルプロセスと同様に、コメントなどのシンボルではない情報は、コンパイルプロセス中に破棄されます。<br/><br/>ファイルが .rc ファイルと同期されていない場合は常に、.rc ファイルが再生成されます。 たとえば、を**保存**すると、リソースエディターによって .rc ファイルと resource.h ファイルが上書きされます。 リソース自体に対する変更は、.rc ファイルに組み込まれたままになりますが、.rc ファイルが上書きされると、コメントは常に失われます。 コメントを保持する方法の詳細については、「[コンパイル時にリソースを含める](../windows/how-to-include-resources-at-compile-time.md)」を参照してください。<br/><br/>通常、ソース管理には、aps ファイルを含めないでください。 |
+| .rc | 現在のプロジェクト内のリソース用のスクリプトを格納するリソース スクリプト ファイル。 このファイルは、保存するたびに .aps ファイルで上書きされます。<br/><br/>このファイルをソース管理に含めます。 |
 
-- [リソースのコピー](../windows/how-to-copy-resources.md)
+## <a name="manifest-resources"></a>マニフェスト リソース
 
-- [リソース テンプレート (.rct) の使用](../windows/how-to-use-resource-templates.md)
+デスクトップC++プロジェクトでは、マニフェストリソースは、アプリケーションが使用する依存関係を記述する XML ファイルです。 たとえば、Visual Studio では、この MFC ウィザードで生成されたマニフェストファイルで、アプリケーションで使用する Windows コモンコントロール Dll のバージョンを定義します。
 
-- [リソースのインポートとエクスポート](../windows/how-to-import-and-export-resources.md)
+```xml
+<description>Your app description here</description>
+<dependency>
+    <dependentAssembly>
+        <assemblyIdentity
+            type="win32"
+            name="Microsoft.Windows.Common-Controls"
+            version="6.0.0.0"
+            processorArchitecture="X86"
+            publicKeyToken="6595b64144ccf1df"
+            language="*"
+        />
+    </dependentAssembly>
+</dependency>
+```
 
-- [編集可能なリソース ファイルの種類](../windows/editable-file-types-for-resources.md)
+Windows XP または Windows Vista アプリケーションの場合、マニフェストリソースは、アプリケーションで使用する Windows コモンコントロールの最新バージョンを指定する必要があります。 上記の例では`6.0.0.0`、 [syslink コントロール](/windows/win32/Controls/syslink-overview)をサポートするバージョンが使用されています。
 
-- [リソース編集の影響を受けるファイル](../windows/files-affected-by-resource-editing.md)
+> [!NOTE]
+> 使用できるマニフェスト リソースは 1 つのモジュールにつき 1 つだけです。
+
+マニフェストリソースに含まれるバージョン情報と型情報を表示するには、XML ビューアーまたは Visual Studio テキストエディターでファイルを開きます。 マニフェスト リソースを [リソース ビュー](../windows/resource-view-window.md)から開くと、リソースはバイナリ形式で表示されます。
+
+### <a name="to-open-a-manifest-resource"></a>マニフェストリソースを開くには
+
+1. Visual Studio でプロジェクトを開き、**ソリューションエクスプローラー**に移動します。
+
+1. **[リソースファイル]** フォルダーを展開し、次のように入力します。
+
+   - テキストエディターでを開くには、 *.manifest*ファイルをダブルクリックします。
+
+   - 別のエディターで開くには、 *.manifest*ファイルを右クリックし、[ファイル**を開くアプリケーション**の選択] をクリックします。 使用するエディターを指定し、 **[開く]** を選択します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -83,6 +131,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース エディター](../windows/resource-editors.md)<br/>
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
-[メニューとその他のリソース](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
+[リソース エディター](../windows/resource-editors.md)<br/>

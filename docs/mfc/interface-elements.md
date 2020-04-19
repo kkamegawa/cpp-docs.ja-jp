@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153586"
 ---
 # <a name="interface-elements"></a>インターフェイス要素
 
@@ -46,7 +46,7 @@ ms.locfileid: "52175900"
 
 ## <a name="mini-frame-windows"></a>ミニフレームの Windows
 
-フローティング ウィンドウは、ミニフレーム ウィンドウに存在します。 ミニフレーム ウィンドウは 2 つのクラスによって表されます: [CMDITabInfo クラス](../mfc/reference/cmditabinfo-class.md)(これは、1 つのペインを含めることができます) と[CMultiPaneFrameWnd クラス](../mfc/reference/cmultipaneframewnd-class.md)(これは、いくつかのペインを含めることができます)。 コードでは、ペインをフローティング、呼び出す[CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane)します。 ペインがフローティング状態になった後は、フレームワークがミニフレーム ウィンドウを自動的に作成し、ミニフレーム ウィンドウがフローティング ウィンドウの親になります。 フローティング ペインがドッキングし、フレームワークがその親をリセット フローティング ペイン (ツールバー) 用のドッキング バーまたはドッキング サイト (のサイズ変更可能なペイン) になります。
+フローティング ウィンドウは、ミニフレーム ウィンドウに存在します。 ミニフレーム ウィンドウは、2 つのクラスによって表されます。[CMDITabInfo クラス](../mfc/reference/cmditabinfo-class.md)(これは、1 つのペインを含めることができます) と[CMultiPaneFrameWnd クラス](../mfc/reference/cmultipaneframewnd-class.md)(これは、いくつかのペインを含めることができます)。 コードでは、ペインをフローティング、呼び出す[CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane)します。 ペインがフローティング状態になった後は、フレームワークがミニフレーム ウィンドウを自動的に作成し、ミニフレーム ウィンドウがフローティング ウィンドウの親になります。 フローティング ペインがドッキングし、フレームワークがその親をリセット フローティング ペイン (ツールバー) 用のドッキング バーまたはドッキング サイト (のサイズ変更可能なペイン) になります。
 
 ## <a name="pane-dividers"></a>ウィンドウの分割
 
@@ -69,4 +69,3 @@ Outlook バー コントロールがタブ バーにも基づいています。 
 ## <a name="see-also"></a>関連項目
 
 [概念](../mfc/mfc-concepts.md)
-

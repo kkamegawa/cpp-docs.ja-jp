@@ -1,42 +1,41 @@
 ---
 title: __vmx_vmclear
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmclear
 helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 469621eb828691b5475b453e8be0b8473b3594a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b5807402cf0a9d8a9ef1ded1d112d22a801633e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586343"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219540"
 ---
-# <a name="vmxvmclear"></a>__vmx_vmclear
+# <a name="__vmx_vmclear"></a>__vmx_vmclear
 
 **Microsoft 固有の仕様**
 
-指定された仮想マシンの制御構造 (VMCS) を初期化し、その起動状態に設定`Clear`します。
+指定された仮想マシン制御構造 (VMCS) を初期化し、その`Clear`起動状態をに設定します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned char __vmx_vmclear(
    unsigned __int64 *VmcsPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*VmcsPhysicalAddress*|[in]クリアする VMCS の物理アドレスを格納する 64 ビット メモリ位置へのポインター。|
+*Vmcsphysのアドレス*\
+から消去する VMCS の物理アドレスを格納している64ビットメモリ位置へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-|[値]|説明|
+|値|説明|
 |-----------|-------------|
 |0|操作が成功しました。|
 |1|現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。|
@@ -44,9 +43,9 @@ unsigned char __vmx_vmclear(
 
 ## <a name="remarks"></a>Remarks
 
-アプリケーションは、いずれかを使用して VM 入力操作を実行できます、 [_ _vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)または[_ _vmx_vmresume](../intrinsics/vmx-vmresume.md)関数。 [_ _Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)関数は、起動状態が VMCS でのみ使用できます`Clear`、および[_ _vmx_vmresume](../intrinsics/vmx-vmresume.md)関数は、起動状態が VMCS でのみ使用できます`Launched`します。 そのため、使用、 [_ _vmx_vmclear](../intrinsics/vmx-vmclear.md)に VMCS の起動状態を設定する関数`Clear`します。 使用して、 [_ _vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)関数は、最初の VM 入力操作を[_ _vmx_vmresume](../intrinsics/vmx-vmresume.md)関数の後続の VM 入力操作。
+アプリケーションでは、 [__ vmxvmlaunch](../intrinsics/vmx-vmlaunch.md)関数または[__ vmx_l](../intrinsics/vmx-vmresume.md)関数のいずれかを使用して、VM 入力操作を実行できます。 [__ Vmxvmlaunch](../intrinsics/vmx-vmlaunch.md)関数は、起動状態が`Clear`である vmcs でのみ使用できます。また、 [__ vmxvmresume](../intrinsics/vmx-vmresume.md)関数は、起動状態が`Launched`である vmcs でのみ使用できます。 そのため、VMCS の起動状態をに`Clear`設定するには、 [__ vmxvmclear](../intrinsics/vmx-vmclear.md)関数を使用します。 最初の VM 入力操作には[__ vmxvmlaunch](../intrinsics/vmx-vmlaunch.md)関数を使用し、後続の vm 入力操作には[__ vmx_l](../intrinsics/vmx-vmresume.md)関数を使用します。
 
-`__vmx_vmclear` 関数は `VMCLEAR` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+`__vmx_vmclear` 関数は `VMCLEAR` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイトのドキュメント「IA-32 intel Architecture の Intel Virtualization Technical Specification」 (ドキュメント番号 C97063-002) を検索してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -54,12 +53,12 @@ unsigned char __vmx_vmclear(
 |---------------|------------------|
 |`__vmx_vmclear`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\
 [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

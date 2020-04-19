@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393754"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -322,7 +322,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type^()|デリゲートにファンクタをキャストします。|
+|operator delegate_type^()|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -597,7 +597,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type^()|デリゲートにファンクタをキャストします。|
+|operator delegate_type^()|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -702,7 +702,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type^()|デリゲートにファンクタをキャストします。|
+|operator delegate_type^()|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -806,7 +806,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type^()|デリゲートにファンクタをキャストします。|
+|operator delegate_type^()|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -907,7 +907,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type^()|デリゲートにファンクタをキャストします。|
+|operator delegate_type^()|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1008,7 +1008,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1109,7 +1109,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1205,12 +1205,12 @@ public:
 
 |メンバー|説明|
 |------------|-----------------|
-|less|ファンクタを構築します。|
+|非表示|ファンクタを構築します。|
 
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1311,7 +1311,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1412,7 +1412,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1510,7 +1510,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1603,7 +1603,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1704,7 +1704,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1805,7 +1805,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1906,7 +1906,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -2004,7 +2004,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -2097,7 +2097,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -2351,7 +2351,7 @@ public:
 |演算子|説明|
 |--------------|-----------------|
 |演算子 ()|必要な関数を計算します。|
-|演算子 delegate_type ^|デリゲートにファンクタをキャストします。|
+|operator delegate_type^|デリゲートにファンクタをキャストします。|
 
 ### <a name="remarks"></a>Remarks
 

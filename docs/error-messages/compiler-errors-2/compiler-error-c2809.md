@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2809
 ms.assetid: ce796b8e-1a8c-4074-995d-1ad09afd0e93
-ms.openlocfilehash: d9dffabf318d51a97c172ecee2e4b2d4183a81f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f875d4ff32cfad425be5bb28bea8ef92c508eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640675"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758997"
 ---
 # <a name="compiler-error-c2809"></a>コンパイラ エラー C2809
 
-'operator 演算子' に仮パラメーターがありません。
+' operator operator ' に仮引数がありません。
 
-演算子には、必要なパラメーターが不足しています。
+演算子に必須のパラメーターがありません。
 
 次の例では、C2809 が生成されます。
 
-```
+```cpp
 // C2809.cpp
 // compile with: /c
 class A{};

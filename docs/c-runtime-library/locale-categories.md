@@ -21,12 +21,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 434500dab0c68aa9475f54e930b91da0b1cd2fc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220193"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749803"
 ---
 # <a name="locale-categories"></a>ロケールのカテゴリ
 
@@ -36,7 +36,7 @@ ms.locfileid: "54220193"
 #include <locale.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ロケールのカテゴリは、プログラムのロケール情報のどの部分を使用するかを指定する、ローカライズ ルーチンで使用されるマニフェスト定数です。 ロケールとは、地域性、つまり国や地域に関する情報であり、この情報に基づいてプログラムの特定の側面をカスタマイズできます。 ロケールに依存する領域としては、日付の形式や通貨値の表示形式などがあります。
 
@@ -53,7 +53,7 @@ ms.locfileid: "54220193"
 
 例については、「[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」をご覧ください。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [localeconv](../c-runtime-library/reference/localeconv.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

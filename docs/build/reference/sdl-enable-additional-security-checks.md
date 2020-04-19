@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318447"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (追加のセキュリティ チェックの有効化)
 
@@ -23,7 +23,7 @@ ms.locfileid: "52389943"
 
 ## <a name="remarks"></a>Remarks
 
-**/sdl**によって提供されるベースライン セキュリティ チェックのスーパー セットの有効[/GS](../../build/reference/gs-buffer-security-check.md)と上書き **/GS-** します。 既定では、 **/sdl**はオフです。 **/sdl-** 追加のセキュリティ チェックを無効にします。
+**/sdl**によって提供されるベースライン セキュリティ チェックのスーパー セットの有効[/GS](gs-buffer-security-check.md)と上書き **/GS-** します。 既定では、 **/sdl**はオフです。 **/sdl-** 追加のセキュリティ チェックを無効にします。
 
 ## <a name="compile-time-checks"></a>コンパイル時のチェック
 
@@ -67,7 +67,7 @@ ms.locfileid: "52389943"
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、 **C/C++** フォルダー。
 
@@ -75,5 +75,5 @@ ms.locfileid: "52389943"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

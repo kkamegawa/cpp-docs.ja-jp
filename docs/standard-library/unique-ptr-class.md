@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3aff30e2e23feb85c6b93d79ddd4552849d3ba05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520973"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243474"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr クラス
 
@@ -93,16 +93,16 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*右*<br/>
+*そうです*\
 `unique_ptr`。
 
-*関数*<br/>
+*関数*\
 `rvalue` 型の `std::nullptr_t`。
 
-*ptr*<br/>
+*ptr*\
 `pointer`。
 
-*削除子*<br/>
+*削除子*\
 `deleter` にバインドされている `unique_ptr` 関数。
 
 ## <a name="exceptions"></a>例外
@@ -125,21 +125,21 @@ public:
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[unique_ptr](#unique_ptr)|`unique_ptr` には、7 種類のコンストラクターがあります。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[deleter_type](#deleter_type)|テンプレート パラメーター `Del` のシノニム。|
 |[element_type](#element_type)|テンプレート パラメーター `T` のシノニム。|
 |[pointer](#pointer)|定義されている場合は `Del::pointer` のシノニム、それ以外の場合は `T *` のシノニム。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[get](#get)|`stored_ptr` を返します。|
 |[get_deleter](#get_deleter)|`stored_deleter` への参照を返します。|
@@ -149,20 +149,14 @@ public:
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |**operator bool**|演算子に変換できる型の値を返します**bool**します。 変換の結果**bool**は**true**とき`get() != pointer()`それ以外の場合、 **false**します。|
 |`operator->`|このメンバー関数は、`stored_ptr` を返します。|
 |`operator*`|このメンバー関数は、`*stored_ptr` を返します。|
-|[unique_ptr operator=](#unique_ptr_operator_eq)|現在の `unique_ptr` に `unique_ptr` (または `pointer-type`) の値を割り当てます。|
+|[operator=](#unique_ptr_operator_eq)|現在の `unique_ptr` に `unique_ptr` (または `pointer-type`) の値を割り当てます。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<memory>
-
-**名前空間:** std
-
-## <a name="deleter_type"></a>  deleter_type
+### <a name="deleter_type"></a> deleter_type
 
 この型は、テンプレート パラメーター `Del` のシノニムです。
 
@@ -170,11 +164,11 @@ public:
 typedef Del deleter_type;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Del` のシノニムです。
 
-## <a name="element_type"></a>  element_type
+### <a name="element_type"></a> element_type
 
 この型は、テンプレート パラメーター `Type` のシノニムです。
 
@@ -182,11 +176,11 @@ typedef Del deleter_type;
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター `Ty`のシノニムです。
+この型は、テンプレート パラメーター `Ty` のシノニムです。
 
-## <a name="get"></a>  unique_ptr::get
+### <a name="get"></a> 取得
 
 `stored_ptr` を返します。
 
@@ -194,11 +188,11 @@ typedef Type element_type;
 pointer get() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`stored_ptr` を返します。
 
-## <a name="get_deleter"></a>  unique_ptr::get_deleter
+### <a name="get_deleter"></a> get_deleter
 
 `stored_deleter` への参照を返します。
 
@@ -208,11 +202,11 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`stored_deleter` への参照を返します。
 
-## <a name="unique_ptr_operator_eq"></a>  unique_ptr operator=
+### <a name="unique_ptr_operator_eq"></a> 演算子 =
 
 指定された `unique_ptr` のアドレスを現在のアドレスに割り当てます。
 
@@ -223,15 +217,15 @@ unique_ptr& operator=(unique_ptr<Type, Del>&& right);
 unique_ptr& operator=(pointer-type);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
 現在の `unique_ptr` に値を割り当てるために使用される `unique_ptr` 参照。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このメンバー関数は `reset(right.release())` を呼び出し、`right.stored_deleter` を `stored_deleter` に移動し、`*this` を返します。
 
-## <a name="pointer"></a>  pointer
+### <a name="pointer"></a> ポインター
 
 定義されている場合は `Del::pointer` のシノニム、それ以外の場合は `Type *` のシノニム。
 
@@ -239,11 +233,11 @@ unique_ptr& operator=(pointer-type);
 typedef T1 pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 この型は、定義されている場合は `Del::pointer` の同意語、それ以外の場合は `Type *` の同意語です。
 
-## <a name="release"></a>  unique_ptr::release
+### <a name="release"></a> リリース
 
 呼び出し元に返される、格納されたポインターの所有権を解放し、格納されているポインター値に設定**nullptr**します。
 
@@ -251,11 +245,11 @@ typedef T1 pointer;
 pointer release();
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 `release` を使用して、`unique_ptr` が保存した生のポインターの所有権を引き継ぎます。 呼び出し元は、返されたポインターの削除を担当します。 `unique-ptr` は、既定で構築される空の状態に設定します。 `unique_ptr` を呼び出した後に、互換性のある型の別のポインターを `release` に割り当てることができます。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 この例は、返されたオブジェクトに release の呼び出し元が対応する方法を示しています。
 
@@ -296,8 +290,6 @@ int main() {
 }
 ```
 
-コンピューターの出力:
-
 ```Output
 Constructing Sample(3)
 Constructing Sample(42)
@@ -305,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-## <a name="reset"></a>  unique_ptr::reset
+### <a name="reset"></a> リセット
 
 ポインター パラメーターの所有権を取得してから、格納されている元のポインターを削除します。 新しいポインターは、元の格納されたポインターと同じ場合`reset`ポインターを削除し、格納されたポインター設定**nullptr**します。
 
@@ -314,19 +306,18 @@ void reset(pointer ptr = pointer());
 void reset(nullptr_t ptr);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|所有権を取得するリソースへのポインター。|
+*ptr*\
+所有権を取得するリソースへのポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 使用`reset`、格納されている変更[ポインター](#pointer)によって所有されている、`unique_ptr`に*ptr*し、元の格納されているポインターを削除します。 `unique_ptr` が空でなかった場合、`reset` は元の格納されているポインターについて [get_deleter](#get_deleter) が返すデリーター関数を呼び出します。
 
 `reset`まず新しいポインターを格納*ptr*、元の格納されたポインターを削除しますが可能性があります`reset`を今すぐ削除*ptr*元と同じである場合格納されたポインター。
 
-## <a name="swap"></a>  unique_ptr::swap
+### <a name="swap"></a> スワップ
 
 2 つの `unique_ptr` オブジェクト間でポインターを交換します。
 
@@ -334,16 +325,16 @@ void reset(nullptr_t ptr);
 void swap(unique_ptr& right);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 ポインターを交換するために使用される `unique_ptr`。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`stored_ptr` を `right.stored_ptr` と交換し、`stored_deleter` を `right.stored_deleter` と交換します。
 
-## <a name="unique_ptr"></a>  unique_ptr::unique_ptr
+### <a name="unique_ptr"></a> unique_ptr
 
 `unique_ptr` には、7 種類のコンストラクターがあります。
 
@@ -363,24 +354,27 @@ unique_ptr(
 unique_ptr(pointer ptr, typename remove_reference<Del>::type&& _Deleter);
 unique_ptr(unique_ptr&& right);
 template <class Ty2, Class Del2>
-unique_ptr(unique_ptr<Ty2, Del2>&& right);
+    unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*ptr*|`unique_ptr.` に割り当てられるリソースへのポインター。|
-|*_Deleter*|`unique_ptr` に割り当てられる `deleter`。|
-|*right*|新しく構築された `unique_ptr` に対する `unique_ptr` フィールドの割り当て元となる `unique_ptr` への `rvalue reference`。|
+*ptr*\
+割り当てられるリソースへのポインター、`unique_ptr`します。
 
-### <a name="remarks"></a>Remarks
+*_Deleter*\
+`unique_ptr` に割り当てられる `deleter`。
+
+*そうです*\
+新しく構築された `unique_ptr` に対する `unique_ptr` フィールドの割り当て元となる `unique_ptr` への `rvalue reference`。
+
+#### <a name="remarks"></a>Remarks
 
 最初の 2 つのコンストラクターはリソースを管理しないオブジェクトを構築します。 3 番目のコンス トラクター ストア*ptr*で`stored_ptr`します。 4 番目のコンス トラクター ストア*ptr*で`stored_ptr`と`deleter`で`stored_deleter`します。
 
 5 番目のコンス トラクター ストア*ptr*で`stored_ptr`移動`deleter`に`stored_deleter`します。 6 番目と 7 番目のコンストラクターは `stored_ptr` に `right.release()` を格納し、`stored_deleter` に `right.get_deleter()` を移動します。
 
-## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
+### <a name="dtorunique_ptr"></a> ~ unique_ptr
 
 `unique_ptr` のデストラクターで、`unique_ptr` オブジェクトを破棄します。
 
@@ -388,10 +382,6 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ~unique_ptr();
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このデストラクターは `get_deleter()(stored_ptr)` を呼び出します。
-
-## <a name="see-also"></a>関連項目
-
-[\<memory>](../standard-library/memory.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449089"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453080"
 ---
 # <a name="outofrange-class"></a>out_of_range クラス
 
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```cpp
 Caught: invalid string position
@@ -71,5 +71,5 @@ Caught: invalid string position
 
 ## <a name="see-also"></a>関連項目
 
-[logic_error クラス](../standard-library/logic-error-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error クラス](../standard-library/logic-error-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

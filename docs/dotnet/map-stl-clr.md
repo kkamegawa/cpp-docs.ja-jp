@@ -100,11 +100,11 @@ helpviewer_keywords:
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
 ms.openlocfilehash: 9150d603f67051df4a6f182366623935e59fe9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393715"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
@@ -1539,7 +1539,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 使用するキー値。
 
-*マップ*<br/>
+*mapped*<br/>
 検索する値をマップします。
 
 ### <a name="remarks"></a>Remarks

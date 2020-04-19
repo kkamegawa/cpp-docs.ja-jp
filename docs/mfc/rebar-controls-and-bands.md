@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rebar controls [MFC], working with bands in
 - bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
-ms.openlocfilehash: aa20e44825ec57dba19dad0b2a11ca51f315743e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bb7b4aeab1478138aa2b52649f41ca943b5daa4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378166"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar コントロールとバンド
 
@@ -42,4 +42,3 @@ Rebar コントロールの主な目的では、子ウィンドウ、コモン �
 
 [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

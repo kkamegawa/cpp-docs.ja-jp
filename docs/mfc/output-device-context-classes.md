@@ -11,12 +11,12 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 6bddebb17663e8d22a4bf784d2a9d08a2f912e59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410201"
 ---
 # <a name="output-device-context-classes"></a>出力 (デバイス コンテキスト) クラス
 
@@ -68,4 +68,3 @@ Windows メタファイル デバイス コンテキスト。 Windows メタフ�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

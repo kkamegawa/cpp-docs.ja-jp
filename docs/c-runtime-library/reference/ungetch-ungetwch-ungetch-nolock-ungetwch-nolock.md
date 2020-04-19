@@ -1,12 +1,12 @@
 ---
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungetch_nolock
 - ungetwch
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430304"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945907"
 ---
-# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
+# <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
 コンソールから読み取った最後の文字をプッシュします。
 
@@ -82,11 +85,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>戻り値
 
-どちらの関数は、文字を返します*c*成功した場合。 エラーがある場合 **_ungetch**の値を返します**EOF**と **_ungetwch**返します**WEOF**します。
+成功した場合、どちらの関数も文字*c*を返します。 エラーが発生した場合、 **_ungetch**は**EOF**の値を返し、 **_ungetwch**は**WEOF**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数の文字をプッシュする*c* 、コンソールに戻って原因*c*して読み取る次の文字にする **_getch**または **_getche** (または **_getwch**または **_getwche**)。 **_ungetch**と **_ungetwch**次が読み取られる前に複数回呼び出された場合は失敗します。 *C*引数ができない可能性があります**EOF** (または**WEOF**)。
+これらの関数は、文字*c*をコンソールにプッシュして、 *c*を **_getch**または **_getche** (または **_getwch**または **_getwche**) によって読み取られた次の文字にします。 **_ungetch**と **_ungetwch**は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C*引数を**EOF** (または**WEOF**) にすることはできません。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
@@ -101,7 +104,7 @@ wint_t _ungetwch_nolock(
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
+|**_ungetch**、 **ungetch_t**|\<conio.h>|
 |**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。

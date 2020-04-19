@@ -1,21 +1,21 @@
 ---
-title: '方法: 作成して、weak_ptr インスタンスを使用'
+title: '方法: weak_ptr インスタンスを作成して使用する'
 ms.custom: how-to
-ms.date: 07/12/2018
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 32e8d64fdb6449f1d40aec4161bfda54987ca66a
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220323"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245598"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>方法: 作成して、weak_ptr インスタンスを使用
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>方法: weak_ptr インスタンスを作成して使用する
 
-オブジェクトには、参照カウントをインクリメントせずに `shared_ptr` の基になるオブジェクトにアクセスする方法を格納する必要が生じることがあります。 通常、この状況は `shared_ptr` インスタンス間に循環参照がある場合に発生します。
+オブジェクトは、参照カウントがインクリメントされないように、 [shared_ptr](../standard-library/shared-ptr-class.md)の基になるオブジェクトにアクセスする方法を格納する必要がある場合があります。 通常、この状況は `shared_ptr` インスタンス間に循環参照がある場合に発生します。
 
-最適なデザインとして、可能な場合は必ずポインターの共有所有権を避けてください。 ただし、`shared_ptr` インスタンスの共有所有権が必要な場合、それらのインスタンス間の循環参照が発生しないようにします。 循環参照を回避できない場合や、何らかの場合で循環参照が必要とされる場合でも、`weak_ptr` を使用して 1 人以上の所有者に別の `shared_ptr` への弱い参照を与えてください。 `weak_ptr` を使用すると、関連するインスタンスの既存のセットに結合される `shared_ptr` を作成できますが、基になるメモリ リソースがまだ有効な場合のみです。 `weak_ptr` 自体は、参照カウントに参加しないため、参照カウントが 0 になるのを防止することはできません。 ただし、`weak_ptr` を使用して、初期化に使用された `shared_ptr` の新しいコピーの取得を試みることはできます。 メモリが既に削除された場合、`bad_weak_ptr`例外がスローされます。 メモリがまだ有効である場合は、新しい共有ポインターが参照カウントをインクリメントし、`shared_ptr` の変数がスコープ内に入っている限りメモリが有効であることを保証します。
+最適なデザインとして、可能な場合は必ずポインターの共有所有権を避けてください。 ただし、`shared_ptr` インスタンスの共有所有権が必要な場合、それらのインスタンス間の循環参照が発生しないようにします。 循環参照が避けられない場合、または何らかの理由で推奨される場合は、 [weak_ptr](../standard-library/weak-ptr-class.md)を使用して、1人以上の所有者に別の `shared_ptr`への弱い参照を与えます。 `weak_ptr` を使用すると、関連するインスタンスの既存のセットに結合される `shared_ptr` を作成できますが、基になるメモリ リソースがまだ有効な場合のみです。 `weak_ptr` 自体は、参照カウントに参加しないため、参照カウントが 0 になるのを防止することはできません。 ただし、`weak_ptr` を使用して、初期化に使用された `shared_ptr` の新しいコピーの取得を試みることはできます。 メモリが既に削除されている場合、`weak_ptr`の bool 演算子は `false`を返します。 メモリがまだ有効である場合は、新しい共有ポインターが参照カウントをインクリメントし、`shared_ptr` の変数がスコープ内に入っている限りメモリが有効であることを保証します。
 
 ## <a name="example"></a>例
 
@@ -65,8 +65,8 @@ Status of 1 = On
 Status of 3 = On
 Status of 4 = On
 use_count = 1
-Status of 0 = O
-nStatus of 1 = On
+Status of 0 = On
+Status of 1 = On
 Status of 2 = On
 Status of 4 = On
 use_count = 1
@@ -84,6 +84,6 @@ Press any key
 
 テストとして、ベクター `others` を `vector<shared_ptr<Controller>>` に変更した後、出力で、`TestRun` が返されたときにデストラクターが呼び出されないことを確認してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

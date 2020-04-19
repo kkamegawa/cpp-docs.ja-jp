@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3013
 ms.assetid: f896777d-27e6-4b6d-baab-1567317f3374
-ms.openlocfilehash: 378d15263b00fdc408565fef1c04d7d1b30b30d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c88d78df84af39933e719e02f8ab5839540130fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612070"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759426"
 ---
 # <a name="compiler-error-c3013"></a>コンパイラ エラー C3013
 
@@ -21,7 +21,7 @@ ms.locfileid: "50612070"
 
 次の例では C3013 が生成されます。
 
-```
+```cpp
 // C3013.cpp
 // compile with: /openmp
 int main() {

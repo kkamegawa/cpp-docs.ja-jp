@@ -1,5 +1,5 @@
 ---
-title: 'コンテナー : 高度な機能'
+title: コンテナー:高度な機能
 ms.date: 11/04/2016
 helpviewer_keywords:
 - links [MFC], to embedded OLE objects
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152931"
 ---
-# <a name="containers-advanced-features"></a>コンテナー : 高度な機能
+# <a name="containers-advanced-features"></a>コンテナー:高度な機能
 
 この記事では、既存のコンテナー アプリケーションに省略可能な高度な機能を組み込むために必要な手順について説明します。 これらの機能は次のとおりです。
 
@@ -31,7 +31,7 @@ ms.locfileid: "50506081"
 
 コンテナー/サーバー アプリケーションは、コンテナーとサーバーの両方として機能するアプリケーションです。 Microsoft Word for Windows では、この例を示します。 Windows の Word ドキュメントを他のアプリケーションに埋め込むことができますし、Windows の Word ドキュメント内のアイテムを埋め込むこともします。 コンテナー アプリケーションのコンテナーと (組み合わせコンテナー/ミニサーバー アプリケーションを作成することはできません)、完全なサーバーの両方を変更するプロセスについては、完全なサーバーを作成するためのプロセスに似ています。
 
-この記事[サーバー: サーバーを実装する](../mfc/servers-implementing-a-server.md)さまざまなサーバー アプリケーションを実装するために必要なタスクを一覧表示されます。 コンテナー/サーバー アプリケーションへのコンテナー アプリケーションを変換する場合、必要があります、同じタスクの一部を実行するコードをコンテナーに追加します。 考慮すべき重要な点を次に示します。
+この記事[サーバー。サーバーを実装する](../mfc/servers-implementing-a-server.md)さまざまなサーバー アプリケーションを実装するために必要なタスクを一覧表示されます。 コンテナー/サーバー アプリケーションへのコンテナー アプリケーションを変換する場合、必要があります、同じタスクの一部を実行するコードをコンテナーに追加します。 考慮すべき重要な点を次に示します。
 
 - 既にアプリケーション ウィザードによって作成されたコンテナーのコードでは、OLE サブシステムを初期化します。 変更または追加をサポートする、何かする必要はありません。
 
@@ -39,9 +39,9 @@ ms.locfileid: "50506081"
 
 - オーバーライド`COleClientItem::CanActivate`場で編集できる、サーバー自体を使用中は、配置内の項目を編集しないようにします。
 
-   たとえば、MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)コンテナー/サーバー アプリケーションで作成されたアイテムが埋め込まれています。 OCLIENT アプリケーションを開くし、一括編集コンテナー/サーバー アプリケーションで作成された項目。 アプリケーションのアイテムの編集中に決定した MFC OLE サンプルで作成したアイテムを埋め込む[HIERSVR](../visual-cpp-samples.md)します。 これを行うには、インプレース アクティブ化を使用することはできません。 完全には、この項目をアクティブ化する HIERSVR を開く必要があります。 Microsoft Foundation Class ライブラリがこの OLE 機能をサポートしていないためにオーバーライド`COleClientItem::CanActivate`すると、このような状況を確認し、アプリケーションで可能な実行時エラーを防ぐことができます。
+   たとえば、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)コンテナー/サーバー アプリケーションで作成されたアイテムが埋め込まれています。 OCLIENT アプリケーションを開くし、一括編集コンテナー/サーバー アプリケーションで作成された項目。 アプリケーションのアイテムの編集中に決定した MFC OLE サンプルで作成したアイテムを埋め込む[HIERSVR](../overview/visual-cpp-samples.md)します。 これを行うには、インプレース アクティブ化を使用することはできません。 完全には、この項目をアクティブ化する HIERSVR を開く必要があります。 Microsoft Foundation Class ライブラリがこの OLE 機能をサポートしていないためにオーバーライド`COleClientItem::CanActivate`すると、このような状況を確認し、アプリケーションで可能な実行時エラーを防ぐことができます。
 
-新しいアプリケーションを作成し、コンテナー/サーバー アプリケーションとして機能する場合は、アプリケーション ウィザードでこのサポート OLE オプション ダイアログ ボックスのオプションが自動的に作成されることを選択します。 詳細については、この記事を参照してください。[概要: ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。 MFC のサンプルについては、MFC のサンプルを参照してください。
+新しいアプリケーションを作成し、コンテナー/サーバー アプリケーションとして機能する場合は、アプリケーション ウィザードでこのサポート OLE オプション ダイアログ ボックスのオプションが自動的に作成されることを選択します。 詳細については、この記事を参照してください。[概要。ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。 MFC のサンプルについては、MFC のサンプルを参照してください。
 
 それ自体に MDI アプリケーションを挿入することはできませんに注意してください。 SDI アプリケーションである場合を除き、コンテナー/サーバー アプリケーションを自体に挿入できません。
 
@@ -69,10 +69,9 @@ ms.locfileid: "50506081"
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT します。CPP*このサンプル アプリケーションのファイル。
+MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT します。CPP*このサンプル アプリケーションのファイル。
 
 ## <a name="see-also"></a>関連項目
 
 [コンテナー](../mfc/containers.md)<br/>
 [サーバー](../mfc/servers.md)
-

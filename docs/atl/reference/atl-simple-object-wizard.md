@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: 7b1d83e74c08f8cb0109c6e5db19ba0e4ebeda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e18c1848c55208b02026aba7684db928e0d6fc0a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260897"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL シンプル オブジェクト ウィザード
 
@@ -45,7 +45,7 @@ Visual Studio 2008 以降では、このウィザードによって生成され�
 
    ウィザードではファイルは上書きされません。 既存のファイルの名前を選択する場合、**[完了]** をクリックすると、ウィザードからクラス宣言をファイルのコンテンツに追加するかどうかを指定するように求められます。 ファイルを追加するには、**[はい]** をクリックします。ウィザードに戻り、別のファイル名を指定するには、**[いいえ]** をクリックします。
 
-- **クラス**
+- **Class**
 
    作成するクラスの名前を設定します。 この名前がで指定した名前に基づいて**短い名前**'C'、クラス名の一般的なプレフィックスが付いた、します。
 
@@ -91,4 +91,3 @@ Visual Studio 2008 以降では、このウィザードによって生成され�
 ## <a name="see-also"></a>関連項目
 
 [ATL シンプル オブジェクト](../../atl/reference/adding-an-atl-simple-object.md)
-

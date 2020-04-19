@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6008
 ms.assetid: f0f304fc-709a-4843-bc7e-bad1ae0d1649
 ms.openlocfilehash: 60e6475a84d2662ad3718e04dba879dc06afeee7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214078"
 ---
 # <a name="c-runtime-error-r6008"></a>C ランタイム エラー R6008
 
@@ -24,8 +24,8 @@ ms.locfileid: "50441900"
 >
 > - その他の実行中のアプリケーションを閉じるか、メモリを解放するため、コンピューターを再起動します。
 > - アプリをコマンドライン引数のサイズと数を削減します。
-> - 使用して、**アプリおよび機能**または**プログラムと機能**ページで、**コントロール パネルの **を修復またはプログラムを再インストールします。
-> - 確認**Windows Update**で、**コントロール パネルの **ソフトウェアの更新。
+> - 使用して、**アプリおよび機能**または**プログラムと機能**ページで、**コントロール パネルの** を修復またはプログラムを再インストールします。
+> - 確認**Windows Update**で、**コントロール パネルの** ソフトウェアの更新。
 > - アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリのベンダーにお問い合わせください。
 
 **プログラマのための情報**

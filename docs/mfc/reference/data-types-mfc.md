@@ -24,24 +24,24 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: 56da8a25261a54e952a529e93063fbe853cbf16d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608088"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502130"
 ---
 # <a name="data-types-mfc"></a>データ型 (MFC)
 
-このトピックでは、Microsoft Foundation Class ライブラリで最もよく使用されるデータ型を使用します。 ほとんどのデータ型は、他のユーザーは MFC 固有プラットフォーム ソフトウェア開発キット (SDK) のと同じです。
+このトピックでは、Microsoft Foundation Class ライブラリで最もよく使用されるデータ型の一覧を示します。 ほとんどのデータ型は、プラットフォームソフトウェア開発キット (SDK) のデータ型と同じですが、MFC に固有のものもあります。
 
-Windows SDK と MFC の両方で使用されるデータ型については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。
+Windows SDK と MFC の両方で使用されるデータ型の詳細については、「 [Windows データ型](/windows/win32/WinProg/windows-data-types)」を参照してください。
 
-Microsoft Foundation Class ライブラリに固有のデータ型を以下に示します。
+Microsoft Foundation Class ライブラリに固有のデータ型には、次のものがあります。
 
-- コレクション内の要素の位置を示すために使用される値を配置します。MFC コレクション クラスによって使用されます。
+- コレクション内の要素の位置を示すために使用される値を配置します。MFC コレクションクラスによって使用されます。
 
-- (変更不可能な) 定数に相当する 32 ビット ポインターを LPCRECT`RECT`構造体。
+- Lpcrect a 32-定数 (不変) `RECT`構造体へのビットポインター。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3761
 ms.assetid: 0c16f093-7a78-4838-b90b-0c67ef6e9270
-ms.openlocfilehash: c78709acfafabbc6d6bc24979432a93e899c3208
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3ac54b7f72cbcc8107aeaebaac4b8e824d3c315
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530911"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757268"
 ---
 # <a name="compiler-error-c3761"></a>コンパイラ エラー C3761
 
-'function': 'retval' は関数の最後の引数でのみ記述できます
+' function ': ' retval ' は関数の最後の引数でのみ使用できます
 
-[Retval](../../windows/retval.md)属性がリストの最後の引数が関数の引数で使用されていました。
+[Retval](../../windows/retval.md)属性が、リストの最後の引数ではない関数引数で使用されました。
 
 次の例では、C3761 が生成されます。
 
-```
+```cpp
 // C3761.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

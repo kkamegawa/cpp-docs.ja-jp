@@ -8,7 +8,7 @@
       items:
         - name: ドキュメント
           tocHref: /cpp/
-          topicHref: /cpp/visual-cpp-in-visual-studio
+          topicHref: /cpp/overview/visual-cpp-in-visual-studio
           items:
             - name: C++ 言語
               tocHref: /cpp/cpp/
@@ -18,12 +18,25 @@
               topicHref: /cpp/c-language/c-language-reference
             - name: C/C++ プリプロセッサ
               tocHref: /cpp/preprocessor/
-              topicHref: /cpp/c-cpp-preprocessor-reference
+              topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
+            - name: コンパイラの組み込みとアセンブリ言語
+              tocHref: /cpp/intrinsics/
+              topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
+              items:
+                - name: ARM
+                  tocHref: /cpp/assembler/arm/
+                  topicHref: /cpp/assembler/arm/arm-assembler-reference
+                - name: インライン アセンブラー
+                  tocHref: /cpp/assembler/inline/
+                  topicHref: /cpp/assembler/inline/inline-assembler
+                - name: MASM
+                  tocHref: /cpp/assembler/masm/
+                  topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
             - name: C ランタイム ライブラリ
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
-                - name: 参照
+                - name: 関連項目
                   tocHref: /cpp/c-runtime-library/reference/
                   topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
             - name: C++ 標準ライブラリ
@@ -36,24 +49,20 @@
                 - name: ATL
                   tocHref: /cpp/atl/
                   topicHref: /cpp/atl/atl-com-desktop-components
-                  items:
-                    - name: 参照
-                      tocHref: /cpp/atl/reference/
-                      topicHref: /cpp/atl/reference/atl-classes
                 - name: MFC
                   tocHref: /cpp/mfc/
                   topicHref: /cpp/mfc/mfc-desktop-applications
                   items:
-                    - name: 参照
+                    - name: 関連項目
                       tocHref: /cpp/mfc/reference/
                       topicHref: /cpp/mfc/reference/mfc-classes
                 - name: ATL/MFC 共有クラス
                   tocHref: /cpp/atl-mfc-shared/
                   topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
                   items:
-                    - name: 参照
+                    - name: 関連項目
                       tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-mfc-and-atl
+                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
                 - name: C++/CX
                   tocHref: /cpp/cppcx/
                   topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
@@ -68,7 +77,7 @@
               topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
             - name: データ アクセス
               tocHref: /cpp/data/
-              topicHref: /cpp/data/
+              topicHref: /cpp/data/data-access-in-cpp
               items:
                 - name: OLEDB
                   tocHref: /cpp/data/oledb/
@@ -76,42 +85,24 @@
                 - name: ODBC
                   tocHref: /cpp/data/odbc/
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
-            - name: IDE およびツール
-              tocHref: /cpp/ide/
-              topicHref: /cpp/ide/ide-and-tools-for-visual-cpp-development
+            - name: コードの編集、移動、およびリファクタリング
+              tocHref: /cpp/ide
+              topicHref: /cpp/overview-of-cpp-development
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
                   topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-                - name: ビルド
-                  tocHref: /cpp/build/building-c-cpp-programs
+            - name: C/C++ プロジェクトのビルド
+              tocHref: /cpp/build/
+              topicHref: /cpp/build/building-c-cpp-programs
+              items:
+                - name: ビルドのリファレンス
+                  tocHref: /cpp/build/reference/
+                  topicHref: /cpp/build/reference/c-cpp-building-reference
                   items:
-                    - name: ビルドのリファレンス
-                      tocHref: /cpp/build/reference/
-                      topicHref: /cpp/build/reference/c-cpp-building-reference
-                      items:
-                        - name: コンパイラ エラー
-                          tocHref: /cpp/error-messages/compiler-errors-1/
-                          topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
-                        - name: コンパイラの警告
-                          tocHref: /cpp/compiler-warnings/
-                          topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
-                        - name: その他のツール
-                          tocHref: /cpp/error-messages/tool-errors/
-                          topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
-                - name: コンパイラの組み込みとアセンブリ言語
-                  tocHref: /cpp/intrinsics/
-                  topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
-                  items:
-                    - name: ARM
-                      tocHref: /cpp/assembler/arm/
-                      topicHref: /cpp/assembler/arm/arm-assembler-reference
-                    - name: インライン アセンブラー
-                      tocHref: /cpp/assembler/inline/
-                      topicHref: /cpp/assembler/inline-assembler
-                    - name: MASM
-                      tocHref: /cpp/assembler/masm/
-                      topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
+                    - name: コンパイラおよびツールのエラーと警告
+                      tocHref: /cpp/error-messages/
+                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: 移植とアップグレード
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide

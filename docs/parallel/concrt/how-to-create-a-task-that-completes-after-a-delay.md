@@ -5,35 +5,35 @@ helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76189f45eb486e06b040155f6697bf003659b474
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616338"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141741"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>方法: 遅延後に完了するタスクを作成する
 
-この例は、使用する方法を示します、 [concurrency::task](../../parallel/concrt/reference/task-class.md)、 [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)、 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)、 [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)、 [concurrency::timer](../../parallel/concrt/reference/timer-class.md)、および[concurrency::call](../../parallel/concrt/reference/call-class.md)遅延後に完了するタスクを作成するためのクラス。 このメソッドを使用すると、場合によってはデータをポーリング、タイムアウトを導入、あらかじめ決められた期間、ユーザー入力の処理の遅延、具合をループをビルドします。
+この例では、 [concurrency:: task](../../parallel/concrt/reference/task-class.md)、 [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)、 [concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)、concurrency [:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)、 [concurrency:: timer](../../parallel/concrt/reference/timer-class.md)、および[concurrency:: call](../../parallel/concrt/reference/call-class.md)クラスを使用して、遅延後に完了するタスクを作成する方法を示します。 このメソッドを使用すると、定期的にデータをポーリングするループを作成したり、タイムアウトを導入したり、事前に定義された時間にユーザー入力の処理を遅延させることができます。
 
 ## <a name="example"></a>例
 
-`complete_after` 関数および `cancel_after_timeout` 関数の例を次に示します。 `complete_after`関数を作成、`task`オブジェクトを指定した遅延後に完了します。 使用して、`timer`オブジェクトと`call`を設定するオブジェクト、`task_completion_event`指定された遅延の後のオブジェクト。 使用して、`task_completion_event`クラス、スレッドの後に完了するタスクを定義することや、別のタスクは使用可能な値を示します。 イベントが設定されている場合は、リスナー タスクが完了し、その継続の実行がスケジュールされています。
+`complete_after` 関数および `cancel_after_timeout` 関数の例を次に示します。 `complete_after` 関数は、指定された遅延の後に完了する `task` オブジェクトを作成します。 `timer` オブジェクトと `call` オブジェクトを使用して、指定された遅延の後に `task_completion_event` オブジェクトを設定します。 `task_completion_event` クラスを使用すると、スレッドまたは別のタスクによって値が使用可能であることが通知された後に完了するタスクを定義できます。 イベントが設定されると、リスナータスクが完了し、その継続が実行されるようにスケジュールされます。
 
 > [!TIP]
->  詳細については、`timer`と`call`Asynchronous Agents Library の一部のクラスを参照してください[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
+> 非同期エージェントライブラリの一部である `timer` および `call` クラスの詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
-`cancel_after_timeout`関数に基づいて、`complete_after`そのタスクが指定したタイムアウト時間の前に完了しない場合は、タスクをキャンセルする関数。 `cancel_after_timeout`関数は、2 つのタスクを作成します。 最初のタスクの成功を示すし、指定されたタスクの完了後に完了2 番目のタスクは、エラーを示し、指定したタイムアウト後に完了します。 `cancel_after_timeout`関数が成功または失敗のタスクが完了したときに実行される継続タスクを作成します。 エラー タスクには、最初が完了すると、継続は、全体的なタスクをキャンセルするトークンのソースをキャンセルします。
+`cancel_after_timeout` 関数は、指定されたタイムアウトの前にタスクが完了しない場合にタスクを取り消すために、`complete_after` 関数を基にしています。 `cancel_after_timeout` 関数は、2つのタスクを作成します。 最初のタスクは成功を示し、指定されたタスクが完了した後に完了します。2番目のタスクは失敗を示し、指定されたタイムアウトの後に完了します。 `cancel_after_timeout` 関数は、成功または失敗のタスクが完了したときに実行される継続タスクを作成します。 エラータスクが最初に完了した場合、継続はトークンソースをキャンセルしてタスク全体を取り消します。
 
 [!code-cpp[concrt-task-delay#1](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_1.cpp)]
 
 ## <a name="example"></a>例
 
-次の例は、[0, 100000] の範囲内の素数の数を計算します。 複数回です。 指定された時間制限内に完了しない場合、操作が失敗します。 `count_primes`関数が使用する方法を示します、`cancel_after_timeout`関数。 特定の範囲内の素数の数をカウントし、指定された時間内にタスクが完了しない場合は失敗します。 `wmain`関数呼び出し、`count_primes`複数回に機能します。 常に、制限時間は半分です。 プログラムの完了後、現在の制限時間内に操作が完了しません。
+次の例では、範囲 [0, 10万] の素数の数を複数回計算しています。 指定された制限時間内に完了しなかった場合、操作は失敗します。 `count_primes` 関数は、`cancel_after_timeout` 関数の使用方法を示しています。 指定された範囲の primes の数をカウントし、指定された時間内にタスクが完了しない場合は失敗します。 `wmain` 関数は、`count_primes` 関数を複数回呼び出します。 そのたびに、時間制限が半分になります。 現在の制限時間内に操作が完了しないと、プログラムは終了します。
 
 [!code-cpp[concrt-task-delay#2](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_2.cpp)]
 
-この手法を使用して遅延後にタスクをキャンセルするときにタスク全体が取り消された後、まだ開始していないタスクは開始されません。 ただし、適切なタイミングで、キャンセルに応答する、実行時間の長いタスクの重要なは。 タスクのキャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+この手法を使用して遅延後にタスクを取り消すと、タスク全体が取り消された後に、未開始のタスクが開始されません。 ただし、長時間実行されるタスクは、キャンセルに迅速に応答することが重要です。 タスクのキャンセルの詳細については、「 [PPL における取り消し](cancellation-in-the-ppl.md)処理」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -43,11 +43,11 @@ ms.locfileid: "50616338"
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`task-delay.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、`task-delay.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc タスク-delay.cpp**
+**cl.exe/EHsc task-delay**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [task クラス (コンカレンシー ランタイム)](../../parallel/concrt/reference/task-class.md)<br/>
@@ -58,4 +58,3 @@ ms.locfileid: "50616338"
 [call クラス](../../parallel/concrt/reference/call-class.md)<br/>
 [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [PPL における取り消し処理](cancellation-in-the-ppl.md)
-

@@ -1,10 +1,10 @@
 ---
 title: _onexit、_onexit_m
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _onexit
 - _onexit_m
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _onexit
 - onexit_m
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951344"
 ---
-# <a name="onexit-onexitm"></a>_onexit、_onexit_m
+# <a name="_onexit-_onexit_m"></a>_onexit、_onexit_m
 
 終了時に呼び出されるルーチンを登録します。
 
@@ -59,15 +62,15 @@ _onexit_t_m _onexit_m(
 
 ## <a name="return-value"></a>戻り値
 
-**_onexit**成功した場合、関数へのポインターを返しますまたは**NULL**関数ポインターを格納する領域がない場合。
+**_onexit**は、成功した場合は関数へのポインターを返し、関数ポインターを格納する領域がない場合は**NULL**を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Onexit**関数には、関数のアドレスが渡されます (*関数*) プログラムが正常に終了したときに呼び出されます。 連続して呼び出す **_onexit** LIFO (最後に、最初に取り出さ) の順序で実行される関数のレジスタが作成されます。 渡される関数は、 **_onexit**パラメーターを受け取ることはできません。
+**_Onexit**関数には、プログラムが正常に終了したときに呼び出される関数 (*関数*) のアドレスが渡されます。 **_Onexit**を連続して呼び出すと、LIFO (後入れ先出し) の順序で実行される関数のレジスタが作成されます。 **_Onexit**に渡される関数は、パラメーターを受け取ることができません。
 
-場合と **_onexit**で登録されたルーチン、DLL 内から呼び出される **_onexit** DLL の実行の後にアンロードする**DllMain**が DLL_PROCESS_DETACH で呼び出されます。
+DLL 内から **_onexit**が呼び出された場合、 **_onexit**に登録されているルーチンは、DLL_PROCESS_DETACH を使用して**DllMain**が呼び出された後に dll のアンロード時に実行されます。
 
-**_onexit**は Microsoft 拡張機能です。 ANSI の移植性のためには、[atexit](atexit.md) を使用します。 **_Onexit_m**関数のバージョンは、混在モードを使用します。
+**_onexit**は Microsoft の拡張機能です。 ANSI の移植性のためには、[atexit](atexit.md) を使用します。 関数のバージョン **(_s)** は混合モードで使用されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -122,7 +125,7 @@ int fn4()
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 This is executed first.

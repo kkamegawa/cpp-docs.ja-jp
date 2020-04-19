@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 6b9788fc02a3bf4d59d34823ba83d86f97298597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642469"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514370"
 ---
-# <a name="msunion"></a>ms_union
+# <a name="ms_union"></a>ms_union
 
-カプセル化されていない共用体のネットワーク データ表現の整列を制御します。
+カプセル化されていない共用体のネットワークデータ表現の配置を制御します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50642469"
 
 ## <a name="remarks"></a>Remarks
 
-**Ms_union** C++ 属性と同じ機能を持つ、 [ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL 属性。
+**Ms_union** C++属性には、 [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、配置の**ms_union**:
+次のコードは、 **ms_union**の配置を示しています。
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp

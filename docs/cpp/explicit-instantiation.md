@@ -7,11 +7,11 @@ helpviewer_keywords:
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
 ms.openlocfilehash: 45661653b4b8f1a4f94ece1c53aa86f4a431700b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392207"
 ---
 # <a name="explicit-instantiation"></a>明示的なインスタンス化
 
@@ -33,7 +33,7 @@ template MyStack<int, 6>::MyStack( void );
 
 例で示すように、再宣言する特定の型引数を使用して、関数テンプレートをインスタンス化することが明示的に[関数テンプレートのインスタンス化](../cpp/function-template-instantiation.md)します。
 
-使用することができます、 **extern**メンバーの自動インスタンス化されないようにするキーワード。 例えば:
+使用することができます、 **extern**メンバーの自動インスタンス化されないようにするキーワード。 例:
 
 ```cpp
 extern template class MyStack<int, 6>;

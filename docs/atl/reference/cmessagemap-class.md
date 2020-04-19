@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-ms.openlocfilehash: 325851b75cef340fe5dcc762df54c40ded1ed704
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 617b7b4592c96625b44fbe5c2b93da971a423128
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258534"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap クラス
 
@@ -99,6 +99,6 @@ TRUE の場合は、メッセージが完全に処理されます。それ以外
 ## <a name="see-also"></a>関連項目
 
 [CDynamicChain クラス](../../atl/reference/cdynamicchain-class.md)<br/>
-[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

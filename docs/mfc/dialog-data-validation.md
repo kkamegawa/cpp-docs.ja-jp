@@ -1,5 +1,5 @@
 ---
-title: ダイアログ データ検証
+title: ダイアログ データ バリデーション
 ms.date: 11/04/2016
 helpviewer_keywords:
 - validating data [MFC], message boxes
@@ -9,24 +9,23 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: 2283806d3fe7c4ff6bd3abc2ae6a86f5dd176d10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c89ed82b148062ddb64fa85eaabda12f44e59895
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483350"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685762"
 ---
-# <a name="dialog-data-validation"></a>ダイアログ データ検証
+# <a name="dialog-data-validation"></a>ダイアログ データ バリデーション
 
-例で示すように、DDV 関数の呼び出しでデータ交換だけでなく検証を指定できます[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)します。 `DDV_MaxChars`呼び出しの例では、テキスト ボックス コントロールに入力した文字列が 20 文字より長くしないことを検証します。 検証が失敗すると、データを再入力できるように、問題のあるコントロールにフォーカスを設定、DDV 関数は通常メッセージ ボックスにユーザーを警告します。 同じコントロールの DDX 関数後すぐに、特定のコントロールの DDV 関数を呼び出す必要があります。
+「[ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)」の例に示すように、DDV 関数を呼び出すことにより、データ交換に加えて検証を指定できます。 この例の `DDV_MaxChars` 呼び出しは、テキストボックスコントロールに入力された文字列が20文字を超えていないことを検証します。 通常、DDV 関数は、検証に失敗した場合にメッセージボックスを使用してユーザーに警告し、ユーザーがデータを再入力できるように、問題のあるコントロールにフォーカスを移します。 特定のコントロールの DDV 関数は、同じコントロールの DDX 関数の直後に呼び出す必要があります。
 
-独自のカスタムの DDX ルーチンおよび DDV ルーチンを定義することもできます。 これと DDX ルーチンおよび DDV の他の側面の詳細については、次を参照してください。 [MFC テクニカル ノート 26](../mfc/tn026-ddx-and-ddv-routines.md)します。
+独自のカスタム DDX ルーチンおよび DDV ルーチンを定義することもできます。 DDX および DDV のその他の側面の詳細については、「 [MFC テクニカルノート 26](../mfc/tn026-ddx-and-ddv-routines.md)」を参照してください。
 
-[追加メンバー変数のウィザード](../ide/add-member-variable-wizard.md)DDX のすべてを記述および DDV 呼び出しがデータ マップにできます。
+[メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)では、データマップ内のすべての DDX 呼び出しと DDV 呼び出しが書き込まれます。
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ データ エクスチェンジとダイアログ データ検証](../mfc/dialog-data-exchange-and-validation.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [ダイアログ データ エクスチェンジ](../mfc/dialog-data-exchange.md)
-

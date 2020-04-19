@@ -1,6 +1,6 @@
 ---
 title: CD2DTextLayout クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextLayout
 - AFXRENDERTARGET/CD2DTextLayout
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca89d12c6aeed33be740aa9f999e7c11d6c32056
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396185"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout クラス
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |名前|説明|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|CD2DTextLayout オブジェクトを構築します。|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|デストラクターです。 D2D テキスト レイアウト オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DTextLayout:: ~ CD2DTextLayout](#_dtorcd2dtextlayout)|デストラクターです。 D2D テキスト レイアウト オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -72,7 +72,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|返します IDWriteTextLayout インターフェイス|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|返します IDWriteTextLayout インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -121,7 +121,7 @@ CD2DTextLayout(
 *strText*<br/>
 新しい CD2DTextLayout オブジェクトを作成する文字列を含む CString オブジェクト。
 
-*TextFormat*<br/>
+*textFormat*<br/>
 文字列に適用する書式を含む CString オブジェクトを指定します。
 
 *sizeMax*<br/>
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 確認するテキストの位置。
 
-*TextRange*<br/>
+*textRange*<br/>
 同じテキストの範囲は、currentPosition で指定された位置にあるテキストとして書式設定します。 つまり、実行には、フォント ファミリ名など、指定された位置として、正確な書式設定します。
 
 ### <a name="return-value"></a>戻り値
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 検査するテキストの位置。
 
-*TextRange*<br/>
+*textRange*<br/>
 同じテキストの範囲は、currentPosition で指定された位置にあるテキストとして書式設定します。 つまり、実行には、ロケール名などの位置指定すると、正確な書式設定します。
 
 ### <a name="return-value"></a>戻り値
@@ -226,7 +226,7 @@ IDWriteTextLayout へのポインター。
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
 
 返します IDWriteTextLayout インターフェイス
 
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 TextRange で指定された範囲内で文字列全体に適用されるフォント ファミリ名
 
-*TextRange*<br/>
+*textRange*<br/>
 この変更を適用するテキスト範囲
 
 ### <a name="return-value"></a>戻り値
@@ -287,7 +287,7 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 Null で終わるロケール名の文字列
 
-*TextRange*<br/>
+*textRange*<br/>
 この変更を適用するテキスト範囲
 
 ### <a name="return-value"></a>戻り値

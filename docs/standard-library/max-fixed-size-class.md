@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 08510ecc3b7469e8f88a61dcb0df28541e170892
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbc39a169f9a4bbac3e78b208b3a1a31e4e30ff2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666455"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456374"
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size クラス
 
@@ -74,11 +74,11 @@ void allocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Nx*|増分値。|
+|*Nx (_s)*|増分値。|
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は何も処理を行いません。 によって呼び出しが成功した後にこのメンバー関数が呼び出されます`cache_freelist::allocate`演算子**新しい**します。 引数 *_Nx*演算子によって割り当てられたチャンク内のメモリ ブロックの数は、**新しい**します。
+このメンバー関数は何も処理を行いません。 このメンバー関数は、operator `cache_freelist::allocate` **new**によるの呼び出しが成功するたびに呼び出されます。 引数 *(_s)* は、 **new**演算子によって割り当てられたチャンク内のメモリブロックの数です。
 
 ## <a name="deallocated"></a>  max_fixed_size::deallocated
 
@@ -92,11 +92,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Nx*|増分値。|
+|*Nx (_s)*|増分値。|
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は何も処理を行いません。 によって、各呼び出しの後にこのメンバー関数が呼び出されます`cache_freelist::deallocate`演算子**削除**します。 引数 *_Nx*演算子によって割り当て解除されたチャンク内のメモリ ブロックの数は、**削除**します。
+このメンバー関数は何も処理を行いません。 このメンバー関数は、が operator **delete**に`cache_freelist::deallocate`対してを呼び出すたびに呼び出されます。 引数 *(_s)* は、 **delete**演算子によって割り当て解除されたチャンク内のメモリブロックの数です。
 
 ## <a name="full"></a>  max_fixed_size::full
 
@@ -108,11 +108,11 @@ bool full();
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合`Max <= _Nblocks`、それ以外の**false**します。
+の場合`Max <= _Nblocks`は true、それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出し、返される場合**true**、 `deallocate` false の場合、返された場合は、フリー リスト; にメモリ ブロックを配置`deallocate`呼び出し演算子**削除**割り当てを解除するブロック。
+このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しで**true**が返され`deallocate`た場合、はメモリブロックをフリーリストに格納します。 `deallocate` false が返された場合は、operator **delete**を呼び出してブロックの割り当てを解除します。
 
 ## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
 
@@ -152,4 +152,4 @@ void saved();
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

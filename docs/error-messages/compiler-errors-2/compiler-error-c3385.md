@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3385
 ms.assetid: 5f1838c1-986e-47db-8dbc-e06976b83cf3
-ms.openlocfilehash: 0cf8f75588339420c688db6e808a62a9fb0ac15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18cdc09a209c072036154cd610684b94addfae49
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571211"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751860"
 ---
 # <a name="compiler-error-c3385"></a>コンパイラ エラー C3385
 
@@ -21,7 +21,7 @@ ms.locfileid: "50571211"
 
 次の例では C3385 が生成されます。
 
-```
+```cpp
 // C3385.cpp
 // compile with: /clr /c
 using namespace System;

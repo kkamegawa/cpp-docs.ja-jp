@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271776"
 ---
 # <a name="errlook-reference"></a>ERRLOOK リファレンス
 
@@ -20,19 +20,19 @@ ms.locfileid: "50621469"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[[値] エディット コントロール](../../build/reference/value-edit-control.md)<br/>
+[[値] エディット コントロール](value-edit-control.md)<br/>
 ERRLOOK の [値] エディット コントロールについて説明します。
 
-[[エラー メッセージ] エディット コントロール](../../build/reference/error-message-edit-control.md)<br/>
+[[エラー メッセージ] エディット コントロール](error-message-edit-control.md)<br/>
 ERRLOOK の [エラー メッセージ] エディット コントロールについて説明します。
 
-[[モジュール] ボタン](../../build/reference/modules-button.md)<br/>
+[[モジュール] ボタン](modules-button.md)<br/>
 ERRLOOK の [モジュール] ボタンについて説明します。
 
-[[検索] ボタン](../../build/reference/look-up-button.md)<br/>
+[[検索] ボタン](look-up-button.md)<br/>
 ERRLOOK の [検索] ボタンについて説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
 Visual C++ に付属の C/C++ ビルド ツールについて説明するトピックへのリンクがあります。

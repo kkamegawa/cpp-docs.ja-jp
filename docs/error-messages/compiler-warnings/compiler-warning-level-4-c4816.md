@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4816
 ms.assetid: 60f730ae-d942-4db9-ab97-41d4a874d8da
-ms.openlocfilehash: 719a950f2cc15b51dcbbb7e8f4f476f92fe326c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96cb81d78b0e49e6978ff6ec78cdbfcfdc89e6d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626656"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990061"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>コンパイラの警告 (レベル 4) C4816
 
@@ -19,11 +19,11 @@ ms.locfileid: "50626656"
 
 サイズが 0 の配列を持つオブジェクトに対するパラメーターが、参照によって渡されませんでした。 オブジェクトが渡されるときに、配列はコピーされません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C4816 が生成されます。
 
-```
+```cpp
 // C4816.cpp
 // compile with: /W4
 #include <stdio.h>

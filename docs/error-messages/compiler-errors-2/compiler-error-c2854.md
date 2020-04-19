@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2854
 ms.assetid: 917fec9c-790a-4149-8dfc-00d17a09199c
-ms.openlocfilehash: a1c30e1fa0f70e5e7bb4b1c97421ca06913fc6f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70b763afa4d511823a62d4d3770fc030ab9fb2ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628970"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745890"
 ---
 # <a name="compiler-error-c2854"></a>コンパイラ エラー C2854
 
-#pragma hdrstop に構文エラー
+#pragma hdrstop に構文エラーがあります
 
-`#pragma hdrstop`無効なファイル名を提供します。 プラグマの後にかっこや引用符で省略可能なファイル名を指定できます。
+`#pragma hdrstop` に無効なファイル名が与えられています。 プラグマの後に、省略可能なファイル名をかっこと引用符で囲んで指定できます。
 
 次の例では、C2854 が生成されます。
 
-```
+```cpp
 // C2854.cpp
 // compile with: /c
 #pragma hdrstop( "\\source\\pchfiles\\myheader.pch" ]   // C2854

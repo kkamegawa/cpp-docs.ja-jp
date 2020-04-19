@@ -1,6 +1,6 @@
 ---
 title: uint_4 クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e763c2654f0edaa02ceaa5294eb33ef02e69ee9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579037"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142413"
 ---
-# <a name="uint4-class"></a>uint_4 クラス
+# <a name="uint_4-class"></a>uint_4 クラス
 
 4 個の符号なし整数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class uint_4;
 ```
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[uint_4 コンス トラクター](#uint_4__ctor) |オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[uint_4 コンストラクター](#uint_4__ctor) |オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -318,7 +318,7 @@ class uint_4;
 |uint_4::get_wzx||
 |uint_4::get_wzxy||
 |uint_4::get_wzy||
-|uint_4::get_wzyx||
+|uint_4:: get_wzyx||
 |uint_4::get_x||
 |uint_4::get_xw||
 |uint_4::get_xwy||
@@ -390,7 +390,7 @@ class uint_4;
 |uint_4::set_wzx||
 |uint_4::set_wzxy||
 |uint_4::set_wzy||
-|uint_4::set_wzyx||
+|uint_4:: set_wzyx||
 |uint_4::set_x||
 |uint_4::set_xw||
 |uint_4::set_xwy||
@@ -437,12 +437,12 @@ class uint_4;
 |uint_4::set_zy||
 |uint_4::set_zyw||
 |uint_4::set_zywx||
-|uint_4::set_zyx||
-|uint_4::set_zyxw||
+|uint_4:: set_zyx||
+|uint_4:: set_zyxw||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
@@ -455,13 +455,13 @@ class uint_4;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#size)||
+|[サイズ定数](#size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -542,7 +542,7 @@ class uint_4;
 |uint_4::wzx||
 |uint_4::wzxy||
 |uint_4::wzy||
-|uint_4::wzyx||
+|uint_4:: wzyx||
 |uint_4::x||
 |uint_4::xw||
 |uint_4::xwy||
@@ -566,8 +566,8 @@ class uint_4;
 |uint_4::ywz||
 |uint_4::ywzx||
 |uint_4::yx||
-|uint_4::yxw||
-|uint_4::yxwz||
+|uint_4:: yxw||
+|uint_4:: yxwz||
 |uint_4::yxz||
 |uint_4::yxzw||
 |uint_4::yz||
@@ -583,7 +583,7 @@ class uint_4;
 |uint_4::zwyx||
 |uint_4::zx||
 |uint_4::zxw||
-|uint_4::zxwy||
+|uint_4:: zxwy||
 |uint_4::zxy||
 |uint_4::zxyw||
 |uint_4::zy||
@@ -596,19 +596,19 @@ class uint_4;
 
 `uint_4`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-## <a name="syntax"></a>構文
+### <a name="syntax"></a>構文
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,34 +639,34 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
 *_V3*<br/>
-3 要素を初期化する値。
+要素3を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-## <a name=""></a> サイズ
+## <a name="size"></a>size
 
-## <a name="syntax"></a>構文
+### <a name="syntax"></a>構文
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

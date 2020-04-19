@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 21: コマンドとメッセージのルーティング'
+title: TN021:コマンドとメッセージのルーティング
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306182"
 ---
-# <a name="tn021-command-and-message-routing"></a>テクニカル ノート 21: コマンドとメッセージのルーティング
+# <a name="tn021-command-and-message-routing"></a>TN021:コマンドとメッセージのルーティング
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -80,7 +80,7 @@ MFC の 1.0 では、マルチ ドキュメント インターフェイス (MDI)
 
 `CFrameWnd` また、ステータス バー (メッセージ行とも呼ばれます) で選択したアイテムの現在のメニューを記述する WM_ENTERIDLE メッセージを処理します。
 
-Visual C で編集、アプリケーションのメニュー構造は潜在的なコマンドを表すために使用されます。 ON_UPDATE_COMMAND_UI ハンドラーでは、状態や、メニューのテキストを変更したり、(ファイルの MRU 一覧や OLE 動詞のポップアップ メニュー) などの高度な用途のため実際には、構造の変更 メニューのメニューが描画される前にすることができます。
+ビジュアル編集アプリケーションのメニュー構造C++は、潜在的なコマンドを表すために使用します。 ON_UPDATE_COMMAND_UI ハンドラーでは、状態や、メニューのテキストを変更したり、(ファイルの MRU 一覧や OLE 動詞のポップアップ メニュー) などの高度な用途のため実際には、構造の変更 メニューのメニューが描画される前にすることができます。
 
 ツールバー (およびその他のコントロール バー) の ON_UPDATE_COMMAND_UI 処理の同じ並べ替えを行います、アプリケーションがアイドル状態のループに入ったとき。 参照してください、*クラス ライブラリ リファレンス*と[テクニカル ノート 31](../mfc/tn031-control-bars.md)コントロール バーの詳細についてはします。
 

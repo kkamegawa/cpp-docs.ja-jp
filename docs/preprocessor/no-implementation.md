@@ -1,38 +1,37 @@
 ---
-title: no_implementation
-ms.date: 11/04/2016
+title: no_implementation import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: d4e55d06bef823d28c5deb3467654bc530a3853e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456785"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220773"
 ---
-# <a name="noimplementation"></a>no_implementation
-**C++ 固有の仕様**
+# <a name="no_implementation-import-attribute"></a>no_implementation import 属性
 
-ラッパー メンバー関数の実装を含む .tli ヘッダーの生成を抑制します。
+**C++のみ**
+
+ラッパーメンバー関数の実装`.tli`を含むヘッダーの生成を抑制します。
 
 ## <a name="syntax"></a>構文
 
-```
-no_implementation
-```
+> **#import***タイプライブラリ***no_implementation**
 
 ## <a name="remarks"></a>Remarks
 
-この属性を指定すると、タイプ ライブラリの項目の公開が宣言され、.tlh ヘッダーが生成されます。`#include` ステートメントによって .tli ヘッダー ファイルは取り込まれません。
+この属性が指定さ`.tlh`れている場合は、ヘッダーファイルをインクルード`.tli`する`#include`ステートメントを使用せずに、タイプライブラリ項目を公開する宣言を含むヘッダーが生成されます。
 
-この属性と組み合わせて使用[implementation_only](../preprocessor/implementation-only.md)します。
+この属性は、 [implementation_only](../preprocessor/implementation-only.md)と組み合わせて使用されます。
 
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

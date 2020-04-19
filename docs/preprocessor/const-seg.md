@@ -1,6 +1,6 @@
 ---
-title: const_seg
-ms.date: 09/17/2018
+title: const_seg プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.const_seg
 - const_seg_CPP
@@ -8,50 +8,52 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 845583889eb922ba97d145eefe6bca280a83817b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648345"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220436"
 ---
-# <a name="constseg"></a>const_seg
-セグメントを指定場所[const](../cpp/const-cpp.md)変数は、.obj ファイルに格納されます。
+# <a name="const_seg-pragma"></a>const_seg プラグマ
+
+[Const](../cpp/const-cpp.md)変数がオブジェクト (.obj) ファイルに格納されるセクション (セグメント) を指定します。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma const_seg (** ["*section-name*" [ **,** "*section-class*"]] **)** \
+> **#pragma const_seg (** { **push** | **pop** } [ **,** *identifier* ] [ **,** "*section-name*" [ **,** "*section-class*"]] **)**
 
 ### <a name="parameters"></a>パラメーター
 
-**push**<br/>
-(省略可能)内部コンパイラ スタックには、レコードを設定します。 A**プッシュ**できますが、*識別子*と*セグメント名*します。
+**押し付け**\
+Optional内部コンパイラスタックにレコードを格納します。 **プッシュ**は*識別子*と*セクション名*を持つことができます。
 
-**pop**<br/>
-(省略可能)内部コンパイラ スタックの上部からレコードを削除します。
+**ショート**\
+Optional内部コンパイラスタックの先頭からレコードを削除します。 **Pop**は*識別子*と*セクション名*を持つことができます。 *識別子*を使用して、 **pop**コマンドを1つだけ使用して複数のレコードをポップできます。 *セクション名*は、pop の後のアクティブな const セクション名になります。
 
-*identifier*<br/>
-(省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると**pop**、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。
+*識別子*\
+Optional**Push**と共に使用すると、内部コンパイラスタックのレコードに名前が割り当てられます。 **Pop**と共に使用する場合、ディレクティブは、*識別子*が削除されるまで、レコードを内部スタックからポップします。 *識別子*が内部スタックで見つからない場合は、何もポップされません。
 
-使用して*識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。
+"*section-name*" \
+Optionalセクションの名前。 **Pop**と共に使用すると、スタックがポップされ、*セクション名*がアクティブな const セクション名になります。
 
-"*セグメント名*"<br/>
-(省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。
-
-"*セグメント クラス*"<br/>
-(省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。
+"*セクションクラス*" \
+Optionalは無視されますが、バージョン2.0 よりC++前のバージョンの Microsoft との互換性のために含まれています。
 
 ## <a name="remarks"></a>Remarks
 
-用語の意味*セグメント*と*セクション*はこのトピックでは互換性があります。
+オブジェクトファイルの*セクション*は、1つの単位としてメモリに読み込まれるデータの名前付きブロックです。 *Const セクション*は、定数データを含むセクションです。 この記事では、*セグメント*と*セクション*は同じ意味を持ちます。
 
-OBJ ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーション。 `const` 変数の .obj ファイルの既定セグメントは、.rdata です。 スカラーのような一部の `const` 変数は、コード ストリームに自動的にインライン展開されます。 インライン コードは、.rdata には現れません。
+**Const_seg** pragma ディレクティブは、翻訳単位のすべての定数データ項目を、*セクション名*という名前の const セクションに配置するようコンパイラに指示します。 **Const**変数のオブジェクトファイルの既定のセクションは`.rdata`です。 スカラーなどの一部の**const**変数は、自動的にコードストリームにインライン化されます。 インラインコードはには`.rdata`表示されません。 **Const_seg**プラグマディレクティブが指定されていない場合、後続の**const**データ項目のセクション名`.rdata`はにリセットされます。
 
-`const_seg` 内に動的な初期化を必要とするオブジェクトを定義すると、未定義の動作が発生します。
+で動的な`const_seg`初期化を必要とするオブジェクトを定義した場合、結果は未定義の動作になります。
 
-パラメーターなしの `#pragma const_seg` は、セグメントを .rdata にリセットします。
+セクションの作成に使用しない名前の一覧については、「 [/SECTION](../build/reference/section-specify-section-attributes.md)」を参照してください。
+
+初期化されたデータのセクション ([data_seg](../preprocessor/data-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および関数 ([code_seg](../preprocessor/code-seg.md)) を指定することもできます。
+
+DUMPBIN を使用でき[ます。](../build/reference/dumpbin-command-line.md)オブジェクトファイルを表示する EXE アプリケーション。 サポートされている各ターゲットアーキテクチャの DUMPBIN のバージョンは、Visual Studio に含まれています。
 
 ## <a name="example"></a>例
 
@@ -89,12 +91,6 @@ test3
 test4
 ```
 
-## <a name="comments"></a>コメント
-
-参照してください[/section](../build/reference/section-specify-section-attributes.md)に対して一連の名前のセクションを作成するときに使用する必要があります。
-
-初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および関数 ([code_seg](../preprocessor/code-seg.md))。
-
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

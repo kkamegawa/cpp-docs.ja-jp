@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161733"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -72,7 +72,7 @@ ref class Map sealed;
 |[UnorderedMap::First](#first)|マップ内の最初の要素を指定する反復子を返します。|
 |[UnorderedMap::GetView](#getview)|現在のマップの読み取り専用ビューである Platform::Collections::UnorderedMapView クラスを返します。|
 |[UnorderedMap::HasKey](#haskey)|指定したキーが現在のマップに格納されているかどうかを判定します。|
-|[Unorderedmap::insert](#insert)|指定したキー/値ペアを現在のマップ オブジェクトに追加します。|
+|[UnorderedMap::Insert](#insert)|指定したキー/値ペアを現在のマップ オブジェクトに追加します。|
 |[UnorderedMap::Lookup](#lookup)|現在のマップ オブジェクト内の指定されたキーの位置の要素を取得します。|
 |[UnorderedMap::Remove](#remove)|指定したキー/値ペアを現在のマップ オブジェクトから削除します。|
 |[UnorderedMap::Size](#size)|現在のマップ オブジェクト内の要素数を返します。|
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap::first メソッド
 
-最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)順序なしのマップ内の要素。
+最初に指定する反復子を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)順序なしのマップ内の要素。
 
 ### <a name="syntax"></a>構文
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
-*値*<br/>
+*value*<br/>
 キー/値ペアの値部分。 型*値*typename が*V*します。
 
 ### <a name="return-value"></a>戻り値
@@ -203,9 +203,9 @@ UnorderedMap の要素の検索に使用するキー。 型*キー* typename が
 
 ### <a name="return-value"></a>戻り値
 
-値とペアになっている、*キー*します。 戻り値の型は typename *V*します。
+値とペアになっている、*キー*します。 戻り値の型は typename *V* します。
 
-## <a name="mapchanged"></a>  Unorderedmap::mapchanged
+## <a name="mapchanged"></a>  UnorderedMap::MapChanged
 
 項目がマップに挿入されたときまたはマップから削除されたときに発生します。
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)発生した変更の種類と、イベントを発生させたオブジェクトに関する情報を格納します。 参照してください[IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)と[CollectionChange 列挙](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)します。
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)発生した変更の種類と、イベントを発生させたオブジェクトに関する情報を格納します。 参照してください[IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)と[CollectionChange 列挙](/uwp/api/windows.foundation.collections.collectionchange)します。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
@@ -241,7 +241,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Unorderedmap::size メソッド
 
-数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap の要素。
+数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) UnorderedMap の要素。
 
 ### <a name="syntax"></a>構文
 

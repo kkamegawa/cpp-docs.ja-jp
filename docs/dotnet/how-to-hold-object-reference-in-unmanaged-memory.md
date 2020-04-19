@@ -1,5 +1,5 @@
 ---
-title: '方法: アンマネージ メモリ内にオブジェクト参照を保持する'
+title: '方法: アンマネージ メモリ内のオブジェクト参照を保持します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 50afaa16f2e0976cf6a90bef09e652b4dc54582a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8dc341d1fe2c61eba098abec9258a2c6dade79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387293"
 ---
-# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>方法: アンマネージ メモリ内にオブジェクト参照を保持する
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>方法: アンマネージ メモリ内のオブジェクト参照を保持します。
 
 ラップする gcroot.h を使用することができます<xref:System.Runtime.InteropServices.GCHandle>をアンマネージ メモリ内の CLR オブジェクトの参照を保持します。 また、使用することができます`GCHandle`直接します。
 

@@ -8,27 +8,26 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: cf01e7b881b8f5c9c5ba9847ccf4e15dee3e18d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15d01924be811a9c9ec8ea333870f444bf9aa61a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518587"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685832"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>フレームワークのダイアログ ボックス コンポーネント
 
-MFC フレームワークでは、ダイアログ ボックスは 2 つのコンポーネントがあります。
+MFC フレームワークのダイアログボックスには、次の2つのコンポーネントがあります。
 
-- ダイアログ ボックスのコントロールとその配置を指定するダイアログ テンプレート リソースです。
+- ダイアログボックスのコントロールとその配置を指定するダイアログテンプレートリソース。
 
-   ダイアログ リソースでは、元の Windows がダイアログ ウィンドウを作成し、表示するダイアログ テンプレートを格納します。 テンプレートには、サイズ、場所、スタイル、種類、ダイアログ ボックスのコントロールの位置など、ダイアログ ボックスの特性を指定します。 リソースとして格納されているダイアログ テンプレートを使用することは、通常は、メモリ内で、独自のテンプレートを作成することもできます。
+   ダイアログリソースには、Windows によってダイアログウィンドウが作成されて表示されるダイアログテンプレートが格納されます。 このテンプレートでは、ダイアログボックスのサイズ、位置、スタイル、ダイアログボックスのコントロールの種類と位置など、ダイアログボックスの特性を指定します。 通常は、リソースとして格納されているダイアログテンプレートを使用しますが、独自のテンプレートをメモリに作成することもできます。
 
-- ダイアログ クラスから派生した[CDialog](../mfc/reference/cdialog-class.md)、ダイアログ ボックスを管理するためのプログラム インターフェイスを提供します。
+- ダイアログボックスを管理するためのプログラムインターフェイスを提供するための、 [CDialog](../mfc/reference/cdialog-class.md)から派生したダイアログクラス。
 
-   ダイアログ ボックスでは、ウィンドウし、表示される場合は、Windows ウィンドウにアタッチされます。 ダイアログ ウィンドウが作成されたときにダイアログ テンプレート リソースは、ダイアログ ボックスのウィンドウ コントロールの子を作成するため、テンプレートとして使用されます。
+   ダイアログボックスはウィンドウであり、表示されると Windows のウィンドウに追加されます。 ダイアログウィンドウが作成されると、ダイアログボックスの子ウィンドウコントロールを作成するためのテンプレートとして、ダイアログテンプレートリソースが使用されます。
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609005"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687060"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ ms.locfileid: "50609005"
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>テンプレートの比率
+### <a name="ratio-template"></a>比率テンプレート
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-テンプレート`ratio`、静的な定数を定義します。`num`と`den`ように`num`  /  `den`分子を = =/分母と`num`と`den`の一般的な要因があるありません。 `num` / `den` テンプレート クラスによって表される値です。 そのため、`type`をインスタンス化を指定`ratio<num, den>`します。
+テンプレート `ratio` は、`num` と `den` の静的定数を定義します。これにより、`num`  /  `den` = = 分子/分母と `num` と `den` に共通の要因がありません。 `num`  /  `den` は、クラステンプレートによって表される値です。 したがって、`type` インスタンス化 `ratio<num, den>` を指定します。
 
 ### <a name="specializations"></a>特殊化
 
@@ -70,7 +70,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 それぞれの特殊化は、`ratio` の特殊化である必要がある 2 つのテンプレート パラメーターを使用します。 `type` の値は関連する論理操作によって決定されます。
 
-|名前|`type` 値|
+|名|`type` 値|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -85,7 +85,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 ### <a name="typedefs"></a>typedef
 
-便宜上は、ヘッダーは、標準の SI プレフィックスの比率を定義します。
+便宜上、ヘッダーは標準の SI プレフィックスの比率を定義します。
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

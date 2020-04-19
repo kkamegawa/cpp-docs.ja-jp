@@ -6,12 +6,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274695"
 ---
 # <a name="marshaling-global-functions"></a>マーシャ リングに関するグローバル関数
 

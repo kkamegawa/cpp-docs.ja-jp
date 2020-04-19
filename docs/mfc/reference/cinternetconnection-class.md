@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: da11f62cfb453e31d3cacc1d4bc5b8a26f5b3764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345697"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection クラス
 
@@ -91,10 +91,10 @@ CInternetConnection(
 *pstrServer*<br/>
 サーバー名を含む文字列へのポインター。
 
-*ポート*<br/>
+*nPort*<br/>
 この接続のインターネットのポートを識別する番号。
 
-*独自*<br/>
+*dwContext*<br/>
 コンテキスト識別子を`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については*独自*します。
 
 ### <a name="remarks"></a>Remarks
@@ -103,11 +103,11 @@ CInternetConnection(
 
 - [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
 
-- [代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
+- [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
 
-- [代わり](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
+- [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-既定値*独自*に MFC によって送信される、 `CInternetConnection`-派生オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、**インターネット**-派生オブジェクト。 既定値を 1 に設定します。ただしで特定のコンテキスト識別子を割り当てることができますに明示的に、 [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)接続のコンス トラクター。 オブジェクトとその動作はコンテキスト ID に関連付けられる コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+既定値*独自*に MFC によって送信される、 `CInternetConnection`-派生オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、**インターネット**-派生オブジェクト。 既定値を 1 に設定します。ただしで特定のコンテキスト識別子を割り当てることができますに明示的に、 [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)接続のコンス トラクター。 オブジェクトとその動作はコンテキスト ID に関連付けられる コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext
 
@@ -125,7 +125,7 @@ DWORD_PTR GetContext() const;
 
 コンテキスト ID が指定されていた[CInternetSession](../../mfc/reference/cinternetsession-class.md)し伝達`CInternetConnection`- と[CInternetFile](../../mfc/reference/cinternetfile-class.md)-表示された関数の呼び出しで異なる方法で指定されていない場合、派生クラス接続です。 コンテキスト ID が指定したオブジェクトのすべての操作に関連付けられた、によって返される操作の状態情報を識別します[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)します。
 
-方法の詳細について`GetContext`ユーザー状態の情報を提供するその他の WinInet クラスは、記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+詳細について`GetContext`ユーザー状態の情報を提供するその他の WinInet クラスは、記事を参照して[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName
 
@@ -163,4 +163,3 @@ operator HINTERNET() const;
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

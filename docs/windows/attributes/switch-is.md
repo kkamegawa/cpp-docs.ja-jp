@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: e70f7d3d7419c25f0c5f9df8006e1d795c8b4361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467290"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513982"
 ---
-# <a name="switchis"></a>switch_is
+# <a name="switch_is"></a>switch_is
 
-式または共用体の判別共用体のメンバーを選択するとして機能する識別子を指定します。
+共用体メンバーを選択する union 判別として機能する式または識別子を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50467290"
 
 ## <a name="remarks"></a>Remarks
 
-**Switch_is** C++ 属性と同じ機能を持つ、 [switch_is](/windows/desktop/Midl/switch-is) MIDL 属性。
+**Switch_is** C++属性には、 [switch_is](/windows/win32/Midl/switch-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-参照してください、[ケース](case-cpp.md)の使用サンプルの例を**switch_is**します。
+**Switch_is**の使用例については、[大文字と小文字](case-cpp.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

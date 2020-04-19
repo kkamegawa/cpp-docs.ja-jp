@@ -11,22 +11,22 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295267"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (セクションの配置)
 
 ## <a name="syntax"></a>構文
 
-> **/ALIGN**[**:**_数_]
+> **/ALIGN**[**:**_number_]
 
 ### <a name="arguments"></a>引数
 
-*数*<br/>
+*number*<br/>
 配置の値 (バイト単位)。
 
 ## <a name="remarks"></a>Remarks
@@ -35,13 +35,13 @@ ms.locfileid: "50665791"
 
 デバイス ドライバーなどのアプリケーションを作成していない場合は、配置を変更する必要ありません。
 
-配置パラメーターを特定のセクションのアラインメントを変更することは、 [/section](../../build/reference/section-specify-section-attributes.md)オプション。
+配置パラメーターを特定のセクションのアラインメントを変更することは、 [/section](section-specify-section-attributes.md)オプション。
 
 配置の値を指定するは、最大のセクションの配置より小さくすることはできません。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -53,5 +53,5 @@ ms.locfileid: "50665791"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーのリファレンス](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

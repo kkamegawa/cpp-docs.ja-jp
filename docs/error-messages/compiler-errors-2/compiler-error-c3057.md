@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3057
 ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
-ms.openlocfilehash: b2b827ec8d6b6ac21d80ded43e70f72098b3f367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da7742a8268adfd2345c0606e2f60dae4e58887c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459905"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761143"
 ---
 # <a name="compiler-error-c3057"></a>コンパイラ エラー C3057
 
@@ -21,7 +21,7 @@ ms.locfileid: "50459905"
 
 次の例では C3057 が生成されます。
 
-```
+```cpp
 // C3057.cpp
 // compile with: /openmp /c
 extern int f();
@@ -47,7 +47,7 @@ int main() {
 
 次の例では C3057 が生成されます。
 
-```
+```cpp
 // C3057b.cpp
 // compile with: /openmp /c
 extern int Initialize();

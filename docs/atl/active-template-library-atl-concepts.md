@@ -1,104 +1,103 @@
 ---
 title: ATL (Active Template Library) の概念
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 9b8c293bc92071509607e8496a5601d0c6ef2018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7b6a40eaed05462f3aa5c877a1c4da3e19c0b03
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523740"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836999"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL (Active Template Library) の概念
 
-Active Template Library (ATL) は、小規模で高速のコンポーネント オブジェクト モデル (COM) オブジェクトを作成できるテンプレート ベースの C++ クラスのセットです。 ストックの実装、デュアル インターフェイス、列挙子の COM インターフェイスの標準的な接続ポイント、ティアオフ インターフェイス、および ActiveX コントロールをなど、キーの COM 機能用の特別なサポートしています。
+Active Template Library (ATL) は、小さくて高速のコンポーネント オブジェクト モデル (COM) オブジェクトを作成できる、テンプレートに基づく C++ クラスのセットです。 ストックの実装、デュアル インターフェイス、標準 COM 列挙子インターフェイス、接続ポイント、ティアオフ インターフェイス、ActiveX コントロールなど、COM の重要な機能が特別にサポートされています。
 
-ATL プログラミングの多くを実行する場合は、COM プログラミングを簡略化するように設計された Visual C .NET の新機能である属性の詳細についてはします。 詳細については、次を参照してください。[属性付きプログラミング](../windows/attributed-programming-concepts.md)します。
+ATL プログラミングを多用する場合は、COM プログラミングが簡単になるように設計されている COM と .NET の属性について、さらに詳しく学習する必要があります。 詳しくは、[Attributed Programming (属性付きプログラミング)](../windows/attributed-programming-concepts.md) に関するページをご覧ください。 (COM および .NET の属性を、C++ 標準\[\[attribute]] 機能と混同しないでください。)
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)<br/>
-コントロールの作成について説明し、プロセスで、ATL の基本事項をいくつかを示します。
-
 [COM と ATL の概要](../atl/introduction-to-com-and-atl.md)<br/>
-コンポーネント オブジェクト モデル (COM) の背後にある主な概念が導入されています。 ここでは、ATL は、ときに使用する必要がありますも簡単に説明します。
+コンポーネント オブジェクト モデル (COM) の背後にある主要な概念について説明します。 ここでは、ATL とはどのようなもので、どういうときに使う必要があるかについても簡単に説明します。
 
 [ATL COM オブジェクトの基礎](../atl/fundamentals-of-atl-com-objects.md)<br/>
-さまざまな ATL クラスとそれらのクラスを実装する方法の間の関係について説明します。
+さまざまな ATL クラスの間の関係と、それらのクラスを実装する方法について説明します。
 
 [デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)<br/>
-ATL の観点からデュアル インターフェイスをについて説明します。
+ATL の観点からデュアル インターフェイスについて説明します。
 
 [ATL のコレクションと列挙子](../atl/atl-collections-and-enumerators.md)<br/>
-実装とコレクションと ATL で列挙子の作成について説明します
+ATL でのコレクションと列挙子の実装および作成について説明します。
 
 [複合コントロールの基本](../atl/atl-composite-control-fundamentals.md)<br/>
-複合コントロールを作成するための手順について説明します。 複合コントロールは、他の ActiveX コントロールまたは Windows のコントロールに含めることができる ActiveX コントロールの一種です。
+複合コントロールを作成する詳細な手順について説明します。 複合コントロールは、他の ActiveX コントロールまたは Windows コントロールを含むことができる ActiveX コントロールの種類です。
 
 [ATL コントロール コンテインメント : Q & A 集](../atl/atl-control-containment-faq.md)<br/>
-ATL. でコントロールをホストに関連する基本的な質問について説明します
+ATL でのコントロールのホストに関連する基本的な質問について説明します。
 
 [ATL COM プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
-指定および COM プロパティ ページを実装する方法を示します。
+COM プロパティ ページを指定および実装する方法を示します。
 
 [DHTML コントロールの ATL サポート](../atl/atl-support-for-dhtml-controls.md)<br/>
-DHTML コントロールの作成手順をについて説明します。
+DHTML コントロールを作成する詳細な手順について説明します。
 
 [ATL コネクション ポイント](../atl/atl-connection-points.md)<br/>
 接続ポイントの概要と ATL での実装方法について説明します。
 
 [イベント処理と ATL](../atl/event-handling-and-atl.md)<br/>
-ATL を使用して COM イベントを処理するために必要な手順について説明します[IDispEventImpl](../atl/reference/idispeventimpl-class.md)と[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)クラス。
+ATL の [IDispEventImpl](../atl/reference/idispeventimpl-class.md) および [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) クラスを使って COM イベントを処理するために必要な手順について説明します。
 
 [ATL とフリー スレッド マーシャラー](../atl/atl-and-the-free-threaded-marshaler.md)<br/>
-フリー スレッド マーシャラー (FTM) を集計するのには、クラスは、ATL シンプル オブジェクト ウィザードのオプションの詳細を説明します。
+独自のクラスでフリー スレッド マーシャラー (FTM) を集計できるようにする ATL シンプル オブジェクト ウィザードのオプションの詳細を説明します。
 
-[プロジェクトのスレッド モデルを指定します。](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
-実行時のパフォーマンスに関連するプロジェクトでのスレッドの制御に使用できるマクロについて説明します。
+[プロジェクトのスレッド モデルの指定](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
+プロジェクトでのスレッドに関連する実行時のパフォーマンスの制御に使用できるマクロについて説明します。
 
 [ATL モジュール クラス](../atl/atl-module-classes.md)<br/>
-ATL 7.0 の新しいモジュール クラスをについて説明します。 モジュール クラスが ATL で必要な基本機能を実装します。
+ATL 7.0 の新しいモジュール クラスについて説明します。 モジュール クラスでは、ATL で必要な基本機能が実装されています。
 
 [ATL サービス](../atl/atl-services.md)<br/>
-一連のサービスが実装されているときに発生するイベントについて説明します。 サービスの開発に関連する概念についても説明します。
+サービスが実装されるときに発生する一連のイベントについて説明します。 サービスの開発に関連する概念についても説明します。
 
 [ATL ウィンドウ クラス](../atl/atl-window-classes.md)<br/>
-作成する方法、スーパークラスと ATL でウィンドウをサブクラス化について説明します ATL ウィンドウ クラスは、COM クラスではありません。
+ATL でスーパークラス ウィンドウとサブクラス ウィンドウを作成する方法について説明します。 ATL ウィンドウ クラスは COM クラスではありません。
 
 [ATL コレクション クラス](../atl/atl-collection-classes.md)<br/>
-配列を使用する方法について説明し、ATL のマップ
+ATL で配列とマップを使用する方法について説明します。
 
 [ATL レジストリ コンポーネント (レジストラー)](../atl/atl-registry-component-registrar.md)<br/>
-ATL スクリプト構文と置き換え可能パラメーターをについて説明します。 レジストラーに静的にリンクを設定する方法も説明します。
+ATL のスクリプト構文と置き換え可能パラメーターについて説明します。 また、レジストラーへの静的リンクを設定する方法も説明します。
 
 [ATL および C ランタイム コードによるプログラミング](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-静的または動的に C ランタイム ライブラリ (CRT) へのリンクの利点について説明します。
+C ランタイム ライブラリ (CRT) への静的または動的なリンクの利点について説明します。
 
 [CComBSTR を使用したプログラミング](../atl/programming-with-ccombstr-atl.md)<br/>
-プログラミングする際の注意を必要とするいくつかの状況について説明します`CComBSTR`します。
+`CComBSTR` でプログラミングするときに注意する必要のあるいくつかの状況について説明します。
 
 [エンコーディングのリファレンス](../atl/atl-encoding-reference.md)<br/>
-関数と atlenc.h の関数で uuencode、16 進数などの一般的なインターネット標準の範囲と UTF8 でエンコードをサポートするマクロを提供します。
+atlenc.h の uuencode、hexadecimal、UTF8 など、一般的なインターネット標準でのエンコードをサポートする関数とマクロを提供します。
 
 [ユーティリティのリファレンス](../atl/atl-utilities-reference.md)<br/>
-形式でパスと Url を操作するコードを提供[CPathT](../atl/reference/cpatht-class.md)と[CUrl](../atl/reference/curl-class.md)します。 スレッド プールでは、 [CThreadPool](../atl/reference/cthreadpool-class.md)、独自のアプリケーションで使用できます。 このコードは、atlpath.h および atlutil.h 記載されています。
+[CPathT](../atl/reference/cpatht-class.md) および [CUrl](../atl/reference/curl-class.md) の形式のパスと URL を操作するためのコードを提供します。 スレッド プール [CThreadPool](../atl/reference/cthreadpool-class.md) を独自のアプリケーションで使用できます。 このコードは、atlpath.h および atlutil.h に含まれます。
 
 ## <a name="related-sections"></a>関連項目
 
-[ATL のサンプル](../visual-cpp-samples.md)<br/>
-説明と ATL のサンプル プログラムへのリンクを提供します。
+[ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)<br/>
+コントロールの作成手順について説明し、プロセスでの ATL の基本を示します。
+
+[ATL のサンプル](../overview/visual-cpp-samples.md)<br/>
+ATL のサンプル プログラムの説明とリンクを提供します。
 
 [ATL プロジェクトの作成](../atl/reference/creating-an-atl-project.md)<br/>
-ATL プロジェクト ウィザードについてを説明します。
+ATL プロジェクト ウィザードについての説明が含まれます。
 
 [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)<br/>
 クラスを追加する方法について説明します。
 
 [属性付きプログラミング](../windows/attributed-programming-concepts.md)<br/>
-属性を使用して、COM プログラミングの詳細なトピックへのリンクの一覧を簡略化するには、概要を示します。
+属性を使って COM プログラミングを簡単にする方法の概要を説明し、さらに詳細なトピックへのリンクを提供します。
 
 [ATL のクラスの概要](../atl/atl-class-overview.md)<br/>
-参照情報と ATL クラスへのリンクを提供します。
-
+ATL クラスに関する参照情報とリンクを提供します。

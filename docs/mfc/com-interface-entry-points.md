@@ -1,6 +1,6 @@
 ---
 title: COM インターフェイスのエントリ ポイント
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - entry points, COM interfaces
 - state management, OLE/COM interfaces
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: 0a8db9c6920b4223296f700d084e0b59b9b3ef15
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207853"
 ---
 # <a name="com-interface-entry-points"></a>COM インターフェイスのエントリ ポイント
 
-COM インターフェイスのメンバー関数は、使用、 [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue)エクスポートされたインターフェイスのメソッドを呼び出すときに、適切なグローバル状態を維持するためにマクロ。
+COM インターフェイスのメンバー関数は、使用、`METHOD_PROLOGUE`エクスポートされたインターフェイスのメソッドを呼び出すときに、適切なグローバル状態を維持するためにマクロ。
 
-によって実装されるインターフェイスのメンバー関数の通常、 `CCmdTarget`-の自動初期化を提供する、このマクロを既に使用して派生オブジェクト、`pThis`ポインター。 例えば:
+によって実装されるインターフェイスのメンバー関数の通常、 `CCmdTarget`-の自動初期化を提供する、このマクロを既に使用して派生オブジェクト、`pThis`ポインター。 例:
 
 [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
@@ -44,4 +44,3 @@ COM インターフェイスのメンバー関数は、使用、 [METHOD_PROLOGU
 ## <a name="see-also"></a>関連項目
 
 [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
-

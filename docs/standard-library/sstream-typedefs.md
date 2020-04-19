@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 12eb7a23c2986223de38ccb0fe763ff42c5e48b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616352"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686281"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedefs
 
@@ -28,7 +28,7 @@ ms.locfileid: "50616352"
 
 ## <a name="istringstream"></a>  istringstream
 
-型を作成します`basic_istringstream`に特殊化された、 **char**テンプレート パラメーター。
+**Char**テンプレートパラメーターに特殊化された `basic_istringstream` 型を作成します。
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -36,11 +36,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_istringstream](../standard-library/basic-istringstream-class.md)型の要素に対して特殊化されて、 **char**します。
+この型は、 **char**型の要素に対して特殊化されたクラステンプレート[basic_istringstream](../standard-library/basic-istringstream-class.md)のシノニムです。
 
 ## <a name="ostringstream"></a>  ostringstream
 
-型を作成します`basic_ostringstream`に特殊化された、 **char**テンプレート パラメーター。
+**Char**テンプレートパラメーターに特殊化された `basic_ostringstream` 型を作成します。
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -48,11 +48,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_ostringstream](../standard-library/basic-ostringstream-class.md)型の要素に対して特殊化されて、 **char**します。
+この型は、 **char**型の要素に対して特殊化されたクラステンプレート[basic_ostringstream](../standard-library/basic-ostringstream-class.md)のシノニムです。
 
 ## <a name="stringbuf"></a>  stringbuf
 
-型を作成します`basic_stringbuf`に特殊化された、 **char**テンプレート パラメーター。
+**Char**テンプレートパラメーターに特殊化された `basic_stringbuf` 型を作成します。
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -60,11 +60,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_stringbuf](../standard-library/basic-stringbuf-class.md)型の要素に対して特殊化されて、 **char**します。
+この型は、 **char**型の要素に対して特殊化されたクラステンプレート[basic_stringbuf](../standard-library/basic-stringbuf-class.md)のシノニムです。
 
 ## <a name="stringstream"></a>  stringstream
 
-型を作成します`basic_stringstream`に特殊化された、 **char**テンプレート パラメーター。
+**Char**テンプレートパラメーターに特殊化された `basic_stringstream` 型を作成します。
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -72,11 +72,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_stringstream](../standard-library/basic-stringstream-class.md)型の要素に対して特殊化されて、 **char**します。
+この型は、 **char**型の要素に対して特殊化されたクラステンプレート[basic_stringstream](../standard-library/basic-stringstream-class.md)のシノニムです。
 
 ## <a name="wistringstream"></a>  wistringstream
 
-型を作成します`basic_istringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。
+**Wchar_t**テンプレートパラメーターに特殊化された `basic_istringstream` 型を作成します。
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -84,11 +84,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_istringstream](../standard-library/basic-istringstream-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
+この型は、 **wchar_t**型の要素に対して特殊化されたクラステンプレート[basic_istringstream](../standard-library/basic-istringstream-class.md)のシノニムです。
 
 ## <a name="wostringstream"></a>  wostringstream
 
-型を作成します`basic_ostringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。
+**Wchar_t**テンプレートパラメーターに特殊化された `basic_ostringstream` 型を作成します。
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -96,11 +96,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_ostringstream](../standard-library/basic-ostringstream-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
+この型は、 **wchar_t**型の要素に対して特殊化されたクラステンプレート[basic_ostringstream](../standard-library/basic-ostringstream-class.md)のシノニムです。
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-型を作成します`basic_stringbuf`に特殊化された、 **wchar_t**テンプレート パラメーター。
+**Wchar_t**テンプレートパラメーターに特殊化された `basic_stringbuf` 型を作成します。
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -108,11 +108,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_stringbuf](../standard-library/basic-stringbuf-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
+この型は、 **wchar_t**型の要素に対して特殊化されたクラステンプレート[basic_stringbuf](../standard-library/basic-stringbuf-class.md)のシノニムです。
 
 ## <a name="wstringstream"></a>  wstringstream
 
-型を作成します`basic_stringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。
+**Wchar_t**テンプレートパラメーターに特殊化された `basic_stringstream` 型を作成します。
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -120,8 +120,8 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート クラスのシノニム[basic_stringstream](../standard-library/basic-stringstream-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
+この型は、 **wchar_t**型の要素に対して特殊化されたクラステンプレート[basic_stringstream](../standard-library/basic-stringstream-class.md)のシノニムです。
 
 ## <a name="see-also"></a>関連項目
 
-[\<sstream>](../standard-library/sstream.md)<br/>
+[\<sstream>](../standard-library/sstream.md)

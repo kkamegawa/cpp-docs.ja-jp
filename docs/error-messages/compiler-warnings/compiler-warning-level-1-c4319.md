@@ -1,27 +1,27 @@
 ---
 title: コンパイラの警告 (レベル 1) C4319
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 f1_keywords:
 - C4319
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d5ae8fcf5a527031c3a974b227f713675f31ffa
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599447"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926100"
 ---
 # <a name="compiler-warning-level-1-c4319"></a>コンパイラの警告 (レベル 1) C4319
 
-> '~': ゼロ拡張'*type1*'to'*type2*' より大きいサイズの
+> ' ~ ': サイズが大きい ' type1 ' を '*type1* *' に*拡張することはできません。
 
-結果、 **~** より大きい型に変換された場合 (ビットごとの補数) 演算子が符号なしとゼロ拡張です。
+**~** (ビットごとの補数) 演算子の結果は符号なしになり、大きな型に変換されるとゼロ拡張になります。
 
 ## <a name="example"></a>例
 
-次の例では、`~(a - 1)`が 32 ビットの unsigned long 式として評価され、ゼロ拡張によって 64 ビットに変換されます。 これは、予期しない操作結果になる可能性があります。
+次の例では`~(a - 1)` 、は、32ビットの符号なし long 式として評価された後、ゼロ拡張によって64ビットに変換されます。 これは、予期しない操作結果になる可能性があります。
 
 ```cpp
 // C4319.cpp

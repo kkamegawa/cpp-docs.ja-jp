@@ -1,9 +1,9 @@
 ---
 title: _locking
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _locking
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327045"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953268"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
 ファイルのバイトをロックまたはロック解除します。
 
@@ -59,20 +62,20 @@ int _locking(
 
 ## <a name="return-value"></a>戻り値
 
-**_locking**成功した場合は 0 を返します。 戻り値-1 はエラーを示します後者[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)値は次のいずれかに設定されます。
+正常終了した場合は**0 を返します。** 戻り値-1 はエラーを示します。この場合、 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
 | **EACCES** | ロック違反 (ファイルはすでにロックされている場合もロック解除されている場合もある)。 |
 | **EBADF** | 無効なファイル記述子。 |
-| **EDEADLOCK** | ロック違反。 ときに返される、 **_LK_LOCK**または **_LK_RLCK**フラグが指定されており、10 回試行した後、ファイルをロックできません。 |
-| **EINVAL** | 無効な引数が指定された **_locking**します。 |
+| **EDEADLOCK** | ロック違反。 **_LK_LOCK**または **_LK_RLCK**フラグが指定され、10回試行した後にファイルをロックできない場合に返されます。 |
+| **EINVAL** | **ロック**に無効な引数が指定されました。 |
 
 エラーの原因が無効なファイル記述子などの無効なパラメーターである場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Locking**関数は、ロックまたはロック解除*nbytes*バイトで指定されたファイルの*fd*します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
+**ロック**関数は、 *fd*によって指定されたファイルの*nbytes*バイトをロックまたはロック解除します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
 
 *mode* は、Locking.h で定義されている、次のマニフェスト定数のいずれかである必要があります。
 
@@ -80,11 +83,11 @@ int _locking(
 |-|-|
 | **_LK_LOCK** | 指定したバイトをロックします。 バイトをロックできない場合、プログラムによって 1 秒後に直ちに再試行されます。 10 回試行した後、バイトをロックできなかった場合、定数はエラーを返します。 |
 | **_LK_NBLCK** | 指定したバイトをロックします。 バイトをロックできない場合、定数はエラーを返します。 |
-| **_LK_NBRLCK** | 同じ **_LK_NBLCK**します。 |
-| **_LK_RLCK** | 同じ **_LK_LOCK**します。 |
+| **_LK_NBRLCK** | **_LK_NBLCK**と同じです。 |
+| **_LK_RLCK** | **_LK_LOCK**と同じです。 |
 | **_LK_UNLCK** | 指定したバイトのロックを解除します。バイトは既にロックされている必要があります。 |
 
-重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 **_locking**隣接する領域をマージしないのは、2 つのロックされた領域が隣接している場合は、各リージョンする必要がありますロックを解除するとは別にします。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
+重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 隣接する領域はロックしません **(_r)** 2つのロックされた領域が隣接している場合は、各領域を個別にロック解除する必要があります。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>入力: crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>入力: crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.

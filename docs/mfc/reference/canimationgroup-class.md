@@ -1,6 +1,6 @@
 ---
 title: CAnimationGroup クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152076"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup クラス
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|アニメーションのグループを作成します。|
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|デストラクターです。 アニメーションのグループが破棄されるときに呼び出されます。|
+|[CAnimationGroup:: ~ CAnimationGroup](#_dtorcanimationgroup)|デストラクターです。 アニメーションのグループが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -123,7 +123,7 @@ class CAnimationGroup;
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup:: ~ CAnimationGroup
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup::~CAnimationGroup
 
 デストラクターです。 アニメーションのグループが破棄されるときに呼び出されます。
 

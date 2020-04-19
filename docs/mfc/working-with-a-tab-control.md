@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-ms.openlocfilehash: faf6494fe9a1d7e5a089c4bea91b8cc4abdc590d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ff4d57f9968f79a964a57b26fc79d68245c1a3e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399513"
 ---
 # <a name="working-with-a-tab-control"></a>タブ コントロールの使い方
 
@@ -29,4 +29,3 @@ ms.locfileid: "50470812"
 
 [CTabCtrl の使い方](../mfc/using-ctabctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: '方法: System::String を wchar_t* または char* に変換する'
+title: '方法: System::string を wchar_t * または char * に変換します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 26e9f5511c0205a3c484b85381fddde802f5469a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387501"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>方法: System::String を wchar_t* または char* に変換する
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>方法: System::string を wchar_t * または char * に変換します。
 
 Vcclr.h の `PtrToStringChars` を使用して、<xref:System.String> をネイティブな `wchar_t *` または `char *` に変換できます。  CLR 文字列は内部的には Unicode であるため、変換を行うと、常にワイド文字列の Unicode ポインターが返されます。 したがって、次の例で示すように、ワイド文字列からの変換を行うことができます。
 

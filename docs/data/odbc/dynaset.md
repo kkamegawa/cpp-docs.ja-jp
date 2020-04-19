@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-ms.openlocfilehash: 66db216b92132638f04627ccf341e2e4ce20e429
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c47546d14d9a121bdd0698fe96eb133dbc44a0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395886"
 ---
 # <a name="dynaset"></a>ダイナセット
 

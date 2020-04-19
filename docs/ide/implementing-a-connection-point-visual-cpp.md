@@ -1,18 +1,16 @@
 ---
 title: コネクション ポイントを実装する
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.impl.cp.overview
+ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693283"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182602"
 ---
 # <a name="implement-a-connection-point"></a>コネクション ポイントを実装する
 
@@ -32,9 +30,9 @@ ms.locfileid: "51693283"
 
 1. クラス ビューで、ATL オブジェクトのクラス名を右クリックします。
 
-1. ショートカット メニューの **[追加]** を選択し、**[接続ポイントの追加]** を選択して [[接続ポイントの実装ウィザード]](#implement-connection-point-wizard) を表示します。
+1. ショートカット メニューの **[追加]** を選択し、 **[接続ポイントの追加]** を選択して [[接続ポイントの実装ウィザード]](#implement-connection-point-wizard) を表示します。
 
-1. 該当するタイプ ライブラリから実装するコネクション ポイント インターフェイスを選択し、**[完了]** を選択します。
+1. 該当するタイプ ライブラリから実装するコネクション ポイント インターフェイスを選択し、 **[完了]** を選択します。
 
 1. クラス ビューで、コネクション ポイントごとに作成されたプロキシ クラスを確認します。 クラスは CProxy*InterfaceName*\<T> のように表示されます。クラスは [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) から派生します。
 
@@ -61,7 +59,7 @@ ms.locfileid: "51693283"
 
 ## <a name="implement-connection-point-wizard"></a>接続ポイントの実装ウィザード
 
-このウィザードでは、COM オブジェクトの接続ポイントを実装できます。 接続可能なオブジェクト (ソース) は、独自のインターフェイスまたは任意の発信インターフェイスの接続ポイントを表示できます。 Visual C++ と Windows のいずれにも、発信インターフェイスがあるタイプ ライブラリがあります。 各発信インターフェイスは、オブジェクト上のクライアント (シンク) によって実装できます。
+このウィザードでは、COM オブジェクトの接続ポイントを実装できます。 接続可能なオブジェクト (ソース) は、独自のインターフェイスまたは任意の発信インターフェイスの接続ポイントを表示できます。 MSVC と Windows の両方に、発信インターフェイスがあるタイプ ライブラリがあります。 各発信インターフェイスは、オブジェクト上のクライアント (シンク) によって実装できます。
 
 詳細については、「[ATL コネクション ポイント](../atl/atl-connection-points.md)」を参照してください。
 
@@ -80,7 +78,7 @@ ms.locfileid: "51693283"
   |転送ボタン|説明|
   |---------------------|-----------------|
   |**>**|**[Implement connection points]\(接続ポイントを実装する\)** リストに、現在 **[インターフェイス]** リストで選択されているインターフェイス名を追加します。|
-  |**>>**|**[Implement connection points]\(接続ポイントを実装する\)** リストに、**[インターフェイス]** リストで使用可能なすべてのインターフェイス名を追加します。|
+  |**>>**|**[Implement connection points]\(接続ポイントを実装する\)** リストに、 **[インターフェイス]** リストで使用可能なすべてのインターフェイス名を追加します。|
   |**\<**|現在 **[Implement connection points]\(接続ポイントを実装する\)** リストで選択されているインターフェイス名を削除します。|
   |**\<\<**|現在 **[Implement connection points]\(接続ポイントを実装する\)** リストに表示されているすべてのインターフェイス名を削除します。|
 

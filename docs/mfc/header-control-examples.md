@@ -5,19 +5,18 @@ helpviewer_keywords:
 - sample applications [MFC], header controls
 - controls [MFC], header
 ms.assetid: 30050732-d53e-4eab-88d7-61aac52914c9
-ms.openlocfilehash: 610524c60900bd8ab7fe3fe64ce8e0c8809c78b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df72489ae11ab1567b0d0b2b06ba3c562ec312a9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667975"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508465"
 ---
 # <a name="header-control-examples"></a>ヘッダー コントロールの例
 
-ヘッダー コントロールの例については、次を参照してください。、[ヘッダー コントロール](/windows/desktop/Controls/header-controls)Windows SDK に含まれています。
+ヘッダーコントロールの例については、Windows SDK の[ヘッダーコントロール](/windows/win32/Controls/header-controls)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

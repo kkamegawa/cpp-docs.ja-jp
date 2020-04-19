@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - NULL, macro
 ms.assetid: 6800f7a4-88a7-442f-87ed-e618e83a0b16
-ms.openlocfilehash: 5cf7ec3f3dacb92d659b284e0c4b0c29b688fc33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c9ce5bc1ab1e4c516731f763772d428bad64ff8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505327"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149584"
 ---
 # <a name="null-macro"></a>NULL マクロ
 
@@ -17,6 +17,6 @@ ms.locfileid: "50505327"
 
 いくつかのインクルード ファイルでは、NULL マクロは `((void *)0)` と定義されています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ライブラリ関数](../c-language/library-functions.md)

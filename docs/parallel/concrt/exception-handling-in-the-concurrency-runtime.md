@@ -8,36 +8,36 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c7fee363da023b9252471a35aaecd262a55f17c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437870"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141787"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>コンカレンシー ランタイムでの例外処理
 
 コンカレンシー ランタイムは、C++ 例外処理を使用してさまざまなエラーを通知します。 そのエラーには、ランタイムの不適切な使用、リソースの取得の失敗などのランタイム エラー、タスクおよびタスク グループに提供した処理関数で生じるエラーなどがあります。 タスクまたはタスク グループによって例外がスローされると、ランタイムはその例外を保持し、タスクまたはタスク グループの完了を待機するコンテキストにマーシャリングします。 軽量タスクやエージェントなどのコンポーネントの例外は、ランタイムによって自動的には管理されません。 そのため、独自の例外処理機構を実装する必要があります。 このトピックでは、タスク、タスク グループ、軽量タスク、および非同期エージェントによってスローされた例外をランタイムが処理するしくみと、アプリケーションで例外に応答する方法を説明します。
 
-## <a name="key-points"></a>主要なポイント
+## <a name="key-points"></a>重要なポイント
 
 - タスクまたはタスク グループによって例外がスローされると、ランタイムはその例外を保持し、タスクまたはタスク グループの完了を待機するコンテキストにマーシャリングします。
 
-- 可能であれば、すべての呼び出しを囲む[::task_canceled](reference/task-class.md#get)と[::wait](reference/task-class.md#wait)で、 `try` / `catch`回復できるエラーを処理するためにブロック差出人。 タスクが例外をスローし、その例外がそのタスク、その継続の 1 つ、またはメイン アプリケーションによってキャッチされない場合、ランタイムはアプリケーションを終了します。
+- 可能な場合は、 [concurrency:: task:: get](reference/task-class.md#get)および[concurrency:: task:: wait](reference/task-class.md#wait)のすべての呼び出しを `try`/`catch` ブロックでブロックし、回復可能なエラーを処理します。 タスクが例外をスローし、その例外がそのタスク、その継続の 1 つ、またはメイン アプリケーションによってキャッチされない場合、ランタイムはアプリケーションを終了します。
 
 - タスク ベースの継続は常に実行されます。継続元タスクが正常に完了したかどうか、例外をスローしたかどうか、または取り消されたかどうかは、関係ありません。 値ベースの継続は、継続元タスクがスローまたは取り消すと、実行されません。
 
 - タスク ベースの継続は常に実行されるため、継続チェーンの末尾にタスク ベースの継続を追加することを検討してください。 これにより、コードですべての例外が確認されることを保証できます。
 
-- ランタイムによってスロー [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md)を呼び出すと[::task_canceled](reference/task-class.md#get)され、そのタスクが取り消されます。
+- [Concurrency:: task:: get](reference/task-class.md#get)を呼び出し、そのタスクがキャンセルされると、ランタイムは[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)をスローします。
 
 - ランタイムは、軽量タスクと軽量エージェントの例外を管理しません。
 
-##  <a name="top"></a> このドキュメントで
+## <a name="top"></a>このドキュメントの説明
 
-- [タスクおよび継続](#tasks)
+- [タスクと継続](#tasks)
 
-- [タスク グループと並列アルゴリズム](#task_groups)
+- [タスクグループと並列アルゴリズム](#task_groups)
 
 - [ランタイムによってスローされた例外](#runtime)
 
@@ -49,11 +49,11 @@ ms.locfileid: "50437870"
 
 - [非同期エージェント](#agents)
 
-##  <a name="tasks"></a> タスクおよび継続
+## <a name="tasks"></a>タスクと継続
 
-このセクションでは、によってスローされる例外をランタイムが処理する方法について説明します[concurrency::task](../../parallel/concrt/reference/task-class.md)オブジェクトおよびその継続します。 タスクおよび継続モデルの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+このセクションでは、 [concurrency:: task](../../parallel/concrt/reference/task-class.md)オブジェクトとその継続によってスローされる例外をランタイムが処理する方法について説明します。 タスクと継続モデルの詳細については、「[タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
-渡す処理関数の本体で例外をスローするときに、`task`オブジェクト、ランタイムはその例外を保存し、呼び出すコンテキストにマーシャ リング[::task_canceled](reference/task-class.md#get)または[同時実行。task::wait](reference/task-class.md#wait)します。 ドキュメント[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)について説明します値ベースの継続が要約すると、値ベースの継続とタスク ベースの型のパラメーターを受け取る`T`とタスク ベースの継続は、型のパラメーターを受け取る`task<T>`. スローするタスクに 1 つ以上の値ベースの継続がある場合、それらの継続を実行するスケジュールは設定されません。 この動作を次の例に示します。
+`task` オブジェクトに渡す処理関数の本体で例外をスローすると、ランタイムはその例外を格納し、 [concurrency:: task:: get](reference/task-class.md#get)または[concurrency:: task:: wait](reference/task-class.md#wait)を呼び出すコンテキストにマーシャリングします。 ドキュメント[タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化では、タスクベースの継続と値ベースの継続が記述されますが、集計のために、値ベースの継続は `T` 型のパラメーターを受け取り、タスクベースの継続は型 `task<T>`のパラメーターを受け取ります。 スローするタスクに 1 つ以上の値ベースの継続がある場合、それらの継続を実行するスケジュールは設定されません。 この動作を次の例に示します。
 
 [!code-cpp[concrt-eh-task#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_1.cpp)]
 
@@ -68,29 +68,29 @@ ms.locfileid: "50437870"
 [!code-cpp[concrt-eh-task-chain#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_3.cpp)]
 
 > [!TIP]
->  使用することができます、 [::task_completion_event::set_exception](../../parallel/concrt/reference/task-completion-event-class.md)タスクの完了イベントと例外を関連付けるメソッド。 ドキュメント[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)について説明します、 [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)クラスがさらに詳しく説明します。
+> [Concurrency:: task_completion_event:: set_exception](../../parallel/concrt/reference/task-completion-event-class.md)メソッドを使用して、タスクの完了イベントに例外を関連付けることができます。 ドキュメント[タスクの並列処理](../../parallel/concrt/task-parallelism-concurrency-runtime.md)では、 [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)クラスがより詳細に記述されています。
 
-[concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md)に関連する重要なランタイム例外の種類は、`task`します。 `task_canceled` が呼び出され、そのタスクが取り消された場合、ランライムは `task::get` をスローします (逆に、`task::wait`返します[task_status](reference/concurrency-namespace-enums.md#task_group_status)スローしません)。タスク ベースの継続から、この例外をキャッチして処理できます。または、`task::get` を呼び出すと、この例外をキャッチして処理できます。 タスクのキャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)は、`task`に関連する重要なランタイム例外の種類です。 `task_canceled` が呼び出され、そのタスクが取り消された場合、ランライムは `task::get` をスローします (逆に、`task::wait` は[task_status:: canceled](reference/concurrency-namespace-enums.md#task_group_status)を返し、はスローしません)。タスクベースの継続から、または `task::get`を呼び出すときに、この例外をキャッチして処理することができます。 タスクのキャンセルの詳細については、「 [PPL における取り消し](cancellation-in-the-ppl.md)処理」を参照してください。
 
 > [!CAUTION]
->  コードから `task_canceled` をスローしないでください。 呼び出す[concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)代わりにします。
+> コードから `task_canceled` をスローしないでください。 代わりに[concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)を呼び出してください。
 
 タスクが例外をスローし、その例外がそのタスク、その継続の 1 つ、またはメイン アプリケーションによってキャッチされない場合、ランタイムはアプリケーションを終了します。 アプリケーションがクラッシュした場合、C++ の例外がスローされると中断するように Visual Studio を構成できます。 未処理の例外の場所を診断したら、タスク ベースの継続を使用してそれを処理します。
 
-セクション[ランタイムによって例外がスロー](#runtime)このドキュメントでさらに詳しく例外をランタイムを使用する方法について説明します。
+このドキュメントの「[ランタイムによってスロー](#runtime)される例外」セクションでは、ランタイム例外をより詳細に操作する方法について説明します。
 
 [[トップ](#top)]
 
-##  <a name="task_groups"></a> タスク グループと並列アルゴリズム
+## <a name="task_groups"></a>タスクグループと並列アルゴリズム
 
-ここでは、タスク グループによってスローされた例外をランタイムが処理するしくみについて説明します。 このセクションにも当てはまります並列アルゴリズムなど[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)タスク グループにこれらのアルゴリズムが構築されるため、します。
+ここでは、タスク グループによってスローされた例外をランタイムが処理するしくみについて説明します。 また、このセクションは、[同時実行::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)などの並列アルゴリズムにも適用されます。これらのアルゴリズムは、タスクグループで構築されるためです。
 
 > [!CAUTION]
->  例外が依存タスクに及ぼす影響を十分に理解しておいてください。 例外処理タスクまたは並列アルゴリズムを使用する方法について推奨されるプラクティスについては、次を参照してください、[理解する方法のキャンセル機能と例外は、オブジェクトの破棄を影響を与える処理](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)、並列でのベスト プラクティス」セクション。パターン ライブラリのトピックです。
+> 例外が依存タスクに及ぼす影響を十分に理解しておいてください。 タスクまたは並列アルゴリズムで例外処理を使用する方法に関する推奨される方法については、「並列パターンライブラリのベストプラクティス」の「[キャンセルと例外処理がオブジェクトの破棄に与える影響](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)について」を参照してください。
 
-タスク グループの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+タスクグループの詳細については、「[タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。 並列アルゴリズムの詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
 
-渡す処理関数の本体で例外をスローするときに、 [concurrency::task_group](reference/task-group-class.md)または[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクト、ランタイムはその例外を保存し、マーシャ リング呼び出すコンテキストに[::task_group::wait](reference/task-group-class.md#wait)、 [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)、 [concurrency::task_group::run_and_wait](reference/task-group-class.md#run_and_wait)、または[::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait)します。 また、ランタイムは、タスク グループ内のすべてのアクティブ タスク (子タスク グループ内のタスクも含む) を中止すると共に、開始されていないすべてのタスクを破棄します。
+[Concurrency:: task_group](reference/task-group-class.md)または[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクトに渡す処理関数の本体で例外をスローすると、ランタイムはその例外を格納し、 [concurrency:: task_group:: wait](reference/task-group-class.md#wait)、 [concurrency:: structured_task_group:: wait](reference/structured-task-group-class.md#wait)、concurrency:: [task_group:: run_and_wait](reference/task-group-class.md#run_and_wait)、または[concurrency](reference/structured-task-group-class.md#run_and_wait):: structured_task_group:: run_and_wait を呼び出すコンテキストにマーシャリングします。 また、ランタイムは、タスク グループ内のすべてのアクティブ タスク (子タスク グループ内のタスクも含む) を中止すると共に、開始されていないすべてのタスクを破棄します。
 
 次の例は、例外をスローする処理関数の基本的な構造を示しています。 この例では、`task_group` オブジェクトを使用して 2 つの `point` オブジェクトの値を並列的に出力します。 `print_point` 処理関数は `point` オブジェクトの値をコンソールに出力します。 入力値が `NULL` の場合、処理関数は例外をスローします。 ランタイムはこの例外を保存し、`task_group::wait` を呼び出すコンテキストにその例外をマーシャリングします。
 
@@ -102,17 +102,17 @@ ms.locfileid: "50437870"
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-タスク グループでの例外処理を使用する完全な例を参照してください。[方法: 例外処理を使用して中断する並列ループから](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)します。
+タスクグループで例外処理を使用する完全な例については、「[方法: 例外処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)」を参照してください。
 
 [[トップ](#top)]
 
-##  <a name="runtime"></a> ランタイムによってスローされた例外
+## <a name="runtime"></a>ランタイムによってスローされた例外
 
-ランタイムの呼び出しから例外が発生する可能性があります。 ほとんどの種類の例外を除き[concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md)と[concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md)、プログラミング エラーを示します。 一般にこれらのエラーは回復不能であるため、アプリケーション コードではキャッチまたは処理できません。 プログラミング エラーを診断する必要がある場合にのみ、回復不能なエラーをアプリケーション コードでキャッチまたは処理することをお勧めします。 ただし、ランタイムで定義されている例外の種類を把握しておけば、プログラミング エラーを診断するときに役立ちます。
+ランタイムの呼び出しから例外が発生する可能性があります。 [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)と[concurrency:: operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md)を除き、ほとんどの例外の種類は、プログラミングエラーを示します。 一般にこれらのエラーは回復不能であるため、アプリケーション コードではキャッチまたは処理できません。 プログラミング エラーを診断する必要がある場合にのみ、回復不能なエラーをアプリケーション コードでキャッチまたは処理することをお勧めします。 ただし、ランタイムで定義されている例外の種類を把握しておけば、プログラミング エラーを診断するときに役立ちます。
 
-ランタイムによってスローされる例外の例外処理機構は、処理関数によってスローされる例外の例外処理機構と同じです。 たとえば、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)関数がスロー`operation_timed_out`ときを受け取らず、メッセージで指定された期間。 タスク グループに渡す処理関数で `receive` が例外をスローすると、ランタイムはその例外を保存して、`task_group::wait`、`structured_task_group::wait`、`task_group::run_and_wait`、または `structured_task_group::run_and_wait` を呼び出すコンテキストにその例外をマーシャリングします。
+ランタイムによってスローされる例外の例外処理機構は、処理関数によってスローされる例外の例外処理機構と同じです。 たとえば、 [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)関数は、指定された期間内にメッセージを受信しない場合に `operation_timed_out` をスローします。 タスク グループに渡す処理関数で `receive` が例外をスローすると、ランタイムはその例外を保存して、`task_group::wait`、`structured_task_group::wait`、`task_group::run_and_wait`、または `structured_task_group::run_and_wait` を呼び出すコンテキストにその例外をマーシャリングします。
 
-次の例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを並列で 2 つのタスクを実行します。 1 つ目のタスクは 5 秒間待機した後、メッセージをメッセージ バッファーに送信します。 2 つ目のタスクは `receive` 関数を使用して 3 秒間待機し、同じメッセージ バッファーからメッセージを受信します。 `receive` 関数は、時間内にメッセージを受信しなかった場合、`operation_timed_out` をスローします。
+次の例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、2つのタスクを並行して実行します。 1 つ目のタスクは 5 秒間待機した後、メッセージをメッセージ バッファーに送信します。 2 つ目のタスクは `receive` 関数を使用して 3 秒間待機し、同じメッセージ バッファーからメッセージを受信します。 `receive` 関数は、時間内にメッセージを受信しなかった場合、`operation_timed_out` をスローします。
 
 [!code-cpp[concrt-eh-time-out#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_5.cpp)]
 
@@ -126,7 +126,7 @@ The operation timed out.
 
 [[トップ](#top)]
 
-##  <a name="multiple"></a> 複数の例外
+## <a name="multiple"></a>複数の例外
 
 タスクまたは並列アルゴリズムが複数の例外を受け取った場合、ランタイムはそのいずれか 1 つだけを呼び出し元のコンテキストにマーシャリングします。 どの例外がマーシャリングされるかは、任意です。
 
@@ -142,25 +142,25 @@ The operation timed out.
 
 [[トップ](#top)]
 
-##  <a name="cancellation"></a> キャンセル
+## <a name="cancellation"></a>取り消さ
 
-すべての例外がエラーの存在を示すわけではありません。 たとえば、検索アルゴリズムは結果を検出したときに、例外処理を使用して、関連付けられているタスクを中止することがあります。 コードで取り消しの機構を使用する方法の詳細については、次を参照してください。 [PPL における取り消し処理](../../parallel/concrt/cancellation-in-the-ppl.md)します。
-
-[[トップ](#top)]
-
-##  <a name="lwts"></a> 軽量タスク
-
-軽量タスクから直接スケジュールしたタスク、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクト。 軽量タスクは、通常のタスクよりもオーバーヘッドが小さくなります。 ただし、ランタイムは軽量タスクによってスローされた例外をキャッチしません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 したがって、アプリケーションで適切なエラー処理機構を使用する必要があります。 軽量タスクの詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+すべての例外がエラーの存在を示すわけではありません。 たとえば、検索アルゴリズムは結果を検出したときに、例外処理を使用して、関連付けられているタスクを中止することがあります。 コードでキャンセルメカニズムを使用する方法の詳細については、「 [PPL でのキャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)」を参照してください。
 
 [[トップ](#top)]
 
-##  <a name="agents"></a> 非同期エージェント
+## <a name="lwts"></a>軽量タスク
+
+軽量タスクは、 [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクトから直接スケジュールするタスクです。 軽量タスクは、通常のタスクよりもオーバーヘッドが小さくなります。 ただし、ランタイムは軽量タスクによってスローされた例外をキャッチしません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 したがって、アプリケーションで適切なエラー処理機構を使用する必要があります。 軽量タスクの詳細については、「[タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
+
+[[トップ](#top)]
+
+## <a name="agents"></a>非同期エージェント
 
 軽量タスクと同様に、ランタイムは非同期エージェントによってスローされた例外を管理しません。
 
-次の例から派生したクラスで例外を処理する方法の 1 つ[concurrency::agent](../../parallel/concrt/reference/agent-class.md)します。 この例では、`points_agent` クラスを定義しています。 `points_agent::run` メソッドはメッセージ バッファーから `point` オブジェクトを読み取り、それをコンソールに出力します。 `run` メソッドは、`NULL` ポインターを受け取った場合に例外をスローします。
+次の例は、 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md)から派生したクラスで例外を処理する方法の1つを示しています。 この例では、`points_agent` クラスを定義しています。 `points_agent::run` メソッドはメッセージ バッファーから `point` オブジェクトを読み取り、それをコンソールに出力します。 `run` メソッドは、`NULL` ポインターを受け取った場合に例外をスローします。
 
-`run`メソッドは、すべての処理を囲む、 `try` - `catch`ブロックします。 `catch` ブロックは、例外をメッセージ バッファーに格納します。 アプリケーションは、エージェントの終了後にこのバッファーから例外を読み取ることで、エージェントでのエラーの有無をチェックします。
+`run` メソッドは、`try`-`catch` ブロック内のすべての作業を囲みます。 `catch` ブロックは、例外をメッセージ バッファーに格納します。 アプリケーションは、エージェントの終了後にこのバッファーから例外を読み取ることで、エージェントでのエラーの有無をチェックします。
 
 [!code-cpp[concrt-eh-agents#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_7.cpp)]
 
@@ -173,19 +173,19 @@ error occurred in agent: point must not be NULL
 the status of the agent is: done
 ```
 
-`try` - `catch`外部ブロックが存在する、`while`ループ、エージェントの終了が最初のエラーが発生したときに処理します。 場合、 `try` - `catch`ブロックが内、`while`ループ、エラーが発生した後、エージェントを引き続きとします。
+`try`-`catch` ブロックは `while` ループの外側に存在するため、エージェントは最初のエラーが発生したときに処理を終了します。 `try`-`catch` ブロックが `while` ループ内にある場合は、エラーが発生した後もエージェントは続行されます。
 
-この例では例外がメッセージ バッファーに格納されるため、別のコンポーネントが実行中のエージェントのエラーを監視できます。 この例では、 [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md)エラーを格納するオブジェクト。 エージェントが複数の例外を処理する場合、`single_assignment` クラスは渡された最初のメッセージだけを保存します。 最後の例外だけを保存するには、使用、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラス。 すべての例外を保存するには、使用、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)クラス。 これらのメッセージ ブロックの詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
+この例では例外がメッセージ バッファーに格納されるため、別のコンポーネントが実行中のエージェントのエラーを監視できます。 この例では、 [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md)オブジェクトを使用してエラーを格納します。 エージェントが複数の例外を処理する場合、`single_assignment` クラスは渡された最初のメッセージだけを保存します。 最後の例外のみを格納するには、 [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラスを使用します。 すべての例外を格納するには、 [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)クラスを使用します。 これらのメッセージブロックの詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
-非同期エージェントの詳細については、次を参照してください。[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)します。
-
-[[トップ](#top)]
-
-##  <a name="summary"></a> まとめ
+非同期エージェントの詳細については、「[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)」を参照してください。
 
 [[トップ](#top)]
 
-## <a name="see-also"></a>関連項目
+## <a name="summary"></a> まとめ
+
+[[トップ](#top)]
+
+## <a name="see-also"></a>参照
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
 [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
@@ -193,4 +193,3 @@ the status of the agent is: done
 [PPL における取り消し処理](cancellation-in-the-ppl.md)<br/>
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)
-

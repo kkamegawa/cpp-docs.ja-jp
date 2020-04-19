@@ -1,9 +1,9 @@
 ---
 title: tmpfile_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488115"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946055"
 ---
-# <a name="tmpfiles"></a>tmpfile_s
+# <a name="tmpfile_s"></a>tmpfile_s
 
 一時ファイルを作成します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [tmpfile](tmpfile.md) です。
 
@@ -53,19 +56,19 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*pFilePtr*|**戻り値**|**内容***pFilePtr* |
+|*pFilePtr*|**戻り値**|**内容**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|変更されない|
 
-上記のパラメーターの検証エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、戻り値は**EINVAL**します。
+上記のパラメーターの検証エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、戻り値は**einval**になります。
 
 ## <a name="remarks"></a>Remarks
 
-**Tmpfile_s**関数は、一時ファイルを作成しでそのストリームへのポインターを与えます、 *pFilePtr*引数。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam_s](tmpnam-s-wtmpnam-s.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
+**Tmpfile_s**関数は、一時ファイルを作成し、そのストリームへのポインターを*pfileptr*引数に格納します。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam_s](tmpnam-s-wtmpnam-s.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
 
-ファイルを開けない場合**tmpfile_s**書き込みます**NULL**を*pFilePtr*パラメーター。 通常、またはプログラムの終了時に、ファイルが閉じられたときに、この一時ファイルが自動的に削除 **_rmtmp**と呼ばれる場合は、現在の作業ディレクトリが変更しないと仮定します。 一時ファイルを開いた**w + b** (バイナリ読み取り/書き込み) モード。
+ファイルを開くことができない場合、 **tmpfile_s**は*pfileptr*パラメーターに**NULL**を書き込みます。 この一時ファイルは、ファイルが閉じられたとき、プログラムが正常に終了したとき、または **_rmtmp**が呼び出されたときに自動的に削除されます。これは、現在の作業ディレクトリが変更されていないことを前提としています。 一時ファイルは、 **w + b** (バイナリ読み取り/書き込み) モードで開かれます。
 
-しようとすると、エラーが発生する可能性が複数の**から**(STDIO を参照してください。H) 呼び出し**tmpfile_s**します。
+**TMP_MAX_S**を超える場合、エラーが発生することがあります (「STDIO」を参照してください)。H) **tmpfile_s**を使用してを呼び出します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -78,7 +81,7 @@ errno_t tmpfile_s(
 ## <a name="example"></a>例
 
 > [!NOTE]
-> この例では、Windows で実行する管理者特権を必要があります。
+> この例では、Windows で実行するために管理者特権が必要になる場合があります。
 
 ```C
 // crt_tmpfile_s.c

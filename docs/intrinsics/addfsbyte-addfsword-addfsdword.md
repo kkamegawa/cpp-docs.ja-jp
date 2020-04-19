@@ -1,6 +1,6 @@
 ---
 title: __addfsbyte、__addfsword、__addfsdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addfsbyte_cpp
 - __addfsdword
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - __addfsword intrinsic
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-ms.openlocfilehash: 477d8ddfe970c6d04e61a47eb4bb10e3fbc570de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 302e58ed13c144913e7806a0a8b7adc202a67ef6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329073"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218526"
 ---
-# <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte、__addfsword、__addfsdword
+# <a name="__addfsbyte-__addfsword-__addfsdword"></a>__addfsbyte、__addfsword、__addfsdword
 
 **Microsoft 固有の仕様**
 
-先頭の相対オフセットで指定されたメモリ位置に値を追加、`FS`セグメント。
+`FS`セグメントの先頭を基準としたオフセットによって指定されたメモリ位置に値を追加します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __addfsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -43,13 +43,13 @@ void __addfsdword(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*オフセット*<br/>
-[in]先頭からのオフセット`FS`します。
+*影*\
+からの`FS`先頭からのオフセット。
 
-*データ*<br/>
-[in]メモリ位置に追加する値。
+*データ*\
+からメモリ位置に追加する値。
 
 ## <a name="requirements"></a>必要条件
 
@@ -59,15 +59,17 @@ void __addfsdword(
 |`__addfsword`|x86|
 |`__addfsdword`|x86|
 
+**ヘッダーファイル**\<>
+
 ## <a name="remarks"></a>Remarks
 
-これらのルーチンは組み込みとしてのみ使用できます。
+これらのルーチンは、組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[_ _incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)<br/>
-[_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[__ インシデント fsbyte、 \_visual word、 \_visual word](../intrinsics/incfsbyte-incfsword-incfsdword.md)\
+[__ readfsbyte、 \_"readfsdword \_"、"readfsqword \_"、"readfsword"](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[__ writefsbyte、 \_ \_writefsdword、writefsqword、 \_writefソード](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

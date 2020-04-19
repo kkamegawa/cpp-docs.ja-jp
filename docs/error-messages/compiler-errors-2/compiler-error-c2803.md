@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-ms.openlocfilehash: d20b8dde9f4134273adcba0f947f685f7ce7d213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d39f737ba02f3fa9c9d5f61594ddf730db6739a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447269"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760661"
 ---
 # <a name="compiler-error-c2803"></a>コンパイラ エラー C2803
 
-'operator 演算子' がクラス型の仮パラメーターを少なくとも 1 つあります。
+' operator operator ' には、クラス型の仮引数が少なくとも1つ必要です
 
-オーバー ロードされた演算子には、クラス型のパラメーターが不足しています。
+オーバーロードされた演算子にクラス型のパラメーターがありません。
 
-参照 (ポインターが参照を使用していない) または値を書き込みを可能にするには少なくとも 1 つのパラメーターを渡す必要がある"、< b"(の型クラス A と b)。
+参照によってパラメーターを1つ以上渡す必要があります (ポインターを使用しないでください)。または、値によって "a < b" (a と b が型クラス A である) を書き込むことができます。
 
-両方のパラメーターがポインターの場合、ポインター アドレスの純粋な比較になり、ユーザー定義の変換は使用しません。
+両方のパラメーターがポインターである場合は、ポインターアドレスの純粋な比較であり、ユーザー定義の変換は使用されません。
 
 次の例では、C2803 が生成されます。
 
-```
+```cpp
 // C2803.cpp
 // compile with: /c
 class A{};

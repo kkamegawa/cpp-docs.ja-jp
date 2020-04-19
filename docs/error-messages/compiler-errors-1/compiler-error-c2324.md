@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2324
 ms.assetid: 215f0544-85b0-452d-825f-17a388b6a61c
-ms.openlocfilehash: 694d1b2c9df4830e721af51517044e9734fcf415
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 924341d75c7126f8af30da1038781f9e559e9c2b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449830"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747892"
 ---
 # <a name="compiler-error-c2324"></a>コンパイラ エラー C2324
 
-'identifier': 'name' の右側に予期しません。
+' identifier ': ' name ' の右には予期されていません
 
-正しくない識別子を使用して、デストラクターが呼び出されます。
+デストラクターが間違った識別子を使用して呼び出されています。
 
 次の例では、C2324 が生成されます。
 
-```
+```cpp
 // C2324.cpp
 class A {};
 typedef A* pA_t;

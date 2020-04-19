@@ -5,18 +5,18 @@ helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: cefd97b377c2755b158830d8e649ac40f90fee11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310842"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI タブ付きグループ
 
 マルチ ドキュメント インターフェイス (MDI) のタブ付きグループ機能により、1 つまたは複数のタブ付きウィンドウを表示する、マルチ ドキュメント インターフェイス (MDI) アプリケーション (またはグループと呼ばれる、タブ付きウィンドウの*タブ付きグループ*) MDI クライアント領域にします。 タブ付きウィンドウは、垂直方向または水平方向に配置できます。 アプリケーションでは、1 つ以上の MDI タブ付きグループをホストしている場合、グループは、スプリッターで区切られます。
 
-## <a name="features"></a>フィーチャー
+## <a name="features"></a>機能
 
 MDI タブ付きグループの機能は、次のとおりです。
 

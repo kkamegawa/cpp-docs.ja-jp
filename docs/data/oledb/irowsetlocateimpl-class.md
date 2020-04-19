@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: e43f9c1761e92120a577f097fb3303a6641f5b5f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408844"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl クラス
 
-OLE DB 実装[IRowsetLocate](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイスで、行セットから任意の行がフェッチされます。
+OLE DB 実装[IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイスで、行セットから任意の行がフェッチされます。
 
 ## <a name="syntax"></a>構文
 
@@ -76,7 +76,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 プロバイダーによって保持されているすべての行ハンドルのストレージ ユニット。
 
 *BookmarkKeyType*<br/>
-長整数型や文字列など、ブックマークの型。 通常のブックマークには少なくとも 2 つのバイトの長さが必要です。 (1 バイトの長さは、OLE DB 用に予約された[標準ブックマーク](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`、 `DBBMK_LAST`、および`DBBMK_INVALID`)。
+長整数型や文字列など、ブックマークの型。 通常のブックマークには少なくとも 2 つのバイトの長さが必要です。 (1 バイトの長さは、OLE DB 用に予約された[標準ブックマーク](/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`、 `DBBMK_LAST`、および`DBBMK_INVALID`)。
 
 *BookmarkType*<br/>
 データへのブックマーク間のリレーションシップを維持するためのマッピング メカニズム。
@@ -107,15 +107,15 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 ## <a name="remarks"></a>Remarks
 
-`IRowsetLocateImpl` OLE DB テンプレートの実装、 [IRowsetLocate](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイス。 `IRowsetLocate` 行セットからの任意の行のフェッチに使用されます。 このインターフェイスを実装していない行セットは、`sequential`行セット。 ときに`IRowsetLocate`が存在する、行セット列 0 が行のブックマーク; の同じ行に位置を変更するために使用するブックマークの値を取得はこのコラムを読みます。
+`IRowsetLocateImpl` OLE DB テンプレートの実装、 [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))インターフェイス。 `IRowsetLocate` 行セットからの任意の行のフェッチに使用されます。 このインターフェイスを実装していない行セットは、`sequential`行セット。 ときに`IRowsetLocate`が存在する、行セット列 0 が行のブックマーク; の同じ行に位置を変更するために使用するブックマークの値を取得はこのコラムを読みます。
 
 `IRowsetLocateImpl` プロバイダーのブックマーク サポートを実装するために使用されます。 ブックマークは、プレース ホルダー (行セットでのインデックス)、行にすばやく戻るコンシューマーを有効にするデータを高速アクセスを許可します。 プロバイダーは、どのようなブックマークは一意を決定します。 行を識別します。 使用して`IRowsetLocateImpl`メソッド、ブックマークを比較する、行のフェッチがでオフセット、ブックマークによる行のフェッチおよびブックマークのハッシュ値を返します。
 
 で行セットの OLE DB のブックマークをサポートするには、このクラスから継承する行セットを確認します。
 
-ブックマークのサポートを実装する方法の詳細については、次を参照してください[プロバイダーのサポートのブックマーク](../../data/oledb/provider-support-for-bookmarks.md)で、 *Visual C++ プログラマ ガイド*と[ブックマーク](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))、で *。OLE DB プログラマーズ リファレンス*プラットフォーム SDK にします。
+ブックマークのサポートを実装する方法の詳細については、次を参照してください[プロバイダーのサポートのブックマーク](../../data/oledb/provider-support-for-bookmarks.md)で、 *Visual C++ プログラマ ガイド*と[ブックマーク](/previous-versions/windows/desktop/ms709728(v=vs.85))、で *。OLE DB プログラマーズ リファレンス*プラットフォーム SDK にします。
 
-## <a name="compare"></a> Irowsetlocateimpl::compare
+## <a name="compare"></a> IRowsetLocateImpl::Compare
 
 2 つのブックマークを比較します。
 
@@ -132,11 +132,11 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
-いずれかのブックマークは、標準 OLE DB 定義[標準ブックマーク](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85))(`DBBMK_FIRST`、 `DBBMK_LAST`、または`DBBMK_INVALID`)。 戻り値`pComparison`2 つのブックマークの間のリレーションシップを示します。
+いずれかのブックマークは、標準 OLE DB 定義[標準ブックマーク](/previous-versions/windows/desktop/ms712954(v=vs.85))(`DBBMK_FIRST`、 `DBBMK_LAST`、または`DBBMK_INVALID`)。 戻り値`pComparison`2 つのブックマークの間のリレーションシップを示します。
 
 - DBCOMPARE_LT (`cbBookmark1`前`cbBookmark2`)。
 
@@ -148,7 +148,7 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 - DBCOMPARE_NOTCOMPARABLE (ブックマークは比較できません。)
 
-## <a name="getrowsat"></a> Irowsetlocateimpl::getrowsat
+## <a name="getrowsat"></a> IRowsetLocateImpl::GetRowsAt
 
 ブックマークからのオフセットで指定した行で始まる行をフェッチします。
 
@@ -167,15 +167,15 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetlocate::getrowsat](https://docs.microsoft.com/previous-versions/windows/desktop/ms723031(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetlocate::getrowsat](/previous-versions/windows/desktop/ms723031(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
-使用する代わりに、カーソル位置からフェッチ、[に](https://docs.microsoft.com/previous-versions/windows/desktop/ms723031(v=vs.85))します。
+使用する代わりに、カーソル位置からフェッチ、[に](/previous-versions/windows/desktop/ms723031(v=vs.85))します。
 
 `IRowsetLocateImpl::GetRowsAt` カーソルの位置は変更されません。
 
-## <a name="getrowsbybookmark"></a> Irowsetlocateimpl::getrowsbybookmark
+## <a name="getrowsbybookmark"></a> IRowsetLocateImpl::GetRowsByBookmark
 
 指定されたブックマークに一致する 1 つまたは複数の行がフェッチされます。
 
@@ -193,15 +193,15 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>パラメーター
 
 *hReserved*<br/>
-[in]対応する*hChapter*パラメーターを[:getrowsbybookmark](https://docs.microsoft.com/previous-versions/windows/desktop/ms725420(v=vs.85))します。
+[in]対応する*hChapter*パラメーターを[:getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [:getrowsbybookmark](https://docs.microsoft.com/previous-versions/windows/desktop/ms725420(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、次を参照してください。 [:getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
-ブックマークは、定義した値または OLE DB[標準ブックマーク](https://docs.microsoft.com/previous-versions/windows/desktop/ms712954(v=vs.85))(`DBBMK_FIRST`または`DBBMK_LAST`)。 カーソルの位置は変更されません。
+ブックマークは、定義した値または OLE DB[標準ブックマーク](/previous-versions/windows/desktop/ms712954(v=vs.85))(`DBBMK_FIRST`または`DBBMK_LAST`)。 カーソルの位置は変更されません。
 
-## <a name="hash"></a> Irowsetlocateimpl::hash
+## <a name="hash"></a> IRowsetLocateImpl::Hash
 
 ハッシュの指定されたブックマークの値を返します。
 
@@ -219,11 +219,11 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>パラメーター
 
 *hReserved*<br/>
-[in]対応する*hChapter*パラメーターを[IRowsetLocate::Hash](https://docs.microsoft.com/previous-versions/windows/desktop/ms709697(v=vs.85))します。
+[in]対応する*hChapter*パラメーターを[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [IRowsetLocate::Hash](https://docs.microsoft.com/previous-versions/windows/desktop/ms709697(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、次を参照してください。 [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="rgbookmarks"></a> Irowsetlocateimpl::m_rgbookmarks
+## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
 
 ブックマークの配列。
 
@@ -237,6 +237,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate:IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721190(v=vs.85))
+[IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[ブックマーク](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+[ブックマーク](/previous-versions/windows/desktop/ms709728(v=vs.85))

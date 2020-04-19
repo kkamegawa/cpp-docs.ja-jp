@@ -1,28 +1,32 @@
 ---
 title: STRUCT (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - struct
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: b64e6adbabe847600147dbd773328aadf4225cb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054a834b7d97ca7df01ab510fde21de22f2acf3d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525676"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318424"
 ---
-# <a name="struct-masm"></a>STRUCT (MASM)
+# <a name="struct"></a>STRUCT
 
-指定した構造体型を宣言します*フィールド宣言*します。 各フィールドは、有効なデータの定義である必要があります。 同じ[STRUC](../../assembler/masm/struc.md)します。
+指定された*フィールド宣言*を持つ構造体型を宣言します。 各フィールドは、有効なデータ定義である必要があります。 [STRUC](struc.md)と同じです。
 
 ## <a name="syntax"></a>構文
 
-> *名前*構造体 [*配置*] [, 一意でない]<br/>
-> *フィールドの宣言*<br/>
-> *名前*終了
+> *name* **STRUCT** ⟦*alignment*⟧⟦ __、__ **一意**でない⟧*フィールド宣言*\
+> *名前*の**終わり**
+
+## <a name="remarks"></a>コメント
+
+*名前*引数は、開始および終了ステートメントと同じである必要があります。 
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

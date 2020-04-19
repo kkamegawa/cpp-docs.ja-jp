@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-ms.openlocfilehash: 7b9f6634e4b5980d8318557a8822549d226910b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8fe808c3147fa52c5041e2988822ace0ba60896
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396341"
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF クラス
 
@@ -65,7 +65,7 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 *pt*<br/>
 ソース ポイント
 
-*[fx]*<br/>
+*fX*<br/>
 ソース X
 
 *fY*<br/>

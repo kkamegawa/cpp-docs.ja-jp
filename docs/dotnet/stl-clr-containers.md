@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 1787e18cb36c77429cd4957bab167c77d5e25d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384596"
 ---
 # <a name="stlclr-containers"></a>STL/CLR コンテナー
 
@@ -37,7 +37,7 @@ STL/CLR コンテナーには、2 種類の要素のいずれかを保持でき�
 
 ### <a name="handles-to-reference-types"></a>参照型へのハンドル
 
-参照型を識別するハンドルを STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ でのハンドルは、ネイティブ C++ でのポインターに似ています。 詳細については、次を参照してください。[オブジェクト演算子 (^) へのハンドル](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)します。
+参照型を識別するハンドルを STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ でのハンドルは、ネイティブ C++ でのポインターに似ています。 詳細については、次を参照してください。[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)します。
 
 #### <a name="example"></a>例
 
@@ -229,7 +229,7 @@ int main()
 
 Unboxed 値型を STL/CLR コンテナーに挿入することもできます。 Unboxed 値型が値の型をまだ*手書き*参照型にします。
 
-値型の要素がある標準の値の型のいずれかなど、 `int`、か、またはユーザー定義の値の型をなどあるできます、`value class`します。 詳細については、次を参照してください[クラスと構造体。](../windows/classes-and-structs-cpp-component-extensions.md)
+値型の要素がある標準の値の型のいずれかなど、 `int`、か、またはユーザー定義の値の型をなどあるできます、`value class`します。 詳細については、次を参照してください[クラスと構造体。](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>例
 

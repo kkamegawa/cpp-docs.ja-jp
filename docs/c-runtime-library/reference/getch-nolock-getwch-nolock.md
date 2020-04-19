@@ -1,10 +1,10 @@
 ---
 title: _getch_nolock、_getwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwch_nolock
 - _getch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getch_nolock
 - getwch_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c8f27b468d0471f44211efa12dcee6453b3fac1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514297"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955465"
 ---
-# <a name="getchnolock-getwchnolock"></a>_getch_nolock、_getwch_nolock
+# <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock、_getwch_nolock
 
 エコーせず、さらにスレッドをロックしないで、コンソールから文字を取得します。
 
@@ -61,7 +64,7 @@ wint_t _getwch_nolock( void );
 
 ## <a name="remarks"></a>Remarks
 
-**_getch_nolock**と **_getwch_nolock**と同じ **_getch**と **_getchw**する点を除いて、他のスレッドによる干渉から保護されません。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getch_nolock**と **_getwch_nolock**は、他のスレッドによる干渉から保護されない点を除いて、 **_getch**および **_getchw**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

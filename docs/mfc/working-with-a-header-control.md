@@ -5,12 +5,12 @@ helpviewer_keywords:
 - header controls [MFC], working with
 - header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
-ms.openlocfilehash: be76a33be713ee8c58df082fee507a2ed9223c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db8f9d40bad116d7873bfd8ea9682c711d44e91f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399526"
 ---
 # <a name="working-with-a-header-control"></a>ヘッダー コントロールの操作
 
@@ -30,4 +30,3 @@ ms.locfileid: "50677631"
 
 [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

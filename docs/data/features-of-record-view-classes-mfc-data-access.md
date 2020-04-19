@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 2feda8f8f446e02a5056287c656707ea038f5387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397953"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>レコード ビュー クラスの機能 (MFC データ アクセス)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50461153"
 
 - 更新プログラムは、ユーザーが別のレコードに移動したときに、現在のレコードを変更します。
 
-ナビゲーションの詳細については、次を参照してください。[レコード ビュー: レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)します。
+ナビゲーションの詳細については、次を参照してください。[レコード ビュー。レコード ビュー内のナビゲーションをサポートしている](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)します。
 
 ## <a name="see-also"></a>関連項目
 

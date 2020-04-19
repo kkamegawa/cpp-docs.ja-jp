@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645810"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943412"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 複素数の絶対値を計算します。
 
@@ -54,11 +57,11 @@ double _cabs(
 
 ## <a name="return-value"></a>戻り値
 
-**_cabs**成功した場合、その引数の絶対値を返します。 オーバーフローについては、 **_cabs**返します**HUGE_VAL**設定と**errno**に**ERANGE**します。 エラー処理は [_matherr](matherr.md) で変更できます。
+cab が成功した場合、その引数の絶対値が返されます **(_t)** 。 オーバーフロー時に**は、** **HUGE_VAL**が返され、 **errno**が**ERANGE**に設定されます。 エラー処理は [_matherr](matherr.md) で変更できます。
 
 ## <a name="remarks"></a>Remarks
 
-**_Cabs**関数型の構造体である必要があります、複素数の絶対値を計算する[_complex](../../c-runtime-library/standard-types.md)します。 構造体*z*は実際のコンポーネントで構成されます*x*と虚数*y*します。 呼び出し **_cabs**と同等の式の値を生成`sqrt( z.x * z.x + z.y * z.y )`します。
+**Cab**関数は、複素数の絶対値を計算します。この値は[、complex 型](../../c-runtime-library/standard-types.md)の構造体である必要があります。 構造体*z*は、実際のコンポーネント*x*と虚数成分*y*で構成されています。 **Cab**を呼び出すと、式`sqrt( z.x * z.x + z.y * z.y )`の値と等価の値が生成されます。
 
 ## <a name="requirements"></a>必要条件
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607861"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448071"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参照型の C++ スタック セマンティクス
 
-Visual C 2005 では、前に、参照型のインスタンスのみ作成でしたを使用して、`new`ガベージにオブジェクトを作成してこの演算子は、ヒープを収集します。 ただし、スタック上のネイティブな型のインスタンスを作成するために使用と同じ構文を使用して、参照型のインスタンスを作成することができますようになりました。 使用する必要がない、 [ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)参照型のオブジェクトを作成します。 コンパイラは、オブジェクトがスコープ外になる、オブジェクトのデストラクターを呼び出します。
+Visual Studio 2005 では、前に、参照型のインスタンスのみ作成でしたを使用して、`new`ガベージにオブジェクトを作成してこの演算子は、ヒープを収集します。 ただし、スタック上のネイティブな型のインスタンスを作成するために使用と同じ構文を使用して、参照型のインスタンスを作成することができますようになりました。 使用する必要がない、 [ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)参照型のオブジェクトを作成します。 コンパイラは、オブジェクトがスコープ外になる、オブジェクトのデストラクターを呼び出します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -27,7 +27,7 @@ Visual C 2005 では、前に、参照型のインスタンスのみ作成でし
 
 コンパイラでは、参照型の既定の代入演算子は生成されません。 代入演算子を使用すると、スタック セマンティクスを使用してオブジェクトを作成し、スタック セマンティクスを使用して作成された既存のオブジェクトで初期化できます。 参照型の代入演算子は、次の形式の署名:`void operator=( R% ){}`します。
 
-型のデストラクターが重要なリソースを解放し、参照型のスタック セマンティクスを使用して場合、は、デストラクターを明示的に呼び出す必要はありません (呼び出したり`delete`)。 参照型のデストラクターの詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+型のデストラクターが重要なリソースを解放し、参照型のスタック セマンティクスを使用して場合、は、デストラクターを明示的に呼び出す必要はありません (呼び出したり`delete`)。 参照型のデストラクターの詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー。クラスと構造体定義および使用 (C +/cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
 
 コンパイラが生成した代入演算子には、次の項目を追加します。 通常の標準 C++ 規則に従います。
 
@@ -41,9 +41,9 @@ Visual C 2005 では、前に、参照型のインスタンスのみ作成でし
 
 次の参照型では、スタック セマンティクスで使用するため使用できません。
 
-- [delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)
 
-- [配列](../windows/arrays-cpp-component-extensions.md)
+- [配列](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 98
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

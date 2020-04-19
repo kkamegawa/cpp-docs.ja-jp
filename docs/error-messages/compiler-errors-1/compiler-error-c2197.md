@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2197
 ms.assetid: 6dd5a6ec-bc80-41b9-a4ac-46f80eaca42d
-ms.openlocfilehash: 8999edcf37277e2e05a92a6601d60d34a675719c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16bc1b17b13cb9c7507a769f644eb34faa4989de
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527401"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301848"
 ---
 # <a name="compiler-error-c2197"></a>コンパイラ エラー C2197
 
@@ -21,7 +21,7 @@ ms.locfileid: "50527401"
 
 次の例では C2197 が生成されます。
 
-```
+```c
 // C2197.c
 // compile with: /Za /c
 void func( int );

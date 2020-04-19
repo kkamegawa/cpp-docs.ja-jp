@@ -9,12 +9,12 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-ms.openlocfilehash: a4f3139498c9954026bd0247316eee1155f1b737
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 306092a00a1e119263f4563eea181d7d3ee2b4b2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274526"
 ---
 # <a name="urect-class"></a>_U_RECT クラス
 

@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize
 - aligned_msize
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 922224dc81858076770a36551df26c89940b3282
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524850"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943910"
 ---
-# <a name="alignedmsize"></a>_aligned_msize
+# <a name="_aligned_msize"></a>_aligned_msize
 
 ヒープで割り当てられたメモリ ブロックのサイズを返します。
 
@@ -61,11 +64,11 @@ size_t _msize(
 
 ## <a name="remarks"></a>Remarks
 
-**_Aligned_msize**関数への呼び出しによって割り当てられたメモリ ブロックのバイト単位のサイズを返します[_aligned_malloc](aligned-malloc.md)または[_aligned_realloc](aligned-realloc.md)します。 *配置*と*オフセット*値は、ブロックを割り当てた関数に渡される値と同じである必要があります。
+**_Aligned_msize**関数は、 [_aligned_malloc](aligned-malloc.md)または[_aligned_realloc](aligned-realloc.md)への呼び出しによって割り当てられたメモリブロックのサイズをバイト単位で返します。 *アラインメント*値と*オフセット*値は、ブロックを割り当てた関数に渡された値と同じである必要があります。
 
-アプリケーションが、C ランタイム ライブラリのデバッグ バージョンにリンクされている場合 **_aligned_msize**に解決される[_aligned_msize_dbg](aligned-msize-dbg.md)します。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **_aligned_msize**は[_aligned_msize_dbg](aligned-msize-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-この関数は、そのパラメーターを検証します。 場合 *_expand* null ポインターまたは*配置*が 2 の累乗でない **_msize**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 関数は、エラーが処理される場合、設定**errno**に**EINVAL** -1 を返します。
+この関数は、そのパラメーターを検証します。 *Memblock*が null ポインターであるか、または*アラインメント*が2の累乗ではない場合、 **_Msize**は「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
 
 ## <a name="requirements"></a>必要条件
 

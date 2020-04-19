@@ -1,49 +1,47 @@
 ---
 title: 'チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成'
-ms.date: 09/24/2018
-f1_keywords:
-- msbuild.cpp.walkthrough.createproject
+ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677216"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837601"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成
 
-このチュートリアルでは、MSBuild を使用して、コマンド プロンプトでの Visual C プロジェクトをビルドする方法を示します。 C++ ソース ファイルと Visual C のコンソール アプリケーションの XML ベースのプロジェクト ファイルを作成する方法について説明します。 プロジェクトをビルドした後は、ビルド プロセスをカスタマイズする方法を学習します。
+このチュートリアルでは、MSBuild を使用して、コマンド プロンプトで Visual Studio C++ プロジェクトをビルドする方法を説明します。 Visual C++ コンソール アプリケーション用の C++ ソース ファイルと XML ベースのプロジェクト ファイルを作成する方法を学習します。 プロジェクトのビルド後は、ビルド処理をカスタマイズする方法を学習します。
 
 このチュートリアルでは、次の作業について説明します。
 
 - プロジェクトの C++ ソース ファイルの作成。
 
-- XML MSBuild プロジェクト ファイルを作成します。
+- XML MSBuild プロジェクト ファイルの作成。
 
-- MSBuild を使用して、プロジェクトをビルドします。
+- MSBuild を使用したプロジェクトのビルド。
 
-- MSBuild を使用して、プロジェクトをカスタマイズします。
+- MSBuild を使用したプロジェクトのカスタマイズ。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを完了するための要件は次のとおりです。
 
-- Visual Studio でのコピー、 **C++ によるデスクトップ開発**ワークロードをインストールします。
+- **C++ によるデスクトップ開発**ワークロードがインストールされた Visual Studio のコピー。
 
-- MSBuild システムの一般的理解。
-
-> [!NOTE]
-> Visual Studio IDE を使用して、後で、プロジェクト ファイルを編集する場合は、このアプローチを使用しないでください。 .Vcxproj ファイルを手動で作成する場合、Visual Studio IDE できないことがあります、読み込んでを編集したり、プロジェクトがプロジェクト項目でワイルドカードを使用している場合に特にです。
+- MSBuild システムの基本的な知識。
 
 > [!NOTE]
-> 低レベルのビルド手順のほとんどに含まれる、 **.targets**と **.props**プロパティに格納されている、VCTargets ディレクトリで定義されているファイル`$(VCTargetsPath)`します。 Visual Studio 2017 Enterprise Edition でこれらのファイルの既定のパスは c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\IDE\\VC\\VCTargets\\します。
+> Visual Studio IDE を使用し後でプロジェクト ファイルを編集する場合は、このアプローチは使用しないでください。 .vcxproj ファイルを手動で作成すると、特にプロジェクトのプロジェクト項目でワイルドカードが使用されている場合、Visual Studio IDE はそれを編集および読み込みできなくなります。
+
+> [!NOTE]
+> 詳細レベルのビルド手順の多くは、VCTargets ディレクトリに定義されている、プロパティ `$(VCTargetsPath)` に格納されている **.targets** および **.props** ファイルに含まれています。 Visual Studio 2019 Enterprise Edition でのこれらのファイルの既定のパスは、C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props です。
 
 ## <a name="creating-the-c-source-files"></a>C++ ソース ファイルの作成
 
-このチュートリアルでは、ソース ファイルとヘッダー ファイルを持つプロジェクトを作成します。 main.cpp という名前のソース ファイルには、コンソール アプリケーションの main 関数を含めます。 main.h という名前のヘッダー ファイルには、iostream ヘッダー ファイルをインクルードするためのコードを含めます。 Visual Studio Code などのエディターで、Visual Studio またはテキストを使用してこれらの C++ ファイルを作成できます。
+このチュートリアルでは、ソース ファイルとヘッダー ファイルがあるプロジェクトを作成します。 main.cpp という名前のソース ファイルには、コンソール アプリケーションの main 関数を含めます。 main.h という名前のヘッダー ファイルには、iostream ヘッダー ファイルをインクルードするためのコードを含めます。 これらの C++ ファイルは、Visual Studio または Visual Studio Code などのテキスト エディターを使用して作成できます。
 
 ### <a name="to-create-the-c-source-files-for-your-project"></a>プロジェクトの C++ ソース ファイルを作成するには
 
@@ -71,24 +69,24 @@ ms.locfileid: "50677216"
 
 ## <a name="creating-the-xml-msbuild-project-file"></a>プロジェクト ファイルXML MSBuild プロジェクト ファイルの作成
 
-MSBuild プロジェクト ファイルがプロジェクトのルート要素を含む XML ファイル (`<Project>`)。 次の例のプロジェクト、`<Project>`要素には、7 つの子要素が含まれています。
+MSBuild のプロジェクト ファイルは、プロジェクトのルート要素 (`<Project>`) を含む XML ファイルです。 次のプロジェクト例では、`<Project>` 要素には 7 個の子要素が含まれています。
 
-- 3 つの項目グループ タグ (`<ItemGroup>`) プロジェクトの構成とプラットフォーム、ソース ファイル名、およびヘッダー ファイル名を指定します。
+- 3 個の項目グループ タグ (`<ItemGroup>`) は、プロジェクトの構成とプラットフォーム、ソース ファイル名、およびヘッダー ファイル名を指定しています。
 
-- 3 つのタグの読み込み (`<Import>`) Microsoft Visual C の設定の場所を指定します。
+- 3 個のインポート タグ (`<Import>`) は、Microsoft Visual C++ の設定の場所を指定しています。
 
-- プロパティ グループ タグ (`<PropertyGroup>`) プロジェクトの設定を指定します。
+- 1 個のプロパティ グループ タグ (`<PropertyGroup>`) は、プロジェクト設定を指定しています。
 
 ### <a name="to-create-the-msbuild-project-file"></a>MSBuild プロジェクト ファイルを作成するには
 
-1. という名前のプロジェクト ファイルを作成するテキスト エディターを使用して`myproject.vcxproj`、し、次のルートを追加`<Project>`要素。 ルートの次の手順で、要素を挿入`<Project>`タグ。
+1. テキスト エディターを使用して `myproject.vcxproj` という名前のプロジェクト ファイルを作成し、次のルート `<Project>` 要素を追加します。 この要素は、次のプロシージャ ステップのルート `<Project>` タグの間に挿入します。 (Visual Studio 2017 を使用している場合は ToolsVersion="15.0" を、Visual Studio 2019 を使用している場合は ToolsVersion="16.0" を使用します。)
 
     ```xml
-    <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-1. 次の 2 つの追加`<ProjectConfiguration>`内の子要素、`<ItemGroup>`要素。 この子要素は、32 ビットの Windows オペレーティング システムのデバッグおよびリリース構成を指定します。
+1. `<ItemGroup>` 要素に次の 2 個の `<ProjectConfiguration>` 子要素を追加します。 この子要素は、32 ビットの Windows オペレーティング システムのデバッグおよびリリース構成を指定します。
 
     ```xml
     <ItemGroup>
@@ -103,28 +101,28 @@ MSBuild プロジェクト ファイルがプロジェクトのルート要素�
     </ItemGroup>
     ```
 
-1. 次の追加`<Import>`このプロジェクトの既定の C++ 設定のパスを指定する要素。
+1. このプロジェクトの既定の C++ 設定のパスを指定する次の `<Import>` 要素を追加します。
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. 次のプロパティ グループ要素の追加 (`<PropertyGroup>`) 2 つのプロジェクト プロパティを指定します。
+1. 2 個のプロジェクト プロパティを指定する次のプロパティ グループ要素 (`<PropertyGroup>`) を追加します。 (Visual Studio 2017 を使用している場合は v141 を、Visual Studio 2019 を使用している場合は v142 を使用します。)
 
     ```xml
     <PropertyGroup>
       <ConfigurationType>Application</ConfigurationType>
-      <PlatformToolset>v141</PlatformToolset>
+      <PlatformToolset>v142</PlatformToolset>
     </PropertyGroup>
     ```
 
-1. 次の追加`<Import>`このプロジェクトの現在の C++ 設定のパスを指定する要素。
+1. このプロジェクトの現在の C++ 設定のパスを指定する次の `<Import>` 要素を追加します。
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-1. 次の追加`<ClCompile>`内の子要素、`<ItemGroup>`要素。 この子要素は、コンパイルする C/C++ ソース ファイルの名前を指定します。
+1. `<ItemGroup>` 要素に次の `<ClCompile>` 子要素を追加します。 この子要素は、コンパイルする C/C++ ソース ファイルの名前を指定します。
 
     ```xml
     <ItemGroup>
@@ -133,9 +131,9 @@ MSBuild プロジェクト ファイルがプロジェクトのルート要素�
     ```
 
    > [!NOTE]
-   > `<ClCompile>` *ビルド ターゲット*で定義されていると、 **VCTargets**ディレクトリ。
+   > `<ClCompile>` は*ビルド ターゲット*であり、**VCTargets** ディレクトリに定義されています。
 
-1. 次の追加`<ClInclude>`内の子要素、`<ItemGroup>`要素。 この子要素は、C/C++ ソース ファイルに対応するヘッダー ファイルの名前を指定します。
+1. `<ItemGroup>` 要素に次の `<ClInclude>` 子要素を追加します。 この子要素は、C/C++ ソース ファイルに対応するヘッダー ファイルの名前を指定します。
 
     ```xml
     <ItemGroup>
@@ -143,7 +141,7 @@ MSBuild プロジェクト ファイルがプロジェクトのルート要素�
     </ItemGroup>
     ```
 
-1. 次の追加`<Import>`このプロジェクトのターゲットを定義するファイルのパスを指定する要素。
+1. このプロジェクトのターゲットを定義するファイルのパスを指定する次の `<Import>` 要素を追加します。
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -151,10 +149,10 @@ MSBuild プロジェクト ファイルがプロジェクトのルート要素�
 
 ### <a name="complete-project-file"></a>完成したプロジェクト ファイル
 
-次のコードは、前の手順で作成したプロジェクト ファイルのすべての内容です。
+次のコードは、前の手順で作成したプロジェクト ファイルのすべての内容です。 (Visual Studio 2017 では ToolsVersion="15.0" を使用します。)
 
 ```xml
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -168,7 +166,7 @@ MSBuild プロジェクト ファイルがプロジェクトのルート要素�
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ItemGroup>
@@ -187,29 +185,29 @@ MSBuild プロジェクト ファイルがプロジェクトのルート要素�
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-MSBuild は、出力ファイルのディレクトリを作成してし、コンパイルし、Myproject.exe プログラムを生成するプロジェクトをリンクします。 ビルド プロセスが完了したら後、は、次のコマンドを使用して、デバッグ フォルダーからアプリケーションを実行します。
+MSBuild によって、出力ファイルのディレクトリが作成され、プロジェクトがコンパイルおよびリンクされて Myproject.exe プログラムが生成されます。 ビルド処理が完了したら、次のコマンドを使用して、デバッグ フォルダーからアプリケーションを実行します。
 
 `myproject`
 
-アプリケーションは、「こんにちは、from MSBuild!」を表示する必要があります。 コンソール ウィンドウに表示します。
+アプリケーションには、"Hello, from MSBuild!" と表示されます。 コンソール ウィンドウに表示します。
 
 ## <a name="customizing-your-project"></a>プロジェクトのカスタマイズ
 
-MSBuild では定義済みのビルド ターゲットを実行、ユーザー定義のプロパティを適用し、イベント、カスタム ツールを使用してビルド手順を行うことができます。 このセクションでは、次のタスクについて説明します。
+MSBuild では、定義済みのビルド ターゲットを実行したり、ユーザー定義のプロパティを適用したりできるほか、カスタム ツール、イベント、およびビルド ステップを使用することができます。 このセクションでは、次のタスクについて説明します。
 
-- MSBuild を使用して、ビルド ターゲットを持つ。
+- MSBuild でのビルド ターゲットの使用。
 
-- MSBuild を使用して、ビルド プロパティを使用します。
+- MSBuild でのビルド プロパティの使用。
 
-- 64 ビットのコンパイラおよびツールでは、MSBuild を使用します。
+- MSBuild での 64 ビットのコンパイラおよびツールの使用。
 
-- 他のツールセットには、MSBuild を使用します。
+- MsBuild での別のツールセットの使用。
 
-- MSBuild のカスタマイズを追加します。
+- MSBuild へのカスタマイズの追加。
 
 ### <a name="using-msbuild-with-build-targets"></a>MSBuild とビルド ターゲットの併用
 
-A*ビルド ターゲット*はビルド中に実行できる定義済みまたはユーザー定義のコマンドの名前付きセットです。 ターゲット コマンド ライン オプション (`/t`) を使用して、ビルド ターゲットを指定します。 `myproject`サンプル プロジェクト、定義済み**クリーン**ターゲットがデバッグ フォルダー内のすべてのファイルが削除し、新しいログ ファイルを作成します。
+*ビルド ターゲット*とは、ビルド時に実行できる定義済みまたはユーザー定義のコマンドの名前付きセットです。 ターゲット コマンド ライン オプション (`/t`) を使用して、ビルド ターゲットを指定します。 `myproject` サンプル プロジェクトでは、定義済みの **clean** ターゲットがデバッグ フォルダー内のすべてのファイルを削除し、新しいログ ファイルを作成しています。
 
 コマンド プロンプトで次のコマンドを入力して、`myproject` を削除します。
 
@@ -235,7 +233,7 @@ A*ビルド ターゲット*はビルド中に実行できる定義済みまた�
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>MSBuild と 64 ビットのコンパイラおよびツールの併用
 
-64 ビットの Windows に既定では Visual C をインストールした場合は、64 ビット x64 ネイティブおよびクロス ツールがインストールされます。 64 ビットのコンパイラおよびツールを使用して設定して、アプリケーションをビルドする MSBuild を構成することができます、`PreferredToolArchitecture`プロパティ。 このプロパティは、プロジェクトの構成とプラットフォームのプロパティに影響しません。 既定では、32 ビット版のツールが使用されます。 コンパイラおよびツールの 64 ビット バージョンを指定する次のプロパティ グループ要素を Myproject.vcxproj プロジェクト ファイル内の後に追加、 `Microsoft.Cpp.default.props` \<Import/> 要素。
+64 ビットの Windows に Visual Studio をインストールした場合、既定で 64 ビットの x64 ネイティブおよびクロス ツールがインストールされます。 MSBuild を構成して `PreferredToolArchitecture` プロパティを設定すると、アプリケーションのビルドに 64 ビットのコンパイラおよびツールを使用できます。 このプロパティは、プロジェクトの構成やプラットフォームのプロパティには影響しません。 既定では、32 ビット版のツールが使用されます。 64 ビット版のコンパイラおよびツールを指定するには、Myproject.vcxproj プロジェクト ファイル内の `Microsoft.Cpp.default.props` \<Importt /> 要素の後に次のプロパティ グループ要素を追加します。
 
 ```xml
 <PropertyGroup>
@@ -247,9 +245,9 @@ A*ビルド ターゲット*はビルド中に実行できる定義済みまた�
 
 `msbuild myproject.vcxproj /p:PreferredToolArchitecture=x64`
 
-### <a name="using-msbuild-with-a-different-toolset"></a>MSBuild を使用して、別のツールセット
+### <a name="using-msbuild-with-a-different-toolset"></a>MsBuild での別のツールセットの使用
 
-ツールセットおよびライブラリがインストールされている Visual C の他のバージョンがある場合は、MSBuild は、現在の Visual C バージョンまたはその他のインストール済みのバージョンのアプリケーションを構築できます。 たとえば、Windows xp では、ビジュアルの C++ 11.0 ツールセットを指定する、Visual Studio 2012 をインストールしている場合、この次のプロパティ グループ要素を Myproject.vcxproj プロジェクト ファイル内の後に追加、 `Microsoft.Cpp.props` \<Import/> 要素。
+インストールされている Visual C++ の他バージョンのツールセットおよびライブラリがある場合、MSBuild では、現在の Visual C++ のバージョンまたはインストールされている別のバージョン用のアプリケーションをビルドできます。 たとえば Visual Studio 2012 がインストールされている場合に Windows XP 用の Visual C++ 11.0 ツールセットを指定するには、Myproject.vcxproj プロジェクト ファイル内の `Microsoft.Cpp.props` \<Import /> 要素の後に次のプロパティ グループ要素を追加します。
 
 ```xml
 <PropertyGroup>
@@ -257,16 +255,16 @@ A*ビルド ターゲット*はビルド中に実行できる定義済みまた�
 </PropertyGroup>
 ```
 
-ビジュアルの C++ 11.0 Windows XP ツールセットでプロジェクトをリビルドするには、次のコマンドを入力します。
+Visual C++ 11.0 Windows XP ツールセットでプロジェクトをリビルドするには、次のコマンドを入力します。
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
 
-### <a name="adding-msbuild-customizations"></a>MSBuild のカスタマイズを追加します。
+### <a name="adding-msbuild-customizations"></a>MSBuild へのカスタマイズの追加
 
-MSBuild では、ビルド プロセスをカスタマイズするさまざまな方法を提供します。 次のトピックでは、MSBuild プロジェクトにカスタム ビルド ステップ、ツール、およびイベントを追加する方法を示します。
+MSBuild では、さまざまな方法でビルド処理をカスタマイズできます。 次のトピックでは、MSBuild プロジェクトにカスタム ビルド ステップ、ツール、およびイベントを追加する方法を示します。
 
-- [方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [方法: MSBuild プロジェクトでビルド イベントを使用する](../build/how-to-use-build-events-in-msbuild-projects.md)
+- [方法: MSBuild プロジェクトでビルド イベントを使用する](how-to-use-build-events-in-msbuild-projects.md)

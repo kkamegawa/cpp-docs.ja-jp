@@ -1,5 +1,5 @@
 ---
-title: 'メモリ管理 : 例'
+title: メモリ管理:使用例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], memory allocation
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: a236dbda9baca7bf7e165edf63a61ffb6eb92a2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ed50bfba03f29fdd16e6f615b193109656f3ce6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352165"
 ---
-# <a name="memory-management-examples"></a>メモリ管理 : 例
+# <a name="memory-management-examples"></a>メモリ管理:使用例
 
 この記事では、それぞれのメモリ割り当ての 3 つの一般的な種類の MFC がフレーム、ヒープ割り当てを実行する方法について説明します。
 
@@ -100,5 +100,4 @@ ms.locfileid: "50548123"
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ管理: ヒープ割り当て](../mfc/memory-management-heap-allocation.md)
-
+[メモリ管理: ヒープの割り当て](../mfc/memory-management-heap-allocation.md)

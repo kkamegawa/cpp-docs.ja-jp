@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CWindowImpl class, using
 - windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-ms.openlocfilehash: f8c072b32e64f87042890c1bcf950ab3ac40e4a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0572e3b65b2d249c569a119a7f260395d91373cd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262022"
 ---
 # <a name="implementing-a-window"></a>ウィンドウの実装
 
@@ -28,4 +28,3 @@ ms.locfileid: "50645836"
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ クラス](../atl/atl-window-classes.md)
-

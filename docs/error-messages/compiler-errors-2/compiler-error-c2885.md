@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652128"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760929"
 ---
 # <a name="compiler-error-c2885"></a>コンパイラ エラー C2885
 
-':identifier': いない有効な using 宣言非クラス スコープ
+' class:: identifier ': 非クラススコープでは有効な using 宣言ではありません
 
-使用した、[を使用して](../../cpp/using-declaration.md)宣言が正しくないです。
+[Using](../../cpp/using-declaration.md)宣言を正しく使用しませんでした。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-このエラーは、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: がすることは不要になった、 `using` ; 入れ子になった型の宣言型の名前に、入れ子にされた型に行った各参照を明示的に修飾する必要がありますスペース、または typedef を作成します。
+このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。入れ子になった型への `using` 宣言を持つことは無効になります。入れ子になった型に対しては、各参照を明示的に修飾するか、名前空間に型を配置するか、typedef を作成する必要があります。
 
 次の例では、C2885 が生成されます。
 
-```
+```cpp
 // C2885.cpp
 namespace MyNamespace {
    class X1 {};
@@ -52,13 +52,13 @@ int main () {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-使用する場合、`using`クラスのメンバーでは、C++ のキーワードでは、別のクラス (派生クラス) 内でそのメンバーを定義する必要があります。
+`using` キーワードをクラスメンバーと共に使用する場合C++ 、では、そのメンバーを別のクラス (派生クラス) 内で定義する必要があります。
 
 次の例では、C2885 が生成されます。
 
-```
+```cpp
 // C2885_b.cpp
 // compile with: /c
 class A {

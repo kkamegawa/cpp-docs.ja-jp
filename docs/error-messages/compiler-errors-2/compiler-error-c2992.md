@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-ms.openlocfilehash: c30a1d2e1c2bae92b426fdd8fa4be628c009fa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d4902d34a806eeb26ef376e3b7a7b6ce843dbc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581923"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751496"
 ---
 # <a name="compiler-error-c2992"></a>コンパイラ エラー C2992
 
@@ -19,11 +19,11 @@ ms.locfileid: "50581923"
 
 クラスの前に、パラメーターがないか、無効である `template` または **generic** キーワードが指定されています。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2992 が生成されます。
 
-```
+```cpp
 // C2992.cpp
 // compile with: /c
 template <class T>

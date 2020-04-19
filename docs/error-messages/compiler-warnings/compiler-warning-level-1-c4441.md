@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f45288e1e52d157e5c135a45c0801a909fccfbc
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539699"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966022"
 ---
 # <a name="compiler-warning-level-1-c4441"></a>コンパイラの警告 (レベル 1) C4441
 
-'cc1' を無視する場合の呼び出し規約' cc2' の代わりに使用
+' cc1 ' の呼び出し規約は無視されます。代わりに ' cc2 ' が使用されています
 
-管理対象のユーザー定義型とグローバル関数のジェネリック メンバー関数を使用する必要があります、 [_ _clrcall](../../cpp/clrcall.md)呼び出し規約。  使用されるコンパイラ`__clrcall`します。
+マネージユーザー定義型およびグローバル関数ジェネリックのメンバー関数は、 [__clrcall](../../cpp/clrcall.md)の呼び出し規約を使用する必要があります。  コンパイラは `__clrcall`を使用しました。
 
 ## <a name="example"></a>例
 
 次の例では、C4441 が生成されます。
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>

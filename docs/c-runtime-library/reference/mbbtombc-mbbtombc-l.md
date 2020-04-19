@@ -1,10 +1,10 @@
 ---
 title: _mbbtombc、_mbbtombc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547993"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952734"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc、_mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc、_mbbtombc_l
 
 1 バイトのマルチバイト文字を、対応する 2 バイトのマルチバイト文字に変換します。
 
@@ -64,15 +67,15 @@ unsigned int _mbbtombc_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合 **_mbbtombc**を正常に変換*c*、マルチバイト文字を返します。 それ以外を返します*c*します。
+**_Mbbtombc**が*c*を正常に変換した場合は、マルチバイト文字を返します。それ以外の場合は、 *c*を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbbtombc**関数は、特定の 1 バイト マルチバイト文字を対応する 2 バイト マルチバイト文字に変換します。 文字は、0x20-0x7E または 0xA1 - の範囲内で変換する 0 xdf にする必要があります。
+**_Mbbtombc**関数は、指定された1バイトのマルチバイト文字を、対応する2バイトのマルチバイト文字に変換します。 変換する文字は、0x20 ~ 0x7E または 0xA1 ~ 0xDF の範囲内である必要があります。
 
-出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 この関数のバージョンは同じですが、する点を除いて **_mbbtombc**このロケールに依存する動作に現在のロケールを使用し、 **_mbbtombc_l**で渡されるロケール パラメーターを代わりに使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数のバージョンは同じですが、 **_mbbtombc**では、このロケールに依存する動作に現在のロケールを使用し、 **_mbbtombc_l**は渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンで **_mbbtombc**という名前が**hantozen**します。 新しいコードを使用して **_mbbtombc**します。
+以前のバージョンでは、 **_mbbtombc**には**hantozen**という名前が付けられていました。 新しいコードの場合は、 **_mbbtombc**を使用します。
 
 ## <a name="requirements"></a>必要条件
 

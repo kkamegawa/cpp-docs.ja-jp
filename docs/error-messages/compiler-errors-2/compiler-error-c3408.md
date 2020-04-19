@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3408
 ms.assetid: 1f5ea979-fb1e-4214-b310-6fd6ca8249b1
-ms.openlocfilehash: c374ea60129b315caf4b72dbf2917a9f4c4ba2ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c606ceb446cdf1e6bc6df52853b8d590751eb21
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428212"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760700"
 ---
 # <a name="compiler-error-c3408"></a>コンパイラ エラー C3408
 
@@ -19,11 +19,11 @@ ms.locfileid: "50428212"
 
 テンプレート定義に属性を適用することはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3408 が生成されます。
 
-```
+```cpp
 // C3408.cpp
 // compile with: /c
 template <class T> struct PTS {

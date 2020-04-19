@@ -1,5 +1,5 @@
 ---
-title: '方法: PInvoke を使用して文字列をマーシャリングする'
+title: '方法: 文字列をマーシャ リングを使用して PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404404"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>方法: PInvoke を使用して文字列をマーシャリングする
+# <a name="how-to-marshal-strings-using-pinvoke"></a>方法: 文字列をマーシャ リングを使用して PInvoke
 
 このトピックの C スタイルの文字列は、CLR の文字列を使用して呼び出すことができますを受け入れる関数をネイティブ .NET Framework プラットフォーム呼び出しのサポートを使用して system::string を入力します。 P/invoke は、ほとんどのコンパイル時エラーを報告するには、タイプ セーフでないし、実装に時間がかかることができますを提供するため、visual C++ プログラマが (可能な) 場合、代わりに、C++ Interop 機能を使用することが推奨されます。 アンマネージ API が DLL としてパッケージ化し、ソース コードが使用できない場合、P/invoke は唯一のオプションが、それ以外の場合を参照してください[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
 

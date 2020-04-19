@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: d13ec31de79e15cf4fefce7bb954f488ff8fccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273275"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN リファレンス
 
@@ -24,12 +24,12 @@ Microsoft COFF Binary File Dumper (DUMPBIN します。EXE) では、一般的�
 > [!NOTE]
 >  このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
 
-のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
 
-- [DUMPBIN コマンドライン](../../build/reference/dumpbin-command-line.md)
+- [DUMPBIN コマンドライン](dumpbin-command-line.md)
 
-- [DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+- [DUMPBIN オプション](dumpbin-options.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)

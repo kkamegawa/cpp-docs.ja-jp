@@ -1,7 +1,7 @@
 ---
 title: または
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::or
 - std.or
@@ -20,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - or function
 ms.assetid: 6523b3ac-0a18-44ec-9e9a-b9bab8525ead
-ms.openlocfilehash: 9973533e0c871048c2bd586a4503dec3942fc14c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5d1d36f3147b746602be03b21867cefde2e32495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951068"
 ---
 # <a name="or"></a>または
 

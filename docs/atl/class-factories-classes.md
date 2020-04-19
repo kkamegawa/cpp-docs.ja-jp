@@ -2,18 +2,16 @@
 title: " ATL クラス ファクトリ クラス"
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.classes.factories
 helpviewer_keywords:
 - class factories
 - class factories, ATL classes
 ms.assetid: 1d8c2ae2-2c37-452c-a02d-1ecbdd309f84
-ms.openlocfilehash: 4865a938f4387c55609db144b02ebdbb92b378ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd39f8428669686910a1c83b3925727b2bd8edbe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250649"
 ---
 # <a name="class-factories-classes"></a>クラス ファクトリ クラス
 
@@ -33,4 +31,3 @@ ms.locfileid: "50631830"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [集計とクラス ファクトリに関するマクロ](../atl/reference/aggregation-and-class-factory-macros.md)
-

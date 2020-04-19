@@ -1,31 +1,31 @@
 ---
-title: コンパイラ エラー C2749
+title: コンパイラエラー C2749
 ms.date: 11/04/2016
 f1_keywords:
 - C2749
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 80ac01eaba8e5291ee5558d226ebea2c3d8ff47e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601072"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759621"
 ---
-# <a name="compiler-error-c2749"></a>コンパイラ エラー C2749
+# <a name="compiler-error-c2749"></a>コンパイラエラー C2749
 
-'type': のみスローまたは/clr:safe を伴うマネージド クラスへのハンドルをキャッチできます
+' type ':/clr: safe を伴うマネージクラスへのハンドルのみをスローまたはキャッチできます
 
-使用する場合 **/clr:safe**、のみスローまたは参照型をキャッチすることができます。
+**/Clr: safe**を使用する場合は、参照型のみをスローまたはキャッチできます。
 
 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C2749 が生成されます。
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

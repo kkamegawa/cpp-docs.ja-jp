@@ -1,6 +1,6 @@
 ---
 title: __inwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inwordstring
 - __inwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: b56a55da06e808bcccf123ccc9867a1b868834a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f67e15bc5eef9fbe9cc8d12e95afcdf869e3b1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608560"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221885"
 ---
-# <a name="inwordstring"></a>__inwordstring
+# <a name="__inwordstring"></a>__inwordstring
 
 **Microsoft 固有の仕様**
 
-使用して、指定されたポートからデータを読み取り、`rep insw`命令。
+`rep insw`命令を使用して、指定されたポートからデータを読み取ります。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __inwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __inwordstring(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]読み取るポート。
+*ポート*\
+から読み取り元のポート。
 
-*Buffer*<br/>
-[out]ここでは、ポートから読み取ったデータを書き込まれます。
+*格納*\
+入出力このポートから読み取られたデータがここに書き込まれます。
 
-*カウント*<br/>
-[in]読み取るデータの文字数です。
+*数*\
+から読み取るデータのワード数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,7 +48,7 @@ void __inwordstring(
 |---------------|------------------|
 |`__inwordstring`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

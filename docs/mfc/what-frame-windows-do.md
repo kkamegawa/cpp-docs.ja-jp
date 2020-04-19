@@ -6,12 +6,12 @@ helpviewer_keywords:
 - frame windows [MFC], tasks
 - MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
-ms.openlocfilehash: ea35b98e5234c10a10143bad1d35fdd1b4510ced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594700ef1cbe0030bbe452adaa40b29b4a72f4d0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405678"
 ---
 # <a name="what-frame-windows-do"></a>フレーム ウィンドウの機能
 
@@ -38,4 +38,3 @@ ms.locfileid: "50508772"
 ## <a name="see-also"></a>関連項目
 
 [フレーム ウィンドウ](../mfc/frame-windows.md)
-

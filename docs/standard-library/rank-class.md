@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: a0658d7278ef31d01d371eff11aec09c19c8011e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518893"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458173"
 ---
 # <a name="rank-class"></a>rank クラス
 
@@ -27,12 +27,12 @@ struct rank;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-型のクエリは、配列型の次元数の値を保持*Ty*、0 の場合、または*Ty*配列型ではありません。
+型クエリは、*配列型の*次元数の値を保持します。 *ty*が配列型でない場合は0です。
 
 ## <a name="example"></a>例
 
@@ -69,5 +69,5 @@ rank<int[5][10]> == 2
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent クラス](../standard-library/extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[extent クラス](../standard-library/extent-class.md)

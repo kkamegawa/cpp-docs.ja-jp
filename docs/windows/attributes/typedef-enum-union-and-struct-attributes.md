@@ -5,12 +5,12 @@ helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407225"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union、および Struct 型の属性
 
@@ -20,7 +20,7 @@ ms.locfileid: "50631063"
 
 |属性|説明|
 |---------------|-----------------|
-|[case](case-cpp.md)|使用される、 [switch_type](switch-type.md)属性、**共用体**します。|
+|[case](case-cpp.md)|使用される、 [switch_type](switch-type.md)属性、**union**します。|
 |[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
 |[first_is](first-is.md)|転送する最初の配列要素のインデックスを指定します。|

@@ -1,34 +1,35 @@
 ---
 title: .SAVEXMM128
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .SAVEXMM128
 helpviewer_keywords:
 - .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-ms.openlocfilehash: c29ec47170c5e0f46f02d53f23ab477a79bbdc32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6402b75c10b1400d56923116621f00b4d0908822
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507902"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318255"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
-いずれかが生成されます、`UWOP_SAVE_XMM128`または`UWOP_SAVE_XMM128_FAR`アンワインド コードのエントリの指定の XMM レジスタと現在のプロローグのオフセットを使用してオフセットします。 MASM は、最も効率的なエンコーディングを選択します。
+現在のプロローグオフセットを使用して、指定された XMM register および offset の `UWOP_SAVE_XMM128` または `UWOP_SAVE_XMM128_FAR` アンワインドコードエントリを生成します。 MASM は、最も効率的なエンコードを選択します。
 
 ## <a name="syntax"></a>構文
 
-> .savexmm128 xmmreg、オフセット
+> **.SAVEXMM128** *xmmreg* 、 *offset*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-.フレームの関数のアンワインドされるとから拡張すると、プロローグ内でのみ許可が指定できる ml64.exe の SAVEXMM128、 [PROC](../../assembler/masm/proc.md)フレームの宣言、[します。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブは、コードを生成しませんのみを生成する`.xdata`と`.pdata`します。 .SAVEXMM128 は、実際にアンワインド操作を実装する手順によって先行されなければなりません。 アンワインド ディレクティブと契約を確認します。 マクロでのアンワインドに本来はコードの両方をラップすることをお勧めします。
+**.SAVEXMM128**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](proc.md) frame 宣言からに拡張されるプロローグ内でのみ使用でき[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 .SAVEXMM128 の前に、アンワインドするアクションを実際に実装する手順を指定する必要があります。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-*オフセット*16 の倍数である必要があります。
+*オフセット*は16の倍数である必要があります。
 
-詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

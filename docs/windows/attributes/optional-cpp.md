@@ -1,21 +1,21 @@
 ---
-title: 省略可能な (C++ COM の属性)
+title: 省略可能C++ (COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 440e605b1dfd0b24060965c5ea5dd55424701cf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590113"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514351"
 ---
 # <a name="optional-c"></a>optional (C++)
 
-メンバー関数のオプション パラメーターを指定します。
+メンバー関数の省略可能なパラメーターを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "50590113"
 
 ## <a name="remarks"></a>Remarks
 
-**省略可能な**C++ 属性と同じ機能を持つ、[省略可能な](/windows/desktop/Midl/optional)MIDL 属性。
+**省略可能** C++な属性には、[省略可能](/windows/win32/Midl/optional)な MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードはどのように**省略可能な**される可能性があります。
+次のコードは、**オプション**を使用する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_optional.cpp
